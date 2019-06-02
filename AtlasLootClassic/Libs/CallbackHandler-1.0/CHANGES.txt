@@ -1,0 +1,14 @@
+------------------------------------------------------------------------
+r23 | nevcairiel | 2018-07-21 14:17:42 +0000 (Sat, 21 Jul 2018) | 1 line
+Changed paths:
+   M /trunk/CallbackHandler-1.0.toc
+
+Update TOC for 8.0
+------------------------------------------------------------------------
+r22 | nevcairiel | 2018-07-21 14:17:22 +0000 (Sat, 21 Jul 2018) | 1 line
+Changed paths:
+   M /trunk/CallbackHandler-1.0/CallbackHandler-1.0.lua
+
+Replace generated Dispatcher with xpcall, which now supports arguments
+------------------------------------------------------------------------
+

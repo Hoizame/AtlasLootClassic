@@ -1,0 +1,19 @@
+changeset:   92:26b63062db62
+tag:         8.0.1.1
+user:        James D. Callahan III <jcallahan@curse.com>
+date:        Sat Jul 21 00:52:52 2018 -0500
+summary:     Hard-embed LibStub, to stop the WoW 8.x client from complaining about being unable to load it under a dev environment.
+
+
+changeset:   91:610a61be9cca
+user:        James D. Callahan III <jcallahan@curse.com>
+date:        Sat Jul 21 00:51:15 2018 -0500
+summary:     Remove dead code.
+
+
+changeset:   90:dea75a748937
+user:        James D. Callahan III <jcallahan@curse.com>
+date:        Sat Jul 21 00:50:33 2018 -0500
+summary:     Update ToC Interface to 80000.
+
+

@@ -1,0 +1,60 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/"   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   xsi:schemaLocation="http://www.blizzard.com/wow/ui/">
+
+	 <Texture name="AtlasLoot-GUI-BossModelButton" file="Interface\EncounterJournal\UI-EncounterJournalTextures" virtual="true" >
+		<Size x="64" y="61"/>	
+		<TexCoords left="0.50585938" right="0.63085938" top="0.02246094" bottom="0.08203125"/>	
+	</Texture>
+	
+	<Button name="AtlasLootCreatureButtonTemplate" motionScriptsWhileDisabled="true" virtual="true" hidden="true">
+		<Size x="50" y="49"/>
+		<Layers>
+			<Layer level="BACKGROUND" TextureSubLevel="6">
+				<Texture name="$parentCreature" parentKey="creature">
+					<Size x="40" y="40"/>
+					<Anchors>
+						<Anchor point="CENTER" x="0" y="0"/>
+					</Anchors>
+				</Texture>
+			</Layer>
+		</Layers>
+		<NormalTexture inherits="AtlasLoot-GUI-BossModelButton">
+		</NormalTexture>
+		<HighlightTexture inherits="AtlasLoot-GUI-BossModelButton" alphaMode="ADD"/>
+		<Scripts>
+			<OnShow>
+				self:SetFrameLevel(self:GetParent():GetFrameLevel()+2)
+				if AtlasLoot.GUI.ModelFrame.SelectedCreature == self then
+					self:Disable()
+				else
+					self:Enable()
+				end
+			</OnShow>
+			<OnDisable>
+				self:SetSize(64, 61)
+				self.creature:SetSize(40, 40)
+			</OnDisable>
+			<OnEnable>
+				self:SetSize(50, 49)
+				self.creature:SetSize(30, 30)
+			</OnEnable>
+			<OnClick>
+				AtlasLoot.GUI.ModelFrame.ButtonOnClick(self)
+				PlaySound(852)
+			</OnClick>
+			<OnEnter>
+				if self.name then
+					GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
+					GameTooltip:SetText(self.name,1,1,1);
+					if self.description then
+						GameTooltip:AddLine(self.description, nil, nil, nil, 1);
+					end
+					GameTooltip:Show()
+				end
+			</OnEnter>
+			<OnLeave>
+				GameTooltip:Hide()
+			</OnLeave>
+		</Scripts>
+	</Button>
+	
+</Ui>

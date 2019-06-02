@@ -1,0 +1,56 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/"   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   xsi:schemaLocation="http://www.blizzard.com/wow/ui/">
+	<Script file="WorldMapIntegration.lua"/>
+
+	<Button name="AtlasLootToggleFromWorldMap1" toplevel="true" parent="WorldMapFrame" frameLevel="10" hidden="true">
+		<Size>
+			<AbsDimension x="32" y="32" />
+		</Size>
+		<Anchors>
+			<Anchor point="TOPRIGHT" relativeTo="WorldMapFrame" x="-4" y="-37"/>
+		</Anchors>
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture parentKey="Background" file="Interface\Minimap\UI-Minimap-Background">
+					<Size x="25" y="25"/>
+					<Anchors>
+						<Anchor point="TOPLEFT" x="2" y="-4"/>
+					</Anchors>
+					<Color r="1" g="1" b="1" a="1"/>
+				</Texture>
+			</Layer>
+			<Layer level="ARTWORK">
+				<Texture parentKey="Icon" file="Interface\Icons\INV_Box_01">
+					<Size x="16" y="16"/>
+					<Anchors>
+						<Anchor point="TOPLEFT" x="8" y="-8"/>
+					</Anchors>
+				</Texture>
+			</Layer>
+			<Layer level="BORDER">
+				<Texture parentKey="Border" file="Interface\Minimap\MiniMap-TrackingBorder">
+					<Size x="54" y="54"/>
+					<Anchors>
+						<Anchor point="TOPLEFT"/>
+					</Anchors>
+				</Texture>
+			</Layer>
+		</Layers>
+		<HighlightTexture file="Interface\Buttons\UI-Common-MouseHilight" alphaMode="ADD" setAllPoints="true">
+			<Size x="48" y="48"/>
+			<Anchors>
+				<Anchor point="CENTER"/>
+			</Anchors>
+		</HighlightTexture>
+		<Scripts>
+			<OnEnter>
+				AtlasLoot.WorldMap.Button_OnEnter(self);
+			</OnEnter>
+			<OnLeave>
+				AtlasLoot.WorldMap.Button_OnLeave(self);
+			</OnLeave>
+			<OnClick>
+				AtlasLoot.WorldMap.Button_OnClick(self, button);
+			</OnClick>
+		</Scripts>
+	</Button>
+</Ui>
