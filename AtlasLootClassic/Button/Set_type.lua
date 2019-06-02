@@ -85,7 +85,7 @@ function Set.OnMouseAction(button, mouseButton)
 			DressUpItemLink(type(button.Items[i]) == "string" and button.Items[i] or "item:"..button.Items[i])
 		end
 	elseif mouseButton == "OpenSet" then
-		SVF:SetAtlasLootItemSet(button.SetName, button.SetAddonName or AtlasLoot.db.GUI.selected[1], button.SubSetName, button.SetDiff)
+		--SVF:SetAtlasLootItemSet(button.SetName, button.SetAddonName or AtlasLoot.db.GUI.selected[1], button.SubSetName, button.SetDiff)
 	elseif mouseButton == "MouseWheelUp" and Set.tooltipFrame then  -- ^
 		local frame = Set.tooltipFrame.modelFrame
 		if IsAltKeyDown() then -- model zoom

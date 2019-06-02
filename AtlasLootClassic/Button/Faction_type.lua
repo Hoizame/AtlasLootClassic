@@ -51,7 +51,10 @@ local FACTION_IMAGES = {
 	-- AB
 	[510] = "Interface\\Icons\\INV_BannerPVP_01", -- The Defilers
 	[509] = "Interface\\Icons\\INV_BannerPVP_02", -- The League of Arathor
-
+	-- WS
+	[889] = "Interface\\Icons\\INV_BannerPVP_01", -- Warsong Outriders
+	[890] = "Interface\\Icons\\INV_BannerPVP_02", -- Silverwing Sentinels
+	
 	-- Classic
 	[47] = "Interface\\Icons\\inv_misc_tournaments_symbol_dwarf",			--Ironforge
 	[54] = "Interface\\Icons\\inv_misc_tournaments_symbol_gnome",			--Gnomeregan
@@ -224,7 +227,7 @@ function Faction.Refresh(button)
 		-- ##################
 		-- name
 		-- ##################
-		name = name or BF[FACTION_KEY[button.FactionID]] or FACTION.." "..button.FactionID
+		name = name or FACTION_KEY[button.FactionID] or FACTION.." "..button.FactionID
 		button.name:SetText(color..name)
 		
 		--button.extra:SetText("|cFF"..FACTION_REP_COLORS[button.RepID or standingID]..GetLocRepStanding(button.RepID or standingID))
