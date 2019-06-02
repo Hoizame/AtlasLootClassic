@@ -29,8 +29,8 @@
 ## Notes-zhTW: @localization(locale="zhTW", key="Notes-Classic", namespace="ToC")@
 #@end-non-debug@
 #@debug@
-## Title: AtlasLootClassic |cFF0099FF[Dungeons and Raids]|r
-## Notes: AtlasLoot loot tables from Dungeons and Raids
+## Title: AtlasLootClassic |cFF0099FF[PvP]|r
+## Notes: AtlasLoot loot tables from PvP
 #@end-debug@
 
 ## X-eMail: manager@atlasloot.net

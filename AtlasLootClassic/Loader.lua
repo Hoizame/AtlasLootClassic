@@ -29,7 +29,14 @@ local ATLASLOOT_MODULE_LIST = {
 	{
 		addonName = "AtlasLootClassic_DungeonsAndRaids",
 		--icon = "Interface\\ICONS\\Inv_ChampionsOfAzeroth",
-		name = "DUNGEONS",
+		name = AL["Dungeons and Raids"],
+		tt_title = nil,		-- ToolTip title
+		tt_text = nil,		-- ToolTip text
+	},
+	{
+		addonName = "AtlasLootClassic_PvP",
+		--icon = "Interface\\ICONS\\Inv_ChampionsOfAzeroth",
+		name = AL["PvP"],
 		tt_title = nil,		-- ToolTip title
 		tt_text = nil,		-- ToolTip text
 	},
