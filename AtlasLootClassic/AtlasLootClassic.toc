@@ -34,7 +34,6 @@
 ## Notes: Shows the possible loot from the bosses
 #@end-debug@
 
-## X-eMail: manager@atlasloot.net
 ## X-Credits: Daviesh, Lag, Cellelach, Asurn, Pernicus, Dynaletik and many others
 ## X-Category: Map
 ## X-License: GPL v2

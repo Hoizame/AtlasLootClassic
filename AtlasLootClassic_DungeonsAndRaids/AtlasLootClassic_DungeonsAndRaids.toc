@@ -33,7 +33,6 @@
 ## Notes: AtlasLoot loot tables from Dungeons and Raids
 #@end-debug@
 
-## X-eMail: manager@atlasloot.net
 ## X-Category: Map
 ## X-License: GPL v2
 

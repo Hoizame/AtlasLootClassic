@@ -422,6 +422,7 @@ local globalSetTable = {
 			},
 		},
 	},
+	-- TODO: Add better description and the class icons with fallback to Head->Robe->FirstItem(?) slot icon
 	["SetID"] = {
 		name = AL["Sets"],
 		{

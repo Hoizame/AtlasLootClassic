@@ -1,0 +1,42 @@
+package-as: AtlasLootClassic
+
+manual-changelog:
+    filename: AtlasLootClassic/Documentation/Release_Notes.txt
+    markup-type: plain
+    
+license-output: AtlasLootClassic/Documentation/LICENSE.txt
+
+externals:
+# SVN
+    AtlasLoot/Libs/CallbackHandler-1.0: 
+        url: https://repos.wowace.com/wow/callbackhandler/trunk/CallbackHandler-1.0
+    AtlasLoot/Libs/LibStub: 
+        url: https://repos.wowace.com/wow/libstub/trunk
+    AtlasLoot/Libs/LibSharedMedia-3.0: 
+        url: https://repos.wowace.com/wow/libsharedmedia-3-0/trunk/LibSharedMedia-3.0
+    AtlasLoot/Libs/LibDBIcon-1.0: 
+        url: https://repos.wowace.com/wow/libdbicon-1-0/trunk/LibDBIcon-1.0
+    AtlasLoot/Libs/LibBabble-Boss-3.0: 
+        url: https://repos.wowace.com/wow/libbabble-boss-3-0/trunk
+    AtlasLoot/Libs/LibBabble-Faction-3.0: 
+        url: https://repos.wowace.com/wow/libbabble-faction-3-0/trunk
+    AtlasLoot/Libs/LibBabble-ItemSet-3.0: 
+        url: https://repos.wowace.com/wow/libbabble-itemset-3-0/trunk
+# HG
+    AtlasLoot/Libs/LibDialog-1.0: 
+        url: https://repos.wowace.com/wow/libdialog-1-0
+
+# Ignore takes place before folder's moving takes place
+ignore:
+    - AtlasLootClassic/Images/PSD
+    - AtlasLootClassic/AtlasLootClassic/Images/PSD
+    - AtlasLootClassic/AtlasLootClassic/DEVTOOLS.lua
+    - AtlasLootClassic/AtlasLootClassic/Libs/AceGUI-3.0
+
+move-folders:
+    AtlasLootClassic/AtlasLootClassic: AtlasLootClassic
+	AtlasLootClassic/AtlasLoot_Crafting: AtlasLoot_Crafting
+	AtlasLootClassic/AtlasLootClassic_DungeonsAndRaids: AtlasLootClassic_DungeonsAndRaids
+	AtlasLootClassic/AtlasLootClassic_PvP: AtlasLootClassic_PvP
+    AtlasLootClassic/AtlasLootClassic_Collections: AtlasLootClassic_Collections
+

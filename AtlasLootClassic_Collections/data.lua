@@ -45,21 +45,64 @@ local GENERAL_CONTENT = data:AddContentType(GENERAL, ATLASLOOT_RAID40_COLOR)
 data["TierSets"] = {
 	name = AL["Tier Sets"],
 	ContentType = SET_CONTENT,
-	LoadDifficulty = NORMAL_DIFF,
-	TableType = LOAD_DIFF,
+	LoadDifficulty = LOAD_DIFF,
+	TableType = SET_ITTYPE,
 	items = {
-		{ -- AVRepFriendly
-			name = "T 0",
-			[HORDE_DIFF] = {
-				{ 1, "f730rep5" },
-				{ 2,  19318 }, -- Bottled Alterac Spring Water
-				{ 3,  19307 }, -- Alterac Heavy Runecloth Bandage
-				{ 4,  17349 }, -- Superior Healing Draught
-				{ 5,  17352 }, -- Superior Mana Draught
-				{ 17,  19032 }, -- Stormpike Battle Tabard
-			},
+		{ -- T1
+			name = "T1",
 			[ALLIANCE_DIFF] = {
-				
+				{ 1, "SetID:203:n" }, -- Warlock
+				{ 3, "SetID:202:n" }, -- Priest
+				{ 16, "SetID:201:n" }, -- Mage
+				{ 5, "SetID:204:n" }, -- Rogue
+				{ 20, "SetID:205:n" }, -- Druid
+				{ 7, "SetID:206:n" }, -- Hunter
+				{ 9, "SetID:209:n" }, -- Warrior
+				{ 24, "SetID:208:n" }, -- Paladin
+			},
+			
+			[HORDE_DIFF] = {
+				GetItemsFromDiff = ALLIANCE_DIFF,
+				{ 22, "SetID:207:n" }, -- Shaman
+				{ 24 }, -- Paladin
+			},
+		},
+		{ -- T2
+			name = "T2",
+			[ALLIANCE_DIFF] = {
+				{ 1, "SetID:212:n" }, -- Warlock
+				{ 3, "SetID:211:n" }, -- Priest
+				{ 16, "SetID:210:n" }, -- Mage
+				{ 5, "SetID:213:n" }, -- Rogue
+				{ 20, "SetID:214:n" }, -- Druid
+				{ 7, "SetID:215:n" }, -- Hunter
+				{ 9, "SetID:218:n" }, -- Warrior
+				{ 24, "SetID:217:n" }, -- Paladin
+			},
+			
+			[HORDE_DIFF] = {
+				GetItemsFromDiff = ALLIANCE_DIFF,
+				{ 22, "SetID:216:n" }, -- Shaman
+				{ 24 }, -- Paladin
+			},
+		},
+		{ -- T3
+			name = "T3",
+			[ALLIANCE_DIFF] = {
+				{ 1, "SetID:529:n" }, -- Warlock
+				{ 3, "SetID:525:n" }, -- Priest
+				{ 16, "SetID:526:n" }, -- Mage
+				{ 5, "SetID:524:n" }, -- Rogue
+				{ 20, "SetID:521:n" }, -- Druid
+				{ 7, "SetID:530:n" }, -- Hunter
+				{ 9, "SetID:523:n" }, -- Warrior
+				{ 24, "SetID:528:n" }, -- Paladin
+			},
+			
+			[HORDE_DIFF] = {
+				GetItemsFromDiff = ALLIANCE_DIFF,
+				{ 22, "SetID:527:n" }, -- Shaman
+				{ 24 }, -- Paladin
 			},
 		},
 	},
