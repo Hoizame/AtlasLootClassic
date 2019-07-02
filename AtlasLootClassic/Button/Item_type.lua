@@ -40,13 +40,13 @@ function Item.OnSet(button, second)
 				DressUp = true,
 			},
 		},
-		db.ClickHandler, 
+		db.ClickHandler,
 		{
 			{ "ChatLink", 	AL["Chat Link"], 	AL["Add item into chat"] },
 			{ "DressUp", 	AL["Dress up"], 	AL["Shows the item in the Dressing room"] },
 		})
 		-- create item colors
-		for i=0,7 do 
+		for i=0,7 do
 			local _, _, _, itemQuality = GetItemQualityColor(i)
 			ITEM_COLORS[i] = itemQuality
 		end
@@ -63,7 +63,7 @@ function Item.OnSet(button, second)
 			end
 		end
 		button.secButton.Droprate = button.__atlaslootinfo.Droprate
-		
+
 		Item.Refresh(button.secButton)
 	else
 		if type(button.__atlaslootinfo.type[2]) == "table" then
@@ -82,7 +82,7 @@ end
 
 function Item.OnMouseAction(button, mouseButton)
 	if not mouseButton then return end
-	
+
 	mouseButton = ItemClickHandler:Get(mouseButton) or mouseButton
 	if mouseButton == "ChatLink" then
 		local itemInfo, itemLink = GetItemInfo(button.ItemString or button.ItemID)
@@ -113,11 +113,11 @@ function Item.OnMouseAction(button, mouseButton)
 			frame:SetRotation(frame.curRotation)
 		end
 	end
-	
+
 end
 
 function Item.OnEnter(button, owner)
-	local tooltip = GetAlTooltip() 
+	local tooltip = GetAlTooltip()
 	tooltip:ClearLines()
 	itemIsOnEnter = tooltip
 	if owner and type(owner) == "table" then
@@ -185,24 +185,24 @@ function Item.Refresh(button)
 
 	if button.type == "secButton" then
 		button:SetNormalTexture(itemTexture or "Interface\\Icons\\INV_Misc_QuestionMark")
-	else	
+	else
 		-- ##################
 		-- icon
 		-- ##################
 		button.icon:SetTexture(itemTexture or "Interface\\Icons\\INV_Misc_QuestionMark")
-		
+
 		-- ##################
 		-- name
 		-- ##################
 		button.name:SetText("|c"..ITEM_COLORS[itemQuality or 0]..itemName)
-		
+
 		-- ##################
 		-- description
 		-- ##################
 		button.extra:SetText(GetItemDescInfo(itemEquipLoc, itemType, itemSubType))
 	end
 	if db.showCompletedHook then
-		itemCount = GetItemCount(button.ItemString, true)
+		local itemCount = GetItemCount(button.ItemString, true)
 		if itemCount and itemCount > 0 then
 			button.completed:Show()
 		end
@@ -226,12 +226,12 @@ end
 --################################
 function Item.ShowQuickDressUp(itemLink, ttFrame)
 	if not itemLink or not IsEquippableItem(itemLink) then return end
-	if not Item.previewTooltipFrame then 
+	if not Item.previewTooltipFrame then
 		local name = "AtlasLoot-SetToolTip"
 		local frame = CreateFrame("Frame", name)
 		frame:SetClampedToScreen(true)
 		frame:SetSize(230, 280)
-		
+
 		frame.modelFrame = CreateFrame("DressUpModel", name.."-ModelFrame", frame)
 		frame.modelFrame:ClearAllPoints()
 		frame.modelFrame:SetParent(frame)
@@ -248,17 +248,17 @@ function Item.ShowQuickDressUp(itemLink, ttFrame)
 		frame.modelFrame.zoomLevelNew = frame.modelFrame.zoomLevel
 		frame.modelFrame:SetPortraitZoom(frame.modelFrame.zoomLevel)
 		frame.modelFrame.Reset = _G.Model_Reset
-		
+
 		Item.previewTooltipFrame = frame
 		frame:Hide()
 	end
-	
+
 	local frame = Item.previewTooltipFrame
-	
+
 	-- calculate point for frame
 	local x,y = ttFrame:GetOwner():GetCenter()
 	local fPoint, oPoint = "BOTTOMLEFT", "TOPRIGHT"
-	
+
 	if y/GetScreenHeight() > 0.3 then
 		fPoint, oPoint = "TOP", "BOTTOM"
 	else
@@ -269,14 +269,14 @@ function Item.ShowQuickDressUp(itemLink, ttFrame)
 	else
 		fPoint, oPoint = fPoint.."RIGHT", oPoint.."RIGHT"
 	end
-	
+
 	frame:Show()
-	
+
 	frame:ClearAllPoints()
 	frame:SetParent(ttFrame:GetOwner():GetParent())
 	frame:SetFrameStrata("TOOLTIP")
 	frame:SetPoint(fPoint, ttFrame, oPoint)
-	
+
 	frame = Item.previewTooltipFrame.modelFrame
 	frame:Reset()
 	frame:Undress()
@@ -305,13 +305,13 @@ local function EventFrame_OnEvent(frame, event, arg1, arg2)
 			end
 			button_list[arg1] = nil
 		end
-	
+
 		if not next(button_list) then
 			frame:UnregisterEvent("GET_ITEM_INFO_RECEIVED")
 		end
 	elseif event == "MODIFIER_STATE_CHANGED" then
 		if itemIsOnEnter then
-			-- arg2: 1 for pressed, 0 (not nil!) for released 
+			-- arg2: 1 for pressed, 0 (not nil!) for released
 			if arg2 == 1 then
 				if arg1 == "LSHIFT" or arg1 == "RSHIFT" then
 					GameTooltip_ShowCompareItem(itemIsOnEnter)

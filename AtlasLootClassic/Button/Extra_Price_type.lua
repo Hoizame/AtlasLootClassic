@@ -170,7 +170,7 @@ setmetatable(Cache, {__mode = "kv"})
 local function SetContentInfo(frame, typ, value, delimiter)
 	value = value or 0
 	delimiter = delimiter or STRING_DELIMITER_END
-	
+
 	if PRICE_INFO[typ] then
 		if PRICE_INFO[typ].func then
 			frame:AddText(PRICE_INFO[typ].func(value)..delimiter)
@@ -194,7 +194,7 @@ end
 function Price.OnSet(mainButton, descFrame)
 	if FIRST_RUN then
 		for k,v in pairs(PRICE_INFO) do
-			if v.itemID then 
+			if v.itemID then
 				local itemName = GetItemInfo(v.itemID)
 				v.icon = GetItemIcon(v.itemID)
 				v.name = itemName
@@ -217,7 +217,7 @@ function Price.OnSet(mainButton, descFrame)
 		end
 		Cache[typeVal] = info
 	end
-	
+
 	if type(info[1]) == STRING_TABLE then
 		for i = 1, #info do
 			for j = 1, #info[i], 2 do
@@ -229,7 +229,7 @@ function Price.OnSet(mainButton, descFrame)
 			SetContentInfo(descFrame, info[i], info[i+1], i+1 == #info and STRING_DELIMITER_END or STRING_DELIMITER_AND)
 		end
 	end
-	
+
 	descFrame.info = info
 end
 
@@ -243,7 +243,7 @@ local TT_HAVE_AND_NEED_RED = STRING_RED.."%d / %d"
 
 local function SetTooltip(tooltip, typ, value)
 	value = tonumber(value) or 0
-	
+
 	if PRICE_INFO[typ] then
 		if PRICE_INFO[typ].func then
 			tooltip:AddLine(PRICE_INFO[typ].func(value))

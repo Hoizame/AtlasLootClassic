@@ -4,7 +4,6 @@ local Set = AtlasLoot.Button:AddType("Set", "set")
 local AL = AtlasLoot.Locales
 local ClickHandler = AtlasLoot.ClickHandler
 local Sets
-local SVF
 
 local db
 
@@ -40,7 +39,6 @@ function Set.OnSet(button, second)
 			{ "DressUp", 	AL["Dress up"], 	AL["Shows the item in the Dressing room"] },
 			--{ "ChatLink", 	AL["Chat Link"], 	AL["Add item into chat"] },
 		})
-		SVF = AtlasLoot.GUI.SetViewFrame
 		Sets = AtlasLoot.Data.Sets
 	end
 	if not button then return end
@@ -50,7 +48,7 @@ function Set.OnSet(button, second)
 		button.secButton.SetDiff = button.__atlaslootinfo.secType[2][3]
 		button.secButton.SetAddonName = button.__atlaslootinfo.secType[2][4] or (AtlasLoot.GUI.ItemFrame.LinkedInfo and (AtlasLoot.GUI.ItemFrame.LinkedInfo[1] or AtlasLoot.db.GUI.selected[1]) or AtlasLoot.db.GUI.selected[1])
 		local set = Sets:GetSet(button.secButton.SetName, button.secButton.SetAddonName)
-		
+
 		button.secButton.VisualName, button.secButton.VisualDesc, button.secButton.VisualIcon = set:GetInfo(button.secButton.SubSetName, set:GetNextPrevDifficulty(button.secButton.SubSetName, button.secButton.SetDiff))
 		button.secButton.Items = set:GetDiffTable(button.secButton.SubSetName, button.secButton.SetDiff)
 		if not set then
@@ -68,7 +66,7 @@ function Set.OnSet(button, second)
 		end
 		button.VisualName, button.VisualDesc, button.VisualIcon = set:GetInfo(button.SubSetName, set:GetNextPrevDifficulty(button.SubSetName, button.SetDiff))
 		button.Items = set:GetDiffTable(button.SubSetName, button.SetDiff)
-		
+
 		Set.Refresh(button)
 	end
 end
@@ -85,7 +83,6 @@ function Set.OnMouseAction(button, mouseButton)
 			DressUpItemLink(type(button.Items[i]) == "string" and button.Items[i] or "item:"..button.Items[i])
 		end
 	elseif mouseButton == "OpenSet" then
-		--SVF:SetAtlasLootItemSet(button.SetName, button.SetAddonName or AtlasLoot.db.GUI.selected[1], button.SubSetName, button.SetDiff)
 		Set.OnClickItemList(button)
 	elseif mouseButton == "MouseWheelUp" and Set.tooltipFrame then  -- ^
 		local frame = Set.tooltipFrame.modelFrame
@@ -123,7 +120,7 @@ function Set.OnClear(button)
 	button.SetAddonName = nil
 	button.Items = nil
 	button.VisualName, button.VisualDesc, button.VisualIcon = nil, nil, nil
-	
+
 	button.secButton.SetName = nil
 	button.secButton.SubSetName = nil
 	button.secButton.SetDiff = nil
@@ -136,7 +133,7 @@ end
 function Set.Refresh(button)
 	if button.type == "secButton" then
 		button:SetNormalTexture(button.VisualIcon)
-	else	
+	else
 		button.icon:SetTexture(button.VisualIcon)
 		button.name:SetText(button.VisualName)
 		button.extra:SetText(button.VisualDesc)
@@ -211,7 +208,7 @@ end
 function Set.OnClickItemList(button)
 	if not button.Items then return end
 	if not Set.ItemListFrame then CreateItemListFrame() end
-	if Set.ItemListFrame:IsShown() and Set.ItemListFrame.ItemList == button.Items then 
+	if Set.ItemListFrame:IsShown() and Set.ItemListFrame.ItemList == button.Items then
 		Set.ItemListFrame:Clear()
 		return
 	end
@@ -231,12 +228,12 @@ end
 
 function Set.ShowToolTipFrame(button)
 	if not button.Items then return end
-	if not Set.tooltipFrame then 
+	if not Set.tooltipFrame then
 		local name = "AtlasLoot-SetToolTip"
 		local frame = CreateFrame("Frame", name)
 		frame:SetClampedToScreen(true)
 		frame:SetSize(230, 280)
-		
+
 		frame.modelFrame = CreateFrame("DressUpModel", name.."-ModelFrame", frame)
 		frame.modelFrame:ClearAllPoints()
 		frame.modelFrame:SetParent(frame)
@@ -253,20 +250,20 @@ function Set.ShowToolTipFrame(button)
 		frame.modelFrame.zoomLevelNew = frame.modelFrame.zoomLevel
 		frame.modelFrame:SetPortraitZoom(frame.modelFrame.zoomLevel)
 		frame.modelFrame.Reset = _G.Model_Reset
-		
+
 		Set.tooltipFrame = frame
 		frame:Hide()
 	end
-	
+
 	local frame = Set.tooltipFrame
-	
+
 	frame:Show()
-	
+
 	frame:ClearAllPoints()
 	frame:SetParent(button:GetParent():GetParent())
 	frame:SetFrameStrata("TOOLTIP")
 	frame:SetPoint("BOTTOMLEFT", button, "TOPRIGHT")
-	
+
 	frame = Set.tooltipFrame.modelFrame
 	frame:Reset()
 	frame:Undress()
@@ -275,5 +272,5 @@ function Set.ShowToolTipFrame(button)
 	for i = 1, #button.Items do
 		frame:TryOn(type(button.Items[i]) == "string" and button.Items[i] or "item:"..button.Items[i])
 	end
-	
+
 end

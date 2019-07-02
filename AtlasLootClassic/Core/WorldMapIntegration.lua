@@ -48,7 +48,7 @@ local function AdjustOtherWorldMapButton(adjust)
 			end
 		end
 	end
-	
+
 	if (checkAddonStatus("ElvUI") and profile.buttonOnTitleBar and ElvUI_BZSkin) then
 		local button = _G["AtlasLootToggleFromWorldMap2"]
 		button:SetNormalTexture("Interface\\Icons\\INV_Box_01")
@@ -91,9 +91,9 @@ local function ButtonBinding()
 		button = CreateFrame("Button", "AtlasLootToggleFromWorldMap2", WorldMapFrame.BorderFrame)
 		button:SetWidth(32)
 		button:SetHeight(32)
-		
-		--button:SetPoint("TOPRIGHT", WorldMapFrameSizeDownButton, -24, 0, "TOPRIGHT") 
-		button:SetPoint("LEFT", WorldMapFrame.BorderFrame.MaximizeMinimizeFrame, -24, 0, "RIGHT") 
+
+		--button:SetPoint("TOPRIGHT", WorldMapFrameSizeDownButton, -24, 0, "TOPRIGHT")
+		button:SetPoint("LEFT", WorldMapFrame.BorderFrame.MaximizeMinimizeFrame, -24, 0, "RIGHT")
 		button:SetNormalTexture("Interface\\AddOns\\AtlasLoot\\Images\\AtlasLootButton-Up")
 		button:SetHighlightTexture("Interface\\Buttons\\UI-Common-MouseHilight", "ADD")
 
@@ -107,7 +107,7 @@ end
 function WorldMap.Init()
 	profile = AtlasLoot.db.WorldMap
 	local button
-	
+
 	if (profile.buttonOnTitleBar) then
 		ButtonBinding()
 		button = _G["AtlasLootToggleFromWorldMap2"]
@@ -167,11 +167,12 @@ end
 function WorldMap.Button_OnEnter(self)
 	local tooltip = GetAlTooltip()
 	tooltip:ClearLines()
-	if owner and type(owner) == "table" then
-		tooltip:SetOwner(owner[1], owner[2], owner[3], owner[4])
-	else
+	-- No owner?
+	--if owner and type(owner) == "table" then
+	--	tooltip:SetOwner(owner[1], owner[2], owner[3], owner[4])
+	--else
 		tooltip:SetOwner(self, "ANCHOR_RIGHT", -(self:GetWidth() * 0.5), 5)
-	end
+	--end
 	tooltip:AddLine(AL["Click to open AtlasLoot window"])
 	tooltip:Show()
 end

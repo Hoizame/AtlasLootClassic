@@ -101,11 +101,11 @@ local function Button_OnClick(self, button) -- down)
 end
 
 local function Button_OnMouseWheel(self, delta)
-	if not delta then return end	
+	if not delta then return end
 	Button_OnClick(self, delta == 1 and "MouseWheelUp" or "MouseWheelDown")
 end
 
-local function Button_SetNormalTexture(self, texture) 
+local function Button_SetNormalTexture(self, texture)
 	self.icon:SetTexture(texture)
 end
 
@@ -134,12 +134,12 @@ function Button:Create()
 	--button:SetNormalTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight")
 	--button:RegisterForClicks("LeftButtonDown", "RightButtonDown")
 	button:EnableMouseWheel(true)
-	button:RegisterForClicks("AnyDown") --"AnyUp", 
+	button:RegisterForClicks("AnyDown") --"AnyUp",
 	button:SetScript("OnEnter", Button_OnEnter)
 	button:SetScript("OnLeave", Button_OnLeave)
 	button:SetScript("OnClick", Button_OnClick)
 	button:SetScript("OnMouseWheel", Button_OnMouseWheel)
-	
+
 	-- highlight Background
 	button.highlightBg = button:CreateTexture(buttonName.."_highlightBg")
 	button.highlightBg:SetPoint("TOPLEFT", button, "TOPLEFT", 0, 0)
@@ -147,14 +147,14 @@ function Button:Create()
 	button.highlightBg:SetColorTexture(1,0,0)
 	button.highlightBg:SetGradientAlpha("HORIZONTAL", 1, 1, 1, 0.45, 1, 1, 1, 0)
 	button.highlightBg:Hide()
-	
+
 	-- Icon <texture>
 	button.icon = button:CreateTexture(buttonName.."_icon")
 	button.icon:SetPoint("TOPLEFT", button, "TOPLEFT", 1, -1)
 	button.icon:SetHeight(26)
 	button.icon:SetWidth(26)
 	button.icon:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark")
-	
+
 	--[[
 	button.icon.glow = CreateFrame("FRAME")
 	button.icon.glow:ClearAllPoints()
@@ -165,27 +165,27 @@ function Button:Create()
 	ActionButton_ShowOverlayGlow(button.icon.glow)
 	--ActionButton_HideOverlayGlow(self)
 	]]--
-	
+
 	button.qualityBorder = button:CreateTexture(buttonName.."_qualityBorder")
 	button.qualityBorder:SetPoint("TOPLEFT", button.icon, "TOPLEFT")
 	button.qualityBorder:SetPoint("BOTTOMRIGHT", button.icon, "BOTTOMRIGHT")
 	button.qualityBorder:SetTexture("Interface\\Common\\WhiteIconFrame")
 	button.qualityBorder:Hide()
-	
+
 	-- secButtonTexture <texture>
 	button.overlay = button:CreateTexture(buttonName.."_overlay", "OVERLAY")
 	button.overlay:SetPoint("CENTER", button.icon, "CENTER")
 	button.overlay:SetHeight(26)
 	button.overlay:SetWidth(26)
 	button.overlay:Hide()
-	
+
 	button.completed = button:CreateTexture(buttonName.."_completed", "OVERLAY")
 	button.completed:SetPoint("BOTTOMRIGHT", button.icon)
 	button.completed:SetHeight(20)
 	button.completed:SetWidth(20)
 	button.completed:SetTexture("Interface\\RaidFrame\\ReadyCheck-Ready")
 	button.completed:Hide()
-	
+
 	-- ItemName <FontString>
 	button.name = button:CreateFontString(buttonName.."_name", "ARTWORK", "GameFontNormal")
 	button.name:SetPoint("TOPLEFT", button.icon, "TOPRIGHT", 3, 0)
@@ -206,7 +206,7 @@ function Button:Create()
 	button.extra:SetTextColor(1, 1, 1, 1)
 	button.extra.Ori_SetText = button.extra.SetText
 	button.extra.SetText = Button_ForceSetText
-	
+
 	-- counter
 	button.count = button:CreateFontString(buttonName.."_count", "ARTWORK", "AtlasLoot_ItemAmountFont")
 	button.count:SetPoint("BOTTOMRIGHT", button.icon, "BOTTOMRIGHT", 0, 1)
@@ -214,7 +214,7 @@ function Button:Create()
 	button.count:SetHeight(15)
 	button.count:SetText(15)
 	button.count:Hide()
-	
+
 	-- secButton <button>
 	button.secButton = CreateFrame("BUTTON", buttonName.."_secButton", button)
 	button.secButton:SetPoint("TOPRIGHT", button, "TOPRIGHT", -1, -1)
@@ -230,17 +230,17 @@ function Button:Create()
 	button.secButton:SetScript("OnLeave", Button_OnLeave)
 	button.secButton:SetScript("OnClick", Button_OnClick)
 	button.secButton:SetScript("OnMouseWheel", Button_OnMouseWheel)
-	
+
 	-- secButtonTexture <texture>
 	button.secButton.icon = button.secButton:CreateTexture(buttonName.."_secButtonIcon", button.secButton)
 	button.secButton.icon:SetAllPoints(button.secButton)
 	button.secButton.icon:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark")
-	
+
 	button.secButton.qualityBorder = button.secButton:CreateTexture(buttonName.."_secButtonQualityBorder")
 	button.secButton.qualityBorder:SetAllPoints(button.secButton)
 	button.secButton.qualityBorder:SetTexture("Interface\\Common\\WhiteIconFrame")
 	button.secButton.qualityBorder:Hide()
-	
+
 	-- secButtonMini <texture>
 	button.secButton.mini = button.secButton:CreateTexture(buttonName.."_secButtonMini")
 	button.secButton.mini:SetPoint("TOPRIGHT", button.secButton.icon, "TOPRIGHT", 0, 0)
@@ -248,56 +248,55 @@ function Button:Create()
 	button.secButton.mini:SetWidth(13)
 	button.secButton.mini:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark")
 	button.secButton.mini:Hide()
-	
+
 	-- secButtonOverlay <texture>
 	button.secButton.overlay = button.secButton:CreateTexture(buttonName.."_secButtonOverlay", "OVERLAY")
 	button.secButton.overlay:SetPoint("CENTER", button.secButton.icon, "CENTER")
 	button.secButton.overlay:SetHeight(26)
 	button.secButton.overlay:SetWidth(26)
 	button.secButton.overlay:Hide()
-	
-	
+
+
 	button.secButton.completed = button.secButton:CreateTexture(buttonName.."_secCompleted", "OVERLAY")
 	button.secButton.completed:SetPoint("BOTTOMRIGHT", button.secButton.icon)
 	button.secButton.completed:SetHeight(20)
 	button.secButton.completed:SetWidth(20)
 	button.secButton.completed:SetTexture("Interface\\RaidFrame\\ReadyCheck-Ready")
 	button.secButton.completed:Hide()
-	
+
 	button.secButton.count = button.secButton:CreateFontString(buttonName.."_secCount", "ARTWORK", "AtlasLoot_ItemAmountFont")
 	button.secButton.count:SetPoint("BOTTOMRIGHT", button.secButton.icon, "BOTTOMRIGHT", 0, 1)
 	button.secButton.count:SetJustifyH("RIGHT")
 	button.secButton.count:SetHeight(15)
 	button.secButton.count:SetText(15)
 	button.secButton.count:Hide()
-	
+
 	-- factionIcon
 	button.factionIcon = button:CreateTexture(buttonName.."_factionIcon", button)
 	button.factionIcon:SetPoint("RIGHT", button.secButton, "LEFT", -2, 0)
 	button.factionIcon:SetHeight(28)
 	button.factionIcon:SetWidth(28)
 	button.factionIcon:Hide()
-	
-	--button.secButton.mini:EnableMouse(false)
-	
+
+
 	button.secButton.SetNormalTexture = Button_SetNormalTexture
-	
+
 	button:Hide()
 	button.__atlaslootinfo = {}
 	for k,v in pairs(Proto) do
 		button[k] = v
 	end
-	
+
 	return button
 end
 
 function Button:CreateSecOnly(frame)
 	SEC_BUTTON_COUNT = SEC_BUTTON_COUNT + 1
-	
+
 	local buttonName = "AtlasLoot_SecButton_"..SEC_BUTTON_COUNT
-	
+
 	local button = frame or CreateFrame("FRAME", buttonName.."_container")
-	
+
 	button.secButton = CreateFrame("BUTTON", buttonName, button)
 	button.secButton:SetAllPoints(button)
 	button.secButton:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
@@ -308,17 +307,17 @@ function Button:CreateSecOnly(frame)
 	button.secButton:SetScript("OnLeave", Button_OnLeave)
 	button.secButton:SetScript("OnClick", Button_OnClick)
 	button.secButton:SetScript("OnMouseWheel", Button_OnMouseWheel)
-	
+
 	-- secButtonTexture <texture>
 	button.secButton.icon = button.secButton:CreateTexture(buttonName.."_secButtonIcon", button.secButton)
 	button.secButton.icon:SetAllPoints(button.secButton)
 	button.secButton.icon:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark")
-	
+
 	button.secButton.qualityBorder = button.secButton:CreateTexture(buttonName.."_secButtonQualityBorder")
 	button.secButton.qualityBorder:SetAllPoints(button.secButton)
 	button.secButton.qualityBorder:SetTexture("Interface\\Common\\WhiteIconFrame")
 	button.secButton.qualityBorder:Hide()
-	
+
 	-- secButtonMini <texture>
 	button.secButton.mini = button.secButton:CreateTexture(buttonName.."_secButtonMini")
 	button.secButton.mini:SetPoint("TOPRIGHT", button.secButton.icon, "TOPRIGHT", 0, 0)
@@ -326,28 +325,28 @@ function Button:CreateSecOnly(frame)
 	button.secButton.mini:SetWidth(13)
 	button.secButton.mini:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark")
 	button.secButton.mini:Hide()
-	
+
 	-- secButtonOverlay <texture>
 	button.secButton.overlay = button.secButton:CreateTexture(buttonName.."_secButtonOverlay", "OVERLAY")
 	button.secButton.overlay:SetAllPoints(button.secButton)
 	button.secButton.overlay:Hide()
-	
+
 	button.secButton.count = button.secButton:CreateFontString(buttonName.."_secCount", "ARTWORK", "AtlasLoot_ItemAmountFont")
 	button.secButton.count:SetPoint("BOTTOMRIGHT", button.secButton.icon, "BOTTOMRIGHT", 0, 1)
 	button.secButton.count:SetJustifyH("RIGHT")
 	button.secButton.count:SetHeight(15)
 	button.secButton.count:SetText(15)
 	button.secButton.count:Hide()
-		
-		
+
+
 	button.secButton.SetNormalTexture = Button_SetNormalTexture
-	
+
 	button.secButton:Hide()
 	button.__atlaslootinfo = {}
 	for k,v in pairs(Proto) do
 		button[k] = v
 	end
-	
+
 	return button
 end
 
@@ -366,13 +365,13 @@ function Proto:Clear()
 	if self.__atlaslootinfo.secType and self.__atlaslootinfo.secType[1] and button_types[self.__atlaslootinfo.secType[1]].OnClear then
 		button_types[self.__atlaslootinfo.secType[1]].OnClear(self)
 	end
-	
+
 	if self.enhancedDesc then
 		self.enhancedDesc:Clear()
 		self.enhancedDesc = nil
 		self.extra:Show()
 	end
-	
+
 	if self.IsShown and self.icon then
 		self.icon:SetTexture(nil)
 		self.name:SetText(nil)
@@ -389,11 +388,11 @@ function Proto:Clear()
 		if self.secButton.completed and self.secButton.completed:IsShown() then self.secButton.completed:Hide() end
 		self.secButton:Hide()
 	end
-	
+
 	if self.highlightBg then
 		self.highlightBg:Hide()
 	end
-	
+
 	wipe(self.__atlaslootinfo)
 end
 
@@ -414,18 +413,18 @@ function Proto:SetContentTable(tab, formatTab, setOnlySec)
 	-- +1 because first is allways button position
 	local sub
 	local typ = formatTab[1]
-	-- first load all info 
+	-- first load all info
 	if setOnlySec then
 		self.__atlaslootinfo.type = {}
 	end
-	
+
 	for i = 1, #formatTab do
 		self.__atlaslootinfo[formatTab[i]] = tab[i+1]
 	end
-	
+
 	self.__atlaslootinfo.filterIgnore = tab[ATLASLOOT_IT_FILTERIGNORE]
-	
-	-- faction specific things must be replaced / set 
+
+	-- faction specific things must be replaced / set
 	if self.factionIcon then
 		if tab[ATLASLOOT_IT_HORDE] or tab[ATLASLOOT_IT_ALLIANCE] then
 			local horde, alliance = tab[ATLASLOOT_IT_HORDE], tab[ATLASLOOT_IT_ALLIANCE]
@@ -440,7 +439,7 @@ function Proto:SetContentTable(tab, formatTab, setOnlySec)
 					self.factionIcon:SetAtlas(FACTION_TEXTURES[ ( horde and alliance ) and PLAYER_FACTION_ID or ( horde and 0 or 1 )])
 				end
 			end
-			
+
 			if not tab[FACTION_INFO_IS_SET_ID] then
 				horde = ( horde and alliance ) and ( PLAYER_FACTION_ID == 0 and horde or alliance ) or horde and horde or ( alliance and alliance or nil )
 				if type(horde) == "table" then
@@ -457,7 +456,7 @@ function Proto:SetContentTable(tab, formatTab, setOnlySec)
 			self.factionIcon:Hide()
 		end
 	end
-	
+
 	-- amount setup
 	if tab[ATLASLOOT_IT_AMOUNT1] then
 		self.count:SetText(tab[ATLASLOOT_IT_AMOUNT1])
@@ -471,8 +470,8 @@ function Proto:SetContentTable(tab, formatTab, setOnlySec)
 	if self.__atlaslootinfo.preSet and self.__atlaslootinfo.preSet.Item and self.__atlaslootinfo.preSet.Item.addDifficultyBonus then
 		self.__atlaslootinfo.ItemDifficulty = type(self.__atlaslootinfo.preSet.Item.addDifficultyBonus) == "number" and self.__atlaslootinfo.preSet.Item.addDifficultyBonus or self.__atlaslootinfo.difficulty
 	end
-	
-	
+
+
 	local formatType, curContent, buttonType
 	for i = 1, #formatTab do
 		formatType, curContent = formatTab[i], tab[i+1]
@@ -512,12 +511,12 @@ function Proto:SetContentTable(tab, formatTab, setOnlySec)
 			self:SetType(formatType, curContent)
 		end
 	end
-	
+
 	-- check for auto complete of second item
 	if self.__atlaslootinfo.preSet and tab[3] == nil and self.__atlaslootinfo.type and self.__atlaslootinfo.type[1] == "Item" and self.__atlaslootinfo.preSet.Item and self.__atlaslootinfo.preSet.Item.autoCompleteItem2 then
 		self:SetType("Item", self.__atlaslootinfo.type[2])
 	end
-	
+
 	-- check for extra types
 	if formatTab.extra then
 		for i=1, #formatTab.extra do
@@ -583,7 +582,7 @@ local EnhancedDescriptionCache = { desc = {}, text = {}, icon = {} }
 
 local function getEnhancedDescription(typ)
 	local desc = next(EnhancedDescriptionCache[typ])
-	if desc then 
+	if desc then
 		EnhancedDescriptionCache[typ][desc] = nil
 	end
 	return desc
@@ -603,13 +602,13 @@ local EnhancedDescriptionProto = {
 			self.removerInfo[1](self.removerInfo[2])
 			self.removerInfo = nil
 		end
-		
+
 		for i = 1, #self.content do
 			freeEnhancedDescription(self.content[i].typ, self.content[i])
 			self.content[i]:Hide()
 			self.content[i] = nil
 		end
-		
+
 		freeEnhancedDescription("desc", self)
 	end,
 	["AddText"] = function(self, text)
@@ -621,29 +620,29 @@ local EnhancedDescriptionProto = {
 			--textFrame:SetText("")
 			textFrame:SetHeight(10)
 			textFrame:SetTextColor(1, 1, 1, 1)
-			
+
 			textFrame.typ = "text"
 		end
 		textFrame:ClearAllPoints()
 		textFrame:SetParent(self)
-		
+
 		textFrame:SetText(text)
 		textFrame:SetWidth(0)
 		textFrame:SetWidth(textFrame:GetStringWidth())
-		
+
 		self.contentSize = self.contentSize + textFrame:GetWidth() + 1
-		
+
 		if self.contentSize > self.parWidth then
 			textFrame:SetWidth(textFrame:GetWidth() - (self.contentSize - self.parWidth))
 			self.contentSize = self.parWidth
 		end
-		
+
 		if #self.content > 0 then
 			textFrame:SetPoint("LEFT", self.content[#self.content], "RIGHT", 1, 0)
 		else
 			textFrame:SetPoint("LEFT", self, "LEFT", 0, 0)
 		end
-		
+
 		textFrame:Show()
 		self.content[#self.content+1] = textFrame
 	end,
@@ -652,32 +651,32 @@ local EnhancedDescriptionProto = {
 		local iconFrame = getEnhancedDescription("icon")
 		if not iconFrame then
 			iconFrame = self:CreateTexture()
-			iconFrame:SetPoint("TOPLEFT", button, "TOPLEFT", 1, -1)
-			
+			iconFrame:SetPoint("TOPLEFT", self, "TOPLEFT", 1, -1)
+
 			iconFrame.typ = "icon"
 		end
 		size = size or self:GetHeight()
 		iconFrame:ClearAllPoints()
 		iconFrame:SetParent(self)
-		
+
 		iconFrame:SetTexture(path or "Interface\\Icons\\INV_Misc_QuestionMark")
-		
+
 		iconFrame:SetSize(size,size)
-		
+
 		self.contentSize = self.contentSize + size + 1
-		
+
 		if self.contentSize > self.parWidth then
 			iconFrame:Clear()
 			self.contentSize = self.parWidth
 			return
 		end
-		
+
 		if #self.content > 0 then
 			iconFrame:SetPoint("LEFT", self.content[#self.content], "RIGHT", 0, 0)
 		else
 			iconFrame:SetPoint("LEFT", self, "LEFT", 0, 0)
 		end
-		
+
 		iconFrame:Show()
 		self.content[#self.content+1] = iconFrame
 	end
@@ -685,7 +684,7 @@ local EnhancedDescriptionProto = {
 
 local function enhancedDescription_OnEnter(self)
 	if not self.ttInfo or not extra_button_types[self.ttInfo].OnEnter then return end
-	local tooltip = GetAlTooltip() 
+	local tooltip = GetAlTooltip()
 	tooltip:SetOwner(self, "ANCHOR_RIGHT", -(self:GetWidth() * 0.5), 24)
 	extra_button_types[self.ttInfo].OnEnter(self, tooltip)
 	tooltip:Show()
@@ -703,22 +702,22 @@ function Proto:AddEnhancedDescription()
 		desc = CreateFrame("FRAME")
 		desc:SetScript("OnEnter", enhancedDescription_OnEnter)
 		desc:SetScript("OnLeave", enhancedDescription_OnLeave)
-		
+
 		desc.content = {}
-		
+
 		for k, v in pairs(EnhancedDescriptionProto) do
 			desc[k] = v
 		end
 	end
-	
+
 	desc:Show()
 	desc:ClearAllPoints()
 	desc:SetParent(self)
 	desc:SetAllPoints(self.extra)
-	
+
 	desc.parWidth = self.extra:GetWidth()
 	desc.contentSize = 0
-	
+
 	self.enhancedDesc = desc
 	self.extra:Hide()
 	return desc
@@ -744,7 +743,7 @@ function Button:AddType(typ, identifier)
 			identifier = identifier,
 			identifierLength = str_len(identifier),
 		}
-		
+
 		--[[
 		setmetatable(button_types[typ], {
 			--__newindex = function(t, k, v)
@@ -755,7 +754,7 @@ function Button:AddType(typ, identifier)
 		})
 		]]--
 	end
-	
+
 	return button_types[typ]
 end
 
@@ -774,11 +773,11 @@ function Button:AddExtraType(typ)
 	assert(typ and type(typ) == "string", "typ must be a string.")
 	if not extra_button_types[typ] then
 		extra_button_types[typ] = {
-			
+
 		}
 		extra_button_types_index[#extra_button_types_index+1] = typ
 	end
-	
+
 	return extra_button_types[typ]
 end
 
@@ -789,5 +788,5 @@ end
 
 function Button:FormatItemTableType(tab)
 	assert(tab and type(tab) == "table", "tab must be a table.")
-	
+
 end

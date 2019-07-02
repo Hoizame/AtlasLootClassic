@@ -19,7 +19,7 @@ local TEMPLATE_NAME = "GUI-TextFrame"
 local BACKDROP_DATA = {bgFile = "Interface/Tooltips/UI-Tooltip-Background"}
 
 local function OnEnter(self, owner)
-	local tooltip = AtlasLoot.Tooltip:GetTooltip() 
+	local tooltip = AtlasLoot.Tooltip:GetTooltip()
 	tooltip:ClearLines()
 	if owner and type(owner) == "table" then
 		tooltip:SetOwner(owner[1], owner[2], owner[3], owner[4])
@@ -89,11 +89,11 @@ function GUI.CreateTextWithBg(parent, width, height, bgColor, textColor)
 		frame:SetSize(1, 1)
 		frame:SetBackdrop(BACKDROP_DATA)
 		frame:SetBackdropColor(0,1,0,1)
-	
+
 		frame.text = frame:CreateFontString(nil, "ARTWORK", "GameFontNormal")
 		frame.text:SetAllPoints(frame)
 		frame.text:SetJustifyH("CENTER")
-		
+
 		for k,v in pairs(templateFunctions) do
 			frame[k] = v
 		end
@@ -102,7 +102,7 @@ function GUI.CreateTextWithBg(parent, width, height, bgColor, textColor)
 	if bgColor or textColor then
 		frame:SetColors(bgColor, textColor)
 	end
-	
+
 	frame:ClearAllPoints()
 	frame:SetParent(parent)
 	return frame

@@ -44,7 +44,7 @@ local ICON_PATH_PRE = {
 	warriProt = "Interface\\Icons\\ability_warrior_defensivestance",
 }
 
--- contains all sets 
+-- contains all sets
 local Storage = {}
 local Loaded_Sets = {}
 
@@ -63,7 +63,7 @@ function Sets_Proto:SetContentTable(setTab)
 end
 
 function Sets_Proto:AddDifficulty(diffName, shortName, preset)
-	if not difficultys[self.__key] then 
+	if not difficultys[self.__key] then
 		difficultys[self.__key] = {
 			counter = 0,
 			names = {},
@@ -73,7 +73,7 @@ function Sets_Proto:AddDifficulty(diffName, shortName, preset)
 	end
 	if not diffName then return end
 	local diffTab = difficultys[self.__key]
-	
+
 	if not diffTab.shortNames[shortName] or not diffTab.names[diffName] then
 		diffTab.counter = diffTab.counter + 1
 		diffTab.names[diffName] = diffTab.counter
@@ -90,7 +90,7 @@ function Sets_Proto:AddDifficulty(diffName, shortName, preset)
 end
 
 function Sets_Proto:AddInfoList(name, emptyEntry)
-	if not infoListData[self.__key] then 
+	if not infoListData[self.__key] then
 		infoListData[self.__key] = {
 			counter = 0,
 			names = {},
@@ -99,7 +99,7 @@ function Sets_Proto:AddInfoList(name, emptyEntry)
 	end
 	if not name then return end
 	local infoTab = infoListData[self.__key]
-	
+
 	if not infoTab.names[name] then
 		infoTab.counter = infoTab.counter + 1
 		infoTab.names[name] = infoTab.counter
@@ -120,7 +120,7 @@ function SingleSet_Proto:Get(subSetName, diff, info)
 	diff = (diff and self[subSetName][diff]) and diff or self:GetNextPrevDifficulty(subSetName, diff)
 	if not diff then return end
 	info = (info and (self[subSetName][info] or self[subSetName][diff][info])) and info or SingleSet_Proto:GetNextPrevInfo(subSetName, diff, info)
-	
+
 	return self[subSetName], subSetName, diff, info
 end
 
@@ -189,7 +189,7 @@ function SingleSet_Proto:GetNextPrevInfo(subSetName, curDiff, curInfo)
 					nex = i-INFO_LIST_START
 					break
 				end
-				
+
 			end
 		end
 		return curInfo, nex, prev
@@ -250,7 +250,7 @@ local Loaded_Sets_MT = {
 					if not tab.subSetNames then tab.subSetNames = {} end
 					tab.subSetNames[subSet.subSetName] = subSet
 				end
-				for ib = INFO_LIST_START+1, infoListData[self.__key].counter+INFO_LIST_START do 
+				for ib = INFO_LIST_START+1, infoListData[self.__key].counter+INFO_LIST_START do
 					if subSet[ib] and tab[ subSet[ib] ] then
 						subSet[ib] = tab[ subSet[ib] ]
 					end
@@ -275,7 +275,7 @@ local Loaded_Sets_MT = {
 							subSet[ia].itemTable = {}
 						end
 						-- check for info templates
-						for ib = INFO_LIST_START+1, infoListData[self.__key].counter+INFO_LIST_START do 
+						for ib = INFO_LIST_START+1, infoListData[self.__key].counter+INFO_LIST_START do
 							if subSet[ia][ib] and tab[ subSet[ia][ib] ] then
 								subSet[ia][ib] = tab[ subSet[ia][ib] ]
 							end
@@ -292,22 +292,22 @@ local Loaded_Sets_MT = {
 								subSet[ia].itemTable[ib] = item[1]
 								for ic = INFO_LIST_START+1, infoListData[self.__key].counter+INFO_LIST_START do
 									if item[ic] then
-										if not subSet[ia][ic] then 
+										if not subSet[ia][ic] then
 											if subSet[ic] then
 												subSet[ia][ic] = setmetatable({}, {__index = subSet[ic]})
 											else
-												subSet[ia][ic] = {} 
+												subSet[ia][ic] = {}
 											end
-											
+
 										elseif subSet[ia][ic] and type(subSet[ia][ic]) == "string" then
 											--print(subSet[ia][ic], tab[ subSet[ia][ic] ], tab[ subSet[ia][ic] ][1])
 											if tab[ subSet[ia][ic] ] then
 												subSet[ia][ic] = setmetatable({}, {__index = tab[ subSet[ia][ic] ]})
 											else
-												subSet[ia][ic] = {} 
+												subSet[ia][ic] = {}
 											end
 										end
-										
+
 										subSet[ia][ic][ ib ] = item[ic]
 									end
 								end
@@ -326,7 +326,7 @@ local Loaded_Sets_MT = {
 			rawset(self, key, tab)
 			setmetatable(self[key], Single_Set_mt)
 		end
-		
+
 		return self[key]
 	end,
 }
@@ -335,7 +335,7 @@ function Sets:RegisterNewSets(addonName)
 	assert(not Storage[addonName], addonName.." already exists.")
 	Loaded_Sets[addonName] = setmetatable({__key = addonName}, Loaded_Sets_MT)
 	-- Init empty diffs/infos
-	Loaded_Sets[addonName]:AddDifficulty()	
+	Loaded_Sets[addonName]:AddDifficulty()
 	Loaded_Sets[addonName]:AddInfoList()
 	return Loaded_Sets[addonName]
 end
@@ -368,7 +368,7 @@ local SOURCE_INFO = Global_Set:AddInfoList("DUMMY")
 ["GMTESTSET"] = {
 	["name"] = "GM",
 	["__addonName"] = "global",
-	{	
+	{
 		["subSetName"] = "gm",
 		["name"] = "GM",
 		["__id"] = 1,
@@ -402,7 +402,7 @@ local SOURCE_INFO = Global_Set:AddInfoList("DUMMY")
 					33475, -- [4]
 				},
 			},
-			
+
 		},
 	},
 },

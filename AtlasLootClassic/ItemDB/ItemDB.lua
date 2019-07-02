@@ -22,7 +22,7 @@ ItemDB.ContentProto = {}
 -- List of content from addons
 local contentList = {}
 
--- the metatable  
+-- the metatable
 ItemDB.contentMt = {
 	__index = ItemDB.ContentProto
 }
@@ -34,7 +34,6 @@ ItemDB.mt = {
 		contentList[t.__atlaslootdata.addonName][k] = t.__atlaslootdata.contentCount
 		v.__atlaslootdata = t.__atlaslootdata
 		rawset(t, k, v)
-		
 	end
 }
 
@@ -91,13 +90,13 @@ end
 local function getItemTableType(addonName, contentName, boss, dif)
 	local tab = ItemDB.Storage[addonName]
 	local typ = nil
-	
+
 	if tab[contentName].items[boss][dif].__linkedInfo then
 		local newData = tab[contentName].items[boss][dif].__linkedInfo
 		addonName, contentName, boss, dif = newData[1], newData[2], newData[3], newData[4]
 		tab = ItemDB.Storage[addonName]
 	end
-	
+
 	if tab[contentName].items[boss][dif].TableType then
 		typ = tab:GetItemTableType(tab[contentName].items[boss][dif].TableType)
 	elseif tab[contentName].items[boss].TableType then
@@ -109,9 +108,9 @@ local function getItemTableType(addonName, contentName, boss, dif)
 	else
 		typ = tab:GetItemTableType(1)
 	end
-	
+
 	typ.extra = ItemDB.Storage[addonName]:GetAllExtraItemTableType()
-	
+
 	return typ
 end
 
@@ -146,13 +145,13 @@ local function loadItemsFromOtherModule(moduleLoader, loadString, contentTable, 
 	else
 		return
 	end
-	
+
 	local addonName, contentName, bossID, shortDiff = str_split(":", loadString)
-	if (moduleLoader and moduleLoader ~= addonName) then 
+	if (moduleLoader and moduleLoader ~= addonName) then
 		return
 	end
 	bossID = tonumber(bossID)
-	
+
 	local loadState = AtlasLoot.Loader:LoadModule(addonName, nil, "itemDB")
 	if loadState == "InCombat" or loadState == "DISABLED" or loadState == "MISSING" then
 		AtlasLoot.Loader:LoadModule(addonName, loadItemsFromOtherModule, "itemDB")
@@ -208,7 +207,7 @@ function ItemDB:GetItemTable(addonName, contentName, boss, dif)
 		dif = ItemDB:GetDifficulty(addonName, contentName, boss, dif)
 	end
 	currentModuleLoadingInfo = nil
-	
+
 	if ItemDB.Storage[addonName][contentName].items[boss][dif] then
 		local bossDiff = ItemDB.Storage[addonName][contentName].items[boss][dif]
 		-- get the items table from a string
@@ -225,7 +224,7 @@ function ItemDB:GetItemTable(addonName, contentName, boss, dif)
 			getItemsFromDiff(bossDiff, ItemDB.Storage[addonName][contentName].items[boss])
 		end
 	end
-	
+
 	--assert(dif and ItemDB.Storage[addonName][contentName].items[boss][dif], dif.." (dif) not found!")
 	return ItemDB.Storage[addonName][contentName].items[boss][dif], getItemTableType(addonName, contentName, boss, dif), ItemDB.Storage[addonName]:GetDifficultyData(dif)
 end
@@ -247,8 +246,8 @@ local difficultys = {}
 
 function ItemDB.Proto:AddDifficulty(dif, uniqueName, difficultyID, tierID)
 	assert(dif, "No 'dif' given.")
-	
-	if not difficultys[self.__atlaslootdata.addonName] then 
+
+	if not difficultys[self.__atlaslootdata.addonName] then
 		difficultys[self.__atlaslootdata.addonName] = {
 			counter = 0,
 			names = {},
@@ -257,7 +256,7 @@ function ItemDB.Proto:AddDifficulty(dif, uniqueName, difficultyID, tierID)
 		}
 	end
 	local diffTab = difficultys[self.__atlaslootdata.addonName]
-	
+
 	if not diffTab.uniqueNames[uniqueName] or not diffTab.names[dif] then
 		diffTab.counter = diffTab.counter + 1
 		diffTab.names[dif] = diffTab.counter
@@ -387,7 +386,7 @@ end
 --- Get the content Type
 -- @return ContentName, ContentIndex
 function ItemDB.ContentProto:GetContentType()
-	if not self.ContentType then 
+	if not self.ContentType then
 		error("ContentType not set for <"..self.__atlaslootdata.addonName.." / "..self.name..">")
 		return nil
 	end

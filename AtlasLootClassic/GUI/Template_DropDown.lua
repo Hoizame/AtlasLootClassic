@@ -89,13 +89,8 @@ local function SetWidth(self, width)
 end
 
 local function SetToolTipFunc(self, OnEnter, OnLeave)
-	if func and type(func) == "function" then
-		self.OnEnterButton = OnEnter
-		self.OnLeaveButton = OnLeave
-	else
-		self.OnEnterButton = ShowToolTip
-		self.OnLeaveButton = HideToolTip
-	end
+		self.OnEnterButton = OnEnter or ShowToolTip
+		self.OnLeaveButton = OnLeave or HideToolTip
 end
 
 local function SetText(self, text)
@@ -128,7 +123,7 @@ local function SetSelected(self, id)
 	if not id then return end
 	local textColor, bgColor
 	local text, arg
-	if Button_Id_List[id] and self == LIST_IS_OPEN then	
+	if Button_Id_List[id] and self == LIST_IS_OPEN then
 		local button = Button_Id_List[id]
 		arg = button.info.arg
 		text = button.info.name
@@ -145,10 +140,10 @@ local function SetSelected(self, id)
 						arg = entry.arg
 					end
 					if entry.name then
-						text = entry.name 
+						text = entry.name
 					end
 					if entry.color then
-						textColor = entry.color 
+						textColor = entry.color
 					end
 					if cat.info.bgColor then
 						bgColor = cat.info.bgColor
@@ -165,7 +160,7 @@ local function SetSelected(self, id)
 	end
 	self.selectedId = id
 	self.frame.label:SetText(text or id)
-	
+
 	textColor, bgColor = textColor or WHITE_TEXT_COLOR, bgColor or WHITE_BG_COLOR
 	self.frame.label:SetTextColor(textColor[1], textColor[2], textColor[3])
 	self.frame:SetBackdropColor(bgColor[1], bgColor[2], bgColor[3], bgColor[4])
@@ -175,7 +170,7 @@ local function EnableSelectable(self, enabled)
 	self.selectable = enabled
 end
 
-local function EnableSelectable(self, enabled)
+local function EnableIcon(self, enabled)
 	self.icon = enabled
 end
 
@@ -187,7 +182,7 @@ do
 
 	local CAT_FRAME_COUNT = 0
 	local BUTTON_COUNT = 0
-	
+
 	local count_cats_created = 0
 	local cat_width = {}
 	local cat_height = {}
@@ -196,23 +191,23 @@ do
 		frames = {},
 		buttons = {},
 	}
-	
+
 	local function RefreshCatWidth(index, width)
 		if cat_width[index] and cat_width[index] < width then
 			cat_width[index] = width
 		end
 	end
-	
+
 	local function GetFromCache(type)
 		if not cache[type] then return end
-		
+
 		local frame = next(cache[type])
 		if frame then
 			cache[type][frame] = nil
 		end
 		return frame
 	end
-	
+
 	local function ClearFrameContainer()
 		for i = 1, #frameContainer do
 			local frame = frameContainer[i]
@@ -229,20 +224,20 @@ do
 		count_cats_created = 0
 		wipe(cat_width)
 	end
-	
+
 	local function ButtonOnClick(self, ...)
 		local dropdown = LIST_IS_OPEN
 		dropdown:SetSelected(self.id)
 	end
-	
+
 	local function CreateButton(dropdown, cat, buttonInfo, catIndex)
 		assert(buttonInfo.id, "No 'id' found for button")
 		local frame = GetFromCache("buttons")
 		if not frame then
 			BUTTON_COUNT = BUTTON_COUNT + 1
 			local frameName = "AtlasLoot-DropDown-Button"..BUTTON_COUNT
-			
-			frame = CreateFrame("Button", frameName, parent)
+
+			frame = CreateFrame("Button", frameName, cat)
 			frame:SetHeight(BUTTON_HEIGHT)
 			frame:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
 			frame:RegisterForClicks("LeftButtonDown", "RightButtonDown")
@@ -252,7 +247,7 @@ do
 			frame.label:SetHeight(BUTTON_HEIGHT)
 			frame.label:SetJustifyH("LEFT")
 			frame.label:SetText(frameName.."-label")
-			
+
 			frame.check = frame:CreateTexture(frameName.."-check", "ARTWORK")
 			frame.check:SetPoint("LEFT", frame, "LEFT", 0, 0)
 			frame.check:SetHeight(BUTTON_HEIGHT)
@@ -260,7 +255,7 @@ do
 			frame.check:SetTexture("Interface\\Common\\UI-DropDownRadioChecks")
 			frame.check:SetTexCoord(0,0.5,0.5,1.0)
 			frame.check:Hide()
-	
+
 			frame.icon = frame:CreateTexture(frameName.."-icon", "ARTWORK")
 			frame.icon:SetPoint("LEFT", frame, "LEFT", 0, 0)
 			frame.icon:SetHeight(BUTTON_HEIGHT)
@@ -276,9 +271,9 @@ do
 		local icon,selectable
 		frame.info = buttonInfo
 		Button_Id_List[buttonInfo.id] = frame
-		
+
 		frame.label:SetText(buttonInfo.name or buttonInfo.id)
-		
+
 		frame:ClearAllPoints()
 		frame:SetParent(cat)
 		frame:SetFrameLevel(cat:GetFrameLevel()+1)
@@ -291,14 +286,13 @@ do
 		else
 			frame:SetPoint("TOPLEFT", cat.buttons[#cat.buttons], "BOTTOMLEFT")
 		end
-		
+
 		if buttonInfo.color then
 			frame.label:SetTextColor(buttonInfo.color[1], buttonInfo.color[2], buttonInfo.color[3])
 		else
 			frame.label:SetTextColor(1, 1, 1)
 		end
-	--self.selectedId
-	
+
 		if buttonInfo.icon and dropdown.icon then
 			frame.icon:SetTexture(buttonInfo.icon)
 			frame.icon:Show()
@@ -307,7 +301,7 @@ do
 		else
 			frame.icon:Hide()
 		end
-		
+
 		if dropdown.selectable then
 			if buttonInfo.id and buttonInfo.id == dropdown.selectedId then
 				frame.check:SetTexCoord(0, 0.5, 0.5, 1.0)
@@ -320,7 +314,7 @@ do
 		else
 			frame.check:Hide()
 		end
-		
+
 		if icon and selectable then
 			frame.label:SetPoint("LEFT", frame.icon, "RIGHT")
 			frame.icon:SetPoint("LEFT", frame.check, "RIGHT")
@@ -332,7 +326,7 @@ do
 		else
 			frame.label:SetPoint("LEFT", frame, "LEFT")
 		end
-		
+
 		frame.cat = cat
 		frame.ttSource = dropdown.ttSource
 		frame.ttTitle = buttonInfo.tt_title
@@ -341,29 +335,29 @@ do
 		frame.id = buttonInfo.id
 
 		cat_height[catIndex] = cat_height[catIndex] + BUTTON_HEIGHT
-		
+
 		RefreshCatWidth(catIndex,frame.label:GetWidth()+width_fix+10)
-		
+
 		frame:Show()
-		
+
 		return frame
 	end
-	
+
 	local function CreateCategory(dropdown, catTab, parent)
 		local frame = GetFromCache("frames")
 		if not frame then
 			CAT_FRAME_COUNT = CAT_FRAME_COUNT + 1
 			local frameName = "AtlasLoot-DropDown-CatFrame"..CAT_FRAME_COUNT
-			
+
 			frame = CreateFrame("Frame", frameName)
 			frame:EnableMouse(true)
 			frame:SetBackdrop(ALPrivate.BOX_BORDER_BACKDROP)
-							
+
 			frame.label = frame:CreateFontString(frameName.."-label", "ARTWORK", "GameFontNormalSmall")
 			frame.label:SetPoint("TOP", frame, "TOP", 0, -5)
 			--frame.label:SetHeight(15)
 			frame.label:SetText(frameName.."-label")
-			
+
 			frame.buttons = {}
 			frame.info = nil
 			frame.type = "frame"
@@ -373,7 +367,7 @@ do
 		cat_height[catTab.index] = 10
 		cat_width[catTab.index] = dropdown.frame:GetWidth()
 		frame.info = catTab.info
-		
+
 		frame:ClearAllPoints()
 		frame:SetParent(dropdown.frame)
 		frame:SetFrameStrata("TOOLTIP")
@@ -403,17 +397,17 @@ do
 		else
 			frame.label:SetTextColor(1, 0.82, 0)
 		end
-		
+
 		if catTab.info.bgColor then
 			frame:SetBackdropColor(catTab.info.bgColor[1] or 0, catTab.info.bgColor[2] or 0, catTab.info.bgColor[3] or 0, catTab.info.bgColor[4] or 1)
 		else
 			frame:SetBackdropColor(0, 0, 0, 1)
 		end
-		
+
 		for i = 1, #catTab do
 			frame.buttons[i] = CreateButton(dropdown, frame, catTab[i], catTab.index)
 		end
-		
+
 		if cat_width[catTab.index] > frame:GetWidth() then
 			for i = 1, #frame.buttons do
 				frame.buttons[i]:SetWidth(cat_width[catTab.index]-10)
@@ -422,7 +416,7 @@ do
 		frame:SetWidth(cat_width[catTab.index])
 		frame:SetHeight(cat_height[catTab.index])
 		frame:Show()
-		
+
 		frameContainer[#frameContainer+1] = frame
 	end
 
@@ -452,7 +446,7 @@ function GUI.CreateDropDown()
 	DROPDOWN_COUNT = DROPDOWN_COUNT + 1
 	local frameName = "AtlasLoot-DropDown-"..DROPDOWN_COUNT
 	local self = {}
-	
+
 	-- functions
 	self.Toggle = Toggle
 	self.Clear = Clear
@@ -460,7 +454,7 @@ function GUI.CreateDropDown()
 	self.ttSource = GameTooltip
 	self.OnEnterButton = ShowToolTip
 	self.OnLeaveButton = HideToolTip
-	
+
 	-- Set functions
 	self.SetParPoint = GUI.Temp_SetParPoint
 	self.SetWidth = SetWidth
@@ -469,12 +463,12 @@ function GUI.CreateDropDown()
 	self.SetSelected = SetSelected
 	self.SetText = SetText
 	self.SetTitle = SetTitle
-	self.EnableSelectable = SetSelectable
+	self.EnableSelectable = EnableSelectable
 	self.EnableIcon = EnableIcon
 	--self.SetIcon = SetIcon
-	
+
 	self.frame = CreateFrame("Button", frameName)
-	local frame = self.frame 
+	local frame = self.frame
 	frame:ClearAllPoints()
 	frame:SetHeight(25)
 	frame:EnableMouse(true)
@@ -483,7 +477,7 @@ function GUI.CreateDropDown()
 	frame:SetScript("OnHide", MainFrame_OnHide)
 	frame:SetScript("OnClick", DropDownButtonOnClick)
 	frame.par = self
-	
+
 	frame.label = frame:CreateFontString(frameName.."-label", "ARTWORK", "GameFontNormalSmall")
 	frame.label:SetPoint("TOPLEFT", frame, "TOPLEFT", 7, 0)
 	frame.label:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", -29, 0)
@@ -492,11 +486,11 @@ function GUI.CreateDropDown()
 	frame.label:SetJustifyV("MIDDLE")
 	--frame.label:SetHeight(15)
 	frame.label:SetText(frameName.."-label")
-	
+
 	frame.title = frame:CreateFontString(frameName.."-title", "ARTWORK", "GameFontNormalSmall")
 	frame.title:SetPoint("TOPLEFT", frame, "TOPLEFT", 3, 10)
 	frame.title:SetText(frameName.."-title")
-	
+
 	frame.button = CreateFrame("Button", frameName.."-button", frame)
 	frame.button:SetWidth(27)
 	frame.button:SetHeight(27)
@@ -507,7 +501,7 @@ function GUI.CreateDropDown()
 	frame.button:SetDisabledTexture("Interface\\ChatFrame\\UI-ChatIcon-ScrollDown-Disabled")
 	frame.button:SetScript("OnClick", DropDownButtonOnClick)
 	frame.button.par = self
-	
+
 	-- data
 	self.data = {}
 	self.ButtonOnClick = nil
@@ -516,8 +510,8 @@ function GUI.CreateDropDown()
 	self.width = nil
 	self.selectable = true
 	self.icon = true
-	
+
 	self:SetWidth(200)
-	
+
 	return self
 end

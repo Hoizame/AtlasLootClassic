@@ -37,14 +37,14 @@ local KEYS = {	-- Keys
 	ExtraList = true,
 	[NORMAL_DIFF] = {
 		{ 1, "INV_Box_01", nil, AL["Key"], nil },
-		{ 2, 16309,},  
-		{ 3, 12344,},  
-		{ 4, 17191,},  
-		{ 5, 7146, },  
-		{ 6, 12382,},  
-		{ 7, 6893, },  
-		{ 8, 11000,},  
-		{ 9, 11140,},  
+		{ 2, 16309,},
+		{ 3, 12344,},
+		{ 4, 17191,},
+		{ 5, 7146, },
+		{ 6, 12382,},
+		{ 7, 6893, },
+		{ 8, 11000,},
+		{ 9, 11140,},
 		{ 10, 18249, },
 		{ 11, 13704, },
 		{ 12, 11197, },
@@ -978,8 +978,8 @@ data["ScarletMonastery"] = {
 				{ 3,  7721 }, -- Hand of Righteousness
 			},
 		},
-		
-		
+
+
 		{ -- SMGTrash
 			name = AL["Graveyard"] .." ".. AL["Trash"],
 			ExtraList = true,
@@ -1508,8 +1508,6 @@ data["Maraudon"] = {
 				{ 3,  17742 }, -- Fungus Shroud Armor
 			},
 		},
-		
-		
 		-- Orange
 		{ -- MaraNoxxion
 			name = AL["Noxxion"],
@@ -2437,8 +2435,7 @@ data["LowerBlackrockSpire"] = {
 				{ 19, 13965 }, -- Blackhand's Breadth
 			},
 		},
-		
-		
+
 		{ -- LBRSTrash
 			name = AL["Trash"],
 			ExtraList = true,
@@ -5300,7 +5297,7 @@ data["TheTempleofAhnQiraj"] = { -- AQ40
 				{ 27, 22630 }, -- Atiesh, Greatstaff of the Guardian
 				{ 28, 22632 }, -- Atiesh, Greatstaff of the Guardian
 			},
-		},		
+		},
 		{ -- AQ40Trash1
 			name = AL["Trash"],
 			ExtraList = true,
@@ -5699,8 +5696,7 @@ data["DireMaul"] = {
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	items = {
-		
-		
+
 		DM_BOOKS,
 		KEYS,
 		ExtraList = true,

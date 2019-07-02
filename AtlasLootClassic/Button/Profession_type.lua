@@ -21,11 +21,8 @@ local TRADESKILLS = {
 	[GetSpellInfo(3273)] 	= GetSpellTexture(3273),	-- First Aid
 	[GetSpellInfo(2108)] 	= GetSpellTexture(2108),	-- Leatherworking
 	[GetSpellInfo(3908)] 	= GetSpellTexture(3908),	-- Tailoring
-	--[GetSpellInfo(25229)]	= GetSpellTexture(25229),	-- Jewelcrafting
 	[GetSpellInfo(2575)] 	= GetSpellTexture(2575),	-- Mining
 	--[GetSpellInfo(63275)]	= GetSpellTexture(63275),	-- Fishing
-	--[GetSpellInfo(78670)]	= GetSpellTexture(78670),	-- Archaeology
-	--[GetSpellInfo(45357)]	= GetSpellTexture(45357),	-- Inscription
 	[GetSpellInfo(2366)] 	= GetSpellTexture(2366),	-- Herbalism
 	[GetSpellInfo(921)]		= GetSpellTexture(921),		-- Pick Pocket
 }
@@ -40,7 +37,7 @@ function Prof.OnSet(button, second)
 				ChatLink = true,
 			},
 		},
-		AtlasLoot.db.Button.Profession.ClickHandler, 
+		AtlasLoot.db.Button.Profession.ClickHandler,
 		{
 			{ "ChatLink", 	AL["Chat Link"], 	AL["Add profession link into chat"] },
 		})
@@ -59,16 +56,16 @@ end
 
 function Prof.OnClear(button)
 	button.Profession = nil
-	button.SpellID = nil	
+	button.SpellID = nil
 	button.tsLink, button.tsName = nil, nil
 	button.secButton.Profession = nil
 	button.secButton.SpellID = nil
 	button.secButton.tsLink, button.secButton.tsName = nil, nil
-	
+
 end
 
 function Prof.OnEnter(button)
-	local tooltip = GetAlTooltip() 
+	local tooltip = GetAlTooltip()
 	tooltip:ClearLines()
 	tooltip:SetOwner(button, "ANCHOR_RIGHT", -(button:GetWidth() * 0.5), 24)
 	tooltip:SetHyperlink(button.tsLink)
@@ -91,16 +88,16 @@ end
 function Prof.Refresh(button)
 	local spellName, _, spellTexture = GetSpellInfo(button.SpellID)
 	button.tsLink, button.tsName = GetTradeskillLink(button.SpellID)
-	
+
 	if button.type == "secButton" then
-		
+
 	else
 		button.name:SetText(PROF_COLOR..spellName)
 		button.extra:SetText(button.tsName)
 	end
-	
+
 	button.icon:SetTexture(TRADESKILLS[button.tsName] or spellTexture)
-	
+
 end
 
 --[[

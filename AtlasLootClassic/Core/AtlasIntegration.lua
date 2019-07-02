@@ -45,7 +45,7 @@ function AtlasIntegration.GetAtlasZoneData(mapID, setMap)
 		end
 		if foundMatch then break end
 	end
-	
+
 	return foundMatch
 end
 
@@ -56,7 +56,7 @@ function AtlasIntegration.ShowMap(mapID)
 	ATLAS_SMALLFRAME_SELECTED = true
 
 	AtlasIntegration.GetAtlasZoneData(mapID, true)
-	
+
 	if ( AtlasFrameLarge:IsVisible() ) then
 		HideUIPanel(AtlasFrameLarge)
 	end
@@ -69,6 +69,6 @@ function AtlasIntegration.ShowMap(mapID)
 	AtlasFrameDropDownType_OnShow()
 	AtlasFrameDropDown_OnShow()
 	Atlas_Refresh()
-	
+
 	ATLAS_SMALLFRAME_SELECTED = ATLAS_SMALLFRAME_SELECTED_ORIG
 end

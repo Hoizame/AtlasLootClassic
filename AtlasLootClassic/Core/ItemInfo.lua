@@ -199,7 +199,7 @@ local ITEM_DESC_INFO = {
 		--["Thrown"]			= true,						-- 14
 		["Crossbows"]			= AL["Crossbow"],			-- 15
 		["Wands"]				= AL["Wand"],				-- 16
-		["Fishing Poles"]		= AL["Fishing Pole"],		-- 17	
+		["Fishing Poles"]		= AL["Fishing Pole"],		-- 17
 	},
 	["Armor"] = {	-- 2
 		["Miscellaneous"] 	= "",							-- 1
@@ -312,7 +312,7 @@ local ITEM_DESC_INFO = {
 	--[[
 	["Quest"] = {	-- 10
 		["Quest"] = true,
-	},	
+	},
 	]]--
 	--[[
 	["Battle Pets"] = {
@@ -331,7 +331,7 @@ local ITEM_DESC_INFO = {
 }
 
 -- small info
--- 2 ways you can replace _G["INVTYPE_WEAPONMAINHAND"] with "" in the ITEM_DESC_INFO["slot"] table too hide ALL Mainhand info in description or you use the filter and generate a own name like "Main Hand, Axe" 
+-- 2 ways you can replace _G["INVTYPE_WEAPONMAINHAND"] with "" in the ITEM_DESC_INFO["slot"] table too hide ALL Mainhand info in description or you use the filter and generate a own name like "Main Hand, Axe"
 local FILTER = {
 	--- examples
 	--{ slot = "INVTYPE_CLOAK", itemType = "Armor", itemSubType = "Cloth", __new = "HELLO THIS IS A TEST :)" },	-- This replace "Back, Cloth" with "HELLO THIS IS A TEST :)"
@@ -355,13 +355,31 @@ preMt = {
 setmetatable(PreSave, preMt)
 
 local function GetAuctionItemClasses()
-return 'Weapon', 'Armor', 'Container', 'Consumable', 'Glyph', 'Trade Goods', 'Recipe', 'Gem', 'Miscellaneous', 'Quest', 'Battle Pets'
+	return 'Weapon', 'Armor', 'Container', 'Consumable', 'Trade Goods', 'Projectile', 'Quiver', 'Recipes', 'Reagent', 'Miscellaneous'
 end
 
+local function GetAuctionItemClassesLoc()
+	return {
+				AUCTION_CATEGORY_WEAPONS,
+				AUCTION_CATEGORY_ARMOR,
+				AUCTION_CATEGORY_CONTAINERS,
+				AUCTION_CATEGORY_CONSUMABLES,
+				AUCTION_CATEGORY_TRADE_GOODS,
+				AUCTION_CATEGORY_PROJECTILE,
+				AUCTION_CATEGORY_QUIVER,
+				AUCTION_CATEGORY_RECIPES,
+				AUCTION_CATEGORY_REAGENT,
+				AUCTION_CATEGORY_MISCELLANEOUS,
+			}
+end
+
+
+
 local function Init()
+
 	-- replace strings
 	LOC_DATA.translation = {}
-	local itemClasses = { AuctionCategories }
+	local itemClasses = { GetAuctionItemClassesLoc() }
 	for i = 1, #itemClasses do
 		local itemSubClasses = { GetAuctionItemSubClasses(i) }
 		local iTab = ITEM_DESC_INFO[ LOC_DATA[i]["__name"] ]
@@ -374,28 +392,27 @@ local function Init()
 			LOC_DATA.translation[LOC_DATA[i][j]] = itemSubClasses[j]
 			if not rawget(IngameLocales, LOC_DATA[i][j]) then
 				IngameLocales[LOC_DATA[i][j]] = itemSubClasses[j]
-			end			
+			end
 			if iTab and iTab[ LOC_DATA[i][j] ] then
 				iTab[ itemSubClasses[j] ] = iTab[ LOC_DATA[i][j] ]
 			end
 		end
 	end
-	
 	for i = 1,#FILTER do
 		FILTER[ ItemInfo.CreateDescription(FILTER[i].slot, LOC_DATA.translation[FILTER[i].itemType], LOC_DATA.translation[FILTER[i].itemSubType], true) ] = type(FILTER[i].__new) == "table" and ItemInfo.CreateDescription(FILTER[i].__new.slot, LOC_DATA.translation[FILTER[i].__new.itemType], LOC_DATA.translation[FILTER[i].__new.itemSubType], true) or FILTER[i].__new
 	end
-	
+
 	LOC_DATA = nil
-	
+
 	--[[ renew data
 		local ITEM_DESC_INDEX = { GetAuctionItemClasses() }
-	
+
 		for i = 1, #ITEM_DESC_INDEX do
 			ITEM_DESC_INDEX[ i ] = {
 				__name = ITEM_DESC_INDEX[i]
 			}
 			local itemSubClasses = { GetAuctionItemSubClasses(i) }
-			local itemClassTab = ITEM_DESC_INDEX[ i ] 
+			local itemClassTab = ITEM_DESC_INDEX[ i ]
 			for j = 1, #itemSubClasses do
 				itemClassTab[ j ] = itemSubClasses[j]
 			end
@@ -403,7 +420,7 @@ local function Init()
 		AtlasLoot.db.ItemInfoLUA = ITEM_DESC_INDEX
 	]]--
 end
-AtlasLoot:AddInitFunc(Init)
+--AtlasLoot:AddInitFunc(Init)
 
 -- only use this if you need to ignore the filter
 function ItemInfo.CreateDescription(slot, itemType, itemSubType, filterIgnore)

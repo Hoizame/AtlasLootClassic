@@ -93,7 +93,5 @@ GUI\Template_Model.lua
 GUI\ItemFrame.lua
 GUI\ModelFrame.lua
 GUI\SoundFrame.lua
-GUI\QuickLootFrame.lua
-GUI\SetViewFrame.lua
 
 Addons\Addons.lua

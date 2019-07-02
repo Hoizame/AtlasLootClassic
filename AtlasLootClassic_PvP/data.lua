@@ -21,7 +21,7 @@ local ALIL = AtlasLoot.IngameLocales
 local NORMAL_DIFF = data:AddDifficulty(AL["Normal"], "n", 1)
 local ALLIANCE_DIFF
 local HORDE_DIFF
-local LOAD_DIFF 
+local LOAD_DIFF
 if UnitFactionGroup("player") == "Horde" then
 	HORDE_DIFF = data:AddDifficulty(FACTION_HORDE, "horde", nil, 1)
 	ALLIANCE_DIFF = data:AddDifficulty(FACTION_ALLIANCE, "alliance", nil, 1)
@@ -47,14 +47,14 @@ local KEYS = {	-- Keys
 	ExtraList = true,
 	[NORMAL_DIFF] = {
 		{ 1, "INV_Box_01", nil, AL["Key"], nil },
-		{ 2, 16309,},  
-		{ 3, 12344,},  
-		{ 4, 17191,},  
-		{ 5, 7146, },  
-		{ 6, 12382,},  
-		{ 7, 6893, },  
-		{ 8, 11000,},  
-		{ 9, 11140,},  
+		{ 2, 16309,},
+		{ 3, 12344,},
+		{ 4, 17191,},
+		{ 5, 7146, },
+		{ 6, 12382,},
+		{ 7, 6893, },
+		{ 8, 11000,},
+		{ 9, 11140,},
 		{ 10, 18249, },
 		{ 11, 13704, },
 		{ 12, 11197, },
@@ -149,7 +149,7 @@ data["AlteracValley"] = {
 				{ 20, 17348 }, -- Major Healing Draught
 				{ 21, 17351 }, -- Major Mana Draught
 			},
-		},		
+		},
 		{ -- AVRepRevered
 			name = _G["FACTION_STANDING_LABEL7"],
 			[ALLIANCE_DIFF] = {
@@ -175,7 +175,7 @@ data["AlteracValley"] = {
 			name = _G["FACTION_STANDING_LABEL8"],
 			[ALLIANCE_DIFF] = {
 				{ 1, "f730rep8" },
-				
+
 				{ 2,  19312 }, -- Lei of the Lifegiver
 				{ 3,  19315 }, -- Therazane's Touch
 				{ 4,  19308 }, -- Tome of Arcane Domination
@@ -187,12 +187,12 @@ data["AlteracValley"] = {
 				{ 10, 19321 }, -- The Immovable Object
 				{ 11, 19324 }, -- The Lobotomizer
 				{ 12, 19323 }, -- The Unstoppable Force
-				
+
 				{ 17,  19030 }, -- Stormpike Battle Charger
 			},
 			[HORDE_DIFF] = {
 				{ 1, "f729rep8" },
-				
+
 				{ 2, 19312 }, -- Lei of the Lifegiver
 				{ 3, 19315 }, -- Therazane's Touch
 				{ 4, 19308 }, -- Tome of Arcane Domination
@@ -204,12 +204,11 @@ data["AlteracValley"] = {
 				{ 10, 19321 }, -- The Immovable Object
 				{ 11, 19324 }, -- The Lobotomizer
 				{ 12, 19323 }, -- The Unstoppable Force
-				
+
 				{ 17, 19029 }, -- Horn of the Frostwolf Howler
 			},
 		},
 	},
-	
 }
 
 data["ArathiBasin"] = {
@@ -221,7 +220,7 @@ data["ArathiBasin"] = {
 		{ -- ABRepFriendly
 			name = _G["FACTION_STANDING_LABEL5"],
 			[ALLIANCE_DIFF] = {
-				{ 1, "f509rep5" }, 
+				{ 1, "f509rep5" },
 				{ 2, "INV_Box_01", nil, "20 - 29", nil }, -- ABRepFriendly2029
 				{ 3,  21119 }, -- Talisman of Arathor
 				{ 4,  20226 }, -- Highlander's Field Ration
@@ -258,11 +257,11 @@ data["ArathiBasin"] = {
 				{ 22, "INV_Box_01", nil, "50 - 59", nil }, -- ABRepFriendly5059
 				{ 23, 20072 }, -- Defiler's Talisman
 			},
-		},	
+		},
 		{ -- ABRepHonored
 			name = _G["FACTION_STANDING_LABEL6"],
 			[ALLIANCE_DIFF] = {
-				{ 1, "f509rep6" }, 
+				{ 1, "f509rep6" },
 				{ 2, "INV_Box_01", nil, "20 - 29", nil }, -- ABRepHonored2029
 				{ 3,  20099 }, -- Highlander's Cloth Girdle
 				{ 4,  20117 }, -- Highlander's Leather Girdle
@@ -284,7 +283,7 @@ data["ArathiBasin"] = {
 				{ 24, 20089 }, -- Highlander's Chain Girdle
 				{ 25, 20107 }, -- Highlander's Lamellar Girdle
 				{ 26, 20125 }, -- Highlander's Plate Girdle
-				{ 101, "f509rep6" }, 
+				{ 101, "f509rep6" },
 				{ 102, "INV_Box_01", nil, "50 - 59", nil }, -- ABRepHonored5059
 				{ 103,  20047 }, -- Highlander's Cloth Girdle
 				{ 104,  20045 }, -- Highlander's Leather Girdle
@@ -325,11 +324,11 @@ data["ArathiBasin"] = {
 				{ 107, 20195 }, -- Defiler's Mail Girdle
 				{ 108, 20204 }, -- Defiler's Plate Girdle
 			},
-		},		
+		},
 		{ -- ABRepRevered
 			name = _G["FACTION_STANDING_LABEL7"],
 			[ALLIANCE_DIFF] = {
-				{ 1, "f509rep7" }, 
+				{ 1, "f509rep7" },
 				{ 2, "INV_Box_01", nil, "20 - 29", nil }, -- ABRepRevered2029
 				{ 3,  20096 }, -- Highlander's Cloth Boots
 				{ 4,  20114 }, -- Highlander's Leather Boots
@@ -351,7 +350,7 @@ data["ArathiBasin"] = {
 				{ 24, 20092 }, -- Highlander's Chain Greaves
 				{ 25, 20110 }, -- Highlander's Lamellar Greaves
 				{ 26, 20128 }, -- Highlander's Plate Greaves
-				{ 101, "f509rep7" }, 
+				{ 101, "f509rep7" },
 				{ 102, "INV_Box_01", nil, "50 - 59", nil }, -- ABRepRevered5059
 				{ 103,  20054 }, -- Highlander's Cloth Boots
 				{ 104,  20052 }, -- Highlander's Leather Boots
@@ -392,11 +391,11 @@ data["ArathiBasin"] = {
 				{ 107, 20199 }, -- Defiler's Mail Greaves
 				{ 108, 20208 }, -- Defiler's Plate Greaves
 			},
-		},		
+		},
 		{ -- ABRepRevered
 			name = _G["FACTION_STANDING_LABEL8"],
 			[ALLIANCE_DIFF] = {
-				{ 1, "f509rep8" }, 
+				{ 1, "f509rep8" },
 				{ 2,  20061 }, -- Highlander's Epaulets
 				{ 3,  20060 }, -- Highlander's Lizardhide Shoulders
 				{ 4,  20059 }, -- Highlander's Leather Shoulders
@@ -421,7 +420,7 @@ data["ArathiBasin"] = {
 				{ 10, 20220 }, -- Ironbark Staff
 				{ 17, 20131 }, -- Battle Tabard of the Defilers
 			},
-		},	
+		},
 		ExtraList = true,
 	},
 }
@@ -435,7 +434,7 @@ data["WarsongGulch"] = {
 		{ -- WSGRepFriendly
 			name = _G["FACTION_STANDING_LABEL5"],
 			[ALLIANCE_DIFF] = {
-				{ 1, "f890rep5" }, 
+				{ 1, "f890rep5" },
 				{ 2, "INV_Box_01", nil, "20 - 29", nil }, -- WSGRepFriendly2029
 				{ 3,  21568 }, -- Rune of Duty
 				{ 4,  21566 }, -- Rune of Perfection
@@ -470,11 +469,11 @@ data["WarsongGulch"] = {
 				{ 20, 19060 }, -- Warsong Gulch Enriched Ration
 				{ 21, 19066 }, -- Warsong Gulch Runecloth Bandage
 			},
-		},	
+		},
 		{ -- WSGRepHonored
 			name = _G["FACTION_STANDING_LABEL6"],
 			[ALLIANCE_DIFF] = {
-				{ 1, "f890rep6" }, 
+				{ 1, "f890rep6" },
 				{ 2, "INV_Box_01", nil, "10 - 19", nil }, -- WSGRepHonored1019
 				{ 3, 20444 }, -- Sentinel's Medallion
 				{ 4, 20428 }, -- Caretaker's Cape
@@ -497,7 +496,7 @@ data["WarsongGulch"] = {
 				{ 27, 19516 }, -- Protector's Band
 				{ 28, 17348 }, -- Major Healing Draught
 				{ 29, 17351 }, -- Major Mana Draught
-				{ 101, "f890rep6" }, 
+				{ 101, "f890rep6" },
 				{ 102, "INV_Box_01", nil, "50 - 59", nil }, -- WSGRepHonored5059
 				{ 103, 19538 }, -- Sentinel's Medallion
 				{ 104, 19530 }, -- Caretaker's Cape
@@ -539,7 +538,7 @@ data["WarsongGulch"] = {
 		{ -- WSGRepRevered
 			name = _G["FACTION_STANDING_LABEL7"],
 			[ALLIANCE_DIFF] = {
-				{ 1, "f890rep7" }, 
+				{ 1, "f890rep7" },
 				{ 2, "INV_Box_01", nil, "10 - 19", nil }, -- WSGRepRevered1019
 				{ 3, 20438 }, -- Outrunner's Bow
 				{ 4, 20443 }, -- Sentinel's Blade
@@ -560,7 +559,7 @@ data["WarsongGulch"] = {
 				{ 25, 19547 }, -- Sentinel's Blade
 				{ 26, 19555 }, -- Protector's Sword
 				{ 27, 19571 }, -- Lorekeeper's Staff
-				{ 101, "f890rep7" }, 
+				{ 101, "f890rep7" },
 				{ 102, "INV_Box_01", nil, "50 - 59", nil }, -- WSGRepRevered5059
 				{ 103, 19562 }, -- Outrunner's Bow
 				{ 104, 19546 }, -- Sentinel's Blade
@@ -600,7 +599,7 @@ data["WarsongGulch"] = {
 		{ -- WSGRepExalted
 			name = _G["FACTION_STANDING_LABEL8"],
 			[ALLIANCE_DIFF] = {
-				{ 1, "f890rep8" }, 
+				{ 1, "f890rep8" },
 				{ 2, "INV_Box_01", nil, "40 - 49", nil }, -- WSGRepExalted4049
 				{ 3,  19597 }, -- Dryad's Wrist Bindings
 				{ 4,  19590 }, -- Forest Stalker's Bracers
@@ -997,7 +996,7 @@ data["Misc"] = {
 				{ 22, 23468 }, -- High Warlord's Tome of Destruction
 				{ 23, 23469 }, -- High Warlord's Tome of Mending
 			},
-		},	
+		},
 		{ -- PvPMountsPvP
 			name = MOUNTS,
 			[ALLIANCE_DIFF] = {
@@ -1024,9 +1023,7 @@ data["DireMaul"] = {
 	ContentType = PVP_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
 	items = {
-		
-		
-		
+
 		ExtraList = true,
 	},
 }

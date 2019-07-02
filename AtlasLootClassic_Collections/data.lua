@@ -19,7 +19,7 @@ local AL = AtlasLoot.Locales
 local ALIL = AtlasLoot.IngameLocales
 
 local NORMAL_DIFF = data:AddDifficulty(AL["Normal"], "n", 1)
-local ALLIANCE_DIFF, HORDE_DIFF, LOAD_DIFF 
+local ALLIANCE_DIFF, HORDE_DIFF, LOAD_DIFF
 if UnitFactionGroup("player") == "Horde" then
 	HORDE_DIFF = data:AddDifficulty(FACTION_HORDE, "horde", nil, 1)
 	ALLIANCE_DIFF = data:AddDifficulty(FACTION_ALLIANCE, "alliance", nil, 1)
@@ -60,7 +60,7 @@ data["TierSets"] = {
 				{ 9, "SetID:209:n" }, -- Warrior
 				{ 24, "SetID:208:n" }, -- Paladin
 			},
-			
+
 			[HORDE_DIFF] = {
 				GetItemsFromDiff = ALLIANCE_DIFF,
 				{ 22, "SetID:207:n" }, -- Shaman
@@ -79,7 +79,7 @@ data["TierSets"] = {
 				{ 9, "SetID:218:n" }, -- Warrior
 				{ 24, "SetID:217:n" }, -- Paladin
 			},
-			
+
 			[HORDE_DIFF] = {
 				GetItemsFromDiff = ALLIANCE_DIFF,
 				{ 22, "SetID:216:n" }, -- Shaman
@@ -98,7 +98,7 @@ data["TierSets"] = {
 				{ 9, "SetID:523:n" }, -- Warrior
 				{ 24, "SetID:528:n" }, -- Paladin
 			},
-			
+
 			[HORDE_DIFF] = {
 				GetItemsFromDiff = ALLIANCE_DIFF,
 				{ 22, "SetID:527:n" }, -- Shaman
@@ -106,5 +106,5 @@ data["TierSets"] = {
 			},
 		},
 	},
-	
+
 }

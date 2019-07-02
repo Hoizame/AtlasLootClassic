@@ -31,12 +31,12 @@ end
 
 function Dummy.Refresh(button)
 	if button.type == "secButton" then
-		
+
 	else
 		button.name:SetText(button.Name)
 		button.extra:SetText(button.Description)
 	end
-	
+
 	button.icon:SetTexture(button.Texture and "Interface\\Icons\\"..button.Texture or "Interface\\Icons\\INV_Misc_QuestionMark")
 end
 

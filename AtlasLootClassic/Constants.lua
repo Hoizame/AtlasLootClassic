@@ -39,16 +39,16 @@ ATLASLOOT_ITEM_BACKGROUND_ALPHA = 0.9
 
 ATLASLOOT_DEATHKNIGHT_COLOR	= "|c"..RAID_CLASS_COLORS["DEATHKNIGHT"].colorStr
 ATLASLOOT_DEMONHUNTER_COLOR	= "|c"..RAID_CLASS_COLORS["DEMONHUNTER"].colorStr
-ATLASLOOT_DRUID_COLOR 		= "|c"..RAID_CLASS_COLORS["DRUID"].colorStr      
-ATLASLOOT_HUNTER_COLOR 		= "|c"..RAID_CLASS_COLORS["HUNTER"].colorStr     
-ATLASLOOT_MAGE_COLOR 		= "|c"..RAID_CLASS_COLORS["MAGE"].colorStr       
-ATLASLOOT_MONK_COLOR 		= "|c"..RAID_CLASS_COLORS["MONK"].colorStr       
-ATLASLOOT_PALADIN_COLOR 	= "|c"..RAID_CLASS_COLORS["PALADIN"].colorStr    
-ATLASLOOT_PRIEST_COLOR 		= "|c"..RAID_CLASS_COLORS["PRIEST"].colorStr     
-ATLASLOOT_ROGUE_COLOR 		= "|c"..RAID_CLASS_COLORS["ROGUE"].colorStr      
-ATLASLOOT_SHAMAN_COLOR 		= "|c"..RAID_CLASS_COLORS["SHAMAN"].colorStr     
-ATLASLOOT_WARLOCK_COLOR 	= "|c"..RAID_CLASS_COLORS["WARLOCK"].colorStr    
-ATLASLOOT_WARRIOR_COLOR 	= "|c"..RAID_CLASS_COLORS["WARRIOR"].colorStr    
+ATLASLOOT_DRUID_COLOR 		= "|c"..RAID_CLASS_COLORS["DRUID"].colorStr
+ATLASLOOT_HUNTER_COLOR 		= "|c"..RAID_CLASS_COLORS["HUNTER"].colorStr
+ATLASLOOT_MAGE_COLOR 		= "|c"..RAID_CLASS_COLORS["MAGE"].colorStr
+ATLASLOOT_MONK_COLOR 		= "|c"..RAID_CLASS_COLORS["MONK"].colorStr
+ATLASLOOT_PALADIN_COLOR 	= "|c"..RAID_CLASS_COLORS["PALADIN"].colorStr
+ATLASLOOT_PRIEST_COLOR 		= "|c"..RAID_CLASS_COLORS["PRIEST"].colorStr
+ATLASLOOT_ROGUE_COLOR 		= "|c"..RAID_CLASS_COLORS["ROGUE"].colorStr
+ATLASLOOT_SHAMAN_COLOR 		= "|c"..RAID_CLASS_COLORS["SHAMAN"].colorStr
+ATLASLOOT_WARLOCK_COLOR 	= "|c"..RAID_CLASS_COLORS["WARLOCK"].colorStr
+ATLASLOOT_WARRIOR_COLOR 	= "|c"..RAID_CLASS_COLORS["WARRIOR"].colorStr
 
 -- ##############################
 -- AtlasLoot Private things
@@ -73,10 +73,10 @@ ALPrivate.BOX_BACKDROP = { bgFile = "Interface/Tooltips/UI-Tooltip-Background" }
 -- backdrop with border
 ALPrivate.BOX_BORDER_BACKDROP = {
 	bgFile = "Interface/Tooltips/UI-Tooltip-Background",
-	edgeFile = "Interface/Tooltips/UI-Tooltip-Border", 
-	tile = true, 
-	tileSize = 16, 
-	edgeSize = 16, 
+	edgeFile = "Interface/Tooltips/UI-Tooltip-Border",
+	tile = true,
+	tileSize = 16,
+	edgeSize = 16,
 	insets = { left = 4, right = 4, top = 4, bottom = 4 },
 }
 

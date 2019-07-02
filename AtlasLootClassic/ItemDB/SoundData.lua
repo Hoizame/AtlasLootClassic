@@ -28,9 +28,9 @@ local AppendPreSets = {
 }
 
 function SoundData.Init()
-	
+	-- needed?
 end
-AtlasLoot:AddInitFunc(SoundData.Init)
+--AtlasLoot:AddInitFunc(SoundData.Init)
 
 -- /dump AtlasLoot.ItemDB.SoundData:GetSoundIdPath(11466)
 -- /run AtlasLoot.ItemDB.SoundData:PlaySound(11466)

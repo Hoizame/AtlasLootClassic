@@ -52,7 +52,7 @@ function Proto.OnUpdate(frame)
 			self.itemStatsList = nil
 			self.NumItemStatsItems = nil
 			self.NumItemStatsItemsFound = nil
-			
+
 			if self.OnItemStatsFinish then
 				self.OnItemStatsFinish()
 				self.OnItemStatsFinish = nil
@@ -70,7 +70,7 @@ function Proto:Wipe()
 	self.NumItemInfoItemsFound = nil
 	self.OnItemInfoFinish = nil
 	self.frame:UnregisterEvent("GET_ITEM_INFO_RECEIVED")
-	
+
 	-- itemStats
 	self.itemStatsList = nil
 	self.NumItemStatsItems = nil
@@ -120,11 +120,11 @@ function ItemQuery:Create(tab)
 	for k,v in pairs(Proto) do
 		tab[k] = v
 	end
-	
-	
+
+
 	tab.frame = CreateFrame("FRAME")
 	tab.frame.obj = tab
 	tab.frame:SetScript("OnEvent", tab.OnEvent)
-	
+
 	return tab
 end

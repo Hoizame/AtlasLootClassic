@@ -103,7 +103,7 @@ function Loader.Init()
 				loaded = IsAddOnLoaded(i),
 				loadReason = tmp[5],
 				standardModule = ATLASLOOT_MODULE_LIST_NAMES[tmp[1]],
-				
+
 				moduleName = GetAddOnMetadata(tmp[1], "X-AtlasLoot-ModuleName") or tmp[1],
 				lootModule = GetAddOnMetadata(tmp[1], "X-AtlasLoot-LootModule"),
 			}
@@ -134,7 +134,7 @@ function Loader:LoadModule(moduleName, onLoadFunction, oneFunction)
 		end
 		return state
 	end
-	if self:IsModuleLoaded(moduleName) then 
+	if self:IsModuleLoaded(moduleName) then
 		if onLoadFunction then
 			onLoadFunction(moduleName)
 		end
@@ -162,7 +162,7 @@ function Loader:LoadModule(moduleName, onLoadFunction, oneFunction)
 		LoaderQueue[moduleName] = onLoadFunction
 	end
 	if InCombatLockdown() then
-		-- in combat must waite with load 
+		-- in combat must waite with load
 		if LoadModuleSpam[moduleName] and (GetTime() - LoadModuleSpam[moduleName]) > 5 then
 			AtlasLoot:Print(str_format(AL["%s will finish loading after combat."], moduleName))
 			LoadModuleSpam[moduleName] = GetTime()

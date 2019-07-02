@@ -1,12 +1,12 @@
 --[[
 	Allows presets with keybinds
-	
+
 	-- MouseButtons
 	- LeftButton
 	- RightButton
 	- MiddleButton
 	- Button4-x
-	
+
 	- MouseWheelUp
 	- MouseWheelDown
 
@@ -42,7 +42,7 @@ local MODIFIER_LOC = {
 }
 
 --[[ format
-	-- db is only the table 
+	-- db is only the table
 	db = MySavedVariables.ClickHandler
 	dbDefault = {
 		ItemLink = { "LeftButton", "Shift" },
@@ -57,7 +57,7 @@ local MODIFIER_LOC = {
 ]]
 function ClickHandler:Add(name, dbDefault, db, types)
 	local handler = {}
-	
+
 	local dbDefaultNEW = {types = {}}
 	for i = 1, #types do
 		local typ = types[i][1]
@@ -77,16 +77,15 @@ function ClickHandler:Add(name, dbDefault, db, types)
 		if not dbDefaultNEW[dbDefault[typ][1]] then dbDefaultNEW[dbDefault[typ][1]] = {} end
 		dbDefaultNEW[dbDefault[typ][1]][dbDefault[typ][2]] = typ
 	end
-	db.__defaults = dbDefaultNEW 
-	
+	db.__defaults = dbDefaultNEW
+
 	handler.db = db
 	handler.dbDefault = dbDefault
 	handler.types = types
-	
+
 	setmetatable(handler, {__index = Proto})
-	
+
 	return handler
-	
 end
 
 function ClickHandler:GetLocMouseButtons()
@@ -143,7 +142,7 @@ function Proto:Get(mouseButton)
 					return self.db[mouseButton].Ctrl
 				end
 			end
-		end	
+		end
 		return self.db[mouseButton].None
 	end
 end

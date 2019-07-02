@@ -19,8 +19,8 @@ AtlasLootScanTooltip:SetOwner(UIParent, "ANCHOR_NONE")
 
 function TooltipScan.GetTradeskillLink(tradeskillID)
 	if not tradeskillID then return end
-	if cache[tradeskillID] then 
-		return cache[tradeskillID][1], cache[tradeskillID][2] 
+	if cache[tradeskillID] then
+		return cache[tradeskillID][1], cache[tradeskillID][2]
 	end
 	local TradeskillLink = nil
 	local TradeskillName = nil
@@ -79,7 +79,7 @@ AtlasLootQueryTooltip:SetScript("OnTooltipSetQuest", OnTooltipSetQuest)
 -- /dump AtlasLoot.TooltipScan.GetQuestName(5090, print)
 function TooltipScan.GetQuestName(questID, onGetFunc, arg1, preSetQuery)
 	if not questID then return end
-	if queryCache.quest[questID] then 
+	if queryCache.quest[questID] then
 		onGetFunc( queryCache.quest[questID], arg1 )
 		AtlasLootQueryTooltip:SetScript("OnTooltipSetQuest", nil)
 		AtlasLootQueryTooltip.onGetFunc = nil

@@ -47,7 +47,7 @@ function ModelFrame.ButtonOnClick(self)
 	end
 	ModelFrame.frame:SetDisplayInfo(self.displayInfo)
 	ModelFrame.frame:SetPosition(0,0,0)
-	
+
 	self:Disable()
 	ModelFrame.SelectedCreature = self
 end
@@ -57,7 +57,7 @@ function ModelFrame:AddButton(name, desc, displayInfo)
 	if not button then
 		BUTTON_COUNT = BUTTON_COUNT + 1
 		local frameName = "AtlasLoot-GUI-ModelFrame-Button"..BUTTON_COUNT
-		
+
 		button = CreateFrame("Button", frameName, ModelFrame.frame, "AtlasLootCreatureButtonTemplate")
 	end
 	button:Show()
@@ -66,23 +66,23 @@ function ModelFrame:AddButton(name, desc, displayInfo)
 	button.name = name
 	button.description = desc
 	SetPortraitTextureFromCreatureDisplayID(button.creature, displayInfo)
-	
+
 	if #buttons == 1 then
 		button:SetPoint("TOPLEFT", ModelFrame.frame, "TOPLEFT", 0, -10)
 		ModelFrame.ButtonOnClick(button)
 	else
 		button:SetPoint("TOPLEFT", buttons[#buttons-1], "BOTTOMLEFT")
 	end
-	
+
 	return button
 end
 
 function ModelFrame:Create()
 	if self.frame then return end
 	local frameName = "AtlasLoot_GUI-ModelFrame"
-	
+
 	self.frame = CreateFrame("PlayerModel", frameName, GUI.frame, "ModelWithControlsTemplate")
-	local frame = self.frame 
+	local frame = self.frame
 	frame:ClearAllPoints()
 	frame:SetParent(GUI.frame)
 	frame:SetPoint("TOPLEFT", GUI.frame.contentFrame.itemBG)
@@ -93,7 +93,7 @@ function ModelFrame:Create()
 	frame.Refresh = ModelFrame.Refresh
 	frame.Clear = ModelFrame.Clear
 	frame:Hide()
-	
+
 	frame:SetCamDistanceScale(3) -- maybe change this later
 end
 
@@ -106,8 +106,6 @@ function ModelFrame:Show()
 	end
 	if self.DisplayIDs then
 		self:SetDisplayID(self.DisplayIDs)
-	elseif self.EncounterJournalID then
-		self:SetEncounterID(self.EncounterJournalID)
 	else
 		return GUI.ItemFrame:Show()
 	end
@@ -136,29 +134,6 @@ function ModelFrame:SetDisplayID(displayID)
 	for k,v in ipairs(displayID) do
 		ModelFrame:AddButton(v[2], v[3], v[1])
 	end
-end
-
-function ModelFrame:SetEncounterID(encounterID)
-	if not self.frame then ModelFrame:Create() end
-	ClearButtonList()
-	ModelFrame.frame:ClearModel()
-	wipe(Creatures)
-	ModelFrame.SelectedCreature = nil
-	if not encounterID then
-		ModelFrame.frame:Hide()
-		return
-	end
-	local id, name, desc, displayInfo, iconImage, uiModelSceneID
-	for i=1,MAX_CREATURES_PER_ENCOUNTER do 
-		id, name, desc, displayInfo, iconImage, uiModelSceneID = EJ_GetCreatureInfo(i, encounterID)
-		
-		if id then
-			 ModelFrame:AddButton(name, desc, displayInfo)
-		else
-			break
-		end
-	end
-	ModelFrame.frame:Show()
 end
 
 function ModelFrame.Clear()

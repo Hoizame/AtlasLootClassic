@@ -20,9 +20,9 @@ local PAGE_NAME_DIFF_PAGE = "%s (%s) [%d/%d]"
 function ItemFrame:Create()
 	if self.frame then return self.frame end
 	local frameName = "AtlasLoot_GUI-ItemFrame"
-	
+
 	self.frame = CreateFrame("FRAME", frameName, GUI.frame)
-	local frame = self.frame 
+	local frame = self.frame
 	frame:ClearAllPoints()
 	frame:SetParent(GUI.frame)
 	frame:SetPoint("TOPLEFT", GUI.frame.contentFrame.itemBG)
@@ -34,7 +34,7 @@ function ItemFrame:Create()
 	frame.Clear = ItemFrame.Clear
 	frame.OnClassFilterUpdate = ItemFrame.OnClassFilterUpdate
 	frame.OnTransMogUpdate = ItemFrame.OnTransMogUpdate
-	
+
 	frame.ItemButtons = {}
 	for i=1,30 do
 		frame.ItemButtons[i] = AtlasLoot.Button:Create()
@@ -115,20 +115,20 @@ function ItemFrame:Refresh(skipProtect)
 	-- small spam protection
 	if not skipProtect and GetTime() - LastRefresh < 0.1 then return end
 	LastRefresh = GetTime()
-	
+
 	ItemFrame:ClearItems()
 	AtlasLoot.db.GUI.selected[5] = AtlasLoot.db.GUI.selected[5] or 0
 	ItemFrame.nextPage = nil
 	local page = AtlasLoot.db.GUI.selected[5] * 100 -- Page number for first items on a page are <1, 101, 201, 301, 401, ...>
 	local items, tableType, diffData = ItemDB:GetItemTable(AtlasLoot.db.GUI.selected[1], AtlasLoot.db.GUI.selected[2], AtlasLoot.db.GUI.selected[3], AtlasLoot.db.GUI.selected[4])
-	
+
 	if items then
-	
+
 		ItemFrame.LinkedInfo = items.__linkedInfo
 		ItemFrame.CurDiff = diffData.difficultyID or 1
 		ItemFrame.CurTier = diffData.tierID or 1
-		
-		-- refresh title with diff and add pagenumber if there 
+
+		-- refresh title with diff and add pagenumber if there
 		if #items and items[#items] and items[#items][1] > 100 then
 			GUI.frame.contentFrame.title:SetText(format(PAGE_NAME_DIFF_PAGE, GUI.frame.contentFrame.title.txt, diffData.name, AtlasLoot.db.GUI.selected[5]+1, floor(items[#items][1]/100)+1))
 		else
@@ -167,7 +167,7 @@ function ItemFrame:Refresh(skipProtect)
 	if AtlasLoot.db.GUI.selected[5] - 1 >= 0 then
 		GUI.frame.contentFrame.prevPageButton.info = tostring(AtlasLoot.db.GUI.selected[5] - 1)
 	else
-		--[[	this must be fixed later ... Check for pages 
+		--[[	this must be fixed later ... Check for pages
 		if AtlasLoot.db.GUI.selected[3] - 1 > 0 then
 			items, tableType = ItemDB:GetItemTable(AtlasLoot.db.GUI.selected[1], AtlasLoot.db.GUI.selected[2], AtlasLoot.db.GUI.selected[3]-1, AtlasLoot.db.GUI.selected[4])
 			if items and #items > 0 and floor(items[#items][1]/100) > 0 then

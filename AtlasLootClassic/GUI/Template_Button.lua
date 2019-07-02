@@ -13,18 +13,18 @@ end
 
 function GUI.CreateButton()
 	BUTTON_COUNT = BUTTON_COUNT + 1
-	
+
 	local frameName = "AtlasLoot-Button-"..BUTTON_COUNT
 	local frame = CreateFrame("BUTTON", frameName, nil, "UIPanelButtonTemplate")
 	frame:SetText("")
 	frame:SetWidth(MIN_WIDTH)
 	frame:SetHeight(22)
-	
+
 	frame.SetPointOri = frame.SetPoint
 	frame.SetPoint = GUI.Temp_SetParPoint
-	
+
 	frame.SetTextOri = frame.SetText
 	frame.SetText = setText
-	
+
 	return frame
 end

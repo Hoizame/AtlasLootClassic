@@ -4,9 +4,12 @@
 -- Functions
 local _G = getfenv(0)
 
--- Libraries
+-- lua
 local assert, type, pairs, next = assert, type, pairs, next
 local wipe = wipe
+
+-- wow
+local CreateFrame = CreateFrame
 -- ----------------------------------------------------------------------------
 -- AddOn namespace.
 -- ----------------------------------------------------------------------------
@@ -56,8 +59,8 @@ function AtlasLoot:OnInitialize()
 	end
 
 	self.db = ALDB:Register(AtlasLootClassicCharDB, AtlasLootClassicDB, AtlasLoot.AtlasLootDBDefaults)
-	
-	
+
+
 	-- bindings
 	BINDING_HEADER_ATLASLOOT = AL["AtlasLoot"]
 	BINDING_NAME_ATLASLOOT_TOGGLE = AL["Toggle AtlasLoot"]
@@ -139,7 +142,7 @@ function AtlasLoot:AutoSelect()
 		end
 		if (dataID) then break end
 	end
-	
+
 	if (refresh and (o_moduleName ~= moduleName or o_dataID ~= dataID)) then
 		AtlasLoot.GUI.frame.moduleSelect:SetSelected(moduleName)
 		AtlasLoot.GUI.frame.subCatSelect:SetSelected(dataID)
