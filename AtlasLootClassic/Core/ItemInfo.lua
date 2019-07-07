@@ -299,16 +299,16 @@ local ITEM_DESC_INFO = {
 		["Cogwheel"]		= true,						-- 10
 	},
 	]]--
-	--[[
+
 	["Miscellaneous"] = {	-- 9
-		["Junk"]			= true,						-- 1
-		["Reagent"]			= true,						-- 2
-		["Companion Pets"]	= true,						-- 3
-		["Holiday"]			= true,						-- 4
-		["Other"]			= true,						-- 5
-		["Mount"]			= true,						-- 6
+		["Junk"]			= _G["MISCELLANEOUS"],		-- 1
+		--["Reagent"]			= true,					-- 2
+		--["Companion Pets"]	= true,					-- 3
+		--["Holiday"]			= true,					-- 4
+		--["Other"]			= true,						-- 5
+		--["Mount"]			= true,						-- 6
 	},
-	]]--
+
 	--[[
 	["Quest"] = {	-- 10
 		["Quest"] = true,
