@@ -2,67 +2,406 @@
 --@localization(locale="enUS", format="lua_additive_table", table-name="AL", handle-unlocalized="ignore", namespace="")@
 --@do-not-package@
 
--- Common strings
+-- \AtlasLootClassic\AtlasLoot.lua
 AL["AtlasLoot"] = true
-
-AL["Dungeons"] = true
-AL["Raids"] = true
-AL["Raid"] = true
-AL["Removed"] = true
-
-AL["Bonus Loot"] = true
-
-AL["Source"] = true
-AL["Set"] = true
-AL["Sets"] = true
-AL["Miscellaneous"] = true
-AL["Black Market Auction House"] = true
-AL["Entrance"] = true
-AL["ilvl %d"] = true
-AL["No longer available"] = true
-AL["Patterns/Plans"] = true
-AL["Rare"] = true
-AL["Recipes"] = true
-AL["Rewards"] = true
-AL["Shared"] = true
-AL["Shared Boss Loot"] = true
-AL["Shop"] = true
-AL["Summon"] = true
-AL["Trash Mobs"] = true
-
--- AtlasLoot.lua
-AL["AtlasLoot_Loader_is_no_longer_in_use"] = [=[AtlasLoot_Loader is no longer in use.
-Delete it from your AddOns folder]=]
 AL["Toggle AtlasLoot"] = true
 
--- AtlasLoot\Core\ClickHandler.lua
-AL["Link the item in chat"] = true
-
--- Loader.lua
-AL["Achievements"] = true
+-- \AtlasLootClassic\Loader.lua
+AL["Dungeons and Raids"] = true
+AL["PvP"] = true
+AL["Crafting"] = true
+AL["Collections"] = true
 AL["Module %s is deactivated."] = true
 AL["Module %s is not installed."] = true
 AL["%s will finish loading after combat."] = true
-AL["Crafting"] = true
-AL["Collections"] = true
-AL["Factions"] = true
-AL["PvP"] = true
-AL["World Events"] = true
 
--- MiniMapButton.lua
-AL["AtlasLoot_Minimap_Clicks"] = [=[|cffFF0000Click: |cffFFFFFFOpen AtlasLoot
-|cffFF0000Shift+Click: |cffFFFFFFOpen AtlasLoot-Options ]=]
+-- \AtlasLootClassic\MiniMapButton.lua
+AL["AtlasLoot_Minimap_Clicks"] = true
 AL["/al mmb - Toggle MiniMapButton"] = true
 
--- Core\SlashCommands.lua
-AL["Command %s not found. Use '/al slash' for a full list of commands"] = true
-AL["Slash commands:"] = true
-AL["/al - Open the AtlasLoot window."] = true
-AL["/al slash - Prints a list of all slash commands."] = true
-AL["/al options - Open AtlasLoot Options window."] = true
--- AL["/al reset - ???."] = true
+-- \AtlasLootClassic_Collections\data.lua
+AL["Normal"] = true
+AL["Sets"] = true
+AL["Tier Sets"] = true
 
--- Core\ItemInfo.lua
+-- \AtlasLootClassic_Crafting\data.lua
+AL["20 Raid"] = true
+AL["40 Raid"] = true
+AL["Dungeons"] = true
+AL["20 Raids"] = true
+AL["40 Raids"] = true
+
+-- \AtlasLootClassic_DungeonsAndRaids\data.lua
+AL["Keys"] = true
+AL["Key"] = true
+AL["Misc"] = true
+AL["AQ opening"] = true
+AL["Books"] = true
+AL["Taragaman the Hungerer"] = true
+AL["Jergosh the Invoker"] = true
+AL["Kresh"] = true
+AL["Lady Anacondra <Fanglord>"] = true
+AL["Lord Cobrahn <Fanglord>"] = true
+AL["Deviate Faerie Dragon"] = true
+AL["Lord Pythas <Fanglord>"] = true
+AL["Skum"] = true
+AL["Lord Serpentis <Fanglord>"] = true
+AL["Verdan the Everliving"] = true
+AL["Mutanus the Devourer"] = true
+AL["Trash"] = true
+AL["Rhahk'Zor <The Foreman>"] = true
+AL["Miner Johnson"] = true
+AL["Sneed <Lumbermaster>"] = true
+AL["Sneed's Shredder <Lumbermaster>"] = true
+AL["Gilnid <The Smelter>"] = true
+AL["Mr. Smite <The Ship's First Mate>"] = true
+AL["Captain Greenskin"] = true
+AL["Edwin VanCleef <Defias Kingpin>"] = true
+AL["Cookie <The Ship's Cook>"] = true
+AL["Trash Mobs"] = true
+AL["Rethilgore <The Cell Keeper>"] = true
+AL["Sever"] = true
+AL["Fel Steed / Shadow Charger"] = true
+AL["Razorclaw the Butcher"] = true
+AL["Baron Silverlaine"] = true
+AL["Commander Springvale"] = true
+AL["Odo the Blindwatcher"] = true
+AL["Deathsworn Captain"] = true
+AL["Fenrus the Devourer"] = true
+AL["Wolf Master Nandos"] = true
+AL["Archmage Arugal"] = true
+AL["Arugal's Voidwalker"] = true
+AL["The Book of Ur"] = true
+AL["Jordan's Smithing Hammer"] = true
+AL["Ghamoo-ra"] = true
+AL["Lady Sarevess"] = true
+AL["Gelihast"] = true
+AL["Baron Aquanis"] = true
+AL["Twilight Lord Kelris"] = true
+AL["Old Serra'kis"] = true
+AL["Aku'mai"] = true
+AL["Kam Deepfury"] = true
+AL["Bruegal Ironknuckle"] = true
+AL["Techbot"] = true
+AL["Viscous Fallout"] = true
+AL["Grubbis"] = true
+AL["Electrocutioner 6000"] = true
+AL["Crowd Pummeler 9-60"] = true
+AL["Mekgineer Thermaplugg"] = true
+AL["Dark Iron Ambassador"] = true
+AL["Aggem Thorncurse <Death's Head Prophet>"] = true
+AL["Death Speaker Jargba <Death's Head Captain>"] = true
+AL["Overlord Ramtusk"] = true
+AL["Agathelos the Raging"] = true
+AL["Earthcaller Halmgar"] = true
+AL["Razorfen Spearhide"] = true
+AL["Blind Hunter"] = true
+AL["Charlga Razorflank <The Crone>"] = true
+AL["Interrogator Vishas"] = true
+AL["Azshir the Sleepless"] = true
+AL["Fallen Champion"] = true
+AL["Ironspine"] = true
+AL["Bloodmage Thalnos"] = true
+AL["Houndmaster Loksey"] = true
+AL["Arcanist Doan"] = true
+AL["Herod <The Scarlet Champion>"] = true
+AL["High Inquisitor Fairbanks"] = true
+AL["Scarlet Commander Mograine"] = true
+AL["High Inquisitor Whitemane"] = true
+AL["Graveyard"] = true
+AL["Library"] = true
+AL["Armory"] = true
+AL["Cathedral"] = true
+AL["Tuten'kash"] = true
+AL["Mordresh Fire Eye"] = true
+AL["Lady Falther'ess"] = true
+AL["Glutton"] = true
+AL["Ragglesnout"] = true
+AL["Plaguemaw the Rotting"] = true
+AL["Amnennar the Coldbringer"] = true
+AL["Henry Stern"] = true
+AL["Revelosh"] = true
+AL["Eric \"The Swift\""] = true
+AL["Baelog"] = true
+AL["Olaf"] = true
+AL["Ironaya"] = true
+AL["Ancient Stone Keeper"] = true
+AL["Galgann Firehammer"] = true
+AL["Grimlok <Stonevault Chieftain>"] = true
+AL["Archaedas <Ancient Stone Watcher>"] = true
+AL["Shadowforge Cache"] = true
+AL["Baelog's Chest"] = true
+AL["Tablet of Will"] = true
+AL["Antu'sul <Overseer of Sul>"] = true
+AL["Theka the Martyr"] = true
+AL["Witch Doctor Zum'rah"] = true
+AL["Nekrum Gutchewer"] = true
+AL["Hydromancer Velratha"] = true
+AL["Sandfury Executioner"] = true
+AL["Gahz'rilla"] = true
+AL["Shadowpriest Sezz'ziz"] = true
+AL["Dustwraith"] = true
+AL["Sergeant Bly"] = true
+AL["Chief Ukorz Sandscalp"] = true
+AL["Zerillis"] = true
+AL["Meshlok the Harvester"] = true
+AL["Noxxion"] = true
+AL["Razorlash"] = true
+AL["Lord Vyletongue"] = true
+AL["Celebras the Cursed"] = true
+AL["Landslide"] = true
+AL["Tinkerer Gizlock"] = true
+AL["Rotgrip"] = true
+AL["Princess Theradras"] = true
+AL["The Nameless Prophet"] = true
+AL["Kolk <The First Kahn>"] = true
+AL["Gelk <The Second Kahn>"] = true
+AL["Magra <The Third Kahn>"] = true
+AL["Maraudos <The Fourth Kahn>"] = true
+AL["Veng <The Fifth Kahn>"] = true
+AL["Atal'alarion <Guardian of the Idol>"] = true
+AL["Balcony Minibosses"] = true
+AL["Spawn of Hakkar"] = true
+AL["Jammal'an the Prophet"] = true
+AL["Ogom the Wretched"] = true
+AL["Weaver"] = true
+AL["Dreamscythe"] = true
+AL["Avatar of Hakkar"] = true
+AL["Hazzas"] = true
+AL["Morphaz"] = true
+AL["Shade of Eranikus"] = true
+AL["High Interrogator Gerstahn "] = true
+AL["Houndmaster Grebmar"] = true
+AL["Lord Roccor"] = true
+AL["Gorosh the Dervish"] = true
+AL["Grizzle"] = true
+AL["Eviscerator"] = true
+AL["Ok'thor the Breaker"] = true
+AL["Anub'shiah"] = true
+AL["Hedrum the Creeper"] = true
+AL["Pyromancer Loregrain"] = true
+AL["Dark Coffer"] = true
+AL["Dark Keeper"] = true
+AL["Secret Safe"] = true
+AL["Relic Coffer"] = true
+AL["Lord Incendius"] = true
+AL["Warder Stilgiss"] = true
+AL["Verek"] = true
+AL["Watchman Doomgrip"] = true
+AL["Fineous Darkvire <Chief Architect>"] = true
+AL["Bael'Gar"] = true
+AL["General Angerforge"] = true
+AL["Golem Lord Argelmach"] = true
+AL["Guzzler"] = true
+AL["Hurley Blackbreath"] = true
+AL["Phalanx"] = true
+AL["Lokhtos Darkbargainer"] = true
+AL["Ribbly Screwspigot"] = true
+AL["Plugger Spazzring"] = true
+AL["Ambassador Flamelash"] = true
+AL["Panzor the Invincible"] = true
+AL["Chest of The Seven"] = true
+AL["Magmus"] = true
+AL["Princess Moira Bronzebeard "] = true
+AL["Emperor Dagran Thaurissan"] = true
+AL["Plans"] = true
+AL["Theldren ( T0.5 )"] = true
+AL["Lower "] = true
+AL["Burning Felguard"] = true
+AL["Highlord Omokk"] = true
+AL["Spirestone Battle Lord"] = true
+AL["Spirestone Lord Magus"] = true
+AL["Shadow Hunter Vosh'gajin"] = true
+AL["War Master Voone"] = true
+AL["Bannok Grimaxe"] = true
+AL["Mother Smolderweb"] = true
+AL["Crystal Fang"] = true
+AL["Urok Doomhowl"] = true
+AL["Quartermaster Zigris"] = true
+AL["Halycon"] = true
+AL["Gizrul the Slavener"] = true
+AL["Ghok Bashguud"] = true
+AL["Spirestone Butcher"] = true
+AL["Overlord Wyrmthalak"] = true
+AL["Mor Grayhoof ( T0.5 )"] = true
+AL["Upper "] = true
+AL["Pyroguard Emberseer"] = true
+AL["Solakar Flamewreath"] = true
+AL["Goraluk Anvilcrack "] = true
+AL["Unforged Rune Covered Breastplate"] = true
+AL["Jed Runewatcher"] = true
+AL["Gyth"] = true
+AL["Warchief Rend Blackhand"] = true
+AL["The Beast"] = true
+AL["General Drakkisath"] = true
+AL["Lord Valthalak ( T0.5 )"] = true
+AL["East"] = true
+AL["Pusillin"] = true
+AL["Zevrim Thornhoof"] = true
+AL["Hydrospawn"] = true
+AL["Lethtendris"] = true
+AL["Alzzin the Wildshaper"] = true
+AL["Isalien ( T0.5 )"] = true
+AL["West"] = true
+AL["Tendris Warpwood"] = true
+AL["Tsu'zee"] = true
+AL["Illyanna Ravenoak"] = true
+AL["Magister Kalendris"] = true
+AL["Immol'thar"] = true
+AL["Prince Tortheldrin"] = true
+AL["Shen'dralar Provisioner"] = true
+AL["Lord Hel'nurath"] = true
+AL["North"] = true
+AL["Guard Mol'dar"] = true
+AL["Stomper Kreeg <The Drunk>"] = true
+AL["Sells:"] = true
+AL["Guard Fengus"] = true
+AL["Fengus's Chest"] = true
+AL["Knot Thimblejack's Cache"] = true
+AL["Guard Slip'kik"] = true
+AL["Captain Kromcrush"] = true
+AL["Cho'Rush the Observer"] = true
+AL["King Gordok"] = true
+AL["Tribute"] = true
+AL["Blood Steward of Kirtonos"] = true
+AL["Kirtonos the Herald"] = true
+AL["Jandice Barov"] = true
+AL["Rattlegore"] = true
+AL["Death Knight Darkreaver"] = true
+AL["Marduk Blackpool"] = true
+AL["Vectus"] = true
+AL["Ras Frostwhisper"] = true
+AL["Doctor Theolen Krastinov"] = true
+AL["Lorekeeper Polkelt"] = true
+AL["Instructor Malicia"] = true
+AL["Lady Illucia Barov"] = true
+AL["Lord Alexei Barov"] = true
+AL["The Ravenian"] = true
+AL["Darkmaster Gandling"] = true
+AL["Kormok ( T0.5 )"] = true
+AL["Skul"] = true
+AL["Stratholme Courier"] = true
+AL["The Unforgiven"] = true
+AL["Hearthsinger Forresten"] = true
+AL["Timmy the Cruel"] = true
+AL["Malor the Zealous"] = true
+AL["Malors Strongbox"] = true
+AL["Balzaphon"] = true
+AL["Crimson Hammersmith"] = true
+AL["Cannon Master Willey"] = true
+AL["Archivist Galford"] = true
+AL["Balnazzar"] = true
+AL["Stonespine"] = true
+AL["Baroness Anastari"] = true
+AL["Black Guard Swordsmith"] = true
+AL["Nerub'enkan"] = true
+AL["Maleki the Pallid"] = true
+AL["Magistrate Barthilas"] = true
+AL["Ramstein the Gorger"] = true
+AL["Postmaster Malown"] = true
+AL["Baron Rivendare"] = true
+AL["Sothos and Jarien's Heirlooms ( T0.5 )"] = true
+AL["Atiesh"] = true
+AL["Lucifron"] = true
+AL["Magmadar"] = true
+AL["Gehennas"] = true
+AL["Garr"] = true
+AL["Shazzrah"] = true
+AL["Baron Geddon"] = true
+AL["Golemagg the Incinerator"] = true
+AL["Sulfuron Harbinger"] = true
+AL["Majordomo Executus"] = true
+AL["Ragnaros"] = true
+AL["All bosses"] = true
+AL["Onyxia"] = true
+AL["High Priestess Jeklik"] = true
+AL["High Priest Venoxis"] = true
+AL["High Priestess Mar'li"] = true
+AL["Bloodlord Mandokir"] = true
+AL["Gri'lek"] = true
+AL["Hazza'rah"] = true
+AL["Renataki"] = true
+AL["Wushoolay"] = true
+AL["Gahz'ranka"] = true
+AL["High Priest Thekal"] = true
+AL["High Priestess Arlokk"] = true
+AL["Jin'do the Hexxer"] = true
+AL["Hakkar"] = true
+AL["Shared loot"] = true
+AL["Enchants"] = true
+AL["Jinxed Hoodoo Pile"] = true
+AL["Muddy Churning Waters"] = true
+AL["Razorgore the Untamed"] = true
+AL["Vaelastrasz the Corrupt"] = true
+AL["Broodlord Lashlayer"] = true
+AL["Firemaw"] = true
+AL["Ebonroc"] = true
+AL["Flamegor"] = true
+AL["Chromaggus"] = true
+AL["Nefarian"] = true
+AL["Kurinnaxx"] = true
+AL["General Rajaxx"] = true
+AL["Moam"] = true
+AL["Buru the Gorger"] = true
+AL["Ayamiss the Hunter"] = true
+AL["Ossirian the Unscarred"] = true
+AL["Class books"] = true
+AL["The Prophet Skeram"] = true
+AL["Bug Trio"] = true
+AL["Battleguard Sartura"] = true
+AL["Fankriss the Unyielding"] = true
+AL["Viscidus"] = true
+AL["Princess Huhuran"] = true
+AL["Twin Emperors"] = true
+AL["Emperor Vek'lor"] = true
+AL["Emperor Vek'nilash"] = true
+AL["Ouro"] = true
+AL["C'Thun"] = true
+AL["Ahn'Qiraj scarabs"] = true
+AL["Ahn'Qiraj enchants"] = true
+AL["Anub'Rekhan"] = true
+AL["Grand Widow Faerlina"] = true
+AL["Maexxna"] = true
+AL["Noth the Plaguebringer"] = true
+AL["Heigan the Unclean"] = true
+AL["Loatheb"] = true
+AL["Instructor Razuvious"] = true
+AL["Gothik the Harvester"] = true
+AL["The Four Horsemen"] = true
+AL["Patchwerk"] = true
+AL["Grobbulus"] = true
+AL["Gluth"] = true
+AL["Thaddius"] = true
+AL["Sapphiron"] = true
+AL["Kel'Thuzad"] = true
+
+-- \AtlasLootClassic_PvP\data.lua
+AL["Battlegrounds"] = true
+AL["Class Sets"] = true
+
+-- \AtlasLootClassic\Addons\Search.lua
+AL["AtlasLoot Search"] = true
+
+-- \AtlasLootClassic\Button\Extra_Price_type.lua
+AL["--- or ---"] = true
+
+-- \AtlasLootClassic\Button\Faction_type.lua
+
+-- \AtlasLootClassic\Button\Item_type.lua
+AL["Chat Link"] = true
+AL["Add item into chat"] = true
+AL["Dress up"] = true
+AL["Shows the item in the Dressing room"] = true
+AL["Droprate:"] = true
+
+-- \AtlasLootClassic\Button\Profession_type.lua
+AL["Add profession link into chat"] = true
+
+-- \AtlasLootClassic\Button\Set_type.lua
+
+-- \AtlasLootClassic\Core\ClickHandler.lua
+
+-- \AtlasLootClassic\Core\ItemInfo.lua
 AL["One-Hand, Axe"] = true
 AL["Two-Hand, Axe"] = true
 AL["Bow"] = true
@@ -80,280 +419,211 @@ AL["Wand"] = true
 AL["Fishing Pole"] = true
 AL["Shield"] = true
 
---Core\StaticPopupDialogs.lua
-AL["It has been detected that your version of Atlas does not match the version that Atlasloot is tuned for (%s/%s). Depending on changes, there may be the occasional error, so please visit http://www.atlasmod.com as soon as possible to update."] = true
-AL["Incompatible Atlas Detected"] = true
-AL["OK"] = true
-AL["Setup"] = true
-AL["Welcome to Atlasloot Enhanced. Please take a moment to set your preferences."] = true
+-- \AtlasLootClassic\Core\SlashCommands.lua
+AL["/al - Open the AtlasLoot window."] = true
+AL["/al slash - Prints a list of all slash commands."] = true
+AL["/al options - Open AtlasLoot Options window."] = true
+AL["Command %s not found. Use '/al slash' for a full list of commands"] = true
+AL["Slash commands:"] = true
 
---Core\WorldMapIntegration.lua
-AL["Click to open AtlasLoot window"] = true;
+-- \AtlasLootClassic\Core\WorldMapIntegration.lua
+AL["Click to open AtlasLoot window"] = true
 
---GUI\GUI.lua
-AL["AtlasLoot Modules"] = true
-AL["Custom Modules"] = true
-AL["Select Module"] = true
-AL["Select Subcategory"] = true
-AL["No module found."] = true
-AL["Model"] = true
-AL["Items"] = true
-AL["Sounds"] = true
-AL["|cff00ff00Right-Click:|r Change Spec"] = true
-AL["Shows items for all %s specializations."] = true
-AL["Required module %s is currently disabled."] = true
-AL["Required module %s is not installed."] = true
-AL["/al togglebg - Toggle the background image on loottables."] = true
+-- \AtlasLootClassic\Data\Sets.lua
+AL["The Gladiator"] = true
+AL["Dal'Rend's Arms"] = true
+AL["Spider's Kiss"] = true
+AL["The Postmaster"] = true
+AL["Cadaverous Garb"] = true
+AL["Necropile Raiment"] = true
+AL["Bloodmail Regalia"] = true
+AL["Deathbone Guardian"] = true
+AL["Volcanic Armor"] = true
+AL["Stormshroud Armor"] = true
+AL["Devilsaur Armor"] = true
+AL["Ironfeather Armor"] = true
+AL["Defias Leather"] = true
+AL["Embrace of the Viper"] = true
+AL["Chain of the Scarlet Crusade"] = true
+AL["Magister's Regalia"] = true
+AL["Vestments of the Devout"] = true
+AL["Dreadmist Raiment"] = true
+AL["Shadowcraft Armor"] = true
+AL["Wildheart Raiment"] = true
+AL["Beaststalker Armor"] = true
+AL["The Elements"] = true
+AL["Lightforge Armor"] = true
+AL["Battlegear of Valor"] = true
+AL["Arcanist Regalia"] = true
+AL["Vestments of Prophecy"] = true
+AL["Felheart Raiment"] = true
+AL["Nightslayer Armor"] = true
+AL["Cenarion Raiment"] = true
+AL["Giantstalker Armor"] = true
+AL["The Earthfury"] = true
+AL["Lawbringer Armor"] = true
+AL["Battlegear of Might"] = true
+AL["Netherwind Regalia"] = true
+AL["Vestments of Transcendence"] = true
+AL["Nemesis Raiment"] = true
+AL["Bloodfang Armor"] = true
+AL["Stormrage Raiment"] = true
+AL["Dragonstalker Armor"] = true
+AL["The Ten Storms"] = true
+AL["Judgement Armor"] = true
+AL["Battlegear of Wrath"] = true
+AL["Garb of Thero-shan"] = true
+AL["Shard of the Gods"] = true
+AL["Spirit of Eskhandar"] = true
+AL["Champion's Battlegear"] = true
+AL["Lieutenant Commander's Battlegear"] = true
+AL["Champion's Earthshaker"] = true
+AL["Imperial Plate"] = true
+AL["Champion's Regalia"] = true
+AL["Champion's Raiment"] = true
+AL["Lieutenant Commander's Regalia"] = true
+AL["Lieutenant Commander's Raiment"] = true
+AL["Champion's Threads"] = true
+AL["Lieutenant Commander's Threads"] = true
+AL["Champion's Vestments"] = true
+AL["Lieutenant Commander's Vestments"] = true
+AL["Champion's Pursuit"] = true
+AL["Lieutenant Commander's Pursuit"] = true
+AL["Lieutenant Commander's Sanctuary"] = true
+AL["Champion's Sanctuary"] = true
+AL["Warlord's Battlegear"] = true
+AL["Field Marshal's Battlegear"] = true
+AL["Warlord's Earthshaker"] = true
+AL["Warlord's Regalia"] = true
+AL["Field Marshal's Regalia"] = true
+AL["Field Marshal's Raiment"] = true
+AL["Warlord's Raiment"] = true
+AL["Warlord's Threads"] = true
+AL["Field Marshal's Threads"] = true
+AL["Warlord's Vestments"] = true
+AL["Field Marshal's Vestments"] = true
+AL["Field Marshal's Pursuit"] = true
+AL["Warlord's Pursuit"] = true
+AL["Field Marshal's Sanctuary"] = true
+AL["Warlord's Sanctuary"] = true
+AL["Lieutenant Commander's Aegis"] = true
+AL["Field Marshal's Aegis"] = true
+AL["Bloodvine Garb"] = true
+AL["Primal Batskin"] = true
+AL["Blood Tiger Harness"] = true
+AL["Bloodsoul Embrace"] = true
+AL["The Darksoul"] = true
+AL["The Twin Blades of Hakkari"] = true
+AL["Zanzil's Concentration"] = true
+AL["Primal Blessing"] = true
+AL["Overlord's Resolution"] = true
+AL["Prayer of the Primal"] = true
+AL["Major Mojo Infusion"] = true
+AL["The Highlander's Resolution"] = true
+AL["The Highlander's Resolve"] = true
+AL["The Highlander's Determination"] = true
+AL["The Highlander's Fortitude"] = true
+AL["The Highlander's Purpose"] = true
+AL["The Highlander's Will"] = true
+AL["The Highlander's Intent"] = true
+AL["Vindicator's Battlegear"] = true
+AL["Freethinker's Armor"] = true
+AL["Augur's Regalia"] = true
+AL["Predator's Armor"] = true
+AL["Madcap's Outfit"] = true
+AL["Haruspex's Garb"] = true
+AL["Confessor's Raiment"] = true
+AL["Demoniac's Threads"] = true
+AL["Illusionist's Attire"] = true
+AL["The Defiler's Determination"] = true
+AL["The Defiler's Fortitude"] = true
+AL["The Defiler's Intent"] = true
+AL["The Defiler's Purpose"] = true
+AL["The Defiler's Resolution"] = true
+AL["The Defiler's Will"] = true
+AL["Black Dragon Mail"] = true
+AL["Green Dragon Mail"] = true
+AL["Blue Dragon Mail"] = true
+AL["Twilight Trappings"] = true
+AL["Genesis Raiment"] = true
+AL["Symbols of Unending Life"] = true
+AL["Battlegear of Unyielding Strength"] = true
+AL["Conqueror's Battlegear"] = true
+AL["Deathdealer's Embrace"] = true
+AL["Emblems of Veiled Shadows"] = true
+AL["Doomcaller's Attire"] = true
+AL["Implements of Unspoken Names"] = true
+AL["Stormcaller's Garb"] = true
+AL["Gift of the Gathering Storm"] = true
+AL["Enigma Vestments"] = true
+AL["Trappings of Vaulted Secrets"] = true
+AL["Avenger's Battlegear"] = true
+AL["Battlegear of Eternal Justice"] = true
+AL["Garments of the Oracle"] = true
+AL["Finery of Infinite Wisdom"] = true
+AL["Striker's Garb"] = true
+AL["Trappings of the Unseen Path"] = true
+AL["Battlegear of Heroism"] = true
+AL["Darkmantle Armor"] = true
+AL["Feralheart Raiment"] = true
+AL["Vestments of the Virtuous"] = true
+AL["Beastmaster Armor"] = true
+AL["Soulforge Armor"] = true
+AL["Sorcerer's Regalia"] = true
+AL["Deathmist Raiment"] = true
+AL["The Five Thunders"] = true
+AL["Ironweave Battlesuit"] = true
+AL["Dreamwalker Raiment"] = true
+AL["Champion's Guard"] = true
+AL["Dreadnaught's Battlegear"] = true
+AL["Bonescythe Armor"] = true
+AL["Vestments of Faith"] = true
+AL["Frostfire Regalia"] = true
+AL["The Earthshatterer"] = true
+AL["Redemption Armor"] = true
+AL["Plagueheart Raiment"] = true
+AL["Cryptstalker Armor"] = true
+AL["Battlegear of Undead Slaying"] = true
+AL["Undead Slayer's Armor"] = true
+AL["Garb of the Undead Slayer"] = true
+AL["Regalia of Undead Cleansing"] = true
+AL["Champion's Battlearmor"] = true
+AL["Champion's Stormcaller"] = true
+AL["Champion's Refuge"] = true
+AL["Champion's Investiture"] = true
+AL["Champion's Dreadgear"] = true
+AL["Champion's Arcanum"] = true
+AL["Champion's Pursuance"] = true
+AL["Lieutenant Commander's Redoubt"] = true
+AL["Lieutenant Commander's Battlearmor"] = true
+AL["Lieutenant Commander's Arcanum"] = true
+AL["Lieutenant Commander's Dreadgear"] = true
+AL["Lieutenant Commander's Guard"] = true
+AL["Lieutenant Commander's Investiture"] = true
+AL["Lieutenant Commander's Pursuance"] = true
+AL["Lieutenant Commander's Refuge"] = true
+
+-- \AtlasLootClassic\GUI\GUI.lua
 AL["Click to open WoW instance map."] = true
 AL["Click to open Atlas instance map."] = true
 AL["Right-click to close Atlas window."] = true
+AL["Shows items for all %s specializations."] = true
+AL["|cff00ff00Right-Click:|r Change Spec"] = true
+AL["Required module %s is currently disabled."] = true
+AL["Required module %s is not installed."] = true
+AL["AtlasLoot Modules"] = true
+AL["Custom Modules"] = true
+AL["No module found."] = true
+AL["/al togglebg - Toggle the background image on loottables."] = true
+AL["Select Module"] = true
+AL["Select Subcategory"] = true
+AL["Model"] = true
+AL["Sounds"] = true
+AL["Items"] = true
 
---GUI\SoundFrame.lua
+-- \AtlasLootClassic\GUI\SoundFrame.lua
 AL["Add sound into chat"] = true
 AL["Copy Box"] = true
 AL["Shows the sound in the copy box"] = true
 
---GUI\QuickLootFrame.lua
-AL["Normal"] = true
-AL["Heroic"] = true
-AL["Mythic"] = true
-AL["25 Player"] = true
-AL["25 Player Heroic"] = true
-AL["Raid Finder"] = true
-AL["Loading Data ..."] = true
-
---GUI\SetViewFrame.lua
-AL["AtlasLoot Set View"] = true
-AL["Stats"] = true
-
--- AtlasLoot\Button\Extra_Price_type.lua
-AL["--- or ---"] = true
-
--- AtlasLoot\Button\Item_type.lua
-AL["Chat Link"] = true
-AL["Add item into chat"] = true
-AL["Dress up"] = true
-AL["Shows the item in the Dressing room"] = true
-AL["Droprate:"] = true
-
--- Profession_type.lua
-AL["Add profession link into chat"] = true
-
--- AtlasLoot\Button\Achievement_type.lua
-AL["Add achievement link into chat"] = true
-
--- Pet_type.lua
-AL["Show Pet in Journal"] = true
-
--- Mount_type.lua
-AL["Show Mount in Journal"] = true
-
--- Addons\Search.lua
-AL["AtlasLoot Search"] = true
-
--- Armor type
-AL["Cloth"] = true
-AL["Leather"] = true
-AL["Mail"] = true
-AL["Plate"] = true
-
--- Classic strings
-AL["AQ Enchants"] = true
-AL["Dire Maul North Tribute Chest"] = true
-AL["Dire Maul Books"] = true
-AL["Felvine Shard"] = true
-AL["Knot Thimblejack"] = true
-AL["Master Elemental Shaper Krixix"] = true
-AL["Ogre Tannin Basket"] = true
-AL["Rajaxx's Captains"] = true
-AL["Shen'dralar Provisioner"] = true
-AL["The Grim Guzzler"] = true
-AL["The Secret Safe"] = true
-AL["The Vault"] = true
-AL["Unfinished Painting"] = true
-
--- Burning Crusade strings
-AL["Aged Dalaran Wizard"] = true
-AL["Avatar of the Martyred"] = true
-AL["Don Carlos"] = true
-AL["First Fragment Guardian"] = true
-AL["Overcharged Manacell"] = true
-AL["Second Fragment Guardian"] = true
-AL["Servant's Quarter Animal Bosses"] = true
-AL["Shattered Hand Executioner"] = true
-AL["Third Fragment Guardian"] = true
-AL["Thomas Yance"] = true
-AL["World Bosses"] = true
-
--- Cataclysm strings
-AL["Firestone Vendor"] = true
-AL["Timed Reward Chest"] = true
-
--- Warlords of Draenor strings
-
--- Collections strings
-AL["Achievement & Quest Rewards"] = true
-AL["Apexis Crystal"] = true
-AL["Arena Reward"] = true
-AL["Ayla Shadowstorm"] = true
-AL["BoE World Epics"] = true
-AL["Card Game Tabards"] = true
-AL["Challenge Mode Armor Sets"] = true
-AL["Challenge Mode Gear"] = true
-AL["Classic Sets"] = true
-AL["Damek Bloombeard"] = true
-AL["Defias Overseer"] = true
-AL["Druid of the Fang"] = true
-AL["Dungeon Sets"] = true
-AL["Dungeon %d Sets"] = true
-AL["Garrison"] = true
-AL["Guild"] = true
-AL["Heirloom"] = true
-AL["Legendary Items"] = true
-AL["Mounts"] = true
-AL["Primal Trader"] = true
-AL["Replica available at Darkmoon Faire"] = true
-AL["Tabards"] = true
-AL["Tier Sets"] = true
-AL["Tier Sets - per Class"] = true
-AL["Tier %d Sets"] = true
-AL["Timewalking Dungeon Event"] = true
-AL["Unobtainable Tabards"] = true
-AL["Varlan Highbough"] = true
-AL["Vendors"] = true
-AL["Zen'Vorka"] = true
-
--- Crafting strings
-AL["Arakkoa"] = true
-AL["Armor Enhancements"] = true
-AL["Armor"] = true
-AL["Attack/Spell Power"] = true
-AL["Attributes"] = true
-AL["Bags"] = true
-AL["Banquets/Feasts"] = true
-AL["Blue Gems"] = true
-AL["Boots"] = true
-AL["BoP Gems"] = true
-AL["Bracers"] = true
-AL["Chest"] = true
-AL["Cloak"] = true
-AL["Cloaks"] = true
-AL["Cogwheels"] = true
-AL["Darkmoon Cards"] = true
-AL["Draenei"] = true
-AL["Draenor Clans"] = true
-AL["Dwarf"] = true
-AL["Elixirs"] = true
-AL["Exalted"] = true
-AL["Firework"] = true
-AL["Flasks"] = true
-AL["Food without Buffs"] = true
-AL["Fossil"] = true
-AL["Gloves"] = true
-AL["Glyphs"] = true
-AL["Green Gems"] = true
-AL["Item Enhancements"] = true
-AL["Mantid"] = true
-AL["Meta Gems"] = true
-AL["Mogu"] = true
-AL["Neck"] = true
-AL["Necklaces"] = true
-AL["Nerubian"] = true
-AL["Night Elf"] = true
-AL["Off-Hands"] = true
-AL["Old Remedies"] = true
-AL["Ogre"] = true
-AL["Orange Gems"] = true
-AL["Orc"] = true
-AL["Other Buffs"] = true
-AL["Pandaren"] = true
-AL["Pets"] = true
-AL["Potions"] = true
-AL["Primary Professions"] = true
-AL["Prismatic Gems"] = true
-AL["Purple Gems"] = true
-AL["Ratings"] = true
-AL["Reagents"] = true
-AL["Red Gems"] = true
-AL["Relic"] = true
-AL["Ring"] = true
-AL["Rings"] = true
-AL["Runes"] = true
-AL["Scopes"] = true
-AL["Scrolls"] = true
-AL["Secondary Professions"] = true
-AL["Shields"] = true
-AL["Shirts"] = true
-AL["Shoulder"] = true
-AL["Special"] = true
-AL["Staves"] = true
-AL["Tinker"] = true
-AL["Tol'vir"] = true
-AL["Training Projects"] = true
-AL["Transmutes"] = true
-AL["Trinkets"] = true
-AL["Troll"] = true
-AL["Vrykul"] = true
-AL["Weapon Enhancements"] = true
-AL["Weapons"] = true
-AL["Yellow Gems"] = true
-AL["Contracts"] = true
-AL["Devices"] = true
-AL["Weapon Enchants"] = true
-
--- Factions strings
-AL["Best Friend"] = true
-AL["Friend"] = true
-AL["Good Friend"] = true
-AL["Rank %d"] = true
-
--- PvP strings
-AL["Amulets"] = true
-AL["Class Sets"] = true
-AL["Elite"] = true
-AL["Non-Set Gear"] = true
-AL["Season %d"] = true
-AL["Warlords Season %d"] = true
-AL["Legion Season %d Elite"] = true
-AL["Legion Season %d"] = true
-AL["Legacy Justice Points Gears"] = true
-AL["Legacy Valor Points Gears"] = true
-
--- World Events strings
-AL["Permanent/Recurring Events"] = true
-AL["Argent Tournament"] = true
-AL["Azeroth"] = true
-AL["Brew of the Month Club"] = true
-AL["Brewfest"] = true
-AL["Candy"] = true
-AL["Children's Week"] = true
-AL["Common Rewards"] = true
-AL["Darkmoon Faire"] = true
-AL["Day of the Dead"] = true
-AL["Drinks"] = true
-AL["Feast of Winter Veil"] = true
-AL["First Prize"] = true
-AL["Food"] = true
-AL["Gifts & Presents"] = true
-AL["Hallow's End"] = true
-AL["Harvest Festival"] = true
-AL["Love is in the Air"] = true
-AL["Lunar Festival"] = true
-AL["Midsummer Fire Festival"] = true
-AL["Noblegarden"] = true
-AL["Non-Playable Race Masks"] = true
-AL["Pilgrim's Bounty"] = true
-AL["Playable Race Masks"] = true
-AL["Rare Fish Rewards"] = true
-AL["Rare Fish"] = true
-AL["Seasonal Events"] = true
-AL["Smokywood Pastures Vendor"] = true
-AL["Special Rewards"] = true
-AL["Stranglethorn Fishing Extravaganza"] = true
-AL["Toys"] = true
-AL["Transmoggable Replicas"] = true
-AL["Vanity Gear"] = true
-AL["Vendor"] = true
-AL["Wands"] = true
-AL["Challenge Card"] = true -- Brawler's Guild
 --@end-do-not-package@

@@ -50,7 +50,7 @@ local IngameLocales = {
 	-- ######################################################################
 	-- Factions
 	-- ######################################################################
-	
+
 
 	-- ######################################################################
 	-- Months
@@ -71,7 +71,7 @@ local IngameLocales = {
 	-- ######################################################################
 	-- Class Specs
 	-- ######################################################################
-	
+
 
 	-- ######################################################################
 	-- Zones
@@ -88,18 +88,15 @@ local IngameLocales = {
 	--["Stormwind City"] = GetMapInfo(84).name,
 	--["Upper Blackrock Spire"] = GetAchievementName(1307),
 
-	
+
 	-- data from Core/ItemInfo.lua is generated after loading
 
 	-- ######################################################################
 	-- Class
 	-- ######################################################################
-	["DEATHKNIGHT"]	= AtlasLoot_GetClassName("DEATHKNIGHT"),
-	["DEMONHUNTER"]	= AtlasLoot_GetClassName("DEMONHUNTER"),
 	["DRUID"] 	= AtlasLoot_GetClassName("DRUID"),
 	["HUNTER"] 	= AtlasLoot_GetClassName("HUNTER"),
 	["MAGE"] 	= AtlasLoot_GetClassName("MAGE"),
-	["MONK"] 	= AtlasLoot_GetClassName("MONK"),
 	["PALADIN"] 	= AtlasLoot_GetClassName("PALADIN"),
 	["PRIEST"] 	= AtlasLoot_GetClassName("PRIEST"),
 	["ROGUE"] 	= AtlasLoot_GetClassName("ROGUE"),

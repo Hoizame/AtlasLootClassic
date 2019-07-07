@@ -5,28 +5,28 @@
 ## LoadOnDemand: 1
 
 #@non-debug@
-## Title: @localization(locale="enUS", key="Title-Classic", namespace="ToC")@
-## Title-deDE: @localization(locale="deDE", key="Title-Classic", namespace="ToC")@
-## Title-esES: @localization(locale="esES", key="Title-Classic", namespace="ToC")@
-## Title-esMX: @localization(locale="esMX", key="Title-Classic", namespace="ToC")@
-## Title-frFR: @localization(locale="frFR", key="Title-Classic", namespace="ToC")@
-## Title-itIT: @localization(locale="itIT", key="Title-Classic", namespace="ToC")@
-## Title-koKR: @localization(locale="koKR", key="Title-Classic", namespace="ToC")@
-## Title-ptBR: @localization(locale="ptBR", key="Title-Classic", namespace="ToC")@
-## Title-ruRU: @localization(locale="ruRU", key="Title-Classic", namespace="ToC")@
-## Title-zhCN: @localization(locale="zhCN", key="Title-Classic", namespace="ToC")@
-## Title-zhTW: @localization(locale="zhTW", key="Title-Classic", namespace="ToC")@
-## Notes: @localization(locale="enUS", key="Notes-Classic", namespace="ToC")@
-## Notes-deDE: @localization(locale="deDE", key="Notes-Classic", namespace="ToC")@
-## Notes-esES: @localization(locale="esES", key="Notes-Classic", namespace="ToC")@
-## Notes-esMX: @localization(locale="esMX", key="Notes-Classic", namespace="ToC")@
-## Notes-frFR: @localization(locale="frFR", key="Notes-Classic", namespace="ToC")@
-## Notes-itIT: @localization(locale="itIT", key="Notes-Classic", namespace="ToC")@
-## Notes-koKR: @localization(locale="koKR", key="Notes-Classic", namespace="ToC")@
-## Notes-ptBR: @localization(locale="ptBR", key="Notes-Classic", namespace="ToC")@
-## Notes-ruRU: @localization(locale="ruRU", key="Notes-Classic", namespace="ToC")@
-## Notes-zhCN: @localization(locale="zhCN", key="Notes-Classic", namespace="ToC")@
-## Notes-zhTW: @localization(locale="zhTW", key="Notes-Classic", namespace="ToC")@
+## Title: @localization(locale="enUS", key="Title-DaR", namespace="ToC")@
+## Title-deDE: @localization(locale="deDE", key="Title-DaR", namespace="ToC")@
+## Title-esES: @localization(locale="esES", key="Title-DaR", namespace="ToC")@
+## Title-esMX: @localization(locale="esMX", key="Title-DaR", namespace="ToC")@
+## Title-frFR: @localization(locale="frFR", key="Title-DaR", namespace="ToC")@
+## Title-itIT: @localization(locale="itIT", key="Title-DaR", namespace="ToC")@
+## Title-koKR: @localization(locale="koKR", key="Title-DaR", namespace="ToC")@
+## Title-ptBR: @localization(locale="ptBR", key="Title-DaR", namespace="ToC")@
+## Title-ruRU: @localization(locale="ruRU", key="Title-DaR", namespace="ToC")@
+## Title-zhCN: @localization(locale="zhCN", key="Title-DaR", namespace="ToC")@
+## Title-zhTW: @localization(locale="zhTW", key="Title-DaR", namespace="ToC")@
+## Notes: @localization(locale="enUS", key="Notes-DaR", namespace="ToC")@
+## Notes-deDE: @localization(locale="deDE", key="Notes-DaR", namespace="ToC")@
+## Notes-esES: @localization(locale="esES", key="Notes-DaR", namespace="ToC")@
+## Notes-esMX: @localization(locale="esMX", key="Notes-DaR", namespace="ToC")@
+## Notes-frFR: @localization(locale="frFR", key="Notes-DaR", namespace="ToC")@
+## Notes-itIT: @localization(locale="itIT", key="Notes-DaR", namespace="ToC")@
+## Notes-koKR: @localization(locale="koKR", key="Notes-DaR", namespace="ToC")@
+## Notes-ptBR: @localization(locale="ptBR", key="Notes-DaR", namespace="ToC")@
+## Notes-ruRU: @localization(locale="ruRU", key="Notes-DaR", namespace="ToC")@
+## Notes-zhCN: @localization(locale="zhCN", key="Notes-DaR", namespace="ToC")@
+## Notes-zhTW: @localization(locale="zhTW", key="Notes-DaR", namespace="ToC")@
 #@end-non-debug@
 #@debug@
 ## Title: AtlasLootClassic |cFF0099FF[Dungeons and Raids]|r

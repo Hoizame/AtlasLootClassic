@@ -1,9 +1,11 @@
--- Set data is mostly loaded with "AtlasLoot_Collections"
+local ALName, ALPrivate = ...
 
 local AtlasLoot = _G.AtlasLoot
 local Sets = {}
 AtlasLoot.Data.Sets = Sets
 local AL = AtlasLoot.Locales
+local ALIL = AtlasLoot.IngameLocales
+local IMAGE_PATH = ALPrivate.IMAGE_PATH
 local ItemStringCreate = AtlasLoot.ItemString.AddBonus
 
 local Sets_Proto = {}
@@ -19,29 +21,15 @@ local GLOBAL_SETS = "global"
 local NO_ICON = "Interface\\Icons\\inv_helmet_08"
 local ICON_PATH_PRE = {
 	-- class icons
-	hunter = "Interface\\Icons\\ClassIcon_Hunter",
-	mage = "Interface\\Icons\\ClassIcon_Mage",
-	rogue = "Interface\\Icons\\ClassIcon_Rogue",
-	warlock = "Interface\\Icons\\ClassIcon_Warlock",
-	shaman = "Interface\\Icons\\ClassIcon_Shaman",
-	shamanEle = "Interface\\Icons\\Spell_Nature_Lightning",
-	shamanEnhanc = "Interface\\Icons\\spell_nature_lightningshield",
-	shamanResto = "Interface\\Icons\\spell_nature_magicimmunity",
-	priest = "Interface\\Icons\\ClassIcon_Priest",
-	priestHeal = "Interface\\Icons\\spell_holy_guardianspirit",
-	priestShadow = "Interface\\Icons\\spell_shadow_shadowwordpain",
-	druid = "Interface\\Icons\\ClassIcon_Druid",
-	druidBalance = "Interface\\Icons\\spell_nature_starfall",
-	druidDPS = "Interface\\Icons\\ability_druid_catform",
-	druidTank = "Interface\\Icons\\ability_racial_bearform",
-	druidResto = "Interface\\Icons\\spell_nature_healingtouch",
-	pala = "Interface\\Icons\\ClassIcon_Paladin",
-	palaHoly = "Interface\\Icons\\Spell_Holy_HolyBolt",
-	palaProt = "Interface\\Icons\\spell_holy_devotionaura",
-	palaRetri = "Interface\\Icons\\Spell_Holy_AuraOfLight",
-	warri = "Interface\\Icons\\ClassIcon_Warrior",
-	warriDPS = "Interface\\Icons\\ability_warrior_innerrage",
-	warriProt = "Interface\\Icons\\ability_warrior_defensivestance",
+	WARRIOR 	= 	IMAGE_PATH.."classicon_warrior",
+	PALADIN 	= 	IMAGE_PATH.."classicon_paladin",
+	HUNTER 		= 	IMAGE_PATH.."classicon_hunter",
+	ROGUE 		= 	IMAGE_PATH.."classicon_rogue",
+	PRIEST 		= 	IMAGE_PATH.."classicon_priest",
+	SHAMAN 		= 	IMAGE_PATH.."classicon_shaman",
+	MAGE 		= 	IMAGE_PATH.."classicon_mage",
+	WARLOCK 	= 	IMAGE_PATH.."classicon_warlock",
+	DRUID 		= 	IMAGE_PATH.."classicon_druid",
 }
 
 -- contains all sets
@@ -214,8 +202,19 @@ function SingleSet_Proto:GetItemTable(subSetName, curDiff)
 end
 
 function SingleSet_Proto:GetIcon(subSetName, curDiff)
-	subSetName = self:GetDiffTable(subSetName, curDiff)
-	return ( subSetName and subSetName.icon ) and subSetName.icon or (self.icon or NO_ICON)
+	subSetName = type(subSetName) == "table" and subSetName or self:Get(subSetName, curDiff)
+
+	if subSetName and subSetName.icon then
+		if ICON_PATH_PRE[subSetName.icon] then
+			return ICON_PATH_PRE[subSetName.icon]
+		elseif type(subSetName.icon) == "number" then
+			return  GetItemIcon(subSetName.icon)
+		else
+			return subSetName.icon
+		end
+	else
+		return GetItemIcon(subSetName[curDiff].itemTable[1]) or NO_ICON
+	end
 end
 
 -- name, desc, icon
@@ -223,11 +222,9 @@ local DIFF_FORMAT_NAME = "%s (%s)"
 function SingleSet_Proto:GetInfo(subSetName, curDiff)
 	subSetName = self:Get(subSetName)
 	local name = ( subSetName and subSetName.name ) and subSetName.name or self.name
-	local desc = ( subSetName and subSetName.name ) and self.name or ( subSetName and subSetName.name ) and subSetName.name or ""
-	if curDiff then
-		desc = format(DIFF_FORMAT_NAME, desc, self:GetDifficultyName(curDiff))
-	end
-	local icon = ( subSetName and subSetName.icon ) and (ICON_PATH_PRE[subSetName.icon] or subSetName.icon) or ((ICON_PATH_PRE[self.icon] or self.icon) or NO_ICON)
+	local desc = ( subSetName and subSetName.desc ) and subSetName.desc or ""
+
+	local icon = self:GetIcon(subSetName, curDiff)
 	return name, desc, icon
 end
 -- ################
@@ -428,7 +425,8 @@ local globalSetTable = {
 		{
 			name = AL["The Gladiator"],
 			subSetName = "1",
-			[NORMAL_DIFF] = { 11729, 11726, 11728, 11731, 11730 }
+			[NORMAL_DIFF] = { 11729, 11726, 11728, 11731, 11730},
+			icon = 11729,
 		},
 		{
 			name = AL["Dal'Rend's Arms"],
@@ -443,12 +441,14 @@ local globalSetTable = {
 		{
 			name = AL["The Postmaster"],
 			subSetName = "81",
-			[NORMAL_DIFF] = { 13390, 13388, 13391, 13392, 13389 }
+			[NORMAL_DIFF] = { 13390, 13388, 13391, 13392, 13389},
+			icon = 13390,
 		},
 		{
 			name = AL["Cadaverous Garb"],
 			subSetName = "121",
-			[NORMAL_DIFF] = { 14637, 14636, 14640, 14638, 14641 }
+			[NORMAL_DIFF] = { 14637, 14636, 14640, 14638, 14641},
+			icon = 14637,
 		},
 		{
 			name = AL["Necropile Raiment"],
@@ -458,22 +458,26 @@ local globalSetTable = {
 		{
 			name = AL["Bloodmail Regalia"],
 			subSetName = "123",
-			[NORMAL_DIFF] = { 14614, 14616, 14615, 14611, 14612 }
+			[NORMAL_DIFF] = { 14614, 14616, 14615, 14611, 14612},
+			icon = 14611,
 		},
 		{
 			name = AL["Deathbone Guardian"],
 			subSetName = "124",
-			[NORMAL_DIFF] = { 14624, 14622, 14620, 14623, 14621 }
+			[NORMAL_DIFF] = { 14624, 14622, 14620, 14623, 14621},
+			icon = 14624,
 		},
 		{
 			name = AL["Volcanic Armor"],
 			subSetName = "141",
-			[NORMAL_DIFF] = { 15053, 15054, 15055 }
+			[NORMAL_DIFF] = { 15053, 15054, 15055},
+			icon = 15053,
 		},
 		{
 			name = AL["Stormshroud Armor"],
 			subSetName = "142",
-			[NORMAL_DIFF] = { 15056, 15057, 15058, 21278 }
+			[NORMAL_DIFF] = { 15056, 15057, 15058, 21278},
+			icon = 15056,
 		},
 		{
 			name = AL["Devilsaur Armor"],
@@ -483,162 +487,213 @@ local globalSetTable = {
 		{
 			name = AL["Ironfeather Armor"],
 			subSetName = "144",
-			[NORMAL_DIFF] = { 15066, 15067 }
+			[NORMAL_DIFF] = { 15066, 15067},
+			icon = 15066,
 		},
 		{
 			name = AL["Defias Leather"],
 			subSetName = "161",
-			[NORMAL_DIFF] = { 10399, 10403, 10402, 10401, 10400 }
+			[NORMAL_DIFF] = { 10399, 10403, 10402, 10401, 10400},
+			icon = 10399,
 		},
 		{
 			name = AL["Embrace of the Viper"],
 			subSetName = "162",
-			[NORMAL_DIFF] = { 10412, 10411, 10413, 10410, 6473 }
+			[NORMAL_DIFF] = { 10412, 10411, 10413, 10410, 6473},
+			icon = 6473,
 		},
 		{
 			name = AL["Chain of the Scarlet Crusade"],
 			subSetName = "163",
-			[NORMAL_DIFF] = { 10329, 10332, 10328, 10331, 10330, 10333 }
+			[NORMAL_DIFF] = { 10329, 10332, 10328, 10331, 10330, 10333},
+			icon = 10328,
 		},
 		{
 			name = AL["Magister's Regalia"],
 			subSetName = "181",
-			[NORMAL_DIFF] = { 16685, 16683, 16686, 16684, 16687, 16689, 16688, 16682 }
+			[NORMAL_DIFF] = { 16685, 16683, 16686, 16684, 16687, 16689, 16688, 16682},
+			icon = 16686,
 		},
 		{
 			name = AL["Vestments of the Devout"],
 			subSetName = "182",
-			[NORMAL_DIFF] = { 16696, 16691, 16697, 16693, 16692, 16695, 16694, 16690 }
+			[NORMAL_DIFF] = { 16696, 16691, 16697, 16693, 16692, 16695, 16694, 16690},
+			icon = 16693,
 		},
 		{
 			name = AL["Dreadmist Raiment"],
 			subSetName = "183",
-			[NORMAL_DIFF] = { 16702, 16703, 16699, 16701, 16700, 16704, 16698, 16705 }
+			[NORMAL_DIFF] = { 16702, 16703, 16699, 16701, 16700, 16704, 16698, 16705},
+			icon = 16698,
 		},
 		{
 			name = AL["Shadowcraft Armor"],
 			subSetName = "184",
-			[NORMAL_DIFF] = { 16713, 16711, 16710, 16721, 16708, 16709, 16712, 16707 }
+			[NORMAL_DIFF] = { 16713, 16711, 16710, 16721, 16708, 16709, 16712, 16707},
+			icon = 16707,
 		},
 		{
 			name = AL["Wildheart Raiment"],
 			subSetName = "185",
-			[NORMAL_DIFF] = { 16716, 16715, 16714, 16720, 16706, 16718, 16719, 16717 }
+			[NORMAL_DIFF] = { 16716, 16715, 16714, 16720, 16706, 16718, 16719, 16717},
+			icon = 16720,
 		},
 		{
 			name = AL["Beaststalker Armor"],
 			subSetName = "186",
-			[NORMAL_DIFF] = { 16680, 16675, 16681, 16677, 16674, 16678, 16679, 16676 }
+			[NORMAL_DIFF] = { 16680, 16675, 16681, 16677, 16674, 16678, 16679, 16676},
+			icon = 16677,
 		},
 		{
 			name = AL["The Elements"],
 			subSetName = "187",
-			[NORMAL_DIFF] = { 16673, 16670, 16671, 16667, 16672, 16668, 16669, 16666 }
+			[NORMAL_DIFF] = { 16673, 16670, 16671, 16667, 16672, 16668, 16669, 16666},
+			icon = 16667,
 		},
 		{
 			name = AL["Lightforge Armor"],
 			subSetName = "188",
-			[NORMAL_DIFF] = { 16723, 16725, 16722, 16726, 16724, 16728, 16729, 16727 }
+			[NORMAL_DIFF] = { 16723, 16725, 16722, 16726, 16724, 16728, 16729, 16727},
+			icon = 16727,
 		},
 		{
 			name = AL["Battlegear of Valor"],
 			subSetName = "189",
-			[NORMAL_DIFF] = { 16736, 16734, 16735, 16730, 16737, 16731, 16732, 16733 }
+			[NORMAL_DIFF] = { 16736, 16734, 16735, 16730, 16737, 16731, 16732, 16733},
+			icon = 16731,
 		},
 		{
 			name = AL["Arcanist Regalia"],
 			subSetName = "201",
-			[NORMAL_DIFF] = { 16802, 16799, 16795, 16800, 16801, 16796, 16797, 16798 }
+			[NORMAL_DIFF] = { 16802, 16799, 16795, 16800, 16801, 16796, 16797, 16798},
+			desc = ALIL["MAGE"],
+			icon = "MAGE",
 		},
 		{
 			name = AL["Vestments of Prophecy"],
 			subSetName = "202",
-			[NORMAL_DIFF] = { 16811, 16813, 16817, 16812, 16814, 16816, 16815, 16819 }
+			[NORMAL_DIFF] = { 16811, 16813, 16817, 16812, 16814, 16816, 16815, 16819},
+			desc = ALIL["PRIEST"],
+			icon = "PRIEST",
 		},
 		{
 			name = AL["Felheart Raiment"],
 			subSetName = "203",
-			[NORMAL_DIFF] = { 16806, 16804, 16805, 16810, 16809, 16807, 16808, 16803 }
+			[NORMAL_DIFF] = { 16806, 16804, 16805, 16810, 16809, 16807, 16808, 16803},
+			desc = ALIL["WARLOCK"],
+			icon = "WARLOCK",
 		},
 		{
 			name = AL["Nightslayer Armor"],
 			subSetName = "204",
-			[NORMAL_DIFF] = { 16827, 16824, 16825, 16820, 16821, 16826, 16822, 16823 }
+			[NORMAL_DIFF] = { 16827, 16824, 16825, 16820, 16821, 16826, 16822, 16823},
+			desc = ALIL["ROGUE"],
+			icon = "ROGUE",
 		},
 		{
 			name = AL["Cenarion Raiment"],
 			subSetName = "205",
-			[NORMAL_DIFF] = { 16828, 16829, 16830, 16833, 16831, 16834, 16835, 16836 }
+			[NORMAL_DIFF] = { 16828, 16829, 16830, 16833, 16831, 16834, 16835, 16836},
+			desc = ALIL["DRUID"],
+			icon = "DRUID",
 		},
 		{
 			name = AL["Giantstalker Armor"],
 			subSetName = "206",
-			[NORMAL_DIFF] = { 16851, 16849, 16850, 16845, 16848, 16852, 16846, 16847 }
+			[NORMAL_DIFF] = { 16851, 16849, 16850, 16845, 16848, 16852, 16846, 16847},
+			desc = ALIL["HUNTER"],
+			icon = "HUNTER",
 		},
 		{
 			name = AL["The Earthfury"],
 			subSetName = "207",
-			[NORMAL_DIFF] = { 16838, 16837, 16840, 16841, 16844, 16839, 16842, 16843 }
+			[NORMAL_DIFF] = { 16838, 16837, 16840, 16841, 16844, 16839, 16842, 16843},
+			desc = ALIL["SHAMAN"],
+			icon = "SHAMAN",
 		},
 		{
 			name = AL["Lawbringer Armor"],
 			subSetName = "208",
-			[NORMAL_DIFF] = { 16858, 16859, 16857, 16853, 16860, 16854, 16855, 16856 }
+			[NORMAL_DIFF] = { 16858, 16859, 16857, 16853, 16860, 16854, 16855, 16856},
+			desc = ALIL["PALADIN"],
+			icon = "PALADIN",
 		},
 		{
 			name = AL["Battlegear of Might"],
 			subSetName = "209",
-			[NORMAL_DIFF] = { 16864, 16861, 16865, 16863, 16866, 16867, 16868, 16862 }
+			[NORMAL_DIFF] = { 16864, 16861, 16865, 16863, 16866, 16867, 16868, 16862},
+			desc = ALIL["WARRIOR"],
+			icon = "WARRIOR",
 		},
 		{
 			name = AL["Netherwind Regalia"],
 			subSetName = "210",
-			[NORMAL_DIFF] = { 16818, 16918, 16912, 16914, 16917, 16913, 16915, 16916 }
+			[NORMAL_DIFF] = { 16818, 16918, 16912, 16914, 16917, 16913, 16915, 16916},
+			desc = ALIL["MAGE"],
+			icon = "MAGE",
 		},
 		{
 			name = AL["Vestments of Transcendence"],
 			subSetName = "211",
-			[NORMAL_DIFF] = { 16925, 16926, 16919, 16921, 16920, 16922, 16924, 16923 }
+			[NORMAL_DIFF] = { 16925, 16926, 16919, 16921, 16920, 16922, 16924, 16923},
+			desc = ALIL["PRIEST"],
+			icon = "PRIEST",
 		},
 		{
 			name = AL["Nemesis Raiment"],
 			subSetName = "212",
-			[NORMAL_DIFF] = { 16933, 16927, 16934, 16928, 16930, 16931, 16929, 16932 }
+			[NORMAL_DIFF] = { 16933, 16927, 16934, 16928, 16930, 16931, 16929, 16932},
+			desc = ALIL["WARLOCK"],
+			icon = "WARLOCK",
 		},
 		{
 			name = AL["Bloodfang Armor"],
 			subSetName = "213",
-			[NORMAL_DIFF] = { 16910, 16906, 16911, 16905, 16907, 16908, 16909, 16832 }
+			[NORMAL_DIFF] = { 16910, 16906, 16911, 16905, 16907, 16908, 16909, 16832},
+			desc = ALIL["ROGUE"],
+			icon = "ROGUE",
 		},
 		{
 			name = AL["Stormrage Raiment"],
 			subSetName = "214",
-			[NORMAL_DIFF] = { 16903, 16898, 16904, 16897, 16900, 16899, 16901, 16902 }
+			[NORMAL_DIFF] = { 16903, 16898, 16904, 16897, 16900, 16899, 16901, 16902},
+			desc = ALIL["DRUID"],
+			icon = "DRUID",
 		},
 		{
 			name = AL["Dragonstalker Armor"],
 			subSetName = "215",
-			[NORMAL_DIFF] = { 16936, 16935, 16942, 16940, 16941, 16939, 16938, 16937 }
+			[NORMAL_DIFF] = { 16936, 16935, 16942, 16940, 16941, 16939, 16938, 16937},
+			desc = ALIL["HUNTER"],
+			icon = "HUNTER",
 		},
 		{
 			name = AL["The Ten Storms"],
 			subSetName = "216",
-			[NORMAL_DIFF] = { 16944, 16943, 16950, 16945, 16948, 16949, 16947, 16946 }
+			[NORMAL_DIFF] = { 16944, 16943, 16950, 16945, 16948, 16949, 16947, 16946},
+			desc = ALIL["SHAMAN"],
+			icon = "SHAMAN",
 		},
 		{
 			name = AL["Judgement Armor"],
 			subSetName = "217",
-			[NORMAL_DIFF] = { 16952, 16951, 16958, 16955, 16956, 16954, 16957, 16953 }
+			[NORMAL_DIFF] = { 16952, 16951, 16958, 16955, 16956, 16954, 16957, 16953},
+			desc = ALIL["PALADIN"],
+			icon = "PALADIN",
 		},
 		{
 			name = AL["Battlegear of Wrath"],
 			subSetName = "218",
-			[NORMAL_DIFF] = { 16959, 16966, 16964, 16963, 16962, 16961, 16965, 16960 }
+			[NORMAL_DIFF] = { 16959, 16966, 16964, 16963, 16962, 16961, 16965, 16960},
+			desc = ALIL["WARRIOR"],
+			icon = "WARRIOR",
 		},
 		{
 			name = AL["Garb of Thero-shan"],
 			subSetName = "221",
-			[NORMAL_DIFF] = { 7950, 7948, 7952, 7951, 7953, 7949 }
+			[NORMAL_DIFF] = { 7950, 7948, 7952, 7951, 7953, 7949},
+			desc = ALIL["ROGUE"],
+			icon = "ROGUE",
 		},
 		{
 			name = AL["Shard of the Gods"],
@@ -653,192 +708,262 @@ local globalSetTable = {
 		{
 			name = AL["Champion's Battlegear"],
 			subSetName = "281",
-			[NORMAL_DIFF] = { 16509, 16510, 16513, 16515, 16514, 16516 }
+			[NORMAL_DIFF] = { 16509, 16510, 16513, 16515, 16514, 16516},
+			desc = ALIL["WARRIOR"],
+			icon = "WARRIOR",
 		},
 		{
 			name = AL["Lieutenant Commander's Battlegear"],
 			subSetName = "282",
-			[NORMAL_DIFF] = { 16405, 16406, 16430, 16431, 16429, 16432 }
+			[NORMAL_DIFF] = { 16405, 16406, 16430, 16431, 16429, 16432},
+			desc = ALIL["WARRIOR"],
+			icon = "WARRIOR",
 		},
 		{
 			name = AL["Champion's Earthshaker"],
 			subSetName = "301",
-			[NORMAL_DIFF] = { 16519, 16518, 16522, 16523, 16521, 16524 }
+			[NORMAL_DIFF] = { 16519, 16518, 16522, 16523, 16521, 16524},
+			desc = ALIL["SHAMAN"],
+			icon = "SHAMAN",
 		},
 		{
 			name = AL["Imperial Plate"],
 			subSetName = "321",
-			[NORMAL_DIFF] = { 12424, 12426, 12425, 12422, 12427, 12429, 12428 }
+			[NORMAL_DIFF] = { 12424, 12426, 12425, 12422, 12427, 12429, 12428},
+			icon = 12427,
 		},
 		{
 			name = AL["Champion's Regalia"],
 			subSetName = "341",
-			[NORMAL_DIFF] = { 16485, 16487, 16491, 16490, 16489, 16492 }
+			[NORMAL_DIFF] = { 16485, 16487, 16491, 16490, 16489, 16492},
+			desc = ALIL["MAGE"],
+			icon = "MAGE",
 		},
 		{
 			name = AL["Champion's Raiment"],
 			subSetName = "342",
-			[NORMAL_DIFF] = { 17616, 17617, 17612, 17611, 17613, 17610 }
+			[NORMAL_DIFF] = { 17616, 17617, 17612, 17611, 17613, 17610},
+			desc = ALIL["PRIEST"],
+			icon = "PRIEST",
 		},
 		{
 			name = AL["Lieutenant Commander's Regalia"],
 			subSetName = "343",
-			[NORMAL_DIFF] = { 16369, 16391, 16413, 16414, 16416, 16415 }
+			[NORMAL_DIFF] = { 16369, 16391, 16413, 16414, 16416, 16415},
+			desc = ALIL["MAGE"],
+			icon = "MAGE",
 		},
 		{
 			name = AL["Lieutenant Commander's Raiment"],
 			subSetName = "344",
-			[NORMAL_DIFF] = { 17594, 17596, 17600, 17599, 17598, 17601 }
+			[NORMAL_DIFF] = { 17594, 17596, 17600, 17599, 17598, 17601},
+			desc = ALIL["PRIEST"],
+			icon = "PRIEST",
 		},
 		{
 			name = AL["Champion's Threads"],
 			subSetName = "345",
-			[NORMAL_DIFF] = { 17576, 17577, 17572, 17571, 17570, 17573 }
+			[NORMAL_DIFF] = { 17576, 17577, 17572, 17571, 17570, 17573},
+			desc = ALIL["WARLOCK"],
+			icon = "WARLOCK",
 		},
 		{
 			name = AL["Lieutenant Commander's Threads"],
 			subSetName = "346",
-			[NORMAL_DIFF] = { 17562, 17564, 17568, 17567, 17569, 17566 }
+			[NORMAL_DIFF] = { 17562, 17564, 17568, 17567, 17569, 17566},
+			desc = ALIL["WARLOCK"],
+			icon = "WARLOCK",
 		},
 		{
 			name = AL["Champion's Vestments"],
 			subSetName = "347",
-			[NORMAL_DIFF] = { 16498, 16499, 16505, 16508, 16506, 16507 }
+			[NORMAL_DIFF] = { 16498, 16499, 16505, 16508, 16506, 16507},
+			desc = ALIL["ROGUE"],
+			icon = "ROGUE",
 		},
 		{
 			name = AL["Lieutenant Commander's Vestments"],
 			subSetName = "348",
-			[NORMAL_DIFF] = { 16392, 16396, 16417, 16419, 16420, 16418 }
+			[NORMAL_DIFF] = { 16392, 16396, 16417, 16419, 16420, 16418},
+			desc = ALIL["ROGUE"],
+			icon = "ROGUE",
 		},
 		{
 			name = AL["Champion's Pursuit"],
 			subSetName = "361",
-			[NORMAL_DIFF] = { 16531, 16530, 16525, 16527, 16526, 16528 }
+			[NORMAL_DIFF] = { 16531, 16530, 16525, 16527, 16526, 16528},
+			desc = ALIL["HUNTER"],
+			icon = "HUNTER",
 		},
 		{
 			name = AL["Lieutenant Commander's Pursuit"],
 			subSetName = "362",
-			[NORMAL_DIFF] = { 16425, 16426, 16401, 16403, 16428, 16427 }
+			[NORMAL_DIFF] = { 16425, 16426, 16401, 16403, 16428, 16427},
+			desc = ALIL["HUNTER"],
+			icon = "HUNTER",
 		},
 		{
 			name = AL["Lieutenant Commander's Sanctuary"],
 			subSetName = "381",
-			[NORMAL_DIFF] = { 16423, 16424, 16422, 16421, 16393, 16397 }
+			[NORMAL_DIFF] = { 16423, 16424, 16422, 16421, 16393, 16397},
+			desc = ALIL["DRUID"],
+			icon = "DRUID",
 		},
 		{
 			name = AL["Champion's Sanctuary"],
 			subSetName = "382",
-			[NORMAL_DIFF] = { 16494, 16496, 16504, 16502, 16503, 16501 }
+			[NORMAL_DIFF] = { 16494, 16496, 16504, 16502, 16503, 16501},
+			desc = ALIL["DRUID"],
+			icon = "DRUID",
 		},
 		{
 			name = AL["Warlord's Battlegear"],
 			subSetName = "383",
-			[NORMAL_DIFF] = { 16541, 16542, 16544, 16545, 16548, 16543 }
+			[NORMAL_DIFF] = { 16541, 16542, 16544, 16545, 16548, 16543},
+			desc = ALIL["WARRIOR"],
+			icon = "WARRIOR",
 		},
 		{
 			name = AL["Field Marshal's Battlegear"],
 			subSetName = "384",
-			[NORMAL_DIFF] = { 16477, 16478, 16480, 16483, 16484, 16479 }
+			[NORMAL_DIFF] = { 16477, 16478, 16480, 16483, 16484, 16479},
+			desc = ALIL["WARRIOR"],
+			icon = "WARRIOR",
 		},
 		{
 			name = AL["Warlord's Earthshaker"],
 			subSetName = "386",
-			[NORMAL_DIFF] = { 16577, 16578, 16580, 16573, 16574, 16579 }
+			[NORMAL_DIFF] = { 16577, 16578, 16580, 16573, 16574, 16579},
+			desc = ALIL["SHAMAN"],
+			icon = "SHAMAN",
 		},
 		{
 			name = AL["Warlord's Regalia"],
 			subSetName = "387",
-			[NORMAL_DIFF] = { 16536, 16533, 16535, 16539, 16540, 16534 }
+			[NORMAL_DIFF] = { 16536, 16533, 16535, 16539, 16540, 16534},
+			desc = ALIL["MAGE"],
+			icon = "MAGE",
 		},
 		{
 			name = AL["Field Marshal's Regalia"],
 			subSetName = "388",
-			[NORMAL_DIFF] = { 16441, 16444, 16443, 16437, 16440, 16442 }
+			[NORMAL_DIFF] = { 16441, 16444, 16443, 16437, 16440, 16442},
+			desc = ALIL["MAGE"],
+			icon = "MAGE",
 		},
 		{
 			name = AL["Field Marshal's Raiment"],
 			subSetName = "389",
-			[NORMAL_DIFF] = { 17604, 17603, 17605, 17608, 17607, 17602 }
+			[NORMAL_DIFF] = { 17604, 17603, 17605, 17608, 17607, 17602},
+			desc = ALIL["PRIEST"],
+			icon = "PRIEST",
 		},
 		{
 			name = AL["Warlord's Raiment"],
 			subSetName = "390",
-			[NORMAL_DIFF] = { 17623, 17625, 17622, 17624, 17618, 17620 }
+			[NORMAL_DIFF] = { 17623, 17625, 17622, 17624, 17618, 17620},
+			desc = ALIL["PRIEST"],
+			icon = "PRIEST",
 		},
 		{
 			name = AL["Warlord's Threads"],
 			subSetName = "391",
-			[NORMAL_DIFF] = { 17586, 17588, 17593, 17591, 17590, 17592 }
+			[NORMAL_DIFF] = { 17586, 17588, 17593, 17591, 17590, 17592},
+			desc = ALIL["WARLOCK"],
+			icon = "WARLOCK",
 		},
 		{
 			name = AL["Field Marshal's Threads"],
 			subSetName = "392",
-			[NORMAL_DIFF] = { 17581, 17580, 17583, 17584, 17579, 17578 }
+			[NORMAL_DIFF] = { 17581, 17580, 17583, 17584, 17579, 17578},
+			desc = ALIL["WARLOCK"],
+			icon = "WARLOCK",
 		},
 		{
 			name = AL["Warlord's Vestments"],
 			subSetName = "393",
-			[NORMAL_DIFF] = { 16563, 16561, 16562, 16564, 16560, 16558 }
+			[NORMAL_DIFF] = { 16563, 16561, 16562, 16564, 16560, 16558},
+			desc = ALIL["ROGUE"],
+			icon = "ROGUE",
 		},
 		{
 			name = AL["Field Marshal's Vestments"],
 			subSetName = "394",
-			[NORMAL_DIFF] = { 16453, 16457, 16455, 16446, 16454, 16456 }
+			[NORMAL_DIFF] = { 16453, 16457, 16455, 16446, 16454, 16456},
+			desc = ALIL["ROGUE"],
+			icon = "ROGUE",
 		},
 		{
 			name = AL["Field Marshal's Pursuit"],
 			subSetName = "395",
-			[NORMAL_DIFF] = { 16466, 16465, 16468, 16462, 16463, 16467 }
+			[NORMAL_DIFF] = { 16466, 16465, 16468, 16462, 16463, 16467},
+			desc = ALIL["HUNTER"],
+			icon = "HUNTER",
 		},
 		{
 			name = AL["Warlord's Pursuit"],
 			subSetName = "396",
-			[NORMAL_DIFF] = { 16569, 16571, 16567, 16565, 16566, 16568 }
+			[NORMAL_DIFF] = { 16569, 16571, 16567, 16565, 16566, 16568},
+			desc = ALIL["HUNTER"],
+			icon = "HUNTER",
 		},
 		{
 			name = AL["Field Marshal's Sanctuary"],
 			subSetName = "397",
-			[NORMAL_DIFF] = { 16452, 16451, 16449, 16459, 16448, 16450 }
+			[NORMAL_DIFF] = { 16452, 16451, 16449, 16459, 16448, 16450},
+			desc = ALIL["DRUID"],
+			icon = "DRUID",
 		},
 		{
 			name = AL["Warlord's Sanctuary"],
 			subSetName = "398",
-			[NORMAL_DIFF] = { 16554, 16555, 16552, 16551, 16549, 16550 }
+			[NORMAL_DIFF] = { 16554, 16555, 16552, 16551, 16549, 16550},
+			desc = ALIL["DRUID"],
+			icon = "DRUID",
 		},
 		{
 			name = AL["Lieutenant Commander's Aegis"],
 			subSetName = "401",
-			[NORMAL_DIFF] = { 16410, 16409, 16433, 16435, 16434, 16436 }
+			[NORMAL_DIFF] = { 16410, 16409, 16433, 16435, 16434, 16436},
+			desc = ALIL["PALADIN"],
+			icon = "PALADIN",
 		},
 		{
 			name = AL["Field Marshal's Aegis"],
 			subSetName = "402",
-			[NORMAL_DIFF] = { 16473, 16474, 16476, 16472, 16471, 16475 }
+			[NORMAL_DIFF] = { 16473, 16474, 16476, 16472, 16471, 16475},
+			desc = ALIL["PALADIN"],
+			icon = "PALADIN",
 		},
 		{
 			name = AL["Bloodvine Garb"],
 			subSetName = "421",
-			[NORMAL_DIFF] = { 19682, 19683, 19684 }
+			[NORMAL_DIFF] = { 19682, 19683, 19684},
+			icon = 19682,
 		},
 		{
 			name = AL["Primal Batskin"],
 			subSetName = "441",
-			[NORMAL_DIFF] = { 19685, 19687, 19686 }
+			[NORMAL_DIFF] = { 19685, 19687, 19686},
+			icon = 19685,
 		},
 		{
 			name = AL["Blood Tiger Harness"],
 			subSetName = "442",
-			[NORMAL_DIFF] = { 19688, 19689 }
+			[NORMAL_DIFF] = { 19688, 19689},
+			icon = 19688,
 		},
 		{
 			name = AL["Bloodsoul Embrace"],
 			subSetName = "443",
-			[NORMAL_DIFF] = { 19690, 19691, 19692 }
+			[NORMAL_DIFF] = { 19690, 19691, 19692},
+			icon = 19690,
 		},
 		{
 			name = AL["The Darksoul"],
 			subSetName = "444",
-			[NORMAL_DIFF] = { 19693, 19694, 19695 }
+			[NORMAL_DIFF] = { 19693, 19694, 19695},
+			icon = 19693,
 		},
 		{
 			name = AL["The Twin Blades of Hakkari"],
@@ -878,17 +1003,23 @@ local globalSetTable = {
 		{
 			name = AL["The Highlander's Resolve"],
 			subSetName = "468",
-			[NORMAL_DIFF] = { 20042, 20049, 20058 }
+			[NORMAL_DIFF] = { 20042, 20049, 20058},
+			desc = ALIL["PALADIN"],
+			icon = "PALADIN",
 		},
 		{
 			name = AL["The Highlander's Determination"],
 			subSetName = "469",
-			[NORMAL_DIFF] = { 20043, 20050, 20055 }
+			[NORMAL_DIFF] = { 20043, 20050, 20055},
+			desc = ALIL["HUNTER"],
+			icon = "HUNTER",
 		},
 		{
 			name = AL["The Highlander's Fortitude"],
 			subSetName = "470",
-			[NORMAL_DIFF] = { 20044, 20051, 20056 }
+			[NORMAL_DIFF] = { 20044, 20051, 20056},
+			desc = ALIL["HUNTER"],
+			icon = "HUNTER",
 		},
 		{
 			name = AL["The Highlander's Purpose"],
@@ -908,47 +1039,65 @@ local globalSetTable = {
 		{
 			name = AL["Vindicator's Battlegear"],
 			subSetName = "474",
-			[NORMAL_DIFF] = { 19951, 19577, 19824, 19823, 19822 }
+			[NORMAL_DIFF] = { 19951, 19577, 19824, 19823, 19822},
+			desc = ALIL["WARRIOR"],
+			icon = "WARRIOR",
 		},
 		{
 			name = AL["Freethinker's Armor"],
 			subSetName = "475",
-			[NORMAL_DIFF] = { 19952, 19588, 19827, 19826, 19825 }
+			[NORMAL_DIFF] = { 19952, 19588, 19827, 19826, 19825},
+			desc = ALIL["PALADIN"],
+			icon = "PALADIN",
 		},
 		{
 			name = AL["Augur's Regalia"],
 			subSetName = "476",
-			[NORMAL_DIFF] = { 19609, 19956, 19830, 19829, 19828 }
+			[NORMAL_DIFF] = { 19609, 19956, 19830, 19829, 19828},
+			desc = ALIL["SHAMAN"],
+			icon = "SHAMAN",
 		},
 		{
 			name = AL["Predator's Armor"],
 			subSetName = "477",
-			[NORMAL_DIFF] = { 19621, 19953, 19833, 19832, 19831 }
+			[NORMAL_DIFF] = { 19621, 19953, 19833, 19832, 19831},
+			desc = ALIL["HUNTER"],
+			icon = "HUNTER",
 		},
 		{
 			name = AL["Madcap's Outfit"],
 			subSetName = "478",
-			[NORMAL_DIFF] = { 19617, 19954, 19836, 19835, 19834 }
+			[NORMAL_DIFF] = { 19617, 19954, 19836, 19835, 19834},
+			desc = ALIL["ROGUE"],
+			icon = "ROGUE",
 		},
 		{
 			name = AL["Haruspex's Garb"],
 			subSetName = "479",
-			[NORMAL_DIFF] = { 19613, 19955, 19840, 19839, 19838 }
+			[NORMAL_DIFF] = { 19613, 19955, 19840, 19839, 19838},
+			desc = ALIL["DRUID"],
+			icon = "DRUID",
 		},
 		{
 			name = AL["Confessor's Raiment"],
 			subSetName = "480",
-			[NORMAL_DIFF] = { 19594, 19958, 19843, 19842, 19841 }
+			[NORMAL_DIFF] = { 19594, 19958, 19843, 19842, 19841},
+			desc = ALIL["PRIEST"],
+			icon = "PRIEST",
 		},
 		{
 			name = AL["Demoniac's Threads"],
 			subSetName = "481",
-			[NORMAL_DIFF] = { 19605, 19957, 19848, 19849, 20033 }
+			[NORMAL_DIFF] = { 19605, 19957, 19848, 19849, 20033},
+			desc = ALIL["WARLOCK"],
+			icon = "WARLOCK",
 		},
 		{
 			name = AL["Illusionist's Attire"],
 			subSetName = "482",
-			[NORMAL_DIFF] = { 19601, 19959, 19846, 19845, 20034 }
+			[NORMAL_DIFF] = { 19601, 19959, 19846, 19845, 20034},
+			desc = ALIL["MAGE"],
+			icon = "MAGE",
 		},
 		{
 			name = AL["The Defiler's Determination"],
@@ -973,7 +1122,9 @@ local globalSetTable = {
 		{
 			name = AL["The Defiler's Resolution"],
 			subSetName = "487",
-			[NORMAL_DIFF] = { 20204, 20208, 20212 }
+			[NORMAL_DIFF] = { 20204, 20208, 20212},
+			desc = ALIL["WARRIOR"],
+			icon = "WARRIOR",
 		},
 		{
 			name = AL["The Defiler's Will"],
@@ -983,42 +1134,54 @@ local globalSetTable = {
 		{
 			name = AL["Black Dragon Mail"],
 			subSetName = "489",
-			[NORMAL_DIFF] = { 16984, 15050, 15052, 15051 }
+			[NORMAL_DIFF] = { 16984, 15050, 15052, 15051},
+			icon = 15050,
 		},
 		{
 			name = AL["Green Dragon Mail"],
 			subSetName = "490",
-			[NORMAL_DIFF] = { 15045, 15046, 20296 }
+			[NORMAL_DIFF] = { 15045, 15046, 20296},
+			icon = 15045,
 		},
 		{
 			name = AL["Blue Dragon Mail"],
 			subSetName = "491",
-			[NORMAL_DIFF] = { 15048, 20295, 15049 }
+			[NORMAL_DIFF] = { 15048, 20295, 15049},
+			icon = 15048,
 		},
 		{
 			name = AL["Twilight Trappings"],
 			subSetName = "492",
-			[NORMAL_DIFF] = { 20406, 20408, 20407 }
+			[NORMAL_DIFF] = { 20406, 20408, 20407},
+			icon = 20408,
 		},
 		{
 			name = AL["Genesis Raiment"],
 			subSetName = "493",
-			[NORMAL_DIFF] = { 21355, 21353, 21354, 21356, 21357 }
+			[NORMAL_DIFF] = { 21355, 21353, 21354, 21356, 21357},
+			desc = ALIL["DRUID"],
+			icon = "DRUID",
 		},
 		{
 			name = AL["Symbols of Unending Life"],
 			subSetName = "494",
-			[NORMAL_DIFF] = { 21408, 21409, 21407 }
+			[NORMAL_DIFF] = { 21408, 21409, 21407},
+			desc = ALIL["DRUID"],
+			icon = "DRUID",
 		},
 		{
 			name = AL["Battlegear of Unyielding Strength"],
 			subSetName = "495",
-			[NORMAL_DIFF] = { 21394, 21392, 21393 }
+			[NORMAL_DIFF] = { 21394, 21392, 21393},
+			desc = ALIL["WARRIOR"],
+			icon = "WARRIOR",
 		},
 		{
 			name = AL["Conqueror's Battlegear"],
 			subSetName = "496",
-			[NORMAL_DIFF] = { 21331, 21329, 21333, 21332 }
+			[NORMAL_DIFF] = { 21331, 21329, 21333, 21332},
+			desc = ALIL["WARRIOR"],
+			icon = "WARRIOR",
 		},
 		{
 			name = AL["Deathdealer's Embrace"],
@@ -1028,182 +1191,241 @@ local globalSetTable = {
 		{
 			name = AL["Emblems of Veiled Shadows"],
 			subSetName = "498",
-			[NORMAL_DIFF] = { 21405, 21406, 21404 }
+			[NORMAL_DIFF] = { 21405, 21406, 21404},
+			desc = ALIL["ROGUE"],
+			icon = "ROGUE",
 		},
 		{
 			name = AL["Doomcaller's Attire"],
 			subSetName = "499",
-			[NORMAL_DIFF] = { 21337, 21338, 21335, 21334, 21336 }
+			[NORMAL_DIFF] = { 21337, 21338, 21335, 21334, 21336},
+			desc = ALIL["WARLOCK"],
+			icon = "WARLOCK",
 		},
 		{
 			name = AL["Implements of Unspoken Names"],
 			subSetName = "500",
-			[NORMAL_DIFF] = { 21416, 21417, 21418 }
+			[NORMAL_DIFF] = { 21416, 21417, 21418},
+			desc = ALIL["WARLOCK"],
+			icon = "WARLOCK",
 		},
 		{
 			name = AL["Stormcaller's Garb"],
 			subSetName = "501",
-			[NORMAL_DIFF] = { 21372, 21373, 21374, 21375, 21376 }
+			[NORMAL_DIFF] = { 21372, 21373, 21374, 21375, 21376},
+			desc = ALIL["SHAMAN"],
+			icon = "SHAMAN",
 		},
 		{
 			name = AL["Gift of the Gathering Storm"],
 			subSetName = "502",
-			[NORMAL_DIFF] = { 21400, 21398, 21399 }
+			[NORMAL_DIFF] = { 21400, 21398, 21399},
+			desc = ALIL["SHAMAN"],
+			icon = "SHAMAN",
 		},
 		{
 			name = AL["Enigma Vestments"],
 			subSetName = "503",
-			[NORMAL_DIFF] = { 21344, 21347, 21346, 21343, 21345 }
+			[NORMAL_DIFF] = { 21344, 21347, 21346, 21343, 21345},
+			desc = ALIL["MAGE"],
+			icon = "MAGE",
 		},
 		{
 			name = AL["Trappings of Vaulted Secrets"],
 			subSetName = "504",
-			[NORMAL_DIFF] = { 21414, 21413, 21415 }
+			[NORMAL_DIFF] = { 21414, 21413, 21415},
+			desc = ALIL["MAGE"],
+			icon = "MAGE",
 		},
 		{
 			name = AL["Avenger's Battlegear"],
 			subSetName = "505",
-			[NORMAL_DIFF] = { 21389, 21387, 21388, 21390, 21391 }
+			[NORMAL_DIFF] = { 21389, 21387, 21388, 21390, 21391},
+			desc = ALIL["PALADIN"],
+			icon = "PALADIN",
 		},
 		{
 			name = AL["Battlegear of Eternal Justice"],
 			subSetName = "506",
-			[NORMAL_DIFF] = { 21397, 21395, 21396 }
+			[NORMAL_DIFF] = { 21397, 21395, 21396},
+			desc = ALIL["PALADIN"],
+			icon = "PALADIN",
 		},
 		{
 			name = AL["Garments of the Oracle"],
 			subSetName = "507",
-			[NORMAL_DIFF] = { 21349, 21350, 21348, 21352, 21351 }
+			[NORMAL_DIFF] = { 21349, 21350, 21348, 21352, 21351},
+			desc = ALIL["PRIEST"],
+			icon = "PRIEST",
 		},
 		{
 			name = AL["Finery of Infinite Wisdom"],
 			subSetName = "508",
-			[NORMAL_DIFF] = { 21410, 21411, 21412 }
+			[NORMAL_DIFF] = { 21410, 21411, 21412},
+			desc = ALIL["PRIEST"],
+			icon = "PRIEST",
 		},
 		{
 			name = AL["Striker's Garb"],
 			subSetName = "509",
-			[NORMAL_DIFF] = { 21366, 21365, 21370, 21368, 21367 }
+			[NORMAL_DIFF] = { 21366, 21365, 21370, 21368, 21367},
+			desc = ALIL["HUNTER"],
+			icon = "HUNTER",
 		},
 		{
 			name = AL["Trappings of the Unseen Path"],
 			subSetName = "510",
-			[NORMAL_DIFF] = { 21403, 21401, 21402 }
+			[NORMAL_DIFF] = { 21403, 21401, 21402},
+			desc = ALIL["HUNTER"],
+			icon = "HUNTER",
 		},
 		{
 			name = AL["Battlegear of Heroism"],
 			subSetName = "511",
-			[NORMAL_DIFF] = { 21994, 21995, 21996, 21997, 21998, 21999, 22000, 22001 }
+			[NORMAL_DIFF] = { 21994, 21995, 21996, 21997, 21998, 21999, 22000, 22001},
+			icon = 21999,
 		},
 		{
 			name = AL["Darkmantle Armor"],
 			subSetName = "512",
-			[NORMAL_DIFF] = { 22002, 22003, 22004, 22005, 22006, 22007, 22008, 22009 }
+			[NORMAL_DIFF] = { 22002, 22003, 22004, 22005, 22006, 22007, 22008, 22009},
+			icon = 22005,
 		},
 		{
 			name = AL["Feralheart Raiment"],
 			subSetName = "513",
-			[NORMAL_DIFF] = { 22106, 22107, 22108, 22109, 22110, 22111, 22112, 22113 }
+			[NORMAL_DIFF] = { 22106, 22107, 22108, 22109, 22110, 22111, 22112, 22113},
+			icon = 22109,
 		},
 		{
 			name = AL["Vestments of the Virtuous"],
 			subSetName = "514",
-			[NORMAL_DIFF] = { 22078, 22079, 22080, 22081, 22082, 22083, 22084, 22085 }
+			[NORMAL_DIFF] = { 22078, 22079, 22080, 22081, 22082, 22083, 22084, 22085},
+			icon = 22080,
 		},
 		{
 			name = AL["Beastmaster Armor"],
 			subSetName = "515",
-			[NORMAL_DIFF] = { 22010, 22011, 22061, 22013, 22015, 22016, 22017, 22060 }
+			[NORMAL_DIFF] = { 22010, 22011, 22061, 22013, 22015, 22016, 22017, 22060},
+			icon = 22013,
 		},
 		{
 			name = AL["Soulforge Armor"],
 			subSetName = "516",
-			[NORMAL_DIFF] = { 22086, 22087, 22088, 22089, 22090, 22091, 22092, 22093 }
+			[NORMAL_DIFF] = { 22086, 22087, 22088, 22089, 22090, 22091, 22092, 22093},
+			icon = 22091,
 		},
 		{
 			name = AL["Sorcerer's Regalia"],
 			subSetName = "517",
-			[NORMAL_DIFF] = { 22062, 22063, 22064, 22065, 22066, 22067, 22068, 22069 }
+			[NORMAL_DIFF] = { 22062, 22063, 22064, 22065, 22066, 22067, 22068, 22069},
+			icon = 22065,
 		},
 		{
 			name = AL["Deathmist Raiment"],
 			subSetName = "518",
-			[NORMAL_DIFF] = { 22070, 22071, 22072, 22073, 22074, 22075, 22076, 22077 }
+			[NORMAL_DIFF] = { 22070, 22071, 22072, 22073, 22074, 22075, 22076, 22077},
+			icon = 22074,
 		},
 		{
 			name = AL["The Five Thunders"],
 			subSetName = "519",
-			[NORMAL_DIFF] = { 22095, 22096, 22097, 22098, 22099, 22100, 22101, 22102 }
+			[NORMAL_DIFF] = { 22095, 22096, 22097, 22098, 22099, 22100, 22101, 22102},
+			icon = 22097,
 		},
 		{
 			name = AL["Ironweave Battlesuit"],
 			subSetName = "520",
-			[NORMAL_DIFF] = { 22306, 22311, 22313, 22302, 22304, 22305, 22303, 22301 }
+			[NORMAL_DIFF] = { 22306, 22311, 22313, 22302, 22304, 22305, 22303, 22301},
+			icon = 22302,
 		},
 		{
 			name = AL["Dreamwalker Raiment"],
 			subSetName = "521",
-			[NORMAL_DIFF] = { 22492, 22494, 22493, 22490, 22489, 22491, 22488, 22495, 23064 }
+			[NORMAL_DIFF] = { 22492, 22494, 22493, 22490, 22489, 22491, 22488, 22495, 23064},
+			desc = ALIL["DRUID"],
+			icon = "DRUID",
 		},
 		{
 			name = AL["Champion's Guard"],
 			subSetName = "522",
-			[NORMAL_DIFF] = { 22864, 22856, 22879, 22880, 23257, 23258 }
+			[NORMAL_DIFF] = { 22864, 22856, 22879, 22880, 23257, 23258},
+			desc = ALIL["ROGUE"],
+			icon = "ROGUE",
 		},
 		{
 			name = AL["Dreadnaught's Battlegear"],
 			subSetName = "523",
-			[NORMAL_DIFF] = { 22423, 22416, 22421, 22422, 22418, 22417, 22419, 22420 }
+			[NORMAL_DIFF] = { 22423, 22416, 22421, 22422, 22418, 22417, 22419, 22420},
+			desc = ALIL["WARRIOR"],
+			icon = "WARRIOR",
 		},
 		{
 			name = AL["Bonescythe Armor"],
 			subSetName = "524",
-			[NORMAL_DIFF] = { 22483, 22476, 22481, 22478, 22477, 22479, 22480, 22482, 23060 }
+			[NORMAL_DIFF] = { 22483, 22476, 22481, 22478, 22477, 22479, 22480, 22482, 23060},
+			desc = ALIL["ROGUE"],
+			icon = "ROGUE",
 		},
 		{
 			name = AL["Vestments of Faith"],
 			subSetName = "525",
-			[NORMAL_DIFF] = { 22518, 22519, 22514, 22517, 22513, 22512, 22516, 22515, 23061 }
+			[NORMAL_DIFF] = { 22518, 22519, 22514, 22517, 22513, 22512, 22516, 22515, 23061},
+			desc = ALIL["PRIEST"],
+			icon = "PRIEST",
 		},
 		{
 			name = AL["Frostfire Regalia"],
 			subSetName = "526",
-			[NORMAL_DIFF] = { 22502, 22503, 22498, 22501, 22497, 22496, 22500, 22499, 23062 }
+			[NORMAL_DIFF] = { 22502, 22503, 22498, 22501, 22497, 22496, 22500, 22499, 23062},
+			desc = ALIL["MAGE"],
+			icon = "MAGE",
 		},
 		{
 			name = AL["The Earthshatterer"],
 			subSetName = "527",
-			[NORMAL_DIFF] = { 22468, 22470, 22469, 22466, 22465, 22467, 22464, 22471, 23065 }
+			[NORMAL_DIFF] = { 22468, 22470, 22469, 22466, 22465, 22467, 22464, 22471, 23065},
+			desc = ALIL["SHAMAN"],
+			icon = "SHAMAN",
 		},
 		{
 			name = AL["Redemption Armor"],
 			subSetName = "528",
-			[NORMAL_DIFF] = { 22430, 22431, 22426, 22428, 22427, 22429, 22425, 22424, 23066 }
+			[NORMAL_DIFF] = { 22430, 22431, 22426, 22428, 22427, 22429, 22425, 22424, 23066},
+			desc = ALIL["PALADIN"],
+			icon = "PALADIN",
 		},
 		{
 			name = AL["Plagueheart Raiment"],
 			subSetName = "529",
-			[NORMAL_DIFF] = { 22510, 22511, 22506, 22509, 22505, 22504, 22508, 22507, 23063 }
+			[NORMAL_DIFF] = { 22510, 22511, 22506, 22509, 22505, 22504, 22508, 22507, 23063},
+			desc = ALIL["WARLOCK"],
+			icon = "WARLOCK",
 		},
 		{
 			name = AL["Cryptstalker Armor"],
 			subSetName = "530",
-			[NORMAL_DIFF] = { 22440, 22442, 22441, 22438, 22437, 22439, 22436, 22443, 23067 }
+			[NORMAL_DIFF] = { 22440, 22442, 22441, 22438, 22437, 22439, 22436, 22443, 23067},
+			desc = ALIL["HUNTER"],
+			icon = "HUNTER",
 		},
 		{
 			name = AL["Battlegear of Undead Slaying"],
 			subSetName = "533",
-			[NORMAL_DIFF] = { 23090, 23087, 23078 }
+			[NORMAL_DIFF] = { 23090, 23087, 23078},
+			icon = 23087,
 		},
 		{
 			name = AL["Undead Slayer's Armor"],
 			subSetName = "534",
-			[NORMAL_DIFF] = { 23081, 23089, 23093 }
+			[NORMAL_DIFF] = { 23081, 23089, 23093},
+			icon = 23089,
 		},
 		{
 			name = AL["Garb of the Undead Slayer"],
 			subSetName = "535",
-			[NORMAL_DIFF] = { 23088, 23082, 23092 }
+			[NORMAL_DIFF] = { 23088, 23082, 23092},
+			icon = 23088,
 		},
 		{
 			name = AL["Regalia of Undead Cleansing"],
@@ -1213,77 +1435,107 @@ local globalSetTable = {
 		{
 			name = AL["Champion's Battlearmor"],
 			subSetName = "537",
-			[NORMAL_DIFF] = { 22868, 22858, 22872, 22873, 23244, 23243 }
+			[NORMAL_DIFF] = { 22868, 22858, 22872, 22873, 23244, 23243},
+			desc = ALIL["WARRIOR"],
+			icon = "WARRIOR",
 		},
 		{
 			name = AL["Champion's Stormcaller"],
 			subSetName = "538",
-			[NORMAL_DIFF] = { 22857, 22867, 22876, 22887, 23259, 23260 }
+			[NORMAL_DIFF] = { 22857, 22867, 22876, 22887, 23259, 23260},
+			desc = ALIL["SHAMAN"],
+			icon = "SHAMAN",
 		},
 		{
 			name = AL["Champion's Refuge"],
 			subSetName = "539",
-			[NORMAL_DIFF] = { 22863, 22852, 22877, 22878, 23253, 23254 }
+			[NORMAL_DIFF] = { 22863, 22852, 22877, 22878, 23253, 23254},
+			desc = ALIL["DRUID"],
+			icon = "DRUID",
 		},
 		{
 			name = AL["Champion's Investiture"],
 			subSetName = "540",
-			[NORMAL_DIFF] = { 22869, 22859, 22882, 22885, 23261, 23262 }
+			[NORMAL_DIFF] = { 22869, 22859, 22882, 22885, 23261, 23262},
+			desc = ALIL["PRIEST"],
+			icon = "PRIEST",
 		},
 		{
 			name = AL["Champion's Dreadgear"],
 			subSetName = "541",
-			[NORMAL_DIFF] = { 22865, 22855, 23255, 23256, 22881, 22884 }
+			[NORMAL_DIFF] = { 22865, 22855, 23255, 23256, 22881, 22884},
+			desc = ALIL["WARLOCK"],
+			icon = "WARLOCK",
 		},
 		{
 			name = AL["Champion's Arcanum"],
 			subSetName = "542",
-			[NORMAL_DIFF] = { 22870, 22860, 23263, 23264, 22883, 22886 }
+			[NORMAL_DIFF] = { 22870, 22860, 23263, 23264, 22883, 22886},
+			desc = ALIL["MAGE"],
+			icon = "MAGE",
 		},
 		{
 			name = AL["Champion's Pursuance"],
 			subSetName = "543",
-			[NORMAL_DIFF] = { 22843, 22862, 23251, 23252, 22874, 22875 }
+			[NORMAL_DIFF] = { 22843, 22862, 23251, 23252, 22874, 22875},
+			desc = ALIL["HUNTER"],
+			icon = "HUNTER",
 		},
 		{
 			name = AL["Lieutenant Commander's Redoubt"],
 			subSetName = "544",
-			[NORMAL_DIFF] = { 23272, 23273, 23274, 23275, 23276, 23277 }
+			[NORMAL_DIFF] = { 23272, 23273, 23274, 23275, 23276, 23277},
+			desc = ALIL["PALADIN"],
+			icon = "PALADIN",
 		},
 		{
 			name = AL["Lieutenant Commander's Battlearmor"],
 			subSetName = "545",
-			[NORMAL_DIFF] = { 23300, 23301, 23286, 23287, 23314, 23315 }
+			[NORMAL_DIFF] = { 23300, 23301, 23286, 23287, 23314, 23315},
+			desc = ALIL["WARRIOR"],
+			icon = "WARRIOR",
 		},
 		{
 			name = AL["Lieutenant Commander's Arcanum"],
 			subSetName = "546",
-			[NORMAL_DIFF] = { 23304, 23305, 23290, 23291, 23318, 23319 }
+			[NORMAL_DIFF] = { 23304, 23305, 23290, 23291, 23318, 23319},
+			desc = ALIL["MAGE"],
+			icon = "MAGE",
 		},
 		{
 			name = AL["Lieutenant Commander's Dreadgear"],
 			subSetName = "547",
-			[NORMAL_DIFF] = { 23296, 23297, 23282, 23283, 23310, 23311 }
+			[NORMAL_DIFF] = { 23296, 23297, 23282, 23283, 23310, 23311},
+			desc = ALIL["WARLOCK"],
+			icon = "WARLOCK",
 		},
 		{
 			name = AL["Lieutenant Commander's Guard"],
 			subSetName = "548",
-			[NORMAL_DIFF] = { 23298, 23299, 23284, 23285, 23312, 23313 }
+			[NORMAL_DIFF] = { 23298, 23299, 23284, 23285, 23312, 23313},
+			desc = ALIL["ROGUE"],
+			icon = "ROGUE",
 		},
 		{
 			name = AL["Lieutenant Commander's Investiture"],
 			subSetName = "549",
-			[NORMAL_DIFF] = { 23302, 23303, 23288, 23289, 23316, 23317 }
+			[NORMAL_DIFF] = { 23302, 23303, 23288, 23289, 23316, 23317},
+			desc = ALIL["PRIEST"],
+			icon = "PRIEST",
 		},
 		{
 			name = AL["Lieutenant Commander's Pursuance"],
 			subSetName = "550",
-			[NORMAL_DIFF] = { 23292, 23293, 23278, 23279, 23306, 23307 }
+			[NORMAL_DIFF] = { 23292, 23293, 23278, 23279, 23306, 23307},
+			desc = ALIL["HUNTER"],
+			icon = "HUNTER",
 		},
 		{
 			name = AL["Lieutenant Commander's Refuge"],
 			subSetName = "551",
-			[NORMAL_DIFF] = { 23294, 23295, 23280, 23281, 23308, 23309 }
+			[NORMAL_DIFF] = { 23294, 23295, 23280, 23281, 23308, 23309},
+			desc = ALIL["DRUID"],
+			icon = "DRUID",
 		},
 	}
 
