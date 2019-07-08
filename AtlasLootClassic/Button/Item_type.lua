@@ -212,7 +212,7 @@ function Item.Refresh(button)
 		-- ##################
 		-- description
 		-- ##################
-		button.extra:SetText(GetItemDescInfo(itemEquipLoc, itemType, itemSubType))
+		button.extra:SetText(Token.GetTokenDescription(button.ItemID) or GetItemDescInfo(itemEquipLoc, itemType, itemSubType))
 	end
 	if db.showCompletedHook then
 		local itemCount = GetItemCount(button.ItemString, true)

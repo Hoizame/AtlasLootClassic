@@ -23,6 +23,7 @@ AL["/al mmb - Toggle MiniMapButton"] = true
 AL["Normal"] = true
 AL["Sets"] = true
 AL["Tier Sets"] = true
+AL["Tier %d Sets"] = true
 
 -- \AtlasLootClassic_Crafting\data.lua
 AL["20 Raid"] = true
@@ -392,6 +393,8 @@ AL["Chat Link"] = true
 AL["Add item into chat"] = true
 AL["Dress up"] = true
 AL["Shows the item in the Dressing room"] = true
+AL["Show extra items"] = true
+AL["Shows extra items (tokens,mats)"] = true
 AL["Droprate:"] = true
 
 -- \AtlasLootClassic\Button\Profession_type.lua
@@ -402,22 +405,6 @@ AL["Add profession link into chat"] = true
 -- \AtlasLootClassic\Core\ClickHandler.lua
 
 -- \AtlasLootClassic\Core\ItemInfo.lua
-AL["One-Hand, Axe"] = true
-AL["Two-Hand, Axe"] = true
-AL["Bow"] = true
-AL["Gun"] = true
-AL["One-Hand, Mace"] = true
-AL["Two-Hand, Mace"] = true
-AL["Polearm"] = true
-AL["One-Hand, Sword"] = true
-AL["Two-Hand, Sword"] = true
-AL["Staff"] = true
-AL["Fist Weapon"] = true
-AL["Dagger"] = true
-AL["Crossbow"] = true
-AL["Wand"] = true
-AL["Fishing Pole"] = true
-AL["Shield"] = true
 
 -- \AtlasLootClassic\Core\SlashCommands.lua
 AL["/al - Open the AtlasLoot window."] = true
@@ -602,6 +589,9 @@ AL["Lieutenant Commander's Guard"] = true
 AL["Lieutenant Commander's Investiture"] = true
 AL["Lieutenant Commander's Pursuance"] = true
 AL["Lieutenant Commander's Refuge"] = true
+
+-- \AtlasLootClassic\Data\Token.lua
+AL["|cff00ff00Left-Click:|r Show additional items."] = true
 
 -- \AtlasLootClassic\GUI\GUI.lua
 AL["Click to open WoW instance map."] = true
