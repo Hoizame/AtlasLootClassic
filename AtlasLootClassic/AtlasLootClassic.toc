@@ -30,7 +30,7 @@
 ## Notes-zhTW: @localization(locale="zhTW", key="Notes-AtlasLoot", namespace="ToC")@
 #@end-non-debug@
 #@debug@
-## Title: AtlasLoot Classic |cFF22B14C[Core]|r
+## Title: AtlasLootClassic |cFF22B14C[Core]|r
 ## Notes: Shows the possible loot from the bosses
 #@end-debug@
 

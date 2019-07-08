@@ -1,0 +1,19 @@
+AtlasLoot Enhanced
+
+This mod is distributed under Version 2 of the GPL.  A copy of the GPL is included in this zip file with links to non-english translations.
+
+
+Patch Notes
+
+v1.0.0-beta1 (Jul. 08, 2019)
+========================
+- Add Token support and Tokensupport for DM-Books, ZG, AQ20, AQ40, T3
+- Add World Events
+- Add Tier Sets
+- Add better icons for Sets
+- Fix bug with item description and rename "Junk"
+
+
+v1.0.0-beta0 (Jul. 07, 2019)
+========================
+- First upload of Classic version
