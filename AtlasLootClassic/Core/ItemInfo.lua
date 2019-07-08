@@ -8,6 +8,128 @@ local IngameLocales = AtlasLoot.IngameLocales
 local type, rawset, rawget, setmetatable = type, rawset, rawget, setmetatable
 -- local GetAuctionItemClasses, GetAuctionItemSubClasses = GetAuctionItemClasses, GetAuctionItemSubClasses
 
+local LOC_DATA = {
+	[0] = {
+		["__name"] = "Consumable",
+		[0] = "Consumable",
+		[1] = "Cheese/Bread(OBSOLETE)",
+		[2] = "Liquid(OBSOLETE)",
+	},
+	[1] = {
+		["__name"] = "Container",
+		[0] = "Bag",
+		[1] = "Soul Bag",
+		[2] = "Herb Bag",
+		[3] = "Enchanting Bag",
+		[4] = "Engineering Bag",
+	},
+	[2] = {
+		["__name"] = "Weapon",
+		[0] = "One-Handed Axes",
+		[1] = "Two-Handed Axes",
+		[2] = "Bows",
+		[3] = "Guns",
+		[4] = "One-Handed Maces",
+		[5] = "Two-Handed Maces",
+		[6] = "Polearms",
+		[7] = "One-Handed Swords",
+		[8] = "Two-Handed Swords",
+		[9] = "Obsolete",
+		[10] = "Staves",
+		[11] = "One-Handed Exotics",
+		[12] = "Two-Handed Exotics",
+		[13] = "Fist Weapons",
+		[14] = "Miscellaneous",
+		[15] = "Daggers",
+		[16] = "Thrown",
+		[17] = "Spears",
+		[18] = "Crossbows",
+		[19] = "Wands",
+		[20] = "Fishing Pole",
+	},
+	[3] = {
+		["__name"] = "Jewelry(OBSOLETE)",
+		[0] = "Jewelry(OBSOLETE)",
+	},
+	[4] = {
+		["__name"] = "Armor",
+		[0] = "Miscellaneous",
+		[1] = "Cloth",
+		[2] = "Leather",
+		[3] = "Mail",
+		[4] = "Plate",
+		[5] = "Bucklers",
+		[6] = "Shields",
+		[7] = "Librams",
+		[8] = "Idols",
+		[9] = "Totems",
+	},
+	[5] = {
+		["__name"] = "Reagent",
+		[0] = "Reagent",
+	},
+	[6] = {
+		["__name"] = "Projectile",
+		[0] = "Wand(OBSOLETE)",
+		[1] = "Bolt(OBSOLETE)",
+		[2] = "Arrow",
+		[3] = "Bullet",
+		[4] = "Thrown(OBSOLETE)",
+	},
+	[7] = {
+		["__name"] = "Trade Goods",
+		[0] = "Trade Goods",
+		[1] = "Parts",
+		[2] = "Explosives",
+		[3] = "Devices",
+	},
+	[8] = {
+		["__name"] = "Generic(OBSOLETE)",
+		[0] = "Generic(OBSOLETE)",
+	},
+	[9] = {
+		["__name"] = "Recipe",
+		[0] = "Book",
+		[1] = "Leatherworking",
+		[2] = "Tailoring",
+		[3] = "Engineering",
+		[4] = "Blacksmithing",
+		[5] = "Cooking",
+		[6] = "Alchemy",
+		[7] = "First Aid",
+		[8] = "Enchanting",
+		[9] = "Fishing",
+	},
+	[10] = {
+		["__name"] = "Money(OBSOLETE)",
+		[0] = "Money(OBSOLETE)",
+	},
+	[11] = {
+		["__name"] = "Quiver",
+		[0] = "Quiver(OBSOLETE)",
+		[1] = "Quiver(OBSOLETE)",
+		[2] = "Quiver",
+		[3] = "Ammo Pouch",
+	},
+	[12] = {
+		["__name"] = "Quest",
+		[0] = "Quest",
+	},
+	[13] = {
+		["__name"] = "Key",
+		[0] = "Key",
+		[1] = "Lockpick",
+	},
+	[14] = {
+		["__name"] = "Permanent(OBSOLETE)",
+		[0] = "Permanent",
+	},
+	[15] = {
+		["__name"] = "Miscellaneous",
+		[0] = "Junk",
+	},
+}
+
 local ITEM_DESC_INFO = {
 	["slot"] = {
 		[""] = "",
@@ -41,152 +163,133 @@ local ITEM_DESC_INFO = {
 		["INVTYPE_WEAPONMAINHAND_PET"]	= _G["INVTYPE_WEAPONMAINHAND_PET"],	-- "Main Attack"
 		["INVTYPE_WEAPONOFFHAND"]		= _G["INVTYPE_WEAPONOFFHAND"],
 	},
-	["Weapon"] = {	-- 1
-		["One-Handed Axes"] 	= AL["One-Hand, Axe"],		-- 1
-		["Two-Handed Axes"]		= AL["Two-Hand, Axe"],		-- 2
-		["Bows"]				= AL["Bow"],				-- 3
-		["Guns"]				= AL["Gun"],				-- 4
-		["One-Handed Maces"]	= AL["One-Hand, Mace"],		-- 5
-		["Two-Handed Maces"]	= AL["Two-Hand, Mace"],		-- 6
-		["Polearms"]			= AL["Polearm"],			-- 7
-		["One-Handed Swords"]	= AL["One-Hand, Sword"],	-- 8
-		["Two-Handed Swords"]	= AL["Two-Hand, Sword"],	-- 9
-		["Staves"]				= AL["Staff"],				-- 10
-		["Fist Weapons"]		= AL["Fist Weapon"],		-- 11
-		--["Miscellaneous"]		= true,						-- 12
-		["Daggers"]				= AL["Dagger"],				-- 13
-		--["Thrown"]			= true,						-- 14
-		["Crossbows"]			= AL["Crossbow"],			-- 15
-		["Wands"]				= AL["Wand"],				-- 16
-		["Fishing Poles"]		= AL["Fishing Pole"],		-- 17
+	--[[
+	["Consumable"] = {		-- 0
+		["Consumable"] = true, -- 0
+		["Cheese/Bread(OBSOLETE)"] = true, -- 1
+		["Liquid(OBSOLETE)"] = true, -- 2
 	},
-	["Armor"] = {	-- 2
-		["Miscellaneous"] 	= "",							-- 1
-		--["Cloth"]			= true,							-- 2
-		--["Leather"] 		= true,							-- 3
-		--["Mail"]			= true,							-- 4
-		--["Plate"]			= true,							-- 5
-		--["Cosmetic"]	 	= true,							-- 6
-		["Shields"]			= AL["Shield"],					-- 7
+	--]]
+	["Container"] = {		-- 1
+		["Bag"] 				= "", 		-- 0
+		--["Soul Bag"] 			= true, 	-- 1
+		--["Herb Bag"] 			= true, 	-- 2
+		--["Enchanting Bag"] 	= true, 	-- 3
+		--["Engineering Bag"] 	= true, 	-- 4
+	},
+	["Weapon"] = {		-- 2
+		["One-Handed Axes"] 	= AL["One-Hand, Axe"], 		-- 0
+		["Two-Handed Axes"] 	= AL["Two-Hand, Axe"], 		-- 1
+		["Bows"] 				= AL["Bow"], 				-- 2
+		["Guns"] 				= AL["Gun"], 				-- 3
+		["One-Handed Maces"] 	= AL["One-Hand, Mace"], 	-- 4
+		["Two-Handed Maces"] 	= AL["Two-Hand, Mace"], 	-- 5
+		["Polearms"] 			= AL["Polearm"], 			-- 6
+		["One-Handed Swords"] 	= AL["One-Hand, Sword"], 	-- 7
+		["Two-Handed Swords"] 	= AL["Two-Hand, Sword"], 	-- 8
+		--["Obsolete"] 			= true, 					-- 9
+		["Staves"] 				= AL["Staff"], 				-- 10
+		--["One-Handed Exotics"]= true, 					-- 11
+		--["Two-Handed Exotics"]= true, 					-- 12
+		["Fist Weapons"] 		= AL["Fist Weapon"], 		-- 13
+		--["Miscellaneous"] 	= true, 					-- 14
+		["Daggers"] 			= AL["Dagger"], 			-- 15
+		--["Thrown"] 			= true, 					-- 16
+		--["Spears"] 			= true, 					-- 17
+		["Crossbows"] 			= AL["Crossbow"], 			-- 18
+		["Wands"] 				= AL["Wand"], 				-- 19
+		["Fishing Pole"] 		= AL["Fishing Pole"], 		-- 20
 	},
 	--[[
-	["Container"] = {	-- 3
-		["Bag"]						= true,					-- 1
-		["Herb Bag"]				= true,					-- 2
-		["Enchanting Bag"]			= true,					-- 3
-		["Engineering Bag"]			= true,					-- 4
-		["Gem Bag"]					= true,					-- 5
-		["Mining Bag"]				= true,					-- 6
-		["Leatherworking Bag"]		= true,					-- 7
-		["Inscription Bag"]			= true,					-- 8
-		["Tackle Box"]				= true,					-- 9
-		["Cooking Bag"]				= true,					-- 10
+	["Jewelry(OBSOLETE)"] = {		-- 3
+		["Jewelry(OBSOLETE)"] = true, -- 0
 	},
-	]]--
+	--]]
+	["Armor"] = {		-- 4
+		["Miscellaneous"] 	= "", -- 0
+		--["Cloth"] 		= true, 			-- 1
+		--["Leather"] 		= true, 			-- 2
+		--["Mail"] 			= true, 			-- 3
+		--["Plate"] 		= true, 			-- 4
+		--["Bucklers"] 		= true, 			-- 5
+		["Shields"]		 	= AL["Shield"], 	-- 6
+		--["Librams"] 		= true, 			-- 7
+		--["Idols"] 		= true, 			-- 8
+		--["Totems"] 		= true, 			-- 9
+	},
 	--[[
-	["Consumable"] = {	-- 4
-		["Food & Drink"]		= true,						-- 1
-		["Potion"]				= true,						-- 2
-		["Elixir"]				= true,						-- 3
-		["Flask"]				= true,						-- 4
-		["Bandage"]				= true,						-- 5
-		["Item Enhancement"]	= true,						-- 6
-		["Scroll"]				= true,						-- 7
-		["Other"]				= true,						-- 8
+	["Reagent"] = {		-- 5
+		["Reagent"] = true, -- 0
 	},
-	]]--
+	--]]
 	--[[
-	["Glyph"] = {	-- 5
-		["Warrior"]				= true,						-- 1
-		["Paladin"]				= true,						-- 2
-		["Hunter"]				= true,						-- 3
-		["Rogue"]				= true,						-- 4
-		["Priest"]				= true,						-- 5
-		["Death Knight"]		= true,						-- 6
-		["Shaman"]				= true,						-- 7
-		["Mage"]				= true,						-- 8
-		["Warlock"]				= true,						-- 9
-		["Monk"]				= true,						-- 10
-		["Druid"]				= true,						-- 11
+	["Projectile"] = {		-- 6
+		["Wand(OBSOLETE)"] = true, -- 0
+		["Bolt(OBSOLETE)"] = true, -- 1
+		["Arrow"] = true, -- 2
+		["Bullet"] = true, -- 3
+		["Thrown(OBSOLETE)"] = true, -- 4
 	},
-	]]--
+	--]]
 	--[[
-	["Trade Goods"] = {	-- 6
-		["Elemental"]			= true,						-- 1
-		["Cloth"]				= true,						-- 2
-		["Leather"]				= true,						-- 3
-		["Metal & Stone"]		= true,						-- 4
-		["Cooking"]				= true,						-- 5
-		["Herb"]				= true,						-- 6
-		["Enchanting"]			= true,						-- 7
-		["Jewelcrafting"]		= true,						-- 8
-		["Parts"]				= true,						-- 9
-		["Devices"]				= true,						-- 10
-		["Explosives"]			= true,						-- 11
-		["Materials"]			= true,						-- 12
-		["Other"]				= true,						-- 13
-		["Item Enchantment"] 	= true,						-- 14
+	["Trade Goods"] = {		-- 7
+		["Trade Goods"] = true, -- 0
+		["Parts"] = true, -- 1
+		["Explosives"] = true, -- 2
+		["Devices"] = true, -- 3
 	},
-	]]--
+	--]]
 	--[[
-	["Recipe"] = {	-- 7
-		["Book"]				= true,						-- 1
-		["Leatherworking"]		= true,						-- 2
-		["Tailoring"]			= true,						-- 3
-		["Engineering"]			= true,						-- 4
-		["Blacksmithing"]		= true,						-- 5
-		["Cooking"]				= true,						-- 6
-		["Alchemy"]				= true,						-- 7
-		["First Aid"]			= true,						-- 8
-		["Enchanting"]			= true,						-- 9
-		["Fishing"]				= true,						-- 10
-		["Jewelcrafting"]		= true,						-- 11
-		["Inscription"]			= true,						-- 12
+	["Generic(OBSOLETE)"] = {		-- 8
+		["Generic(OBSOLETE)"] = true, -- 0
 	},
-	]]--
+	--]]
 	--[[
-	["Gem"] = {	-- 8
-		["Red"]				= true,						-- 1
-		["Blue"]			= true,						-- 2
-		["Yellow"]			= true,						-- 3
-		["Purple"]			= true,						-- 4
-		["Green"]			= true,						-- 5
-		["Orange"]			= true,						-- 6
-		["Meta"]			= true,						-- 7
-		["Simple"]			= true,						-- 8
-		["Prismatic"]		= true,						-- 9
-		["Cogwheel"]		= true,						-- 10
+	["Recipe"] = {		-- 9
+		["Book"] = true, -- 0
+		["Leatherworking"] = true, -- 1
+		["Tailoring"] = true, -- 2
+		["Engineering"] = true, -- 3
+		["Blacksmithing"] = true, -- 4
+		["Cooking"] = true, -- 5
+		["Alchemy"] = true, -- 6
+		["First Aid"] = true, -- 7
+		["Enchanting"] = true, -- 8
+		["Fishing"] = true, -- 9
 	},
-	]]--
-
-	["Miscellaneous"] = {	-- 9
-		["Junk"]			= _G["MISCELLANEOUS"],		-- 1
-		--["Reagent"]			= true,					-- 2
-		--["Companion Pets"]	= true,					-- 3
-		--["Holiday"]			= true,					-- 4
-		--["Other"]			= true,						-- 5
-		--["Mount"]			= true,						-- 6
-	},
-
+	--]]
 	--[[
-	["Quest"] = {	-- 10
-		["Quest"] = true,
+	["Money(OBSOLETE)"] = {		-- 10
+		["Money(OBSOLETE)"] = true, -- 0
 	},
-	]]--
+	--]]
 	--[[
-	["Battle Pets"] = {
-		["Humanoid"]		= true,						-- 1
-		["Dragonkin"]		= true,						-- 2
-		["Flying"]			= true,						-- 3
-		["Undead"]			= true,						-- 4
-		["Critter"]			= true,						-- 5
-		["Magic"]			= true,						-- 6
-		["Elemental"]		= true,						-- 7
-		["Beast"]			= true,						-- 8
-		["Aquatic"]			= true,						-- 9
-		["Mechanical"]		= true,						-- 10
+	["Quiver"] = {		-- 11
+		["Quiver(OBSOLETE)"] = true, -- 0
+		["Quiver(OBSOLETE)"] = true, -- 1
+		["Quiver"] = true, -- 2
+		["Ammo Pouch"] = true, -- 3
 	},
-	]]--
+	--]]
+	--[[
+	["Quest"] = {		-- 12
+		["Quest"] = true, -- 0
+	},
+	--]]
+	--[[
+	["Key"] = {		-- 13
+		["Key"] = true, -- 0
+		["Lockpick"] = true, -- 1
+	},
+	--]]
+	--[[
+	["Permanent(OBSOLETE)"] = {		-- 14
+		["Permanent"] = true, -- 0
+	},
+	--]]
+	["Miscellaneous"] = {		-- 15
+		["Junk"] 	= 	_G["MISCELLANEOUS"], 	-- 0
+	},
 }
 
 -- small info
@@ -232,9 +335,34 @@ local function GetAuctionItemClassesLoc()
 			}
 end
 
+
+
 local function Init()
+	local NewLocData = {
+		--en = {},
+		loc = {},
+	}
+	for iC = 0, #LOC_DATA do
+		local class = LOC_DATA[iC]
+		local className = GetItemClassInfo(iC)
+
+		--NewLocData.en[class.__name] = className
+		NewLocData.loc[className] = class.__name
+
+		for isC = 0, #class do
+			local subClass = class[isC]
+			local name = GetItemSubClassInfo(iC,isC)
+			if not NewLocData[subClass] then
+				--NewLocData.en[class.__name..subClass] = name
+				NewLocData.loc[className..name] = subClass
+			end
+		end
+	end
+
+	LOC_DATA = NewLocData
+
 	for i = 1,#FILTER do
-		FILTER[ ItemInfo.CreateDescription(FILTER[i].slot, FILTER[i].itemType, FILTER[i].itemSubType, true) ] = type(FILTER[i].__new) == "table" and ItemInfo.CreateDescription(FILTER[i].__new.slot, FILTER[i].__new.itemType, FILTER[i].__new.itemSubType, true) or FILTER[i].__new
+		FILTER[ ItemInfo.CreateDescription(FILTER[i].slot, LOC_DATA.loc[FILTER[i].itemType], LOC_DATA.loc[FILTER[i].itemType..FILTER[i].itemSubType], true) ] = type(FILTER[i].__new) == "table" and ItemInfo.CreateDescription(FILTER[i].__new.slot, LOC_DATA.loc[FILTER[i].__new.itemType], (FILTER[i].__new.itemType and FILTER[i].__new.itemSubType) and FILTER[i].__new.itemType..FILTER[i].__new.itemSubType or nil, true) or FILTER[i].__new
 	end
 end
 AtlasLoot:AddInitFunc(Init)
@@ -245,6 +373,8 @@ function ItemInfo.CreateDescription(slot, itemType, itemSubType, filterIgnore)
 	if slot then
 		desc = ITEM_DESC_INFO["slot"][slot] and ITEM_DESC_INFO["slot"][slot] or ( _G[slot] or "" )
 	end
+	itemType = itemType and ( LOC_DATA.loc[itemType] or itemType ) or itemType
+	itemSubType = (itemType and itemSubType) and ( LOC_DATA.loc[itemType..itemSubType] or itemSubType ) or itemSubType
 	if itemType and itemSubType then
 		if ITEM_DESC_INFO[itemType] and ITEM_DESC_INFO[itemType][itemSubType] then
 			if ITEM_DESC_INFO[itemType][itemSubType] ~= true then
