@@ -819,6 +819,7 @@ local function ExtraItemFrame_AddButton(self)
 end
 
 local function ExtraItemFrame_ClearAllButtons(self)
+	if not self.ItemList and not self:IsShown() then return end
 	for i = 1, #self.ShownContainer do
 		self.Container[self.ShownContainer[i]] = true
 		self.ShownContainer[i]:Clear()
@@ -858,7 +859,12 @@ function Button:ExtraItemFrame_GetFrame(button, itemList)
 	end
 
 	for i = 1, #itemList do
-		frame:AddButton():SetContentTable({ 1, 0, itemList[i] }, nil, true)
+		local item = itemList[i]
+		if type(item) == "table" then
+			frame:AddButton():SetContentTable({ 1, 0, item[1], [ATLASLOOT_IT_AMOUNT2] = item[2] }, nil, true)
+		else
+			frame:AddButton():SetContentTable({ 1, 0, item }, nil, true)
+		end
 		frame:SetWidth(frame:GetWidth() + 32)
 	end
 	frame:ClearAllPoints()
@@ -866,7 +872,7 @@ function Button:ExtraItemFrame_GetFrame(button, itemList)
 	frame:SetPoint("TOPLEFT", button, "BOTTOMLEFT")
 	frame:SetFrameStrata("TOOLTIP")
 	frame:Show()
-	frame.ItemList = button.Items
+	frame.ItemList = itemList
 	frame.button = button
 
 	return frame

@@ -5,6 +5,7 @@ local Query = {}
 Item.Query = Query
 local AL = AtlasLoot.Locales
 local ClickHandler = AtlasLoot.ClickHandler
+local Token = AtlasLoot.Data.Token
 
 local db
 
@@ -35,15 +36,18 @@ function Item.OnSet(button, second)
 		{
 			ChatLink = { "LeftButton", "Shift" },
 			DressUp = { "LeftButton", "Ctrl" },
+			ShowExtraItems = { "LeftButton", "None" },
 			types = {
 				ChatLink = true,
 				DressUp = true,
+				ShowExtraItems = true,
 			},
 		},
 		db.ClickHandler,
 		{
-			{ "ChatLink", 	AL["Chat Link"], 	AL["Add item into chat"] },
-			{ "DressUp", 	AL["Dress up"], 	AL["Shows the item in the Dressing room"] },
+			{ "ChatLink", 		AL["Chat Link"], 			AL["Add item into chat"] },
+			{ "DressUp", 		AL["Dress up"], 			AL["Shows the item in the Dressing room"] },
+			{ "ShowExtraItems", AL["Show extra items"], 	AL["Shows extra items (tokens,mats)"] },
 		})
 		-- create item colors
 		for i=0,7 do
@@ -93,6 +97,11 @@ function Item.OnMouseAction(button, mouseButton)
 		itemLink = itemLink or button.ItemString
 		if itemLink then
 			DressUpItemLink(itemLink)
+		end
+	elseif mouseButton == "ShowExtraItems" then
+		if Token.IsToken(button.ItemID) then
+			button.IsToken = true
+			AtlasLoot.Button:ExtraItemFrame_GetFrame(button, Token.GetTokenData(button.ItemID))
 		end
 	elseif mouseButton == "MouseWheelUp" and Item.previewTooltipFrame and Item.previewTooltipFrame:IsShown() then  -- ^
 		local frame = Item.previewTooltipFrame.modelFrame
@@ -166,6 +175,10 @@ function Item.OnClear(button)
 		button.overlay:Hide()
 	end
 	button.secButton.overlay:Hide()
+	if button.IsToken then
+		AtlasLoot.Button:ExtraItemFrame_ClearFrame()
+		button.IsToken = false
+	end
 end
 
 function Item.Refresh(button)
@@ -222,7 +235,7 @@ function Item.GetStringContent(str)
 end
 
 --################################
--- Item querys
+-- Item dess up
 --################################
 function Item.ShowQuickDressUp(itemLink, ttFrame)
 	if not itemLink or not IsEquippableItem(itemLink) then return end
