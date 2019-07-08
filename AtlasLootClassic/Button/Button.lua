@@ -9,6 +9,7 @@
 		mountID			= 123,
 	}
 ]]
+local ALName, ALPrivate = ...
 
 local AtlasLoot = _G.AtlasLoot
 local Button = {}
@@ -789,4 +790,89 @@ end
 function Button:FormatItemTableType(tab)
 	assert(tab and type(tab) == "table", "tab must be a table.")
 
+end
+
+--################################
+-- Extra Items Frame
+--################################
+local ExtraItemFrame_Frame
+
+local function ExtraItemFrame_AddButton(self)
+	local container = self.Container
+	local shownContainer = self.ShownContainer
+	local button = next(container)
+	if not button then
+		button = AtlasLoot.Button:CreateSecOnly()
+		button:SetSize(30,30)
+		button:SetParent(self)
+	end
+	container[button] = nil
+
+	if #shownContainer < 1 then
+		button:SetPoint("TOPLEFT", self, "TOPLEFT", 5, -5)
+	else
+		button:SetPoint("TOPLEFT", shownContainer[#shownContainer], "TOPRIGHT", 2, 0)
+	end
+	button:Show()
+	shownContainer[#shownContainer + 1] = button
+	return button
+end
+
+local function ExtraItemFrame_ClearAllButtons(self)
+	for i = 1, #self.ShownContainer do
+		self.Container[self.ShownContainer[i]] = true
+		self.ShownContainer[i]:Clear()
+		self.ShownContainer[i]:Hide()
+	end
+	wipe(self.ShownContainer)
+	self:Hide()
+	self:SetWidth(10)
+	self.ItemList = nil
+	self.button = nil
+end
+
+function Button:ExtraItemFrame_GetFrame(button, itemList)
+	local frame = ExtraItemFrame_Frame
+	if frame and frame.ItemList then
+		if frame.button == button then
+			return ExtraItemFrame_Frame:Clear()
+		else
+			ExtraItemFrame_Frame:Clear()
+		end
+	elseif not frame then
+		frame = CreateFrame("frame")
+		frame:SetClampedToScreen(true)
+		frame:SetHeight(40)
+		frame:SetWidth(10)
+		frame:SetBackdrop(ALPrivate.BOX_BORDER_BACKDROP)
+		frame:SetBackdropColor(1,1,1,1)
+		frame:EnableMouse(true)
+
+		frame.Container = {}
+		frame.ShownContainer = {}
+		frame.AddButton = ExtraItemFrame_AddButton
+		frame.Clear = ExtraItemFrame_ClearAllButtons
+
+		frame:Hide()
+		ExtraItemFrame_Frame = frame
+	end
+
+	for i = 1, #itemList do
+		frame:AddButton():SetContentTable({ 1, 0, itemList[i] }, nil, true)
+		frame:SetWidth(frame:GetWidth() + 32)
+	end
+	frame:ClearAllPoints()
+	frame:SetParent(button:GetParent():GetParent())
+	frame:SetPoint("TOPLEFT", button, "BOTTOMLEFT")
+	frame:SetFrameStrata("TOOLTIP")
+	frame:Show()
+	frame.ItemList = button.Items
+	frame.button = button
+
+	return frame
+end
+
+function Button:ExtraItemFrame_ClearFrame()
+	if not ExtraItemFrame_Frame then return end
+	ExtraItemFrame_Frame:Clear()
 end

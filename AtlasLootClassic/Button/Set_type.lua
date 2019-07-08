@@ -127,7 +127,7 @@ function Set.OnClear(button)
 	button.secButton.SetAddonName = nil
 	button.secButton.Items = nil
 	button.secButton.VisualName, button.secButton.VisualDesc, button.secButton.VisualIcon = nil, nil, nil
-	if Set.ItemListFrame then Set.ItemListFrame:Clear() end
+	AtlasLoot.Button:ExtraItemFrame_ClearFrame()
 end
 
 function Set.Refresh(button)
@@ -152,78 +152,9 @@ end
 -- Tooltip
 -- #########
 
-local function AddButton(self)
-	local container = self.Container
-	local shownContainer = self.ShownContainer
-	local button = next(container)
-	if not button then
-		button = AtlasLoot.Button:CreateSecOnly()
-		button:SetSize(30,30)
-		button:SetParent(self)
-	end
-	container[button] = nil
-
-	if #shownContainer < 1 then
-		button:SetPoint("TOPLEFT", self, "TOPLEFT", 5, -5)
-	else
-		button:SetPoint("TOPLEFT", shownContainer[#shownContainer], "TOPRIGHT", 2, 0)
-	end
-	button:Show()
-	shownContainer[#shownContainer + 1] = button
-	return button
-end
-
-local function ClearAllButtons(self)
-	for i = 1, #self.ShownContainer do
-		self.Container[self.ShownContainer[i]] = true
-		self.ShownContainer[i]:Clear()
-		self.ShownContainer[i]:Hide()
-	end
-	wipe(self.ShownContainer)
-	self:Hide()
-	self:SetWidth(10)
-	self.ItemList = nil
-end
-
-local function CreateItemListFrame()
-	if Set.ItemListFrame then return end
-
-	local frame = CreateFrame("frame")
-	frame:SetClampedToScreen(true)
-	frame:SetHeight(40)
-	frame:SetWidth(40)
-	frame:SetBackdrop(ALPrivate.BOX_BORDER_BACKDROP)
-	frame:SetBackdropColor(1,1,1,1)
-	frame:EnableMouse(true)
-
-	frame.Container = {}
-	frame.ShownContainer = {}
-	frame.AddButton = AddButton
-	frame.Clear = ClearAllButtons
-
-	frame:Hide()
-	Set.ItemListFrame = frame
-end
-
 function Set.OnClickItemList(button)
 	if not button.Items then return end
-	if not Set.ItemListFrame then CreateItemListFrame() end
-	if Set.ItemListFrame:IsShown() and Set.ItemListFrame.ItemList == button.Items then
-		Set.ItemListFrame:Clear()
-		return
-	end
-	local frame = Set.ItemListFrame
-	frame:Clear()
-	for i = 1, #button.Items do
-		frame:AddButton():SetContentTable({ 1, 0, button.Items[i] }, nil, true)
-		frame:SetWidth(frame:GetWidth() + 32)
-	end
-	frame:ClearAllPoints()
-	frame:SetParent(button:GetParent():GetParent())
-	frame:SetPoint("TOPLEFT", button, "BOTTOMLEFT")
-	frame:SetFrameStrata("TOOLTIP")
-	frame:Show()
-	frame.ItemList = button.Items
+	AtlasLoot.Button:ExtraItemFrame_GetFrame(button, button.Items)
 end
 
 function Set.ShowToolTipFrame(button)

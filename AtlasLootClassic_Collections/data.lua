@@ -49,7 +49,7 @@ data["TierSets"] = {
 	TableType = SET_ITTYPE,
 	items = {
 		{ -- T1
-			name = "T1",
+			name = format(AL["Tier %d Sets"], 1),
 			[ALLIANCE_DIFF] = {
 				{ 1, "SetID:203:n" }, -- Warlock
 				{ 3, "SetID:202:n" }, -- Priest
@@ -68,7 +68,7 @@ data["TierSets"] = {
 			},
 		},
 		{ -- T2
-			name = "T2",
+			name = format(AL["Tier %d Sets"], 2),
 			[ALLIANCE_DIFF] = {
 				{ 1, "SetID:212:n" }, -- Warlock
 				{ 3, "SetID:211:n" }, -- Priest
@@ -87,7 +87,7 @@ data["TierSets"] = {
 			},
 		},
 		{ -- T3
-			name = "T3",
+			name = format(AL["Tier %d Sets"], 3),
 			[ALLIANCE_DIFF] = {
 				{ 1, "SetID:529:n" }, -- Warlock
 				{ 3, "SetID:525:n" }, -- Priest
