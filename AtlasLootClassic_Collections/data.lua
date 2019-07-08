@@ -48,8 +48,46 @@ data["TierSets"] = {
 	LoadDifficulty = LOAD_DIFF,
 	TableType = SET_ITTYPE,
 	items = {
+		{ -- T0
+			name = format(AL["Tier %s Sets"], "0"),
+			[ALLIANCE_DIFF] = {
+				{ 1, "SetID:183:n" }, -- Warlock
+				{ 3, "SetID:182:n" }, -- Priest
+				{ 16, "SetID:181:n" }, -- Mage
+				{ 5, "SetID:184:n" }, -- Rogue
+				{ 20, "SetID:185:n" }, -- Druid
+				{ 7, "SetID:186:n" }, -- Hunter
+				{ 9, "SetID:189:n" }, -- Warrior
+				{ 24, "SetID:188:n" }, -- Paladin
+			},
+
+			[HORDE_DIFF] = {
+				GetItemsFromDiff = ALLIANCE_DIFF,
+				{ 22, "SetID:187:n" }, -- Shaman
+				{ 24 }, -- Paladin
+			},
+		},
+		{ -- T0.5
+			name = format(AL["Tier %s Sets"], "0.5"),
+			[ALLIANCE_DIFF] = {
+				{ 1, "SetID:518:n" }, -- Warlock
+				{ 3, "SetID:514:n" }, -- Priest
+				{ 16, "SetID:517:n" }, -- Mage
+				{ 5, "SetID:512:n" }, -- Rogue
+				{ 20, "SetID:513:n" }, -- Druid
+				{ 7, "SetID:515:n" }, -- Hunter
+				{ 9, "SetID:511:n" }, -- Warrior
+				{ 24, "SetID:516:n" }, -- Paladin
+			},
+
+			[HORDE_DIFF] = {
+				GetItemsFromDiff = ALLIANCE_DIFF,
+				{ 22, "SetID:519:n" }, -- Shaman
+				{ 24 }, -- Paladin
+			},
+		},
 		{ -- T1
-			name = format(AL["Tier %d Sets"], 1),
+			name = format(AL["Tier %s Sets"], "1"),
 			[ALLIANCE_DIFF] = {
 				{ 1, "SetID:203:n" }, -- Warlock
 				{ 3, "SetID:202:n" }, -- Priest
@@ -68,7 +106,7 @@ data["TierSets"] = {
 			},
 		},
 		{ -- T2
-			name = format(AL["Tier %d Sets"], 2),
+			name = format(AL["Tier %s Sets"], "2"),
 			[ALLIANCE_DIFF] = {
 				{ 1, "SetID:212:n" }, -- Warlock
 				{ 3, "SetID:211:n" }, -- Priest
@@ -87,7 +125,7 @@ data["TierSets"] = {
 			},
 		},
 		{ -- T3
-			name = format(AL["Tier %d Sets"], 3),
+			name = format(AL["Tier %s Sets"], "3"),
 			[ALLIANCE_DIFF] = {
 				{ 1, "SetID:529:n" }, -- Warlock
 				{ 3, "SetID:525:n" }, -- Priest

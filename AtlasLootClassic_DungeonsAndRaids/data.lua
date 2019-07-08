@@ -80,7 +80,7 @@ local KEYS = {	-- Keys
 }
 
 local T1_SET = {
-	name = format(AL["Tier %d Sets"], 1),
+	name = format(AL["Tier %s Sets"], "1"),
 	ExtraList = true,
 	LoadDifficulty = LOAD_DIFF,
 	TableType = SET_ITTYPE,
@@ -103,7 +103,7 @@ local T1_SET = {
 }
 
 local T2_SET = {
-	name = format(AL["Tier %d Sets"], 2),
+	name = format(AL["Tier %s Sets"], "2"),
 	ExtraList = true,
 	LoadDifficulty = LOAD_DIFF,
 	TableType = SET_ITTYPE,
@@ -126,7 +126,7 @@ local T2_SET = {
 }
 
 local T3_SET = {
-	name = format(AL["Tier %d Sets"], 3),
+	name = format(AL["Tier %s Sets"], "3"),
 	ExtraList = true,
 	LoadDifficulty = LOAD_DIFF,
 	TableType = SET_ITTYPE,
