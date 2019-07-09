@@ -795,6 +795,10 @@ end
 --################################
 -- Extra Items Frame
 --################################
+local ITEM_ICON_SIZE = 30
+local ITEM_DISTANCE = 3
+local BORDER_DISTANCE = 6
+local MAX_ITEMS_PER_LINE = 8
 local ExtraItemFrame_Frame
 
 local function ExtraItemFrame_AddButton(self)
@@ -803,15 +807,19 @@ local function ExtraItemFrame_AddButton(self)
 	local button = next(container)
 	if not button then
 		button = AtlasLoot.Button:CreateSecOnly()
-		button:SetSize(30,30)
+		button:SetSize(ITEM_ICON_SIZE,ITEM_ICON_SIZE)
 		button:SetParent(self)
 	end
 	container[button] = nil
 
 	if #shownContainer < 1 then
-		button:SetPoint("TOPLEFT", self, "TOPLEFT", 5, -5)
+		button:SetPoint("TOPLEFT", self, "TOPLEFT", BORDER_DISTANCE, -BORDER_DISTANCE)
 	else
-		button:SetPoint("TOPLEFT", shownContainer[#shownContainer], "TOPRIGHT", 2, 0)
+		if #shownContainer % MAX_ITEMS_PER_LINE == 0 then
+			button:SetPoint("TOPLEFT", shownContainer[(#shownContainer-MAX_ITEMS_PER_LINE) + 1], "BOTTOMLEFT", 0, -ITEM_DISTANCE)
+		else
+			button:SetPoint("TOPLEFT", shownContainer[#shownContainer], "TOPRIGHT", ITEM_DISTANCE, 0)
+		end
 	end
 	button:Show()
 	shownContainer[#shownContainer + 1] = button
@@ -827,7 +835,8 @@ local function ExtraItemFrame_ClearAllButtons(self)
 	end
 	wipe(self.ShownContainer)
 	self:Hide()
-	self:SetWidth(10)
+	self:SetWidth(BORDER_DISTANCE*2)
+	self:SetHeight(ITEM_ICON_SIZE+(BORDER_DISTANCE*2))
 	self.ItemList = nil
 	self.button = nil
 end
@@ -843,8 +852,8 @@ function Button:ExtraItemFrame_GetFrame(button, itemList)
 	elseif not frame then
 		frame = CreateFrame("frame")
 		frame:SetClampedToScreen(true)
-		frame:SetHeight(40)
-		frame:SetWidth(10)
+		frame:SetHeight(ITEM_ICON_SIZE+(BORDER_DISTANCE*2))
+		frame:SetWidth(BORDER_DISTANCE*2)
 		frame:SetBackdrop(ALPrivate.BOX_BORDER_BACKDROP)
 		frame:SetBackdropColor(1,1,1,1)
 		frame:EnableMouse(true)
@@ -865,7 +874,13 @@ function Button:ExtraItemFrame_GetFrame(button, itemList)
 		else
 			frame:AddButton():SetContentTable({ 1, 0, item }, nil, true)
 		end
-		frame:SetWidth(frame:GetWidth() + 32)
+		if i > MAX_ITEMS_PER_LINE and i % (MAX_ITEMS_PER_LINE+1) == 0 then
+			frame:SetHeight(frame:GetHeight() + ITEM_ICON_SIZE + ITEM_DISTANCE)
+		elseif i == 1 then
+			frame:SetWidth(frame:GetWidth() + ITEM_ICON_SIZE)
+		elseif i <= MAX_ITEMS_PER_LINE then
+			frame:SetWidth(frame:GetWidth() + ITEM_ICON_SIZE + ITEM_DISTANCE)
+		end
 	end
 	frame:ClearAllPoints()
 	frame:SetParent(button:GetParent():GetParent())
