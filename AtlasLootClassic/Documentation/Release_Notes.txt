@@ -5,9 +5,15 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 
 Patch Notes
 
+v1.0.0-beta2 (Jul. 09, 2019)
+========================
+- Add much more Tokens and expand their usage
+- Cleanup some loottables
+- Fix pkgmeta
+
 v1.0.0-beta1 (Jul. 08, 2019)
 ========================
-- Add Token support and Tokensupport for DM-Books, ZG, AQ20, AQ40, T3
+- Add Token support and Tokens for DM-Books, ZG, AQ20, AQ40, T3
 - Add World Events
 - Add Tier Sets
 - Add better icons for Sets

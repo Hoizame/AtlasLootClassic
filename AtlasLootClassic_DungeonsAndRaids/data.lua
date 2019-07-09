@@ -187,19 +187,15 @@ local DM_BOOKS = { -- DMBooks
 		{ 9,  18363 }, -- Frost Shock and You
 		{ 10, 18359 }, -- The Light and How to Swing It
 		{ 11, 18357 }, -- Codex of Defense
-		{ 13, 18333 }, -- Libram of Focus
-		{ 14, 18334 }, -- Libram of Protection
-		{ 15, 18332 }, -- Libram of Rapidity
-		{ 16, 18348 }, -- Quel'Serrar
-		{ 18, 18469 }, -- Royal Seal of Eldre'Thalas
-		{ 19, 18468 }, -- Royal Seal of Eldre'Thalas
-		{ 20, 18467 }, -- Royal Seal of Eldre'Thalas
-		{ 21, 18465 }, -- Royal Seal of Eldre'Thalas
-		{ 22, 18470 }, -- Royal Seal of Eldre'Thalas
-		{ 23, 18473 }, -- Royal Seal of Eldre'Thalas
-		{ 24, 18471 }, -- Royal Seal of Eldre'Thalas
-		{ 25, 18472 }, -- Royal Seal of Eldre'Thalas
-		{ 26, 18466 }, -- Royal Seal of Eldre'Thalas
+		--{ 16, 18348 }, -- Quel'Serrar
+		{ 18, 18333 }, -- Libram of Focus
+		{ 19, 11733 }, -- Libram of Constitution
+		{ 20, 18334 }, -- Libram of Protection
+		{ 21, 18332 }, -- Libram of Rapidity
+		{ 22, 11736 }, -- Libram of Resilience
+		{ 23, 11732 }, -- Libram of Rumination
+		{ 24, 11734 }, -- Libram of Tenacity
+		{ 25, 11737 }, -- Libram of Voracity
 	},
 }
 
@@ -324,8 +320,6 @@ data["WailingCaverns"] = {
 				{ 2,  6627 }, -- Mutant Scale Breastplate
 				{ 3,  6463 }, -- Deep Fathom Ring
 				{ 16,  10441 }, -- Glowing Shard
-				{ 17,  10657 }, -- Talbar Mantle
-				{ 18,  10658 }, -- Quagmire Galoshes
 			},
 		},
 		{ -- WCTrash
@@ -638,8 +632,6 @@ data["BlackfathomDeeps"] = {
 			DisplayIDs = {{110}},
 			[NORMAL_DIFF] = {
 				{ 1,  16782 }, -- Strange Water Globe
-				{ 2,  16886 }, -- Outlaw Sabre
-				{ 3,  16887 }, -- Witch's Finger
 			},
 		},
 		{ -- BFDTwilightLordKelris
@@ -786,14 +778,14 @@ data["Gnomeregan"] = {
 				{ 2,  9461 }, -- Charged Gear
 				{ 3,  9458 }, -- Thermaplugg's Central Core
 				{ 4,  9459 }, -- Thermaplugg's Left Arm
-				{ 16, 4415 }, -- Schematic: Craftsman's Monocle
-				{ 17, 4393 }, -- Craftsman's Monocle
-				{ 19, 4413 }, -- Schematic: Discombobulator Ray
-				{ 20, 4388 }, -- Discombobulator Ray
-				{ 22, 4411 }, -- Schematic: Flame Deflector
-				{ 23, 4376 }, -- Flame Deflector
-				{ 25, 7742 }, -- Schematic: Gnomish Cloaking Device
-				{ 26, 4397 }, -- Gnomish Cloaking Device
+				{ 16, 4415, 4393 }, -- Schematic: Craftsman's Monocle
+				--{ 17, 4393 }, -- Craftsman's Monocle
+				{ 18, 4413, 4388 }, -- Schematic: Discombobulator Ray
+				--{ 20, 4388 }, -- Discombobulator Ray
+				{ 20, 4411, 4376 }, -- Schematic: Flame Deflector
+				--{ 23, 4376 }, -- Flame Deflector
+				{ 22, 7742, 4397 }, -- Schematic: Gnomish Cloaking Device
+				--{ 26, 4397 }, -- Gnomish Cloaking Device
 			},
 		},
 		{ -- GnDIAmbassador
@@ -823,12 +815,11 @@ data["Gnomeregan"] = {
 				{ 18, 7191 }, -- Fused Wiring
 				{ 19, 9308 }, -- Grime-Encrusted Object
 				{ 20, 9326 }, -- Grime-Encrusted Ring
-				{ 21, 9588 }, -- Nogg's Gold Ring
-				{ 23, 9279 }, -- White Punch Card
-				{ 24, 9280 }, -- Yellow Punch Card
-				{ 25, 9282 }, -- Blue Punch Card
-				{ 26, 9281 }, -- Red Punch Card
-				{ 27, 9316 }, -- Prismatic Punch Card
+				{ 22, 9279 }, -- White Punch Card
+				{ 23, 9280 }, -- Yellow Punch Card
+				{ 24, 9282 }, -- Blue Punch Card
+				{ 25, 9281 }, -- Red Punch Card
+				{ 26, 9316 }, -- Prismatic Punch Card
 			},
 		},
 
@@ -912,10 +903,7 @@ data["RazorfenKraul"] = {
 				{ 1,  6693 }, -- Agamaggan's Clutch
 				{ 2,  6694 }, -- Heart of Agamaggan
 				{ 3,  6692 }, -- Pronged Reaver
-				{ 5,  17008 }, -- Small Scroll
-				{ 6,  17043 }, -- Zealot's Robe
-				{ 7,  17042 }, -- Nail Spitter
-				{ 8,  17039 }, -- Skullbreaker
+				{ 16,  17008 }, -- Small Scroll
 			},
 		},
 		{ -- RFKTrash
@@ -1448,7 +1436,6 @@ data["Zul'Farrak"] = {
 				{ 2,  9641 }, -- Lifeblood Amulet
 				{ 3,  9639 }, -- The Hand of Antu'sul
 				{ 5,  9379 }, -- Sang'thraze the Deflector
-				{ 6,  9372 }, -- Sul'thraze the Lasher
 			},
 		},
 		{ -- ZFThekatheMartyr
@@ -1539,7 +1526,6 @@ data["Zul'Farrak"] = {
 				{ 3,  9478 }, -- Ripsaw
 				{ 4,  9477 }, -- The Chief's Enforcer
 				{ 6,  11086 }, -- Jang'thraze the Protector
-				{ 7,  9372 }, -- Sul'thraze the Lasher
 			},
 		},
 		{ -- ZFZerillis
@@ -1884,7 +1870,6 @@ data["TheTempleOfAtal'Hakkar"] = {
 				{ 7,  10837 }, -- Tooth of Eranikus
 				{ 8,  10828 }, -- Dire Nail
 				{ 10, 10454 }, -- Essence of Eranikus
-				{ 11, 10455 }, -- Chained Essence of Eranikus
 			},
 		},
 		{ -- STTrash
@@ -1953,8 +1938,8 @@ data["BlackrockDepths"] = {
 				{ 3,  11631 }, -- Stoneshell Guard
 				{ 4,  22397 }, -- Idol of Ferocity
 				{ 5,  11630 }, -- Rockshard Pellets
-				{ 7,  11813 }, -- Formula: Smoking Heart of the Mountain
-				{ 8,  11811 }, -- Smoking Heart of the Mountain
+				{ 7,  11813, 11811 }, -- Formula: Smoking Heart of the Mountain
+				--{ 8,  11811 }, -- Smoking Heart of the Mountain
 			},
 		},
 		-- RING start
@@ -1974,12 +1959,12 @@ data["BlackrockDepths"] = {
 			npcId = 9028,
 			DisplayIDs = {{7873}},
 			[NORMAL_DIFF] = {
-				{ 1,  11610 }, -- Plans: Dark Iron Pulverizer
-				{ 2,  11608 }, -- Dark Iron Pulverizer
-				{ 3,  11722 }, -- Dregmetal Spaulders
-				{ 4,  11703 }, -- Stonewall Girdle
-				{ 5,  22270 }, -- Entrenching Boots
-				{ 6,  11702 }, -- Grizzle's Skinner
+				{ 1,  11722 }, -- Dregmetal Spaulders
+				{ 2,  11703 }, -- Stonewall Girdle
+				{ 3,  22270 }, -- Entrenching Boots
+				{ 4,  11702 }, -- Grizzle's Skinner
+				{ 6,  11610, 11608 }, -- Plans: Dark Iron Pulverizer
+				--{ 2,  11608 }, -- Dark Iron Pulverizer
 			},
 		},
 		{ -- BRDEviscerator
@@ -2046,11 +2031,11 @@ data["BlackrockDepths"] = {
 			[NORMAL_DIFF] = {
 				{ 1, "INV_Box_01", nil, AL["Dark Keeper"], nil },
 				{ 2,  11197 }, -- Dark Keeper Key
-				{ 4, "INV_Box_01", nil, AL["Secret Safe"], nil },
-				{ 5,  22256 }, -- Mana Shaping Handwraps
-				{ 6,  22205 }, -- Black Steel Bindings
-				{ 7,  22255 }, -- Magma Forged Band
-				{ 8,  22254 }, -- Wand of Eternal Light
+				{ 5, "INV_Box_01", nil, AL["Secret Safe"], nil },
+				{ 6,  22256 }, -- Mana Shaping Handwraps
+				{ 7,  22205 }, -- Black Steel Bindings
+				{ 8,  22255 }, -- Magma Forged Band
+				{ 9,  22254 }, -- Wand of Eternal Light
 				{ 16, "INV_Box_01", nil, AL["Relic Coffer"], nil },
 				{ 17, 11945 }, -- Dark Iron Ring
 				{ 18, 11946 }, -- Fire Opal Necklace
@@ -2304,15 +2289,15 @@ data["BlackrockDepths"] = {
 			},
 		},
 		{ -- BRDTheldren
-			name = AL["Theldren ( T0.5 )"],
+			name = AL["Theldren"].." - "..format(AL["Tier %s Sets"], "0.5"),
 			npcId = 16059,
 			DisplayIDs = {{15981}},
 			ExtraList = true,
 			[NORMAL_DIFF] = {
-				{ 2,  22305 }, -- Ironweave Mantle
-				{ 3,  22330 }, -- Shroud of Arcane Mastery
-				{ 4,  22318 }, -- Malgen's Long Bow
-				{ 5,  22317 }, -- Lefty's Brass Knuckle
+				{ 1,  22305 }, -- Ironweave Mantle
+				{ 2,  22330 }, -- Shroud of Arcane Mastery
+				{ 3,  22318 }, -- Malgen's Long Bow
+				{ 4,  22317 }, -- Lefty's Brass Knuckle
 			},
 		},
 	},
@@ -2404,8 +2389,8 @@ data["LowerBlackrockSpire"] = {
 				{ 1,  12637 }, -- Backusarian Gauntlets
 				{ 2,  12634 }, -- Chiselbrand Girdle
 				{ 3,  12621 }, -- Demonfork
-				{ 5,  12838 }, -- Plans: Arcanite Reaper
-				{ 6,  12784 }, -- Arcanite Reaper
+				{ 5,  12838, 12784 }, -- Plans: Arcanite Reaper
+				--{ 6,  12784 }, -- Arcanite Reaper
 			},
 		},
 		{ -- LBRSSmolderweb
@@ -2439,8 +2424,8 @@ data["LowerBlackrockSpire"] = {
 				{ 3,  13259 }, -- Ribsteel Footguards
 				{ 4,  13178 }, -- Rosewine Circle
 				{ 6,  18784 }, -- Top Half of Advanced Armorsmithing: Volume III
-				{ 7,  12725 }, -- Plans: Enchanted Thorium Helm
-				{ 8,  12620 }, -- Enchanted Thorium Helm
+				--{ 7,  12725 }, -- Plans: Enchanted Thorium Helm
+				--{ 8,  12620 }, -- Enchanted Thorium Helm
 			},
 		},
 		{ -- LBRSZigris
@@ -2450,8 +2435,8 @@ data["LowerBlackrockSpire"] = {
 			[NORMAL_DIFF] = {
 				{ 1,  13253 }, -- Hands of Power
 				{ 2,  13252 }, -- Cloudrunner Girdle
-				{ 4,  12835 }, -- Plans: Annihilator
-				{ 5,  12798 }, -- Annihilator
+				{ 4,  12835, 12798 }, -- Plans: Annihilator
+				--{ 5,  12798 }, -- Annihilator
 			},
 		},
 		{ -- LBRSHalycon
@@ -2510,9 +2495,6 @@ data["LowerBlackrockSpire"] = {
 				{ 10, 13161 }, -- Trindlehaven Staff
 				{ 12, 12337 }, -- Gemstone of Bloodaxe
 				{ 16, 12780 }, -- General Drakkisath's Command
-				{ 17, 13966 }, -- Mark of Tyranny
-				{ 18, 13968 }, -- Eye of the Beast
-				{ 19, 13965 }, -- Blackhand's Breadth
 			},
 		},
 
@@ -2520,18 +2502,18 @@ data["LowerBlackrockSpire"] = {
 			name = AL["Trash"],
 			ExtraList = true,
 			[NORMAL_DIFF] = {
-				{ 1,  14513 }, -- Pattern: Robe of the Archmage
-				{ 2,  14152 }, -- Robe of the Archmage
-				{ 4,  16696 }, -- Devout Belt
-				{ 5,  16685 }, -- Magister's Belt
-				{ 6,  16683 }, -- Magister's Bindings
-				{ 7,  16703 }, -- Dreadmist Bracers
-				{ 8,  16713 }, -- Shadowcraft Belt
-				{ 9,  16716 }, -- Wildheart Belt
-				{ 10, 16680 }, -- Beaststalker's Belt
-				{ 11, 16673 }, -- Cord of Elements
-				{ 12, 16736 }, -- Belt of Valor
-				{ 13, 16735 }, -- Bracers of Valor
+				{ 1,  14513, 14152 }, -- Pattern: Robe of the Archmage
+				--{ 2,  14152 }, -- Robe of the Archmage
+				{ 3,  16696 }, -- Devout Belt
+				{ 4,  16685 }, -- Magister's Belt
+				{ 5,  16683 }, -- Magister's Bindings
+				{ 6,  16703 }, -- Dreadmist Bracers
+				{ 7,  16713 }, -- Shadowcraft Belt
+				{ 8,  16716 }, -- Wildheart Belt
+				{ 9, 16680 }, -- Beaststalker's Belt
+				{ 10, 16673 }, -- Cord of Elements
+				{ 11, 16736 }, -- Belt of Valor
+				{ 12, 16735 }, -- Bracers of Valor
 				{ 16, 15749 }, -- Pattern: Volcanic Breastplate
 				{ 17, 15775 }, -- Pattern: Volcanic Shoulders
 				{ 18, 13494 }, -- Recipe: Greater Fire Protection Potion
@@ -2543,7 +2525,7 @@ data["LowerBlackrockSpire"] = {
 			},
 		},
 		{ -- LBRSGrayhoof
-			name = AL["Mor Grayhoof ( T0.5 )"],
+			name = AL["Mor Grayhoof"].." - "..format(AL["Tier %s Sets"], "0.5"),
 			npcId = 16080,
 			DisplayIDs = {{15997}},
 			ExtraList = true,
@@ -2588,8 +2570,8 @@ data["UpperBlackrockSpire"] = {
 				{ 4,  12603 }, -- Nightbrace Tunic
 				{ 5,  12589 }, -- Dustfeather Sash
 				{ 6,  12606 }, -- Crystallized Girdle
-				{ 8,  18657 }, -- Schematic: Hyper-Radiant Flame Reflector
-				{ 9,  18638 }, -- Hyper-Radiant Flame Reflector
+				{ 8,  18657, 18638 }, -- Schematic: Hyper-Radiant Flame Reflector
+				--{ 9,  18638 }, -- Hyper-Radiant Flame Reflector
 			},
 		},
 		{ -- UBRSAnvilcrack
@@ -2601,13 +2583,11 @@ data["UpperBlackrockSpire"] = {
 				{ 2,  13498 }, -- Handcrafted Mastersmith Leggings
 				{ 3,  18047 }, -- Flame Walkers
 				{ 4,  18048 }, -- Mastersmith's Hammer
-				{ 6,  12834 }, -- Plans: Arcanite Champion
-				{ 7,  12790 }, -- Arcanite Champion
-				{ 8,  12837 }, -- Plans: Masterwork Stormhammer
-				{ 9,  12794 }, -- Masterwork Stormhammer
+				{ 6,  12834, 12790 }, -- Plans: Arcanite Champion
+				--{ 7,  12790 }, -- Arcanite Champion
+				{ 8,  12837, 12794 }, -- Plans: Masterwork Stormhammer
+				--{ 9,  12794 }, -- Masterwork Stormhammer
 				{ 11, 18779 }, -- Bottom Half of Advanced Armorsmithing: Volume I
-				{ 12, 12727 }, -- Plans: Enchanted Thorium Breastplate
-				{ 13, 12618 }, -- Enchanted Thorium Breastplate
 				{ 16, "INV_Box_01", nil, AL["Unforged Rune Covered Breastplate"], nil },
 				{ 17, 12806 }, -- Unforged Rune Covered Breastplate
 				{ 18, 12696 }, -- Plans: Demon Forged Breastplate
@@ -2724,7 +2704,7 @@ data["UpperBlackrockSpire"] = {
 			},
 		},
 		{ -- UBRSValthalak
-			name = AL["Lord Valthalak ( T0.5 )"],
+			name = AL["Lord Valthalak"].." - "..format(AL["Tier %s Sets"], "0.5"),
 			npcId = 16042,
 			DisplayIDs = {{14308}},
 			ExtraList = true,
@@ -2827,7 +2807,7 @@ data["DireMaulEast"] = {
 			},
 		},
 		{ -- DMEIsalien
-			name = AL["Isalien ( T0.5 )"],
+			name = AL["Isalien"].." - "..format(AL["Tier %s Sets"], "0.5"),
 			npcId = 16097,
 			DisplayIDs = {{16000}},
 			ExtraList = true,
@@ -2894,8 +2874,8 @@ data["DireMaulWest"] = {
 				{ 3,  18371 }, -- Mindtap Talisman
 				{ 5,  18350 }, -- Amplifying Cloak
 				{ 6,  18351 }, -- Magically Sealed Bracers
-				{ 8,  22309 }, -- Pattern: Big Bag of Enchantment
-				{ 9,  22249 }, -- Big Bag of Enchantment
+				{ 8,  22309, 22249 }, -- Pattern: Big Bag of Enchantment
+				--{ 9,  22249 }, -- Big Bag of Enchantment
 			},
 		},
 		{ -- DMWImmolthar
@@ -3032,7 +3012,7 @@ data["DireMaulNorth"] = {
 				{ 17, 18266 }, -- Gordok Courtyard Key
 			},
 		},
-		{ -- DMNThimblejack
+		{ -- DMNThimblejack		TODO: Update with rework of Crafting
 			name = AL["Knot Thimblejack's Cache"],
 			[NORMAL_DIFF] = {
 				{ 1,  18414 }, -- Pattern: Belt of the Archmage
@@ -3119,8 +3099,6 @@ data["DireMaulNorth"] = {
 				{ 8,  18520 }, -- Barbarous Blade
 				{ 16, 19258 }, -- Ace of Warlords
 				{ 18, 18780 }, -- Top Half of Advanced Armorsmithing: Volume I
-				{ 19, 12727 }, -- Plans: Enchanted Thorium Breastplate
-				{ 20, 12618 }, -- Enchanted Thorium Breastplate
 			},
 		},
 		{ -- DMNTRIBUTERUN
@@ -3226,9 +3204,7 @@ data["Scholomance"] = {
 				{ 7,  14528 }, -- Rattlecage Buckler
 				{ 8,  14531 }, -- Frightskull Shaft
 				{ 10, 18782 }, -- Top Half of Advanced Armorsmithing: Volume II
-				{ 11, 12726 }, -- Plans: Enchanted Thorium Leggings
-				{ 12, 12619 }, -- Enchanted Thorium Leggings
-				{ 14, 13873 }, -- Viewing Room Key
+				{ 12, 13873 }, -- Viewing Room Key
 			},
 		},
 		{ -- SCHOLODeathKnight
@@ -3497,17 +3473,16 @@ data["Scholomance"] = {
 			DisplayIDs = {{11070}},
 			[NORMAL_DIFF] = {
 				{ 1,  13937 }, -- Headmaster's Charge
-				{ 2,  14514 }, -- Pattern: Robe of the Void
-				{ 3,  14153 }, -- Robe of the Void
-				{ 5,  16693 }, -- Devout Crown
-				{ 6,  16686 }, -- Magister's Crown
-				{ 7,  16698 }, -- Dreadmist Mask
-				{ 8,  16707 }, -- Shadowcraft Cap
-				{ 9,  16720 }, -- Wildheart Cowl
-				{ 10, 16677 }, -- Beaststalker's Cap
-				{ 11, 16667 }, -- Coif of Elements
-				{ 12, 16727 }, -- Lightforge Helm
-				{ 13, 16731 }, -- Helm of Valor
+				{ 2,  14514, 14153 }, -- Pattern: Robe of the Void
+				{ 4,  16693 }, -- Devout Crown
+				{ 5,  16686 }, -- Magister's Crown
+				{ 6,  16698 }, -- Dreadmist Mask
+				{ 7,  16707 }, -- Shadowcraft Cap
+				{ 8,  16720 }, -- Wildheart Cowl
+				{ 9, 16677 }, -- Beaststalker's Cap
+				{ 10, 16667 }, -- Coif of Elements
+				{ 11, 16727 }, -- Lightforge Helm
+				{ 12, 16731 }, -- Helm of Valor
 				{ 16, 13944 }, -- Tombstone Breastplate
 				{ 17, 13951 }, -- Vigorsteel Vambraces
 				{ 18, 13950 }, -- Detention Strap
@@ -3551,7 +3526,7 @@ data["Scholomance"] = {
 			},
 		},
 		{ -- SCHOLOKormok
-			name = AL["Kormok ( T0.5 )"],
+			name = AL["Kormok"].." - "..format(AL["Tier %s Sets"], "0.5"),
 			npcId = 16118,
 			DisplayIDs = {{16020}},
 			ExtraList = true,
@@ -3657,10 +3632,7 @@ data["Stratholme"] = {
 			DisplayIDs = {{10637}},
 			[NORMAL_DIFF] = {
 				{ 1,  18781 }, -- Bottom Half of Advanced Armorsmithing: Volume II
-				{ 2,  12726 }, -- Plans: Enchanted Thorium Leggings
-				{ 3,  12619 }, -- Enchanted Thorium Leggings
-				{ 5,  12824 }, -- Plans: Enchanted Battlehammer
-				{ 6,  12776 }, -- Enchanted Battlehammer
+				{ 3,  12824, 12776 }, -- Plans: Enchanted Battlehammer
 			},
 		},
 		{ -- STRATCannonMasterWilley
@@ -3679,8 +3651,7 @@ data["Stratholme"] = {
 				{ 10, 13377 }, -- Miniature Cannon Balls
 				{ 11, 22404 }, -- Willey's Back Scratcher
 				{ 12, 22406 }, -- Redemption
-				{ 16, 12839 }, -- Plans: Heartseeker
-				{ 17, 12783 }, -- Heartseeker
+				{ 16, 12839, 12783 }, -- Plans: Heartseeker
 			},
 		},
 		{ -- STRATArchivistGalford
@@ -3703,18 +3674,17 @@ data["Stratholme"] = {
 			DisplayIDs = {{10691}},
 			[NORMAL_DIFF] = {
 				{ 1,  13353 }, -- Book of the Dead
-				{ 2,  14512 }, -- Pattern: Truefaith Vestments
-				{ 3,  14154 }, -- Truefaith Vestments
-				{ 5,  16725 }, -- Lightforge Boots
-				{ 7,  13359 }, -- Crown of Tyranny
-				{ 8,  18718 }, -- Grand Crusader's Helm
-				{ 9,  12103 }, -- Star of Mystaria
-				{ 10, 18720 }, -- Shroud of the Nathrezim
-				{ 11, 13358 }, -- Wyrmtongue Shoulders
-				{ 12, 13369 }, -- Fire Striders
-				{ 13, 13360 }, -- Gift of the Elven Magi
-				{ 14, 18717 }, -- Hammer of the Grand Crusader
-				{ 15, 13348 }, -- Demonshear
+				{ 2,  14512, 14154 }, -- Pattern: Truefaith Vestments
+				{ 4,  16725 }, -- Lightforge Boots
+				{ 6,  13359 }, -- Crown of Tyranny
+				{ 7,  18718 }, -- Grand Crusader's Helm
+				{ 8,  12103 }, -- Star of Mystaria
+				{ 9, 18720 }, -- Shroud of the Nathrezim
+				{ 10, 13358 }, -- Wyrmtongue Shoulders
+				{ 11, 13369 }, -- Fire Striders
+				{ 12, 13360 }, -- Gift of the Elven Magi
+				{ 13, 18717 }, -- Hammer of the Grand Crusader
+				{ 14, 13348 }, -- Demonshear
 				{ 16, 13520 }, -- Recipe: Flask of Distilled Wisdom
 				{ 18, 13250 }, -- Head of Balnazzar
 			},
@@ -3752,10 +3722,10 @@ data["Stratholme"] = {
 			DisplayIDs = {{775}},
 			[NORMAL_DIFF] = {
 				{ 1,  18783 }, -- Bottom Half of Advanced Armorsmithing: Volume III
-				{ 2,  12725 }, -- Plans: Enchanted Thorium Helm
-				{ 3,  12620 }, -- Enchanted Thorium Helm
-				{ 5,  12825 }, -- Plans: Blazing Rapier
-				{ 6,  12777 }, -- Blazing Rapier
+				--{ 2,  12725 }, -- Plans: Enchanted Thorium Helm
+				--{ 3,  12620 }, -- Enchanted Thorium Helm
+				{ 3,  12825, 12777 }, -- Plans: Blazing Rapier
+				--{ 6,  12777 }, -- Blazing Rapier
 			},
 		},
 		{ -- STRATNerubenkan
@@ -3790,8 +3760,7 @@ data["Stratholme"] = {
 				{ 10, 13526 }, -- Flamescarred Girdle
 				{ 11, 13527 }, -- Lavawalker Greaves
 				{ 12, 13509 }, -- Clutch of Foresight
-				{ 16, 12833 }, -- Plans: Hammer of the Titans
-				{ 17, 12796 }, -- Hammer of the Titans
+				{ 16, 12833, 12796 }, -- Plans: Hammer of the Titans
 			},
 		},
 		{ -- STRATMagistrateBarthilas
@@ -3900,7 +3869,7 @@ data["Stratholme"] = {
 			},
 		},
 		{ -- STRATSothosJarien
-			name = AL["Sothos and Jarien's Heirlooms ( T0.5 )"],
+			name = AL["Sothos and Jarien's Heirlooms"].." - "..format(AL["Tier %s Sets"], "0.5"),
 			ExtraList = true,
 			[NORMAL_DIFF] = {
 				{ 1,  22327 }, -- Amulet of the Redeemed
@@ -4562,9 +4531,6 @@ data["Zul'Gurub"] = {
 				{ 14, 19859 }, -- Fang of the Faceless
 				{ 15, 19854 }, -- Zin'rokh, Destroyer of Worlds
 				{ 16, 19802 }, -- Heart of Hakkar
-				{ 17, 19950 }, -- Zandalarian Hero Charm(ZHC)
-				{ 18, 19949 }, -- Zandalarian Hero Medallion
-				{ 19, 19948 }, -- Zandalarian Hero Badge
 			},
 		},
 		{ -- ZGShared
@@ -4930,10 +4896,10 @@ data["TheRuinsofAhnQiraj"] = { -- AQ20
 				{ 5,  21501 }, -- Toughened Silithid Hide Gloves
 				{ 6,  21500 }, -- Belt of the Inquisition
 				{ 7,  21503 }, -- Belt of the Sand Reaver
-				{ 18, 20885 }, -- Qiraji Martial Drape
-				{ 19, 20889 }, -- Qiraji Regal Drape
-				{ 20, 20888 }, -- Qiraji Ceremonial Ring
-				{ 21, 20884 }, -- Qiraji Magisterial Ring
+				{ 19, 20885 }, -- Qiraji Martial Drape
+				{ 20, 20889 }, -- Qiraji Regal Drape
+				{ 21, 20888 }, -- Qiraji Ceremonial Ring
+				{ 22, 20884 }, -- Qiraji Magisterial Ring
 			},
 		},
 		{ -- AQ20Rajaxx
@@ -4947,10 +4913,10 @@ data["TheRuinsofAhnQiraj"] = { -- AQ20
 				{ 5,  21494 }, -- Southwind's Grasp
 				{ 6,  21495 }, -- Legplates of the Qiraji Command
 				{ 7,  21497 }, -- Boots of the Qiraji General
-				{ 18, 20885 }, -- Qiraji Martial Drape
-				{ 19, 20889 }, -- Qiraji Regal Drape
-				{ 20, 20888 }, -- Qiraji Ceremonial Ring
-				{ 21, 20884 }, -- Qiraji Magisterial Ring
+				{ 19, 20885 }, -- Qiraji Martial Drape
+				{ 20, 20889 }, -- Qiraji Regal Drape
+				{ 21, 20888 }, -- Qiraji Ceremonial Ring
+				{ 22, 20884 }, -- Qiraji Magisterial Ring
 			},
 		},
 		{ -- AQ20Moam
@@ -4973,10 +4939,10 @@ data["TheRuinsofAhnQiraj"] = { -- AQ20
 				{ 14, 21473 }, -- Eye of Moam
 				{ 16, 20890 }, -- Qiraji Ornate Hilt
 				{ 17, 20886 }, -- Qiraji Spiked Hilt
-				{ 20, 20888 }, -- Qiraji Ceremonial Ring
-				{ 21, 20884 }, -- Qiraji Magisterial Ring
-				{ 23, 22220 }, -- Plans: Black Grasp of the Destroyer
-				{ 24, 22194 }, -- Black Grasp of the Destroyer
+				{ 21, 20888 }, -- Qiraji Ceremonial Ring
+				{ 22, 20884 }, -- Qiraji Magisterial Ring
+				{ 24, 22220, 22194 }, -- Plans: Black Grasp of the Destroyer
+				--{ 24, 22194 }, -- Black Grasp of the Destroyer
 			},
 		},
 		{ -- AQ20Buru
@@ -4993,10 +4959,10 @@ data["TheRuinsofAhnQiraj"] = { -- AQ20
 				{ 8,  21488 }, -- Fetish of Chitinous Spikes
 				{ 16, 20890 }, -- Qiraji Ornate Hilt
 				{ 17, 20886 }, -- Qiraji Spiked Hilt
-				{ 18, 20885 }, -- Qiraji Martial Drape
-				{ 19, 20889 }, -- Qiraji Regal Drape
-				{ 20, 20888 }, -- Qiraji Ceremonial Ring
-				{ 21, 20884 }, -- Qiraji Magisterial Ring
+				{ 20, 20885 }, -- Qiraji Martial Drape
+				{ 21, 20889 }, -- Qiraji Regal Drape
+				{ 22, 20888 }, -- Qiraji Ceremonial Ring
+				{ 23, 20884 }, -- Qiraji Magisterial Ring
 			},
 		},
 		{ -- AQ20Ayamiss
@@ -5014,10 +4980,10 @@ data["TheRuinsofAhnQiraj"] = { -- AQ20
 				{ 9,  21483 }, -- Ring of the Desert Winds
 				{ 16, 20890 }, -- Qiraji Ornate Hilt
 				{ 17, 20886 }, -- Qiraji Spiked Hilt
-				{ 18, 20885 }, -- Qiraji Martial Drape
-				{ 19, 20889 }, -- Qiraji Regal Drape
-				{ 20, 20888 }, -- Qiraji Ceremonial Ring
-				{ 21, 20884 }, -- Qiraji Magisterial Ring
+				{ 20, 20885 }, -- Qiraji Martial Drape
+				{ 21, 20889 }, -- Qiraji Regal Drape
+				{ 22, 20888 }, -- Qiraji Ceremonial Ring
+				{ 23, 20884 }, -- Qiraji Magisterial Ring
 			},
 		},
 		{ -- AQ20Ossirian
@@ -5043,10 +5009,6 @@ data["TheRuinsofAhnQiraj"] = { -- AQ20
 				{ 20, 20888 }, -- Qiraji Ceremonial Ring
 				{ 21, 20884 }, -- Qiraji Magisterial Ring
 				{ 23, 21220 }, -- Head of Ossirian the Unscarred
-				{ 24, 21504 }, -- Charm of the Shifting Sands
-				{ 25, 21507 }, -- Amulet of the Shifting Sands
-				{ 26, 21505 }, -- Choker of the Shifting Sands
-				{ 27, 21506 }, -- Pendant of the Shifting Sands
 			},
 		},
 		{ -- AQ20Trash
@@ -5143,16 +5105,9 @@ data["TheTempleofAhnQiraj"] = { -- AQ40
 				{ 13, 21703 }, -- Hammer of Ji'zhi
 				{ 14, 21128 }, -- Staff of the Qiraji Prophets
 				{ 16, 21237 }, -- Imperial Qiraji Regalia
-				{ 17, 21268 }, -- Blessed Qiraji War Hammer
-				{ 18, 21273 }, -- Blessed Qiraji Acolyte Staff
-				{ 19, 21275 }, -- Blessed Qiraji Augur Staff
-				{ 21, 21232 }, -- Imperial Qiraji Armaments
-				{ 22, 21242 }, -- Blessed Qiraji War Axe
-				{ 23, 21244 }, -- Blessed Qiraji Pugio
-				{ 24, 21272 }, -- Blessed Qiraji Musket
-				{ 25, 21269 }, -- Blessed Qiraji Bulwark
-				{ 27, 22222 }, -- Plans: Thick Obsidian Breastplate
-				{ 28, 22196 }, -- Thick Obsidian Breastplate
+				{ 17, 21232 }, -- Imperial Qiraji Armaments
+				{ 19, 22222, 22196 }, -- Plans: Thick Obsidian Breastplate
+				--{ 20, 22196 }, -- Thick Obsidian Breastplate
 			},
 		},
 		{ -- AQ40Trio
@@ -5202,14 +5157,7 @@ data["TheTempleofAhnQiraj"] = { -- AQ40
 				{ 12, 21666 }, -- Sartura's Might
 				{ 13, 21673 }, -- Silithid Claw
 				{ 16, 21237 }, -- Imperial Qiraji Regalia
-				{ 17, 21268 }, -- Blessed Qiraji War Hammer
-				{ 18, 21273 }, -- Blessed Qiraji Acolyte Staff
-				{ 19, 21275 }, -- Blessed Qiraji Augur Staff
-				{ 21, 21232 }, -- Imperial Qiraji Armaments
-				{ 22, 21242 }, -- Blessed Qiraji War Axe
-				{ 23, 21244 }, -- Blessed Qiraji Pugio
-				{ 24, 21272 }, -- Blessed Qiraji Musket
-				{ 25, 21269 }, -- Blessed Qiraji Bulwark
+				{ 17, 21232 }, -- Imperial Qiraji Armaments
 			},
 		},
 		{ -- AQ40Fankriss
@@ -5231,14 +5179,7 @@ data["TheTempleofAhnQiraj"] = { -- AQ40
 				{ 13, 22402 }, -- Libram of Grace
 				{ 14, 22396 }, -- Totem of Life
 				{ 16, 21237 }, -- Imperial Qiraji Regalia
-				{ 17, 21268 }, -- Blessed Qiraji War Hammer
-				{ 18, 21273 }, -- Blessed Qiraji Acolyte Staff
-				{ 19, 21275 }, -- Blessed Qiraji Augur Staff
-				{ 21, 21232 }, -- Imperial Qiraji Armaments
-				{ 22, 21242 }, -- Blessed Qiraji War Axe
-				{ 23, 21244 }, -- Blessed Qiraji Pugio
-				{ 24, 21272 }, -- Blessed Qiraji Musket
-				{ 25, 21269 }, -- Blessed Qiraji Bulwark
+				{ 17, 21232 }, -- Imperial Qiraji Armaments
 			},
 		},
 		{ -- AQ40Viscidus
@@ -5253,17 +5194,10 @@ data["TheTempleofAhnQiraj"] = { -- AQ40
 				{ 6,  21677 }, -- Ring of the Qiraji Fury
 				{ 7,  21625 }, -- Scarab Brooch
 				{ 8,  22399 }, -- Idol of Health
-				{ 10, 20928 }, -- Qiraji Bindings of Command
-				{ 11, 20932 }, -- Qiraji Bindings of Dominance
 				{ 16, 21237 }, -- Imperial Qiraji Regalia
-				{ 17, 21268 }, -- Blessed Qiraji War Hammer
-				{ 18, 21273 }, -- Blessed Qiraji Acolyte Staff
-				{ 19, 21275 }, -- Blessed Qiraji Augur Staff
-				{ 21, 21232 }, -- Imperial Qiraji Armaments
-				{ 22, 21242 }, -- Blessed Qiraji War Axe
-				{ 23, 21244 }, -- Blessed Qiraji Pugio
-				{ 24, 21272 }, -- Blessed Qiraji Musket
-				{ 25, 21269 }, -- Blessed Qiraji Bulwark
+				{ 17, 21232 }, -- Imperial Qiraji Armaments
+				{ 19, 20928 }, -- Qiraji Bindings of Command
+				{ 20, 20932 }, -- Qiraji Bindings of Dominance
 			},
 		},
 		{ -- AQ40Huhuran
@@ -5277,17 +5211,10 @@ data["TheTempleofAhnQiraj"] = { -- AQ40
 				{ 4,  21617 }, -- Wasphide Gauntlets
 				{ 5,  21620 }, -- Ring of the Martyr
 				{ 6,  21616 }, -- Huhuran's Stinger
-				{ 9,  20928 }, -- Qiraji Bindings of Command
-				{ 10, 20932 }, -- Qiraji Bindings of Dominance
 				{ 16, 21237 }, -- Imperial Qiraji Regalia
-				{ 17, 21268 }, -- Blessed Qiraji War Hammer
-				{ 18, 21273 }, -- Blessed Qiraji Acolyte Staff
-				{ 19, 21275 }, -- Blessed Qiraji Augur Staff
-				{ 21, 21232 }, -- Imperial Qiraji Armaments
-				{ 22, 21242 }, -- Blessed Qiraji War Axe
-				{ 23, 21244 }, -- Blessed Qiraji Pugio
-				{ 24, 21272 }, -- Blessed Qiraji Musket
-				{ 25, 21269 }, -- Blessed Qiraji Bulwark
+				{ 17, 21232 }, -- Imperial Qiraji Armaments
+				{ 19, 20928 }, -- Qiraji Bindings of Command
+				{ 20, 20932 }, -- Qiraji Bindings of Dominance
 			},
 		},
 		{ -- AQ40Emperors
@@ -5304,11 +5231,11 @@ data["TheTempleofAhnQiraj"] = { -- AQ40
 				{ 7,  21601 }, -- Ring of Emperor Vek'lor
 				{ 8,  21597 }, -- Royal Scepter of Vek'lor
 				{ 9,  20735 }, -- Formula: Enchant Cloak - Subtlety
-				{ 11, 21232 }, -- Imperial Qiraji Armaments
-				{ 12, 21242 }, -- Blessed Qiraji War Axe
-				{ 13, 21244 }, -- Blessed Qiraji Pugio
-				{ 14, 21272 }, -- Blessed Qiraji Musket
-				{ 15, 21269 }, -- Blessed Qiraji Bulwark
+				{ 12, 21232 }, -- Imperial Qiraji Armaments
+				--{ 12, 21242 }, -- Blessed Qiraji War Axe
+				--{ 13, 21244 }, -- Blessed Qiraji Pugio
+				--{ 14, 21272 }, -- Blessed Qiraji Musket
+				--{ 15, 21269 }, -- Blessed Qiraji Bulwark
 				{ 16, "INV_Box_01", nil, AL["Emperor Vek'nilash"], nil },
 				{ 17, 20926 }, -- Vek'nilash's Circlet
 				{ 18, 21608 }, -- Amulet of Vek'nilash
@@ -5320,9 +5247,9 @@ data["TheTempleofAhnQiraj"] = { -- AQ40
 				{ 24, 21679 }, -- Kalimdor's Revenge
 				{ 25, 20726 }, -- Formula: Enchant Gloves - Threat
 				{ 27, 21237 }, -- Imperial Qiraji Regalia
-				{ 28, 21268 }, -- Blessed Qiraji War Hammer
-				{ 29, 21273 }, -- Blessed Qiraji Acolyte Staff
-				{ 30, 21275 }, -- Blessed Qiraji Augur Staff
+				--{ 28, 21268 }, -- Blessed Qiraji War Hammer
+				--{ 29, 21273 }, -- Blessed Qiraji Acolyte Staff
+				--{ 30, 21275 }, -- Blessed Qiraji Augur Staff
 			},
 		},
 		{ -- AQ40Ouro
@@ -5336,17 +5263,10 @@ data["TheTempleofAhnQiraj"] = { -- AQ40
 				{ 4,  23570 }, -- Jom Gabbar
 				{ 5,  21610 }, -- Wormscale Blocker
 				{ 6,  23557 }, -- Larvae of the Great Worm
-				{ 8,  20927 }, -- Ouro's Intact Hide
-				{ 9,  20931 }, -- Skin of the Great Sandworm
 				{ 16, 21237 }, -- Imperial Qiraji Regalia
-				{ 17, 21268 }, -- Blessed Qiraji War Hammer
-				{ 18, 21273 }, -- Blessed Qiraji Acolyte Staff
-				{ 19, 21275 }, -- Blessed Qiraji Augur Staff
-				{ 21, 21232 }, -- Imperial Qiraji Armaments
-				{ 22, 21242 }, -- Blessed Qiraji War Axe
-				{ 23, 21244 }, -- Blessed Qiraji Pugio
-				{ 24, 21272 }, -- Blessed Qiraji Musket
-				{ 25, 21269 }, -- Blessed Qiraji Bulwark
+				{ 17, 21232 }, -- Imperial Qiraji Armaments
+				{ 19,  20927 }, -- Ouro's Intact Hide
+				{ 20,  20931 }, -- Skin of the Great Sandworm
 			},
 		},
 		{ -- AQ40CThun
@@ -5370,9 +5290,6 @@ data["TheTempleofAhnQiraj"] = { -- AQ40
 				{ 16, 20929 }, -- Carapace of the Old God
 				{ 17, 20933 }, -- Husk of the Old God
 				{ 19, 21221 }, -- Eye of C'Thun
-				{ 20, 21712 }, -- Amulet of the Fallen God
-				{ 21, 21710 }, -- Cloak of the Fallen God
-				{ 22, 21709 }, -- Ring of the Fallen God
 				{ 24, 22734 }, -- Base of Atiesh
 				{ 25, 22631 }, -- Atiesh, Greatstaff of the Guardian
 				{ 26, 22589 }, -- Atiesh, Greatstaff of the Guardian
@@ -5725,8 +5642,6 @@ data["Naxxramas"] = {
 				{ 10, 22798 }, -- Might of Menethil
 				{ 11, 22799 }, -- Soulseeker
 				{ 13, 22520 }, -- The Phylactery of Kel'Thuzad
-				{ 14, 23207 }, -- Mark of the Champion
-				{ 15, 23206 }, -- Mark of the Champion
 				{ 16, 23061 }, -- Ring of Faith
 				{ 17, 23062 }, -- Frostfire Ring
 				{ 18, 23063 }, -- Plagueheart Ring
