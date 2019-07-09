@@ -1,8 +1,6 @@
--- \AtlasLootClassic\AtlasLoot.lua
+-- \AL_locales.lua
 AL["AtlasLoot"] = true
 AL["Toggle AtlasLoot"] = true
-
--- \AtlasLootClassic\Loader.lua
 AL["Dungeons and Raids"] = true
 AL["PvP"] = true
 AL["Crafting"] = true
@@ -10,12 +8,8 @@ AL["Collections"] = true
 AL["Module %s is deactivated."] = true
 AL["Module %s is not installed."] = true
 AL["%s will finish loading after combat."] = true
-
--- \AtlasLootClassic\MiniMapButton.lua
 AL["AtlasLoot_Minimap_Clicks"] = true
 AL["/al mmb - Toggle MiniMapButton"] = true
-
--- \AtlasLootClassic_Collections\data.lua
 AL["Normal"] = true
 AL["Sets"] = true
 AL["World Events"] = true
@@ -82,15 +76,11 @@ AL["Lunar Festival Fireworks Pack"] = true
 AL["Lucky Red Envelope"] = true
 AL["Plans"] = true
 AL["Midsummer Festival"] = true
-
--- \AtlasLootClassic_Crafting\data.lua
 AL["20 Raid"] = true
 AL["40 Raid"] = true
 AL["Dungeons"] = true
 AL["20 Raids"] = true
 AL["40 Raids"] = true
-
--- \AtlasLootClassic_DungeonsAndRaids\data.lua
 AL["Keys"] = true
 AL["Key"] = true
 AL["AQ opening"] = true
@@ -428,20 +418,10 @@ AL["Gluth"] = true
 AL["Thaddius"] = true
 AL["Sapphiron"] = true
 AL["Kel'Thuzad"] = true
-
--- \AtlasLootClassic_PvP\data.lua
 AL["Battlegrounds"] = true
 AL["Class Sets"] = true
-
--- \AtlasLootClassic\Addons\Search.lua
 AL["AtlasLoot Search"] = true
-
--- \AtlasLootClassic\Button\Extra_Price_type.lua
 AL["--- or ---"] = true
-
--- \AtlasLootClassic\Button\Faction_type.lua
-
--- \AtlasLootClassic\Button\Item_type.lua
 AL["Chat Link"] = true
 AL["Add item into chat"] = true
 AL["Dress up"] = true
@@ -449,27 +429,13 @@ AL["Shows the item in the Dressing room"] = true
 AL["Show extra items"] = true
 AL["Shows extra items (tokens,mats)"] = true
 AL["Droprate:"] = true
-
--- \AtlasLootClassic\Button\Profession_type.lua
 AL["Add profession link into chat"] = true
-
--- \AtlasLootClassic\Button\Set_type.lua
-
--- \AtlasLootClassic\Core\ClickHandler.lua
-
--- \AtlasLootClassic\Core\ItemInfo.lua
-
--- \AtlasLootClassic\Core\SlashCommands.lua
 AL["/al - Open the AtlasLoot window."] = true
 AL["/al slash - Prints a list of all slash commands."] = true
 AL["/al options - Open AtlasLoot Options window."] = true
 AL["Command %s not found. Use '/al slash' for a full list of commands"] = true
 AL["Slash commands:"] = true
-
--- \AtlasLootClassic\Core\WorldMapIntegration.lua
 AL["Click to open AtlasLoot window"] = true
-
--- \AtlasLootClassic\Data\Sets.lua
 AL["The Gladiator"] = true
 AL["Dal'Rend's Arms"] = true
 AL["Spider's Kiss"] = true
@@ -642,11 +608,7 @@ AL["Lieutenant Commander's Guard"] = true
 AL["Lieutenant Commander's Investiture"] = true
 AL["Lieutenant Commander's Pursuance"] = true
 AL["Lieutenant Commander's Refuge"] = true
-
--- \AtlasLootClassic\Data\Token.lua
 AL["|cff00ff00Left-Click:|r Show additional items."] = true
-
--- \AtlasLootClassic\GUI\GUI.lua
 AL["Click to open WoW instance map."] = true
 AL["Click to open Atlas instance map."] = true
 AL["Right-click to close Atlas window."] = true
@@ -663,9 +625,57 @@ AL["Select Subcategory"] = true
 AL["Model"] = true
 AL["Sounds"] = true
 AL["Items"] = true
-
--- \AtlasLootClassic\GUI\SoundFrame.lua
 AL["Add sound into chat"] = true
 AL["Copy Box"] = true
 AL["Shows the sound in the copy box"] = true
+
+-- \AtlasLootClassic\AtlasLoot.lua
+
+-- \AtlasLootClassic\Loader.lua
+
+-- \AtlasLootClassic\MiniMapButton.lua
+
+-- \AtlasLootClassic_Collections\data.lua
+
+-- \AtlasLootClassic_Crafting\data.lua
+
+-- \AtlasLootClassic_DungeonsAndRaids\data.lua
+AL["Theldren"] = true
+AL["Mor Grayhoof"] = true
+AL["Lord Valthalak"] = true
+AL["Isalien"] = true
+AL["Kormok"] = true
+AL["Sothos and Jarien's Heirlooms"] = true
+
+-- \AtlasLootClassic_PvP\data.lua
+
+-- \AtlasLootClassic\Addons\Search.lua
+
+-- \AtlasLootClassic\Button\Extra_Price_type.lua
+
+-- \AtlasLootClassic\Button\Faction_type.lua
+
+-- \AtlasLootClassic\Button\Item_type.lua
+
+-- \AtlasLootClassic\Button\Profession_type.lua
+
+-- \AtlasLootClassic\Button\Set_type.lua
+
+-- \AtlasLootClassic\Core\ClickHandler.lua
+
+-- \AtlasLootClassic\Core\ItemInfo.lua
+
+-- \AtlasLootClassic\Core\SlashCommands.lua
+
+-- \AtlasLootClassic\Core\WorldMapIntegration.lua
+
+-- \AtlasLootClassic\Data\Sets.lua
+
+-- \AtlasLootClassic\Data\Token.lua
+AL["|cff00ff00Left-Click:|r Show possible items."] = true
+AL["|cff00ff00Left-Click:|r Show quest rewards."] = true
+
+-- \AtlasLootClassic\GUI\GUI.lua
+
+-- \AtlasLootClassic\GUI\SoundFrame.lua
 
