@@ -798,7 +798,7 @@ end
 local ITEM_ICON_SIZE = 30
 local ITEM_DISTANCE = 3
 local BORDER_DISTANCE = 6
-local MAX_ITEMS_PER_LINE = 8
+local MAX_ITEMS_PER_LINE = 9
 local ExtraItemFrame_Frame
 
 local function ExtraItemFrame_AddButton(self)
@@ -867,19 +867,43 @@ function Button:ExtraItemFrame_GetFrame(button, itemList)
 		ExtraItemFrame_Frame = frame
 	end
 
+	local line = 0
+	local fixedCounter, lineItem, biggestLineItem = 0, 0, 0
+	local skipScaling = true
 	for i = 1, #itemList do
 		local item = itemList[i]
-		if type(item) == "table" then
-			frame:AddButton():SetContentTable({ 1, 0, item[1], [ATLASLOOT_IT_AMOUNT2] = item[2] }, nil, true)
+
+		-- get new Line, 0 = new line
+		if item == 0 then
+			line = line + 1
+			-- if we have a new line we must create some empty buttons
+			local newButtonCount = ( line * MAX_ITEMS_PER_LINE ) - fixedCounter
+			fixedCounter = fixedCounter + newButtonCount
+			for i = 1, newButtonCount do
+				frame:AddButton():Hide()
+			end
+			skipScaling = true
+			lineItem = 0
 		else
-			frame:AddButton():SetContentTable({ 1, 0, item }, nil, true)
+			lineItem = lineItem + 1
+			fixedCounter = fixedCounter + 1
+			if type(item) == "table" then
+				frame:AddButton():SetContentTable({ 1, 0, item[1], [ATLASLOOT_IT_AMOUNT2] = item[2] }, nil, true)
+			else
+				frame:AddButton():SetContentTable({ 1, 0, item }, nil, true)
+			end
+			skipScaling = false
 		end
-		if i > MAX_ITEMS_PER_LINE and i % (MAX_ITEMS_PER_LINE+1) == 0 then
-			frame:SetHeight(frame:GetHeight() + ITEM_ICON_SIZE + ITEM_DISTANCE)
-		elseif i == 1 then
-			frame:SetWidth(frame:GetWidth() + ITEM_ICON_SIZE)
-		elseif i <= MAX_ITEMS_PER_LINE then
-			frame:SetWidth(frame:GetWidth() + ITEM_ICON_SIZE + ITEM_DISTANCE)
+
+		if not skipScaling then
+			if fixedCounter > MAX_ITEMS_PER_LINE and fixedCounter % (MAX_ITEMS_PER_LINE+1) == 0 then
+				frame:SetHeight(frame:GetHeight() + ITEM_ICON_SIZE + ITEM_DISTANCE)
+			elseif fixedCounter == 1 then
+				frame:SetWidth(frame:GetWidth() + ITEM_ICON_SIZE)
+			elseif lineItem <= MAX_ITEMS_PER_LINE and lineItem > biggestLineItem then
+				biggestLineItem = lineItem
+				frame:SetWidth(frame:GetWidth() + ITEM_ICON_SIZE + ITEM_DISTANCE)
+			end
 		end
 	end
 	frame:ClearAllPoints()
