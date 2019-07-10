@@ -66,6 +66,8 @@ MiniMapButton.lua
 
 Data\Token.lua
 Data\Sets.lua
+Data\Profession.lua
+Data\Recipe.lua
 
 ItemDB\ItemDB.lua
 ItemDB\SoundData.lua

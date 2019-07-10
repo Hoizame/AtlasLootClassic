@@ -6,6 +6,7 @@ Item.Query = Query
 local AL = AtlasLoot.Locales
 local ClickHandler = AtlasLoot.ClickHandler
 local Token = AtlasLoot.Data.Token
+local Recipe = AtlasLoot.Data.Recipe
 
 local db
 
@@ -24,6 +25,7 @@ local GetItemDescInfo = AtlasLoot.ItemInfo.GetDescription
 local GetItemString = AtlasLoot.ItemString.Create
 
 local ITEM_COLORS = {}
+local WHITE_ICON_FRAME = "Interface\\Common\\WhiteIconFrame"
 
 local ItemClickHandler = nil
 local itemIsOnEnter = nil
@@ -100,8 +102,11 @@ function Item.OnMouseAction(button, mouseButton)
 		end
 	elseif mouseButton == "ShowExtraItems" then
 		if Token.IsToken(button.ItemID) then
-			button.IsToken = true
+			button.ExtraFrameShown = true
 			AtlasLoot.Button:ExtraItemFrame_GetFrame(button, Token.GetTokenData(button.ItemID))
+		elseif Recipe.IsRecipe(button.ItemID) then
+			button.ExtraFrameShown = true
+			AtlasLoot.Button:ExtraItemFrame_GetFrame(button, Recipe.GetRecipeDataForExtraFrame(button.ItemID))
 		end
 	elseif mouseButton == "MouseWheelUp" and Item.previewTooltipFrame and Item.previewTooltipFrame:IsShown() then  -- ^
 		local frame = Item.previewTooltipFrame.modelFrame
@@ -175,9 +180,10 @@ function Item.OnClear(button)
 		button.overlay:Hide()
 	end
 	button.secButton.overlay:Hide()
-	if button.IsToken then
+	button.secButton.overlay:SetDesaturated(false)
+	if button.ExtraFrameShown then
 		AtlasLoot.Button:ExtraItemFrame_ClearFrame()
-		button.IsToken = false
+		button.ExtraFrameShown = false
 	end
 end
 
@@ -190,7 +196,7 @@ function Item.Refresh(button)
 	end
 
 	button.overlay:Show()
-	button.overlay:SetTexture("Interface\\Common\\WhiteIconFrame")
+	button.overlay:SetTexture(WHITE_ICON_FRAME)
 	button.overlay:SetAtlas(LOOT_BORDER_BY_QUALITY[itemQuality] or LOOT_BORDER_BY_QUALITY[LE_ITEM_QUALITY_UNCOMMON])
 	if not LOOT_BORDER_BY_QUALITY[itemQuality] then
 		button.overlay:SetDesaturated(true)
@@ -212,14 +218,16 @@ function Item.Refresh(button)
 		-- ##################
 		-- description
 		-- ##################
-		button.extra:SetText(Token.GetTokenDescription(button.ItemID) or GetItemDescInfo(itemEquipLoc, itemType, itemSubType))
+		button.extra:SetText(Token.GetTokenDescription(button.ItemID) or Recipe.GetRecipeDescription(button.ItemID) or GetItemDescInfo(itemEquipLoc, itemType, itemSubType))
 	end
+	--[[
 	if db.showCompletedHook then
 		local itemCount = GetItemCount(button.ItemString, true)
 		if itemCount and itemCount > 0 then
 			button.completed:Show()
 		end
 	end
+	]]--
 
 	return true
 end

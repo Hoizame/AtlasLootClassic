@@ -333,7 +333,7 @@ function Button:CreateSecOnly(frame)
 	button.secButton.overlay:Hide()
 
 	button.secButton.count = button.secButton:CreateFontString(buttonName.."_secCount", "ARTWORK", "AtlasLoot_ItemAmountFont")
-	button.secButton.count:SetPoint("BOTTOMRIGHT", button.secButton.icon, "BOTTOMRIGHT", 0, 1)
+	button.secButton.count:SetPoint("BOTTOMRIGHT", button.secButton.icon, "BOTTOMRIGHT", -1, 1)
 	button.secButton.count:SetJustifyH("RIGHT")
 	button.secButton.count:SetHeight(15)
 	button.secButton.count:SetText(15)
@@ -906,13 +906,17 @@ function Button:ExtraItemFrame_GetFrame(button, itemList)
 			end
 		end
 	end
-	frame:ClearAllPoints()
-	frame:SetParent(button:GetParent():GetParent())
-	frame:SetPoint("TOPLEFT", button, "BOTTOMLEFT")
-	frame:SetFrameStrata("TOOLTIP")
+
+	local newParent = button:GetParent():GetParent()
+	if newParent ~= frame then
+		frame:ClearAllPoints()
+		frame:SetParent(newParent)
+		frame:SetPoint("TOPLEFT", button, "BOTTOMLEFT")
+		frame:SetFrameStrata("TOOLTIP")
+		frame.button = button
+	end
 	frame:Show()
 	frame.ItemList = itemList
-	frame.button = button
 
 	return frame
 end

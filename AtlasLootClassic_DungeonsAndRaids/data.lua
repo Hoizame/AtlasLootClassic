@@ -778,13 +778,13 @@ data["Gnomeregan"] = {
 				{ 2,  9461 }, -- Charged Gear
 				{ 3,  9458 }, -- Thermaplugg's Central Core
 				{ 4,  9459 }, -- Thermaplugg's Left Arm
-				{ 16, 4415, 4393 }, -- Schematic: Craftsman's Monocle
+				{ 16, 4415 }, -- Schematic: Craftsman's Monocle
 				--{ 17, 4393 }, -- Craftsman's Monocle
-				{ 18, 4413, 4388 }, -- Schematic: Discombobulator Ray
+				{ 17, 4413 }, -- Schematic: Discombobulator Ray
 				--{ 20, 4388 }, -- Discombobulator Ray
-				{ 20, 4411, 4376 }, -- Schematic: Flame Deflector
+				{ 18, 4411 }, -- Schematic: Flame Deflector
 				--{ 23, 4376 }, -- Flame Deflector
-				{ 22, 7742, 4397 }, -- Schematic: Gnomish Cloaking Device
+				{ 19, 7742 }, -- Schematic: Gnomish Cloaking Device
 				--{ 26, 4397 }, -- Gnomish Cloaking Device
 			},
 		},
@@ -1893,7 +1893,6 @@ data["TheTempleOfAtal'Hakkar"] = {
 				{ 18, 10780 }, -- Mark of Hakkar
 				{ 20, 16216 }, -- Formula: Enchant Cloak - Greater Resistance
 				{ 21, 15733 }, -- Pattern: Green Dragonscale Leggings
-				{ 22, 15046 }, -- Green Dragonscale Leggings
 			},
 		},
 	},
@@ -1938,7 +1937,7 @@ data["BlackrockDepths"] = {
 				{ 3,  11631 }, -- Stoneshell Guard
 				{ 4,  22397 }, -- Idol of Ferocity
 				{ 5,  11630 }, -- Rockshard Pellets
-				{ 7,  11813, 11811 }, -- Formula: Smoking Heart of the Mountain
+				{ 7,  11813 }, -- Formula: Smoking Heart of the Mountain
 				--{ 8,  11811 }, -- Smoking Heart of the Mountain
 			},
 		},
@@ -1963,7 +1962,7 @@ data["BlackrockDepths"] = {
 				{ 2,  11703 }, -- Stonewall Girdle
 				{ 3,  22270 }, -- Entrenching Boots
 				{ 4,  11702 }, -- Grizzle's Skinner
-				{ 6,  11610, 11608 }, -- Plans: Dark Iron Pulverizer
+				{ 6,  11610 }, -- Plans: Dark Iron Pulverizer
 				--{ 2,  11608 }, -- Dark Iron Pulverizer
 			},
 		},
@@ -2151,7 +2150,6 @@ data["BlackrockDepths"] = {
 				{ 10, 11744 }, -- Bloodfist
 				{ 12, "INV_Box_01", nil, AL["Lokhtos Darkbargainer"], nil },
 				{ 13, 18592 }, -- Plans: Sulfuron Hammer
-				{ 14, 17193 }, -- Sulfuron Hammer
 				{ 16, "INV_Box_01", nil, AL["Ribbly Screwspigot"], nil },
 				{ 17, 11612 }, -- Plans: Dark Iron Plate
 				{ 18, 2662 }, -- Ribbly's Quiver
@@ -2389,7 +2387,7 @@ data["LowerBlackrockSpire"] = {
 				{ 1,  12637 }, -- Backusarian Gauntlets
 				{ 2,  12634 }, -- Chiselbrand Girdle
 				{ 3,  12621 }, -- Demonfork
-				{ 5,  12838, 12784 }, -- Plans: Arcanite Reaper
+				{ 5,  12838 }, -- Plans: Arcanite Reaper
 				--{ 6,  12784 }, -- Arcanite Reaper
 			},
 		},
@@ -2435,7 +2433,7 @@ data["LowerBlackrockSpire"] = {
 			[NORMAL_DIFF] = {
 				{ 1,  13253 }, -- Hands of Power
 				{ 2,  13252 }, -- Cloudrunner Girdle
-				{ 4,  12835, 12798 }, -- Plans: Annihilator
+				{ 4,  12835 }, -- Plans: Annihilator
 				--{ 5,  12798 }, -- Annihilator
 			},
 		},
@@ -2502,7 +2500,7 @@ data["LowerBlackrockSpire"] = {
 			name = AL["Trash"],
 			ExtraList = true,
 			[NORMAL_DIFF] = {
-				{ 1,  14513, 14152 }, -- Pattern: Robe of the Archmage
+				{ 1,  14513 }, -- Pattern: Robe of the Archmage
 				--{ 2,  14152 }, -- Robe of the Archmage
 				{ 3,  16696 }, -- Devout Belt
 				{ 4,  16685 }, -- Magister's Belt
@@ -2583,9 +2581,9 @@ data["UpperBlackrockSpire"] = {
 				{ 2,  13498 }, -- Handcrafted Mastersmith Leggings
 				{ 3,  18047 }, -- Flame Walkers
 				{ 4,  18048 }, -- Mastersmith's Hammer
-				{ 6,  12834, 12790 }, -- Plans: Arcanite Champion
+				{ 6,  12834 }, -- Plans: Arcanite Champion
 				--{ 7,  12790 }, -- Arcanite Champion
-				{ 8,  12837, 12794 }, -- Plans: Masterwork Stormhammer
+				{ 8,  12837 }, -- Plans: Masterwork Stormhammer
 				--{ 9,  12794 }, -- Masterwork Stormhammer
 				{ 11, 18779 }, -- Bottom Half of Advanced Armorsmithing: Volume I
 				{ 16, "INV_Box_01", nil, AL["Unforged Rune Covered Breastplate"], nil },
@@ -2874,7 +2872,7 @@ data["DireMaulWest"] = {
 				{ 3,  18371 }, -- Mindtap Talisman
 				{ 5,  18350 }, -- Amplifying Cloak
 				{ 6,  18351 }, -- Magically Sealed Bracers
-				{ 8,  22309, 22249 }, -- Pattern: Big Bag of Enchantment
+				{ 8,  22309 }, -- Pattern: Big Bag of Enchantment
 				--{ 9,  22249 }, -- Big Bag of Enchantment
 			},
 		},
@@ -3012,22 +3010,23 @@ data["DireMaulNorth"] = {
 				{ 17, 18266 }, -- Gordok Courtyard Key
 			},
 		},
-		{ -- DMNThimblejack		TODO: Update with rework of Crafting
+		{ -- DMNThimblejack
 			name = AL["Knot Thimblejack's Cache"],
 			[NORMAL_DIFF] = {
 				{ 1,  18414 }, -- Pattern: Belt of the Archmage
-				{ 2,  18517 }, -- Pattern: Chromatic Cloak
-				{ 3,  18518 }, -- Pattern: Hide of the Wild
-				{ 4,  18519 }, -- Pattern: Shifting Cloak
-				{ 6,  18415 }, -- Pattern: Felcloth Gloves
-				{ 7,  18416 }, -- Pattern: Inferno Gloves
-				{ 8,  18417 }, -- Pattern: Mooncloth Gloves
-				{ 9,  18418 }, -- Pattern: Cloak of Warding
-				{ 10, 18514 }, -- Pattern: Girdle of Insight
-				{ 11, 18515 }, -- Pattern: Mongoose Boots
-				{ 12, 18516 }, -- Pattern: Swift Flight Bracers
-				{ 14, 18258 }, -- Gordok Ogre Suit
-				{ 15, 18240 }, -- Ogre Tannin
+				{ 16,  18517 }, -- Pattern: Chromatic Cloak
+				{ 17,  18518 }, -- Pattern: Hide of the Wild
+				{ 18,  18519 }, -- Pattern: Shifting Cloak
+				{ 5,  18415 }, -- Pattern: Felcloth Gloves
+				{ 6,  18416 }, -- Pattern: Inferno Gloves
+				{ 7,  18417 }, -- Pattern: Mooncloth Gloves
+				{ 8,  18418 }, -- Pattern: Cloak of Warding
+				{ 20, 18514 }, -- Pattern: Girdle of Insight
+				{ 21, 18515 }, -- Pattern: Mongoose Boots
+				{ 22, 18516 }, -- Pattern: Swift Flight Bracers
+				{ 10, 18258 }, -- Gordok Ogre Suit
+				{ 11, 18240 }, -- Ogre Tannin
+				--[[
 				{ 16, 18405 }, -- Belt of the Archmage
 				{ 17, 18509 }, -- Chromatic Cloak
 				{ 18, 18510 }, -- Hide of the Wild
@@ -3039,6 +3038,7 @@ data["DireMaulNorth"] = {
 				{ 25, 18504 }, -- Girdle of Insight
 				{ 26, 18506 }, -- Mongoose Boots
 				{ 27, 18508 }, -- Swift Flight Bracers
+				]]--
 			},
 		},
 		{ -- DMNGuardSlipkik
@@ -3632,7 +3632,7 @@ data["Stratholme"] = {
 			DisplayIDs = {{10637}},
 			[NORMAL_DIFF] = {
 				{ 1,  18781 }, -- Bottom Half of Advanced Armorsmithing: Volume II
-				{ 3,  12824, 12776 }, -- Plans: Enchanted Battlehammer
+				{ 3,  12824 }, -- Plans: Enchanted Battlehammer
 			},
 		},
 		{ -- STRATCannonMasterWilley
@@ -3651,7 +3651,7 @@ data["Stratholme"] = {
 				{ 10, 13377 }, -- Miniature Cannon Balls
 				{ 11, 22404 }, -- Willey's Back Scratcher
 				{ 12, 22406 }, -- Redemption
-				{ 16, 12839, 12783 }, -- Plans: Heartseeker
+				{ 16, 12839 }, -- Plans: Heartseeker
 			},
 		},
 		{ -- STRATArchivistGalford
@@ -3674,7 +3674,7 @@ data["Stratholme"] = {
 			DisplayIDs = {{10691}},
 			[NORMAL_DIFF] = {
 				{ 1,  13353 }, -- Book of the Dead
-				{ 2,  14512, 14154 }, -- Pattern: Truefaith Vestments
+				{ 2,  14512 }, -- Pattern: Truefaith Vestments
 				{ 4,  16725 }, -- Lightforge Boots
 				{ 6,  13359 }, -- Crown of Tyranny
 				{ 7,  18718 }, -- Grand Crusader's Helm
@@ -3724,7 +3724,7 @@ data["Stratholme"] = {
 				{ 1,  18783 }, -- Bottom Half of Advanced Armorsmithing: Volume III
 				--{ 2,  12725 }, -- Plans: Enchanted Thorium Helm
 				--{ 3,  12620 }, -- Enchanted Thorium Helm
-				{ 3,  12825, 12777 }, -- Plans: Blazing Rapier
+				{ 3,  12825 }, -- Plans: Blazing Rapier
 				--{ 6,  12777 }, -- Blazing Rapier
 			},
 		},
@@ -3760,7 +3760,7 @@ data["Stratholme"] = {
 				{ 10, 13526 }, -- Flamescarred Girdle
 				{ 11, 13527 }, -- Lavawalker Greaves
 				{ 12, 13509 }, -- Clutch of Foresight
-				{ 16, 12833, 12796 }, -- Plans: Hammer of the Titans
+				{ 16, 12833 }, -- Plans: Hammer of the Titans
 			},
 		},
 		{ -- STRATMagistrateBarthilas
@@ -4573,15 +4573,15 @@ data["Zul'Gurub"] = {
 				{ 22, 19817 }, -- Punctured Voodoo Doll
 				{ 23, 19815 }, -- Punctured Voodoo Doll
 				{ 24, 19813 }, -- Punctured Voodoo Doll
-				{ 101,  19706 }, -- Bloodscalp Coin
-				{ 102,  19701 }, -- Gurubashi Coin
-				{ 103,  19700 }, -- Hakkari Coin
-				{ 104,  19699 }, -- Razzashi Coin
-				{ 105,  19704 }, -- Sandfury Coin
-				{ 106,  19705 }, -- Skullsplitter Coin
-				{ 107,  19702 }, -- Vilebranch Coin
-				{ 108,  19703 }, -- Witherbark Coin
-				{ 109,  19698 }, -- Zulian Coin
+				{ 101, 19706 }, -- Bloodscalp Coin
+				{ 102, 19701 }, -- Gurubashi Coin
+				{ 103, 19700 }, -- Hakkari Coin
+				{ 104, 19699 }, -- Razzashi Coin
+				{ 105, 19704 }, -- Sandfury Coin
+				{ 106, 19705 }, -- Skullsplitter Coin
+				{ 107, 19702 }, -- Vilebranch Coin
+				{ 108, 19703 }, -- Witherbark Coin
+				{ 109, 19698 }, -- Zulian Coin
 				{ 116, 19708 }, -- Blue Hakkari Bijou
 				{ 117, 19713 }, -- Bronze Hakkari Bijou
 				{ 118, 19715 }, -- Gold Hakkari Bijou
@@ -4941,7 +4941,7 @@ data["TheRuinsofAhnQiraj"] = { -- AQ20
 				{ 17, 20886 }, -- Qiraji Spiked Hilt
 				{ 21, 20888 }, -- Qiraji Ceremonial Ring
 				{ 22, 20884 }, -- Qiraji Magisterial Ring
-				{ 24, 22220, 22194 }, -- Plans: Black Grasp of the Destroyer
+				{ 24, 22220 }, -- Plans: Black Grasp of the Destroyer
 				--{ 24, 22194 }, -- Black Grasp of the Destroyer
 			},
 		},
@@ -5106,7 +5106,7 @@ data["TheTempleofAhnQiraj"] = { -- AQ40
 				{ 14, 21128 }, -- Staff of the Qiraji Prophets
 				{ 16, 21237 }, -- Imperial Qiraji Regalia
 				{ 17, 21232 }, -- Imperial Qiraji Armaments
-				{ 19, 22222, 22196 }, -- Plans: Thick Obsidian Breastplate
+				{ 19, 22222 }, -- Plans: Thick Obsidian Breastplate
 				--{ 20, 22196 }, -- Thick Obsidian Breastplate
 			},
 		},
@@ -5685,20 +5685,3 @@ data["Naxxramas"] = {
 		T3_SET,
 	},
 }
-
---[[
-data["DireMaul"] = {
-	name = C_Map.GetAreaInfo(2557) .." ".. AL["East"],
-	MapID = 2557,
-	AtlasMapID = "DireMaul",
-	ContentType = DUNGEON_CONTENT,
-	LoadDifficulty = NORMAL_DIFF,
-	items = {
-
-		DM_BOOKS,
-		KEYS,
-		ExtraList = true,
-	},
-}
-
-]]--

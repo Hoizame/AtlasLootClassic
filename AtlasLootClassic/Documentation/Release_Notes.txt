@@ -5,6 +5,12 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 
 Patch Notes
 
+v1.0.0-beta3 (Jul. XX, 2019)
+========================
+- Add Recipe database
+- Fix order of some Tokens with added multiline support
+- Remove double entries that are no longer needed with recipe db
+
 v1.0.0-beta2 (Jul. 09, 2019)
 ========================
 - Add much more Tokens and expand their usage
@@ -18,7 +24,6 @@ v1.0.0-beta1 (Jul. 08, 2019)
 - Add Tier Sets
 - Add better icons for Sets
 - Fix bug with item description and rename "Junk"
-
 
 v1.0.0-beta0 (Jul. 07, 2019)
 ========================
