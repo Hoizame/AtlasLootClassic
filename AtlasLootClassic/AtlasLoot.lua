@@ -53,7 +53,7 @@ function AtlasLoot:Print(msg)
 end
 
 function AtlasLoot:OnInitialize()
-	if not AtlasLootClassicCharDB.__addonrevision then --or AtlasLootDB.__addonrevision < AtlasLoot.__addonrevision then
+	if not AtlasLootClassicCharDB.__addonrevision or AtlasLootClassicCharDB.__addonrevision < AtlasLoot.__addonrevision then
 		wipe(AtlasLootClassicCharDB)
 		AtlasLootClassicCharDB.__addonrevision = AtlasLoot.__addonrevision
 	end

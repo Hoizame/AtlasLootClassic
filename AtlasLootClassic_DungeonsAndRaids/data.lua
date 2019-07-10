@@ -3473,7 +3473,7 @@ data["Scholomance"] = {
 			DisplayIDs = {{11070}},
 			[NORMAL_DIFF] = {
 				{ 1,  13937 }, -- Headmaster's Charge
-				{ 2,  14514, 14153 }, -- Pattern: Robe of the Void
+				{ 2,  14514 }, -- Pattern: Robe of the Void
 				{ 4,  16693 }, -- Devout Crown
 				{ 5,  16686 }, -- Magister's Crown
 				{ 6,  16698 }, -- Dreadmist Mask

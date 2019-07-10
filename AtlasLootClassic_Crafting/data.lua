@@ -23,6 +23,7 @@ local RAID20_DIFF = data:AddDifficulty(AL["20 Raid"], "r20", 9)
 local RAID40_DIFF = data:AddDifficulty(AL["40 Raid"], "r40", 9)
 
 local NORMAL_ITTYPE = data:AddItemTableType("Item", "Item")
+local PROF_ITTYPE = data:AddItemTableType("Profession", "Item")
 
 local QUEST_EXTRA_ITTYPE = data:AddExtraItemTableType("Quest")
 local PRICE_EXTRA_ITTYPE = data:AddExtraItemTableType("Price")
@@ -32,14 +33,22 @@ local RAID20_CONTENT = data:AddContentType(AL["20 Raids"], ATLASLOOT_RAID20_COLO
 local RAID40_CONTENT = data:AddContentType(AL["40 Raids"], ATLASLOOT_RAID40_COLOR)
 
 data["DUMMY"] = {
-	name = "DUMMY",
+	name = "Test",
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
+	TableType = PROF_ITTYPE,
 	items = {
 		{
-			name = "DUMMY",
+			name = "TestBoss",
 			[NORMAL_DIFF] = {
-				{ 1,  19318 }, -- Bottled Alterac Spring Water
+				{ 1,  17634 },
+				{ 2,  17564 },
+
+				{ 4,  25073 },
+				{ 5,  25129 },
+
+				{ 16,  18629 },
+				{ 17,  7934 },
 			},
 		},
 	},

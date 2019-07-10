@@ -148,9 +148,7 @@ function ALDB:Register(savedVariablesBase, savedVariablesSec, defaults)
 		savedVariablesBase = savedVariablesBase,
 		savedVariablesSec = savedVariablesSec,
 	}
-	
 	ALDB:SetDefaults(db, defaults)
-	
 	return db
 end
 

@@ -71,33 +71,6 @@ AtlasLoot.AtlasLootDBDefaults = {
 			},
 		},
 	},
-	SetViewFrame = {
-		point = {"CENTER"},
-		currentContentType = "stats",
-		mainFrame = {
-			bgColor = {0, 0, 0, 1},
-			bgColorModel = {1, 1, 1, 1},
-			scale = 1,
-			title = {
-				bgColor = { 0, 0.86, 1, 1 },
-				textColor = {1, 1, 1, 1},
-				size = 12,
-				font = "Friz Quadrata TT",
-			},
-		},
-		contentTopBottom = {
-			bgColor = {0, 0.86, 1, 1},
-			textColor = {1, 1, 1, 1},
-			textFont = "Friz Quadrata TT",
-			textSize = 12,
-		},
-		content = {
-			bgColor = {1, 1, 1, 1},
-			textColor = {1, 0.82, 0, 1},
-			textFont = "Friz Quadrata TT",
-			textSize = 12,
-		},
-	},
 --[[
 	MiniMapButton = {
 		point = false,

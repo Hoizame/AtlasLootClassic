@@ -10,7 +10,7 @@ local tonumber = _G.tonumber
 local addonname = ...
 
 _G.AtlasLoot = {
-	__addonrevision = tonumber(("$Rev: 4772 $"):match("%d+")) or 0
+	__addonrevision = tonumber(("$Rev: 4773 $"):match("%d+")) or 0
 }
 
 local AddonNameVersion = string.format("%s-%d", addonname, _G.AtlasLoot.__addonrevision)

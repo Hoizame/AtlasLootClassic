@@ -8,6 +8,7 @@ Patch Notes
 v1.0.0-beta3 (Jul. XX, 2019)
 ========================
 - Add Recipe database
+- Add Profession database
 - Fix order of some Tokens with added multiline support
 - Remove double entries that are no longer needed with recipe db
 
