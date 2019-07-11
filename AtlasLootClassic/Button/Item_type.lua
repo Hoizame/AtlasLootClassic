@@ -321,8 +321,14 @@ Query.EventFrame = CreateFrame("FRAME")
 local function EventFrame_OnEvent(frame, event, arg1, arg2)
 	if event == "GET_ITEM_INFO_RECEIVED" then
 		if arg1 and button_list[arg1] then
+			local button
 			for i = 1, #button_list[arg1] do
-				Item.Refresh(button_list[arg1][i])
+				button = button_list[arg1][i]
+				if button.type == "secButton" then
+					button:GetSecTypeFunctions().Refresh(button_list[arg1][i])
+				else
+					button:GetTypeFunctions().Refresh(button_list[arg1][i])
+				end
 			end
 			button_list[arg1] = nil
 		end

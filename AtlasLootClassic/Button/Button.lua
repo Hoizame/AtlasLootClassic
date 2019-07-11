@@ -576,6 +576,14 @@ end
 function Proto:SetDifficultyID(diffID)
 	self.__atlaslootinfo.difficulty = diffID
 end
+
+function Proto:GetTypeFunctions()
+	return button_types[self.__atlaslootinfo.type[1]]
+end
+
+function Proto:GetSecTypeFunctions()
+	return button_types[self.__atlaslootinfo.secType[1]]
+end
 --################################
 -- Enhanced Description
 --################################

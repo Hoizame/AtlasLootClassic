@@ -1,5 +1,6 @@
 local AtlasLoot = _G.AtlasLoot
 local Prof = AtlasLoot.Button:AddType("Profession", "prof")
+local ItemQuery = AtlasLoot.Button:GetType("Item").Query
 local AL = AtlasLoot.Locales
 local GetAlTooltip = AtlasLoot.Tooltip.GetTooltip
 local Profession = AtlasLoot.Data.Profession
@@ -51,12 +52,14 @@ function Prof.OnSet(button, second)
 end
 
 function Prof.OnClear(button)
+	ItemQuery:Remove(button)
+	ItemQuery:Remove(button.secButton)
 	button.Profession = nil
 	button.SpellID = nil
-	button.tsLink, button.tsName = nil, nil
+	button.ItemID = nil
 	button.secButton.Profession = nil
 	button.secButton.SpellID = nil
-	button.secButton.tsLink, button.secButton.tsName = nil, nil
+	button.secButton.ItemID = nil
 	if button.ExtraFrameShown then
 		AtlasLoot.Button:ExtraItemFrame_ClearFrame()
 		button.ExtraFrameShown = false
@@ -93,12 +96,18 @@ function Prof.Refresh(button)
 	local spellName, _, spellTexture = GetSpellInfo(button.SpellID)
 
 	if Profession.IsProfessionSpell(button.SpellID) then
-		local itemName, _, itemQuality, _, _, _, _, _, _, itemTexture
-		if Profession.GetCreatedItemID(button.SpellID) then
-			itemName, _, itemQuality, _, _, _, _, _, _, itemTexture = GetItemInfo(Profession.GetCreatedItemID(button.SpellID))
+		local _, itemName, itemQuality, itemTexture, itemCount
+		button.ItemID = Profession.GetCreatedItemID(button.SpellID)
+		if button.ItemID then
+			itemName, _, itemQuality, _, _, _, _, _, _, itemTexture = GetItemInfo(button.ItemID)
+			if not itemName then
+				ItemQuery:Add(button)
+				return false
+			end
+			itemCount = Profession.GetNumCreatedItems(button.SpellID)
 		end
 		itemQuality = itemQuality or 0
-
+		--ItemQuery
 		button.overlay:Show()
 		button.overlay:SetTexture(WHITE_ICON_FRAME)
 		button.overlay:SetAtlas(LOOT_BORDER_BY_QUALITY[itemQuality] or LOOT_BORDER_BY_QUALITY[LE_ITEM_QUALITY_UNCOMMON])
@@ -110,13 +119,16 @@ function Prof.Refresh(button)
 
 		else
 			if itemName then
-				button.name:SetText("|c"..ITEM_COLORS[itemQuality or 0]..itemName)
+				button.name:SetText("|c"..ITEM_COLORS[itemQuality or 0]..(spellName or itemName))
 			else
 				button.name:SetText(PROF_COLOR..spellName)
 			end
 			button.extra:SetText(Profession.GetSpellDescription(button.SpellID).." ( "..Profession.GetColorSkillRank(button.SpellID).." )")
 		end
-
+		if itemCount > 1 then
+			button.count:SetText(itemCount)
+			button.count:Show()
+		end
 		button.icon:SetTexture(itemTexture or Profession.GetIcon(button.SpellID) or spellTexture)
 	end
 
