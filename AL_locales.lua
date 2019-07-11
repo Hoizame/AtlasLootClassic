@@ -628,6 +628,14 @@ AL["Items"] = true
 AL["Add sound into chat"] = true
 AL["Copy Box"] = true
 AL["Shows the sound in the copy box"] = true
+AL["Theldren"] = true
+AL["Mor Grayhoof"] = true
+AL["Lord Valthalak"] = true
+AL["Isalien"] = true
+AL["Kormok"] = true
+AL["Sothos and Jarien's Heirlooms"] = true
+AL["|cff00ff00Left-Click:|r Show possible items."] = true
+AL["|cff00ff00Left-Click:|r Show quest rewards."] = true
 
 -- \AtlasLootClassic\AtlasLoot.lua
 
@@ -638,14 +646,16 @@ AL["Shows the sound in the copy box"] = true
 -- \AtlasLootClassic_Collections\data.lua
 
 -- \AtlasLootClassic_Crafting\data.lua
+AL["Flasks"] = true
+AL["Transmutes"] = true
+AL["Healing/Mana Potions"] = true
+AL["Protection Potions"] = true
+AL["Util Potions"] = true
+AL["Stat Elixirs"] = true
+AL["Misc Elixirs"] = true
+AL["Special Elixirs"] = true
 
 -- \AtlasLootClassic_DungeonsAndRaids\data.lua
-AL["Theldren"] = true
-AL["Mor Grayhoof"] = true
-AL["Lord Valthalak"] = true
-AL["Isalien"] = true
-AL["Kormok"] = true
-AL["Sothos and Jarien's Heirlooms"] = true
 
 -- \AtlasLootClassic_PvP\data.lua
 
@@ -669,11 +679,15 @@ AL["Sothos and Jarien's Heirlooms"] = true
 
 -- \AtlasLootClassic\Core\WorldMapIntegration.lua
 
+-- \AtlasLootClassic\Data\Profession.lua
+AL["|cff00ff00Left-Click:|r %s"] = true
+AL["|cff00ff00Left-Click:|r Show reagents."] = true
+
+-- \AtlasLootClassic\Data\Recipe.lua
+
 -- \AtlasLootClassic\Data\Sets.lua
 
 -- \AtlasLootClassic\Data\Token.lua
-AL["|cff00ff00Left-Click:|r Show possible items."] = true
-AL["|cff00ff00Left-Click:|r Show quest rewards."] = true
 
 -- \AtlasLootClassic\GUI\GUI.lua
 

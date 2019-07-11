@@ -8,6 +8,7 @@ local format = string.format
 local rawget = rawget
 
 -- WoW
+local GetSpellInfo = GetSpellInfo
 
 -- ----------------------------------------------------------------------------
 -- AddOn namespace.
@@ -48,9 +49,20 @@ end
 
 local IngameLocales = {
 	-- ######################################################################
-	-- Factions
+	-- Professions
 	-- ######################################################################
-
+	["First Aid"] = GetSpellInfo(3273),
+	["Blacksmithing"] = GetSpellInfo(2018),
+	["Leatherworking"] = GetSpellInfo(2108),
+	["Alchemy"] = GetSpellInfo(2259),
+	["Herbalism"] = GetSpellInfo(2366),
+	["Cooking"] = GetSpellInfo(2550),
+	["Mining"] = GetSpellInfo(2575),
+	["Tailoring"] = GetSpellInfo(3908),
+	["Engineering"] = GetSpellInfo(4036),
+	["Enchanting"] = GetSpellInfo(7411),
+	["Fishing"] = GetSpellInfo(7732),
+	["Skinning"] = GetSpellInfo(8618),
 
 	-- ######################################################################
 	-- Months
