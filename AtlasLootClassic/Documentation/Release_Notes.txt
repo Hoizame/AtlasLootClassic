@@ -5,6 +5,12 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 
 Patch Notes
 
+v1.0.0-beta4 (Jul. XX, 2019)
+========================
+- Fix bug with unknown items
+- Some more Tokens
+- Add Blacksmithing
+
 v1.0.0-beta3 (Jul. 11, 2019)
 ========================
 - Add first Profession (Alchemy) for testing the new Prof/Mat system

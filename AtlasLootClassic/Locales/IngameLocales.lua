@@ -9,6 +9,7 @@ local rawget = rawget
 
 -- WoW
 local GetSpellInfo = GetSpellInfo
+local GetItemSubClassInfo = GetItemSubClassInfo
 
 -- ----------------------------------------------------------------------------
 -- AddOn namespace.
@@ -81,8 +82,70 @@ local IngameLocales = {
 	["December"] = months[12],
 
 	-- ######################################################################
-	-- Class Specs
+	-- Armor Classes
 	-- ######################################################################
+	["Cloth"] = GetItemSubClassInfo(4,1),
+	["Leather"] = GetItemSubClassInfo(4,2),
+	["Mail"] = GetItemSubClassInfo(4,3),
+	["Plate"] = GetItemSubClassInfo(4,4),
+	["Bucklers"] = GetItemSubClassInfo(4,5),
+	["Shields"] = GetItemSubClassInfo(4,6),
+	["Librams"] = GetItemSubClassInfo(4,7),
+	["Idols"] = GetItemSubClassInfo(4,8),
+	["Totems"] = GetItemSubClassInfo(4,9),
+
+
+	-- ######################################################################
+	-- Slots
+	-- ######################################################################
+	["Weapons"] = _G["WEAPONS"],
+	["Armor"] = _G["ARMOR"],
+	["Shield"] = _G["INVTYPE_SHIELD"],
+	["Wrist"] = _G["INVTYPE_WRIST"],
+	["Trinket"]	= _G["INVTYPE_TRINKET"],
+	["Robe"] = _G["INVTYPE_ROBE"],
+	["Cloak"] = _G["INVTYPE_CLOAK"],
+	["Head"] = _G["INVTYPE_HEAD"],
+	["Holdable"] = _G["INVTYPE_HOLDABLE"],
+	["Chest"] = _G["INVTYPE_CHEST"],
+	["Neck"] = _G["INVTYPE_NECK"],
+	["Tabard"] = _G["INVTYPE_TABARD"],
+	["Legs"] = _G["INVTYPE_LEGS"],
+	["Hand"] = _G["INVTYPE_HAND"],
+	["Waist"] = _G["INVTYPE_WAIST"],
+	["Feet"] = _G["INVTYPE_FEET"],
+	["Shoulder"] = _G["INVTYPE_SHOULDER"],
+	["Finger"] = _G["INVTYPE_FINGER"],
+	["Bag"] = _G["INVTYPE_BAG"],
+	["Ammo"] = _G["INVTYPE_AMMO"],
+	["Body"] = _G["INVTYPE_BODY"], -- Shirt
+	["Quiver"] = _G["INVTYPE_QUIVER"],
+	["Relic"] = _G["INVTYPE_RELIC"],
+	["Thrown"] = _G["INVTYPE_THROWN"],
+	["Main Hand"] = _G["INVTYPE_WEAPONMAINHAND"],
+	["Main Attack"]	= _G["INVTYPE_WEAPONMAINHAND_PET"],	-- "Main Attack"
+	["Off Hand"] = _G["INVTYPE_WEAPONOFFHAND"],
+	-- GetItemSubClassInfo(iC,isC)
+	["Two-Handed Axes"] = GetItemSubClassInfo(2,1),
+	["Bows"] = GetItemSubClassInfo(2,2),
+	["Guns"] = GetItemSubClassInfo(2,3),
+	["One-Handed Maces"] = GetItemSubClassInfo(2,4),
+	["Two-Handed Maces"] = GetItemSubClassInfo(2,5),
+	["Polearms"] = GetItemSubClassInfo(2,6),
+	["One-Handed Swords"] = GetItemSubClassInfo(2,7),
+	["Two-Handed Swords"] = GetItemSubClassInfo(2,8),
+	--["Obsolete"] = GetItemSubClassInfo(2,9),
+	["Staves"] = GetItemSubClassInfo(2,10),
+	["One-Handed Exotics"] = GetItemSubClassInfo(2,11),
+	["Two-Handed Exotics"] = GetItemSubClassInfo(2,12),
+	["Fist Weapons"] = GetItemSubClassInfo(2,13),
+	--["Miscellaneous"] = GetItemSubClassInfo(2,14),
+	["Daggers"] = GetItemSubClassInfo(2,15),
+	--["Thrown"] = GetItemSubClassInfo(2,16),
+	["Spears"] = GetItemSubClassInfo(2,17),
+	["Crossbows"] = GetItemSubClassInfo(2,18),
+	["Wands"] = GetItemSubClassInfo(2,19),
+	["Fishing Pole"] = GetItemSubClassInfo(2,20),
 
 
 	-- ######################################################################

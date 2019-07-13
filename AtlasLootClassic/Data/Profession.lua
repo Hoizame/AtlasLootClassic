@@ -1,12 +1,13 @@
 local AtlasLoot = _G.AtlasLoot
 local Profession = {}
 AtlasLoot.Data.Profession = Profession
+local Recipe
 local AL = AtlasLoot.Locales
 local ALIL = AtlasLoot.IngameLocales
 
 local format = string.format
 
-local LOC_STRING_DESC = AL["|cff00ff00Left-Click:|r %s"]
+local LOC_STRING_DESC = AL["|cff00ff00L-Click:|r %s"]
 local LOC_STRING_DESC2 = AL["|cff00ff00Left-Click:|r Show reagents."]
 local FORMAT_STRING_SKILL = "|cffff8040%d|r |cffffff00%d|r |cff40bf40%d|r |cff808080%d|r"
 
@@ -1330,16 +1331,26 @@ function Profession.GetDataForExtraFrame(spellID)
     if not prof then return end
 
     if not ProfessionCache[spellID] then
+        if not Recipe then
+            Recipe = AtlasLoot.Data.Recipe
+        end
+        local recipe = Recipe.GetRecipeForSpell(spellID)
         local ret
         if prof[1] then
             if prof[1] and prof[8] then
-                ret = { { prof[1], prof[8] }, 0 }
+                ret = { { prof[1], prof[8] } }
             else
-                ret = { prof[1], 0 }
+                ret = { prof[1] }
+            end
+            if recipe then
+                ret[#ret+1] = recipe
+                ret[#ret+1] = 0
+            else
+                ret[#ret+1] = 0
             end
 		else
 			ret = {}
-		end
+        end
 		for i = 1, #prof[6] do
 			ret[#ret+1] = {prof[6][i], prof[7][i]}
 		end

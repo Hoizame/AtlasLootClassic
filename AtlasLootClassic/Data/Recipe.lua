@@ -5,6 +5,7 @@ local Profession = AtlasLoot.Data.Profession
 local AL = AtlasLoot.Locales
 
 local format = string.format
+local pairs = pairs
 
 
 local LOC_STRING = AL["|cff00ff00Left-Click:|r %s"]
@@ -832,6 +833,10 @@ local RECIPE = {
 	[23689] = 	{ 1,	300,  	30021 }, -- Manual: Crystal Infused Bandage
 	[23690] = 	{ 6,	300,  	30047 }, -- Recipe: Crystal Flake Throat Lozenge
 }
+local RECIPE_TO_SPELL = {}
+for k,v in pairs(RECIPE) do
+	RECIPE_TO_SPELL[v[3]] = k
+end
 
 -- maybe weak table?
 local RecipeCache = {}
@@ -860,4 +865,8 @@ end
 
 function Recipe.GetRecipeProfession(itemID)
 	return ( itemID and RECIPE[itemID] ) and RECIPE[itemID][1] or nil
+end
+
+function Recipe.GetRecipeForSpell(spellID)
+	return RECIPE_TO_SPELL[spellID or 0]
 end

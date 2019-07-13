@@ -660,22 +660,20 @@ data["LunarFestival"] = {
 			[NORMAL_DIFF] = {
 				{ 1,  21738 }, -- Schematic: Firework Launcher
 				{ 3,  21722 }, -- Pattern: Festival Dress
-				{ 4,  21154 }, -- Festival Dress
-				{ 7,  21724 }, -- Schematic: Small Blue Rocket
-				{ 8,  21725 }, -- Schematic: Small Green Rocket
-				{ 9,  21726 }, -- Schematic: Small Red Rocket
-				{ 12, 21727 }, -- Schematic: Large Blue Rocket
-				{ 13, 21728 }, -- Schematic: Large Green Rocket
-				{ 14, 21729 }, -- Schematic: Large Red Rocket
+				{ 5,  21724 }, -- Schematic: Small Blue Rocket
+				{ 6,  21725 }, -- Schematic: Small Green Rocket
+				{ 7,  21726 }, -- Schematic: Small Red Rocket
+				{ 9, 21727 }, -- Schematic: Large Blue Rocket
+				{ 10, 21728 }, -- Schematic: Large Green Rocket
+				{ 11, 21729 }, -- Schematic: Large Red Rocket
 				{ 16, 21737 }, -- Schematic: Cluster Launcher
 				{ 18, 21723 }, -- Pattern: Festive Red Pant Suit
-				{ 19, 21542 }, -- Festival Suit
-				{ 22, 21730 }, -- Schematic: Blue Rocket Cluster
-				{ 23, 21731 }, -- Schematic: Green Rocket Cluster
-				{ 24, 21732 }, -- Schematic: Red Rocket Cluster
-				{ 27, 21733 }, -- Schematic: Large Blue Rocket Cluster
-				{ 28, 21734 }, -- Schematic: Large Green Rocket Cluster
-				{ 29, 21735 }, -- Schematic: Large Red Rocket Cluster
+				{ 20, 21730 }, -- Schematic: Blue Rocket Cluster
+				{ 21, 21731 }, -- Schematic: Green Rocket Cluster
+				{ 22, 21732 }, -- Schematic: Red Rocket Cluster
+				{ 24, 21733 }, -- Schematic: Large Blue Rocket Cluster
+				{ 25, 21734 }, -- Schematic: Large Green Rocket Cluster
+				{ 26, 21735 }, -- Schematic: Large Red Rocket Cluster
 			},
 		},
 	},
