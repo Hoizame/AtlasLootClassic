@@ -325,7 +325,7 @@ local function EventFrame_OnEvent(frame, event, arg1, arg2)
 			for i = 1, #button_list[arg1] do
 				button = button_list[arg1][i]
 				if button.type == "secButton" then
-					button:GetSecTypeFunctions().Refresh(button_list[arg1][i])
+					button.obj:GetSecTypeFunctions().Refresh(button_list[arg1][i])
 				else
 					button:GetTypeFunctions().Refresh(button_list[arg1][i])
 				end
