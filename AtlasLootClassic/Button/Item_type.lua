@@ -7,6 +7,7 @@ local AL = AtlasLoot.Locales
 local ClickHandler = AtlasLoot.ClickHandler
 local Token = AtlasLoot.Data.Token
 local Recipe = AtlasLoot.Data.Recipe
+local Profession = AtlasLoot.Data.Profession
 
 local db
 
@@ -218,7 +219,7 @@ function Item.Refresh(button)
 		-- ##################
 		-- description
 		-- ##################
-		button.extra:SetText(Token.GetTokenDescription(button.ItemID) or Recipe.GetRecipeDescription(button.ItemID) or GetItemDescInfo(itemEquipLoc, itemType, itemSubType))
+		button.extra:SetText(Token.GetTokenDescription(button.ItemID) or Recipe.GetRecipeDescription(button.ItemID) or Profession.GetColorSkillRankItem(button.ItemID) or GetItemDescInfo(itemEquipLoc, itemType, itemSubType))
 	end
 	--[[
 	if db.showCompletedHook then

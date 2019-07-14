@@ -15,6 +15,8 @@ local addonname = ...
 local AtlasLoot = _G.AtlasLoot
 local data = AtlasLoot.ItemDB:Add(addonname, 1)
 
+local GetColorSkill = AtlasLoot.Data.Profession.GetColorSkillRankNoSpell
+
 local AL = AtlasLoot.Locales
 local ALIL = AtlasLoot.IngameLocales
 
@@ -775,6 +777,92 @@ data["Enchanting"] = {
 				{ 23, 7457 }, --Enchant Bracer - Minor Stamina / 100
 				{ 24, 7428 }, --Enchant Bracer - Minor Deflect / 80
 				{ 25, 7418 }, --Enchant Bracer - Minor Health / 70
+			}
+		},
+	}
+}
+
+data["Mining"] = {
+	name = ALIL["Mining"],
+	ContentType = PROF_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = PROF_ITTYPE,
+	items = {
+		{
+			name = AL["Smelting"],
+			[NORMAL_DIFF] = {
+				{ 1, 22967 }, --Smelt Elementium / 310
+				{ 2, 16153 }, --Smelt Thorium / 250
+				{ 3, 10098 }, --Smelt Truesilver / 230
+				{ 4, 14891 }, --Smelt Dark Iron / 230
+				{ 5, 10097 }, --Smelt Mithril / 175
+				{ 6, 3308 }, --Smelt Gold / 170
+				{ 7, 3569 }, --Smelt Steel / 165
+				{ 8, 3307 }, --Smelt Iron / 130
+				{ 9, 2658 }, --Smelt Silver / 100
+				{ 10, 2659 }, --Smelt Bronze / 65
+				{ 11, 3304 }, --Smelt Tin / 50
+				{ 12, 2657 }, --Smelt Copper / 25
+			}
+		},
+	}
+}
+
+data["Herbalism"] = {
+	name = ALIL["Herbalism"],
+	ContentType = PROF_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = NORMAL_ITTYPE,
+	items = {
+		{
+			name = AL["Artisan"],
+			[NORMAL_DIFF] = {
+				{ 1,  13467 }, -- Icecap
+				{ 2,  13466 }, -- Plaguebloom
+				{ 3,  13465 }, -- Mountain Silversage
+				{ 4,  13463 }, -- Dreamfoil
+				{ 5,  13464 }, -- Golden Sansam
+				{ 6, 8846 }, -- Gromsblood
+				{ 7, 8845 }, -- Ghost Mushroom
+				{ 8, 8839 }, -- Blindweed
+				{ 9, 8838 }, -- Sungrass
+				{ 16,  13468 }, -- Black Lotus
+				{ 17,  19726 }, -- Bloodvine
+			}
+		},
+		{
+			name = AL["Expert"],
+			[NORMAL_DIFF] = {
+				{ 1, 8836 }, -- Arthas' Tears
+				{ 2, 8831, 8153 }, -- Purple Lotus
+				{ 3, 4625 }, -- Firebloom
+				{ 4, 3819 }, -- Wintersbite
+				{ 5, 3358 }, -- Khadgar's Whisker
+				{ 6, 3821 }, -- Goldthorn
+				{ 7, 3818 }, -- Fadeleaf
+				--{ 17, 8153 }, -- Wildvine
+			}
+		},
+		{
+			name = AL["Journeyman"],
+			[NORMAL_DIFF] = {
+				{ 1, 3357 }, -- Liferoot
+				{ 2, 3356 }, -- Kingsblood
+				{ 3, 3369 }, -- Grave Moss
+				{ 4, 3355 }, -- Wild Steelbloom
+				{ 5, 2453 }, -- Bruiseweed
+				{ 6, 3820 }, -- Stranglekelp
+			}
+		},
+		{
+			name = AL["Apprentice"],
+			[NORMAL_DIFF] = {
+				{ 1,  2450, 2452 }, -- Briarthorn
+				{ 2,  785, 2452 }, -- Mageroyal
+				{ 3,  2449 }, -- Earthroot
+				{ 4,  765 }, -- Silverleaf
+				{ 5,  2447 }, -- Peacebloom
+				--{ 16,  2452 }, -- Swiftthistle
 			}
 		},
 	}
