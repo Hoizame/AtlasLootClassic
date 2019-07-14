@@ -60,7 +60,14 @@ function AtlasLoot:OnInitialize()
 
 	self.db = ALDB:Register(AtlasLootClassicCharDB, AtlasLootClassicDB, AtlasLoot.AtlasLootDBDefaults)
 
-
+	-- make sure that it got replaced
+	if not AtlasLootClassicRawDB.NpcCache or ( AtlasLootClassicRawDB.NpcCache.__addonrevision or 0 ) < AtlasLoot.__addonrevision then
+		AtlasLoot.Loader:LoadAllModules(true)
+		AtlasLootClassicRawDB.NpcCache = {
+			__addonrevision = AtlasLoot.__addonrevision
+		}
+	end
+	AtlasLoot.ItemDB.NpcList = AtlasLootClassicRawDB.NpcCache
 	-- bindings
 	BINDING_HEADER_ATLASLOOT = AL["AtlasLoot"]
 	BINDING_NAME_ATLASLOOT_TOGGLE = AL["Toggle AtlasLoot"]
@@ -74,6 +81,31 @@ function AtlasLoot:AddInitFunc(func, module)
 	module = module or "AtlasLootClassic"
 	if not AtlasLoot.Init[module] then AtlasLoot.Init[module] = {} end
 	AtlasLoot.Init[module][#AtlasLoot.Init[module]+1] = func
+end
+
+-- ##############################
+-- Should be new File but for testing leave it here
+-- ##############################
+do
+	local str_split = string.split
+
+	local UnitGUID = UnitGUID
+
+	local SCAN_TARGET, CHECK_TARGET = "target", "Creature"
+
+	local EventFrame = CreateFrame("Frame")
+
+	--EventFrame:RegisterEvent("PLAYER_TARGET_CHANGED")
+
+	local function PLAYER_TARGET_CHANGED()
+		local tGuid = UnitGUID(SCAN_TARGET)
+		if not tGuid then return end
+		local type, _, _, _, _, npcID = str_split("-", tGuid)
+		if type == CHECK_TARGET then
+			--print(npcID)
+		end
+	end
+	--EventFrame:SetScript("OnEvent", PLAYER_TARGET_CHANGED)
 end
 
 --[=[ Only instance related module will be handled

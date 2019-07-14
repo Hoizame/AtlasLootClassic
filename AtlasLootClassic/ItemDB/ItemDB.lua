@@ -5,6 +5,7 @@ local AL = AtlasLoot.Locales
 
 -- lua
 local assert, setmetatable, rawset = assert, setmetatable, rawset
+local type = type
 local select = select
 local pairs = pairs
 local match, str_split, format = string.match, string.split, string.format
@@ -22,6 +23,9 @@ ItemDB.ContentProto = {}
 -- List of content from addons
 local contentList = {}
 
+-- NpcListTable /run print(string.split("-", UnitGUID"target"))
+ItemDB.NpcList = {}
+
 -- the metatable
 ItemDB.contentMt = {
 	__index = ItemDB.ContentProto
@@ -33,6 +37,20 @@ ItemDB.mt = {
 		contentList[t.__atlaslootdata.addonName][t.__atlaslootdata.contentCount] = k
 		contentList[t.__atlaslootdata.addonName][k] = t.__atlaslootdata.contentCount
 		v.__atlaslootdata = t.__atlaslootdata
+		if v and v.items and #v.items > 0 then
+			local t = v.items
+			local npcID
+			for i = 1, #t do
+				npcID = t[i].npcId
+				if type(npcID) == "table" then
+					for j = 1, #npcID do
+						ItemDB.NpcList[npcID[j]] = v.__atlaslootdata.addonName..":"..k..":"..i
+					end
+				elseif npcID then
+					ItemDB.NpcList[npcID] = v.__atlaslootdata.addonName..":"..k..":"..i
+				end
+			end
+		end
 		rawset(t, k, v)
 	end
 }
@@ -113,8 +131,6 @@ local function getItemTableType(addonName, contentName, boss, dif)
 
 	return typ
 end
-
-
 
 local function getItemsFromDiff(curBossTab, iniTab)
 	-- first cache all positions that allready set

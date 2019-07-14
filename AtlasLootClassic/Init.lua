@@ -13,7 +13,7 @@ _G.AtlasLoot = { }
 
 local addonVersion = GetAddOnMetadata(addonname, "Version")
 if addonVersion == "@project-version@" then addonVersion = "v99.99.9999-dev" end
-local versionT = { string.match(addonVersion, "v(%d+)%.(%d+)%.(%d+)%-?(%w*)") }
+local versionT = { string.match(addonVersion, "v(%d+)%.(%d+)%.(%d+)%-?(%a*)(%d*)") }
 addonVersion = ""
 for k,v in ipairs(versionT) do
 	if k < 4 then
