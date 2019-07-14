@@ -17,6 +17,9 @@ local Loader = {}
 AtlasLoot.Loader = Loader
 local AL = AtlasLoot.Locales
 
+local IsInit = false
+local AllLoaded
+
 local LoaderQueue = {}
 local LoaderQueueSaves = {}
 local ModuleList = {}
@@ -104,13 +107,19 @@ function Loader.Init()
 				loadReason = tmp[5],
 				standardModule = ATLASLOOT_MODULE_LIST_NAMES[tmp[1]],
 
-				moduleName = GetAddOnMetadata(tmp[1], "X-AtlasLoot-ModuleName") or tmp[1],
-				lootModule = GetAddOnMetadata(tmp[1], "X-AtlasLoot-LootModule"),
+				moduleName = GetAddOnMetadata(tmp[1], "X-AtlasLootClassic-ModuleName") or tmp[1],
+				lootModule = GetAddOnMetadata(tmp[1], "X-AtlasLootClassic-LootModule"),
 			}
 		end
 	end
+	IsInit = true
+	if AllLoaded then
+		IsInit = true
+		local loadCustom = AllLoaded == "loadAll" and true or false
+		AllLoaded = nil
+		Loader:LoadAllModules(loadCustom)
+	end
 end
-
 AtlasLoot:AddInitFunc(Loader.Init)
 
 --/dump GetAddOnEnableState(playerName, i) == 0 and false or true
@@ -207,11 +216,30 @@ function Loader:GetLootModuleList()
 	data.custom = {}
 	for addonName, addonTable in pairs(ModuleList) do
 		if not addonTable.standardModule and addonTable.enabled and addonTable.lootModule == "1" then
-			data.custom [#data.custom+1] = {
+			data.custom[#data.custom+1] = {
 				addonName = addonName,
 				name = addonTable.moduleName or UNKNOWN,
 			}
 		end
 	end
 	return data
+end
+
+function Loader:LoadAllModules(loadCustom)
+	if not IsInit or (AllLoaded == "loadAllNoCustom" and loadCustom) then
+		AllLoaded = loadCustom and "loadAll" or "loadAllNoCustom"
+		return
+	elseif AllLoaded then
+		return
+	end
+	local moduleList = Loader:GetLootModuleList()
+	if not moduleList then return end
+	for k,v in ipairs(moduleList.module) do
+		Loader:LoadModule(v.addonName)
+	end
+	if loadCustom then
+		for k,v in ipairs(moduleList.custom) do
+			Loader:LoadModule(v.addonName)
+		end
+	end
 end
