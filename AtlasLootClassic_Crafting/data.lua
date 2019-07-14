@@ -547,3 +547,235 @@ data["Blacksmithing"] = {
 		},
 	}
 }
+
+--[[ add later
+data["Cooking"] = {
+	name = ALIL["Cooking"],
+	ContentType = PROF_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = PROF_ITTYPE,
+	items = {
+		{
+			name = ALIL["Cooking"],
+			[NORMAL_DIFF] = {
+
+			}
+		},
+	}
+}
+]]--Enchanting
+
+data["Enchanting"] = {
+	name = ALIL["Enchanting"],
+	ContentType = PROF_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = PROF_ITTYPE,
+	items = {
+		{
+			name = AL["Oil"],
+			[NORMAL_DIFF] = {
+				{ 1, 25130 }, --Brilliant Mana Oil / 310
+				{ 2, 25129 }, --Brilliant Wizard Oil / 310
+				{ 3, 25128 }, --Wizard Oil / 285
+				{ 4, 25127 }, --Lesser Mana Oil / 260
+				{ 5, 25126 }, --Lesser Wizard Oil / 210
+				{ 6, 25125 }, --Minor Mana Oil / 160
+				{ 7, 25124 }, --Minor Wizard Oil / 55
+			}
+		},
+		{
+			name = ALIL["Wands"],
+			[NORMAL_DIFF] = {
+				{ 1, 14810 }, --Greater Mystic Wand / 195
+				{ 2, 14809 }, --Lesser Mystic Wand / 175
+				{ 3, 14807 }, --Greater Magic Wand / 110
+				{ 4, 14293 }, --Lesser Magic Wand / 75
+			}
+		},
+		{
+			name = AL["Misc"],
+			[NORMAL_DIFF] = {
+				{ 1, 20051 }, --Runed Arcanite Rod / 310
+				{ 2, 13702 }, --Runed Truesilver Rod / 220
+				{ 3, 13628 }, --Runed Golden Rod / 175
+				{ 4, 7795 }, --Runed Silver Rod / 130
+				{ 5, 7421 }, --Runed Copper Rod / 5
+				{ 16, 15596 }, --Smoking Heart of the Mountain / 285
+				{ 18, 17181 }, --Enchanted Leather / 250
+				{ 20, 17180 }, --Enchanted Thorium / 250
+			}
+		},
+		{
+			name = ALIL["Weapon"].." - "..AL["Enhancements"],
+			[NORMAL_DIFF] = {
+				{ 1, 23804 }, --Enchant Weapon - Mighty Intellect / 320
+				{ 2, 20034 }, --Enchant Weapon - Crusader / 320
+				{ 3, 20032 }, --Enchant Weapon - Lifestealing / 320
+				{ 4, 22749 }, --Enchant Weapon - Spell Power / 320
+				{ 5, 22750 }, --Enchant Weapon - Healing Power / 320
+				{ 6, 23803 }, --Enchant Weapon - Mighty Spirit / 320
+				{ 7, 20031 }, --Enchant Weapon - Superior Striking / 320
+				{ 8, 20033 }, --Enchant Weapon - Unholy Weapon / 315
+				{ 9, 23799 }, --Enchant Weapon - Strength / 310
+				{ 10, 23800 }, --Enchant Weapon - Agility / 310
+				{ 11, 20029 }, --Enchant Weapon - Icy Chill / 305
+				{ 12, 13898 }, --Enchant Weapon - Fiery Weapon / 285
+				{ 13, 13943 }, --Enchant Weapon - Greater Striking / 265
+				{ 14, 13915 }, --Enchant Weapon - Demonslaying / 250
+				{ 15, 13693 }, --Enchant Weapon - Striking / 215
+				{ 16, 21931 }, --Enchant Weapon - Winter / 210
+				{ 17, 13653 }, --Enchant Weapon - Lesser Beastslayer / 195
+				{ 18, 13655 }, --Enchant Weapon - Lesser Elemental Slayer / 195
+				{ 19, 13503 }, --Enchant Weapon - Lesser Striking / 165
+				{ 20, 7788 }, --Enchant Weapon - Minor Striking / 120
+				{ 21, 7786 }, --Enchant Weapon - Minor Beastslayer / 120
+			}
+		},
+		{
+			name = ALIL["2H Weapon"].." - "..AL["Enhancements"],
+			[NORMAL_DIFF] = {
+				{ 1, 20035 }, --Enchant 2H Weapon - Major Spirit / 320
+				{ 2, 20036 }, --Enchant 2H Weapon - Major Intellect / 320
+				{ 3, 20030 }, --Enchant 2H Weapon - Superior Impact / 315
+				{ 4, 27837 }, --Enchant 2H Weapon - Agility / 310
+				{ 5, 13937 }, --Enchant 2H Weapon - Greater Impact / 260
+				{ 6, 13695 }, --Enchant 2H Weapon - Impact / 220
+				{ 7, 13529 }, --Enchant 2H Weapon - Lesser Impact / 170
+				{ 8, 13380 }, --Enchant 2H Weapon - Lesser Spirit / 135
+				{ 9, 7745 }, --Enchant 2H Weapon - Minor Impact / 130
+				{ 10, 7793 }, --Enchant 2H Weapon - Lesser Intellect / 130
+			}
+		},
+		{
+			name = ALIL["Cloak"].." - "..AL["Enhancements"],
+			[NORMAL_DIFF] = {
+				{ 1, 25086 }, --Enchant Cloak - Dodge / 320
+				{ 2, 25081 }, --Enchant Cloak - Greater Fire Resistance / 320
+				{ 3, 25082 }, --Enchant Cloak - Greater Nature Resistance / 320
+				{ 4, 25084 }, --Enchant Cloak - Subtlety / 320
+				{ 5, 25083 }, --Enchant Cloak - Stealth / 320
+				{ 6, 20015 }, --Enchant Cloak - Superior Defense / 305
+				{ 7, 20014 }, --Enchant Cloak - Greater Resistance / 285
+				{ 8, 13882 }, --Enchant Cloak - Lesser Agility / 245
+				{ 9, 13794 }, --Enchant Cloak - Resistance / 225
+				{ 10, 13746 }, --Enchant Cloak - Greater Defense / 225
+				{ 11, 13657 }, --Enchant Cloak - Fire Resistance / 195
+				{ 12, 13635 }, --Enchant Cloak - Defense / 175
+				{ 13, 13522 }, --Enchant Cloak - Lesser Shadow Resistance / 160
+				{ 14, 7861 }, --Enchant Cloak - Lesser Fire Resistance / 150
+				{ 15, 13421 }, --Enchant Cloak - Lesser Protection / 140
+				{ 16, 13419 }, --Enchant Cloak - Minor Agility / 135
+				{ 17, 7771 }, --Enchant Cloak - Minor Protection / 110
+				{ 18, 7454 }, --Enchant Cloak - Minor Resistance / 95
+			}
+		},
+		{
+			name = ALIL["Chest"].." - "..AL["Enhancements"],
+			[NORMAL_DIFF] = {
+				{ 1, 20025 }, --Enchant Chest - Greater Stats / 320
+				{ 2, 20028 }, --Enchant Chest - Major Mana / 310
+				{ 3, 20026 }, --Enchant Chest - Major Health / 295
+				{ 4, 13941 }, --Enchant Chest - Stats / 265
+				{ 5, 13917 }, --Enchant Chest - Superior Mana / 250
+				{ 6, 13858 }, --Enchant Chest - Superior Health / 240
+				{ 7, 13700 }, --Enchant Chest - Lesser Stats / 220
+				{ 8, 13663 }, --Enchant Chest - Greater Mana / 205
+				{ 9, 13640 }, --Enchant Chest - Greater Health / 180
+				{ 10, 13626 }, --Enchant Chest - Minor Stats / 175
+				{ 11, 13607 }, --Enchant Chest - Mana / 170
+				{ 12, 13538 }, --Enchant Chest - Lesser Absorption / 165
+				{ 13, 7857 }, --Enchant Chest - Health / 145
+				{ 14, 7776 }, --Enchant Chest - Lesser Mana / 115
+				{ 15, 7748 }, --Enchant Chest - Lesser Health / 105
+				{ 16, 7426 }, --Enchant Chest - Minor Absorption / 90
+				{ 17, 7443 }, --Enchant Chest - Minor Mana / 80
+				{ 18, 7420 }, --Enchant Chest - Minor Health / 70
+			}
+		},
+		{
+			name = ALIL["Feet"].." - "..AL["Enhancements"],
+			[NORMAL_DIFF] = {
+				{ 1, 20023 }, --Enchant Boots - Greater Agility / 315
+				{ 2, 20024 }, --Enchant Boots - Spirit / 295
+				{ 3, 20020 }, --Enchant Boots - Greater Stamina / 280
+				{ 4, 13935 }, --Enchant Boots - Agility / 255
+				{ 5, 13890 }, --Enchant Boots - Minor Speed / 245
+				{ 6, 13836 }, --Enchant Boots - Stamina / 235
+				{ 7, 13687 }, --Enchant Boots - Lesser Spirit / 210
+				{ 8, 13644 }, --Enchant Boots - Lesser Stamina / 190
+				{ 9, 13637 }, --Enchant Boots - Lesser Agility / 180
+				{ 10, 7867 }, --Enchant Boots - Minor Agility / 150
+				{ 11, 7863 }, --Enchant Boots - Minor Stamina / 150
+			}
+		},
+		{
+			name = ALIL["Hand"].." - "..AL["Enhancements"],
+			[NORMAL_DIFF] = {
+				{ 1, 25080 }, --Enchant Gloves - Superior Agility / 320
+				{ 2, 25073 }, --Enchant Gloves - Shadow Power / 320
+				{ 3, 25074 }, --Enchant Gloves - Frost Power / 320
+				{ 4, 25072 }, --Enchant Gloves - Threat / 320
+				{ 5, 25079 }, --Enchant Gloves - Healing Power / 320
+				{ 6, 25078 }, --Enchant Gloves - Fire Power / 320
+				{ 7, 20013 }, --Enchant Gloves - Greater Strength / 315
+				{ 8, 20012 }, --Enchant Gloves - Greater Agility / 290
+				{ 9, 13948 }, --Enchant Gloves - Minor Haste / 270
+				{ 10, 13947 }, --Enchant Gloves - Riding Skill / 270
+				{ 11, 13868 }, --Enchant Gloves - Advanced Herbalism / 245
+				{ 12, 13887 }, --Enchant Gloves - Strength / 245
+				{ 13, 13841 }, --Enchant Gloves - Advanced Mining / 235
+				{ 14, 13815 }, --Enchant Gloves - Agility / 230
+				{ 15, 13698 }, --Enchant Gloves - Skinning / 220
+				{ 16, 13617 }, --Enchant Gloves - Herbalism / 170
+				{ 17, 13620 }, --Enchant Gloves - Fishing / 170
+				{ 18, 13612 }, --Enchant Gloves - Mining / 170
+			}
+		},
+		{
+			name = ALIL["Shield"].." - "..AL["Enhancements"],
+			[NORMAL_DIFF] = {
+				{ 1, 20016 }, --Enchant Shield - Superior Spirit / 300
+				{ 2, 20017 }, --Enchant Shield - Greater Stamina / 285
+				{ 3, 13933 }, --Enchant Shield - Frost Resistance / 255
+				{ 4, 13905 }, --Enchant Shield - Greater Spirit / 250
+				{ 5, 13817 }, --Enchant Shield - Stamina / 230
+				{ 6, 13689 }, --Enchant Shield - Lesser Block / 215
+				{ 7, 13659 }, --Enchant Shield - Spirit / 200
+				{ 8, 13631 }, --Enchant Shield - Lesser Stamina / 175
+				{ 9, 13485 }, --Enchant Shield - Lesser Spirit / 155
+				{ 10, 13464 }, --Enchant Shield - Lesser Protection / 140
+				{ 11, 13378 }, --Enchant Shield - Minor Stamina / 130
+			}
+		},
+		{
+			name = ALIL["Wrist"].." - "..AL["Enhancements"],
+			[NORMAL_DIFF] = {
+				{ 1, 23802 }, --Enchant Bracer - Healing Power / 320
+				{ 2, 20011 }, --Enchant Bracer - Superior Stamina / 320
+				{ 3, 20010 }, --Enchant Bracer - Superior Strength / 315
+				{ 4, 23801 }, --Enchant Bracer - Mana Regeneration / 310
+				{ 5, 20009 }, --Enchant Bracer - Superior Spirit / 290
+				{ 6, 20008 }, --Enchant Bracer - Greater Intellect / 275
+				{ 7, 13945 }, --Enchant Bracer - Greater Stamina / 265
+				{ 8, 13939 }, --Enchant Bracer - Greater Strength / 260
+				{ 9, 13931 }, --Enchant Bracer - Deflection / 255
+				{ 10, 13846 }, --Enchant Bracer - Greater Spirit / 240
+				{ 11, 13822 }, --Enchant Bracer - Intellect / 230
+				{ 12, 13661 }, --Enchant Bracer - Strength / 200
+				{ 13, 13648 }, --Enchant Bracer - Stamina / 190
+				{ 14, 13646 }, --Enchant Bracer - Lesser Deflection / 190
+				{ 15, 13642 }, --Enchant Bracer - Spirit / 185
+				{ 16, 13622 }, --Enchant Bracer - Lesser Intellect / 175
+				{ 17, 13536 }, --Enchant Bracer - Lesser Strength / 165
+				{ 18, 13501 }, --Enchant Bracer - Lesser Stamina / 155
+				{ 19, 7859 }, --Enchant Bracer - Lesser Spirit / 145
+				{ 20, 7779 }, --Enchant Bracer - Minor Agility / 115
+				{ 21, 7782 }, --Enchant Bracer - Minor Strength / 115
+				{ 22, 7766 }, --Enchant Bracer - Minor Spirit / 105
+				{ 23, 7457 }, --Enchant Bracer - Minor Stamina / 100
+				{ 24, 7428 }, --Enchant Bracer - Minor Deflect / 80
+				{ 25, 7418 }, --Enchant Bracer - Minor Health / 70
+			}
+		},
+	}
+}

@@ -98,9 +98,11 @@ local IngameLocales = {
 	-- ######################################################################
 	-- Slots
 	-- ######################################################################
+	["Weapon"] = _G["ENCHSLOT_WEAPON"],
+	["2H Weapon"] = _G["ENCHSLOT_2HWEAPON"],
 	["Weapons"] = _G["WEAPONS"],
 	["Armor"] = _G["ARMOR"],
-	["Shield"] = _G["INVTYPE_SHIELD"],
+	["Shield"] = _G["SHIELDSLOT"],
 	["Wrist"] = _G["INVTYPE_WRIST"],
 	["Trinket"]	= _G["INVTYPE_TRINKET"],
 	["Robe"] = _G["INVTYPE_ROBE"],

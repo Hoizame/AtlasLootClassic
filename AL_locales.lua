@@ -636,6 +636,16 @@ AL["Kormok"] = true
 AL["Sothos and Jarien's Heirlooms"] = true
 AL["|cff00ff00Left-Click:|r Show possible items."] = true
 AL["|cff00ff00Left-Click:|r Show quest rewards."] = true
+AL["Flasks"] = true
+AL["Transmutes"] = true
+AL["Healing/Mana Potions"] = true
+AL["Protection Potions"] = true
+AL["Util Potions"] = true
+AL["Stat Elixirs"] = true
+AL["Misc Elixirs"] = true
+AL["Special Elixirs"] = true
+AL["|cff00ff00Left-Click:|r %s"] = true
+AL["|cff00ff00Left-Click:|r Show reagents."] = true
 
 -- \AtlasLootClassic\AtlasLoot.lua
 
@@ -646,14 +656,11 @@ AL["|cff00ff00Left-Click:|r Show quest rewards."] = true
 -- \AtlasLootClassic_Collections\data.lua
 
 -- \AtlasLootClassic_Crafting\data.lua
-AL["Flasks"] = true
-AL["Transmutes"] = true
-AL["Healing/Mana Potions"] = true
-AL["Protection Potions"] = true
-AL["Util Potions"] = true
-AL["Stat Elixirs"] = true
-AL["Misc Elixirs"] = true
-AL["Special Elixirs"] = true
+AL["Axes"] = true
+AL["Maces"] = true
+AL["Swords"] = true
+AL["Enhancements"] = true
+AL["Oil"] = true
 
 -- \AtlasLootClassic_DungeonsAndRaids\data.lua
 
@@ -680,8 +687,7 @@ AL["Special Elixirs"] = true
 -- \AtlasLootClassic\Core\WorldMapIntegration.lua
 
 -- \AtlasLootClassic\Data\Profession.lua
-AL["|cff00ff00Left-Click:|r %s"] = true
-AL["|cff00ff00Left-Click:|r Show reagents."] = true
+AL["|cff00ff00L-Click:|r %s"] = true
 
 -- \AtlasLootClassic\Data\Recipe.lua
 
@@ -692,4 +698,3 @@ AL["|cff00ff00Left-Click:|r Show reagents."] = true
 -- \AtlasLootClassic\GUI\GUI.lua
 
 -- \AtlasLootClassic\GUI\SoundFrame.lua
-
