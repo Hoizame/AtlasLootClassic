@@ -1334,7 +1334,6 @@ function Profession.GetDataForExtraFrame(spellID)
         if not Recipe then
             Recipe = AtlasLoot.Data.Recipe
         end
-        local recipe = Recipe.GetRecipeForSpell(spellID)
         local ret
         if prof[1] then
             if prof[1] and prof[8] then
@@ -1342,14 +1341,15 @@ function Profession.GetDataForExtraFrame(spellID)
             else
                 ret = { prof[1] }
             end
-            if recipe then
-                ret[#ret+1] = recipe
-                ret[#ret+1] = 0
-            else
-                ret[#ret+1] = 0
-            end
 		else
 			ret = {}
+        end
+        local recipe = Recipe.GetRecipeForSpell(spellID)
+        if recipe then
+            ret[#ret+1] = recipe
+            ret[#ret+1] = 0
+        else
+            ret[#ret+1] = 0
         end
 		for i = 1, #prof[6] do
 			ret[#ret+1] = {prof[6][i], prof[7][i]}
