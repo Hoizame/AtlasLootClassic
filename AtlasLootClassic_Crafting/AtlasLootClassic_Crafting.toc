@@ -48,8 +48,7 @@
 
 ## X-Category: Map
 ## X-License: GPL v2
-## X-Website: http://www.atlasloot.net
 
-## X-AtlasLoot-LootModule: 1
+## X-AtlasLootClassic-LootModule: 1
 
 data.lua

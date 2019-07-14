@@ -29,6 +29,7 @@ globals = {
 	"AtlasLoot",
 	"AtlasLootClassicCharDB",
 	"AtlasLootClassicDB",
+	"AtlasLootClassicRawDB",
 	"ATLASLOOT_UNKNOWN_COLOR",
 	"ATLASLOOT_COLLECTION_COLOR",
 	"ATLASLOOT_DUNGEON_COLOR",
