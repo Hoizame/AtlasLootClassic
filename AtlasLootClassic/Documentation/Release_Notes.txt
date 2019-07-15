@@ -10,8 +10,10 @@ v1.0.1-beta (Jul. XX, 2019)
 - Add more Tokens
 - Add Blacksmithing
 - Add Enchanting
+- Add First Aid
 - Fix bug with unknown items
 - Fix bug with recipes are not shown for enchants
+- Headers should no longer show the difficulty text when not needed
 
 v1.0.0-beta3 (Jul. 11, 2019)
 ========================

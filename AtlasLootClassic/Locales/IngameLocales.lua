@@ -52,6 +52,7 @@ local IngameLocales = {
 	-- ######################################################################
 	-- Professions
 	-- ######################################################################
+	["Professions"] = _G["TRADE_SKILLS"],
 	["First Aid"] = GetSpellInfo(3273),
 	["Blacksmithing"] = GetSpellInfo(2018),
 	["Leatherworking"] = GetSpellInfo(2108),

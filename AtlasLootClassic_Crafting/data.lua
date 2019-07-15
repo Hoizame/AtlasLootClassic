@@ -30,7 +30,7 @@ local PROF_ITTYPE = data:AddItemTableType("Profession", "Item")
 local QUEST_EXTRA_ITTYPE = data:AddExtraItemTableType("Quest")
 local PRICE_EXTRA_ITTYPE = data:AddExtraItemTableType("Price")
 
-local PROF_CONTENT = data:AddContentType(TRADE_SKILLS, ATLASLOOT_DUNGEON_COLOR)
+local PROF_CONTENT = data:AddContentType(ALIL["Professions"], ATLASLOOT_DUNGEON_COLOR)
 --local RAID20_CONTENT = data:AddContentType(AL["20 Raids"], ATLASLOOT_RAID20_COLOR)
 --local RAID40_CONTENT = data:AddContentType(AL["40 Raids"], ATLASLOOT_RAID40_COLOR)
 
@@ -153,19 +153,6 @@ data["Alchemy"] = {
 			},
 		},
 		{
-			name = AL["Misc Elixirs"],
-			[NORMAL_DIFF] = {
-				{ 1, 11478 }, --Elixir of Detect Demon
-				{ 2, 12609 }, --Catseye Elixir
-				{ 4, 22808 }, --Elixir of Greater Water Breathing
-				{ 6, 11468 }, --Elixir of Dream Vision
-
-				{ 16, 11460 }, --Elixir of Detect Undead
-				{ 17, 3453 }, --Elixir of Detect Lesser Invisibility
-				{ 19, 7179 }, --Elixir of Water Breathing
-			},
-		},
-		{
 			name = AL["Special Elixirs"],
 			[NORMAL_DIFF] = {
 				{ 1, 26277 }, --Elixir of Greater Firepower
@@ -179,6 +166,19 @@ data["Alchemy"] = {
 				{ 18, 11476 }, --Elixir of Shadow Power
 				{ 20, 2334 }, --Elixir of Minor Fortitude
 				{ 22, 8240 }, --Elixir of Giant Growth
+			},
+		},
+		{
+			name = AL["Misc Elixirs"],
+			[NORMAL_DIFF] = {
+				{ 1, 11478 }, --Elixir of Detect Demon
+				{ 2, 12609 }, --Catseye Elixir
+				{ 4, 22808 }, --Elixir of Greater Water Breathing
+				{ 6, 11468 }, --Elixir of Dream Vision
+
+				{ 16, 11460 }, --Elixir of Detect Undead
+				{ 17, 3453 }, --Elixir of Detect Lesser Invisibility
+				{ 19, 7179 }, --Elixir of Water Breathing
 			},
 		},
 		{
@@ -863,6 +863,33 @@ data["Herbalism"] = {
 				{ 4,  765 }, -- Silverleaf
 				{ 5,  2447 }, -- Peacebloom
 				--{ 16,  2452 }, -- Swiftthistle
+			}
+		},
+	}
+}
+
+data["FirstAid"] = {
+	name = ALIL["First Aid"],
+	ContentType = PROF_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = PROF_ITTYPE,
+	items = {
+		{
+			name = ALIL["First Aid"],
+			[NORMAL_DIFF] = {
+				{ 1, 18630 }, --Heavy Runecloth Bandage / 290
+				{ 2, 18629 }, --Runecloth Bandage / 260
+				{ 3, 10841 }, --Heavy Mageweave Bandage / 240
+				{ 4, 10840 }, --Mageweave Bandage / 210
+				{ 5, 7929 }, --Heavy Silk Bandage / 180
+				{ 6, 7928 }, --Silk Bandage / 150
+				{ 7, 3278 }, --Heavy Wool Bandage / 115
+				{ 8, 3277 }, --Wool Bandage / 80
+				{ 9, 3276 }, --Heavy Linen Bandage / 50
+				{ 10, 3275 }, --Linen Bandage / 30
+				{ 16, 23787 }, --Powerful Anti-Venom / 300
+				{ 17, 7935 }, --Strong Anti-Venom / 130
+				{ 18, 7934 }, --Anti-Venom / 80
 			}
 		},
 	}
