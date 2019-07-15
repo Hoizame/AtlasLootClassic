@@ -14,6 +14,7 @@ local format = string.format
 local GetTime = GetTime
 
 local LastRefresh = GetTime()
+local PAGE_NAME_PAGE = "%s [%d/%d]"
 local PAGE_NAME_DIFF = "%s (%s)"
 local PAGE_NAME_DIFF_PAGE = "%s (%s) [%d/%d]"
 
@@ -130,9 +131,17 @@ function ItemFrame:Refresh(skipProtect)
 
 		-- refresh title with diff and add pagenumber if there
 		if #items and items[#items] and items[#items][1] > 100 then
-			GUI.frame.contentFrame.title:SetText(format(PAGE_NAME_DIFF_PAGE, GUI.frame.contentFrame.title.txt, diffData.name, AtlasLoot.db.GUI.selected[5]+1, floor(items[#items][1]/100)+1))
+			if not diffData.textIsHidden then
+				GUI.frame.contentFrame.title:SetText(format(PAGE_NAME_DIFF_PAGE, GUI.frame.contentFrame.title.txt, diffData.name, AtlasLoot.db.GUI.selected[5]+1, floor(items[#items][1]/100)+1))
+			else
+				GUI.frame.contentFrame.title:SetText(format(PAGE_NAME_PAGE, GUI.frame.contentFrame.title.txt, AtlasLoot.db.GUI.selected[5]+1, floor(items[#items][1]/100)+1))
+			end
 		else
-			GUI.frame.contentFrame.title:SetText(format(PAGE_NAME_DIFF, GUI.frame.contentFrame.title.txt or "", diffData.name or ""))
+			if not diffData.textIsHidden then
+				GUI.frame.contentFrame.title:SetText(format(PAGE_NAME_DIFF, GUI.frame.contentFrame.title.txt or "", diffData.name or ""))
+			else
+				GUI.frame.contentFrame.title:SetText(GUI.frame.contentFrame.title.txt or "")
+			end
 		end
 		if type(items) == "string" then
 			GUI:ShowLoadingInfo(items, true, tableType)

@@ -260,7 +260,7 @@ end
 ]]
 local difficultys = {}
 
-function ItemDB.Proto:AddDifficulty(dif, uniqueName, difficultyID, tierID)
+function ItemDB.Proto:AddDifficulty(dif, uniqueName, difficultyID, tierID, textIsHiddenInHeader)
 	assert(dif, "No 'dif' given.")
 
 	if not difficultys[self.__atlaslootdata.addonName] then
@@ -284,6 +284,7 @@ function ItemDB.Proto:AddDifficulty(dif, uniqueName, difficultyID, tierID)
 			uniqueName = uniqueName,
 			difficultyID = difficultyID,
 			tierID = tierID or ItemDB.Storage[self.__atlaslootdata.addonName].__atlaslootdata.tierID,
+			textIsHidden = textIsHiddenInHeader,
 		}
 	end
 	return diffTab.uniqueNames[uniqueName] or diffTab.names[dif]

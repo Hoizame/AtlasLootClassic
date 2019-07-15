@@ -18,7 +18,7 @@ local data = AtlasLoot.ItemDB:Add(addonname, 1)
 local AL = AtlasLoot.Locales
 local ALIL = AtlasLoot.IngameLocales
 
-local NORMAL_DIFF = data:AddDifficulty(AL["Normal"], "n", 1)
+local NORMAL_DIFF = data:AddDifficulty(AL["Normal"], "n", 1, nil, true)
 local RAID20_DIFF = data:AddDifficulty(AL["20 Raid"], "r20", 9)
 local RAID40_DIFF = data:AddDifficulty(AL["40 Raid"], "r40", 9)
 local ALLIANCE_DIFF, HORDE_DIFF, LOAD_DIFF
