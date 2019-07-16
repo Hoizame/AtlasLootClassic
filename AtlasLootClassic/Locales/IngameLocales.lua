@@ -95,6 +95,58 @@ local IngameLocales = {
 	["Idols"] = GetItemSubClassInfo(4,8),
 	["Totems"] = GetItemSubClassInfo(4,9),
 
+	-- ######################################################################
+	-- Stats
+	-- ######################################################################
+	["Mana"] = _G["ITEM_MOD_MANA_SHORT"],
+	["Health"] = _G["ITEM_MOD_HEALTH_SHORT"],
+	["Agility"] = _G["ITEM_MOD_AGILITY_SHORT"],
+	["Strength"] = _G["ITEM_MOD_STRENGTH_SHORT"],
+	["Intellect"] = _G["ITEM_MOD_INTELLECT_SHORT"],
+	["Spirit"] = _G["ITEM_MOD_SPIRIT_SHORT"],
+	["Stamina"] = _G["ITEM_MOD_STAMINA_SHORT"],
+	["Happiness Per 5 Sec."] = _G["ITEM_MOD_POWER_REGEN4_SHORT"],
+	["Hit"] = _G["ITEM_MOD_HIT_RATING_SHORT"],
+	["PvP Resilience"] = _G["ITEM_MOD_RESILIENCE_RATING_SHORT"],
+	["Bonus Healing"] = _G["ITEM_MOD_SPELL_HEALING_DONE_SHORT"],
+	["Critical Strike"] = _G["ITEM_MOD_CRIT_RATING_SHORT"],
+	["Armor Penetration"] = _G["ITEM_MOD_ARMOR_PENETRATION_RATING_SHORT"],
+	["Critical Strike (Spell)"] = _G["ITEM_MOD_CRIT_SPELL_RATING_SHORT"],
+	["Critical Strike (Melee)"] = _G["ITEM_MOD_CRIT_MELEE_RATING_SHORT"],
+	["Runic Power Per 5 Sec."] = _G["ITEM_MOD_POWER_REGEN6_SHORT"],
+	["Hit Avoidance (Spell)"] = _G["ITEM_MOD_HIT_TAKEN_SPELL_RATING_SHORT"],
+	["Energy Per 5 Sec."] = _G["ITEM_MOD_POWER_REGEN3_SHORT"],
+	["Health Per 5 Sec."] = _G["ITEM_MOD_HEALTH_REGEN_SHORT"],
+	["Expertise"] = _G["ITEM_MOD_EXPERTISE_RATING_SHORT"],
+	["Parry"] = _G["ITEM_MOD_PARRY_RATING_SHORT"],
+	["Critical Strike Avoidance"] = _G["ITEM_MOD_CRIT_TAKEN_RATING_SHORT"],
+	["Hit (Spell)"] = _G["ITEM_MOD_HIT_SPELL_RATING_SHORT"],
+	["Block"] = _G["ITEM_MOD_BLOCK_RATING_SHORT"],
+	["Defense"] = _G["ITEM_MOD_DEFENSE_SKILL_RATING_SHORT"],
+	["Damage Per Second"] = _G["ITEM_MOD_DAMAGE_PER_SECOND_SHORT"],
+	["Hit Avoidance (Melee)"] = _G["ITEM_MOD_HIT_TAKEN_MELEE_RATING_SHORT"],
+	["Rage Per 5 Sec."] = _G["ITEM_MOD_POWER_REGEN1_SHORT"],
+	["Hit (Ranged)"] = _G["ITEM_MOD_HIT_RANGED_RATING_SHORT"],
+	["Critical Strike Avoidance (Spell)"] = _G["ITEM_MOD_CRIT_TAKEN_SPELL_RATING_SHORT"],
+	["Mana Regeneration"] = _G["ITEM_MOD_MANA_REGENERATION_SHORT"],
+	["Melee Attack Power"] = _G["ITEM_MOD_MELEE_ATTACK_POWER_SHORT"],
+	["Hit Avoidance (Ranged)"] = _G["ITEM_MOD_HIT_TAKEN_RANGED_RATING_SHORT"],
+	["Focus Per 5 Sec."] = _G["ITEM_MOD_POWER_REGEN2_SHORT"],
+	["Mana Per 5 Sec."] = _G["ITEM_MOD_POWER_REGEN0_SHORT"],
+	["PvP Power"] = _G["ITEM_MOD_PVP_POWER_SHORT"],
+	["Critical Strike Avoidance (Ranged)"] = _G["ITEM_MOD_CRIT_TAKEN_RANGED_RATING_SHORT"],
+	["Block Value"] = _G["ITEM_MOD_BLOCK_VALUE_SHORT"],
+	["Haste"] = _G["ITEM_MOD_HASTE_RATING_SHORT"],
+	["Critical Strike (Ranged)"] = _G["ITEM_MOD_CRIT_RANGED_RATING_SHORT"],
+	["Bonus Damage"] = _G["ITEM_MOD_SPELL_DAMAGE_DONE_SHORT"],
+	["Ranged Attack Power"] = _G["ITEM_MOD_RANGED_ATTACK_POWER_SHORT"],
+	["Attack Power In Forms"] = _G["ITEM_MOD_FERAL_ATTACK_POWER_SHORT"],
+	["Spell Power"] = _G["ITEM_MOD_SPELL_POWER_SHORT"],
+	["Hit Avoidance"] = _G["ITEM_MOD_HIT_TAKEN_RATING_SHORT"],
+	["Critical Strike Avoidance (Melee)"] = _G["ITEM_MOD_CRIT_TAKEN_MELEE_RATING_SHORT"],
+	["Runes Per 5 Sec."] = _G["ITEM_MOD_POWER_REGEN5_SHORT"],
+	["Hit (Melee)"] = _G["ITEM_MOD_HIT_MELEE_RATING_SHORT"],
+	["Dodge"] = _G["ITEM_MOD_DODGE_RATING_SHORT"],
 
 	-- ######################################################################
 	-- Slots
@@ -181,6 +233,12 @@ local IngameLocales = {
 	["SHAMAN"] 	= AtlasLoot_GetClassName("SHAMAN"),
 	["WARLOCK"] 	= AtlasLoot_GetClassName("WARLOCK"),
 	["WARRIOR"] 	= AtlasLoot_GetClassName("WARRIOR"),
+
+	-- ######################################################################
+	-- Misc
+	-- ######################################################################
+	["Food"] = _G["POWER_TYPE_FOOD"],
+	["Special"] = _G["SPECIAL"],
 }
 AtlasLoot.IngameLocales = IngameLocales
 

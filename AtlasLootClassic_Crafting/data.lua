@@ -875,90 +875,135 @@ data["Cooking"] = {
 	TableType = PROF_ITTYPE,
 	items = {
 		{
-			name = ALIL["Cooking"],
+			name = ALIL["Stamina"],
 			[NORMAL_DIFF] = {
-				{ 1, 24801 }, --Smoked Desert Dumplings
-				{ 2, 24418 }, --Heavy Crocolisk Stew
-				{ 3, 18244 }, --Poached Sunscale Salmon
-				{ 4, 22480 }, --Tender Wolf Steak
-				{ 5, 18245 }, --Lobster Stew
-				{ 6, 18246 }, --Mightfish Steak
-				{ 7, 18243 }, --Nightfin Soup
-				{ 8, 18242 }, --Hot Smoked Bass
-				{ 9, 18241 }, --Filet of Redgill
-				{ 10, 18239 }, --Cooked Glossy Mightfish
-				{ 11, 15915 }, --Spiced Chili Crab
-				{ 12, 15910 }, --Heavy Kodo Stew
-				{ 13, 15935 }, --Crispy Bat Wing
-				{ 14, 18247 }, --Baked Salmon
-				{ 15, 21175 }, --Spider Sausage
-				{ 16, 18238 }, --Spotted Yellowtail
-				{ 17, 18240 }, --Grilled Squid
-				{ 18, 15865 }, --Mystery Stew
-				{ 19, 15906 }, --Dragonbreath Chili
-				{ 20, 21144 }, --Egg Nog
-				{ 21, 15855 }, --Roast Raptor
-				{ 22, 15863 }, --Carrion Surprise
-				{ 23, 6501 }, --Clam Chowder
-				{ 24, 15861 }, --Jungle Stew
-				{ 25, 15856 }, --Hot Wolf Ribs
-				{ 26, 15853 }, --Lean Wolf Steak
-				{ 27, 9513 }, --Thistle Tea
-				{ 28, 20626 }, --Undermine Clam Chowder
-				{ 29, 25704 }, --Smoked Sagefish
-				{ 30, 3399 }, --Tasty Lion Steak
-				{ 101, 3400 }, --Soothing Turtle Bisque
-				{ 102, 3398 }, --Hot Lion Chops
-				{ 103, 7827 }, --Rainbow Fin Albacore
-				{ 104, 3397 }, --Big Bear Steak
-				{ 105, 3373 }, --Crocolisk Gumbo
-				{ 106, 13028 }, --Goldthorn Tea
-				{ 107, 6499 }, --Boiled Clams
-				{ 108, 22761 }, --Runn Tum Tuber Surprise
-				{ 109, 3372 }, --Murloc Fin Soup
-				{ 110, 3377 }, --Gooey Spider Cake
-				{ 111, 3376 }, --Curiously Tasty Omelet
-				{ 112, 6418 }, --Crispy Lizard Tail
-				{ 113, 2548 }, --Succulent Pork Ribs
-				{ 114, 7754 }, --Loch Frenzy Delight
-				{ 115, 6417 }, --Dig Rat Stew
-				{ 116, 2546 }, --Dry Pork Ribs
-				{ 117, 2547 }, --Redridge Goulash
-				{ 118, 6416 }, --Strider Stew
-				{ 119, 3371 }, --Blood Sausage
-				{ 120, 6500 }, --Goblin Deviled Clams
-				{ 121, 2544 }, --Crab Cake
-				{ 122, 7828 }, --Rockscale Cod
-				{ 123, 2795 }, --Beer Basted Boar Ribs
-				{ 124, 2545 }, --Cooked Crab Claw
-				{ 125, 25659 }, --Dirge
-				{ 126, 2543 }, --Westfall Stew
-				{ 127, 2542 }, --Goretusk Liver Pie
-				{ 128, 3370 }, --Crocolisk Steak
-				{ 129, 8607 }, --Smoked Bear Meat
-				{ 130, 7755 }, --Bristle Whisker Catfish
-				{ 201, 7752 }, --Slitherskin Mackerel
-				{ 202, 2541 }, --Coyote Steak
-				{ 203, 2540 }, --Roasted Boar Meat
-				{ 204, 6419 }, --Lean Venison
-				{ 205, 7753 }, --Longjaw Mud Snapper
-				{ 206, 6415 }, --Fillet of Frenzy
-				{ 207, 6414 }, --Roasted Kodo Meat
-				{ 208, 8604 }, --Herb Baked Egg
-				{ 209, 6413 }, --Scorpid Surprise
-				{ 210, 21143 }, --Gingerbread Cookie
-				{ 211, 6412 }, --Kaldorei Spider Kabob
-				{ 212, 2549 }, --Seasoned Wolf Kabob
-				{ 213, 2538 }, --Charred Wolf Meat
-				{ 214, 4094 }, --Barbecued Buzzard Wing
-				{ 216, 15933 }, --Monster Omelet
-				{ 217, 2539 }, --Spiced Wolf Meat
-				{ 218, 20916 }, --Mithril Headed Trout
-				{ 219, 7213 }, --Giant Clam Scorcho
-				{ 220, 8238 }, --Savory Deviate Delight
-				{ 221, 7751 }, --Brilliant Smallfish
-				{ 222, 25954 }, --Sagefish Delight
-			}
+				{ 1, 25659 }, --Dirge / 325
+				{ 2, 18246 }, --Mightfish Steak / 315
+				{ 3, 18239 }, --Cooked Glossy Mightfish / 265
+			},
+		},
+		{
+			name = ALIL["Intellect"],
+			[NORMAL_DIFF] = {
+				{ 1, 22761 }, --Runn Tum Tuber Surprise / 315
+			},
+		},
+		{
+			name = ALIL["Agility"],
+			[NORMAL_DIFF] = {
+				{ 1, 18240 }, --Grilled Squid / 280
+			},
+		},
+		{
+			name = ALIL["Strength"],
+			[NORMAL_DIFF] = {
+				{ 1, 24801 }, --Smoked Desert Dumplings / 325
+			},
+		},
+		{
+			name = ALIL["Spirit"],
+			[NORMAL_DIFF] = {
+				{ 1, 18242 }, --Hot Smoked Bass / 280
+			},
+		},
+		{
+			name = ALIL["Stamina"].." + "..ALIL["Spirit"],
+			[NORMAL_DIFF] = {
+				{ 1, 15933 }, --Monster Omelet / 265
+				{ 2, 22480 }, --Tender Wolf Steak / 265
+				{ 3, 15915 }, --Spiced Chili Crab / 265
+				{ 4, 15910 }, --Heavy Kodo Stew / 240
+				{ 5, 21175 }, --Spider Sausage / 240
+				{ 6, 15855 }, --Roast Raptor / 215
+				{ 7, 15863 }, --Carrion Surprise / 215
+				{ 8, 4094 }, --Barbecued Buzzard Wing / 215
+				{ 9, 7213 }, --Giant Clam Scorcho / 215
+				{ 10, 15861 }, --Jungle Stew / 215
+				{ 11, 15856 }, --Hot Wolf Ribs / 215
+				{ 12, 3400 }, --Soothing Turtle Bisque / 215
+				{ 13, 15865 }, --Mystery Stew / 215
+				{ 14, 3399 }, --Tasty Lion Steak / 190
+				{ 15, 3398 }, --Hot Lion Chops / 175
+				{ 16, 3376 }, --Curiously Tasty Omelet / 170
+				{ 17, 15853 }, --Lean Wolf Steak / 165
+				{ 18, 6500 }, --Goblin Deviled Clams / 165
+				{ 19, 24418 }, --Heavy Crocolisk Stew / 160
+				{ 20, 3373 }, --Crocolisk Gumbo / 160
+				{ 21, 3397 }, --Big Bear Steak / 150
+				{ 22, 3377 }, --Gooey Spider Cake / 150
+				{ 23, 6419 }, --Lean Venison / 150
+				{ 24, 6418 }, --Crispy Lizard Tail / 140
+				{ 25, 2549 }, --Seasoned Wolf Kabob / 140
+				{ 26, 2547 }, --Redridge Goulash / 135
+				{ 27, 3372 }, --Murloc Fin Soup / 130
+				{ 28, 3370 }, --Crocolisk Steak / 120
+				{ 29, 2546 }, --Dry Pork Ribs / 120
+				{ 30, 2544 }, --Crab Cake / 115
+				{ 101, 3371 }, --Blood Sausage / 100
+				{ 102, 6416 }, --Strider Stew / 90
+				{ 103, 2542 }, --Goretusk Liver Pie / 90
+				{ 104, 2541 }, --Coyote Steak / 90
+				{ 105, 6499 }, --Boiled Clams / 90
+				{ 106, 6415 }, --Fillet of Frenzy / 90
+				{ 107, 21144 }, --Egg Nog / 75
+				{ 108, 6414 }, --Roasted Kodo Meat / 75
+				{ 109, 2795 }, --Beer Basted Boar Ribs / 60
+				{ 110, 2539 }, --Spiced Wolf Meat / 50
+				{ 111, 6412 }, --Kaldorei Spider Kabob / 50
+				{ 112, 15935 }, --Crispy Bat Wing / 45
+				{ 113, 8604 }, --Herb Baked Egg / 45
+				{ 114, 21143 }, --Gingerbread Cookie / 45
+			},
+		},
+		{
+			name = ALIL["Mana Per 5 Sec."],
+			[NORMAL_DIFF] = {
+				{ 1, 25704 }, --Smoked Sagefish / 290
+				{ 2, 25954 }, --Sagefish Delight / 215
+				{ 3, 18243 }, --Nightfin Soup / 120
+			},
+		},
+		{
+			name = ALIL["Health Per 5 Sec."],
+			[NORMAL_DIFF] = {
+				{ 1, 18244 }, --Poached Sunscale Salmon / 290
+			},
+		},
+		{
+			name = ALIL["Food"],
+			[NORMAL_DIFF] = {
+				{ 1, 18245 }, --Lobster Stew / 315
+				{ 2, 18238 }, --Spotted Yellowtail / 315
+				{ 3, 18247 }, --Baked Salmon / 265
+				{ 4, 6501 }, --Clam Chowder / 265
+				{ 5, 18241 }, --Filet of Redgill / 265
+				{ 6, 20916 }, --Mithril Headed Trout / 215
+				{ 7, 13028 }, --Goldthorn Tea / 215
+				{ 8, 7828 }, --Rockscale Cod / 190
+				{ 9, 7755 }, --Bristle Whisker Catfish / 140
+				{ 10, 20626 }, --Undermine Clam Chowder / 130
+				{ 11, 2548 }, --Succulent Pork Ribs / 130
+				{ 12, 6417 }, --Dig Rat Stew / 130
+				{ 13, 2545 }, --Cooked Crab Claw / 125
+				{ 14, 2543 }, --Westfall Stew / 115
+				{ 15, 7827 }, --Rainbow Fin Albacore / 90
+				{ 16, 7754 }, --Loch Frenzy Delight / 90
+				{ 17, 7753 }, --Longjaw Mud Snapper / 90
+				{ 18, 8607 }, --Smoked Bear Meat / 80
+				{ 19, 6413 }, --Scorpid Surprise / 60
+				{ 20, 7752 }, --Slitherskin Mackerel / 45
+				{ 21, 2538 }, --Charred Wolf Meat / 45
+				{ 22, 7751 }, --Brilliant Smallfish / 45
+				{ 23, 2540 }, --Roasted Boar Meat / 45
+			},
+		},
+		{
+			name = ALIL["Special"],
+			[NORMAL_DIFF] = {
+				{ 1, 15906 }, --Dragonbreath Chili / 240
+				{ 2, 8238 }, --Savory Deviate Delight / 125
+				{ 3, 9513 }, --Thistle Tea / 100
+			},
 		},
 	}
 }
