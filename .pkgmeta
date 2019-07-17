@@ -30,7 +30,7 @@ externals:
 
 # Ignore takes place before folder's moving takes place
 ignore:
-    - AL_locales.lua
+    - babelfish.lua
     - AtlasLootClassic/Images/PSD
     - AtlasLootClassic/AtlasLootClassic/Images/PSD
     - AtlasLootClassic/AtlasLootClassic/DEVTOOLS.lua
