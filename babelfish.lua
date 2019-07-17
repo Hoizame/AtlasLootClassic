@@ -1,5 +1,5 @@
 --[[
-This little script gets all Locales from the given files.
+This little script get all Locales from the given files.
 Used mostly for AtlasLoot
 ]]--
 -- ################################
@@ -57,7 +57,7 @@ local IGNORE_LIST = {
 -- ################################
 -- Script part, no changes here
 -- ################################
-local gmatch, sub, format, lower = string.gmatch, string.sub, string.format, string.lower
+local gmatch, sub, format, lower, gsub, match = string.gmatch, string.sub, string.format, string.lower, string.gsub, string.match
 local unpack = table.unpack or unpack
 local io_lines = io.lines
 
@@ -173,8 +173,14 @@ end
 
 local function IsOnIgnoreList(fileName)
 	if not fileName then return end
-	local path, file, fileType = SplitPathAndFileName(fileName)
-	return ( IGNORE_LIST[fileName] or ( path and (IGNORE_LIST[path] or IGNORE_LIST[sub(path, 1, #path-1)]) ) ) and true or false
+	local path, file, fileType, fileNameNew = SplitPathAndFileName(fileName)
+	if IGNORE_LIST[fileNameNew] then return true end
+	for k,v in pairs(IGNORE_LIST) do
+		local p, f, fT, fN = SplitPathAndFileName(k)
+		if match(fileNameNew, fN) then
+			return true
+		end
+	end
 end
 
 local function ParseLuaFile(fileName)
@@ -185,25 +191,54 @@ local function ParseLuaFile(fileName)
 	local t = {}
 
 	local isComment, commentCount = false, 0
+	local oneLineCom, multiComment, multiComReg = false, false, nil
 	local tmp, loc, start, lastC = ""
 	for line in io_lines(fileName) do
 		for c in gmatch(line, ".") do
-			if tmp == IDENTIFIER and c == "[" then
-				start = true
-			elseif start and c == "\"" and not loc then --start
-				loc = ""
-			elseif loc and start and c == "\"" and lastC ~= "\\" then
-				AddIntoITable(t, loc)
-				loc, start, tmp = nil, false, ""
-			elseif loc and start then
-				loc = loc..c
+			if oneLineCom or multiComment then
+				if oneLineCom and not tmp and lastC == "-" and c=="[" then
+					oneLineCom = c
+				elseif type(oneLineCom) == "string" and not tmp and (lastC=="=" or lastC=="[") and (c=="=" or c=="[") then
+					oneLineCom = oneLineCom..c
+				elseif multiComment and not tmp and lastC == "]" and ( c == "]" or c == "=" ) then
+					tmp = "]"..c
+				elseif multiComment and tmp and (c=="=" or c=="]") then
+					tmp = tmp..c
+				else
+					--tmp = nil
+				end
+				if type(oneLineCom) == "string" and #oneLineCom > 1 and not tmp and lastC=="[" and (c~="=" or c~="[") then
+					multiComReg = gsub(oneLineCom, "%[", "]")
+					multiComment, oneLineCom = true, false
+				elseif multiComment and tmp and multiComReg == tmp then
+					multiComment, multiComReg, tmp = false, nil, ""
+				end
 			end
-			if #tmp == IDENTIFIER_SIZE then
-				tmp = sub(tmp..c, 2, IDENTIFIER_SIZE+1)
-			else
-				tmp = tmp..c
+			if not oneLineCom and not multiComment then
+				if tmp == IDENTIFIER and c == "[" then
+					start = true
+				elseif start and c == "\"" and not loc then --start
+					loc = ""
+				elseif loc and start and c == "\"" and lastC ~= "\\" then
+					AddIntoITable(t, loc)
+					loc, start, tmp = nil, false, ""
+				elseif loc and start then
+					loc = loc..c
+				elseif c == "-" and lastC == "-" then
+					oneLineCom, tmp = true, nil
+				end
+				if oneLineCom then
+
+				elseif #tmp == IDENTIFIER_SIZE then
+					tmp = sub(tmp..c, 2, IDENTIFIER_SIZE+1)
+				else
+					tmp = tmp..c
+				end
 			end
 			lastC = c
+		end
+		if oneLineCom then
+			oneLineCom, tmp = false, ""
 		end
 	end
 	if #t < 1 then AddLog(0, "No match inside "..fileName) end
