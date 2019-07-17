@@ -3899,6 +3899,7 @@ globals = {
 	"table.setn",
 	"table.sort",
 	"table.wipe",
+	"table.unpack",
 	"tan",
 	"time",
 	"tinsert",
