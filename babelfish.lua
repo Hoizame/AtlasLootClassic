@@ -6,16 +6,19 @@ Used mostly for AtlasLoot
 -- Settings
 -- ################################
 -- Output Path / Folder must exist
-local OUTPUT_PATH = "Locales/"
+local OUTPUT_PATH = ""
 
 -- Identifier for Locales
 local IDENTIFIER = "AL"
+
+-- Is the local importet with the curseforge api?
+local IS_JSON = true
 
 -- Parse XML-Files for embeded lua scripts?
 local PARSE_XML = true
 
 -- Create a log file
-local LOG = true
+local LOG = false
 
 -- Set log lvl 0: info,warning,error - 1:warning,error - 2:error
 local LOG_LVL = 1
@@ -57,7 +60,7 @@ local IGNORE_LIST = {
 -- ################################
 -- Script part, no changes here
 -- ################################
-local gmatch, sub, format, lower, gsub, match = string.gmatch, string.sub, string.format, string.lower, string.gsub, string.match
+local gmatch, sub, format, lower, gsub, match, byte = string.gmatch, string.sub, string.format, string.lower, string.gsub, string.match, string.byte
 local unpack = table.unpack or unpack
 local io_lines = io.lines
 
@@ -414,6 +417,14 @@ local function BuildLocaleList(fileList)
 	return t
 end
 
+local JsonEscape = "\\\\"
+local function GetJson(strg)
+	if not IS_JSON then return strg end
+	strg = gsub(strg, "<", JsonEscape..byte("<"))
+	strg = gsub(strg, ">", JsonEscape..byte(">"))
+	return strg
+end
+
 local function Finalize(t)
 	Finalize_Rebase(t)
 	local base = BASE_NAMESPACE and t[BASE_NAMESPACE] or nil
@@ -423,7 +434,7 @@ local function Finalize(t)
 		if #nsT > 0 then
 			local nsFfile = io.open(OUTPUT_PATH..namespace..".lua", "w+")
 			for _,loc in ipairs(nsT) do
-				nsFfile:write(format(IDENTIFIER.."[\"%s\"] = true\n", loc))
+				nsFfile:write(format(IDENTIFIER.."[\"%s\"] = true\n", GetJson(loc)))
 				c = c + 1
 			end
 			AddLog(99,"Created namespace:"..namespace.." <"..#nsT..">")
