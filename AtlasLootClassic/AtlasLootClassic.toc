@@ -37,8 +37,8 @@
 ## X-Credits: Daviesh, Lag, Cellelach, Asurn, Pernicus, Dynaletik and many others
 ## X-Category: Map
 ## X-License: GPL v2
-## X-Embeds: LibStub, LibBabble-ItemSet-3.0, LibBabble-Boss-3.0, CallbackHandler-1.0, LibDataBroker-1.1, LibSharedMedia-3.0, LibDBIcon-1.0, LibDialog-1.0, LibBabble-Faction-3.0
 ## X-Localizations: enUS, deDE, frFR, esES, koKR, zhCN, zhTW, esMX, ptBR, ruRU, itIT
+## X-Curse-Project-ID: 326516
 
 embeds.xml
 
