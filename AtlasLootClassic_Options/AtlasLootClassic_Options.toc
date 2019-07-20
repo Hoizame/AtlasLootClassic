@@ -1,0 +1,67 @@
+﻿## Interface: 11302
+## Author: Lag, Proteyer, Arith	
+## Version: @project-version@
+## Dependencies: AtlasLootClassic
+## LoadOnDemand: 1
+
+#@non-debug@
+## Title: @localization(locale="enUS", key="Title-Options", namespace="AtlasLootClassic / ToC")@
+## Title-deDE: @localization(locale="deDE", key="Title-Options", namespace="AtlasLootClassic / ToC")@
+## Title-esES: @localization(locale="esES", key="Title-Options", namespace="AtlasLootClassic / ToC")@
+## Title-esMX: @localization(locale="esMX", key="Title-Options", namespace="AtlasLootClassic / ToC")@
+## Title-frFR: @localization(locale="frFR", key="Title-Options", namespace="AtlasLootClassic / ToC")@
+## Title-itIT: @localization(locale="itIT", key="Title-Options", namespace="AtlasLootClassic / ToC")@
+## Title-koKR: @localization(locale="koKR", key="Title-Options", namespace="AtlasLootClassic / ToC")@
+## Title-ptBR: @localization(locale="ptBR", key="Title-Options", namespace="AtlasLootClassic / ToC")@
+## Title-ruRU: @localization(locale="ruRU", key="Title-Options", namespace="AtlasLootClassic / ToC")@
+## Title-zhCN: @localization(locale="zhCN", key="Title-Options", namespace="AtlasLootClassic / ToC")@
+## Title-zhTW: @localization(locale="zhTW", key="Title-Options", namespace="AtlasLootClassic / ToC")@
+## Notes: @localization(locale="enUS", key="Notes-Options", namespace="AtlasLootClassic / ToC")@
+## Notes-deDE: @localization(locale="deDE", key="Notes-Options", namespace="AtlasLootClassic / ToC")@
+## Notes-esES: @localization(locale="esES", key="Notes-Options", namespace="AtlasLootClassic / ToC")@
+## Notes-esMX: @localization(locale="esMX", key="Notes-Options", namespace="AtlasLootClassic / ToC")@
+## Notes-frFR: @localization(locale="frFR", key="Notes-Options", namespace="AtlasLootClassic / ToC")@
+## Notes-itIT: @localization(locale="itIT", key="Notes-Options", namespace="AtlasLootClassic / ToC")@
+## Notes-koKR: @localization(locale="koKR", key="Notes-Options", namespace="AtlasLootClassic / ToC")@
+## Notes-ptBR: @localization(locale="ptBR", key="Notes-Options", namespace="AtlasLootClassic / ToC")@
+## Notes-ruRU: @localization(locale="ruRU", key="Notes-Options", namespace="AtlasLootClassic / ToC")@
+## Notes-zhCN: @localization(locale="zhCN", key="Notes-Options", namespace="AtlasLootClassic / ToC")@
+## Notes-zhTW: @localization(locale="zhTW", key="Notes-Options", namespace="AtlasLootClassic / ToC")@
+#@end-non-debug@
+#@debug@
+## Title: AtlasLoot |cFF0099FF[Options]|r
+## Title-deDE: AtlasLoot |cFF0099FF[Einstellungen]|r
+## Title-koKR: AtlasLoot |cFF0099FF[옵션]|r
+## Title-ruRU: AtlasLoot |cFF0099FF[Опции]|r
+## Title-zhCN: AtlasLoot |cFF0099FF[选项]|r
+## Title-zhTW: AtlasLoot |cFF0099FF[選項]|r
+
+## Notes: AtlasLoot options module
+## Notes-deDE: AtlasLoot Modul für Einstellungen
+## Notes-frFR: Module d'options AtlasLoot
+## Notes-koKR: AtlasLoot 옵션 모듈
+## Notes-ruRU: AtlasLoot модуль опций
+## Notes-zhCN: AtlasLoot 选项模块
+## Notes-zhTW: AtlasLoot 選項設定模組
+#@end-debug@
+
+## X-Category: Map
+## X-License: GPL v2
+
+## X-AtlasLoot-LootModule: 0
+
+ALOptions\ALOptions-1.0.xml
+
+Locales\constants.lua
+Locales\constants.cn.lua
+Locales\constants.de.lua
+Locales\constants.es.lua
+Locales\constants.fr.lua
+Locales\constants.it.lua
+Locales\constants.kr.lua
+Locales\constants.mx.lua
+Locales\constants.pt.lua
+Locales\constants.ru.lua
+Locales\constants.tw.lua
+
+Core.lua

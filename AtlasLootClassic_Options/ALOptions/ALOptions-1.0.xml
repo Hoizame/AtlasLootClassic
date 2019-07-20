@@ -1,0 +1,13 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML\UI.xsd">
+	<Script file="ALOptions-1.0.lua"/>
+	<!-- widgets -->
+	<Script file="widgets\CheckBox.lua"/>
+	<Script file="widgets\Button.lua"/>
+	<Script file="widgets\ColorPicker.lua"/>
+	<Script file="widgets\EditBox.lua"/>
+	<Script file="widgets\SimpleDropDown.lua"/>
+	<Script file="widgets\Text.lua"/>
+	<Script file="widgets\Line.lua"/>
+	<Script file="widgets\Slider.lua"/>
+</Ui>
