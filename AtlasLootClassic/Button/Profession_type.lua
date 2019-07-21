@@ -82,7 +82,10 @@ function Prof.OnMouseAction(button, mouseButton)
 	if not mouseButton then return end
 	mouseButton = ProfClickHandler:Get(mouseButton)
 	if mouseButton == "ChatLink" then
-		--AtlasLoot.Button:AddChatLink(button.tsLink or "spell:"..button.SpellID)
+		if button.ItemID then
+			local itemInfo, itemLink = GetItemInfo(button.ItemID)
+			AtlasLoot.Button:AddChatLink(itemLink)
+		end
 	elseif mouseButton == "ShowExtraItems" then
 		if Profession.IsProfessionSpell(button.SpellID) then
 			button.ExtraFrameShown = true
