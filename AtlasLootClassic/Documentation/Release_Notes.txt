@@ -11,6 +11,10 @@ v1.0.1-beta (Jul. XX, 2019)
 - Add Blacksmithing
 - Add Enchanting
 - Add First Aid
+- Add Engineering
+- Add Herbalism
+- Add Cooking
+- Add Mining
 - Fix bug with unknown items
 - Fix bug with recipes are not shown for enchants
 - Headers should no longer show the difficulty text when not needed

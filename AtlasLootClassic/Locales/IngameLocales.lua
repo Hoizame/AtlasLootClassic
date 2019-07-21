@@ -9,7 +9,7 @@ local rawget = rawget
 
 -- WoW
 local GetSpellInfo = GetSpellInfo
-local GetItemSubClassInfo = GetItemSubClassInfo
+local GetItemClassInfo, GetItemSubClassInfo = GetItemClassInfo, GetItemSubClassInfo
 
 -- ----------------------------------------------------------------------------
 -- AddOn namespace.
@@ -201,6 +201,10 @@ local IngameLocales = {
 	["Crossbows"] = GetItemSubClassInfo(2,18),
 	["Wands"] = GetItemSubClassInfo(2,19),
 	["Fishing Pole"] = GetItemSubClassInfo(2,20),
+	["Parts"] = GetItemSubClassInfo(7,1),
+	["Projectile"] = GetItemClassInfo(6),
+	["Bullet"] = GetItemSubClassInfo(6,3),
+	["Explosives"] = GetItemSubClassInfo(7,2),
 
 
 	-- ######################################################################
