@@ -47,7 +47,7 @@ local PROFESSION_ICON = {
 }
 
 local PROFESSION = {
-    -- [spellID] = { createdItemID, prof, minLvl, maxLvl, reagents{}, reagentsCount{}, numCreatedItems }
+    -- [spellID] = { createdItemID, prof, minLvl, lowLvl, highLvl, reagents{}, reagentsCount{}, numCreatedItems }
     [10015] =  	{ 7960,  	2,  	1,  	285,  	310,  	{3860,6037,7910,7081,7966,4304}, {30,16,6,4,8,6} }, -- Truesilver Champion
     [2544] =  	{ 2683,  	6,  	75,  	115,  	155,  	{2674,2678}, {1,1} }, -- Crab Cake
     [2795] =  	{ 2888,  	6,  	40,  	60,  	100,  	{2886,2894}, {1,1} }, -- Beer Basted Boar Ribs

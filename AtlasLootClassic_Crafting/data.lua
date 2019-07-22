@@ -79,8 +79,8 @@ data["Alchemy"] = {
 				{ 6, 2330 }, --Minor Healing Potion
 				{ 8, 2332 }, --Minor Rejuvenation Potion
 				{ 10, 24366 }, --Greater Dreamless Sleep Potion
-				{ 12, 4508 }, --Discolored Healing Potion
-				{ 13, 11458 }, --Wildvine Potion
+				{ 12, 11458 }, --Wildvine Potion
+				{ 13, 4508 }, --Discolored Healing Potion
 				{ 16, 17580 }, --Major Mana Potion
 				{ 17, 17553 }, --Superior Mana Potion
 				{ 18, 11448 }, --Greater Mana Potion
@@ -96,17 +96,17 @@ data["Alchemy"] = {
 			name = AL["Protection Potions"],
 			[NORMAL_DIFF] = {
 				{ 1, 17574 }, --Greater Fire Protection Potion
-				{ 2, 17575 }, --Greater Frost Protection Potion
-				{ 3, 17576 }, --Greater Nature Protection Potion
-				{ 4, 17577 }, --Greater Arcane Protection Potion
-				{ 5, 17578 }, --Greater Shadow Protection Potion
+				{ 2, 17576 }, --Greater Nature Protection Potion
+				{ 3, 17575 }, --Greater Frost Protection Potion
+				{ 4, 17578 }, --Greater Shadow Protection Potion
+				{ 5, 17577 }, --Greater Arcane Protection Potion
 				{ 7, 11453 }, --Magic Resistance Potion
 				{ 8, 3174 }, --Elixir of Poison Resistance
 				{ 16, 7257 }, --Fire Protection Potion
-				{ 17, 7258 }, --Frost Protection Potion
-				{ 18, 7259 }, --Nature Protection Potion
-				{ 19, 7255 }, --Holy Protection Potion
-				{ 20, 7256 }, --Shadow Protection Potion
+				{ 17, 7259 }, --Nature Protection Potion
+				{ 18, 7258 }, --Frost Protection Potion
+				{ 19, 7256 }, --Shadow Protection Potion
+				{ 20, 7255 }, --Holy Protection Potion
 				{ 22, 3172 }, --Minor Magic Resistance Potion
 			},
 		},
@@ -132,8 +132,8 @@ data["Alchemy"] = {
 		{
 			name = AL["Stat Elixirs"],
 			[NORMAL_DIFF] = {
-				{ 1, 3451 }, --Mighty Troll
-				{ 2, 24368 }, --Major Troll
+				{ 1, 24368 }, --Mighty Troll
+				{ 2, 3451 }, --Major Troll
 				{ 3, 3176 }, --Strong Troll
 				{ 4, 3170 }, --Weak Troll
 				{ 6, 17554 }, --Elixir of Superior Defense
@@ -149,8 +149,8 @@ data["Alchemy"] = {
 				{ 19, 3230 }, --Elixir of Minor Agility
 				{ 21, 11465 }, --Elixir of Greater Intellect
 				{ 22, 3171 }, --Elixir of Wisdom
-				{ 23, 17573 }, --Greater Arcane Elixir
-				{ 24, 11461 }, --Arcane Elixir
+				{ 24, 17573 }, --Greater Arcane Elixir
+				{ 25, 11461 }, --Arcane Elixir
 			},
 		},
 		{
