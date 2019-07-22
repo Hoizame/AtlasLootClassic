@@ -21,6 +21,7 @@ local AL = AtlasLoot.Locales
 local ALIL = AtlasLoot.IngameLocales
 
 local NORMAL_DIFF = data:AddDifficulty(AL["Normal"], "n", 1, nil, true)
+local LEATHER_DIFF = data:AddDifficulty(ALIL["Leather"], "leather", 0)
 local MAIL_DIFF = data:AddDifficulty(ALIL["Mail"], "mail", 0)
 local PLATE_DIFF = data:AddDifficulty(ALIL["Plate"], "plate", 0)
 
@@ -1238,29 +1239,37 @@ data["Tailoring"] = {
 			}
 		},
 		{
+			name = ALIL["Armor"].." - "..ALIL["Wrist"],
+			[NORMAL_DIFF] = {
+				{ 1, 28209 }, --Glacial Wrists / 80 / 315
+				{ 2, 22759 }, --Flarecore Wraps / 64 / 320
+				{ 3, 3841 }, --Green Linen Bracers / 12 / 85
+			}
+		},
+		{
 			name = ALIL["Bag"],
 			[NORMAL_DIFF] = {
 				{ 1, 18455 }, --Bottomless Bag / 62 / 315
-				{ 2, 27725 }, --Satchel of Cenarius / 65 / 315
-				{ 3, 26087 }, --Core Felcloth Bag / 60 / 315
-				{ 4, 27660 }, --Big Bag of Enchantment / 65 / 315
-				{ 5, 18445 }, --Mooncloth Bag / 60 / 315
-				{ 6, 26086 }, --Felcloth Bag / 57 / 300
-				{ 7, 27724 }, --Cenarion Herb Bag / 55 / 290
-				{ 8, 27659 }, --Enchanted Runecloth Bag / 55 / 290
-				{ 9, 26085 }, --Soul Pouch / 52 / 275
-				{ 10, 18405 }, --Runecloth Bag / 52 / 275
-				{ 11, 12079 }, --Red Mageweave Bag / 35 / 250
-				{ 12, 12065 }, --Mageweave Bag / 35 / 240
-				{ 13, 27658 }, --Enchanted Mageweave Pouch / 45 / 240
-				{ 14, 6695 }, --Black Silk Pack / 25 / 205
-				{ 15, 6693 }, --Green Silk Pack / 25 / 195
-				{ 16, 3813 }, --Small Silk Pack / 25 / 170
-				{ 17, 6688 }, --Red Woolen Bag / 15 / 140
-				{ 18, 3758 }, --Green Woolen Bag / 15 / 120
-				{ 19, 3757 }, --Woolen Bag / 15 / 105
-				{ 20, 6686 }, --Red Linen Bag / 5 / 95
-				{ 21, 3755 }, --Linen Bag / 5 / 70
+				{ 2, 18445 }, --Mooncloth Bag / 60 / 315
+				{ 3, 18405 }, --Runecloth Bag / 52 / 275
+				{ 4, 12079 }, --Red Mageweave Bag / 35 / 250
+				{ 5, 12065 }, --Mageweave Bag / 35 / 240
+				{ 6, 6695 }, --Black Silk Pack / 25 / 205
+				{ 7, 6693 }, --Green Silk Pack / 25 / 195
+				{ 8, 3813 }, --Small Silk Pack / 25 / 170
+				{ 9, 6688 }, --Red Woolen Bag / 15 / 140
+				{ 10, 3758 }, --Green Woolen Bag / 15 / 120
+				{ 11, 3757 }, --Woolen Bag / 15 / 105
+				{ 12, 6686 }, --Red Linen Bag / 5 / 95
+				{ 13, 3755 }, --Linen Bag / 5 / 70
+				{ 16, 27725 }, --Satchel of Cenarius / 65 / 315
+				{ 17, 27724 }, --Cenarion Herb Bag / 55 / 290
+				{ 19, 27660 }, --Big Bag of Enchantment / 65 / 315
+				{ 20, 27659 }, --Enchanted Runecloth Bag / 55 / 290
+				{ 21, 27658 }, --Enchanted Mageweave Pouch / 45 / 240
+				{ 23, 26087 }, --Core Felcloth Bag / 60 / 315
+				{ 24, 26086 }, --Felcloth Bag / 57 / 300
+				{ 25, 26085 }, --Soul Pouch / 52 / 275
 			}
 		},
 		{
@@ -1273,6 +1282,318 @@ data["Tailoring"] = {
 				{ 5, 2964 }, --Bolt of Woolen Cloth / 25 / 90
 				{ 6, 2963 }, --Bolt of Linen Cloth / 10 / 25
 			}
+		},
+	}
+}
+
+data["Leatherworking"] = {
+	name = ALIL["Leatherworking"],
+	ContentType = PROF_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = PROF_ITTYPE,
+	items = {
+		{
+			name = ALIL["Armor"].." - "..ALIL["Cloak"],
+			[NORMAL_DIFF] = {
+				{ 1, 22927 }, --Hide of the Wild / 62 / 320
+				{ 2, 22928 }, --Shifting Cloak / 62 / 320
+				{ 3, 22926 }, --Chromatic Cloak / 62 / 320
+				{ 4, 19093 }, --Onyxia Scale Cloak / 60 / 320
+				{ 5, 10574 }, --Wild Leather Cloak / 50 / 270
+				{ 6, 10562 }, --Big Voodoo Cloak / 48 / 260
+				{ 7, 7153 }, --Guardian Cloak / 37 / 205
+				{ 8, 9198 }, --Frost Leather Cloak / 36 / 200
+				{ 9, 3760 }, --Hillman's Cloak / 30 / 170
+				{ 10, 2168 }, --Dark Leather Cloak / 22 / 135
+				{ 11, 9070 }, --Black Whelp Cloak / 20 / 125
+				{ 12, 7953 }, --Deviate Scale Cloak / 18 / 120
+				{ 13, 2159 }, --Fine Leather Cloak / 15 / 105
+				{ 14, 2162 }, --Embossed Leather Cloak / 13 / 90
+				{ 15, 9058 }, --Handstitched Leather Cloak / 9 / 40
+			}
+		},
+		{
+			name = ALIL["Armor"].." - "..ALIL["Chest"],
+			[LEATHER_DIFF] = {
+				{ 1, 28219 }, --Polar Tunic / 80 / 320
+				{ 2, 24121 }, --Primal Batskin Jerkin / 65 / 320
+				{ 3, 24124 }, --Blood Tiger Breastplate / 65 / 320
+				{ 4, 19102 }, --Runic Leather Armor / 62 / 320
+				{ 5, 19104 }, --Frostsaber Tunic / 62 / 320
+				{ 6, 19098 }, --Wicked Leather Armor / 61 / 320
+				{ 7, 19095 }, --Living Breastplate / 60 / 320
+				{ 8, 19086 }, --Ironfeather Breastplate / 58 / 310
+				{ 9, 19081 }, --Chimeric Vest / 58 / 310
+				{ 10, 19076 }, --Volcanic Breastplate / 57 / 305
+				{ 11, 19079 }, --Stormshroud Armor / 57 / 305
+				{ 12, 19068 }, --Warbear Harness / 55 / 295
+				{ 13, 10647 }, --Feathered Breastplate / 50 / 270
+				{ 14, 10544 }, --Wild Leather Vest / 45 / 245
+				{ 15, 10520 }, --Big Voodoo Robe / 43 / 235
+				{ 16, 10499 }, --Nightscape Tunic / 41 / 225
+				{ 17, 6661 }, --Barbaric Harness / 38 / 210
+				{ 18, 3773 }, --Guardian Armor / 35 / 195
+				{ 19, 9197 }, --Green Whelp Armor / 35 / 195
+				{ 20, 9196 }, --Dusky Leather Armor / 35 / 195
+				{ 21, 6704 }, --Thick Murloc Armor / 34 / 190
+				{ 22, 4096 }, --Raptor Hide Harness / 33 / 185
+				{ 23, 3772 }, --Green Leather Armor / 31 / 175
+				{ 24, 2166 }, --Toughened Leather Armor / 24 / 145
+				{ 25, 24940 }, --Black Whelp Tunic / 20 / 125
+				{ 26, 3762 }, --Hillman's Leather Vest / 20 / 125
+				{ 27, 2169 }, --Dark Leather Tunic / 20 / 125
+				{ 28, 6703 }, --Murloc Scale Breastplate / 19 / 125
+				{ 29, 8322 }, --Moonglow Vest / 18 / 115
+				{ 30, 3761 }, --Fine Leather Tunic / 17 / 115
+				{ 101, 2163 }, --White Leather Jerkin / 13 / 90
+				{ 102, 2160 }, --Embossed Leather Vest / 12 / 70
+				{ 103, 7126 }, --Handstitched Leather Vest / 8 / 40
+			},
+			[MAIL_DIFF] = {
+				{ 1, 28222 }, --Icy Scale Breastplate / 80 / 320
+				{ 2, 24703 }, --Dreamscale Breastplate / 68 / 320
+				{ 3, 24851 }, --Sandstalker Breastplate / 62 / 320
+				{ 4, 24848 }, --Spitfire Breastplate / 62 / 320
+				{ 5, 19054 }, --Red Dragonscale Breastplate / 61 / 320
+				{ 6, 19085 }, --Black Dragonscale Breastplate / 58 / 310
+				{ 7, 19077 }, --Blue Dragonscale Breastplate / 57 / 305
+				{ 8, 19051 }, --Heavy Scorpid Vest / 53 / 285
+				{ 9, 19050 }, --Green Dragonscale Breastplate / 52 / 280
+				{ 10, 10650 }, --Dragonscale Breastplate / 51 / 275
+				{ 11, 10525 }, --Tough Scorpid Breastplate / 44 / 240
+				{ 12, 10511 }, --Turtle Scale Breastplate / 42 / 230
+			},
+		},
+		{
+			name = ALIL["Armor"].." - "..ALIL["Feet"],
+			[LEATHER_DIFF] = {
+				{ 1, 28473 }, --Bramblewood Boots / 70 / 320
+				{ 2, 22922 }, --Mongoose Boots / 62 / 320
+				{ 3, 20853 }, --Corehound Boots / 59 / 315
+				{ 4, 23705 }, --Dawn Treaders / 58 / 310
+				{ 5, 19063 }, --Chimeric Boots / 55 / 295
+				{ 6, 19066 }, --Frostsaber Boots / 55 / 295
+				{ 7, 10566 }, --Wild Leather Boots / 49 / 265
+				{ 8, 10558 }, --Nightscape Boots / 47 / 255
+				{ 9, 9207 }, --Dusky Boots / 40 / 220
+				{ 10, 9208 }, --Swift Boots / 40 / 220
+				{ 11, 2167 }, --Dark Leather Boots / 20 / 125
+				{ 12, 2158 }, --Fine Leather Boots / 18 / 120
+				{ 13, 2161 }, --Embossed Leather Boots / 15 / 85
+				{ 14, 2149 }, --Handstitched Leather Boots / 8 / 40
+			},
+			[MAIL_DIFF] = {
+				{ 1, 20855 }, --Black Dragonscale Boots / 61 / 320
+				{ 2, 10554 }, --Tough Scorpid Boots / 47 / 255
+			},
+		},
+		{
+			name = ALIL["Armor"].." - "..ALIL["Hand"],
+			[LEATHER_DIFF] = {
+				{ 1, 28220 }, --Polar Gloves / 80 / 320
+				{ 2, 24122 }, --Primal Batskin Gloves / 65 / 320
+				{ 3, 23704 }, --Timbermaw Brawlers / 64 / 320
+				{ 4, 26279 }, --Stormshroud Gloves / 62 / 320
+				{ 5, 19087 }, --Frostsaber Gloves / 59 / 315
+				{ 6, 19084 }, --Devilsaur Gauntlets / 58 / 310
+				{ 7, 19055 }, --Runic Leather Gauntlets / 54 / 290
+				{ 8, 19053 }, --Chimeric Gloves / 53 / 285
+				{ 9, 19049 }, --Wicked Leather Gauntlets / 52 / 280
+				{ 10, 10630 }, --Gauntlets of the Sea / 46 / 250
+				{ 11, 22711 }, --Shadowskin Gloves / 40 / 210
+				{ 12, 7156 }, --Guardian Gloves / 38 / 210
+				{ 13, 21943 }, --Gloves of the Greatfather / 38 / 210
+				{ 14, 3771 }, --Barbaric Gloves / 30 / 170
+				{ 15, 9149 }, --Heavy Earthen Gloves / 29 / 170
+				{ 16, 3764 }, --Hillman's Leather Gloves / 29 / 170
+				{ 17, 9148 }, --Pilferer's Gloves / 28 / 165
+				{ 18, 3770 }, --Toughened Leather Gloves / 27 / 160
+				{ 19, 9146 }, --Herbalist's Gloves / 27 / 160
+				{ 20, 3765 }, --Dark Leather Gloves / 26 / 155
+				{ 21, 9145 }, --Fletcher's Gloves / 25 / 150
+				{ 22, 9074 }, --Nimble Leather Gloves / 24 / 145
+				{ 23, 9072 }, --Red Whelp Gloves / 24 / 145
+				{ 24, 7954 }, --Deviate Scale Gloves / 21 / 130
+				{ 25, 2164 }, --Fine Leather Gloves / 15 / 105
+				{ 26, 3756 }, --Embossed Leather Gloves / 13 / 85
+			},
+			[MAIL_DIFF] = {
+				{ 1, 28223 }, --Icy Scale Gauntlets / 80 / 320
+				{ 2, 23708 }, --Chromatic Gauntlets / 70 / 320
+				{ 3, 24847 }, --Spitfire Gauntlets / 62 / 320
+				{ 4, 24850 }, --Sandstalker Gauntlets / 62 / 320
+				{ 5, 24655 }, --Green Dragonscale Gauntlets / 56 / 300
+				{ 6, 19064 }, --Heavy Scorpid Gauntlet / 55 / 295
+				{ 7, 10542 }, --Tough Scorpid Gloves / 45 / 245
+				{ 8, 10619 }, --Dragonscale Gauntlets / 45 / 245
+				{ 9, 10509 }, --Turtle Scale Gloves / 41 / 225
+			},
+		},
+		{
+			name = ALIL["Armor"].." - "..ALIL["Head"],
+			[LEATHER_DIFF] = {
+				{ 1, 28472 }, --Bramblewood Helm / 70 / 320
+				{ 2, 20854 }, --Molten Helm / 60 / 320
+				{ 3, 19082 }, --Runic Leather Headband / 58 / 310
+				{ 4, 19071 }, --Wicked Leather Headband / 56 / 300
+				{ 5, 10632 }, --Helm of Fire / 50 / 270
+				{ 6, 10621 }, --Wolfshead Helm / 45 / 245
+				{ 7, 10546 }, --Wild Leather Helmet / 45 / 245
+				{ 8, 10531 }, --Big Voodoo Mask / 44 / 240
+				{ 9, 10507 }, --Nightscape Headband / 41 / 225
+				{ 10, 10490 }, --Comfortable Leather Hat / 40 / 220
+			},
+			[MAIL_DIFF] = {
+				{ 1, 19088 }, --Heavy Scorpid Helm / 59 / 315
+				{ 2, 10570 }, --Tough Scorpid Helm / 50 / 270
+				{ 3, 10552 }, --Turtle Scale Helm / 46 / 250
+			},
+		},
+		{
+			name = ALIL["Armor"].." - "..ALIL["Legs"],
+			[LEATHER_DIFF] = {
+				{ 1, 19097 }, --Devilsaur Leggings / 60 / 320
+				{ 2, 19091 }, --Runic Leather Pants / 60 / 320
+				{ 3, 19083 }, --Wicked Leather Pants / 58 / 310
+				{ 4, 19074 }, --Frostsaber Leggings / 57 / 305
+				{ 5, 19080 }, --Warbear Woolies / 57 / 305
+				{ 6, 19078 }, --Living Leggings / 57 / 305
+				{ 7, 19073 }, --Chimeric Leggings / 56 / 300
+				{ 8, 19067 }, --Stormshroud Pants / 55 / 295
+				{ 9, 19059 }, --Volcanic Leggings / 54 / 290
+				{ 10, 10572 }, --Wild Leather Leggings / 50 / 270
+				{ 11, 10560 }, --Big Voodoo Pants / 47 / 260
+				{ 12, 10548 }, --Nightscape Pants / 46 / 250
+				{ 13, 7149 }, --Barbaric Leggings / 34 / 190
+				{ 14, 9195 }, --Dusky Leather Leggings / 33 / 185
+				{ 15, 7147 }, --Guardian Pants / 32 / 180
+				{ 16, 7135 }, --Dark Leather Pants / 23 / 140
+				{ 17, 7133 }, --Fine Leather Pants / 21 / 130
+				{ 18, 9068 }, --Light Leather Pants / 19 / 125
+				{ 19, 3759 }, --Embossed Leather Pants / 15 / 105
+				{ 20, 9064 }, --Rugged Leather Pants / 11 / 65
+				{ 21, 2153 }, --Handstitched Leather Pants / 10 / 45
+			},
+			[MAIL_DIFF] = {
+				{ 1, 19107 }, --Black Dragonscale Leggings / 62 / 320
+				{ 2, 24654 }, --Blue Dragonscale Leggings / 60 / 320
+				{ 3, 19075 }, --Heavy Scorpid Leggings / 57 / 305
+				{ 4, 19060 }, --Green Dragonscale Leggings / 54 / 290
+				{ 5, 10568 }, --Tough Scorpid Leggings / 49 / 265
+				{ 6, 10556 }, --Turtle Scale Leggings / 47 / 255
+			},
+		},
+		{
+			name = ALIL["Armor"].." - "..ALIL["Shoulder"],
+			[LEATHER_DIFF] = {
+				{ 1, 24125 }, --Blood Tiger Shoulders / 65 / 320
+				{ 2, 23706 }, --Golden Mantle of the Dawn / 64 / 320
+				{ 3, 19103 }, --Runic Leather Shoulders / 62 / 320
+				{ 4, 19101 }, --Volcanic Shoulders / 61 / 320
+				{ 5, 19090 }, --Stormshroud Shoulders / 59 / 315
+				{ 6, 19061 }, --Living Shoulders / 54 / 290
+				{ 7, 19062 }, --Ironfeather Shoulders / 54 / 290
+				{ 8, 10529 }, --Wild Leather Shoulders / 44 / 240
+				{ 9, 10516 }, --Nightscape Shoulders / 42 / 230
+				{ 10, 7151 }, --Barbaric Shoulders / 35 / 195
+				{ 11, 3769 }, --Dark Leather Shoulders / 28 / 165
+				{ 12, 9147 }, --Earthen Leather Shoulders / 27 / 160
+				{ 13, 3768 }, --Hillman's Shoulders / 26 / 155
+			},
+			[MAIL_DIFF] = {
+				{ 1, 19100 }, --Heavy Scorpid Shoulders / 61 / 320
+				{ 2, 19094 }, --Black Dragonscale Shoulders / 60 / 320
+				{ 3, 19089 }, --Blue Dragonscale Shoulders / 59 / 315
+				{ 4, 10564 }, --Tough Scorpid Shoulders / 48 / 260
+			},
+		},
+		{
+			name = ALIL["Armor"].." - "..ALIL["Waist"],
+			[LEATHER_DIFF] = {
+				{ 1, 23709 }, --Corehound Belt / 70 / 320
+				{ 2, 23710 }, --Molten Belt / 70 / 320
+				{ 3, 28474 }, --Bramblewood Belt / 70 / 320
+				{ 4, 23707 }, --Lava Belt / 66 / 320
+				{ 5, 22921 }, --Girdle of Insight / 62 / 320
+				{ 6, 19092 }, --Wicked Leather Belt / 60 / 320
+				{ 7, 23703 }, --Might of the Timbermaw / 58 / 310
+				{ 8, 19072 }, --Runic Leather Belt / 56 / 300
+				{ 9, 3779 }, --Barbaric Belt / 40 / 220
+				{ 10, 9206 }, --Dusky Belt / 39 / 215
+				{ 11, 3778 }, --Gem-studded Leather Belt / 37 / 205
+				{ 12, 3775 }, --Guardian Belt / 34 / 190
+				{ 13, 4097 }, --Raptor Hide Belt / 33 / 185
+				{ 14, 3774 }, --Green Leather Belt / 32 / 180
+				{ 15, 3767 }, --Hillman's Belt / 25 / 145
+				{ 16, 3766 }, --Dark Leather Belt / 25 / 150
+				{ 17, 7955 }, --Deviate Scale Belt / 23 / 140
+				{ 18, 6702 }, --Murloc Scale Belt / 18 / 120
+				{ 19, 3763 }, --Fine Leather Belt / 16 / 110
+				{ 20, 3753 }, --Handstitched Leather Belt / 10 / 55
+			},
+			[MAIL_DIFF] = {
+				{ 1, 19070 }, --Heavy Scorpid Belt / 56 / 300
+			},
+		},
+		{
+			name = ALIL["Armor"].." - "..ALIL["Wrist"],
+			[LEATHER_DIFF] = {
+				{ 1, 28221 }, --Polar Bracers / 80 / 320
+				{ 2, 24123 }, --Primal Batskin Bracers / 65 / 320
+				{ 3, 19065 }, --Runic Leather Bracers / 55 / 295
+				{ 4, 19052 }, --Wicked Leather Bracers / 53 / 285
+				{ 5, 3777 }, --Guardian Leather Bracers / 39 / 215
+				{ 6, 9202 }, --Green Whelp Bracers / 38 / 210
+				{ 7, 6705 }, --Murloc Scale Bracers / 38 / 210
+				{ 8, 9201 }, --Dusky Bracers / 37 / 205
+				{ 9, 3776 }, --Green Leather Bracers / 36 / 200
+				{ 10, 23399 }, --Barbaric Bracers / 32 / 175
+				{ 11, 9065 }, --Light Leather Bracers / 14 / 100
+				{ 12, 9059 }, --Handstitched Leather Bracers / 9 / 40
+			},
+			[MAIL_DIFF] = {
+				{ 1, 28224 }, --Icy Scale Bracers / 80 / 320
+				{ 2, 24849 }, --Sandstalker Bracers / 62 / 320
+				{ 3, 22923 }, --Swift Flight Bracers / 62 / 320
+				{ 4, 24846 }, --Spitfire Bracers / 62 / 320
+				{ 5, 19048 }, --Heavy Scorpid Bracers / 51 / 275
+				{ 6, 10533 }, --Tough Scorpid Bracers / 44 / 240
+				{ 7, 10518 }, --Turtle Scale Bracers / 42 / 230
+			},
+		},
+		{
+			name = ALIL["Bag"],
+			[NORMAL_DIFF] = {
+				{ 1, 14932 }, --Thick Leather Ammo Pouch / 45 / 245
+				{ 2, 9194 }, --Heavy Leather Ammo Pouch / 35 / 170
+				{ 3, 9062 }, --Small Leather Ammo Pouch / 5 / 60
+				{ 5, 14930 }, --Quickdraw Quiver / 45 / 245
+				{ 6, 9193 }, --Heavy Quiver / 35 / 170
+				{ 7, 9060 }, --Light Leather Quiver / 5 / 60
+				{ 16, 5244 }, --Kodo Hide Bag / 5 / 70
+			},
+		},
+		{
+			name = AL["Misc"],
+			[NORMAL_DIFF] = {
+				{ 1, 22331 }, --Rugged Leather / 50 / 250
+				{ 2, 20650 }, --Thick Leather / 40 / 200
+				{ 3, 20649 }, --Heavy Leather / 30 / 150
+				{ 4, 20648 }, --Medium Leather / 20 / 100
+				{ 5, 2881 }, --Light Leather / 10 / 20
+				{ 7, 22727 }, --Core Armor Kit / 60 / 320
+				{ 8, 19058 }, --Rugged Armor Kit / 50 / 250
+				{ 9, 10487 }, --Thick Armor Kit / 40 / 220
+				{ 10, 3780 }, --Heavy Armor Kit / 30 / 170
+				{ 11, 2165 }, --Medium Armor Kit / 15 / 115
+				{ 12, 2152 }, --Light Armor Kit / 5 / 30
+				{ 16, 19047 }, --Cured Rugged Hide / 50 / 250
+				{ 17, 10482 }, --Cured Thick Hide / 40 / 200
+				{ 18, 3818 }, --Cured Heavy Hide / 30 / 160
+				{ 19, 3817 }, --Cured Medium Hide / 20 / 115
+				{ 20, 3816 }, --Cured Light Hide / 10 / 55
+				{ 22, 23190 }, --Heavy Leather Ball / 1 / 150
+			},
 		},
 	}
 }
