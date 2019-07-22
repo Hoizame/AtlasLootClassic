@@ -15,8 +15,12 @@ v1.0.1-beta (Jul. XX, 2019)
 - Add Herbalism
 - Add Cooking
 - Add Mining
+- Add Tailoring
+- Add Leatherworking
+- Add Options
 - Fix bug with unknown items
 - Fix bug with recipes are not shown for enchants
+- Fix bug with crafting items cant be linked into chat
 - Headers should no longer show the difficulty text when not needed
 
 v1.0.0-beta3 (Jul. 11, 2019)

@@ -26,6 +26,7 @@ ignore:
 
 move-folders:
     AtlasLootClassic/AtlasLootClassic: AtlasLootClassic
+    AtlasLootClassic/AtlasLootClassic_Options: AtlasLootClassic_Options
 	AtlasLootClassic/AtlasLootClassic_Crafting: AtlasLootClassic_Crafting
 	AtlasLootClassic/AtlasLootClassic_DungeonsAndRaids: AtlasLootClassic_DungeonsAndRaids
 	AtlasLootClassic/AtlasLootClassic_PvP: AtlasLootClassic_PvP
