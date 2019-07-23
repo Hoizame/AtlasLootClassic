@@ -289,9 +289,9 @@ local function ParseXMLFile(fileName, overrideParseXML)
 					tmp = ""
 				elseif c == ">" then
 					tmp, waiteForFile = "", false
-				elseif lTmp == "script" then
+				elseif lower(lTmp) == "script" or lower(lTmp) == "include" then
 					waiteForFile = true
-				elseif lTmp == "scripts" then
+				elseif lower(lTmp) == "scripts" then
 					waiteForFile = false
 				elseif waiteForFile and ( lTmp == "file" or lTmp == "file=") and c == " " then
 					c = ""
