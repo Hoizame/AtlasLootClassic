@@ -2,6 +2,7 @@ local ALName, ALPrivate = ...
 local AtlasLoot = _G.AtlasLoot
 local Set = AtlasLoot.Button:AddType("Set", "set")
 local AL = AtlasLoot.Locales
+local ALIL = AtlasLoot.IngameLocales
 local ClickHandler = AtlasLoot.ClickHandler
 local Sets
 
@@ -9,9 +10,7 @@ local db
 
 -- lua
 local tonumber, type = tonumber, type
-local assert = assert
-local next, wipe, tab_remove = next, wipe, table.remove
-local format, split = string.format, string.split
+local split = string.split
 
 -- AL
 local GetAlTooltip = AtlasLoot.Tooltip.GetTooltip
@@ -43,29 +42,23 @@ function Set.OnSet(button, second)
 	end
 	if not button then return end
 	if second and button.__atlaslootinfo.secType then
-		button.secButton.SetName = button.__atlaslootinfo.secType[2][1]
-		button.secButton.SubSetName = button.__atlaslootinfo.secType[2][2]
-		button.secButton.SetDiff = button.__atlaslootinfo.secType[2][3]
-		button.secButton.SetAddonName = button.__atlaslootinfo.secType[2][4] or (AtlasLoot.GUI.ItemFrame.LinkedInfo and (AtlasLoot.GUI.ItemFrame.LinkedInfo[1] or AtlasLoot.db.GUI.selected[1]) or AtlasLoot.db.GUI.selected[1])
-		local set = Sets:GetSet(button.secButton.SetName, button.secButton.SetAddonName)
+		button.secButton.SetID = tonumber(button.__atlaslootinfo.secType[2][2])
 
-		button.secButton.VisualName, button.secButton.VisualDesc, button.secButton.VisualIcon = set:GetInfo(button.secButton.SubSetName, set:GetNextPrevDifficulty(button.secButton.SubSetName, button.secButton.SetDiff))
-		button.secButton.Items = set:GetDiffTable(button.secButton.SubSetName, button.secButton.SetDiff)
-		if not set then
-			error("Set \""..button.secButton.SetName.." / "..button.secButton.SetAddonName.."\" not found")
-		end
+		local name, items, icon, classID, className = Sets:GetItemSetData(button.secButton.SetID)
+		button.secButton.SetName = name
+		button.secButton.Items = items
+		button.secButton.SetIcon = icon
+		button.secButton.SetClassName = className
+
 		Set.Refresh(button.secButton)
 	else
-		button.SetName = button.__atlaslootinfo.type[2][1]
-		button.SubSetName = button.__atlaslootinfo.type[2][2]
-		button.SetDiff = button.__atlaslootinfo.type[2][3]
-		button.SetAddonName = button.__atlaslootinfo.type[2][4] or (AtlasLoot.GUI.ItemFrame.LinkedInfo and (AtlasLoot.GUI.ItemFrame.LinkedInfo[1] or AtlasLoot.db.GUI.selected[1]) or AtlasLoot.db.GUI.selected[1])
-		local set = Sets:GetSet(button.SetName, button.SetAddonName)
-		if not set then
-			error("Set \""..button.SetName.." / "..button.SetAddonName.."\" not found")
-		end
-		button.VisualName, button.VisualDesc, button.VisualIcon = set:GetInfo(button.SubSetName, set:GetNextPrevDifficulty(button.SubSetName, button.SetDiff))
-		button.Items = set:GetDiffTable(button.SubSetName, button.SetDiff)
+		button.SetID = tonumber(button.__atlaslootinfo.type[2][2])
+
+		local name, items, icon, classID, className = Sets:GetItemSetData(button.SetID)
+		button.SetName = name
+		button.Items = items
+		button.SetIcon = icon
+		button.SetClassName = className
 
 		Set.Refresh(button)
 	end
@@ -115,28 +108,26 @@ end
 
 function Set.OnClear(button)
 	button.SetName = nil
-	button.SubSetName = nil
-	button.SetDiff = nil
-	button.SetAddonName = nil
 	button.Items = nil
-	button.VisualName, button.VisualDesc, button.VisualIcon = nil, nil, nil
+	button.SetIcon = nil
+	button.SetClassName = nil
 
 	button.secButton.SetName = nil
-	button.secButton.SubSetName = nil
-	button.secButton.SetDiff = nil
-	button.secButton.SetAddonName = nil
 	button.secButton.Items = nil
-	button.secButton.VisualName, button.secButton.VisualDesc, button.secButton.VisualIcon = nil, nil, nil
+	button.secButton.SetIcon = nil
+	button.secButton.SetClassName = nil
 	AtlasLoot.Button:ExtraItemFrame_ClearFrame()
 end
 
 function Set.Refresh(button)
 	if button.type == "secButton" then
-		button:SetNormalTexture(button.VisualIcon)
+		button:SetNormalTexture(button.SetIcon)
 	else
-		button.icon:SetTexture(button.VisualIcon)
-		button.name:SetText(button.VisualName)
-		button.extra:SetText(button.VisualDesc)
+		button.icon:SetTexture(button.SetIcon)
+		button.name:SetText(button.SetName)
+		if button.SetClassName then
+			button.extra:SetText(ALIL[button.SetClassName])
+		end
 	end
 
 	return true

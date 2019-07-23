@@ -12,6 +12,7 @@
 <Include file="Libs\LibDialog-1.0\lib.xml"/>
 <!--@end-no-lib-strip@-->
 <Script file="Libs\ALDB-1.0\ALDB-1.0.lua"/>
+<Include file="Libs\ClassicItemSetsLib-1.0\ClassicItemSetsLib-1.0.xml"/>
 <!--@do-not-package@-->
 <!--@end-do-not-package@-->
 </Ui>
