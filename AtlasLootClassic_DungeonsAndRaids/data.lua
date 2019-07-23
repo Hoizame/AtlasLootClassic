@@ -85,19 +85,19 @@ local T1_SET = {
 	LoadDifficulty = LOAD_DIFF,
 	TableType = SET_ITTYPE,
 	[ALLIANCE_DIFF] = {
-		{ 1, "SetID:203:n" }, -- Warlock
-		{ 3, "SetID:202:n" }, -- Priest
-		{ 16, "SetID:201:n" }, -- Mage
-		{ 5, "SetID:204:n" }, -- Rogue
-		{ 20, "SetID:205:n" }, -- Druid
-		{ 7, "SetID:206:n" }, -- Hunter
-		{ 9, "SetID:209:n" }, -- Warrior
-		{ 24, "SetID:208:n" }, -- Paladin
+		{ 1, 203 }, -- Warlock
+		{ 3, 202 }, -- Priest
+		{ 16, 201 }, -- Mage
+		{ 5, 204 }, -- Rogue
+		{ 20, 205 }, -- Druid
+		{ 7, 206 }, -- Hunter
+		{ 9, 209 }, -- Warrior
+		{ 24, 208 }, -- Paladin
 	},
 
 	[HORDE_DIFF] = {
 		GetItemsFromDiff = ALLIANCE_DIFF,
-		{ 22, "SetID:207:n" }, -- Shaman
+		{ 22, 207 }, -- Shaman
 		{ 24 }, -- Paladin
 	},
 }
@@ -108,19 +108,19 @@ local T2_SET = {
 	LoadDifficulty = LOAD_DIFF,
 	TableType = SET_ITTYPE,
 	[ALLIANCE_DIFF] = {
-		{ 1, "SetID:212:n" }, -- Warlock
-		{ 3, "SetID:211:n" }, -- Priest
-		{ 16, "SetID:210:n" }, -- Mage
-		{ 5, "SetID:213:n" }, -- Rogue
-		{ 20, "SetID:214:n" }, -- Druid
-		{ 7, "SetID:215:n" }, -- Hunter
-		{ 9, "SetID:218:n" }, -- Warrior
-		{ 24, "SetID:217:n" }, -- Paladin
+		{ 1, 212 }, -- Warlock
+		{ 3, 211 }, -- Priest
+		{ 16, 210 }, -- Mage
+		{ 5, 213 }, -- Rogue
+		{ 20, 214 }, -- Druid
+		{ 7, 215 }, -- Hunter
+		{ 9, 218 }, -- Warrior
+		{ 24, 217 }, -- Paladin
 	},
 
 	[HORDE_DIFF] = {
 		GetItemsFromDiff = ALLIANCE_DIFF,
-		{ 22, "SetID:216:n" }, -- Shaman
+		{ 22, 216 }, -- Shaman
 		{ 24 }, -- Paladin
 	},
 }
@@ -131,19 +131,19 @@ local T3_SET = {
 	LoadDifficulty = LOAD_DIFF,
 	TableType = SET_ITTYPE,
 	[ALLIANCE_DIFF] = {
-		{ 1, "SetID:529:n" }, -- Warlock
-		{ 3, "SetID:525:n" }, -- Priest
-		{ 16, "SetID:526:n" }, -- Mage
-		{ 5, "SetID:524:n" }, -- Rogue
-		{ 20, "SetID:521:n" }, -- Druid
-		{ 7, "SetID:530:n" }, -- Hunter
-		{ 9, "SetID:523:n" }, -- Warrior
-		{ 24, "SetID:528:n" }, -- Paladin
+		{ 1, 529 }, -- Warlock
+		{ 3, 525 }, -- Priest
+		{ 16, 526 }, -- Mage
+		{ 5, 524 }, -- Rogue
+		{ 20, 521 }, -- Druid
+		{ 7, 530 }, -- Hunter
+		{ 9, 523 }, -- Warrior
+		{ 24, 528 }, -- Paladin
 	},
 
 	[HORDE_DIFF] = {
 		GetItemsFromDiff = ALLIANCE_DIFF,
-		{ 22, "SetID:527:n" }, -- Shaman
+		{ 22, 527 }, -- Shaman
 		{ 24 }, -- Paladin
 	},
 }

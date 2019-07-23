@@ -42,7 +42,7 @@ function Set.OnSet(button, second)
 	end
 	if not button then return end
 	if second and button.__atlaslootinfo.secType then
-		button.secButton.SetID = tonumber(button.__atlaslootinfo.secType[2][2])
+		button.secButton.SetID = button.__atlaslootinfo.secType[2]
 
 		local name, items, icon, classID, className = Sets:GetItemSetData(button.secButton.SetID)
 		button.secButton.SetName = name
@@ -52,7 +52,7 @@ function Set.OnSet(button, second)
 
 		Set.Refresh(button.secButton)
 	else
-		button.SetID = tonumber(button.__atlaslootinfo.type[2][2])
+		button.SetID = button.__atlaslootinfo.type[2]
 
 		local name, items, icon, classID, className = Sets:GetItemSetData(button.SetID)
 		button.SetName = name
@@ -135,7 +135,7 @@ end
 
 function Set.GetStringContent(str)
 	return {
-		split(":", str)
+		tonumber(str)
 	}
 end
 

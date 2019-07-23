@@ -51,95 +51,95 @@ data["TierSets"] = {
 		{ -- T0
 			name = format(AL["Tier %s Sets"], "0"),
 			[ALLIANCE_DIFF] = {
-				{ 1, "SetID:183:n" }, -- Warlock
-				{ 3, "SetID:182:n" }, -- Priest
-				{ 16, "SetID:181:n" }, -- Mage
-				{ 5, "SetID:184:n" }, -- Rogue
-				{ 20, "SetID:185:n" }, -- Druid
-				{ 7, "SetID:186:n" }, -- Hunter
-				{ 9, "SetID:189:n" }, -- Warrior
-				{ 24, "SetID:188:n" }, -- Paladin
+				{ 1, 183 }, -- Warlock
+				{ 3, 182 }, -- Priest
+				{ 16, 181 }, -- Mage
+				{ 5, 184 }, -- Rogue
+				{ 20, 185 }, -- Druid
+				{ 7, 186 }, -- Hunter
+				{ 9, 189 }, -- Warrior
+				{ 24, 188 }, -- Paladin
 			},
 
 			[HORDE_DIFF] = {
 				GetItemsFromDiff = ALLIANCE_DIFF,
-				{ 22, "SetID:187:n" }, -- Shaman
+				{ 22, 187 }, -- Shaman
 				{ 24 }, -- Paladin
 			},
 		},
 		{ -- T0.5
 			name = format(AL["Tier %s Sets"], "0.5"),
 			[ALLIANCE_DIFF] = {
-				{ 1, "SetID:518:n" }, -- Warlock
-				{ 3, "SetID:514:n" }, -- Priest
-				{ 16, "SetID:517:n" }, -- Mage
-				{ 5, "SetID:512:n" }, -- Rogue
-				{ 20, "SetID:513:n" }, -- Druid
-				{ 7, "SetID:515:n" }, -- Hunter
-				{ 9, "SetID:511:n" }, -- Warrior
-				{ 24, "SetID:516:n" }, -- Paladin
+				{ 1, 518 }, -- Warlock
+				{ 3, 514 }, -- Priest
+				{ 16, 517 }, -- Mage
+				{ 5, 512 }, -- Rogue
+				{ 20, 513 }, -- Druid
+				{ 7, 515 }, -- Hunter
+				{ 9, 511 }, -- Warrior
+				{ 24, 516 }, -- Paladin
 			},
 
 			[HORDE_DIFF] = {
 				GetItemsFromDiff = ALLIANCE_DIFF,
-				{ 22, "SetID:519:n" }, -- Shaman
+				{ 22, 519 }, -- Shaman
 				{ 24 }, -- Paladin
 			},
 		},
 		{ -- T1
 			name = format(AL["Tier %s Sets"], "1"),
 			[ALLIANCE_DIFF] = {
-				{ 1, "SetID:203:n" }, -- Warlock
-				{ 3, "SetID:202:n" }, -- Priest
-				{ 16, "SetID:201:n" }, -- Mage
-				{ 5, "SetID:204:n" }, -- Rogue
-				{ 20, "SetID:205:n" }, -- Druid
-				{ 7, "SetID:206:n" }, -- Hunter
-				{ 9, "SetID:209:n" }, -- Warrior
-				{ 24, "SetID:208:n" }, -- Paladin
+				{ 1, 203 }, -- Warlock
+				{ 3, 202 }, -- Priest
+				{ 16, 201 }, -- Mage
+				{ 5, 204 }, -- Rogue
+				{ 20, 205 }, -- Druid
+				{ 7, 206 }, -- Hunter
+				{ 9, 209 }, -- Warrior
+				{ 24, 208 }, -- Paladin
 			},
 
 			[HORDE_DIFF] = {
 				GetItemsFromDiff = ALLIANCE_DIFF,
-				{ 22, "SetID:207:n" }, -- Shaman
+				{ 22, 207 }, -- Shaman
 				{ 24 }, -- Paladin
 			},
 		},
 		{ -- T2
 			name = format(AL["Tier %s Sets"], "2"),
 			[ALLIANCE_DIFF] = {
-				{ 1, "SetID:212:n" }, -- Warlock
-				{ 3, "SetID:211:n" }, -- Priest
-				{ 16, "SetID:210:n" }, -- Mage
-				{ 5, "SetID:213:n" }, -- Rogue
-				{ 20, "SetID:214:n" }, -- Druid
-				{ 7, "SetID:215:n" }, -- Hunter
-				{ 9, "SetID:218:n" }, -- Warrior
-				{ 24, "SetID:217:n" }, -- Paladin
+				{ 1, 212 }, -- Warlock
+				{ 3, 211 }, -- Priest
+				{ 16, 210 }, -- Mage
+				{ 5, 213 }, -- Rogue
+				{ 20, 214 }, -- Druid
+				{ 7, 215 }, -- Hunter
+				{ 9, 218 }, -- Warrior
+				{ 24, 217 }, -- Paladin
 			},
 
 			[HORDE_DIFF] = {
 				GetItemsFromDiff = ALLIANCE_DIFF,
-				{ 22, "SetID:216:n" }, -- Shaman
+				{ 22, 216 }, -- Shaman
 				{ 24 }, -- Paladin
 			},
 		},
 		{ -- T3
 			name = format(AL["Tier %s Sets"], "3"),
 			[ALLIANCE_DIFF] = {
-				{ 1, "SetID:529:n" }, -- Warlock
-				{ 3, "SetID:525:n" }, -- Priest
-				{ 16, "SetID:526:n" }, -- Mage
-				{ 5, "SetID:524:n" }, -- Rogue
-				{ 20, "SetID:521:n" }, -- Druid
-				{ 7, "SetID:530:n" }, -- Hunter
-				{ 9, "SetID:523:n" }, -- Warrior
-				{ 24, "SetID:528:n" }, -- Paladin
+				{ 1, 529 }, -- Warlock
+				{ 3, 525 }, -- Priest
+				{ 16, 526 }, -- Mage
+				{ 5, 524 }, -- Rogue
+				{ 20, 521 }, -- Druid
+				{ 7, 530 }, -- Hunter
+				{ 9, 523 }, -- Warrior
+				{ 24, 528 }, -- Paladin
 			},
 
 			[HORDE_DIFF] = {
 				GetItemsFromDiff = ALLIANCE_DIFF,
-				{ 22, "SetID:527:n" }, -- Shaman
+				{ 22, 527 }, -- Shaman
 				{ 24 }, -- Paladin
 			},
 		},
