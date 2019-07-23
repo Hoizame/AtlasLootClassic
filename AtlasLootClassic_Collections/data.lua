@@ -636,7 +636,7 @@ data["ScourgeInvasion"] = {
 			},
 		},
 		{
-			name = AL["Stratholme"].." - "..AL["Balzaphon"],
+			name = C_Map_GetAreaInfo(2017).." - "..AL["Balzaphon"],
 			[NORMAL_DIFF] = {
 				{ 1,  23126 }, -- Waistband of Balzaphon
 				{ 2,  23125 }, -- Chains of the Lich
@@ -644,7 +644,7 @@ data["ScourgeInvasion"] = {
 			}
 		},
 		{
-			name = AL["Scholomance"].." - "..AL["Lord Blackwood"],
+			name = C_Map_GetAreaInfo(2057).." - "..AL["Lord Blackwood"],
 			[NORMAL_DIFF] = {
 				{ 1,  23132 }, -- Lord Blackwood's Blade
 				{ 2,  23156 }, -- Blackwood's Thigh
@@ -652,7 +652,7 @@ data["ScourgeInvasion"] = {
 			}
 		},
 		{
-			name = AL["Dire Maul"].." - "..AL["Revanchion"],
+			name = C_Map_GetAreaInfo(2557).." - "..AL["Revanchion"],
 			[NORMAL_DIFF] = {
 				{ 1, 23127 }, -- Cloak of Revanchion
 				{ 2, 23129 }, -- Bracers of Mending
@@ -668,14 +668,14 @@ data["ScourgeInvasion"] = {
 			}
 		},
 		{
-			name = AL["Shadowfang Keep"].." - "..AL["Sever"],
+			name = C_Map_GetAreaInfo(209).." - "..AL["Sever"],
 			[NORMAL_DIFF] = {
 				{ 1, 23173 }, -- Abomination Skin Leggings
 				{ 2, 23171 }, -- The Axe of Severing
 			}
 		},
 		{
-			name = AL["Razorfen Downs"].." - "..AL["Lady Falther'ess"],
+			name = C_Map_GetAreaInfo(722).." - "..AL["Lady Falther'ess"],
 			[NORMAL_DIFF] = {
 				{ 1, 23178 }, -- Mantle of Lady Falther'ess
 				{ 2, 23177 }, -- Lady Falther'ess' Finger
@@ -731,16 +731,16 @@ data["LunarFestival"] = {
 		{ -- LunarFestival2
 			name = AL["Plans"],
 			[NORMAL_DIFF] = {
-				{ 1,  21738 }, -- Schematic: Firework Launcher
-				{ 3,  21722 }, -- Pattern: Festival Dress
+				{ 1,  21722 }, -- Pattern: Festival Dress
+				{ 3,  21738 }, -- Schematic: Firework Launcher
 				{ 5,  21724 }, -- Schematic: Small Blue Rocket
 				{ 6,  21725 }, -- Schematic: Small Green Rocket
 				{ 7,  21726 }, -- Schematic: Small Red Rocket
 				{ 9, 21727 }, -- Schematic: Large Blue Rocket
 				{ 10, 21728 }, -- Schematic: Large Green Rocket
 				{ 11, 21729 }, -- Schematic: Large Red Rocket
-				{ 16, 21737 }, -- Schematic: Cluster Launcher
-				{ 18, 21723 }, -- Pattern: Festive Red Pant Suit
+				{ 16, 21723 }, -- Pattern: Festive Red Pant Suit
+				{ 18, 21737 }, -- Schematic: Cluster Launcher
 				{ 20, 21730 }, -- Schematic: Blue Rocket Cluster
 				{ 21, 21731 }, -- Schematic: Green Rocket Cluster
 				{ 22, 21732 }, -- Schematic: Red Rocket Cluster

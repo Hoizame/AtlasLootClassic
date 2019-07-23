@@ -171,6 +171,7 @@ local TOKEN = {
 	[17008] = { 17043, 17042, 17039, type = 3 }, -- Small Scroll
 	[10454] = { 10455, type = 3 }, -- Essence of Eranikus
 	[12780] = { 13966, 13968, 13965, type = 3 }, -- General Drakkisath's Command
+	[7666] = { 7673, type = 3 }, -- Shattered Necklace
 
 	-- Naxxramas
 	[22520] = { 23207, 23206, type = 3 }, -- The Phylactery of Kel'Thuzad

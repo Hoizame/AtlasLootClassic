@@ -1381,7 +1381,7 @@ data["Uldaman"] = {
 				{ 9,  9396 }, -- Legguards of the Vault
 				{ 10, 9393 }, -- Beacon of Hope
 				{ 12, 7666 }, -- Shattered Necklace
-				{ 13, 7673 }, -- Talvash's Enhancing Necklace
+				--{ 13, 7673 }, -- Talvash's Enhancing Necklace
 				{ 16, 9381 }, -- Earthen Rod
 				{ 17, 9426 }, -- Monolithic Bow
 				{ 18, 9422 }, -- Shadowforge Bushmaster
