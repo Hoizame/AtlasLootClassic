@@ -13,7 +13,6 @@ externals:
     AtlasLootClassic/Libs/LibStub: https://repos.wowace.com/wow/libstub/trunk
     AtlasLootClassic/Libs/LibSharedMedia-3.0: https://repos.wowace.com/wow/libsharedmedia-3-0/trunk/LibSharedMedia-3.0
     AtlasLootClassic/Libs/LibDBIcon-1.0: https://repos.wowace.com/wow/libdbicon-1-0/trunk/LibDBIcon-1.0
-    AtlasLootClassic/Libs/LibDialog-1.0:  https://repos.wowace.com/wow/libdialog-1-0
     AtlasLootClassic/Libs/ClassicItemSetsLib-1.0:  
         url: https://github.com/Hoizame/ClassicItemSetsLib-1.0.git
         tag: latest

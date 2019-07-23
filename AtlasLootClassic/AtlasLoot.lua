@@ -17,7 +17,6 @@ local AtlasLoot = _G.AtlasLoot
 local AL = AtlasLoot.Locales
 
 local LibStub = _G.LibStub
-local LibDialog = LibStub("LibDialog-1.0")
 local ALDB = LibStub("ALDB-1.0")
 
 -- lua
