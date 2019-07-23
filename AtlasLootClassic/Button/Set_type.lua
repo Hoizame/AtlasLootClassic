@@ -134,9 +134,7 @@ function Set.Refresh(button)
 end
 
 function Set.GetStringContent(str)
-	return {
-		tonumber(str)
-	}
+	return tonumber(str)
 end
 
 -- #########
