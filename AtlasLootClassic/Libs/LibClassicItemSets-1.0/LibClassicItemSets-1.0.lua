@@ -1,4 +1,4 @@
-local MAJOR, MINOR = "ClassicItemSetsLib-1.0", 1
+local MAJOR, MINOR = "LibClassicItemSets-1.0", 1
 assert(LibStub, MAJOR .. " requires LibStub")
 
 local CIS, oldversion = LibStub:NewLibrary(MAJOR, MINOR)

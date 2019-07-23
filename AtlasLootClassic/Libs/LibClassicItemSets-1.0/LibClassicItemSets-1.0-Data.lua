@@ -1,5 +1,5 @@
 local DATA_VERSION = 1
-local CIS = LibStub:GetLibrary("ClassicItemSetsLib-1.0")
+local CIS = LibStub:GetLibrary("LibClassicItemSets-1.0")
 if not CIS or not CIS:IsNewData(DATA_VERSION) then return end
 
 local LOCALE = GetLocale()

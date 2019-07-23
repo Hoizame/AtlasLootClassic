@@ -6,7 +6,7 @@ AtlasLoot.Data.Sets = Sets
 local ALIL = AtlasLoot.IngameLocales
 local IMAGE_PATH = ALPrivate.IMAGE_PATH
 
-local ClassicItemSets = LibStub:GetLibrary("ClassicItemSetsLib-1.0")
+local ClassicItemSets = LibStub:GetLibrary("LibClassicItemSets-1.0")
 
 -- lua
 local assert, type = assert, type
