@@ -18,6 +18,7 @@ v1.0.1-beta (Jul. XX, 2019)
 - Add Tailoring
 - Add Leatherworking
 - Add Options
+- Add Collections Sets for ZG, AQ20, AQ40
 - Fix bug with unknown items
 - Fix bug with recipes are not shown for enchants
 - Fix bug with crafting items cant be linked into chat

@@ -7,6 +7,7 @@ local string = _G.string
 local format = string.format
 
 -- WoW
+local C_Map_GetAreaInfo = C_Map.GetAreaInfo
 
 -- ----------------------------------------------------------------------------
 -- AddOn namespace.
@@ -144,8 +145,80 @@ data["TierSets"] = {
 			},
 		},
 	},
-
 }
+
+data["ZGSets"] = {
+	name = format(AL["%s Sets"], C_Map_GetAreaInfo(1977)),
+	ContentType = SET_CONTENT,
+	LoadDifficulty = LOAD_DIFF,
+	TableType = SET_ITTYPE,
+	items = {
+		{
+			name = format(AL["%s Sets"], C_Map_GetAreaInfo(1977)),
+			[ALLIANCE_DIFF] = {
+				{ 1,  481 }, -- Warlock
+				{ 3,  480 }, -- Priest
+				{ 16, 482 }, -- Mage
+				{ 5,  478 }, -- Rogue
+				{ 20, 479 }, -- Druid
+				{ 7,  477 }, -- Hunter
+				{ 9,  474 }, -- Warrior
+				{ 24, 475 }, -- Paladin
+			},
+			[HORDE_DIFF] = {
+				GetItemsFromDiff = ALLIANCE_DIFF,
+				{ 22, 476 }, -- Shaman
+				{ 24 }, -- Paladin
+			},
+		},
+	},
+}
+
+data["AQSets"] = {
+	name = format(AL["%s Sets"], C_Map_GetAreaInfo(3428)),
+	ContentType = SET_CONTENT,
+	LoadDifficulty = LOAD_DIFF,
+	TableType = SET_ITTYPE,
+	items = {
+		{ -- AQ20
+			name = format(AL["%s Sets"], C_Map_GetAreaInfo(3428).." 20"),
+			[ALLIANCE_DIFF] = {
+				{ 1,  500 }, -- Warlock
+				{ 3,  508 }, -- Priest
+				{ 16, 504 }, -- Mage
+				{ 5,  498 }, -- Rogue
+				{ 20, 494 }, -- Druid
+				{ 7,  510 }, -- Hunter
+				{ 9,  495 }, -- Warrior
+				{ 24, 506 }, -- Paladin
+			},
+			[HORDE_DIFF] = {
+				GetItemsFromDiff = ALLIANCE_DIFF,
+				{ 22, 502 }, -- Shaman
+				{ 24 }, -- Paladin
+			},
+		},
+		{ -- AQ40
+			name = format(AL["%s Sets"], C_Map_GetAreaInfo(3428).." 40"),
+			[ALLIANCE_DIFF] = {
+				{ 1,  499 }, -- Warlock
+				{ 3,  507 }, -- Priest
+				{ 16, 503 }, -- Mage
+				{ 5,  497 }, -- Rogue
+				{ 20, 493 }, -- Druid
+				{ 7,  509 }, -- Hunter
+				{ 9,  496 }, -- Warrior
+				{ 24, 505 }, -- Paladin
+			},
+			[HORDE_DIFF] = {
+				GetItemsFromDiff = ALLIANCE_DIFF,
+				{ 22, 501 }, -- Shaman
+				{ 24 }, -- Paladin
+			},
+		},
+	},
+}
+
 
 data["SilithusAbyssal"] = {
 	name = AL["Silithus Abyssal"],
