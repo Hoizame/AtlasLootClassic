@@ -335,8 +335,6 @@ local function GetAuctionItemClassesLoc()
 			}
 end
 
-
-
 local function Init()
 	local NewLocData = {
 		--en = {},

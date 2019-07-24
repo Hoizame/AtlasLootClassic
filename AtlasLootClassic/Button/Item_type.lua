@@ -8,6 +8,7 @@ local ClickHandler = AtlasLoot.ClickHandler
 local Token = AtlasLoot.Data.Token
 local Recipe = AtlasLoot.Data.Recipe
 local Profession = AtlasLoot.Data.Profession
+local Sets = AtlasLoot.Data.Sets
 
 local db
 
@@ -70,6 +71,7 @@ function Item.OnSet(button, second)
 			end
 		end
 		button.secButton.Droprate = button.__atlaslootinfo.Droprate
+		button.secButton.SetID = Sets:GetItemSetForItemID(button.secButton.ItemID)
 
 		Item.Refresh(button.secButton)
 	else
@@ -83,6 +85,7 @@ function Item.OnSet(button, second)
 			end
 		end
 		button.Droprate = button.__atlaslootinfo.Droprate
+
 		Item.Refresh(button)
 	end
 end
@@ -108,6 +111,12 @@ function Item.OnMouseAction(button, mouseButton)
 		elseif Recipe.IsRecipe(button.ItemID) then
 			button.ExtraFrameShown = true
 			AtlasLoot.Button:ExtraItemFrame_GetFrame(button, Recipe.GetRecipeDataForExtraFrame(button.ItemID))
+		elseif button.type ~= "secButton" and ( button.SetData or Sets:GetItemSetForItemID(button.ItemID) ) then -- sec buttons should not be clickable for sets
+			if not button.SetData then
+				button.SetData = Sets:GetSetItems(Sets:GetItemSetForItemID(button.ItemID))
+			end
+			button.ExtraFrameShown = true
+			AtlasLoot.Button:ExtraItemFrame_GetFrame(button, button.SetData)
 		end
 	elseif mouseButton == "MouseWheelUp" and Item.previewTooltipFrame and Item.previewTooltipFrame:IsShown() then  -- ^
 		local frame = Item.previewTooltipFrame.modelFrame
@@ -173,9 +182,12 @@ function Item.OnClear(button)
 	button.ItemID = nil
 	button.Droprate = nil
 	button.ItemString = nil
+	button.SetData = nil
 	button.secButton.ItemID = nil
 	button.secButton.Droprate = nil
 	button.secButton.ItemString = nil
+	button.secButton.SetData = nil
+
 	if button.overlay then
 		button.overlay:SetDesaturated(false)
 		button.overlay:Hide()
@@ -219,7 +231,12 @@ function Item.Refresh(button)
 		-- ##################
 		-- description
 		-- ##################
-		button.extra:SetText(Token.GetTokenDescription(button.ItemID) or Recipe.GetRecipeDescription(button.ItemID) or Profession.GetColorSkillRankItem(button.ItemID) or GetItemDescInfo(itemEquipLoc, itemType, itemSubType))
+		button.extra:SetText(
+			Token.GetTokenDescription(button.ItemID) or
+			Recipe.GetRecipeDescription(button.ItemID) or
+			Profession.GetColorSkillRankItem(button.ItemID) or
+			( Sets:GetItemSetForItemID(button.ItemID) and AL["|cff00ff00Set item:|r "] or "")..GetItemDescInfo(itemEquipLoc, itemType, itemSubType)
+		)
 	end
 	--[[
 	if db.showCompletedHook then

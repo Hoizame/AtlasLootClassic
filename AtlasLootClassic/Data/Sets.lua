@@ -43,3 +43,12 @@ function Sets:GetItemSetData(setID)
 	if not ClassicItemSets:SetExist(setID) then return end
 	return ClassicItemSets:GetSetName(setID), ClassicItemSets:GetItems(setID), self:GetIcon(setID), ClassicItemSets:GetPlayerClass(setID)
 end
+
+function Sets:GetItemSetForItemID(itemID)
+	return ClassicItemSets:GetItemSetForItemID(itemID)
+end
+
+function Sets:GetSetItems(setID)
+	if not ClassicItemSets:SetExist(setID) then return end
+	return ClassicItemSets:GetItems(setID)
+end
