@@ -5,6 +5,9 @@ addons:
   apt:
     packages:
     - luarocks
+
+git:
+  submodules: false
  
 install: 
   - luarocks install --local luacheck
