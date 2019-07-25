@@ -10,7 +10,8 @@ local TOKEN_TYPE_TEXT = {
 	[0] = nil,	-- empty
 	[1] = "|cff00ff00"..AL["L-Click"]..":|r "..AL["Show additional items."],		-- default
 	[2] = "|cff00ff00"..AL["L-Click"]..":|r "..AL["Show possible items."],
-	[3] = "|cff00ff00"..AL["L-Click"]..":|r "..AL["how quest rewards."],
+	[3] = "|cff00ff00"..AL["L-Click"]..":|r "..AL["Show quest rewards."],
+	[4] = "|cff00ff00"..AL["L-Click"]..":|r "..AL["Quest objective."],
 }
 
 local TOKEN = {
@@ -72,7 +73,7 @@ local TOKEN = {
 	[19265] = 19257,	-- Eight of Warlords
 
 	-- Beasts / Darkmoon Card: Blue Dragon
-	[19257] = { 19228, 19288, 0, 19227, 19230, 19231, 19232, 19233, 19234, 19235, 19236 },	-- Beasts Deck
+	[19228] = { 19228, 19288, 0, 19227, 19230, 19231, 19232, 19233, 19234, 19235, 19236 },	-- Beasts Deck
 	[19227] = 19228,	-- Ace of Beasts
 	[19230] = 19228,	-- Two of Beasts
 	[19231] = 19228,	-- Three of Beasts
@@ -181,8 +182,11 @@ local TOKEN = {
 	[7666] = { 7673, type = 3 }, -- Shattered Necklace
 	[19003] = { 19383, 19384, 19366, type = 3 }, -- Head of Nefarian
 	[18423] = { 18404, 18403, 18406, type = 3 }, -- Head of Onyxia
-	[18705] = { 18713, type = 3 }, -- Mature Black Dragon Sinew
-	[18704] = { 18714, type = 3 }, -- Mature Blue Dragon Sinew
+
+	-- Quest objective
+	[18705] = { 18713, type = 4 }, -- Mature Black Dragon Sinew
+	[18704] = { 18714, type = 4 }, -- Mature Blue Dragon Sinew
+	[12871] = { 12895, 0, 12903, 12945, type = 4 }, -- Chromatic Carapace
 
 	-- Naxxramas
 	[22520] = { 23207, 23206, type = 3 }, -- The Phylactery of Kel'Thuzad

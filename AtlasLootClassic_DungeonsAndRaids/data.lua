@@ -2568,8 +2568,7 @@ data["UpperBlackrockSpire"] = {
 				{ 4,  12603 }, -- Nightbrace Tunic
 				{ 5,  12589 }, -- Dustfeather Sash
 				{ 6,  12606 }, -- Crystallized Girdle
-				{ 8,  18657, 18638 }, -- Schematic: Hyper-Radiant Flame Reflector
-				--{ 9,  18638 }, -- Hyper-Radiant Flame Reflector
+				{ 8,  18657 }, -- Schematic: Hyper-Radiant Flame Reflector
 			},
 		},
 		{ -- UBRSAnvilcrack
@@ -2582,14 +2581,11 @@ data["UpperBlackrockSpire"] = {
 				{ 3,  18047 }, -- Flame Walkers
 				{ 4,  18048 }, -- Mastersmith's Hammer
 				{ 6,  12834 }, -- Plans: Arcanite Champion
-				--{ 7,  12790 }, -- Arcanite Champion
-				{ 8,  12837 }, -- Plans: Masterwork Stormhammer
-				--{ 9,  12794 }, -- Masterwork Stormhammer
-				{ 11, 18779 }, -- Bottom Half of Advanced Armorsmithing: Volume I
+				{ 7,  12837 }, -- Plans: Masterwork Stormhammer
+				{ 9, 18779 }, -- Bottom Half of Advanced Armorsmithing: Volume I
 				{ 16, "INV_Box_01", nil, AL["Unforged Rune Covered Breastplate"], nil },
 				{ 17, 12806 }, -- Unforged Rune Covered Breastplate
 				{ 18, 12696 }, -- Plans: Demon Forged Breastplate
-				{ 19, 12628 }, -- Demon Forged Breastplate
 			},
 		},
 		{ -- UBRSRunewatcher
