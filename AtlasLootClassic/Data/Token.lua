@@ -8,9 +8,9 @@ local type, pairs = type, pairs
 local TOKEN_TYPE_DEFAULT = 1
 local TOKEN_TYPE_TEXT = {
 	[0] = nil,	-- empty
-	[1] = AL["|cff00ff00Left-Click:|r Show additional items."],		-- default
-	[2] = AL["|cff00ff00Left-Click:|r Show possible items."],
-	[3] = AL["|cff00ff00Left-Click:|r Show quest rewards."],
+	[1] = "|cff00ff00"..AL["L-Click"]..":|r "..AL["Show additional items."],		-- default
+	[2] = "|cff00ff00"..AL["L-Click"]..":|r "..AL["Show possible items."],
+	[3] = "|cff00ff00"..AL["L-Click"]..":|r "..AL["how quest rewards."],
 }
 
 local TOKEN = {
@@ -161,7 +161,8 @@ local TOKEN = {
 	[18782] = { 12726, 0, 18781, 18782 }, -- Top Half of Advanced Armorsmithing: Volume II
 	[18781] = { 12726, 0, 18781, 18782 }, -- Bottom Half of Advanced Armorsmithing: Volume II
 	[21813] = { 21816, 21817, 21818, 21819, 21820, 21821, 21822, 21823, type = 2}, -- Bag of Candies
-	[19697] = { {19696, 4} },
+	[19697] = { {19696, 4} }, -- Bounty of the Harvest
+	[15410] = { 15138 }, -- Scale of Onyxia
 
 	-- Quests
 	[10441] = { 10657, 10658, type = 3 }, -- Glowing Shard
@@ -172,6 +173,8 @@ local TOKEN = {
 	[10454] = { 10455, type = 3 }, -- Essence of Eranikus
 	[12780] = { 13966, 13968, 13965, type = 3 }, -- General Drakkisath's Command
 	[7666] = { 7673, type = 3 }, -- Shattered Necklace
+	[19003] = { 19383, 19384, 19366, type = 3 }, -- Head of Nefarian
+	[18423] = { 18404, 18403, 18406, type = 3 }, -- Head of Onyxia
 
 	-- Naxxramas
 	[22520] = { 23207, 23206, type = 3 }, -- The Phylactery of Kel'Thuzad

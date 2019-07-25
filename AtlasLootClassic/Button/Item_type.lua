@@ -28,6 +28,7 @@ local GetItemString = AtlasLoot.ItemString.Create
 
 local ITEM_COLORS = {}
 local WHITE_ICON_FRAME = "Interface\\Common\\WhiteIconFrame"
+local SET_ITEM = "|cff00ff00"..AL["Set item"]..":|r "
 
 local ItemClickHandler = nil
 local itemIsOnEnter = nil

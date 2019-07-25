@@ -4259,11 +4259,8 @@ data["Onyxia"] = {
 				{ 7,  16947 }, -- Helmet of Ten Storms
 				{ 8,  16955 }, -- Judgement Crown
 				{ 9,  16963 }, -- Helm of Wrath
-				{ 11, 18423 }, -- Head of Onyxia
-				{ 12, 18404 }, -- Onyxia Tooth Pendant
-				{ 13, 18403 }, -- Dragonslayer's Signet
-				{ 14, 18406 }, -- Onyxia Blood Talisman
-				{ 15, 15138 }, -- Onyxia Scale Cloak
+				{ 12, 18423 }, -- Head of Onyxia
+				{ 13, 15410 }, -- Scale of Onyxia
 				{ 16, 18705 }, -- Mature Black Dragon Sinew
 				{ 17, 18713 }, -- Rhok'delar, Longbow of the Ancient Keepers
 				{ 19, 18205 }, -- Eskhandar's Collar
@@ -4275,7 +4272,6 @@ data["Onyxia"] = {
 				{ 25, 17075 }, -- Vis'kag the Bloodletter
 				{ 27, 17966 }, -- Onyxia Hide Backpack
 				{ 28, 17962 }, -- Blue Sack of Gems
-				{ 30, 15410 }, -- Scale of Onyxia
 			},
 		},
 	},
@@ -4702,13 +4698,13 @@ data["BlackwingLair"] = {
 				{ 7,  16949 }, -- Greaves of Ten Storms
 				{ 8,  16957 }, -- Judgement Sabatons
 				{ 9,  16965 }, -- Sabatons of Wrath
-				{ 15, 20383 }, -- Head of the Broodlord Lashlayer
 				{ 16, 19341 }, -- Lifegiving Gem
 				{ 17, 19342 }, -- Venomous Totem
 				{ 19, 19373 }, -- Black Brood Pauldrons
 				{ 20, 19374 }, -- Bracers of Arcane Accuracy
 				{ 21, 19350 }, -- Heartstriker
 				{ 22, 19351 }, -- Maladath, Runed Blade of the Black Flight
+				{ 24, 20383 }, -- Head of the Broodlord Lashlayer
 			},
 		},
 		{ -- BWLFiremaw
@@ -4755,7 +4751,9 @@ data["BlackwingLair"] = {
 				{ 7,  16948 }, -- Gauntlets of Ten Storms
 				{ 8,  16956 }, -- Judgement Gauntlets
 				{ 9,  16964 }, -- Gauntlets of Wrath
-				{ 13, 19345 }, -- Aegis of Preservation
+				{ 11, 19345 }, -- Aegis of Preservation
+				{ 12, 19406 }, -- Drake Fang Talisman
+				{ 13, 19395 }, -- Rejuvenating Gem
 				{ 16, 19394 }, -- Drake Talon Pauldrons
 				{ 17, 19407 }, -- Ebony Flame Gloves
 				{ 18, 19396 }, -- Taut Dragonhide Belt
@@ -4763,10 +4761,9 @@ data["BlackwingLair"] = {
 				{ 21, 19368 }, -- Dragonbreath Hand Cannon
 				{ 22, 19353 }, -- Drake Talon Cleaver
 				{ 23, 19355 }, -- Shadow Wing Focus Staff
-				{ 25, 19403 }, -- Band of Forced Concentration
-				{ 26, 19397 }, -- Ring of Blackrock
-				{ 27, 19406 }, -- Drake Fang Talisman
-				{ 28, 19395 }, -- Rejuvenating Gem
+				{ 26, 19403 }, -- Band of Forced Concentration
+				{ 27, 19397 }, -- Ring of Blackrock
+
 			},
 		},
 		{ -- BWLFlamegor
@@ -4783,6 +4780,8 @@ data["BlackwingLair"] = {
 				{ 7,  16948 }, -- Gauntlets of Ten Storms
 				{ 8,  16956 }, -- Judgement Gauntlets
 				{ 9,  16964 }, -- Gauntlets of Wrath
+				{ 11, 19395 }, -- Rejuvenating Gem
+				{ 12, 19431 }, -- Styleen's Impeding Scarab
 				{ 16, 19394 }, -- Drake Talon Pauldrons
 				{ 17, 19430 }, -- Shroud of Pure Thought
 				{ 18, 19396 }, -- Taut Dragonhide Belt
@@ -4793,8 +4792,6 @@ data["BlackwingLair"] = {
 				{ 24, 19355 }, -- Shadow Wing Focus Staff
 				{ 26, 19432 }, -- Circle of Applied Force
 				{ 27, 19397 }, -- Ring of Blackrock
-				{ 28, 19395 }, -- Rejuvenating Gem
-				{ 29, 19431 }, -- Styleen's Impeding Scarab
 			},
 		},
 		{ -- BWLChromaggus
@@ -4840,10 +4837,7 @@ data["BlackwingLair"] = {
 				{ 7,  16950 }, -- Breastplate of Ten Storms
 				{ 8,  16958 }, -- Judgement Breastplate
 				{ 9,  16966 }, -- Breastplate of Wrath
-				{ 12, 19003 }, -- Head of Nefarian
-				{ 13, 19383 }, -- Master Dragonslayer's Medallion
-				{ 14, 19384 }, -- Master Dragonslayer's Ring
-				{ 15, 19366 }, -- Master Dragonslayer's Orb
+				{ 11, 19003 }, -- Head of Nefarian
 				{ 16, 19360 }, -- Lok'amir il Romathis
 				{ 17, 19363 }, -- Crul'shorukh, Edge of Chaos
 				{ 18, 19364 }, -- Ashkandi, Greatsword of the Brotherhood

@@ -24,7 +24,7 @@ ItemDB.ContentProto = {}
 local contentList = {}
 
 -- NpcListTable /run print(string.split("-", UnitGUID"target"))
-ItemDB.NpcList = {}
+-- ItemDB.NpcList = {}
 
 -- the metatable
 ItemDB.contentMt = {
@@ -37,6 +37,7 @@ ItemDB.mt = {
 		contentList[t.__atlaslootdata.addonName][t.__atlaslootdata.contentCount] = k
 		contentList[t.__atlaslootdata.addonName][k] = t.__atlaslootdata.contentCount
 		v.__atlaslootdata = t.__atlaslootdata
+		--[=[
 		if v and v.items and #v.items > 0 then
 			local t = v.items
 			local npcID
@@ -51,6 +52,7 @@ ItemDB.mt = {
 				end
 			end
 		end
+		]=]--
 		rawset(t, k, v)
 	end
 }

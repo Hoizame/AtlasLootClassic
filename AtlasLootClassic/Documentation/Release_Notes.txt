@@ -7,6 +7,7 @@ Patch Notes
 
 v1.0.1-beta (Jul. XX, 2019)
 ========================
+- SetItems are now marked and clickable to show the whole set
 - Add more Tokens
 - Add Blacksmithing
 - Add Enchanting
