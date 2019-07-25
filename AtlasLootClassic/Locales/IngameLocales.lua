@@ -5,7 +5,7 @@ local _G = getfenv(0)
 local select = _G.select
 local string = _G.string
 local format = string.format
-local rawget = rawget
+local rawget = _G.rawget
 
 -- WoW
 local GetSpellInfo = GetSpellInfo
@@ -211,19 +211,6 @@ local IngameLocales = {
 	-- Zones
 	-- ######################################################################
 	-- Classic
-	--["Ahn'Qiraj"] = GetMapInfo(319).name,
-	--["Blackrock Depths"] = GetMapInfo(242).name,
-	--["Blackwing Lair"] = GetMapInfo(287).name,
-	--["Lower Blackrock Spire"] = GetAchievementName(643),
-	--["Molten Core"] = GetMapInfo(232).name,
-	--["Orgrimmar"] = GetMapInfo(85).name,
-	--["Ruins of Ahn'Qiraj"] = GetMapInfo(247).name,
-	--["Shadowfang Keep"] = GetMapInfo(310).name,
-	--["Stormwind City"] = GetMapInfo(84).name,
-	--["Upper Blackrock Spire"] = GetAchievementName(1307),
-
-
-	-- data from Core/ItemInfo.lua is generated after loading
 
 	-- ######################################################################
 	-- Class

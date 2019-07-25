@@ -3,7 +3,8 @@ local AL = {}
 _G.AtlasLoot.Locales = AL
 
 --lua
-local rawset = rawset
+local _G = _G
+local rawset = _G.rawset
 
 -- save
 local localeSave = {}

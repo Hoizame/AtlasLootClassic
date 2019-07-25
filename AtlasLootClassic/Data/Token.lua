@@ -163,6 +163,12 @@ local TOKEN = {
 	[21813] = { 21816, 21817, 21818, 21819, 21820, 21821, 21822, 21823, type = 2}, -- Bag of Candies
 	[19697] = { {19696, 4} }, -- Bounty of the Harvest
 	[15410] = { 15138 }, -- Scale of Onyxia
+	[18564] = { 19019, 0, 18563, 18564, 19017 }, -- Bindings of the Windseeker <right>
+	[18563] = 18564, -- Bindings of the Windseeker <left>
+	[19017] = 18564, -- Essence of the Firelord
+	[17204] = { 17182 }, -- Eye of Sulfuras
+	[18703] = { 18714, 18713, 18715 }, -- Ancient Petrified Leaf
+	[18646] = { 18608, 18609 }, -- The Eye of Divinity
 
 	-- Quests
 	[10441] = { 10657, 10658, type = 3 }, -- Glowing Shard
@@ -175,6 +181,8 @@ local TOKEN = {
 	[7666] = { 7673, type = 3 }, -- Shattered Necklace
 	[19003] = { 19383, 19384, 19366, type = 3 }, -- Head of Nefarian
 	[18423] = { 18404, 18403, 18406, type = 3 }, -- Head of Onyxia
+	[18705] = { 18713, type = 3 }, -- Mature Black Dragon Sinew
+	[18704] = { 18714, type = 3 }, -- Mature Blue Dragon Sinew
 
 	-- Naxxramas
 	[22520] = { 23207, 23206, type = 3 }, -- The Phylactery of Kel'Thuzad

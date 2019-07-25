@@ -219,7 +219,6 @@ data["AQSets"] = {
 	},
 }
 
-
 data["SilithusAbyssal"] = {
 	name = AL["Silithus Abyssal"],
 	ContentType = WORLD_EVENT_CONTENT,

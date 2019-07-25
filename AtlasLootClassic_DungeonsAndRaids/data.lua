@@ -3949,6 +3949,7 @@ data["MoltenCore"] = {
 				{ 7,  16843 },	-- Earthfury Legguards
 				{ 8,  16855 },	-- Lawbringer Legplates
 				{ 9,  16867 },	-- Legplates of Might
+				{ 11, 18203 },	-- Eskhandar's Right Claw
 				{ 16, 17065 },	-- Medallion of Steadfast Might
 				{ 17, 18829 },	-- Deep Earth Spaulders
 				{ 18, 18823 },	-- Aged Core Leather Gloves
@@ -3961,9 +3962,8 @@ data["MoltenCore"] = {
 				{ 25, 18820 },	-- Talisman of Ephemeral Power
 				{ 26, 19142 },	-- Fire Runed Grimoire
 				{ 27, 17069 },	-- Striker's Mark
-				{ 28, 18203 },	-- Eskhandar's Right Claw
-				{ 29, 17073 },	-- Earthshaker
-				{ 30, 18822 },	-- Obsidian Edged Blade
+				{ 28, 17073 },	-- Earthshaker
+				{ 29, 18822 },	-- Obsidian Edged Blade
 			},
 		},
 		{	--MCGehennas
@@ -3994,17 +3994,16 @@ data["MoltenCore"] = {
 			npcId = 12057,
 			DisplayIDs = {{12110}, {5781}},
 			[NORMAL_DIFF] = {
-				{ 1,  16813 },	-- Circlet of Prophecy
-				{ 2,  16795 },	-- Arcanist Crown
-				{ 3,  16808 },	-- Felheart Horns
-				{ 4,  16821 },	-- Nightslayer Cover
-				{ 5,  16834 },	-- Cenarion Helm
-				{ 6,  16846 },	-- Giantstalker's Helmet
-				{ 7,  16842 },	-- Earthfury Helmet
-				{ 8,  16854 },	-- Lawbringer Helm
-				{ 9,  16866 },	-- Helm of Might
-				{ 14, 18564 },	-- Bindings of the Windseeker
-				{ 15, 19019 },	-- Thunderfury, Blessed Blade of the Windseeker
+				{ 1, 18564 },	-- Bindings of the Windseeker
+				{ 3,  16813 },	-- Circlet of Prophecy
+				{ 4,  16795 },	-- Arcanist Crown
+				{ 5,  16808 },	-- Felheart Horns
+				{ 6,  16821 },	-- Nightslayer Cover
+				{ 7,  16834 },	-- Cenarion Helm
+				{ 8,  16846 },	-- Giantstalker's Helmet
+				{ 9,  16842 },	-- Earthfury Helmet
+				{ 10,  16854 },	-- Lawbringer Helm
+				{ 11,  16866 },	-- Helm of Might
 				{ 16, 18829 },	-- Deep Earth Spaulders
 				{ 17, 18823 },	-- Aged Core Leather Gloves
 				{ 18, 19143 },	-- Flameguard Gauntlets
@@ -4050,13 +4049,12 @@ data["MoltenCore"] = {
 			npcId = 12056,
 			DisplayIDs = {{12129}},
 			[NORMAL_DIFF] = {
-				{ 1,  16797 },	-- Arcanist Mantle
-				{ 2,  16807 },	-- Felheart Shoulder Pads
-				{ 3,  16836 },	-- Cenarion Spaulders
-				{ 4,  16844 },	-- Earthfury Epaulets
-				{ 5,  16856 },	-- Lawbringer Spaulders
-				{ 14, 18563 },	-- Bindings of the Windseeker
-				{ 15, 19019 },	-- Thunderfury, Blessed Blade of the Windseeker
+				{ 1,  18563 },	-- Bindings of the Windseeker
+				{ 3,  16797 },	-- Arcanist Mantle
+				{ 4,  16807 },	-- Felheart Shoulder Pads
+				{ 5,  16836 },	-- Cenarion Spaulders
+				{ 6,  16844 },	-- Earthfury Epaulets
+				{ 7,  16856 },	-- Lawbringer Spaulders
 				{ 16, 18829 },	-- Deep Earth Spaulders
 				{ 17, 18823 },	-- Aged Core Leather Gloves
 				{ 18, 19143 },	-- Flameguard Gauntlets
@@ -4085,8 +4083,7 @@ data["MoltenCore"] = {
 				{ 7,  16841 },	-- Earthfury Vestments
 				{ 8,  16853 },	-- Lawbringer Chestguard
 				{ 9,  16865 },	-- Breastplate of Might
-				{ 14, 17203 },	-- Sulfuron Ingot
-				{ 15, 17182 },	-- Sulfuras, Hand of Ragnaros
+				{ 11, 17203 },	-- Sulfuron Ingot
 				{ 16, 18829 },	-- Deep Earth Spaulders
 				{ 17, 18823 },	-- Aged Core Leather Gloves
 				{ 18, 19143 },	-- Flameguard Gauntlets
@@ -4142,12 +4139,7 @@ data["MoltenCore"] = {
 				{ 9,  18805 }, -- Core Hound Tooth
 				{ 10, 18803 }, -- Finkle's Lava Dredger
 				{ 16, 18703 }, -- Ancient Petrified Leaf
-				{ 17, 18714 }, -- Ancient Sinew Wrapped Lamina
-				{ 18, 18713 }, -- Rhok'delar, Longbow of the Ancient Keepers
-				{ 19, 18715 }, -- Lok'delar, Stave of the Ancient Keepers
-				{ 21, 18646 }, -- The Eye of Divinity
-				{ 22, 18608 }, -- Benediction
-				{ 23, 18609 }, -- Anathema
+				{ 18, 18646 }, -- The Eye of Divinity
 			},
 		},
 		{ -- MCRagnaros
@@ -4155,19 +4147,18 @@ data["MoltenCore"] = {
 			npcId = 11502,
 			DisplayIDs = {{11121}},
 			[NORMAL_DIFF] = {
-				{ 1,  16922 }, -- Leggings of Transcendence
-				{ 2,  16915 }, -- Netherwind Pants
-				{ 3,  16930 }, -- Nemesis Leggings
-				{ 4,  16909 }, -- Bloodfang Pants
-				{ 5,  16901 }, -- Stormrage Legguards
-				{ 6,  16938 }, -- Dragonstalker's Legguards
-				{ 7,  16946 }, -- Legplates of Ten Storms
-				{ 8,  16954 }, -- Judgement Legplates
-				{ 9,  16962 }, -- Legplates of Wrath
-				{ 11, 17204 }, -- Eye of Sulfuras
-				{ 12, 17182 }, -- Sulfuras, Hand of Ragnaros
-				{ 14, 19017 }, -- Essence of the Firelord
-				{ 15, 19019 }, -- Thunderfury, Blessed Blade of the Windseeker
+				{ 1, 17204 }, -- Eye of Sulfuras
+				{ 2, 19017 }, -- Essence of the Firelord
+				{ 4,  16922 }, -- Leggings of Transcendence
+				{ 5,  16915 }, -- Netherwind Pants
+				{ 6,  16930 }, -- Nemesis Leggings
+				{ 7,  16909 }, -- Bloodfang Pants
+				{ 8,  16901 }, -- Stormrage Legguards
+				{ 9,  16938 }, -- Dragonstalker's Legguards
+				{ 10,  16946 }, -- Legplates of Ten Storms
+				{ 11,  16954 }, -- Judgement Legplates
+				{ 12,  16962 }, -- Legplates of Wrath
+				{ 14, 17082 }, -- Shard of the Flame
 				{ 16, 18817 }, -- Crown of Destruction
 				{ 17, 18814 }, -- Choker of the Fire Lord
 				{ 18, 17102 }, -- Cloak of the Shrouded Mists
@@ -4176,11 +4167,10 @@ data["MoltenCore"] = {
 				{ 21, 17063 }, -- Band of Accuria
 				{ 22, 19138 }, -- Band of Sulfuras
 				{ 23, 18815 }, -- Essence of the Pure Flame
-				{ 24, 17082 }, -- Shard of the Flame
-				{ 25, 17106 }, -- Malistar's Defender
-				{ 26, 18816 }, -- Perdition's Blade
-				{ 27, 17104 }, -- Spinal Reaper
-				{ 28, 17076 }, -- Bonereaver's Edge
+				{ 24, 17106 }, -- Malistar's Defender
+				{ 25, 18816 }, -- Perdition's Blade
+				{ 26, 17104 }, -- Spinal Reaper
+				{ 27, 17076 }, -- Bonereaver's Edge
 			},
 		},
 		{ -- MCRANDOMBOSSDROPS
@@ -4259,19 +4249,18 @@ data["Onyxia"] = {
 				{ 7,  16947 }, -- Helmet of Ten Storms
 				{ 8,  16955 }, -- Judgement Crown
 				{ 9,  16963 }, -- Helm of Wrath
-				{ 12, 18423 }, -- Head of Onyxia
-				{ 13, 15410 }, -- Scale of Onyxia
+				{ 11, 18423 }, -- Head of Onyxia
+				{ 12, 15410 }, -- Scale of Onyxia
 				{ 16, 18705 }, -- Mature Black Dragon Sinew
-				{ 17, 18713 }, -- Rhok'delar, Longbow of the Ancient Keepers
-				{ 19, 18205 }, -- Eskhandar's Collar
-				{ 20, 17078 }, -- Sapphiron Drape
-				{ 21, 18813 }, -- Ring of Binding
-				{ 22, 17064 }, -- Shard of the Scale
-				{ 23, 17067 }, -- Ancient Cornerstone Grimoire
-				{ 24, 17068 }, -- Deathbringer
-				{ 25, 17075 }, -- Vis'kag the Bloodletter
-				{ 27, 17966 }, -- Onyxia Hide Backpack
-				{ 28, 17962 }, -- Blue Sack of Gems
+				{ 18, 18205 }, -- Eskhandar's Collar
+				{ 19, 17078 }, -- Sapphiron Drape
+				{ 20, 18813 }, -- Ring of Binding
+				{ 21, 17064 }, -- Shard of the Scale
+				{ 22, 17067 }, -- Ancient Cornerstone Grimoire
+				{ 23, 17068 }, -- Deathbringer
+				{ 24, 17075 }, -- Vis'kag the Bloodletter
+				{ 26, 17966 }, -- Onyxia Hide Backpack
+				{ 27, 17962 }, -- Blue Sack of Gems
 			},
 		},
 	},
@@ -5226,10 +5215,6 @@ data["TheTempleofAhnQiraj"] = { -- AQ40
 				{ 8,  21597 }, -- Royal Scepter of Vek'lor
 				{ 9,  20735 }, -- Formula: Enchant Cloak - Subtlety
 				{ 12, 21232 }, -- Imperial Qiraji Armaments
-				--{ 12, 21242 }, -- Blessed Qiraji War Axe
-				--{ 13, 21244 }, -- Blessed Qiraji Pugio
-				--{ 14, 21272 }, -- Blessed Qiraji Musket
-				--{ 15, 21269 }, -- Blessed Qiraji Bulwark
 				{ 16, "INV_Box_01", nil, AL["Emperor Vek'nilash"], nil },
 				{ 17, 20926 }, -- Vek'nilash's Circlet
 				{ 18, 21608 }, -- Amulet of Vek'nilash
@@ -5241,9 +5226,6 @@ data["TheTempleofAhnQiraj"] = { -- AQ40
 				{ 24, 21679 }, -- Kalimdor's Revenge
 				{ 25, 20726 }, -- Formula: Enchant Gloves - Threat
 				{ 27, 21237 }, -- Imperial Qiraji Regalia
-				--{ 28, 21268 }, -- Blessed Qiraji War Hammer
-				--{ 29, 21273 }, -- Blessed Qiraji Acolyte Staff
-				--{ 30, 21275 }, -- Blessed Qiraji Augur Staff
 			},
 		},
 		{ -- AQ40Ouro
