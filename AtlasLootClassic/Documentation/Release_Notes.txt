@@ -9,18 +9,11 @@ v1.0.1-beta (Jul. XX, 2019)
 ========================
 - SetItems are now marked and clickable to show the whole set
 - There is now a search box under every loot page
+- Add Crafting: Leatherworking, Tailoring, Mining, Cooking, Herbalism, Engineering, First Aid, Enchanting, Blacksmithing
+- Add Factions: Argent Dawn, Timbermaw
+- Add Collections: Sets for ZG, AQ20, AQ40
 - Add more Tokens
-- Add Blacksmithing
-- Add Enchanting
-- Add First Aid
-- Add Engineering
-- Add Herbalism
-- Add Cooking
-- Add Mining
-- Add Tailoring
-- Add Leatherworking
 - Add Options
-- Add Collections Sets for ZG, AQ20, AQ40
 - Fix bug with unknown items
 - Fix bug with recipes are not shown for enchants
 - Fix bug with crafting items cant be linked into chat

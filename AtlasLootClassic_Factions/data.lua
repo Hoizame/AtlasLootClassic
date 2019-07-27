@@ -61,7 +61,7 @@ data["ArgentDawn"] = {
 		{ -- Exalted
 			name = _G["FACTION_STANDING_LABEL8"],
 			[NORMAL_DIFF] = {
-				{ 1, "f529rep7" },
+				{ 1, "f529rep8" },
 				{ 2, 18182 }, -- Chromatic Mantle of the Dawn
 				{ 17,  22523, 22524, [ATLASLOOT_IT_AMOUNT1] = format(AD_INSIGNIA_FORMAT_EPIC, 27), [ATLASLOOT_IT_AMOUNT2] = format(AD_INSIGNIA_FORMAT_EPIC, 27) }, -- Insignia of the Dawn / Crusade
 				{ 18,  22523, 22524, [ATLASLOOT_IT_AMOUNT1] = format(AD_INSIGNIA_FORMAT_BLUE, 6), [ATLASLOOT_IT_AMOUNT2] = format(AD_INSIGNIA_FORMAT_BLUE, 6) }, -- Insignia of the Dawn / Crusade
@@ -107,6 +107,52 @@ data["ArgentDawn"] = {
 				{ 2,  13724 }, -- Enriched Manna Biscuit
 				{ 17,  22523, 22524, [ATLASLOOT_IT_AMOUNT1] = format(AD_INSIGNIA_FORMAT_EPIC, 110), [ATLASLOOT_IT_AMOUNT2] = format(AD_INSIGNIA_FORMAT_EPIC, 110) }, -- Insignia of the Dawn / Crusade
 				{ 18,  22523, 22524, [ATLASLOOT_IT_AMOUNT1] = format(AD_INSIGNIA_FORMAT_BLUE, 30), [ATLASLOOT_IT_AMOUNT2] = format(AD_INSIGNIA_FORMAT_BLUE, 30) }, -- Insignia of the Dawn / Crusade
+			},
+		},
+	},
+}
+
+data["Timbermaw"] = {
+	FactionID = 576,
+	ContentType = FACTIONS_CONTENT,
+	LoadDifficulty = LOAD_DIFF,
+	items = {
+		{ -- Exalted
+			name = _G["FACTION_STANDING_LABEL8"],
+			[NORMAL_DIFF] = {
+				{ 1, "f576rep8" },
+				{ 2, 21326 }, -- Defender of the Timbermaw
+			},
+		},
+		{ -- Revered
+			name = _G["FACTION_STANDING_LABEL7"],
+			[NORMAL_DIFF] = {
+				{ 1, "f576rep7" },
+				{ 2, 19218 }, -- Pattern: Mantle of the Timbermaw
+				{ 3, 19327 }, -- Pattern: Timbermaw Brawlers
+				{ 4, 19204 }, -- Plans: Heavy Timbermaw Boots
+			},
+		},
+		{ -- Honored
+			name = _G["FACTION_STANDING_LABEL6"],
+			[NORMAL_DIFF] = {
+				{ 1, "f576rep6" },
+				{ 2,  16768 }, -- Furbolg Medicine Pouch
+				{ 3,  16769 }, -- Furbolg Medicine Totem
+				{ 4, 19202 }, -- Plans: Heavy Timbermaw Belt
+				{ 5, 19326 }, -- Pattern: Might of the Timbermaw
+				{ 6, 19215 }, -- Pattern: Wisdom of the Timbermaw
+				{ 7, 19445 }, -- Formula: Enchant Weapon - Agility
+			},
+		},
+		{ -- Friendly
+			name = _G["FACTION_STANDING_LABEL5"],
+			[NORMAL_DIFF] = {
+				{ 1, "f576rep5" },
+				{ 2,  13484 }, -- Recipe: Transmute Earth to Water
+				{ 3,  15754 }, -- Pattern: Warbear Woolies
+				{ 4,  15742 }, -- Pattern: Warbear Harness
+				{ 5,  22392 }, -- Formula: Enchant 2H Weapon - Agility
 			},
 		},
 	},
