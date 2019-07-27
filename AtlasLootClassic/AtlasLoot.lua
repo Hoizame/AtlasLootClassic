@@ -59,14 +59,6 @@ function AtlasLoot:OnInitialize()
 
 	self.db = ALDB:Register(AtlasLootClassicCharDB, AtlasLootClassicDB, AtlasLoot.AtlasLootDBDefaults)
 
-	-- make sure that it got replaced
-	if not AtlasLootClassicRawDB.NpcCache or ( AtlasLootClassicRawDB.NpcCache.__addonrevision or 0 ) < AtlasLoot.__addonrevision then
-		AtlasLoot.Loader:LoadAllModules(true)
-		AtlasLootClassicRawDB.NpcCache = {
-			__addonrevision = AtlasLoot.__addonrevision
-		}
-	end
-	AtlasLoot.ItemDB.NpcList = AtlasLootClassicRawDB.NpcCache
 	-- bindings
 	BINDING_HEADER_ATLASLOOT = AL["AtlasLoot"]
 	BINDING_NAME_ATLASLOOT_TOGGLE = AL["Toggle AtlasLoot"]
