@@ -9,6 +9,7 @@ local Token = AtlasLoot.Data.Token
 local Recipe = AtlasLoot.Data.Recipe
 local Profession = AtlasLoot.Data.Profession
 local Sets = AtlasLoot.Data.Sets
+local ItemFrame
 
 local db
 
@@ -16,7 +17,7 @@ local db
 local tonumber = tonumber
 local assert = assert
 local next, wipe, tab_remove = next, wipe, table.remove
-local format, split = string.format, string.split
+local format, split, sfind, slower = string.format, string.split, string.find, string.lower
 
 -- WoW
 local GetItemInfo, IsEquippableItem = GetItemInfo, IsEquippableItem
@@ -59,6 +60,7 @@ function Item.OnSet(button, second)
 			local _, _, _, itemQuality = GetItemQualityColor(i)
 			ITEM_COLORS[i] = itemQuality
 		end
+		ItemFrame = AtlasLoot.GUI.ItemFrame
 	end
 	if not button then return end
 	if second and button.__atlaslootinfo.secType then
@@ -346,7 +348,16 @@ local function EventFrame_OnEvent(frame, event, arg1, arg2)
 				if button.type == "secButton" then
 					button.obj:GetSecTypeFunctions().Refresh(button_list[arg1][i])
 				else
-					button:GetTypeFunctions().Refresh(button_list[arg1][i])
+					local typFunc = button:GetTypeFunctions()
+					if typFunc then
+						typFunc.Refresh(button_list[arg1][i])
+						if ItemFrame.SearchString then
+							local text = button.name:GetText()
+							if text and not sfind(slower(text), ItemFrame.SearchString, 1, true) then
+								button:Clear()
+							end
+						end
+					end
 				end
 			end
 			button_list[arg1] = nil

@@ -28,21 +28,14 @@ local function UpdateFrames(noPageUpdate)
 	local moduleData = AtlasLoot.ItemDB:Get(db.selected[1])
 	local dataID = db.selected[2]
 	local bossID = db.selected[3]
+	local frame, contentFrame = GUI.frame, GUI.frame.contentFrame
 	local contentName, contentIndex, contentColor = moduleData[dataID]:GetContentType()
 	local name, description, _, loreImage, dungeonAreaMapID
 	contentColor = contentColor or ATLASLOOT_UNKNOWN_COLOR
 
-	if moduleData[dataID].EncounterJournalID and moduleData[dataID].items[bossID].EncounterJournalID then
-		GUI.__EJData = { moduleData[dataID].EncounterJournalID, moduleData[dataID].items[bossID].EncounterJournalID }
-		GUI.frame.contentFrame.clasFilterButton:Show()
-	else
-		GUI.__EJData = nil
-		GUI.frame.contentFrame.clasFilterButton:Hide()
-	end
-
 	-- Set Boss name
-	GUI.frame.contentFrame.title.txt = moduleData[dataID]:GetNameForItemTable(bossID)
-	GUI.frame.contentFrame.title:SetText(GUI.frame.contentFrame.title.txt)
+	contentFrame.title.txt = moduleData[dataID]:GetNameForItemTable(bossID)
+	contentFrame.title:SetText(contentFrame.title.txt)
 
 	-- refresh background info
 	GUI.lastBgInfo = GUI.curBGInfo
@@ -72,45 +65,52 @@ local function UpdateFrames(noPageUpdate)
 			moduleData[dataID].items[bossID].DisplayIDs[1][2] = moduleData[dataID]:GetNameForItemTable(bossID)
 		end
 		GUI.ModelFrame.DisplayIDs = moduleData[dataID].items[bossID].DisplayIDs
-		GUI.frame.contentFrame.modelButton:Show()
+		contentFrame.modelButton:Show()
 	elseif moduleData[dataID].items[bossID].EncounterJournalID then
 		GUI.ModelFrame.EncounterJournalID = moduleData[dataID].items[bossID].EncounterJournalID
-		GUI.frame.contentFrame.modelButton:Show()
+		contentFrame.modelButton:Show()
 	else
 		GUI.ModelFrame.DisplayIDs = nil
 		GUI.ModelFrame.EncounterJournalID = nil
-		GUI.frame.contentFrame.modelButton:Hide()
+		contentFrame.modelButton:Hide()
 	end
 
 	-- SOUNDS
 	if moduleData[dataID].items[bossID].npcId and SoundData:GetNpcData(moduleData[dataID].items[bossID].npcId) then
 		GUI.SoundFrame.npcId = moduleData[dataID].items[bossID].npcId
-		GUI.frame.contentFrame.soundsButton:Show()
+		contentFrame.soundsButton:Show()
 	else
 		GUI.SoundFrame.npcId = nil
-		GUI.frame.contentFrame.soundsButton:Hide()
-		if GUI.frame.contentFrame.shownFrame == GUI.SoundFrame.frame then
-			GUI.frame.contentFrame.shownFrame = nil
+		contentFrame.soundsButton:Hide()
+		if contentFrame.shownFrame == GUI.SoundFrame.frame then
+			contentFrame.shownFrame = nil
 			if GUI.SoundFrame.frame then
 				GUI.SoundFrame.frame:Hide()
 			end
 		end
 	end
 
+	-- Search
+	if contentFrame.shownFrame and contentFrame.shownFrame.OnSearch then
+		contentFrame.searchBox:Show()
+	else
+		contentFrame.searchBox:Hide()
+	end
+
 	-- AtlasMapID
 	if AtlasLoot.AtlasIntegration and (AtlasLoot.AtlasIntegration.IsEnabled() and moduleData[dataID].AtlasMapID and AtlasLoot.AtlasIntegration.GetAtlasZoneData(moduleData[dataID].AtlasMapID)) then
-		GUI.frame.contentFrame.AtlasMapButton.AtlasMapID = moduleData[dataID].AtlasMapID
-		GUI.frame.contentFrame.AtlasMapButton:Show()
-		if (GUI.frame.contentFrame.soundsButton:IsVisible()) then
-			GUI.frame.contentFrame.AtlasMapButton:SetPoint("RIGHT", GUI.frame.contentFrame.soundsButton, "LEFT", -2, 0)
-		elseif (GUI.frame.contentFrame.modelButton:IsVisible()) then
-			GUI.frame.contentFrame.AtlasMapButton:SetPoint("RIGHT", GUI.frame.contentFrame.modelButton, "LEFT", -2, 0)
+		contentFrame.AtlasMapButton.AtlasMapID = moduleData[dataID].AtlasMapID
+		contentFrame.AtlasMapButton:Show()
+		if (contentFrame.soundsButton:IsVisible()) then
+			contentFrame.AtlasMapButton:SetPoint("RIGHT", contentFrame.soundsButton, "LEFT", -2, 0)
+		elseif (contentFrame.modelButton:IsVisible()) then
+			contentFrame.AtlasMapButton:SetPoint("RIGHT", contentFrame.modelButton, "LEFT", -2, 0)
 		else
-			GUI.frame.contentFrame.AtlasMapButton:SetPoint("RIGHT", GUI.frame.contentFrame.nextPageButton, "LEFT", 0, 0)
+			contentFrame.AtlasMapButton:SetPoint("RIGHT", contentFrame.nextPageButton, "LEFT", 0, 0)
 		end
 	else
-		GUI.frame.contentFrame.AtlasMapButton.AtlasMapID = nil
-		GUI.frame.contentFrame.AtlasMapButton:Hide()
+		contentFrame.AtlasMapButton.AtlasMapID = nil
+		contentFrame.AtlasMapButton:Hide()
 	end
 
 	-- BaseLvl for Items
@@ -120,32 +120,31 @@ local function UpdateFrames(noPageUpdate)
 		-- Next/Prev
 		if moduleData[dataID].items[bossID+1] then
 			if moduleData[dataID].items[bossID].ExtraList and moduleData[dataID].items[bossID+1].ExtraList then
-				GUI.frame.contentFrame.nextPageButton.info = nil
-				--GUI.frame.contentFrame.nextPageButton.info = bossID + 1
+				contentFrame.nextPageButton.info = nil
+				--contentFrame.nextPageButton.info = bossID + 1
 			elseif not moduleData[dataID].items[bossID+1].ExtraList and not moduleData[dataID].items[bossID].ExtraList then
-				GUI.frame.contentFrame.nextPageButton.info = GUI.frame.boss:CheckIfNext()
+				contentFrame.nextPageButton.info = GUI.frame.boss:CheckIfNext()
 			else
-				GUI.frame.contentFrame.nextPageButton.info = nil
+				contentFrame.nextPageButton.info = nil
 			end
 		else
-			GUI.frame.contentFrame.nextPageButton.info = nil
+			contentFrame.nextPageButton.info = nil
 		end
-		if GUI.frame.contentFrame.shownFrame and GUI.frame.contentFrame.shownFrame.prevPage and not moduleData[dataID].items[bossID].ExtraList then
-			GUI.frame.contentFrame.prevPageButton.info = tostring(GUI.frame.contentFrame.shownFrame.prevPage)
+		if contentFrame.shownFrame and contentFrame.shownFrame.prevPage and not moduleData[dataID].items[bossID].ExtraList then
+			contentFrame.prevPageButton.info = tostring(contentFrame.shownFrame.prevPage)
 		elseif moduleData[dataID].items[bossID-1] and not moduleData[dataID].items[bossID].ExtraList then
-			GUI.frame.contentFrame.prevPageButton.info = GUI.frame.boss:CheckIfPrev()
+			contentFrame.prevPageButton.info = GUI.frame.boss:CheckIfPrev()
 		else
-			GUI.frame.contentFrame.prevPageButton.info = nil
+			contentFrame.prevPageButton.info = nil
 		end
 
 		-- refresh current page
-		if GUI.frame.contentFrame.shownFrame and GUI.frame.contentFrame.shownFrame.Refresh then
-			GUI.frame.contentFrame.shownFrame:Refresh()
-		elseif not GUI.frame.contentFrame.shownFrame then
+		if contentFrame.shownFrame and contentFrame.shownFrame.Refresh then
+			contentFrame.shownFrame:Refresh()
+		elseif not contentFrame.shownFrame then
 			GUI.ItemFrame:Show()
 		end
 	end
-
 	GUI:RefreshNextPrevButtons()
 end
 
@@ -464,6 +463,19 @@ local function NextPrevButtonOnClick(self)
 				GUI.frame.boss:SetPrev()
 			end
 		end
+	end
+end
+
+local function SearchBoxOnEnter(self)
+	self:ClearFocus()
+	if GUI.frame.contentFrame.shownFrame and GUI.frame.contentFrame.shownFrame.OnSearch then
+		GUI.frame.contentFrame.shownFrame.OnSearch(self:GetText())
+	end
+end
+
+local function SearchBoxOnClear(self)
+	if GUI.frame.contentFrame.shownFrame and GUI.frame.contentFrame.shownFrame.OnSearchClear then
+		GUI.frame.contentFrame.shownFrame.OnSearchClear()
 	end
 end
 
@@ -956,6 +968,18 @@ function GUI:Create()
 	frame.contentFrame.soundsButton:SetText(AL["Sounds"])
 	frame.contentFrame.soundsButton:SetScript("OnClick", SoundButtonOnClick)
 
+	-- #####
+	-- Center
+	-- #####
+	frame.contentFrame.searchBox = CreateFrame("EditBox", frameName.."-SearchBox", frame.contentFrame, "SearchBoxTemplate")
+	frame.contentFrame.searchBox:SetWidth(200)
+	frame.contentFrame.searchBox:SetHeight(35)
+	frame.contentFrame.searchBox:SetPoint("CENTER", frame.contentFrame.downBG, "CENTER", 0, 0)
+	frame.contentFrame.searchBox:SetAutoFocus(false)
+	frame.contentFrame.searchBox:SetMaxLetters(50)
+	frame.contentFrame.searchBox:SetScript("OnEnterPressed", SearchBoxOnEnter)
+	frame.contentFrame.searchBox.clearButton:HookScript("OnClick", SearchBoxOnClear)
+	frame.contentFrame.searchBox:Show()
 
 	-- #####
 	-- Left -> Right
@@ -1002,13 +1026,14 @@ function GUI:Create()
 	GUI.RefreshMainFrame()
 
 	self.ItemFrame:Create()
+	-- Set itemframe as start frame
+	frame.contentFrame.shownFrame = GUI.ItemFrame.frame
 	--self.SoundFrame:Create()
 end
 
 function GUI.RefreshStyle()
 
 end
-
 
 function GUI.ResetFrames()
 	db.point = { "CENTER" }

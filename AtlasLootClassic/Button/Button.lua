@@ -578,7 +578,7 @@ function Proto:SetDifficultyID(diffID)
 end
 
 function Proto:GetTypeFunctions()
-	return button_types[self.__atlaslootinfo.type[1]]
+	return self.__atlaslootinfo.type and button_types[self.__atlaslootinfo.type[1]] or nil
 end
 
 function Proto:GetSecTypeFunctions()

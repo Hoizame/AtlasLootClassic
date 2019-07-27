@@ -1643,7 +1643,8 @@ data["Herbalism"] = {
 				{ 8, 8839 }, -- Blindweed
 				{ 9, 8838 }, -- Sungrass
 				{ 16,  13468 }, -- Black Lotus
-				{ 17,  19726 }, -- Bloodvine
+				{ 18,  19727 }, -- Blood Scythe
+				{ 19,  19726 }, -- Bloodvine
 			}
 		},
 		{
