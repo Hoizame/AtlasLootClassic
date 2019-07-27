@@ -96,81 +96,6 @@ data["AlteracValley"] = {
 	ContentType = PVP_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
 	items = {
-		{ -- AVRepFriendly
-			name = _G["FACTION_STANDING_LABEL5"],
-			[ALLIANCE_DIFF] = {
-				{ 1, "f730rep5" },
-				{ 2,  19318 }, -- Bottled Alterac Spring Water
-				{ 3,  19307 }, -- Alterac Heavy Runecloth Bandage
-				{ 4,  17349 }, -- Superior Healing Draught
-				{ 5,  17352 }, -- Superior Mana Draught
-				{ 17,  19032 }, -- Stormpike Battle Tabard
-			},
-			[HORDE_DIFF] = {
-				{ 1, "f729rep5" },
-				{ 2, 19318 }, --  Spring Water
-				{ 3, 19307 }, -- Alterac Heavy Runecloth Bandage
-				{ 4, 17349 }, -- Superior Healing Draught
-				{ 5, 17352 }, -- Superior Mana Draught
-				{ 17, 19031 }, -- Frostwolf Battle Tabard
-			},
-		},
-		{ -- AVRepHonored
-			name = _G["FACTION_STANDING_LABEL6"],
-			[ALLIANCE_DIFF] = {
-				{ 1, "f730rep6" },
-				{ 2,  19098 }, -- Stormpike Sage's Pendant
-				{ 3,  19097 }, -- Stormpike Soldier's Pendant
-				{ 4,  19086 }, -- Stormpike Sage's Cloak
-				{ 5,  19084 }, -- Stormpike Soldier's Cloak
-				{ 6,  19094 }, -- Stormpike Cloth Girdle
-				{ 7,  19093 }, -- Stormpike Leather Girdle
-				{ 8,  19092 }, -- Stormpike Mail Girdle
-				{ 9, 19091 }, -- Stormpike Plate Girdle
-				{ 17, 19316 }, -- Ice Threaded Arrow
-				{ 18, 19317 }, -- Ice Threaded Bullet
-				{ 19, 19301 }, -- Alterac Manna Biscuit
-				{ 20, 17348 }, -- Major Healing Draught
-				{ 21, 17351 }, -- Major Mana Draught
-			},
-			[HORDE_DIFF] = {
-				{ 1, "f729rep6" },
-				{ 2, 19096 }, -- Frostwolf Advisor's Pendant
-				{ 3, 19095 }, -- Frostwolf Legionnaire's Pendant
-				{ 4, 19085 }, -- Frostwolf Advisor's Cloak
-				{ 5, 19083 }, -- Frostwolf Legionnaire's Cloak
-				{ 6, 19090 }, -- Frostwolf Cloth Belt
-				{ 7, 19089 }, -- Frostwolf Leather Belt
-				{ 8, 19088 }, -- Frostwolf Mail Belt
-				{ 9, 19087 }, -- Frostwolf Plate Belt
-				{ 17, 19316 }, -- Ice Threaded Arrow
-				{ 18, 19317 }, -- Ice Threaded Bullet
-				{ 19, 19301 }, -- Alterac Manna Biscuit
-				{ 20, 17348 }, -- Major Healing Draught
-				{ 21, 17351 }, -- Major Mana Draught
-			},
-		},
-		{ -- AVRepRevered
-			name = _G["FACTION_STANDING_LABEL7"],
-			[ALLIANCE_DIFF] = {
-				{ 1, "f730rep7" },
-				{ 2,  19045 }, -- Stormpike Battle Standard
-				{ 3,  19320 }, -- Gnoll Skin Bandolier
-				{ 4,  19319 }, -- Harpy Hide Quiver
-				{ 5,  19100 }, -- Electrified Dagger
-				{ 6,  19104 }, -- Stormstrike Hammer
-				{ 7,  19102 }, -- Crackling Staff
-			},
-			[HORDE_DIFF] = {
-				{ 1, "f729rep7" },
-				{ 2, 19046 }, -- Frostwolf Battle Standard
-				{ 3, 19320 }, -- Gnoll Skin Bandolier
-				{ 4, 19319 }, -- Harpy Hide Quiver
-				{ 5, 19099 }, -- Glacial Blade
-				{ 6, 19103 }, -- Frostbite
-				{ 7, 19101 }, -- Whiteout Staff
-			},
-		},
 		{ -- AVRepExalted
 			name = _G["FACTION_STANDING_LABEL8"],
 			[ALLIANCE_DIFF] = {
@@ -208,6 +133,81 @@ data["AlteracValley"] = {
 				{ 17, 19029 }, -- Horn of the Frostwolf Howler
 			},
 		},
+		{ -- AVRepRevered
+			name = _G["FACTION_STANDING_LABEL7"],
+			[ALLIANCE_DIFF] = {
+				{ 1, "f730rep7" },
+				{ 2,  19045 }, -- Stormpike Battle Standard
+				{ 3,  19320 }, -- Gnoll Skin Bandolier
+				{ 4,  19319 }, -- Harpy Hide Quiver
+				{ 5,  19100 }, -- Electrified Dagger
+				{ 6,  19104 }, -- Stormstrike Hammer
+				{ 7,  19102 }, -- Crackling Staff
+			},
+			[HORDE_DIFF] = {
+				{ 1, "f729rep7" },
+				{ 2, 19046 }, -- Frostwolf Battle Standard
+				{ 3, 19320 }, -- Gnoll Skin Bandolier
+				{ 4, 19319 }, -- Harpy Hide Quiver
+				{ 5, 19099 }, -- Glacial Blade
+				{ 6, 19103 }, -- Frostbite
+				{ 7, 19101 }, -- Whiteout Staff
+			},
+		},
+		{ -- AVRepHonored
+			name = _G["FACTION_STANDING_LABEL6"],
+			[ALLIANCE_DIFF] = {
+				{ 1, "f730rep6" },
+				{ 2,  19098 }, -- Stormpike Sage's Pendant
+				{ 3,  19097 }, -- Stormpike Soldier's Pendant
+				{ 4,  19086 }, -- Stormpike Sage's Cloak
+				{ 5,  19084 }, -- Stormpike Soldier's Cloak
+				{ 6,  19094 }, -- Stormpike Cloth Girdle
+				{ 7,  19093 }, -- Stormpike Leather Girdle
+				{ 8,  19092 }, -- Stormpike Mail Girdle
+				{ 9, 19091 }, -- Stormpike Plate Girdle
+				{ 17, 19316 }, -- Ice Threaded Arrow
+				{ 18, 19317 }, -- Ice Threaded Bullet
+				{ 19, 19301 }, -- Alterac Manna Biscuit
+				{ 20, 17348 }, -- Major Healing Draught
+				{ 21, 17351 }, -- Major Mana Draught
+			},
+			[HORDE_DIFF] = {
+				{ 1, "f729rep6" },
+				{ 2, 19096 }, -- Frostwolf Advisor's Pendant
+				{ 3, 19095 }, -- Frostwolf Legionnaire's Pendant
+				{ 4, 19085 }, -- Frostwolf Advisor's Cloak
+				{ 5, 19083 }, -- Frostwolf Legionnaire's Cloak
+				{ 6, 19090 }, -- Frostwolf Cloth Belt
+				{ 7, 19089 }, -- Frostwolf Leather Belt
+				{ 8, 19088 }, -- Frostwolf Mail Belt
+				{ 9, 19087 }, -- Frostwolf Plate Belt
+				{ 17, 19316 }, -- Ice Threaded Arrow
+				{ 18, 19317 }, -- Ice Threaded Bullet
+				{ 19, 19301 }, -- Alterac Manna Biscuit
+				{ 20, 17348 }, -- Major Healing Draught
+				{ 21, 17351 }, -- Major Mana Draught
+			},
+		},
+		{ -- AVRepFriendly
+			name = _G["FACTION_STANDING_LABEL5"],
+			[ALLIANCE_DIFF] = {
+				{ 1, "f730rep5" },
+				{ 2,  19318 }, -- Bottled Alterac Spring Water
+				{ 3,  19307 }, -- Alterac Heavy Runecloth Bandage
+				{ 4,  17349 }, -- Superior Healing Draught
+				{ 5,  17352 }, -- Superior Mana Draught
+				{ 17,  19032 }, -- Stormpike Battle Tabard
+			},
+			[HORDE_DIFF] = {
+				{ 1, "f729rep5" },
+				{ 2, 19318 }, --  Spring Water
+				{ 3, 19307 }, -- Alterac Heavy Runecloth Bandage
+				{ 4, 17349 }, -- Superior Healing Draught
+				{ 5, 17352 }, -- Superior Mana Draught
+				{ 17, 19031 }, -- Frostwolf Battle Tabard
+			},
+		},
 	},
 }
 
@@ -217,112 +217,33 @@ data["ArathiBasin"] = {
 	ContentType = PVP_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
 	items = {
-		{ -- ABRepFriendly
-			name = _G["FACTION_STANDING_LABEL5"],
+		{ -- ABRepRevered
+			name = _G["FACTION_STANDING_LABEL8"],
 			[ALLIANCE_DIFF] = {
-				{ 1, "f509rep5" },
-				{ 2, "INV_Box_01", nil, "20 - 29", nil }, -- ABRepFriendly2029
-				{ 3,  21119 }, -- Talisman of Arathor
-				{ 4,  20226 }, -- Highlander's Field Ration
-				{ 5,  20244 }, -- Highlander's Silk Bandage
-				{ 7, "INV_Box_01", nil, "30 - 39", nil }, -- ABRepFriendly3039
-				{ 8,  21118 }, -- Talisman of Arathor
-				{ 9,  20227 }, -- Highlander's Iron Ration
-				{ 10,  20237 }, -- Highlander's Mageweave Bandage
-				{ 11,  17349 }, -- Superior Healing Draught
-				{ 12,  17352 }, -- Superior Mana Draught
-				{ 17, "INV_Box_01", nil, "40 - 49", nil }, -- ABRepFriendly4049
-				{ 18,  21117 }, -- Talisman of Arathor
-				{ 19,  20225 }, -- Highlander's Enriched Ration
-				{ 20,  20243 }, -- Highlander's Runecloth Bandage
-				{ 22, "INV_Box_01", nil, "50 - 59", nil }, -- ABRepFriendly5059
-				{ 23,  20071 }, -- Talisman of Arathor
+				{ 1, "f509rep8" },
+				{ 2,  20061 }, -- Highlander's Epaulets
+				{ 3,  20060 }, -- Highlander's Lizardhide Shoulders
+				{ 4,  20059 }, -- Highlander's Leather Shoulders
+				{ 5,  20055 }, -- Highlander's Chain Pauldrons
+				{ 6,  20058 }, -- Highlander's Lamellar Spaulders
+				{ 7,  20057 }, -- Highlander's Plate Spaulders
+				{ 8, 20073 }, -- Cloak of the Honor Guard
+				{ 9, 20070 }, -- Sageclaw
+				{ 10, 20069 }, -- Ironbark Staff
+				{ 17, 20132 }, -- Arathor Battle Tabard
 			},
 			[HORDE_DIFF] = {
-				{ 1, "f510rep5" },
-				{ 2, "INV_Box_01", nil, "20 - 29", nil }, -- ABRepFriendly2029
-				{ 3, 21120 }, -- Defiler's Talisman
-				{ 4, 20223 }, -- Defiler's Field Ration
-				{ 5, 20235 }, -- Defiler's Silk Bandage
-				{ 7, "INV_Box_01", nil, "30 - 39", nil }, -- ABRepFriendly3039
-				{ 8, 21116 }, -- Defiler's Talisman
-				{ 9, 20224 }, -- Defiler's Iron Ration
-				{ 10, 20232 }, -- Defiler's Mageweave Bandage
-				{ 11, 17349 }, -- Superior Healing Draught
-				{ 12, 17352 }, -- Superior Mana Draught
-				{ 17, "INV_Box_01", nil, "40 - 49", nil }, -- ABRepFriendly4049
-				{ 18, 21115 }, -- Defiler's Talisman
-				{ 19, 20222 }, -- Defiler's Enriched Ration
-				{ 20, 20234 }, -- Defiler's Runecloth Bandage
-				{ 22, "INV_Box_01", nil, "50 - 59", nil }, -- ABRepFriendly5059
-				{ 23, 20072 }, -- Defiler's Talisman
-			},
-		},
-		{ -- ABRepHonored
-			name = _G["FACTION_STANDING_LABEL6"],
-			[ALLIANCE_DIFF] = {
-				{ 1, "f509rep6" },
-				{ 2, "INV_Box_01", nil, "20 - 29", nil }, -- ABRepHonored2029
-				{ 3,  20099 }, -- Highlander's Cloth Girdle
-				{ 4,  20117 }, -- Highlander's Leather Girdle
-				{ 5,  20105 }, -- Highlander's Lizardhide Girdle
-				{ 6,  20090 }, -- Highlander's Chain Girdle
-				{ 7,  20108 }, -- Highlander's Lamellar Girdle
-				{ 8,  20126 }, -- Highlander's Plate Girdle
-				{ 10, "INV_Box_01", nil, "30 - 39", nil }, -- ABRepHonored3039
-				{ 11,  20098 }, -- Highlander's Cloth Girdle
-				{ 12,  20116 }, -- Highlander's Leather Girdle
-				{ 13,  20104 }, -- Highlander's Lizardhide Girdle
-				{ 17, "INV_Box_01", nil, "40 - 49", nil }, -- ABRepHonored4049
-				{ 18,  20097 }, -- Highlander's Cloth Girdle
-				{ 19,  20115 }, -- Highlander's Leather Girdle
-				{ 20,  20103 }, -- Highlander's Lizardhide Girdle
-				{ 21,  20088 }, -- Highlander's Chain Girdle
-				{ 22,  20106 }, -- Highlander's Lamellar Girdle
-				{ 23,  20124 }, -- Highlander's Plate Girdle
-				{ 24, 20089 }, -- Highlander's Chain Girdle
-				{ 25, 20107 }, -- Highlander's Lamellar Girdle
-				{ 26, 20125 }, -- Highlander's Plate Girdle
-				{ 101, "f509rep6" },
-				{ 102, "INV_Box_01", nil, "50 - 59", nil }, -- ABRepHonored5059
-				{ 103,  20047 }, -- Highlander's Cloth Girdle
-				{ 104,  20045 }, -- Highlander's Leather Girdle
-				{ 105,  20046 }, -- Highlander's Lizardhide Girdle
-				{ 106,  20043 }, -- Highlander's Chain Girdle
-				{ 107,  20042 }, -- Highlander's Lamellar Girdle
-				{ 108,  20041 }, -- Highlander's Plate Girdle
-			},
-			[HORDE_DIFF] = {
-				{ 1, "f510rep6" },
-				{ 2, "INV_Box_01", nil, "20 - 29", nil }, -- ABRepHonored2029
-				{ 3, 20164 }, -- Defiler's Cloth Girdle
-				{ 4, 20191 }, -- Defiler's Leather Girdle
-				{ 5, 20172 }, -- Defiler's Lizardhide Girdle
-				{ 6, 20152 }, -- Defiler's Chain Girdle
-				{ 7, 20197 }, -- Defiler's Mail Girdle
-				{ 8, 20207 }, -- Defiler's Plate Girdle
-				{ 10, "INV_Box_01", nil, "30 - 39", nil }, -- ABRepHonored3039
-				{ 11, 20166 }, -- Defiler's Cloth Girdle
-				{ 12, 20192 }, -- Defiler's Leather Girdle
-				{ 13, 20173 }, -- Defiler's Lizardhide Girdle
-				{ 17, "INV_Box_01", nil, "40 - 49", nil }, -- ABRepHonored4049
-				{ 18, 20165 }, -- Defiler's Cloth Girdle
-				{ 19, 20193 }, -- Defiler's Leather Girdle
-				{ 20, 20174 }, -- Defiler's Lizardhide Girdle
-				{ 21, 20151 }, -- Defiler's Chain Girdle
-				{ 22, 20196 }, -- Defiler's Mail Girdle
-				{ 23, 20205 }, -- Defiler's Plate Girdle
-				{ 24, 20153 }, -- Defiler's Chain Girdle
-				{ 25, 20198 }, -- Defiler's Mail Girdle
-				{ 26, 20206 }, -- Defiler's Plate Girdle
-				{ 101, "f510rep6" },
-				{ 102, "INV_Box_01", nil, "50 - 59", nil }, -- ABRepHonored5059
-				{ 103, 20163 }, -- Defiler's Cloth Girdle
-				{ 104, 20190 }, -- Defiler's Leather Girdle
-				{ 105, 20171 }, -- Defiler's Lizardhide Girdle
-				{ 106, 20150 }, -- Defiler's Chain Girdle
-				{ 107, 20195 }, -- Defiler's Mail Girdle
-				{ 108, 20204 }, -- Defiler's Plate Girdle
+				{ 1, "f510rep8" },
+				{ 2, 20176 }, -- Defiler's Epaulets
+				{ 3, 20175 }, -- Defiler's Lizardhide Shoulders
+				{ 4, 20194 }, -- Defiler's Leather Shoulders
+				{ 5, 20158 }, -- Defiler's Chain Pauldrons
+				{ 6, 20203 }, -- Defiler's Mail Pauldrons
+				{ 7, 20212 }, -- Defiler's Plate Spaulders
+				{ 8, 20068 }, -- Deathguard's Cloak
+				{ 9, 20214 }, -- Mindfang
+				{ 10, 20220 }, -- Ironbark Staff
+				{ 17, 20131 }, -- Battle Tabard of the Defilers
 			},
 		},
 		{ -- ABRepRevered
@@ -392,36 +313,114 @@ data["ArathiBasin"] = {
 				{ 108, 20208 }, -- Defiler's Plate Greaves
 			},
 		},
-		{ -- ABRepRevered
-			name = _G["FACTION_STANDING_LABEL8"],
+		{ -- ABRepHonored
+			name = _G["FACTION_STANDING_LABEL6"],
 			[ALLIANCE_DIFF] = {
-				{ 1, "f509rep8" },
-				{ 2,  20061 }, -- Highlander's Epaulets
-				{ 3,  20060 }, -- Highlander's Lizardhide Shoulders
-				{ 4,  20059 }, -- Highlander's Leather Shoulders
-				{ 5,  20055 }, -- Highlander's Chain Pauldrons
-				{ 6,  20058 }, -- Highlander's Lamellar Spaulders
-				{ 7,  20057 }, -- Highlander's Plate Spaulders
-				{ 8, 20073 }, -- Cloak of the Honor Guard
-				{ 9, 20070 }, -- Sageclaw
-				{ 10, 20069 }, -- Ironbark Staff
-				{ 17, 20132 }, -- Arathor Battle Tabard
+				{ 1, "f509rep6" },
+				{ 2, "INV_Box_01", nil, "20 - 29", nil }, -- ABRepHonored2029
+				{ 3,  20099 }, -- Highlander's Cloth Girdle
+				{ 4,  20117 }, -- Highlander's Leather Girdle
+				{ 5,  20105 }, -- Highlander's Lizardhide Girdle
+				{ 6,  20090 }, -- Highlander's Chain Girdle
+				{ 7,  20108 }, -- Highlander's Lamellar Girdle
+				{ 8,  20126 }, -- Highlander's Plate Girdle
+				{ 10, "INV_Box_01", nil, "30 - 39", nil }, -- ABRepHonored3039
+				{ 11,  20098 }, -- Highlander's Cloth Girdle
+				{ 12,  20116 }, -- Highlander's Leather Girdle
+				{ 13,  20104 }, -- Highlander's Lizardhide Girdle
+				{ 17, "INV_Box_01", nil, "40 - 49", nil }, -- ABRepHonored4049
+				{ 18,  20097 }, -- Highlander's Cloth Girdle
+				{ 19,  20115 }, -- Highlander's Leather Girdle
+				{ 20,  20103 }, -- Highlander's Lizardhide Girdle
+				{ 21,  20088 }, -- Highlander's Chain Girdle
+				{ 22,  20106 }, -- Highlander's Lamellar Girdle
+				{ 23,  20124 }, -- Highlander's Plate Girdle
+				{ 24, 20089 }, -- Highlander's Chain Girdle
+				{ 25, 20107 }, -- Highlander's Lamellar Girdle
+				{ 26, 20125 }, -- Highlander's Plate Girdle
+				{ 101, "f509rep6" },
+				{ 102, "INV_Box_01", nil, "50 - 59", nil }, -- ABRepHonored5059
+				{ 103,  20047 }, -- Highlander's Cloth Girdle
+				{ 104,  20045 }, -- Highlander's Leather Girdle
+				{ 105,  20046 }, -- Highlander's Lizardhide Girdle
+				{ 106,  20043 }, -- Highlander's Chain Girdle
+				{ 107,  20042 }, -- Highlander's Lamellar Girdle
+				{ 108,  20041 }, -- Highlander's Plate Girdle
 			},
 			[HORDE_DIFF] = {
-				{ 1, "f510rep8" },
-				{ 2, 20176 }, -- Defiler's Epaulets
-				{ 3, 20175 }, -- Defiler's Lizardhide Shoulders
-				{ 4, 20194 }, -- Defiler's Leather Shoulders
-				{ 5, 20158 }, -- Defiler's Chain Pauldrons
-				{ 6, 20203 }, -- Defiler's Mail Pauldrons
-				{ 7, 20212 }, -- Defiler's Plate Spaulders
-				{ 8, 20068 }, -- Deathguard's Cloak
-				{ 9, 20214 }, -- Mindfang
-				{ 10, 20220 }, -- Ironbark Staff
-				{ 17, 20131 }, -- Battle Tabard of the Defilers
+				{ 1, "f510rep6" },
+				{ 2, "INV_Box_01", nil, "20 - 29", nil }, -- ABRepHonored2029
+				{ 3, 20164 }, -- Defiler's Cloth Girdle
+				{ 4, 20191 }, -- Defiler's Leather Girdle
+				{ 5, 20172 }, -- Defiler's Lizardhide Girdle
+				{ 6, 20152 }, -- Defiler's Chain Girdle
+				{ 7, 20197 }, -- Defiler's Mail Girdle
+				{ 8, 20207 }, -- Defiler's Plate Girdle
+				{ 10, "INV_Box_01", nil, "30 - 39", nil }, -- ABRepHonored3039
+				{ 11, 20166 }, -- Defiler's Cloth Girdle
+				{ 12, 20192 }, -- Defiler's Leather Girdle
+				{ 13, 20173 }, -- Defiler's Lizardhide Girdle
+				{ 17, "INV_Box_01", nil, "40 - 49", nil }, -- ABRepHonored4049
+				{ 18, 20165 }, -- Defiler's Cloth Girdle
+				{ 19, 20193 }, -- Defiler's Leather Girdle
+				{ 20, 20174 }, -- Defiler's Lizardhide Girdle
+				{ 21, 20151 }, -- Defiler's Chain Girdle
+				{ 22, 20196 }, -- Defiler's Mail Girdle
+				{ 23, 20205 }, -- Defiler's Plate Girdle
+				{ 24, 20153 }, -- Defiler's Chain Girdle
+				{ 25, 20198 }, -- Defiler's Mail Girdle
+				{ 26, 20206 }, -- Defiler's Plate Girdle
+				{ 101, "f510rep6" },
+				{ 102, "INV_Box_01", nil, "50 - 59", nil }, -- ABRepHonored5059
+				{ 103, 20163 }, -- Defiler's Cloth Girdle
+				{ 104, 20190 }, -- Defiler's Leather Girdle
+				{ 105, 20171 }, -- Defiler's Lizardhide Girdle
+				{ 106, 20150 }, -- Defiler's Chain Girdle
+				{ 107, 20195 }, -- Defiler's Mail Girdle
+				{ 108, 20204 }, -- Defiler's Plate Girdle
 			},
 		},
-		ExtraList = true,
+		{ -- ABRepFriendly
+			name = _G["FACTION_STANDING_LABEL5"],
+			[ALLIANCE_DIFF] = {
+				{ 1, "f509rep5" },
+				{ 2, "INV_Box_01", nil, "20 - 29", nil }, -- ABRepFriendly2029
+				{ 3,  21119 }, -- Talisman of Arathor
+				{ 4,  20226 }, -- Highlander's Field Ration
+				{ 5,  20244 }, -- Highlander's Silk Bandage
+				{ 7, "INV_Box_01", nil, "30 - 39", nil }, -- ABRepFriendly3039
+				{ 8,  21118 }, -- Talisman of Arathor
+				{ 9,  20227 }, -- Highlander's Iron Ration
+				{ 10,  20237 }, -- Highlander's Mageweave Bandage
+				{ 11,  17349 }, -- Superior Healing Draught
+				{ 12,  17352 }, -- Superior Mana Draught
+				{ 17, "INV_Box_01", nil, "40 - 49", nil }, -- ABRepFriendly4049
+				{ 18,  21117 }, -- Talisman of Arathor
+				{ 19,  20225 }, -- Highlander's Enriched Ration
+				{ 20,  20243 }, -- Highlander's Runecloth Bandage
+				{ 22, "INV_Box_01", nil, "50 - 59", nil }, -- ABRepFriendly5059
+				{ 23,  20071 }, -- Talisman of Arathor
+			},
+			[HORDE_DIFF] = {
+				{ 1, "f510rep5" },
+				{ 2, "INV_Box_01", nil, "20 - 29", nil }, -- ABRepFriendly2029
+				{ 3, 21120 }, -- Defiler's Talisman
+				{ 4, 20223 }, -- Defiler's Field Ration
+				{ 5, 20235 }, -- Defiler's Silk Bandage
+				{ 7, "INV_Box_01", nil, "30 - 39", nil }, -- ABRepFriendly3039
+				{ 8, 21116 }, -- Defiler's Talisman
+				{ 9, 20224 }, -- Defiler's Iron Ration
+				{ 10, 20232 }, -- Defiler's Mageweave Bandage
+				{ 11, 17349 }, -- Superior Healing Draught
+				{ 12, 17352 }, -- Superior Mana Draught
+				{ 17, "INV_Box_01", nil, "40 - 49", nil }, -- ABRepFriendly4049
+				{ 18, 21115 }, -- Defiler's Talisman
+				{ 19, 20222 }, -- Defiler's Enriched Ration
+				{ 20, 20234 }, -- Defiler's Runecloth Bandage
+				{ 22, "INV_Box_01", nil, "50 - 59", nil }, -- ABRepFriendly5059
+				{ 23, 20072 }, -- Defiler's Talisman
+			},
+		},
 	},
 }
 
@@ -431,43 +430,118 @@ data["WarsongGulch"] = {
 	ContentType = PVP_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
 	items = {
-		{ -- WSGRepFriendly
-			name = _G["FACTION_STANDING_LABEL5"],
+		{ -- WSGRepExalted
+			name = _G["FACTION_STANDING_LABEL8"],
 			[ALLIANCE_DIFF] = {
-				{ 1, "f890rep5" },
-				{ 2, "INV_Box_01", nil, "20 - 29", nil }, -- WSGRepFriendly2029
-				{ 3,  21568 }, -- Rune of Duty
-				{ 4,  21566 }, -- Rune of Perfection
-				{ 5,  19062 }, -- Warsong Gulch Field Ration
-				{ 6,  19068 }, -- Warsong Gulch Silk Bandage
-				{ 8, "INV_Box_01", nil, "30 - 39", nil }, -- WSGRepFriendly3039
-				{ 9,  19061 }, -- Warsong Gulch Iron Ration
-				{ 10,  19067 }, -- Warsong Gulch Mageweave Bandage
-				{ 11,  17349 }, -- Superior Healing Draught
-				{ 12, 17352 }, -- Superior Mana Draught
-				{ 17, "INV_Box_01", nil, "40 - 49", nil }, -- WSGRepFriendly4049
-				{ 18,  21567 }, -- Rune of Duty
-				{ 19,  21565 }, -- Rune of Perfection
-				{ 20,  19060 }, -- Warsong Gulch Enriched Ration
-				{ 21,  19066 }, -- Warsong Gulch Runecloth Bandage
+				{ 1, "f890rep8" },
+				{ 2, "INV_Box_01", nil, "40 - 49", nil }, -- WSGRepExalted4049
+				{ 3,  19597 }, -- Dryad's Wrist Bindings
+				{ 4,  19590 }, -- Forest Stalker's Bracers
+				{ 5,  19584 }, -- Windtalker's Wristguards
+				{ 6,  19581 }, -- Berserker Bracers
+				{ 8, "INV_Box_01", nil, "50 - 59", nil }, -- WSGRepExalted5059
+				{ 9,  19596 }, -- Dryad's Wrist Bindings
+				{ 10,  19589 }, -- Forest Stalker's Bracers
+				{ 11,  19583 }, -- Windtalker's Wristguards
+				{ 12,  19580 }, -- Berserker Bracers
+				{ 17, "INV_Box_01", nil, "60", nil }, -- WSGRepExalted60
+				{ 18,  19595 }, -- Dryad's Wrist Bindings
+				{ 19,  19587 }, -- Forest Stalker's Bracers
+				{ 20,  19582 }, -- Windtalker's Wristguards
+				{ 21,  19578 }, -- Berserker Bracers
+				{ 22,  22752 }, -- Sentinel's Silk Leggings
+				{ 23,  22749 }, -- Sentinel's Leather Pants
+				{ 24, 22750 }, -- Sentinel's Lizardhide Pants
+				{ 25, 22748 }, -- Sentinel's Chain Leggings
+				{ 26, 22753 }, -- Sentinel's Lamellar Legguards
+				{ 27, 22672 }, -- Sentinel's Plate Legguards
+				{ 28, 19506 }, -- Silverwing Battle Tabard
 			},
 			[HORDE_DIFF] = {
-				{ 1, "f889rep5" },
-				{ 2, "INV_Box_01", nil, "20 - 29", nil }, -- WSGRepFriendly2029
-				{ 3, 21568 }, -- Rune of Duty
-				{ 4, 21566 }, -- Rune of Perfection
-				{ 5, 19062 }, -- Warsong Gulch Field Ration
-				{ 6, 19068 }, -- Warsong Gulch Silk Bandage
-				{ 8, "INV_Box_01", nil, "30 - 39", nil }, -- WSGRepFriendly3039
-				{ 9, 19061 }, -- Warsong Gulch Iron Ration
-				{ 10, 19067 }, -- Warsong Gulch Mageweave Bandage
-				{ 11, 17349 }, -- Superior Healing Draught
-				{ 12, 17352 }, -- Superior Mana Draught
-				{ 17, "INV_Box_01", nil, "40 - 49", nil }, -- WSGRepFriendly4049
-				{ 18, 21567 }, -- Rune of Duty
-				{ 19, 21565 }, -- Rune of Perfection
-				{ 20, 19060 }, -- Warsong Gulch Enriched Ration
-				{ 21, 19066 }, -- Warsong Gulch Runecloth Bandage
+				{ 1, "f889rep8" },
+				{ 2, "INV_Box_01", nil, "40 - 49", nil }, -- WSGRepExalted4049
+				{ 3, 19597 }, -- Dryad's Wrist Bindings
+				{ 4, 19590 }, -- Forest Stalker's Bracers
+				{ 5, 19584 }, -- Windtalker's Wristguards
+				{ 6, 19581 }, -- Berserker Bracers
+				{ 8, "INV_Box_01", nil, "50 - 59", nil }, -- WSGRepExalted5059
+				{ 9, 19596 }, -- Dryad's Wrist Bindings
+				{ 10, 19589 }, -- Forest Stalker's Bracers
+				{ 11, 19583 }, -- Windtalker's Wristguards
+				{ 12, 19580 }, -- Berserker Bracers
+				{ 17, "INV_Box_01", nil, "60", nil }, -- WSGRepExalted60
+				{ 18, 19595 }, -- Dryad's Wrist Bindings
+				{ 19, 19587 }, -- Forest Stalker's Bracers
+				{ 20, 19582 }, -- Windtalker's Wristguards
+				{ 21, 19578 }, -- Berserker Bracers
+				{ 22, 22747 }, -- Outrider's Silk Leggings
+				{ 23, 22740 }, -- Outrider's Leather Pants
+				{ 24, 22741 }, -- Outrider's Lizardhide Pants
+				{ 25, 22673 }, -- Outrider's Chain Leggings
+				{ 26, 22676 }, -- Outrider's Mail Leggings
+				{ 27, 22651 }, -- Outrider's Plate Legguards
+				{ 28, 19505 }, -- Warsong Battle Tabard
+			},
+		},
+		{ -- WSGRepRevered
+			name = _G["FACTION_STANDING_LABEL7"],
+			[ALLIANCE_DIFF] = {
+				{ 1, "f890rep7" },
+				{ 2, "INV_Box_01", nil, "10 - 19", nil }, -- WSGRepRevered1019
+				{ 3, 20438 }, -- Outrunner's Bow
+				{ 4, 20443 }, -- Sentinel's Blade
+				{ 5, 20440 }, -- Protector's Sword
+				{ 6, 20434 }, -- Lorekeeper's Staff
+				{ 8, "INV_Box_01", nil, "20 - 29", nil }, -- WSGRepRevered2029
+				{ 9, 19565 }, -- Outrunner's Bow
+				{ 10, 19549 }, -- Sentinel's Blade
+				{ 11, 19557 }, -- Protector's Sword
+				{ 12, 19573 }, -- Lorekeeper's Staff
+				{ 17, "INV_Box_01", nil, "30 - 39", nil }, -- WSGRepRevered3039
+				{ 18, 19564 }, -- Outrunner's Bow
+				{ 19, 19548 }, -- Sentinel's Blade
+				{ 20, 19556 }, -- Protector's Sword
+				{ 21, 19572 }, -- Lorekeeper's Staff
+				{ 23, "INV_Box_01", nil, "40 - 49", nil }, -- WSGRepRevered4049
+				{ 24, 19563 }, -- Outrunner's Bow
+				{ 25, 19547 }, -- Sentinel's Blade
+				{ 26, 19555 }, -- Protector's Sword
+				{ 27, 19571 }, -- Lorekeeper's Staff
+				{ 101, "f890rep7" },
+				{ 102, "INV_Box_01", nil, "50 - 59", nil }, -- WSGRepRevered5059
+				{ 103, 19562 }, -- Outrunner's Bow
+				{ 104, 19546 }, -- Sentinel's Blade
+				{ 105, 19554 }, -- Protector's Sword
+				{ 106, 19570 }, -- Lorekeeper's Staff
+			},
+			[HORDE_DIFF] = {
+				{ 1, "f889rep7" },
+				{ 2, "INV_Box_01", nil, "10 - 19", nil }, -- WSGRepRevered1019
+				{ 3, 20437 }, -- Outrider's Bow
+				{ 4, 20441 }, -- Scout's Blade
+				{ 5, 20430 }, -- Legionnaire's Sword
+				{ 6, 20425 }, -- Advisor's Gnarled Staff
+				{ 8, "INV_Box_01", nil, "20 - 29", nil }, -- WSGRepRevered2029
+				{ 9, 19561 }, -- Outrider's Bow
+				{ 10, 19545 }, -- Scout's Blade
+				{ 11, 19553 }, -- Legionnaire's Sword
+				{ 12, 19569 }, -- Advisor's Gnarled Staff
+				{ 17, "INV_Box_01", nil, "30 - 39", nil }, -- WSGRepRevered3039
+				{ 18, 19560 }, -- Outrider's Bow
+				{ 19, 19544 }, -- Scout's Blade
+				{ 20, 19552 }, -- Legionnaire's Sword
+				{ 21, 19568 }, -- Advisor's Gnarled Staff
+				{ 23, "INV_Box_01", nil, "40 - 49", nil }, -- WSGRepRevered4049
+				{ 24, 19559 }, -- Outrider's Bow
+				{ 25, 19543 }, -- Scout's Blade
+				{ 26, 19551 }, -- Legionnaire's Sword
+				{ 27, 19567 }, -- Advisor's Gnarled Staff
+				{ 101, "f889rep7" },
+				{ 102, "INV_Box_01", nil, "50 - 59", nil }, -- WSGRepRevered5059
+				{ 103, 19558 }, -- Outrider's Bow
+				{ 104, 19542 }, -- Scout's Blade
+				{ 105, 19550 }, -- Legionnaire's Sword
+				{ 106, 19566 }, -- Advisor's Gnarled Staff
 			},
 		},
 		{ -- WSGRepHonored
@@ -535,118 +609,43 @@ data["WarsongGulch"] = {
 				{ 106, 19514 }, -- Protector's Band
 			},
 		},
-		{ -- WSGRepRevered
-			name = _G["FACTION_STANDING_LABEL7"],
+		{ -- WSGRepFriendly
+			name = _G["FACTION_STANDING_LABEL5"],
 			[ALLIANCE_DIFF] = {
-				{ 1, "f890rep7" },
-				{ 2, "INV_Box_01", nil, "10 - 19", nil }, -- WSGRepRevered1019
-				{ 3, 20438 }, -- Outrunner's Bow
-				{ 4, 20443 }, -- Sentinel's Blade
-				{ 5, 20440 }, -- Protector's Sword
-				{ 6, 20434 }, -- Lorekeeper's Staff
-				{ 8, "INV_Box_01", nil, "20 - 29", nil }, -- WSGRepRevered2029
-				{ 9, 19565 }, -- Outrunner's Bow
-				{ 10, 19549 }, -- Sentinel's Blade
-				{ 11, 19557 }, -- Protector's Sword
-				{ 12, 19573 }, -- Lorekeeper's Staff
-				{ 17, "INV_Box_01", nil, "30 - 39", nil }, -- WSGRepRevered3039
-				{ 18, 19564 }, -- Outrunner's Bow
-				{ 19, 19548 }, -- Sentinel's Blade
-				{ 20, 19556 }, -- Protector's Sword
-				{ 21, 19572 }, -- Lorekeeper's Staff
-				{ 23, "INV_Box_01", nil, "40 - 49", nil }, -- WSGRepRevered4049
-				{ 24, 19563 }, -- Outrunner's Bow
-				{ 25, 19547 }, -- Sentinel's Blade
-				{ 26, 19555 }, -- Protector's Sword
-				{ 27, 19571 }, -- Lorekeeper's Staff
-				{ 101, "f890rep7" },
-				{ 102, "INV_Box_01", nil, "50 - 59", nil }, -- WSGRepRevered5059
-				{ 103, 19562 }, -- Outrunner's Bow
-				{ 104, 19546 }, -- Sentinel's Blade
-				{ 105, 19554 }, -- Protector's Sword
-				{ 106, 19570 }, -- Lorekeeper's Staff
+				{ 1, "f890rep5" },
+				{ 2, "INV_Box_01", nil, "20 - 29", nil }, -- WSGRepFriendly2029
+				{ 3,  21568 }, -- Rune of Duty
+				{ 4,  21566 }, -- Rune of Perfection
+				{ 5,  19062 }, -- Warsong Gulch Field Ration
+				{ 6,  19068 }, -- Warsong Gulch Silk Bandage
+				{ 8, "INV_Box_01", nil, "30 - 39", nil }, -- WSGRepFriendly3039
+				{ 9,  19061 }, -- Warsong Gulch Iron Ration
+				{ 10,  19067 }, -- Warsong Gulch Mageweave Bandage
+				{ 11,  17349 }, -- Superior Healing Draught
+				{ 12, 17352 }, -- Superior Mana Draught
+				{ 17, "INV_Box_01", nil, "40 - 49", nil }, -- WSGRepFriendly4049
+				{ 18,  21567 }, -- Rune of Duty
+				{ 19,  21565 }, -- Rune of Perfection
+				{ 20,  19060 }, -- Warsong Gulch Enriched Ration
+				{ 21,  19066 }, -- Warsong Gulch Runecloth Bandage
 			},
 			[HORDE_DIFF] = {
-				{ 1, "f889rep7" },
-				{ 2, "INV_Box_01", nil, "10 - 19", nil }, -- WSGRepRevered1019
-				{ 3, 20437 }, -- Outrider's Bow
-				{ 4, 20441 }, -- Scout's Blade
-				{ 5, 20430 }, -- Legionnaire's Sword
-				{ 6, 20425 }, -- Advisor's Gnarled Staff
-				{ 8, "INV_Box_01", nil, "20 - 29", nil }, -- WSGRepRevered2029
-				{ 9, 19561 }, -- Outrider's Bow
-				{ 10, 19545 }, -- Scout's Blade
-				{ 11, 19553 }, -- Legionnaire's Sword
-				{ 12, 19569 }, -- Advisor's Gnarled Staff
-				{ 17, "INV_Box_01", nil, "30 - 39", nil }, -- WSGRepRevered3039
-				{ 18, 19560 }, -- Outrider's Bow
-				{ 19, 19544 }, -- Scout's Blade
-				{ 20, 19552 }, -- Legionnaire's Sword
-				{ 21, 19568 }, -- Advisor's Gnarled Staff
-				{ 23, "INV_Box_01", nil, "40 - 49", nil }, -- WSGRepRevered4049
-				{ 24, 19559 }, -- Outrider's Bow
-				{ 25, 19543 }, -- Scout's Blade
-				{ 26, 19551 }, -- Legionnaire's Sword
-				{ 27, 19567 }, -- Advisor's Gnarled Staff
-				{ 101, "f889rep7" },
-				{ 102, "INV_Box_01", nil, "50 - 59", nil }, -- WSGRepRevered5059
-				{ 103, 19558 }, -- Outrider's Bow
-				{ 104, 19542 }, -- Scout's Blade
-				{ 105, 19550 }, -- Legionnaire's Sword
-				{ 106, 19566 }, -- Advisor's Gnarled Staff
-			},
-		},
-		{ -- WSGRepExalted
-			name = _G["FACTION_STANDING_LABEL8"],
-			[ALLIANCE_DIFF] = {
-				{ 1, "f890rep8" },
-				{ 2, "INV_Box_01", nil, "40 - 49", nil }, -- WSGRepExalted4049
-				{ 3,  19597 }, -- Dryad's Wrist Bindings
-				{ 4,  19590 }, -- Forest Stalker's Bracers
-				{ 5,  19584 }, -- Windtalker's Wristguards
-				{ 6,  19581 }, -- Berserker Bracers
-				{ 8, "INV_Box_01", nil, "50 - 59", nil }, -- WSGRepExalted5059
-				{ 9,  19596 }, -- Dryad's Wrist Bindings
-				{ 10,  19589 }, -- Forest Stalker's Bracers
-				{ 11,  19583 }, -- Windtalker's Wristguards
-				{ 12,  19580 }, -- Berserker Bracers
-				{ 17, "INV_Box_01", nil, "60", nil }, -- WSGRepExalted60
-				{ 18,  19595 }, -- Dryad's Wrist Bindings
-				{ 19,  19587 }, -- Forest Stalker's Bracers
-				{ 20,  19582 }, -- Windtalker's Wristguards
-				{ 21,  19578 }, -- Berserker Bracers
-				{ 22,  22752 }, -- Sentinel's Silk Leggings
-				{ 23,  22749 }, -- Sentinel's Leather Pants
-				{ 24, 22750 }, -- Sentinel's Lizardhide Pants
-				{ 25, 22748 }, -- Sentinel's Chain Leggings
-				{ 26, 22753 }, -- Sentinel's Lamellar Legguards
-				{ 27, 22672 }, -- Sentinel's Plate Legguards
-				{ 28, 19506 }, -- Silverwing Battle Tabard
-			},
-			[HORDE_DIFF] = {
-				{ 1, "f889rep8" },
-				{ 2, "INV_Box_01", nil, "40 - 49", nil }, -- WSGRepExalted4049
-				{ 3, 19597 }, -- Dryad's Wrist Bindings
-				{ 4, 19590 }, -- Forest Stalker's Bracers
-				{ 5, 19584 }, -- Windtalker's Wristguards
-				{ 6, 19581 }, -- Berserker Bracers
-				{ 8, "INV_Box_01", nil, "50 - 59", nil }, -- WSGRepExalted5059
-				{ 9, 19596 }, -- Dryad's Wrist Bindings
-				{ 10, 19589 }, -- Forest Stalker's Bracers
-				{ 11, 19583 }, -- Windtalker's Wristguards
-				{ 12, 19580 }, -- Berserker Bracers
-				{ 17, "INV_Box_01", nil, "60", nil }, -- WSGRepExalted60
-				{ 18, 19595 }, -- Dryad's Wrist Bindings
-				{ 19, 19587 }, -- Forest Stalker's Bracers
-				{ 20, 19582 }, -- Windtalker's Wristguards
-				{ 21, 19578 }, -- Berserker Bracers
-				{ 22, 22747 }, -- Outrider's Silk Leggings
-				{ 23, 22740 }, -- Outrider's Leather Pants
-				{ 24, 22741 }, -- Outrider's Lizardhide Pants
-				{ 25, 22673 }, -- Outrider's Chain Leggings
-				{ 26, 22676 }, -- Outrider's Mail Leggings
-				{ 27, 22651 }, -- Outrider's Plate Legguards
-				{ 28, 19505 }, -- Warsong Battle Tabard
+				{ 1, "f889rep5" },
+				{ 2, "INV_Box_01", nil, "20 - 29", nil }, -- WSGRepFriendly2029
+				{ 3, 21568 }, -- Rune of Duty
+				{ 4, 21566 }, -- Rune of Perfection
+				{ 5, 19062 }, -- Warsong Gulch Field Ration
+				{ 6, 19068 }, -- Warsong Gulch Silk Bandage
+				{ 8, "INV_Box_01", nil, "30 - 39", nil }, -- WSGRepFriendly3039
+				{ 9, 19061 }, -- Warsong Gulch Iron Ration
+				{ 10, 19067 }, -- Warsong Gulch Mageweave Bandage
+				{ 11, 17349 }, -- Superior Healing Draught
+				{ 12, 17352 }, -- Superior Mana Draught
+				{ 17, "INV_Box_01", nil, "40 - 49", nil }, -- WSGRepFriendly4049
+				{ 18, 21567 }, -- Rune of Duty
+				{ 19, 21565 }, -- Rune of Perfection
+				{ 20, 19060 }, -- Warsong Gulch Enriched Ration
+				{ 21, 19066 }, -- Warsong Gulch Runecloth Bandage
 			},
 		},
 	},
