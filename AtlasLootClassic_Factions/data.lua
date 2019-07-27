@@ -157,3 +157,100 @@ data["Timbermaw"] = {
 		},
 	},
 }
+
+data["ThoriumBrotherhood"] = {
+	FactionID = 59,
+	ContentType = FACTIONS_CONTENT,
+	LoadDifficulty = LOAD_DIFF,
+	items = {
+		{ -- Exalted
+			name = _G["FACTION_STANDING_LABEL8"],
+			[NORMAL_DIFF] = {
+				{ 1, "f59rep8" },
+				{ 2,  20040 }, -- Plans: Dark Iron Boots
+				{ 3,  19210 }, -- Plans: Ebon Hand
+				{ 4,  19211 }, -- Plans: Blackguard
+				{ 5,  19212 }, -- Plans: Nightfall
+			},
+		},
+		{ -- Revered
+			name = _G["FACTION_STANDING_LABEL7"],
+			[NORMAL_DIFF] = {
+				{ 1, "f59rep7" },
+				{ 2,  19220 }, -- Pattern: Flarecore Leggings
+				{ 3,  19333 }, -- Pattern: Molten Belt
+				{ 4,  19332 }, -- Pattern: Corehound Belt
+				{ 5,  17053 }, -- Plans: Fiery Chain Shoulders
+				{ 6,  19331 }, -- Pattern: Chromatic Gauntlets
+				{ 7,  19207 }, -- Plans: Dark Iron Gauntlets
+				{ 8,  17052 }, -- Plans: Dark Iron Leggings
+				{ 9,  19208 }, -- Plans: Black Amnesty
+				{ 10,  19209 }, -- Plans: Blackfury
+				{ 11, 19449 }, -- Formula: Enchant Weapon - Mighty Intellect
+			},
+		},
+		{ -- Honored
+			name = _G["FACTION_STANDING_LABEL6"],
+			[NORMAL_DIFF] = {
+				{ 1, "f59rep6" },
+				{ 2,  17017 }, -- Pattern: Flarecore Mantle
+				{ 3,  19219 }, -- Pattern: Flarecore Robe
+				{ 4,  19330 }, -- Pattern: Lava Belt
+				{ 5,  17049 }, -- Plans: Fiery Chain Girdle
+				{ 6,  17025 }, -- Pattern: Black Dragonscale Boots
+				{ 7,  19206 }, -- Plans: Dark Iron Helm
+				{ 8,  17059 }, -- Plans: Dark Iron Reaver
+				{ 9,  17060 }, -- Plans: Dark Iron Destroyer
+				{ 10,  19448 }, -- Formula: Enchant Weapon - Mighty Spirit
+			},
+		},
+		{ -- Friendly
+			name = _G["FACTION_STANDING_LABEL5"],
+			[NORMAL_DIFF] = {
+				{ 1, "f59rep5" },
+				{ 2,  17018 }, -- Pattern: Flarecore Gloves
+				{ 3,  17023 }, -- Pattern: Molten Helm
+				{ 4,  17022 }, -- Pattern: Corehound Boots
+				{ 5,  17051 }, -- Plans: Dark Iron Bracers
+				{ 6,  20761 }, -- Recipe: Transmute Elemental Fire
+				{ 7,  19444 }, -- Formula: Enchant Weapon - Strength
+			},
+		},
+	},
+}
+
+--[[
+data["Timbermaw"] = {
+	FactionID = 59,
+	ContentType = FACTIONS_CONTENT,
+	LoadDifficulty = LOAD_DIFF,
+	items = {
+		{ -- Exalted
+			name = _G["FACTION_STANDING_LABEL8"],
+			[NORMAL_DIFF] = {
+				{ 1, "f59rep8" },
+			},
+		},
+		{ -- Revered
+			name = _G["FACTION_STANDING_LABEL7"],
+			[NORMAL_DIFF] = {
+				{ 1, "f59rep7" },
+			},
+		},
+		{ -- Honored
+			name = _G["FACTION_STANDING_LABEL6"],
+			[NORMAL_DIFF] = {
+				{ 1, "f59rep6" },
+			},
+		},
+		{ -- Friendly
+			name = _G["FACTION_STANDING_LABEL5"],
+			[NORMAL_DIFF] = {
+				{ 1, "f59rep5" },
+			},
+		},
+	},
+}
+]]
+
+

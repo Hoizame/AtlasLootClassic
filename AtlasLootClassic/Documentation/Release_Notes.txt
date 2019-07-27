@@ -10,7 +10,7 @@ v1.0.1-beta (Jul. XX, 2019)
 - SetItems are now marked and clickable to show the whole set
 - There is now a search box under every loot page
 - Add Crafting: Leatherworking, Tailoring, Mining, Cooking, Herbalism, Engineering, First Aid, Enchanting, Blacksmithing
-- Add Factions: Argent Dawn, Timbermaw
+- Add Factions: Argent Dawn, Timbermaw, Thorium Brotherhood
 - Add Collections: Sets for ZG, AQ20, AQ40
 - Add more Tokens
 - Add Options
