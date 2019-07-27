@@ -219,8 +219,64 @@ data["ThoriumBrotherhood"] = {
 	},
 }
 
+data["CenarionCircle"] = {
+	FactionID = 609,
+	ContentType = FACTIONS_CONTENT,
+	LoadDifficulty = LOAD_DIFF,
+	items = {
+		{ -- Exalted
+			name = _G["FACTION_STANDING_LABEL8"],
+			[NORMAL_DIFF] = {
+				{ 1, "f609rep8" },
+				{ 2,  20382 }, -- Pattern: Dreamscale Breastplate
+			},
+		},
+		{ -- Revered
+			name = _G["FACTION_STANDING_LABEL7"],
+			[NORMAL_DIFF] = {
+				{ 1, "f609rep7" },
+				{ 2,  22683 }, -- Pattern: Gaea's Embrace
+				{ 3,  22774 }, -- Pattern: Sylvan Vest
+				{ 4,  22771 }, -- Pattern: Bramblewood Helm
+				{ 5,  20508 }, -- Pattern: Spitfire Breastplate
+				{ 6,  20511 }, -- Pattern: Sandstalker Breastplate
+				{ 7,  22766 }, -- Plans: Ironvine Breastplate
+				{ 8,  22219 }, -- Plans: Jagged Obsidian Shield
+				{ 9,  22312 }, -- Pattern: Satchel of Cenarius
+			},
+		},
+		{ -- Honored
+			name = _G["FACTION_STANDING_LABEL6"],
+			[NORMAL_DIFF] = {
+				{ 1, "f609rep6" },
+				{ 2,  22773 }, -- Pattern: Sylvan Crown
+				{ 3,  22770 }, -- Pattern: Bramblewood Boots
+				{ 4,  20507 }, -- Pattern: Spitfire Gauntlets
+				{ 5,  20510 }, -- Pattern: Sandstalker Gauntlets
+				{ 6,  22767 }, -- Plans: Ironvine Gloves
+				{ 7,  22214 }, -- Plans: Light Obsidian Belt
+				{ 8,  20733 }, -- Formula: Enchant Cloak - Greater Nature Resistance
+			},
+		},
+		{ -- Friendly
+			name = _G["FACTION_STANDING_LABEL5"],
+			[NORMAL_DIFF] = {
+				{ 1, "f609rep5" },
+				{ 2,  22772 }, -- Pattern: Sylvan Shoulders
+				{ 3,  22769 }, -- Pattern: Bramblewood Belt
+				{ 4,  20506 }, -- Pattern: Spitfire Bracers
+				{ 5,  20509 }, -- Pattern: Sandstalker Bracers
+				{ 6,  22768 }, -- Plans: Ironvine Belt
+				{ 7,  22209 }, -- Plans: Heavy Obsidian Belt
+				{ 8,  22310 }, -- Pattern: Cenarion Herb Bag
+				{ 9,  20732 }, -- Formula: Enchant Cloak - Greater Fire Resistance
+			},
+		},
+	},
+}
+
 --[[
-data["Timbermaw"] = {
+	data["Timbermaw"] = {
 	FactionID = 59,
 	ContentType = FACTIONS_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
