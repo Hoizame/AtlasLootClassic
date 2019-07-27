@@ -8,6 +8,7 @@ Patch Notes
 v1.0.1-beta (Jul. XX, 2019)
 ========================
 - SetItems are now marked and clickable to show the whole set
+- There is now a search box under every loot page
 - Add more Tokens
 - Add Blacksmithing
 - Add Enchanting

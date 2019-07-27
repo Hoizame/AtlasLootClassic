@@ -188,6 +188,12 @@ local TOKEN = {
 	[18704] = { 18714, type = 4 }, -- Mature Blue Dragon Sinew
 	[12871] = { 12895, 0, 12903, 12945, type = 4 }, -- Chromatic Carapace
 
+
+	[22523] = { 22523, 22524, 0,
+				22689, 22690, 22681, 22680, 22688, 22679, 0,
+				22667, 22668, 22657, 22659, 22678, 22656, type = 4 }, -- Insignia of the Dawn
+	[22524] = 22523, -- Insignia of the Crusade
+
 	-- Naxxramas
 	[22520] = { 23207, 23206, type = 3 }, -- The Phylactery of Kel'Thuzad
 
