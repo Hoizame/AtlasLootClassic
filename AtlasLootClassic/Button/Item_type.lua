@@ -9,6 +9,7 @@ local Token = AtlasLoot.Data.Token
 local Recipe = AtlasLoot.Data.Recipe
 local Profession = AtlasLoot.Data.Profession
 local Sets = AtlasLoot.Data.Sets
+local Mount = AtlasLoot.Data.Mount
 local ItemFrame
 
 local db
@@ -32,7 +33,7 @@ local WHITE_ICON_FRAME = "Interface\\Common\\WhiteIconFrame"
 local SET_ITEM = "|cff00ff00"..AL["Set item"]..":|r "
 
 local ItemClickHandler = nil
-local itemIsOnEnter = nil
+local itemIsOnEnter, buttonOnEnter = nil, nil
 
 function Item.OnSet(button, second)
 	if not ItemClickHandler then
@@ -147,6 +148,7 @@ function Item.OnEnter(button, owner)
 	local tooltip = GetAlTooltip()
 	tooltip:ClearLines()
 	itemIsOnEnter = tooltip
+	buttonOnEnter = button
 	if owner and type(owner) == "table" then
 		tooltip:SetOwner(owner[1], owner[2], owner[3], owner[4])
 	else
@@ -165,14 +167,19 @@ function Item.OnEnter(button, owner)
 		GameTooltip_ShowCompareItem(tooltip)
 	end
 	if IsControlKeyDown() or db.alwaysShowPreviewTT then
-		local _, link = tooltip:GetItem()
-		Item.ShowQuickDressUp(link, tooltip)
+		if Mount.IsMount(button.ItemID) then
+			Item.ShowQuickDressUp(button.ItemID, tooltip)
+		else
+			local _, link = tooltip:GetItem()
+			Item.ShowQuickDressUp(link, tooltip)
+		end
 	end
 end
 
 function Item.OnLeave(button)
 	GetAlTooltip():Hide()
 	itemIsOnEnter = nil
+	buttonOnEnter = nil
 	ShoppingTooltip1:Hide()
 	ShoppingTooltip2:Hide()
 	if Item.previewTooltipFrame and Item.previewTooltipFrame:IsShown() then Item.previewTooltipFrame:Hide() end
@@ -267,7 +274,7 @@ end
 -- Item dess up
 --################################
 function Item.ShowQuickDressUp(itemLink, ttFrame)
-	if not itemLink or not IsEquippableItem(itemLink) then return end
+	if not itemLink or ( not IsEquippableItem(itemLink) and not Mount.IsMount(itemLink) ) then return end
 	if not Item.previewTooltipFrame then
 		local name = "AtlasLoot-SetToolTip"
 		local frame = CreateFrame("Frame", name)
@@ -322,14 +329,23 @@ function Item.ShowQuickDressUp(itemLink, ttFrame)
 	frame = Item.previewTooltipFrame.modelFrame
 	frame:Reset()
 	frame:Undress()
-	local info = {GetItemInfo(itemLink)}
-	if not (info[9] == "INVTYPE_CLOAK") then
-		frame:SetRotation(frame.curRotation)
+	local npcID = Mount.GetMountNpcID(itemLink)
+	if npcID then
+		frame:SetDisplayInfo(npcID)
+		frame:SetPortraitZoom(frame.zoomLevel)
+		frame:SetCamDistanceScale(2)
 	else
-		frame:SetRotation(frame.curRotation + math.pi)
+		frame:SetCamDistanceScale(1)
+		frame:SetUnit("player")
+		local info = {GetItemInfo(itemLink)}
+		if not (info[9] == "INVTYPE_CLOAK") then
+			frame:SetRotation(frame.curRotation)
+		else
+			frame:SetRotation(frame.curRotation + math.pi)
+		end
+		frame:SetPortraitZoom(frame.zoomLevelNew)
+		frame:TryOn(itemLink)
 	end
-	frame:SetPortraitZoom(frame.zoomLevelNew)
-	frame:TryOn(itemLink)
 end
 
 --################################
@@ -373,8 +389,12 @@ local function EventFrame_OnEvent(frame, event, arg1, arg2)
 				if arg1 == "LSHIFT" or arg1 == "RSHIFT" then
 					GameTooltip_ShowCompareItem(itemIsOnEnter)
 				elseif arg1 == "LCTRL" or arg1 == "RCTRL" then
-					local _, link = itemIsOnEnter:GetItem()
-					Item.ShowQuickDressUp(link, itemIsOnEnter)
+					if Mount.IsMount(buttonOnEnter.ItemID) then
+						Item.ShowQuickDressUp(buttonOnEnter.ItemID, itemIsOnEnter)
+					else
+						local _, link = itemIsOnEnter:GetItem()
+						Item.ShowQuickDressUp(link, itemIsOnEnter)
+					end
 				end
 			else
 				if arg1 == "LSHIFT" or arg1 == "RSHIFT" then
