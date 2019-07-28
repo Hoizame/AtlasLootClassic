@@ -479,6 +479,12 @@ local function SearchBoxOnClear(self)
 	end
 end
 
+local function SearchBoxOnTextChanged(self, pI)
+	if pI and GUI.frame.contentFrame.shownFrame and GUI.frame.contentFrame.shownFrame.OnSearchTextChanged then
+		GUI.frame.contentFrame.shownFrame.OnSearchTextChanged(self:GetText())
+	end
+end
+
 -- ################################
 -- DropDowns/Select
 -- ################################
@@ -978,6 +984,7 @@ function GUI:Create()
 	frame.contentFrame.searchBox:SetAutoFocus(false)
 	frame.contentFrame.searchBox:SetMaxLetters(50)
 	frame.contentFrame.searchBox:SetScript("OnEnterPressed", SearchBoxOnEnter)
+	frame.contentFrame.searchBox:HookScript("OnTextChanged", SearchBoxOnTextChanged)
 	frame.contentFrame.searchBox.clearButton:HookScript("OnClick", SearchBoxOnClear)
 	frame.contentFrame.searchBox:Show()
 

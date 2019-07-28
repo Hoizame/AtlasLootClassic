@@ -17,6 +17,7 @@ local LastRefresh = GetTime()
 local PAGE_NAME_PAGE = "%s [%d/%d]"
 local PAGE_NAME_DIFF = "%s (%s)"
 local PAGE_NAME_DIFF_PAGE = "%s (%s) [%d/%d]"
+local FILTER_ALPHA = 0.33
 
 function ItemFrame:Create()
 	if self.frame then return self.frame end
@@ -35,6 +36,7 @@ function ItemFrame:Create()
 	frame.Clear = ItemFrame.Clear
 	frame.OnSearch = ItemFrame.OnSearch
 	frame.OnSearchClear = ItemFrame.OnSearchClear
+	frame.OnSearchTextChanged = ItemFrame.OnSearchTextChanged
 	frame.OnClassFilterUpdate = ItemFrame.OnClassFilterUpdate
 	frame.OnTransMogUpdate = ItemFrame.OnTransMogUpdate
 
@@ -72,6 +74,32 @@ function ItemFrame:ClearItems()
 	end
 end
 
+function ItemFrame.UpdateFilter()
+	local Reset = true
+	if AtlasLoot.db.GUI.classFilter then
+		-- NYI
+		-- Reset = false
+	end
+	if ItemFrame.SearchString then
+		local searchString = ItemFrame.SearchString
+		for i=1,30 do
+			local button = ItemFrame.frame.ItemButtons[i]
+			local text = button.name:GetText()
+			if text and not sfind(slower(text), searchString, 1, true) then
+				button:SetAlpha(FILTER_ALPHA)
+			else
+				button:SetAlpha(1.0)
+			end
+		end
+		Reset = false
+	end
+	if Reset then
+		for i=1,30 do
+			ItemFrame.frame.ItemButtons[i]:SetAlpha(1)
+		end
+	end
+end
+
 function ItemFrame.OnClassFilterUpdate(filterTab)
 	--[[ NEED REWORK
 	if AtlasLoot.db.GUI.classFilter and GUI.__EJData then
@@ -102,12 +130,17 @@ end
 
 function ItemFrame.OnSearch(msg)
 	ItemFrame.SearchString = ( not msg or msg == "" ) and nil or slower(msg)
-	ItemFrame:Refresh(true)
+	ItemFrame.UpdateFilter()
 end
 
 function ItemFrame.OnSearchClear()
 	ItemFrame.SearchString = nil
-	ItemFrame:Refresh(true)
+	ItemFrame.UpdateFilter()
+end
+
+function ItemFrame.OnSearchTextChanged(msg)
+	ItemFrame.SearchString = ( not msg or msg == "" ) and nil or slower(msg)
+	ItemFrame.UpdateFilter()
 end
 
 function ItemFrame:Refresh(skipProtect)
@@ -155,13 +188,6 @@ function ItemFrame:Refresh(skipProtect)
 				ItemFrame.frame.ItemButtons[fixItemNum]:SetDifficultyID(diffData.difficultyID)
 				ItemFrame.frame.ItemButtons[fixItemNum]:SetPreSet(diffData.preset)
 				ItemFrame.frame.ItemButtons[fixItemNum]:SetContentTable(item, tableType)
-				--ItemFrame.frame.ItemButtons[fixItemNum]:SetAlpha(1)
-				if ItemFrame.SearchString then
-					local text = ItemFrame.frame.ItemButtons[fixItemNum].name:GetText()
-					if text and not sfind(slower(text), ItemFrame.SearchString, 1, true) then
-						ItemFrame.frame.ItemButtons[fixItemNum]:Clear()
-					end
-				end
 				setn = true
 			elseif fixItemNum > 100 then
 				GUI.frame.contentFrame.nextPageButton.info = tostring(AtlasLoot.db.GUI.selected[5] + 1)
@@ -188,7 +214,7 @@ function ItemFrame:Refresh(skipProtect)
 		end
 		]]--
 	end
-	--ItemFrame.OnClassFilterUpdate()
+	ItemFrame.UpdateFilter()
 end
 
 function ItemFrame.Clear()

@@ -3022,19 +3022,6 @@ data["DireMaulNorth"] = {
 				{ 22, 18516 }, -- Pattern: Swift Flight Bracers
 				{ 10, 18258 }, -- Gordok Ogre Suit
 				{ 11, 18240 }, -- Ogre Tannin
-				--[[
-				{ 16, 18405 }, -- Belt of the Archmage
-				{ 17, 18509 }, -- Chromatic Cloak
-				{ 18, 18510 }, -- Hide of the Wild
-				{ 19, 18511 }, -- Shifting Cloak
-				{ 21, 18407 }, -- Felcloth Gloves
-				{ 22, 18408 }, -- Inferno Gloves
-				{ 23, 18409 }, -- Mooncloth Gloves
-				{ 24, 18413 }, -- Cloak of Warding
-				{ 25, 18504 }, -- Girdle of Insight
-				{ 26, 18506 }, -- Mongoose Boots
-				{ 27, 18508 }, -- Swift Flight Bracers
-				]]--
 			},
 		},
 		{ -- DMNGuardSlipkik
@@ -3121,8 +3108,8 @@ data["DireMaulNorth"] = {
 				{ 21, 18476 }, -- Mud Stained Boots
 				{ 22, 18482 }, -- Ogre Toothpick Shooter
 				{ 23, 18481 }, -- Skullcracking Mace
-				{ 24, 18655 }, -- Schematic: Major Recombobulator
-				{ 25, 18637 }, -- Major Recombobulator
+				{ 24, 18637 }, -- Major Recombobulator
+				{ 26, 18655 }, -- Schematic: Major Recombobulator
 			},
 		},
 		{ -- DMNTrash

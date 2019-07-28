@@ -354,7 +354,7 @@ local function EventFrame_OnEvent(frame, event, arg1, arg2)
 						if ItemFrame and ItemFrame.SearchString then
 							local text = button.name:GetText()
 							if text and not sfind(slower(text), ItemFrame.SearchString, 1, true) then
-								button:Clear()
+								button:SetAlpha(0.33)
 							end
 						end
 					end

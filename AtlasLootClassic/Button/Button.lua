@@ -377,6 +377,7 @@ function Proto:Clear()
 		self.icon:SetTexture(nil)
 		self.name:SetText(nil)
 		self.extra:SetText(nil)
+		self:SetAlpha(1.0)
 		if self.count then self.count:Hide() end
 		self.overlay:SetSize(self.icon:GetWidth(), self.icon:GetHeight())
 		if self.completed and self.completed:IsShown() then self.completed:Hide() end
