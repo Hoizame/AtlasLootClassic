@@ -236,13 +236,13 @@ data["CenarionCircle"] = {
 			[NORMAL_DIFF] = {
 				{ 1, "f609rep7" },
 				{ 2,  22683 }, -- Pattern: Gaea's Embrace
-				{ 3,  22774 }, -- Pattern: Sylvan Vest
-				{ 4,  22771 }, -- Pattern: Bramblewood Helm
-				{ 5,  20508 }, -- Pattern: Spitfire Breastplate
-				{ 6,  20511 }, -- Pattern: Sandstalker Breastplate
-				{ 7,  22766 }, -- Plans: Ironvine Breastplate
-				{ 8,  22219 }, -- Plans: Jagged Obsidian Shield
-				{ 9,  22312 }, -- Pattern: Satchel of Cenarius
+				{ 3,  22312 }, -- Pattern: Satchel of Cenarius
+				{ 4,  22774 }, -- Pattern: Sylvan Vest
+				{ 5,  22771 }, -- Pattern: Bramblewood Helm
+				{ 6,  20508 }, -- Pattern: Spitfire Breastplate
+				{ 7,  20511 }, -- Pattern: Sandstalker Breastplate
+				{ 8,  22766 }, -- Plans: Ironvine Breastplate
+				{ 9,  22219 }, -- Plans: Jagged Obsidian Shield
 			},
 		},
 		{ -- Honored
@@ -263,12 +263,12 @@ data["CenarionCircle"] = {
 			[NORMAL_DIFF] = {
 				{ 1, "f609rep5" },
 				{ 2,  22772 }, -- Pattern: Sylvan Shoulders
-				{ 3,  22769 }, -- Pattern: Bramblewood Belt
-				{ 4,  20506 }, -- Pattern: Spitfire Bracers
-				{ 5,  20509 }, -- Pattern: Sandstalker Bracers
-				{ 6,  22768 }, -- Plans: Ironvine Belt
-				{ 7,  22209 }, -- Plans: Heavy Obsidian Belt
-				{ 8,  22310 }, -- Pattern: Cenarion Herb Bag
+				{ 3,  22310 }, -- Pattern: Cenarion Herb Bag
+				{ 4,  22769 }, -- Pattern: Bramblewood Belt
+				{ 5,  20506 }, -- Pattern: Spitfire Bracers
+				{ 6,  20509 }, -- Pattern: Sandstalker Bracers
+				{ 7,  22768 }, -- Plans: Ironvine Belt
+				{ 8,  22209 }, -- Plans: Heavy Obsidian Belt
 				{ 9,  20732 }, -- Formula: Enchant Cloak - Greater Fire Resistance
 			},
 		},
@@ -294,7 +294,66 @@ data["Darkmoon"] = {
 	},
 }
 
-
+data["ZandalarTribe"] = {
+	FactionID = 270,
+	ContentType = FACTIONS_CONTENT,
+	LoadDifficulty = LOAD_DIFF,
+	items = {
+		{ -- Exalted
+			name = _G["FACTION_STANDING_LABEL8"],
+			[NORMAL_DIFF] = {
+				{ 1, "f270rep8" },
+				{ 2,  20013 }, -- Recipe: Living Action Potion
+				{ 3,  20077 }, -- Zandalar Signet of Might
+				{ 4,  20076 }, -- Zandalar Signet of Mojo
+				{ 5,  20078 }, -- Zandalar Signet of Serenity
+			},
+		},
+		{ -- Revered
+			name = _G["FACTION_STANDING_LABEL7"],
+			[NORMAL_DIFF] = {
+				{ 1, "f270rep7" },
+				{ 2,  19764 }, -- Pattern: Bloodvine Vest
+				{ 3,  19769 }, -- Pattern: Primal Batskin Jerkin
+				{ 4,  19772 }, -- Pattern: Blood Tiger Breastplate
+				{ 5,  19776 }, -- Plans: Bloodsoul Breastplate
+				{ 6,  19779 }, -- Plans: Darksoul Breastplate
+				{ 7,  20011 }, -- Recipe: Mageblood Potion
+				{ 17,  20080 }, -- Sheen of Zanza
+				{ 18,  20079 }, -- Spirit of Zanza
+				{ 19,  20081 }, -- Swiftness of Zanza
+			},
+		},
+		{ -- Honored
+			name = _G["FACTION_STANDING_LABEL6"],
+			[NORMAL_DIFF] = {
+				{ 1, "f270rep6" },
+				{ 2,  19765 }, -- Pattern: Bloodvine Leggings
+				{ 3,  20000 }, -- Schematic: Bloodvine Goggles
+				{ 4,  19770 }, -- Pattern: Primal Batskin Gloves
+				{ 5,  19773 }, -- Pattern: Blood Tiger Shoulders
+				{ 6,  19777 }, -- Plans: Bloodsoul Shoulders
+				{ 7,  19780 }, -- Plans: Darksoul Leggings
+				{ 8,  20014 }, -- Recipe: Major Troll's Blood Potion
+				{ 9,  20756 }, -- Formula: Brilliant Wizard Oil
+				{ 10,  20031 }, -- Essence Mango
+			},
+		},
+		{ -- Friendly
+			name = _G["FACTION_STANDING_LABEL5"],
+			[NORMAL_DIFF] = {
+				{ 1, "f270rep5" },
+				{ 2,  19766 }, -- Pattern: Bloodvine Boots
+				{ 3,  19771 }, -- Pattern: Primal Batskin Bracers
+				{ 4,  20001 }, -- Schematic: Bloodvine Lens
+				{ 5,  19778 }, -- Plans: Bloodsoul Gauntlets
+				{ 6,  19781 }, -- Plans: Darksoul Shoulders
+				{ 7,  20012 }, -- Recipe: Greater Dreamless Sleep
+				{ 8,  20757 }, -- Formula: Brilliant Mana Oil
+			},
+		},
+	},
+}
 --[[
 	data["Timbermaw"] = {
 	FactionID = 59,
