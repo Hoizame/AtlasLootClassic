@@ -21,7 +21,6 @@ externals:
 ignore:
     - babelfish.lua
     - cf_translations.sh
-    - AtlasLootClassic_Factions
     - AtlasLootClassic/Images/PSD
     - AtlasLootClassic/AtlasLootClassic/Images/PSD
     - AtlasLootClassic/AtlasLootClassic/DEVTOOLS.lua
@@ -34,4 +33,5 @@ move-folders:
 	AtlasLootClassic/AtlasLootClassic_DungeonsAndRaids: AtlasLootClassic_DungeonsAndRaids
 	AtlasLootClassic/AtlasLootClassic_PvP: AtlasLootClassic_PvP
     AtlasLootClassic/AtlasLootClassic_Collections: AtlasLootClassic_Collections
+    AtlasLootClassic/AtlasLootClassic_Factions: AtlasLootClassic_Factions
 
