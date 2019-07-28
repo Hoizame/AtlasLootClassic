@@ -39,6 +39,7 @@ local PRICE_EXTRA_ITTYPE = data:AddExtraItemTableType("Price")
 local SET_EXTRA_ITTYPE = data:AddExtraItemTableType("Set")
 
 local FACTIONS_CONTENT = data:AddContentType(AL["Factions"], ATLASLOOT_FACTION_COLOR)
+local FACTIONS2_CONTENT = data:AddContentType(AL["Factions 2"], {0.1, 0.3, 0.1, 1})
 
 --[[
 0 - Unknown
@@ -350,6 +351,83 @@ data["ZandalarTribe"] = {
 				{ 6,  19781 }, -- Plans: Darksoul Shoulders
 				{ 7,  20012 }, -- Recipe: Greater Dreamless Sleep
 				{ 8,  20757 }, -- Formula: Brilliant Mana Oil
+			},
+		},
+	},
+}
+
+data["BroodOfNozdormu"] = {
+	FactionID = 910,
+	ContentType = FACTIONS_CONTENT,
+	LoadDifficulty = LOAD_DIFF,
+	items = {
+		{ -- Exalted
+			name = _G["FACTION_STANDING_LABEL8"],
+			[NORMAL_DIFF] = {
+				{ 1, "f910rep8" },
+				{ 2, 21210 }, --Signet Ring of the Bronze Dragonflight / 80
+				{ 3, 21205 }, --Signet Ring of the Bronze Dragonflight / 80
+				{ 4, 21200 }, --Signet Ring of the Bronze Dragonflight / 80
+			},
+		},
+		{ -- Revered
+			name = _G["FACTION_STANDING_LABEL7"],
+			[NORMAL_DIFF] = {
+				{ 1, "f910rep7" },
+				{ 2, 21209 }, --Signet Ring of the Bronze Dragonflight / 75
+				{ 3, 21204 }, --Signet Ring of the Bronze Dragonflight / 75
+				{ 4, 21199 }, --Signet Ring of the Bronze Dragonflight / 75
+			},
+		},
+		{ -- Honored
+			name = _G["FACTION_STANDING_LABEL6"],
+			[NORMAL_DIFF] = {
+				{ 1, "f910rep6" },
+				{ 2, 21208 }, --Signet Ring of the Bronze Dragonflight / 70
+				{ 2, 21203 }, --Signet Ring of the Bronze Dragonflight / 70
+				{ 3, 21198 }, --Signet Ring of the Bronze Dragonflight / 70
+			},
+		},
+		{ -- Friendly
+			name = _G["FACTION_STANDING_LABEL5"],
+			[NORMAL_DIFF] = {
+				{ 1, "f910rep5" },
+				{ 2, 21207 }, --Signet Ring of the Bronze Dragonflight / 65
+				{ 3, 21202 }, --Signet Ring of the Bronze Dragonflight / 65
+				{ 4, 21197 }, --Signet Ring of the Bronze Dragonflight / 65
+			},
+		},
+		{ -- Neutral
+			name = _G["FACTION_STANDING_LABEL4"],
+			[NORMAL_DIFF] = {
+				{ 1, "f910rep4" },
+				{ 2, 21206 }, --Signet Ring of the Bronze Dragonflight / 60
+				{ 3, 21201 }, --Signet Ring of the Bronze Dragonflight / 60
+				{ 4, 21196 }, --Signet Ring of the Bronze Dragonflight / 60
+			},
+		},
+	},
+}
+
+
+
+
+
+
+
+data["BloodsailBuccaneers"] = {
+	FactionID = 87,
+	ContentType = FACTIONS2_CONTENT,
+	LoadDifficulty = LOAD_DIFF,
+	items = {
+		{ -- Friendly
+			name = _G["FACTION_STANDING_LABEL5"],
+			[NORMAL_DIFF] = {
+				{ 1, "f87rep5" },
+				{ 2, 12185 }, -- Bloodsail Admiral's Hat
+				{ 3, 22742 }, -- Bloodsail Shirt
+				{ 4, 22743 }, -- Bloodsail Sash
+				{ 5, 22745 }, -- Bloodsail Pants
 			},
 		},
 	},
