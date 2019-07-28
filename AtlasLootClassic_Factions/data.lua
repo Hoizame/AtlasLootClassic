@@ -409,11 +409,30 @@ data["BroodOfNozdormu"] = {
 	},
 }
 
-
-
-
-
-
+data["HydraxianWaterlords"] = {
+	FactionID = 749,
+	ContentType = FACTIONS_CONTENT,
+	LoadDifficulty = LOAD_DIFF,
+	items = {
+		{ -- Revered
+			name = _G["FACTION_STANDING_LABEL7"],
+			[NORMAL_DIFF] = {
+				{ 1, "f749rep7" },
+				{ 2, 22687 }, -- Pattern: Glacial Wrists
+				{ 3, 22698 }, -- Pattern: Icy Scale Bracers
+				{ 4, 22705 }, -- Plans: Icebane Bracers
+				{ 5, 22695 }, -- Pattern: Polar Bracers
+			},
+		},
+		{ -- Honored
+			name = _G["FACTION_STANDING_LABEL6"],
+			[NORMAL_DIFF] = {
+				{ 1, "f749rep6" },
+				{ 2, 17333 }, -- Aqual Quintessence
+			},
+		},
+	},
+}
 
 data["BloodsailBuccaneers"] = {
 	FactionID = 87,
@@ -428,6 +447,21 @@ data["BloodsailBuccaneers"] = {
 				{ 3, 22742 }, -- Bloodsail Shirt
 				{ 4, 22743 }, -- Bloodsail Sash
 				{ 5, 22745 }, -- Bloodsail Pants
+			},
+		},
+	},
+}
+
+data["WintersaberTrainers"] = {
+	FactionID = 589,
+	ContentType = FACTIONS2_CONTENT,
+	LoadDifficulty = LOAD_DIFF,
+	items = {
+		{ -- Exalted
+			name = _G["FACTION_STANDING_LABEL8"],
+			[ALLIANCE_DIFF] = {
+				{ 1, "f589rep8" },
+				{ 2, 13086 }, -- Reins of the Winterspring Frostsaber
 			},
 		},
 	},
