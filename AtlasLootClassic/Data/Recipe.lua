@@ -863,10 +863,18 @@ function Recipe.GetRecipeDescription(itemID)
 	return ( itemID and RECIPE[itemID] ) and RECIPE_PROF_TEXT[RECIPE[itemID][1] or RECIPE_PROF_DEFAULT] or nil
 end
 
+function Recipe.GetRecipeDescriptionWithRank(itemID)
+	return ( itemID and RECIPE[itemID] ) and ( Profession.GetSpellDescriptionWithRank(RECIPE[itemID][3]) or Recipe.GetRecipeDescription(itemID) ) or nil
+end
+
 function Recipe.GetRecipeProfession(itemID)
 	return ( itemID and RECIPE[itemID] ) and RECIPE[itemID][1] or nil
 end
 
 function Recipe.GetRecipeForSpell(spellID)
 	return RECIPE_TO_SPELL[spellID or 0]
+end
+
+function Recipe.GetRecipeSkillRankForSpell(spellID)
+	return RECIPE_TO_SPELL[spellID or 0] and RECIPE[ RECIPE_TO_SPELL[spellID or 0][2] ] or nil
 end

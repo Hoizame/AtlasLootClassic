@@ -192,11 +192,11 @@ data["Alchemy"] = {
 				{ 7, 11466 }, --Gift of Arthas
 				{ 8, 3449 }, --Shadow Oil
 				{ 9, 3454 }, --Frost Oil
-				{ 10, 7837 }, --Fire Oil
+				{ 10, 11451 }, --Oil of Immolation
 				{ 16, 11459 }, --Philosophers' Stone
 				{ 18, 11456 }, --Goblin Rocket Fuel
 				{ 23, 7836 }, --Blackmouth Oil
-				{ 24, 11451 }, --Oil of Immolation
+				{ 24, 7837 }, --Fire Oil
 				{ 25, 17551 }, --Stonescale Oil
 			},
 		},

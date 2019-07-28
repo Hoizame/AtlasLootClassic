@@ -126,7 +126,7 @@ function Prof.Refresh(button)
 			else
 				button.name:SetText(PROF_COLOR..spellName)
 			end
-			button.extra:SetText(Profession.GetSpellDescription(button.SpellID).." ( "..Profession.GetColorSkillRank(button.SpellID).." )")
+			button.extra:SetText(Profession.GetSpellDescriptionWithRank(button.SpellID))
 		end
 		if itemCount and itemCount > 1 then
 			button.count:SetText(itemCount)

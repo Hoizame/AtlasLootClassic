@@ -236,7 +236,7 @@ function Item.Refresh(button)
 		-- ##################
 		button.extra:SetText(
 			Token.GetTokenDescription(button.ItemID) or
-			Recipe.GetRecipeDescription(button.ItemID) or
+			Recipe.GetRecipeDescriptionWithRank(button.ItemID) or
 			Profession.GetColorSkillRankItem(button.ItemID) or
 			( Sets:GetItemSetForItemID(button.ItemID) and AL["|cff00ff00Set item:|r "] or "")..GetItemDescInfo(itemEquipLoc, itemType, itemSubType)
 		)
@@ -351,7 +351,7 @@ local function EventFrame_OnEvent(frame, event, arg1, arg2)
 					local typFunc = button:GetTypeFunctions()
 					if typFunc then
 						typFunc.Refresh(button_list[arg1][i])
-						if ItemFrame.SearchString then
+						if ItemFrame and ItemFrame.SearchString then
 							local text = button.name:GetText()
 							if text and not sfind(slower(text), ItemFrame.SearchString, 1, true) then
 								button:Clear()
