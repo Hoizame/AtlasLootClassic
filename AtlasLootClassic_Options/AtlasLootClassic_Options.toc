@@ -50,6 +50,7 @@
 
 ## X-AtlasLoot-LootModule: 0
 
+embeds.xml
 ALOptions\ALOptions-1.0.xml
 
 Locales\constants.lua
