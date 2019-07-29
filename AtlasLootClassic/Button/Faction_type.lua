@@ -96,6 +96,19 @@ local FACTION_KEY = {
 	[910] = "Brood of Nozdormu",
 }
 
+ClickHandler:Add(
+	"Faction",
+	{
+		--ChatLink = { "LeftButton", "Shift" },
+		types = {
+			--ChatLink = true,
+		},
+	},
+	{
+		--{ "ChatLink", 	AL["Chat Link"], 	AL["Add item into chat"] },
+	}
+)
+
 local function GetLocRepStanding(id)
 	if (id > 10) then
 		return FACTION_STANDING_LABEL4_FEMALE
@@ -114,19 +127,8 @@ end
 
 function Faction.OnSet(button, second)
 	if not FactionClickHandler then
-		FactionClickHandler = ClickHandler:Add(
-		"Faction",
-		{
-			--ChatLink = { "LeftButton", "Shift" },
-			types = {
-				--ChatLink = true,
-			},
-		},
-		AtlasLoot.db.Button.Faction.ClickHandler,
-		{
-			--{ "ChatLink", 	AL["Chat Link"], 	AL["Add item into chat"] },
-		}
-		)
+		FactionClickHandler = ClickHandler:GetHandler("Faction")
+		--db = FactionClickHandler:GetDB()
 
 		PlayerSex = UnitSex("player")
 

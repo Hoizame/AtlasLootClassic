@@ -16,23 +16,27 @@ local PROF_COLOR = "|cffffff00"
 local ITEM_COLORS = {}
 local WHITE_ICON_FRAME = "Interface\\Common\\WhiteIconFrame"
 
+AtlasLoot.ClickHandler:Add(
+	"Profession",
+	{
+		ChatLink = { "LeftButton", "Shift" },
+		ShowExtraItems = { "LeftButton", "None" },
+		types = {
+			ChatLink = true,
+			ShowExtraItems = true,
+		},
+	},
+	{
+		{ "ChatLink", 	AL["Chat Link"], 	AL["Add profession link into chat"] },
+		{ "ShowExtraItems", AL["Show extra items"], 	AL["Shows extra items (tokens,mats)"] },
+	}
+)
+
 function Prof.OnSet(button, second)
 	if not ProfClickHandler then
-		ProfClickHandler = AtlasLoot.ClickHandler:Add(
-		"Profession",
-		{
-			ChatLink = { "LeftButton", "Shift" },
-			ShowExtraItems = { "LeftButton", "None" },
-			types = {
-				ChatLink = true,
-				ShowExtraItems = true,
-			},
-		},
-		AtlasLoot.db.Button.Profession.ClickHandler,
-		{
-			{ "ChatLink", 	AL["Chat Link"], 	AL["Add profession link into chat"] },
-			{ "ShowExtraItems", AL["Show extra items"], 	AL["Shows extra items (tokens,mats)"] },
-		})
+		ProfClickHandler = AtlasLoot.ClickHandler:GetHandler("Profession")
+		--db = ProfClickHandler:GetDB()
+
 		-- create item colors
 		for i=0,7 do
 			local _, _, _, itemQuality = GetItemQualityColor(i)

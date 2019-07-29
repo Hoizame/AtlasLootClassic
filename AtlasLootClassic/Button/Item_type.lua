@@ -32,30 +32,36 @@ local ITEM_COLORS = {}
 local WHITE_ICON_FRAME = "Interface\\Common\\WhiteIconFrame"
 local SET_ITEM = "|cff00ff00"..AL["Set item"]..":|r "
 
-local ItemClickHandler = nil
 local itemIsOnEnter, buttonOnEnter = nil, nil
+
+local ItemClickHandler = nil
+ClickHandler:Add(
+	"Item",
+	{
+		ChatLink = { "LeftButton", "Shift" },
+		DressUp = { "LeftButton", "Ctrl" },
+		SetFavourite = { "LeftButton", "Alt" },
+		ShowExtraItems = { "LeftButton", "None" },
+		types = {
+			ChatLink = true,
+			DressUp = true,
+			ShowExtraItems = true,
+			SetFavourite = true,
+		},
+	},
+	{
+		{ "ChatLink", 		AL["Chat Link"], 			AL["Add item into chat"] },
+		{ "DressUp", 		AL["Dress up"], 			AL["Shows the item in the Dressing room"] },
+		{ "SetFavourite", 	AL["Set Favourite"], 		AL["Set the item as favourite"] },
+		{ "ShowExtraItems", AL["Show extra items"], 	AL["Shows extra items (tokens,mats)"] },
+	}
+)
 
 function Item.OnSet(button, second)
 	if not ItemClickHandler then
-		db = AtlasLoot.db.Button.Item
-		ItemClickHandler = ClickHandler:Add(
-		"Item",
-		{
-			ChatLink = { "LeftButton", "Shift" },
-			DressUp = { "LeftButton", "Ctrl" },
-			ShowExtraItems = { "LeftButton", "None" },
-			types = {
-				ChatLink = true,
-				DressUp = true,
-				ShowExtraItems = true,
-			},
-		},
-		db.ClickHandler,
-		{
-			{ "ChatLink", 		AL["Chat Link"], 			AL["Add item into chat"] },
-			{ "DressUp", 		AL["Dress up"], 			AL["Shows the item in the Dressing room"] },
-			{ "ShowExtraItems", AL["Show extra items"], 	AL["Shows extra items (tokens,mats)"] },
-		})
+		ItemClickHandler = ClickHandler:GetHandler("Item")
+		db = ItemClickHandler:GetDB()
+
 		-- create item colors
 		for i=0,7 do
 			local _, _, _, itemQuality = GetItemQualityColor(i)
@@ -122,6 +128,8 @@ function Item.OnMouseAction(button, mouseButton)
 			button.ExtraFrameShown = true
 			AtlasLoot.Button:ExtraItemFrame_GetFrame(button, button.SetData)
 		end
+	elseif mouseButton == "SetFavourite" then
+		print("wuiii")
 	elseif mouseButton == "MouseWheelUp" and Item.previewTooltipFrame and Item.previewTooltipFrame:IsShown() then  -- ^
 		local frame = Item.previewTooltipFrame.modelFrame
 		if IsAltKeyDown() then -- model zoom

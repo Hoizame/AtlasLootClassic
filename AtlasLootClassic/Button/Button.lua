@@ -187,6 +187,14 @@ function Button:Create()
 	button.completed:SetTexture("Interface\\RaidFrame\\ReadyCheck-Ready")
 	button.completed:Hide()
 
+	button.favourite = button:CreateTexture(buttonName.."_favourite", "OVERLAY")
+	button.favourite:SetPoint("TOPLEFT", button.icon, -3, 3)
+	button.favourite:SetHeight(20)
+	button.favourite:SetWidth(20)
+	button.favourite:SetAtlas("VignetteKill")
+	button.favourite:SetDrawLayer(button.overlay:GetDrawLayer(), 1)
+	button.favourite:Hide()
+
 	-- ItemName <FontString>
 	button.name = button:CreateFontString(buttonName.."_name", "ARTWORK", "GameFontNormal")
 	button.name:SetPoint("TOPLEFT", button.icon, "TOPRIGHT", 3, 0)
@@ -257,7 +265,6 @@ function Button:Create()
 	button.secButton.overlay:SetWidth(26)
 	button.secButton.overlay:Hide()
 
-
 	button.secButton.completed = button.secButton:CreateTexture(buttonName.."_secCompleted", "OVERLAY")
 	button.secButton.completed:SetPoint("BOTTOMRIGHT", button.secButton.icon)
 	button.secButton.completed:SetHeight(20)
@@ -271,6 +278,14 @@ function Button:Create()
 	button.secButton.count:SetHeight(15)
 	button.secButton.count:SetText(15)
 	button.secButton.count:Hide()
+
+	button.secButton.favourite = button.secButton:CreateTexture(buttonName.."_favourite", "OVERLAY")
+	button.secButton.favourite:SetPoint("TOPLEFT", button.secButton.icon, -3, 3)
+	button.secButton.favourite:SetHeight(20)
+	button.secButton.favourite:SetWidth(20)
+	button.secButton.favourite:SetAtlas("VignetteKill")
+	button.secButton.favourite:SetDrawLayer(button.secButton.overlay:GetDrawLayer(), 1)
+	button.secButton.favourite:Hide()
 
 	-- factionIcon
 	button.factionIcon = button:CreateTexture(buttonName.."_factionIcon", button)
@@ -338,6 +353,14 @@ function Button:CreateSecOnly(frame)
 	button.secButton.count:SetHeight(15)
 	button.secButton.count:SetText(15)
 	button.secButton.count:Hide()
+
+	button.secButton.favourite = button.secButton:CreateTexture(buttonName.."_favourite", "OVERLAY")
+	button.secButton.favourite:SetPoint("TOPLEFT", button.secButton.icon, -3, 3)
+	button.secButton.favourite:SetHeight(20)
+	button.secButton.favourite:SetWidth(20)
+	button.secButton.favourite:SetAtlas("VignetteKill")
+	button.secButton.favourite:SetDrawLayer(button.secButton.overlay:GetDrawLayer(), 1)
+	button.secButton.favourite:Hide()
 
 
 	button.secButton.SetNormalTexture = Button_SetNormalTexture

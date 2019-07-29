@@ -17,6 +17,7 @@ local ClickHandler = {}
 AtlasLoot.ClickHandler = ClickHandler
 local Proto = {}
 local AL = AtlasLoot.Locales
+local DbDefaults = AtlasLoot.AtlasLootDBDefaults.profile.Button
 
 -- lua
 local setmetatable = setmetatable
@@ -40,6 +41,7 @@ local MODIFIER_LOC = {
 	{ "LeftShift",	_G["LSHIFT_KEY_TEXT"] },
 	{ "RightShift",	_G["RSHIFT_KEY_TEXT"] },
 }
+local HandlerRegister = {}
 
 --[[ format
 	-- db is only the table
@@ -55,37 +57,30 @@ local MODIFIER_LOC = {
 		{ "ItemLink", AL["Chat Link"], AL["Link the item in chat"] },
 	}
 ]]
-function ClickHandler:Add(name, dbDefault, db, types)
-	local handler = {}
+function ClickHandler:Add(name, dbDefault, types)
+	assert(not DbDefaults[name], "ClickHandler "..(name or "nil").." already exists.")
 
-	local dbDefaultNEW = {types = {}}
-	for i = 1, #types do
-		local typ = types[i][1]
-		if not db.types then db.types = {} end
-		dbDefaultNEW.types[typ] = dbDefault.types[typ]
-		if db.types[typ] == nil then
-			db.types[typ] = dbDefault.types[typ] or false
-			-- set default keybind if aviable and free
-			if dbDefault[typ] and dbDefault[typ][1] ~= "None" then
-				local info = dbDefault[typ]
-				if not db[info[1]] then db[info[1]] = {} end
-				if db[info[1]][info[2]] == nil then
-					db[info[1]][info[2]] = typ
-				end
-			end
-		end
-		if not dbDefaultNEW[dbDefault[typ][1]] then dbDefaultNEW[dbDefault[typ][1]] = {} end
-		dbDefaultNEW[dbDefault[typ][1]][dbDefault[typ][2]] = typ
-	end
-	db.__defaults = dbDefaultNEW
+	DbDefaults[name] = dbDefault
 
-	handler.db = db
-	handler.dbDefault = dbDefault
-	handler.types = types
+	local handler = {
+		name = name,
+		types = types,
+		defaults = dbDefault
+	}
 
 	setmetatable(handler, {__index = Proto})
+	HandlerRegister[name] = handler
 
 	return handler
+end
+
+function ClickHandler:GetHandler(name)
+	return HandlerRegister[name]
+end
+
+function ClickHandler:Update(name)
+	if not DbDefaults[name] then return end
+	DbDefaults[name]:Update()
 end
 
 function ClickHandler:GetLocMouseButtons()
@@ -112,37 +107,68 @@ function ClickHandler:GetLocModifier()
 end
 
 function Proto:Get(mouseButton)
-	if mouseButton and self.db[mouseButton] then
+	local db = self.db or self:SetDB(AtlasLoot.db.Button[self.name])
+	local handler = self.handler
+	if mouseButton and handler[mouseButton] then
 		if IsModifierKeyDown() then
 			if IsShiftKeyDown() then
-				if IsLeftShiftKeyDown() and self.db[mouseButton].LeftShift then
-					return self.db[mouseButton].LeftShift
-				elseif IsRightShiftKeyDown() and self.db[mouseButton].RightShift then
-					return self.db[mouseButton].RightShift
+				if IsLeftShiftKeyDown() and handler[mouseButton].LeftShift then
+					return db[handler[mouseButton].LeftShift]
+				elseif IsRightShiftKeyDown() and handler[mouseButton].RightShift then
+					return db[handler[mouseButton].RightShift]
 				end
-				if self.db[mouseButton].Shift then
-					return self.db[mouseButton].Shift
+				if handler[mouseButton].Shift then
+					return db[handler[mouseButton].Shift]
 				end
 			elseif IsAltKeyDown() then
-				if IsLeftAltKeyDown() and self.db[mouseButton].LeftAlt then
-					return self.db[mouseButton].LeftAlt
-				elseif IsRightAltKeyDown() and self.db[mouseButton].RightAlt then
-					return self.db[mouseButton].RightAlt
+				if IsLeftAltKeyDown() and handler[mouseButton].LeftAlt then
+					return db[handler[mouseButton].LeftAlt]
+				elseif IsRightAltKeyDown() and handler[mouseButton].RightAlt then
+					return db[handler[mouseButton].RightAlt]
 				end
-				if self.db[mouseButton].Alt then
-					return self.db[mouseButton].Alt
+				if handler[mouseButton].Alt then
+					return db[handler[mouseButton].Alt]
 				end
 			elseif IsControlKeyDown() then
-				if IsLeftControlKeyDown() and self.db[mouseButton].LeftCtrl then
-					return self.db[mouseButton].LeftCtrl
-				elseif IsRightControlKeyDown() and self.db[mouseButton].RightCtrl then
-					return self.db[mouseButton].RightCtrl
+				if IsLeftControlKeyDown() and handler[mouseButton].LeftCtrl then
+					return db[handler[mouseButton].LeftCtrl]
+				elseif IsRightControlKeyDown() and handler[mouseButton].RightCtrl then
+					return db[handler[mouseButton].RightCtrl]
 				end
-				if self.db[mouseButton].Ctrl then
-					return self.db[mouseButton].Ctrl
+				if handler[mouseButton].Ctrl then
+					return db[handler[mouseButton].Ctrl]
 				end
 			end
 		end
-		return self.db[mouseButton].None
+		return handler[mouseButton].None
 	end
+end
+
+function Proto:Update()
+	local db = self.db or self:GetDB() or self.defaults
+
+	local handler = {}
+
+	for k,v in pairs(db) do
+		if k ~= "types" then
+			if v[1] and not handler[v[1]] then
+				handler[v[1]] = {}
+			end
+			if v[2] and not handler[v[1]][v[2]] then
+				handler[v[1]][v[2]] = k
+			end
+		end
+	end
+
+	self.handler = handler
+end
+
+function Proto:SetDB(dbTab)
+	self.db = dbTab
+	self:Update()
+	return self.db
+end
+
+function Proto:GetDB(dbTab)
+	return self.db or self:SetDB(AtlasLoot.db.Button[self.name])
 end

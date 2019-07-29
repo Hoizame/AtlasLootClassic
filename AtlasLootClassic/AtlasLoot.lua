@@ -17,7 +17,6 @@ local AtlasLoot = _G.AtlasLoot
 local AL = AtlasLoot.Locales
 
 local LibStub = _G.LibStub
-local ALDB = LibStub("ALDB-1.0")
 
 -- lua
 
@@ -57,7 +56,11 @@ function AtlasLoot:OnInitialize()
 		AtlasLootClassicCharDB.__addonrevision = AtlasLoot.__addonrevision
 	end
 
-	self.db = ALDB:Register(AtlasLootClassicCharDB, AtlasLootClassicDB, AtlasLoot.AtlasLootDBDefaults)
+	self.dbRaw = LibStub("AceDB-3.0"):New("AtlasLootClassicDB", AtlasLoot.AtlasLootDBDefaults)
+	self.db = self.dbRaw.profile
+	self.dbGlobal = self.dbRaw.global
+
+	self.dbGlobal.__addonrevision = AtlasLoot.__addonrevision
 
 	-- bindings
 	BINDING_HEADER_ATLASLOOT = AL["AtlasLoot"]

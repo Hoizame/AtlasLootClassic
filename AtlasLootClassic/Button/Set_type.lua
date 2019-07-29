@@ -6,7 +6,7 @@ local ALIL = AtlasLoot.IngameLocales
 local ClickHandler = AtlasLoot.ClickHandler
 local Sets
 
-local db
+--local db
 
 -- lua
 local tonumber, type = tonumber, type
@@ -17,27 +17,30 @@ local GetAlTooltip = AtlasLoot.Tooltip.GetTooltip
 
 local SetClickHandler = nil
 
+ClickHandler:Add(
+	"Set",
+	{
+		OpenSet = { "LeftButton", "None" },
+		DressUp = { "LeftButton", "Ctrl" },
+		--ChatLink = { "LeftButton", "Shift" },
+		types = {
+			OpenSet = true,
+			DressUp = true,
+			--ChatLink = true,
+		},
+	},
+	{
+		{ "OpenSet", 	"OpenSet", 	"OpenSet desc" },
+		{ "DressUp", 	AL["Dress up"], 	AL["Shows the item in the Dressing room"] },
+		--{ "ChatLink", 	AL["Chat Link"], 	AL["Add item into chat"] },
+	}
+)
+
 function Set.OnSet(button, second)
 	if not SetClickHandler then
-		db = AtlasLoot.db.Button.Set
-		SetClickHandler = ClickHandler:Add(
-		"Set",
-		{
-			OpenSet = { "LeftButton", "None" },
-			DressUp = { "LeftButton", "Ctrl" },
-			--ChatLink = { "LeftButton", "Shift" },
-			types = {
-				OpenSet = true,
-				DressUp = true,
-				--ChatLink = true,
-			},
-		},
-		db.ClickHandler,
-		{
-			{ "OpenSet", 	"OpenSet", 	"OpenSet desc" },
-			{ "DressUp", 	AL["Dress up"], 	AL["Shows the item in the Dressing room"] },
-			--{ "ChatLink", 	AL["Chat Link"], 	AL["Add item into chat"] },
-		})
+		SetClickHandler = ClickHandler:GetHandler("Set")
+		--db = SetClickHandler:GetDB()
+
 		Sets = AtlasLoot.Data.Sets
 	end
 	if not button then return end
