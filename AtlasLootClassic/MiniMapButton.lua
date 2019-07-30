@@ -14,7 +14,6 @@ local MiniMapButton = {}
 AtlasLoot.MiniMapButton = MiniMapButton
 local SlashCommands = AtlasLoot.SlashCommands
 local AL = AtlasLoot.Locales
-local profile
 local ALButton = LibStub("LibDBIcon-1.0")
 
 
@@ -44,21 +43,19 @@ function MiniMapButton.Init()
 	SlashCommands:Add("mmb", MiniMapButton.Toggle, AL["/al mmb - Toggle MiniMapButton"])
 	SlashCommands:AddResetFunction(MiniMapButton.ResetFrames, "frames", "mmb")
 
-	profile = AtlasLoot.db
-
-	ALButton:Register("AtlasLoot", MiniMapLDB, profile.minimap);
+	ALButton:Register("AtlasLoot", MiniMapLDB, AtlasLoot.db.minimap);
 end
 AtlasLoot:AddInitFunc(MiniMapButton.Init)
 
 function MiniMapButton.ResetFrames()
-	profile.minimap.minimapPos = 218;
+	AtlasLoot.db.minimap.minimapPos = 218;
 	ALButton:Refresh("AtlasLoot");
 end
 
 function MiniMapButton.Toggle()
-	profile.minimap.shown = not profile.minimap.shown
-	profile.minimap.hide = not profile.minimap.hide
-	if not profile.minimap.hide then
+	AtlasLoot.db.minimap.shown = not AtlasLoot.db.minimap.shown
+	AtlasLoot.db.minimap.hide = not AtlasLoot.db.minimap.hide
+	if not AtlasLoot.db.minimap.hide then
 		ALButton:Show("AtlasLoot")
 	else
 		ALButton:Hide("AtlasLoot")
@@ -66,17 +63,17 @@ function MiniMapButton.Toggle()
 end
 
 function MiniMapButton.Options_Toggle()
-	if profile.minimap.shown then
+	if AtlasLoot.db.minimap.shown then
 		ALButton:Show("AtlasLoot")
-		profile.minimap.hide = nil
+		AtlasLoot.db.minimap.hide = nil
 	else
 		ALButton:Hide("AtlasLoot")
-		profile.minimap.hide = true
+		AtlasLoot.db.minimap.hide = true
 	end
 end
 
 function MiniMapButton.Lock_Toggle()
-	if profile.minimap.locked then
+	if AtlasLoot.db.minimap.locked then
 		ALButton:Lock("AtlasLoot");
 	else
 		ALButton:Unlock("AtlasLoot");

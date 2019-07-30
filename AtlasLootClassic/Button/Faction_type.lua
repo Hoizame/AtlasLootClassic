@@ -128,7 +128,6 @@ end
 function Faction.OnSet(button, second)
 	if not FactionClickHandler then
 		FactionClickHandler = ClickHandler:GetHandler("Faction")
-		--db = FactionClickHandler:GetDB()
 
 		PlayerSex = UnitSex("player")
 

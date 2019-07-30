@@ -39,7 +39,6 @@ ClickHandler:Add(
 function Set.OnSet(button, second)
 	if not SetClickHandler then
 		SetClickHandler = ClickHandler:GetHandler("Set")
-		--db = SetClickHandler:GetDB()
 
 		Sets = AtlasLoot.Data.Sets
 	end

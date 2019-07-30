@@ -21,6 +21,7 @@ v1.0.1-beta (Jul. XX, 2019)
 - Fix bug with crafting items cant be linked into chat
 - Reworke the item set part with ClassicItemSetsLib-1.0 and remove unused stuff from it
 - Headers should no longer show the difficulty text when not needed
+- Options now use AceLib
 
 v1.0.0-beta3 (Jul. 11, 2019)
 ========================

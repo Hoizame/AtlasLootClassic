@@ -35,7 +35,6 @@ AtlasLoot.ClickHandler:Add(
 function Prof.OnSet(button, second)
 	if not ProfClickHandler then
 		ProfClickHandler = AtlasLoot.ClickHandler:GetHandler("Profession")
-		--db = ProfClickHandler:GetDB()
 
 		-- create item colors
 		for i=0,7 do

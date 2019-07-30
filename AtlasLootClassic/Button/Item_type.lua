@@ -12,8 +12,6 @@ local Sets = AtlasLoot.Data.Sets
 local Mount = AtlasLoot.Data.Mount
 local ItemFrame
 
-local db
-
 -- lua
 local tonumber = tonumber
 local assert = assert
@@ -60,7 +58,6 @@ ClickHandler:Add(
 function Item.OnSet(button, second)
 	if not ItemClickHandler then
 		ItemClickHandler = ClickHandler:GetHandler("Item")
-		db = ItemClickHandler:GetDB()
 
 		-- create item colors
 		for i=0,7 do
@@ -154,6 +151,7 @@ end
 
 function Item.OnEnter(button, owner)
 	local tooltip = GetAlTooltip()
+	local db = ItemClickHandler:GetDB()
 	tooltip:ClearLines()
 	itemIsOnEnter = tooltip
 	buttonOnEnter = button

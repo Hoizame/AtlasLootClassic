@@ -1038,8 +1038,21 @@ function GUI:Create()
 	--self.SoundFrame:Create()
 end
 
-function GUI.RefreshStyle()
+function GUI:ForceUpdate()
+	db = AtlasLoot.db.GUI
+	FIRST_SHOW = true
+	if self.frame:IsShown() then
+		self.frame:Hide()
+		self.frame:Show()
+	end
+	GUI.RefreshStyle()
+	--UpdateFrames()
+end
 
+function GUI.RefreshStyle()
+	GUI.RefreshContentBackGround()
+	GUI.RefreshMainFrame()
+	GUI.RefreshFonts()
 end
 
 function GUI.ResetFrames()

@@ -50,6 +50,12 @@ function AtlasLoot:Print(msg)
 	print("|cff33ff99AtlasLoot|r: "..(msg or ""))
 end
 
+function AtlasLoot:OnProfileChanged()
+	AtlasLoot.db = AtlasLoot.dbRaw.profile
+
+	AtlasLoot.GUI:ForceUpdate()
+end
+
 function AtlasLoot:OnInitialize()
 	if not AtlasLootClassicCharDB.__addonrevision or AtlasLootClassicCharDB.__addonrevision < AtlasLoot.__addonrevision then
 		wipe(AtlasLootClassicCharDB)
@@ -59,6 +65,10 @@ function AtlasLoot:OnInitialize()
 	self.dbRaw = LibStub("AceDB-3.0"):New("AtlasLootClassicDB", AtlasLoot.AtlasLootDBDefaults)
 	self.db = self.dbRaw.profile
 	self.dbGlobal = self.dbRaw.global
+
+	self.dbRaw.RegisterCallback(self, "OnProfileChanged", "OnProfileChanged")
+	self.dbRaw.RegisterCallback(self, "OnProfileCopied", "OnProfileChanged")
+	self.dbRaw.RegisterCallback(self, "OnProfileReset", "OnProfileChanged")
 
 	self.dbGlobal.__addonrevision = AtlasLoot.__addonrevision
 
