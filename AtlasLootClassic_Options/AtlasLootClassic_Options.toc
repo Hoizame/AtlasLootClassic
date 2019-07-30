@@ -3,6 +3,7 @@
 ## Version: @project-version@
 ## Dependencies: AtlasLootClassic
 ## LoadOnDemand: 1
+## OptionalDeps: LibStub, CallbackHandler-1.0, AceConfig-3.0, AceDBOptions-3.0, AceGUI-3.0, AceGUI-3.0-SharedMediaWidgets, LibDialog-1.0
 
 #@non-debug@
 ## Title: @localization(locale="enUS", key="Title-Options", namespace="ToC")@
