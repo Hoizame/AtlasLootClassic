@@ -244,7 +244,7 @@ data["WailingCaverns"] = {
 			},
 		},
 		{ -- WCLadyAnacondra
-			name = AL["Lady Anacondra <Fanglord>"],
+			name = AL["Lady Anacondra"],
 			npcId = 3671,
 			DisplayIDs = {{4313}},
 			[NORMAL_DIFF] = {
@@ -254,7 +254,7 @@ data["WailingCaverns"] = {
 			},
 		},
 		{ -- WCLordCobrahn
-			name = AL["Lord Cobrahn <Fanglord>"],
+			name = AL["Lord Cobrahn"],
 			npcId = 3669,
 			DisplayIDs = {{4213}},
 			[NORMAL_DIFF] = {
@@ -273,7 +273,7 @@ data["WailingCaverns"] = {
 			},
 		},
 		{ -- WCLordPythas
-			name = AL["Lord Pythas <Fanglord>"],
+			name = AL["Lord Pythas"],
 			npcId = 3670,
 			DisplayIDs = {{4214}},
 			[NORMAL_DIFF] = {
@@ -291,7 +291,7 @@ data["WailingCaverns"] = {
 			},
 		},
 		{ -- WCLordSerpentis
-			name = AL["Lord Serpentis <Fanglord>"],
+			name = AL["Lord Serpentis"],
 			npcId = 3673,
 			DisplayIDs = {{4215}},
 			[NORMAL_DIFF] = {
@@ -339,7 +339,7 @@ data["TheDeadmines"] = {
 	LoadDifficulty = NORMAL_DIFF,
 	items = {
 		{	--DMRhahkZor
-			name = AL["Rhahk'Zor <The Foreman>"],
+			name = AL["Rhahk'Zor"],
 			npcId = 644,
 			DisplayIDs = {{14403}},
 			[NORMAL_DIFF] = {
@@ -357,7 +357,7 @@ data["TheDeadmines"] = {
 			},
 		},
 		{	--DMSneed
-			name = AL["Sneed <Lumbermaster>"],
+			name = AL["Sneed"],
 			npcId = 643,
 			DisplayIDs = {{7125}},
 			[NORMAL_DIFF] = {
@@ -366,7 +366,7 @@ data["TheDeadmines"] = {
 			},
 		},
 		{	--DMSneedsShredder
-			name = AL["Sneed's Shredder <Lumbermaster>"],
+			name = AL["Sneed's Shredder"],
 			npcId = 642,
 			DisplayIDs = {{1269}},
 			[NORMAL_DIFF] = {
@@ -375,7 +375,7 @@ data["TheDeadmines"] = {
 			},
 		},
 		{	--DMGilnid
-			name = AL["Gilnid <The Smelter>"],
+			name = AL["Gilnid"],
 			npcId = 1763,
 			DisplayIDs = {{7124}},
 			[NORMAL_DIFF] = {
@@ -391,7 +391,7 @@ data["TheDeadmines"] = {
 		},
 		]]--
 		{	--DMMrSmite
-			name = AL["Mr. Smite <The Ship's First Mate>"],
+			name = AL["Mr. Smite"],
 			npcId = 646,
 			DisplayIDs = {{2026}},
 			[NORMAL_DIFF] = {
@@ -411,7 +411,7 @@ data["TheDeadmines"] = {
 			},
 		},
 		{	--DMVanCleef
-			name = AL["Edwin VanCleef <Defias Kingpin>"],
+			name = AL["Edwin VanCleef"],
 			npcId = 639,
 			DisplayIDs = {{2029}},
 			[NORMAL_DIFF] = {
@@ -423,7 +423,7 @@ data["TheDeadmines"] = {
 			},
 		},
 		{	--DMCookie
-			name = AL["Cookie <The Ship's Cook>"],
+			name = AL["Cookie"],
 			npcId = 645,
 			DisplayIDs = {{1305}},
 			[NORMAL_DIFF] = {
@@ -450,7 +450,7 @@ data["ShadowfangKeep"] = {
 	LoadDifficulty = NORMAL_DIFF,
 	items = {
 		{ -- SFKRethilgore
-			name = AL["Rethilgore <The Cell Keeper>"],
+			name = AL["Rethilgore"],
 			npcId = 3914,
 			DisplayIDs = {{524}},
 			[NORMAL_DIFF] = {
@@ -833,7 +833,7 @@ data["RazorfenKraul"] = {
 	LoadDifficulty = NORMAL_DIFF,
 	items = {
 		{ -- RFKAggem
-			name = AL["Aggem Thorncurse <Death's Head Prophet>"],
+			name = AL["Aggem Thorncurse"],
 			npcId = 4424,
 			DisplayIDs = {{6097}},
 			[NORMAL_DIFF] = {
@@ -841,7 +841,7 @@ data["RazorfenKraul"] = {
 			},
 		},
 		{ -- RFKDeathSpeakerJargba
-			name = AL["Death Speaker Jargba <Death's Head Captain>"],
+			name = AL["Death Speaker Jargba"],
 			npcId = 4428,
 			DisplayIDs = {{4644}},
 			[NORMAL_DIFF] = {
@@ -896,7 +896,7 @@ data["RazorfenKraul"] = {
 			},
 		},
 		{ -- RFKCharlgaRazorflank
-			name = AL["Charlga Razorflank <The Crone>"],
+			name = AL["Charlga Razorflank"],
 			npcId = 4421,
 			DisplayIDs = {{4642}},
 			[NORMAL_DIFF] = {
@@ -1004,7 +1004,7 @@ data["ScarletMonastery"] = {
 		},
 		-- Armory
 		{ -- SMHerod
-			name = AL["Herod <The Scarlet Champion>"],
+			name = AL["Herod"],
 			npcId = 3975,
 			DisplayIDs = {{2041}},
 			[NORMAL_DIFF] = {
@@ -1347,7 +1347,7 @@ data["Uldaman"] = {
 			},
 		},
 		{ -- UldGrimlok
-			name = AL["Grimlok <Stonevault Chieftain>"],
+			name = AL["Grimlok"],
 			npcId = 4854,
 			DisplayIDs = {{11165}},
 			[NORMAL_DIFF] = {
@@ -1357,7 +1357,7 @@ data["Uldaman"] = {
 			},
 		},
 		{ -- UldArchaedas
-			name = AL["Archaedas <Ancient Stone Watcher>"],
+			name = AL["Archaedas"],
 			npcId = 2748,
 			DisplayIDs = {{5988}},
 			[NORMAL_DIFF] = {
@@ -1428,7 +1428,7 @@ data["Zul'Farrak"] = {
 	LoadDifficulty = NORMAL_DIFF,
 	items = {
 		{ -- ZFAntusul
-			name = AL["Antu'sul <Overseer of Sul>"],
+			name = AL["Antu'sul"],
 			npcId = 8127,
 			DisplayIDs = {{7353}},
 			[NORMAL_DIFF] = {
@@ -1675,7 +1675,7 @@ data["Maraudon"] = {
 			},
 		},
 		{ -- MaraKhanKolk
-			name = AL["Kolk <The First Kahn>"],
+			name = AL["Kolk"],
 			npcId = 13742,
 			DisplayIDs = {{4860}},
 			ExtraList = true,
@@ -1684,7 +1684,7 @@ data["Maraudon"] = {
 			},
 		},
 		{ -- MaraKhanGelk
-			name = AL["Gelk <The Second Kahn>"],
+			name = AL["Gelk"],
 			npcId = 13741,
 			DisplayIDs = {{9427}},
 			ExtraList = true,
@@ -1693,7 +1693,7 @@ data["Maraudon"] = {
 			},
 		},
 		{ -- MaraKhanMagra
-			name = AL["Magra <The Third Kahn>"],
+			name = AL["Magra"],
 			npcId = 13740,
 			DisplayIDs = {{9433}},
 			ExtraList = true,
@@ -1702,7 +1702,7 @@ data["Maraudon"] = {
 			},
 		},
 		{ -- MaraKhanMaraudos
-			name = AL["Maraudos <The Fourth Kahn>"],
+			name = AL["Maraudos"],
 			npcId = 13739,
 			DisplayIDs = {{9441}},
 			ExtraList = true,
@@ -1711,7 +1711,7 @@ data["Maraudon"] = {
 			},
 		},
 		{ -- MaraKhanVeng
-			name = AL["Veng <The Fifth Kahn>"],
+			name = AL["Veng"],
 			npcId = 13738,
 			DisplayIDs = {{9418}},
 			ExtraList = true,
@@ -1729,7 +1729,7 @@ data["TheTempleOfAtal'Hakkar"] = {
 	LoadDifficulty = NORMAL_DIFF,
 	items = {
 		{ -- STAtalalarion
-			name = AL["Atal'alarion <Guardian of the Idol>"],
+			name = AL["Atal'alarion"],
 			npcId = 8580,
 			DisplayIDs = {{7873}},
 			[NORMAL_DIFF] = {
@@ -2089,7 +2089,7 @@ data["BlackrockDepths"] = {
 			},
 		},
 		{ -- BRDFineousDarkvire
-			name = AL["Fineous Darkvire <Chief Architect>"],
+			name = AL["Fineous Darkvire"],
 			npcId = 9056,
 			DisplayIDs = {{8704}},
 			[NORMAL_DIFF] = {
@@ -2975,7 +2975,7 @@ data["DireMaulNorth"] = {
 			},
 		},
 		{ -- DMNStomperKreeg
-			name = AL["Stomper Kreeg <The Drunk>"],
+			name = AL["Stomper Kreeg"],
 			npcId = 14322,
 			DisplayIDs = {{11545}},
 			[NORMAL_DIFF] = {
