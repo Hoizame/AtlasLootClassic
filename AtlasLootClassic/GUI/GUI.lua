@@ -1091,31 +1091,31 @@ function GUI.RefreshContentBackGround()
 	local frame = GUI.frame.contentFrame
 
 	-- top Bg
-	if db.contentTopBar.useContentColor and ( frame.topBG.curAlpha ~= db.contentTopBar.bgColor[4] or frame.topBG.curColor ~= GUI.curBgInfo[1]) then
-		frame.topBG:SetColorTexture(GUI.curBgInfo[1][1], GUI.curBgInfo[1][2], GUI.curBgInfo[1][3], db.contentTopBar.bgColor[4])
+	if db.contentTopBar.useContentColor and ( frame.topBG.curAlpha ~= db.contentTopBar.bgColor.a or frame.topBG.curColor ~= GUI.curBgInfo[1]) then
+		frame.topBG:SetColorTexture(GUI.curBgInfo[1][1], GUI.curBgInfo[1][2], GUI.curBgInfo[1][3], db.contentTopBar.bgColor.a)
 		frame.topBG.curColor = GUI.curBgInfo[1]
-		frame.topBG.curAlpha = db.contentTopBar.bgColor[4]
+		frame.topBG.curAlpha = db.contentTopBar.bgColor.a
 	elseif not db.contentTopBar.useContentColor and frame.topBG.curColor ~= db.contentTopBar.bgColor then
-		frame.topBG:SetColorTexture(db.contentTopBar.bgColor[1], db.contentTopBar.bgColor[2], db.contentTopBar.bgColor[3], db.contentTopBar.bgColor[4])
+		frame.topBG:SetColorTexture(db.contentTopBar.bgColor.r, db.contentTopBar.bgColor.g, db.contentTopBar.bgColor.b, db.contentTopBar.bgColor.a)
 		frame.topBG.curColor = db.contentTopBar.bgColor
 	end
 
 	-- content Bg
 	if db.content.showBgImage and GUI.curBgInfo and GUI.curBgInfo[2] ~= ( GUI.lastBgInfo and GUI.lastBgInfo[2] or nil) then
 		GUI.frame.contentFrame.itemBG:SetTexture(GUI.curBgInfo[2])
-		GUI.frame.contentFrame.itemBG:SetAlpha(db.content.bgColor[4])
+		GUI.frame.contentFrame.itemBG:SetAlpha(db.content.bgColor.a)
 	elseif not db.content.showBgImage or not GUI.curBgInfo[2] then
 		GUI.frame.contentFrame.itemBG:SetAlpha(1)
-		GUI.frame.contentFrame.itemBG:SetColorTexture(db.content.bgColor[1], db.content.bgColor[2], db.content.bgColor[3], db.content.bgColor[4])
+		GUI.frame.contentFrame.itemBG:SetColorTexture(db.content.bgColor.r, db.content.bgColor.g, db.content.bgColor.b, db.content.bgColor.a)
 	end
 
 	-- bottom Bg
-	if db.contentBottomBar.useContentColor and ( frame.downBG.curAlpha ~= db.contentBottomBar.bgColor[4] or frame.downBG.curColor ~= GUI.curBgInfo[1]) then
-		frame.downBG:SetColorTexture(GUI.curBgInfo[1][1], GUI.curBgInfo[1][2], GUI.curBgInfo[1][3], db.contentBottomBar.bgColor[4])
+	if db.contentBottomBar.useContentColor and ( frame.downBG.curAlpha ~= db.contentBottomBar.bgColor.a or frame.downBG.curColor ~= GUI.curBgInfo[1]) then
+		frame.downBG:SetColorTexture(GUI.curBgInfo[1][1], GUI.curBgInfo[1][2], GUI.curBgInfo[1][3], db.contentTopBar.bgColor.a)
 		frame.downBG.curColor = GUI.curBgInfo[1]
-		frame.downBG.curAlpha = db.contentBottomBar.bgColor[4]
+		frame.downBG.curAlpha = db.contentBottomBar.bgColor.a
 	elseif not db.contentBottomBar.useContentColor and frame.downBG.curColor ~= db.contentBottomBar.bgColor then
-		frame.downBG:SetColorTexture(db.contentBottomBar.bgColor[1], db.contentBottomBar.bgColor[2], db.contentBottomBar.bgColor[3], db.contentBottomBar.bgColor[4])
+		frame.downBG:SetColorTexture(db.contentBottomBar.bgColor.r, db.contentBottomBar.bgColor.g, db.contentBottomBar.bgColor.b, db.contentBottomBar.bgColor.a)
 		frame.downBG.curColor = db.contentBottomBar.bgColor
 	end
 end
@@ -1124,19 +1124,24 @@ function GUI.RefreshMainFrame()
 	if not GUI.frame then return end
 
 	local frame = GUI.frame
-	frame:SetBackdropColor(db.mainFrame.bgColor[1], db.mainFrame.bgColor[2], db.mainFrame.bgColor[3], db.mainFrame.bgColor[4])
-	frame.titleFrame:SetBackdropColor(db.mainFrame.title.bgColor[1], db.mainFrame.title.bgColor[2], db.mainFrame.title.bgColor[3], db.mainFrame.title.bgColor[4])
-	frame.titleFrame.text:SetTextColor(db.mainFrame.title.textColor[1], db.mainFrame.title.textColor[2], db.mainFrame.title.textColor[3], db.mainFrame.title.textColor[4])
-	frame.titleFrame.text:SetFont(LibSharedMedia:Fetch("font", db.mainFrame.title.font), db.mainFrame.title.size)
+	frame:SetBackdropColor(db.mainFrame.bgColor.r, db.mainFrame.bgColor.b, db.mainFrame.bgColor.g, db.mainFrame.bgColor.a)
+	frame.titleFrame:SetBackdropColor(db.mainFrame.title.bgColor.r, db.mainFrame.title.bgColor.g, db.mainFrame.title.bgColor.b, db.mainFrame.title.bgColor.a)
+	GUI.RefreshFonts("title")
 
 	frame:SetScale(db.mainFrame.scale)
 end
 
-function GUI.RefreshFonts()
+function GUI.RefreshFonts(obj)
 	if not GUI.frame then return end
-	local frame = GUI.frame.contentFrame
+	local frame = GUI.frame
 
-
-	frame.title:SetFont(LibSharedMedia:Fetch("font", db.contentTopBar.font.font), db.contentTopBar.font.size)
-	frame.title:SetTextColor(db.contentTopBar.font.color[1], db.contentTopBar.font.color[2], db.contentTopBar.font.color[3], db.contentTopBar.font.color[4])
+	--db.GUI.mainFrame.title.font
+	if not obj or obj == "title" then
+		frame.titleFrame:SetFont(LibSharedMedia:Fetch("font", db.mainFrame.title.font), db.mainFrame.title.size)
+		frame.titleFrame.text:SetTextColor(db.mainFrame.title.textColor.r, db.mainFrame.title.textColor.g, db.mainFrame.title.textColor.b, db.mainFrame.title.textColor.a)
+	end
+	if not obj or obj == "contentFrame" then
+		frame.contentFrame.title:SetFont(LibSharedMedia:Fetch("font", db.contentTopBar.font.font), db.contentTopBar.font.size)
+		frame.contentFrame.title:SetTextColor(db.contentTopBar.font.color.r, db.contentTopBar.font.color.g, db.contentTopBar.font.color.b, db.contentTopBar.font.color.a)
+	end
 end

@@ -58,6 +58,9 @@ local templateFunctions = {
 			self.tt2 = nil
 		end
 	end,
+	["SetFont"] = function(self, ...)
+		self.text:SetFont(...)
+	end,
 	["SetFontObject"] = function(self, font)
 		self.text:SetFontObject(font or "GameFontNormal")
 	end,

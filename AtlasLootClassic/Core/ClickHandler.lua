@@ -145,11 +145,12 @@ function Proto:Get(mouseButton)
 end
 
 function Proto:Update()
-	local db = self.db or self:GetDB() or self.defaults
+	local db = self.db or self:GetDB()
+	local defaults = self.defaults
 
 	local handler = {}
 
-	for k,v in pairs(db) do
+	for k,v in pairs(defaults) do
 		if k ~= "types" then
 			if v[1] and not handler[v[1]] then
 				handler[v[1]] = {}

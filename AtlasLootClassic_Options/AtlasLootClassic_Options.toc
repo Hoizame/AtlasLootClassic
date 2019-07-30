@@ -51,7 +51,6 @@
 ## X-AtlasLoot-LootModule: 0
 
 embeds.xml
-ALOptions\ALOptions-1.0.xml
 
 Locales\constants.lua
 Locales\constants.cn.lua
@@ -66,3 +65,6 @@ Locales\constants.ru.lua
 Locales\constants.tw.lua
 
 Core.lua
+Main.lua
+Windows.lua
+MiniMapButton.lua
