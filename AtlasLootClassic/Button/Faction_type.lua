@@ -327,7 +327,7 @@ function Faction.ShowToolTipFrame(button)
 	frame:ClearAllPoints()
 	frame:SetParent(button:GetParent():GetParent())
 	frame:SetFrameStrata("TOOLTIP")
-	frame:SetPoint("BOTTOMLEFT", button, "TOPRIGHT")
+	frame:SetPoint("BOTTOMLEFT", button, "TOPLEFT", (button:GetWidth() * 0.5), 5)
 
 	frame.icon:SetTexture(FACTION_IMAGES[button.FactionID] or FACTION_IMAGES[0])
 	frame.name:SetText(name or "Faction "..button.FactionID)

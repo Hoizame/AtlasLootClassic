@@ -60,4 +60,12 @@ function Favourite:IsFavouriteItemID(itemID)
     return self.activeList[itemID]
 end
 
+function Favourite:GetProfileLists()
+    return 
+end
+
+function Favourite:GetGlobaleLists()
+
+end
+
 Favourite:Finalize()

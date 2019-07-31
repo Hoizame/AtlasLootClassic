@@ -72,7 +72,7 @@ end
 function Prof.OnEnter(button)
 	local tooltip = GetAlTooltip()
 	tooltip:ClearLines()
-	tooltip:SetOwner(button, "ANCHOR_RIGHT", -(button:GetWidth() * 0.5), 24)
+	tooltip:SetOwner(button, "ANCHOR_RIGHT", -(button:GetWidth() * 0.5), 5)
 	tooltip:SetSpellByID(button.SpellID)
 	tooltip:Show()
 end

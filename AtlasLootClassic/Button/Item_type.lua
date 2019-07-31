@@ -172,7 +172,7 @@ function Item.OnEnter(button, owner)
 	if owner and type(owner) == "table" then
 		tooltip:SetOwner(owner[1], owner[2], owner[3], owner[4])
 	else
-		tooltip:SetOwner(button, "ANCHOR_RIGHT", -(button:GetWidth() * 0.5), 24)
+		tooltip:SetOwner(button, "ANCHOR_RIGHT", -(button:GetWidth() * 0.5), 5)
 	end
 	if button.ItemString then
 		tooltip:SetHyperlink(button.ItemString)
