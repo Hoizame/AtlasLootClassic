@@ -20,13 +20,13 @@ local AL = AtlasLoot.Locales
 local DbDefaults = AtlasLoot.AtlasLootDBDefaults.profile.Button
 
 -- lua
-local setmetatable = setmetatable
+local setmetatable = _G.setmetatable
 
 -- WoW
 local IsModifierKeyDown = IsModifierKeyDown
-local IsAltKeyDown, IsLeftAltKeyDown, IsRightAltKeyDown = IsAltKeyDown, IsLeftAltKeyDown, IsRightAltKeyDown
-local IsControlKeyDown, IsLeftControlKeyDown, IsRightControlKeyDown = IsControlKeyDown, IsLeftControlKeyDown, IsRightControlKeyDown
-local IsShiftKeyDown, IsLeftShiftKeyDown, IsRightShiftKeyDown = IsShiftKeyDown, IsLeftShiftKeyDown, IsRightShiftKeyDown
+local IsAltKeyDown, IsLeftAltKeyDown, IsRightAltKeyDown = _G.IsAltKeyDown, _G.IsLeftAltKeyDown, _G.IsRightAltKeyDown
+local IsControlKeyDown, IsLeftControlKeyDown, IsRightControlKeyDown = _G.IsControlKeyDown, _G.IsLeftControlKeyDown, _G.IsRightControlKeyDown
+local IsShiftKeyDown, IsLeftShiftKeyDown, IsRightShiftKeyDown = _G.IsShiftKeyDown, _G.IsLeftShiftKeyDown, _G.IsRightShiftKeyDown
 
 
 local MOUSE_BUTTON_LOC = nil
@@ -161,7 +161,6 @@ function Proto:Update()
 				handler[v[1]] = {}
 			end
 			if v[2] and not handler[v[1]][v[2]] then
-				print(v[1], v[2],  k)
 				handler[v[1]][v[2]] = k
 			end
 		end

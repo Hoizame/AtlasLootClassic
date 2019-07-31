@@ -1,11 +1,20 @@
 --[[ ############################
 
 - function overrites
-    MyAddon:OnInitialize()
+    MyAddon.OnInitialize()
     MyAddon:OnProfileChanged()
+    MyAddon:OnStatusChanged()   added / disabled / enabled
 
 - table overrites
-    MyAddon.DbDefaults = {}     -- calls Addons:SetDbDefaults
+    MyAddon.DbDefaults = { enabled = true }     -- calls Addons:SetDbDefaults
+
+- Protos
+    MyAddon:IsEnabled()
+    MyAddon:UpdateCallbacks()
+    MyAddon:GetDb()
+
+- End
+    MyAddon:Finalize()
 
 -- ############################ ]]--
 
@@ -22,6 +31,8 @@ local assert = _G.assert
 local type = _G.type
 local pairs = _G.pairs
 
+local CallbackList = {}
+
 local AddonMT = {
     __index = AddonProto,
     __newindex = function(table, key, value)
@@ -34,9 +45,19 @@ local AddonMT = {
     end
 }
 
+local function UpdateCallbacks(name)
+    if AddonList[name] and CallbackList[name] then
+        for c in pairs(CallbackList[name]) do
+            c(AddonList[name], AddonList[name]:IsEnabled())
+        end
+    end
+end
+
 function Addons:RegisterNewAddon(name)
+    CallbackList[name] = CallbackList[name] or {}
     local addonTable = {
         __name = name,
+        __callbacks = CallbackList[name]
     }
     setmetatable(addonTable, AddonMT)
     AddonList[name] = addonTable
@@ -44,8 +65,15 @@ function Addons:RegisterNewAddon(name)
     return addonTable
 end
 
-function Addons:GetAddon(name)
-    assert(name and AddonList[name], "Addon '"..(name or "nil").."' not found.")
+-- callback(Addon, enabled) gets called if the addon is added / disabled / enabled
+function Addons:GetAddon(name, callback)
+    if callback then
+        CallbackList[name] = CallbackList[name] or {}
+        CallbackList[name][callback] = true
+        if AddonList[name] then
+            callback(AddonList[name], AddonList[name]:IsEnabled())
+        end
+    end
     return AddonList[name]
 end
 
@@ -66,3 +94,21 @@ end
 -- AddonProto
 -- ##########################
 
+function AddonProto:Finalize()
+    UpdateCallbacks(self.__name)
+end
+
+function AddonProto:IsEnabled()
+    local db = self:GetDb()
+    return ( db and db.enabled ~= nil ) and db.enabled or true
+end
+
+function AddonProto:UpdateCallbacks()
+    UpdateCallbacks(self.__name)
+end
+
+function AddonProto:GetDb()
+    if self.DbDefaults then
+        return AtlasLoot.db.Addons[self.__name]
+    end
+end

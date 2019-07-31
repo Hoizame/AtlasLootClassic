@@ -10,16 +10,16 @@ local Recipe = AtlasLoot.Data.Recipe
 local Profession = AtlasLoot.Data.Profession
 local Sets = AtlasLoot.Data.Sets
 local Mount = AtlasLoot.Data.Mount
-local ItemFrame
+local ItemFrame, Favourite
 
 -- lua
-local tonumber = tonumber
-local assert = assert
-local next, wipe, tab_remove = next, wipe, table.remove
-local format, split, sfind, slower = string.format, string.split, string.find, string.lower
+local tonumber = _G.tonumber
+local assert = _G.assert
+local next, wipe, tab_remove = _G.next, _G.wipe, _G.table.remove
+local format, split, sfind, slower = _G.string.format, _G.string.split, _G.string.find, _G.string.lower
 
 -- WoW
-local GetItemInfo, IsEquippableItem = GetItemInfo, IsEquippableItem
+local GetItemInfo, IsEquippableItem = _G.GetItemInfo, _G.IsEquippableItem
 
 -- AL
 local GetAlTooltip = AtlasLoot.Tooltip.GetTooltip
@@ -55,10 +55,15 @@ ClickHandler:Add(
 	}
 )
 
+local function OnFavouriteAddonLoad(addon, enabled)
+	Favourite = enabled and addon or nil
+end
+
+
 function Item.OnSet(button, second)
 	if not ItemClickHandler then
 		ItemClickHandler = ClickHandler:GetHandler("Item")
-
+		AtlasLoot.Addons:GetAddon("Favourite", OnFavouriteAddonLoad)
 		-- create item colors
 		for i=0,7 do
 			local _, _, _, itemQuality = GetItemQualityColor(i)
@@ -126,7 +131,16 @@ function Item.OnMouseAction(button, mouseButton)
 			AtlasLoot.Button:ExtraItemFrame_GetFrame(button, button.SetData)
 		end
 	elseif mouseButton == "SetFavourite" then
-		print("wuiii")
+		if Favourite then
+			if Favourite:IsFavouriteItemID(button.ItemID) then
+				Favourite:RemoveItemID(button.ItemID)
+				button.favourite:Hide()
+			else
+				if Favourite:AddItemID(button.ItemID) then
+					button.favourite:Show()
+				end
+			end
+		end
 	elseif mouseButton == "MouseWheelUp" and Item.previewTooltipFrame and Item.previewTooltipFrame:IsShown() then  -- ^
 		local frame = Item.previewTooltipFrame.modelFrame
 		if IsAltKeyDown() then -- model zoom
@@ -253,6 +267,11 @@ function Item.Refresh(button)
 			Profession.GetColorSkillRankItem(button.ItemID) or
 			( Sets:GetItemSetForItemID(button.ItemID) and AL["|cff00ff00Set item:|r "] or "")..GetItemDescInfo(itemEquipLoc, itemType, itemSubType)
 		)
+	end
+	if Favourite and Favourite:IsFavouriteItemID(button.ItemID) then
+		button.favourite:Show()
+	else
+		button.favourite:Hide()
 	end
 	--[[
 	if db.showCompletedHook then

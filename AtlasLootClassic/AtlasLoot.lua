@@ -54,8 +54,8 @@ function AtlasLoot:OnProfileChanged()
 	AtlasLoot.db = AtlasLoot.dbRaw.profile
 
 	AtlasLoot.ClickHandler:OnProfileChanged()
-	AtlasLoot.GUI:ForceUpdate()
 	AtlasLoot.Addons:OnProfileChanged()
+	AtlasLoot.GUI:ForceUpdate()
 end
 
 function AtlasLoot:OnInitialize()

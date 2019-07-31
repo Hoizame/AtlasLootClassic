@@ -403,14 +403,16 @@ function Proto:Clear()
 		self:SetAlpha(1.0)
 		if self.count then self.count:Hide() end
 		self.overlay:SetSize(self.icon:GetWidth(), self.icon:GetHeight())
-		if self.completed and self.completed:IsShown() then self.completed:Hide() end
+		if self.completed then self.completed:Hide() end
+		if self.favourite then self.favourite:Hide() end
 		self:Hide()
 	end
 	if self.secButton then
 		self.secButton:SetNormalTexture(nil)
 		self.secButton.overlay:SetSize(self.secButton:GetWidth(), self.secButton:GetHeight())
 		if self.secButton.count then self.secButton.count:Hide() end
-		if self.secButton.completed and self.secButton.completed:IsShown() then self.secButton.completed:Hide() end
+		if self.secButton.completed then self.secButton.completed:Hide() end
+		if self.secButton.favourite then self.secButton.favourite:Hide() end
 		self.secButton:Hide()
 	end
 
