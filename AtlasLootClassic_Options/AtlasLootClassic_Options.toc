@@ -69,3 +69,4 @@ Core.lua
 Main.lua
 Windows.lua
 MiniMapButton.lua
+Addons.lua

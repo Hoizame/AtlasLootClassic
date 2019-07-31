@@ -10,7 +10,7 @@ local Recipe = AtlasLoot.Data.Recipe
 local Profession = AtlasLoot.Data.Profession
 local Sets = AtlasLoot.Data.Sets
 local Mount = AtlasLoot.Data.Mount
-local ItemFrame, Favourite
+local ItemFrame, Favourites
 
 -- lua
 local tonumber = _G.tonumber
@@ -55,15 +55,15 @@ ClickHandler:Add(
 	}
 )
 
-local function OnFavouriteAddonLoad(addon, enabled)
-	Favourite = enabled and addon or nil
+local function OnFavouritesAddonLoad(addon, enabled)
+	Favourites = enabled and addon or nil
 end
 
 
 function Item.OnSet(button, second)
 	if not ItemClickHandler then
 		ItemClickHandler = ClickHandler:GetHandler("Item")
-		AtlasLoot.Addons:GetAddon("Favourite", OnFavouriteAddonLoad)
+		AtlasLoot.Addons:GetAddon("Favourites", OnFavouritesAddonLoad)
 		-- create item colors
 		for i=0,7 do
 			local _, _, _, itemQuality = GetItemQualityColor(i)
@@ -131,12 +131,12 @@ function Item.OnMouseAction(button, mouseButton)
 			AtlasLoot.Button:ExtraItemFrame_GetFrame(button, button.SetData)
 		end
 	elseif mouseButton == "SetFavourite" then
-		if Favourite then
-			if Favourite:IsFavouriteItemID(button.ItemID) then
-				Favourite:RemoveItemID(button.ItemID)
+		if Favourites then
+			if Favourites:IsFavouriteItemID(button.ItemID) then
+				Favourites:RemoveItemID(button.ItemID)
 				button.favourite:Hide()
 			else
-				if Favourite:AddItemID(button.ItemID) then
+				if Favourites:AddItemID(button.ItemID) then
 					button.favourite:Show()
 				end
 			end
@@ -268,7 +268,7 @@ function Item.Refresh(button)
 			( Sets:GetItemSetForItemID(button.ItemID) and AL["|cff00ff00Set item:|r "] or "")..GetItemDescInfo(itemEquipLoc, itemType, itemSubType)
 		)
 	end
-	if Favourite and Favourite:IsFavouriteItemID(button.ItemID) then
+	if Favourites and Favourites:IsFavouriteItemID(button.ItemID) then
 		button.favourite:Show()
 	else
 		button.favourite:Hide()

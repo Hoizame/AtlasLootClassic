@@ -1,7 +1,7 @@
 local _G = getfenv(0)
 local AtlasLoot = _G.AtlasLoot
 local Addons = AtlasLoot.Addons
-local Favourite = Addons:RegisterNewAddon("Favourite")
+local Favourites = Addons:RegisterNewAddon("Favourites")
 
 -- lua
 
@@ -9,7 +9,7 @@ local Favourite = Addons:RegisterNewAddon("Favourite")
 -- WoW
 local GetItemInfo = _G.GetItemInfo
 
-Favourite.DbDefaults = {
+Favourites.DbDefaults = {
     enabled = true,
     activeList = { "Base", false }, -- name, isGlobal
     lists = {
@@ -18,12 +18,12 @@ Favourite.DbDefaults = {
     }
 }
 
-Favourite.GlobalDbDefaults = {
+Favourites.GlobalDbDefaults = {
     ["Base"] = {},
     ["*"] = {},
 }
 
-function Favourite:UpdateDb()
+function Favourites:UpdateDb()
     self.db = self:GetDb()
     if self.db and self.db.activeList[2] then
         self.activeList = self:GetGlobalDb()[self.db.activeList[1]]
@@ -32,15 +32,19 @@ function Favourite:UpdateDb()
     end
 end
 
-function Favourite.OnInitialize()
-    Favourite:UpdateDb()
+function Favourites.OnInitialize()
+    Favourites:UpdateDb()
 end
 
-function Favourite:OnProfileChanged()
+function Favourites:OnProfileChanged()
     self:UpdateDb()
 end
 
-function Favourite:AddItemID(itemID)
+function Favourites:OnStatusChanged()
+    self:UpdateDb()
+end
+
+function Favourites:AddItemID(itemID)
     if itemID and GetItemInfo(itemID) and not self.activeList[itemID] then
         self.activeList[itemID] = true
         return true
@@ -48,7 +52,7 @@ function Favourite:AddItemID(itemID)
     return false
 end
 
-function Favourite:RemoveItemID(itemID)
+function Favourites:RemoveItemID(itemID)
     if itemID and self.activeList[itemID] then
         self.activeList[itemID] = nil
         return true
@@ -56,16 +60,16 @@ function Favourite:RemoveItemID(itemID)
     return false
 end
 
-function Favourite:IsFavouriteItemID(itemID)
+function Favourites:IsFavouriteItemID(itemID)
     return self.activeList[itemID]
 end
 
-function Favourite:GetProfileLists()
-    return 
+function Favourites:GetProfileLists()
+    return self.db.lists
 end
 
-function Favourite:GetGlobaleLists()
-
+function Favourites:GetGlobaleLists()
+    return self:GetGlobalDb()
 end
 
-Favourite:Finalize()
+Favourites:Finalize()

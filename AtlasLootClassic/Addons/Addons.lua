@@ -89,13 +89,21 @@ function Addons:OnProfileChanged()
 end
 
 function Addons:SetDbDefaults(addonName, dbDefaults)
-    assert(addonName and dbDefaults and type(dbDefaults), "Invalid value/s.")
+    assert(addonName and dbDefaults and type(dbDefaults) == "table", "Invalid args.")
     AtlasLoot.AtlasLootDBDefaults.profile.Addons[addonName] = dbDefaults
 end
 
 function Addons:SetGlobalDbDefaults(addonName, dbDefaults)
-    assert(addonName and dbDefaults and type(dbDefaults), "Invalid value/s.")
+    assert(addonName and dbDefaults and type(dbDefaults) == "table", "Invalid args.")
     AtlasLoot.AtlasLootDBDefaults.global.Addons[addonName] = dbDefaults
+end
+
+function Addons:UpdateStatus(addonName)
+    assert(addonName and AddonList[addonName], "Invalid args.")
+    if AddonList[addonName].OnStatusChanged then
+        AddonList[addonName].OnStatusChanged(AddonList[addonName])
+    end
+    AddonList[addonName]:UpdateCallbacks()
 end
 
 -- ##########################
@@ -108,7 +116,11 @@ end
 
 function AddonProto:IsEnabled()
     local db = self:GetDb()
-    return ( db and db.enabled ~= nil ) and db.enabled or true
+    if db and db.enabled ~= nil then
+        return db.enabled
+    else
+        return true
+    end
 end
 
 function AddonProto:UpdateCallbacks()
