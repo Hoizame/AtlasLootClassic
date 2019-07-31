@@ -101,6 +101,11 @@ function ClickHandler:GetLocMouseButtons()
 	return MOUSE_BUTTON_LOC
 end
 
+function ClickHandler:OnProfileChanged()
+	for k, v in pairs(HandlerRegister) do
+		v.db = nil
+	end
+end
 
 function ClickHandler:GetLocModifier()
 	return MODIFIER_LOC
@@ -110,52 +115,53 @@ function Proto:Get(mouseButton)
 	local db = self.db or self:SetDB(AtlasLoot.db.Button[self.name])
 	local handler = self.handler
 	if mouseButton and handler[mouseButton] then
+		handler = handler[mouseButton]
 		if IsModifierKeyDown() then
 			if IsShiftKeyDown() then
-				if IsLeftShiftKeyDown() and handler[mouseButton].LeftShift then
-					return db[handler[mouseButton].LeftShift]
-				elseif IsRightShiftKeyDown() and handler[mouseButton].RightShift then
-					return db[handler[mouseButton].RightShift]
+				if IsLeftShiftKeyDown() and handler.LeftShift then
+					return db.types[handler.LeftShift] and handler.LeftShift or nil
+				elseif IsRightShiftKeyDown() and handler.RightShift then
+					return db.types[handler.RightShift] and handler.RightShift or nil
 				end
-				if handler[mouseButton].Shift then
-					return db[handler[mouseButton].Shift]
+				if handler.Shift then
+					return db.types[handler.Shift] and handler.Shift or nil
 				end
 			elseif IsAltKeyDown() then
-				if IsLeftAltKeyDown() and handler[mouseButton].LeftAlt then
-					return db[handler[mouseButton].LeftAlt]
-				elseif IsRightAltKeyDown() and handler[mouseButton].RightAlt then
-					return db[handler[mouseButton].RightAlt]
+				if IsLeftAltKeyDown() and handler.LeftAlt then
+					return db.types[handler.LeftAlt] and handler.LeftAlt or nil
+				elseif IsRightAltKeyDown() and handler.RightAlt then
+					return db.types[handler.RightAlt] and handler.RightAlt or nil
 				end
-				if handler[mouseButton].Alt then
-					return db[handler[mouseButton].Alt]
+				if handler.Alt then
+					return db.types[handler.Alt] and handler.Alt or nil
 				end
 			elseif IsControlKeyDown() then
-				if IsLeftControlKeyDown() and handler[mouseButton].LeftCtrl then
-					return db[handler[mouseButton].LeftCtrl]
-				elseif IsRightControlKeyDown() and handler[mouseButton].RightCtrl then
-					return db[handler[mouseButton].RightCtrl]
+				if IsLeftControlKeyDown() and handler.LeftCtrl then
+					return db.types[handler.LeftCtrl] and handler.LeftCtrl or nil
+				elseif IsRightControlKeyDown() and handler.RightCtrl then
+					return db.types[handler.RightCtrl] and handler.RightCtrl or nil
 				end
-				if handler[mouseButton].Ctrl then
-					return db[handler[mouseButton].Ctrl]
+				if handler.Ctrl then
+					return db.types[handler.Ctrl] and handler.Ctrl or nil
 				end
 			end
 		end
-		return handler[mouseButton].None
+		return handler.None
 	end
 end
 
 function Proto:Update()
 	local db = self.db or self:GetDB()
-	local defaults = self.defaults
 
 	local handler = {}
 
-	for k,v in pairs(defaults) do
+	for k,v in pairs(db) do
 		if k ~= "types" then
 			if v[1] and not handler[v[1]] then
 				handler[v[1]] = {}
 			end
 			if v[2] and not handler[v[1]][v[2]] then
+				print(v[1], v[2],  k)
 				handler[v[1]][v[2]] = k
 			end
 		end
