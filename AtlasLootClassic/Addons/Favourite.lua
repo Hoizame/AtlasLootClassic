@@ -11,15 +11,25 @@ local GetItemInfo = _G.GetItemInfo
 
 Favourite.DbDefaults = {
     enabled = true,
-    activeList = "Base",
+    activeList = { "Base", false }, -- name, isGlobal
     lists = {
+        ["Base"] = {},
         ["*"] = {},
     }
 }
 
+Favourite.GlobalDbDefaults = {
+    ["Base"] = {},
+    ["*"] = {},
+}
+
 function Favourite:UpdateDb()
     self.db = self:GetDb()
-    self.activeList = self.db.lists[self.db.activeList]
+    if self.db and self.db.activeList[2] then
+        self.activeList = self:GetGlobalDb()[self.db.activeList[1]]
+    else
+        self.activeList = self.db.lists[self.db.activeList[1]]
+    end
 end
 
 function Favourite.OnInitialize()

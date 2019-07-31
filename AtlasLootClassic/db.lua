@@ -62,10 +62,9 @@ AtlasLoot.AtlasLootDBDefaults = {
 				}
 			}
 		},
-		Addons = {
-			Search = {
-				point = {"CENTER"},
-			},
-		},
+		Addons = {},
 	},
+	global = {
+		Addons = {},
+	}
 }

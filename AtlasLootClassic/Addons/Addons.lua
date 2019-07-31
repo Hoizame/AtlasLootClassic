@@ -7,6 +7,7 @@
 
 - table overrites
     MyAddon.DbDefaults = { enabled = true }     -- calls Addons:SetDbDefaults
+    MyAddon.GlobalDbDefaults = { enabled = true }     -- calls Addons:SetGlobalDbDefaults
 
 - Protos
     MyAddon:IsEnabled()
@@ -41,6 +42,8 @@ local AddonMT = {
             AtlasLoot:AddInitFunc(value)
         elseif key == "DbDefaults" and type(value) == "table" then
             Addons:SetDbDefaults(table.__name, value)
+        elseif key == "GlobalDbDefaults" and type(value) == "table" then
+            Addons:SetGlobalDbDefaults(table.__name, value)
         end
     end
 }
@@ -90,6 +93,11 @@ function Addons:SetDbDefaults(addonName, dbDefaults)
     AtlasLoot.AtlasLootDBDefaults.profile.Addons[addonName] = dbDefaults
 end
 
+function Addons:SetGlobalDbDefaults(addonName, dbDefaults)
+    assert(addonName and dbDefaults and type(dbDefaults), "Invalid value/s.")
+    AtlasLoot.AtlasLootDBDefaults.global.Addons[addonName] = dbDefaults
+end
+
 -- ##########################
 -- AddonProto
 -- ##########################
@@ -108,7 +116,9 @@ function AddonProto:UpdateCallbacks()
 end
 
 function AddonProto:GetDb()
-    if self.DbDefaults then
-        return AtlasLoot.db.Addons[self.__name]
-    end
+    return AtlasLoot.db.Addons[self.__name]
+end
+
+function AddonProto:GetGlobalDb()
+    return AtlasLoot.dbGlobal.Addons[self.__name]
 end
