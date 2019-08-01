@@ -8,6 +8,13 @@ local AL = AtlasLoot.Locales
 local Addons = _G.AtlasLoot.Addons
 local GetAddon = Addons.GetAddon
 
+-- lua
+local pairs = _G.pairs
+local format = _G.format
+
+-- WoW
+local GetServerTime = _G.GetServerTime()
+
 local count = 0
 
 local function UpdateItemFrame(adoon, addonName)
@@ -20,12 +27,13 @@ end
 local function CreateFavouriteOptions()
     count = count + 1
     local AddonName = "Favourites"
+    local FavAddon = GetAddon(Addons, "Favourites")
     local t = {
         type = "group",
         name = AL["Favourites"],
         order = count,
-        get = function(info) return GetAddon(Addons, AddonName).db[info[#info]] end,
-        set = function(info, value) GetAddon(Addons, AddonName).db[info[#info]] = value end,
+        get = function(info) return FavAddon.db[info[#info]] end,
+        set = function(info, value) FavAddon.db[info[#info]] = value end,
         args = {
             enabled = {
                 order = 1,
@@ -33,30 +41,32 @@ local function CreateFavouriteOptions()
                 width = "full",
                 name = _G.ENABLE,
                 set = function(info, value)
-                    GetAddon(Addons, AddonName).db[info[#info]] = value
+                    FavAddon.db[info[#info]] = value
                     UpdateItemFrame(Addons, AddonName)
                 end
             },
-            test = {
+            list = {
                 type = "select",
                 order = 2,
-                name = AL["List"],
+                name = AL["Active list"],
                 values = function()
-                    local db = GetAddon(Addons, AddonName):GetDb()
+                    local db = FavAddon:GetDb()
+                    local listDb
                     local list = {}
-                    if db.activeList[2] == true then --gloabal
-                        db = GetAddon(Addons, AddonName):GetGlobalDb()
+                    if db.activeList[2] == true then
+                        listDb = FavAddon:GetGlobaleLists()
                     else
-                        db = db.lists
+                        listDb = FavAddon:GetProfileLists()
                     end
-                    for k,v in pairs(db) do
-                        list[k] = k
+                    for k,v in pairs(listDb) do
+                        list[ k ] = FavAddon:GetListName(k, db.activeList[2] == true)
                     end
                     return list
                 end,
-                get = function(info) return GetAddon(Addons, AddonName):GetDb().activeList[1] end,
+                get = function(info) return FavAddon:GetDb().activeList[1] end,
                 set = function(info, value)
-                    GetAddon(Addons, AddonName):GetDb().activeList[1] = value
+                    print(value)
+                    FavAddon:GetDb().activeList[1] = value
                     UpdateItemFrame(Addons, AddonName)
                 end,
             },
@@ -64,17 +74,48 @@ local function CreateFavouriteOptions()
                 order = 3,
                 type = "toggle",
                 --width = "half",
-                name = AL["Use global list."],
-                get = function(info) return GetAddon(Addons, AddonName):GetDb().activeList[2] end,
+                name = AL["Global lists."],
+                get = function(info) return FavAddon:GetDb().activeList[2] end,
                 set = function(info, value)
-                    local db = GetAddon(Addons, AddonName):GetDb()
+                    local db = FavAddon:GetDb()
                     db.activeList[1] = "Base"
                     db.activeList[2] = value
                     UpdateItemFrame(Addons, AddonName)
                 end
             },
+            headerSetting = {
+                order = 10,
+                type = "header",
+                name = AL["Selected list settings"],
+            }, 
+            useGlobal = {
+                order = 11,
+                type = "toggle",
+                width = "full",
+                name = AL["Always active for all Profiles."],
+                desc = AL["Always marks items as favourite for every profile if enabled."],
+                hidden = function(info) return not FavAddon:GetDb().activeList[2] end,
+                get = function(info) return FavAddon:ListIsGlobalActive( FavAddon:GetDb().activeList[1] ) end,
+                set = function(info, value)
+                    print(value)
+                    UpdateItemFrame(Addons, AddonName)
+                end
+            },
+            useProfile = {
+                order = 12,
+                type = "toggle",
+                width = "full",
+                name = format(AL["Always active for profile: |cff00ff00%s|r"], AtlasLoot.dbRaw:GetCurrentProfile()),
+                desc = format(AL["Always marks items as favourite for profile |cff00ff00%s|r if enabled."], AtlasLoot.dbRaw:GetCurrentProfile()),
+                get = function(info) return FavAddon:ListIsProfileActive( FavAddon:GetDb().activeList[1] ) end,
+                set = function(info, value)
+                    print(value)
+                    UpdateItemFrame(Addons, AddonName)
+                end
+            },
         },
     }
+
     local args = t.args
 
     return t

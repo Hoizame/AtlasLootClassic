@@ -137,6 +137,7 @@ function Item.OnMouseAction(button, mouseButton)
 				button.favourite:Hide()
 			else
 				if Favourites:AddItemID(button.ItemID) then
+					Favourites:SetFavouriteAtlas(button.ItemID, button.favourite)
 					button.favourite:Show()
 				end
 			end
