@@ -63,6 +63,12 @@ function Prof.OnClear(button)
 	button.secButton.Profession = nil
 	button.secButton.SpellID = nil
 	button.secButton.ItemID = nil
+	if button.overlay then
+		button.overlay:SetDesaturated(false)
+		button.overlay:Hide()
+	end
+	button.secButton.overlay:Hide()
+	button.secButton.overlay:SetDesaturated(false)
 	if button.ExtraFrameShown then
 		AtlasLoot.Button:ExtraItemFrame_ClearFrame()
 		button.ExtraFrameShown = false
