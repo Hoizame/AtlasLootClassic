@@ -187,6 +187,7 @@ function Item.OnEnter(button, owner)
 	if button.Droprate and db.showDropRate then
 		tooltip:AddDoubleLine(AL["Droprate:"], button.Droprate.."%")
 	end
+	if button.ItemID == 12784 then tooltip:AddLine("Arcanite Reaper Hoooooo!") end
 	tooltip:Show()
 	if IsShiftKeyDown() or db.alwaysShowCompareTT then
 		GameTooltip_ShowCompareItem(tooltip)
@@ -279,14 +280,6 @@ function Item.Refresh(button)
 	else
 		button.favourite:Hide()
 	end
-	--[[
-	if db.showCompletedHook then
-		local itemCount = GetItemCount(button.ItemString, true)
-		if itemCount and itemCount > 0 then
-			button.completed:Show()
-		end
-	end
-	]]--
 
 	return true
 end

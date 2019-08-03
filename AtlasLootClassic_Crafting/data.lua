@@ -226,75 +226,81 @@ data["Blacksmithing"] = {
 		{
 			name = ALIL["Weapons"].." - "..AL["Axes"],
 			[NORMAL_DIFF] = {
-				{ 1, 20897 }, --Dark Iron Destroyer / 65
-				{ 2, 16991 }, --Annihilator / 63
-				{ 3, 16970 }, --Dawn / 55
-				{ 4, 16969 }, --Ornate Thorium Handaxe / 55
-				{ 5, 9995 }, --Blue Glittering Axe / 44
-				{ 6, 9993 }, --Heavy Mithril Axe / 42
-				{ 7, 21913 }, --Edge of Winter / 38
-				{ 8, 2741 }, --Bronze Axe / 23
-				{ 9, 3294 }, --Thick War Axe / 17
-				{ 10, 2738 }, --Copper Axe / 9
-				{ 16, 23653 }, --Nightfall / 70
-				{ 17, 16994 }, --Arcanite Reaper / 63
-				{ 18, 15294 }, --Dark Iron Sunderer / 57
-				{ 19, 16971 }, --Huge Thorium Battleaxe / 56
-				{ 20, 3500 }, --Shadow Crescent Axe / 40
-				{ 21, 3498 }, --Massive Iron Axe / 37
-				{ 22, 9987 }, --Bronze Battle Axe / 27
-				{ 23, 3293 }, --Copper Battle Axe / 13
+				{ 1, "INV_sword_04", nil, ALIL["One-Handed Axes"] },
+				{ 2, 20897 }, --Dark Iron Destroyer / 65
+				{ 3, 16991 }, --Annihilator / 63
+				{ 4, 16970 }, --Dawn / 55
+				{ 5, 16969 }, --Ornate Thorium Handaxe / 55
+				{ 6, 9995 }, --Blue Glittering Axe / 44
+				{ 7, 9993 }, --Heavy Mithril Axe / 42
+				{ 8, 21913 }, --Edge of Winter / 38
+				{ 9, 2741 }, --Bronze Axe / 23
+				{ 10, 3294 }, --Thick War Axe / 17
+				{ 11, 2738 }, --Copper Axe / 9
+				{ 16, "INV_sword_04", nil, ALIL["Two-Handed Axes"] },
+				{ 17, 23653 }, --Nightfall / 70
+				{ 18, 16994 }, --Arcanite Reaper / 63
+				{ 19, 15294 }, --Dark Iron Sunderer / 57
+				{ 20, 16971 }, --Huge Thorium Battleaxe / 56
+				{ 21, 3500 }, --Shadow Crescent Axe / 40
+				{ 22, 3498 }, --Massive Iron Axe / 37
+				{ 23, 9987 }, --Bronze Battle Axe / 27
+				{ 24, 3293 }, --Copper Battle Axe / 13
 			}
 		},
 		{
 			name = ALIL["Weapons"].." - "..AL["Maces"],
 			[NORMAL_DIFF] = {
-				{ 1, 23650 }, --Ebon Hand / 70
-				{ 2, 16993 }, --Masterwork Stormhammer / 63
-				{ 3, 27830 }, --Persuader / 63
-				{ 4, 16984 }, --Volcanic Hammer / 58
-				{ 5, 16983 }, --Serenity / 57
-				{ 6, 10009 }, --Runed Mithril Hammer / 49
-				{ 7, 10003 }, --The Shatterer / 47
-				{ 8, 10001 }, --Big Black Mace / 46
-				{ 9, 3297 }, --Mighty Iron Hammer / 30
-				{ 10, 6518 }, --Iridescent Hammer / 28
-				{ 11, 3296 }, --Heavy Bronze Mace / 25
-				{ 12, 2740 }, --Bronze Mace / 22
-				{ 13, 2737 }, --Copper Mace / 9
-				{ 16, 21161 }, --Sulfuron Hammer / 67
-				{ 17, 16988 }, --Hammer of the Titans / 63
-				{ 18, 16973 }, --Enchanted Battlehammer / 56
-				{ 19, 15292 }, --Dark Iron Pulverizer / 55
-				{ 20, 3495 }, --Golden Iron Destroyer / 34
-				{ 21, 3494 }, --Solid Iron Maul / 31
-				{ 22, 9985 }, --Bronze Warhammer / 25
-				{ 23, 7408 }, --Heavy Copper Maul / 16
+				{ 1, "INV_sword_04", nil, ALIL["One-Handed Maces"] },
+				{ 2, 23650 }, --Ebon Hand / 70
+				{ 3, 16993 }, --Masterwork Stormhammer / 63
+				{ 4, 27830 }, --Persuader / 63
+				{ 5, 16984 }, --Volcanic Hammer / 58
+				{ 6, 16983 }, --Serenity / 57
+				{ 7, 10009 }, --Runed Mithril Hammer / 49
+				{ 8, 10003 }, --The Shatterer / 47
+				{ 9, 10001 }, --Big Black Mace / 46
+				{ 10, 3297 }, --Mighty Iron Hammer / 30
+				{ 11, 6518 }, --Iridescent Hammer / 28
+				{ 12, 3296 }, --Heavy Bronze Mace / 25
+				{ 13, 2740 }, --Bronze Mace / 22
+				{ 14, 2737 }, --Copper Mace / 9
+				{ 16, "INV_sword_04", nil, ALIL["Two-Handed Maces"] },
+				{ 17, 21161 }, --Sulfuron Hammer / 67
+				{ 18, 16988 }, --Hammer of the Titans / 63
+				{ 19, 16973 }, --Enchanted Battlehammer / 56
+				{ 20, 15292 }, --Dark Iron Pulverizer / 55
+				{ 21, 3495 }, --Golden Iron Destroyer / 34
+				{ 22, 3494 }, --Solid Iron Maul / 31
+				{ 23, 9985 }, --Bronze Warhammer / 25
+				{ 24, 7408 }, --Heavy Copper Maul / 16
 			}
 		},
 		{
 			name = ALIL["Weapons"].." - "..AL["Swords"],
 			[NORMAL_DIFF] = {
-				{ 1, 23652 }, --Blackguard / 70
-				{ 2, 20890 }, --Dark Iron Reaver / 65
-				{ 3, 27832 }, --Sageblade / 64
-				{ 4, 16992 }, --Frostguard / 63
-				{ 5, 16978 }, --Blazing Rapier / 56
-				{ 6, 10007 }, --Phantom Blade / 49
-				{ 7, 10005 }, --Dazzling Mithril Rapier / 48
-				{ 8, 9997 }, --Wicked Mithril Blade / 45
-				{ 9, 3493 }, --Jade Serpentblade / 35
-				{ 10, 3492 }, --Hardened Iron Shortsword / 32
-				{ 11, 2742 }, --Bronze Shortsword / 24
-				{ 12, 2739 }, --Copper Shortsword / 9
-				{ 16, 16990 }, --Arcanite Champion / 63
-				{ 17, 16985 }, --Corruption / 58
-				{ 18, 10015 }, --Truesilver Champion / 52
-				{ 19, 3497 }, --Frost Tiger Blade / 40
-				{ 20, 3496 }, --Moonsteel Broadsword / 36
-				{ 21, 9986 }, --Bronze Greatsword / 26
-				{ 22, 3292 }, --Heavy Copper Broadsword / 19
-				{ 23, 9983 }, --Copper Claymore / 11
+				{ 1, "INV_sword_04", nil, ALIL["One-Handed Swords"] },
+				{ 2, 23652 }, --Blackguard / 70
+				{ 3, 20890 }, --Dark Iron Reaver / 65
+				{ 4, 27832 }, --Sageblade / 64
+				{ 5, 16992 }, --Frostguard / 63
+				{ 6, 16978 }, --Blazing Rapier / 56
+				{ 7, 10007 }, --Phantom Blade / 49
+				{ 8, 10005 }, --Dazzling Mithril Rapier / 48
+				{ 9, 9997 }, --Wicked Mithril Blade / 45
+				{ 10, 3493 }, --Jade Serpentblade / 35
+				{ 11, 3492 }, --Hardened Iron Shortsword / 32
+				{ 12, 2742 }, --Bronze Shortsword / 24
+				{ 13, 2739 }, --Copper Shortsword / 9
+				{ 16, "INV_sword_06", nil, ALIL["Two-Handed Swords"] },
+				{ 17, 16990 }, --Arcanite Champion / 63
+				{ 18, 16985 }, --Corruption / 58
+				{ 19, 10015 }, --Truesilver Champion / 52
+				{ 20, 3497 }, --Frost Tiger Blade / 40
+				{ 21, 3496 }, --Moonsteel Broadsword / 36
+				{ 22, 9986 }, --Bronze Greatsword / 26
+				{ 23, 3292 }, --Heavy Copper Broadsword / 19
+				{ 24, 9983 }, --Copper Claymore / 11
 			}
 		},
 		{

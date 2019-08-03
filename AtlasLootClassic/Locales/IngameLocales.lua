@@ -181,6 +181,7 @@ local IngameLocales = {
 	["Main Attack"]	= _G["INVTYPE_WEAPONMAINHAND_PET"],	-- "Main Attack"
 	["Off Hand"] = _G["INVTYPE_WEAPONOFFHAND"],
 	-- GetItemSubClassInfo(iC,isC)
+	["One-Handed Axes"] = GetItemSubClassInfo(2,0),
 	["Two-Handed Axes"] = GetItemSubClassInfo(2,1),
 	["Bows"] = GetItemSubClassInfo(2,2),
 	["Guns"] = GetItemSubClassInfo(2,3),
