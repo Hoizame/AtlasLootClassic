@@ -13,7 +13,7 @@ local pairs = _G.pairs
 local format = _G.format
 
 -- WoW
-local GetServerTime = _G.GetServerTime()
+local GetServerTime = _G.GetServerTime
 
 local count = 0
 
@@ -45,9 +45,22 @@ local function CreateFavouriteOptions()
                     UpdateItemFrame(Addons, AddonName)
                 end
             },
+            global = {
+                order = 2,
+                type = "toggle",
+                width = "full",
+                name = AL["Global lists."],
+                get = function(info) return FavAddon:GetDb().activeList[2] end,
+                set = function(info, value)
+                    local db = FavAddon:GetDb()
+                    db.activeList[1] = value and FavAddon.BASE_NAME_G or FavAddon.BASE_NAME_P
+                    db.activeList[2] = value
+                    UpdateItemFrame(Addons, AddonName)
+                end
+            },
             list = {
                 type = "select",
-                order = 2,
+                order = 3,
                 name = AL["Active list"],
                 values = function()
                     local db = FavAddon:GetDb()
@@ -69,26 +82,48 @@ local function CreateFavouriteOptions()
                     UpdateItemFrame(Addons, AddonName)
                 end,
             },
-            global = {
-                order = 3,
-                type = "toggle",
-                --width = "half",
-                name = AL["Global lists."],
-                get = function(info) return FavAddon:GetDb().activeList[2] end,
-                set = function(info, value)
-                    local db = FavAddon:GetDb()
-                    db.activeList[1] = value and FavAddon.BASE_NAME_G or FavAddon.BASE_NAME_P
-                    db.activeList[2] = value
-                    UpdateItemFrame(Addons, AddonName)
-                end
+            addNewList = {
+                order = 4,
+                type = 'execute',
+                name = AL["Add new list"],
+                confirm = true,
+                func = function()
+                    local newList = FavAddon:AddNewList(FavAddon:GetDb().activeList[2])
+                    if newList then
+                        FavAddon:GetDb().activeList[1] = newList
+                        UpdateItemFrame(Addons, AddonName)
+                    end
+                end,
+            },
+            deleteList = {
+                order = 5,
+                type = 'execute',
+                name = _G.DELETE,
+                confirm = true,
+                func = function()
+                    local db = FavAddon:GetDb().activeList
+                    local deleted = FavAddon:RemoveList(db[1], db[2])
+                    if deleted then
+                        db[1] = db[2] and FavAddon.BASE_NAME_G or FavAddon.BASE_NAME_P
+                        UpdateItemFrame(Addons, AddonName)
+                    end
+                end,
             },
             headerSetting = {
                 order = 10,
                 type = "header",
                 name = AL["Selected list settings"],
             },
-            useGlobal = {
+            name = {
                 order = 11,
+                type = 'input',
+                name = _G.NAME,
+                func = function() FavAddon:AddNewList() end,
+                get = function(info) return FavAddon:GetName() end,
+                set = function(info, value) FavAddon:SetName(value) end,
+            },
+            useGlobal = {
+                order = 12,
                 type = "toggle",
                 width = "full",
                 name = AL["Always active for all Profiles."],
@@ -106,7 +141,7 @@ local function CreateFavouriteOptions()
                 end
             },
             useProfile = {
-                order = 12,
+                order = 13,
                 type = "toggle",
                 width = "full",
                 name = format(AL["Always active for profile: |cff00ff00%s|r"], AtlasLoot.dbRaw:GetCurrentProfile()),
@@ -121,6 +156,35 @@ local function CreateFavouriteOptions()
                     end
                     UpdateItemFrame(Addons, AddonName)
                 end
+            },
+            iconSelection = {
+                type = "group",
+                name = AL["Icon"],
+                inline = true,
+                order = -1,
+                get = function(info) return FavAddon.db[info[#info]] end,
+                set = function(info, value)
+                    print("disable")
+                    FavAddon:SetIconAtlas(nil)
+                    UpdateItemFrame(Addons, AddonName)
+                end,
+                get = function(info) return FavAddon.db[info[#info]] end,
+                set = function(info, value) FavAddon.db[info[#info]] = value end,
+                args = {
+                    useIcon = {
+                        order = 1,
+                        type = "toggle",
+                        width = "full",
+                        name = _G.DISABLE,
+                        disabled = function(info) return FavAddon:GetIconAtlas() and false or true end,
+                        get = function(info) return FavAddon:GetIconAtlas() and false or true end,
+                        set = function(info, value)
+                            print("disable")
+                            FavAddon:SetIconAtlas(nil)
+                            UpdateItemFrame(Addons, AddonName)
+                        end
+                    },
+                },
             },
         },
     }

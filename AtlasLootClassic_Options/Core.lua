@@ -21,6 +21,7 @@ function Options:Show()
 end
 
 -- https://www.wowace.com/projects/ace3/pages/ace-gui-3-0-widgets
+-- https://www.wowace.com/projects/ace3/pages/ace-config-3-0-options-tables
 Options.config = {
 	type = "group",
 	name = AL["AtlasLoot"],

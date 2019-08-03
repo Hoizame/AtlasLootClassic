@@ -6,12 +6,15 @@ local Favourites = Addons:RegisterNewAddon("Favourites")
 
 -- lua
 local next = _G.next
+local format = _G.format
 
 -- WoW
 local GetItemInfo = _G.GetItemInfo
+local GetServerTime = _G.GetServerTime
 
 -- locals
-local BASE_NAME_P, BASE_NAME_G = "ProfileBase", "GlobalBase"
+local BASE_NAME_P, BASE_NAME_G, LIST_BASE_NAME = "ProfileBase", "GlobalBase", "List"
+local NEW_LIST_ID_PATTERN = "%s%s"
 local STD_ATLAS, STD_ATLAS2
 
 Favourites.BASE_NAME_P, Favourites.BASE_NAME_G = BASE_NAME_P, BASE_NAME_G
@@ -201,9 +204,9 @@ end
 
 function Favourites:GetListName(id, isGlobal)
     if isGlobal and self:GetGlobaleLists()[id] then
-        return self:GetGlobaleLists()[id].__name or UNKNOWN
+        return self:GetGlobaleLists()[id].__name or LIST_BASE_NAME
     elseif not isGlobal and self:GetProfileLists()[id] then
-        return self:GetProfileLists()[id].__name or UNKNOWN
+        return self:GetProfileLists()[id].__name or LIST_BASE_NAME
     end
     return id
 end
@@ -238,6 +241,43 @@ function Favourites:RemoveFromShownList(listID, isGlobalList, globalShown)
     local activeSubLists = ( isGlobalList and globalShown ) and self.globalDb.activeSubLists or self.db.activeSubLists
 
     activeSubLists[listID] = nil
+end
+
+function Favourites:SetIconAtlas(atlas)
+    self.activeList.__atlas = atlas
+end
+
+function Favourites:GetIconAtlas(atlas)
+    return self.activeList.__atlas
+end
+
+function Favourites:GetName()
+    return self.activeList.__name or LIST_BASE_NAME
+end
+
+function Favourites:SetName(name)
+    self.activeList.__name = name
+end
+
+function Favourites:AddNewList(isGlobalList)
+    local list = isGlobalList and self:GetGlobaleLists() or self:GetProfileLists()
+    local id = format(NEW_LIST_ID_PATTERN, isGlobalList and "g" or "p", GetServerTime())
+
+    if not list[id] then    -- should work as spam protect as GetServerTime returns sec
+        list[id] = {}
+        return id
+    end
+    return false
+end
+
+function Favourites:RemoveList(id, isGlobalList)
+    local list = isGlobalList and self:GetGlobaleLists() or self:GetProfileLists()
+    if list[id] then
+        list[id] = nil
+        self:CleanUpShownLists()
+        return true
+    end
+    return false
 end
 
 Favourites:Finalize()
