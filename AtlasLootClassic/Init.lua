@@ -42,8 +42,6 @@ setmetatable(_G.AtlasLoot, MainMT)
 
 -- DB
 AtlasLootClassicDB = {}
-AtlasLootClassicCharDB = {}
-AtlasLootClassicRawDB = {}
 
 -- Translations
 _G.AtlasLoot.Locale = {}
@@ -53,4 +51,3 @@ _G.AtlasLoot.Init = {}
 
 -- Data table
 _G.AtlasLoot.Data = {}
-
