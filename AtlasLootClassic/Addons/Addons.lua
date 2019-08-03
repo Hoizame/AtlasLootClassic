@@ -134,3 +134,7 @@ end
 function AddonProto:GetGlobalDb()
     return AtlasLoot.dbGlobal.Addons[self.__name]
 end
+
+function AddonProto:GetName()
+    return self.__name
+end

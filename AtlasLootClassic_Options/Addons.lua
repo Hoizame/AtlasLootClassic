@@ -65,7 +65,6 @@ local function CreateFavouriteOptions()
                 end,
                 get = function(info) return FavAddon:GetDb().activeList[1] end,
                 set = function(info, value)
-                    print(value)
                     FavAddon:GetDb().activeList[1] = value
                     UpdateItemFrame(Addons, AddonName)
                 end,
@@ -78,7 +77,7 @@ local function CreateFavouriteOptions()
                 get = function(info) return FavAddon:GetDb().activeList[2] end,
                 set = function(info, value)
                     local db = FavAddon:GetDb()
-                    db.activeList[1] = "Base"
+                    db.activeList[1] = value and FavAddon.BASE_NAME_G or FavAddon.BASE_NAME_P
                     db.activeList[2] = value
                     UpdateItemFrame(Addons, AddonName)
                 end
@@ -87,7 +86,7 @@ local function CreateFavouriteOptions()
                 order = 10,
                 type = "header",
                 name = AL["Selected list settings"],
-            }, 
+            },
             useGlobal = {
                 order = 11,
                 type = "toggle",
@@ -97,7 +96,12 @@ local function CreateFavouriteOptions()
                 hidden = function(info) return not FavAddon:GetDb().activeList[2] end,
                 get = function(info) return FavAddon:ListIsGlobalActive( FavAddon:GetDb().activeList[1] ) end,
                 set = function(info, value)
-                    print(value)
+                    local db = FavAddon:GetDb()
+                    if value then
+                        FavAddon:AddIntoShownList(db.activeList[1], db.activeList[2], true)
+                    else
+                        FavAddon:RemoveFromShownList(db.activeList[1], db.activeList[2], true)
+                    end
                     UpdateItemFrame(Addons, AddonName)
                 end
             },
@@ -109,7 +113,12 @@ local function CreateFavouriteOptions()
                 desc = format(AL["Always marks items as favourite for profile |cff00ff00%s|r if enabled."], AtlasLoot.dbRaw:GetCurrentProfile()),
                 get = function(info) return FavAddon:ListIsProfileActive( FavAddon:GetDb().activeList[1] ) end,
                 set = function(info, value)
-                    print(value)
+                    local db = FavAddon:GetDb()
+                    if value then
+                        FavAddon:AddIntoShownList(db.activeList[1], db.activeList[2], false)
+                    else
+                        FavAddon:RemoveFromShownList(db.activeList[1], db.activeList[2], false)
+                    end
                     UpdateItemFrame(Addons, AddonName)
                 end
             },

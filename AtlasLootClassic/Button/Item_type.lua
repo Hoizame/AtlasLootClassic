@@ -132,9 +132,13 @@ function Item.OnMouseAction(button, mouseButton)
 		end
 	elseif mouseButton == "SetFavourite" then
 		if Favourites then
-			if Favourites:IsFavouriteItemID(button.ItemID) then
+			if Favourites:IsFavouriteItemID(button.ItemID, true) then
 				Favourites:RemoveItemID(button.ItemID)
-				button.favourite:Hide()
+				if Favourites:IsFavouriteItemID(button.ItemID) then
+					Favourites:SetFavouriteAtlas(button.ItemID, button.favourite)
+				else
+					button.favourite:Hide()
+				end
 			else
 				if Favourites:AddItemID(button.ItemID) then
 					Favourites:SetFavouriteAtlas(button.ItemID, button.favourite)
@@ -270,6 +274,7 @@ function Item.Refresh(button)
 		)
 	end
 	if Favourites and Favourites:IsFavouriteItemID(button.ItemID) then
+		Favourites:SetFavouriteAtlas(button.ItemID, button.favourite)
 		button.favourite:Show()
 	else
 		button.favourite:Hide()

@@ -11,17 +11,19 @@ local next = _G.next
 local GetItemInfo = _G.GetItemInfo
 
 -- locals
-local BASE_NAME = "Base"
+local BASE_NAME_P, BASE_NAME_G = "ProfileBase", "GlobalBase"
 local STD_ATLAS, STD_ATLAS2
+
+Favourites.BASE_NAME_P, Favourites.BASE_NAME_G = BASE_NAME_P, BASE_NAME_G
 
 
 -- Addon
 Favourites.DbDefaults = {
     enabled = true,
-    activeList = { BASE_NAME, false }, -- name, isGlobal
+    activeList = { BASE_NAME_P, false }, -- name, isGlobal
     activeSubLists = {},
     lists = {
-        [BASE_NAME] = {
+        [BASE_NAME_P] = {
             __name = AL["Profile base list"],
         },
         --["*"] = {
@@ -32,7 +34,7 @@ Favourites.DbDefaults = {
 Favourites.GlobalDbDefaults = {
     activeSubLists = {},
     lists = {
-        [BASE_NAME] = {
+        [BASE_NAME_G] = {
             __name = AL["Global base list"],
         },
         --["*"] = {
@@ -68,21 +70,22 @@ Favourites.AtlasList = {
     "services-number-9",
 }
 
-local function AddItemsInfoFavouritesSub(items, activeSub)
-    local fav = Favourites.subItems
-    for itemID in next, items do
-        fav[itemID] = activeSub
+local function AddItemsInfoFavouritesSub(items, activeSub, isGlobal)
+    if items and activeSub then
+        local fav = Favourites.subItems
+        for itemID in next, items do
+            fav[itemID] = { activeSub, isGlobal }
+        end
     end
 end
 
 local function CheckSubSetDb(list, db, globalDb)
-    if list and #list > 0 then
-        for i = 1, #list do
-            local activeSub = list[i]
-            if activeSub[2] and globalDb[activeSub[1]] then
-                AddItemsInfoFavouritesSub(globalDb[activeSub[1]], activeSub)
-            elseif db[activeSub[1]] then
-                AddItemsInfoFavouritesSub(db[activeSub[1]], activeSub)
+    if list then
+        for activeSub, isGlobal in next, list do
+            if isGlobal and globalDb[activeSub] then
+                AddItemsInfoFavouritesSub(globalDb[activeSub] or db[activeSub], activeSub, isGlobal)
+            elseif not isGlobal and db[activeSub] then
+                AddItemsInfoFavouritesSub(db[activeSub], activeSub, isGlobal)
             end
         end
     end
@@ -102,21 +105,23 @@ local function GetActiveList(self)
     if db[name] then
         return db[name]
     else
-        self.db.activeList[1] = db[BASE_NAME]
-        return db[BASE_NAME]
+        self.db.activeList[1] = db[BASE_NAME_P]
+        return db[BASE_NAME_P]
     end
 end
 
-local function CheckIfActive(dbList, activeList, ID)
-    if activeList and #activeList > 0 then
-        for i = 1, #activeList do
-            local t = activeList[i]
-            if t[1] == ID and dbList[ID] then
-                return true
-            end
+local function CleanUpShownLists(db, globalDb, activeSubLists, isGlobalList)
+    local new = {}
+
+    for listID, isGlobal in next, activeSubLists do
+        if ( isGlobal and globalDb[listID] ) then
+            new[listID] = isGlobal
+        elseif not isGlobal and not isGlobalList and db[listID] then
+            new[listID] = isGlobal
         end
     end
-    return false
+
+    return new
 end
 
 function Favourites:UpdateDb()
@@ -158,8 +163,12 @@ function Favourites:RemoveItemID(itemID)
     return false
 end
 
-function Favourites:IsFavouriteItemID(itemID)
-    return self.activeList[itemID] or self.subItems[itemID]
+function Favourites:IsFavouriteItemID(itemID, onlyActiveList)
+    if onlyActiveList then
+        return self.activeList[itemID]
+    else
+        return self.activeList[itemID] or self.subItems[itemID]
+    end
 end
 
 function Favourites:SetFavouriteAtlas(itemID, texture, hideOnFail)
@@ -170,12 +179,13 @@ function Favourites:SetFavouriteAtlas(itemID, texture, hideOnFail)
     if listName == true then
         atlas = self.activeList.__atlas or STD_ATLAS
     elseif listName[2] == true then
-        atlas = self.db.lists[listName[1]].__atlas or STD_ATLAS2
+        atlas = self.globalDb.lists[listName[1]].__atlas or STD_ATLAS2
     elseif listName[2] == false then
-        atlas = self:GetGlobaleLists()[listName[1]].__atlas or STD_ATLAS2
+        atlas = self.db.lists[listName[1]].__atlas or STD_ATLAS2
     elseif listName[2] then
         atlas = listName[2]
     end
+
     if atlas and atlas ~= texture:GetAtlas() then
         texture:SetAtlas(atlas)
     end
@@ -199,11 +209,35 @@ function Favourites:GetListName(id, isGlobal)
 end
 
 function Favourites:ListIsGlobalActive(listID)
-    return CheckIfActive(self:GetGlobaleLists(), self.globalDb.activeSubLists, listID)
+    return ( self.globalDb.activeSubLists[listID] or self.globalDb.activeSubLists[listID] == false ) and true or false
 end
 
 function Favourites:ListIsProfileActive(listID)
-    return CheckIfActive(self:GetProfileLists(), self.db.activeSubLists, listID)
+    return ( self.db.activeSubLists[listID] or self.db.activeSubLists[listID] == false ) and true or false
+end
+
+function Favourites:CleanUpShownLists()
+    local db, globalDb = self.db, self.globalDb
+
+    local newDbActive, newGlobalActive = {}, {}
+
+    self.db.activeSubLists = CleanUpShownLists(self.db, self.globalDb, self.db.activeSubLists)
+    self.globalDb.activeSubLists = CleanUpShownLists(self.db, self.globalDb, self.globalDb.activeSubLists, true)
+end
+
+function Favourites:AddIntoShownList(listID, isGlobalList, globalShown)
+    local list = isGlobalList and self:GetGlobaleLists() or self:GetProfileLists()
+    if not listID or not list[listID] then return end
+    local activeSubLists = ( isGlobalList and globalShown ) and self.globalDb.activeSubLists or self.db.activeSubLists
+
+    activeSubLists[listID] = isGlobalList
+end
+
+function Favourites:RemoveFromShownList(listID, isGlobalList, globalShown)
+    local list = isGlobalList and self:GetGlobaleLists() or self:GetProfileLists()
+    local activeSubLists = ( isGlobalList and globalShown ) and self.globalDb.activeSubLists or self.db.activeSubLists
+
+    activeSubLists[listID] = nil
 end
 
 Favourites:Finalize()
