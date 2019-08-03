@@ -145,6 +145,10 @@ function Item.OnMouseAction(button, mouseButton)
 					button.favourite:Show()
 				end
 			end
+			if Favourites.db.showInTT then
+				Item.OnLeave(button)
+				Item.OnEnter(button)
+			end
 		end
 	elseif mouseButton == "MouseWheelUp" and Item.previewTooltipFrame and Item.previewTooltipFrame:IsShown() then  -- ^
 		local frame = Item.previewTooltipFrame.modelFrame

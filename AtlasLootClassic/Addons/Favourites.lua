@@ -9,7 +9,7 @@ local Favourites = Addons:RegisterNewAddon("Favourites")
 -- lua
 local type = _G.type
 local next = _G.next
-local format, strsub = _G.format, _G.strsub
+local format, strsub, strmatch = _G.format, _G.strsub, _G.strmatch
 
 -- WoW
 local GetItemInfo = _G.GetItemInfo
@@ -21,6 +21,10 @@ local BASE_NAME_P, BASE_NAME_G, LIST_BASE_NAME = "ProfileBase", "GlobalBase", "L
 local NEW_LIST_ID_PATTERN = "%s%s"
 local ATLAS_ICON_IDENTIFIER = "#"
 local STD_ICON, STD_ICON2
+local KEY_WEAK_MT = {__mode="k"}
+
+local TooltipCache, TooltipTextCache = {}
+setmetatable(TooltipCache, KEY_WEAK_MT)
 
 Favourites.BASE_NAME_P, Favourites.BASE_NAME_G = BASE_NAME_P, BASE_NAME_G
 
@@ -28,6 +32,7 @@ Favourites.BASE_NAME_P, Favourites.BASE_NAME_G = BASE_NAME_P, BASE_NAME_G
 -- Addon
 Favourites.DbDefaults = {
     enabled = true,
+    showInTT = false,
     activeList = { BASE_NAME_P, false }, -- name, isGlobal
     activeSubLists = {},
     lists = {
@@ -127,10 +132,35 @@ local function CleanUpShownLists(db, globalDb, activeSubLists, isGlobalList)
     return new
 end
 
+local function OnTooltipSetItem_Hook(self)
+    if not Favourites.db.enabled or not Favourites.db.showInTT then return end
+    local _, item = self:GetItem()
+    if not item then return end
+    if not TooltipCache[item] then
+        TooltipCache[item] = tonumber(strmatch(item, "item:(%d+)"))
+    end
+
+    item = TooltipCache[item]
+    if Favourites:IsFavouriteItemID(item) then
+        if not TooltipTextCache[item] then
+            TooltipTextCache[item] = format("|T%s:0|t%s", Favourites:GetIconForActiveItemID(item), _G[self:GetName().."TextLeft1"]:GetText())
+        end
+        _G[self:GetName().."TextLeft1"]:SetText( TooltipTextCache[item] )
+    end
+end
+GameTooltip:HookScript("OnTooltipSetItem", OnTooltipSetItem_Hook)
+AtlasLootTooltip:HookScript("OnTooltipSetItem", OnTooltipSetItem_Hook)
+
+function Favourites:AddTooltipHook(tooltip)
+    tooltip:HookScript("OnTooltipSetItem", OnTooltipSetItem_Hook)
+end
+
 function Favourites:UpdateDb()
     self.db = self:GetDb()
     self.globalDb = self:GetGlobalDb()
     self.activeList = GetActiveList(self)
+    TooltipTextCache = {}
+    setmetatable(TooltipTextCache, KEY_WEAK_MT)
 
     -- populate sublists
     Favourites.subItems = {}
@@ -203,6 +233,21 @@ function Favourites:SetFavouriteIcon(itemID, texture, hideOnFail)
             end
         end
     end
+end
+
+function Favourites:GetIconForActiveItemID(itemID)
+    local listName = self:IsFavouriteItemID(itemID)
+    local icon
+    if listName == true then
+        icon = self.activeList.__icon or STD_ICON
+    elseif listName[2] == true then
+        icon = self.globalDb.lists[listName[1]].IconList or STD_ICON2
+    elseif listName[2] == false then
+        icon = self.db.lists[listName[1]].__icon or STD_ICON2
+    elseif listName[2] then
+        icon = listName[2]
+    end
+    return icon
 end
 
 function Favourites:GetProfileLists()

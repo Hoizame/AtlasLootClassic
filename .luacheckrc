@@ -62,6 +62,7 @@ globals = {
 	"ATLASLOOT_IT_AMOUNT1",
 	"ATLASLOOT_IT_AMOUNT2",
 	"ATLASLOOT_IT_FILTERIGNORE",
+	"AtlasLootTooltip",
 
 	-- Atlas
 	"Atlas",

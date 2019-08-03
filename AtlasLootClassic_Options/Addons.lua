@@ -45,8 +45,14 @@ local function CreateFavouriteOptions()
                     UpdateItemFrame(Addons, AddonName)
                 end
             },
-            global = {
+            showInTT = {
                 order = 2,
+                type = "toggle",
+                width = "full",
+                name = AL["Show favourite item icon in item tooltip"],
+            },
+            global = {
+                order = 3,
                 type = "toggle",
                 width = "full",
                 name = AL["Global lists."],
@@ -60,7 +66,7 @@ local function CreateFavouriteOptions()
             },
             list = {
                 type = "select",
-                order = 3,
+                order = 4,
                 name = AL["Active list"],
                 values = function()
                     local db = FavAddon:GetDb()
@@ -83,7 +89,7 @@ local function CreateFavouriteOptions()
                 end,
             },
             addNewList = {
-                order = 4,
+                order = 5,
                 type = 'execute',
                 name = AL["Add new list"],
                 confirm = true,
@@ -96,7 +102,7 @@ local function CreateFavouriteOptions()
                 end,
             },
             deleteList = {
-                order = 5,
+                order = 6,
                 type = 'execute',
                 name = _G.DELETE,
                 confirm = true,
@@ -225,19 +231,6 @@ local function CreateFavouriteOptions()
 
     return t
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
