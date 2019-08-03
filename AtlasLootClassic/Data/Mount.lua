@@ -117,6 +117,7 @@ local MOUNT_LIST = {
     [21324] = 15680, -- Yellow Qiraji Battle Tank
     [21218] = 15672, -- Blue Qiraji Battle Tank
     [23720] = 17158, -- Riding Turtle
+    [21176] = 15677, -- Black Qiraji Resonating Crystal
 }
 
 function Mount.IsMount(itemID)
