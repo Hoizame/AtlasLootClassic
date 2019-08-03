@@ -2,6 +2,7 @@
 /.vscode
 /AtlasLootClassic/Libs/*
 /AtlasLootClassic_Options/Libs/*
+/AtlasLootClassic_Options/Widgets/*
 Global.lua
 Collections.lua
 Crafting.lua

@@ -173,22 +173,24 @@ local function CreateFavouriteOptions()
                 get = function(info) return FavAddon.db[info[#info]] end,
                 set = function(info, value)
                     print("disable")
-                    FavAddon:SetIconAtlas(nil)
+                    FavAddon:SetIcon(nil)
                     UpdateItemFrame(Addons, AddonName)
                 end,
                 get = function(info) return FavAddon.db[info[#info]] end,
-                set = function(info, value) FavAddon.db[info[#info]] = value end,
+                set = function(info, value)
+                    FavAddon.db[info[#info]] = value
+                    FavAddon:SetIcon(value)
+                end,
                 args = {
                     useIcon = {
                         order = 1,
                         type = "toggle",
                         width = "full",
                         name = _G.DISABLE,
-                        disabled = function(info) return FavAddon:GetIconAtlas() and false or true end,
-                        get = function(info) return FavAddon:GetIconAtlas() and false or true end,
+                        disabled = function(info) return not FavAddon:HasIcon() end,
+                        get = function(info) return not FavAddon:HasIcon() end,
                         set = function(info, value)
-                            print("disable")
-                            FavAddon:SetIconAtlas(nil)
+                            FavAddon:SetIcon(nil)
                             UpdateItemFrame(Addons, AddonName)
                         end
                     },
@@ -197,7 +199,29 @@ local function CreateFavouriteOptions()
         },
     }
 
-    local args = t.args
+    -- icons
+    local args = t.args.iconSelection.args
+    local iconList = FavAddon.IconList
+    local count = 1
+    for i = 3, #iconList do
+        local icon = iconList[i]
+        count = count + 1
+        args[icon] = {
+            order = count,
+            type = "execute",
+            name = function(info)
+                return FavAddon:GetIcon() == info[#info] and "^" or ""
+            end,
+            image = icon,
+            imageWidth = 20,
+            imageHeight = 20,
+            width = 0.3,
+            func = function(info)
+                FavAddon:SetIcon(info[#info])
+                UpdateItemFrame(Addons, AddonName)
+            end,
+        }
+    end
 
     return t
 end

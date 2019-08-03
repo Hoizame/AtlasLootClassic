@@ -4,7 +4,7 @@ local AtlasLoot = _G.AtlasLoot
 local Sets = {}
 AtlasLoot.Data.Sets = Sets
 local ALIL = AtlasLoot.IngameLocales
-local IMAGE_PATH = ALPrivate.IMAGE_PATH
+local IMAGE_PATH = ALPrivate.ICONS_PATH
 
 local ClassicItemSets = LibStub:GetLibrary("LibClassicItemSets-1.0")
 

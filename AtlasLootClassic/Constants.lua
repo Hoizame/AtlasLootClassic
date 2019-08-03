@@ -56,6 +56,7 @@ ALPrivate.ACCOUNT_LOCALE = GetLocale()
 
 -- Image path
 ALPrivate.IMAGE_PATH = "Interface\\AddOns\\"..ALName.."\\Images\\"
+ALPrivate.ICONS_PATH = ALPrivate.IMAGE_PATH.."Icons\\"
 
 -- Mostly used in selection template
 ALPrivate.COIN_TEXTURE = {

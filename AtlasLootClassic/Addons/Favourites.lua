@@ -16,6 +16,7 @@ local GetItemInfo = _G.GetItemInfo
 local GetServerTime = _G.GetServerTime
 
 -- locals
+local ICONS_PATH = ALPrivate.ICONS_PATH
 local BASE_NAME_P, BASE_NAME_G, LIST_BASE_NAME = "ProfileBase", "GlobalBase", "List"
 local NEW_LIST_ID_PATTERN = "%s%s"
 local ATLAS_ICON_IDENTIFIER = "#"
@@ -33,8 +34,6 @@ Favourites.DbDefaults = {
         [BASE_NAME_P] = {
             __name = AL["Profile base list"],
         },
-        --["*"] = {
-        --},
     }
 }
 
@@ -44,37 +43,34 @@ Favourites.GlobalDbDefaults = {
         [BASE_NAME_G] = {
             __name = AL["Global base list"],
         },
-        --["*"] = {
-        --},
     },
 }
 
-Favourites.AtlasList = {
-    "#VignetteKill", -- std
-    "#Gear",
-    "#VignetteLoot",
-    "#VignetteEventElite",
-    "#VignetteKillElite",
-    "#VignetteLootElite",
-    "#tradeskills-star",
-    "#tradeskills-star-off",
-    "#Vehicle-HammerGold",
-    "#Vehicle-HammerGold-1",
-    "#Vehicle-HammerGold-2",
-    "#Vehicle-HammerGold-3",
-    "#Taxi_Frame_Green",
-    "#Taxi_Frame_Yellow",
-    "#ShipMissionIcon-Bonus-Map",
-    "#services-checkmark",
-    "#services-number-1",
-    "#services-number-2",
-    "#services-number-3",
-    "#services-number-4",
-    "#services-number-5",
-    "#services-number-6",
-    "#services-number-7",
-    "#services-number-8",
-    "#services-number-9",
+Favourites.PlaceHolderIcon = ICONS_PATH.."placeholder-icon"
+Favourites.IconList = {
+    ICONS_PATH.."VignetteKill",
+    ICONS_PATH.."Gear",
+    ICONS_PATH.."groupfinder-icon-class-druid",
+    ICONS_PATH.."groupfinder-icon-class-hunter",
+    ICONS_PATH.."groupfinder-icon-class-mage",
+    ICONS_PATH.."groupfinder-icon-class-paladin",
+    ICONS_PATH.."groupfinder-icon-class-priest",
+    ICONS_PATH.."groupfinder-icon-class-rogue",
+    ICONS_PATH.."groupfinder-icon-class-shaman",
+    ICONS_PATH.."groupfinder-icon-class-warlock",
+    ICONS_PATH.."groupfinder-icon-class-warrior",
+    ICONS_PATH.."groupfinder-icon-role-large-dps",
+    ICONS_PATH.."groupfinder-icon-role-large-heal",
+    ICONS_PATH.."groupfinder-icon-role-large-tank",
+    ICONS_PATH.."Vehicle-HammerGold",
+    ICONS_PATH.."Vehicle-HammerGold-1",
+    ICONS_PATH.."Vehicle-HammerGold-2",
+    ICONS_PATH.."Vehicle-HammerGold-3",
+    ICONS_PATH.."Vehicle-TempleofKotmogu-CyanBall",
+    ICONS_PATH.."Vehicle-TempleofKotmogu-GreenBall",
+    ICONS_PATH.."Vehicle-TempleofKotmogu-OrangeBall",
+    ICONS_PATH.."Vehicle-TempleofKotmogu-PurpleBall",
+    ICONS_PATH.."worldquest-tracker-questmarker",
 }
 
 local function AddItemsInfoFavouritesSub(items, activeSub, isGlobal)
@@ -143,7 +139,7 @@ end
 
 function Favourites.OnInitialize()
     Favourites:UpdateDb()
-    STD_ICON, STD_ICON2 = Favourites.AtlasList[1], Favourites.AtlasList[2]
+    STD_ICON, STD_ICON2 = Favourites.IconList[1], Favourites.IconList[2]
 end
 
 function Favourites:OnProfileChanged()
@@ -184,11 +180,11 @@ function Favourites:SetFavouriteIcon(itemID, texture, hideOnFail)
     local icon
 
     if listName == true then
-        icon = self.activeList.__atlas or STD_ICON
+        icon = self.activeList.__icon or STD_ICON
     elseif listName[2] == true then
-        icon = self.globalDb.lists[listName[1]].__atlas or STD_ICON2
+        icon = self.globalDb.lists[listName[1]].IconList or STD_ICON2
     elseif listName[2] == false then
-        icon = self.db.lists[listName[1]].__atlas or STD_ICON2
+        icon = self.db.lists[listName[1]].__icon or STD_ICON2
     elseif listName[2] then
         icon = listName[2]
     end
@@ -258,12 +254,16 @@ function Favourites:RemoveFromShownList(listID, isGlobalList, globalShown)
     activeSubLists[listID] = nil
 end
 
-function Favourites:SetIconAtlas(atlas)
-    self.activeList.__atlas = atlas
+function Favourites:SetIcon(icon)
+    self.activeList.__icon = ( icon ~= STD_ICON and icon ~= STD_ICON2 ) and icon or nil
 end
 
-function Favourites:GetIconAtlas(atlas)
-    return self.activeList.__atlas
+function Favourites:GetIcon()
+    return self.activeList.__icon
+end
+
+function Favourites:HasIcon()
+    return self.activeList.__icon and true or false
 end
 
 function Favourites:GetName()
