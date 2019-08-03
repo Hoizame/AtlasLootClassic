@@ -59,11 +59,6 @@ function AtlasLoot:OnProfileChanged()
 end
 
 function AtlasLoot:OnInitialize()
-	if not AtlasLootClassicCharDB.__addonrevision or AtlasLootClassicCharDB.__addonrevision < AtlasLoot.__addonrevision then
-		wipe(AtlasLootClassicCharDB)
-		AtlasLootClassicCharDB.__addonrevision = AtlasLoot.__addonrevision
-	end
-
 	self.dbRaw = LibStub("AceDB-3.0"):New("AtlasLootClassicDB", AtlasLoot.AtlasLootDBDefaults)
 	self.db = self.dbRaw.profile
 	self.dbGlobal = self.dbRaw.global
