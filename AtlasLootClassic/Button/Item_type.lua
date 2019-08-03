@@ -191,6 +191,9 @@ function Item.OnEnter(button, owner)
 	if button.Droprate and db.showDropRate then
 		tooltip:AddDoubleLine(AL["Droprate:"], button.Droprate.."%")
 	end
+	if AtlasLoot.db.showIDsInTT then
+		tooltip:AddDoubleLine("ItemID:", button.ItemID)
+	end
 	if button.ItemID == 12784 then tooltip:AddLine("Arcanite Reaper Hoooooo!") end
 	tooltip:Show()
 	if IsShiftKeyDown() or db.alwaysShowCompareTT then

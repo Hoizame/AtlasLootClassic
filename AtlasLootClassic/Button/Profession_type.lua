@@ -80,6 +80,9 @@ function Prof.OnEnter(button)
 	tooltip:ClearLines()
 	tooltip:SetOwner(button, "ANCHOR_RIGHT", -(button:GetWidth() * 0.5), 5)
 	tooltip:SetSpellByID(button.SpellID)
+	if AtlasLoot.db.showIDsInTT then
+		tooltip:AddDoubleLine("SpellID:", button.SpellID)
+	end
 	tooltip:Show()
 end
 

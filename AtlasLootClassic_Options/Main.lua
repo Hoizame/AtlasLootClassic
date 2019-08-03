@@ -21,5 +21,13 @@ Options.config.args.atlasloot = {
 			get = function(info) return AtlasLoot.db.Tooltip.useGameTooltip end,
 			set = function(info, value) AtlasLoot.db.Tooltip.useGameTooltip = value AtlasLoot.Tooltip.Refresh() end
 		},
+		showIDsInTT = {
+			order = 2,
+			type = "toggle",
+			width = "full",
+			name = AL["Show ID's in tooltip."],
+			get = function(info) return AtlasLoot.db.showIDsInTT end,
+			set = function(info, value) AtlasLoot.db.showIDsInTT = value end
+		},
 	},
 }
