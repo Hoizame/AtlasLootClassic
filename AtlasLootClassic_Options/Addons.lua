@@ -100,6 +100,14 @@ local function CreateFavouriteOptions()
                 type = 'execute',
                 name = _G.DELETE,
                 confirm = true,
+                disabled = function(info)
+                    local db = FavAddon:GetDb().activeList
+                    if db[1] == FavAddon.BASE_NAME_P or db[1] == FavAddon.BASE_NAME_G then
+                        return true
+                    else
+                        return false
+                    end
+                end,
                 func = function()
                     local db = FavAddon:GetDb().activeList
                     local deleted = FavAddon:RemoveList(db[1], db[2])

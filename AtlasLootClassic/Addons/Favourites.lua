@@ -1,3 +1,5 @@
+local ALName, ALPrivate = ...
+
 local _G = getfenv(0)
 local AtlasLoot = _G.AtlasLoot
 local Addons = AtlasLoot.Addons
@@ -5,8 +7,9 @@ local AL = AtlasLoot.Locales
 local Favourites = Addons:RegisterNewAddon("Favourites")
 
 -- lua
+local type = _G.type
 local next = _G.next
-local format = _G.format
+local format, strsub = _G.format, _G.strsub
 
 -- WoW
 local GetItemInfo = _G.GetItemInfo
@@ -15,7 +18,8 @@ local GetServerTime = _G.GetServerTime
 -- locals
 local BASE_NAME_P, BASE_NAME_G, LIST_BASE_NAME = "ProfileBase", "GlobalBase", "List"
 local NEW_LIST_ID_PATTERN = "%s%s"
-local STD_ATLAS, STD_ATLAS2
+local ATLAS_ICON_IDENTIFIER = "#"
+local STD_ICON, STD_ICON2
 
 Favourites.BASE_NAME_P, Favourites.BASE_NAME_G = BASE_NAME_P, BASE_NAME_G
 
@@ -46,31 +50,31 @@ Favourites.GlobalDbDefaults = {
 }
 
 Favourites.AtlasList = {
-    "VignetteKill", -- std
-    "Gear",
-    "VignetteLoot",
-    "VignetteEventElite",
-    "VignetteKillElite",
-    "VignetteLootElite",
-    "tradeskills-star",
-    "tradeskills-star-off",
-    "Vehicle-HammerGold",
-    "Vehicle-HammerGold-1",
-    "Vehicle-HammerGold-2",
-    "Vehicle-HammerGold-3",
-    "Taxi_Frame_Green",
-    "Taxi_Frame_Yellow",
-    "ShipMissionIcon-Bonus-Map",
-    "services-checkmark",
-    "services-number-1",
-    "services-number-2",
-    "services-number-3",
-    "services-number-4",
-    "services-number-5",
-    "services-number-6",
-    "services-number-7",
-    "services-number-8",
-    "services-number-9",
+    "#VignetteKill", -- std
+    "#Gear",
+    "#VignetteLoot",
+    "#VignetteEventElite",
+    "#VignetteKillElite",
+    "#VignetteLootElite",
+    "#tradeskills-star",
+    "#tradeskills-star-off",
+    "#Vehicle-HammerGold",
+    "#Vehicle-HammerGold-1",
+    "#Vehicle-HammerGold-2",
+    "#Vehicle-HammerGold-3",
+    "#Taxi_Frame_Green",
+    "#Taxi_Frame_Yellow",
+    "#ShipMissionIcon-Bonus-Map",
+    "#services-checkmark",
+    "#services-number-1",
+    "#services-number-2",
+    "#services-number-3",
+    "#services-number-4",
+    "#services-number-5",
+    "#services-number-6",
+    "#services-number-7",
+    "#services-number-8",
+    "#services-number-9",
 }
 
 local function AddItemsInfoFavouritesSub(items, activeSub, isGlobal)
@@ -139,7 +143,7 @@ end
 
 function Favourites.OnInitialize()
     Favourites:UpdateDb()
-    STD_ATLAS, STD_ATLAS2 = Favourites.AtlasList[1], Favourites.AtlasList[2]
+    STD_ICON, STD_ICON2 = Favourites.AtlasList[1], Favourites.AtlasList[2]
 end
 
 function Favourites:OnProfileChanged()
@@ -174,23 +178,34 @@ function Favourites:IsFavouriteItemID(itemID, onlyActiveList)
     end
 end
 
-function Favourites:SetFavouriteAtlas(itemID, texture, hideOnFail)
+function Favourites:SetFavouriteIcon(itemID, texture, hideOnFail)
     local listName = self:IsFavouriteItemID(itemID)
     if not listName then return hideOnFail and texture:Hide() or nil end
-    local atlas
+    local icon
 
     if listName == true then
-        atlas = self.activeList.__atlas or STD_ATLAS
+        icon = self.activeList.__atlas or STD_ICON
     elseif listName[2] == true then
-        atlas = self.globalDb.lists[listName[1]].__atlas or STD_ATLAS2
+        icon = self.globalDb.lists[listName[1]].__atlas or STD_ICON2
     elseif listName[2] == false then
-        atlas = self.db.lists[listName[1]].__atlas or STD_ATLAS2
+        icon = self.db.lists[listName[1]].__atlas or STD_ICON2
     elseif listName[2] then
-        atlas = listName[2]
+        icon = listName[2]
     end
 
-    if atlas and atlas ~= texture:GetAtlas() then
-        texture:SetAtlas(atlas)
+    if icon then
+        local iconType = type(icon)
+        if iconType == "number" then
+            texture:SetTexture(icon)
+        elseif iconType == "string" then
+            if strsub(icon, 1, 1) == ATLAS_ICON_IDENTIFIER then
+                if icon and icon ~= texture:GetAtlas() then
+                    texture:SetAtlas(strsub(icon, 2))
+                end
+            else
+                texture:SetTexture(icon)
+            end
+        end
     end
 end
 
