@@ -349,7 +349,6 @@ data["GurubashiArena"] = {
 				{ 3,  18711 }, -- Arena Bands
 				{ 4,  18712 }, -- Arena Vambraces
 				{ 16, 18706 }, -- Arena Master
-				{ 17, 19024 }, -- Arena Grand Master
 			},
 		},
 	},
