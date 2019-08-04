@@ -8,18 +8,20 @@ local Favourites = Addons:RegisterNewAddon("Favourites")
 
 -- lua
 local type = _G.type
-local next = _G.next
-local format, strsub, strmatch = _G.format, _G.strsub, _G.strmatch
+local next, pairs, tblconcat = _G.next, _G.pairs, _G.table.concat
+local format, strsub, strmatch, strgmatch, strsplit = _G.format, _G.strsub, _G.strmatch, _G.gmatch, _G.strsplit
 
 -- WoW
 local GetItemInfo = _G.GetItemInfo
 local GetServerTime = _G.GetServerTime
+local GetItemInfoInstant = _G.GetItemInfoInstant
 
 -- locals
 local ICONS_PATH = ALPrivate.ICONS_PATH
 local BASE_NAME_P, BASE_NAME_G, LIST_BASE_NAME = "ProfileBase", "GlobalBase", "List"
 local NEW_LIST_ID_PATTERN = "%s%s"
 local ATLAS_ICON_IDENTIFIER = "#"
+local IMPORT_EXPORT_DELIMITER, IMPORT_PATTERN, EXPORT_PATTERN = ",", "(%w+):(%d+)", "%s:%d"
 local STD_ICON, STD_ICON2
 local KEY_WEAK_MT = {__mode="k"}
 
@@ -51,6 +53,16 @@ Favourites.GlobalDbDefaults = {
     },
 }
 
+Favourites.HookTooltipList = {
+    "AtlasLootTooltip",
+    "GameTooltip",
+    "ItemRefTooltip",
+    "ShoppingTooltip1",
+    "ShoppingTooltip2",
+    "ShoppingTooltip3"
+}
+local AlreadyHookedTT = {}
+
 Favourites.PlaceHolderIcon = ICONS_PATH.."placeholder-icon"
 Favourites.IconList = {
     ICONS_PATH.."VignetteKill",
@@ -81,7 +93,7 @@ Favourites.IconList = {
 local function AddItemsInfoFavouritesSub(items, activeSub, isGlobal)
     if items and activeSub then
         local fav = Favourites.subItems
-        for itemID in next, items do
+        for itemID in pairs(items) do
             fav[itemID] = { activeSub, isGlobal }
         end
     end
@@ -89,7 +101,7 @@ end
 
 local function CheckSubSetDb(list, db, globalDb)
     if list then
-        for activeSub, isGlobal in next, list do
+        for activeSub, isGlobal in pairs(list) do
             if isGlobal and globalDb[activeSub] then
                 AddItemsInfoFavouritesSub(globalDb[activeSub] or db[activeSub], activeSub, isGlobal)
             elseif not isGlobal and db[activeSub] then
@@ -148,11 +160,12 @@ local function OnTooltipSetItem_Hook(self)
         _G[self:GetName().."TextLeft1"]:SetText( TooltipTextCache[item] )
     end
 end
-GameTooltip:HookScript("OnTooltipSetItem", OnTooltipSetItem_Hook)
-AtlasLootTooltip:HookScript("OnTooltipSetItem", OnTooltipSetItem_Hook)
 
 function Favourites:AddTooltipHook(tooltip)
-    tooltip:HookScript("OnTooltipSetItem", OnTooltipSetItem_Hook)
+    if tooltip and tooltip.HookScript and not AlreadyHookedTT[tooltip] then
+        tooltip:HookScript("OnTooltipSetItem", OnTooltipSetItem_Hook)
+        AlreadyHookedTT[tooltip] = true
+    end
 end
 
 function Favourites:UpdateDb()
@@ -170,6 +183,10 @@ end
 function Favourites.OnInitialize()
     Favourites:UpdateDb()
     STD_ICON, STD_ICON2 = Favourites.IconList[1], Favourites.IconList[2]
+    for i = 1, #Favourites.HookTooltipList do
+        local tooltip = _G[Favourites.HookTooltipList[i]]
+        Favourites:AddTooltipHook(tooltip)
+    end
 end
 
 function Favourites:OnProfileChanged()
@@ -258,6 +275,12 @@ function Favourites:GetGlobaleLists()
     return self.globalDb.lists
 end
 
+function Favourites:GetListByID(listID, isGlobalList)
+    local list = isGlobalList and self:GetGlobaleLists() or self:GetProfileLists()
+    if not listID or not list[listID] then return end
+    return list[listID]
+end
+
 function Favourites:GetListName(id, isGlobal)
     if isGlobal and self:GetGlobaleLists()[id] then
         return self:GetGlobaleLists()[id].__name or LIST_BASE_NAME
@@ -311,11 +334,11 @@ function Favourites:HasIcon()
     return self.activeList.__icon and true or false
 end
 
-function Favourites:GetName()
+function Favourites:GetActiveListName()
     return self.activeList.__name or LIST_BASE_NAME
 end
 
-function Favourites:SetName(name)
+function Favourites:SetActiveListName(name)
     self.activeList.__name = name
 end
 
@@ -330,14 +353,67 @@ function Favourites:AddNewList(isGlobalList)
     return false
 end
 
-function Favourites:RemoveList(id, isGlobalList)
+function Favourites:RemoveList(listID, isGlobalList)
     local list = isGlobalList and self:GetGlobaleLists() or self:GetProfileLists()
-    if list[id] then
-        list[id] = nil
+    if list[listID] then
+        list[listID] = nil
         self:CleanUpShownLists()
         return true
     end
     return false
+end
+-- AtlasLoot.Addons.GetAddon(Addons, "Favourites"):ExportItemList("ProfileBase", false)
+function Favourites:RemoveEntrysFromList(listID, isGlobalList)
+    local list = self:GetListByID(listID, isGlobalList)
+    if not list then return end
+    local newList = {}
+    for key, entry in pairs(list) do
+        if strsub(key, 1, 2) == "__" then
+            newList[key] = entry
+        end
+    end
+    list = isGlobalList and self:GetGlobaleLists() or self:GetProfileLists()
+    list[listID] = newList
+    return newList
+end
+
+function Favourites:ExportItemList(listID, isGlobalList)
+    local list = self:GetListByID(listID, isGlobalList)
+    if not list then return end
+    local ret = {}
+    for entry in pairs(list) do
+        if strsub(entry, 1, 2) ~= "__" then
+            ret[#ret + 1] = format(EXPORT_PATTERN, "i", entry)
+        end
+    end
+    return tblconcat(ret, IMPORT_EXPORT_DELIMITER)
+end
+
+function Favourites:ImportItemList(listID, isGlobalList, newList, replace)
+    local list = replace and self:RemoveEntrysFromList(listID, isGlobalList) or self:GetListByID(listID, isGlobalList)
+    if not list then return end
+    local numNewEntrys = 0
+    if type(newList) == "string" then
+        local stList = { strsplit(IMPORT_EXPORT_DELIMITER, newList) }
+        for i = 1, #stList do
+            local eType, entry = strmatch(stList[i], IMPORT_PATTERN)
+            if entry then
+                entry = tonumber(entry)
+                if eType == "i" and not list[entry] and GetItemInfoInstant(entry) then
+                    list[entry] = true
+                    numNewEntrys = numNewEntrys + 1
+                end
+            end
+        end
+    elseif type(newList) == "table" then
+        for i = 1, #newList do
+            if not list[newList[i]] then
+                list[newList[i]] = true
+                numNewEntrys = numNewEntrys + 1
+            end
+        end
+    end
+    return numNewEntrys
 end
 
 Favourites:Finalize()

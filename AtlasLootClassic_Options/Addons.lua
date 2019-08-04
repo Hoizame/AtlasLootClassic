@@ -7,6 +7,9 @@ local AL = AtlasLoot.Locales
 
 local Addons = _G.AtlasLoot.Addons
 local GetAddon = Addons.GetAddon
+local FavAddon = _G.AtlasLoot.Addons:GetAddon("Favourites")
+
+local AceGUI = LibStub("AceGUI-3.0")
 
 -- lua
 local pairs = _G.pairs
@@ -17,17 +20,59 @@ local GetServerTime = _G.GetServerTime
 
 local count = 0
 
-local function UpdateItemFrame(adoon, addonName)
-    adoon:UpdateStatus(addonName)
+local function UpdateItemFrame(addon)
+    Addons:UpdateStatus(addon:GetName())
     if AtlasLoot.GUI.frame and AtlasLoot.GUI.frame:IsShown() then
         AtlasLoot.GUI.ItemFrame:Refresh(true)
     end
 end
 
+local function ImportItemList(listName, listID, isGlobal)
+	local frame = AceGUI:Create("Frame")
+	frame:SetTitle(AL["Import item list"])
+	frame:SetStatusText(listName)
+    frame:SetCallback("OnClose", function(widget) AceGUI:Release(widget) end)
+    frame:SetLayout("Flow")
+
+    local checkBox = AceGUI:Create("CheckBox")
+    checkBox:SetValue(false)
+    checkBox:SetLabel(AL["Replace existing items"])
+    frame:AddChild(checkBox)
+
+    local multiEditbox = AceGUI:Create("MultiLineEditBox")
+    multiEditbox:SetText("")
+    multiEditbox:SetFocus(true)
+	multiEditbox:SetFullWidth(true)
+    multiEditbox:SetFullHeight(true)
+    multiEditbox:SetCallback("OnEnterPressed", function(self, script, text)
+        local addedItems = FavAddon:ImportItemList(listID, isGlobal, text, checkBox:GetValue())
+        UpdateItemFrame(FavAddon)
+        AtlasLoot:Print(format(AL["Added |cff00ff00%d|r items into list |cff00ff00%s|r."], addedItems or 0, listName))
+        frame:Hide()
+    end)
+    frame:AddChild(multiEditbox)
+end
+
+local function ExportItemList(listName, listString)
+	local frame = AceGUI:Create("Frame")
+	frame:SetTitle(AL["Export item list"])
+	frame:SetStatusText(listName)
+	frame:SetCallback("OnClose", function(widget) AceGUI:Release(widget) end)
+	frame:SetLayout("Fill")
+
+    local multiEditbox = AceGUI:Create("MultiLineEditBox")
+    multiEditbox:SetText(listString or "")
+    multiEditbox:HighlightText(0)
+    multiEditbox:DisableButton(true)
+    multiEditbox:SetFocus(true)
+	multiEditbox:SetFullWidth(true)
+	multiEditbox:SetFullHeight(true)
+	frame:AddChild(multiEditbox)
+end
+
 local function CreateFavouriteOptions()
     count = count + 1
-    local AddonName = "Favourites"
-    local FavAddon = GetAddon(Addons, "Favourites")
+    local AddonName = FavAddon:GetName()
     local t = {
         type = "group",
         name = AL["Favourites"],
@@ -42,7 +87,7 @@ local function CreateFavouriteOptions()
                 name = _G.ENABLE,
                 set = function(info, value)
                     FavAddon.db[info[#info]] = value
-                    UpdateItemFrame(Addons, AddonName)
+                    UpdateItemFrame(FavAddon)
                 end
             },
             showInTT = {
@@ -61,7 +106,7 @@ local function CreateFavouriteOptions()
                     local db = FavAddon:GetDb()
                     db.activeList[1] = value and FavAddon.BASE_NAME_G or FavAddon.BASE_NAME_P
                     db.activeList[2] = value
-                    UpdateItemFrame(Addons, AddonName)
+                    UpdateItemFrame(FavAddon)
                 end
             },
             list = {
@@ -85,7 +130,7 @@ local function CreateFavouriteOptions()
                 get = function(info) return FavAddon:GetDb().activeList[1] end,
                 set = function(info, value)
                     FavAddon:GetDb().activeList[1] = value
-                    UpdateItemFrame(Addons, AddonName)
+                    UpdateItemFrame(FavAddon)
                 end,
             },
             addNewList = {
@@ -97,7 +142,7 @@ local function CreateFavouriteOptions()
                     local newList = FavAddon:AddNewList(FavAddon:GetDb().activeList[2])
                     if newList then
                         FavAddon:GetDb().activeList[1] = newList
-                        UpdateItemFrame(Addons, AddonName)
+                        UpdateItemFrame(FavAddon)
                     end
                 end,
             },
@@ -119,7 +164,7 @@ local function CreateFavouriteOptions()
                     local deleted = FavAddon:RemoveList(db[1], db[2])
                     if deleted then
                         db[1] = db[2] and FavAddon.BASE_NAME_G or FavAddon.BASE_NAME_P
-                        UpdateItemFrame(Addons, AddonName)
+                        UpdateItemFrame(FavAddon)
                     end
                 end,
             },
@@ -133,11 +178,29 @@ local function CreateFavouriteOptions()
                 type = 'input',
                 name = _G.NAME,
                 func = function() FavAddon:AddNewList() end,
-                get = function(info) return FavAddon:GetName() end,
-                set = function(info, value) FavAddon:SetName(value) end,
+                get = function(info) return FavAddon:GetActiveListName() end,
+                set = function(info, value) FavAddon:SetActiveListName(value) end,
+            },
+            import = {
+                order = 12,
+                type = "execute",
+                name = AL["Import item list"],
+                func = function(info)
+                    local db = FavAddon:GetDb()
+                    ImportItemList(FavAddon:GetActiveListName(), db.activeList[1], db.activeList[2])
+                end,
+            },
+            export = {
+                order = 13,
+                type = "execute",
+                name = AL["Export item list"],
+                func = function(info)
+                    local db = FavAddon:GetDb()
+                    ExportItemList(FavAddon:GetActiveListName(), FavAddon:ExportItemList(db.activeList[1], db.activeList[2]))
+                end,
             },
             useGlobal = {
-                order = 12,
+                order = 14,
                 type = "toggle",
                 width = "full",
                 name = AL["Always active for all Profiles."],
@@ -151,15 +214,15 @@ local function CreateFavouriteOptions()
                     else
                         FavAddon:RemoveFromShownList(db.activeList[1], db.activeList[2], true)
                     end
-                    UpdateItemFrame(Addons, AddonName)
+                    UpdateItemFrame(FavAddon)
                 end
             },
             useProfile = {
-                order = 13,
+                order = 15,
                 type = "toggle",
                 width = "full",
-                name = format(AL["Always active for profile: |cff00ff00%s|r"], AtlasLoot.dbRaw:GetCurrentProfile()),
-                desc = format(AL["Always marks items as favourite for profile |cff00ff00%s|r if enabled."], AtlasLoot.dbRaw:GetCurrentProfile()),
+                name = function() return format(AL["Always active for profile: |cff00ff00%s|r"], AtlasLoot.dbRaw:GetCurrentProfile()) end,
+                desc = function() return format(AL["Always marks items as favourite for profile |cff00ff00%s|r if enabled."], AtlasLoot.dbRaw:GetCurrentProfile()) end,
                 get = function(info) return FavAddon:ListIsProfileActive( FavAddon:GetDb().activeList[1] ) end,
                 set = function(info, value)
                     local db = FavAddon:GetDb()
@@ -168,7 +231,7 @@ local function CreateFavouriteOptions()
                     else
                         FavAddon:RemoveFromShownList(db.activeList[1], db.activeList[2], false)
                     end
-                    UpdateItemFrame(Addons, AddonName)
+                    UpdateItemFrame(FavAddon)
                 end
             },
             iconSelection = {
@@ -178,9 +241,8 @@ local function CreateFavouriteOptions()
                 order = -1,
                 get = function(info) return FavAddon.db[info[#info]] end,
                 set = function(info, value)
-                    print("disable")
                     FavAddon:SetIcon(nil)
-                    UpdateItemFrame(Addons, AddonName)
+                    UpdateItemFrame(FavAddon)
                 end,
                 get = function(info) return FavAddon.db[info[#info]] end,
                 set = function(info, value)
@@ -197,7 +259,7 @@ local function CreateFavouriteOptions()
                         get = function(info) return not FavAddon:HasIcon() end,
                         set = function(info, value)
                             FavAddon:SetIcon(nil)
-                            UpdateItemFrame(Addons, AddonName)
+                            UpdateItemFrame(FavAddon)
                         end
                     },
                 },
@@ -224,7 +286,7 @@ local function CreateFavouriteOptions()
             width = 0.3,
             func = function(info)
                 FavAddon:SetIcon(info[#info])
-                UpdateItemFrame(Addons, AddonName)
+                UpdateItemFrame(FavAddon)
             end,
         }
     end
