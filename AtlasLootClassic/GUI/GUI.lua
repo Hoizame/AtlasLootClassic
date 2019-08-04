@@ -1158,3 +1158,7 @@ function GUI.RefreshFonts(obj)
 		frame.contentFrame.title:SetTextColor(db.contentTopBar.font.color.r, db.contentTopBar.font.color.g, db.contentTopBar.font.color.b, db.contentTopBar.font.color.a)
 	end
 end
+
+function GUI.OnLevelRangeRefresh()
+	ModuleSelectFunction(nil, db.selected[1])
+end

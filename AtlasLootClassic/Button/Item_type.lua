@@ -1,3 +1,4 @@
+local _G = _G
 local ALName, ALPrivate = ...
 local AtlasLoot = _G.AtlasLoot
 local Item = AtlasLoot.Button:AddType("Item", "i")

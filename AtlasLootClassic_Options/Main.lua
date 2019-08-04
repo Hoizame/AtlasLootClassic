@@ -19,7 +19,7 @@ Options.config.args.atlasloot = {
 			name = AL["Use GameTooltip"],
 			desc = AL["Use the standard GameTooltip instead of the custom AtlasLoot tooltip"],
 			get = function(info) return AtlasLoot.db.Tooltip.useGameTooltip end,
-			set = function(info, value) AtlasLoot.db.Tooltip.useGameTooltip = value AtlasLoot.Tooltip.Refresh() end
+			set = function(info, value) AtlasLoot.db.Tooltip.useGameTooltip = value AtlasLoot.Tooltip.Refresh() end,
 		},
 		showIDsInTT = {
 			order = 2,
@@ -27,7 +27,15 @@ Options.config.args.atlasloot = {
 			width = "full",
 			name = AL["Show ID's in tooltip."],
 			get = function(info) return AtlasLoot.db.showIDsInTT end,
-			set = function(info, value) AtlasLoot.db.showIDsInTT = value end
+			set = function(info, value) AtlasLoot.db.showIDsInTT = value end,
+		},
+		showLvlRange = {
+			order = 3,
+			type = "toggle",
+			width = "full",
+			name = AL["Show level range if aviable."],
+			get = function(info) return AtlasLoot.db.showLvlRange end,
+			set = function(info, value) AtlasLoot.db.showLvlRange = value AtlasLoot.GUI.OnLevelRangeRefresh() end,
 		},
 	},
 }

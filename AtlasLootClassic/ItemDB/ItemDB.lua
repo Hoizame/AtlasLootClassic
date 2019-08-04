@@ -1,17 +1,19 @@
+local _G = _G
 local AtlasLoot = _G.AtlasLoot
 local ItemDB = {}
 AtlasLoot.ItemDB = ItemDB
 local AL = AtlasLoot.Locales
 
 -- lua
-local assert, setmetatable, rawset = assert, setmetatable, rawset
-local type = type
-local select = select
-local pairs = pairs
-local match, str_split, format = string.match, string.split, string.format
+local assert, setmetatable, rawset = _G.assert, _G.setmetatable, _G.rawset
+local type = _G.type
+local select = _G.select
+local pairs, unpack = _G.pairs, _G.unpack
+local match, str_split, format = _G.string.match, _G.string.split, _G.string.format
 
 local STRING_TYPE = "string"
 local BOSS_LINK_FORMAT = "%s:%s:%s"
+local LEVEL_RANGE_FORMAT = "  <|cffff0000%d|r |cffff8040%d|r |cffffff00%d|r |cff40bf40%d|r>"
 
 -- Saves all the items ;)
 ItemDB.Storage = {}
@@ -417,10 +419,14 @@ function ItemDB.ContentProto:GetName()
 	if self.AreaID and not self.MapID then
 		self.MapID = self.AreaID
 	end
+	local lvlRange = ""
+	if AtlasLoot.db.showLvlRange and self.LevelRange then
+		lvlRange = format(LEVEL_RANGE_FORMAT, self.LevelRange[1] or 0, self.LevelRange[2] or 0, self.LevelRange[3] or 0, self.LevelRange[4] or 0 )
+	end
 	if self.name then
-		return self.name
+		return self.name..lvlRange
 	elseif self.MapID then
-		return C_Map.GetAreaInfo(self.MapID) or "MapID:"..self.MapID
+		return C_Map.GetAreaInfo(self.MapID)..lvlRange or "MapID:"..self.MapID
 	elseif self.FactionID then
 		return GetFactionInfoByID(self.FactionID) --or "Faction "..self.FactionID
 	else
