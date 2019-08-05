@@ -843,6 +843,7 @@ local function ExtraItemFrame_AddButton(self)
 		button = AtlasLoot.Button:CreateSecOnly()
 		button:SetSize(ITEM_ICON_SIZE,ITEM_ICON_SIZE)
 		button:SetParent(self)
+		button.secButton.IsExtraItemFrameButton = true
 	end
 	container[button] = nil
 
@@ -875,7 +876,22 @@ local function ExtraItemFrame_ClearAllButtons(self)
 	self.button = nil
 end
 
+local function ExtraItemFrame_Refresh(self, triggerButton)
+	if not self.ItemList and not self:IsShown() then return end
+	local itemList, button = self.ItemList, self.button
+	ExtraItemFrame_ClearAllButtons(self)
+	Button:ExtraItemFrame_GetFrame(button, itemList)
+	if triggerButton and triggerButton.IsExtraItemFrameButton then
+		if button.type == "secButton" then
+			button.obj:GetSecTypeFunctions().Refresh(button)
+		else
+			button:GetTypeFunctions().Refresh(button)
+		end
+	end
+end
+
 function Button:ExtraItemFrame_GetFrame(button, itemList)
+	if button and button.IsExtraItemFrameButton then return end -- skip own buttons
 	local frame = ExtraItemFrame_Frame
 	if frame and frame.ItemList then
 		if frame.button == button then
@@ -896,6 +912,7 @@ function Button:ExtraItemFrame_GetFrame(button, itemList)
 		frame.ShownContainer = {}
 		frame.AddButton = ExtraItemFrame_AddButton
 		frame.Clear = ExtraItemFrame_ClearAllButtons
+		frame.Refresh = ExtraItemFrame_Refresh
 
 		frame:Hide()
 		ExtraItemFrame_Frame = frame
@@ -953,6 +970,11 @@ function Button:ExtraItemFrame_GetFrame(button, itemList)
 	frame.ItemList = itemList
 
 	return frame
+end
+
+function Button:ExtraItemFrame_Refresh(triggerButton)
+	if not ExtraItemFrame_Frame then return end
+	ExtraItemFrame_Frame:Refresh(triggerButton)
 end
 
 function Button:ExtraItemFrame_ClearFrame()

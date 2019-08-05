@@ -150,6 +150,7 @@ function Item.OnMouseAction(button, mouseButton)
 				Item.OnLeave(button)
 				Item.OnEnter(button)
 			end
+			AtlasLoot.Button:ExtraItemFrame_Refresh(button)
 		end
 	elseif mouseButton == "MouseWheelUp" and Item.previewTooltipFrame and Item.previewTooltipFrame:IsShown() then  -- ^
 		local frame = Item.previewTooltipFrame.modelFrame
@@ -390,15 +391,14 @@ Query.EventFrame = CreateFrame("FRAME")
 local function EventFrame_OnEvent(frame, event, arg1, arg2)
 	if event == "GET_ITEM_INFO_RECEIVED" then
 		if arg1 and button_list[arg1] then
-			local button
 			for i = 1, #button_list[arg1] do
-				button = button_list[arg1][i]
+				local button = button_list[arg1][i]
 				if button.type == "secButton" then
-					button.obj:GetSecTypeFunctions().Refresh(button_list[arg1][i])
+					button.obj:GetSecTypeFunctions().Refresh(button)
 				else
 					local typFunc = button:GetTypeFunctions()
 					if typFunc then
-						typFunc.Refresh(button_list[arg1][i])
+						typFunc.Refresh(button)
 						if ItemFrame and ItemFrame.SearchString then
 							local text = button.name:GetText()
 							if text and not sfind(slower(text), ItemFrame.SearchString, 1, true) then
