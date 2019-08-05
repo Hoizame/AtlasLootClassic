@@ -25,6 +25,7 @@ local IMPORT_EXPORT_DELIMITER, IMPORT_PATTERN, EXPORT_PATTERN = ",", "(%w+):(%d+
 local STD_ICON, STD_ICON2
 local KEY_WEAK_MT = {__mode="k"}
 
+local TooltipsHooked = false
 local TooltipCache, TooltipTextCache = {}
 setmetatable(TooltipCache, KEY_WEAK_MT)
 
@@ -161,6 +162,15 @@ local function OnTooltipSetItem_Hook(self)
     end
 end
 
+local function InitTooltips()
+    if TooltipsHooked then return end
+    for i = 1, #Favourites.HookTooltipList do
+        local tooltip = _G[Favourites.HookTooltipList[i]]
+        Favourites:AddTooltipHook(tooltip)
+    end
+    TooltipsHooked = true
+end
+
 function Favourites:AddTooltipHook(tooltip)
     if tooltip and tooltip.HookScript and not AlreadyHookedTT[tooltip] then
         tooltip:HookScript("OnTooltipSetItem", OnTooltipSetItem_Hook)
@@ -178,15 +188,16 @@ function Favourites:UpdateDb()
     -- populate sublists
     Favourites.subItems = {}
     PopulateSubLists(self.db, self.globalDb)
+
+    -- tooltip hook
+    if self.db.enabled and self.db.showInTT and not TooltipsHooked then
+        InitTooltips()
+    end
 end
 
 function Favourites.OnInitialize()
     Favourites:UpdateDb()
     STD_ICON, STD_ICON2 = Favourites.IconList[1], Favourites.IconList[2]
-    for i = 1, #Favourites.HookTooltipList do
-        local tooltip = _G[Favourites.HookTooltipList[i]]
-        Favourites:AddTooltipHook(tooltip)
-    end
 end
 
 function Favourites:OnProfileChanged()
