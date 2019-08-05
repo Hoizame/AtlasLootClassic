@@ -424,8 +424,8 @@ local function EventFrame_OnEvent(frame, event, arg1, arg2)
 					if Mount.IsMount(buttonOnEnter.ItemID) then
 						Item.ShowQuickDressUp(buttonOnEnter.ItemID, itemIsOnEnter)
 					else
-						local _, link = itemIsOnEnter:GetItem()
-						Item.ShowQuickDressUp(link, itemIsOnEnter)
+						--local _, link = itemIsOnEnter:GetItem()
+						Item.ShowQuickDressUp(buttonOnEnter.ItemID, itemIsOnEnter)
 					end
 				end
 			else
