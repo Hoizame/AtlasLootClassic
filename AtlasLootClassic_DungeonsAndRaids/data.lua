@@ -204,7 +204,7 @@ data["Ragefire"] = {
 	AtlasMapID = "Ragefire",
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
-	LevelRange = {9, 12, 14, 19},
+	LevelRange = {10, 13, 18},
 	items = {
 		{ -- RFCTaragaman
 			name = AL["Taragaman the Hungerer"],
@@ -234,7 +234,7 @@ data["WailingCaverns"] = {
 	AtlasMapID = "WailingCaverns",
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
-	LevelRange = {15, 17, 19, 24},
+	LevelRange = {10, 17, 24},
 	items = {
 		{ -- WCKresh
 			name = AL["Kresh"],
@@ -339,7 +339,7 @@ data["TheDeadmines"] = {
 	AtlasMapID = "TheDeadmines",
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
-	LevelRange = {14, 17, 19, 24},
+	LevelRange = {10, 17, 26},
 	items = {
 		{	--DMRhahkZor
 			name = AL["Rhahk'Zor"],
@@ -451,7 +451,7 @@ data["ShadowfangKeep"] = {
 	AtlasMapID = "ShadowfangKeep",
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
-	LevelRange = {18, 21, 23, 28},
+	LevelRange = {11, 22, 30},
 	items = {
 		{ -- SFKRethilgore
 			name = AL["Rethilgore"],
@@ -600,7 +600,7 @@ data["BlackfathomDeeps"] = {
 	AtlasMapID = "BlackfathomDeeps",
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
-	LevelRange = {21, 23, 25, 30},
+	LevelRange = {15, 24, 32},
 	items = {
 		{ -- BFDGhamoora
 			name = AL["Ghamoo-ra"],
@@ -693,7 +693,7 @@ data["TheStockade"] = {
 	AtlasMapID = "TheStockade",
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
-	LevelRange = {22, 24, 26, 30},
+	LevelRange = {15, 24, 32},
 	items = {
 		{ -- SWStKamDeepfury
 			name = AL["Kam Deepfury"],
@@ -728,7 +728,7 @@ data["Gnomeregan"] = {
 	AtlasMapID = "Gnomeregan",
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
-	LevelRange = {25, 30, 33, 38},
+	LevelRange = {19, 29, 38},
 	items = {
 		{ -- GnTechbot
 			name = AL["Techbot"],
@@ -838,7 +838,7 @@ data["RazorfenKraul"] = {
 	AtlasMapID = "RazorfenKraul",
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
-	LevelRange = {25, 28, 31, 34},
+	LevelRange = {25, 29, 38},
 	items = {
 		{ -- RFKAggem
 			name = AL["Aggem Thorncurse"],
@@ -938,7 +938,7 @@ data["ScarletMonastery"] = {
 	AtlasMapID = "ScarletMonastery",
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
-	LevelRange = {26, 32, 37, 45},
+	LevelRange = {20, 34, 45},
 	items = {
 		-- Graveyard
 		{ -- SMVishas
@@ -1177,7 +1177,7 @@ data["RazorfenDowns"] = {
 	AtlasMapID = "RazorfenDowns",
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
-	LevelRange = {35, 37, 39, 44},
+	LevelRange = {35, 37, 46},
 	items = {
 		{ -- RFDTutenkash
 			name = AL["Tuten'kash"],
@@ -1283,7 +1283,7 @@ data["Uldaman"] = {
 	AtlasMapID = "Uldaman",
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
-	LevelRange = {37, 40 ,42 ,47},
+	LevelRange = {30, 41, 51},
 	items = {
 		{ -- UldRevelosh
 			name = AL["Revelosh"],
@@ -1437,7 +1437,7 @@ data["Zul'Farrak"] = {
 	AtlasMapID = "Zul'Farrak",
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
-	LevelRange = {40, 42, 44, 50},
+	LevelRange = {39, 42, 46},
 	items = {
 		{ -- ZFAntusul
 			name = AL["Antu'sul"],
@@ -1574,7 +1574,7 @@ data["Maraudon"] = {
 	AtlasMapID = "Maraudon",
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
-	LevelRange = {41, 44, 46, 54},
+	LevelRange = {25, 46, 55},
 	items = {
 		-- Other
 		{ -- MaraMeshlok
@@ -1740,7 +1740,7 @@ data["TheTempleOfAtal'Hakkar"] = {
 	AtlasMapID = "TheTempleOfAtal'Hakkar",
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
-	LevelRange = {46, 49, 51, 54},
+	LevelRange = {45, 50, 56},
 	items = {
 		{ -- STAtalalarion
 			name = AL["Atal'alarion"],
@@ -1917,7 +1917,7 @@ data["BlackrockDepths"] = {
 	AtlasMapID = "BlackrockDepths",
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
-	LevelRange = {50, 52, 55, 60},
+	LevelRange = {42, 52, 60},
 	items = {
 		{ -- BRDHighInterrogatorGerstahn
 			name = AL["High Interrogator Gerstahn "],
@@ -2322,7 +2322,7 @@ data["LowerBlackrockSpire"] = {
 	AtlasMapID = "LowerBlackrockSpire",
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
-	LevelRange = {54, 56, 58, 60},
+	LevelRange = {48, 55, 60},
 	items = {
 		{ -- LBRSFelguard
 			name = AL["Burning Felguard"],
@@ -2554,116 +2554,13 @@ data["LowerBlackrockSpire"] = {
 	},
 }
 
-data["DireMaulEast"] = {
-	name = C_Map.GetAreaInfo(2557) .." ".. AL["East"],
-	MapID = 2557,
-	AtlasMapID = "DireMaul",
-	ContentType = DUNGEON_CONTENT,
-	LoadDifficulty = NORMAL_DIFF,
-	LevelRange = {52, 54, 56, 60},
-	items = {
-		{ -- DMEPusillin
-			name = AL["Pusillin"],
-			npcId = 14354,
-			DisplayIDs = {{7552}},
-			[NORMAL_DIFF] = {
-				{ 1,  18267 }, -- Recipe: Runn Tum Tuber Surprise
-				{ 3,  18249 }, -- Crescent Key
-			},
-		},
-		{ -- DMEZevrimThornhoof
-			name = AL["Zevrim Thornhoof"],
-			npcId = 11490,
-			DisplayIDs = {{11335}},
-			[NORMAL_DIFF] = {
-				{ 1,  18319 }, -- Fervent Helm
-				{ 2,  18313 }, -- Helm of Awareness
-				{ 3,  18323 }, -- Satyr's Bow
-				{ 5,  18308 }, -- Clever Hat
-				{ 6,  18306 }, -- Gloves of Shadowy Mist
-			},
-		},
-		{ -- DMEHydro
-			name = AL["Hydrospawn"],
-			npcId = 13280,
-			DisplayIDs = {{5489}},
-			[NORMAL_DIFF] = {
-				{ 1,  18317 }, -- Tempest Talisman
-				{ 2,  18322 }, -- Waterspout Boots
-				{ 3,  18324 }, -- Waveslicer
-				{ 5,  19268 }, -- Ace of Elementals
-				{ 7,  18305 }, -- Breakwater Legguards
-				{ 8,  18307 }, -- Riptide Shoes
-			},
-		},
-		{ -- DMELethtendris
-			name = AL["Lethtendris"],
-			npcId = 14327,
-			DisplayIDs = {{14378}},
-			[NORMAL_DIFF] = {
-				{ 1,  18325 }, -- Felhide Cap
-				{ 2,  18311 }, -- Quel'dorai Channeling Rod
-				{ 4,  18301 }, -- Lethtendris's Wand
-				{ 5,  18302 }, -- Band of Vigor
-			},
-		},
-		{ -- DMEAlzzin
-			name = AL["Alzzin the Wildshaper"],
-			npcId = 11492,
-			DisplayIDs = {{14416}},
-			[NORMAL_DIFF] = {
-				{ 1,  18328 }, -- Shadewood Cloak
-				{ 2,  18312 }, -- Energized Chestplate
-				{ 3,  18309 }, -- Gloves of Restoration
-				{ 4,  18326 }, -- Razor Gauntlets
-				{ 5,  18327 }, -- Whipvine Cord
-				{ 6,  18318 }, -- Merciful Greaves
-				{ 7,  18321 }, -- Energetic Rod
-				{ 8,  18310 }, -- Fiendish Machete
-				{ 9,  18314 }, -- Ring of Demonic Guile
-				{ 10, 18315 }, -- Ring of Demonic Potency
-			},
-		},
-		{ -- DMETrash
-			name = AL["Trash"],
-			ExtraList = true,
-			[NORMAL_DIFF] = {
-				{ 1,  18289 }, -- Barbed Thorn Necklace
-				{ 2,  18296 }, -- Marksman Bands
-				{ 3,  18298 }, -- Unbridled Leggings
-				{ 4,  18295 }, -- Phasing Boots
-				{ 6,  18333 }, -- Libram of Focus
-				{ 7,  18334 }, -- Libram of Protection
-				{ 8,  18332 }, -- Libram of Rapidity
-				{ 10, 18255 }, -- Runn Tum Tuber
-				{ 11, 18297 }, -- Thornling Seed
-			},
-		},
-		{ -- DMEIsalien
-			name = AL["Isalien"].." - "..format(AL["Tier %s Sets"], "0.5"),
-			npcId = 16097,
-			DisplayIDs = {{16000}},
-			ExtraList = true,
-			[NORMAL_DIFF] = {
-				{ 1,  22304 }, -- Ironweave Gloves
-				{ 2,  22472 }, -- Boots of Ferocity
-				{ 3,  22401 }, -- Libram of Hope
-				{ 4,  22345 }, -- Totem of Rebirth
-				{ 5,  22315 }, -- Hammer of Revitalization
-				{ 6,  22314 }, -- Huntsman's Harpoon
-			},
-		},
-		DM_BOOKS,
-		KEYS,
-	},
-}
-
 data["UpperBlackrockSpire"] = {
 	name = AL["Upper "] .. C_Map.GetAreaInfo(1583),
 	MapID = 1583,
 	AtlasMapID = "UpperBlackrockSpire",
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
+	LevelRange = {48, 55, 60},
 	items = {
 		{ -- UBRSEmberseer
 			name = AL["Pyroguard Emberseer"],
@@ -2836,6 +2733,109 @@ data["UpperBlackrockSpire"] = {
 	},
 }
 
+data["DireMaulEast"] = {
+	name = C_Map.GetAreaInfo(2557) .." ".. AL["East"],
+	MapID = 2557,
+	AtlasMapID = "DireMaul",
+	ContentType = DUNGEON_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	LevelRange = {31, 55, 60},
+	items = {
+		{ -- DMEPusillin
+			name = AL["Pusillin"],
+			npcId = 14354,
+			DisplayIDs = {{7552}},
+			[NORMAL_DIFF] = {
+				{ 1,  18267 }, -- Recipe: Runn Tum Tuber Surprise
+				{ 3,  18249 }, -- Crescent Key
+			},
+		},
+		{ -- DMEZevrimThornhoof
+			name = AL["Zevrim Thornhoof"],
+			npcId = 11490,
+			DisplayIDs = {{11335}},
+			[NORMAL_DIFF] = {
+				{ 1,  18319 }, -- Fervent Helm
+				{ 2,  18313 }, -- Helm of Awareness
+				{ 3,  18323 }, -- Satyr's Bow
+				{ 5,  18308 }, -- Clever Hat
+				{ 6,  18306 }, -- Gloves of Shadowy Mist
+			},
+		},
+		{ -- DMEHydro
+			name = AL["Hydrospawn"],
+			npcId = 13280,
+			DisplayIDs = {{5489}},
+			[NORMAL_DIFF] = {
+				{ 1,  18317 }, -- Tempest Talisman
+				{ 2,  18322 }, -- Waterspout Boots
+				{ 3,  18324 }, -- Waveslicer
+				{ 5,  19268 }, -- Ace of Elementals
+				{ 7,  18305 }, -- Breakwater Legguards
+				{ 8,  18307 }, -- Riptide Shoes
+			},
+		},
+		{ -- DMELethtendris
+			name = AL["Lethtendris"],
+			npcId = 14327,
+			DisplayIDs = {{14378}},
+			[NORMAL_DIFF] = {
+				{ 1,  18325 }, -- Felhide Cap
+				{ 2,  18311 }, -- Quel'dorai Channeling Rod
+				{ 4,  18301 }, -- Lethtendris's Wand
+				{ 5,  18302 }, -- Band of Vigor
+			},
+		},
+		{ -- DMEAlzzin
+			name = AL["Alzzin the Wildshaper"],
+			npcId = 11492,
+			DisplayIDs = {{14416}},
+			[NORMAL_DIFF] = {
+				{ 1,  18328 }, -- Shadewood Cloak
+				{ 2,  18312 }, -- Energized Chestplate
+				{ 3,  18309 }, -- Gloves of Restoration
+				{ 4,  18326 }, -- Razor Gauntlets
+				{ 5,  18327 }, -- Whipvine Cord
+				{ 6,  18318 }, -- Merciful Greaves
+				{ 7,  18321 }, -- Energetic Rod
+				{ 8,  18310 }, -- Fiendish Machete
+				{ 9,  18314 }, -- Ring of Demonic Guile
+				{ 10, 18315 }, -- Ring of Demonic Potency
+			},
+		},
+		{ -- DMETrash
+			name = AL["Trash"],
+			ExtraList = true,
+			[NORMAL_DIFF] = {
+				{ 1,  18289 }, -- Barbed Thorn Necklace
+				{ 2,  18296 }, -- Marksman Bands
+				{ 3,  18298 }, -- Unbridled Leggings
+				{ 4,  18295 }, -- Phasing Boots
+				{ 6,  18333 }, -- Libram of Focus
+				{ 7,  18334 }, -- Libram of Protection
+				{ 8,  18332 }, -- Libram of Rapidity
+				{ 10, 18255 }, -- Runn Tum Tuber
+				{ 11, 18297 }, -- Thornling Seed
+			},
+		},
+		{ -- DMEIsalien
+			name = AL["Isalien"].." - "..format(AL["Tier %s Sets"], "0.5"),
+			npcId = 16097,
+			DisplayIDs = {{16000}},
+			ExtraList = true,
+			[NORMAL_DIFF] = {
+				{ 1,  22304 }, -- Ironweave Gloves
+				{ 2,  22472 }, -- Boots of Ferocity
+				{ 3,  22401 }, -- Libram of Hope
+				{ 4,  22345 }, -- Totem of Rebirth
+				{ 5,  22315 }, -- Hammer of Revitalization
+				{ 6,  22314 }, -- Huntsman's Harpoon
+			},
+		},
+		DM_BOOKS,
+		KEYS,
+	},
+}
 
 data["DireMaulWest"] = {
 	name = C_Map.GetAreaInfo(2557) .." ".. AL["West"],
@@ -2843,6 +2843,7 @@ data["DireMaulWest"] = {
 	AtlasMapID = "DireMaul",
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
+	LevelRange = {31, 55, 60},
 	items = {
 		{ -- DMWTendrisWarpwood
 			name = AL["Tendris Warpwood"],
@@ -2969,6 +2970,7 @@ data["DireMaulNorth"] = {
 	AtlasMapID = "DireMaulNorth",
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
+	LevelRange = {31, 55, 60},
 	items = {
 		{ -- DMNGuardMoldar
 			name = AL["Guard Mol'dar"],
@@ -3151,6 +3153,7 @@ data["Scholomance"] = {
 	AtlasMapID = "Scholomance",
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
+	LevelRange = {33, 58, 60},
 	items = {
 		{ -- SCHOLOBlood
 			name = AL["Blood Steward of Kirtonos"],
@@ -3548,6 +3551,7 @@ data["Stratholme"] = {
 	AtlasMapID = "Stratholme",
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
+	LevelRange = {37, 58, 60},
 	items = {
 		{ -- STRATSkull
 			name = AL["Skul"],

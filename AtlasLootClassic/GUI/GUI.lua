@@ -1160,5 +1160,6 @@ function GUI.RefreshFonts(obj)
 end
 
 function GUI.OnLevelRangeRefresh()
+	
 	ModuleSelectFunction(nil, db.selected[1])
 end

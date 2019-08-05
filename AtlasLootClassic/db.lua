@@ -2,6 +2,7 @@ AtlasLoot.AtlasLootDBDefaults = {
 	profile = {
 		showIDsInTT = false,
 		showLvlRange = false,
+		showMinEnterLvl = false,
 		Tooltip = {	-- Core\Tooltip.lua
 			tooltip = "AtlasLootTooltip",
 		},

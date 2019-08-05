@@ -13,7 +13,8 @@ local match, str_split, format = _G.string.match, _G.string.split, _G.string.for
 
 local STRING_TYPE = "string"
 local BOSS_LINK_FORMAT = "%s:%s:%s"
-local LEVEL_RANGE_FORMAT = "  <|cffff0000%d|r |cffff8040%d|r |cffffff00%d|r |cff40bf40%d|r>"
+local LEVEL_RANGE_FORMAT = "  (|cffff0000%d|r: |cffff8040%d|r - |cff40bf40%d|r)"--"  <|cffff0000%d|r |cffff8040%d|r |cffffff00%d|r |cff40bf40%d|r>"
+local LEVEL_RANGE_FORMAT2 = "  (|cffff8040%d|r - |cff40bf40%d|r)"
 
 -- Saves all the items ;)
 ItemDB.Storage = {}
@@ -421,7 +422,11 @@ function ItemDB.ContentProto:GetName()
 	end
 	local lvlRange = ""
 	if AtlasLoot.db.showLvlRange and self.LevelRange then
-		lvlRange = format(LEVEL_RANGE_FORMAT, self.LevelRange[1] or 0, self.LevelRange[2] or 0, self.LevelRange[3] or 0, self.LevelRange[4] or 0 )
+		if AtlasLoot.db.showMinEnterLvl then
+			lvlRange = format(LEVEL_RANGE_FORMAT, self.LevelRange[1] or 0, self.LevelRange[2] or 0, self.LevelRange[3] or 0 )
+		else
+			lvlRange = format(LEVEL_RANGE_FORMAT2, self.LevelRange[2] or 0, self.LevelRange[3] or 0 )
+		end
 	end
 	if self.name then
 		return self.name..lvlRange
