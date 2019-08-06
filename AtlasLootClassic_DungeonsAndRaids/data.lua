@@ -2740,6 +2740,7 @@ data["DireMaulEast"] = {
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	LevelRange = {31, 55, 60},
+	ContentPhase = 2,
 	items = {
 		{ -- DMEPusillin
 			name = AL["Pusillin"],
@@ -2844,6 +2845,7 @@ data["DireMaulWest"] = {
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	LevelRange = {31, 55, 60},
+	ContentPhase = 2,
 	items = {
 		{ -- DMWTendrisWarpwood
 			name = AL["Tendris Warpwood"],
@@ -2971,6 +2973,7 @@ data["DireMaulNorth"] = {
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	LevelRange = {31, 55, 60},
+	ContentPhase = 2,
 	items = {
 		{ -- DMNGuardMoldar
 			name = AL["Guard Mol'dar"],
@@ -4276,6 +4279,7 @@ data["Zul'Gurub"] = {
 	AtlasMapID = "Zul'Gurub", -- ??
 	ContentType = RAID20_CONTENT,
 	LoadDifficulty = RAID20_DIFF,
+	ContentPhase = 4,
 	items = {
 		{ -- ZGJeklik
 			name = AL["High Priestess Jeklik"],
@@ -4633,6 +4637,7 @@ data["BlackwingLair"] = {
 	AtlasMapID = "BlackwingLair",
 	ContentType = RAID40_CONTENT,
 	LoadDifficulty = RAID40_DIFF,
+	ContentPhase = 3,
 	items = {
 		{ -- BWLRazorgore
 			name = AL["Razorgore the Untamed"],
@@ -4872,6 +4877,7 @@ data["TheRuinsofAhnQiraj"] = { -- AQ20
 	AtlasMapID = "TheRuinsofAhnQiraj",
 	ContentType = RAID20_CONTENT,
 	LoadDifficulty = RAID20_DIFF,
+	ContentPhase = 5,
 	items = {
 		{ -- AQ20Kurinnaxx
 			name = AL["Kurinnaxx"],
@@ -5073,6 +5079,7 @@ data["TheTempleofAhnQiraj"] = { -- AQ40
 	AtlasMapID = "TheTempleofAhnQiraj",
 	ContentType = RAID40_CONTENT,
 	LoadDifficulty = RAID40_DIFF,
+	ContentPhase = 5,
 	items = {
 		{ -- AQ40Skeram
 			name = AL["The Prophet Skeram"],
@@ -5345,6 +5352,7 @@ data["Naxxramas"] = {
 	AtlasMapID = "Naxxramas",
 	ContentType = RAID40_CONTENT,
 	LoadDifficulty = RAID40_DIFF,
+	ContentPhase = 6,
 	items = {
 		-- The Arachnid Quarter
 		{ -- NAXAnubRekhan

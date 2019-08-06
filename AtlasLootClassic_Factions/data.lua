@@ -276,25 +276,6 @@ data["CenarionCircle"] = {
 	},
 }
 
-data["Darkmoon"] = {
-	FactionID = 909,
-	ContentType = FACTIONS_CONTENT,
-	LoadDifficulty = LOAD_DIFF,
-	items = {
-		{ -- Exalted
-			name = GetFactionInfoByID(909),
-			[NORMAL_DIFF] = {
-				{ 1,  19228 }, -- Darkmoon Card: Blue Dragon
-				{ 2,  19267 }, -- Darkmoon Card: Maelstrom
-				{ 3,  19257 }, -- Darkmoon Card: Heroism
-				{ 4,  19277 }, -- Darkmoon Card: Twisting Nether
-				{ 16,  19491 }, -- Amulet of the Darkmoon
-				{ 17,  19426 }, -- Orb of the Darkmoon
-			},
-		},
-	},
-}
-
 data["ZandalarTribe"] = {
 	FactionID = 270,
 	ContentType = FACTIONS_CONTENT,

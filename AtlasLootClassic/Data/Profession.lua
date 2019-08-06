@@ -1,7 +1,7 @@
 local AtlasLoot = _G.AtlasLoot
 local Profession = {}
 AtlasLoot.Data.Profession = Profession
-local Recipe
+local Recipe, ContentPhase
 local AL = AtlasLoot.Locales
 local ALIL = AtlasLoot.IngameLocales
 
@@ -1353,6 +1353,13 @@ local PROFESSION_ITEM_SKILL = {
 
 -- maybe weak table?
 local ProfessionCache = {}
+local ContentPhaseCache = {}
+
+local function OnInit()
+    Recipe = AtlasLoot.Data.Recipe
+    ContentPhase = AtlasLoot.Data.ContentPhase
+end
+AtlasLoot:AddInitFunc(OnInit)
 
 function Profession.IsProfessionSpell(spellID)
 	return PROFESSION[spellID or 0] and true or false
@@ -1367,9 +1374,6 @@ function Profession.GetDataForExtraFrame(spellID)
     if not prof then return end
 
     if not ProfessionCache[spellID] then
-        if not Recipe then
-            Recipe = AtlasLoot.Data.Recipe
-        end
         local ret
         if prof[1] then
             if prof[1] and prof[8] then
@@ -1433,4 +1437,26 @@ function Profession.GetIcon(spellID)
     local prof = Profession.GetProfessionData(spellID)
     if not prof then return PROFESSION_ICON[0] end
     return PROFESSION_ICON[prof[2] or 0] or PROFESSION_ICON[0]
+end
+
+function Profession.GetSpellIDPhase(spellID)
+    if not PROFESSION[spellID] then return end
+    if not ContentPhaseCache[spellID] then
+        local content = PROFESSION[spellID][6]
+        local recipe = Recipe.GetRecipeForSpell(spellID)
+        local phase = recipe and ContentPhase:GetForItemID(recipe) or 0
+        for i = 1, #content do
+            local c = ContentPhase:GetForItemID(content[i])
+            phase = ( c and c > phase ) and c or phase
+        end
+
+        ContentPhaseCache[spellID] = phase
+    end
+    return ContentPhaseCache[spellID]
+end
+
+function Profession.GetPhaseTextureForSpellID(spellID)
+    local phase = ContentPhaseCache[spellID] or Profession.GetSpellIDPhase(spellID)
+    if not phase then return end
+    return ContentPhase:GetPhaseTexture(phase)
 end

@@ -68,6 +68,7 @@ Data\Sets.lua
 Data\Profession.lua
 Data\Recipe.lua
 Data\Mount.lua
+Data\ContentPhase.lua
 
 ItemDB\ItemDB.lua
 ItemDB\SoundData.lua

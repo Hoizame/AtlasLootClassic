@@ -153,11 +153,11 @@ local TOKEN = {
 
 	-- Misc
 	[11086] = { 9372, 0, 9379, 11086 }, -- Jang'thraze the Protector
-	[9379] =  { 9372, 0, 9379, 11086 }, -- Sang'thraze the Deflector
+	[9379] =  11086, -- Sang'thraze the Deflector
 	[18784] = { 12725, 0, 18783, 18784 }, -- Top Half of Advanced Armorsmithing: Volume III
-	[18783] = { 12725, 0, 18783, 18784 }, -- Bottom Half of Advanced Armorsmithing: Volume III
+	[18783] = 18784, -- Bottom Half of Advanced Armorsmithing: Volume III
 	[18780] = { 12727, 0, 18779, 18780 }, -- Top Half of Advanced Armorsmithing: Volume I
-	[18779] = { 12727, 0, 18779, 18780 }, -- Bottom Half of Advanced Armorsmithing: Volume I
+	[18779] = 18780, -- Bottom Half of Advanced Armorsmithing: Volume I
 	[12731] = { 12752, 12757, 12756 }, -- Pristine Hide of the Beast
 	[18782] = { 12726, 0, 18781, 18782 }, -- Top Half of Advanced Armorsmithing: Volume II
 	[18781] = { 12726, 0, 18781, 18782 }, -- Bottom Half of Advanced Armorsmithing: Volume II

@@ -219,11 +219,32 @@ data["AQSets"] = {
 	},
 }
 
+data["Darkmoon"] = {
+	FactionID = 909,
+	ContentType = WORLD_EVENT_CONTENT,
+	LoadDifficulty = LOAD_DIFF,
+	ContentPhase = 3,
+	items = {
+		{ -- Exalted
+			name = GetFactionInfoByID(909),
+			[NORMAL_DIFF] = {
+				{ 1,  19228 }, -- Darkmoon Card: Blue Dragon
+				{ 2,  19267 }, -- Darkmoon Card: Maelstrom
+				{ 3,  19257 }, -- Darkmoon Card: Heroism
+				{ 4,  19277 }, -- Darkmoon Card: Twisting Nether
+				{ 16,  19491 }, -- Amulet of the Darkmoon
+				{ 17,  19426 }, -- Orb of the Darkmoon
+			},
+		},
+	},
+}
+
 data["SilithusAbyssal"] = {
 	name = AL["Silithus Abyssal"],
 	ContentType = WORLD_EVENT_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = NORMAL_ITTYPE,
+	ContentPhase = 4,
 	items = {
 		{ -- AbyssalDukes
 			name = AL["Abyssal Dukes"],
@@ -308,6 +329,7 @@ data["ElementalInvasions"] = {
 	ContentType = WORLD_EVENT_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = NORMAL_ITTYPE,
+	ContentPhase = 2,
 	items = {
 		{ -- ElementalInvasion
 			name = AL["Elemental Invasions"],
@@ -608,6 +630,7 @@ data["ScourgeInvasion"] = {
 	ContentType = WORLD_EVENT_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = NORMAL_ITTYPE,
+	ContentPhase = 6,
 	items = {
 		{ -- ScourgeInvasionEvent1
 			name = AL["Scourge Invasion"],

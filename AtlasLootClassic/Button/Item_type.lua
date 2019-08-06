@@ -11,6 +11,7 @@ local Recipe = AtlasLoot.Data.Recipe
 local Profession = AtlasLoot.Data.Profession
 local Sets = AtlasLoot.Data.Sets
 local Mount = AtlasLoot.Data.Mount
+local ContentPhase = AtlasLoot.Data.ContentPhase
 local ItemFrame, Favourites
 
 -- lua
@@ -29,6 +30,7 @@ local GetItemString = AtlasLoot.ItemString.Create
 
 local ITEM_COLORS = {}
 local WHITE_ICON_FRAME = "Interface\\Common\\WhiteIconFrame"
+local DUMMY_ITEM_ICON = "Interface\\Icons\\INV_Misc_QuestionMark"
 local SET_ITEM = "|cff00ff00"..AL["Set item"]..":|r "
 
 local itemIsOnEnter, buttonOnEnter = nil, nil
@@ -68,7 +70,7 @@ function Item.OnSet(button, second)
 		-- create item colors
 		for i=0,7 do
 			local _, _, _, itemQuality = GetItemQualityColor(i)
-			ITEM_COLORS[i] = itemQuality
+			ITEM_COLORS[i] = "|c"..itemQuality
 		end
 		ItemFrame = AtlasLoot.GUI.ItemFrame
 	end
@@ -196,6 +198,9 @@ function Item.OnEnter(button, owner)
 	if AtlasLoot.db.showIDsInTT then
 		tooltip:AddDoubleLine("ItemID:", button.ItemID or 0)
 	end
+	if AtlasLoot.db.ContentPhase.enableOnItems and ContentPhase:GetForItemID(button.ItemID) then
+		tooltip:AddDoubleLine(AL["Content phase:"], ContentPhase:GetForItemID(button.ItemID))
+	end
 	if button.ItemID == 12784 then tooltip:AddLine("Arcanite Reaper Hoooooo!") end
 	tooltip:Show()
 	if IsShiftKeyDown() or db.alwaysShowCompareTT then
@@ -205,8 +210,7 @@ function Item.OnEnter(button, owner)
 		if Mount.IsMount(button.ItemID) then
 			Item.ShowQuickDressUp(button.ItemID, tooltip)
 		else
-			local _, link = tooltip:GetItem()
-			Item.ShowQuickDressUp(link, tooltip)
+			Item.ShowQuickDressUp(button.ItemID, tooltip)
 		end
 	end
 end
@@ -261,17 +265,17 @@ function Item.Refresh(button)
 	end
 
 	if button.type == "secButton" then
-		button:SetNormalTexture(itemTexture or "Interface\\Icons\\INV_Misc_QuestionMark")
+		button:SetNormalTexture(itemTexture or DUMMY_ITEM_ICON)
 	else
 		-- ##################
 		-- icon
 		-- ##################
-		button.icon:SetTexture(itemTexture or "Interface\\Icons\\INV_Misc_QuestionMark")
+		button.icon:SetTexture(itemTexture or DUMMY_ITEM_ICON)
 
 		-- ##################
 		-- name
 		-- ##################
-		button.name:SetText("|c"..ITEM_COLORS[itemQuality or 0]..itemName)
+		button.name:SetText(ITEM_COLORS[itemQuality or 0]..itemName)
 
 		-- ##################
 		-- description
@@ -289,7 +293,13 @@ function Item.Refresh(button)
 	else
 		button.favourite:Hide()
 	end
-
+	if AtlasLoot.db.ContentPhase.enableOnItems then
+		local phaseT = ContentPhase:GetPhaseTextureForItemID(button.ItemID)
+		if phaseT then
+			button.phaseIndicator:SetTexture(phaseT)
+			button.phaseIndicator:Show()
+		end
+	end
 	return true
 end
 

@@ -3,6 +3,7 @@ local AtlasLoot = _G.AtlasLoot
 local ItemDB = {}
 AtlasLoot.ItemDB = ItemDB
 local AL = AtlasLoot.Locales
+local ContentPhase = AtlasLoot.Data.ContentPhase
 
 -- lua
 local assert, setmetatable, rawset = _G.assert, _G.setmetatable, _G.rawset
@@ -15,6 +16,7 @@ local STRING_TYPE = "string"
 local BOSS_LINK_FORMAT = "%s:%s:%s"
 local LEVEL_RANGE_FORMAT = "  (|cffff0000%d|r: |cffff8040%d|r - |cff40bf40%d|r)"--"  <|cffff0000%d|r |cffff8040%d|r |cffffff00%d|r |cff40bf40%d|r>"
 local LEVEL_RANGE_FORMAT2 = "  (|cffff8040%d|r - |cff40bf40%d|r)"
+local CONTENT_PHASE_FORMAT = "|cff00FF96".."<P: %d>".."|r"
 
 -- Saves all the items ;)
 ItemDB.Storage = {}
@@ -420,18 +422,21 @@ function ItemDB.ContentProto:GetName()
 	if self.AreaID and not self.MapID then
 		self.MapID = self.AreaID
 	end
-	local lvlRange = ""
+	local add = ""
 	if AtlasLoot.db.showLvlRange and self.LevelRange then
 		if AtlasLoot.db.showMinEnterLvl then
-			lvlRange = format(LEVEL_RANGE_FORMAT, self.LevelRange[1] or 0, self.LevelRange[2] or 0, self.LevelRange[3] or 0 )
+			add = format(LEVEL_RANGE_FORMAT, self.LevelRange[1] or 0, self.LevelRange[2] or 0, self.LevelRange[3] or 0 )
 		else
-			lvlRange = format(LEVEL_RANGE_FORMAT2, self.LevelRange[2] or 0, self.LevelRange[3] or 0 )
+			add = format(LEVEL_RANGE_FORMAT2, self.LevelRange[2] or 0, self.LevelRange[3] or 0 )
 		end
 	end
+	if AtlasLoot.db.ContentPhase.enableOnLootTable and self.ContentPhase and not ContentPhase:IsActive(self.ContentPhase) then
+		add = add.."  "..format(CONTENT_PHASE_FORMAT, self.ContentPhase)
+	end
 	if self.name then
-		return self.name..lvlRange
+		return self.name..add
 	elseif self.MapID then
-		return C_Map.GetAreaInfo(self.MapID)..lvlRange or "MapID:"..self.MapID
+		return C_Map.GetAreaInfo(self.MapID)..add or "MapID:"..self.MapID
 	elseif self.FactionID then
 		return GetFactionInfoByID(self.FactionID) --or "Faction "..self.FactionID
 	else

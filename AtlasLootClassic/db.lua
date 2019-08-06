@@ -3,6 +3,12 @@ AtlasLoot.AtlasLootDBDefaults = {
 		showIDsInTT = false,
 		showLvlRange = false,
 		showMinEnterLvl = false,
+		ContentPhase = {
+			enableOnLootTable = false,
+			enableOnItems = false,
+			enableTT = false,
+			activePhase = 1,
+		},
 		Tooltip = {	-- Core\Tooltip.lua
 			tooltip = "AtlasLootTooltip",
 		},

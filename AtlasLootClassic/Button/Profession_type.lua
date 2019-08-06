@@ -144,6 +144,15 @@ function Prof.Refresh(button)
 			button.count:SetText(itemCount)
 			button.count:Show()
 		end
+		if AtlasLoot.db.ContentPhase.enableOnItems then
+			local phaseT = Profession.GetPhaseTextureForSpellID(button.SpellID)
+			if phaseT then
+				button.phaseIndicator:SetTexture(phaseT)
+				button.phaseIndicator:Show()
+			end
+		end
+
+		--Profession.GetPhaseTextureForSpellID(spellID)
 		button.icon:SetTexture(itemTexture or Profession.GetIcon(button.SpellID) or spellTexture)
 	end
 

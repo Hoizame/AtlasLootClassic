@@ -5,6 +5,12 @@ local AtlasLoot = _G.AtlasLoot
 local Options = AtlasLoot.Options
 local AL = AtlasLoot.Locales
 
+local function UpdateItemFrame()
+    if AtlasLoot.GUI.frame and AtlasLoot.GUI.frame:IsShown() then
+        AtlasLoot.GUI.ItemFrame:Refresh(true)
+    end
+end
+
 -- AtlasLoot
 Options.orderNumber = Options.orderNumber + 1
 Options.config.args.atlasloot = {
@@ -45,6 +51,30 @@ Options.config.args.atlasloot = {
 			disabled = function() return not AtlasLoot.db.showLvlRange end,
 			get = function(info) return AtlasLoot.db.showMinEnterLvl end,
 			set = function(info, value) AtlasLoot.db.showMinEnterLvl = value AtlasLoot.GUI.OnLevelRangeRefresh() end,
+		},
+		showContentPhaseInTT = {
+			order = 5,
+			type = "toggle",
+			width = "full",
+			name = "|cffff0000<WIP>:|r "..AL["Show content phase in tooltip."],
+			get = function(info) return AtlasLoot.db.ContentPhase.enableTT end,
+			set = function(info, value) AtlasLoot.db.ContentPhase.enableTT = value end,
+		},
+		enableContentPhaseOnLootTable = {
+			order = 6,
+			type = "toggle",
+			width = "full",
+			name = "|cffff0000<WIP>:|r "..AL["Show content phase indicator for loottables."],
+			get = function(info) return AtlasLoot.db.ContentPhase.enableOnLootTable end,
+			set = function(info, value) AtlasLoot.db.ContentPhase.enableOnLootTable = value AtlasLoot.GUI.OnLevelRangeRefresh() end,
+		},
+		enableContentPhaseOnItems = {
+			order = 7,
+			type = "toggle",
+			width = "full",
+			name = "|cffff0000<WIP>:|r "..AL["Show content phase indicator for items."],
+			get = function(info) return AtlasLoot.db.ContentPhase.enableOnItems end,
+			set = function(info, value) AtlasLoot.db.ContentPhase.enableOnItems = value UpdateItemFrame() end,
 		},
 	},
 }
