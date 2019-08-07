@@ -389,7 +389,7 @@ function Item.ShowQuickDressUp(itemLink, ttFrame)
 			frame:SetRotation(frame.curRotation + math.pi)
 		end
 		frame:SetPortraitZoom(frame.zoomLevelNew)
-		frame:TryOn(itemLink)
+		frame:TryOn(info[2])
 	end
 end
 
