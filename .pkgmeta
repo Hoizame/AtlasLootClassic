@@ -1,42 +1,38 @@
 package-as: AtlasLootClassic
 
 manual-changelog:
-    filename: AtlasLootClassic/Documentation/Release_Notes.txt
-    markup-type: plain
+ filename: AtlasLootClassic/Documentation/Release_Notes.txt
+ markup-type: plain
 
 enable-nolib-creation: no
     
 license-output: AtlasLootClassic/Documentation/LICENSE.txt
 
 externals:
-    AtlasLootClassic/Libs/CallbackHandler-1.0: https://repos.wowace.com/wow/callbackhandler/trunk/CallbackHandler-1.0
-    AtlasLootClassic/Libs/LibStub: https://repos.wowace.com/wow/libstub/trunk
-    AtlasLootClassic/Libs/LibSharedMedia-3.0: https://repos.wowace.com/wow/libsharedmedia-3-0/trunk/LibSharedMedia-3.0
-    AtlasLootClassic/Libs/LibDBIcon-1.0: https://repos.wowace.com/wow/libdbicon-1-0/trunk/LibDBIcon-1.0
-    AtlasLootClassic/Libs/AceDB-3.0: https://repos.wowace.com/wow/ace3/trunk/AceDB-3.0
-    AtlasLootClassic_Options/Libs/AceConfig-3.0: https://repos.wowace.com/wow/ace3/trunk/AceConfig-3.0
-    AtlasLootClassic_Options/Libs/AceGUI-3.0: https://repos.wowace.com/wow/ace3/trunk/AceGUI-3.0
-    AtlasLootClassic_Options/Libs/AceDBOptions-3.0: https://repos.wowace.com/wow/ace3/trunk/AceDBOptions-3.0
-    AtlasLootClassic_Options/Libs/AceGUI-3.0-SharedMediaWidgets: https://repos.wowace.com/wow/ace-gui-3-0-shared-media-widgets/trunk/AceGUI-3.0-SharedMediaWidgets
-    AtlasLootClassic/Libs/LibClassicItemSets-1.0:  
-        url: https://github.com/Hoizame/LibClassicItemSets-1.0.git
-        tag: latest
+ AtlasLootClassic/Libs/CallbackHandler-1.0: https://repos.wowace.com/wow/callbackhandler/trunk/CallbackHandler-1.0
+ AtlasLootClassic/Libs/LibStub: https://repos.wowace.com/wow/libstub/trunk
+ AtlasLootClassic/Libs/LibSharedMedia-3.0: https://repos.wowace.com/wow/libsharedmedia-3-0/trunk/LibSharedMedia-3.0
+ AtlasLootClassic/Libs/LibDBIcon-1.0: https://repos.wowace.com/wow/libdbicon-1-0/trunk/LibDBIcon-1.0
+ AtlasLootClassic/Libs/AceDB-3.0: https://repos.wowace.com/wow/ace3/trunk/AceDB-3.0
+ AtlasLootClassic_Options/Libs/AceConfig-3.0: https://repos.wowace.com/wow/ace3/trunk/AceConfig-3.0
+ AtlasLootClassic_Options/Libs/AceGUI-3.0: https://repos.wowace.com/wow/ace3/trunk/AceGUI-3.0
+ AtlasLootClassic_Options/Libs/AceDBOptions-3.0: https://repos.wowace.com/wow/ace3/trunk/AceDBOptions-3.0
+ AtlasLootClassic_Options/Libs/AceGUI-3.0-SharedMediaWidgets: https://repos.wowace.com/wow/ace-gui-3-0-shared-media-widgets/trunk/AceGUI-3.0-SharedMediaWidgets
+ AtlasLootClassic/Libs/LibClassicItemSets-1.0:  
+  url: https://github.com/Hoizame/LibClassicItemSets-1.0.git
+  tag: latest
 
 # Ignore takes place before folder's moving takes place
 ignore:
-    - babelfish.lua
-    - cf_translations.sh
-    - AtlasLootClassic/Images/PSD
-    - AtlasLootClassic/AtlasLootClassic/Images/PSD
-    - AtlasLootClassic/AtlasLootClassic/DEVTOOLS.lua
-    - AtlasLootClassic/AtlasLootClassic/Libs/AceGUI-3.0
+ - babelfish.lua
+ - cf_translations.sh
+ - AtlasLootClassic/Images/PSD
 
 move-folders:
-    AtlasLootClassic/AtlasLootClassic: AtlasLootClassic
-    AtlasLootClassic/AtlasLootClassic_Options: AtlasLootClassic_Options
-	AtlasLootClassic/AtlasLootClassic_Crafting: AtlasLootClassic_Crafting
-	AtlasLootClassic/AtlasLootClassic_DungeonsAndRaids: AtlasLootClassic_DungeonsAndRaids
-	AtlasLootClassic/AtlasLootClassic_PvP: AtlasLootClassic_PvP
-    AtlasLootClassic/AtlasLootClassic_Collections: AtlasLootClassic_Collections
-    AtlasLootClassic/AtlasLootClassic_Factions: AtlasLootClassic_Factions
-
+ AtlasLootClassic/AtlasLootClassic: AtlasLootClassic
+ AtlasLootClassic/AtlasLootClassic_Crafting: AtlasLootClassic_Crafting
+ AtlasLootClassic/AtlasLootClassic_DungeonsAndRaids: AtlasLootClassic_DungeonsAndRaids
+ AtlasLootClassic/AtlasLootClassic_PvP: AtlasLootClassic_PvP
+ AtlasLootClassic/AtlasLootClassic_Collections: AtlasLootClassic_Collections
+ AtlasLootClassic/AtlasLootClassic_Factions: AtlasLootClassic_Factions
+ AtlasLootClassic/AtlasLootClassic_Options: AtlasLootClassic_Options
