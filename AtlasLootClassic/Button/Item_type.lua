@@ -198,7 +198,7 @@ function Item.OnEnter(button, owner)
 	if AtlasLoot.db.showIDsInTT then
 		tooltip:AddDoubleLine("ItemID:", button.ItemID or 0)
 	end
-	if AtlasLoot.db.ContentPhase.enableOnItems and ContentPhase:GetForItemID(button.ItemID) then
+	if AtlasLoot.db.ContentPhase.enableTT and ContentPhase:GetForItemID(button.ItemID) then
 		tooltip:AddDoubleLine(AL["Content phase:"], ContentPhase:GetForItemID(button.ItemID))
 	end
 	if button.ItemID == 12784 then tooltip:AddLine("Arcanite Reaper Hoooooo!") end

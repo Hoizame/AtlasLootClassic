@@ -275,9 +275,7 @@ data["LordKazzak"] = {
 				{ 8,  18543 }, -- Ring of Entropy
 				{ 9,  17112 }, -- Empyrean Demolisher
 				{ 10, 17113 }, -- Amberseal Keeper
-				{ 12, 18665 }, -- The Eye of Shadow
-				{ 13, 18608 }, -- Benediction
-				{ 14, 18609 }, -- Anathema
+				{ 16, 18665 }, -- The Eye of Shadow
 			},
 		},
 	},
@@ -395,144 +393,6 @@ data["DragonsOfNightmare"] = {
 				{ 2,  21147 }, -- Fragment of the Nightmare's Corruption
 				{ 3,  21148 }, -- Fragment of the Nightmare's Corruption
 				{ 4,  21149 }, -- Fragment of the Nightmare's Corruption
-			},
-		},
-	},
-}
-
-data["Darkmoon"] = {
-	FactionID = 909,
-	ContentType = WORLD_EVENT_CONTENT,
-	LoadDifficulty = LOAD_DIFF,
-	ContentPhase = 3,
-	items = {
-		{ -- Exalted
-			name = GetFactionInfoByID(909),
-			[NORMAL_DIFF] = {
-				{ 1,  19228 }, -- Darkmoon Card: Blue Dragon
-				{ 2,  19267 }, -- Darkmoon Card: Maelstrom
-				{ 3,  19257 }, -- Darkmoon Card: Heroism
-				{ 4,  19277 }, -- Darkmoon Card: Twisting Nether
-				{ 16,  19491 }, -- Amulet of the Darkmoon
-				{ 17,  19426 }, -- Orb of the Darkmoon
-			},
-		},
-	},
-}
-
-data["SilithusAbyssal"] = {
-	name = AL["Silithus Abyssal"],
-	ContentType = WORLD_EVENT_CONTENT,
-	LoadDifficulty = NORMAL_DIFF,
-	TableType = NORMAL_ITTYPE,
-	ContentPhase = 4,
-	items = {
-		{ -- AbyssalDukes
-			name = AL["Abyssal Dukes"],
-			[NORMAL_DIFF] = {
-				{ 1, "INV_Box_01", nil, AL["The Duke of Cynders"] },
-				{ 2,  20665 }, -- Abyssal Leather Leggings
-				{ 3,  20666 }, -- Hardened Steel Warhammer
-				{ 4,  20514 }, -- Abyssal Signet
-				{ 5,  20664 }, -- Abyssal Cloth Sash
-				{ 8, "INV_Box_01", nil, AL["The Duke of Fathoms"] },
-				{ 9,  20668 }, -- Abyssal Mail Legguards
-				{ 10, 20669 }, -- Darkstone Claymore
-				{ 11, 20514 }, -- Abyssal Signet
-				{ 12, 20667 }, -- Abyssal Leather Belt
-				{ 16, "INV_Box_01", nil, AL["The Duke of Zephyrs"] },
-				{ 17, 20674 }, -- Abyssal Cloth Pants
-				{ 18, 20675 }, -- Soulrender
-				{ 19, 20514 }, -- Abyssal Signet
-				{ 20, 20673 }, -- Abyssal Plate Girdle
-				{ 23, "INV_Box_01", nil, AL["The Duke of Shards"] },
-				{ 24, 20671 }, -- Abyssal Plate Legplates
-				{ 25, 20672 }, -- Sparkling Crystal Wand
-				{ 26, 20514 }, -- Abyssal Signet
-				{ 27, 20670 }, -- Abyssal Mail Clutch
-			},
-		},
-		{ -- AbyssalLords
-			name = AL["Abyssal Lords"],
-			[NORMAL_DIFF] = {
-				{ 1, "INV_Box_01", nil, AL["Prince Skaldrenox"] },
-				{ 2,  20682 }, -- Elemental Focus Band
-				{ 3,  20515 }, -- Abyssal Scepter
-				{ 4,  20681 }, -- Abyssal Leather Bracers
-				{ 5,  20680 }, -- Abyssal Mail Pauldrons
-				{ 7, "INV_Box_01", nil, AL["Lord Skwol"] },
-				{ 8,  20685 }, -- Wavefront Necklace
-				{ 9,  20515 }, -- Abyssal Scepter
-				{ 10, 20684 }, -- Abyssal Mail Armguards
-				{ 11, 20683 }, -- Abyssal Plate Epaulets
-				{ 16, "INV_Box_01", nil, AL["High Marshal Whirlaxis"] },
-				{ 17, 20691 }, -- Windshear Cape
-				{ 18, 20515 }, -- Abyssal Scepter
-				{ 19, 20690 }, -- Abyssal Cloth Wristbands
-				{ 20, 20689 }, -- Abyssal Leather Shoulders
-				{ 22, "INV_Box_01", nil, AL["Baron Kazum"] },
-				{ 23, 20688 }, -- Earthen Guard
-				{ 24, 20515 }, -- Abyssal Scepter
-				{ 25, 20686 }, -- Abyssal Cloth Amice
-				{ 26, 20687 }, -- Abyssal Plate Vambraces
-			},
-		},
-		{ -- AbyssalTemplars
-			name = AL["Abyssal Templars"],
-			[NORMAL_DIFF] = {
-				{ 1, "INV_Box_01", nil, AL["Crimson Templar"] },
-				{ 2,  20657 }, -- Crystal Tipped Stiletto
-				{ 3,  20655 }, -- Abyssal Cloth Handwraps
-				{ 4,  20656 }, -- Abyssal Mail Sabatons
-				{ 5,  20513 }, -- Abyssal Crest
-				{ 7, "INV_Box_01", nil, AL["Azure Templar"] },
-				{ 8,  20654 }, -- Amethyst War Staff
-				{ 9,  20653 }, -- Abyssal Plate Gauntlets
-				{ 10, 20652 }, -- Abyssal Cloth Slippers
-				{ 11, 20513 }, -- Abyssal Crest
-				{ 16, "INV_Box_01", nil, AL["Hoary Templar"] },
-				{ 17, 20660 }, -- Stonecutting Glaive
-				{ 18, 20659 }, -- Abyssal Mail Handguards
-				{ 19, 20658 }, -- Abyssal Leather Boots
-				{ 20, 20513 }, -- Abyssal Crest
-				{ 22, "INV_Box_01", nil, AL["Earthen Templar"] },
-				{ 23, 20663 }, -- Deep Strike Bow
-				{ 24, 20661 }, -- Abyssal Leather Gloves
-				{ 25, 20662 }, -- Abyssal Plate Greaves
-				{ 26, 20513 }, -- Abyssal Crest
-			},
-		},
-	},
-}
-
-data["ElementalInvasions"] = {
-	name = AL["Elemental Invasions"],
-	ContentType = WORLD_EVENT_CONTENT,
-	LoadDifficulty = NORMAL_DIFF,
-	TableType = NORMAL_ITTYPE,
-	ContentPhase = 2,
-	items = {
-		{ -- ElementalInvasion
-			name = AL["Elemental Invasions"],
-			[NORMAL_DIFF] = {
-				{ 1, "INV_Box_01", nil, AL["Baron Charr"] },
-				{ 2,  18671 }, -- Baron Charr's Sceptre
-				{ 3,  19268 }, -- Ace of Elementals
-				{ 4,  18672 }, -- Elemental Ember
-				{ 6, "INV_Box_01", nil, AL["Princess Tempestria"] },
-				{ 7,  18678 }, -- Tempestria's Frozen Necklace
-				{ 8,  19268 }, -- Ace of Elementals
-				{ 9,  21548 }, -- Pattern: Stormshroud Gloves
-				{ 10, 18679 }, -- Frigid Ring
-				{ 16, "INV_Box_01", nil, AL["Avalanchion"] },
-				{ 17, 18673 }, -- Avalanchion's Stony Hide
-				{ 18, 19268 }, -- Ace of Elementals
-				{ 19, 18674 }, -- Hardened Stone Band
-				{ 21, "INV_Box_01", nil, AL["The Windreaver"] },
-				{ 22, 18676 }, -- Sash of the Windreaver
-				{ 23, 19268 }, -- Ace of Elementals
-				{ 24, 21548 }, -- Pattern: Stormshroud Gloves
-				{ 25, 18677 }, -- Zephyr Cloak
 			},
 		},
 	},
@@ -806,86 +666,6 @@ data["HarvestFestival"] = {
 	},
 }
 
-data["ScourgeInvasion"] = {
-	name = AL["Scourge Invasion"],
-	ContentType = WORLD_EVENT_CONTENT,
-	LoadDifficulty = NORMAL_DIFF,
-	TableType = NORMAL_ITTYPE,
-	ContentPhase = 6,
-	items = {
-		{ -- ScourgeInvasionEvent1
-			name = AL["Scourge Invasion"],
-			[NORMAL_DIFF] = {
-				{ 1,  23123 }, -- Blessed Wizard Oil
-				{ 2,  23122 }, -- Consecrated Sharpening Stone
-				{ 3,  22999 }, -- Tabard of the Argent Dawn
-				{ 4,  22484 }, -- Necrotic Rune
-				{ 7,  23085 }, -- Robe of Undead Cleansing
-				{ 8,  23091 }, -- Bracers of Undead Cleansing
-				{ 9,  23084 }, -- Gloves of Undead Cleansing
-				{ 12, 23089 }, -- Tunic of Undead Slaying
-				{ 13, 23093 }, -- Wristwraps of Undead Slaying
-				{ 14, 23081 }, -- Handwraps of Undead Slaying
-				{ 16, 23194 }, -- Lesser Mark of the Dawn
-				{ 17, 23195 }, -- Mark of the Dawn
-				{ 18, 23196 }, -- Greater Mark of the Dawn
-				{ 22, 23088 }, -- Chestguard of Undead Slaying
-				{ 23, 23092 }, -- Wristguards of Undead Slaying
-				{ 24, 23082 }, -- Handguards of Undead Slaying
-				{ 27, 23087 }, -- Breastplate of Undead Slaying
-				{ 28, 23090 }, -- Bracers of Undead Slaying
-				{ 29, 23078 }, -- Gauntlets of Undead Slaying
-			},
-		},
-		{
-			name = C_Map_GetAreaInfo(2017).." - "..AL["Balzaphon"],
-			[NORMAL_DIFF] = {
-				{ 1,  23126 }, -- Waistband of Balzaphon
-				{ 2,  23125 }, -- Chains of the Lich
-				{ 3,  23124 }, -- Staff of Balzaphon
-			}
-		},
-		{
-			name = C_Map_GetAreaInfo(2057).." - "..AL["Lord Blackwood"],
-			[NORMAL_DIFF] = {
-				{ 1,  23132 }, -- Lord Blackwood's Blade
-				{ 2,  23156 }, -- Blackwood's Thigh
-				{ 3,  23139 }, -- Lord Blackwood's Buckler
-			}
-		},
-		{
-			name = C_Map_GetAreaInfo(2557).." - "..AL["Revanchion"],
-			[NORMAL_DIFF] = {
-				{ 1, 23127 }, -- Cloak of Revanchion
-				{ 2, 23129 }, -- Bracers of Mending
-				{ 3, 23128 }, -- The Shadow's Grasp
-			}
-		},
-		{
-			name = AL["Scarlet Monastery - Graveyard"].." - "..AL["Scorn"],
-			[NORMAL_DIFF] = {
-				{ 1, 23169 }, -- Scorn's Icy Choker
-				{ 2, 23170 }, -- The Frozen Clutch
-				{ 3, 23168 }, -- Scorn's Focal Dagger
-			}
-		},
-		{
-			name = C_Map_GetAreaInfo(209).." - "..AL["Sever"],
-			[NORMAL_DIFF] = {
-				{ 1, 23173 }, -- Abomination Skin Leggings
-				{ 2, 23171 }, -- The Axe of Severing
-			}
-		},
-		{
-			name = C_Map_GetAreaInfo(722).." - "..AL["Lady Falther'ess"],
-			[NORMAL_DIFF] = {
-				{ 1, 23178 }, -- Mantle of Lady Falther'ess
-				{ 2, 23177 }, -- Lady Falther'ess' Finger
-			}
-		},
-	},
-}
-
 data["LunarFestival"] = {
 	name = AL["Lunar Festival"],
 	ContentType = WORLD_EVENT_CONTENT,
@@ -974,6 +754,224 @@ data["MidsummerFestival"] = {
 				{ 11, 23326 }, -- Midsummer Sausage
 				{ 12, 23211 }, -- Toasted Smorc
 			},
+		},
+	},
+}
+
+data["ElementalInvasions"] = {
+	name = AL["Elemental Invasions"],
+	ContentType = WORLD_EVENT_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = NORMAL_ITTYPE,
+	ContentPhase = 2,
+	items = {
+		{ -- ElementalInvasion
+			name = AL["Elemental Invasions"],
+			[NORMAL_DIFF] = {
+				{ 1, "INV_Box_01", nil, AL["Baron Charr"] },
+				{ 2,  18671 }, -- Baron Charr's Sceptre
+				{ 3,  19268 }, -- Ace of Elementals
+				{ 4,  18672 }, -- Elemental Ember
+				{ 6, "INV_Box_01", nil, AL["Princess Tempestria"] },
+				{ 7,  18678 }, -- Tempestria's Frozen Necklace
+				{ 8,  19268 }, -- Ace of Elementals
+				{ 9,  21548 }, -- Pattern: Stormshroud Gloves
+				{ 10, 18679 }, -- Frigid Ring
+				{ 16, "INV_Box_01", nil, AL["Avalanchion"] },
+				{ 17, 18673 }, -- Avalanchion's Stony Hide
+				{ 18, 19268 }, -- Ace of Elementals
+				{ 19, 18674 }, -- Hardened Stone Band
+				{ 21, "INV_Box_01", nil, AL["The Windreaver"] },
+				{ 22, 18676 }, -- Sash of the Windreaver
+				{ 23, 19268 }, -- Ace of Elementals
+				{ 24, 21548 }, -- Pattern: Stormshroud Gloves
+				{ 25, 18677 }, -- Zephyr Cloak
+			},
+		},
+	},
+}
+
+data["Darkmoon"] = {
+	FactionID = 909,
+	ContentType = WORLD_EVENT_CONTENT,
+	LoadDifficulty = LOAD_DIFF,
+	ContentPhase = 3,
+	items = {
+		{ -- Exalted
+			name = GetFactionInfoByID(909),
+			[NORMAL_DIFF] = {
+				{ 1,  19228 }, -- Darkmoon Card: Blue Dragon
+				{ 2,  19267 }, -- Darkmoon Card: Maelstrom
+				{ 3,  19257 }, -- Darkmoon Card: Heroism
+				{ 4,  19277 }, -- Darkmoon Card: Twisting Nether
+				{ 16,  19491 }, -- Amulet of the Darkmoon
+				{ 17,  19426 }, -- Orb of the Darkmoon
+			},
+		},
+	},
+}
+
+data["SilithusAbyssal"] = {
+	name = AL["Silithus Abyssal"],
+	ContentType = WORLD_EVENT_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = NORMAL_ITTYPE,
+	ContentPhase = 4,
+	items = {
+		{ -- AbyssalDukes
+			name = AL["Abyssal Dukes"],
+			[NORMAL_DIFF] = {
+				{ 1, "INV_Box_01", nil, AL["The Duke of Cynders"] },
+				{ 2,  20665 }, -- Abyssal Leather Leggings
+				{ 3,  20666 }, -- Hardened Steel Warhammer
+				{ 4,  20514 }, -- Abyssal Signet
+				{ 5,  20664 }, -- Abyssal Cloth Sash
+				{ 8, "INV_Box_01", nil, AL["The Duke of Fathoms"] },
+				{ 9,  20668 }, -- Abyssal Mail Legguards
+				{ 10, 20669 }, -- Darkstone Claymore
+				{ 11, 20514 }, -- Abyssal Signet
+				{ 12, 20667 }, -- Abyssal Leather Belt
+				{ 16, "INV_Box_01", nil, AL["The Duke of Zephyrs"] },
+				{ 17, 20674 }, -- Abyssal Cloth Pants
+				{ 18, 20675 }, -- Soulrender
+				{ 19, 20514 }, -- Abyssal Signet
+				{ 20, 20673 }, -- Abyssal Plate Girdle
+				{ 23, "INV_Box_01", nil, AL["The Duke of Shards"] },
+				{ 24, 20671 }, -- Abyssal Plate Legplates
+				{ 25, 20672 }, -- Sparkling Crystal Wand
+				{ 26, 20514 }, -- Abyssal Signet
+				{ 27, 20670 }, -- Abyssal Mail Clutch
+			},
+		},
+		{ -- AbyssalLords
+			name = AL["Abyssal Lords"],
+			[NORMAL_DIFF] = {
+				{ 1, "INV_Box_01", nil, AL["Prince Skaldrenox"] },
+				{ 2,  20682 }, -- Elemental Focus Band
+				{ 3,  20515 }, -- Abyssal Scepter
+				{ 4,  20681 }, -- Abyssal Leather Bracers
+				{ 5,  20680 }, -- Abyssal Mail Pauldrons
+				{ 7, "INV_Box_01", nil, AL["Lord Skwol"] },
+				{ 8,  20685 }, -- Wavefront Necklace
+				{ 9,  20515 }, -- Abyssal Scepter
+				{ 10, 20684 }, -- Abyssal Mail Armguards
+				{ 11, 20683 }, -- Abyssal Plate Epaulets
+				{ 16, "INV_Box_01", nil, AL["High Marshal Whirlaxis"] },
+				{ 17, 20691 }, -- Windshear Cape
+				{ 18, 20515 }, -- Abyssal Scepter
+				{ 19, 20690 }, -- Abyssal Cloth Wristbands
+				{ 20, 20689 }, -- Abyssal Leather Shoulders
+				{ 22, "INV_Box_01", nil, AL["Baron Kazum"] },
+				{ 23, 20688 }, -- Earthen Guard
+				{ 24, 20515 }, -- Abyssal Scepter
+				{ 25, 20686 }, -- Abyssal Cloth Amice
+				{ 26, 20687 }, -- Abyssal Plate Vambraces
+			},
+		},
+		{ -- AbyssalTemplars
+			name = AL["Abyssal Templars"],
+			[NORMAL_DIFF] = {
+				{ 1, "INV_Box_01", nil, AL["Crimson Templar"] },
+				{ 2,  20657 }, -- Crystal Tipped Stiletto
+				{ 3,  20655 }, -- Abyssal Cloth Handwraps
+				{ 4,  20656 }, -- Abyssal Mail Sabatons
+				{ 5,  20513 }, -- Abyssal Crest
+				{ 7, "INV_Box_01", nil, AL["Azure Templar"] },
+				{ 8,  20654 }, -- Amethyst War Staff
+				{ 9,  20653 }, -- Abyssal Plate Gauntlets
+				{ 10, 20652 }, -- Abyssal Cloth Slippers
+				{ 11, 20513 }, -- Abyssal Crest
+				{ 16, "INV_Box_01", nil, AL["Hoary Templar"] },
+				{ 17, 20660 }, -- Stonecutting Glaive
+				{ 18, 20659 }, -- Abyssal Mail Handguards
+				{ 19, 20658 }, -- Abyssal Leather Boots
+				{ 20, 20513 }, -- Abyssal Crest
+				{ 22, "INV_Box_01", nil, AL["Earthen Templar"] },
+				{ 23, 20663 }, -- Deep Strike Bow
+				{ 24, 20661 }, -- Abyssal Leather Gloves
+				{ 25, 20662 }, -- Abyssal Plate Greaves
+				{ 26, 20513 }, -- Abyssal Crest
+			},
+		},
+	},
+}
+
+data["ScourgeInvasion"] = {
+	name = AL["Scourge Invasion"],
+	ContentType = WORLD_EVENT_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = NORMAL_ITTYPE,
+	ContentPhase = 6,
+	items = {
+		{ -- ScourgeInvasionEvent1
+			name = AL["Scourge Invasion"],
+			[NORMAL_DIFF] = {
+				{ 1,  23123 }, -- Blessed Wizard Oil
+				{ 2,  23122 }, -- Consecrated Sharpening Stone
+				{ 3,  22999 }, -- Tabard of the Argent Dawn
+				{ 4,  22484 }, -- Necrotic Rune
+				{ 7,  23085 }, -- Robe of Undead Cleansing
+				{ 8,  23091 }, -- Bracers of Undead Cleansing
+				{ 9,  23084 }, -- Gloves of Undead Cleansing
+				{ 12, 23089 }, -- Tunic of Undead Slaying
+				{ 13, 23093 }, -- Wristwraps of Undead Slaying
+				{ 14, 23081 }, -- Handwraps of Undead Slaying
+				{ 16, 23194 }, -- Lesser Mark of the Dawn
+				{ 17, 23195 }, -- Mark of the Dawn
+				{ 18, 23196 }, -- Greater Mark of the Dawn
+				{ 22, 23088 }, -- Chestguard of Undead Slaying
+				{ 23, 23092 }, -- Wristguards of Undead Slaying
+				{ 24, 23082 }, -- Handguards of Undead Slaying
+				{ 27, 23087 }, -- Breastplate of Undead Slaying
+				{ 28, 23090 }, -- Bracers of Undead Slaying
+				{ 29, 23078 }, -- Gauntlets of Undead Slaying
+			},
+		},
+		{
+			name = C_Map_GetAreaInfo(2017).." - "..AL["Balzaphon"],
+			[NORMAL_DIFF] = {
+				{ 1,  23126 }, -- Waistband of Balzaphon
+				{ 2,  23125 }, -- Chains of the Lich
+				{ 3,  23124 }, -- Staff of Balzaphon
+			}
+		},
+		{
+			name = C_Map_GetAreaInfo(2057).." - "..AL["Lord Blackwood"],
+			[NORMAL_DIFF] = {
+				{ 1,  23132 }, -- Lord Blackwood's Blade
+				{ 2,  23156 }, -- Blackwood's Thigh
+				{ 3,  23139 }, -- Lord Blackwood's Buckler
+			}
+		},
+		{
+			name = C_Map_GetAreaInfo(2557).." - "..AL["Revanchion"],
+			[NORMAL_DIFF] = {
+				{ 1, 23127 }, -- Cloak of Revanchion
+				{ 2, 23129 }, -- Bracers of Mending
+				{ 3, 23128 }, -- The Shadow's Grasp
+			}
+		},
+		{
+			name = AL["Scarlet Monastery - Graveyard"].." - "..AL["Scorn"],
+			[NORMAL_DIFF] = {
+				{ 1, 23169 }, -- Scorn's Icy Choker
+				{ 2, 23170 }, -- The Frozen Clutch
+				{ 3, 23168 }, -- Scorn's Focal Dagger
+			}
+		},
+		{
+			name = C_Map_GetAreaInfo(209).." - "..AL["Sever"],
+			[NORMAL_DIFF] = {
+				{ 1, 23173 }, -- Abomination Skin Leggings
+				{ 2, 23171 }, -- The Axe of Severing
+			}
+		},
+		{
+			name = C_Map_GetAreaInfo(722).." - "..AL["Lady Falther'ess"],
+			[NORMAL_DIFF] = {
+				{ 1, 23178 }, -- Mantle of Lady Falther'ess
+				{ 2, 23177 }, -- Lady Falther'ess' Finger
+			}
 		},
 	},
 }

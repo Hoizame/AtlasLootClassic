@@ -170,7 +170,8 @@ local TOKEN = {
 	[19017] = 18564, -- Essence of the Firelord
 	[17204] = { 17182 }, -- Eye of Sulfuras
 	[18703] = { 18714, 18713, 18715 }, -- Ancient Petrified Leaf
-	[18646] = { 18608, 18609 }, -- The Eye of Divinity
+	[18646] = { 18665, 18646, 0, 18608, 18609 }, -- The Eye of Divinity
+	[18665] = 18646, -- The Eye of Shadow
 
 	-- Quests
 	[10441] = { 10657, 10658, type = 3 }, -- Glowing Shard
@@ -210,6 +211,7 @@ local TOKEN = {
 
 	-- Reagent for...
 	[12811] = { "prof20034", "prof22750", "prof25079", 0, "prof18456", "prof16990", "prof23632", "prof23633", type = 5 }, -- Righteous Orb
+	[20381] = { "prof24703", type = 5 }, -- Dreamscale Breastplate
 }
 for k, v in pairs(TOKEN) do
 	if TOKEN[v] then
