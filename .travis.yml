@@ -18,6 +18,10 @@ before_script:
 script: 
   - if [[ "$TRAVIS_BRANCH" == "master" && "$TRAVIS_PULL_REQUEST" == "false" ]]; then ./cf_translations.sh; fi
   - curl -s https://raw.githubusercontent.com/BigWigsMods/packager/master/release.sh | bash
+ 
+branches:
+  only:
+  - /^v\d+\.\d+\.\d+(-\S*)?$/
 
 notifications:
   email:
