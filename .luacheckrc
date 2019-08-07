@@ -2,7 +2,16 @@ std = "lua51"
 max_line_length = false
 exclude_files = {
 	".luacheckrc",
-	"AL_locales.lua"
+	"AL_locales.lua",
+	"Global.lua",
+	"Collections.lua",
+	"Crafting.lua",
+	"DungeonsAndRaids.lua",
+	"PvP.lua",
+	"Options.lua",
+	"AtlasLootClassic/Libs/",
+	"AtlasLootClassic_Options/Libs/",
+	"babelfish.lua",
 }
 ignore = {
 	"11./SLASH_.*", -- Setting an undefined (Slash handler) global variable
