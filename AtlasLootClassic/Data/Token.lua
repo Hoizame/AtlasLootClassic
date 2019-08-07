@@ -212,6 +212,7 @@ local TOKEN = {
 	-- Reagent for...
 	[12811] = { "prof20034", "prof22750", "prof25079", 0, "prof18456", "prof16990", "prof23632", "prof23633", type = 5 }, -- Righteous Orb
 	[20381] = { "prof24703", type = 5 }, -- Dreamscale Breastplate
+	[12753] = { "prof22928", "prof27830", type = 5 }, -- Dreamscale Breastplate
 }
 for k, v in pairs(TOKEN) do
 	if TOKEN[v] then

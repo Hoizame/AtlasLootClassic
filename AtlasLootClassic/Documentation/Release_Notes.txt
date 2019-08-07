@@ -5,7 +5,7 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 
 Patch Notes
 
-v1.1.0-beta (Aug. XX, 2019)
+v1.1.0-beta (Aug. 07, 2019)
 ========================
 - Favourites system added
 - SetItems are now marked and clickable to show the whole set
