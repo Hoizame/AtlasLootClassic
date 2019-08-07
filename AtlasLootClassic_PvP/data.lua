@@ -95,6 +95,7 @@ data["AlteracValley"] = {
 	AtlasMapID = "AlteracValley",
 	ContentType = PVP_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
+	ContentPhase = 3,
 	items = {
 		{ -- AVRepExalted
 			name = _G["FACTION_STANDING_LABEL8"],
@@ -211,224 +212,12 @@ data["AlteracValley"] = {
 	},
 }
 
-data["ArathiBasin"] = {
-	MapID = 3358,
-	AtlasMapID = "ArathiBasin",
-	ContentType = PVP_CONTENT,
-	LoadDifficulty = LOAD_DIFF,
-	items = {
-		{ -- ABRepRevered
-			name = _G["FACTION_STANDING_LABEL8"],
-			[ALLIANCE_DIFF] = {
-				{ 1, "f509rep8" },
-				{ 2,  20061 }, -- Highlander's Epaulets
-				{ 3,  20060 }, -- Highlander's Lizardhide Shoulders
-				{ 4,  20059 }, -- Highlander's Leather Shoulders
-				{ 5,  20055 }, -- Highlander's Chain Pauldrons
-				{ 6,  20058 }, -- Highlander's Lamellar Spaulders
-				{ 7,  20057 }, -- Highlander's Plate Spaulders
-				{ 8, 20073 }, -- Cloak of the Honor Guard
-				{ 9, 20070 }, -- Sageclaw
-				{ 10, 20069 }, -- Ironbark Staff
-				{ 17, 20132 }, -- Arathor Battle Tabard
-			},
-			[HORDE_DIFF] = {
-				{ 1, "f510rep8" },
-				{ 2, 20176 }, -- Defiler's Epaulets
-				{ 3, 20175 }, -- Defiler's Lizardhide Shoulders
-				{ 4, 20194 }, -- Defiler's Leather Shoulders
-				{ 5, 20158 }, -- Defiler's Chain Pauldrons
-				{ 6, 20203 }, -- Defiler's Mail Pauldrons
-				{ 7, 20212 }, -- Defiler's Plate Spaulders
-				{ 8, 20068 }, -- Deathguard's Cloak
-				{ 9, 20214 }, -- Mindfang
-				{ 10, 20220 }, -- Ironbark Staff
-				{ 17, 20131 }, -- Battle Tabard of the Defilers
-			},
-		},
-		{ -- ABRepRevered
-			name = _G["FACTION_STANDING_LABEL7"],
-			[ALLIANCE_DIFF] = {
-				{ 1, "f509rep7" },
-				{ 2, "INV_Box_01", nil, "20 - 29", nil }, -- ABRepRevered2029
-				{ 3,  20096 }, -- Highlander's Cloth Boots
-				{ 4,  20114 }, -- Highlander's Leather Boots
-				{ 5,  20102 }, -- Highlander's Lizardhide Boots
-				{ 6,  20093 }, -- Highlander's Chain Greaves
-				{ 7,  20111 }, -- Highlander's Lamellar Greaves
-				{ 8,  20129 }, -- Highlander's Plate Greaves
-				{ 10, "INV_Box_01", nil, "30 - 39", nil }, -- ABRepRevered3039
-				{ 11,  20095 }, -- Highlander's Cloth Boots
-				{ 12,  20113 }, -- Highlander's Leather Boots
-				{ 13,  20101 }, -- Highlander's Lizardhide Boots
-				{ 17, "INV_Box_01", nil, "40 - 49", nil }, -- ABRepRevered4049
-				{ 18,  20094 }, -- Highlander's Cloth Boots
-				{ 19,  20112 }, -- Highlander's Leather Boots
-				{ 20,  20100 }, -- Highlander's Lizardhide Boots
-				{ 21,  20091 }, -- Highlander's Chain Greaves
-				{ 22,  20109 }, -- Highlander's Lamellar Greaves
-				{ 23,  20127 }, -- Highlander's Plate Greaves
-				{ 24, 20092 }, -- Highlander's Chain Greaves
-				{ 25, 20110 }, -- Highlander's Lamellar Greaves
-				{ 26, 20128 }, -- Highlander's Plate Greaves
-				{ 101, "f509rep7" },
-				{ 102, "INV_Box_01", nil, "50 - 59", nil }, -- ABRepRevered5059
-				{ 103,  20054 }, -- Highlander's Cloth Boots
-				{ 104,  20052 }, -- Highlander's Leather Boots
-				{ 105,  20053 }, -- Highlander's Lizardhide Boots
-				{ 106,  20050 }, -- Highlander's Chain Greaves
-				{ 107,  20049 }, -- Highlander's Lamellar Greaves
-				{ 108,  20048 }, -- Highlander's Plate Greaves
-			},
-			[HORDE_DIFF] = {
-				{ 1, "f510rep7" },
-				{ 2, "INV_Box_01", nil, "20 - 29", nil }, -- ABRepRevered2029
-				{ 3, 20162 }, -- Defiler's Cloth Boots
-				{ 4, 20188 }, -- Defiler's Leather Boots
-				{ 5, 20169 }, -- Defiler's Lizardhide Boots
-				{ 6, 20157 }, -- Defiler's Chain Greaves
-				{ 7, 20201 }, -- Defiler's Mail Greaves
-				{ 8, 20210 }, -- Defiler's Plate Greaves
-				{ 10, "INV_Box_01", nil, "30 - 39", nil }, -- ABRepRevered3039
-				{ 11, 20161 }, -- Defiler's Cloth Boots
-				{ 12, 20187 }, -- Defiler's Leather Boots
-				{ 13, 20168 }, -- Defiler's Lizardhide Boots
-				{ 17, "INV_Box_01", nil, "40 - 49", nil }, -- ABRepRevered4049
-				{ 18, 20160 }, -- Defiler's Cloth Boots
-				{ 19, 20189 }, -- Defiler's Leather Boots
-				{ 20, 20170 }, -- Defiler's Lizardhide Boots
-				{ 21, 20155 }, -- Defiler's Chain Greaves
-				{ 22, 20202 }, -- Defiler's Mail Greaves
-				{ 23, 20211 }, -- Defiler's Plate Greaves
-				{ 24, 20156 }, -- Defiler's Chain Greaves
-				{ 25, 20200 }, -- Defiler's Mail Greaves
-				{ 26, 20209 }, -- Defiler's Plate Greaves
-				{ 101, "f510rep7" },
-				{ 102, "INV_Box_01", nil, "50 - 59", nil }, -- ABRepRevered5059
-				{ 103, 20159 }, -- Defiler's Cloth Boots
-				{ 104, 20186 }, -- Defiler's Leather Boots
-				{ 105, 20167 }, -- Defiler's Lizardhide Boots
-				{ 106, 20154 }, -- Defiler's Chain Greaves
-				{ 107, 20199 }, -- Defiler's Mail Greaves
-				{ 108, 20208 }, -- Defiler's Plate Greaves
-			},
-		},
-		{ -- ABRepHonored
-			name = _G["FACTION_STANDING_LABEL6"],
-			[ALLIANCE_DIFF] = {
-				{ 1, "f509rep6" },
-				{ 2, "INV_Box_01", nil, "20 - 29", nil }, -- ABRepHonored2029
-				{ 3,  20099 }, -- Highlander's Cloth Girdle
-				{ 4,  20117 }, -- Highlander's Leather Girdle
-				{ 5,  20105 }, -- Highlander's Lizardhide Girdle
-				{ 6,  20090 }, -- Highlander's Chain Girdle
-				{ 7,  20108 }, -- Highlander's Lamellar Girdle
-				{ 8,  20126 }, -- Highlander's Plate Girdle
-				{ 10, "INV_Box_01", nil, "30 - 39", nil }, -- ABRepHonored3039
-				{ 11,  20098 }, -- Highlander's Cloth Girdle
-				{ 12,  20116 }, -- Highlander's Leather Girdle
-				{ 13,  20104 }, -- Highlander's Lizardhide Girdle
-				{ 17, "INV_Box_01", nil, "40 - 49", nil }, -- ABRepHonored4049
-				{ 18,  20097 }, -- Highlander's Cloth Girdle
-				{ 19,  20115 }, -- Highlander's Leather Girdle
-				{ 20,  20103 }, -- Highlander's Lizardhide Girdle
-				{ 21,  20088 }, -- Highlander's Chain Girdle
-				{ 22,  20106 }, -- Highlander's Lamellar Girdle
-				{ 23,  20124 }, -- Highlander's Plate Girdle
-				{ 24, 20089 }, -- Highlander's Chain Girdle
-				{ 25, 20107 }, -- Highlander's Lamellar Girdle
-				{ 26, 20125 }, -- Highlander's Plate Girdle
-				{ 101, "f509rep6" },
-				{ 102, "INV_Box_01", nil, "50 - 59", nil }, -- ABRepHonored5059
-				{ 103,  20047 }, -- Highlander's Cloth Girdle
-				{ 104,  20045 }, -- Highlander's Leather Girdle
-				{ 105,  20046 }, -- Highlander's Lizardhide Girdle
-				{ 106,  20043 }, -- Highlander's Chain Girdle
-				{ 107,  20042 }, -- Highlander's Lamellar Girdle
-				{ 108,  20041 }, -- Highlander's Plate Girdle
-			},
-			[HORDE_DIFF] = {
-				{ 1, "f510rep6" },
-				{ 2, "INV_Box_01", nil, "20 - 29", nil }, -- ABRepHonored2029
-				{ 3, 20164 }, -- Defiler's Cloth Girdle
-				{ 4, 20191 }, -- Defiler's Leather Girdle
-				{ 5, 20172 }, -- Defiler's Lizardhide Girdle
-				{ 6, 20152 }, -- Defiler's Chain Girdle
-				{ 7, 20197 }, -- Defiler's Mail Girdle
-				{ 8, 20207 }, -- Defiler's Plate Girdle
-				{ 10, "INV_Box_01", nil, "30 - 39", nil }, -- ABRepHonored3039
-				{ 11, 20166 }, -- Defiler's Cloth Girdle
-				{ 12, 20192 }, -- Defiler's Leather Girdle
-				{ 13, 20173 }, -- Defiler's Lizardhide Girdle
-				{ 17, "INV_Box_01", nil, "40 - 49", nil }, -- ABRepHonored4049
-				{ 18, 20165 }, -- Defiler's Cloth Girdle
-				{ 19, 20193 }, -- Defiler's Leather Girdle
-				{ 20, 20174 }, -- Defiler's Lizardhide Girdle
-				{ 21, 20151 }, -- Defiler's Chain Girdle
-				{ 22, 20196 }, -- Defiler's Mail Girdle
-				{ 23, 20205 }, -- Defiler's Plate Girdle
-				{ 24, 20153 }, -- Defiler's Chain Girdle
-				{ 25, 20198 }, -- Defiler's Mail Girdle
-				{ 26, 20206 }, -- Defiler's Plate Girdle
-				{ 101, "f510rep6" },
-				{ 102, "INV_Box_01", nil, "50 - 59", nil }, -- ABRepHonored5059
-				{ 103, 20163 }, -- Defiler's Cloth Girdle
-				{ 104, 20190 }, -- Defiler's Leather Girdle
-				{ 105, 20171 }, -- Defiler's Lizardhide Girdle
-				{ 106, 20150 }, -- Defiler's Chain Girdle
-				{ 107, 20195 }, -- Defiler's Mail Girdle
-				{ 108, 20204 }, -- Defiler's Plate Girdle
-			},
-		},
-		{ -- ABRepFriendly
-			name = _G["FACTION_STANDING_LABEL5"],
-			[ALLIANCE_DIFF] = {
-				{ 1, "f509rep5" },
-				{ 2, "INV_Box_01", nil, "20 - 29", nil }, -- ABRepFriendly2029
-				{ 3,  21119 }, -- Talisman of Arathor
-				{ 4,  20226 }, -- Highlander's Field Ration
-				{ 5,  20244 }, -- Highlander's Silk Bandage
-				{ 7, "INV_Box_01", nil, "30 - 39", nil }, -- ABRepFriendly3039
-				{ 8,  21118 }, -- Talisman of Arathor
-				{ 9,  20227 }, -- Highlander's Iron Ration
-				{ 10,  20237 }, -- Highlander's Mageweave Bandage
-				{ 11,  17349 }, -- Superior Healing Draught
-				{ 12,  17352 }, -- Superior Mana Draught
-				{ 17, "INV_Box_01", nil, "40 - 49", nil }, -- ABRepFriendly4049
-				{ 18,  21117 }, -- Talisman of Arathor
-				{ 19,  20225 }, -- Highlander's Enriched Ration
-				{ 20,  20243 }, -- Highlander's Runecloth Bandage
-				{ 22, "INV_Box_01", nil, "50 - 59", nil }, -- ABRepFriendly5059
-				{ 23,  20071 }, -- Talisman of Arathor
-			},
-			[HORDE_DIFF] = {
-				{ 1, "f510rep5" },
-				{ 2, "INV_Box_01", nil, "20 - 29", nil }, -- ABRepFriendly2029
-				{ 3, 21120 }, -- Defiler's Talisman
-				{ 4, 20223 }, -- Defiler's Field Ration
-				{ 5, 20235 }, -- Defiler's Silk Bandage
-				{ 7, "INV_Box_01", nil, "30 - 39", nil }, -- ABRepFriendly3039
-				{ 8, 21116 }, -- Defiler's Talisman
-				{ 9, 20224 }, -- Defiler's Iron Ration
-				{ 10, 20232 }, -- Defiler's Mageweave Bandage
-				{ 11, 17349 }, -- Superior Healing Draught
-				{ 12, 17352 }, -- Superior Mana Draught
-				{ 17, "INV_Box_01", nil, "40 - 49", nil }, -- ABRepFriendly4049
-				{ 18, 21115 }, -- Defiler's Talisman
-				{ 19, 20222 }, -- Defiler's Enriched Ration
-				{ 20, 20234 }, -- Defiler's Runecloth Bandage
-				{ 22, "INV_Box_01", nil, "50 - 59", nil }, -- ABRepFriendly5059
-				{ 23, 20072 }, -- Defiler's Talisman
-			},
-		},
-	},
-}
-
 data["WarsongGulch"] = {
 	MapID = 3277,
 	AtlasMapID = "WarsongGulch",
 	ContentType = PVP_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
+	ContentPhase = 3,
 	items = {
 		{ -- WSGRepExalted
 			name = _G["FACTION_STANDING_LABEL8"],
@@ -646,6 +435,220 @@ data["WarsongGulch"] = {
 				{ 19, 21565 }, -- Rune of Perfection
 				{ 20, 19060 }, -- Warsong Gulch Enriched Ration
 				{ 21, 19066 }, -- Warsong Gulch Runecloth Bandage
+			},
+		},
+	},
+}
+
+data["ArathiBasin"] = {
+	MapID = 3358,
+	AtlasMapID = "ArathiBasin",
+	ContentType = PVP_CONTENT,
+	LoadDifficulty = LOAD_DIFF,
+	ContentPhase = 4,
+	items = {
+		{ -- ABRepRevered
+			name = _G["FACTION_STANDING_LABEL8"],
+			[ALLIANCE_DIFF] = {
+				{ 1, "f509rep8" },
+				{ 2,  20061 }, -- Highlander's Epaulets
+				{ 3,  20060 }, -- Highlander's Lizardhide Shoulders
+				{ 4,  20059 }, -- Highlander's Leather Shoulders
+				{ 5,  20055 }, -- Highlander's Chain Pauldrons
+				{ 6,  20058 }, -- Highlander's Lamellar Spaulders
+				{ 7,  20057 }, -- Highlander's Plate Spaulders
+				{ 8, 20073 }, -- Cloak of the Honor Guard
+				{ 9, 20070 }, -- Sageclaw
+				{ 10, 20069 }, -- Ironbark Staff
+				{ 17, 20132 }, -- Arathor Battle Tabard
+			},
+			[HORDE_DIFF] = {
+				{ 1, "f510rep8" },
+				{ 2, 20176 }, -- Defiler's Epaulets
+				{ 3, 20175 }, -- Defiler's Lizardhide Shoulders
+				{ 4, 20194 }, -- Defiler's Leather Shoulders
+				{ 5, 20158 }, -- Defiler's Chain Pauldrons
+				{ 6, 20203 }, -- Defiler's Mail Pauldrons
+				{ 7, 20212 }, -- Defiler's Plate Spaulders
+				{ 8, 20068 }, -- Deathguard's Cloak
+				{ 9, 20214 }, -- Mindfang
+				{ 10, 20220 }, -- Ironbark Staff
+				{ 17, 20131 }, -- Battle Tabard of the Defilers
+			},
+		},
+		{ -- ABRepRevered
+			name = _G["FACTION_STANDING_LABEL7"],
+			[ALLIANCE_DIFF] = {
+				{ 1, "f509rep7" },
+				{ 2, "INV_Box_01", nil, "20 - 29", nil }, -- ABRepRevered2029
+				{ 3,  20096 }, -- Highlander's Cloth Boots
+				{ 4,  20114 }, -- Highlander's Leather Boots
+				{ 5,  20102 }, -- Highlander's Lizardhide Boots
+				{ 6,  20093 }, -- Highlander's Chain Greaves
+				{ 7,  20111 }, -- Highlander's Lamellar Greaves
+				{ 8,  20129 }, -- Highlander's Plate Greaves
+				{ 10, "INV_Box_01", nil, "30 - 39", nil }, -- ABRepRevered3039
+				{ 11,  20095 }, -- Highlander's Cloth Boots
+				{ 12,  20113 }, -- Highlander's Leather Boots
+				{ 13,  20101 }, -- Highlander's Lizardhide Boots
+				{ 17, "INV_Box_01", nil, "40 - 49", nil }, -- ABRepRevered4049
+				{ 18,  20094 }, -- Highlander's Cloth Boots
+				{ 19,  20112 }, -- Highlander's Leather Boots
+				{ 20,  20100 }, -- Highlander's Lizardhide Boots
+				{ 21,  20091 }, -- Highlander's Chain Greaves
+				{ 22,  20109 }, -- Highlander's Lamellar Greaves
+				{ 23,  20127 }, -- Highlander's Plate Greaves
+				{ 24, 20092 }, -- Highlander's Chain Greaves
+				{ 25, 20110 }, -- Highlander's Lamellar Greaves
+				{ 26, 20128 }, -- Highlander's Plate Greaves
+				{ 101, "f509rep7" },
+				{ 102, "INV_Box_01", nil, "50 - 59", nil }, -- ABRepRevered5059
+				{ 103,  20054 }, -- Highlander's Cloth Boots
+				{ 104,  20052 }, -- Highlander's Leather Boots
+				{ 105,  20053 }, -- Highlander's Lizardhide Boots
+				{ 106,  20050 }, -- Highlander's Chain Greaves
+				{ 107,  20049 }, -- Highlander's Lamellar Greaves
+				{ 108,  20048 }, -- Highlander's Plate Greaves
+			},
+			[HORDE_DIFF] = {
+				{ 1, "f510rep7" },
+				{ 2, "INV_Box_01", nil, "20 - 29", nil }, -- ABRepRevered2029
+				{ 3, 20162 }, -- Defiler's Cloth Boots
+				{ 4, 20188 }, -- Defiler's Leather Boots
+				{ 5, 20169 }, -- Defiler's Lizardhide Boots
+				{ 6, 20157 }, -- Defiler's Chain Greaves
+				{ 7, 20201 }, -- Defiler's Mail Greaves
+				{ 8, 20210 }, -- Defiler's Plate Greaves
+				{ 10, "INV_Box_01", nil, "30 - 39", nil }, -- ABRepRevered3039
+				{ 11, 20161 }, -- Defiler's Cloth Boots
+				{ 12, 20187 }, -- Defiler's Leather Boots
+				{ 13, 20168 }, -- Defiler's Lizardhide Boots
+				{ 17, "INV_Box_01", nil, "40 - 49", nil }, -- ABRepRevered4049
+				{ 18, 20160 }, -- Defiler's Cloth Boots
+				{ 19, 20189 }, -- Defiler's Leather Boots
+				{ 20, 20170 }, -- Defiler's Lizardhide Boots
+				{ 21, 20155 }, -- Defiler's Chain Greaves
+				{ 22, 20202 }, -- Defiler's Mail Greaves
+				{ 23, 20211 }, -- Defiler's Plate Greaves
+				{ 24, 20156 }, -- Defiler's Chain Greaves
+				{ 25, 20200 }, -- Defiler's Mail Greaves
+				{ 26, 20209 }, -- Defiler's Plate Greaves
+				{ 101, "f510rep7" },
+				{ 102, "INV_Box_01", nil, "50 - 59", nil }, -- ABRepRevered5059
+				{ 103, 20159 }, -- Defiler's Cloth Boots
+				{ 104, 20186 }, -- Defiler's Leather Boots
+				{ 105, 20167 }, -- Defiler's Lizardhide Boots
+				{ 106, 20154 }, -- Defiler's Chain Greaves
+				{ 107, 20199 }, -- Defiler's Mail Greaves
+				{ 108, 20208 }, -- Defiler's Plate Greaves
+			},
+		},
+		{ -- ABRepHonored
+			name = _G["FACTION_STANDING_LABEL6"],
+			[ALLIANCE_DIFF] = {
+				{ 1, "f509rep6" },
+				{ 2, "INV_Box_01", nil, "20 - 29", nil }, -- ABRepHonored2029
+				{ 3,  20099 }, -- Highlander's Cloth Girdle
+				{ 4,  20117 }, -- Highlander's Leather Girdle
+				{ 5,  20105 }, -- Highlander's Lizardhide Girdle
+				{ 6,  20090 }, -- Highlander's Chain Girdle
+				{ 7,  20108 }, -- Highlander's Lamellar Girdle
+				{ 8,  20126 }, -- Highlander's Plate Girdle
+				{ 10, "INV_Box_01", nil, "30 - 39", nil }, -- ABRepHonored3039
+				{ 11,  20098 }, -- Highlander's Cloth Girdle
+				{ 12,  20116 }, -- Highlander's Leather Girdle
+				{ 13,  20104 }, -- Highlander's Lizardhide Girdle
+				{ 17, "INV_Box_01", nil, "40 - 49", nil }, -- ABRepHonored4049
+				{ 18,  20097 }, -- Highlander's Cloth Girdle
+				{ 19,  20115 }, -- Highlander's Leather Girdle
+				{ 20,  20103 }, -- Highlander's Lizardhide Girdle
+				{ 21,  20088 }, -- Highlander's Chain Girdle
+				{ 22,  20106 }, -- Highlander's Lamellar Girdle
+				{ 23,  20124 }, -- Highlander's Plate Girdle
+				{ 24, 20089 }, -- Highlander's Chain Girdle
+				{ 25, 20107 }, -- Highlander's Lamellar Girdle
+				{ 26, 20125 }, -- Highlander's Plate Girdle
+				{ 101, "f509rep6" },
+				{ 102, "INV_Box_01", nil, "50 - 59", nil }, -- ABRepHonored5059
+				{ 103,  20047 }, -- Highlander's Cloth Girdle
+				{ 104,  20045 }, -- Highlander's Leather Girdle
+				{ 105,  20046 }, -- Highlander's Lizardhide Girdle
+				{ 106,  20043 }, -- Highlander's Chain Girdle
+				{ 107,  20042 }, -- Highlander's Lamellar Girdle
+				{ 108,  20041 }, -- Highlander's Plate Girdle
+			},
+			[HORDE_DIFF] = {
+				{ 1, "f510rep6" },
+				{ 2, "INV_Box_01", nil, "20 - 29", nil }, -- ABRepHonored2029
+				{ 3, 20164 }, -- Defiler's Cloth Girdle
+				{ 4, 20191 }, -- Defiler's Leather Girdle
+				{ 5, 20172 }, -- Defiler's Lizardhide Girdle
+				{ 6, 20152 }, -- Defiler's Chain Girdle
+				{ 7, 20197 }, -- Defiler's Mail Girdle
+				{ 8, 20207 }, -- Defiler's Plate Girdle
+				{ 10, "INV_Box_01", nil, "30 - 39", nil }, -- ABRepHonored3039
+				{ 11, 20166 }, -- Defiler's Cloth Girdle
+				{ 12, 20192 }, -- Defiler's Leather Girdle
+				{ 13, 20173 }, -- Defiler's Lizardhide Girdle
+				{ 17, "INV_Box_01", nil, "40 - 49", nil }, -- ABRepHonored4049
+				{ 18, 20165 }, -- Defiler's Cloth Girdle
+				{ 19, 20193 }, -- Defiler's Leather Girdle
+				{ 20, 20174 }, -- Defiler's Lizardhide Girdle
+				{ 21, 20151 }, -- Defiler's Chain Girdle
+				{ 22, 20196 }, -- Defiler's Mail Girdle
+				{ 23, 20205 }, -- Defiler's Plate Girdle
+				{ 24, 20153 }, -- Defiler's Chain Girdle
+				{ 25, 20198 }, -- Defiler's Mail Girdle
+				{ 26, 20206 }, -- Defiler's Plate Girdle
+				{ 101, "f510rep6" },
+				{ 102, "INV_Box_01", nil, "50 - 59", nil }, -- ABRepHonored5059
+				{ 103, 20163 }, -- Defiler's Cloth Girdle
+				{ 104, 20190 }, -- Defiler's Leather Girdle
+				{ 105, 20171 }, -- Defiler's Lizardhide Girdle
+				{ 106, 20150 }, -- Defiler's Chain Girdle
+				{ 107, 20195 }, -- Defiler's Mail Girdle
+				{ 108, 20204 }, -- Defiler's Plate Girdle
+			},
+		},
+		{ -- ABRepFriendly
+			name = _G["FACTION_STANDING_LABEL5"],
+			[ALLIANCE_DIFF] = {
+				{ 1, "f509rep5" },
+				{ 2, "INV_Box_01", nil, "20 - 29", nil }, -- ABRepFriendly2029
+				{ 3,  21119 }, -- Talisman of Arathor
+				{ 4,  20226 }, -- Highlander's Field Ration
+				{ 5,  20244 }, -- Highlander's Silk Bandage
+				{ 7, "INV_Box_01", nil, "30 - 39", nil }, -- ABRepFriendly3039
+				{ 8,  21118 }, -- Talisman of Arathor
+				{ 9,  20227 }, -- Highlander's Iron Ration
+				{ 10,  20237 }, -- Highlander's Mageweave Bandage
+				{ 11,  17349 }, -- Superior Healing Draught
+				{ 12,  17352 }, -- Superior Mana Draught
+				{ 17, "INV_Box_01", nil, "40 - 49", nil }, -- ABRepFriendly4049
+				{ 18,  21117 }, -- Talisman of Arathor
+				{ 19,  20225 }, -- Highlander's Enriched Ration
+				{ 20,  20243 }, -- Highlander's Runecloth Bandage
+				{ 22, "INV_Box_01", nil, "50 - 59", nil }, -- ABRepFriendly5059
+				{ 23,  20071 }, -- Talisman of Arathor
+			},
+			[HORDE_DIFF] = {
+				{ 1, "f510rep5" },
+				{ 2, "INV_Box_01", nil, "20 - 29", nil }, -- ABRepFriendly2029
+				{ 3, 21120 }, -- Defiler's Talisman
+				{ 4, 20223 }, -- Defiler's Field Ration
+				{ 5, 20235 }, -- Defiler's Silk Bandage
+				{ 7, "INV_Box_01", nil, "30 - 39", nil }, -- ABRepFriendly3039
+				{ 8, 21116 }, -- Defiler's Talisman
+				{ 9, 20224 }, -- Defiler's Iron Ration
+				{ 10, 20232 }, -- Defiler's Mageweave Bandage
+				{ 11, 17349 }, -- Superior Healing Draught
+				{ 12, 17352 }, -- Superior Mana Draught
+				{ 17, "INV_Box_01", nil, "40 - 49", nil }, -- ABRepFriendly4049
+				{ 18, 21115 }, -- Defiler's Talisman
+				{ 19, 20222 }, -- Defiler's Enriched Ration
+				{ 20, 20234 }, -- Defiler's Runecloth Bandage
+				{ 22, "INV_Box_01", nil, "50 - 59", nil }, -- ABRepFriendly5059
+				{ 23, 20072 }, -- Defiler's Talisman
 			},
 		},
 	},
