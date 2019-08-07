@@ -1445,6 +1445,8 @@ function Profession.GetSpellIDPhase(spellID)
         local content = PROFESSION[spellID][6]
         local recipe = Recipe.GetRecipeForSpell(spellID)
         local phase = recipe and ContentPhase:GetForItemID(recipe) or 0
+        local createdItemPhase = ContentPhase:GetForItemID(PROFESSION[spellID][1])
+        phase = ( createdItemPhase and createdItemPhase > phase ) and createdItemPhase or phase
         for i = 1, #content do
             local c = ContentPhase:GetForItemID(content[i])
             phase = ( c and c > phase ) and c or phase

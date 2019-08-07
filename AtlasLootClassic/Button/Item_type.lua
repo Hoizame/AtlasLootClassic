@@ -251,7 +251,8 @@ end
 
 function Item.Refresh(button)
 	if not button.ItemID then return end
-	local itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount, itemEquipLoc, itemTexture = GetItemInfo(button.ItemString or button.ItemID)
+	local itemID = button.ItemID
+	local itemName, itemLink, itemQuality, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount, itemEquipLoc, itemTexture = GetItemInfo(button.ItemString or itemID)
 	if not itemName then
 		Query:Add(button)
 		return false
@@ -281,20 +282,21 @@ function Item.Refresh(button)
 		-- description
 		-- ##################
 		button.extra:SetText(
-			Token.GetTokenDescription(button.ItemID) or
-			Recipe.GetRecipeDescriptionWithRank(button.ItemID) or
-			Profession.GetColorSkillRankItem(button.ItemID) or
-			( Sets:GetItemSetForItemID(button.ItemID) and AL["|cff00ff00Set item:|r "] or "")..GetItemDescInfo(itemEquipLoc, itemType, itemSubType)
+			Token.GetTokenDescription(itemID) or
+			Recipe.GetRecipeDescriptionWithRank(itemID) or
+			Profession.GetColorSkillRankItem(itemID) or
+			( Sets:GetItemSetForItemID(itemID) and AL["|cff00ff00Set item:|r "] or "")..GetItemDescInfo(itemEquipLoc, itemType, itemSubType)
 		)
 	end
-	if Favourites and Favourites:IsFavouriteItemID(button.ItemID) then
-		Favourites:SetFavouriteIcon(button.ItemID, button.favourite)
+	if Favourites and Favourites:IsFavouriteItemID(itemID) then
+		Favourites:SetFavouriteIcon(itemID, button.favourite)
 		button.favourite:Show()
 	else
 		button.favourite:Hide()
 	end
+	--elseif Recipe.IsRecipe(itemID) then
 	if AtlasLoot.db.ContentPhase.enableOnItems then
-		local phaseT = ContentPhase:GetPhaseTextureForItemID(button.ItemID)
+		local phaseT = Recipe.IsRecipe(itemID) and Recipe.GetPhaseTextureForItemID(itemID) or ContentPhase:GetPhaseTextureForItemID(itemID)
 		if phaseT then
 			button.phaseIndicator:SetTexture(phaseT)
 			button.phaseIndicator:Show()
