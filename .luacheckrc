@@ -63,6 +63,7 @@ globals = {
 	"ATLASLOOT_IT_AMOUNT2",
 	"ATLASLOOT_IT_FILTERIGNORE",
 	"AtlasLootTooltip",
+	"ATLASLOOT_WORLD_BOSS_COLOR",
 
 	-- Atlas
 	"Atlas",
