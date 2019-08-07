@@ -12,6 +12,7 @@ local TOKEN_TYPE_TEXT = {
 	[2] = "|cff00ff00"..AL["L-Click"]..":|r "..AL["Show possible items."],
 	[3] = "|cff00ff00"..AL["L-Click"]..":|r "..AL["Show quest rewards."],
 	[4] = "|cff00ff00"..AL["L-Click"]..":|r "..AL["Quest objective."],
+	[5] = "|cff00ff00"..AL["L-Click"]..":|r "..AL["Reagent for..."],
 }
 
 local TOKEN = {
@@ -206,6 +207,9 @@ local TOKEN = {
 
 	-- ZG
 	[19802] = { 19950, 19949, 19948, type = 3 }, -- Heart of Hakkar
+
+	-- Reagent for...
+	[12811] = { "prof20034", "prof22750", "prof25079", 0, "prof18456", "prof16990", "prof23632", "prof23633", type = 5 }, -- Righteous Orb
 }
 for k, v in pairs(TOKEN) do
 	if TOKEN[v] then
