@@ -17,7 +17,6 @@ externals:
     AtlasLootClassic_Options/Libs/AceConfig-3.0: https://repos.wowace.com/wow/ace3/trunk/AceConfig-3.0
     AtlasLootClassic_Options/Libs/AceGUI-3.0: https://repos.wowace.com/wow/ace3/trunk/AceGUI-3.0
     AtlasLootClassic_Options/Libs/AceDBOptions-3.0: https://repos.wowace.com/wow/ace3/trunk/AceDBOptions-3.0
-    AtlasLootClassic_Options/Libs/LibDialog-1.0: https://repos.wowace.com/wow/libdialog-1-0
     AtlasLootClassic_Options/Libs/AceGUI-3.0-SharedMediaWidgets: https://repos.wowace.com/wow/ace-gui-3-0-shared-media-widgets/trunk/AceGUI-3.0-SharedMediaWidgets
     AtlasLootClassic/Libs/LibClassicItemSets-1.0:  
         url: https://github.com/Hoizame/LibClassicItemSets-1.0.git
