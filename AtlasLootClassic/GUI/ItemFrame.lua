@@ -84,7 +84,7 @@ function ItemFrame.UpdateFilter()
 		local searchString = ItemFrame.SearchString
 		for i=1,30 do
 			local button = ItemFrame.frame.ItemButtons[i]
-			local text = button.name:GetText()
+			local text = button.RawName or button.name:GetText()
 			if text and not sfind(slower(text), searchString, 1, true) then
 				button:SetAlpha(FILTER_ALPHA)
 			else

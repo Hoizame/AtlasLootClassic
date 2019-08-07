@@ -232,10 +232,12 @@ function Item.OnClear(button)
 	button.Droprate = nil
 	button.ItemString = nil
 	button.SetData = nil
+	button.RawName = nil
 	button.secButton.ItemID = nil
 	button.secButton.Droprate = nil
 	button.secButton.ItemString = nil
 	button.secButton.SetData = nil
+	button.secButton.RawName = nil
 
 	if button.overlay then
 		button.overlay:SetDesaturated(false)
@@ -257,6 +259,7 @@ function Item.Refresh(button)
 		Query:Add(button)
 		return false
 	end
+	button.RawName = itemName
 
 	button.overlay:Show()
 	button.overlay:SetTexture(WHITE_ICON_FRAME)
@@ -412,7 +415,7 @@ local function EventFrame_OnEvent(frame, event, arg1, arg2)
 					if typFunc then
 						typFunc.Refresh(button)
 						if ItemFrame and ItemFrame.SearchString then
-							local text = button.name:GetText()
+							local text = button.RawName or button.name:GetText()
 							if text and not sfind(slower(text), ItemFrame.SearchString, 1, true) then
 								button:SetAlpha(0.33)
 							end
