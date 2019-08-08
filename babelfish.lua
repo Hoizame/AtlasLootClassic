@@ -417,11 +417,10 @@ local function BuildLocaleList(fileList)
 	return t
 end
 
-local JsonEscape = "\\\\"
 local function GetJson(strg)
 	if not IS_JSON then return strg end
-	strg = gsub(strg, "<", JsonEscape..byte("<"))
-	strg = gsub(strg, ">", JsonEscape..byte(">"))
+	strg = gsub(strg, "<", "\\<")
+	strg = gsub(strg, ">", "\\>")
 	return strg
 end
 
