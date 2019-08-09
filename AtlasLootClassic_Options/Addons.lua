@@ -78,7 +78,7 @@ local function CreateFavouriteOptions()
         name = AL["Favourites"],
         order = count,
         get = function(info) return FavAddon.db[info[#info]] end,
-        set = function(info, value) FavAddon.db[info[#info]] = value end,
+        set = function(info, value) FavAddon.db[info[#info]] = value Addons:UpdateStatus("Favourites") end,
         args = {
             enabled = {
                 order = 1,
