@@ -21,13 +21,16 @@ AtlasLoot.ClickHandler:Add(
 	{
 		ChatLink = { "LeftButton", "Shift" },
 		ShowExtraItems = { "LeftButton", "None" },
+		DressUp = { "LeftButton", "Ctrl" },
 		types = {
 			ChatLink = true,
 			ShowExtraItems = true,
+			DressUp = true,
 		},
 	},
 	{
 		{ "ChatLink", 	AL["Chat Link"], 	AL["Add profession link into chat"] },
+		{ "DressUp", 		AL["Dress up"], 			AL["Shows the item in the Dressing room"] },
 		{ "ShowExtraItems", AL["Show extra items"], 	AL["Shows extra items (tokens,mats)"] },
 	}
 )
@@ -97,6 +100,13 @@ function Prof.OnMouseAction(button, mouseButton)
 		if button.ItemID then
 			local itemInfo, itemLink = GetItemInfo(button.ItemID)
 			AtlasLoot.Button:AddChatLink(itemLink)
+		end
+	elseif mouseButton == "DressUp" then
+		if button.ItemID then
+			local itemInfo, itemLink = GetItemInfo(button.ItemID)
+			if itemLink then
+				DressUpItemLink(itemLink)
+			end
 		end
 	elseif mouseButton == "ShowExtraItems" then
 		if Profession.IsProfessionSpell(button.SpellID) then
