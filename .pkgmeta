@@ -27,6 +27,7 @@ ignore:
  - babelfish.lua
  - cf_translations.sh
  - AtlasLootClassic/Images/PSD
+ - README.md
 
 move-folders:
  AtlasLootClassic/AtlasLootClassic: AtlasLootClassic
