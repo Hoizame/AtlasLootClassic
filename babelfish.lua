@@ -11,9 +11,6 @@ local OUTPUT_PATH = ""
 -- Identifier for Locales
 local IDENTIFIER = "AL"
 
--- Is the local importet with the curseforge api?
-local IS_JSON = true
-
 -- Parse XML-Files for embeded lua scripts?
 local PARSE_XML = true
 
@@ -417,11 +414,10 @@ local function BuildLocaleList(fileList)
 	return t
 end
 
-local function GetJson(strg)
-	if not IS_JSON then return strg end
-	strg = gsub(strg, "<", "\\<")
-	strg = gsub(strg, ">", "\\>")
-	return strg
+local function getJsonFormattedString(s)
+    s = string.gsub(s, "<", "\\f<\\f")
+    s = string.gsub(s, ">", "\\f>\\f")
+    return s
 end
 
 local function Finalize(t)
@@ -433,7 +429,7 @@ local function Finalize(t)
 		if #nsT > 0 then
 			local nsFfile = io.open(OUTPUT_PATH..namespace..".lua", "w+")
 			for _,loc in ipairs(nsT) do
-				nsFfile:write(format(IDENTIFIER.."[\"%s\"] = true\n", GetJson(loc)))
+				nsFfile:write(format(IDENTIFIER.."[\"%s\"] = true\n", getJsonFormattedString(loc)))
 				c = c + 1
 			end
 			AddLog(99,"Created namespace:"..namespace.." <"..#nsT..">")
