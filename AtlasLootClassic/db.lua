@@ -1,7 +1,7 @@
 AtlasLoot.AtlasLootDBDefaults = {
 	profile = {
 		showIDsInTT = false,
-		showLvlRange = false,
+		showLvlRange = true,
 		showMinEnterLvl = false,
 		ContentPhase = {
 			enableOnLootTable = false,
