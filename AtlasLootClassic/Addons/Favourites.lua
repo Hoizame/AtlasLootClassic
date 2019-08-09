@@ -15,6 +15,7 @@ local format, strsub, strmatch, strgmatch, strsplit = _G.format, _G.strsub, _G.s
 local GetItemInfo = _G.GetItemInfo
 local GetServerTime = _G.GetServerTime
 local GetItemInfoInstant = _G.GetItemInfoInstant
+local RETRIEVING_ITEM_INFO = _G["RETRIEVING_ITEM_INFO"]
 
 -- locals
 local ICONS_PATH = ALPrivate.ICONS_PATH
@@ -155,10 +156,10 @@ local function OnTooltipSetItem_Hook(self)
 
     item = TooltipCache[item]
     if Favourites:IsFavouriteItemID(item) then
-        if not TooltipTextCache[item] then
+        if not TooltipTextCache[item] and _G[self:GetName().."TextLeft1"]:GetText() ~= RETRIEVING_ITEM_INFO then
             TooltipTextCache[item] = format("|T%s:0|t%s", Favourites:GetIconForActiveItemID(item), _G[self:GetName().."TextLeft1"]:GetText())
         end
-        _G[self:GetName().."TextLeft1"]:SetText( TooltipTextCache[item] )
+        _G[self:GetName().."TextLeft1"]:SetText( TooltipTextCache[item] or RETRIEVING_ITEM_INFO )
     end
 end
 
