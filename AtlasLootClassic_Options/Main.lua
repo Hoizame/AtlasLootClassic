@@ -64,7 +64,7 @@ Options.config.args.atlasloot = {
 			order = 6,
 			type = "toggle",
 			width = "full",
-			name = "|cffff0000<WIP>:|r "..AL["Show content phase indicator for loottables."],
+			name = AL["Show content phase indicator for loottables."],
 			get = function(info) return AtlasLoot.db.ContentPhase.enableOnLootTable end,
 			set = function(info, value) AtlasLoot.db.ContentPhase.enableOnLootTable = value AtlasLoot.GUI.OnLevelRangeRefresh() end,
 		},
