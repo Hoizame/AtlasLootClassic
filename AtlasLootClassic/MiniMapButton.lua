@@ -16,6 +16,8 @@ local SlashCommands = AtlasLoot.SlashCommands
 local AL = AtlasLoot.Locales
 local ALButton = LibStub("LibDBIcon-1.0")
 
+local TT_H_1, TT_H_2 = "|cff00FF00"..AL["AtlasLoot"].."|r", string.format("|cffFFFFFF%s|r", AtlasLoot.IsDevVersion and "dev" or AtlasLoot.__addonversion)
+
 
 -- LDB
 if not LibStub:GetLibrary("LibDataBroker-1.1", true) then return end
@@ -26,7 +28,7 @@ local MiniMapLDB = LibStub:GetLibrary("LibDataBroker-1.1"):NewDataObject("AtlasL
 	text = AL["AtlasLoot"],
 	icon = "Interface\\Icons\\INV_Box_01",
 	OnTooltipShow = function(tooltip)
-		tooltip:AddLine("|cff00FF00"..AL["AtlasLoot"].."|r");
+		tooltip:AddDoubleLine(TT_H_1, TT_H_2);
 		tooltip:AddLine(AL["AtlasLoot_Minimap_Clicks"]);
 	end,
 	OnClick = function(self, button)
