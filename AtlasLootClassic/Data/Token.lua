@@ -164,7 +164,6 @@ local TOKEN = {
 	[18781] = { 12726, 0, 18781, 18782 }, -- Bottom Half of Advanced Armorsmithing: Volume II
 	[21813] = { 21816, 21817, 21818, 21819, 21820, 21821, 21822, 21823, type = 2}, -- Bag of Candies
 	[19697] = { {19696, 4} }, -- Bounty of the Harvest
-	[15410] = { 15138 }, -- Scale of Onyxia
 	[18564] = { 19019, 0, 18563, 18564, 19017 }, -- Bindings of the Windseeker <right>
 	[18563] = 18564, -- Bindings of the Windseeker <left>
 	[19017] = 18564, -- Essence of the Firelord
@@ -221,6 +220,15 @@ local TOKEN = {
 	[12811] = { "prof20034", "prof22750", "prof25079", 0, "prof18456", "prof16990", "prof23632", "prof23633", type = 5 }, -- Righteous Orb
 	[20381] = { "prof24703", type = 5 }, -- Dreamscale Breastplate
 	[12753] = { "prof22928", "prof27830", type = 5 }, -- Dreamscale Breastplate
+	[17203] = { "prof21161", type = 5 }, -- Sulfuron Ingot
+	[15410] = { "prof19106", "prof19093", type = 5 }, -- Scale of Onyxia
+
+	-- Atiesh
+	[22727] = { { 22726, 40 }, 22727, 22734, 22733, 0, 22631, 22589, 22630, 22632 }, -- Frame of Atiesh
+	[22726] = 22727, -- Splinter of Atiesh
+	[22734] = 22727, -- Base of Atiesh
+	[22733] = 22727, -- Staff Head of Atiesh
+
 }
 for k, v in pairs(TOKEN) do
 	if TOKEN[v] then

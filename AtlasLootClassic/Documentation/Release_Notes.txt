@@ -11,6 +11,8 @@ v1.1.1-beta (Aug. XX, 2019)
 - Fix caching issue with unknown items and favourites
 - Fix loading bug with faction module on Horde
 - Crafting items can now use the equip preview ( Ctrl + L-Click )
+- Update some item content phases
+- Mount preview should now work while holding Ctrl
 
 v1.1.0-beta (Aug. 07, 2019)
 ========================

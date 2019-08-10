@@ -5278,11 +5278,7 @@ data["TheTempleofAhnQiraj"] = { -- AQ40
 				{ 16, 20929 }, -- Carapace of the Old God
 				{ 17, 20933 }, -- Husk of the Old God
 				{ 19, 21221 }, -- Eye of C'Thun
-				{ 24, 22734 }, -- Base of Atiesh
-				{ 25, 22631 }, -- Atiesh, Greatstaff of the Guardian
-				{ 26, 22589 }, -- Atiesh, Greatstaff of the Guardian
-				{ 27, 22630 }, -- Atiesh, Greatstaff of the Guardian
-				{ 28, 22632 }, -- Atiesh, Greatstaff of the Guardian
+				{ 21, 22734 }, -- Base of Atiesh
 			},
 		},
 		{ -- AQ40Trash1
@@ -5641,10 +5637,6 @@ data["Naxxramas"] = {
 				{ 23, 23066 }, -- Ring of Redemption
 				{ 24, 23059 }, -- Ring of the Dreadnaught
 				{ 26, 22733 }, -- Staff Head of Atiesh
-				{ 27, 22631 }, -- Atiesh, Greatstaff of the Guardian
-				{ 28, 22589 }, -- Atiesh, Greatstaff of the Guardian
-				{ 29, 22630 }, -- Atiesh, Greatstaff of the Guardian
-				{ 30, 22632 }, -- Atiesh, Greatstaff of the Guardian
 			},
 		},
 		{ -- NAXTrash
