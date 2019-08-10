@@ -9,9 +9,11 @@ local IMAGE_PATH = ALPrivate.ICONS_PATH
 local ClassicItemSets = LibStub:GetLibrary("LibClassicItemSets-1.0")
 
 -- lua
-local assert, type = assert, type
+local assert, type = _G.assert, _G.type
+local format = _G.string.format
 
-local format = string.format
+-- WoW
+local GetItemQualityColor = _G.GetItemQualityColor
 
 local GLOBAL_SETS = "global"
 local NO_ICON = "Interface\\Icons\\inv_helmet_08"
@@ -27,6 +29,11 @@ local ICON_PATH_PRE = {
 	WARLOCK 	= 	IMAGE_PATH.."classicon_warlock",
 	DRUID 		= 	IMAGE_PATH.."classicon_druid",
 }
+local COLOR_STRINGS = {}
+for i=0,7 do
+	local _, _, _, itemQuality = GetItemQualityColor(i)
+	COLOR_STRINGS[i] = "|c"..itemQuality
+end
 
 function Sets:GetIcon(setID)
 	if not ClassicItemSets:SetExist(setID) then return end
@@ -51,4 +58,8 @@ end
 function Sets:GetSetItems(setID)
 	if not ClassicItemSets:SetExist(setID) then return end
 	return ClassicItemSets:GetItems(setID)
+end
+
+function Sets:GetSetColor(setID)
+	return COLOR_STRINGS[ClassicItemSets:GetSetQualityID(setID) or 0] or COLOR_STRINGS[0]
 end

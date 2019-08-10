@@ -113,11 +113,13 @@ function Set.OnClear(button)
 	button.Items = nil
 	button.SetIcon = nil
 	button.SetClassName = nil
+	button.SetID = nil
 
 	button.secButton.SetName = nil
 	button.secButton.Items = nil
 	button.secButton.SetIcon = nil
 	button.secButton.SetClassName = nil
+	button.secButton.SetID = nil
 	AtlasLoot.Button:ExtraItemFrame_ClearFrame()
 end
 
@@ -126,7 +128,7 @@ function Set.Refresh(button)
 		button:SetNormalTexture(button.SetIcon)
 	else
 		button.icon:SetTexture(button.SetIcon)
-		button.name:SetText(button.SetName)
+		button.name:SetText(Sets:GetSetColor(button.SetID)..button.SetName)
 		if button.SetClassName then
 			button.extra:SetText(ALIL[button.SetClassName])
 		end
