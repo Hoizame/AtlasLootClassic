@@ -5,6 +5,7 @@ local Sets = {}
 AtlasLoot.Data.Sets = Sets
 local ALIL = AtlasLoot.IngameLocales
 local IMAGE_PATH = ALPrivate.ICONS_PATH
+local ContentPhase
 
 local ClassicItemSets = LibStub:GetLibrary("LibClassicItemSets-1.0")
 
@@ -30,10 +31,16 @@ local ICON_PATH_PRE = {
 	DRUID 		= 	IMAGE_PATH.."classicon_druid",
 }
 local COLOR_STRINGS = {}
-for i=0,7 do
-	local _, _, _, itemQuality = GetItemQualityColor(i)
-	COLOR_STRINGS[i] = "|c"..itemQuality
+local ContentPhaseCache = {}
+
+local function OnInit()
+    for i=0,7 do
+		local _, _, _, itemQuality = GetItemQualityColor(i)
+		COLOR_STRINGS[i] = "|c"..itemQuality
+	end
+    ContentPhase = AtlasLoot.Data.ContentPhase
 end
+AtlasLoot:AddInitFunc(OnInit)
 
 function Sets:GetIcon(setID)
 	if not ClassicItemSets:SetExist(setID) then return end
@@ -62,4 +69,26 @@ end
 
 function Sets:GetSetColor(setID)
 	return COLOR_STRINGS[ClassicItemSets:GetSetQualityID(setID) or 0] or COLOR_STRINGS[0]
+end
+
+function Sets:GetSpetIDPhase(setID)
+    if not ClassicItemSets:SetExist(setID) then return end
+    if not ContentPhaseCache[setID] then
+        local content = ClassicItemSets:GetItems(setID)
+		local phase = 0
+        for i = 1, #content do
+            local c = ContentPhase:GetForItemID(content[i])
+            phase = ( c and c > phase ) and c or phase
+        end
+
+        ContentPhaseCache[setID] = phase
+    end
+    return ContentPhaseCache[setID]
+end
+
+
+function Sets:GetPhaseTextureForSetID(setID)
+    local phase = ContentPhaseCache[setID] or Sets:GetSpetIDPhase(setID)
+    if not phase then return end
+    return ContentPhase:GetPhaseTexture(phase)
 end

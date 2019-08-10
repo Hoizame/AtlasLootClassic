@@ -133,6 +133,13 @@ function Set.Refresh(button)
 			button.extra:SetText(ALIL[button.SetClassName])
 		end
 	end
+	if AtlasLoot.db.ContentPhase.enableOnSets then
+		local phaseT = Sets:GetPhaseTextureForSetID(button.SetID)
+		if phaseT then
+			button.phaseIndicator:SetTexture(phaseT)
+			button.phaseIndicator:Show()
+		end
+	end
 
 	return true
 end

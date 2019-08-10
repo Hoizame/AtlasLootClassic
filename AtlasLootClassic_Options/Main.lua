@@ -76,5 +76,21 @@ Options.config.args.atlasloot = {
 			get = function(info) return AtlasLoot.db.ContentPhase.enableOnItems end,
 			set = function(info, value) AtlasLoot.db.ContentPhase.enableOnItems = value UpdateItemFrame() end,
 		},
+		enableContentPhaseOnCrafting = {
+			order = 8,
+			type = "toggle",
+			width = "full",
+			name = "|cffff0000<WIP>:|r "..AL["Show content phase indicator for crafting."],
+			get = function(info) return AtlasLoot.db.ContentPhase.enableOnCrafting end,
+			set = function(info, value) AtlasLoot.db.ContentPhase.enableOnCrafting = value UpdateItemFrame() end,
+		},
+		enableContentPhaseOnSets = {
+			order = 9,
+			type = "toggle",
+			width = "full",
+			name = "|cffff0000<WIP>:|r "..AL["Show content phase indicator for sets."],
+			get = function(info) return AtlasLoot.db.ContentPhase.enableOnSets end,
+			set = function(info, value) AtlasLoot.db.ContentPhase.enableOnSets = value UpdateItemFrame() end,
+		},
 	},
 }
