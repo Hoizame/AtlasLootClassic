@@ -6,7 +6,9 @@ local AL = AtlasLoot.Locales
 
 local STANDART_TOOLTIP = "AtlasLootTooltip"
 
-_G["AtlasLootTooltip"].shoppingTooltips = {ShoppingTooltip1, ShoppingTooltip2, ShoppingTooltip3}
+local AtlasLootTooltip = CreateFrame("GameTooltip", "AtlasLootTooltip", UIParent, "GameTooltipTemplate")
+AtlasLootTooltip:Hide()
+AtlasLootTooltip.shoppingTooltips = {ShoppingTooltip1, ShoppingTooltip2, ShoppingTooltip3}
 
 local TooltipList = {
 	"GameTooltip",
@@ -15,7 +17,7 @@ local TooltipList = {
 
 
 function Tooltip.GetTooltip()
-	return _G[AtlasLoot.db.Tooltip.tooltip or STANDART_TOOLTIP] or _G[STANDART_TOOLTIP]
+	return _G[AtlasLoot.db.Tooltip.tooltip or STANDART_TOOLTIP] or AtlasLootTooltip
 end
 
 function Tooltip:AddTooltipSource(src)
@@ -25,4 +27,3 @@ end
 function Tooltip:Refresh()
 	AtlasLoot.db.Tooltip.tooltip = AtlasLoot.db.Tooltip.useGameTooltip and "GameTooltip" or "AtlasLootTooltip"
 end
-
