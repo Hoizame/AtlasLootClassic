@@ -1,7 +1,7 @@
 package-as: AtlasLootClassic
 
 manual-changelog:
- filename: Documentation/Release_Notes.txt
+ filename: AtlasLootClassic/Documentation/Release_Notes.txt
  markup-type: plain
 
 enable-nolib-creation: no
@@ -14,13 +14,11 @@ externals:
  AtlasLootClassic/Libs/LibSharedMedia-3.0: https://repos.wowace.com/wow/libsharedmedia-3-0/trunk/LibSharedMedia-3.0
  AtlasLootClassic/Libs/LibDBIcon-1.0: https://repos.wowace.com/wow/libdbicon-1-0/trunk/LibDBIcon-1.0
  AtlasLootClassic/Libs/AceDB-3.0: https://repos.wowace.com/wow/ace3/trunk/AceDB-3.0
+ AtlasLootClassic/Libs/LibClassicItemSets-1.0: https://github.com/Hoizame/LibClassicItemSets-1.0
  AtlasLootClassic_Options/Libs/AceConfig-3.0: https://repos.wowace.com/wow/ace3/trunk/AceConfig-3.0
  AtlasLootClassic_Options/Libs/AceGUI-3.0: https://repos.wowace.com/wow/ace3/trunk/AceGUI-3.0
  AtlasLootClassic_Options/Libs/AceDBOptions-3.0: https://repos.wowace.com/wow/ace3/trunk/AceDBOptions-3.0
  AtlasLootClassic_Options/Libs/AceGUI-3.0-SharedMediaWidgets: https://repos.wowace.com/wow/ace-gui-3-0-shared-media-widgets/trunk/AceGUI-3.0-SharedMediaWidgets
- AtlasLootClassic/Libs/LibClassicItemSets-1.0:  
-  url: https://github.com/Hoizame/LibClassicItemSets-1.0.git
-  tag: latest
 
 # Ignore takes place before folder's moving takes place
 ignore:

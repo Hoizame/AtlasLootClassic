@@ -218,6 +218,64 @@ data["AQSets"] = {
 	},
 }
 
+data["MiscSets"] = {
+	name = format(AL["%s Sets"], AL["Misc"]),
+	ContentType = SET_CONTENT,
+	LoadDifficulty = LOAD_DIFF,
+	TableType = SET_ITTYPE,
+	items = {
+		{ -- Cloth
+			name = ALIL["Cloth"],
+			[NORMAL_DIFF] = {
+				{ 1,  421 }, -- Bloodvine Garb / 65
+				{ 2,  520 }, -- Ironweave Battlesuit / 61-63
+				{ 3,  122 }, -- Necropile Raiment / 61
+				{ 4,  81 }, -- Twilight Trappings / 61
+				{ 5,  492 }, -- Twilight Trappings / 60
+				{ 16,  536 }, -- Regalia of Undead Cleansing / 63
+			},
+		},
+		{ -- Leather
+			name = ALIL["Leather"],
+			[NORMAL_DIFF] = {
+				{ 1,  442 }, -- Blood Tiger Harness / 65
+				{ 2,  441 }, -- Primal Batskin / 65
+				{ 3,  121 }, -- Cadaverous Garb / 61
+				{ 4,  142 }, -- Stormshroud Armor / 55-62
+				{ 5,  141 }, -- Volcanic Armor / 54-61
+				{ 6,  143 }, -- Devilsaur Armor / 58-60
+				{ 7,  144 }, -- Ironfeather Armor / 54-58
+				{ 8,  221 }, -- Garb of Thero-shan / 32-42
+				{ 9,  161 }, -- Defias Leather / 18-24
+				{ 10,  162 }, -- Embrace of the Viper / 19-23
+				{ 16,  534 }, -- Undead Slayer's Armor / 63
+			},
+		},
+		{ -- Mail
+			name = ALIL["Mail"],
+			[NORMAL_DIFF] = {
+				{ 1,  443 }, -- Bloodsoul Embrace / 65
+				{ 2,  123 }, -- Bloodmail Regalia / 61
+				{ 3,  489 }, -- Black Dragon Mail / 58-62
+				{ 4,  491 }, -- Blue Dragon Mail / 57-60
+				{ 5,  1 }, -- The Gladiator / 57
+				{ 6,  490 }, -- Green Dragon Mail / 52-56
+				{ 7,  163 }, -- Chain of the Scarlet Crusade / 35-43
+				{ 16,  535 }, -- Garb of the Undead Slayer / 63
+			},
+		},
+		{ -- Plate
+			name = ALIL["Plate"],
+			[NORMAL_DIFF] = {
+				{ 1,  444 }, -- The Darksoul / 65
+				{ 2,  124 }, -- Deathbone Guardian / 61
+				{ 3,  321 }, -- Imperial Plate / 53-61
+				{ 16,  533 }, -- Battlegear of Undead Slaying / 63
+			},
+		},
+	},
+}
+
 data["Azuregos"] = {
 	name = AL["Azuregos"],
 	ContentType = WORLD_BOSS_CONTENT,
