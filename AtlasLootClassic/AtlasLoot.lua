@@ -109,6 +109,15 @@ do
 	--EventFrame:SetScript("OnEvent", PLAYER_TARGET_CHANGED)
 end
 
+-- ##############################
+-- This is a testing function for testing curseforge upload
+-- ##############################
+local function UselessFunction()
+	print(AL["TEST: My <message>"])
+	print(AL["TEST: <><<>><<><>>"])
+	print(AL["TEST: \n\">\f<<<<"])
+end
+
 --[=[ Only instance related module will be handled
 local ATLASLOOT_INSTANCE_MODULE_LIST = {
 	"AtlasLoot_BattleforAzeroth",
