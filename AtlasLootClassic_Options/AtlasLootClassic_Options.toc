@@ -5,31 +5,6 @@
 ## LoadOnDemand: 1
 ## OptionalDeps: LibStub, CallbackHandler-1.0, AceConfig-3.0, AceDBOptions-3.0, AceGUI-3.0, AceGUI-3.0-SharedMediaWidgets, LibDialog-1.0
 
-#@non-debug@
-## Title: @localization(locale="enUS", key="Title-Options", namespace="ToC")@
-## Title-deDE: @localization(locale="deDE", key="Title-Options", namespace="ToC")@
-## Title-esES: @localization(locale="esES", key="Title-Options", namespace="ToC")@
-## Title-esMX: @localization(locale="esMX", key="Title-Options", namespace="ToC")@
-## Title-frFR: @localization(locale="frFR", key="Title-Options", namespace="ToC")@
-## Title-itIT: @localization(locale="itIT", key="Title-Options", namespace="ToC")@
-## Title-koKR: @localization(locale="koKR", key="Title-Options", namespace="ToC")@
-## Title-ptBR: @localization(locale="ptBR", key="Title-Options", namespace="ToC")@
-## Title-ruRU: @localization(locale="ruRU", key="Title-Options", namespace="ToC")@
-## Title-zhCN: @localization(locale="zhCN", key="Title-Options", namespace="ToC")@
-## Title-zhTW: @localization(locale="zhTW", key="Title-Options", namespace="ToC")@
-## Notes: @localization(locale="enUS", key="Notes-Options", namespace="ToC")@
-## Notes-deDE: @localization(locale="deDE", key="Notes-Options", namespace="ToC")@
-## Notes-esES: @localization(locale="esES", key="Notes-Options", namespace="ToC")@
-## Notes-esMX: @localization(locale="esMX", key="Notes-Options", namespace="ToC")@
-## Notes-frFR: @localization(locale="frFR", key="Notes-Options", namespace="ToC")@
-## Notes-itIT: @localization(locale="itIT", key="Notes-Options", namespace="ToC")@
-## Notes-koKR: @localization(locale="koKR", key="Notes-Options", namespace="ToC")@
-## Notes-ptBR: @localization(locale="ptBR", key="Notes-Options", namespace="ToC")@
-## Notes-ruRU: @localization(locale="ruRU", key="Notes-Options", namespace="ToC")@
-## Notes-zhCN: @localization(locale="zhCN", key="Notes-Options", namespace="ToC")@
-## Notes-zhTW: @localization(locale="zhTW", key="Notes-Options", namespace="ToC")@
-#@end-non-debug@
-#@debug@
 ## Title: AtlasLoot |cFF0099FF[Options]|r
 ## Title-deDE: AtlasLoot |cFF0099FF[Einstellungen]|r
 ## Title-koKR: AtlasLoot |cFF0099FF[옵션]|r
@@ -44,7 +19,6 @@
 ## Notes-ruRU: AtlasLoot модуль опций
 ## Notes-zhCN: AtlasLoot 选项模块
 ## Notes-zhTW: AtlasLoot 選項設定模組
-#@end-debug@
 
 ## X-Category: Map
 ## X-License: GPL v2

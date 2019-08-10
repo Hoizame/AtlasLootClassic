@@ -53,6 +53,7 @@ local FILE_LIST = {
 local IGNORE_LIST = {
 	["AtlasLootClassic/Locales/"] = true,
 	["AtlasLootClassic/Libs"] = true,
+	["AtlasLootClassic_Options/Libs"] = true,
 }
 -- ################################
 -- Script part, no changes here
@@ -184,7 +185,7 @@ local function IsOnIgnoreList(fileName)
 end
 
 local function ParseLuaFile(fileName)
-	assert(FileExists(fileName), "Lua File not found: "..(fileName or "nil"))
+	if not FileExists(fileName) then return end
 	local _
 	_, _, _, fileName = SplitPathAndFileName(fileName)
 	if IsOnIgnoreList(fileName) then return end
@@ -246,7 +247,7 @@ local function ParseLuaFile(fileName)
 end
 
 local function ParseXMLFile(fileName, overrideParseXML)
-	assert(FileExists(fileName), "XML File not found: "..(fileName or "nil"))
+	if not FileExists(fileName) then return end
 	local oriPath, _
 	oriPath, _, _, fileName = SplitPathAndFileName(fileName)
 	local t = {}
