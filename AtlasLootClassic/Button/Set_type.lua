@@ -9,13 +9,16 @@ local Sets
 --local db
 
 -- lua
-local tonumber, type = tonumber, type
-local split = string.split
+local tonumber, type = _G.tonumber, _G.type
+local pairs = _G.pairs
+local split, format = string.split, _G.format
 
 -- AL
 local GetAlTooltip = AtlasLoot.Tooltip.GetTooltip
-
 local SetClickHandler = nil
+
+local CLASS_COLOR_FORMAT = "|c%s%s|r"
+local CLASS_NAMES_WITH_COLORS = {}
 
 ClickHandler:Add(
 	"Set",
@@ -39,6 +42,11 @@ ClickHandler:Add(
 function Set.OnSet(button, second)
 	if not SetClickHandler then
 		SetClickHandler = ClickHandler:GetHandler("Set")
+
+		for k,v in pairs(RAID_CLASS_COLORS) do
+			CLASS_NAMES_WITH_COLORS[k] = format(CLASS_COLOR_FORMAT,  v.colorStr, ALIL[k])
+		end
+		CLASS_COLOR_FORMAT = nil
 
 		Sets = AtlasLoot.Data.Sets
 	end
@@ -130,7 +138,7 @@ function Set.Refresh(button)
 		button.icon:SetTexture(button.SetIcon)
 		button.name:SetText(Sets:GetSetColor(button.SetID)..button.SetName)
 		if button.SetClassName then
-			button.extra:SetText(ALIL[button.SetClassName])
+			button.extra:SetText(CLASS_NAMES_WITH_COLORS[button.SetClassName])
 		end
 	end
 	if AtlasLoot.db.ContentPhase.enableOnSets then
