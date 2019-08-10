@@ -90,7 +90,7 @@ local FACTION_KEY = {
 	[529] = "Argent Dawn",
 	[530] = "Darkspear Trolls",
 	[576] = "Timbermaw Hold",
-	[589] = "Wintersaber Trainers",
+	[589] = AL["Wintersaber Trainers"], -- Alliance only, Horde gets no info :/
 	[609] = "Cenarion Circle",
 	[719] = "Hydraxian Waterlords",
 	[910] = "Brood of Nozdormu",
@@ -123,6 +123,12 @@ local function RGBToHex(t)
 	g = g <= 255 and g >= 0 and g or 0
 	b = b <= 255 and b >= 0 and b or 0
 	return str_format("%02x%02x%02x", r, g, b)
+end
+
+-- TODO: Create faction data module?
+function AtlasLoot:Faction_GetFactionName(factionID)
+	local name = GetFactionInfoByID(factionID)
+	return name or FACTION_KEY[factionID] or FACTION.." "..factionID
 end
 
 function Faction.OnSet(button, second)
@@ -257,7 +263,7 @@ function Faction.Refresh(button)
 end
 
 function Faction.ShowToolTipFrame(button)
-
+	if not GetFactionInfoByID(button.FactionID) then return end
 	if not Faction.tooltipFrame then
 		local WIDTH = 200
 		local name = "AtlasLoot-FactionToolTip"

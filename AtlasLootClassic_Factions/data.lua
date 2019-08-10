@@ -441,8 +441,8 @@ data["WintersaberTrainers"] = {
 		{ -- Exalted
 			name = _G["FACTION_STANDING_LABEL8"],
 			[ALLIANCE_DIFF] = {
-				{ 1, "f589rep8" },
-				{ 2, 13086 }, -- Reins of the Winterspring Frostsaber
+				{ 1, "f589rep8", [ATLASLOOT_IT_ALLIANCE] = true },
+				{ 2, 13086, [ATLASLOOT_IT_ALLIANCE] = true }, -- Reins of the Winterspring Frostsaber
 			},
 		},
 	},

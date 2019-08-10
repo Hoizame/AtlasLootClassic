@@ -9,6 +9,7 @@ v1.1.1-beta (Aug. XX, 2019)
 ========================
 - Fix bug with favourites shown in tooltip needs a reload
 - Fix caching issue with unknown items and favourites
+- Fix loading bug with faction module on Horde
 - Crafting items can now use the equip preview ( Ctrl + L-Click )
 
 v1.1.0-beta (Aug. 07, 2019)

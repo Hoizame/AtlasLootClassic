@@ -438,7 +438,7 @@ function ItemDB.ContentProto:GetName()
 	elseif self.MapID then
 		return C_Map.GetAreaInfo(self.MapID)..add or "MapID:"..self.MapID
 	elseif self.FactionID then
-		return GetFactionInfoByID(self.FactionID)..add --or "Faction "..self.FactionID
+		return AtlasLoot:Faction_GetFactionName(self.FactionID)..add
 	else
 		return UNKNOWN
 	end
