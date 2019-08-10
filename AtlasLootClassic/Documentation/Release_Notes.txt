@@ -5,7 +5,7 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 
 Patch Notes
 
-v1.1.1-beta (Aug. 10, 2019)
+v1.1.2-beta (Aug. 10, 2019)
 ========================
 - Fix bug with favourites shown in tooltip needs a reload
 - Fix caching issue with unknown items and favourites
