@@ -2,7 +2,7 @@
 ## Author: Lag, Arith
 ## Version: @project-version@
 ## SavedVariables: AtlasLootClassicDB
-## OptionalDeps: LibStub, CallbackHandler-1.0, LibSharedMedia-3.0, LibDBIcon-1.0, LibClassicItemSets-1.0, AceDB-3.0
+## OptionalDeps: Ace3, LibSharedMedia-3.0, AceGUI-3.0-SharedMediaWidgets, LibDBIcon-1.0, LibDataBroker-1.1, LibClassicItemSets-1.0
 
 ## Title: AtlasLootClassic |cFF22B14C[Core]|r
 ## Notes: Shows the possible loot from the bosses
