@@ -1462,3 +1462,7 @@ function Profession.GetPhaseTextureForSpellID(spellID)
     if not phase then return end
     return ContentPhase:GetPhaseTexture(phase)
 end
+
+function Profession.GetProfessionID(spellID)
+    return PROFESSION[spellID or 0] and PROFESSION[spellID][2] or nil
+end

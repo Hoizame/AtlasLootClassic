@@ -54,6 +54,7 @@ function Button.Init()
 		LOOT_BORDER_BY_QUALITY_AL[k] = v
 	end
 	LOOT_BORDER_BY_QUALITY_AL[1] = ALPrivate.IMAGE_PATH.."loottoast-itemborder-white"
+	LOOT_BORDER_BY_QUALITY_AL["gold"] = "loottoast-itemborder-gold"
 end
 AtlasLoot:AddInitFunc(Button.Init)
 

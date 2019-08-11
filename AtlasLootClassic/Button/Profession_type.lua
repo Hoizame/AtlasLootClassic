@@ -128,6 +128,10 @@ function Prof.Refresh(button)
 		itemQuality = itemQuality or 0
 
 		button.overlay:Show()
+		-- enchanting border
+		if not button.ItemID then
+			itemQuality = "gold"
+		end
 		button.overlay:SetQualityBorder(itemQuality)
 
 		if button.type == "secButton" then
