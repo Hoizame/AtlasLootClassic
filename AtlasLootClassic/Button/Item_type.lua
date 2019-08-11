@@ -30,7 +30,6 @@ local GetItemDescInfo = AtlasLoot.ItemInfo.GetDescription
 local GetItemString = AtlasLoot.ItemString.Create
 
 local ITEM_COLORS = {}
-local WHITE_ICON_FRAME = "Interface\\Common\\WhiteIconFrame"
 local DUMMY_ITEM_ICON = "Interface\\Icons\\INV_Misc_QuestionMark"
 local SET_ITEM = "|cff00ff00"..AL["Set item"]..":|r "
 
@@ -240,12 +239,7 @@ function Item.OnClear(button)
 	button.secButton.SetData = nil
 	button.secButton.RawName = nil
 
-	if button.overlay then
-		button.overlay:SetDesaturated(false)
-		button.overlay:Hide()
-	end
 	button.secButton.overlay:Hide()
-	button.secButton.overlay:SetDesaturated(false)
 	if button.ExtraFrameShown then
 		AtlasLoot.Button:ExtraItemFrame_ClearFrame()
 		button.ExtraFrameShown = false
@@ -263,11 +257,7 @@ function Item.Refresh(button)
 	button.RawName = itemName
 
 	button.overlay:Show()
-
-	button.overlay:SetAtlas(LOOT_BORDER_BY_QUALITY[itemQuality] or LOOT_BORDER_BY_QUALITY[LE_ITEM_QUALITY_UNCOMMON])
-	if not LOOT_BORDER_BY_QUALITY[itemQuality] then
-		button.overlay:SetDesaturated(true)
-	end
+	button.overlay:SetQualityBorder(itemQuality)
 
 	if button.type == "secButton" then
 		button:SetNormalTexture(itemTexture or DUMMY_ITEM_ICON)

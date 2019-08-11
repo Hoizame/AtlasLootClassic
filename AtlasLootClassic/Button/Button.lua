@@ -38,6 +38,7 @@ local FACTION_TEXTURES = {
 	[1] = "MountJournalIcons-Alliance"
 }
 local PLAYER_FACTION_ID = 0
+local LOOT_BORDER_BY_QUALITY_AL = {}
 
 local BUTTON_COUNT = 0
 local SEC_BUTTON_COUNT = 0
@@ -48,6 +49,11 @@ for i = 1,#STANDART_TABLE do STANDART_FORMAT_TABLE[#STANDART_FORMAT_TABLE+1] = S
 
 function Button.Init()
 	PLAYER_FACTION_ID = UnitFactionGroup("player") == "Horde" and 0 or 1
+
+	for k, v in pairs(LOOT_BORDER_BY_QUALITY) do
+		LOOT_BORDER_BY_QUALITY_AL[k] = v
+	end
+	LOOT_BORDER_BY_QUALITY_AL[1] = ALPrivate.IMAGE_PATH.."loottoast-itemborder-white"
 end
 AtlasLoot:AddInitFunc(Button.Init)
 
@@ -124,6 +130,19 @@ local function Button_ForceSetText(self, text, force)
 	end
 end
 
+local function Button_Overlay_SetQualityBorder(self, qualityID)
+	if qualityID ==  1 then
+		self:SetTexture(LOOT_BORDER_BY_QUALITY_AL[qualityID])
+	else
+		self:SetAtlas(LOOT_BORDER_BY_QUALITY_AL[qualityID] or LOOT_BORDER_BY_QUALITY_AL[LE_ITEM_QUALITY_UNCOMMON])
+	end
+	if not LOOT_BORDER_BY_QUALITY_AL[qualityID] then
+		self:SetDesaturated(true)
+	else
+		self:SetDesaturated(false)
+	end
+end
+
 --/run AtlasLoot.Button:Create():SetContentTable({ 1, 104939 })
 function Button:Create()
 	BUTTON_COUNT = BUTTON_COUNT + 1
@@ -175,10 +194,10 @@ function Button:Create()
 
 	-- secButtonTexture <texture>
 	button.overlay = button:CreateTexture(buttonName.."_overlay", "OVERLAY")
-	button.overlay:SetPoint("CENTER", button.icon, "CENTER")
-	button.overlay:SetHeight(26)
-	button.overlay:SetWidth(26)
+	button.overlay:SetPoint("TOPLEFT", button.icon, "TOPLEFT")
+	button.overlay:SetPoint("BOTTOMRIGHT", button.icon, "BOTTOMRIGHT")
 	button.overlay:Hide()
+	button.overlay.SetQualityBorder = Button_Overlay_SetQualityBorder
 
 	button.completed = button:CreateTexture(buttonName.."_completed", "OVERLAY")
 	button.completed:SetPoint("BOTTOMRIGHT", button.icon)
@@ -268,10 +287,10 @@ function Button:Create()
 
 	-- secButtonOverlay <texture>
 	button.secButton.overlay = button.secButton:CreateTexture(buttonName.."_secButtonOverlay", "OVERLAY")
-	button.secButton.overlay:SetPoint("CENTER", button.secButton.icon, "CENTER")
-	button.secButton.overlay:SetHeight(26)
-	button.secButton.overlay:SetWidth(26)
+	button.secButton.overlay:SetPoint("TOPLEFT", button.secButton.icon, "TOPLEFT")
+	button.secButton.overlay:SetPoint("BOTTOMRIGHT", button.secButton.icon, "BOTTOMRIGHT")
 	button.secButton.overlay:Hide()
+	button.secButton.overlay.SetQualityBorder = Button_Overlay_SetQualityBorder
 
 	button.secButton.completed = button.secButton:CreateTexture(buttonName.."_secCompleted", "OVERLAY")
 	button.secButton.completed:SetPoint("BOTTOMRIGHT", button.secButton.icon)
@@ -360,8 +379,10 @@ function Button:CreateSecOnly(frame)
 
 	-- secButtonOverlay <texture>
 	button.secButton.overlay = button.secButton:CreateTexture(buttonName.."_secButtonOverlay", "OVERLAY")
-	button.secButton.overlay:SetAllPoints(button.secButton)
+	button.secButton.overlay:SetPoint("TOPLEFT", button.secButton.icon, "TOPLEFT")
+	button.secButton.overlay:SetPoint("BOTTOMRIGHT", button.secButton.icon, "BOTTOMRIGHT")
 	button.secButton.overlay:Hide()
+	button.secButton.overlay.SetQualityBorder = Button_Overlay_SetQualityBorder
 
 	button.secButton.count = button.secButton:CreateFontString(buttonName.."_secCount", "ARTWORK", "AtlasLoot_ItemAmountFont")
 	button.secButton.count:SetPoint("BOTTOMRIGHT", button.secButton.icon, "BOTTOMRIGHT", -1, 1)
@@ -427,16 +448,25 @@ function Proto:Clear()
 		if self.completed then self.completed:Hide() end
 		if self.favourite then self.favourite:Hide() end
 		if self.phaseIndicator then self.phaseIndicator:Hide() end
+		if self.overlay then
+			self.overlay:SetDesaturated(false)
+			self.overlay:Hide()
+		end
 		self:Hide()
 	end
 	if self.secButton then
-		self.secButton:SetNormalTexture(nil)
-		self.secButton.overlay:SetSize(self.secButton:GetWidth(), self.secButton:GetHeight())
-		if self.secButton.count then self.secButton.count:Hide() end
-		if self.secButton.completed then self.secButton.completed:Hide() end
-		if self.secButton.favourite then self.secButton.favourite:Hide() end
-		if self.secButton.phaseIndicator then self.secButton.phaseIndicator:Hide() end
-		self.secButton:Hide()
+		local secButton = self.secButton
+		secButton:SetNormalTexture(nil)
+		secButton.overlay:SetSize(secButton:GetWidth(), secButton:GetHeight())
+		if secButton.count then secButton.count:Hide() end
+		if secButton.completed then secButton.completed:Hide() end
+		if secButton.favourite then secButton.favourite:Hide() end
+		if secButton.phaseIndicator then secButton.phaseIndicator:Hide() end
+		if secButton.overlay then
+			secButton.overlay:SetDesaturated(false)
+			secButton.overlay:Hide()
+		end
+		secButton:Hide()
 	end
 
 	if self.highlightBg then

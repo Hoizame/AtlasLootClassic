@@ -14,7 +14,6 @@ local ProfClickHandler = nil
 
 local PROF_COLOR = "|cffffff00"
 local ITEM_COLORS = {}
-local WHITE_ICON_FRAME = "Interface\\Common\\WhiteIconFrame"
 
 AtlasLoot.ClickHandler:Add(
 	"Profession",
@@ -66,12 +65,7 @@ function Prof.OnClear(button)
 	button.secButton.Profession = nil
 	button.secButton.SpellID = nil
 	button.secButton.ItemID = nil
-	if button.overlay then
-		button.overlay:SetDesaturated(false)
-		button.overlay:Hide()
-	end
-	button.secButton.overlay:Hide()
-	button.secButton.overlay:SetDesaturated(false)
+
 	if button.ExtraFrameShown then
 		AtlasLoot.Button:ExtraItemFrame_ClearFrame()
 		button.ExtraFrameShown = false
@@ -132,13 +126,9 @@ function Prof.Refresh(button)
 			itemCount = Profession.GetNumCreatedItems(button.SpellID)
 		end
 		itemQuality = itemQuality or 0
-		--ItemQuery
+
 		button.overlay:Show()
-		button.overlay:SetTexture(WHITE_ICON_FRAME)
-		button.overlay:SetAtlas(LOOT_BORDER_BY_QUALITY[itemQuality] or LOOT_BORDER_BY_QUALITY[LE_ITEM_QUALITY_UNCOMMON])
-		if not LOOT_BORDER_BY_QUALITY[itemQuality] then
-			button.overlay:SetDesaturated(true)
-		end
+		button.overlay:SetQualityBorder(itemQuality)
 
 		if button.type == "secButton" then
 
