@@ -40,6 +40,7 @@ local SET_EXTRA_ITTYPE = data:AddExtraItemTableType("Set")
 
 local SET_CONTENT = data:AddContentType(AL["Sets"], ATLASLOOT_PVP_COLOR)
 local WORLD_BOSS_CONTENT = data:AddContentType(AL["World Bosses"], ATLASLOOT_WORLD_BOSS_COLOR)
+local COLLECTIONS_CONTENT = data:AddContentType(AL["Collections"], ATLASLOOT_COLLECTIONS_COLOR)
 local WORLD_EVENT_CONTENT = data:AddContentType(AL["World Events"], ATLASLOOT_SEASONALEVENTS_COLOR)
 
 data["TierSets"] = {
@@ -451,6 +452,112 @@ data["DragonsOfNightmare"] = {
 				{ 2,  21147 }, -- Fragment of the Nightmare's Corruption
 				{ 3,  21148 }, -- Fragment of the Nightmare's Corruption
 				{ 4,  21149 }, -- Fragment of the Nightmare's Corruption
+			},
+		},
+	},
+}
+
+data["WorldEpics"] = {
+	name = AL["World Epics"],
+	ContentType = COLLECTIONS_CONTENT,
+	LoadDifficulty = LOAD_DIFF,
+	TableType = NORMAL_ITTYPE,
+	items = {
+		{
+			name = AL["One-Handed Weapons"],
+			[NORMAL_ITTYPE] = {
+				-- Mace
+				{ 1, 2243 }, -- Hand of Edward the Odd
+				{ 2, 810 }, -- Hammer of the Northern Wind
+				{ 3, 868 }, -- Ardent Custodian
+				-- Axe
+				{ 7, 811 }, -- Axe of the Deep Woods
+				{ 8, 871 }, -- Flurry Axe
+				-- Sword
+				{ 16, 1728 }, -- Teebu's Blazing Longsword
+				{ 17, 20698 }, -- Elemental Attuned Blade
+				{ 18, 2244 }, -- Krol Blade
+				{ 19, 809 }, -- Bloodrazor
+				{ 20, 869 }, -- Dazzling Longsword
+				-- Dagger
+				{ 22, 14555 }, -- Alcor's Sunrazor
+				{ 23, 2163 }, -- Shadowblade
+				{ 24, 2164 }, -- Gut Ripper
+			},
+		},
+		{
+			name = AL["Two-Handed Weapons"],
+			[NORMAL_ITTYPE] = {
+				-- Axe
+				{ 1, 2801 }, -- Blade of Hanna
+				{ 2, 647 }, -- Destiny
+				{ 3, 2291 }, -- Kang the Decapitator
+				{ 4, 870 }, -- Fiery War Axe
+				-- Mace
+				{ 6, 2915 }, -- Taran Icebreaker
+				-- Sword
+				{ 16, 1263 }, -- Brain Hacker
+				{ 17, 1982 }, -- Nightblade
+				-- Staff
+				{ 21, 944 }, -- Elemental Mage Staff
+				{ 22, 812 }, -- Glowing Brightwood Staff
+				{ 23, 943 }, -- Warden Staff
+				{ 24, 873 }, -- Staff of Jordan
+			},
+		},
+		{
+			name = AL["Ranged Weapons"].." & "..ALIL["Shield"],
+			[NORMAL_ITTYPE] = {
+				-- Bow
+				{ 1, 2824 }, -- Hurricane
+				{ 2, 2825 }, -- Bow of Searing Arrows
+				-- Gun
+				{ 4, 2099 }, -- Dwarven Hand Cannon
+				{ 5, 2100 }, -- Precisely Calibrated Boomstick
+				-- Shield
+				{ 16, 1168 }, -- Skullflame Shield
+				{ 17, 1979 }, -- Wall of the Dead
+				{ 18, 1169 }, -- Blackskull Shield
+				{ 19, 1204 }, -- The Green Tower
+			},
+		},
+		{
+			name = ALIL["Trinket"].." & "..ALIL["Finger"].." & "..ALIL["Neck"],
+			[NORMAL_ITTYPE] = {
+				-- Trinket
+				{ 1, 14557 }, -- The Lion Horn of Stormwind
+				{ 2, 833 }, -- Lifestone
+				-- Neck
+				{ 6,  14558 }, -- Lady Maye's Pendant
+				{ 7,  1443 }, -- Jeweled Amulet of Cainwyn
+				{ 8,  1315 }, -- Lei of Lilies
+				--Finger
+				{ 16,  2246 }, -- Myrmidon's Signet
+				{ 17,  942 }, -- Freezing Band
+				{ 18,  1447 }, -- Ring of Saviors
+				{ 19,  1980 }, -- Underworld Band
+			},
+		},
+		{
+			name = AL["Equip"],
+			[NORMAL_ITTYPE] = {
+				-- Cloth
+				{ 1,  3075 }, -- Eye of Flame
+				{ 2,  940 }, -- Robes of Insight
+				-- Mail
+				{ 4,  2245 }, -- Helm of Narv
+				{ 5,  17007 }, -- Stonerender Gauntlets
+				{ 6,  14551 }, -- Edgemaster's Handguards
+				{ 7,  1981 }, -- Icemail Jerkin
+				-- Back
+				{ 9,  3475 }, -- Cloak of Flames
+				-- Leather
+				{ 16,  14553 }, -- Sash of Mercy
+				{ 17,  867 }, -- Gloves of Holy Might
+				-- Plate
+				{ 19,  14554 }, -- Cloudkeeper Legplates
+				{ 20,  14552 }, -- Stockade Pauldrons
+				{ 21,  14549 }, -- Boots of Avoidance
 			},
 		},
 	},

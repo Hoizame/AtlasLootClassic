@@ -11,6 +11,9 @@ v1.1.3-beta (Aug. XX, 2019)
 - Classes on ItemSets now are colored
 - Add content phase support for item sets
 - Add Atiesh tokens
+- Add World Epics
+- Add white border for common items instead of the gray one
+- Add border for enchanting profession
 
 v1.1.2-beta (Aug. 10, 2019)
 ========================

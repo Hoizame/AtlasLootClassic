@@ -74,6 +74,7 @@ globals = {
 	"ATLASLOOT_IT_FILTERIGNORE",
 	"AtlasLootTooltip",
 	"ATLASLOOT_WORLD_BOSS_COLOR",
+	"ATLASLOOT_COLLECTIONS_COLOR",
 
 	-- Atlas
 	"Atlas",
