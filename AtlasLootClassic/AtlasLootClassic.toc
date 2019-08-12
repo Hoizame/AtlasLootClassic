@@ -7,6 +7,8 @@
 ## Title: AtlasLootClassic |cFF22B14C[Core]|r
 ## Notes: Shows the possible loot from the bosses
 
+## Notes-zhCN: 显示首领可能的掉落物品
+
 ## X-Credits: Daviesh, Lag, Cellelach, Asurn, Pernicus, Dynaletik and many others
 ## X-Category: Map
 ## X-License: GPL v2

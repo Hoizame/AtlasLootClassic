@@ -17,7 +17,7 @@
 ## Notes-frFR: Tables de butin AtlasLoot des Objets Fabriqués
 ## Notes-koKR: AtlasLoot 전문 기술의 전리품 목록
 ## Notes-ruRU: AtlasLoot таблица добычи на создание предметов
-## Notes-zhCN: AtlasLoot 《专业制造》物品信息
+## Notes-zhCN: AtlasLoot专业制作物品列表
 ## Notes-zhTW: AtlasLoot 商業技能物品資料庫
 
 ## X-Category: Map

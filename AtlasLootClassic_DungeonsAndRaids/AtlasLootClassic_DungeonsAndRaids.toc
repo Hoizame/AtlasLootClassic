@@ -10,6 +10,8 @@
 ## Notes: AtlasLoot loot tables from Dungeons and Raids
 ## Notes-deDE: AtlasLoot loottabellen für Instanzen und Raids
 
+## Notes-zhCN: AtlasLoot 地下城&团队副本掉落列表
+
 
 ## X-Category: Map
 ## X-License: GPL v2

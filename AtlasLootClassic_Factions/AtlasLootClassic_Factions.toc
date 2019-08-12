@@ -10,6 +10,8 @@
 ## Notes: AtlasLoot loot tables from Factions
 ## Notes-deDE: AtlasLoot Fraktionen
 
+## Notes-zhCN: AtlasLoot 阵营掉落列表
+
 ## X-Category: Map
 ## X-License: GPL v2
 
