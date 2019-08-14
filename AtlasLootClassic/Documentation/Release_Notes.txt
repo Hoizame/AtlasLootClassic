@@ -5,6 +5,10 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 
 Patch Notes
 
+v1.1.4-beta (Aug. XX, 2019)
+========================
+
+
 v1.1.3-beta (Aug. 12, 2019)
 ========================
 - ItemSets are now colored

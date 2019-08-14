@@ -1,6 +1,6 @@
 # AtlasLootClassic
 
-[![Build Status](https://travis-ci.com/Hoizame/AtlasLootClassic.svg?branch=master)](https://travis-ci.com/Hoizame/AtlasLootClassic)
+[![Build Status](https://travis-ci.com/Hoizame/AtlasLootClassic.svg?branch=master)](https://travis-ci.com/Hoizame/AtlasLootClassic) [![AtlasLootClassic Discord](https://img.shields.io/badge/discord-atlaslootclassic-7289DA)](https://discord.gg/vMUwzPc)
 
 AtlasLoot Classic is an UI mod allowing for loot tables of bosses to be browsed whenever needed within the game.
 
