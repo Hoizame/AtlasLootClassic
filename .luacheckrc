@@ -91,6 +91,7 @@ globals = {
 	"ATLAS_SMALLFRAME_SELECTED",
 
 	-- misc custom
+	"AceGUIWidgetLSMlists",
 	"CUSTOM_CLASS_COLORS",
 	"LibStub",
 
