@@ -29,7 +29,7 @@ local MiniMapLDB = LibStub:GetLibrary("LibDataBroker-1.1"):NewDataObject("AtlasL
 	icon = "Interface\\Icons\\INV_Box_01",
 	OnTooltipShow = function(tooltip)
 		tooltip:AddDoubleLine(TT_H_1, TT_H_2);
-		tooltip:AddLine(AL["AtlasLoot_Minimap_Clicks"]);
+		tooltip:AddLine(AL["|cffFF0000Click: |cffFFFFFFOpen AtlasLoot\n|cffFF0000Shift+Click: |cffFFFFFFOpen AtlasLoot-Options"]);
 	end,
 	OnClick = function(self, button)
 		if button == "RightButton" then return end
