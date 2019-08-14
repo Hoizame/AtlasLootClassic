@@ -60,7 +60,7 @@ data["ArgentDawn"] = {
 	LoadDifficulty = LOAD_DIFF,
 	items = {
 		{ -- Exalted
-			name = _G["FACTION_STANDING_LABEL8"],
+			name = ALIL["Exalted"],
 			[NORMAL_DIFF] = {
 				{ 1, "f529rep8" },
 				{ 2, 18182 }, -- Chromatic Mantle of the Dawn
@@ -69,7 +69,7 @@ data["ArgentDawn"] = {
 			},
 		},
 		{ -- Revered
-			name = _G["FACTION_STANDING_LABEL7"],
+			name = ALIL["Revered"],
 			[NORMAL_DIFF] = {
 				{ 1, "f529rep7" },
 				{ 2, 13810 }, -- Blessed Sunfruit
@@ -88,7 +88,7 @@ data["ArgentDawn"] = {
 			},
 		},
 		{ -- Honored
-			name = _G["FACTION_STANDING_LABEL6"],
+			name = ALIL["Honored"],
 			[NORMAL_DIFF] = {
 				{ 1, "f529rep6" },
 				{ 2,  19216 }, -- Pattern: Argent Boots
@@ -102,7 +102,7 @@ data["ArgentDawn"] = {
 			},
 		},
 		{ -- Friendly
-			name = _G["FACTION_STANDING_LABEL5"],
+			name = ALIL["Friendly"],
 			[NORMAL_DIFF] = {
 				{ 1, "f529rep5" },
 				{ 2,  13724 }, -- Enriched Manna Biscuit
@@ -119,14 +119,14 @@ data["Timbermaw"] = {
 	LoadDifficulty = LOAD_DIFF,
 	items = {
 		{ -- Exalted
-			name = _G["FACTION_STANDING_LABEL8"],
+			name = ALIL["Exalted"],
 			[NORMAL_DIFF] = {
 				{ 1, "f576rep8" },
 				{ 2, 21326 }, -- Defender of the Timbermaw
 			},
 		},
 		{ -- Revered
-			name = _G["FACTION_STANDING_LABEL7"],
+			name = ALIL["Revered"],
 			[NORMAL_DIFF] = {
 				{ 1, "f576rep7" },
 				{ 2, 19218 }, -- Pattern: Mantle of the Timbermaw
@@ -135,7 +135,7 @@ data["Timbermaw"] = {
 			},
 		},
 		{ -- Honored
-			name = _G["FACTION_STANDING_LABEL6"],
+			name = ALIL["Honored"],
 			[NORMAL_DIFF] = {
 				{ 1, "f576rep6" },
 				{ 2,  16768 }, -- Furbolg Medicine Pouch
@@ -147,7 +147,7 @@ data["Timbermaw"] = {
 			},
 		},
 		{ -- Friendly
-			name = _G["FACTION_STANDING_LABEL5"],
+			name = ALIL["Friendly"],
 			[NORMAL_DIFF] = {
 				{ 1, "f576rep5" },
 				{ 2,  13484 }, -- Recipe: Transmute Earth to Water
@@ -165,7 +165,7 @@ data["ThoriumBrotherhood"] = {
 	LoadDifficulty = LOAD_DIFF,
 	items = {
 		{ -- Exalted
-			name = _G["FACTION_STANDING_LABEL8"],
+			name = ALIL["Exalted"],
 			[NORMAL_DIFF] = {
 				{ 1, "f59rep8" },
 				{ 2,  20040 }, -- Plans: Dark Iron Boots
@@ -175,7 +175,7 @@ data["ThoriumBrotherhood"] = {
 			},
 		},
 		{ -- Revered
-			name = _G["FACTION_STANDING_LABEL7"],
+			name = ALIL["Revered"],
 			[NORMAL_DIFF] = {
 				{ 1, "f59rep7" },
 				{ 2,  19220 }, -- Pattern: Flarecore Leggings
@@ -191,7 +191,7 @@ data["ThoriumBrotherhood"] = {
 			},
 		},
 		{ -- Honored
-			name = _G["FACTION_STANDING_LABEL6"],
+			name = ALIL["Honored"],
 			[NORMAL_DIFF] = {
 				{ 1, "f59rep6" },
 				{ 2,  17017 }, -- Pattern: Flarecore Mantle
@@ -206,7 +206,7 @@ data["ThoriumBrotherhood"] = {
 			},
 		},
 		{ -- Friendly
-			name = _G["FACTION_STANDING_LABEL5"],
+			name = ALIL["Friendly"],
 			[NORMAL_DIFF] = {
 				{ 1, "f59rep5" },
 				{ 2,  17018 }, -- Pattern: Flarecore Gloves
@@ -226,14 +226,14 @@ data["CenarionCircle"] = {
 	LoadDifficulty = LOAD_DIFF,
 	items = {
 		{ -- Exalted
-			name = _G["FACTION_STANDING_LABEL8"],
+			name = ALIL["Exalted"],
 			[NORMAL_DIFF] = {
 				{ 1, "f609rep8" },
 				{ 2,  20382 }, -- Pattern: Dreamscale Breastplate
 			},
 		},
 		{ -- Revered
-			name = _G["FACTION_STANDING_LABEL7"],
+			name = ALIL["Revered"],
 			[NORMAL_DIFF] = {
 				{ 1, "f609rep7" },
 				{ 2,  22683 }, -- Pattern: Gaea's Embrace
@@ -247,7 +247,7 @@ data["CenarionCircle"] = {
 			},
 		},
 		{ -- Honored
-			name = _G["FACTION_STANDING_LABEL6"],
+			name = ALIL["Honored"],
 			[NORMAL_DIFF] = {
 				{ 1, "f609rep6" },
 				{ 2,  22773 }, -- Pattern: Sylvan Crown
@@ -260,7 +260,7 @@ data["CenarionCircle"] = {
 			},
 		},
 		{ -- Friendly
-			name = _G["FACTION_STANDING_LABEL5"],
+			name = ALIL["Friendly"],
 			[NORMAL_DIFF] = {
 				{ 1, "f609rep5" },
 				{ 2,  22772 }, -- Pattern: Sylvan Shoulders
@@ -282,7 +282,7 @@ data["ZandalarTribe"] = {
 	LoadDifficulty = LOAD_DIFF,
 	items = {
 		{ -- Exalted
-			name = _G["FACTION_STANDING_LABEL8"],
+			name = ALIL["Exalted"],
 			[NORMAL_DIFF] = {
 				{ 1, "f270rep8" },
 				{ 2,  20013 }, -- Recipe: Living Action Potion
@@ -292,7 +292,7 @@ data["ZandalarTribe"] = {
 			},
 		},
 		{ -- Revered
-			name = _G["FACTION_STANDING_LABEL7"],
+			name = ALIL["Revered"],
 			[NORMAL_DIFF] = {
 				{ 1, "f270rep7" },
 				{ 2,  19764 }, -- Pattern: Bloodvine Vest
@@ -307,7 +307,7 @@ data["ZandalarTribe"] = {
 			},
 		},
 		{ -- Honored
-			name = _G["FACTION_STANDING_LABEL6"],
+			name = ALIL["Honored"],
 			[NORMAL_DIFF] = {
 				{ 1, "f270rep6" },
 				{ 2,  19765 }, -- Pattern: Bloodvine Leggings
@@ -322,7 +322,7 @@ data["ZandalarTribe"] = {
 			},
 		},
 		{ -- Friendly
-			name = _G["FACTION_STANDING_LABEL5"],
+			name = ALIL["Friendly"],
 			[NORMAL_DIFF] = {
 				{ 1, "f270rep5" },
 				{ 2,  19766 }, -- Pattern: Bloodvine Boots
@@ -343,7 +343,7 @@ data["BroodOfNozdormu"] = {
 	LoadDifficulty = LOAD_DIFF,
 	items = {
 		{ -- Exalted
-			name = _G["FACTION_STANDING_LABEL8"],
+			name = ALIL["Exalted"],
 			[NORMAL_DIFF] = {
 				{ 1, "f910rep8" },
 				{ 2, 21210 }, --Signet Ring of the Bronze Dragonflight / 80
@@ -352,7 +352,7 @@ data["BroodOfNozdormu"] = {
 			},
 		},
 		{ -- Revered
-			name = _G["FACTION_STANDING_LABEL7"],
+			name = ALIL["Revered"],
 			[NORMAL_DIFF] = {
 				{ 1, "f910rep7" },
 				{ 2, 21209 }, --Signet Ring of the Bronze Dragonflight / 75
@@ -361,7 +361,7 @@ data["BroodOfNozdormu"] = {
 			},
 		},
 		{ -- Honored
-			name = _G["FACTION_STANDING_LABEL6"],
+			name = ALIL["Honored"],
 			[NORMAL_DIFF] = {
 				{ 1, "f910rep6" },
 				{ 2, 21208 }, --Signet Ring of the Bronze Dragonflight / 70
@@ -370,7 +370,7 @@ data["BroodOfNozdormu"] = {
 			},
 		},
 		{ -- Friendly
-			name = _G["FACTION_STANDING_LABEL5"],
+			name = ALIL["Friendly"],
 			[NORMAL_DIFF] = {
 				{ 1, "f910rep5" },
 				{ 2, 21207 }, --Signet Ring of the Bronze Dragonflight / 65
@@ -379,7 +379,7 @@ data["BroodOfNozdormu"] = {
 			},
 		},
 		{ -- Neutral
-			name = _G["FACTION_STANDING_LABEL4"],
+			name = ALIL["Neutral"],
 			[NORMAL_DIFF] = {
 				{ 1, "f910rep4" },
 				{ 2, 21206 }, --Signet Ring of the Bronze Dragonflight / 60
@@ -396,7 +396,7 @@ data["HydraxianWaterlords"] = {
 	LoadDifficulty = LOAD_DIFF,
 	items = {
 		{ -- Revered
-			name = _G["FACTION_STANDING_LABEL7"],
+			name = ALIL["Revered"],
 			[NORMAL_DIFF] = {
 				{ 1, "f749rep7" },
 				{ 2, 22687 }, -- Pattern: Glacial Wrists
@@ -406,7 +406,7 @@ data["HydraxianWaterlords"] = {
 			},
 		},
 		{ -- Honored
-			name = _G["FACTION_STANDING_LABEL6"],
+			name = ALIL["Honored"],
 			[NORMAL_DIFF] = {
 				{ 1, "f749rep6" },
 				{ 2, 17333 }, -- Aqual Quintessence
@@ -421,7 +421,7 @@ data["BloodsailBuccaneers"] = {
 	LoadDifficulty = LOAD_DIFF,
 	items = {
 		{ -- Friendly
-			name = _G["FACTION_STANDING_LABEL5"],
+			name = ALIL["Friendly"],
 			[NORMAL_DIFF] = {
 				{ 1, "f87rep5" },
 				{ 2, 12185 }, -- Bloodsail Admiral's Hat
@@ -439,7 +439,7 @@ data["WintersaberTrainers"] = {
 	LoadDifficulty = LOAD_DIFF,
 	items = {
 		{ -- Exalted
-			name = _G["FACTION_STANDING_LABEL8"],
+			name = ALIL["Exalted"],
 			[ALLIANCE_DIFF] = {
 				{ 1, "f589rep8", [ATLASLOOT_IT_ALLIANCE] = true },
 				{ 2, 13086, [ATLASLOOT_IT_ALLIANCE] = true }, -- Reins of the Winterspring Frostsaber
@@ -454,25 +454,25 @@ data["WintersaberTrainers"] = {
 	LoadDifficulty = LOAD_DIFF,
 	items = {
 		{ -- Exalted
-			name = _G["FACTION_STANDING_LABEL8"],
+			name = ALIL["Exalted"],
 			[NORMAL_DIFF] = {
 				{ 1, "f59rep8" },
 			},
 		},
 		{ -- Revered
-			name = _G["FACTION_STANDING_LABEL7"],
+			name = ALIL["Revered"],
 			[NORMAL_DIFF] = {
 				{ 1, "f59rep7" },
 			},
 		},
 		{ -- Honored
-			name = _G["FACTION_STANDING_LABEL6"],
+			name = ALIL["Honored"],
 			[NORMAL_DIFF] = {
 				{ 1, "f59rep6" },
 			},
 		},
 		{ -- Friendly
-			name = _G["FACTION_STANDING_LABEL5"],
+			name = ALIL["Friendly"],
 			[NORMAL_DIFF] = {
 				{ 1, "f59rep5" },
 			},

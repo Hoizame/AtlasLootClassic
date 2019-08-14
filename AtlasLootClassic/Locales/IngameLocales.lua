@@ -48,7 +48,27 @@ local function AtlasLoot_GetClassName(class)
 	end
 end
 
+local function GetLocRepStanding(id)
+	if (id > 10) then
+		return FACTION_STANDING_LABEL4_FEMALE
+	else
+		return UnitSex("player")==3 and _G["FACTION_STANDING_LABEL"..(id or 4).."_FEMALE"] or _G["FACTION_STANDING_LABEL"..(id or 4)]
+	end
+end
+
 local IngameLocales = {
+	-- ######################################################################
+	-- Faction standing
+	-- ######################################################################
+	["Hated"] = GetLocRepStanding(1),
+	["Hostile"] = GetLocRepStanding(2),
+	["Unfriendly"] = GetLocRepStanding(3),
+	["Neutral"] = GetLocRepStanding(4),
+	["Friendly"] = GetLocRepStanding(5),
+	["Honored"] = GetLocRepStanding(6),
+	["Revered"] = GetLocRepStanding(7),
+	["Exalted"] = GetLocRepStanding(8),
+
 	-- ######################################################################
 	-- Professions
 	-- ######################################################################
