@@ -75,6 +75,7 @@ globals = {
 	"AtlasLootTooltip",
 	"ATLASLOOT_WORLD_BOSS_COLOR",
 	"ATLASLOOT_COLLECTIONS_COLOR",
+	"ATLASLOOT_CLASSPROFESSION_COLOR",
 
 	-- Atlas
 	"Atlas",
@@ -90,8 +91,6 @@ globals = {
 	"ATLAS_SMALLFRAME_SELECTED",
 
 	-- misc custom
-	"AceGUIWeakAurasMultiLineEditBoxInsertLink",
-	"AceGUIWidgetLSMlists",
 	"CUSTOM_CLASS_COLORS",
 	"LibStub",
 

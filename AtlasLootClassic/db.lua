@@ -5,9 +5,9 @@ AtlasLoot.AtlasLootDBDefaults = {
 		showMinEnterLvl = false,
 		ContentPhase = {
 			enableOnLootTable = true,
-			enableOnItems = false,
-			enableOnCrafting = false,
-			enableOnSets = false,
+			enableOnItems = true,
+			enableOnCrafting = true,
+			enableOnSets = true,
 			enableTT = false,
 			activePhase = 1,
 		},

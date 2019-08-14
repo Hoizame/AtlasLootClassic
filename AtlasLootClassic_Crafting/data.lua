@@ -7,6 +7,7 @@ local string = _G.string
 local format = string.format
 
 -- WoW
+local RAID_CLASS_COLORS = _G["RAID_CLASS_COLORS"]
 
 -- ----------------------------------------------------------------------------
 -- AddOn namespace.
@@ -33,6 +34,7 @@ local PRICE_EXTRA_ITTYPE = data:AddExtraItemTableType("Price")
 
 local PROF_CONTENT = data:AddContentType(ALIL["Professions"], ATLASLOOT_PRIMPROFESSION_COLOR)
 local PROF_SEC_CONTENT = data:AddContentType(AL["Secondary Professions"], ATLASLOOT_SECPROFESSION_COLOR)
+local PROF_CLASS_CONTENT = data:AddContentType(AL["Class Professions"], ATLASLOOT_CLASSPROFESSION_COLOR)
 --local RAID20_CONTENT = data:AddContentType(AL["20 Raids"], ATLASLOOT_RAID20_COLOR)
 --local RAID40_CONTENT = data:AddContentType(AL["40 Raids"], ATLASLOOT_RAID40_COLOR)
 
@@ -1853,6 +1855,40 @@ data["FirstAid"] = {
 				{ 16, 23787 }, --Powerful Anti-Venom / 300
 				{ 17, 7935 }, --Strong Anti-Venom / 130
 				{ 18, 7934 }, --Anti-Venom / 80
+			}
+		},
+	}
+}
+
+data["RoguePoisons"] = {
+	name = format("|c%s%s|r", RAID_CLASS_COLORS["ROGUE"].colorStr, ALIL["ROGUE"]),
+	ContentType = PROF_CLASS_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = PROF_ITTYPE,
+	items = {
+		{
+			name = ALIL["Poisons"],
+			[NORMAL_DIFF] = {
+				{ 1, 11343 }, -- Instant Poison VI
+				{ 2, 11342 }, -- Instant Poison V
+				{ 3, 11341 }, -- Instant Poison IV
+				{ 4, 8691  }, -- Instant Poison III
+				{ 5, 8687  }, -- Instant Poison II
+				{ 6, 8681  }, -- Instant Poison
+				{ 8, 13230 },  -- Wound Poison IV
+				{ 9, 13229 },  -- Wound Poison III
+				{ 10, 13228 }, -- Wound Poison II
+				{ 11, 13220 }, -- Wound Poison
+				{ 13, 3420  }, -- Crippling Poison
+				{ 17, 25347 }, -- Deadly Poison V
+				{ 18, 11358 }, -- Deadly Poison IV
+				{ 19, 11357 }, -- Deadly Poison III
+				{ 20, 2837  }, -- Deadly Poison II
+				{ 21, 2835  }, -- Deadly Poison
+				{ 24, 11400 }, -- Mind-numbing Poison III
+				{ 25, 8694  }, -- Mind-numbing Poison II
+				{ 26, 5763  }, -- Mind-numbing Poison
+				{ 28, 6510  }, -- Blinding Powder
 			}
 		},
 	}

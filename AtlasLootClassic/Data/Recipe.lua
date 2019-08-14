@@ -121,6 +121,7 @@ local RECIPE = {
 	[5641] = 	{ 4,	125,  	6619 }, -- Recipe: Cowardly Flight Potion
 	[5642] = 	{ 4,	150,  	6624 }, -- Recipe: Free Action Potion
 	[5643] = 	{ 4,	175,  	6618 }, -- Recipe: Great Rage Potion
+	[5657] = 	{ 13,	120,  	6651 }, -- Recipe: Instant Toxin
 	[5771] = 	{ 8,	70,  	6686 }, -- Pattern: Red Linen Bag
 	[5772] = 	{ 8,	115,  	6688 }, -- Pattern: Red Woolen Bag
 	[5773] = 	{ 8,	150,  	6692 }, -- Pattern: Robes of Arcana
@@ -833,6 +834,7 @@ local RECIPE = {
 	[23689] = 	{ 1,	300,  	30021 }, -- Manual: Crystal Infused Bandage
 	[23690] = 	{ 6,	300,  	30047 }, -- Recipe: Crystal Flake Throat Lozenge
 }
+RECIPE[21302] = { 13, 300, 25347 } -- Handbook of Deadly Poison V
 local RECIPE_TO_SPELL = {}
 for k,v in pairs(RECIPE) do
 	RECIPE_TO_SPELL[v[3]] = k
