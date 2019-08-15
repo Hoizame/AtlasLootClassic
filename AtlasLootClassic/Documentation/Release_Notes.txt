@@ -15,7 +15,7 @@ v1.1.4-beta (Aug. XX, 2019)
 - Update pvp sets
 - Fix missing Minimap button text
 - Fix AQ mounts preview
-- Moce out PvP Weapons and Mounts into own tables
+- Move out PvP Weapons and Mounts into own tables
 
 
 v1.1.3-beta (Aug. 12, 2019)

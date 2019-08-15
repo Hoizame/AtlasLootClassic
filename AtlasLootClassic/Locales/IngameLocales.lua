@@ -266,6 +266,7 @@ local IngameLocales = {
 	["Food"] = _G["POWER_TYPE_FOOD"],
 	["Special"] = _G["SPECIAL"],
 	["Mounts"] = _G["MOUNTS"],
+	["Mount"] = _G["MOUNT"],
 }
 AtlasLoot.IngameLocales = IngameLocales
 

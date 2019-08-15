@@ -4,7 +4,7 @@ local AtlasLoot = _G.AtlasLoot
 local Item = AtlasLoot.Button:AddType("Item", "i")
 local Query = {}
 Item.Query = Query
-local AL = AtlasLoot.Locales
+local AL, ALIL = AtlasLoot.Locales, AtlasLoot.IngameLocales
 local ClickHandler = AtlasLoot.ClickHandler
 local Token = AtlasLoot.Data.Token
 local Recipe = AtlasLoot.Data.Recipe
@@ -277,6 +277,7 @@ function Item.Refresh(button)
 			Token.GetTokenDescription(itemID) or
 			Recipe.GetRecipeDescriptionWithRank(itemID) or
 			Profession.GetColorSkillRankItem(itemID) or
+			(Mount.IsMount(button.ItemID) and ALIL["Mount"] or nil) or
 			( Sets:GetItemSetForItemID(itemID) and AL["|cff00ff00Set item:|r "] or "")..GetItemDescInfo(itemEquipLoc, itemType, itemSubType)
 		)
 	end
@@ -317,15 +318,18 @@ function Item.ShowQuickDressUp(itemLink, ttFrame)
 		local frame = CreateFrame("Frame", name)
 		frame:SetClampedToScreen(true)
 		frame:SetSize(230, 280)
+		frame:SetBackdrop(ALPrivate.BOX_BORDER_BACKDROP)
+		frame:SetBackdropColor(0,0,0,1)
 
 		frame.modelFrame = CreateFrame("DressUpModel", name.."-ModelFrame", frame)
 		frame.modelFrame:ClearAllPoints()
 		frame.modelFrame:SetParent(frame)
-		frame.modelFrame:SetAllPoints(frame)
+		frame.modelFrame:SetPoint("TOPLEFT", frame, "TOPLEFT", 5, -5)
+		frame.modelFrame:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", -5, 5)
 		frame.modelFrame.defaultRotation = MODELFRAME_DEFAULT_ROTATION
 		frame.modelFrame:SetRotation(MODELFRAME_DEFAULT_ROTATION)
-		frame.modelFrame:SetBackdrop(ALPrivate.BOX_BORDER_BACKDROP)
-		frame.modelFrame:SetBackdropColor(0,0,0,1)
+		--frame.modelFrame:SetBackdrop(ALPrivate.BOX_BORDER_BACKDROP)
+		--frame.modelFrame:SetBackdropColor(0,0,0,1)
 		frame.modelFrame:SetUnit("player")
 		frame.modelFrame.minZoom = 0
 		frame.modelFrame.maxZoom = 1.0
@@ -426,7 +430,7 @@ local function EventFrame_OnEvent(frame, event, arg1, arg2)
 					GameTooltip_ShowCompareItem(itemIsOnEnter)
 				elseif arg1 == "LCTRL" or arg1 == "RCTRL" then
 					if Mount.IsMount(buttonOnEnter.ItemID) then
-						Item.ShowQuickDressUp(buttonOnEnter.ItemID, itemIsOnEnter)
+						--Item.ShowQuickDressUp(buttonOnEnter.ItemID, itemIsOnEnter)
 					else
 						--local _, link = itemIsOnEnter:GetItem()
 						Item.ShowQuickDressUp(buttonOnEnter.ItemID, itemIsOnEnter)
@@ -438,7 +442,7 @@ local function EventFrame_OnEvent(frame, event, arg1, arg2)
 					ShoppingTooltip2:Hide()
 					--ShoppingTooltip3:Hide()
 				elseif arg1 == "LCTRL" or arg1 == "RCTRL" then
-					if Item.previewTooltipFrame and Item.previewTooltipFrame:IsShown() then Item.previewTooltipFrame:Hide() end
+					if Item.previewTooltipFrame and not Mount.IsMount(buttonOnEnter.ItemID) and Item.previewTooltipFrame:IsShown() then Item.previewTooltipFrame:Hide() end
 				end
 			end
 		end
