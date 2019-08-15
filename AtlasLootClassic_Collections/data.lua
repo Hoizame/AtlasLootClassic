@@ -568,6 +568,39 @@ data["WorldEpics"] = {
 	},
 }
 
+data["Tabards"] = {
+	name = ALIL["Tabard"],
+	ContentType = COLLECTIONS_CONTENT,
+	LoadDifficulty = LOAD_DIFF,
+	TableType = NORMAL_ITTYPE,
+	items = {
+		{
+			name = ALIL["Tabard"],
+			[ALLIANCE_DIFF] = {
+				{ 1,  15196 }, -- Private's Tabard
+				{ 2,  15198 }, -- Knight's Colors
+				{ 3,  19506 }, -- Silverwing Battle Tabard
+				{ 4,  20132 }, -- Arathor Battle Tabard
+				{ 5,  19032 }, -- Stormpike Battle Tabard
+				{ 16,  19160 }, -- Contest Winner's Tabard
+				{ 17,  22999 }, -- Tabard of the Agent Dawn
+				{ 18, 23192 }, -- Tabard of the Scarlet Crusade
+				{ 19, 23705 }, -- Tabard of Flame
+				{ 20, 23709 }, -- Tabard of Frost
+			},
+			[HORDE_DIFF] = {
+				GetItemsFromDiff = ALLIANCE_DIFF,
+				{ 1, 15197 }, -- Scout's Tabard
+				{ 2, 15199 }, -- Stone Guard's Herald
+				{ 3, 19505 }, -- Warsong Battle Tabard
+				{ 4, 20131 }, -- Battle Tabard of the Defilers
+				{ 5, 19031 }, -- Frostwolf Battle Tabard
+			},
+		},
+	},
+}
+
+
 data["GurubashiArena"] = {
 	name = AL["Gurubashi Arena"],
 	ContentType = WORLD_EVENT_CONTENT,
