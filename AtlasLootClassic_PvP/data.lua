@@ -658,6 +658,7 @@ data["ClassSets"] = {
 	name = AL["Class Sets"],
 	ContentType = GENERAL_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
+	ContentPhase = 2,
 	items = {
 		{ -- PVPPriest
 			name = ALIL["PRIEST"],
@@ -945,13 +946,14 @@ data["ClassSets"] = {
 	},
 }
 
-data["Misc"] = {
-	name = BINDING_HEADER_MISC,
+data["Weapons"] = {
+	name = ALIL["Weapons"],
 	ContentType = GENERAL_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
+	ContentPhase = 2,
 	items = {
 		{ -- PVPWeapons
-			name = AUCTION_CATEGORY_WEAPONS,
+			name = ALIL["Weapons"],
 			[ALLIANCE_DIFF] = {
 				{ 1,  18827 }, -- Grand Marshal's Handaxe
 				{ 2,  18830 }, -- Grand Marshal's Sunderer
@@ -999,8 +1001,17 @@ data["Misc"] = {
 				{ 23, 23469 }, -- High Warlord's Tome of Mending
 			},
 		},
+	},
+}
+
+data["Mounts"] = {
+	name = ALIL["Mounts"],
+	ContentType = GENERAL_CONTENT,
+	LoadDifficulty = LOAD_DIFF,
+	ContentPhase = 2,
+	items = {
 		{ -- PvPMountsPvP
-			name = MOUNTS,
+			name = ALIL["Mounts"],
 			[ALLIANCE_DIFF] = {
 				{ 1,  19030 }, -- Stormpike Battle Charger
 				{ 2,  18244 }, -- Black War Ram
@@ -1018,6 +1029,7 @@ data["Misc"] = {
 		},
 	}
 }
+
 --[[
 data["DireMaul"] = {
 	MapID = 2597,
