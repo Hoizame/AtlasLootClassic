@@ -9,7 +9,10 @@ v1.1.4-beta (Aug. XX, 2019)
 ========================
 - Mounts should now always been shown on mouseover
 - Add Rogue poisons into crafting module
+- Add more Sets
+- Add Collections: Tabards
 - Add clear list for favourites
+- Update pvp sets
 - Fix missing Minimap button text
 - Fix AQ mounts preview
 - Moce out PvP Weapons and Mounts into own tables

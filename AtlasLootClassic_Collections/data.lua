@@ -175,6 +175,19 @@ data["ZGSets"] = {
 				{ 24 }, -- Paladin
 			},
 		},
+		{ -- Misc
+			name = format(AL["%s Sets"], AL["Misc"]),
+			[NORMAL_DIFF] = {
+				-- Swords
+				{ 1,  461 }, -- Warblade of the Hakkari
+				{ 3,  463 }, -- Primal Blessing
+				-- Rings
+				{ 16,  466 }, -- Major Mojo Infusion
+				{ 17,  462 }, -- Zanzil's Concentration
+				{ 18,  465 }, -- Prayer of the Primal
+				{ 19,  464 }, -- Overlord's Resolution
+			},
+		},
 	},
 }
 
@@ -277,6 +290,19 @@ data["MiscSets"] = {
 				{ 2,  124 }, -- Deathbone Guardian / 61
 				{ 3,  321 }, -- Imperial Plate / 53-61
 				{ 16,  533 }, -- Battlegear of Undead Slaying / 63
+			},
+		},
+		{ -- Misc
+			name = format(AL["%s Sets"], AL["Misc"]),
+			[NORMAL_DIFF] = {
+				-- Fist weapons
+				{ 1,  261 }, -- Spirit of Eskhandar
+				-- Swords
+				{ 3,  41 }, -- Dal'Rend's Arms
+				-- Dagger / Mace
+				{ 5,  65 }, -- Spider's Kiss
+				-- Trinket
+				{ 16,  444 }, -- Shard of the Gods / 60
 			},
 		},
 	},

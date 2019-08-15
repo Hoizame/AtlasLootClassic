@@ -14,7 +14,7 @@ local assert, type = _G.assert, _G.type
 local format = _G.string.format
 
 -- WoW
-local GetItemQualityColor = _G.GetItemQualityColor
+local GetItemQualityColor, GetItemIcon = _G.GetItemQualityColor, _G.GetItemIcon
 
 local GLOBAL_SETS = "global"
 local NO_ICON = "Interface\\Icons\\inv_helmet_08"
@@ -30,6 +30,17 @@ local ICON_PATH_PRE = {
 	WARLOCK 	= 	IMAGE_PATH.."classicon_warlock",
 	DRUID 		= 	IMAGE_PATH.."classicon_druid",
 }
+local SPECIAL_ICONS = {
+	[466] = GetItemIcon(19898), -- Major Mojo Infusion
+	[462] = GetItemIcon(19905), -- Zanzil's Concentration
+	[465] = GetItemIcon(19863), -- Prayer of the Primal
+	[464] = GetItemIcon(19873), -- Overlord's Resolution
+	[461] = GetItemIcon(19865), -- The Twin Blades of Hakkari
+	[41]  = GetItemIcon(12940), -- Dal'Rend's Arms
+	[463] = GetItemIcon(19896), -- Primal Blessing
+	[261] = GetItemIcon(18203), -- Spirit of Eskhandar
+	[65]  = GetItemIcon(13183), -- Spider's Kiss
+}
 local COLOR_STRINGS = {}
 local ContentPhaseCache = {}
 
@@ -44,11 +55,15 @@ AtlasLoot:AddInitFunc(OnInit)
 
 function Sets:GetIcon(setID)
 	if not ClassicItemSets:SetExist(setID) then return end
-	local icon, class, className = ClassicItemSets:GetSetIcon(setID), ClassicItemSets:GetPlayerClass(setID)
-	if class then
-		return ICON_PATH_PRE[className]
+	if SPECIAL_ICONS[setID] then
+		return SPECIAL_ICONS[setID]
 	else
-		return icon or NO_ICON
+		local icon, class, className = ClassicItemSets:GetSetIcon(setID), ClassicItemSets:GetPlayerClass(setID)
+		if class then
+			return ICON_PATH_PRE[className]
+		else
+			return icon or NO_ICON
+		end
 	end
 end
 
@@ -85,7 +100,6 @@ function Sets:GetSpetIDPhase(setID)
     end
     return ContentPhaseCache[setID]
 end
-
 
 function Sets:GetPhaseTextureForSetID(setID)
     local phase = ContentPhaseCache[setID] or Sets:GetSpetIDPhase(setID)
