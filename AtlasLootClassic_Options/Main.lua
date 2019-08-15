@@ -52,8 +52,13 @@ Options.config.args.atlasloot = {
 			get = function(info) return AtlasLoot.db.showMinEnterLvl end,
 			set = function(info, value) AtlasLoot.db.showMinEnterLvl = value AtlasLoot.GUI.OnLevelRangeRefresh() end,
 		},
+		headerSetting = {
+			order = 10,
+			type = "header",
+			name = AL["Content phase settings"],
+		},
 		showContentPhaseInTT = {
-			order = 5,
+			order = 11,
 			type = "toggle",
 			width = "full",
 			name = AL["Show content phase in tooltip."],
@@ -61,7 +66,7 @@ Options.config.args.atlasloot = {
 			set = function(info, value) AtlasLoot.db.ContentPhase.enableTT = value end,
 		},
 		enableContentPhaseOnLootTable = {
-			order = 6,
+			order = 12,
 			type = "toggle",
 			width = "full",
 			name = AL["Show content phase indicator for loottables."],
@@ -69,7 +74,7 @@ Options.config.args.atlasloot = {
 			set = function(info, value) AtlasLoot.db.ContentPhase.enableOnLootTable = value AtlasLoot.GUI.OnLevelRangeRefresh() end,
 		},
 		enableContentPhaseOnItems = {
-			order = 7,
+			order = 13,
 			type = "toggle",
 			width = "full",
 			name = AL["Show content phase indicator for items."],
@@ -77,7 +82,7 @@ Options.config.args.atlasloot = {
 			set = function(info, value) AtlasLoot.db.ContentPhase.enableOnItems = value UpdateItemFrame() end,
 		},
 		enableContentPhaseOnCrafting = {
-			order = 8,
+			order = 14,
 			type = "toggle",
 			width = "full",
 			name = AL["Show content phase indicator for crafting."],
@@ -85,7 +90,7 @@ Options.config.args.atlasloot = {
 			set = function(info, value) AtlasLoot.db.ContentPhase.enableOnCrafting = value UpdateItemFrame() end,
 		},
 		enableContentPhaseOnSets = {
-			order = 9,
+			order = 15,
 			type = "toggle",
 			width = "full",
 			name = AL["Show content phase indicator for sets."],
