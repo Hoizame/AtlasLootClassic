@@ -206,12 +206,10 @@ function Item.OnEnter(button, owner)
 	if IsShiftKeyDown() or db.alwaysShowCompareTT then
 		GameTooltip_ShowCompareItem(tooltip)
 	end
-	if IsControlKeyDown() or db.alwaysShowPreviewTT then
-		if Mount.IsMount(button.ItemID) then
-			Item.ShowQuickDressUp(button.ItemID, tooltip)
-		else
-			Item.ShowQuickDressUp(button.ItemID, tooltip)
-		end
+	if Mount.IsMount(button.ItemID) then
+		Item.ShowQuickDressUp(button.ItemID, tooltip)
+	elseif IsControlKeyDown() or db.alwaysShowPreviewTT then
+		Item.ShowQuickDressUp(button.ItemID, tooltip)
 	end
 end
 
