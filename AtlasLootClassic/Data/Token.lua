@@ -201,6 +201,7 @@ local TOKEN = {
 
 	-- AQ40
 	[21221] = { 21712, 21710, 21709, type = 3 }, -- Amulet of the Fallen God
+	[21762] = { 21156, 20876, 20879, 20875, 20878, 20881, 20877, 20874, 20882 }, -- Greater Scarab Coffer Key
 
 	-- AQ20
 	[21220] = { 21504, 21507, 21505, 21506, type = 3 }, -- Head of Ossirian the Unscarred
