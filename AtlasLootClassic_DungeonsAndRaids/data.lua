@@ -107,6 +107,7 @@ local T2_SET = {
 	ExtraList = true,
 	LoadDifficulty = LOAD_DIFF,
 	TableType = SET_ITTYPE,
+	ContentPhase = 3,
 	[ALLIANCE_DIFF] = {
 		{ 1, 212 }, -- Warlock
 		{ 3, 211 }, -- Priest
@@ -130,6 +131,7 @@ local T3_SET = {
 	ExtraList = true,
 	LoadDifficulty = LOAD_DIFF,
 	TableType = SET_ITTYPE,
+	ContentPhase = 6,
 	[ALLIANCE_DIFF] = {
 		{ 1, 529 }, -- Warlock
 		{ 3, 525 }, -- Priest
@@ -152,6 +154,7 @@ local AQ_OPENING = {	-- Keys
 	name = AL["AQ opening"],
 	TableType = NORMAL_ITTYPE,
 	ExtraList = true,
+	ContentPhase = 5,
 	[NORMAL_DIFF] = {
 		{ 1,  21138 }, -- Red Scepter Shard
 		{ 2,  21529 }, -- Amulet of Shadow Shielding
@@ -176,6 +179,7 @@ local AQ_OPENING = {	-- Keys
 local DM_BOOKS = { -- DMBooks
 	name = AL["Books"],
 	ExtraList = true,
+	ContentPhase = 2,
 	[NORMAL_DIFF] = {
 		{ 1,  18401 }, -- Foror's Compendium of Dragon Slaying
 		{ 3,  18362 }, -- Holy Bologna: What the Light Won't Tell You
@@ -2543,6 +2547,7 @@ data["LowerBlackrockSpire"] = {
 			npcId = 16080,
 			DisplayIDs = {{15997}},
 			ExtraList = true,
+			ContentPhase = 5,
 			[NORMAL_DIFF] = {
 				{ 1,  22306 }, -- Ironweave Belt
 				{ 2,  22325 }, -- Belt of the Trickster
@@ -2824,6 +2829,7 @@ data["DireMaulEast"] = {
 			npcId = 16097,
 			DisplayIDs = {{16000}},
 			ExtraList = true,
+			ContentPhase = 5,
 			[NORMAL_DIFF] = {
 				{ 1,  22304 }, -- Ironweave Gloves
 				{ 2,  22472 }, -- Boots of Ferocity
@@ -3537,6 +3543,7 @@ data["Scholomance"] = {
 			npcId = 16118,
 			DisplayIDs = {{16020}},
 			ExtraList = true,
+			ContentPhase = 5,
 			[NORMAL_DIFF] = {
 				{ 1,  22303 }, -- Ironweave Pants
 				{ 2,  22326 }, -- Amalgam's Band
@@ -3879,6 +3886,7 @@ data["Stratholme"] = {
 		{ -- STRATSothosJarien
 			name = AL["Sothos and Jarien's Heirlooms"].." - "..format(AL["Tier %s Sets"], "0.5"),
 			ExtraList = true,
+			ContentPhase = 5,
 			[NORMAL_DIFF] = {
 				{ 1,  22327 }, -- Amulet of the Redeemed
 				{ 2,  22301 }, -- Ironweave Robe

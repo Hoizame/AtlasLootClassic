@@ -70,6 +70,7 @@ data["TierSets"] = {
 		},
 		{ -- T0.5
 			name = format(AL["Tier %s Sets"], "0.5"),
+			ContentPhase = 5,
 			[ALLIANCE_DIFF] = {
 				{ 1, 518 }, -- Warlock
 				{ 3, 514 }, -- Priest
@@ -108,6 +109,7 @@ data["TierSets"] = {
 		},
 		{ -- T2
 			name = format(AL["Tier %s Sets"], "2"),
+			ContentPhase = 3,
 			[ALLIANCE_DIFF] = {
 				{ 1, 212 }, -- Warlock
 				{ 3, 211 }, -- Priest
@@ -127,6 +129,7 @@ data["TierSets"] = {
 		},
 		{ -- T3
 			name = format(AL["Tier %s Sets"], "3"),
+			ContentPhase = 6,
 			[ALLIANCE_DIFF] = {
 				{ 1, 529 }, -- Warlock
 				{ 3, 525 }, -- Priest
@@ -152,6 +155,7 @@ data["ZGSets"] = {
 	ContentType = SET_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
 	TableType = SET_ITTYPE,
+	ContentPhase = 4,
 	items = {
 		{
 			name = format(AL["%s Sets"], C_Map_GetAreaInfo(1977)),
@@ -179,6 +183,7 @@ data["AQSets"] = {
 	ContentType = SET_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
 	TableType = SET_ITTYPE,
+	ContentPhase = 5,
 	items = {
 		{ -- AQ20
 			name = format(AL["%s Sets"], C_Map_GetAreaInfo(3428).." 20"),

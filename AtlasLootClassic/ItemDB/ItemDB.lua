@@ -455,10 +455,15 @@ end
 function ItemDB.ContentProto:GetNameForItemTable(index)
 	assert(self.items, "items table not found.")
 	assert(index and self.items[index], "index not found.")
-	if self.items[index].name then
-		return self.items[index].name
-	elseif self.items[index].FactionID then
-		return GetFactionInfoByID(self.items[index].FactionID) --or "Faction "..self.items[index].FactionID
+	index = self.items[index]
+	local add = ""
+	if AtlasLoot.db.ContentPhase.enableOnLootTable and index.ContentPhase and not ContentPhase:IsActive(index.ContentPhase) then
+		add = add.." "..format(CONTENT_PHASE_FORMAT, index.ContentPhase)
+	end
+	if index.name then
+		return index.name..add
+	elseif index.FactionID then
+		return GetFactionInfoByID(index.FactionID)..add --or "Faction "..self.items[index].FactionID
 	else
 		return UNKNOWN
 	end
