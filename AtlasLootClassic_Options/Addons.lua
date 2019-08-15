@@ -21,7 +21,9 @@ local GetServerTime = _G.GetServerTime
 local count = 0
 
 local function UpdateItemFrame(addon)
-    Addons:UpdateStatus(addon:GetName())
+    if addon then
+        Addons:UpdateStatus(addon:GetName())
+    end
     if AtlasLoot.GUI.frame and AtlasLoot.GUI.frame:IsShown() then
         AtlasLoot.GUI.ItemFrame:Refresh(true)
     end
@@ -199,8 +201,19 @@ local function CreateFavouriteOptions()
                     ExportItemList(FavAddon:GetActiveListName(), FavAddon:ExportItemList(db.activeList[1], db.activeList[2]))
                 end,
             },
-            useGlobal = {
+            clearList = {
                 order = 14,
+                type = "execute",
+                name = AL["Clear list"],
+                desc = function() return format(AL["Remove |cffff0000%d|r items from list."], FavAddon:GetNumItemsInList()) end,
+                confirm = true,
+                func = function(info)
+                    FavAddon:ClearList()
+                    UpdateItemFrame()
+                end,
+            },
+            useGlobal = {
+                order = 15,
                 type = "toggle",
                 width = "full",
                 name = AL["Always active for all Profiles."],
@@ -218,7 +231,7 @@ local function CreateFavouriteOptions()
                 end
             },
             useProfile = {
-                order = 15,
+                order = 16,
                 type = "toggle",
                 width = "full",
                 name = function() return format(AL["Always active for profile: |cff00ff00%s|r"], AtlasLoot.dbRaw:GetCurrentProfile()) end,

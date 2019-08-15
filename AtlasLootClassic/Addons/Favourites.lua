@@ -132,6 +132,16 @@ local function GetActiveList(self)
     end
 end
 
+local function ClearActiveList(self)
+    local name, isGlobal = self.db.activeList[1], ( self.db.activeList[2] == true )
+    local db = isGlobal and self:GetGlobaleLists() or self:GetProfileLists()
+    if db[name] then
+        db[name] = {}
+    else
+        db[BASE_NAME_P] = {}
+    end
+end
+
 local function CleanUpShownLists(db, globalDb, activeSubLists, isGlobalList)
     local new = {}
 
@@ -187,8 +197,16 @@ function Favourites:UpdateDb()
     setmetatable(TooltipTextCache, KEY_WEAK_MT)
 
     -- populate sublists
-    Favourites.subItems = {}
+    self.subItems = {}
     PopulateSubLists(self.db, self.globalDb)
+
+    -- init item count
+    local numItems = 0
+    for k in pairs(self.activeList) do
+        numItems = numItems + 1
+    end
+    self.numItems = numItems
+
 
     -- tooltip hook
     if self.db.enabled and self.db.showInTT and not TooltipsHooked then
@@ -211,6 +229,7 @@ end
 
 function Favourites:AddItemID(itemID)
     if itemID and GetItemInfo(itemID) and not self.activeList[itemID] then
+        self.numItems = self.numItems + 1
         self.activeList[itemID] = true
         return true
     end
@@ -219,10 +238,25 @@ end
 
 function Favourites:RemoveItemID(itemID)
     if itemID and self.activeList[itemID] then
+        self.numItems = self.numItems - 1
         self.activeList[itemID] = nil
         return true
     end
     return false
+end
+
+-- call update db after!!
+function Favourites:ClearList()
+    if self.db and self.activeList then
+        ClearActiveList(self)
+        self:UpdateDb()
+        return true
+    end
+    return false
+end
+
+function Favourites:GetNumItemsInList()
+    return self.numItems or 0
 end
 
 function Favourites:IsFavouriteItemID(itemID, onlyActiveList)
