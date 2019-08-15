@@ -3,13 +3,12 @@
 -----------------------------------------------------------------------
 local _G = getfenv(0)
 local tonumber = _G.tonumber
+local ipairs = _G.ipairs
 
 -- ----------------------------------------------------------------------------
 -- AddOn namespace.
 -- ----------------------------------------------------------------------------
 local addonname = ...
-
-_G.AtlasLoot = { }
 
 local addonVersion = GetAddOnMetadata(addonname, "Version")
 if addonVersion == string.format("@%s@", "project-version") then addonVersion = "v99.99.9999-dev" end

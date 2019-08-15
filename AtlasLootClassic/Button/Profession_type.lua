@@ -28,7 +28,7 @@ AtlasLoot.ClickHandler:Add(
 		},
 	},
 	{
-		{ "ChatLink", 	AL["Chat Link"], 	AL["Add profession link into chat"] },
+		{ "ChatLink", 		AL["Chat Link"], 			AL["Add profession link into chat"] },
 		{ "DressUp", 		AL["Dress up"], 			AL["Shows the item in the Dressing room"] },
 		{ "ShowExtraItems", AL["Show extra items"], 	AL["Shows extra items (tokens,mats)"] },
 	}

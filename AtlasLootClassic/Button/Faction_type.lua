@@ -23,16 +23,6 @@ local ClickHandler = AtlasLoot.ClickHandler
 	-- if rep index is in between 11 and 16, means it has friendship reputation
 ]]
 
---[[
-	1 => 11 - Stranger
-	2 => 12 - Acquaintance
-	3 => 13 - Buddy
-	4 => 14 - Friend
-	5 => 15 - Good Friend
-	6 => 16 - Best Friend
-]]
-
-
 local FactionClickHandler
 local PlayerSex
 

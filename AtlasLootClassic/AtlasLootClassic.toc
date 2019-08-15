@@ -57,9 +57,7 @@ Button\Dummy_type.lua
 Button\Faction_type.lua
 Button\Set_type.lua
 Button\Extra_Price_type.lua
-Button\Extra_Quest_type.lua
-Button\Extra_PvP_type.lua
-Button\Extra_Location_type.lua
+#Button\Extra_Quest_type.lua
 
 GUI\GUI.xml
 GUI\GUI.lua

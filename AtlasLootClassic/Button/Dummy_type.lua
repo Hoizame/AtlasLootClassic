@@ -1,10 +1,18 @@
+local _G = _G
 local AtlasLoot = _G.AtlasLoot
 local TYPE, ID_INV, ID_ICON, ID_ABILITY = "Dummy", "INV_", "ICON_", "ABILITY_"
 local Dummy = AtlasLoot.Button:AddType(TYPE, ID_INV)
 local Dummy_ID_ICON = AtlasLoot.Button:AddIdentifier(TYPE, ID_ICON)
 local Ability_ID_ICON = AtlasLoot.Button:AddIdentifier(TYPE, ID_ABILITY)
 
-local str_match = string.match
+-- lua
+local str_match = _G.string.match
+
+-- WoW
+
+
+local DUMMY_ICON = "Interface\\Icons\\INV_Misc_QuestionMark"
+local INTERFACE_PATH = "Interface\\Icons\\"
 
 function Dummy.OnSet(button, second)
 	if not button then return end
@@ -38,7 +46,7 @@ function Dummy.Refresh(button)
 		button.extra:SetText(button.Description)
 	end
 	button.overlay:Hide()
-	button.icon:SetTexture(button.Texture and "Interface\\Icons\\"..button.Texture or "Interface\\Icons\\INV_Misc_QuestionMark")
+	button.icon:SetTexture(button.Texture and INTERFACE_PATH..button.Texture or DUMMY_ICON)
 end
 
 function Dummy.GetStringContent(str)
