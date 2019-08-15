@@ -67,7 +67,7 @@ function AtlasLoot:OnInitialize()
 	self.dbRaw.RegisterCallback(self, "OnProfileCopied", "OnProfileChanged")
 	self.dbRaw.RegisterCallback(self, "OnProfileReset", "OnProfileChanged")
 
-	self.dbGlobal.__addonrevision = AtlasLoot.__addonrevision
+	self.dbGlobal.__addonrevision = AtlasLoot.IsDevVersion and 0 or AtlasLoot.__addonrevision
 
 	-- bindings
 	BINDING_HEADER_ATLASLOOT = AL["AtlasLoot"]
