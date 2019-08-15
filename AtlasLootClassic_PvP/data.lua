@@ -33,6 +33,7 @@ else
 end
 
 local NORMAL_ITTYPE = data:AddItemTableType("Item", "Item")
+local SET_ITTYPE = data:AddItemTableType("Set", "Item")
 
 local QUEST_EXTRA_ITTYPE = data:AddExtraItemTableType("Quest")
 local PRICE_EXTRA_ITTYPE = data:AddExtraItemTableType("Price")
@@ -658,289 +659,57 @@ data["ClassSets"] = {
 	name = AL["Class Sets"],
 	ContentType = GENERAL_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
+	TableType = SET_ITTYPE,
 	ContentPhase = 2,
 	items = {
-		{ -- PVPPriest
-			name = ALIL["PRIEST"],
+		{ -- Epic
+			name = ALIL["Epic"],
+			ContentPhase = 2,
 			[ALLIANCE_DIFF] = {
-				{ 1, "set389" },
-				{ 2,  17602 }, -- Field Marshal's Headdress
-				{ 3,  17604 }, -- Field Marshal's Satin Mantle
-				{ 4,  17605 }, -- Field Marshal's Satin Vestments
-				{ 5,  17608 }, -- Marshal's Satin Gloves
-				{ 6,  17603 }, -- Marshal's Satin Pants
-				{ 7,  17607 }, -- Marshal's Satin Sandals
-				{ 16, "set549" },
-				{ 17, 23316 }, -- Lieutenant Commander's Satin Hood
-				{ 18, 23317 }, -- Lieutenant Commander's Satin Mantle
-				{ 19, 23303 }, -- Knight-Captain's Satin Tunic
-				{ 20, 23288 }, -- Knight-Lieutenant's Satin Handwraps
-				{ 21, 23302 }, -- Knight-Captain's Satin Legguards
-				{ 22, 23289 }, -- Knight-Lieutenant's Satin Walkers
+				{ 1, 392 }, -- Warlock
+				{ 3, 389 }, -- Priest
+				{ 16, 388 }, -- Mage
+				{ 5, 394 }, -- Rogue
+				{ 20, 397 }, -- Druid
+				{ 7, 395 }, -- Hunter
+				{ 9, 384 }, -- Warrior
+				{ 24, 402 }, -- Paladin
 			},
+
 			[HORDE_DIFF] = {
-				{ 1, "set390" },
-				{ 2, 17623 }, -- Warlord's Satin Cowl
-				{ 3, 17622 }, -- Warlord's Satin Mantle
-				{ 4, 17624 }, -- Warlord's Satin Robes
-				{ 5, 17620 }, -- General's Satin Gloves
-				{ 6, 17625 }, -- General's Satin Leggings
-				{ 7, 17618 }, -- General's Satin Boots
-				{ 16, "set540" },
-				{ 17, 23261 }, -- Champion's Satin Hood
-				{ 18, 23262 }, -- Champion's Satin Mantle
-				{ 19, 22885 }, -- Legionnaire's Satin Tunic
-				{ 20, 22869 }, -- Blood Guard's Satin Handwraps
-				{ 21, 22882 }, -- Legionnaire's Satin Legguards
-				{ 22, 22859 }, -- Blood Guard's Satin Walkers
+				{ 1, 391 }, -- Warlock
+				{ 3, 390 }, -- Priest
+				{ 16, 387 }, -- Mage
+				{ 5, 393 }, -- Rogue
+				{ 20, 398 }, -- Druid
+				{ 7, 396 }, -- Hunter
+				{ 9, 383 }, -- Warrior
+				{ 22, 386 }, -- Shaman
 			},
 		},
-		{ -- PVPWarlock
-			name = ALIL["WARLOCK"],
+		{ -- Rare
+			name = ALIL["Rare"],
+			ContentPhase = 6,
 			[ALLIANCE_DIFF] = {
-				{ 1, "set392" },
-				{ 2,  17578 }, -- Field Marshal's Coronal
-				{ 3,  17580 }, -- Field Marshal's Dreadweave Shoulders
-				{ 4,  17581 }, -- Field Marshal's Dreadweave Robe
-				{ 5,  17584 }, -- Marshal's Dreadweave Gloves
-				{ 6,  17579 }, -- Marshal's Dreadweave Leggings
-				{ 7,  17583 }, -- Marshal's Dreadweave Boots
-				{ 16, "set547" },
-				{ 17, 23310 }, -- Lieutenant Commander's Dreadweave Cowl
-				{ 18, 23311 }, -- Lieutenant Commander's Dreadweave Spaulders
-				{ 19, 23297 }, -- Knight-Captain's Dreadweave Tunic
-				{ 20, 23282 }, -- Knight-Lieutenant's Dreadweave Handwraps
-				{ 21, 23296 }, -- Knight-Captain's Dreadweave Legguards
-				{ 22, 23283 }, -- Knight-Lieutenant's Dreadweave Walkers
+				{ 1, 547 }, -- Warlock
+				{ 3, 549 }, -- Priest
+				{ 16, 546 }, -- Mage
+				{ 5, 548 }, -- Rogue
+				{ 20, 539 }, -- Druid
+				{ 7, 550 }, -- Hunter
+				{ 9, 545 }, -- Warrior
+				{ 24, 544 }, -- Paladin
 			},
+
 			[HORDE_DIFF] = {
-				{ 1, "set391" },
-				{ 2, 17591 }, -- Warlord's Dreadweave Hood
-				{ 3, 17590 }, -- Warlord's Dreadweave Mantle
-				{ 4, 17592 }, -- Warlord's Dreadweave Robe
-				{ 5, 17588 }, -- General's Dreadweave Gloves
-				{ 6, 17593 }, -- General's Dreadweave Pants
-				{ 7, 17586 }, -- General's Dreadweave Boots
-				{ 16, "set541" },
-				{ 17, 23255 }, -- Champion's Dreadweave Cowl
-				{ 18, 23256 }, -- Champion's Dreadweave Spaulders
-				{ 19, 22884 }, -- Legionnaire's Dreadweave Tunic
-				{ 20, 22865 }, -- Blood Guard's Dreadweave Handwraps
-				{ 21, 22881 }, -- Legionnaire's Dreadweave Legguards
-				{ 22, 22855 }, -- Blood Guard's Dreadweave Walkers
-			},
-		},
-		{ -- PVPMage
-			name = ALIL["MAGE"],
-			[ALLIANCE_DIFF] = {
-				{ 1, "set388" },
-				{ 2,  16441 }, -- Field Marshal's Coronet
-				{ 3,  16444 }, -- Field Marshal's Silk Spaulders
-				{ 4,  16443 }, -- Field Marshal's Silk Vestments
-				{ 5,  16440 }, -- Marshal's Silk Gloves
-				{ 6,  16442 }, -- Marshal's Silk Leggings
-				{ 7,  16437 }, -- Marshal's Silk Footwraps
-				{ 16, "set546" },
-				{ 17, 23318 }, -- Lieutenant Commander's Silk Cowl
-				{ 18, 23319 }, -- Lieutenant Commander's Silk Mantle
-				{ 19, 23305 }, -- Knight-Captain's Silk Tunic
-				{ 20, 23290 }, -- Knight-Lieutenant's Silk Handwraps
-				{ 21, 23304 }, -- Knight-Captain's Silk Legguards
-				{ 22, 23291 }, -- Knight-Lieutenant's Silk Walkers
-			},
-			[HORDE_DIFF] = {
-				{ 1, "set387" },
-				{ 2, 16533 }, -- Warlord's Silk Cowl
-				{ 3, 16536 }, -- Warlord's Silk Amice
-				{ 4, 16535 }, -- Warlord's Silk Raiment
-				{ 5, 16540 }, -- General's Silk Handguards
-				{ 6, 16534 }, -- General's Silk Trousers
-				{ 7, 16539 }, -- General's Silk Boots
-				{ 16, "set542" },
-				{ 17, 23263 }, -- Champion's Silk Cowl
-				{ 18, 23264 }, -- Champion's Silk Mantle
-				{ 19, 22886 }, -- Legionnaire's Silk Tunic
-				{ 20, 22870 }, -- Blood Guard's Silk Handwraps
-				{ 21, 22883 }, -- Legionnaire's Silk Legguards
-				{ 22, 22860 }, -- Blood Guard's Silk Walkers
-			},
-		},
-		{ -- PVPRogue
-			name = ALIL["ROGUE"],
-			[ALLIANCE_DIFF] = {
-				{ 1, "set394" },
-				{ 2,  16455 }, -- Field Marshal's Leather Mask
-				{ 3,  16457 }, -- Field Marshal's Leather Epaulets
-				{ 4,  16453 }, -- Field Marshal's Leather Chestpiece
-				{ 5,  16454 }, -- Marshal's Leather Handgrips
-				{ 6,  16456 }, -- Marshal's Leather Leggings
-				{ 7,  16446 }, -- Marshal's Leather Footguards
-				{ 16, "set548" },
-				{ 17, 23312 }, -- Lieutenant Commander's Leather Helm
-				{ 18, 23313 }, -- Lieutenant Commander's Leather Shoulders
-				{ 19, 23298 }, -- Knight-Captain's Leather Chestpiece
-				{ 20, 23284 }, -- Knight-Lieutenant's Leather Grips
-				{ 21, 23299 }, -- Knight-Captain's Leather Legguards
-				{ 22, 23285 }, -- Knight-Lieutenant's Leather Walkers
-			},
-			[HORDE_DIFF] = {
-				{ 1, "set393" },
-				{ 2, 16561 }, -- Warlord's Leather Helm
-				{ 3, 16562 }, -- Warlord's Leather Spaulders
-				{ 4, 16563 }, -- Warlord's Leather Breastplate
-				{ 5, 16560 }, -- General's Leather Mitts
-				{ 6, 16564 }, -- General's Leather Legguards
-				{ 7, 16558 }, -- General's Leather Treads
-				{ 16, "set522" },
-				{ 17, 23257 }, -- Champion's Leather Helm
-				{ 18, 23258 }, -- Champion's Leather Shoulders
-				{ 19, 22879 }, -- Legionnaire's Leather Chestpiece
-				{ 20, 22864 }, -- Blood Guard's Leather Grips
-				{ 21, 22880 }, -- Legionnaire's Leather Legguards
-				{ 22, 22856 }, -- Blood Guard's Leather Walkers
-			},
-		},
-		{ -- PVPDruid
-			name = ALIL["DRUID"],
-			[ALLIANCE_DIFF] = {
-				{ 1, "set397" },
-				{ 2,  16451 }, -- Field Marshal's Dragonhide Helmet
-				{ 3,  16449 }, -- Field Marshal's Dragonhide Spaulders
-				{ 4,  16452 }, -- Field Marshal's Dragonhide Breastplate
-				{ 5,  16448 }, -- Marshal's Dragonhide Gauntlets
-				{ 6,  16450 }, -- Marshal's Dragonhide Legguards
-				{ 7,  16459 }, -- Marshal's Dragonhide Boots
-				{ 16, "set551" },
-				{ 17, 23308 }, -- Lieutenant Commander's Dragonhide Headguard
-				{ 18, 23309 }, -- Lieutenant Commander's Dragonhide Shoulders
-				{ 19, 23294 }, -- Knight-Captain's Dragonhide Chestpiece
-				{ 20, 23280 }, -- Knight-Lieutenant's Dragonhide Grips
-				{ 21, 23295 }, -- Knight-Captain's Dragonhide Leggings
-				{ 22, 23281 }, -- Knight-Lieutenant's Dragonhide Treads
-			},
-			[HORDE_DIFF] = {
-				{ 1, "set398" },
-				{ 2, 16550 }, -- Warlord's Dragonhide Helmet
-				{ 3, 16551 }, -- Warlord's Dragonhide Epaulets
-				{ 4, 16549 }, -- Warlord's Dragonhide Hauberk
-				{ 5, 16555 }, -- General's Dragonhide Gloves
-				{ 6, 16552 }, -- General's Dragonhide Leggings
-				{ 7, 16554 }, -- General's Dragonhide Boots
-				{ 16, "set539" },
-				{ 17, 23253 }, -- Champion's Dragonhide Headguard
-				{ 18, 23254 }, -- Champion's Dragonhide Shoulders
-				{ 19, 22877 }, -- Legionnaire's Dragonhide Chestpiece
-				{ 20, 22863 }, -- Blood Guard's Dragonhide Grips
-				{ 21, 22878 }, -- Legionnaire's Dragonhide Leggings
-				{ 22, 22852 }, -- Blood Guard's Dragonhide Treads
-			},
-		},
-		{ -- PVPHunter
-			name = ALIL["HUNTER"],
-			[ALLIANCE_DIFF] = {
-				{ 1, "set395" },
-				{ 2,  16465 }, -- Field Marshal's Chain Helm
-				{ 3,  16468 }, -- Field Marshal's Chain Spaulders
-				{ 4,  16466 }, -- Field Marshal's Chain Breastplate
-				{ 5,  16463 }, -- Marshal's Chain Grips
-				{ 6,  16467 }, -- Marshal's Chain Legguards
-				{ 7,  16462 }, -- Marshal's Chain Boots
-				{ 16, "set550" },
-				{ 17, 23306 }, -- Lieutenant Commander's Chain Helm
-				{ 18, 23307 }, -- Lieutenant Commander's Chain Shoulders
-				{ 19, 23292 }, -- Knight-Captain's Chain Hauberk
-				{ 20, 23279 }, -- Knight-Lieutenant's Chain Vices
-				{ 21, 23293 }, -- Knight-Captain's Chain Legguards
-				{ 22, 23278 }, -- Knight-Lieutenant's Chain Greaves
-			},
-			[HORDE_DIFF] = {
-				{ 1, "set396" },
-				{ 2, 16566 }, -- Warlord's Chain Helmet
-				{ 3, 16568 }, -- Warlord's Chain Shoulders
-				{ 4, 16565 }, -- Warlord's Chain Chestpiece
-				{ 5, 16571 }, -- General's Chain Gloves
-				{ 6, 16567 }, -- General's Chain Legguards
-				{ 7, 16569 }, -- General's Chain Boots
-				{ 16, "set543" },
-				{ 17, 23251 }, -- Champion's Chain Helm
-				{ 18, 23252 }, -- Champion's Chain Shoulders
-				{ 19, 22874 }, -- Legionnaire's Chain Hauberk
-				{ 20, 22862 }, -- Blood Guard's Chain Vices
-				{ 21, 22875 }, -- Legionnaire's Chain Legguards
-				{ 22, 22843 }, -- Blood Guard's Chain Greaves
-			},
-		},
-		{ -- PVPWarrior
-			name = ALIL["WARRIOR"],
-			[ALLIANCE_DIFF] = {
-				{ 1, "set384" },
-				{ 2,  16478 }, -- Field Marshal's Plate Helm
-				{ 3,  16480 }, -- Field Marshal's Plate Shoulderguards
-				{ 4,  16477 }, -- Field Marshal's Plate Armor
-				{ 5,  16484 }, -- Marshal's Plate Gauntlets
-				{ 6,  16479 }, -- Marshal's Plate Legguards
-				{ 7,  16483 }, -- Marshal's Plate Boots
-				{ 16, "set545" },
-				{ 17, 23314 }, -- Lieutenant Commander's Plate Helm
-				{ 18, 23315 }, -- Lieutenant Commander's Plate Shoulders
-				{ 19, 23300 }, -- Knight-Captain's Plate Hauberk
-				{ 20, 23286 }, -- Knight-Lieutenant's Plate Gauntlets
-				{ 21, 23301 }, -- Knight-Captain's Plate Leggings
-				{ 22, 23287 }, -- Knight-Lieutenant's Plate Greaves
-			},
-			[HORDE_DIFF] = {
-				{ 1, "set383" },
-				{ 2, 16542 }, -- Warlord's Plate Headpiece
-				{ 3, 16544 }, -- Warlord's Plate Shoulders
-				{ 4, 16541 }, -- Warlord's Plate Armor
-				{ 5, 16548 }, -- General's Plate Gauntlets
-				{ 6, 16543 }, -- General's Plate Leggings
-				{ 7, 16545 }, -- General's Plate Boots
-				{ 16, "set537" },
-				{ 17, 23244 }, -- Champion's Plate Helm
-				{ 18, 23243 }, -- Champion's Plate Shoulders
-				{ 19, 22872 }, -- Legionnaire's Plate Hauberk
-				{ 20, 22868 }, -- Blood Guard's Plate Gauntlets
-				{ 21, 22873 }, -- Legionnaire's Plate Leggings
-				{ 22, 22858 }, -- Blood Guard's Plate Greaves
-			},
-		},
-		{ -- PVPPaladin
-			name = ALIL["PALADIN"],
-			[ALLIANCE_DIFF] = {
-				{ 1, "set402" },
-				{ 2,  16474 }, -- Field Marshal's Lamellar Faceguard
-				{ 3,  16476 }, -- Field Marshal's Lamellar Pauldrons
-				{ 4,  16473 }, -- Field Marshal's Lamellar Chestplate
-				{ 5,  16471 }, -- Marshal's Lamellar Gloves
-				{ 6,  16475 }, -- Marshal's Lamellar Legplates
-				{ 7,  16472 }, -- Marshal's Lamellar Boots
-				{ 16, "set544" },
-				{ 17, 23276 }, -- Lieutenant Commander's Lamellar Headguard
-				{ 18, 23277 }, -- Lieutenant Commander's Lamellar Shoulders
-				{ 19, 23272 }, -- Knight-Captain's Lamellar Breastplate
-				{ 20, 23274 }, -- Knight-Lieutenant's Lamellar Gauntlets
-				{ 21, 23273 }, -- Knight-Captain's Lamellar Leggings
-				{ 22, 23275 }, -- Knight-Lieutenant's Lamellar Sabatons
-			},
-		},
-		{ -- PVPShaman
-			name = ALIL["SHAMAN"],
-			[HORDE_DIFF] = {
-				{ 1, "set386" },
-				{ 2, 16578 }, -- Warlord's Mail Helm
-				{ 3, 16580 }, -- Warlord's Mail Spaulders
-				{ 4, 16577 }, -- Warlord's Mail Armor
-				{ 5, 16574 }, -- General's Mail Gauntlets
-				{ 6, 16579 }, -- General's Mail Leggings
-				{ 7, 16573 }, -- General's Mail Boots
-				{ 16, "set538" },
-				{ 17, 23259 }, -- Champion's Mail Headguard
-				{ 18, 23260 }, -- Champion's Mail Pauldrons
-				{ 19, 22876 }, -- Legionnaire's Mail Hauberk
-				{ 20, 22867 }, -- Blood Guard's Mail Vices
-				{ 21, 22887 }, -- Legionnaire's Mail Legguards
-				{ 22, 22857 }, -- Blood Guard's Mail Greaves
+				{ 1, 541 }, -- Warlock
+				{ 3, 540 }, -- Priest
+				{ 16, 542 }, -- Mage
+				{ 5, 522 }, -- Rogue
+				{ 20, 539 }, -- Druid
+				{ 7, 543 }, -- Hunter
+				{ 9, 537 }, -- Warrior
+				{ 22, 538 }, -- Shaman
 			},
 		},
 	},

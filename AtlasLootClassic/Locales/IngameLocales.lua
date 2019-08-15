@@ -247,6 +247,19 @@ local IngameLocales = {
 	["WARLOCK"] 	= AtlasLoot_GetClassName("WARLOCK"),
 	["WARRIOR"] 	= AtlasLoot_GetClassName("WARRIOR"),
 
+
+	-- ######################################################################
+	-- Item Quality
+	-- ######################################################################
+	["Poor"]	 	= _G["ITEM_QUALITY0_DESC"],
+	["Common"] 		= _G["ITEM_QUALITY1_DESC"],
+	["Uncommon"] 	= _G["ITEM_QUALITY2_DESC"],
+	["Rare"] 		= _G["ITEM_QUALITY3_DESC"],
+	["Epic"]		= _G["ITEM_QUALITY4_DESC"],
+	["Legendary"] 	= _G["ITEM_QUALITY5_DESC"],
+	["Artifact"] 	= _G["ITEM_QUALITY6_DESC"],
+	["Heirloom"] 	= _G["ITEM_QUALITY7_DESC"],
+
 	-- ######################################################################
 	-- Misc
 	-- ######################################################################
