@@ -350,13 +350,18 @@ function Favourites:GetListByID(listID, isGlobalList)
     return list[listID]
 end
 
-function Favourites:GetListName(id, isGlobal)
-    if isGlobal and self:GetGlobaleLists()[id] then
-        return self:GetGlobaleLists()[id].__name or LIST_BASE_NAME
-    elseif not isGlobal and self:GetProfileLists()[id] then
-        return self:GetProfileLists()[id].__name or LIST_BASE_NAME
+function Favourites:GetListName(id, isGlobal, withIcon)
+    --ListNameCache[isGlobal and "global" or "profile"]
+    if withIcon then
+        return ListNameCache[isGlobal and "global" or "profile"][id]
+    else
+        if isGlobal and self:GetGlobaleLists()[id] then
+            return self:GetGlobaleLists()[id].__name or LIST_BASE_NAME
+        elseif not isGlobal and self:GetProfileLists()[id] then
+            return self:GetProfileLists()[id].__name or LIST_BASE_NAME
+        end
+        return id
     end
-    return id
 end
 
 function Favourites:ListIsGlobalActive(listID)

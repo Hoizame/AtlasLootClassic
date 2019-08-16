@@ -134,7 +134,7 @@ local function CreateFavouriteOptions()
                         listDb = FavAddon:GetProfileLists()
                     end
                     for k,v in pairs(listDb) do
-                        list[ k ] = FavAddon:GetListName(k, db.activeList[2] == true)
+                        list[ k ] = FavAddon:GetListName(k, db.activeList[2] == true, true)
                     end
                     return list
                 end,
