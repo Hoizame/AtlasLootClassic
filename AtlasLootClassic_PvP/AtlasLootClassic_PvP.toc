@@ -1,5 +1,5 @@
 ﻿## Interface: 11302
-## Author: Lag, Proteyer, Arith	
+## Author: Lag
 ## Version: @project-version@
 ## Dependencies: AtlasLootClassic
 ## LoadOnDemand: 1
