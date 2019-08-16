@@ -98,8 +98,17 @@ local function CreateFavouriteOptions()
                 width = "full",
                 name = AL["Show favourite item icon in item tooltip"],
             },
-            global = {
+            showListInTT = {
                 order = 3,
+                type = "toggle",
+                width = "full",
+                disabled = function(info)
+                    return not FavAddon.db.showInTT
+                end,
+                name = AL["Show listname in item tooltip"],
+            },
+            global = {
+                order = 4,
                 type = "toggle",
                 width = "full",
                 name = AL["Global lists."],
@@ -113,7 +122,7 @@ local function CreateFavouriteOptions()
             },
             list = {
                 type = "select",
-                order = 4,
+                order = 5,
                 name = AL["Active list"],
                 values = function()
                     local db = FavAddon:GetDb()
@@ -136,7 +145,7 @@ local function CreateFavouriteOptions()
                 end,
             },
             addNewList = {
-                order = 5,
+                order = 6,
                 type = 'execute',
                 name = AL["Add new list"],
                 confirm = true,
@@ -149,7 +158,7 @@ local function CreateFavouriteOptions()
                 end,
             },
             deleteList = {
-                order = 6,
+                order = 7,
                 type = 'execute',
                 name = _G.DELETE,
                 confirm = true,
@@ -179,9 +188,10 @@ local function CreateFavouriteOptions()
                 order = 11,
                 type = 'input',
                 name = _G.NAME,
+                width = "full",
                 func = function() FavAddon:AddNewList() end,
                 get = function(info) return FavAddon:GetActiveListName() end,
-                set = function(info, value) FavAddon:SetActiveListName(value) end,
+                set = function(info, value) FavAddon:SetActiveListName(value) UpdateItemFrame(FavAddon) end,
             },
             import = {
                 order = 12,

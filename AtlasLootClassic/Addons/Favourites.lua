@@ -22,6 +22,7 @@ local RETRIEVING_ITEM_INFO = _G["RETRIEVING_ITEM_INFO"]
 local ICONS_PATH = ALPrivate.ICONS_PATH
 local BASE_NAME_P, BASE_NAME_G, LIST_BASE_NAME = "ProfileBase", "GlobalBase", "List"
 local NEW_LIST_ID_PATTERN = "%s%s"
+local TEXT_WITH_TEXTURE = "|T%s:0|t %s"
 local ATLAS_ICON_IDENTIFIER = "#"
 local IMPORT_EXPORT_DELIMITER, IMPORT_PATTERN, EXPORT_PATTERN = ",", "(%w+):(%d+)", "%s:%d"
 local STD_ICON, STD_ICON2
@@ -29,6 +30,7 @@ local KEY_WEAK_MT = {__mode="k"}
 
 local TooltipsHooked = false
 local TooltipCache, TooltipTextCache = {}
+local ListNameCache
 setmetatable(TooltipCache, KEY_WEAK_MT)
 
 Favourites.BASE_NAME_P, Favourites.BASE_NAME_G = BASE_NAME_P, BASE_NAME_G
@@ -38,6 +40,7 @@ Favourites.BASE_NAME_P, Favourites.BASE_NAME_G = BASE_NAME_P, BASE_NAME_G
 Favourites.DbDefaults = {
     enabled = true,
     showInTT = false,
+    showListInTT = true,
     activeList = { BASE_NAME_P, false }, -- name, isGlobal
     activeSubLists = {},
     lists = {
@@ -82,12 +85,19 @@ Favourites.IconList = {
     ICONS_PATH.."Vehicle-TempleofKotmogu-PurpleBall",
     ICONS_PATH.."worldquest-tracker-questmarker",
 }
+STD_ICON, STD_ICON2 = Favourites.IconList[1], Favourites.IconList[2]
 
 local function AddItemsInfoFavouritesSub(items, activeSub, isGlobal)
     if items and activeSub then
         local fav = Favourites.subItems
         for itemID in pairs(items) do
-            fav[itemID] = { activeSub, isGlobal }
+            if fav[itemID] then
+                fav[itemID][#fav[itemID] + 1] = { activeSub, isGlobal }
+            else
+                fav[itemID] = {
+                    { activeSub, isGlobal }
+                }
+            end
         end
     end
 end
@@ -110,6 +120,12 @@ local function PopulateSubLists(db, globalDb)
 
     CheckSubSetDb(subDb, db, globalDb)
     CheckSubSetDb(globalSubDb, db, globalDb)
+end
+
+local function PopulateListNames(db, dest)
+    for k,v in pairs(db) do
+        dest[k] = format(TEXT_WITH_TEXTURE, tostring(v.__icon or STD_ICON), v.__name or LIST_BASE_NAME)
+    end
 end
 
 local function GetActiveList(self)
@@ -135,8 +151,9 @@ end
 
 local function CleanUpShownLists(db, globalDb, activeSubLists, isGlobalList)
     local new = {}
+    db, globalDb = db.lists, globalDb.lists
 
-    for listID, isGlobal in next, activeSubLists do
+    for listID, isGlobal in pairs(activeSubLists) do
         if ( isGlobal and globalDb[listID] ) then
             new[listID] = isGlobal
         elseif not isGlobal and not isGlobalList and db[listID] then
@@ -156,11 +173,30 @@ local function OnTooltipSetItem_Hook(self)
     end
 
     item = TooltipCache[item]
+    -- ItemName
     if Favourites:IsFavouriteItemID(item) then
-        if not TooltipTextCache[item] and _G[self:GetName().."TextLeft1"]:GetText() ~= RETRIEVING_ITEM_INFO then
-            TooltipTextCache[item] = format("|T%s:0|t%s", Favourites:GetIconForActiveItemID(item), _G[self:GetName().."TextLeft1"]:GetText())
+        -- itemName
+        local text = _G[self:GetName().."TextLeft1"]
+        if not TooltipTextCache[item] and text:GetText() ~= RETRIEVING_ITEM_INFO then
+            TooltipTextCache[item] = format(TEXT_WITH_TEXTURE, Favourites:GetIconForActiveItemID(item), text:GetText())
         end
-        _G[self:GetName().."TextLeft1"]:SetText( TooltipTextCache[item] or RETRIEVING_ITEM_INFO )
+        text:SetText( TooltipTextCache[item] or RETRIEVING_ITEM_INFO )
+
+        -- Add Listnames
+        if Favourites.db.showListInTT then
+            self:AddLine(" ")
+            if Favourites.activeList[item] then
+                self:AddLine(ListNameCache.active)
+            end
+            if Favourites.subItems[item] then
+                for i = 1, #Favourites.subItems[item] do
+                    local entry = Favourites.subItems[item][i]
+                    if entry[1] ~= Favourites.activeListID then
+                        self:AddLine(ListNameCache[entry[2] and "global" or "profile"][entry[1]])
+                    end
+                end
+            end
+        end
     end
 end
 
@@ -174,6 +210,7 @@ function Favourites:UpdateDb()
     self.db = self:GetDb()
     self.globalDb = self:GetGlobalDb()
     self.activeList = GetActiveList(self)
+    self.activeListID = self.db.activeList[1]
     TooltipTextCache = {}
     setmetatable(TooltipTextCache, KEY_WEAK_MT)
 
@@ -184,9 +221,20 @@ function Favourites:UpdateDb()
     -- init item count
     local numItems = 0
     for k in pairs(self.activeList) do
-        numItems = numItems + 1
+        if type(k) == "number" then
+            numItems = numItems + 1
+        end
     end
     self.numItems = numItems
+
+    -- name / icon mix
+    ListNameCache = {
+        active = format(TEXT_WITH_TEXTURE, tostring(self.activeList.__icon or STD_ICON), self.activeList.__name or LIST_BASE_NAME),
+        global = {},
+        profile = {},
+    }
+    PopulateListNames(self.db.lists, ListNameCache.profile)
+    PopulateListNames(self.globalDb.lists, ListNameCache.global)
 
 
     -- tooltip hook
@@ -197,7 +245,6 @@ end
 
 function Favourites.OnInitialize()
     Favourites:UpdateDb()
-    STD_ICON, STD_ICON2 = Favourites.IconList[1], Favourites.IconList[2]
 end
 
 function Favourites:OnProfileChanged()
@@ -212,6 +259,7 @@ function Favourites:AddItemID(itemID)
     if itemID and GetItemInfo(itemID) and not self.activeList[itemID] then
         self.numItems = self.numItems + 1
         self.activeList[itemID] = true
+        TooltipTextCache[itemID] = nil
         return true
     end
     return false
@@ -221,6 +269,7 @@ function Favourites:RemoveItemID(itemID)
     if itemID and self.activeList[itemID] then
         self.numItems = self.numItems - 1
         self.activeList[itemID] = nil
+        TooltipTextCache[itemID] = nil
         return true
     end
     return false
@@ -251,23 +300,12 @@ end
 function Favourites:SetFavouriteIcon(itemID, texture, hideOnFail)
     local listName = self:IsFavouriteItemID(itemID)
     if not listName then return hideOnFail and texture:Hide() or nil end
-    local icon
-
-    if listName == true then
-        icon = self.activeList.__icon or STD_ICON
-    elseif listName[2] == true then
-        icon = self.globalDb.lists[listName[1]].IconList or STD_ICON2
-    elseif listName[2] == false then
-        icon = self.db.lists[listName[1]].__icon or STD_ICON2
-    elseif listName[2] then
-        icon = listName[2]
-    end
+    local icon = Favourites:GetIconForActiveItemID(itemID)
 
     if icon then
-        local iconType = type(icon)
-        if iconType == "number" then
+        if type(icon) == "number" then
             texture:SetTexture(icon)
-        elseif iconType == "string" then
+        elseif type(icon) == "string" then
             if strsub(icon, 1, 1) == ATLAS_ICON_IDENTIFIER then
                 if icon and icon ~= texture:GetAtlas() then
                     texture:SetAtlas(strsub(icon, 2))
@@ -282,15 +320,19 @@ end
 function Favourites:GetIconForActiveItemID(itemID)
     local listName = self:IsFavouriteItemID(itemID)
     local icon
+
     if listName == true then
         icon = self.activeList.__icon or STD_ICON
-    elseif listName[2] == true then
-        icon = self.globalDb.lists[listName[1]].IconList or STD_ICON2
-    elseif listName[2] == false then
-        icon = self.db.lists[listName[1]].__icon or STD_ICON2
-    elseif listName[2] then
-        icon = listName[2]
+    elseif #listName > 1 then
+        icon = STD_ICON
+    elseif listName[1][2] == true then
+        icon = self.globalDb.lists[ listName[1][1] ].__icon or STD_ICON2
+    elseif listName[1][2] == false then
+        icon = self.db.lists[ listName[1][1] ].__icon or STD_ICON2
+    elseif listName[1][2] then
+        icon = listName[1][2]
     end
+
     return icon
 end
 
@@ -326,10 +368,6 @@ function Favourites:ListIsProfileActive(listID)
 end
 
 function Favourites:CleanUpShownLists()
-    local db, globalDb = self.db, self.globalDb
-
-    local newDbActive, newGlobalActive = {}, {}
-
     self.db.activeSubLists = CleanUpShownLists(self.db, self.globalDb, self.db.activeSubLists)
     self.globalDb.activeSubLists = CleanUpShownLists(self.db, self.globalDb, self.globalDb.activeSubLists, true)
 end

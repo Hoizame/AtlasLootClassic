@@ -257,10 +257,9 @@ function ItemDB:GetModuleList(addonName)
 	return contentList[addonName]
 end
 
--- /dump AtlasLoot.ItemDB:GetNameData_UNSAFE("AtlasLootClassic_DungeonsAndRaids", "Ragefire", 1)
 function ItemDB:GetNameData_UNSAFE(addonName, contentName, boss)
 	if not ItemDB.Storage[addonName] then return end
-	return ItemDB.Storage[addonName][contentName]:GetName(true), ItemDB.Storage[addonName][contentName]:GetNameForItemTable(boss or 1, true)
+	return ItemDB.Storage[addonName][contentName]:GetName(true), ItemDB.Storage[addonName][contentName]:GetNameForItemTable(boss, true)
 end
 
 -- ##################################################
