@@ -40,7 +40,6 @@
 
 embeds.xml
 
-Locales\constants.lua
 Locales\constants.cn.lua
 Locales\constants.de.lua
 Locales\constants.es.lua

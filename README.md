@@ -15,6 +15,7 @@ AtlasLoot Classic is an UI mod allowing for loot tables of bosses to be browsed 
 * Factions
 * Collections with item sets and world events
 * Add your favourite items into a favourite list with "ALT + Left click" supports import/export, multiple lists global and profile based and more
+![image](https://drive.google.com/uc?export=view&id=187PAs2VYp2b6AQqIvq1Dcstb-B1DXJJx)
 
 ## Favourites import/export format
 
