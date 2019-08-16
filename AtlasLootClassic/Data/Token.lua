@@ -230,6 +230,11 @@ local TOKEN = {
 	[22734] = 22727, -- Base of Atiesh
 	[22733] = 22727, -- Staff Head of Atiesh
 
+	-- UBRS key
+	[12219] = { 12219, 12336, 12335, 12337, 0, 12344 }, -- Unadorned Seal of Ascension
+	[12336] = 12219, -- Gemstone of Spirestone
+	[12335] = 12219, -- Gemstone of Smolderthorn
+	[12337] = 12219, -- Gemstone of Bloodaxe
 }
 for k, v in pairs(TOKEN) do
 	if TOKEN[v] then
