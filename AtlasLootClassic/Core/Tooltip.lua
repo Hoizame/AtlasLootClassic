@@ -1,3 +1,5 @@
+local ALName, ALPrivate = ...
+
 local _G = _G
 local AtlasLoot = _G.AtlasLoot
 local Tooltip = {}
@@ -8,7 +10,12 @@ local AL = AtlasLoot.Locales
 local pairs = _G.pairs
 local type = _G.type
 
+-- WoW
+local UnitGUID = _G.UnitGUID
+
 local STANDART_TOOLTIP = "AtlasLootTooltip"
+local COLOR = "|cFF00ccff%s|r"
+local GOLD, SILVER, COPPER = "|T"..ALPrivate.COIN_TEXTURE.GOLD..":0|t "..COLOR, "|T"..ALPrivate.COIN_TEXTURE.SILVER..":0|t "..COLOR, "|T"..ALPrivate.COIN_TEXTURE.COPPER..":0|t "..COLOR
 
 local AtlasLootTooltip = CreateFrame("GameTooltip", "AtlasLootTooltip", UIParent, "GameTooltipTemplate")
 AtlasLootTooltip:Hide()
@@ -108,3 +115,16 @@ local function HookInit()
 	HookInitDone = true
 end
 AtlasLoot:AddInitFunc(HookInit)
+
+local PLAYER_GUID_REGISTER = {
+    --["Player-4618-000DD289"] = format(GOLD, "Test"),
+}
+
+local function AddText(self)
+	local name, target = self:GetUnit()
+	local guid = UnitGUID(target)
+	if guid and PLAYER_GUID_REGISTER[guid] then
+		self:AddLine(PLAYER_GUID_REGISTER[guid])
+	end
+end
+Tooltip:AddHookFunction("OnTooltipSetUnit", AddText)

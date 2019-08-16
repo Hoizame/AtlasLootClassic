@@ -2723,6 +2723,7 @@ data["UpperBlackrockSpire"] = {
 			npcId = 16042,
 			DisplayIDs = {{14308}},
 			ExtraList = true,
+			ContentPhase = 5,
 			[NORMAL_DIFF] = {
 				{ 1,  22302 }, -- Ironweave Cowl
 				{ 2,  22340 }, -- Pendant of Celerity

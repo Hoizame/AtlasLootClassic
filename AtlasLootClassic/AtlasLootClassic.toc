@@ -34,6 +34,7 @@ Core\ItemInfo.lua
 Core\TooltipScan.lua
 Core\ItemQuery.lua
 Core\ItemString.lua
+Core\TargetScan.lua
 #Core\AtlasIntegration.lua
 #Core\WorldMapIntegration.xml
 
