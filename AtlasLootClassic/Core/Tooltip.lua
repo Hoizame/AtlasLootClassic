@@ -4,11 +4,15 @@ local Tooltip = {}
 AtlasLoot.Tooltip = Tooltip
 local AL = AtlasLoot.Locales
 
+-- lua
+local pairs = _G.pairs
+local type = _G.type
+
 local STANDART_TOOLTIP = "AtlasLootTooltip"
 
 local AtlasLootTooltip = CreateFrame("GameTooltip", "AtlasLootTooltip", UIParent, "GameTooltipTemplate")
 AtlasLootTooltip:Hide()
-AtlasLootTooltip.shoppingTooltips = {ShoppingTooltip1, ShoppingTooltip2, ShoppingTooltip3}
+AtlasLootTooltip.shoppingTooltips = {ShoppingTooltip1, ShoppingTooltip2}
 
 local TooltipList = {
 	"GameTooltip",
@@ -27,3 +31,80 @@ end
 function Tooltip:Refresh()
 	AtlasLoot.db.Tooltip.tooltip = AtlasLoot.db.Tooltip.useGameTooltip and "GameTooltip" or "AtlasLootTooltip"
 end
+
+-- Hook
+local HookInitDone = false
+local HookTooltipList = {
+    "AtlasLootTooltip",
+    "GameTooltip",
+    "ItemRefTooltip",
+    "ShoppingTooltip1",
+    "ShoppingTooltip2"
+}
+local HookedTooltipRegister = {}
+local FunctionRegister = {}
+
+local function RefreshHooks()
+	for i = 1, #HookTooltipList do
+		local tt = HookTooltipList[i]
+		if not HookedTooltipRegister[tt] then
+			HookedTooltipRegister[tt] = {}
+		end
+		local register = HookedTooltipRegister[tt]
+		for script, scriptFunc in pairs(FunctionRegister) do
+			if not register[script] then
+				register[script] = {}
+			end
+			for func, state in pairs(scriptFunc) do
+				if state and not register[script][func] then
+					local hookTT = type(tt) == "string" and _G[tt] or tt
+					if hookTT.HookScript then
+						hookTT:HookScript(script, func)
+						register[script][func] = true
+					end
+				end
+			end
+		end
+	end
+end
+
+-- tt = "GameTooltip" or { "tt1", "tt2", myLocalTT }
+function Tooltip:AddTooltipSource(tt, notRefresh)
+	if not tt then return end
+	if type(tt) == "table" then
+		for i = 1, #tt do
+			self:AddTooltipSource(tt[i], true)
+		end
+		if not notRefresh then
+			RefreshHooks()
+		end
+	else
+		local count = #HookTooltipList
+		for i = 1, #HookTooltipList do
+			if HookTooltipList[i] == tt then return end
+		end
+		HookTooltipList[count + 1] = tt
+		if not notRefresh then
+			RefreshHooks()
+		end
+	end
+end
+
+function Tooltip:AddHookFunction(script, func)
+	if type(func) ~= "function" or not script then return end
+	if not FunctionRegister[script] then
+		FunctionRegister[script] = {}
+	end
+	if not FunctionRegister[script][func] then
+		FunctionRegister[script][func] = true
+		if HookInitDone then
+			RefreshHooks()
+		end
+	end
+end
+
+local function HookInit()
+	RefreshHooks()
+	HookInitDone = true
+end
+AtlasLoot:AddInitFunc(HookInit)

@@ -5,6 +5,7 @@ local AtlasLoot = _G.AtlasLoot
 local Addons = AtlasLoot.Addons
 local AL = AtlasLoot.Locales
 local Favourites = Addons:RegisterNewAddon("Favourites")
+local Tooltip = AtlasLoot.Tooltip
 
 -- lua
 local type = _G.type
@@ -54,16 +55,6 @@ Favourites.GlobalDbDefaults = {
         },
     },
 }
-
-Favourites.HookTooltipList = {
-    "AtlasLootTooltip",
-    "GameTooltip",
-    "ItemRefTooltip",
-    "ShoppingTooltip1",
-    "ShoppingTooltip2",
-    "ShoppingTooltip3"
-}
-local AlreadyHookedTT = {}
 
 Favourites.PlaceHolderIcon = ICONS_PATH.."placeholder-icon"
 Favourites.IconList = {
@@ -175,18 +166,8 @@ end
 
 local function InitTooltips()
     if TooltipsHooked then return end
-    for i = 1, #Favourites.HookTooltipList do
-        local tooltip = _G[Favourites.HookTooltipList[i]]
-        Favourites:AddTooltipHook(tooltip)
-    end
+    Tooltip:AddHookFunction("OnTooltipSetItem", OnTooltipSetItem_Hook)
     TooltipsHooked = true
-end
-
-function Favourites:AddTooltipHook(tooltip)
-    if tooltip and tooltip.HookScript and not AlreadyHookedTT[tooltip] then
-        tooltip:HookScript("OnTooltipSetItem", OnTooltipSetItem_Hook)
-        AlreadyHookedTT[tooltip] = true
-    end
 end
 
 function Favourites:UpdateDb()
