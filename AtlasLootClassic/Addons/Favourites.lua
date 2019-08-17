@@ -285,12 +285,16 @@ function Favourites:RemoveItemID(itemID)
         self.numItems = self.numItems - 1
         self.activeList[itemID] = nil
         TooltipTextCache[itemID] = nil
+        self:CleanUpMainItems()
         return true
     end
     return false
 end
 
--- call update db after!!
+function Favourites:GetActiveList()
+    return self.activeList
+end
+
 function Favourites:ClearList()
     if self.db and self.activeList then
         ClearActiveList(self)
@@ -499,6 +503,33 @@ function Favourites:ImportItemList(listID, isGlobalList, newList, replace)
         end
     end
     return numNewEntrys
+end
+
+-- gui
+function Favourites:SetAsMainItem(slotID, itemID)
+    if not self.activeList then return end
+    if not self.activeList.mainItems then self.activeList.mainItems = {} end
+    self.activeList.mainItems[slotID] = itemID
+end
+
+function Favourites:SetMainItemEmpty(slotID)
+    self:SetAsMainItem(slotID, true)
+end
+
+function Favourites:CleanUpMainItems()
+    if not self.activeList or not self.activeList.mainItems then return end
+    local newList = {}
+    local count = 0
+    for k,v in pairs(self.activeList.mainItems) do
+        if v == true or self.activeList[v] then
+            newList[k] = v
+        end
+    end
+    if count > 0 then
+        self.activeList.mainItems = newList
+    else
+        self.activeList.mainItems = nil
+    end
 end
 
 Favourites:Finalize()

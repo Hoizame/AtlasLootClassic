@@ -62,8 +62,7 @@ local function OnFavouritesAddonLoad(addon, enabled)
 	Favourites = enabled and addon or nil
 end
 
-
-function Item.OnSet(button, second)
+local function OnInit()
 	if not ItemClickHandler then
 		ItemClickHandler = ClickHandler:GetHandler("Item")
 		AtlasLoot.Addons:GetAddon("Favourites", OnFavouritesAddonLoad)
@@ -74,6 +73,10 @@ function Item.OnSet(button, second)
 		end
 		ItemFrame = AtlasLoot.GUI.ItemFrame
 	end
+end
+AtlasLoot:AddInitFunc(OnInit)
+
+function Item.OnSet(button, second)
 	if not button then return end
 	if second and button.__atlaslootinfo.secType then
 		if type(button.__atlaslootinfo.secType[2]) == "table" then

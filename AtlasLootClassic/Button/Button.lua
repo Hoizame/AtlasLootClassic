@@ -143,6 +143,7 @@ local function Button_Overlay_SetQualityBorder(self, qualityID)
 		self:SetDesaturated(false)
 	end
 end
+Button.Button_Overlay_SetQualityBorder = Button_Overlay_SetQualityBorder
 
 --/run AtlasLoot.Button:Create():SetContentTable({ 1, 104939 })
 function Button:Create()
