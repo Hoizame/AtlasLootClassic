@@ -440,9 +440,8 @@ local function ItemScroll_Update(self)
     local startPos, endPos = ItemScroll_GetStartAndEndPos(self)
     local itemList = self.itemList
     local buttonCount = 0
-
     for i = 1, self.maxItems do
-        local itemID = itemList[startPos + i]
+        local itemID = itemList[startPos + i - 1]
         if itemID then
             local item = self.itemButtons[i]
             if not item then
