@@ -392,13 +392,13 @@ do
 			frame.label:Hide()
 		end
 
-		if catTab.info.textColor then
+		if catTab.info and catTab.info.textColor then
 			frame.label:SetTextColor(catTab.info.textColor[1] or 0, catTab.info.textColor[2] or 0, catTab.info.textColor[3] or 0)
 		else
 			frame.label:SetTextColor(1, 0.82, 0)
 		end
 
-		if catTab.info.bgColor then
+		if catTab.info and catTab.info.bgColor then
 			frame:SetBackdropColor(catTab.info.bgColor[1] or 0, catTab.info.bgColor[2] or 0, catTab.info.bgColor[3] or 0, catTab.info.bgColor[4] or 1)
 		else
 			frame:SetBackdropColor(0, 0, 0, 1)

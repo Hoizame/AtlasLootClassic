@@ -22,9 +22,9 @@ local function SetText(self, text)
 end
 
 
-local function OnClick(self,...)
+local function OnClick(self, ...)
 	if self.obj.onClickFunc then
-		self.obj:onClickFunc(...)
+		self.obj:onClickFunc(self:GetChecked())
 	end
 end
 

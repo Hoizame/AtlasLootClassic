@@ -47,7 +47,20 @@ Favourites.DbDefaults = {
         [BASE_NAME_P] = {
             __name = AL["Profile base list"],
         },
-    }
+    },
+    GUI = {
+        bgColor = {r = 0.45, g = 0.45, b = 0.45, a = 1},
+        scale = 1,
+        title = {
+            bgColor = { r = 0.05, g = 0.05, b = 0.05, a = 1 },
+            textColor = {r = 1, g = 1, b = 1, a = 1},
+            size = 12,
+            font = "Friz Quadrata TT",
+        },
+        content = {
+            bgColor = { r = 0.05, g = 0.05, b = 0.05, a = 1 },
+        },
+    },
 }
 
 Favourites.GlobalDbDefaults = {
@@ -236,7 +249,6 @@ function Favourites:UpdateDb()
     PopulateListNames(self.db.lists, ListNameCache.profile)
     PopulateListNames(self.globalDb.lists, ListNameCache.global)
 
-
     -- tooltip hook
     if self.db.enabled and self.db.showInTT and not TooltipsHooked then
         InitTooltips()
@@ -245,14 +257,17 @@ end
 
 function Favourites.OnInitialize()
     Favourites:UpdateDb()
+    Favourites.GUI.OnInitialize()
 end
 
 function Favourites:OnProfileChanged()
     self:UpdateDb()
+    self.GUI:OnProfileChanged()
 end
 
 function Favourites:OnStatusChanged()
     self:UpdateDb()
+    self.GUI:OnStatusChanged()
 end
 
 function Favourites:AddItemID(itemID)

@@ -111,7 +111,7 @@ local function CreateFavouriteOptions()
                 order = 4,
                 type = "toggle",
                 width = "full",
-                name = AL["Global lists."],
+                name = AL["Global lists"],
                 get = function(info) return FavAddon:GetDb().activeList[2] end,
                 set = function(info, value)
                     local db = FavAddon:GetDb()
@@ -277,7 +277,7 @@ local function CreateFavouriteOptions()
                         order = 1,
                         type = "toggle",
                         width = "full",
-                        name = _G.DISABLE,
+                        name = _G.DEFAULT,
                         disabled = function(info) return not FavAddon:HasIcon() end,
                         get = function(info) return not FavAddon:HasIcon() end,
                         set = function(info, value)
