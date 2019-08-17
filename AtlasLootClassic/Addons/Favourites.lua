@@ -118,10 +118,12 @@ end
 local function CheckSubSetDb(list, db, globalDb)
     if list then
         for activeSub, isGlobal in pairs(list) do
-            if isGlobal and globalDb[activeSub] then
-                AddItemsInfoFavouritesSub(globalDb[activeSub] or db[activeSub], activeSub, isGlobal)
-            elseif not isGlobal and db[activeSub] then
-                AddItemsInfoFavouritesSub(db[activeSub], activeSub, isGlobal)
+            if activeSub ~= Favourites.db.activeList[1] then
+                if isGlobal and globalDb[activeSub] then
+                    AddItemsInfoFavouritesSub(globalDb[activeSub] or db[activeSub], activeSub, isGlobal)
+                elseif not isGlobal and db[activeSub] then
+                    AddItemsInfoFavouritesSub(db[activeSub], activeSub, isGlobal)
+                end
             end
         end
     end
@@ -275,6 +277,7 @@ function Favourites:AddItemID(itemID)
         self.numItems = self.numItems + 1
         self.activeList[itemID] = true
         TooltipTextCache[itemID] = nil
+        self.GUI:ItemListUpdate()
         return true
     end
     return false
@@ -517,19 +520,26 @@ function Favourites:SetMainItemEmpty(slotID)
 end
 
 function Favourites:CleanUpMainItems()
-    if not self.activeList or not self.activeList.mainItems then return end
-    local newList = {}
-    local count = 0
-    for k,v in pairs(self.activeList.mainItems) do
-        if v == true or self.activeList[v] then
-            newList[k] = v
+    if self.activeList and self.activeList.mainItems then 
+        local newList = {}
+        local count = 0
+        for k,v in pairs(self.activeList.mainItems) do
+            if v == true or self.activeList[v] then
+                newList[k] = v
+                count = count + 1
+            end
+        end
+        if count > 0 then
+            self.activeList.mainItems = newList
+        else
+            self.activeList.mainItems = nil
         end
     end
-    if count > 0 then
-        self.activeList.mainItems = newList
-    else
-        self.activeList.mainItems = nil
-    end
+    self.GUI:ItemListUpdate()
+end
+
+function Favourites:GetMainListItems()
+    return self.activeList and self.activeList.mainItems or nil
 end
 
 Favourites:Finalize()

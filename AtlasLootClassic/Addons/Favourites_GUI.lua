@@ -120,6 +120,7 @@ local function ShowOptionsOnClick()
 end
 
 local function UpdateGUI(self)
+    if not self.frame or not self.frame:IsShown() then return end
     if self.frame then
         self.frame.content.isGlobal:SetChecked(Favourites:GetDb().activeList[2])
     end
@@ -129,6 +130,7 @@ local function UpdateGUI(self)
 
     GUI:UpdateStyle()
     GUI:UpdateDropDown()
+    self.frame.content.slotFrame:UpdateSlots()
 end
 
 local function CheckSlot(invType, slotID)
@@ -188,16 +190,30 @@ local function SlotButton_OnLeave(self, motion)
 end
 
 local function SlotButton_OnClick(self, button, down)
-    print(button, down)
+    if self.ItemID then
+        ItemButtonType.OnMouseAction(self, button)
+    end
+end
+
+local function SlotButton_OnEvent(self, event, itemID, success)
+    if event == "GET_ITEM_INFO_RECEIVED" and itemID == self.ItemID and success then
+        self.overlay:SetQualityBorder(GetItemQuality(itemID))
+        self:UnregisterEvent("GET_ITEM_INFO_RECEIVED")
+    end
 end
 
 local function SlotButton_SetSlotItem(self, itemID)
-    if itemID and ItemExist(itemID) then
+    if itemID and itemID ~= true and ItemExist(itemID) then
         local _, _, _, itemEquipLoc, icon = GetItemInfoInstant(itemID)
         if not self.slotID or (self.equipLoc and self.equipLoc[itemEquipLoc]) then
             self.ItemID = itemID
             local quality = GetItemQuality(itemID)
-            self.overlay:SetQualityBorder(quality)
+            if not quality then
+                self:RegisterEvent("GET_ITEM_INFO_RECEIVED")
+            else
+                self.overlay:SetQualityBorder(quality)
+                self:UnregisterEvent("GET_ITEM_INFO_RECEIVED")
+            end
             self.overlay:Show()
             self.icon:SetTexture(icon)
             if self.modelFrame then
@@ -210,6 +226,7 @@ local function SlotButton_SetSlotItem(self, itemID)
         if self.modelFrame then
             self.modelFrame:UndressSlot(self.slotID)
         end
+        self:UnregisterEvent("GET_ITEM_INFO_RECEIVED")
         self.ItemID = nil
     end
 end
@@ -219,7 +236,8 @@ local function Slot_CreateSlotButton(parFrame, slotID, modelFrame)
 	frame:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
 	frame:SetScript("OnEnter", SlotButton_OnEnter)
 	frame:SetScript("OnLeave", SlotButton_OnLeave)
-	frame:SetScript("OnClick", SlotButton_OnClick)
+    frame:SetScript("OnClick", SlotButton_OnClick)
+    frame:SetScript("OnEvent", SlotButton_OnEvent)
 
 	-- secButtonTexture <texture>
 	frame.icon = frame:CreateTexture(nil, frame)
@@ -292,9 +310,16 @@ local function Slot_CreateSlotRow(frame, slotList, frameSlots, size, startAnchor
     return rowFrame
 end
 
+local function Slot_ResetSlots(self)
+    for slotID, slot in pairs(self.slots) do
+        slot:SetSlotItem(nil)
+    end
+end
+
 local function Slot_Update(self)
     local list = Favourites:GetActiveList()
     local slotFrames = self.slots
+    local mainItems = Favourites:GetMainListItems()
     local itemList = {
         ALL = {},
         EquipLoc = {},
@@ -313,11 +338,14 @@ local function Slot_Update(self)
         end
     end
 
+    self:ResetSlots()
     self.modelFrame:Undress()
 
     local setn = {}
     for slotID, slot in pairs(slotFrames) do
-        if slot.equipLoc then
+        if mainItems and mainItems[slotID] then
+            slot:SetSlotItem(mainItems[slotID])
+        elseif slot.equipLoc then
             local elCount = #slot.equipLoc
             for i = 1, elCount do
                 local el = slot.equipLoc[i]
@@ -357,6 +385,7 @@ local function Slot_CreateSlotFrame(frame)
     frame.modelFrame.Reset = _G.Model_Reset
 
     frame.UpdateSlots = Slot_Update
+    frame.ResetSlots = Slot_ResetSlots
 end
 
 
@@ -520,4 +549,10 @@ function GUI:UpdateStyle()
     frame.content.bg1:SetBackdropColor(db.content.bgColor.r, db.content.bgColor.g, db.content.bgColor.b, db.content.bgColor.a)
     frame.content.bg2:SetBackdropColor(db.content.bgColor.r, db.content.bgColor.g, db.content.bgColor.b, db.content.bgColor.a)
     frame.content.bg3:SetBackdropColor(db.content.bgColor.r, db.content.bgColor.g, db.content.bgColor.b, db.content.bgColor.a)
+end
+
+function GUI:ItemListUpdate()
+    if self.frame and self.frame:IsShown() then
+        self.frame.content.slotFrame:UpdateSlots()
+    end
 end
