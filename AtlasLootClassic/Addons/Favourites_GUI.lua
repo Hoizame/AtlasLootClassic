@@ -130,6 +130,7 @@ local function UpdateGUI(self)
 
     GUI:UpdateStyle()
     GUI:UpdateDropDown()
+    GUI:ItemListUpdate()
     self.frame.content.slotFrame:UpdateSlots()
 end
 
@@ -170,8 +171,10 @@ local function GUI_GlobalCheckOnClick(self, value)
     UpdateItemFrame()
 end
 
-local function GUI_ListDropDownOnSelect(self, id, arg)
-    print(id)
+local function GUI_ListDropDownOnSelect(self, id, arg, userClick)
+    if not userClick then return end
+    Favourites:GetDb().activeList[1] = id
+    UpdateItemFrame()
 end
 
 -- ###########################
@@ -252,11 +255,10 @@ local function Slot_CreateSlotButton(parFrame, slotID, modelFrame)
 
     -- count
     frame.count = frame:CreateFontString(nil, "ARTWORK", "AtlasLoot_ItemAmountFont")
-	frame.count:SetPoint("BOTTOMRIGHT", frame.icon, "BOTTOMRIGHT", -1, 1)
+	frame.count:SetPoint("BOTTOMRIGHT", frame.icon, "BOTTOMRIGHT", -3, 2)
 	frame.count:SetJustifyH("RIGHT")
 	frame.count:SetHeight(15)
     frame.count:SetText(0)
-	frame.count:Hide()
 
     -- info
     frame.slotID = slotID
@@ -323,7 +325,7 @@ local function Slot_Update(self)
     local itemList = {
         ALL = {},
         EquipLoc = {},
-        IDToEquipLoc = {}
+        IDToEquipLoc = {},
     }
 
     for itemID, stat in pairs(list) do
@@ -335,6 +337,7 @@ local function Slot_Update(self)
             itemList.EquipLoc[itemEquipLoc][#itemList.EquipLoc[itemEquipLoc] + 1] = itemID
             itemList.ALL[#itemList.ALL + 1] = itemID
             itemList.IDToEquipLoc[itemID] = itemEquipLoc
+            itemList.NumItemsBySlotID = {}
         end
     end
 
@@ -343,20 +346,26 @@ local function Slot_Update(self)
 
     local setn = {}
     for slotID, slot in pairs(slotFrames) do
-        if mainItems and mainItems[slotID] then
-            slot:SetSlotItem(mainItems[slotID])
-        elseif slot.equipLoc then
+        local counter, set = 0, false
+        if slot.equipLoc then
             local elCount = #slot.equipLoc
+            if mainItems and mainItems[slotID] then
+                slot:SetSlotItem(mainItems[slotID])
+                set = true
+            end
             for i = 1, elCount do
                 local el = slot.equipLoc[i]
                 local elTab = itemList.EquipLoc[el]
-
-                if elTab and #elTab > 0 then
-                    slot:SetSlotItem(elTab[1])
-                    break
+                if elTab then
+                    counter = counter + #elTab
+                    if not set and #elTab > 0 then
+                        slot:SetSlotItem(elTab[1])
+                        set = true
+                    end
                 end
             end
         end
+        slot.count:SetText(counter)
     end
 end
 

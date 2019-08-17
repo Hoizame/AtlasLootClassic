@@ -157,10 +157,18 @@ end
 local function ClearActiveList(self)
     local name, isGlobal = self.db.activeList[1], ( self.db.activeList[2] == true )
     local db = isGlobal and self:GetGlobaleLists() or self:GetProfileLists()
+    local new = {}
+
+    for k,v in pairs(self.activeList) do
+        if type(k) ~= "number" and k ~= "mainItems" then
+            new[k] = v
+        end
+    end
+
     if db[name] then
-        db[name] = {}
+        db[name] = new
     else
-        db[BASE_NAME_P] = {}
+        db[BASE_NAME_P] = new
     end
 end
 
@@ -255,6 +263,7 @@ function Favourites:UpdateDb()
     if self.db.enabled and self.db.showInTT and not TooltipsHooked then
         InitTooltips()
     end
+    self.GUI:ItemListUpdate()
 end
 
 function Favourites.OnInitialize()
@@ -520,7 +529,7 @@ function Favourites:SetMainItemEmpty(slotID)
 end
 
 function Favourites:CleanUpMainItems()
-    if self.activeList and self.activeList.mainItems then 
+    if self.activeList and self.activeList.mainItems then
         local newList = {}
         local count = 0
         for k,v in pairs(self.activeList.mainItems) do
