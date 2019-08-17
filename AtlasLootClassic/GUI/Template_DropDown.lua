@@ -119,7 +119,7 @@ local function SetButtonOnClick(self, func)
 end
 
 -- must be a unique id
-local function SetSelected(self, id)
+local function SetSelected(self, id, userClick)
 	if not id then return end
 	local textColor, bgColor
 	local text, arg
@@ -156,7 +156,7 @@ local function SetSelected(self, id)
 	end
 
 	if self.ButtonOnClick then
-		self:ButtonOnClick(id, arg)
+		self:ButtonOnClick(id, arg, userClick)
 	end
 	self.selectedId = id
 	self.frame.label:SetText(text or id)
@@ -227,7 +227,7 @@ do
 
 	local function ButtonOnClick(self, ...)
 		local dropdown = LIST_IS_OPEN
-		dropdown:SetSelected(self.id)
+		dropdown:SetSelected(self.id, true)
 	end
 
 	local function CreateButton(dropdown, cat, buttonInfo, catIndex)
