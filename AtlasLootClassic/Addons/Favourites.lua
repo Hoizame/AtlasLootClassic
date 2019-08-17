@@ -329,6 +329,7 @@ function Favourites:IsFavouriteItemID(itemID, onlyActiveList)
 end
 
 function Favourites:SetFavouriteIcon(itemID, texture, hideOnFail)
+    if not texture then return end
     local listName = self:IsFavouriteItemID(itemID)
     if not listName then return hideOnFail and texture:Hide() or nil end
     local icon = Favourites:GetIconForActiveItemID(itemID)

@@ -73,6 +73,7 @@ local function OnInit()
 		end
 		ItemFrame = AtlasLoot.GUI.ItemFrame
 	end
+	Item.ItemClickHandler = ItemClickHandler
 end
 AtlasLoot:AddInitFunc(OnInit)
 

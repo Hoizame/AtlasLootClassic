@@ -458,7 +458,7 @@ function GUI.CreateSelect()
 
 	local scrollbg = frame.scrollbar:CreateTexture(nil, "BACKGROUND")
 	scrollbg:SetAllPoints(frame.scrollbar)
-	scrollbg:SetTexture(0, 0, 0, 0.4)
+	scrollbg:SetColorTexture(0, 0, 0, 0.5)
 
 	self:Update()
 

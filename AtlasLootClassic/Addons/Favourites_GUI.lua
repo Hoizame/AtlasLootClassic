@@ -101,10 +101,16 @@ local SLOTS_ROWS = {
     right = { 10, 6, 7, 8, 11, 12, 13, 14 },
     bottom = { 16, 17, 18 },
 }
+local EQUIP_ITEM_SIZE, LIST_ITEM_SIZE = 35, 35
 
 -- locale
-local function UpdateItemFrame()
-    AtlasLoot.Addons:UpdateStatus(Favourites:GetName())
+local function UpdateItemFrame(notPushChange)
+    if not notPushChange then
+        if AtlasLoot.Options then
+            AtlasLoot.Options:NotifyChange()
+        end
+        AtlasLoot.Addons:UpdateStatus(Favourites:GetName())
+    end
     if AtlasLoot.GUI.frame and AtlasLoot.GUI.frame:IsShown() then
         AtlasLoot.GUI.ItemFrame:Refresh(true)
     end
@@ -119,19 +125,17 @@ local function ShowOptionsOnClick()
     AtlasLoot.Loader:LoadModule("AtlasLootClassic_Options", ShowFavOptions)
 end
 
-local function UpdateGUI(self)
+local function UpdateGUI(self, noListUpdate)
     if not self.frame or not self.frame:IsShown() then return end
     if self.frame then
         self.frame.content.isGlobal:SetChecked(Favourites:GetDb().activeList[2])
     end
-    if AtlasLoot.Options then
-        AtlasLoot.Options:NotifyChange()
-    end
 
     GUI:UpdateStyle()
     GUI:UpdateDropDown()
-    GUI:ItemListUpdate()
-    self.frame.content.slotFrame:UpdateSlots()
+    if not noListUpdate then
+        GUI:ItemListUpdate()
+    end
 end
 
 local function CheckSlot(invType, slotID)
@@ -161,7 +165,7 @@ local function GUI_FrameOnDragStop(self)
 end
 
 local function GUI_FrameOnShow(self)
-	self.content.slotFrame:UpdateSlots()
+	UpdateGUI(GUI)
 end
 
 local function GUI_GlobalCheckOnClick(self, value)
@@ -194,7 +198,11 @@ end
 
 local function SlotButton_OnClick(self, button, down)
     if self.ItemID then
+        local b = ItemButtonType.ItemClickHandler:Get(button)
         ItemButtonType.OnMouseAction(self, button)
+        if b == "SetFavourite" then
+            UpdateItemFrame(true)
+        end
     end
 end
 
@@ -202,6 +210,18 @@ local function SlotButton_OnEvent(self, event, itemID, success)
     if event == "GET_ITEM_INFO_RECEIVED" and itemID == self.ItemID and success then
         self.overlay:SetQualityBorder(GetItemQuality(itemID))
         self:UnregisterEvent("GET_ITEM_INFO_RECEIVED")
+    end
+end
+
+local function SlotButton_SetSlot(self, slotID)
+    if slotID then
+        self.slotID = slotID
+        self.equipLoc = SLOTID_ITYPE[slotID]
+        self.icon:SetTexture(EMPTY_SLOTS[slotID] or EMPTY_SLOT_DUMMY)
+    else
+        self.slotID = nil
+        self.equipLoc = nil
+        self.icon:SetTexture(EMPTY_SLOT_DUMMY)
     end
 end
 
@@ -245,7 +265,6 @@ local function Slot_CreateSlotButton(parFrame, slotID, modelFrame)
 	-- secButtonTexture <texture>
 	frame.icon = frame:CreateTexture(nil, frame)
 	frame.icon:SetAllPoints(frame)
-	frame.icon:SetTexture(EMPTY_SLOTS[slotID] or EMPTY_SLOT_DUMMY)
 
 	-- secButtonOverlay <texture>
 	frame.overlay = frame:CreateTexture(nil, "OVERLAY")
@@ -260,15 +279,14 @@ local function Slot_CreateSlotButton(parFrame, slotID, modelFrame)
 	frame.count:SetHeight(15)
     frame.count:SetText(0)
 
-    -- info
-    frame.slotID = slotID
-    if slotID then
-        frame.equipLoc = SLOTID_ITYPE[slotID]
-    end
+    --info
     frame.modelFrame = modelFrame
 
     -- function
     frame.SetSlotItem = SlotButton_SetSlotItem
+    frame.SetSlot = SlotButton_SetSlot
+
+    frame:SetSlot(slotID)
 
     return frame
 end
@@ -327,8 +345,9 @@ local function Slot_Update(self)
         EquipLoc = {},
         IDToEquipLoc = {},
     }
+    self.itemList = itemList
 
-    for itemID, stat in pairs(list) do
+    for itemID, state in pairs(list) do
         local _, _, _, itemEquipLoc, icon = GetItemInfoInstant(itemID)
         if itemEquipLoc then
             if not itemList.EquipLoc[itemEquipLoc] then
@@ -337,7 +356,6 @@ local function Slot_Update(self)
             itemList.EquipLoc[itemEquipLoc][#itemList.EquipLoc[itemEquipLoc] + 1] = itemID
             itemList.ALL[#itemList.ALL + 1] = itemID
             itemList.IDToEquipLoc[itemID] = itemEquipLoc
-            itemList.NumItemsBySlotID = {}
         end
     end
 
@@ -367,21 +385,19 @@ local function Slot_Update(self)
         end
         slot.count:SetText(counter)
     end
+    GUI.frame.content.scrollFrame:SetItems(itemList.ALL)
 end
 
 local function Slot_CreateSlotFrame(frame)
-
-    local iconSize = 35
-
     frame.modelFrame = CreateFrame("DressUpModel", nil, frame, "ModelWithControlsTemplate")
     frame.slots = {}
     frame.rowFrame = {}
-    frame.rowFrame.left = Slot_CreateSlotRow(frame, SLOTS_ROWS.left, frame.slots, iconSize, "TOPLEFT", 0, 0, "DOWN", 2)
-    frame.rowFrame.right = Slot_CreateSlotRow(frame, SLOTS_ROWS.right, frame.slots, iconSize, "TOPRIGHT", 0, 0, "DOWN", 2)
-    frame.rowFrame.bottom = Slot_CreateSlotRow(frame, SLOTS_ROWS.bottom, frame.slots, iconSize, "TOP", 0, -(frame.rowFrame.left:GetHeight() - (iconSize * 0.5)), "RIGHT", 2)
+    frame.rowFrame.left = Slot_CreateSlotRow(frame, SLOTS_ROWS.left, frame.slots, EQUIP_ITEM_SIZE, "TOPLEFT", 0, 0, "DOWN", 2)
+    frame.rowFrame.right = Slot_CreateSlotRow(frame, SLOTS_ROWS.right, frame.slots, EQUIP_ITEM_SIZE, "TOPRIGHT", 0, 0, "DOWN", 2)
+    frame.rowFrame.bottom = Slot_CreateSlotRow(frame, SLOTS_ROWS.bottom, frame.slots, EQUIP_ITEM_SIZE, "TOP", 0, -(frame.rowFrame.left:GetHeight() - (EQUIP_ITEM_SIZE * 0.5)), "RIGHT", 2)
 
     frame.modelFrame:SetPoint("TOPLEFT", frame.rowFrame.left, "TOPRIGHT", 0, 0)
-    frame.modelFrame:SetPoint("BOTTOMRIGHT", frame.rowFrame.right, "BOTTOMLEFT", 0, iconSize * 0.5)
+    frame.modelFrame:SetPoint("BOTTOMRIGHT", frame.rowFrame.right, "BOTTOMLEFT", 0, EQUIP_ITEM_SIZE * 0.5)
     frame.modelFrame.defaultRotation = MODELFRAME_DEFAULT_ROTATION
     frame.modelFrame:SetRotation(MODELFRAME_DEFAULT_ROTATION)
     frame.modelFrame:SetUnit("player")
@@ -397,20 +413,118 @@ local function Slot_CreateSlotFrame(frame)
     frame.ResetSlots = Slot_ResetSlots
 end
 
+-- ###########################
+-- Item Scrollframe
+-- ###########################
+local function ItemScroll_GetStartAndEndPos(self)
+    if not self.scrollEnabled then
+        return 1, self.maxItems
+    end
+
+    local startPos, endPos = 1,1
+
+    startPos = ( (self.curPos-1) * self.maxItemsPerRow )
+    endPos = startPos + self.maxItems
+
+    return startPos, endPos
+end
+
+local function ItemScroll_CreateItemButton(self)
+    local button = Slot_CreateSlotButton(self)
+    button.count:Hide()
+    return button
+end
+
+local function ItemScroll_Update(self)
+    if not self or not self.itemList then return end
+    local startPos, endPos = ItemScroll_GetStartAndEndPos(self)
+    local itemList = self.itemList
+    local buttonCount = 0
+
+    for i = 1, self.maxItems do
+        local itemID = itemList[startPos + i]
+        if itemID then
+            local item = self.itemButtons[i]
+            if not item then
+                item = ItemScroll_CreateItemButton(self)
+                item:SetSize(LIST_ITEM_SIZE, LIST_ITEM_SIZE)
+                if i == 1 then
+                    item:SetPoint("TOPLEFT", 0, 0)
+                elseif (i-1) % self.maxItemsPerRow == 0 then
+                    item:SetPoint("TOP", self.itemButtons[i-self.maxItemsPerRow], "BOTTOM", 0, -(self.itemGapH))
+                else
+                    item:SetPoint("LEFT", self.itemButtons[i-1], "RIGHT", self.itemGapV, 0)
+                end
+                self.itemButtons[i] = item
+            end
+            item:SetSlotItem(itemID)
+            item:Show()
+        elseif self.itemButtons[i] then
+            self.itemButtons[i]:Hide()
+        else
+            break
+        end
+    end
+end
+
+local function ItemScroll_ClearItems(self)
+    if #self.itemButtons <= 0 then return end
+    for i = 1, #self.itemButtons do
+        self.itemButtons[i]:Hide()
+    end
+end
+
+local function ItemScroll_SetItems(self, itemList)
+    self.itemList = itemList
+    local itemButtons = self.itemButtons
+
+    ItemScroll_ClearItems(self)
+
+    self.curPos = 1
+    self.maxScroll = ( floor((#itemList / self.maxItemsPerRow)+0.5) - self.maxItemRows ) + 1
+    if self.maxScroll > 0 then
+        self.scrollEnabled = true
+        self.scrollbar:SetValue(1)
+        self.scrollbar:SetMinMaxValues(1, self.maxScroll)
+    else
+        self.scrollEnabled = false
+        self.scrollbar:SetValue(1)
+        self.scrollbar:SetMinMaxValues(1, 1)
+    end
+
+    ItemScroll_Update(self)
+end
+
+-- value: up +1, down -1
+local function ItemScroll_OnMouseWheel(self, value)
+    if not self.scrollEnabled then return end
+	self.curPos = self.curPos - value
+	if self.curPos >= self.maxScroll then self.curPos = self.maxScroll end
+	if self.curPos <= 0 then self.curPos = 1 end
+	self.scrollbar:SetValue(min(self.curPos, self.maxScroll))
+end
+
+local function ItemScroll_OnValueChanged(self, value)
+    if not self.obj.scrollEnabled then return end
+    self = self.obj
+	self.curPos = floor(value)
+    if self.curPos <= 0 then self.curPos = 1 end
+	ItemScroll_Update(self)
+end
 
 -- ###########################
 -- Base
 -- ###########################
 function GUI.OnInitialize()
-    GUI:Toggle()
+
 end
 
 function GUI:OnProfileChanged()
-    UpdateGUI(GUI)
+    UpdateGUI(GUI, true)
 end
 
 function GUI:OnStatusChanged()
-    UpdateGUI(GUI)
+    UpdateGUI(GUI, true)
 end
 
 function GUI:UpdateDropDown()
@@ -529,12 +643,40 @@ function GUI:Create()
         frame.content.slotFrame:SetPoint("TOPRIGHT", frame.content.listSelect.frame, "BOTTOMRIGHT", 0, -5)
         frame.content.slotFrame:SetPoint("BOTTOMLEFT", frame.content, "BOTTOMLEFT", 0, 5)
 
+        local scrollFrame = CreateFrame("ScrollFrame", frameName.."-scroll", frame.content)
+        scrollFrame:EnableMouse(true)
+        scrollFrame:EnableMouseWheel(true)
+        scrollFrame:SetPoint("TOPLEFT", frame.content.bg3, "TOPLEFT", 0, 0)
+        scrollFrame:SetPoint("BOTTOMRIGHT", frame.content.bg3, "BOTTOMRIGHT", 0, 0)
+        scrollFrame:SetScript("OnMouseWheel", ItemScroll_OnMouseWheel)
+        scrollFrame.contentWidth = scrollFrame:GetWidth() - 22
+        scrollFrame.maxItemsPerRow = math.floor(scrollFrame.contentWidth / LIST_ITEM_SIZE)
+        scrollFrame.maxItemRows = math.floor(scrollFrame:GetHeight() / LIST_ITEM_SIZE)
+        scrollFrame.maxItems = scrollFrame.maxItemsPerRow * scrollFrame.maxItemRows
+        scrollFrame.itemGapV = (scrollFrame.contentWidth - ( scrollFrame.maxItemsPerRow * LIST_ITEM_SIZE )) / ( scrollFrame.maxItemsPerRow - 1 )
+        scrollFrame.itemGapH = (scrollFrame:GetHeight() - ( scrollFrame.maxItemRows * LIST_ITEM_SIZE )) / ( scrollFrame.maxItemRows - 1 )
+
+        scrollFrame.scrollbar = CreateFrame("Slider", frameName.."-scrollbar", scrollFrame, "UIPanelScrollBarTemplate")
+        scrollFrame.scrollbar:SetPoint("TOPLEFT", scrollFrame, "TOPRIGHT", -20, -20)
+        scrollFrame.scrollbar:SetPoint("BOTTOMLEFT", scrollFrame, "BOTTOMRIGHT", 20, 20)
+        scrollFrame.scrollbar:SetValueStep(1)
+        scrollFrame.scrollbar.scrollStep = 1
+        scrollFrame.scrollbar:SetValue(0)
+        scrollFrame.scrollbar:SetWidth(16)
+        scrollFrame.scrollbar:SetScript("OnValueChanged", ItemScroll_OnValueChanged)
+        scrollFrame.scrollbar.obj = scrollFrame
+
+        scrollFrame.scrollbg = scrollFrame:CreateTexture(nil, "BACKGROUND")
+        scrollFrame.scrollbg:SetAllPoints(scrollFrame.scrollbar)
+        scrollFrame.scrollbg:SetColorTexture(0, 0, 0, 0.5)
+
+        scrollFrame.SetItems = ItemScroll_SetItems
+        scrollFrame.itemButtons = {}
+        frame.content.scrollFrame = scrollFrame
+
         Slot_CreateSlotFrame(frame.content.slotFrame)
 
         self.frame = frame
-
-        GUI:UpdateStyle()
-        GUI:UpdateDropDown()
 
         frame:Hide()
     end
