@@ -3,6 +3,7 @@ local ALName, ALPrivate = ...
 local _G = getfenv(0)
 local AtlasLoot = _G.AtlasLoot
 local AL = AtlasLoot.Locales
+local ALIL = AtlasLoot.IngameLocales
 local Favourites = AtlasLoot.Addons:GetAddon("Favourites")
 if not Favourites then return end
 local GUI = {}
@@ -16,6 +17,18 @@ local LibSharedMedia = LibStub("LibSharedMedia-3.0")
 -- WoW
 
 -- locale
+local function UpdateItemFrame()
+    AtlasLoot.Addons:UpdateStatus(Favourites:GetName())
+    if AtlasLoot.GUI.frame and AtlasLoot.GUI.frame:IsShown() then
+        AtlasLoot.GUI.ItemFrame:Refresh(true)
+    end
+end
+
+local function ShowFavOptions()
+    --AtlasLoot.Loader:LoadModule("AtlasLootClassic_Options", ShowFavOptions)
+    AtlasLoot.Options:ShowAddon("favourite")
+end
+
 local function FrameOnDragStart(self, arg1)
 	if arg1 == "LeftButton" then
 		--if not db.DefaultFrameLocked then
@@ -44,23 +57,40 @@ local function GlobalCheckOnClick(self, value)
     local db = Favourites:GetDb()
     db.activeList[1] = value and Favourites.BASE_NAME_G or Favourites.BASE_NAME_P
     db.activeList[2] = value
-    AtlasLoot.Addons:UpdateStatus(Favourites:GetName())
+    UpdateItemFrame()
 end
 
+local function ShowOptionsOnClick()
+    AtlasLoot.Loader:LoadModule("AtlasLootClassic_Options", ShowFavOptions)
+end
+
+local function UpdateGUI(self)
+    if self.frame then
+        self.frame.content.isGlobal:SetChecked(Favourites:GetDb().activeList[2])
+    end
+    if AtlasLoot.Options then
+        AtlasLoot.Options:NotifyChange()
+    end
+
+    GUI:UpdateStyle()
+    GUI:UpdateDropDown()
+end
+
+local function ListDropDownOnSelect(self, id, arg)
+    print(id)
+end
 
 -- global
 function GUI.OnInitialize()
-    --GUI:Create()
+    GUI:Create()
 end
 
 function GUI:OnProfileChanged()
-    GUI:UpdateStyle()
-    GUI:UpdateDropDown()
+    UpdateGUI(GUI)
 end
 
 function GUI:OnStatusChanged()
-    GUI:UpdateStyle()
-    GUI:UpdateDropDown()
+    UpdateGUI(GUI)
 end
 
 function GUI:UpdateDropDown()
@@ -120,10 +150,10 @@ function GUI:Create()
         frame:SetBackdrop(ALPrivate.BOX_BACKDROP)
         frame:Hide()
         --tinsert(UISpecialFrames, frameName)	-- allow ESC close
-    
+
         frame.CloseButton = CreateFrame("Button", frameName.."-CloseButton", frame, "UIPanelCloseButton")
         frame.CloseButton:SetPoint("TOPRIGHT", frame, "TOPRIGHT", 3, 2)
-    
+
         frame.titleFrame = AtlasLoot.GUI.CreateTextWithBg(frame, 0, 0)
         frame.titleFrame:SetPoint("TOPLEFT", frame, 5, -5)
         frame.titleFrame:SetPoint("BOTTOMRIGHT", frame, "TOPRIGHT", -27, -23)
@@ -133,19 +163,24 @@ function GUI:Create()
         frame.content:SetPoint("TOPLEFT", frame.titleFrame, "BOTTOMLEFT", 0, -3)
         frame.content:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", -5, 5)
         frame.content:SetBackdrop(ALPrivate.BOX_BACKDROP)
-    
+
         frame.content.listSelect = AtlasLoot.GUI:CreateDropDown()
         frame.content.listSelect:SetParPoint("TOPLEFT", frame.content, "TOPLEFT", 2, -2)
         frame.content.listSelect:SetWidth(270)
         frame.content.listSelect:SetTitle("")
         frame.content.listSelect:SetText(AL["Active list"])
-        frame.content.listSelect:SetButtonOnClick(print)
+        frame.content.listSelect:SetButtonOnClick(ListDropDownOnSelect)
 
         frame.content.isGlobal = AtlasLoot.GUI.CreateCheckBox()
         frame.content.isGlobal:SetParPoint("LEFT", frame.content.listSelect.frame, "RIGHT", 5, 0)
         frame.content.isGlobal:SetText(AL["Global lists"])
         frame.content.isGlobal:SetOnClickFunc(GlobalCheckOnClick)
         frame.content.isGlobal:SetChecked(Favourites:GetDb().activeList[2])
+
+        frame.content.optionsButton = AtlasLoot.GUI.CreateButton()
+        frame.content.optionsButton:SetPoint("LEFT", frame.content.isGlobal.frame.text, "RIGHT", 5, 0)
+        frame.content.optionsButton:SetText(ALIL["Settings"])
+        frame.content.optionsButton:SetScript("OnClick", ShowOptionsOnClick)
 
         self.frame = frame
 

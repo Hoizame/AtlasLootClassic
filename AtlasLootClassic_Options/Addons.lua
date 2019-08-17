@@ -317,8 +317,6 @@ local function CreateFavouriteOptions()
     return t
 end
 
-
-
 -- Addons
 Options.orderNumber = Options.orderNumber + 1
 Options.config.args.addons = {
