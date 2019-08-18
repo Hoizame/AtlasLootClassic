@@ -17,6 +17,7 @@ local GetItemInfo = _G.GetItemInfo
 local GetServerTime = _G.GetServerTime
 local GetItemInfoInstant = _G.GetItemInfoInstant
 local RETRIEVING_ITEM_INFO = _G["RETRIEVING_ITEM_INFO"]
+local ItemExist = _G.C_Item.DoesItemExistByID
 
 -- locals
 local ICONS_PATH = ALPrivate.ICONS_PATH
@@ -282,7 +283,7 @@ function Favourites:OnStatusChanged()
 end
 
 function Favourites:AddItemID(itemID)
-    if itemID and GetItemInfo(itemID) and not self.activeList[itemID] then
+    if itemID and ItemExist(itemID) and not self.activeList[itemID] then
         self.numItems = self.numItems + 1
         self.activeList[itemID] = true
         TooltipTextCache[itemID] = nil
@@ -501,7 +502,7 @@ function Favourites:ImportItemList(listID, isGlobalList, newList, replace)
             local eType, entry = strmatch(stList[i], IMPORT_PATTERN)
             if entry then
                 entry = tonumber(entry)
-                if eType == "i" and not list[entry] and GetItemInfoInstant(entry) then
+                if eType == "i" and not list[entry] and ItemExist(entry) then
                     list[entry] = true
                     numNewEntrys = numNewEntrys + 1
                 end

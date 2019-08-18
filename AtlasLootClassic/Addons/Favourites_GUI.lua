@@ -208,6 +208,17 @@ local function GUI_ListDropDownOnSelect(self, id, arg, userClick)
     UpdateItemFrame()
 end
 
+local function GUI_EditBoxOnTextChange(self)
+    Favourites:AddItemID(self:GetNumber())
+    self:SetText("")
+end
+
+local function GUI_EditBoxOnEnterPressed(self)
+    GUI_EditBoxOnTextChange(self)
+    self:ClearFocus()
+end
+
+
 -- ###########################
 -- Slot functions
 -- ###########################
@@ -276,10 +287,10 @@ local function SlotButton_SetSlotItem(self, itemID)
         if not self.slotID or (self.equipLoc and self.equipLoc[itemEquipLoc]) then
             self.ItemID = itemID
             local quality = GetItemQuality(itemID)
+            self.overlay:SetQualityBorder(quality)
             if not quality then
                 self:RegisterEvent("GET_ITEM_INFO_RECEIVED")
             else
-                self.overlay:SetQualityBorder(quality)
                 self:UnregisterEvent("GET_ITEM_INFO_RECEIVED")
             end
             self.overlay:Show()
@@ -582,7 +593,6 @@ end
 -- Base
 -- ###########################
 function GUI.OnInitialize()
-
 end
 
 function GUI:OnProfileChanged()
@@ -715,6 +725,24 @@ function GUI:Create()
         frame.content.showAllItems:SetText(ALIL["Show all items"])
         frame.content.showAllItems:SetScript("OnClick", ShowAllItemsOnClick)
 
+        frame.content.editBox = CreateFrame("EditBox", nil, frame.content, "InputBoxTemplate")
+        frame.content.editBox:SetWidth(60)
+        frame.content.editBox:SetHeight(35)
+        frame.content.editBox:SetPoint("RIGHT", frame.content.bottomBg, "RIGHT", -2, 0)
+        frame.content.editBox:SetAutoFocus(false)
+        frame.content.editBox:SetMaxLetters(6)
+        frame.content.editBox:SetNumeric(true)
+        frame.content.editBox:SetScript("OnEnterPressed", GUI_EditBoxOnEnterPressed)
+        --frame.content.editBox:SetScript("OnTextChanged", GUI_EditBoxOnTextChange)
+
+        frame.content.editBox.text = frame.content.bottomBg:CreateFontString(nil, "ARTWORK", "GameFontNormal")
+        frame.content.editBox.text:SetPoint("RIGHT", frame.content.editBox, "LEFT", -7, 0)
+        frame.content.editBox.text:SetPoint("LEFT", frame.content.showAllItems, "RIGHT", 2, 0)
+        frame.content.editBox.text:SetHeight(20) -- no new lines
+        frame.content.editBox.text:SetJustifyH("RIGHT")
+        frame.content.editBox.text:SetJustifyV("MIDDLE")
+        frame.content.editBox.text:SetText(AL["Add ItemID"])
+
         frame.content.slotFrame = CreateFrame("Frame", nil, frame.content)
         frame.content.slotFrame:SetPoint("TOPLEFT", frame.content.listSelect.frame, "BOTTOMLEFT", 0, -5)
         frame.content.slotFrame:SetPoint("TOPRIGHT", frame.content.listSelect.frame, "BOTTOMRIGHT", 0, -5)
@@ -760,24 +788,25 @@ function GUI:Create()
 end
 
 function GUI:UpdateStyle()
-    if not self.frame then return end
-    local frame = self.frame
     local db = Favourites.db.GUI
+    if self.frame then
+        local frame = self.frame
 
-    -- main
-    frame:SetBackdropColor(db.bgColor.r, db.bgColor.b, db.bgColor.g, db.bgColor.a)
-    frame:SetScale(db.scale)
+        -- main
+        frame:SetBackdropColor(db.bgColor.r, db.bgColor.b, db.bgColor.g, db.bgColor.a)
+        frame:SetScale(db.scale)
 
-    -- title
-    frame.titleFrame:SetBackdropColor(db.title.bgColor.r, db.title.bgColor.g, db.title.bgColor.b, db.title.bgColor.a)
-    frame.titleFrame:SetFont(LibSharedMedia:Fetch("font", db.title.font), db.title.size)
-    frame.titleFrame.text:SetTextColor(db.title.textColor.r, db.title.textColor.g, db.title.textColor.b, db.title.textColor.a)
+        -- title
+        frame.titleFrame:SetBackdropColor(db.title.bgColor.r, db.title.bgColor.g, db.title.bgColor.b, db.title.bgColor.a)
+        frame.titleFrame:SetFont(LibSharedMedia:Fetch("font", db.title.font), db.title.size)
+        frame.titleFrame.text:SetTextColor(db.title.textColor.r, db.title.textColor.g, db.title.textColor.b, db.title.textColor.a)
 
-    -- content
-    frame.content.slotBg:SetBackdropColor(db.content.bgColor.r, db.content.bgColor.g, db.content.bgColor.b, db.content.bgColor.a)
-    frame.content.headerBg:SetBackdropColor(db.content.bgColor.r, db.content.bgColor.g, db.content.bgColor.b, db.content.bgColor.a)
-    frame.content.itemListBg:SetBackdropColor(db.content.bgColor.r, db.content.bgColor.g, db.content.bgColor.b, db.content.bgColor.a)
-    frame.content.bottomBg:SetBackdropColor(db.content.bgColor.r, db.content.bgColor.g, db.content.bgColor.b, db.content.bgColor.a)
+        -- content
+        frame.content.slotBg:SetBackdropColor(db.content.bgColor.r, db.content.bgColor.g, db.content.bgColor.b, db.content.bgColor.a)
+        frame.content.headerBg:SetBackdropColor(db.content.bgColor.r, db.content.bgColor.g, db.content.bgColor.b, db.content.bgColor.a)
+        frame.content.itemListBg:SetBackdropColor(db.content.bgColor.r, db.content.bgColor.g, db.content.bgColor.b, db.content.bgColor.a)
+        frame.content.bottomBg:SetBackdropColor(db.content.bgColor.r, db.content.bgColor.g, db.content.bgColor.b, db.content.bgColor.a)
+    end
 end
 
 function GUI:ItemListUpdate()
