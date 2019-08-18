@@ -2,8 +2,6 @@
 
 This mod is distributed under Version 2 of the GPL.  A copy of the GPL is included in this zip file with links to non-english translations.
 
-## v1.1.6-beta (Aug. XX, 2019)
-
 ## v1.1.5-beta (Aug. 19, 2019)
 
 - Add a GUI for favourites
