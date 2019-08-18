@@ -13,11 +13,24 @@ local AceGUI = LibStub("AceGUI-3.0")
 local AceConfig = LibStub("AceConfig-3.0")
 local AceConfigDialog = LibStub("AceConfigDialog-3.0")
 local AceDBOptions = LibStub("AceDBOptions-3.0")
+local AceConfigRegistry = LibStub("AceConfigRegistry-3.0")
 
 Options.orderNumber = 0
 
 function Options:Show()
 	AceConfigDialog:Open("AtlasLoot")
+end
+
+function Options:Close()
+	AceConfigDialog:Close("AtlasLoot")
+end
+
+function Options:NotifyChange()
+	AceConfigRegistry:NotifyChange("AtlasLoot")
+end
+
+function Options:ShowAddon(addonName)
+	AceConfigDialog:Open("AtlasLoot", nil, "addons", addonName)
 end
 
 -- https://www.wowace.com/projects/ace3/pages/ace-gui-3-0-widgets

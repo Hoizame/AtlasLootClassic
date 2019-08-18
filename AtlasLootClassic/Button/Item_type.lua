@@ -62,8 +62,7 @@ local function OnFavouritesAddonLoad(addon, enabled)
 	Favourites = enabled and addon or nil
 end
 
-
-function Item.OnSet(button, second)
+local function OnInit()
 	if not ItemClickHandler then
 		ItemClickHandler = ClickHandler:GetHandler("Item")
 		AtlasLoot.Addons:GetAddon("Favourites", OnFavouritesAddonLoad)
@@ -74,6 +73,11 @@ function Item.OnSet(button, second)
 		end
 		ItemFrame = AtlasLoot.GUI.ItemFrame
 	end
+	Item.ItemClickHandler = ItemClickHandler
+end
+AtlasLoot:AddInitFunc(OnInit)
+
+function Item.OnSet(button, second)
 	if not button then return end
 	if second and button.__atlaslootinfo.secType then
 		if type(button.__atlaslootinfo.secType[2]) == "table" then
@@ -140,12 +144,16 @@ function Item.OnMouseAction(button, mouseButton)
 				if Favourites:IsFavouriteItemID(button.ItemID) then
 					Favourites:SetFavouriteIcon(button.ItemID, button.favourite)
 				else
-					button.favourite:Hide()
+					if button.favourite then
+						button.favourite:Hide()
+					end
 				end
 			else
 				if Favourites:AddItemID(button.ItemID) then
 					Favourites:SetFavouriteIcon(button.ItemID, button.favourite)
-					button.favourite:Show()
+					if button.favourite then
+						button.favourite:Show()
+					end
 				end
 			end
 			if Favourites.db.showInTT then
@@ -177,6 +185,7 @@ function Item.OnMouseAction(button, mouseButton)
 end
 
 function Item.OnEnter(button, owner)
+	if not button.ItemID then return end
 	local tooltip = GetAlTooltip()
 	local db = ItemClickHandler:GetDB()
 	tooltip:ClearLines()

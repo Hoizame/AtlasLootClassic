@@ -257,6 +257,10 @@ function ItemDB:GetModuleList(addonName)
 	return contentList[addonName]
 end
 
+function ItemDB:GetNameData_UNSAFE(addonName, contentName, boss)
+	if not ItemDB.Storage[addonName] then return end
+	return ItemDB.Storage[addonName][contentName]:GetName(true), ItemDB.Storage[addonName][contentName]:GetNameForItemTable(boss, true)
+end
 
 -- ##################################################
 --	TableProto
@@ -418,20 +422,22 @@ function ItemDB.ContentProto:GetContentType()
 	return content_types[self.__atlaslootdata.addonName][self.ContentType][1], self.ContentType, content_types[self.__atlaslootdata.addonName][self.ContentType][2]
 end
 
-function ItemDB.ContentProto:GetName()
+function ItemDB.ContentProto:GetName(raw)
 	if self.AreaID and not self.MapID then
 		self.MapID = self.AreaID
 	end
 	local add = ""
-	if AtlasLoot.db.showLvlRange and self.LevelRange then
-		if AtlasLoot.db.showMinEnterLvl then
-			add = format(LEVEL_RANGE_FORMAT, self.LevelRange[1] or 0, self.LevelRange[2] or 0, self.LevelRange[3] or 0 )
-		else
-			add = format(LEVEL_RANGE_FORMAT2, self.LevelRange[2] or 0, self.LevelRange[3] or 0 )
+	if not raw then
+		if AtlasLoot.db.showLvlRange and self.LevelRange then
+			if AtlasLoot.db.showMinEnterLvl then
+				add = format(LEVEL_RANGE_FORMAT, self.LevelRange[1] or 0, self.LevelRange[2] or 0, self.LevelRange[3] or 0 )
+			else
+				add = format(LEVEL_RANGE_FORMAT2, self.LevelRange[2] or 0, self.LevelRange[3] or 0 )
+			end
 		end
-	end
-	if AtlasLoot.db.ContentPhase.enableOnLootTable and self.ContentPhase and not ContentPhase:IsActive(self.ContentPhase) then
-		add = add.."  "..format(CONTENT_PHASE_FORMAT, self.ContentPhase)
+		if AtlasLoot.db.ContentPhase.enableOnLootTable and self.ContentPhase and not ContentPhase:IsActive(self.ContentPhase) then
+			add = add.."  "..format(CONTENT_PHASE_FORMAT, self.ContentPhase)
+		end
 	end
 	if self.name then
 		return self.name..add
@@ -452,13 +458,16 @@ function ItemDB.ContentProto:GetInfo()
 	end
 end
 
-function ItemDB.ContentProto:GetNameForItemTable(index)
+function ItemDB.ContentProto:GetNameForItemTable(index, raw)
 	assert(self.items, "items table not found.")
+	if raw and not self.items[index] then return end
 	assert(index and self.items[index], "index not found.")
 	index = self.items[index]
 	local add = ""
-	if AtlasLoot.db.ContentPhase.enableOnLootTable and index.ContentPhase and not ContentPhase:IsActive(index.ContentPhase) then
-		add = add.." "..format(CONTENT_PHASE_FORMAT, index.ContentPhase)
+	if not raw then
+		if AtlasLoot.db.ContentPhase.enableOnLootTable and index.ContentPhase and not ContentPhase:IsActive(index.ContentPhase) then
+			add = add.." "..format(CONTENT_PHASE_FORMAT, index.ContentPhase)
+		end
 	end
 	if index.name then
 		return index.name..add

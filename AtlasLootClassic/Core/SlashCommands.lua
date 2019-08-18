@@ -1,12 +1,13 @@
+local _G = getfenv(0)
 local AtlasLoot = _G.AtlasLoot
 local SlashCommands = {}
 AtlasLoot.SlashCommands = SlashCommands
 local AL = AtlasLoot.Locales
 
 -- lua
-local assert, type, select, print = assert, type, select, print
-local str_lower, str_format, str_split = string.lower, string.format, string.split
-local tbl_remove, unpack, pairs = table.remove, unpack, pairs
+local assert, type, select, print = _G.assert, _G.type, _G.select, _G.print
+local str_lower, str_format, str_split = _G.string.lower, _G.string.format, _G.string.split
+local tbl_remove, unpack, pairs = _G.table.remove, _G.unpack, _G.pairs
 
 local resetFunctions = {}
 

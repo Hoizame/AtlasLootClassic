@@ -98,11 +98,20 @@ local function CreateFavouriteOptions()
                 width = "full",
                 name = AL["Show favourite item icon in item tooltip"],
             },
-            global = {
+            showListInTT = {
                 order = 3,
                 type = "toggle",
                 width = "full",
-                name = AL["Global lists."],
+                disabled = function(info)
+                    return not FavAddon.db.showInTT
+                end,
+                name = AL["Show listname in item tooltip"],
+            },
+            global = {
+                order = 4,
+                type = "toggle",
+                width = "full",
+                name = AL["Global lists"],
                 get = function(info) return FavAddon:GetDb().activeList[2] end,
                 set = function(info, value)
                     local db = FavAddon:GetDb()
@@ -113,8 +122,9 @@ local function CreateFavouriteOptions()
             },
             list = {
                 type = "select",
-                order = 4,
+                order = 5,
                 name = AL["Active list"],
+                width = "double",
                 values = function()
                     local db = FavAddon:GetDb()
                     local listDb
@@ -125,7 +135,7 @@ local function CreateFavouriteOptions()
                         listDb = FavAddon:GetProfileLists()
                     end
                     for k,v in pairs(listDb) do
-                        list[ k ] = FavAddon:GetListName(k, db.activeList[2] == true)
+                        list[ k ] = FavAddon:GetListName(k, db.activeList[2] == true, true)
                     end
                     return list
                 end,
@@ -136,7 +146,7 @@ local function CreateFavouriteOptions()
                 end,
             },
             addNewList = {
-                order = 5,
+                order = 6,
                 type = 'execute',
                 name = AL["Add new list"],
                 confirm = true,
@@ -149,9 +159,9 @@ local function CreateFavouriteOptions()
                 end,
             },
             deleteList = {
-                order = 6,
+                order = 7,
                 type = 'execute',
-                name = _G.DELETE,
+                name = AL["Delete list"],
                 confirm = true,
                 disabled = function(info)
                     local db = FavAddon:GetDb().activeList
@@ -179,9 +189,10 @@ local function CreateFavouriteOptions()
                 order = 11,
                 type = 'input',
                 name = _G.NAME,
+                width = "full",
                 func = function() FavAddon:AddNewList() end,
                 get = function(info) return FavAddon:GetActiveListName() end,
-                set = function(info, value) FavAddon:SetActiveListName(value) end,
+                set = function(info, value) FavAddon:SetActiveListName(value) UpdateItemFrame(FavAddon) end,
             },
             import = {
                 order = 12,
@@ -267,7 +278,7 @@ local function CreateFavouriteOptions()
                         order = 1,
                         type = "toggle",
                         width = "full",
-                        name = _G.DISABLE,
+                        name = _G.DEFAULT,
                         disabled = function(info) return not FavAddon:HasIcon() end,
                         get = function(info) return not FavAddon:HasIcon() end,
                         set = function(info, value)
@@ -306,8 +317,6 @@ local function CreateFavouriteOptions()
 
     return t
 end
-
-
 
 -- Addons
 Options.orderNumber = Options.orderNumber + 1

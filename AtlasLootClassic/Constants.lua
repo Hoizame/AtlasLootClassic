@@ -55,6 +55,7 @@ ALPrivate.ICONS_PATH = ALPrivate.IMAGE_PATH.."Icons\\"
 ALPrivate.COIN_TEXTURE = {
 	GOLD 		= "Interface\\MoneyFrame\\UI-GoldIcon",
 	SILVER 		= "Interface\\MoneyFrame\\UI-SilverIcon",
+	COPPER		= "Interface\\MoneyFrame\\UI-CopperIcon",
 	AC 		= "Interface\\AchievementFrame\\UI-Achievement-TinyShield",
 	REPUTATION 	= "Interface\\Icons\\Achievement_Reputation_08",
 }

@@ -1,9 +1,15 @@
-AtlasLoot Enhanced
+AtlasLootClassic
 
 This mod is distributed under Version 2 of the GPL.  A copy of the GPL is included in this zip file with links to non-english translations.
 
 
 Patch Notes
+
+
+v1.1.5-beta (Aug. XX, 2019)
+========================
+- Add a GUI for favourites
+- Favourite Lists can now shown in the item tooltip
 
 v1.1.4-beta (Aug. 15, 2019)
 ========================

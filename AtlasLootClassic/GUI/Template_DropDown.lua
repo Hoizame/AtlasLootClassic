@@ -119,7 +119,7 @@ local function SetButtonOnClick(self, func)
 end
 
 -- must be a unique id
-local function SetSelected(self, id)
+local function SetSelected(self, id, userClick)
 	if not id then return end
 	local textColor, bgColor
 	local text, arg
@@ -156,7 +156,7 @@ local function SetSelected(self, id)
 	end
 
 	if self.ButtonOnClick then
-		self:ButtonOnClick(id, arg)
+		self:ButtonOnClick(id, arg, userClick)
 	end
 	self.selectedId = id
 	self.frame.label:SetText(text or id)
@@ -227,7 +227,7 @@ do
 
 	local function ButtonOnClick(self, ...)
 		local dropdown = LIST_IS_OPEN
-		dropdown:SetSelected(self.id)
+		dropdown:SetSelected(self.id, true)
 	end
 
 	local function CreateButton(dropdown, cat, buttonInfo, catIndex)
@@ -392,13 +392,13 @@ do
 			frame.label:Hide()
 		end
 
-		if catTab.info.textColor then
+		if catTab.info and catTab.info.textColor then
 			frame.label:SetTextColor(catTab.info.textColor[1] or 0, catTab.info.textColor[2] or 0, catTab.info.textColor[3] or 0)
 		else
 			frame.label:SetTextColor(1, 0.82, 0)
 		end
 
-		if catTab.info.bgColor then
+		if catTab.info and catTab.info.bgColor then
 			frame:SetBackdropColor(catTab.info.bgColor[1] or 0, catTab.info.bgColor[2] or 0, catTab.info.bgColor[3] or 0, catTab.info.bgColor[4] or 1)
 		else
 			frame:SetBackdropColor(0, 0, 0, 1)

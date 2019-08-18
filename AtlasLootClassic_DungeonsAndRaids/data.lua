@@ -2689,8 +2689,7 @@ data["UpperBlackrockSpire"] = {
 				{ 9,  22253 }, -- Tome of the Lost
 				{ 10, 12602 }, -- Draconian Deflector
 				{ 12, 15730 }, -- Pattern: Red Dragonscale Breastplate
-				{ 13, 15047 }, -- Red Dragonscale Breastplate
-				{ 15, 13519 }, -- Recipe: Flask of the Titans
+				{ 14, 13519 }, -- Recipe: Flask of the Titans
 				{ 16, 16690 }, -- Devout Robe
 				{ 17, 16688 }, -- Magister's Robes
 				{ 18, 16700 }, -- Dreadmist Robe
@@ -2724,6 +2723,7 @@ data["UpperBlackrockSpire"] = {
 			npcId = 16042,
 			DisplayIDs = {{14308}},
 			ExtraList = true,
+			ContentPhase = 5,
 			[NORMAL_DIFF] = {
 				{ 1,  22302 }, -- Ironweave Cowl
 				{ 2,  22340 }, -- Pendant of Celerity
