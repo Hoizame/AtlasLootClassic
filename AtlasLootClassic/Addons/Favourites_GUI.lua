@@ -668,7 +668,7 @@ function GUI:Create()
         frame:SetToplevel(true)
         frame:SetClampedToScreen(true)
         frame:SetBackdrop(ALPrivate.BOX_BACKDROP)
-        --tinsert(UISpecialFrames, frameName)	-- allow ESC close
+        tinsert(UISpecialFrames, frameName)	-- allow ESC close
 
         frame.CloseButton = CreateFrame("Button", frameName.."-CloseButton", frame, "UIPanelCloseButton")
         frame.CloseButton:SetPoint("TOPRIGHT", frame, "TOPRIGHT", 3, 2)

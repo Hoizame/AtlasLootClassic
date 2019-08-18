@@ -31,7 +31,7 @@ local MiniMapLDB = LibStub:GetLibrary("LibDataBroker-1.1"):NewDataObject("AtlasL
 	OnTooltipShow = function(tooltip)
 		tooltip:AddDoubleLine(TT_H_1, TT_H_2);
 		tooltip:AddLine(format(TT_ENTRY, AL["Left Click"], AL["Open AtlasLoot"]))
-		tooltip:AddLine(format(TT_ENTRY, AL["Shift + Left Click"], AL["Open AtlasLoot-Options"]))
+		tooltip:AddLine(format(TT_ENTRY, AL["Shift + Left Click"], AL["Open Options"]))
 		tooltip:AddLine(format(TT_ENTRY, AL["Right Click"], AL["Open Favourites"]))
 	end,
 	OnClick = function(self, button)

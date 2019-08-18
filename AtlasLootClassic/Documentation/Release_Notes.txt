@@ -8,6 +8,7 @@ Patch Notes
 
 v1.1.5-beta (Aug. XX, 2019)
 ========================
+- Add a GUI for favourites
 - Favourite Lists can now shown in the item tooltip
 
 v1.1.4-beta (Aug. 15, 2019)
