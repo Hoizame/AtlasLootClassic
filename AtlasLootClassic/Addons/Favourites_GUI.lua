@@ -125,6 +125,10 @@ local function ShowOptionsOnClick()
     AtlasLoot.Loader:LoadModule("AtlasLootClassic_Options", ShowFavOptions)
 end
 
+local function ShowAllItemsOnClick()
+    GUI:SelectSlot(nil)
+end
+
 local function UpdateGUI(self, noListUpdate)
     if not self.frame or not self.frame:IsShown() then return end
     if self.frame then
@@ -138,13 +142,31 @@ local function UpdateGUI(self, noListUpdate)
     end
 end
 
-local function CheckSlot(invType, slotID)
-    if SLOT_CHECK[invType] == slotID then
-        return true
-    elseif SLOT_CHECK[invType] and type(SLOT_CHECK[invType]) == "table" and SLOT_CHECK[invType][slotID] then
-        return true
+local function ShowItemList(slotID)
+    if not GUI.frame then return end
+    local itemList = GUI.frame.content.slotFrame.itemList
+    if not itemList then return end
+    if not slotID or not GUI.frame.content.slotFrame.slots[slotID] then
+        GUI.frame.content.scrollFrame:SetItems(itemList.ALL, false)
+        GUI.selectedButton = nil
+    elseif itemList.ItemsBySlot[slotID] then
+        GUI.frame.content.scrollFrame:SetItems(itemList.ItemsBySlot[slotID])
+        GUI.selectedButton = GUI.frame.content.slotFrame.slots[slotID]
+    else
+        --SLOTID_ITYPE
+        local slot = GUI.frame.content.slotFrame.slots[slotID]
+        local newList = {}
+        for i = 1, #itemList.ALL do
+            local itemID = itemList.ALL[i]
+            -- IDToEquipLoc
+            if slot.equipLoc[itemList.IDToEquipLoc[itemID]] then
+                newList[#newList+1] = itemID
+            end
+        end
+        itemList.ItemsBySlot[slotID] = newList
+        GUI.frame.content.scrollFrame:SetItems(newList)
+        GUI.selectedButton = slot
     end
-    return false
 end
 
 -- ###########################
@@ -166,6 +188,10 @@ end
 
 local function GUI_FrameOnShow(self)
 	UpdateGUI(GUI)
+end
+
+local function GUI_FrameOnHide(self)
+    GUI.frame.content.slotFrame.itemList = nil
 end
 
 local function GUI_GlobalCheckOnClick(self, value)
@@ -197,19 +223,29 @@ local function SlotButton_OnLeave(self, motion)
 end
 
 local function SlotButton_OnClick(self, button, down)
-    if self.ItemID then
-        if not IsModifierKeyDown() then
-            if button == "LeftButton" then
-
-            elseif button == "RightButton" then
-
+    if not IsModifierKeyDown() then
+        if button == "LeftButton" then
+            if self.slotFrameButton then
+                GUI:SelectSlot(self.slotID)
+            elseif self.listFrameButton then
+                if GUI.selectedButton then
+                    Favourites:SetAsMainItem(GUI.selectedButton.slotID, self.ItemID)
+                    GUI.selectedButton:SetSlotItem(self.ItemID)
+                end
             end
-        else
-            local b = ItemButtonType.ItemClickHandler:Get(button)
-            ItemButtonType.OnMouseAction(self, button)
-            if b == "SetFavourite" then
-                UpdateItemFrame(true)
+        elseif button == "RightButton" then
+            -- clear slot
+            if self.slotFrameButton then
+                SlotButton_OnLeave(self)
+                Favourites:SetMainItemEmpty(self.slotID)
+                self:SetSlotItem()
             end
+        end
+    elseif self.ItemID then
+        local b = ItemButtonType.ItemClickHandler:Get(button)
+        ItemButtonType.OnMouseAction(self, button)
+        if b == "SetFavourite" then
+            UpdateItemFrame(true)
         end
     end
 end
@@ -269,6 +305,7 @@ local function Slot_CreateSlotButton(parFrame, slotID, modelFrame)
 	frame:SetScript("OnLeave", SlotButton_OnLeave)
     frame:SetScript("OnClick", SlotButton_OnClick)
     frame:SetScript("OnEvent", SlotButton_OnEvent)
+    frame:RegisterForClicks("AnyDown")
 
 	-- secButtonTexture <texture>
 	frame.icon = frame:CreateTexture(nil, frame)
@@ -318,6 +355,7 @@ local function Slot_CreateSlotRow(frame, slotList, frameSlots, size, startAnchor
         local slotNum = slotList[i]
         local slot = Slot_CreateSlotButton(rowFrame, slotNum, frame.modelFrame)
         slot:SetSize(size, size)
+        slot.slotFrameButton = true
         if i == 1 then
             slot:SetPoint("TOPLEFT", 0, 0)
         elseif direction == "LEFT" then
@@ -344,6 +382,7 @@ local function Slot_ResetSlots(self)
     end
 end
 
+-- update item list
 local function Slot_Update(self)
     local list = Favourites:GetActiveList()
     local slotFrames = self.slots
@@ -352,6 +391,7 @@ local function Slot_Update(self)
         ALL = {},
         EquipLoc = {},
         IDToEquipLoc = {},
+        ItemsBySlot = {}, -- filled with ShowItemList(slotID) 'cache'
     }
     self.itemList = itemList
 
@@ -393,7 +433,7 @@ local function Slot_Update(self)
         end
         slot.count:SetText(counter)
     end
-    GUI.frame.content.scrollFrame:SetItems(itemList.ALL)
+    ShowItemList(itemList.ALL)
 end
 
 local function Slot_CreateSlotFrame(frame)
@@ -455,6 +495,7 @@ local function ItemScroll_Update(self)
             local item = self.itemButtons[i]
             if not item then
                 item = ItemScroll_CreateItemButton(self)
+                item.listFrameButton = true
                 item:SetSize(LIST_ITEM_SIZE, LIST_ITEM_SIZE)
                 if i == 1 then
                     item:SetPoint("TOPLEFT", 0, 0)
@@ -483,7 +524,8 @@ local function ItemScroll_ClearItems(self)
 end
 
 -- scrollFrame.SetItems
-local function ItemScroll_SetItems(self, itemList)
+local function ItemScroll_SetItems(self, itemList, forceUpdate)
+    if not forceUpdate and self.itemList == itemList then return end
     self.itemList = itemList
     local itemButtons = self.itemButtons
 
@@ -597,6 +639,7 @@ function GUI:Create()
         frame:SetScript("OnMouseDown", GUI_FrameOnDragStart)
         frame:SetScript("OnMouseUp", GUI_FrameOnDragStop)
         frame:SetScript("OnShow", GUI_FrameOnShow)
+        frame:SetScript("OnHide", GUI_FrameOnHide)
         frame:SetToplevel(true)
         frame:SetClampedToScreen(true)
         frame:SetBackdrop(ALPrivate.BOX_BACKDROP)
@@ -625,7 +668,7 @@ function GUI:Create()
         frame.content.headerBg:SetBackdrop(ALPrivate.BOX_BACKDROP)
 
         frame.content.bottomBg = CreateFrame("Frame", nil, frame.content)
-        frame.content.bottomBg:SetPoint("TOPLEFT", frame.content.slotBg, "BOTTOMRIGHT", 0, 20)
+        frame.content.bottomBg:SetPoint("TOPLEFT", frame.content.slotBg, "BOTTOMRIGHT", 2, 27)
         frame.content.bottomBg:SetPoint("BOTTOMRIGHT", frame.content, "BOTTOMRIGHT", 0, 0)
         frame.content.bottomBg:SetBackdrop(ALPrivate.BOX_BACKDROP)
 
@@ -651,6 +694,11 @@ function GUI:Create()
         frame.content.optionsButton:SetPoint("LEFT", frame.content.isGlobal.frame.text, "RIGHT", 5, 0)
         frame.content.optionsButton:SetText(ALIL["Settings"])
         frame.content.optionsButton:SetScript("OnClick", ShowOptionsOnClick)
+
+        frame.content.showAllItems = AtlasLoot.GUI.CreateButton()
+        frame.content.showAllItems:SetPoint("LEFT", frame.content.bottomBg, "LEFT", 2, 0)
+        frame.content.showAllItems:SetText(ALIL["Show all items"])
+        frame.content.showAllItems:SetScript("OnClick", ShowAllItemsOnClick)
 
         frame.content.slotFrame = CreateFrame("Frame", nil, frame.content)
         frame.content.slotFrame:SetPoint("TOPLEFT", frame.content.listSelect.frame, "BOTTOMLEFT", 0, -5)
@@ -724,10 +772,11 @@ function GUI:ItemListUpdate()
 end
 
 function GUI:SelectSlot(slotID)
-    if not slotID or not self.frame then return end
-    if self.frame.content.slotFrame.slots[slotID] then
+    if not self.frame then return end
+    if slotID and self.frame.content.slotFrame.slots[slotID] then
         GUI.selectedSlot = slotID
     else
         GUI.selectedSlot = nil
     end
+    ShowItemList(slotID)
 end

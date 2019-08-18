@@ -124,6 +124,7 @@ local function CreateFavouriteOptions()
                 type = "select",
                 order = 5,
                 name = AL["Active list"],
+                width = "double",
                 values = function()
                     local db = FavAddon:GetDb()
                     local listDb
@@ -160,7 +161,7 @@ local function CreateFavouriteOptions()
             deleteList = {
                 order = 7,
                 type = 'execute',
-                name = _G.DELETE,
+                name = AL["Delete list"],
                 confirm = true,
                 disabled = function(info)
                     local db = FavAddon:GetDb().activeList

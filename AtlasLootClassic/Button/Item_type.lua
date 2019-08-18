@@ -144,12 +144,16 @@ function Item.OnMouseAction(button, mouseButton)
 				if Favourites:IsFavouriteItemID(button.ItemID) then
 					Favourites:SetFavouriteIcon(button.ItemID, button.favourite)
 				else
-					button.favourite:Hide()
+					if button.favourite then
+						button.favourite:Hide()
+					end
 				end
 			else
 				if Favourites:AddItemID(button.ItemID) then
 					Favourites:SetFavouriteIcon(button.ItemID, button.favourite)
-					button.favourite:Show()
+					if button.favourite then
+						button.favourite:Show()
+					end
 				end
 			end
 			if Favourites.db.showInTT then
@@ -181,6 +185,7 @@ function Item.OnMouseAction(button, mouseButton)
 end
 
 function Item.OnEnter(button, owner)
+	if not button.ItemID then return end
 	local tooltip = GetAlTooltip()
 	local db = ItemClickHandler:GetDB()
 	tooltip:ClearLines()
