@@ -18,6 +18,7 @@ local pairs = _G.pairs
 
 -- WoW
 local GetItemQuality, GetItemIcon, GetItemInfoInstant, ItemExist = _G.C_Item.GetItemQualityByID, _G.C_Item.GetItemIconByID, _G.GetItemInfoInstant, _G.C_Item.DoesItemExistByID
+local GetItemCount = _G.GetItemCount
 
 -- AL
 local GetAlTooltip = AtlasLoot.Tooltip.GetTooltip
@@ -287,6 +288,11 @@ local function SlotButton_SetSlotItem(self, itemID)
                 self.modelFrame:TryOn("item:"..itemID)
             end
         end
+        if GetItemCount(itemID, true) > 0 then
+            self.ownedItem:Show()
+        else
+            self.ownedItem:Hide()
+        end
     else
         self.icon:SetTexture(EMPTY_SLOTS[self.slotID] or EMPTY_SLOT_DUMMY)
         self.overlay:Hide()
@@ -295,6 +301,7 @@ local function SlotButton_SetSlotItem(self, itemID)
         end
         self:UnregisterEvent("GET_ITEM_INFO_RECEIVED")
         self.ItemID = nil
+        self.ownedItem:Hide()
     end
 end
 
@@ -323,6 +330,14 @@ local function Slot_CreateSlotButton(parFrame, slotID, modelFrame)
 	frame.count:SetJustifyH("RIGHT")
 	frame.count:SetHeight(15)
     frame.count:SetText(0)
+
+    frame.ownedItem = frame:CreateTexture(nil, "OVERLAY")
+	frame.ownedItem:SetPoint("BOTTOMLEFT", frame.icon)
+	frame.ownedItem:SetHeight(20)
+	frame.ownedItem:SetWidth(20)
+    frame.ownedItem:SetTexture("Interface\\RaidFrame\\ReadyCheck-Ready")
+    frame.ownedItem:SetDrawLayer(frame.overlay:GetDrawLayer(), 2)
+	frame.ownedItem:Hide()
 
     --info
     frame.modelFrame = modelFrame
