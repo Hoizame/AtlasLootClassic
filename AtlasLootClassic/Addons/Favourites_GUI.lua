@@ -15,6 +15,7 @@ local LibSharedMedia = LibStub("LibSharedMedia-3.0")
 -- lua
 local type = _G.type
 local pairs = _G.pairs
+local format = _G.format
 
 -- WoW
 local GetItemQuality, GetItemIcon, GetItemInfoInstant, ItemExist = _G.C_Item.GetItemQualityByID, _G.C_Item.GetItemIconByID, _G.GetItemInfoInstant, _G.C_Item.DoesItemExistByID
@@ -24,6 +25,7 @@ local GetItemCount = _G.GetItemCount
 local GetAlTooltip = AtlasLoot.Tooltip.GetTooltip
 
 -- const
+local TT_INFO_ENTRY = "|cFFCFCFCF%s:|r %s"
 local EMPTY_SLOT_DUMMY = 136509 -- emptyslot
 local EMPTY_SLOTS = {
     [INVSLOT_AMMO]      = 136510, -- ammo
@@ -216,6 +218,17 @@ end
 local function GUI_EditBoxOnEnterPressed(self)
     GUI_EditBoxOnTextChange(self)
     self:ClearFocus()
+end
+
+local function GUI_InfoOnEnter(self)
+    local tooltip = GetAlTooltip()
+    tooltip:SetOwner(self, "ANCHOR_LEFT", (self:GetWidth() * 0.5), 5)
+    tooltip:AddLine(format(TT_INFO_ENTRY, AL["Alt + Left Click"], AL["Remove item from list"]))
+    tooltip:Show()
+end
+
+local function GUI_InfoOnLeave(self)
+    GetAlTooltip():Hide()
 end
 
 
@@ -677,6 +690,11 @@ function GUI:Create()
         frame.titleFrame:SetPoint("TOPLEFT", frame, 5, -5)
         frame.titleFrame:SetPoint("BOTTOMRIGHT", frame, "TOPRIGHT", -27, -23)
         frame.titleFrame.text:SetText(AL["AtlasLoot"].." - "..AL["Favourites"])
+
+        frame.infoButton = CreateFrame("Button", nil, frame, "UIPanelInfoButton")
+        frame.infoButton:SetPoint("RIGHT", frame.titleFrame, "RIGHT", -1, 0)
+        frame.infoButton:SetScript("OnEnter", GUI_InfoOnEnter)
+        frame.infoButton:SetScript("OnLeave", GUI_InfoOnLeave)
 
         frame.content = CreateFrame("Frame", nil, frame)
         frame.content:SetPoint("TOPLEFT", frame.titleFrame, "BOTTOMLEFT", 0, -3)

@@ -171,6 +171,10 @@ local TOKEN = {
 	[18703] = { 18714, 18713, 18715 }, -- Ancient Petrified Leaf
 	[18646] = { 18665, 18646, 0, 18608, 18609 }, -- The Eye of Divinity
 	[18665] = 18646, -- The Eye of Shadow
+	[17074] = { 17074, 17223 }, -- Shadowstrike
+	[17223] = 17074, -- Thunderstrike
+	[18608] = { 18608, 18609 }, -- Benediction
+	[18609] = 18608, -- Anathema
 
 	-- Quests
 	[10441] = { 10657, 10658, type = 3 }, -- Glowing Shard

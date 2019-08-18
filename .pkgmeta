@@ -1,8 +1,8 @@
 package-as: AtlasLootClassic
 
 manual-changelog:
- filename: AtlasLootClassic/Documentation/Release_Notes.txt
- markup-type: plain
+ filename: AtlasLootClassic/Documentation/Release_Notes.md
+ markup-type: markdown
 
 enable-nolib-creation: no
     
