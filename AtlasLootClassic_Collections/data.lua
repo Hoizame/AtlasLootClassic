@@ -691,13 +691,13 @@ data["ChildrensWeek"] = {
 }
 
 data["Valentineday"] = {
-	name = AL["Valentineday"],
+	name = AL["Love is in the Air"],
 	ContentType = WORLD_EVENT_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = NORMAL_ITTYPE,
 	items = {
 		{ -- Valentineday
-			name = AL["Valentineday"],
+			name = AL["Love is in the Air"],
 			[NORMAL_DIFF] = {
 				{ 1,  22206 }, -- Bouquet of Red Roses
 				{ 3, "INV_ValentinesBoxOfChocolates02", nil, AL["Gift of Adoration"] },
