@@ -198,10 +198,18 @@ end
 
 local function SlotButton_OnClick(self, button, down)
     if self.ItemID then
-        local b = ItemButtonType.ItemClickHandler:Get(button)
-        ItemButtonType.OnMouseAction(self, button)
-        if b == "SetFavourite" then
-            UpdateItemFrame(true)
+        if not IsModifierKeyDown() then
+            if button == "LeftButton" then
+
+            elseif button == "RightButton" then
+
+            end
+        else
+            local b = ItemButtonType.ItemClickHandler:Get(button)
+            ItemButtonType.OnMouseAction(self, button)
+            if b == "SetFavourite" then
+                UpdateItemFrame(true)
+            end
         end
     end
 end
@@ -424,7 +432,8 @@ local function ItemScroll_GetStartAndEndPos(self)
     local startPos, endPos = 1,1
 
     startPos = ( (self.curPos-1) * self.maxItemsPerRow )
-    endPos = startPos + self.maxItems
+    startPos = startPos <= 0 and 1 or startPos+1
+    endPos = startPos + self.maxItems - 1
 
     return startPos, endPos
 end
@@ -473,6 +482,7 @@ local function ItemScroll_ClearItems(self)
     end
 end
 
+-- scrollFrame.SetItems
 local function ItemScroll_SetItems(self, itemList)
     self.itemList = itemList
     local itemButtons = self.itemButtons
@@ -604,24 +614,29 @@ function GUI:Create()
         frame.content:SetPoint("TOPLEFT", frame.titleFrame, "BOTTOMLEFT", 0, -3)
         frame.content:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", -5, 5)
 
-        frame.content.bg1 = CreateFrame("Frame", nil, frame.content)
-        frame.content.bg1:SetPoint("TOPLEFT", frame.content, "TOPLEFT", 0, 0)
-        frame.content.bg1:SetPoint("BOTTOMRIGHT", frame.content, "BOTTOMLEFT", 275, 0)
-        frame.content.bg1:SetBackdrop(ALPrivate.BOX_BACKDROP)
+        frame.content.slotBg = CreateFrame("Frame", nil, frame.content)
+        frame.content.slotBg:SetPoint("TOPLEFT", frame.content, "TOPLEFT", 0, 0)
+        frame.content.slotBg:SetPoint("BOTTOMRIGHT", frame.content, "BOTTOMLEFT", 275, 0)
+        frame.content.slotBg:SetBackdrop(ALPrivate.BOX_BACKDROP)
 
-        frame.content.bg2 = CreateFrame("Frame", nil, frame.content)
-        frame.content.bg2:SetPoint("TOPLEFT", frame.content.bg1, "TOPRIGHT", 0, 0)
-        frame.content.bg2:SetPoint("BOTTOMRIGHT", frame.content, "TOPRIGHT", 0, -27)
-        frame.content.bg2:SetBackdrop(ALPrivate.BOX_BACKDROP)
+        frame.content.headerBg = CreateFrame("Frame", nil, frame.content)
+        frame.content.headerBg:SetPoint("TOPLEFT", frame.content.slotBg, "TOPRIGHT", 0, 0)
+        frame.content.headerBg:SetPoint("BOTTOMRIGHT", frame.content, "TOPRIGHT", 0, -27)
+        frame.content.headerBg:SetBackdrop(ALPrivate.BOX_BACKDROP)
 
-        frame.content.bg3 = CreateFrame("Frame", nil, frame.content)
-        frame.content.bg3:SetPoint("TOPLEFT", frame.content.bg2, "BOTTOMLEFT", 2, -2)
-        frame.content.bg3:SetPoint("BOTTOMRIGHT", frame.content, "BOTTOMRIGHT", 0, 0)
-        frame.content.bg3:SetBackdrop(ALPrivate.BOX_BACKDROP)
+        frame.content.bottomBg = CreateFrame("Frame", nil, frame.content)
+        frame.content.bottomBg:SetPoint("TOPLEFT", frame.content.slotBg, "BOTTOMRIGHT", 0, 20)
+        frame.content.bottomBg:SetPoint("BOTTOMRIGHT", frame.content, "BOTTOMRIGHT", 0, 0)
+        frame.content.bottomBg:SetBackdrop(ALPrivate.BOX_BACKDROP)
+
+        frame.content.itemListBg = CreateFrame("Frame", nil, frame.content)
+        frame.content.itemListBg:SetPoint("TOPLEFT", frame.content.headerBg, "BOTTOMLEFT", 2, -2)
+        frame.content.itemListBg:SetPoint("BOTTOMRIGHT", frame.content.bottomBg, "TOPRIGHT", 0, 2)
+        frame.content.itemListBg:SetBackdrop(ALPrivate.BOX_BACKDROP)
 
         frame.content.listSelect = AtlasLoot.GUI:CreateDropDown()
         frame.content.listSelect:SetParPoint("TOPLEFT", frame.content, "TOPLEFT", 2, -2)
-        frame.content.listSelect:SetWidth(frame.content.bg1:GetWidth()-5)
+        frame.content.listSelect:SetWidth(frame.content.slotBg:GetWidth()-5)
         frame.content.listSelect:SetTitle("")
         frame.content.listSelect:SetText(AL["Active list"])
         frame.content.listSelect:SetButtonOnClick(GUI_ListDropDownOnSelect)
@@ -645,8 +660,8 @@ function GUI:Create()
         local scrollFrame = CreateFrame("ScrollFrame", frameName.."-scroll", frame.content)
         scrollFrame:EnableMouse(true)
         scrollFrame:EnableMouseWheel(true)
-        scrollFrame:SetPoint("TOPLEFT", frame.content.bg3, "TOPLEFT", 0, 0)
-        scrollFrame:SetPoint("BOTTOMRIGHT", frame.content.bg3, "BOTTOMRIGHT", 0, 0)
+        scrollFrame:SetPoint("TOPLEFT", frame.content.itemListBg, "TOPLEFT", 0, 0)
+        scrollFrame:SetPoint("BOTTOMRIGHT", frame.content.itemListBg, "BOTTOMRIGHT", 0, 0)
         scrollFrame:SetScript("OnMouseWheel", ItemScroll_OnMouseWheel)
         scrollFrame.contentWidth = scrollFrame:GetWidth() - 22
         scrollFrame.maxItemsPerRow = math.floor(scrollFrame.contentWidth / LIST_ITEM_SIZE)
@@ -696,13 +711,23 @@ function GUI:UpdateStyle()
     frame.titleFrame.text:SetTextColor(db.title.textColor.r, db.title.textColor.g, db.title.textColor.b, db.title.textColor.a)
 
     -- content
-    frame.content.bg1:SetBackdropColor(db.content.bgColor.r, db.content.bgColor.g, db.content.bgColor.b, db.content.bgColor.a)
-    frame.content.bg2:SetBackdropColor(db.content.bgColor.r, db.content.bgColor.g, db.content.bgColor.b, db.content.bgColor.a)
-    frame.content.bg3:SetBackdropColor(db.content.bgColor.r, db.content.bgColor.g, db.content.bgColor.b, db.content.bgColor.a)
+    frame.content.slotBg:SetBackdropColor(db.content.bgColor.r, db.content.bgColor.g, db.content.bgColor.b, db.content.bgColor.a)
+    frame.content.headerBg:SetBackdropColor(db.content.bgColor.r, db.content.bgColor.g, db.content.bgColor.b, db.content.bgColor.a)
+    frame.content.itemListBg:SetBackdropColor(db.content.bgColor.r, db.content.bgColor.g, db.content.bgColor.b, db.content.bgColor.a)
+    frame.content.bottomBg:SetBackdropColor(db.content.bgColor.r, db.content.bgColor.g, db.content.bgColor.b, db.content.bgColor.a)
 end
 
 function GUI:ItemListUpdate()
     if self.frame and self.frame:IsShown() then
         self.frame.content.slotFrame:UpdateSlots()
+    end
+end
+
+function GUI:SelectSlot(slotID)
+    if not slotID or not self.frame then return end
+    if self.frame.content.slotFrame.slots[slotID] then
+        GUI.selectedSlot = slotID
+    else
+        GUI.selectedSlot = nil
     end
 end
