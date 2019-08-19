@@ -1,6 +1,7 @@
 local AtlasLoot = _G.AtlasLoot
 local Prof = AtlasLoot.Button:AddType("Profession", "prof")
-local ItemQuery = AtlasLoot.Button:GetType("Item").Query
+local Item_ButtonType = AtlasLoot.Button:GetType("Item")
+local ItemQuery = Item_ButtonType.Query
 local AL = AtlasLoot.Locales
 local GetAlTooltip = AtlasLoot.Tooltip.GetTooltip
 local Profession = AtlasLoot.Data.Profession
