@@ -40,7 +40,7 @@ Favourites.BASE_NAME_P, Favourites.BASE_NAME_G = BASE_NAME_P, BASE_NAME_G
 -- Addon
 Favourites.DbDefaults = {
     enabled = true,
-    showInTT = false,
+    showIconInTT = false,
     showListInTT = true,
     activeList = { BASE_NAME_P, false }, -- name, isGlobal
     activeSubLists = {},
@@ -189,7 +189,7 @@ local function CleanUpShownLists(db, globalDb, activeSubLists, isGlobalList)
 end
 
 local function OnTooltipSetItem_Hook(self)
-    if not Favourites.db.enabled or not Favourites.db.showInTT then return end
+    if not Favourites.db.enabled or (not Favourites.db.showIconInTT and not Favourites.db.showListInTT) then return end
     local _, item = self:GetItem()
     if not item then return end
     if not TooltipCache[item] then
@@ -197,14 +197,14 @@ local function OnTooltipSetItem_Hook(self)
     end
 
     item = TooltipCache[item]
-    -- ItemName
     if Favourites:IsFavouriteItemID(item) then
-        -- itemName
-        local text = _G[self:GetName().."TextLeft1"]
-        if not TooltipTextCache[item] and text:GetText() ~= RETRIEVING_ITEM_INFO then
-            TooltipTextCache[item] = format(TEXT_WITH_TEXTURE, Favourites:GetIconForActiveItemID(item), text:GetText())
+        if Favourites.db.showIconInTT then
+            local text = _G[self:GetName().."TextLeft1"]
+            if not TooltipTextCache[item] and text:GetText() ~= RETRIEVING_ITEM_INFO then
+                TooltipTextCache[item] = format(TEXT_WITH_TEXTURE, Favourites:GetIconForActiveItemID(item), text:GetText())
+            end
+            text:SetText( TooltipTextCache[item] or RETRIEVING_ITEM_INFO )
         end
-        text:SetText( TooltipTextCache[item] or RETRIEVING_ITEM_INFO )
 
         -- Add Listnames
         if Favourites.db.showListInTT then
@@ -261,7 +261,7 @@ function Favourites:UpdateDb()
     PopulateListNames(self.globalDb.lists, ListNameCache.global)
 
     -- tooltip hook
-    if self.db.enabled and self.db.showInTT and not TooltipsHooked then
+    if self.db.enabled and ( self.db.showIconInTT or self.db.showListInTT ) and not TooltipsHooked then
         InitTooltips()
     end
     self.GUI:ItemListUpdate()
