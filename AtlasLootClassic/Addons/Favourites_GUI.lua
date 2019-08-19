@@ -120,7 +120,6 @@ local function UpdateItemFrame(notPushChange)
 end
 
 local function ShowFavOptions()
-    --AtlasLoot.Loader:LoadModule("AtlasLootClassic_Options", ShowFavOptions)
     AtlasLoot.Options:ShowAddon("favourite")
 end
 
@@ -223,7 +222,10 @@ end
 local function GUI_InfoOnEnter(self)
     local tooltip = GetAlTooltip()
     tooltip:SetOwner(self, "ANCHOR_LEFT", (self:GetWidth() * 0.5), 5)
+    tooltip:AddLine(AL["Favourites"], 0, 1, 0)
     tooltip:AddLine(format(TT_INFO_ENTRY, AL["Alt + Left Click"], AL["Remove item from list"]))
+    tooltip:AddLine(ALIL["Dressing Room"]..":", 1, 1, 1)
+    tooltip:AddLine(format(TT_INFO_ENTRY, AL["Right Click"], AL["Undress item"]))
     tooltip:Show()
 end
 
@@ -457,6 +459,7 @@ local function Slot_Update(self)
             if mainItems and mainItems[slotID] then
                 slot:SetSlotItem(mainItems[slotID])
                 set = true
+                setn[mainItems[slotID]] = true
             end
             for i = 1, elCount do
                 local el = slot.equipLoc[i]
@@ -464,8 +467,20 @@ local function Slot_Update(self)
                 if elTab then
                     counter = counter + #elTab
                     if not set and #elTab > 0 then
-                        slot:SetSlotItem(elTab[1])
-                        set = true
+                        if not setn[elTab[1]] then
+                            slot:SetSlotItem(elTab[1])
+                            setn[elTab[1]] = true
+                            set = true
+                        elseif #elTab > 1 then
+                            for j=1, #elTab do
+                                if not setn[elTab[j]] then
+                                    slot:SetSlotItem(elTab[j])
+                                    setn[elTab[j]] = true
+                                    set = true
+                                    break
+                                end
+                            end
+                        end
                     end
                 end
             end
