@@ -835,7 +835,7 @@ function GUI:Create()
 	frame.titleFrame.version:SetFont(_G["SystemFont_Tiny"]:GetFont(), 10)
 	frame.titleFrame.version:SetJustifyH("RIGHT")
 	frame.titleFrame.version:SetJustifyV("BOTTOM")
-	frame.titleFrame.version:SetText(AtlasLoot.IsDevVersion and "dev" or AtlasLoot.__addonversion)
+	frame.titleFrame.version:SetText(AtlasLoot.__addonversion)
 
 	frame.moduleSelect = GUI:CreateDropDown()
 	frame.moduleSelect:SetParPoint("TOPLEFT", frame, "TOPLEFT", 10, -40)
