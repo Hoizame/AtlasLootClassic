@@ -7,3 +7,4 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 ## v1.1.6-beta (Aug. XX, 2019)
 
 - Favourites tooltip icon and lists can now enabled separately
+- Add faction mounts, some have bad modelzoom but can't fix that now
