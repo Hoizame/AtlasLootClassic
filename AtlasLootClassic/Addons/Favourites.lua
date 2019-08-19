@@ -261,7 +261,7 @@ function Favourites:UpdateDb()
     PopulateListNames(self.globalDb.lists, ListNameCache.global)
 
     -- tooltip hook
-    if self.db.enabled and ( self.db.showIconInTT or self.db.showListInTT ) and not TooltipsHooked then
+    if self:TooltipHookEnabled() and not TooltipsHooked then
         InitTooltips()
     end
     self.GUI:ItemListUpdate()
@@ -517,6 +517,10 @@ function Favourites:ImportItemList(listID, isGlobalList, newList, replace)
         end
     end
     return numNewEntrys
+end
+
+function Favourites:TooltipHookEnabled()
+    return self.db.enabled and ( self.db.showIconInTT or self.db.showListInTT ) or false
 end
 
 -- gui

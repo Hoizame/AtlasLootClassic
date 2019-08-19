@@ -156,7 +156,7 @@ function Item.OnMouseAction(button, mouseButton)
 					end
 				end
 			end
-			if Favourites.db.showInTT then
+			if Favourites:TooltipHookEnabled() then
 				Item.OnLeave(button)
 				Item.OnEnter(button)
 			end
