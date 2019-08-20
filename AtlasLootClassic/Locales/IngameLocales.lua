@@ -269,6 +269,7 @@ local IngameLocales = {
 	["Mount"] = _G["MOUNT"],
 	["Default"] = _G["DEFAULT"],
 	["Settings"] = _G["SETTINGS"],
+	["Dressing Room"] = _G["DRESSUP_FRAME"],
 }
 AtlasLoot.IngameLocales = IngameLocales
 

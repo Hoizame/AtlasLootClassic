@@ -92,7 +92,7 @@ local function CreateFavouriteOptions()
                     UpdateItemFrame(FavAddon)
                 end
             },
-            showInTT = {
+            showIconInTT = {
                 order = 2,
                 type = "toggle",
                 width = "full",
@@ -102,9 +102,6 @@ local function CreateFavouriteOptions()
                 order = 3,
                 type = "toggle",
                 width = "full",
-                disabled = function(info)
-                    return not FavAddon.db.showInTT
-                end,
                 name = AL["Show listname in item tooltip"],
             },
             global = {

@@ -16,7 +16,7 @@ local SlashCommands = AtlasLoot.SlashCommands
 local AL = AtlasLoot.Locales
 local ALButton = LibStub("LibDBIcon-1.0")
 
-local TT_H_1, TT_H_2 = "|cff00FF00"..AL["AtlasLoot"].."|r", string.format("|cffFFFFFF%s|r", AtlasLoot.IsDevVersion and "dev" or AtlasLoot.__addonversion)
+local TT_H_1, TT_H_2 = "|cff00FF00"..AL["AtlasLoot"].."|r", string.format("|cffFFFFFF%s|r", AtlasLoot.__addonversion)
 local TT_ENTRY = "|cFFCFCFCF%s:|r %s" --|cffFFFFFF%s|r"
 
 
