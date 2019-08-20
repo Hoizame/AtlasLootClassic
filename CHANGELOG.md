@@ -8,3 +8,4 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 
 - Favourites tooltip icon and lists can now enabled separately
 - Add faction mounts, some have bad modelzoom but can't fix that now
+- Movec MC and Onyxia items from P2 into P1 but keep P3 items in P3 for now
