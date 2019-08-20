@@ -26,8 +26,6 @@ ignore:
  - cf_translations.sh
  - AtlasLootClassic/Images/PSD
  - AtlasLootClassic/Addons/tmpl.lua
- - AtlasLootClassic/Libs
- - AtlasLootClassic_Options/Libs
  - README.md
 
 move-folders:
