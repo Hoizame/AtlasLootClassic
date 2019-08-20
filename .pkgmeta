@@ -25,6 +25,7 @@ ignore:
  - babelfish.lua
  - cf_translations.sh
  - AtlasLootClassic/Images/PSD
+ - AtlasLootClassic/Addons/tmpl.lua
  - README.md
 
 move-folders:

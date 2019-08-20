@@ -96,3 +96,4 @@ GUI\SoundFrame.lua
 Addons\Addons.lua
 Addons\Favourites.lua
 Addons\Favourites_GUI.lua
+Addons\Reagents.lua
