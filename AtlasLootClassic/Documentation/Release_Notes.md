@@ -2,6 +2,13 @@
 
 This mod is distributed under Version 2 of the GPL.  A copy of the GPL is included in this zip file with links to non-english translations.
 
+## v1.1.6-beta (Aug. 25, 2019)
+
+- Big thanks for the translation work at curseforge!
+- Favourites tooltip icon and lists can now enabled separately
+- Add faction mounts, some have bad modelzoom but can't fix that now
+- Cleanup Phase 2/3 items with new info from blizzards AmA
+
 ## v1.1.5-beta (Aug. 19, 2019)
 
 - Add a GUI for favourites
