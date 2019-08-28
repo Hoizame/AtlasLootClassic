@@ -416,8 +416,6 @@ local function BuildLocaleList(fileList)
 end
 
 local function getJsonFormattedString(s)
-    s = string.gsub(s, "<", "\\f<\\f")
-    s = string.gsub(s, ">", "\\f>\\f")
     return s
 end
 
