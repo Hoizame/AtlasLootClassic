@@ -8,6 +8,8 @@ AtlasLoot Classic is an UI mod allowing for loot tables of bosses to be browsed 
 
 [Curseforge](https://www.curseforge.com/wow/addons/atlaslootclassic)
 
+[WoWInterface](https://www.wowinterface.com/downloads/info25185-AtlasLootClassic.html)
+
 ## Features
 
 * Loottables for Dungeons and Raids
@@ -24,7 +26,7 @@ AtlasLoot Classic is an UI mod allowing for loot tables of bosses to be browsed 
 * Import and export your lists
 * A GUI that let you plan your gear and shows a indicator if you already own an item
 
-![image](https://drive.google.com/uc?export=view&id=1ExzBOWRcefewTRHA9BQOdz9m7FFY-zzP)![image](https://drive.google.com/uc?export=view&id=187PAs2VYp2b6AQqIvq1Dcstb-B1DXJJx)
+![image](https://media.forgecdn.net/attachments/260/125/atlasloot-fav-gui.png)![image](https://media.forgecdn.net/attachments/260/931/atlasloot-fav-tt.png)
 
 ## Favourites import/export format
 

@@ -469,6 +469,7 @@ data["ShadowfangKeep"] = {
 			name = AL["Sever"],
 			npcId = 14682,
 			DisplayIDs = {{1061}},
+			ContentPhase = 6,
 			[NORMAL_DIFF] = {
 				{ 1,  23173 }, -- Abomination Skin Leggings
 				{ 2,  23171 }, -- The Axe of Severing
@@ -1207,6 +1208,7 @@ data["RazorfenDowns"] = {
 			name = AL["Lady Falther'ess"],
 			npcId = 14686,
 			DisplayIDs = {{10698}},
+			ContentPhase = 6,
 			[NORMAL_DIFF] = {
 				{ 1,  23178 }, -- Mantle of Lady Falther'ess
 				{ 2,  23177 }, -- Lady Falther'ess' Finger
@@ -1520,6 +1522,7 @@ data["Zul'Farrak"] = {
 			name = AL["Dustwraith"],
 			npcId = 10081,
 			DisplayIDs = {{9292}},
+			ContentPhase = 5,
 			[NORMAL_DIFF] = {
 				{ 1,  12471 }, -- Desertwalker Cane
 			},
@@ -3635,6 +3638,7 @@ data["Stratholme"] = {
 			name = AL["Balzaphon"],
 			npcId = 14684,
 			DisplayIDs = {{7919}},
+			ContentPhase = 6,
 			[NORMAL_DIFF] = {
 				{ 1,  23125 }, -- Chains of the Lich
 				{ 2,  23126 }, -- Waistband of Balzaphon
