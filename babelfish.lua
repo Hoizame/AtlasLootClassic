@@ -218,6 +218,10 @@ local function ParseLuaFile(fileName)
 			if not oneLineCom and not multiComment then
 				if tmp == IDENTIFIER and c == "[" then
 					start = true
+				elseif tmp == IDENTIFIER and c ~= "[" then
+					loc, start, tmp = nil, false, ""
+				elseif start and c ~= "\"" and not loc then --start
+					loc, start, tmp = nil, false, ""
 				elseif start and c == "\"" and not loc then --start
 					loc = ""
 				elseif loc and start and c == "\"" and lastC ~= "\\" then

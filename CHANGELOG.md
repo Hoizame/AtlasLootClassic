@@ -6,5 +6,5 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 
 ## v1.1.7-beta (Aug. 27, 2019)
 
-- Translation update
+- Translation update from curseforge
 - Some small fixes
