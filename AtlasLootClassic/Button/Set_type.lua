@@ -25,17 +25,20 @@ ClickHandler:Add(
 	{
 		OpenSet = { "LeftButton", "None" },
 		DressUp = { "LeftButton", "Ctrl" },
+		WoWHeadLink = { "RightButton", "Shift" },
 		--ChatLink = { "LeftButton", "Shift" },
 		types = {
 			OpenSet = true,
 			DressUp = true,
 			--ChatLink = true,
+			WoWHeadLink = true,
 		},
 	},
 	{
 		{ "OpenSet", 	"OpenSet", 	"OpenSet desc" },
 		{ "DressUp", 	AL["Dress up"], 	AL["Shows the item in the Dressing room"] },
 		--{ "ChatLink", 	AL["Chat Link"], 	AL["Add item into chat"] },
+		{ "WoWHeadLink", 	AL["Show WowHead link"], 	AL["Shows a copyable link for WoWHead"] },
 	}
 )
 
@@ -81,6 +84,8 @@ function Set.OnMouseAction(button, mouseButton)
 		--local itemInfo, itemLink = GetItemInfo(button.ItemString or button.ItemID)
 		--itemLink = itemLink or button.ItemString
 		--AtlasLoot.Button:AddChatLink(itemLink or "item:"..button.ItemID)
+	elseif mouseButton == "WoWHeadLink" then
+		AtlasLoot.Button:OpenWoWHeadLink("item-set", button.SetID)
 	elseif mouseButton == "DressUp" then
 		for i = 1, #button.Items do
 			DressUpItemLink(type(button.Items[i]) == "string" and button.Items[i] or "item:"..button.Items[i])

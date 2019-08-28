@@ -31,6 +31,7 @@ local CreateFrame = CreateFrame
 
 -- UnitFactionGroup("player")		"Alliance", "Horde", "Neutral" or nil.
 -- :SetAtlas()
+local WOW_HEAD_LINK, WOW_HEAD_LINK_LOC = "https://classic.wowhead.com/%s=%d", "https://%s.classic.wowhead.com/%s=%d"
 local FACTION_INFO_IS_SET_ID = 998
 local IGNORE_THIS_BUTTON_ID = 999
 local FACTION_TEXTURES = {
@@ -68,6 +69,16 @@ function Button:AddChatLink(link)
 		ChatFrameEditBox:Insert(link)
 	else
 		ChatEdit_InsertLink(link)
+	end
+end
+
+function Button:OpenWoWHeadLink(type, id)
+	if id and type and AtlasLoot.db.enableWoWHeadIntegration and type then
+		if AtlasLoot.db.wowHeadLanguage then
+			print(format(WOW_HEAD_LINK_LOC, AtlasLoot.db.wowHeadLanguage, type, id))
+		else
+			print(format(WOW_HEAD_LINK, type, id))
+		end
 	end
 end
 
@@ -1036,3 +1047,8 @@ function Button:ExtraItemFrame_ClearFrame()
 	if not ExtraItemFrame_Frame then return end
 	ExtraItemFrame_Frame:Clear()
 end
+
+
+--################################
+-- WowHead Copy Frame
+--################################
