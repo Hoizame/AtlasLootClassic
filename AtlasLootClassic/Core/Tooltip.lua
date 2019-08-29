@@ -123,6 +123,7 @@ local PLAYER_GUID_REGISTER = {
 
 local function AddText(self)
 	local name, target = self:GetUnit()
+	if not target then return end
 	local guid = UnitGUID(target)
 	if guid and PLAYER_GUID_REGISTER[guid] then
 		self:AddLine(PLAYER_GUID_REGISTER[guid])
