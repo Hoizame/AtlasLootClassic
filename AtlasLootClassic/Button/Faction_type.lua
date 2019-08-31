@@ -161,7 +161,7 @@ function Faction.OnMouseAction(button, mouseButton)
 	if not mouseButton then return end
 	mouseButton = FactionClickHandler:Get(mouseButton)
 	if mouseButton == "WoWHeadLink" then
-		AtlasLoot.Button:OpenWoWHeadLink("faction", button.FactionID)
+		AtlasLoot.Button:OpenWoWHeadLink(button, "faction", button.FactionID)
 	end
 end
 

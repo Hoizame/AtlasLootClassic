@@ -4,4 +4,7 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 
 [Changelog history](https://github.com/Hoizame/AtlasLootClassic/blob/master/AtlasLootClassic/Documentation/Release_Notes.md)
 
-## v1.1.8-beta (Aug. XX, 2019)
+## v1.1.8-beta (Aug. 31, 2019)
+
+- Split Scarlet Monastery into wings
+- Add support for WoW-Head links ( Shift + Right Click )

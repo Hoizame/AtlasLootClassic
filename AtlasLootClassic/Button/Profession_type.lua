@@ -100,7 +100,7 @@ function Prof.OnMouseAction(button, mouseButton)
 			AtlasLoot.Button:AddChatLink(itemLink, "item", button.ItemID)
 		end
 	elseif mouseButton == "WoWHeadLink" then
-		AtlasLoot.Button:OpenWoWHeadLink("spell", button.SpellID)
+		AtlasLoot.Button:OpenWoWHeadLink(button, "spell", button.SpellID)
 	elseif mouseButton == "DressUp" then
 		if button.ItemID then
 			local itemInfo, itemLink = GetItemInfo(button.ItemID)

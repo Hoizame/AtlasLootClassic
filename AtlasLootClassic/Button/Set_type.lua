@@ -85,7 +85,7 @@ function Set.OnMouseAction(button, mouseButton)
 		--itemLink = itemLink or button.ItemString
 		--AtlasLoot.Button:AddChatLink(itemLink or "item:"..button.ItemID)
 	elseif mouseButton == "WoWHeadLink" then
-		AtlasLoot.Button:OpenWoWHeadLink("item-set", button.SetID)
+		AtlasLoot.Button:OpenWoWHeadLink(button, "item-set", button.SetID)
 	elseif mouseButton == "DressUp" then
 		for i = 1, #button.Items do
 			DressUpItemLink(type(button.Items[i]) == "string" and button.Items[i] or "item:"..button.Items[i])

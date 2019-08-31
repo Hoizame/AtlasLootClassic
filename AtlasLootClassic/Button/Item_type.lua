@@ -121,7 +121,7 @@ function Item.OnMouseAction(button, mouseButton)
 		itemLink = itemLink or button.ItemString
 		AtlasLoot.Button:AddChatLink(itemLink or "item:"..button.ItemID)
 	elseif mouseButton == "WoWHeadLink" then
-		AtlasLoot.Button:OpenWoWHeadLink("item", button.ItemID)
+		AtlasLoot.Button:OpenWoWHeadLink(button, "item", button.ItemID)
 	elseif mouseButton == "DressUp" then
 		local itemInfo, itemLink = GetItemInfo(button.ItemString or button.ItemID)
 		itemLink = itemLink or button.ItemString
