@@ -296,6 +296,7 @@ function Button:Create()
 	button.secButton:SetScript("OnLeave", Button_OnLeave)
 	button.secButton:SetScript("OnClick", Button_OnClick)
 	button.secButton:SetScript("OnMouseWheel", Button_OnMouseWheel)
+	button.secButton:RegisterForClicks("AnyDown")
 
 	-- secButtonTexture <texture>
 	button.secButton.icon = button.secButton:CreateTexture(buttonName.."_secButtonIcon", button.secButton)
@@ -388,6 +389,7 @@ function Button:CreateSecOnly(frame)
 	button.secButton:SetScript("OnLeave", Button_OnLeave)
 	button.secButton:SetScript("OnClick", Button_OnClick)
 	button.secButton:SetScript("OnMouseWheel", Button_OnMouseWheel)
+	button.secButton:RegisterForClicks("AnyDown")
 
 	-- secButtonTexture <texture>
 	button.secButton.icon = button.secButton:CreateTexture(buttonName.."_secButtonIcon", button.secButton)
@@ -1085,7 +1087,6 @@ local function CopyBox_SetCopyText(self, text)
 	self.tLenght:SetText(text)
 	self:SetWidth(self.tLenght:GetStringWidth() + 20)
 	self.text = text
-	self.time = COPY_BOX_HIDE_AFTER
 
 	self:Show()
 	return true
@@ -1130,7 +1131,11 @@ local function CopyBox_Create()
 		self:ClearFocus()
 		self.time = COPY_BOX_HIDE_AFTER_ENTER -- let it stay some time
 	end)
+	frame:SetScript("OnShow", function(self)
+		self.time = COPY_BOX_HIDE_AFTER
+	end)
 	frame:SetScript("OnHide", function(self)
+		if self:IsShown() then self:Hide() end -- fix for when the frame itself is not hidden
 		GetAlTooltip():Hide()
 		self:ClearFocus()
 		self.text = nil
