@@ -18,6 +18,7 @@ local API = {}
 AtlasLoot.Button = Button
 Button.Proto = Proto
 Button.API = API
+local AL = AtlasLoot.Locales
 
 local GetAlTooltip = AtlasLoot.Tooltip.GetTooltip
 
@@ -31,6 +32,8 @@ local CreateFrame = CreateFrame
 
 -- UnitFactionGroup("player")		"Alliance", "Horde", "Neutral" or nil.
 -- :SetAtlas()
+local WOW_HEAD_LINK, WOW_HEAD_LINK_LOC = "https://classic.wowhead.com/%s=%d", "https://%s.classic.wowhead.com/%s=%d"
+local WOW_HEAD_LOCALE
 local FACTION_INFO_IS_SET_ID = 998
 local IGNORE_THIS_BUTTON_ID = 999
 local FACTION_TEXTURES = {
@@ -55,8 +58,25 @@ function Button.Init()
 	end
 	LOOT_BORDER_BY_QUALITY_AL[1] = ALPrivate.IMAGE_PATH.."loottoast-itemborder-white"
 	LOOT_BORDER_BY_QUALITY_AL["gold"] = "loottoast-itemborder-gold"
+
+	-- Setup WoW Head locale
+	local locale = GetLocale()
+	if locale == "deDE" then WOW_HEAD_LOCALE = "de"
+	elseif locale == "esMX" then WOW_HEAD_LOCALE = "es"
+	elseif locale == "esES" then WOW_HEAD_LOCALE = "es"
+	elseif locale == "frFR" then WOW_HEAD_LOCALE = "fr"
+	elseif locale == "itIT" then WOW_HEAD_LOCALE = "it"
+	elseif locale == "ptBR" then WOW_HEAD_LOCALE = "pt"
+	elseif locale == "ruRU" then WOW_HEAD_LOCALE = "ru"
+	elseif locale == "koKR" then WOW_HEAD_LOCALE = "ko"
+	elseif locale == "zhCN" then WOW_HEAD_LOCALE = "cn"
+	elseif locale == "zhTW" then WOW_HEAD_LOCALE = "cn" end
 end
 AtlasLoot:AddInitFunc(Button.Init)
+
+function Button:GetWoWHeadLocale()
+	return WOW_HEAD_LOCALE
+end
 
 function Button:CreateFormatTable(tab)
 	for i = 1,#STANDART_TABLE do tab[#tab+1] = STANDART_TABLE[i] end
@@ -68,6 +88,16 @@ function Button:AddChatLink(link)
 		ChatFrameEditBox:Insert(link)
 	else
 		ChatEdit_InsertLink(link)
+	end
+end
+
+function Button:OpenWoWHeadLink(button, type, id)
+	if id and type and AtlasLoot.db.enableWoWHeadIntegration and type then
+		if AtlasLoot.db.useEnglishWoWHead or not WOW_HEAD_LOCALE then
+			Button:CopyBox_Show(button, format(WOW_HEAD_LINK, type, id))
+		else
+			Button:CopyBox_Show(button, format(WOW_HEAD_LINK_LOC, WOW_HEAD_LOCALE, type, id))
+		end
 	end
 end
 
@@ -266,6 +296,7 @@ function Button:Create()
 	button.secButton:SetScript("OnLeave", Button_OnLeave)
 	button.secButton:SetScript("OnClick", Button_OnClick)
 	button.secButton:SetScript("OnMouseWheel", Button_OnMouseWheel)
+	button.secButton:RegisterForClicks("AnyDown")
 
 	-- secButtonTexture <texture>
 	button.secButton.icon = button.secButton:CreateTexture(buttonName.."_secButtonIcon", button.secButton)
@@ -358,6 +389,7 @@ function Button:CreateSecOnly(frame)
 	button.secButton:SetScript("OnLeave", Button_OnLeave)
 	button.secButton:SetScript("OnClick", Button_OnClick)
 	button.secButton:SetScript("OnMouseWheel", Button_OnMouseWheel)
+	button.secButton:RegisterForClicks("AnyDown")
 
 	-- secButtonTexture <texture>
 	button.secButton.icon = button.secButton:CreateTexture(buttonName.."_secButtonIcon", button.secButton)
@@ -1035,4 +1067,107 @@ end
 function Button:ExtraItemFrame_ClearFrame()
 	if not ExtraItemFrame_Frame then return end
 	ExtraItemFrame_Frame:Clear()
+end
+
+
+--################################
+-- WowHead Copy Frame
+--################################
+local CopyBox_Frame
+local COPY_BOX_HIDE_AFTER, COPY_BOX_HIDE_AFTER_ENTER = 3, 0.5
+
+local function CopyBox_SetCopyText(self, text)
+	if not text or text == self.text then
+		self.text = nil
+		self:Hide()
+		return false
+	end
+
+	self:SetText(text)
+	self.tLenght:SetText(text)
+	self:SetWidth(self.tLenght:GetStringWidth() + 20)
+	self.text = text
+
+	self:Show()
+	return true
+end
+
+local function CopyBox_OnUpdate(self, elapsed)
+	if not self.time then return end
+	self.time = self.time - elapsed
+	if self.time <= 0 then
+		self:Hide()
+	end
+end
+
+local function CopyBox_Create()
+	local frame = CreateFrame("EditBox")
+	frame:ClearAllPoints()
+	frame:SetPoint("TOPLEFT", 70, 4)
+	frame:SetHeight(16)
+	frame:SetFontObject("GameFontNormal")
+	frame:SetBlinkSpeed(0)
+	frame:SetAutoFocus(false)
+	frame:EnableKeyboard(false)
+	frame:SetScript("OnKeyDown", function() end)
+	frame:SetScript("OnMouseUp", function()
+		if frame:IsMouseOver() then
+			frame:HighlightText()
+		else
+			frame:HighlightText(0, 0)
+		end
+	end)
+	frame:SetScript("OnEnter", function(self)
+		local tooltip = GetAlTooltip()
+		tooltip:SetOwner(self, "ANCHOR_BOTTOM", 0, -5)
+		tooltip:SetText(AL["Ctrl + C to copy"], nil, nil, nil, nil, true)
+		tooltip:Show()
+		self:HighlightText()
+		self:SetFocus()
+		self.time = nil
+	end)
+	frame:SetScript("OnLeave", function(self)
+		GetAlTooltip():Hide()
+		self:ClearFocus()
+		self.time = COPY_BOX_HIDE_AFTER_ENTER -- let it stay some time
+	end)
+	frame:SetScript("OnShow", function(self)
+		self.time = COPY_BOX_HIDE_AFTER
+	end)
+	frame:SetScript("OnHide", function(self)
+		if self:IsShown() then self:Hide() end -- fix for when the frame itself is not hidden
+		GetAlTooltip():Hide()
+		self:ClearFocus()
+		self.text = nil
+		self.time = nil
+	end)
+	frame:SetScript("OnUpdate", CopyBox_OnUpdate)
+
+	frame.bg = frame:CreateTexture(nil, "BACKGROUND")
+	frame.bg:SetAllPoints(frame)
+	frame.bg:SetColorTexture(0.1, 0.1, 0.1, 1.0)
+
+	frame.tLenght = frame:CreateFontString(nil, 'ARTWORK', 'GameFontNormal')
+	frame.tLenght:Hide()
+
+	frame.SetCopyText = CopyBox_SetCopyText
+
+	return frame
+end
+
+function Button:CopyBox_Show(button, text)
+	if not CopyBox_Frame then
+		CopyBox_Frame = CopyBox_Create()
+	end
+	if CopyBox_Frame:SetCopyText(text) then
+		CopyBox_Frame:ClearAllPoints()
+		CopyBox_Frame:SetParent(button)
+		CopyBox_Frame:SetPoint("TOPLEFT", button, "BOTTOMLEFT", 0, -1)
+	end
+end
+
+function Button:CopyBox_Hide()
+	if CopyBox_Frame and CopyBox_Frame:IsShown() then
+		CopyBox_Frame:Hide()
+	end
 end

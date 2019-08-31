@@ -189,7 +189,7 @@ local function CleanUpShownLists(db, globalDb, activeSubLists, isGlobalList)
 end
 
 local function OnTooltipSetItem_Hook(self)
-    if not Favourites.db.enabled or (not Favourites.db.showIconInTT and not Favourites.db.showListInTT) then return end
+    if self:IsForbidden() or not Favourites.db.enabled or (not Favourites.db.showIconInTT and not Favourites.db.showListInTT) then return end
     local _, item = self:GetItem()
     if not item then return end
     if not TooltipCache[item] then

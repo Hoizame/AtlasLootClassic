@@ -146,6 +146,7 @@ local function UpdateFrames(noPageUpdate)
 		end
 	end
 	GUI:RefreshNextPrevButtons()
+	AtlasLoot.Button:CopyBox_Hide()
 end
 
 -- ################################

@@ -89,13 +89,16 @@ local FACTION_KEY = {
 ClickHandler:Add(
 	"Faction",
 	{
+		WoWHeadLink = { "RightButton", "Shift" },
 		--ChatLink = { "LeftButton", "Shift" },
 		types = {
 			--ChatLink = true,
+			WoWHeadLink = true,
 		},
 	},
 	{
 		--{ "ChatLink", 	AL["Chat Link"], 	AL["Add item into chat"] },
+		{ "WoWHeadLink", 	AL["Show WowHead link"], 	AL["Shows a copyable link for WoWHead"] },
 	}
 )
 
@@ -157,9 +160,9 @@ end
 function Faction.OnMouseAction(button, mouseButton)
 	if not mouseButton then return end
 	mouseButton = FactionClickHandler:Get(mouseButton)
-	--if mouseButton == "ChatLink" then
-
-	--end
+	if mouseButton == "WoWHeadLink" then
+		AtlasLoot.Button:OpenWoWHeadLink(button, "faction", button.FactionID)
+	end
 end
 
 function Faction.OnEnter(button, owner)
