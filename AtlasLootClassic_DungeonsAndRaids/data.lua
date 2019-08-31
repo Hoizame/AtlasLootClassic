@@ -273,6 +273,7 @@ data["WailingCaverns"] = {
 			name = AL["Deviate Faerie Dragon"],
 			npcId = 5912,
 			DisplayIDs = {{1267}},
+			specialType = "rare",
 			[NORMAL_DIFF] = {
 				{ 1,  5243 }, -- Firebelcher
 				{ 3,  6632 }, -- Feyscale Cloak
@@ -358,6 +359,7 @@ data["TheDeadmines"] = {
 			name = AL["Miner Johnson"],
 			npcId = 3586,
 			DisplayIDs = {{556}},
+			specialType = "rare",
 			[NORMAL_DIFF] = {
 				{ 1, 5443 },	-- Gold-plated Buckler
 				{ 3, 5444 },	-- Miner's Cape
@@ -433,6 +435,7 @@ data["TheDeadmines"] = {
 			name = AL["Cookie"],
 			npcId = 645,
 			DisplayIDs = {{1305}},
+			specialType = "elite",
 			[NORMAL_DIFF] = {
 				{ 1, 5198 },	-- Cookie's Stirring Rod
 				{ 3, 5197 },	-- Cookie's Tenderizer
@@ -525,6 +528,7 @@ data["ShadowfangKeep"] = {
 			name = AL["Deathsworn Captain"],
 			npcId = 3872,
 			DisplayIDs = {{3224}},
+			specialType = "rare",
 			[NORMAL_DIFF] = {
 				{ 1,  6642 }, -- Phantom Armor
 				{ 3,  6641 }, -- Haunting Blade
@@ -712,6 +716,7 @@ data["TheStockade"] = {
 			name = AL["Bruegal Ironknuckle"],
 			npcId = 1720,
 			DisplayIDs = {{2142}},
+			specialType = "rare",
 			[NORMAL_DIFF] = {
 				{ 1,  3228 }, -- Jimmied Handcuffs
 				{ 2,  2941 }, -- Prison Shank
@@ -804,6 +809,7 @@ data["Gnomeregan"] = {
 			name = AL["Dark Iron Ambassador"],
 			npcId = 6228,
 			DisplayIDs = {{6669}},
+			specialType = "rare",
 			[NORMAL_DIFF] = {
 				{ 1,  9455 }, -- Emissary Cuffs
 				{ 2,  9456 }, -- Glass Shooter
@@ -902,6 +908,7 @@ data["RazorfenKraul"] = {
 			name = AL["Blind Hunter"],
 			npcId = 4425,
 			DisplayIDs = {{4735}},
+			specialType = "rare",
 			[NORMAL_DIFF] = {
 				{ 1,  6695 }, -- Stygian Bone Amulet
 				{ 2,  6697 }, -- Batwing Mantle
@@ -1870,6 +1877,7 @@ data["Maraudon"] = {
 			name = AL["Meshlok the Harvester"],
 			npcId = 12237,
 			DisplayIDs = {{9014}},
+			specialType = "rare",
 			[NORMAL_DIFF] = {
 				{ 1,  17767 }, -- Bloomsprout Headpiece
 				{ 2,  17741 }, -- Nature's Embrace
@@ -2688,6 +2696,7 @@ data["LowerBlackrockSpire"] = {
 			name = AL["Bannok Grimaxe"],
 			npcId = 9596,
 			DisplayIDs = {{9668}},
+			specialType = "rare",
 			[NORMAL_DIFF] = {
 				{ 1,  12637 }, -- Backusarian Gauntlets
 				{ 2,  12634 }, -- Chiselbrand Girdle
@@ -3852,6 +3861,7 @@ data["Stratholme"] = {
 			name = AL["Skul"],
 			npcId = 10393,
 			DisplayIDs = {{2606}},
+			specialType = "rare",
 			[NORMAL_DIFF] = {
 				{ 1,  13395 }, -- Skul's Fingerbone Claws
 				{ 2,  13394 }, -- Skul's Cold Embrace
@@ -3887,6 +3897,7 @@ data["Stratholme"] = {
 			name = AL["Hearthsinger Forresten"],
 			npcId = 10558,
 			DisplayIDs = {{10482}},
+			specialType = "rare",
 			[NORMAL_DIFF] = {
 				{ 1,  16682 }, -- Magister's Boots
 				{ 3,  13378 }, -- Songbird Blouse
