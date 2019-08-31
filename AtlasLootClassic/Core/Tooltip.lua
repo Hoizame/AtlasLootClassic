@@ -122,6 +122,7 @@ local PLAYER_GUID_REGISTER = {
 }
 
 local function AddText(self)
+	if self:IsForbidden() then return end
 	local name, target = self:GetUnit()
 	if not target then return end
 	local guid = UnitGUID(target)

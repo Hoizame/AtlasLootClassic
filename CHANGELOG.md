@@ -8,3 +8,4 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 
 - Split Scarlet Monastery into wings
 - Add support for WoW-Head links ( Shift + Right Click )
+- Some content phase fixes

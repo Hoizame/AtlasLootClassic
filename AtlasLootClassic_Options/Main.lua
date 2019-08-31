@@ -5,6 +5,8 @@ local AtlasLoot = _G.AtlasLoot
 local Options = AtlasLoot.Options
 local AL = AtlasLoot.Locales
 
+local format = format
+
 local function UpdateItemFrame()
     if AtlasLoot.GUI.frame and AtlasLoot.GUI.frame:IsShown() then
         AtlasLoot.GUI.ItemFrame:Refresh(true)
@@ -17,6 +19,8 @@ Options.config.args.atlasloot = {
 	type = "group",
 	name = AL["AtlasLoot"],
 	order = Options.orderNumber,
+	get = function(info) return AtlasLoot.db[info[#info]] end,
+    set = function(info, value) AtlasLoot.db[info[#info]] = value end,
 	args = {
 		ignoreScalePopup = {
 			order = 1,
@@ -32,8 +36,6 @@ Options.config.args.atlasloot = {
 			type = "toggle",
 			width = "full",
 			name = AL["Show ID's in tooltip."],
-			get = function(info) return AtlasLoot.db.showIDsInTT end,
-			set = function(info, value) AtlasLoot.db.showIDsInTT = value end,
 		},
 		showLvlRange = {
 			order = 3,
@@ -51,6 +53,18 @@ Options.config.args.atlasloot = {
 			disabled = function() return not AtlasLoot.db.showLvlRange end,
 			get = function(info) return AtlasLoot.db.showMinEnterLvl end,
 			set = function(info, value) AtlasLoot.db.showMinEnterLvl = value AtlasLoot.GUI.OnLevelRangeRefresh() end,
+		},
+		enableWoWHeadIntegration = {
+			order = 5,
+			type = "toggle",
+			name = AL["Enable WoWHead links."],
+			desc = format("|cFFCFCFCF%s:|r %s", AL["Shift + Right Click"], AL["Shows a copyable link for WoWHead"])
+		},
+		useEnglishWoWHead = {
+			order = 6,
+			type = "toggle",
+			hidden = AtlasLoot.Button:GetWoWHeadLocale() and false or true,
+			name = AL["Use english WoWHead."],
 		},
 		headerSetting = {
 			order = 10,
