@@ -223,24 +223,6 @@ local function ModelButtonOnClick(self)
 	UpdateFrames(true)
 end
 
-local function MapButtonOnClick(self)
-	if self.mapID then
-		print("Map on Click")
-	end
-end
-
-local function MapButtonOnEnter(self, owner)
-	local tooltip = GetAlTooltip()
-	tooltip:ClearLines()
-	if owner and type(owner) == "table" then
-		tooltip:SetOwner(owner[1], owner[2], owner[3], owner[4])
-	else
-		tooltip:SetOwner(self, "ANCHOR_RIGHT", -(self:GetWidth() * 0.5), 5)
-	end
-	tooltip:AddLine("REPLACE_ME_TT")
-	tooltip:Show()
-end
-
 -- Atlas
 local function AtlasMapButton_OnClick(self, button)
 	if (AtlasLoot.AtlasIntegration.IsEnabled()) then
@@ -519,12 +501,36 @@ local function AtlasMaps_SetMaps(self, map1, map2, ...)
 		local left, right, top, bottom = ...
 		self[2]:SetTexture(ATLAS_MAPS_PATH..map2)
 		self[2]:SetTexCoord(left, right, top, bottom)
+		self[2]:SetSize(self.maxWidth * right, self.maxHeight * top)
 		self[2]:Show()
+		self[1]:SetDesaturated(true)
 	else
 		self[2]:Hide()
+		self[1]:SetDesaturated(false)
 	end
 
 	self[3]:Show()
+end
+
+
+local function MapButtonOnClick(self)
+	if GUI.frame.contentFrame.shownFrame then
+		GUI.frame.contentFrame.shownFrame:Clear()
+		GUI.frame.contentFrame.shownFrame = nil
+		self.mapData[3]:Hide()
+	end
+end
+
+local function MapButtonOnEnter(self, owner)
+	local tooltip = GetAlTooltip()
+	tooltip:ClearLines()
+	if owner and type(owner) == "table" then
+		tooltip:SetOwner(owner[1], owner[2], owner[3], owner[4])
+	else
+		tooltip:SetOwner(self, "ANCHOR_RIGHT", -(self:GetWidth() * 0.5), 5)
+	end
+	tooltip:AddLine(AL["Atlas map"])
+	tooltip:Show()
 end
 
 -- ################################
@@ -954,16 +960,20 @@ function GUI:Create()
 	frame.contentFrame.map[1]:Hide()
 
 	frame.contentFrame.map[2] = frame.contentFrame:CreateTexture(frameName.."-map2","BACKGROUND")
-	frame.contentFrame.map[2]:SetAllPoints(frame.contentFrame.itemBG)
+	frame.contentFrame.map[2]:SetPoint("BOTTOMLEFT", frame.contentFrame.map[1], "BOTTOMLEFT")
 	frame.contentFrame.map[2]:SetDrawLayer(frame.contentFrame.itemBG:GetDrawLayer(), 3)
 	frame.contentFrame.map[2]:Hide()
+	frame.contentFrame.map[2].maxWidth = frame.contentFrame.map[1]:GetWidth()
+	frame.contentFrame.map[2].maxHeight = frame.contentFrame.map[1]:GetHeight()
 
-	frame.contentFrame.map[3] = frame.contentFrame:CreateTexture(frameName.."-map2","BACKGROUND")
+	frame.contentFrame.map[3] = frame.contentFrame:CreateTexture(frameName.."-map3","BACKGROUND")
 	frame.contentFrame.map[3]:SetAllPoints(frame.contentFrame.itemBG)
 	frame.contentFrame.map[3]:SetDrawLayer(frame.contentFrame.itemBG:GetDrawLayer(), 4)
 	frame.contentFrame.map[3]:SetColorTexture(0, 0, 0, 0.4)
 	frame.contentFrame.map[3]:Hide()
 
+	frame.contentFrame.map.maxWidth = frame.contentFrame.map[1]:GetWidth()
+	frame.contentFrame.map.maxHeight = frame.contentFrame.map[1]:GetHeight()
 	frame.contentFrame.map.SetMap = AtlasMaps_SetMaps
 
 	-- #####
@@ -992,6 +1002,7 @@ function GUI:Create()
 	frame.contentFrame.mapButton:SetScript("OnMouseUp", function(self) self.texture:SetTexCoord(0.125, 0.875, 0.0, 0.5) end)
 	frame.contentFrame.mapButton:SetScript("OnEnter", MapButtonOnEnter)
 	frame.contentFrame.mapButton:SetScript("OnLeave", function(self) GetAlTooltip():Hide() end)
+	frame.contentFrame.mapButton.mapData = frame.contentFrame.map
 	frame.contentFrame.mapButton:Hide()
 
 	frame.contentFrame.mapButton.texture = frame.contentFrame.mapButton:CreateTexture(frameName.."-mapButton-texture","ARTWORK")
