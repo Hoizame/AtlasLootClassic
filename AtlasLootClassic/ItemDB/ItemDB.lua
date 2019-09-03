@@ -417,6 +417,8 @@ local ATLAS_TEXTURE, PATH_TEXTURE = "|A:%s:0:0|a ","|T%s:0|t "
 local SpecialMobList = {
 	rare = format(ATLAS_TEXTURE, "nameplates-icon-elite-silver"),
 	elite = format(ATLAS_TEXTURE, "nameplates-icon-elite-gold"),
+	quest = format(ATLAS_TEXTURE, "QuestNormal"),
+	questTurnIn = format(ATLAS_TEXTURE, "QuestTurnin"),
 }
 
 --- Get the content Type
@@ -477,7 +479,7 @@ function ItemDB.ContentProto:GetNameForItemTable(index, raw)
 			addEnd = addEnd.." "..format(CONTENT_PHASE_FORMAT, index.ContentPhase)
 		end
 		if IsMapsModuleAviable() and index.AtlasMapBossID then
-			addStart = index.AtlasMapBossID..") "
+			addStart = "|cffffffff"..index.AtlasMapBossID..")|r "
 		end
 		if index.specialType and SpecialMobList[index.specialType] then
 			addStart = addStart..SpecialMobList[index.specialType]

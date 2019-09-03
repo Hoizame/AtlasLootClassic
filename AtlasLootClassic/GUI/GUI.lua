@@ -62,8 +62,7 @@ local function UpdateFrames(noPageUpdate)
 	]]--
 	if IsMapsModuleAviable() then
 		if moduleData[dataID] and moduleData[dataID].AtlasMapFile then
-			GUI.frame.contentFrame.mapButton.atlasMapFile = moduleData[dataID].AtlasMapFile
-			print(moduleData[dataID].AtlasMapFile)
+			GUI.frame.contentFrame.mapButton.atlasMapFile = moduleData[dataID].items[bossID].AtlasMapFile or moduleData[dataID].AtlasMapFile
 			GUI.frame.contentFrame.mapButton:Show()
 		else
 			GUI.frame.contentFrame.mapButton.atlasMapFile = nil
