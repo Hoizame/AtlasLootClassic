@@ -119,6 +119,7 @@ AtlasLoot:AddInitFunc(HookInit)
 local PLAYER_GUID_REGISTER = {
 	["Player-4463-003F795C"] = format(GOLD, "AtlasLoot Author"),
 	["Player-4455-00D28DDC"] = format(SILVER, "AtlasLoot Friend"),
+	["Player-4476-0054EED9"] = format(COPPER, "aka god of shadow"),
 }
 
 local function AddText(self)

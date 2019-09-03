@@ -219,4 +219,5 @@ end
 
 function ItemFrame.Clear()
 	ItemFrame:ClearItems()
+	ItemFrame.frame:Hide()
 end

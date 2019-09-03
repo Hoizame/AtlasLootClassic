@@ -18,6 +18,8 @@ local LEVEL_RANGE_FORMAT = "  (|cffff0000%d|r: |cffff8040%d|r - |cff40bf40%d|r)"
 local LEVEL_RANGE_FORMAT2 = "  (|cffff8040%d|r - |cff40bf40%d|r)"
 local CONTENT_PHASE_FORMAT = "|cff00FF96".."<P: %d>".."|r"
 
+local IsMapsModuleAviable = AtlasLoot.Loader.IsMapsModuleAviable
+
 -- Saves all the items ;)
 ItemDB.Storage = {}
 
@@ -415,6 +417,8 @@ local ATLAS_TEXTURE, PATH_TEXTURE = "|A:%s:0:0|a ","|T%s:0|t "
 local SpecialMobList = {
 	rare = format(ATLAS_TEXTURE, "nameplates-icon-elite-silver"),
 	elite = format(ATLAS_TEXTURE, "nameplates-icon-elite-gold"),
+	quest = format(ATLAS_TEXTURE, "QuestNormal"),
+	questTurnIn = format(ATLAS_TEXTURE, "QuestTurnin"),
 }
 
 --- Get the content Type
@@ -474,9 +478,13 @@ function ItemDB.ContentProto:GetNameForItemTable(index, raw)
 		if AtlasLoot.db.ContentPhase.enableOnLootTable and index.ContentPhase and not ContentPhase:IsActive(index.ContentPhase) then
 			addEnd = addEnd.." "..format(CONTENT_PHASE_FORMAT, index.ContentPhase)
 		end
-		if index.specialType and SpecialMobList[index.specialType] then
-			addStart = SpecialMobList[index.specialType]
+		if IsMapsModuleAviable() and index.AtlasMapBossID then
+			addStart = "|cffffffff"..index.AtlasMapBossID..")|r "
 		end
+		if index.specialType and SpecialMobList[index.specialType] then
+			addStart = addStart..SpecialMobList[index.specialType]
+		end
+
 	end
 	if index.name then
 		return addStart..index.name..addEnd

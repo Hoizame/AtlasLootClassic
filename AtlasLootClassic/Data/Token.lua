@@ -175,6 +175,9 @@ local TOKEN = {
 	[17223] = 17074, -- Thunderstrike
 	[18608] = { 18608, 18609 }, -- Benediction
 	[18609] = 18608, -- Anathema
+	[7733] = { 7733, 0, 7740, 7741 }, -- Staff of Prehistoria
+	[7740] = 7733, -- Gni'kiv Medallion
+	[7741] = 7733, -- The Shaft of Tsol
 
 	-- Quests
 	[10441] = { 10657, 10658, type = 3 }, -- Glowing Shard
