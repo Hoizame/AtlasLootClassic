@@ -1850,6 +1850,7 @@ data["Zul'Farrak"] = {
 			npcId = 7272,
 			DisplayIDs = {{6696}},
 			AtlasMapBossID = 2,
+			specialType = "quest",
 			[NORMAL_DIFF] = {
 				{ 1,  10660 }, -- First Mosh'aru Tablet
 			},
@@ -1869,6 +1870,7 @@ data["Zul'Farrak"] = {
 			npcId = 7796,
 			DisplayIDs = {{6690}},
 			AtlasMapBossID = 4,
+			specialType = "quest",
 			[NORMAL_DIFF] = {
 				{ 1,  9471 }, -- Nekrum's Medallion
 			},
@@ -1909,6 +1911,7 @@ data["Zul'Farrak"] = {
 			npcId = 7604,
 			DisplayIDs = {{6433}},
 			AtlasMapBossID = 5,
+			specialType = "quest",
 			[NORMAL_DIFF] = {
 				{ 1,  8548 }, -- Divino-matic Rod
 			},
@@ -1918,6 +1921,7 @@ data["Zul'Farrak"] = {
 			npcId = 7795,
 			DisplayIDs = {{6685}},
 			AtlasMapBossID = 6,
+			specialType = "quest",
 			[NORMAL_DIFF] = {
 				{ 1,  9234 }, -- Tiara of the Deep
 				{ 2,  10661 }, -- Second Mosh'aru Tablet
