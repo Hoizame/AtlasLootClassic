@@ -5,3 +5,6 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 [Changelog history](https://github.com/Hoizame/AtlasLootClassic/blob/master/AtlasLootClassic/Documentation/Release_Notes.md)
 
 ## v1.1.10-beta (Sep. XX, 2019)
+
+- Maps: Add data for WorldBosses
+- Profession rank updates
