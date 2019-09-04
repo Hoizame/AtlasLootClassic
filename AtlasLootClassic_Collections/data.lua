@@ -310,6 +310,7 @@ data["MiscSets"] = {
 
 data["Azuregos"] = {
 	name = AL["Azuregos"],
+	AtlasMapFile = "Azuregos",
 	ContentType = WORLD_BOSS_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
 	ContentPhase = 2,
@@ -318,6 +319,7 @@ data["Azuregos"] = {
 			name = AL["Azuregos"],
 			npcId = 6109,
 			DisplayIDs = {{11460}},
+			AtlasMapBossID = 1,
 			[NORMAL_DIFF] = {
 				{ 1,  19132 }, -- Crystal Adorned Crown
 				{ 2,  18208 }, -- Drape of Benediction
@@ -336,6 +338,7 @@ data["Azuregos"] = {
 			name = AL["Spirit of Azuregos"],
 			npcId = 15481,
 			DisplayIDs = {{15473}},
+			AtlasMapBossID = 1,
 			ExtraList = true,
 			[NORMAL_DIFF] = {
 				{ 1,  20949 }, -- Magical Ledger
@@ -346,6 +349,7 @@ data["Azuregos"] = {
 
 data["LordKazzak"] = {
 	name = AL["Lord Kazzak"],
+	AtlasMapFile = "LordKazzak",
 	ContentType = WORLD_BOSS_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
 	ContentPhase = 2,
@@ -354,6 +358,7 @@ data["LordKazzak"] = {
 			name = AL["Lord Kazzak"],
 			npcId = 12397,
 			DisplayIDs = {{12449}},
+			AtlasMapBossID = 1,
 			[NORMAL_DIFF] = {
 				{ 1,  18546 }, -- Infernal Headcage
 				{ 2,  17111 }, -- Blazefury Medallion
@@ -373,6 +378,7 @@ data["LordKazzak"] = {
 
 data["DragonsOfNightmare"] = {
 	name = AL["Dragons of Nightmare"],
+	AtlasMapFile = "FourDragons",
 	ContentType = WORLD_BOSS_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
 	ContentPhase = 4,
