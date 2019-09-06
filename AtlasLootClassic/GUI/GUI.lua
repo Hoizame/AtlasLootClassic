@@ -31,6 +31,9 @@ local function UpdateFrames(noPageUpdate)
 	local moduleData = AtlasLoot.ItemDB:Get(db.selected[1])
 	local dataID = db.selected[2]
 	local bossID = db.selected[3]
+	if not GUI.frame.contentFrame.shownFrame then
+		GUI.ItemFrame:Show()
+	end
 	local frame, contentFrame = GUI.frame, GUI.frame.contentFrame
 	local contentName, contentIndex, contentColor = moduleData[dataID]:GetContentType()
 	local name, description, _, loreImage, dungeonAreaMapID
