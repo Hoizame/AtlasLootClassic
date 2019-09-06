@@ -6,5 +6,6 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 
 ## v1.1.10-beta (Sep. XX, 2019)
 
-- Maps: Add data for WorldBosses
 - Profession rank updates
+- Maps: Add data for WorldBosses
+- Maps: Entrance map support
