@@ -2388,7 +2388,7 @@ data["BlackrockDepths"] = {
 				{ 2,  11624 }, -- Kentic Amice
 				{ 3,  22240 }, -- Greaves of Withering Despair
 				{ 4,  11625 }, -- Enthralled Sphere
-				{ 6,  11140 }, -- Prison Cell Key
+				{ 16,  11140 }, -- Prison Cell Key
 			},
 		},
 		{ -- BRDHoundmaster
@@ -2398,9 +2398,10 @@ data["BlackrockDepths"] = {
 			AtlasMapBossID = 6,
 			[NORMAL_DIFF] = {
 				{ 1,  11623 }, -- Spritecaster Cape
-				{ 2,  11627 }, -- Fleetfoot Greaves
-				{ 3,  11628 }, -- Houndmaster's Bow
-				{ 4,  11629 }, -- Houndmaster's Rifle
+				{ 2,  11626 }, -- Blackveil Cape
+				{ 3,  11627 }, -- Fleetfoot Greaves
+				{ 4,  11628 }, -- Houndmaster's Bow
+				{ 5,  11629 }, -- Houndmaster's Rifle
 			},
 		},
 		{ -- BRDGorosh
@@ -2410,9 +2411,13 @@ data["BlackrockDepths"] = {
 			AtlasMapBossID = 6,
 			[NORMAL_DIFF] = {
 				{ 1,  11726 }, -- Savage Gladiator Chain
-				{ 2,  22271 }, -- Leggings of Frenzied Magic
-				{ 3,  22257 }, -- Bloodclot Band
-				{ 4,  22266 }, -- Flarethorn
+				{ 2,  11729 }, -- Savage Gladiator Helm
+				{ 3,  11730 }, -- Savage Gladiator Grips
+				{ 4,  11728 }, -- Savage Gladiator Leggings
+				{ 5,  11731 }, -- Savage Gladiator Greaves
+				{ 7,  22271 }, -- Leggings of Frenzied Magic
+				{ 8,  22257 }, -- Bloodclot Band
+				{ 9,  22266 }, -- Flarethorn
 			},
 		},
 		{ -- BRDGrizzle
@@ -2597,6 +2602,8 @@ data["BlackrockDepths"] = {
 				{ 3,  11810 }, -- Force of Will
 				{ 4,  11817 }, -- Lord General's Sword
 				{ 5,  11816 }, -- Angerforge's Battle Axe
+				{ 6,  11841 }, -- Senior Designer's Pantaloons
+				{ 7,  11815 }, -- Hand of Justice
 			},
 		},
 		{ -- BRDGolemLordArgelmach
@@ -2724,7 +2731,7 @@ data["BlackrockDepths"] = {
 				{ 6,  22204 }, -- Wristguards of Renown
 				{ 7,  22207 }, -- Sash of the Grand Hunt
 				{ 8,  11934 }, -- Emperor's Seal
-				{ 9,  11815 }, --  of Justice
+				{ 9,  11815 }, -- Hand of Justice
 				{ 10, 11928 }, -- Thaurissan's Royal Scepter
 				{ 11, 11931 }, -- Dreadforge Retaliator
 				{ 12, 11932 }, -- Guiding Stave of Wisdom
