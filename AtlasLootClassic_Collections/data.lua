@@ -628,6 +628,7 @@ data["Mounts"] = {
 				{ 24,  2414 }, -- Pinto Bridle
 				{ 25,  5656 }, -- Brown Horse Bridle
 				{ 26,  5655 }, -- Chestnut Mare Bridle
+				{ 27,  2411 }, -- Black Stallion Bridle
 				{ 13,  18902 }, -- Reins of the Swift Stormsaber
 				{ 14,  18767 }, -- Reins of the Swift Mistsaber
 				{ 15,  18766 }, -- Reins of the Swift Frostsaber
