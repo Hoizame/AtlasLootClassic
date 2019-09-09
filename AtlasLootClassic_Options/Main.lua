@@ -22,14 +22,14 @@ Options.config.args.atlasloot = {
 	get = function(info) return AtlasLoot.db[info[#info]] end,
     set = function(info, value) AtlasLoot.db[info[#info]] = value end,
 	args = {
-		ignoreScalePopup = {
+		useGameTooltip = {
 			order = 1,
 			type = "toggle",
 			width = "full",
 			name = AL["Use GameTooltip"],
 			desc = AL["Use the standard GameTooltip instead of the custom AtlasLoot tooltip"],
 			get = function(info) return AtlasLoot.db.Tooltip.useGameTooltip end,
-			set = function(info, value) AtlasLoot.db.Tooltip.useGameTooltip = value AtlasLoot.Tooltip.Refresh() end,
+			set = function(info, value) AtlasLoot.db.Tooltip.useGameTooltip = value end,
 		},
 		showIDsInTT = {
 			order = 2,

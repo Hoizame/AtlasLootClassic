@@ -28,15 +28,11 @@ local TooltipList = {
 
 
 function Tooltip.GetTooltip()
-	return _G[AtlasLoot.db.Tooltip.tooltip or STANDART_TOOLTIP] or AtlasLootTooltip
+	return AtlasLoot.db.Tooltip.useGameTooltip and _G["GameTooltip"] or ( _G[AtlasLoot.db.Tooltip.tooltip or STANDART_TOOLTIP] or AtlasLootTooltip )
 end
 
 function Tooltip:AddTooltipSource(src)
 	TooltipList[#TooltipList+1] = src
-end
-
-function Tooltip:Refresh()
-	AtlasLoot.db.Tooltip.tooltip = AtlasLoot.db.Tooltip.useGameTooltip and "GameTooltip" or "AtlasLootTooltip"
 end
 
 -- Hook

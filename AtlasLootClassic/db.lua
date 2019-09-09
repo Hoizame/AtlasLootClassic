@@ -15,6 +15,7 @@ AtlasLoot.AtlasLootDBDefaults = {
 		},
 		Tooltip = {	-- Core\Tooltip.lua
 			tooltip = "AtlasLootTooltip",
+			useGameTooltip = false,
 		},
 		GUI = {		-- GUI\GUI.lua
 			point = {"CENTER"},
