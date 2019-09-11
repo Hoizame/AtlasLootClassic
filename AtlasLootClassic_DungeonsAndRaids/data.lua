@@ -2736,6 +2736,7 @@ data["BlackrockDepths"] = {
 				{ 11, 11931 }, -- Dreadforge Retaliator
 				{ 12, 11932 }, -- Guiding Stave of Wisdom
 				{ 14, 12033 }, -- Thaurissan Family Jewels
+				{ 15, 11810 }, -- Force of Will
 			},
 		},
 		{ -- BRDTrash
