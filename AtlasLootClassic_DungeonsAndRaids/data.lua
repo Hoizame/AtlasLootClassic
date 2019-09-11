@@ -3094,6 +3094,7 @@ data["UpperBlackrockSpire"] = {
 			npcId = 10509,
 			DisplayIDs = {{9686}},
 			AtlasMapBossID = 4,
+			specialType = "rare",
 			[NORMAL_DIFF] = {
 				{ 1,  12604 }, -- Starfire Tiara
 				{ 2,  12930 }, -- Briarwood Reed
