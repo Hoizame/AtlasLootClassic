@@ -900,8 +900,8 @@ data["Engineering"] = {
 				{ 15, 3942 }, --Whirring Bronze Gizmo / 25
 				{ 16, 3938 }, --Bronze Tube / 21
 				{ 17, 3973 }, --Silver Contact / 18
-				{ 18, 3929 }, --Coarse Blasting Powder / 15
-				{ 19, 3926 }, --Copper Modulator / 13
+				{ 18, 3926 }, --Copper Modulator / 13
+				{ 19, 3929 }, --Coarse Blasting Powder / 15
 				{ 20, 3924 }, --Copper Tube / 10
 				{ 21, 3922 }, --Handful of Copper Bolts / 8
 				{ 22, 3918 }, --Rough Blasting Powder / 5
