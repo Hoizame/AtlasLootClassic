@@ -2951,9 +2951,10 @@ data["LowerBlackrockSpire"] = {
 			DisplayIDs = {{9738}},
 			AtlasMapBossID = 16,
 			[NORMAL_DIFF] = {
-				{ 1,  13253 }, -- Hands of Power
-				{ 2,  13252 }, -- Cloudrunner Girdle
-				{ 4,  12835 }, -- Plans: Annihilator
+				{ 1,  13247 }, -- Quartermaster Zigris' Footlocker
+				{ 3,  13253 }, -- Hands of Power
+				{ 4,  13252 }, -- Cloudrunner Girdle
+				{ 6,  12835 }, -- Plans: Annihilator
 				--{ 5,  12798 }, -- Annihilator
 			},
 		},
