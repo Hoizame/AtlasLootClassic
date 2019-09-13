@@ -2600,10 +2600,10 @@ data["BlackrockDepths"] = {
 				{ 1,  11820 }, -- Royal Decorated Armor
 				{ 2,  11821 }, -- Warstrife Leggings
 				{ 3,  11810 }, -- Force of Will
-				{ 4,  11817 }, -- Lord General's Sword
-				{ 5,  11816 }, -- Angerforge's Battle Axe
-				{ 6,  11841 }, -- Senior Designer's Pantaloons
-				{ 7,  11815 }, -- Hand of Justice
+				{ 4,  11815 }, -- Hand of Justice
+				{ 5,  11817 }, -- Lord General's Sword
+				{ 6,  11816 }, -- Angerforge's Battle Axe
+				{ 7,  11841 }, -- Senior Designer's Pantaloons
 			},
 		},
 		{ -- BRDGolemLordArgelmach
@@ -2732,11 +2732,11 @@ data["BlackrockDepths"] = {
 				{ 7,  22207 }, -- Sash of the Grand Hunt
 				{ 8,  11934 }, -- Emperor's Seal
 				{ 9,  11815 }, -- Hand of Justice
-				{ 10, 11928 }, -- Thaurissan's Royal Scepter
-				{ 11, 11931 }, -- Dreadforge Retaliator
-				{ 12, 11932 }, -- Guiding Stave of Wisdom
-				{ 14, 12033 }, -- Thaurissan Family Jewels
-				{ 15, 11810 }, -- Force of Will
+				{ 10, 11810 }, -- Force of Will
+				{ 11, 11928 }, -- Thaurissan's Royal Scepter
+				{ 12, 11931 }, -- Dreadforge Retaliator
+				{ 13, 11932 }, -- Guiding Stave of Wisdom
+				{ 16, 12033 }, -- Thaurissan Family Jewels
 			},
 		},
 		{ -- BRDTrash
@@ -2758,16 +2758,14 @@ data["BlackrockDepths"] = {
 				{ 13, 12532 }, -- Spire of the Stoneshaper
 				{ 16, 15781 }, -- Pattern: Black Dragonscale Leggings
 				{ 17, 15770 }, -- Pattern: Black Dragonscale Shoulders
-				{ 18, 11611 }, -- Plans: Dark Iron Sunderer
-				{ 19, 11614 }, -- Plans: Dark Iron Mail
-				{ 20, 11615 }, -- Plans: Dark Iron Shoulders
-				{ 21, 16048 }, -- Schematic: Dark Iron Rifle
-				{ 22, 16053 }, -- Schematic: Master Engineer's Goggles
-				{ 23, 16049 }, -- Schematic: Dark Iron Bomb
-				{ 24, 18654 }, -- Schematic: Gnomish Alarm-O-Bot
-				{ 25, 18661 }, -- Schematic: World Enlarger
-				{ 27, 18232 }, -- Field Repair Bot 74A
-				{ 29, 11446 }, -- A Crumpled Up Note
+				{ 19, 11611 }, -- Plans: Dark Iron Sunderer
+				{ 20, 11614 }, -- Plans: Dark Iron Mail
+				{ 21, 11615 }, -- Plans: Dark Iron Shoulders
+				{ 23, 16048 }, -- Schematic: Dark Iron Rifle
+				{ 24, 16053 }, -- Schematic: Master Engineer's Goggles
+				{ 25, 16049 }, -- Schematic: Dark Iron Bomb
+				{ 26, 18654 }, -- Schematic: Gnomish Alarm-O-Bot
+				{ 27, 18661 }, -- Schematic: World Enlarger
 			},
 		},
 		{ -- BRDBSPlans
