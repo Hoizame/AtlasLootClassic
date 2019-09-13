@@ -47,7 +47,9 @@ function Set.OnSet(button, second)
 		SetClickHandler = ClickHandler:GetHandler("Set")
 
 		for k,v in pairs(RAID_CLASS_COLORS) do
-			CLASS_NAMES_WITH_COLORS[k] = format(CLASS_COLOR_FORMAT,  v.colorStr, ALIL[k])
+			if v.colorStr then
+				CLASS_NAMES_WITH_COLORS[k] = format(CLASS_COLOR_FORMAT,  v.colorStr, ALIL[k] or k)
+			end
 		end
 		CLASS_COLOR_FORMAT = nil
 
