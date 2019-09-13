@@ -230,6 +230,11 @@ local function InitTooltips()
     TooltipsHooked = true
 end
 
+local function SlashCommand()
+    Favourites.GUI:Toggle()
+end
+AtlasLoot.SlashCommands:Add("fav", SlashCommand, "/al fav - "..AL["Open Favourites"])
+
 function Favourites:UpdateDb()
     self.db = self:GetDb()
     self.globalDb = self:GetGlobalDb()
