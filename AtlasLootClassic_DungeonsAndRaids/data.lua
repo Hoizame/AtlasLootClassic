@@ -2818,6 +2818,7 @@ data["LowerBlackrockSpire"] = {
 			npcId = 9219,
 			DisplayIDs = {{11574}},
 			AtlasMapBossID = 4,
+			specialType = "rare",
 			[NORMAL_DIFF] = {
 				{ 1,  12608 }, -- Butcher's Apron
 				{ 2,  13286 }, -- Rivenspike
@@ -2844,6 +2845,7 @@ data["LowerBlackrockSpire"] = {
 			npcId = 9218,
 			DisplayIDs = {{11576}},
 			AtlasMapBossID = 6,
+			specialType = "rare",
 			[NORMAL_DIFF] = {
 				{ 1,  13284 }, -- Swiftdart Battleboots
 				{ 2,  13285 }, -- The Nicker
@@ -2921,6 +2923,7 @@ data["LowerBlackrockSpire"] = {
 			npcId = 10376,
 			DisplayIDs = {{9755}},
 			AtlasMapBossID = 14,
+			specialType = "rare",
 			[NORMAL_DIFF] = {
 				{ 1,  13185 }, -- Sunderseer Mantle
 				{ 2,  13184 }, -- Fallbrush Handgrips
