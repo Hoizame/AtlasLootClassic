@@ -3,6 +3,7 @@ local _G = getfenv(0)
 local AtlasLoot = _G.AtlasLoot
 local GUI = {}
 local AL = AtlasLoot.Locales
+local ALIL = AtlasLoot.IngameLocales
 
 local LibSharedMedia = LibStub("LibSharedMedia-3.0")
 
@@ -24,6 +25,7 @@ local PLAYER_CLASS, PLAYER_CLASS_FN
 local TT_ENTRY = "|cFFCFCFCF%s:|r %s"
 
 local LOADER_STRING = "GUI_LOADING"
+local TT_INFO_ENTRY = "|cFFCFCFCF%s:|r %s"
 
 local db
 
@@ -555,6 +557,24 @@ local function MapButtonOnEnter(self, owner)
 	tooltip:Show()
 end
 
+-- Info Button
+local function GUI_InfoOnEnter(self)
+    local tooltip = GetAlTooltip()
+    tooltip:SetOwner(self, "ANCHOR_LEFT", (self:GetWidth() * 0.5), 5)
+	tooltip:AddLine("AtlasLootClassic", 0, 1, 0)
+	tooltip:AddLine(format(TT_INFO_ENTRY, AL["Shift + Left Click"], AL["Add item into chat"]))
+	tooltip:AddLine(format(TT_INFO_ENTRY, AL["Ctrl + Left Click"], AL["Shows the item in the Dressing room"]))
+	tooltip:AddLine(format(TT_INFO_ENTRY, AL["Alt + Left Click"], AL["Set/Remove the item as favourite"]))
+	if AtlasLoot.db.enableWoWHeadIntegration then
+		tooltip:AddLine(format(TT_INFO_ENTRY, AL["Shift + Right Click"], AL["Shows a copyable link for WoWHead"]))
+	end
+    tooltip:Show()
+end
+
+local function GUI_InfoOnLeave(self)
+    GetAlTooltip():Hide()
+end
+
 -- ################################
 -- DropDowns/Select
 -- ################################
@@ -897,8 +917,13 @@ function GUI:Create()
 	frame.titleFrame:SetPoint("BOTTOMRIGHT", frame, "TOPRIGHT", -30, -25)
 	frame.titleFrame.text:SetText(AL["AtlasLoot"])
 
+	frame.titleFrame.infoButton = CreateFrame("Button", nil, frame, "UIPanelInfoButton")
+	frame.titleFrame.infoButton:SetPoint("RIGHT", frame.titleFrame, "RIGHT", -1, 0)
+	frame.titleFrame.infoButton:SetScript("OnEnter", GUI_InfoOnEnter)
+	frame.titleFrame.infoButton:SetScript("OnLeave", GUI_InfoOnLeave)
+
 	frame.titleFrame.version = frame.titleFrame:CreateFontString(nil, "ARTWORK")
-	frame.titleFrame.version:SetPoint("BOTTOMRIGHT", frame.titleFrame, "BOTTOMRIGHT", -2, 1)
+	frame.titleFrame.version:SetPoint("BOTTOMRIGHT", frame.titleFrame, "BOTTOMRIGHT", -20, 1)
 	frame.titleFrame.version:SetTextColor(1, 1, 1, 0.5)
 	frame.titleFrame.version:SetSize(150, 10)
 	frame.titleFrame.version:SetFont(_G["SystemFont_Tiny"]:GetFont(), 10)
