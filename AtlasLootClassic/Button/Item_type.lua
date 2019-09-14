@@ -55,7 +55,7 @@ ClickHandler:Add(
 	{
 		{ "ChatLink", 		AL["Chat Link"], 			AL["Add item into chat"] },
 		{ "DressUp", 		AL["Dress up"], 			AL["Shows the item in the Dressing room"] },
-		{ "SetFavourite", 	AL["Set Favourite"], 		AL["Set the item as favourite"] },
+		{ "SetFavourite", 	AL["Set Favourite"], 		AL["Set/Remove the item as favourite"] },
 		{ "ShowExtraItems", AL["Show extra items"], 	AL["Shows extra items (tokens,mats)"] },
 		{ "WoWHeadLink", 	AL["Show WowHead link"], 	AL["Shows a copyable link for WoWHead"] },
 	}

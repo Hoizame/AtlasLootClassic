@@ -2,6 +2,10 @@
 
 This mod is distributed under Version 2 of the GPL.  A copy of the GPL is included in this zip file with links to non-english translations.
 
+## v1.1.9-beta (Sep. 03, 2019)
+
+- Add support for AtlasLootClassic_Maps Module
+
 ## v1.1.8-beta (Aug. 31, 2019)
 
 - Split Scarlet Monastery into wings

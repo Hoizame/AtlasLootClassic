@@ -29,8 +29,8 @@
 ## Notes-zhTW: @localization(locale="zhTW", key="Notes-Options", namespace="ToC")@
 #@end-non-debug@
 #@debug@
-## Title: AtlasLoot |cFF0099FF[Options]|r
-## Notes: AtlasLoot options module
+## Title: AtlasLootClassic |cFF0099FF[Options]|r
+## Notes: AtlasLootClassic options module
 #@end-debug@
 
 ## X-Category: Map

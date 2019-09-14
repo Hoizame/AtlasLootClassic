@@ -1083,6 +1083,7 @@ local function CopyBox_SetCopyText(self, text)
 		return false
 	end
 
+	if self:IsShown() then self:Hide() end
 	self:SetText(text)
 	self.tLenght:SetText(text)
 	self:SetWidth(self.tLenght:GetStringWidth() + 20)

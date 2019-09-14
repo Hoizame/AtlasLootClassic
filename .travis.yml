@@ -1,21 +1,18 @@
 sudo: false
 language: minimal
- 
+
 addons:
   apt:
     packages:
     - luarocks
 
-git:
-  submodules: false
- 
-install: 
+install:
   - luarocks install --local luacheck
 
 before_script:
   - /home/travis/.luarocks/bin/luacheck . --no-color -q
 
-script: 
+script:
   - if [[ "$TRAVIS_BRANCH" == "master" && "$TRAVIS_PULL_REQUEST" == "false" ]]; then ./cf_translations.sh; fi
   - curl -s https://raw.githubusercontent.com/BigWigsMods/packager/master/release.sh | bash
 

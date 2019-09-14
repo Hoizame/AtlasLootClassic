@@ -3,6 +3,7 @@ local _G = getfenv(0)
 local AtlasLoot = _G.AtlasLoot
 local GUI = {}
 local AL = AtlasLoot.Locales
+local ALIL = AtlasLoot.IngameLocales
 
 local LibSharedMedia = LibStub("LibSharedMedia-3.0")
 
@@ -21,8 +22,10 @@ local IsMapsModuleAviable = AtlasLoot.Loader.IsMapsModuleAviable
 local GUI_CREATED = false
 local FIRST_SHOW = true
 local PLAYER_CLASS, PLAYER_CLASS_FN
+local TT_ENTRY = "|cFFCFCFCF%s:|r %s"
 
 local LOADER_STRING = "GUI_LOADING"
+local TT_INFO_ENTRY = "|cFFCFCFCF%s:|r %s"
 
 local db
 
@@ -30,6 +33,9 @@ local function UpdateFrames(noPageUpdate)
 	local moduleData = AtlasLoot.ItemDB:Get(db.selected[1])
 	local dataID = db.selected[2]
 	local bossID = db.selected[3]
+	if not GUI.frame.contentFrame.shownFrame then
+		GUI.ItemFrame:Show()
+	end
 	local frame, contentFrame = GUI.frame, GUI.frame.contentFrame
 	local contentName, contentIndex, contentColor = moduleData[dataID]:GetContentType()
 	local name, description, _, loreImage, dungeonAreaMapID
@@ -483,42 +489,56 @@ end
 
 -- AtlasMaps
 local ATLAS_MAPS_PATH = "Interface\\AddOns\\AtlasLootClassic_Maps\\"
-local function AtlasMaps_SetMaps(self, map1, map2, ...)
-	if not map1 or not IsMapsModuleAviable() then
-		self[1]:Hide()
-		self[2]:Hide()
-		self[3]:Hide()
+local function AtlasMaps_SetMaps(self, map, entranceMap)
+	if map == self.map and self.entranceMap == entranceMap then
+		self:ShowOverlay(true)
 		return
 	end
-	if type(map1) == "table" then
-		return AtlasMaps_SetMaps(self, unpack(map1))
+	if not map or not IsMapsModuleAviable() then
+		self:Hide()
+		self.overlay:Hide()
+		return
+	end
+	if type(map) == "table" then
+		return AtlasMaps_SetMaps(self, unpack(map))
 	end
 
-	self[1]:SetTexture(ATLAS_MAPS_PATH..map1)
-	self[1]:Show()
+	self.map = map
+	self.entranceMap = entranceMap
 
-	if map2 then
-		local left, right, top, bottom = ...
-		self[2]:SetTexture(ATLAS_MAPS_PATH..map2)
-		self[2]:SetTexCoord(left, right, top, bottom)
-		self[2]:SetSize(self.maxWidth * right, self.maxHeight * top)
-		self[2]:Show()
-		self[1]:SetDesaturated(true)
-	else
-		self[2]:Hide()
-		self[1]:SetDesaturated(false)
-	end
-
-	self[3]:Show()
+	self:ShowEntranceMap(false, true, true)
 end
 
+local function AtlasMaps_ShowEntranceMap(self, flag, showOverlay, force)
+	if (self.isEntranceMap and not flag) or (not flag and force) then
+		self:SetTexture(ATLAS_MAPS_PATH..self.map)
+		self.isEntranceMap = false
+	elseif (not self.isEntranceMap and flag and self.entranceMap) or (flag and self.entranceMap and force) then
+		self:SetTexture(ATLAS_MAPS_PATH..self.entranceMap)
+		self.isEntranceMap = true
+	end
+	self:Show()
+	self:ShowOverlay(showOverlay)
+end
 
-local function MapButtonOnClick(self)
+local function AtlasMaps_ShowOverlay(self, flag)
+	if flag then
+		self.overlay:Show()
+	else
+		self.overlay:Hide()
+	end
+end
+
+local function MapButtonOnClick(self, button)
 	if GUI.frame.contentFrame.shownFrame then
 		GUI.frame.contentFrame.shownFrame:Clear()
-		GUI.frame.contentFrame.shownFrame = nil
-		self.mapData[3]:Hide()
 	end
+	if button == "RightButton" then
+		self.mapData:ShowEntranceMap(true)
+	else
+		self.mapData:ShowEntranceMap(false)
+	end
+	self.mapData:ShowOverlay(false)
 end
 
 local function MapButtonOnEnter(self, owner)
@@ -530,7 +550,29 @@ local function MapButtonOnEnter(self, owner)
 		tooltip:SetOwner(self, "ANCHOR_RIGHT", -(self:GetWidth() * 0.5), 5)
 	end
 	tooltip:AddLine(AL["Atlas map"])
+	tooltip:AddLine(format(TT_ENTRY, AL["Left Click"], AL["Show dungeon map"]))
+	if self.mapData.entranceMap then
+		tooltip:AddLine(format(TT_ENTRY, AL["Right Click"], AL["Show entrance map"]))
+	end
 	tooltip:Show()
+end
+
+-- Info Button
+local function GUI_InfoOnEnter(self)
+    local tooltip = GetAlTooltip()
+    tooltip:SetOwner(self, "ANCHOR_LEFT", (self:GetWidth() * 0.5), 5)
+	tooltip:AddLine("AtlasLootClassic", 0, 1, 0)
+	tooltip:AddLine(format(TT_INFO_ENTRY, AL["Shift + Left Click"], AL["Add item into chat"]))
+	tooltip:AddLine(format(TT_INFO_ENTRY, AL["Ctrl + Left Click"], AL["Shows the item in the Dressing room"]))
+	tooltip:AddLine(format(TT_INFO_ENTRY, AL["Alt + Left Click"], AL["Set/Remove the item as favourite"]))
+	if AtlasLoot.db.enableWoWHeadIntegration then
+		tooltip:AddLine(format(TT_INFO_ENTRY, AL["Shift + Right Click"], AL["Shows a copyable link for WoWHead"]))
+	end
+    tooltip:Show()
+end
+
+local function GUI_InfoOnLeave(self)
+    GetAlTooltip():Hide()
 end
 
 -- ################################
@@ -852,7 +894,6 @@ function GUI:Create()
 	frame:SetHeight(600)
 	frame:SetMovable(true)
 	frame:EnableMouse(true)
-	frame:RegisterForDrag("LeftButton")
 	frame:RegisterForDrag("LeftButton", "RightButton")
 	frame:SetScript("OnMouseDown", FrameOnDragStart)
 	frame:SetScript("OnMouseUp", FrameOnDragStop)
@@ -876,8 +917,13 @@ function GUI:Create()
 	frame.titleFrame:SetPoint("BOTTOMRIGHT", frame, "TOPRIGHT", -30, -25)
 	frame.titleFrame.text:SetText(AL["AtlasLoot"])
 
+	frame.titleFrame.infoButton = CreateFrame("Button", nil, frame, "UIPanelInfoButton")
+	frame.titleFrame.infoButton:SetPoint("RIGHT", frame.titleFrame, "RIGHT", -1, 0)
+	frame.titleFrame.infoButton:SetScript("OnEnter", GUI_InfoOnEnter)
+	frame.titleFrame.infoButton:SetScript("OnLeave", GUI_InfoOnLeave)
+
 	frame.titleFrame.version = frame.titleFrame:CreateFontString(nil, "ARTWORK")
-	frame.titleFrame.version:SetPoint("BOTTOMRIGHT", frame.titleFrame, "BOTTOMRIGHT", -2, 1)
+	frame.titleFrame.version:SetPoint("BOTTOMRIGHT", frame.titleFrame, "BOTTOMRIGHT", -20, 1)
 	frame.titleFrame.version:SetTextColor(1, 1, 1, 0.5)
 	frame.titleFrame.version:SetSize(150, 10)
 	frame.titleFrame.version:SetFont(_G["SystemFont_Tiny"]:GetFont(), 10)
@@ -902,14 +948,14 @@ function GUI:Create()
 	frame.difficulty = GUI:CreateSelect()
 	frame.difficulty:SetParPoint("TOPRIGHT", frame, "TOPRIGHT", -10, -40)
 	frame.difficulty:SetWidth(320)
-	frame.difficulty:SetNumEntrys(4)
+	frame.difficulty:SetNumEntrys(2)
 	frame.difficulty:ShowSelectedCoin(false)
 	frame.difficulty:SetButtonOnClick(DifficultySelectFunction)
 
 	frame.boss = GUI:CreateSelect()
 	frame.boss:SetParPoint("TOPLEFT", frame.difficulty.frame, "BOTTOMLEFT", 0, -10)
 	frame.boss:SetWidth(320)
-	frame.boss:SetNumEntrys(20)
+	frame.boss:SetNumEntrys(22)
 	frame.boss:SetButtonOnClick(BossSelectFunction)
 
 	frame.extra = GUI:CreateSelect()
@@ -952,29 +998,22 @@ function GUI:Create()
 	frame.contentFrame.itemBG:SetTexCoord(0.1, 0.7, 0.1, 0.7)
 
 	-- Map frame
-	frame.contentFrame.map = {}
+	frame.contentFrame.map = frame.contentFrame:CreateTexture(frameName.."-map1","BACKGROUND")
+	frame.contentFrame.map:SetAllPoints(frame.contentFrame.itemBG)
+	frame.contentFrame.map:SetDrawLayer(frame.contentFrame.itemBG:GetDrawLayer(), 2)
+	frame.contentFrame.map:Hide()
 
-	frame.contentFrame.map[1] = frame.contentFrame:CreateTexture(frameName.."-map1","BACKGROUND")
-	frame.contentFrame.map[1]:SetAllPoints(frame.contentFrame.itemBG)
-	frame.contentFrame.map[1]:SetDrawLayer(frame.contentFrame.itemBG:GetDrawLayer(), 2)
-	frame.contentFrame.map[1]:Hide()
+	frame.contentFrame.map.overlay = frame.contentFrame:CreateTexture(frameName.."-map3","BACKGROUND")
+	frame.contentFrame.map.overlay:SetAllPoints(frame.contentFrame.itemBG)
+	frame.contentFrame.map.overlay:SetDrawLayer(frame.contentFrame.itemBG:GetDrawLayer(), 4)
+	frame.contentFrame.map.overlay:SetColorTexture(0, 0, 0, 0.4)
+	frame.contentFrame.map.overlay:Hide()
 
-	frame.contentFrame.map[2] = frame.contentFrame:CreateTexture(frameName.."-map2","BACKGROUND")
-	frame.contentFrame.map[2]:SetPoint("BOTTOMLEFT", frame.contentFrame.map[1], "BOTTOMLEFT")
-	frame.contentFrame.map[2]:SetDrawLayer(frame.contentFrame.itemBG:GetDrawLayer(), 3)
-	frame.contentFrame.map[2]:Hide()
-	frame.contentFrame.map[2].maxWidth = frame.contentFrame.map[1]:GetWidth()
-	frame.contentFrame.map[2].maxHeight = frame.contentFrame.map[1]:GetHeight()
-
-	frame.contentFrame.map[3] = frame.contentFrame:CreateTexture(frameName.."-map3","BACKGROUND")
-	frame.contentFrame.map[3]:SetAllPoints(frame.contentFrame.itemBG)
-	frame.contentFrame.map[3]:SetDrawLayer(frame.contentFrame.itemBG:GetDrawLayer(), 4)
-	frame.contentFrame.map[3]:SetColorTexture(0, 0, 0, 0.4)
-	frame.contentFrame.map[3]:Hide()
-
-	frame.contentFrame.map.maxWidth = frame.contentFrame.map[1]:GetWidth()
-	frame.contentFrame.map.maxHeight = frame.contentFrame.map[1]:GetHeight()
+	frame.contentFrame.map.maxWidth = frame.contentFrame.map:GetWidth()
+	frame.contentFrame.map.maxHeight = frame.contentFrame.map:GetHeight()
 	frame.contentFrame.map.SetMap = AtlasMaps_SetMaps
+	frame.contentFrame.map.ShowEntranceMap = AtlasMaps_ShowEntranceMap
+	frame.contentFrame.map.ShowOverlay = AtlasMaps_ShowOverlay
 
 	-- #####
 	-- Right -> Left
@@ -996,6 +1035,7 @@ function GUI:Create()
 	frame.contentFrame.mapButton:SetParent(frame.contentFrame)
 	frame.contentFrame.mapButton:SetWidth(48)
 	frame.contentFrame.mapButton:SetHeight(32)
+	frame.contentFrame.mapButton:RegisterForClicks("AnyDown")
 	frame.contentFrame.mapButton:SetPoint("RIGHT", frame.contentFrame.nextPageButton, "LEFT", 0, 0)
 	frame.contentFrame.mapButton:SetScript("OnClick", MapButtonOnClick)
 	frame.contentFrame.mapButton:SetScript("OnMouseDown", function(self) self.texture:SetTexCoord(0.125, 0.875, 0.5, 1.0) end)
