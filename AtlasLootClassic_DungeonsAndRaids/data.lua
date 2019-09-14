@@ -2385,9 +2385,10 @@ data["BlackrockDepths"] = {
 			AtlasMapBossID = 5,
 			[NORMAL_DIFF] = {
 				{ 1,  11626 }, -- Blackveil Cape
-				{ 2,  11624 }, -- Kentic Amice
-				{ 3,  22240 }, -- Greaves of Withering Despair
-				{ 4,  11625 }, -- Enthralled Sphere
+				{ 2,  11623 }, -- Spritecaster Cape
+				{ 3,  11624 }, -- Kentic Amice
+				{ 4,  22240 }, -- Greaves of Withering Despair
+				{ 5,  11625 }, -- Enthralled Sphere
 				{ 16,  11140 }, -- Prison Cell Key
 			},
 		},
@@ -2488,6 +2489,7 @@ data["BlackrockDepths"] = {
 			npcId = 9024,
 			DisplayIDs = {{8762}},
 			AtlasMapBossID = 7,
+			specialType = "rare",
 			[NORMAL_DIFF] = {
 				{ 1,  11747 }, -- Flamestrider Robes
 				{ 2,  11749 }, -- Searingscale Leggings
@@ -2682,15 +2684,14 @@ data["BlackrockDepths"] = {
 			DisplayIDs = {{8690},{8686},{8692},{8689},{8691},{8687},{8688}},
 			AtlasMapBossID = 18,
 			[NORMAL_DIFF] = {
-				{ 1, "INV_Box_01", nil, AL["Chest of The Seven"], nil },
-				{ 2,  11925 }, -- Ghostshroud
-				{ 3,  11926 }, -- Deathdealer Breastplate
-				{ 4,  11929 }, -- Haunting Specter Leggings
-				{ 5,  11927 }, -- Legplates of the Eternal Guardian
-				{ 6,  11920 }, -- Wraith Scythe
-				{ 7,  11923 }, -- The Hammer of Grace
-				{ 8,  11922 }, -- Blood-etched Blade
-				{ 9,  11921 }, -- Impervious Giant
+				{ 1,  11925 }, -- Ghostshroud
+				{ 2,  11926 }, -- Deathdealer Breastplate
+				{ 3,  11929 }, -- Haunting Specter Leggings
+				{ 4,  11927 }, -- Legplates of the Eternal Guardian
+				{ 5,  11920 }, -- Wraith Scythe
+				{ 6,  11923 }, -- The Hammer of Grace
+				{ 7,  11922 }, -- Blood-etched Blade
+				{ 8,  11921 }, -- Impervious Giant
 			},
 		},
 		{ -- BRDMagmus
