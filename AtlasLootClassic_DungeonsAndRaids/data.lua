@@ -2883,11 +2883,12 @@ data["LowerBlackrockSpire"] = {
 			[NORMAL_DIFF] = {
 				{ 1,  16676 }, -- Beaststalker's Gloves
 				{ 3,  13177 }, -- Talisman of Evasion
-				{ 4,  13179 }, -- Brazecore Armguards
-				{ 5,  22231 }, -- Kayser's Boots of Precision
-				{ 6,  13173 }, -- Flightblade Throwing Axe
-				{ 7,  12582 }, -- Keris of Zul'Serak
-				{ 9,  12335 }, -- Gemstone of Smolderthorn
+				{ 4,  13178 }, -- Rosewine Circle
+				{ 5,  13179 }, -- Brazecore Armguards
+				{ 6,  22231 }, -- Kayser's Boots of Precision
+				{ 7,  13173 }, -- Flightblade Throwing Axe
+				{ 8,  12582 }, -- Keris of Zul'Serak
+				{ 10,  12335 }, -- Gemstone of Smolderthorn
 			},
 		},
 		{ -- LBRSGrimaxe
@@ -2934,13 +2935,12 @@ data["LowerBlackrockSpire"] = {
 			DisplayIDs = {{11583}},
 			AtlasMapBossID = 15,
 			[NORMAL_DIFF] = {
-				{ 1,  13258 }, -- Slaghide Gauntlets
-				{ 2,  22232 }, -- Marksman's Girdle
-				{ 3,  13259 }, -- Ribsteel Footguards
-				{ 4,  13178 }, -- Rosewine Circle
-				{ 6,  18784 }, -- Top Half of Advanced Armorsmithing: Volume III
-				--{ 7,  12725 }, -- Plans: Enchanted Thorium Helm
-				--{ 8,  12620 }, -- Enchanted Thorium Helm
+				{ 1,  16670 }, -- Boots of Elements
+				{ 3,  13258 }, -- Slaghide Gauntlets
+				{ 4,  22232 }, -- Marksman's Girdle
+				{ 5,  13259 }, -- Ribsteel Footguards
+				{ 6,  13178 }, -- Rosewine Circle
+				{ 8,  18784 }, -- Top Half of Advanced Armorsmithing: Volume III
 			},
 		},
 		{ -- LBRSZigris
@@ -2985,6 +2985,7 @@ data["LowerBlackrockSpire"] = {
 			npcId = 9718,
 			DisplayIDs = {{11809}},
 			AtlasMapBossID = 18,
+			specialType = "rare",
 			[NORMAL_DIFF] = {
 				{ 1,  13203 }, -- Armswake Cloak
 				{ 2,  13198 }, -- Hurd Smasher
