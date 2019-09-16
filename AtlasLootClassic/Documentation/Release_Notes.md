@@ -2,6 +2,10 @@
 
 This mod is distributed under Version 2 of the GPL.  A copy of the GPL is included in this zip file with links to non-english translations.
 
+## v1.1.11 (Sep. 14, 2019)
+
+- Fix koKR translation
+
 ## v1.1.10 (Sep. 14, 2019)
 
 - Profession rank updates

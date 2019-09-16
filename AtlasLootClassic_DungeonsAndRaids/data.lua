@@ -1678,22 +1678,11 @@ data["Uldaman"] = {
 	AtlasMapFile = {"Uldaman", "UldamanEnt"},
 	LevelRange = {30, 41, 51},
 	items = {
-		{ -- UldRevelosh
-			name = AL["Revelosh"],
-			npcId = 6910,
-			DisplayIDs = {{5945}},
-			[NORMAL_DIFF] = {
-				{ 1,  9389 }, -- Revelosh's Spaulders
-				{ 2,  9388 }, -- Revelosh's Armguards
-				{ 3,  9390 }, -- Revelosh's Gloves
-				{ 4,  9387 }, -- Revelosh's Boots
-				{ 6,  7741 }, -- The Shaft of Tsol
-			},
-		},
 		{ -- UldEric
 			name = AL["Eric \"The Swift\""],
 			npcId = 6907,
 			DisplayIDs = {{5708}},
+			AtlasMapBossID = 1,
 			[NORMAL_DIFF] = {
 				{ 1,  9394 }, -- Horned Viking Helmet
 				{ 3,  9398 }, -- Worn Running Boots
@@ -1704,6 +1693,7 @@ data["Uldaman"] = {
 			name = AL["Baelog"],
 			npcId = 6906,
 			DisplayIDs = {{5710}},
+			AtlasMapBossID = 1,
 			[NORMAL_DIFF] = {
 				{ 1,  9401 }, -- Nordic Longshank
 				{ 3,  9399 }, -- Precision Arrow
@@ -1714,16 +1704,31 @@ data["Uldaman"] = {
 			name = AL["Olaf"],
 			npcId = 6908,
 			DisplayIDs = {{5709}},
+			AtlasMapBossID = 1,
 			[NORMAL_DIFF] = {
 				{ 1,  9404 }, -- Olaf's All Purpose Shield
 				{ 3,  9403 }, -- Battered Viking Shield
 				{ 4,  1177 }, -- Oil of Olaf
 			},
 		},
+		{ -- UldRevelosh
+			name = AL["Revelosh"],
+			npcId = 6910,
+			DisplayIDs = {{5945}},
+			AtlasMapBossID = 3,
+			[NORMAL_DIFF] = {
+				{ 1,  9389 }, -- Revelosh's Spaulders
+				{ 2,  9388 }, -- Revelosh's Armguards
+				{ 3,  9390 }, -- Revelosh's Gloves
+				{ 4,  9387 }, -- Revelosh's Boots
+				{ 6,  7741 }, -- The Shaft of Tsol
+			},
+		},
 		{ -- UldIronaya
 			name = AL["Ironaya"],
 			npcId = 7228,
 			DisplayIDs = {{6089}},
+			AtlasMapBossID = 4,
 			[NORMAL_DIFF] = {
 				{ 1,  9409 }, -- Ironaya's Bracers
 				{ 2,  9407 }, -- Stoneweaver Leggings
@@ -1734,6 +1739,7 @@ data["Uldaman"] = {
 			name = AL["Ancient Stone Keeper"],
 			npcId = 7206,
 			DisplayIDs = {{10798}},
+			AtlasMapBossID = 7,
 			[NORMAL_DIFF] = {
 				{ 1,  9410 }, -- Cragfists
 				{ 3,  9411 }, -- Rockshard Pauldrons
@@ -1743,6 +1749,7 @@ data["Uldaman"] = {
 			name = AL["Galgann Firehammer"],
 			npcId = 7291,
 			DisplayIDs = {{6059}},
+			AtlasMapBossID = 8,
 			[NORMAL_DIFF] = {
 				{ 1,  11310 }, -- Flameseer Mantle
 				{ 2,  9412 }, -- Galgann's Fireblaster
@@ -1754,6 +1761,7 @@ data["Uldaman"] = {
 			name = AL["Grimlok"],
 			npcId = 4854,
 			DisplayIDs = {{11165}},
+			AtlasMapBossID = 9,
 			[NORMAL_DIFF] = {
 				{ 1,  9415 }, -- Grimlok's Tribal Vestments
 				{ 2,  9416 }, -- Grimlok's Charge
@@ -1764,6 +1772,7 @@ data["Uldaman"] = {
 			name = AL["Archaedas"],
 			npcId = 2748,
 			DisplayIDs = {{5988}},
+			AtlasMapBossID = 10,
 			[NORMAL_DIFF] = {
 				{ 1,  11118 }, -- Archaedic Stone
 				{ 2,  9413 }, -- The Rockpounder
@@ -1801,23 +1810,26 @@ data["Uldaman"] = {
 				{ 28, 9391 }, -- The Shoveler
 			},
 		},
-		{ -- UldShadowforgeCache
-			name = AL["Shadowforge Cache"],
-			ExtraList = true,
-			[NORMAL_DIFF] = {
-				{ 1,  7669 }, -- Shattered Necklace Ruby
-			},
-		},
 		{ -- UldBaelogsChest
 			name = AL["Baelog's Chest"],
 			ExtraList = true,
+			AtlasMapBossID = 1,
 			[NORMAL_DIFF] = {
 				{ 1,  7740 }, -- Gni'kiv Medallion
+			},
+		},
+		{ -- UldShadowforgeCache
+			name = AL["Shadowforge Cache"],
+			ExtraList = true,
+			AtlasMapBossID = 8,
+			[NORMAL_DIFF] = {
+				{ 1,  7669 }, -- Shattered Necklace Ruby
 			},
 		},
 		{ -- UldTabletofWill
 			name = AL["Tablet of Will"],
 			ExtraList = true,
+			AtlasMapBossID = 8,
 			[NORMAL_DIFF] = {
 				{ 1,  5824 }, -- Tablet of Will
 			},
