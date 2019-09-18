@@ -251,6 +251,9 @@ function Item.OnClear(button)
 	button.secButton.SetData = nil
 	button.secButton.RawName = nil
 
+	itemIsOnEnter = nil
+	buttonOnEnter = nil
+
 	button.secButton.overlay:Hide()
 	if button.ExtraFrameShown then
 		AtlasLoot.Button:ExtraItemFrame_ClearFrame()
@@ -326,7 +329,7 @@ end
 -- Item dess up
 --################################
 function Item.ShowQuickDressUp(itemLink, ttFrame)
-	if not itemLink or ( not IsEquippableItem(itemLink) and not Mount.IsMount(itemLink) ) then return end
+	if not itemLink or not ttFrame or ( not IsEquippableItem(itemLink) and not Mount.IsMount(itemLink) ) then return end
 	if not Item.previewTooltipFrame then
 		local name = "AtlasLoot-SetToolTip"
 		local frame = CreateFrame("Frame", name)

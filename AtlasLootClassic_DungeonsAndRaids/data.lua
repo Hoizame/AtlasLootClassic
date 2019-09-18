@@ -1678,22 +1678,11 @@ data["Uldaman"] = {
 	AtlasMapFile = {"Uldaman", "UldamanEnt"},
 	LevelRange = {30, 41, 51},
 	items = {
-		{ -- UldRevelosh
-			name = AL["Revelosh"],
-			npcId = 6910,
-			DisplayIDs = {{5945}},
-			[NORMAL_DIFF] = {
-				{ 1,  9389 }, -- Revelosh's Spaulders
-				{ 2,  9388 }, -- Revelosh's Armguards
-				{ 3,  9390 }, -- Revelosh's Gloves
-				{ 4,  9387 }, -- Revelosh's Boots
-				{ 6,  7741 }, -- The Shaft of Tsol
-			},
-		},
 		{ -- UldEric
 			name = AL["Eric \"The Swift\""],
 			npcId = 6907,
 			DisplayIDs = {{5708}},
+			AtlasMapBossID = 1,
 			[NORMAL_DIFF] = {
 				{ 1,  9394 }, -- Horned Viking Helmet
 				{ 3,  9398 }, -- Worn Running Boots
@@ -1704,6 +1693,7 @@ data["Uldaman"] = {
 			name = AL["Baelog"],
 			npcId = 6906,
 			DisplayIDs = {{5710}},
+			AtlasMapBossID = 1,
 			[NORMAL_DIFF] = {
 				{ 1,  9401 }, -- Nordic Longshank
 				{ 3,  9399 }, -- Precision Arrow
@@ -1714,16 +1704,31 @@ data["Uldaman"] = {
 			name = AL["Olaf"],
 			npcId = 6908,
 			DisplayIDs = {{5709}},
+			AtlasMapBossID = 1,
 			[NORMAL_DIFF] = {
 				{ 1,  9404 }, -- Olaf's All Purpose Shield
 				{ 3,  9403 }, -- Battered Viking Shield
 				{ 4,  1177 }, -- Oil of Olaf
 			},
 		},
+		{ -- UldRevelosh
+			name = AL["Revelosh"],
+			npcId = 6910,
+			DisplayIDs = {{5945}},
+			AtlasMapBossID = 3,
+			[NORMAL_DIFF] = {
+				{ 1,  9389 }, -- Revelosh's Spaulders
+				{ 2,  9388 }, -- Revelosh's Armguards
+				{ 3,  9390 }, -- Revelosh's Gloves
+				{ 4,  9387 }, -- Revelosh's Boots
+				{ 6,  7741 }, -- The Shaft of Tsol
+			},
+		},
 		{ -- UldIronaya
 			name = AL["Ironaya"],
 			npcId = 7228,
 			DisplayIDs = {{6089}},
+			AtlasMapBossID = 4,
 			[NORMAL_DIFF] = {
 				{ 1,  9409 }, -- Ironaya's Bracers
 				{ 2,  9407 }, -- Stoneweaver Leggings
@@ -1734,6 +1739,7 @@ data["Uldaman"] = {
 			name = AL["Ancient Stone Keeper"],
 			npcId = 7206,
 			DisplayIDs = {{10798}},
+			AtlasMapBossID = 7,
 			[NORMAL_DIFF] = {
 				{ 1,  9410 }, -- Cragfists
 				{ 3,  9411 }, -- Rockshard Pauldrons
@@ -1743,6 +1749,7 @@ data["Uldaman"] = {
 			name = AL["Galgann Firehammer"],
 			npcId = 7291,
 			DisplayIDs = {{6059}},
+			AtlasMapBossID = 8,
 			[NORMAL_DIFF] = {
 				{ 1,  11310 }, -- Flameseer Mantle
 				{ 2,  9412 }, -- Galgann's Fireblaster
@@ -1754,6 +1761,7 @@ data["Uldaman"] = {
 			name = AL["Grimlok"],
 			npcId = 4854,
 			DisplayIDs = {{11165}},
+			AtlasMapBossID = 9,
 			[NORMAL_DIFF] = {
 				{ 1,  9415 }, -- Grimlok's Tribal Vestments
 				{ 2,  9416 }, -- Grimlok's Charge
@@ -1764,6 +1772,7 @@ data["Uldaman"] = {
 			name = AL["Archaedas"],
 			npcId = 2748,
 			DisplayIDs = {{5988}},
+			AtlasMapBossID = 10,
 			[NORMAL_DIFF] = {
 				{ 1,  11118 }, -- Archaedic Stone
 				{ 2,  9413 }, -- The Rockpounder
@@ -1801,23 +1810,26 @@ data["Uldaman"] = {
 				{ 28, 9391 }, -- The Shoveler
 			},
 		},
-		{ -- UldShadowforgeCache
-			name = AL["Shadowforge Cache"],
-			ExtraList = true,
-			[NORMAL_DIFF] = {
-				{ 1,  7669 }, -- Shattered Necklace Ruby
-			},
-		},
 		{ -- UldBaelogsChest
 			name = AL["Baelog's Chest"],
 			ExtraList = true,
+			AtlasMapBossID = 1,
 			[NORMAL_DIFF] = {
 				{ 1,  7740 }, -- Gni'kiv Medallion
+			},
+		},
+		{ -- UldShadowforgeCache
+			name = AL["Shadowforge Cache"],
+			ExtraList = true,
+			AtlasMapBossID = 8,
+			[NORMAL_DIFF] = {
+				{ 1,  7669 }, -- Shattered Necklace Ruby
 			},
 		},
 		{ -- UldTabletofWill
 			name = AL["Tablet of Will"],
 			ExtraList = true,
+			AtlasMapBossID = 8,
 			[NORMAL_DIFF] = {
 				{ 1,  5824 }, -- Tablet of Will
 			},
@@ -2455,8 +2467,7 @@ data["BlackrockDepths"] = {
 			[NORMAL_DIFF] = {
 				{ 1,  11665 }, -- Ogreseer Fists
 				{ 2,  11662 }, -- Ban'thok Sash
-				{ 3,  11728 }, -- Savage Gladiator Leggings
-				{ 4,  11824 }, -- Cyclopean Band
+				{ 3,  11824 }, -- Cyclopean Band
 			},
 		},
 		{ -- BRDAnubshiah
@@ -2468,7 +2479,6 @@ data["BlackrockDepths"] = {
 				{ 1,  11678 }, -- Carapace of Anub'shiah
 				{ 2,  11677 }, -- Graverot Cape
 				{ 3,  11675 }, -- Shadefiend Boots
-				{ 4,  11731 }, -- Savage Gladiator Greaves
 			},
 		},
 		{ -- BRDHedrum
@@ -2511,6 +2521,7 @@ data["BlackrockDepths"] = {
 				{ 7,  22205 }, -- Black Steel Bindings
 				{ 8,  22255 }, -- Magma Forged Band
 				{ 9,  22254 }, -- Wand of Eternal Light
+				{ 10,  11923 }, -- The Hammer of Grace
 				{ 16, "INV_Box_01", nil, AL["Relic Coffer"], nil },
 				{ 17, 11945 }, -- Dark Iron Ring
 				{ 18, 11946 }, -- Fire Opal Necklace
@@ -2632,11 +2643,12 @@ data["BlackrockDepths"] = {
 				{ 4,  22275 }, -- Firemoss Boots
 				{ 5,  18044 }, -- Hurley's Tankard
 				{ 7, "INV_Box_01", nil, AL["Phalanx"], nil },
-				{ 8,  22212 }, -- Golem Fitted Pauldrons
-				{ 9,  11745 }, -- Fists of Phalanx
-				{ 10, 11744 }, -- Bloodfist
-				{ 12, "INV_Box_01", nil, AL["Lokhtos Darkbargainer"], nil },
-				{ 13, 18592 }, -- Plans: Sulfuron Hammer
+				{ 8,  11746 }, -- Golem Skull Helm
+				{ 9,  22212 }, -- Golem Fitted Pauldrons
+				{ 10,  11745 }, -- Fists of Phalanx
+				{ 11, 11744 }, -- Bloodfist
+				{ 13, "INV_Box_01", nil, AL["Lokhtos Darkbargainer"], nil },
+				{ 14, 18592 }, -- Plans: Sulfuron Hammer
 				{ 16, "INV_Box_01", nil, AL["Ribbly Screwspigot"], nil },
 				{ 17, 11612 }, -- Plans: Dark Iron Plate
 				{ 18, 2662 }, -- Ribbly's Quiver
@@ -2726,13 +2738,13 @@ data["BlackrockDepths"] = {
 			AtlasMapBossID = 21,
 			[NORMAL_DIFF] = {
 				{ 1,  11684 }, -- Ironfoe
-				{ 3,  11933 }, -- Imperial Jewel
-				{ 4,  11930 }, -- The Emperor's New Cape
-				{ 5,  11924 }, -- Robes of the Royal Crown
-				{ 6,  22204 }, -- Wristguards of Renown
-				{ 7,  22207 }, -- Sash of the Grand Hunt
-				{ 8,  11934 }, -- Emperor's Seal
-				{ 9,  11815 }, -- Hand of Justice
+				{ 3,  16724 }, -- Lightforge Gauntlets
+				{ 4,  11933 }, -- Imperial Jewel
+				{ 5,  11930 }, -- The Emperor's New Cape
+				{ 6,  11924 }, -- Robes of the Royal Crown
+				{ 7,  22204 }, -- Wristguards of Renown
+				{ 8,  22207 }, -- Sash of the Grand Hunt
+				{ 9,  11934 }, -- Emperor's Seal
 				{ 10, 11810 }, -- Force of Will
 				{ 11, 11928 }, -- Thaurissan's Royal Scepter
 				{ 12, 11931 }, -- Dreadforge Retaliator
@@ -4195,11 +4207,10 @@ data["Stratholme"] = {
 			DisplayIDs = {{571}},
 			AtlasMapBossID = 6,
 			[NORMAL_DIFF] = {
-				{ 1,  16724 }, -- Lightforge Gauntlets
-				{ 3,  13400 }, -- Vambraces of the Sadist
-				{ 4,  13403 }, -- Grimgore Noose
-				{ 5,  13402 }, -- Timmy's Galoshes
-				{ 6,  13401 }, -- The Cruel Hand of Timmy
+				{ 1,  13400 }, -- Vambraces of the Sadist
+				{ 2,  13403 }, -- Grimgore Noose
+				{ 3,  13402 }, -- Timmy's Galoshes
+				{ 4,  13401 }, -- The Cruel Hand of Timmy
 			},
 		},
 		{ -- STRATMalorsStrongbox
