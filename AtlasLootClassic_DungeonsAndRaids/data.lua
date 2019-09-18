@@ -2467,8 +2467,7 @@ data["BlackrockDepths"] = {
 			[NORMAL_DIFF] = {
 				{ 1,  11665 }, -- Ogreseer Fists
 				{ 2,  11662 }, -- Ban'thok Sash
-				{ 3,  11728 }, -- Savage Gladiator Leggings
-				{ 4,  11824 }, -- Cyclopean Band
+				{ 3,  11824 }, -- Cyclopean Band
 			},
 		},
 		{ -- BRDAnubshiah
@@ -2480,7 +2479,6 @@ data["BlackrockDepths"] = {
 				{ 1,  11678 }, -- Carapace of Anub'shiah
 				{ 2,  11677 }, -- Graverot Cape
 				{ 3,  11675 }, -- Shadefiend Boots
-				{ 4,  11731 }, -- Savage Gladiator Greaves
 			},
 		},
 		{ -- BRDHedrum
@@ -2523,6 +2521,7 @@ data["BlackrockDepths"] = {
 				{ 7,  22205 }, -- Black Steel Bindings
 				{ 8,  22255 }, -- Magma Forged Band
 				{ 9,  22254 }, -- Wand of Eternal Light
+				{ 10,  11923 }, -- The Hammer of Grace
 				{ 16, "INV_Box_01", nil, AL["Relic Coffer"], nil },
 				{ 17, 11945 }, -- Dark Iron Ring
 				{ 18, 11946 }, -- Fire Opal Necklace
@@ -2644,11 +2643,12 @@ data["BlackrockDepths"] = {
 				{ 4,  22275 }, -- Firemoss Boots
 				{ 5,  18044 }, -- Hurley's Tankard
 				{ 7, "INV_Box_01", nil, AL["Phalanx"], nil },
-				{ 8,  22212 }, -- Golem Fitted Pauldrons
-				{ 9,  11745 }, -- Fists of Phalanx
-				{ 10, 11744 }, -- Bloodfist
-				{ 12, "INV_Box_01", nil, AL["Lokhtos Darkbargainer"], nil },
-				{ 13, 18592 }, -- Plans: Sulfuron Hammer
+				{ 8,  11746 }, -- Golem Skull Helm
+				{ 9,  22212 }, -- Golem Fitted Pauldrons
+				{ 10,  11745 }, -- Fists of Phalanx
+				{ 11, 11744 }, -- Bloodfist
+				{ 13, "INV_Box_01", nil, AL["Lokhtos Darkbargainer"], nil },
+				{ 14, 18592 }, -- Plans: Sulfuron Hammer
 				{ 16, "INV_Box_01", nil, AL["Ribbly Screwspigot"], nil },
 				{ 17, 11612 }, -- Plans: Dark Iron Plate
 				{ 18, 2662 }, -- Ribbly's Quiver
@@ -2738,13 +2738,13 @@ data["BlackrockDepths"] = {
 			AtlasMapBossID = 21,
 			[NORMAL_DIFF] = {
 				{ 1,  11684 }, -- Ironfoe
-				{ 3,  11933 }, -- Imperial Jewel
-				{ 4,  11930 }, -- The Emperor's New Cape
-				{ 5,  11924 }, -- Robes of the Royal Crown
-				{ 6,  22204 }, -- Wristguards of Renown
-				{ 7,  22207 }, -- Sash of the Grand Hunt
-				{ 8,  11934 }, -- Emperor's Seal
-				{ 9,  11815 }, -- Hand of Justice
+				{ 3,  16724 }, -- Lightforge Gauntlets
+				{ 4,  11933 }, -- Imperial Jewel
+				{ 5,  11930 }, -- The Emperor's New Cape
+				{ 6,  11924 }, -- Robes of the Royal Crown
+				{ 7,  22204 }, -- Wristguards of Renown
+				{ 8,  22207 }, -- Sash of the Grand Hunt
+				{ 9,  11934 }, -- Emperor's Seal
 				{ 10, 11810 }, -- Force of Will
 				{ 11, 11928 }, -- Thaurissan's Royal Scepter
 				{ 12, 11931 }, -- Dreadforge Retaliator
@@ -4207,11 +4207,10 @@ data["Stratholme"] = {
 			DisplayIDs = {{571}},
 			AtlasMapBossID = 6,
 			[NORMAL_DIFF] = {
-				{ 1,  16724 }, -- Lightforge Gauntlets
-				{ 3,  13400 }, -- Vambraces of the Sadist
-				{ 4,  13403 }, -- Grimgore Noose
-				{ 5,  13402 }, -- Timmy's Galoshes
-				{ 6,  13401 }, -- The Cruel Hand of Timmy
+				{ 1,  13400 }, -- Vambraces of the Sadist
+				{ 2,  13403 }, -- Grimgore Noose
+				{ 3,  13402 }, -- Timmy's Galoshes
+				{ 4,  13401 }, -- The Cruel Hand of Timmy
 			},
 		},
 		{ -- STRATMalorsStrongbox
