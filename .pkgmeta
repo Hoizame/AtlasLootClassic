@@ -6,8 +6,6 @@ manual-changelog:
 
 enable-nolib-creation: no
 
-license-output: AtlasLootClassic/Documentation/LICENSE.txt
-
 externals:
  AtlasLootClassic/Libs/CallbackHandler-1.0: https://repos.wowace.com/wow/callbackhandler/trunk/CallbackHandler-1.0
  AtlasLootClassic/Libs/LibStub: https://repos.wowace.com/wow/libstub/trunk
