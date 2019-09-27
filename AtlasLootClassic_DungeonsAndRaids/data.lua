@@ -3943,7 +3943,7 @@ data["Scholomance"] = {
 				{ 30, 18683 }, -- Hammer of the Vesper
 			},
 		},
-{ -- SCHOLOTheRavenian
+		{ -- SCHOLOTheRavenian
 			name = AL["The Ravenian"],
 			npcId = 10507,
 			DisplayIDs = {{10433}},
