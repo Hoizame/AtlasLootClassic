@@ -986,6 +986,7 @@ data["RazorfenKraul"] = {
 			npcID = 4842,
 			DisplayIDs = {{6102}},
 			AtlasMapBossID = 9,
+			specialType = "rare",
 			[NORMAL_DIFF] = {
 				{ 1,  6689 }, -- Wind Spirit Staff
 				{ 3,  6688 }, -- Whisperwind Headdress
