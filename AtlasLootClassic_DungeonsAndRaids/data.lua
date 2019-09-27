@@ -2612,11 +2612,10 @@ data["BlackrockDepths"] = {
 			[NORMAL_DIFF] = {
 				{ 1,  11820 }, -- Royal Decorated Armor
 				{ 2,  11821 }, -- Warstrife Leggings
-				{ 3,  11810 }, -- Force of Will
-				{ 4,  11815 }, -- Hand of Justice
-				{ 5,  11817 }, -- Lord General's Sword
-				{ 6,  11816 }, -- Angerforge's Battle Axe
-				{ 7,  11841 }, -- Senior Designer's Pantaloons
+				{ 3,  11815 }, -- Hand of Justice
+				{ 4,  11817 }, -- Lord General's Sword
+				{ 5,  11816 }, -- Angerforge's Battle Axe
+				{ 6,  11841 }, -- Senior Designer's Pantaloons
 			},
 		},
 		{ -- BRDGolemLordArgelmach
