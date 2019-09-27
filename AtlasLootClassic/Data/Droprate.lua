@@ -3,6 +3,10 @@ local Droprate = {}
 AtlasLoot.Data.Droprate = Droprate
 local AL = AtlasLoot.Locales
 
+-- lua
+local type = type
+local pairs = pairs
+
 local DropRateData = {
     --[npcID] = { itemID = dropRate },
 }
