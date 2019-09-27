@@ -7,3 +7,4 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 ## v1.1.13 (Sep. XX, 2019)
 
 - Add droprates for dungeons
+- Update content phase items
