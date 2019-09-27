@@ -5,7 +5,7 @@ manual-changelog:
  markup-type: markdown
 
 enable-nolib-creation: no
-    
+
 license-output: AtlasLootClassic/Documentation/LICENSE.txt
 
 externals:
@@ -26,6 +26,7 @@ ignore:
  - cf_translations.sh
  - AtlasLootClassic/Images/PSD
  - AtlasLootClassic/Addons/tmpl.lua
+ - AtlasLootClassic_DungeonsAndRaids/droprate_override.lua
  - README.md
 
 move-folders:

@@ -13,6 +13,7 @@ exclude_files = {
 	"AtlasLootClassic/Libs/",
 	"AtlasLootClassic_Options/Libs/",
 	"babelfish.lua",
+	"AtlasLootClassic_DungeonsAndRaids/droprate_override.lua",
 }
 ignore = {
 	"11./SLASH_.*", -- Setting an undefined (Slash handler) global variable
@@ -100,8 +101,8 @@ globals = {
 	"ChatFrameEditBox",
 	"FACTION_BAR_COLORS",
 	"GameTooltip_ShowCompareItem",
-	"ShoppingTooltip1", 
-	"ShoppingTooltip2", 
+	"ShoppingTooltip1",
+	"ShoppingTooltip2",
 	"ShoppingTooltip3",
 	"SetPortraitTextureFromCreatureDisplayID",
 	"MODELFRAME_DEFAULT_ROTATION",

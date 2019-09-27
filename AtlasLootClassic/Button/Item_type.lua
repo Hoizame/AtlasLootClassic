@@ -12,6 +12,7 @@ local Profession = AtlasLoot.Data.Profession
 local Sets = AtlasLoot.Data.Sets
 local Mount = AtlasLoot.Data.Mount
 local ContentPhase = AtlasLoot.Data.ContentPhase
+local Droprate = AtlasLoot.Data.Droprate
 local ItemFrame, Favourites
 
 -- lua
@@ -106,7 +107,7 @@ function Item.OnSet(button, second)
 				button.ItemString = GetItemString(button.ItemID)
 			end
 		end
-		button.Droprate = button.__atlaslootinfo.Droprate
+		button.Droprate = Droprate:GetData(button.__atlaslootinfo.npcID, button.ItemID)-- button.__atlaslootinfo.Droprate
 
 		Item.Refresh(button)
 	end
@@ -206,7 +207,7 @@ function Item.OnEnter(button, owner)
 	else
 		tooltip:SetItemByID(button.ItemID)
 	end
-	if button.Droprate and db.showDropRate then
+	if button.Droprate then
 		tooltip:AddDoubleLine(AL["Droprate:"], button.Droprate.."%")
 	end
 	if AtlasLoot.db.showIDsInTT then
