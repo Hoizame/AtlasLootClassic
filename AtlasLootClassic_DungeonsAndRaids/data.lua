@@ -205,6 +205,7 @@ local DM_BOOKS = { -- DMBooks
 
 data["Ragefire"] = {
 	MapID = 2437,
+	InstanceID = 389,
 	AtlasMapID = "Ragefire",
 	AtlasMapFile = "RagefireChasm",
 	ContentType = DUNGEON_CONTENT,
@@ -238,6 +239,7 @@ data["Ragefire"] = {
 
 data["WailingCaverns"] = {
 	MapID = 718,
+	InstanceID = 43,
 	AtlasMapID = "WailingCaverns",
 	AtlasMapFile = {"WailingCaverns", "WailingCavernsEnt"},
 	ContentType = DUNGEON_CONTENT,
@@ -354,6 +356,7 @@ data["WailingCaverns"] = {
 
 data["TheDeadmines"] = {
 	MapID = 1581,
+	InstanceID = 36,
 	AtlasMapID = "TheDeadmines",
 	AtlasMapFile = {"TheDeadmines", "TheDeadminesEnt"},
 	ContentType = DUNGEON_CONTENT,
@@ -478,6 +481,7 @@ data["TheDeadmines"] = {
 
 data["ShadowfangKeep"] = {
 	MapID = 209,
+	InstanceID = 33,
 	AtlasMapID = "ShadowfangKeep",
 	AtlasMapFile = "ShadowfangKeep",
 	ContentType = DUNGEON_CONTENT,
@@ -644,6 +648,7 @@ data["ShadowfangKeep"] = {
 
 data["BlackfathomDeeps"] = {
 	MapID = 719,
+	InstanceID = 48,
 	AtlasMapID = "BlackfathomDeeps",
 	AtlasMapFile = {"BlackfathomDeeps", "BlackfathomDeepsEnt"},
 	ContentType = DUNGEON_CONTENT,
@@ -745,6 +750,7 @@ data["BlackfathomDeeps"] = {
 
 data["TheStockade"] = {
 	MapID = 717,
+	InstanceID = 34,
 	AtlasMapID = "TheStockade",
 	AtlasMapFile = "TheStockade",
 	ContentType = DUNGEON_CONTENT,
@@ -784,6 +790,7 @@ data["TheStockade"] = {
 
 data["Gnomeregan"] = {
 	MapID = 721,
+	InstanceID = 90,
 	AtlasMapID = "Gnomeregan",
 	AtlasMapFile = {"Gnomeregan", "GnomereganEnt"},
 	ContentType = DUNGEON_CONTENT,
@@ -902,6 +909,7 @@ data["Gnomeregan"] = {
 
 data["RazorfenKraul"] = {
 	MapID = 491,
+	InstanceID = 47,
 	AtlasMapID = "RazorfenKraul",
 	AtlasMapFile = "RazorfenKraul",
 	ContentType = DUNGEON_CONTENT,
@@ -1013,6 +1021,7 @@ data["RazorfenKraul"] = {
 
 data["ScarletMonasteryGraveyard"] = {
 	MapID = 796,
+	InstanceID = 189,
 	name = C_Map.GetAreaInfo(796) .." - ".. AL["Graveyard"],
 	AtlasMapID = "ScarletMonastery",
 	AtlasMapFile = {"SMGraveyard", "SMEnt"},
@@ -1103,6 +1112,7 @@ data["ScarletMonasteryGraveyard"] = {
 
 data["ScarletMonasteryLibrary"] = {
 	MapID = 796,
+	InstanceID = 189,
 	name = C_Map.GetAreaInfo(796) .." - ".. AL["Library"],
 	AtlasMapID = "ScarletMonastery",
 	AtlasMapFile = {"SMLibrary", "SMEnt"},
@@ -1177,6 +1187,7 @@ data["ScarletMonasteryLibrary"] = {
 
 data["ScarletMonasteryArmory"] = {
 	MapID = 796,
+	InstanceID = 189,
 	name = C_Map.GetAreaInfo(796) .." - ".. AL["Armory"],
 	AtlasMapID = "ScarletMonastery",
 	AtlasMapFile = {"SMArmory", "SMEnt"},
@@ -1233,6 +1244,7 @@ data["ScarletMonasteryArmory"] = {
 
 data["ScarletMonasteryCathedral"] = {
 	MapID = 796,
+	InstanceID = 189,
 	name = C_Map.GetAreaInfo(796) .." - ".. AL["Cathedral"],
 	AtlasMapID = "ScarletMonastery",
 	AtlasMapFile = {"SMCathedral", "SMEnt"},
@@ -1557,6 +1569,7 @@ data["ScarletMonastery"] = {
 
 data["RazorfenDowns"] = {
 	MapID = 722,
+	InstanceID = 129,
 	AtlasMapID = "RazorfenDowns",
 	AtlasMapFile = "RazorfenDowns",
 	ContentType = DUNGEON_CONTENT,
@@ -1673,6 +1686,7 @@ data["RazorfenDowns"] = {
 
 data["Uldaman"] = {
 	MapID = 1337, -- just no...
+	InstanceID = 70,
 	AtlasMapID = "Uldaman",
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
@@ -1840,6 +1854,7 @@ data["Uldaman"] = {
 
 data["Zul'Farrak"] = {
 	MapID = 1176,
+	InstanceID = 209,
 	AtlasMapID = "Zul'Farrak",
 	AtlasMapFile = "ZulFarrak",
 	ContentType = DUNGEON_CONTENT,
@@ -1995,6 +2010,7 @@ data["Zul'Farrak"] = {
 
 data["Maraudon"] = {
 	MapID = 2100,
+	InstanceID = 349,
 	AtlasMapID = "Maraudon",
 	AtlasMapFile = {"Maraudon", "MaraudonEnt"},
 	ContentType = DUNGEON_CONTENT,
@@ -2181,6 +2197,7 @@ data["Maraudon"] = {
 
 data["TheTempleOfAtal'Hakkar"] = {
 	MapID = 1477,
+	InstanceID = 109,
 	AtlasMapID = "TheTempleOfAtal'Hakkar",
 	AtlasMapFile = { "TheSunkenTemple", "TheSunkenTempleEnt" },
 	ContentType = DUNGEON_CONTENT,
@@ -2370,6 +2387,7 @@ data["TheTempleOfAtal'Hakkar"] = {
 
 data["BlackrockDepths"] = {
 	MapID = 1584,
+	InstanceID = 230,
 	AtlasMapID = "BlackrockDepths",
 	AtlasMapFile = {"BlackrockDepths", "BlackrockMountainEnt"},
 	ContentType = DUNGEON_CONTENT,
@@ -2808,6 +2826,7 @@ data["BlackrockDepths"] = {
 data["LowerBlackrockSpire"] = {
 	name = AL["Lower "] .. C_Map.GetAreaInfo(1583),
 	MapID = 1583,
+	InstanceID = 229,
 	AtlasMapID = "LowerBlackrockSpire",
 	AtlasMapFile = {"BlackrockSpireLower", "BlackrockMountainEnt"},
 	ContentType = DUNGEON_CONTENT,
@@ -3071,6 +3090,7 @@ data["LowerBlackrockSpire"] = {
 data["UpperBlackrockSpire"] = {
 	name = AL["Upper "] .. C_Map.GetAreaInfo(1583),
 	MapID = 1583,
+	InstanceID = 229,
 	AtlasMapID = "UpperBlackrockSpire",
 	AtlasMapFile = {"BlackrockSpireUpper", "BlackrockMountainEnt"},
 	ContentType = DUNGEON_CONTENT,
@@ -3270,6 +3290,7 @@ data["UpperBlackrockSpire"] = {
 data["DireMaulEast"] = {
 	name = C_Map.GetAreaInfo(2557) .." ".. AL["East"],
 	MapID = 2557,
+	InstanceID = 429,
 	AtlasMapID = "DireMaul",
 	AtlasMapFile = {"DireMaulEast", "DireMaulEnt"},
 	ContentType = DUNGEON_CONTENT,
@@ -3383,6 +3404,7 @@ data["DireMaulEast"] = {
 data["DireMaulWest"] = {
 	name = C_Map.GetAreaInfo(2557) .." ".. AL["West"],
 	MapID = 2557,
+	InstanceID = 429,
 	AtlasMapID = "DireMaul",
 	AtlasMapFile = {"DireMaulWest", "DireMaulEnt"},
 	ContentType = DUNGEON_CONTENT,
@@ -3521,6 +3543,7 @@ data["DireMaulWest"] = {
 data["DireMaulNorth"] = {
 	name = C_Map.GetAreaInfo(2557) .." ".. AL["North"],
 	MapID = 2557,
+	InstanceID = 429,
 	AtlasMapID = "DireMaulNorth",
 	AtlasMapFile = {"DireMaulNorth", "DireMaulEnt"},
 	ContentType = DUNGEON_CONTENT,
@@ -3714,6 +3737,7 @@ data["DireMaulNorth"] = {
 
 data["Scholomance"] = {
 	MapID = 2057,
+	InstanceID = 289,
 	AtlasMapID = "Scholomance",
 	AtlasMapFile = "Scholomance",
 	ContentType = DUNGEON_CONTENT,
@@ -4130,6 +4154,7 @@ data["Scholomance"] = {
 
 data["Stratholme"] = {
 	MapID = 2017,
+	InstanceID = 329,
 	AtlasMapID = "Stratholme",
 	AtlasMapFile = "Stratholme",
 	ContentType = DUNGEON_CONTENT,
@@ -4520,6 +4545,7 @@ data["Stratholme"] = {
 -- ########################
 data["MoltenCore"] = {
 	MapID = 2717,
+	InstanceID = 409,
 	AtlasMapID = "MoltenCore",
 	AtlasMapFile = "MoltenCore",
 	ContentType = RAID40_CONTENT,
@@ -4856,6 +4882,7 @@ data["MoltenCore"] = {
 
 data["Onyxia"] = {
 	MapID = 2159,
+	InstanceID = 249,
 	AtlasMapID = "Onyxia",
 	AtlasMapFile = "OnyxiasLair",
 	ContentType = RAID40_CONTENT,
@@ -4895,6 +4922,7 @@ data["Onyxia"] = {
 
 data["Zul'Gurub"] = {
 	MapID = 1977,
+	InstanceID = 309,
 	AtlasMapID = "Zul'Gurub", -- ??
 	AtlasMapFile = "ZulGurub",
 	ContentType = RAID20_CONTENT,
@@ -5269,6 +5297,7 @@ data["Zul'Gurub"] = {
 
 data["BlackwingLair"] = {
 	MapID = 2677,
+	InstanceID = 469,
 	AtlasMapID = "BlackwingLair",
 	AtlasMapFile = "BlackwingLair",
 	ContentType = RAID40_CONTENT,
@@ -5518,6 +5547,7 @@ data["BlackwingLair"] = {
 
 data["TheRuinsofAhnQiraj"] = { -- AQ20
 	MapID = 3429,
+	InstanceID = 509,
 	AtlasMapID = "TheRuinsofAhnQiraj",
 	AtlasMapFile = "TheRuinsofAhnQiraj",
 	ContentType = RAID20_CONTENT,
@@ -5727,6 +5757,7 @@ data["TheRuinsofAhnQiraj"] = { -- AQ20
 
 data["TheTempleofAhnQiraj"] = { -- AQ40
 	MapID = 3428,
+	InstanceID = 531,
 	AtlasMapID = "TheTempleofAhnQiraj",
 	AtlasMapFile = "TheTempleofAhnQiraj",
 	ContentType = RAID40_CONTENT,
@@ -6012,6 +6043,7 @@ local PURP = "|cff9900ff"
 local WHIT = "|cffffffff"
 data["Naxxramas"] = {
 	MapID = 3456,
+	InstanceID = 533,
 	AtlasMapID = "Naxxramas",
 	AtlasMapFile = "Naxxramas",
 	ContentType = RAID40_CONTENT,
