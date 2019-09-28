@@ -212,8 +212,16 @@ local function FrameOnShow(self)
 		self.moduleSelect:SetSelected(db.selected[1])
 	end
 	FIRST_SHOW = false
-	if (AtlasLoot.db.GUI.autoselect) then
-		--AtlasLoot:AutoSelect()
+	if (AtlasLoot.db.enableAutoSelect) then
+		local autoSelectData = AtlasLoot:AutoSelectGetPlayerData()
+		if autoSelectData then
+			if autoSelectData[1] ~= db.selected[1] then
+				self.moduleSelect:SetSelected(autoSelectData[1])
+			end
+			if autoSelectData[2] ~= db.selected[2] then
+				self.subCatSelect:SetSelected(autoSelectData[2])
+			end
+		end
 	end
 end
 
