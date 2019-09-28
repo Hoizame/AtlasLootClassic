@@ -72,7 +72,7 @@ Options.config.args.atlasloot = {
 			width = "full",
 			name = AL["Enable auto selection of instances if available."],
 			desc = AL["Select instance loottable on open."]..AL["\n|cffff0000Splitted instances like LBRS/UBRS currently not work correctly.|r"],
-			set = function(info, value) AtlasLoot.db.enableAutoSelect = value AtlasLoot:RefreshAutoSelectOption() end,
+			set = function(info, value) AtlasLoot.db.enableAutoSelect = value AtlasLoot.Data.AutoSelect:RefreshOptions() end,
 		},
 		headerSetting = {
 			order = 10,

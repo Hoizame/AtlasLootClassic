@@ -58,7 +58,7 @@ function AtlasLoot:OnProfileChanged()
 	AtlasLoot.Addons:OnProfileChanged()
 	AtlasLoot.GUI:ForceUpdate()
 
-	AtlasLoot:RefreshAutoSelectOption()
+	AtlasLoot.Data.AutoSelect:RefreshOptions()
 end
 
 function AtlasLoot:OnInitialize()
@@ -85,28 +85,4 @@ function AtlasLoot:AddInitFunc(func, module)
 	module = module or "AtlasLootClassic"
 	if not AtlasLoot.Init[module] then AtlasLoot.Init[module] = {} end
 	AtlasLoot.Init[module][#AtlasLoot.Init[module]+1] = func
-end
-
---################################
--- Auto select
---################################
-local AutoSelectSave = {}
-
-function AtlasLoot:RefreshAutoSelectOption()
-	if self.db.enableAutoSelect and not self.Loader:IsModuleLoaded("AtlasLootClassic_DungeonsAndRaids") then
-		self.Loader:LoadModule("AtlasLootClassic_DungeonsAndRaids")
-	end
-end
-
-function AtlasLoot:AutoSelectAdd(module, instanceAlID, instanceID)
-	if module and instanceAlID and instanceID then
-		AutoSelectSave[instanceID] = { module, instanceAlID }
-	end
-end
-
-function AtlasLoot:AutoSelectGetPlayerData()
-	local posY, posX, posZ, instanceID = UnitPosition("player")
-	if instanceID and AutoSelectSave[instanceID] then
-		return AutoSelectSave[instanceID]
-	end
 end

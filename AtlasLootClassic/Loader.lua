@@ -133,7 +133,7 @@ function Loader.Init()
 		AtlasMapsModuleLoaded = false
 	end
 
-	AtlasLoot:RefreshAutoSelectOption()
+	AtlasLoot.Data.AutoSelect:RefreshOptions()
 end
 AtlasLoot:AddInitFunc(Loader.Init)
 

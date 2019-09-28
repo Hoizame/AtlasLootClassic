@@ -213,14 +213,15 @@ local function FrameOnShow(self)
 	end
 	FIRST_SHOW = false
 	if (AtlasLoot.db.enableAutoSelect) then
-		local autoSelectData = AtlasLoot:AutoSelectGetPlayerData()
-		if autoSelectData then
-			if autoSelectData[1] ~= db.selected[1] then
-				self.moduleSelect:SetSelected(autoSelectData[1])
-			end
-			if autoSelectData[2] ~= db.selected[2] then
-				self.subCatSelect:SetSelected(autoSelectData[2])
-			end
+		local module, instance, boss = AtlasLoot.Data.AutoSelect:GetCurrrentPlayerData()
+		if module ~= db.selected[1] then
+			self.moduleSelect:SetSelected(module)
+		end
+		if instance ~= db.selected[2] then
+			self.subCatSelect:SetSelected(instance)
+		end
+		if boss ~= db.selected[3] then
+			self.boss:SetSelected(boss)
 		end
 	end
 end

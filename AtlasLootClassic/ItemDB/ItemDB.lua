@@ -44,8 +44,7 @@ ItemDB.mt = {
 		contentList[t.__atlaslootdata.addonName][t.__atlaslootdata.contentCount] = k
 		contentList[t.__atlaslootdata.addonName][k] = t.__atlaslootdata.contentCount
 		v.__atlaslootdata = t.__atlaslootdata
-		AtlasLoot:AutoSelectAdd(t.__atlaslootdata.addonName, k, v.InstanceID)
-
+		AtlasLoot.Data.AutoSelect:AddInstanceTable(t.__atlaslootdata.addonName, k, v)
 		rawset(t, k, v)
 	end
 }

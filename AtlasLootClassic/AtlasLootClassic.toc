@@ -69,6 +69,7 @@ Data\Recipe.lua
 Data\Mount.lua
 Data\ContentPhase.lua
 Data\Droprate.lua
+Data\AutoSelect.lua
 
 ItemDB\ItemDB.lua
 ItemDB\SoundData.lua
