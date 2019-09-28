@@ -10,6 +10,7 @@ local wipe = wipe
 
 -- wow
 local CreateFrame = CreateFrame
+local UnitPosition = UnitPosition
 -- ----------------------------------------------------------------------------
 -- AddOn namespace.
 -- ----------------------------------------------------------------------------
@@ -86,8 +87,26 @@ function AtlasLoot:AddInitFunc(func, module)
 	AtlasLoot.Init[module][#AtlasLoot.Init[module]+1] = func
 end
 
+--################################
+-- Auto select
+--################################
+local AutoSelectSave = {}
+
 function AtlasLoot:RefreshAutoSelectOption()
 	if self.db.enableAutoSelect and not self.Loader:IsModuleLoaded("AtlasLootClassic_DungeonsAndRaids") then
 		self.Loader:LoadModule("AtlasLootClassic_DungeonsAndRaids")
+	end
+end
+
+function AtlasLoot:AutoSelectAdd(module, instanceAlID, instanceID)
+	if module and instanceAlID and instanceID then
+		AutoSelectSave[instanceID] = { module, instanceAlID }
+	end
+end
+
+function AtlasLoot:AutoSelectGetPlayerData()
+	local posY, posX, posZ, instanceID = UnitPosition("player")
+	if instanceID and AutoSelectSave[instanceID] then
+		return AutoSelectSave[instanceID]
 	end
 end
