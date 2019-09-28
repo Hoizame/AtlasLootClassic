@@ -66,6 +66,13 @@ Options.config.args.atlasloot = {
 			hidden = AtlasLoot.Button:GetWoWHeadLocale() and false or true,
 			name = AL["Use english WoWHead."],
 		},
+		enableAutoSelect = {
+			order = 7,
+			type = "toggle",
+			width = "full",
+			name = AL["Enable auto selection of instances if available."],
+			desc = AL["Select instance loottable on open."]..AL["\n|cffff0000Splitted instances like LBRS/UBRS currently not work correctly.|r"],
+		},
 		headerSetting = {
 			order = 10,
 			type = "header",
