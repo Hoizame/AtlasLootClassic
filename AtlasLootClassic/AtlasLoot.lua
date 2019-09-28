@@ -56,6 +56,8 @@ function AtlasLoot:OnProfileChanged()
 	AtlasLoot.ClickHandler:OnProfileChanged()
 	AtlasLoot.Addons:OnProfileChanged()
 	AtlasLoot.GUI:ForceUpdate()
+
+	AtlasLoot:RefreshAutoSelectOption()
 end
 
 function AtlasLoot:OnInitialize()
@@ -82,4 +84,10 @@ function AtlasLoot:AddInitFunc(func, module)
 	module = module or "AtlasLootClassic"
 	if not AtlasLoot.Init[module] then AtlasLoot.Init[module] = {} end
 	AtlasLoot.Init[module][#AtlasLoot.Init[module]+1] = func
+end
+
+function AtlasLoot:RefreshAutoSelectOption()
+	if self.db.enableAutoSelect and not self.Loader:IsModuleLoaded("AtlasLootClassic_DungeonsAndRaids") then
+		self.Loader:LoadModule("AtlasLootClassic_DungeonsAndRaids")
+	end
 end
