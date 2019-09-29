@@ -10,6 +10,7 @@ local wipe = wipe
 
 -- wow
 local CreateFrame = CreateFrame
+local UnitPosition = UnitPosition
 -- ----------------------------------------------------------------------------
 -- AddOn namespace.
 -- ----------------------------------------------------------------------------
@@ -56,6 +57,8 @@ function AtlasLoot:OnProfileChanged()
 	AtlasLoot.ClickHandler:OnProfileChanged()
 	AtlasLoot.Addons:OnProfileChanged()
 	AtlasLoot.GUI:ForceUpdate()
+
+	AtlasLoot.Data.AutoSelect:RefreshOptions()
 end
 
 function AtlasLoot:OnInitialize()

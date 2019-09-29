@@ -44,22 +44,7 @@ ItemDB.mt = {
 		contentList[t.__atlaslootdata.addonName][t.__atlaslootdata.contentCount] = k
 		contentList[t.__atlaslootdata.addonName][k] = t.__atlaslootdata.contentCount
 		v.__atlaslootdata = t.__atlaslootdata
-		--[=[
-		if v and v.items and #v.items > 0 then
-			local t = v.items
-			local npcID
-			for i = 1, #t do
-				npcID = t[i].npcId
-				if type(npcID) == "table" then
-					for j = 1, #npcID do
-						ItemDB.NpcList[npcID[j]] = v.__atlaslootdata.addonName..":"..k..":"..i
-					end
-				elseif npcID then
-					ItemDB.NpcList[npcID] = v.__atlaslootdata.addonName..":"..k..":"..i
-				end
-			end
-		end
-		]=]--
+		AtlasLoot.Data.AutoSelect:AddInstanceTable(t.__atlaslootdata.addonName, k, v)
 		rawset(t, k, v)
 	end
 }

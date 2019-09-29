@@ -205,6 +205,7 @@ local DM_BOOKS = { -- DMBooks
 
 data["Ragefire"] = {
 	MapID = 2437,
+	InstanceID = 389,
 	AtlasMapID = "Ragefire",
 	AtlasMapFile = "RagefireChasm",
 	ContentType = DUNGEON_CONTENT,
@@ -238,6 +239,8 @@ data["Ragefire"] = {
 
 data["WailingCaverns"] = {
 	MapID = 718,
+	InstanceID = 43,
+	SubAreaIDs = { 15285, 15301, 15294, 15300, 15292, 17731 },
 	AtlasMapID = "WailingCaverns",
 	AtlasMapFile = {"WailingCaverns", "WailingCavernsEnt"},
 	ContentType = DUNGEON_CONTENT,
@@ -247,6 +250,7 @@ data["WailingCaverns"] = {
 		{ -- WCLordCobrahn
 			name = AL["Lord Cobrahn"],
 			npcID = 3669,
+			SubAreaID = 15300,
 			DisplayIDs = {{4213}},
 			AtlasMapBossID = 2,
 			[NORMAL_DIFF] = {
@@ -279,6 +283,7 @@ data["WailingCaverns"] = {
 		{ -- WCLordPythas
 			name = AL["Lord Pythas"],
 			npcID = 3670,
+			SubAreaID = 17731,
 			DisplayIDs = {{4214}},
 			AtlasMapBossID = 5,
 			[NORMAL_DIFF] = {
@@ -322,6 +327,7 @@ data["WailingCaverns"] = {
 		{ -- WCMutanus
 			name = AL["Mutanus the Devourer"],
 			npcID = 3654,
+			SubAreaID = 15294,
 			DisplayIDs = {{4088}},
 			AtlasMapBossID = 9,
 			[NORMAL_DIFF] = {
@@ -354,6 +360,8 @@ data["WailingCaverns"] = {
 
 data["TheDeadmines"] = {
 	MapID = 1581,
+	InstanceID = 36,
+	SubAreaIDs = { 19444, 19529, 19502, 26104 },
 	AtlasMapID = "TheDeadmines",
 	AtlasMapFile = {"TheDeadmines", "TheDeadminesEnt"},
 	ContentType = DUNGEON_CONTENT,
@@ -384,6 +392,7 @@ data["TheDeadmines"] = {
 		{	--DMSneed
 			name = AL["Sneed"],
 			npcID = 643,
+			SubAreaID = 19529,
 			DisplayIDs = {{7125}},
 			AtlasMapBossID = 3,
 			[NORMAL_DIFF] = {
@@ -404,6 +413,7 @@ data["TheDeadmines"] = {
 		{	--DMGilnid
 			name = AL["Gilnid"],
 			npcID = 1763,
+			SubAreaID = 19502,
 			DisplayIDs = {{7124}},
 			AtlasMapBossID = 4,
 			[NORMAL_DIFF] = {
@@ -421,6 +431,7 @@ data["TheDeadmines"] = {
 		{	--DMMrSmite
 			name = AL["Mr. Smite"],
 			npcID = 646,
+			SubAreaID = 26104,
 			DisplayIDs = {{2026}},
 			AtlasMapBossID = 6,
 			[NORMAL_DIFF] = {
@@ -478,6 +489,7 @@ data["TheDeadmines"] = {
 
 data["ShadowfangKeep"] = {
 	MapID = 209,
+	InstanceID = 33,
 	AtlasMapID = "ShadowfangKeep",
 	AtlasMapFile = "ShadowfangKeep",
 	ContentType = DUNGEON_CONTENT,
@@ -644,6 +656,7 @@ data["ShadowfangKeep"] = {
 
 data["BlackfathomDeeps"] = {
 	MapID = 719,
+	InstanceID = 48,
 	AtlasMapID = "BlackfathomDeeps",
 	AtlasMapFile = {"BlackfathomDeeps", "BlackfathomDeepsEnt"},
 	ContentType = DUNGEON_CONTENT,
@@ -745,6 +758,7 @@ data["BlackfathomDeeps"] = {
 
 data["TheStockade"] = {
 	MapID = 717,
+	InstanceID = 34,
 	AtlasMapID = "TheStockade",
 	AtlasMapFile = "TheStockade",
 	ContentType = DUNGEON_CONTENT,
@@ -784,6 +798,7 @@ data["TheStockade"] = {
 
 data["Gnomeregan"] = {
 	MapID = 721,
+	InstanceID = 90,
 	AtlasMapID = "Gnomeregan",
 	AtlasMapFile = {"Gnomeregan", "GnomereganEnt"},
 	ContentType = DUNGEON_CONTENT,
@@ -902,6 +917,7 @@ data["Gnomeregan"] = {
 
 data["RazorfenKraul"] = {
 	MapID = 491,
+	InstanceID = 47,
 	AtlasMapID = "RazorfenKraul",
 	AtlasMapFile = "RazorfenKraul",
 	ContentType = DUNGEON_CONTENT,
@@ -1013,6 +1029,8 @@ data["RazorfenKraul"] = {
 
 data["ScarletMonasteryGraveyard"] = {
 	MapID = 796,
+	InstanceID = 189,
+	SubAreaIDs = { 21379, 24000, 23805 },
 	name = C_Map.GetAreaInfo(796) .." - ".. AL["Graveyard"],
 	AtlasMapID = "ScarletMonastery",
 	AtlasMapFile = {"SMGraveyard", "SMEnt"},
@@ -1025,6 +1043,7 @@ data["ScarletMonasteryGraveyard"] = {
 			name = AL["Interrogator Vishas"],
 			npcID = 3983,
 			DisplayIDs = {{2044}},
+			SubAreaID = 21379,
 			AtlasMapBossID = 1,
 			[NORMAL_DIFF] = {
 				{ 1,  7682 }, -- Torturing Poker
@@ -1035,6 +1054,7 @@ data["ScarletMonasteryGraveyard"] = {
 			name = AL["Azshir the Sleepless"],
 			npcID = 6490,
 			DisplayIDs = {{5534}},
+			SubAreaID = 24000,
 			AtlasMapBossID = "1'",
 			specialType = "rare",
 			[NORMAL_DIFF] = {
@@ -1070,6 +1090,7 @@ data["ScarletMonasteryGraveyard"] = {
 		{ -- SMBloodmageThalnos
 			name = AL["Bloodmage Thalnos"],
 			npcID = 4543,
+			SubAreaID = 23805,
 			DisplayIDs = {{11396}},
 			AtlasMapBossID = 3,
 			[NORMAL_DIFF] = {
@@ -1103,6 +1124,8 @@ data["ScarletMonasteryGraveyard"] = {
 
 data["ScarletMonasteryLibrary"] = {
 	MapID = 796,
+	InstanceID = 189,
+	SubAreaIDs = { 21426, 21444, 21420 },
 	name = C_Map.GetAreaInfo(796) .." - ".. AL["Library"],
 	AtlasMapID = "ScarletMonastery",
 	AtlasMapFile = {"SMLibrary", "SMEnt"},
@@ -1114,6 +1137,7 @@ data["ScarletMonasteryLibrary"] = {
 		{ -- SMHoundmasterLoksey
 			name = AL["Houndmaster Loksey"],
 			npcID = 3974,
+			SubAreaID = 21444,
 			DisplayIDs = {{2040}},
 			AtlasMapBossID = 1,
 			[NORMAL_DIFF] = {
@@ -1125,6 +1149,7 @@ data["ScarletMonasteryLibrary"] = {
 		{ -- SMDoan
 			name = AL["Arcanist Doan"],
 			npcID = 6487,
+			SubAreaID = 21420,
 			DisplayIDs = {{5266}},
 			AtlasMapBossID = 2,
 			[NORMAL_DIFF] = {
@@ -1177,6 +1202,8 @@ data["ScarletMonasteryLibrary"] = {
 
 data["ScarletMonasteryArmory"] = {
 	MapID = 796,
+	InstanceID = 189,
+	SubAreaIDs = { 21460, 21455, 21448, 21457 },
 	name = C_Map.GetAreaInfo(796) .." - ".. AL["Armory"],
 	AtlasMapID = "ScarletMonastery",
 	AtlasMapFile = {"SMArmory", "SMEnt"},
@@ -1188,6 +1215,7 @@ data["ScarletMonasteryArmory"] = {
 		{ -- SMHerod
 			name = AL["Herod"],
 			npcID = 3975,
+			SubAreaID = 21448,
 			DisplayIDs = {{2041}},
 			AtlasMapBossID = 1,
 			[NORMAL_DIFF] = {
@@ -1233,6 +1261,8 @@ data["ScarletMonasteryArmory"] = {
 
 data["ScarletMonasteryCathedral"] = {
 	MapID = 796,
+	InstanceID = 189,
+	SubAreaIDs = { 21401, 21410 },
 	name = C_Map.GetAreaInfo(796) .." - ".. AL["Cathedral"],
 	AtlasMapID = "ScarletMonastery",
 	AtlasMapFile = {"SMCathedral", "SMEnt"},
@@ -1557,6 +1587,7 @@ data["ScarletMonastery"] = {
 
 data["RazorfenDowns"] = {
 	MapID = 722,
+	InstanceID = 129,
 	AtlasMapID = "RazorfenDowns",
 	AtlasMapFile = "RazorfenDowns",
 	ContentType = DUNGEON_CONTENT,
@@ -1673,6 +1704,7 @@ data["RazorfenDowns"] = {
 
 data["Uldaman"] = {
 	MapID = 1337, -- just no...
+	InstanceID = 70,
 	AtlasMapID = "Uldaman",
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
@@ -1840,6 +1872,7 @@ data["Uldaman"] = {
 
 data["Zul'Farrak"] = {
 	MapID = 1176,
+	InstanceID = 209,
 	AtlasMapID = "Zul'Farrak",
 	AtlasMapFile = "ZulFarrak",
 	ContentType = DUNGEON_CONTENT,
@@ -1995,6 +2028,7 @@ data["Zul'Farrak"] = {
 
 data["Maraudon"] = {
 	MapID = 2100,
+	InstanceID = 349,
 	AtlasMapID = "Maraudon",
 	AtlasMapFile = {"Maraudon", "MaraudonEnt"},
 	ContentType = DUNGEON_CONTENT,
@@ -2181,6 +2215,7 @@ data["Maraudon"] = {
 
 data["TheTempleOfAtal'Hakkar"] = {
 	MapID = 1477,
+	InstanceID = 109,
 	AtlasMapID = "TheTempleOfAtal'Hakkar",
 	AtlasMapFile = { "TheSunkenTemple", "TheSunkenTempleEnt" },
 	ContentType = DUNGEON_CONTENT,
@@ -2370,6 +2405,8 @@ data["TheTempleOfAtal'Hakkar"] = {
 
 data["BlackrockDepths"] = {
 	MapID = 1584,
+	InstanceID = 230,
+	SubAreaIDs = { 26758, 26761, 26747, 26733, 26755, 26740, 26751, 26759, 26735, 26769, 26768, 26766, 26781, 26765, 26764, 26742, 26750, 26745, 26784, 26749 },
 	AtlasMapID = "BlackrockDepths",
 	AtlasMapFile = {"BlackrockDepths", "BlackrockMountainEnt"},
 	ContentType = DUNGEON_CONTENT,
@@ -2379,6 +2416,7 @@ data["BlackrockDepths"] = {
 		{ -- BRDLordRoccor
 			name = AL["Lord Roccor"],
 			npcID = 9025,
+			SubAreaID = 26735,
 			DisplayIDs = {{5781}},
 			AtlasMapBossID = 1,
 			[NORMAL_DIFF] = {
@@ -2394,6 +2432,7 @@ data["BlackrockDepths"] = {
 		{ -- BRDHighInterrogatorGerstahn
 			name = AL["High Interrogator Gerstahn "],
 			npcID = 9018,
+			SubAreaID = 26733,
 			DisplayIDs = {{8761}},
 			AtlasMapBossID = 5,
 			[NORMAL_DIFF] = {
@@ -2408,6 +2447,7 @@ data["BlackrockDepths"] = {
 		{ -- BRDHoundmaster
 			name = AL["Houndmaster Grebmar"],
 			npcID = 9319,
+			SubAreaID = 26735,
 			DisplayIDs = {{9212}},
 			AtlasMapBossID = 6,
 			[NORMAL_DIFF] = {
@@ -2421,6 +2461,7 @@ data["BlackrockDepths"] = {
 		{ -- BRDGorosh
 			name = AL["Gorosh the Dervish"],
 			npcID = 9027,
+			SubAreaID = 26742,
 			DisplayIDs = {{8760}},
 			AtlasMapBossID = 6,
 			[NORMAL_DIFF] = {
@@ -2498,6 +2539,7 @@ data["BlackrockDepths"] = {
 		{ -- BRDPyromancerLoregrain
 			name = AL["Pyromancer Loregrain"],
 			npcID = 9024,
+			SubAreaID = 26745,
 			DisplayIDs = {{8762}},
 			AtlasMapBossID = 7,
 			specialType = "rare",
@@ -2511,6 +2553,7 @@ data["BlackrockDepths"] = {
 		},
 		{ -- BRDTheVault
 			name = AL["Dark Coffer"],
+			SubAreaID = 26758,
 			npcID = {9438, 9442, 9443, 9439, 9437, 9441},
 			DisplayIDs = {{8592},{8595},{8596},{8593},{8591},{8594}},
 			AtlasMapBossID = 8,
@@ -2535,6 +2578,7 @@ data["BlackrockDepths"] = {
 		{ -- BRDWarderStilgiss
 			name = AL["Warder Stilgiss"],
 			npcID = 9041,
+			SubAreaID = 26758,
 			DisplayIDs = {{9089}},
 			AtlasMapBossID = 8,
 			[NORMAL_DIFF] = {
@@ -2547,6 +2591,7 @@ data["BlackrockDepths"] = {
 		{ -- BRDVerek
 			name = AL["Verek"],
 			npcID = 9042,
+			SubAreaID = 26758,
 			DisplayIDs = {{9019}},
 			AtlasMapBossID = 8,
 			[NORMAL_DIFF] = {
@@ -2557,6 +2602,7 @@ data["BlackrockDepths"] = {
 		{ -- BRDWatchmanDoomgrip
 			name = AL["Watchman Doomgrip"],
 			npcID = 9476,
+			SubAreaID = 26758,
 			DisplayIDs = {{8655}},
 			AtlasMapBossID = 8,
 			[NORMAL_DIFF] = {
@@ -2569,6 +2615,7 @@ data["BlackrockDepths"] = {
 		{ -- BRDFineousDarkvire
 			name = AL["Fineous Darkvire"],
 			npcID = 9056,
+			SubAreaID = 26759,
 			DisplayIDs = {{8704}},
 			AtlasMapBossID = 9,
 			[NORMAL_DIFF] = {
@@ -2582,6 +2629,7 @@ data["BlackrockDepths"] = {
 		{ -- BRDLordIncendius
 			name = AL["Lord Incendius"],
 			npcID = 9017,
+			SubAreaID = 26750,
 			DisplayIDs = {{1204}},
 			AtlasMapBossID = 10,
 			[NORMAL_DIFF] = {
@@ -2596,6 +2644,7 @@ data["BlackrockDepths"] = {
 		{ -- BRDBaelGar
 			name = AL["Bael'Gar"],
 			npcID = 9016,
+			SubAreaID = 26747,
 			DisplayIDs = {{12162}},
 			AtlasMapBossID = 11,
 			[NORMAL_DIFF] = {
@@ -2608,6 +2657,7 @@ data["BlackrockDepths"] = {
 		{ -- BRDGeneralAngerforge
 			name = AL["General Angerforge"],
 			npcID = 9033,
+			SubAreaID = 26749,
 			DisplayIDs = {{8756}},
 			AtlasMapBossID = 13,
 			[NORMAL_DIFF] = {
@@ -2622,6 +2672,7 @@ data["BlackrockDepths"] = {
 		{ -- BRDGolemLordArgelmach
 			name = AL["Golem Lord Argelmach"],
 			npcID = 8983,
+			SubAreaID = 26781,
 			DisplayIDs = {{8759}},
 			AtlasMapBossID = 14,
 			[NORMAL_DIFF] = {
@@ -2633,6 +2684,7 @@ data["BlackrockDepths"] = {
 		},
 		{ -- BRDGuzzler
 			name = AL["Guzzler"],
+			SubAreaID = 26751,
 			npcID = {9537, 9502, 12944, 9543, 9499},
 			DisplayIDs = {{8658},{8177},{14666},{8667},{8652}},
 			AtlasMapBossID = 15,
@@ -2667,6 +2719,7 @@ data["BlackrockDepths"] = {
 		{ -- BRDFlamelash
 			name = AL["Ambassador Flamelash"],
 			npcID = 9156,
+			SubAreaID = 26761,
 			DisplayIDs = {{8329}},
 			AtlasMapBossID = 16,
 			[NORMAL_DIFF] = {
@@ -2681,6 +2734,7 @@ data["BlackrockDepths"] = {
 		{ -- BRDPanzor
 			name = AL["Panzor the Invincible"],
 			npcID = 8923,
+			SubAreaID = 26764,
 			DisplayIDs = {{8270}},
 			AtlasMapBossID = 17,
 			[NORMAL_DIFF] = {
@@ -2692,6 +2746,7 @@ data["BlackrockDepths"] = {
 		},
 		{ -- BRDTomb
 			name = AL["Chest of The Seven"],
+			SubAreaID = 26784,
 			npcID = {9034, 9035, 9036, 9037, 9038, 9039, 9040},
 			DisplayIDs = {{8690},{8686},{8692},{8689},{8691},{8687},{8688}},
 			AtlasMapBossID = 18,
@@ -2709,6 +2764,7 @@ data["BlackrockDepths"] = {
 		{ -- BRDMagmus
 			name = AL["Magmus"],
 			npcID = 9938,
+			SubAreaID = 26768,
 			DisplayIDs = {{12162}},
 			AtlasMapBossID = 20,
 			[NORMAL_DIFF] = {
@@ -2722,6 +2778,7 @@ data["BlackrockDepths"] = {
 		{ -- BRDPrincess
 			name = AL["Princess Moira Bronzebeard "],
 			npcID = 8929,
+			SubAreaID = 26769,
 			DisplayIDs = {{8705}},
 			AtlasMapBossID = 21,
 			[NORMAL_DIFF] = {
@@ -2734,6 +2791,7 @@ data["BlackrockDepths"] = {
 		{ -- BRDEmperorDagranThaurissan
 			name = AL["Emperor Dagran Thaurissan"],
 			npcID = 9019,
+			SubAreaID = 26769,
 			DisplayIDs = {{8807}},
 			AtlasMapBossID = 21,
 			[NORMAL_DIFF] = {
@@ -2808,6 +2866,8 @@ data["BlackrockDepths"] = {
 data["LowerBlackrockSpire"] = {
 	name = AL["Lower "] .. C_Map.GetAreaInfo(1583),
 	MapID = 1583,
+	InstanceID = 229,
+	SubAreaIDs = { 26683, 26718, 26711, 26713, 26686, 32528, 26688 },
 	AtlasMapID = "LowerBlackrockSpire",
 	AtlasMapFile = {"BlackrockSpireLower", "BlackrockMountainEnt"},
 	ContentType = DUNGEON_CONTENT,
@@ -2838,6 +2898,7 @@ data["LowerBlackrockSpire"] = {
 		{ -- LBRSOmokk
 			name = AL["Highlord Omokk"],
 			npcID = 9196,
+			SubAreaID = 26713,
 			DisplayIDs = {{11565}},
 			AtlasMapBossID = 5,
 			[NORMAL_DIFF] = {
@@ -2876,6 +2937,7 @@ data["LowerBlackrockSpire"] = {
 		{ -- LBRSVosh
 			name = AL["Shadow Hunter Vosh'gajin"],
 			npcID = 9236,
+			SubAreaID = 26688,
 			DisplayIDs = {{9732}},
 			AtlasMapBossID = 7,
 			[NORMAL_DIFF] = {
@@ -2891,6 +2953,7 @@ data["LowerBlackrockSpire"] = {
 		{ -- LBRSVoone
 			name = AL["War Master Voone"],
 			npcID = 9237,
+			SubAreaID = 26688,
 			DisplayIDs = {{9733}},
 			AtlasMapBossID = 9,
 			[NORMAL_DIFF] = {
@@ -2921,6 +2984,7 @@ data["LowerBlackrockSpire"] = {
 		{ -- LBRSSmolderweb
 			name = AL["Mother Smolderweb"],
 			npcID = 10596,
+			SubAreaID = 26686,
 			DisplayIDs = {{9929}},
 			AtlasMapBossID = 13,
 			[NORMAL_DIFF] = {
@@ -2933,6 +2997,7 @@ data["LowerBlackrockSpire"] = {
 		{ -- LBRSCrystalFang
 			name = AL["Crystal Fang"],
 			npcID = 10376,
+			SubAreaID = 26686,
 			DisplayIDs = {{9755}},
 			AtlasMapBossID = 14,
 			specialType = "rare",
@@ -2959,6 +3024,7 @@ data["LowerBlackrockSpire"] = {
 		{ -- LBRSZigris
 			name = AL["Quartermaster Zigris"],
 			npcID = 9736,
+			SubAreaID = 32528,
 			DisplayIDs = {{9738}},
 			AtlasMapBossID = 16,
 			[NORMAL_DIFF] = {
@@ -2972,6 +3038,7 @@ data["LowerBlackrockSpire"] = {
 		{ -- LBRSHalycon
 			name = AL["Halycon"],
 			npcID = 10220,
+			SubAreaID = 26711,
 			DisplayIDs = {{9567}},
 			AtlasMapBossID = 17,
 			[NORMAL_DIFF] = {
@@ -2984,6 +3051,7 @@ data["LowerBlackrockSpire"] = {
 		{ -- LBRSSlavener
 			name = AL["Gizrul the Slavener"],
 			npcID = 10268,
+			SubAreaID = 26711,
 			DisplayIDs = {{9564}},
 			AtlasMapBossID = 17,
 			[NORMAL_DIFF] = {
@@ -3008,6 +3076,7 @@ data["LowerBlackrockSpire"] = {
 		{ -- LBRSWyrmthalak
 			name = AL["Overlord Wyrmthalak"],
 			npcID = 9568,
+			SubAreaID = 26718,
 			DisplayIDs = {{8711}},
 			AtlasMapBossID = 19,
 			[NORMAL_DIFF] = {
@@ -3071,6 +3140,8 @@ data["LowerBlackrockSpire"] = {
 data["UpperBlackrockSpire"] = {
 	name = AL["Upper "] .. C_Map.GetAreaInfo(1583),
 	MapID = 1583,
+	InstanceID = 229,
+	SubAreaIDs = { 26670, 26668, 26684, 26662, 26642, 26683, 15492, 26666, 26715 },
 	AtlasMapID = "UpperBlackrockSpire",
 	AtlasMapFile = {"BlackrockSpireUpper", "BlackrockMountainEnt"},
 	ContentType = DUNGEON_CONTENT,
@@ -3080,6 +3151,7 @@ data["UpperBlackrockSpire"] = {
 		{ -- UBRSEmberseer
 			name = AL["Pyroguard Emberseer"],
 			npcID = 9816,
+			SubAreaID = 26662,
 			DisplayIDs = {{2172}},
 			AtlasMapBossID = 1,
 			[NORMAL_DIFF] = {
@@ -3094,6 +3166,7 @@ data["UpperBlackrockSpire"] = {
 		{ -- UBRSSolakar
 			name = AL["Solakar Flamewreath"],
 			npcID = 10264,
+			SubAreaID = 26666,
 			DisplayIDs = {{9581}},
 			AtlasMapBossID = 2,
 			[NORMAL_DIFF] = {
@@ -3108,6 +3181,7 @@ data["UpperBlackrockSpire"] = {
 		{ -- UBRSRunewatcher
 			name = AL["Jed Runewatcher"],
 			npcID = 10509,
+			SubAreaID = 26642,
 			DisplayIDs = {{9686}},
 			AtlasMapBossID = 4,
 			specialType = "rare",
@@ -3120,6 +3194,7 @@ data["UpperBlackrockSpire"] = {
 		{ -- UBRSAnvilcrack
 			name = AL["Goraluk Anvilcrack "],
 			npcID = 10899,
+			SubAreaID = 26642,
 			DisplayIDs = {{10222}},
 			AtlasMapBossID = 5,
 			[NORMAL_DIFF] = {
@@ -3138,6 +3213,7 @@ data["UpperBlackrockSpire"] = {
 		{ -- UBRSGyth
 			name = AL["Gyth"],
 			npcID = 10339,
+			SubAreaID = 26670,
 			DisplayIDs = {{9806}},
 			AtlasMapBossID = 6,
 			[NORMAL_DIFF] = {
@@ -3153,6 +3229,7 @@ data["UpperBlackrockSpire"] = {
 		{ -- UBRSRend
 			name = AL["Warchief Rend Blackhand"],
 			npcID = 10429,
+			SubAreaID = 26670,
 			DisplayIDs = {{9778}},
 			AtlasMapBossID = 6,
 			[NORMAL_DIFF] = {
@@ -3174,6 +3251,7 @@ data["UpperBlackrockSpire"] = {
 		{ -- UBRSBeast
 			name = AL["The Beast"],
 			npcID = 10430,
+			SubAreaID = 26684,
 			DisplayIDs = {{10193}},
 			AtlasMapBossID = 8,
 			[NORMAL_DIFF] = {
@@ -3195,6 +3273,7 @@ data["UpperBlackrockSpire"] = {
 		{ -- UBRSDrakkisath
 			name = AL["General Drakkisath"],
 			npcID = 10363,
+			SubAreaID = 26715,
 			DisplayIDs = {{10115}},
 			AtlasMapBossID = 9,
 			[NORMAL_DIFF] = {
@@ -3270,6 +3349,8 @@ data["UpperBlackrockSpire"] = {
 data["DireMaulEast"] = {
 	name = C_Map.GetAreaInfo(2557) .." ".. AL["East"],
 	MapID = 2557,
+	InstanceID = 429,
+	SubAreaIDs = { 34776, 33730 },
 	AtlasMapID = "DireMaul",
 	AtlasMapFile = {"DireMaulEast", "DireMaulEnt"},
 	ContentType = DUNGEON_CONTENT,
@@ -3383,6 +3464,8 @@ data["DireMaulEast"] = {
 data["DireMaulWest"] = {
 	name = C_Map.GetAreaInfo(2557) .." ".. AL["West"],
 	MapID = 2557,
+	InstanceID = 429,
+	SubAreaIDs = { 33748, 33749, 33750 },
 	AtlasMapID = "DireMaul",
 	AtlasMapFile = {"DireMaulWest", "DireMaulEnt"},
 	ContentType = DUNGEON_CONTENT,
@@ -3521,6 +3604,8 @@ data["DireMaulWest"] = {
 data["DireMaulNorth"] = {
 	name = C_Map.GetAreaInfo(2557) .." ".. AL["North"],
 	MapID = 2557,
+	InstanceID = 429,
+	SubAreaIDs = { 33774, 33775 },
 	AtlasMapID = "DireMaulNorth",
 	AtlasMapFile = {"DireMaulNorth", "DireMaulEnt"},
 	ContentType = DUNGEON_CONTENT,
@@ -3714,6 +3799,8 @@ data["DireMaulNorth"] = {
 
 data["Scholomance"] = {
 	MapID = 2057,
+	InstanceID = 289,
+	SubAreaIDs = { 32549, 32574, 32567, 32577, 32566, 32565, 32581, 32579, 32573, 32568, 32576, 32569 },
 	AtlasMapID = "Scholomance",
 	AtlasMapFile = "Scholomance",
 	ContentType = DUNGEON_CONTENT,
@@ -3723,6 +3810,7 @@ data["Scholomance"] = {
 		{ -- SCHOLOBlood
 			name = AL["Blood Steward of Kirtonos"],
 			npcID = 14861,
+			SubAreaID = 32573,
 			DisplayIDs = {{10925}},
 			AtlasMapBossID = 1,
 			[NORMAL_DIFF] = {
@@ -3732,6 +3820,7 @@ data["Scholomance"] = {
 		{ -- SCHOLOKirtonostheHerald
 			name = AL["Kirtonos the Herald"],
 			npcID = 10506,
+			SubAreaID = 32574,
 			DisplayIDs = {{7534}},
 			AtlasMapBossID = 2,
 			[NORMAL_DIFF] = {
@@ -3766,6 +3855,7 @@ data["Scholomance"] = {
 		{ -- SCHOLORattlegore
 			name = AL["Rattlegore"],
 			npcID = 11622,
+			SubAreaID = 32577,
 			DisplayIDs = {{12073}},
 			AtlasMapBossID = 5,
 			[NORMAL_DIFF] = {
@@ -3783,6 +3873,7 @@ data["Scholomance"] = {
 		{ -- SCHOLODeathKnight
 			name = AL["Death Knight Darkreaver"],
 			npcID = 14516,
+			SubAreaID = 32577,
 			DisplayIDs = {{14591}},
 			AtlasMapBossID = 5,
 			[NORMAL_DIFF] = {
@@ -3795,6 +3886,7 @@ data["Scholomance"] = {
 		{ -- SCHOLOMarduk
 			name = AL["Marduk Blackpool"],
 			npcID = 10433,
+			SubAreaID = 32576,
 			DisplayIDs = {{10248}},
 			AtlasMapBossID = 6,
 			[NORMAL_DIFF] = {
@@ -3805,6 +3897,7 @@ data["Scholomance"] = {
 		{ -- SCHOLOVectus
 			name = AL["Vectus"],
 			npcID = 10432,
+			SubAreaID = 32576,
 			DisplayIDs = {{2606}},
 			AtlasMapBossID = 6,
 			[NORMAL_DIFF] = {
@@ -3815,6 +3908,7 @@ data["Scholomance"] = {
 		{ -- SCHOLORasFrostwhisper
 			name = AL["Ras Frostwhisper"],
 			npcID = 10508,
+			SubAreaID = 32579,
 			DisplayIDs = {{7919}},
 			AtlasMapBossID = 7,
 			[NORMAL_DIFF] = {
@@ -3837,6 +3931,7 @@ data["Scholomance"] = {
 		{ -- SCHOLOInstructorMalicia
 			name = AL["Instructor Malicia"],
 			npcID = 10505,
+			SubAreaID = 32567,
 			DisplayIDs = {{11069}},
 			AtlasMapBossID = 8,
 			[NORMAL_DIFF] = {
@@ -3873,6 +3968,7 @@ data["Scholomance"] = {
 		{ -- SCHOLODoctorTheolenKrastinov
 			name = AL["Doctor Theolen Krastinov"],
 			npcID = 11261,
+			SubAreaID = 32565,
 			DisplayIDs = {{10901}},
 			AtlasMapBossID = 9,
 			[NORMAL_DIFF] = {
@@ -3910,6 +4006,7 @@ data["Scholomance"] = {
 		{ -- SCHOLOLorekeeperPolkelt
 			name = AL["Lorekeeper Polkelt"],
 			npcID = 10901,
+			SubAreaID = 32566,
 			DisplayIDs = {{11492}},
 			AtlasMapBossID = 10,
 			[NORMAL_DIFF] = {
@@ -3946,6 +4043,7 @@ data["Scholomance"] = {
 		{ -- SCHOLOTheRavenian
 			name = AL["The Ravenian"],
 			npcID = 10507,
+			SubAreaID = 32569,
 			DisplayIDs = {{10433}},
 			AtlasMapBossID = 11,
 			[NORMAL_DIFF] = {
@@ -3982,6 +4080,7 @@ data["Scholomance"] = {
 		{ -- SCHOLOLordAlexeiBarov
 			name = AL["Lord Alexei Barov"],
 			npcID = 10504,
+			SubAreaID = 32549,
 			DisplayIDs = {{11072}},
 			AtlasMapBossID = 12,
 			[NORMAL_DIFF] = {
@@ -4018,6 +4117,7 @@ data["Scholomance"] = {
 		{ -- SCHOLOLadyIlluciaBarov
 			name = AL["Lady Illucia Barov"],
 			npcID = 10502,
+			SubAreaID = 32568,
 			DisplayIDs = {{11835}},
 			AtlasMapBossID = 13,
 			[NORMAL_DIFF] = {
@@ -4053,6 +4153,7 @@ data["Scholomance"] = {
 		{ -- SCHOLODarkmasterGandling
 			name = AL["Darkmaster Gandling"],
 			npcID = 1853,
+			SubAreaID = 32581,
 			DisplayIDs = {{11070}},
 			AtlasMapBossID = 14,
 			[NORMAL_DIFF] = {
@@ -4130,6 +4231,15 @@ data["Scholomance"] = {
 
 data["Stratholme"] = {
 	MapID = 2017,
+	InstanceID = 329,
+	SubAreaIDs = {
+		-- Living
+		32319, 32320, 32367, 32331, 32357, 32281, 32285, 32277,
+		-- Undead
+		32342, 32322, 32303, 32301, 32352,
+			-- Ziggurats
+			32344, 32345, 32349,
+	},
 	AtlasMapID = "Stratholme",
 	AtlasMapFile = "Stratholme",
 	ContentType = DUNGEON_CONTENT,
@@ -4162,21 +4272,10 @@ data["Stratholme"] = {
 				{ 6,  13302 }, -- Market Row Postbox Key
 			},
 		},
-		{ -- STRATBalzaphon
-			name = AL["Balzaphon"],
-			npcID = 14684,
-			DisplayIDs = {{7919}},
-			AtlasMapBossID = 2,
-			ContentPhase = 6,
-			[NORMAL_DIFF] = {
-				{ 1,  23125 }, -- Chains of the Lich
-				{ 2,  23126 }, -- Waistband of Balzaphon
-				{ 3,  23124 }, -- Staff of Balzaphon
-			},
-		},
 		{ -- STRATHearthsingerForresten
 			name = AL["Hearthsinger Forresten"],
 			npcID = 10558,
+			SubAreaID = 32277,
 			DisplayIDs = {{10482}},
 			AtlasMapBossID = 3,
 			specialType = "rare",
@@ -4191,6 +4290,7 @@ data["Stratholme"] = {
 		{ -- STRATTheUnforgiven
 			name = AL["The Unforgiven"],
 			npcID = 10516,
+			SubAreaID = 32281,
 			DisplayIDs = {{10771}},
 			AtlasMapBossID = 4,
 			[NORMAL_DIFF] = {
@@ -4204,6 +4304,7 @@ data["Stratholme"] = {
 		{ -- STRATTimmytheCruel
 			name = AL["Timmy the Cruel"],
 			npcID = 10808,
+			SubAreaID = 32319,
 			DisplayIDs = {{571}},
 			AtlasMapBossID = 6,
 			[NORMAL_DIFF] = {
@@ -4216,6 +4317,7 @@ data["Stratholme"] = {
 		{ -- STRATMalorsStrongbox
 			name = AL["Malor the Zealous"],
 			npcID = 11032,
+			SubAreaID = 32319,
 			DisplayIDs = {{10458}},
 			AtlasMapBossID = 7,
 			[NORMAL_DIFF] = {
@@ -4226,6 +4328,7 @@ data["Stratholme"] = {
 		{ -- STRATCrimsonHammersmith
 			name = AL["Crimson Hammersmith"],
 			npcID = 11120,
+			SubAreaID = 32357,
 			DisplayIDs = {{10637}},
 			AtlasMapBossID = 8,
 			[NORMAL_DIFF] = {
@@ -4236,6 +4339,7 @@ data["Stratholme"] = {
 		{ -- STRATCannonMasterWilley
 			name = AL["Cannon Master Willey"],
 			npcID = 10997,
+			SubAreaID = 32357,
 			DisplayIDs = {{10674}},
 			AtlasMapBossID = 9,
 			[NORMAL_DIFF] = {
@@ -4256,6 +4360,7 @@ data["Stratholme"] = {
 		{ -- STRATArchivistGalford
 			name = AL["Archivist Galford"],
 			npcID = 10811,
+			SubAreaID = 32331,
 			DisplayIDs = {{10544}},
 			AtlasMapBossID = 10,
 			[NORMAL_DIFF] = {
@@ -4271,6 +4376,7 @@ data["Stratholme"] = {
 		{ -- STRATBalnazzar
 			name = AL["Balnazzar"],
 			npcID = 10813,
+			SubAreaID = 32367,
 			DisplayIDs = {{10691}},
 			AtlasMapBossID = 11,
 			[NORMAL_DIFF] = {
@@ -4293,6 +4399,7 @@ data["Stratholme"] = {
 		{ -- STRATMagistrateBarthilas
 			name = AL["Magistrate Barthilas"],
 			npcID = 10435,
+			SubAreaID = 32342,
 			DisplayIDs = {{10433}},
 			AtlasMapBossID = 12,
 			[NORMAL_DIFF] = {
@@ -4308,6 +4415,7 @@ data["Stratholme"] = {
 		{ -- STRATStonespine
 			name = AL["Stonespine"],
 			npcID = 10809,
+			SubAreaID = 32303,
 			DisplayIDs = {{7856}},
 			AtlasMapBossID = 14,
 			[NORMAL_DIFF] = {
@@ -4319,6 +4427,7 @@ data["Stratholme"] = {
 		{ -- STRATBaronessAnastari
 			name = AL["Baroness Anastari"],
 			npcID = 10436,
+			SubAreaID = 32344,
 			DisplayIDs = {{10698}},
 			AtlasMapBossID = 15,
 			[NORMAL_DIFF] = {
@@ -4337,6 +4446,7 @@ data["Stratholme"] = {
 		{ -- STRATBlackGuardSwordsmith
 			name = AL["Black Guard Swordsmith"],
 			npcID = 11121,
+			SubAreaID = 32345,
 			DisplayIDs = {{775}},
 			AtlasMapBossID = 15,
 			[NORMAL_DIFF] = {
@@ -4350,6 +4460,7 @@ data["Stratholme"] = {
 		{ -- STRATNerubenkan
 			name = AL["Nerub'enkan"],
 			npcID = 10437,
+			SubAreaID = 32345,
 			DisplayIDs = {{9793}},
 			AtlasMapBossID = 16,
 			[NORMAL_DIFF] = {
@@ -4368,6 +4479,7 @@ data["Stratholme"] = {
 		{ -- STRATMalekithePallid
 			name = AL["Maleki the Pallid"],
 			npcID = 10438,
+			SubAreaID = 32349,
 			DisplayIDs = {{10546}},
 			AtlasMapBossID = 17,
 			[NORMAL_DIFF] = {
@@ -4387,6 +4499,7 @@ data["Stratholme"] = {
 		{ -- STRATRamsteintheGorger
 			name = AL["Ramstein the Gorger"],
 			npcID = 10439,
+			SubAreaID = 32301,
 			DisplayIDs = {{12818}},
 			AtlasMapBossID = 18,
 			[NORMAL_DIFF] = {
@@ -4402,6 +4515,7 @@ data["Stratholme"] = {
 		{ -- STRATBaronRivendare
 			name = AL["Baron Rivendare"],
 			npcID = 10440,
+			SubAreaID = 32352,
 			DisplayIDs = {{10729}},
 			AtlasMapBossID = 19,
 			[NORMAL_DIFF] = {
@@ -4497,6 +4611,19 @@ data["Stratholme"] = {
 				{ 1,  22736 }, -- Andonisus, Reaper of Souls
 			},
 		},
+		{ -- STRATBalzaphon
+			name = AL["Balzaphon"],
+			ExtraList = true,
+			npcID = 14684,
+			DisplayIDs = {{7919}},
+			AtlasMapBossID = 2,
+			ContentPhase = 6,
+			[NORMAL_DIFF] = {
+				{ 1,  23125 }, -- Chains of the Lich
+				{ 2,  23126 }, -- Waistband of Balzaphon
+				{ 3,  23124 }, -- Staff of Balzaphon
+			},
+		},
 		{ -- STRATSothosJarien
 			name = AL["Sothos and Jarien's Heirlooms"].." - "..format(AL["Tier %s Sets"], "0.5"),
 			ExtraList = true,
@@ -4520,6 +4647,7 @@ data["Stratholme"] = {
 -- ########################
 data["MoltenCore"] = {
 	MapID = 2717,
+	InstanceID = 409,
 	AtlasMapID = "MoltenCore",
 	AtlasMapFile = "MoltenCore",
 	ContentType = RAID40_CONTENT,
@@ -4856,6 +4984,7 @@ data["MoltenCore"] = {
 
 data["Onyxia"] = {
 	MapID = 2159,
+	InstanceID = 249,
 	AtlasMapID = "Onyxia",
 	AtlasMapFile = "OnyxiasLair",
 	ContentType = RAID40_CONTENT,
@@ -4895,6 +5024,7 @@ data["Onyxia"] = {
 
 data["Zul'Gurub"] = {
 	MapID = 1977,
+	InstanceID = 309,
 	AtlasMapID = "Zul'Gurub", -- ??
 	AtlasMapFile = "ZulGurub",
 	ContentType = RAID20_CONTENT,
@@ -5269,6 +5399,7 @@ data["Zul'Gurub"] = {
 
 data["BlackwingLair"] = {
 	MapID = 2677,
+	InstanceID = 469,
 	AtlasMapID = "BlackwingLair",
 	AtlasMapFile = "BlackwingLair",
 	ContentType = RAID40_CONTENT,
@@ -5518,6 +5649,7 @@ data["BlackwingLair"] = {
 
 data["TheRuinsofAhnQiraj"] = { -- AQ20
 	MapID = 3429,
+	InstanceID = 509,
 	AtlasMapID = "TheRuinsofAhnQiraj",
 	AtlasMapFile = "TheRuinsofAhnQiraj",
 	ContentType = RAID20_CONTENT,
@@ -5727,6 +5859,7 @@ data["TheRuinsofAhnQiraj"] = { -- AQ20
 
 data["TheTempleofAhnQiraj"] = { -- AQ40
 	MapID = 3428,
+	InstanceID = 531,
 	AtlasMapID = "TheTempleofAhnQiraj",
 	AtlasMapFile = "TheTempleofAhnQiraj",
 	ContentType = RAID40_CONTENT,
@@ -6012,6 +6145,7 @@ local PURP = "|cff9900ff"
 local WHIT = "|cffffffff"
 data["Naxxramas"] = {
 	MapID = 3456,
+	InstanceID = 533,
 	AtlasMapID = "Naxxramas",
 	AtlasMapFile = "Naxxramas",
 	ContentType = RAID40_CONTENT,
