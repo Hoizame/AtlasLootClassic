@@ -3141,7 +3141,7 @@ data["UpperBlackrockSpire"] = {
 	name = AL["Upper "] .. C_Map.GetAreaInfo(1583),
 	MapID = 1583,
 	InstanceID = 229,
-	SubAreaIDs = {  },
+	SubAreaIDs = { 26670, 26668, 26684, 26662, 26642, 26683, 15492, 26666, 26715 },
 	AtlasMapID = "UpperBlackrockSpire",
 	AtlasMapFile = {"BlackrockSpireUpper", "BlackrockMountainEnt"},
 	ContentType = DUNGEON_CONTENT,
@@ -3151,6 +3151,7 @@ data["UpperBlackrockSpire"] = {
 		{ -- UBRSEmberseer
 			name = AL["Pyroguard Emberseer"],
 			npcID = 9816,
+			SubAreaID = 26662,
 			DisplayIDs = {{2172}},
 			AtlasMapBossID = 1,
 			[NORMAL_DIFF] = {
@@ -3165,6 +3166,7 @@ data["UpperBlackrockSpire"] = {
 		{ -- UBRSSolakar
 			name = AL["Solakar Flamewreath"],
 			npcID = 10264,
+			SubAreaID = 26666,
 			DisplayIDs = {{9581}},
 			AtlasMapBossID = 2,
 			[NORMAL_DIFF] = {
@@ -3179,6 +3181,7 @@ data["UpperBlackrockSpire"] = {
 		{ -- UBRSRunewatcher
 			name = AL["Jed Runewatcher"],
 			npcID = 10509,
+			SubAreaID = 26642,
 			DisplayIDs = {{9686}},
 			AtlasMapBossID = 4,
 			specialType = "rare",
@@ -3191,6 +3194,7 @@ data["UpperBlackrockSpire"] = {
 		{ -- UBRSAnvilcrack
 			name = AL["Goraluk Anvilcrack "],
 			npcID = 10899,
+			SubAreaID = 26642,
 			DisplayIDs = {{10222}},
 			AtlasMapBossID = 5,
 			[NORMAL_DIFF] = {
@@ -3209,6 +3213,7 @@ data["UpperBlackrockSpire"] = {
 		{ -- UBRSGyth
 			name = AL["Gyth"],
 			npcID = 10339,
+			SubAreaID = 26670,
 			DisplayIDs = {{9806}},
 			AtlasMapBossID = 6,
 			[NORMAL_DIFF] = {
@@ -3224,6 +3229,7 @@ data["UpperBlackrockSpire"] = {
 		{ -- UBRSRend
 			name = AL["Warchief Rend Blackhand"],
 			npcID = 10429,
+			SubAreaID = 26670,
 			DisplayIDs = {{9778}},
 			AtlasMapBossID = 6,
 			[NORMAL_DIFF] = {
@@ -3245,6 +3251,7 @@ data["UpperBlackrockSpire"] = {
 		{ -- UBRSBeast
 			name = AL["The Beast"],
 			npcID = 10430,
+			SubAreaID = 26684,
 			DisplayIDs = {{10193}},
 			AtlasMapBossID = 8,
 			[NORMAL_DIFF] = {
@@ -3266,6 +3273,7 @@ data["UpperBlackrockSpire"] = {
 		{ -- UBRSDrakkisath
 			name = AL["General Drakkisath"],
 			npcID = 10363,
+			SubAreaID = 26715,
 			DisplayIDs = {{10115}},
 			AtlasMapBossID = 9,
 			[NORMAL_DIFF] = {
