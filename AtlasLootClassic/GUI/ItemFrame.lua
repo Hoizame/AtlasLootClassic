@@ -153,7 +153,6 @@ function ItemFrame:Refresh(skipProtect)
 	ItemFrame.nextPage = nil
 	local page = AtlasLoot.db.GUI.selected[5] * 100 -- Page number for first items on a page are <1, 101, 201, 301, 401, ...>
 	local items, tableType, diffData = ItemDB:GetItemTable(AtlasLoot.db.GUI.selected[1], AtlasLoot.db.GUI.selected[2], AtlasLoot.db.GUI.selected[3], AtlasLoot.db.GUI.selected[4])
-
 	if items then
 
 		ItemFrame.LinkedInfo = items.__linkedInfo
@@ -186,6 +185,7 @@ function ItemFrame:Refresh(skipProtect)
 			fixItemNum = item[1] - page
 			if ItemFrame.frame.ItemButtons[fixItemNum] then
 				ItemFrame.frame.ItemButtons[fixItemNum]:SetDifficultyID(diffData.difficultyID)
+				ItemFrame.frame.ItemButtons[fixItemNum]:SetNpcID(ItemFrame.npcID)
 				ItemFrame.frame.ItemButtons[fixItemNum]:SetPreSet(diffData.preset)
 				ItemFrame.frame.ItemButtons[fixItemNum]:SetContentTable(item, tableType)
 				setn = true

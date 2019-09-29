@@ -41,3 +41,4 @@
 Locales\Locales.xml
 
 data.lua
+droprate.lua

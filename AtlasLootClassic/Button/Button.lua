@@ -690,6 +690,10 @@ function Proto:SetDifficultyID(diffID)
 	self.__atlaslootinfo.difficulty = diffID
 end
 
+function Proto:SetNpcID(npcID)
+	self.__atlaslootinfo.npcID = npcID
+end
+
 function Proto:GetTypeFunctions()
 	return self.__atlaslootinfo.type and button_types[self.__atlaslootinfo.type[1]] or nil
 end

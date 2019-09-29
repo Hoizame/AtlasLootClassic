@@ -24,6 +24,7 @@ ignore:
  - cf_translations.sh
  - AtlasLootClassic/Images/PSD
  - AtlasLootClassic/Addons/tmpl.lua
+ - AtlasLootClassic_DungeonsAndRaids/droprate_override.lua
  - README.md
 
 move-folders:

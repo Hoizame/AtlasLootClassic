@@ -5,6 +5,8 @@ AtlasLoot.AtlasLootDBDefaults = {
 		showMinEnterLvl = false,
 		enableWoWHeadIntegration = true,
 		useEnglishWoWHead = false,
+		enableAutoSelect = true,
+		enableAutoSelectBoss = true,
 		ContentPhase = {
 			enableOnLootTable = true,
 			enableOnItems = true,
@@ -24,7 +26,6 @@ AtlasLoot.AtlasLootDBDefaults = {
 			classFilter = false,
 			autoselect = true,
 			ExpansionIcon = true,
-
 			mainFrame = {
 				bgColor = {r = 0.45, g = 0.45, b = 0.45, a = 1},
 				scale = 1,
