@@ -205,7 +205,8 @@ function Item.OnEnter(button, owner)
 	if button.ItemString then
 		tooltip:SetHyperlink(button.ItemString)
 	else
-		tooltip:SetItemByID(button.ItemID)
+		--tooltip:SetItemByID(button.ItemID)
+		tooltip:SetHyperlink("item:"..button.ItemID)
 	end
 	if button.Droprate then
 		tooltip:AddDoubleLine(AL["Droprate:"], button.Droprate.."%")
