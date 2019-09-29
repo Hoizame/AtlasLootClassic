@@ -2867,6 +2867,7 @@ data["LowerBlackrockSpire"] = {
 	name = AL["Lower "] .. C_Map.GetAreaInfo(1583),
 	MapID = 1583,
 	InstanceID = 229,
+	SubAreaIDs = { 26683, 26718, 26711, 26713, 26686, 32528, 26688 },
 	AtlasMapID = "LowerBlackrockSpire",
 	AtlasMapFile = {"BlackrockSpireLower", "BlackrockMountainEnt"},
 	ContentType = DUNGEON_CONTENT,
@@ -2897,6 +2898,7 @@ data["LowerBlackrockSpire"] = {
 		{ -- LBRSOmokk
 			name = AL["Highlord Omokk"],
 			npcID = 9196,
+			SubAreaID = 26713,
 			DisplayIDs = {{11565}},
 			AtlasMapBossID = 5,
 			[NORMAL_DIFF] = {
@@ -2935,6 +2937,7 @@ data["LowerBlackrockSpire"] = {
 		{ -- LBRSVosh
 			name = AL["Shadow Hunter Vosh'gajin"],
 			npcID = 9236,
+			SubAreaID = 26688,
 			DisplayIDs = {{9732}},
 			AtlasMapBossID = 7,
 			[NORMAL_DIFF] = {
@@ -2950,6 +2953,7 @@ data["LowerBlackrockSpire"] = {
 		{ -- LBRSVoone
 			name = AL["War Master Voone"],
 			npcID = 9237,
+			SubAreaID = 26688,
 			DisplayIDs = {{9733}},
 			AtlasMapBossID = 9,
 			[NORMAL_DIFF] = {
@@ -2980,6 +2984,7 @@ data["LowerBlackrockSpire"] = {
 		{ -- LBRSSmolderweb
 			name = AL["Mother Smolderweb"],
 			npcID = 10596,
+			SubAreaID = 26686,
 			DisplayIDs = {{9929}},
 			AtlasMapBossID = 13,
 			[NORMAL_DIFF] = {
@@ -2992,6 +2997,7 @@ data["LowerBlackrockSpire"] = {
 		{ -- LBRSCrystalFang
 			name = AL["Crystal Fang"],
 			npcID = 10376,
+			SubAreaID = 26686,
 			DisplayIDs = {{9755}},
 			AtlasMapBossID = 14,
 			specialType = "rare",
@@ -3018,6 +3024,7 @@ data["LowerBlackrockSpire"] = {
 		{ -- LBRSZigris
 			name = AL["Quartermaster Zigris"],
 			npcID = 9736,
+			SubAreaID = 32528,
 			DisplayIDs = {{9738}},
 			AtlasMapBossID = 16,
 			[NORMAL_DIFF] = {
@@ -3031,6 +3038,7 @@ data["LowerBlackrockSpire"] = {
 		{ -- LBRSHalycon
 			name = AL["Halycon"],
 			npcID = 10220,
+			SubAreaID = 26711,
 			DisplayIDs = {{9567}},
 			AtlasMapBossID = 17,
 			[NORMAL_DIFF] = {
@@ -3043,6 +3051,7 @@ data["LowerBlackrockSpire"] = {
 		{ -- LBRSSlavener
 			name = AL["Gizrul the Slavener"],
 			npcID = 10268,
+			SubAreaID = 26711,
 			DisplayIDs = {{9564}},
 			AtlasMapBossID = 17,
 			[NORMAL_DIFF] = {
@@ -3067,6 +3076,7 @@ data["LowerBlackrockSpire"] = {
 		{ -- LBRSWyrmthalak
 			name = AL["Overlord Wyrmthalak"],
 			npcID = 9568,
+			SubAreaID = 26718,
 			DisplayIDs = {{8711}},
 			AtlasMapBossID = 19,
 			[NORMAL_DIFF] = {
@@ -3131,6 +3141,7 @@ data["UpperBlackrockSpire"] = {
 	name = AL["Upper "] .. C_Map.GetAreaInfo(1583),
 	MapID = 1583,
 	InstanceID = 229,
+	SubAreaIDs = {  },
 	AtlasMapID = "UpperBlackrockSpire",
 	AtlasMapFile = {"BlackrockSpireUpper", "BlackrockMountainEnt"},
 	ContentType = DUNGEON_CONTENT,
