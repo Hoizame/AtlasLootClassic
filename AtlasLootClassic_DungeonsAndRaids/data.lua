@@ -4877,6 +4877,7 @@ data["MoltenCore"] = {
 		{ -- MCMajordomo
 			name = AL["Majordomo Executus"],
 			npcID = 12018,
+			ObjectID = 179703,
 			DisplayIDs = {{12029},{13029},{12002}},
 			AtlasMapBossID = 9,
 			[NORMAL_DIFF] = {
