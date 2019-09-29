@@ -102,6 +102,13 @@ if LOCALE == "deDE" then
 		[32577] = "Das große Ossuarium",
 		[32579] = "Das Labor",
 		[32581] = "Arbeitszimmer des Direktors",
+		[33730] = "Der Schrein von Eldretharr",
+		[33748] = "Das Athenaeum",
+		[33749] = "Das Gefängnis von Immol'thar",
+		[33750] = "Hof der Hochgeborenen",
+		[33774] = "Gordoks Sitz",
+		[33775] = "Hallen der Zerstörung",
+		[34776] = "Das Konservatorium",
 	}
 elseif LOCALE == "zhCN" then
 	SUB_L = {
@@ -190,6 +197,13 @@ elseif LOCALE == "zhCN" then
 		[32577] = "尸骨储藏所",
 		[32579] = "实验室",
 		[32581] = "院长的书房",
+		[33730] = "艾德雷斯神殿",
+		[33748] = "图书馆",
+		[33749] = "伊莫塔尔的牢笼",
+		[33750] = "上层精灵庭院",
+		[33774] = "戈多克的王座",
+		[33775] = "毁灭大厅",
+		[34776] = "温室",
 	}
 elseif LOCALE == "esES" then
 	SUB_L = {
@@ -278,6 +292,13 @@ elseif LOCALE == "esES" then
 		[32577] = "El Gran Osario",
 		[32579] = "El Laboratorio",
 		[32581] = "Sala Rectoral",
+		[33730] = "Santuario de Eldretharr",
+		[33748] = "El Athenaeum",
+		[33749] = "Prisión de Immol'thar",
+		[33750] = "Corte de los Altonato",
+		[33774] = "Trono de Gordok",
+		[33775] = "Salas de la Destrucción",
+		[34776] = "Conservatorio",
 	}
 elseif LOCALE == "frFR" then
 	SUB_L = {
@@ -366,6 +387,13 @@ elseif LOCALE == "frFR" then
 		[32577] = "Le Grand ossuaire",
 		[32579] = "Le Laboratoire",
 		[32581] = "Bureau du proviseur",
+		[33730] = "Le sanctuaire d'Eldretharr",
+		[33748] = "L'Athenaeum",
+		[33749] = "Prison d'Immol'thar",
+		[33750] = "Cour des Bien-nés",
+		[33774] = "Trône gordok",
+		[33775] = "Halls de la Destruction",
+		[34776] = "Le jardin d'hiver",
 	}
 elseif LOCALE == "itIT" then
 	SUB_L = {
@@ -454,6 +482,13 @@ elseif LOCALE == "itIT" then
 		[32577] = "Le Grand ossuaire",
 		[32579] = "Le Laboratoire",
 		[32581] = "Bureau du proviseur",
+		[33730] = "Le sanctuaire d'Eldretharr",
+		[33748] = "L'Athenaeum",
+		[33749] = "Prison d'Immol'thar",
+		[33750] = "Cour des Bien-nés",
+		[33774] = "Trône gordok",
+		[33775] = "Halls de la Destruction",
+		[34776] = "Le jardin d'hiver",
 	}
 elseif LOCALE == "koKR" then
 	SUB_L = {
@@ -542,6 +577,13 @@ elseif LOCALE == "koKR" then
 		[32577] = "대형 납골당",
 		[32579] = "연구소",
 		[32581] = "교장의 연구실",
+		[33730] = "엘드레사르 제단",
+		[33748] = "도서관",
+		[33749] = "이몰타르의 감옥",
+		[33750] = "귀족 왕궁",
+		[33774] = "고르독의 권좌",
+		[33775] = "파괴의 전당",
+		[34776] = "고요의 정원",
 	}
 elseif LOCALE == "esMX" then
 	SUB_L = {
@@ -630,6 +672,13 @@ elseif LOCALE == "esMX" then
 		[32577] = "El Gran Osario",
 		[32579] = "El Laboratorio",
 		[32581] = "Sala Rectoral",
+		[33730] = "Santuario de Eldretharr",
+		[33748] = "El Athenaeum",
+		[33749] = "Prisión de Immol'thar",
+		[33750] = "Corte de los Altonato",
+		[33774] = "Trono de Gordok",
+		[33775] = "Salas de la Destrucción",
+		[34776] = "El Vivero",
 	}
 elseif LOCALE == "ptBR" then
 	SUB_L = {
@@ -718,6 +767,13 @@ elseif LOCALE == "ptBR" then
 		[32577] = "O Grande Ossário",
 		[32579] = "O Laboratório",
 		[32581] = "Estúdio do Diretor",
+		[33730] = "Altar de Eldretharr",
+		[33748] = "O Ateneu",
+		[33749] = "Prisão de Immol'thar",
+		[33750] = "A Corte dos Altaneiros",
+		[33774] = "Trono do Gordok",
+		[33775] = "Salões da Destruição",
+		[34776] = "O Conservatório",
 	}
 elseif LOCALE == "ruRU" then
 	SUB_L = {
@@ -806,6 +862,13 @@ elseif LOCALE == "ruRU" then
 		[32577] = "Главный склеп",
 		[32579] = "Лаборатория",
 		[32581] = "Кабинет Директора",
+		[33730] = "Святилище Элдретарра",
+		[33748] = "Читальня",
+		[33749] = "Тюрьма Бессмер'тера",
+		[33750] = "Двор Высокорожденных",
+		[33774] = "Трон Гордока",
+		[33775] = "Гибельные залы",
+		[34776] = "Зимний сад",
 	}
 elseif LOCALE == "zhTW" then
 	SUB_L = {
@@ -894,6 +957,13 @@ elseif LOCALE == "zhTW" then
 		[32577] = "屍骨儲藏所",
 		[32579] = "實驗室",
 		[32581] = "院長的書房",
+		[33730] = "艾德雷斯神殿",
+		[33748] = "圖書館",
+		[33749] = "伊莫塔爾的牢籠",
+		[33750] = "高等精靈庭院",
+		[33774] = "戈多克的王座",
+		[33775] = "毀滅大廳",
+		[34776] = "溫室",
 	}
 else
 	SUB_L = {
@@ -982,6 +1052,13 @@ else
 		[32577] = "The Great Ossuary",
 		[32579] = "The Laboratory",
 		[32581] = "Headmaster's Study",
+		[33730] = "The Shrine of Eldretharr",
+		[33748] = "The Athenaeum",
+		[33749] = "Prison of Immol'thar",
+		[33750] = "Court of the Highborne",
+		[33774] = "Gordok's Seat",
+		[33775] = "Halls of Destruction",
+		[34776] = "The Conservatory",
 	}
 end
 --##END-DATA##
