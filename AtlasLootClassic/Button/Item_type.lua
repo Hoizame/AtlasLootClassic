@@ -314,6 +314,8 @@ function Item.Refresh(button)
 			button.phaseIndicator:Show()
 		end
 	end
+	-- Set tt so the text gets loaded
+	AtlasLootScanTooltip:SetItemByID(itemID)
 	return true
 end
 
