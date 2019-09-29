@@ -361,6 +361,7 @@ data["WailingCaverns"] = {
 data["TheDeadmines"] = {
 	MapID = 1581,
 	InstanceID = 36,
+	SubAreaIDs = { 19444, 19529, 19502, 26104 },
 	AtlasMapID = "TheDeadmines",
 	AtlasMapFile = {"TheDeadmines", "TheDeadminesEnt"},
 	ContentType = DUNGEON_CONTENT,
@@ -391,6 +392,7 @@ data["TheDeadmines"] = {
 		{	--DMSneed
 			name = AL["Sneed"],
 			npcID = 643,
+			SubAreaID = 19529,
 			DisplayIDs = {{7125}},
 			AtlasMapBossID = 3,
 			[NORMAL_DIFF] = {
@@ -411,6 +413,7 @@ data["TheDeadmines"] = {
 		{	--DMGilnid
 			name = AL["Gilnid"],
 			npcID = 1763,
+			SubAreaID = 19502,
 			DisplayIDs = {{7124}},
 			AtlasMapBossID = 4,
 			[NORMAL_DIFF] = {
@@ -428,6 +431,7 @@ data["TheDeadmines"] = {
 		{	--DMMrSmite
 			name = AL["Mr. Smite"],
 			npcID = 646,
+			SubAreaID = 26104,
 			DisplayIDs = {{2026}},
 			AtlasMapBossID = 6,
 			[NORMAL_DIFF] = {
