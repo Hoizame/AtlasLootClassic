@@ -6,6 +6,7 @@ AtlasLoot.AtlasLootDBDefaults = {
 		enableWoWHeadIntegration = true,
 		useEnglishWoWHead = false,
 		enableAutoSelect = true,
+		enableAutoSelectBoss = true,
 		ContentPhase = {
 			enableOnLootTable = true,
 			enableOnItems = true,

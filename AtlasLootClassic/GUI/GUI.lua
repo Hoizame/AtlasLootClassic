@@ -220,7 +220,7 @@ local function FrameOnShow(self)
 		if instance ~= db.selected[2] then
 			self.subCatSelect:SetSelected(instance)
 		end
-		if boss and boss ~= db.selected[3] then
+		if AtlasLoot.db.enableAutoSelectBoss and boss and boss ~= db.selected[3] then
 			self.boss:SetSelected(boss)
 		end
 	end
