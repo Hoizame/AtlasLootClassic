@@ -240,6 +240,7 @@ data["Ragefire"] = {
 data["WailingCaverns"] = {
 	MapID = 718,
 	InstanceID = 43,
+	SubAreaIDs = { 15285, 15301, 15294, 15300, 15292, 17731 },
 	AtlasMapID = "WailingCaverns",
 	AtlasMapFile = {"WailingCaverns", "WailingCavernsEnt"},
 	ContentType = DUNGEON_CONTENT,
@@ -249,6 +250,7 @@ data["WailingCaverns"] = {
 		{ -- WCLordCobrahn
 			name = AL["Lord Cobrahn"],
 			npcID = 3669,
+			SubAreaID = 15300,
 			DisplayIDs = {{4213}},
 			AtlasMapBossID = 2,
 			[NORMAL_DIFF] = {
@@ -281,6 +283,7 @@ data["WailingCaverns"] = {
 		{ -- WCLordPythas
 			name = AL["Lord Pythas"],
 			npcID = 3670,
+			SubAreaID = 17731,
 			DisplayIDs = {{4214}},
 			AtlasMapBossID = 5,
 			[NORMAL_DIFF] = {
@@ -324,6 +327,7 @@ data["WailingCaverns"] = {
 		{ -- WCMutanus
 			name = AL["Mutanus the Devourer"],
 			npcID = 3654,
+			SubAreaID = 15294,
 			DisplayIDs = {{4088}},
 			AtlasMapBossID = 9,
 			[NORMAL_DIFF] = {

@@ -17,6 +17,12 @@ local LOCALE, SUB_L = GetLocale()
 --##START-DATA##
 if LOCALE == "deDE" then
 	SUB_L = {
+		[15285] = "Höhle der Nebel",
+		[15292] = "Kreischende Schlucht",
+		[15294] = "Träumerstein",
+		[15300] = "Fangzahngrube",
+		[15301] = "Klippe der Ewiglebenden",
+		[17731] = "Gewundener Abgrund",
 		[21379] = "Kammer der Buße",
 		[21401] = "Kapelle der Kreuzzügler",
 		[21410] = "Kapellengarten",
@@ -80,6 +86,12 @@ if LOCALE == "deDE" then
 	}
 elseif LOCALE == "zhCN" then
 	SUB_L = {
+		[15285] = "迷雾洞穴",
+		[15292] = "激流溪谷",
+		[15294] = "美梦石",
+		[15300] = "毒牙深渊",
+		[15301] = "永生峭壁",
+		[17731] = "狂风裂口",
 		[21379] = "忏悔室",
 		[21401] = "十字军礼拜堂",
 		[21410] = "教堂花园",
@@ -143,6 +155,12 @@ elseif LOCALE == "zhCN" then
 	}
 elseif LOCALE == "esES" then
 	SUB_L = {
+		[15285] = "Caverna Vaharada",
+		[15292] = "Quebrada del Llanto",
+		[15294] = "Roca del Soñador",
+		[15300] = "Foso de los Colmillos",
+		[15301] = "Risco de los Eternos",
+		[17731] = "Sima Serpenteante",
 		[21379] = "Cámara Expiatoria",
 		[21401] = "Capilla de los Cruzados",
 		[21410] = "Jardines de la Capilla",
@@ -206,6 +224,12 @@ elseif LOCALE == "esES" then
 	}
 elseif LOCALE == "frFR" then
 	SUB_L = {
+		[15285] = "Caverne des Brumes",
+		[15292] = "Ravine hurlante",
+		[15294] = "Rocher du Rêveur",
+		[15300] = "Abîme des Crocs",
+		[15301] = "Combe des Eternels",
+		[17731] = "Gouffre tortueux",
 		[21379] = "Chambre de l'expiation",
 		[21401] = "Chapelle des Croisés",
 		[21410] = "Jardins de la chapelle",
@@ -269,6 +293,12 @@ elseif LOCALE == "frFR" then
 	}
 elseif LOCALE == "itIT" then
 	SUB_L = {
+		[15285] = "Caverne des Brumes",
+		[15292] = "Ravine hurlante",
+		[15294] = "Rocher du Rêveur",
+		[15300] = "Abîme des Crocs",
+		[15301] = "Combe des Eternels",
+		[17731] = "Gouffre tortueux",
 		[21379] = "Chambre de l'expiation",
 		[21401] = "Chapelle des Croisés",
 		[21410] = "Jardins de la chapelle",
@@ -332,6 +362,12 @@ elseif LOCALE == "itIT" then
 	}
 elseif LOCALE == "koKR" then
 	SUB_L = {
+		[15285] = "안개 동굴",
+		[15292] = "울부짖는 협곡",
+		[15294] = "꿈꾸는 자의 바위",
+		[15300] = "송곳니 구덩이",
+		[15301] = "영생의 바위굴",
+		[17731] = "굽이치는 바위굴",
 		[21379] = "속죄의 방",
 		[21401] = "십자군 예배당",
 		[21410] = "예배당 정원",
@@ -395,6 +431,12 @@ elseif LOCALE == "koKR" then
 	}
 elseif LOCALE == "esMX" then
 	SUB_L = {
+		[15285] = "Caverna Vaharada",
+		[15292] = "Quebrada del Llanto",
+		[15294] = "Roca del Soñador",
+		[15300] = "Foso de los Colmillos",
+		[15301] = "Risco de los Eternos",
+		[17731] = "Sima Serpenteante",
 		[21379] = "Cámara Expiatoria",
 		[21401] = "Capilla de los Cruzados",
 		[21410] = "Jardines de la Capilla",
@@ -458,6 +500,12 @@ elseif LOCALE == "esMX" then
 	}
 elseif LOCALE == "ptBR" then
 	SUB_L = {
+		[15285] = "Caverna das Brumas",
+		[15292] = "Barranca Estridente",
+		[15294] = "Rocha do Sonhador",
+		[15300] = "Fosso das Presas",
+		[15301] = "Rochedo do Sempre-vivo",
+		[17731] = "Fenda Sinuosa",
 		[21379] = "Câmara da Redenção",
 		[21401] = "Capela do Cruzado",
 		[21410] = "Jardins da Capela",
@@ -521,6 +569,12 @@ elseif LOCALE == "ptBR" then
 	}
 elseif LOCALE == "ruRU" then
 	SUB_L = {
+		[15285] = "Пещера Туманов",
+		[15292] = "Овраг Воплей",
+		[15294] = "Покои Спящего",
+		[15300] = "Змеиная яма",
+		[15301] = "Утес Вечноживущего",
+		[17731] = "Извилистая расщелина",
 		[21379] = "Чертог Искупления",
 		[21401] = "Часовня Ордена",
 		[21410] = "Церковные сады",
@@ -584,6 +638,12 @@ elseif LOCALE == "ruRU" then
 	}
 elseif LOCALE == "zhTW" then
 	SUB_L = {
+		[15285] = "迷霧洞穴",
+		[15292] = "激流溪谷",
+		[15294] = "美夢石",
+		[15300] = "毒牙深淵",
+		[15301] = "永生峭壁",
+		[17731] = "狂風裂口",
 		[21379] = "懺悔室",
 		[21401] = "十字軍禮拜堂",
 		[21410] = "教堂花園",
@@ -647,6 +707,12 @@ elseif LOCALE == "zhTW" then
 	}
 else
 	SUB_L = {
+		[15285] = "Cavern of Mists",
+		[15292] = "Screaming Gully",
+		[15294] = "Dreamer's Rock",
+		[15300] = "Pit of Fangs",
+		[15301] = "Crag of the Everliving",
+		[17731] = "Winding Chasm",
 		[21379] = "Chamber of Atonement",
 		[21401] = "Crusader's Chapel",
 		[21410] = "Chapel Gardens",
