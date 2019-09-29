@@ -4202,6 +4202,14 @@ data["Scholomance"] = {
 data["Stratholme"] = {
 	MapID = 2017,
 	InstanceID = 329,
+	SubAreaIDs = {
+		-- Living
+		32319, 32320, 32367, 32331, 32357, 32281, 32285, 32277,
+		-- Undead
+		32342, 32322, 32303, 32301, 32352,
+			-- Ziggurats
+			32344, 32345, 32349,
+	},
 	AtlasMapID = "Stratholme",
 	AtlasMapFile = "Stratholme",
 	ContentType = DUNGEON_CONTENT,
@@ -4234,21 +4242,10 @@ data["Stratholme"] = {
 				{ 6,  13302 }, -- Market Row Postbox Key
 			},
 		},
-		{ -- STRATBalzaphon
-			name = AL["Balzaphon"],
-			npcID = 14684,
-			DisplayIDs = {{7919}},
-			AtlasMapBossID = 2,
-			ContentPhase = 6,
-			[NORMAL_DIFF] = {
-				{ 1,  23125 }, -- Chains of the Lich
-				{ 2,  23126 }, -- Waistband of Balzaphon
-				{ 3,  23124 }, -- Staff of Balzaphon
-			},
-		},
 		{ -- STRATHearthsingerForresten
 			name = AL["Hearthsinger Forresten"],
 			npcID = 10558,
+			SubAreaID = 32277,
 			DisplayIDs = {{10482}},
 			AtlasMapBossID = 3,
 			specialType = "rare",
@@ -4263,6 +4260,7 @@ data["Stratholme"] = {
 		{ -- STRATTheUnforgiven
 			name = AL["The Unforgiven"],
 			npcID = 10516,
+			SubAreaID = 32281,
 			DisplayIDs = {{10771}},
 			AtlasMapBossID = 4,
 			[NORMAL_DIFF] = {
@@ -4276,6 +4274,7 @@ data["Stratholme"] = {
 		{ -- STRATTimmytheCruel
 			name = AL["Timmy the Cruel"],
 			npcID = 10808,
+			SubAreaID = 32319,
 			DisplayIDs = {{571}},
 			AtlasMapBossID = 6,
 			[NORMAL_DIFF] = {
@@ -4288,6 +4287,7 @@ data["Stratholme"] = {
 		{ -- STRATMalorsStrongbox
 			name = AL["Malor the Zealous"],
 			npcID = 11032,
+			SubAreaID = 32319,
 			DisplayIDs = {{10458}},
 			AtlasMapBossID = 7,
 			[NORMAL_DIFF] = {
@@ -4298,6 +4298,7 @@ data["Stratholme"] = {
 		{ -- STRATCrimsonHammersmith
 			name = AL["Crimson Hammersmith"],
 			npcID = 11120,
+			SubAreaID = 32357,
 			DisplayIDs = {{10637}},
 			AtlasMapBossID = 8,
 			[NORMAL_DIFF] = {
@@ -4308,6 +4309,7 @@ data["Stratholme"] = {
 		{ -- STRATCannonMasterWilley
 			name = AL["Cannon Master Willey"],
 			npcID = 10997,
+			SubAreaID = 32357,
 			DisplayIDs = {{10674}},
 			AtlasMapBossID = 9,
 			[NORMAL_DIFF] = {
@@ -4328,6 +4330,7 @@ data["Stratholme"] = {
 		{ -- STRATArchivistGalford
 			name = AL["Archivist Galford"],
 			npcID = 10811,
+			SubAreaID = 32331,
 			DisplayIDs = {{10544}},
 			AtlasMapBossID = 10,
 			[NORMAL_DIFF] = {
@@ -4343,6 +4346,7 @@ data["Stratholme"] = {
 		{ -- STRATBalnazzar
 			name = AL["Balnazzar"],
 			npcID = 10813,
+			SubAreaID = 32367,
 			DisplayIDs = {{10691}},
 			AtlasMapBossID = 11,
 			[NORMAL_DIFF] = {
@@ -4365,6 +4369,7 @@ data["Stratholme"] = {
 		{ -- STRATMagistrateBarthilas
 			name = AL["Magistrate Barthilas"],
 			npcID = 10435,
+			SubAreaID = 32342,
 			DisplayIDs = {{10433}},
 			AtlasMapBossID = 12,
 			[NORMAL_DIFF] = {
@@ -4380,6 +4385,7 @@ data["Stratholme"] = {
 		{ -- STRATStonespine
 			name = AL["Stonespine"],
 			npcID = 10809,
+			SubAreaID = 32303,
 			DisplayIDs = {{7856}},
 			AtlasMapBossID = 14,
 			[NORMAL_DIFF] = {
@@ -4391,6 +4397,7 @@ data["Stratholme"] = {
 		{ -- STRATBaronessAnastari
 			name = AL["Baroness Anastari"],
 			npcID = 10436,
+			SubAreaID = 32344,
 			DisplayIDs = {{10698}},
 			AtlasMapBossID = 15,
 			[NORMAL_DIFF] = {
@@ -4409,6 +4416,7 @@ data["Stratholme"] = {
 		{ -- STRATBlackGuardSwordsmith
 			name = AL["Black Guard Swordsmith"],
 			npcID = 11121,
+			SubAreaID = 32345,
 			DisplayIDs = {{775}},
 			AtlasMapBossID = 15,
 			[NORMAL_DIFF] = {
@@ -4422,6 +4430,7 @@ data["Stratholme"] = {
 		{ -- STRATNerubenkan
 			name = AL["Nerub'enkan"],
 			npcID = 10437,
+			SubAreaID = 32345,
 			DisplayIDs = {{9793}},
 			AtlasMapBossID = 16,
 			[NORMAL_DIFF] = {
@@ -4440,6 +4449,7 @@ data["Stratholme"] = {
 		{ -- STRATMalekithePallid
 			name = AL["Maleki the Pallid"],
 			npcID = 10438,
+			SubAreaID = 32349,
 			DisplayIDs = {{10546}},
 			AtlasMapBossID = 17,
 			[NORMAL_DIFF] = {
@@ -4459,6 +4469,7 @@ data["Stratholme"] = {
 		{ -- STRATRamsteintheGorger
 			name = AL["Ramstein the Gorger"],
 			npcID = 10439,
+			SubAreaID = 32301,
 			DisplayIDs = {{12818}},
 			AtlasMapBossID = 18,
 			[NORMAL_DIFF] = {
@@ -4474,6 +4485,7 @@ data["Stratholme"] = {
 		{ -- STRATBaronRivendare
 			name = AL["Baron Rivendare"],
 			npcID = 10440,
+			SubAreaID = 32352,
 			DisplayIDs = {{10729}},
 			AtlasMapBossID = 19,
 			[NORMAL_DIFF] = {
@@ -4567,6 +4579,19 @@ data["Stratholme"] = {
 			ContentPhase = 6,
 			[NORMAL_DIFF] = {
 				{ 1,  22736 }, -- Andonisus, Reaper of Souls
+			},
+		},
+		{ -- STRATBalzaphon
+			name = AL["Balzaphon"],
+			ExtraList = true,
+			npcID = 14684,
+			DisplayIDs = {{7919}},
+			AtlasMapBossID = 2,
+			ContentPhase = 6,
+			[NORMAL_DIFF] = {
+				{ 1,  23125 }, -- Chains of the Lich
+				{ 2,  23126 }, -- Waistband of Balzaphon
+				{ 3,  23124 }, -- Staff of Balzaphon
 			},
 		},
 		{ -- STRATSothosJarien
