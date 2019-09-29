@@ -988,7 +988,7 @@ end
 
 -- AutoSelect
 local AutoSelectSave = {}
-local LastBase
+local LastData, LastInstanceID = {}, 0
 
 function AutoSelect:RefreshOptions()
 	if AtlasLoot.db.enableAutoSelect and not AtlasLoot.Loader:IsModuleLoaded("AtlasLootClassic_DungeonsAndRaids") then
@@ -1028,6 +1028,24 @@ function AutoSelect:AddInstanceTable(module, instanceAlID, iniTab)
     end
 end
 
+local function GetNewLocalData(instanceID, newData, isBase)
+	local module, alIniID, bossID
+
+	module = newData[1]
+
+	if instanceID == LastInstanceID and ((not newData[3] or newData[3] ~= LastData[3]) or isBase) then
+		alIniID = LastData[2]
+	else
+		alIniID = newData[2]
+		LastInstanceID = instanceID
+	end
+
+	bossID = newData[3]
+
+	LastData[1], LastData[2], LastData[3], LastData[4] = module, alIniID, bossID, isBase
+	return module, alIniID, bossID
+end
+
 function AutoSelect:GetCurrrentPlayerData()
     local posY, posX, posZ, instanceID = UnitPosition("player")
     local ini = instanceID and AutoSelectSave[instanceID] or nil
@@ -1036,11 +1054,11 @@ function AutoSelect:GetCurrrentPlayerData()
             local subZoneName = GetSubZoneText()
             for i = 1, #ini.subList do
                 local locName = SUB_L[ini.subList[i]]
-                if locName and locName == subZoneName then
-                    return ini.sub[ini.subList[i]][1], ini.sub[ini.subList[i]][2], ini.sub[ini.subList[i]][3]
+				if locName and locName == subZoneName then
+                    return GetNewLocalData(instanceID, ini.sub[ini.subList[i]])
                 end
             end
-        end
-        return unpack(ini.base)
+		end
+        return GetNewLocalData(instanceID, ini.base, true)
 	end
 end
