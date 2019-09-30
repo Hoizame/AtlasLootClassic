@@ -2436,11 +2436,10 @@ data["BlackrockDepths"] = {
 			DisplayIDs = {{8761}},
 			AtlasMapBossID = 5,
 			[NORMAL_DIFF] = {
-				{ 1,  11626 }, -- Blackveil Cape
-				{ 2,  11623 }, -- Spritecaster Cape
-				{ 3,  11624 }, -- Kentic Amice
-				{ 4,  22240 }, -- Greaves of Withering Despair
-				{ 5,  11625 }, -- Enthralled Sphere
+				{ 1,  11623 }, -- Spritecaster Cape
+				{ 2,  11624 }, -- Kentic Amice
+				{ 3,  22240 }, -- Greaves of Withering Despair
+				{ 4,  11625 }, -- Enthralled Sphere
 				{ 16,  11140 }, -- Prison Cell Key
 			},
 		},
@@ -2451,11 +2450,10 @@ data["BlackrockDepths"] = {
 			DisplayIDs = {{9212}},
 			AtlasMapBossID = 6,
 			[NORMAL_DIFF] = {
-				{ 1,  11623 }, -- Spritecaster Cape
-				{ 2,  11626 }, -- Blackveil Cape
-				{ 3,  11627 }, -- Fleetfoot Greaves
-				{ 4,  11628 }, -- Houndmaster's Bow
-				{ 5,  11629 }, -- Houndmaster's Rifle
+				{ 1,  11626 }, -- Blackveil Cape
+				{ 2,  11627 }, -- Fleetfoot Greaves
+				{ 3,  11628 }, -- Houndmaster's Bow
+				{ 4,  11629 }, -- Houndmaster's Rifle
 			},
 		},
 		{ -- BRDGorosh
@@ -2768,11 +2766,10 @@ data["BlackrockDepths"] = {
 			DisplayIDs = {{12162}},
 			AtlasMapBossID = 20,
 			[NORMAL_DIFF] = {
-				{ 1,  11746 }, -- Golem Skull Helm
-				{ 2,  11935 }, -- Magmus Stone
-				{ 3,  22395 }, -- Totem of Rage
-				{ 4,  22400 }, -- Libram of Truth
-				{ 5,  22208 }, -- Lavastone Hammer
+				{ 1,  11935 }, -- Magmus Stone
+				{ 2,  22395 }, -- Totem of Rage
+				{ 3,  22400 }, -- Libram of Truth
+				{ 4,  22208 }, -- Lavastone Hammer
 			},
 		},
 		{ -- BRDPrincess
