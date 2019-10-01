@@ -2,6 +2,13 @@
 
 This mod is distributed under Version 2 of the GPL.  A copy of the GPL is included in this zip file with links to non-english translations.
 
+## v1.2.0 (Sep. 30, 2019)
+
+- Add droprates for dungeons / raids
+- Add auto select for dungeons / raids
+- Update content phase items
+- Add License back into zip file
+
 ## v1.1.12 (Sep. 18, 2019)
 
 - Update BRD loottables

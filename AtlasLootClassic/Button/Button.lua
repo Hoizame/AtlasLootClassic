@@ -275,7 +275,7 @@ function Button:Create()
 
 	-- counter
 	button.count = button:CreateFontString(buttonName.."_count", "ARTWORK", "AtlasLoot_ItemAmountFont")
-	button.count:SetPoint("BOTTOMRIGHT", button.icon, "BOTTOMRIGHT", 0, 1)
+	button.count:SetPoint("BOTTOMRIGHT", button.icon, "BOTTOMRIGHT", -1, 1)
 	button.count:SetJustifyH("RIGHT")
 	button.count:SetHeight(15)
 	button.count:SetText(15)
@@ -333,7 +333,7 @@ function Button:Create()
 	button.secButton.completed:Hide()
 
 	button.secButton.count = button.secButton:CreateFontString(buttonName.."_secCount", "ARTWORK", "AtlasLoot_ItemAmountFont")
-	button.secButton.count:SetPoint("BOTTOMRIGHT", button.secButton.icon, "BOTTOMRIGHT", 0, 1)
+	button.secButton.count:SetPoint("BOTTOMRIGHT", button.secButton.icon, "BOTTOMRIGHT", -1, 1)
 	button.secButton.count:SetJustifyH("RIGHT")
 	button.secButton.count:SetHeight(15)
 	button.secButton.count:SetText(15)
