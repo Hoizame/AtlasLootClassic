@@ -2,6 +2,7 @@ AtlasLoot.AtlasLootDBDefaults = {
 	profile = {
 		showIDsInTT = false,
 		showLvlRange = true,
+		enableBossLevel = false,
 		showMinEnterLvl = false,
 		enableWoWHeadIntegration = true,
 		useEnglishWoWHead = false,

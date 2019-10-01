@@ -318,6 +318,7 @@ data["Azuregos"] = {
 		{ -- AAzuregos
 			name = AL["Azuregos"],
 			npcId = 6109,
+			Level = 999,
 			DisplayIDs = {{11460}},
 			AtlasMapBossID = 1,
 			[NORMAL_DIFF] = {
@@ -357,6 +358,7 @@ data["LordKazzak"] = {
 		{ -- KKazzak
 			name = AL["Lord Kazzak"],
 			npcId = 12397,
+			Level = 999,
 			DisplayIDs = {{12449}},
 			AtlasMapBossID = 1,
 			[NORMAL_DIFF] = {
@@ -386,6 +388,7 @@ data["DragonsOfNightmare"] = {
 		{ -- DLethon
 			name = AL["Lethon"],
 			npcId = 14888,
+			Level = 999,
 			DisplayIDs = {{15365}},
 			[NORMAL_DIFF] = {
 				{ 1,  20628 }, -- Deviate Growth Cap
@@ -411,6 +414,7 @@ data["DragonsOfNightmare"] = {
 		{ -- DEmeriss
 			name = AL["Emeriss"],
 			npcId = 14889,
+			Level = 999,
 			DisplayIDs = {{15366}},
 			[NORMAL_DIFF] = {
 				{ 1,  20623 }, -- Circlet of Restless Dreams
@@ -435,6 +439,7 @@ data["DragonsOfNightmare"] = {
 		{ -- DTaerar
 			name = AL["Taerar"],
 			npcId = 14890,
+			Level = 999,
 			DisplayIDs = {{15363}, {15367}},
 			[NORMAL_DIFF] = {
 				{ 1,  20633 }, -- Unnatural Leather Spaulders
@@ -459,6 +464,7 @@ data["DragonsOfNightmare"] = {
 		{ -- DYsondre
 			name = AL["Ysondre"],
 			npcId = 14887,
+			Level = 999,
 			DisplayIDs = {{15364}},
 			[NORMAL_DIFF] = {
 				{ 1,  20637 }, -- Acid Inscribed Pauldrons
@@ -695,7 +701,6 @@ data["Tabards"] = {
 		},
 	},
 }
-
 
 data["GurubashiArena"] = {
 	name = AL["Gurubashi Arena"],

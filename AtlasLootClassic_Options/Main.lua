@@ -40,10 +40,18 @@ Options.config.args.atlasloot = {
 		showLvlRange = {
 			order = 3,
 			type = "toggle",
-			width = "full",
+			--width = "full",
 			name = AL["Show level range if aviable."],
 			get = function(info) return AtlasLoot.db.showLvlRange end,
 			set = function(info, value) AtlasLoot.db.showLvlRange = value AtlasLoot.GUI.OnLevelRangeRefresh() end,
+		},
+		enableBossLevel = {
+			order = 3.5,
+			type = "toggle",
+			--width = "full",
+			name = AL["Show boss level if aviable."],
+			get = function(info) return AtlasLoot.db.enableBossLevel end,
+			set = function(info, value) AtlasLoot.db.enableBossLevel = value AtlasLoot.GUI.OnLevelRangeRefresh() end,
 		},
 		showMinEnterLvl = {
 			order = 4,
