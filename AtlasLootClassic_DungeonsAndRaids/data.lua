@@ -5244,7 +5244,6 @@ data["Onyxia"] = {
 data["Zul'Gurub"] = {
 	MapID = 1977,
 	InstanceID = 309,
-	Level = 999,
 	AtlasMapID = "Zul'Gurub", -- ??
 	AtlasMapFile = "ZulGurub",
 	ContentType = RAID20_CONTENT,
@@ -5254,6 +5253,7 @@ data["Zul'Gurub"] = {
 		{ -- ZGJeklik
 			name = AL["High Priestess Jeklik"],
 			npcID = 14517,
+			Level = 999,
 			DisplayIDs = {{15219}},
 			AtlasMapBossID = 1,
 			[NORMAL_DIFF] = {
