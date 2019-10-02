@@ -178,6 +178,7 @@ local TOKEN = {
 	[7733] = { 7733, 0, 7740, 7741 }, -- Staff of Prehistoria
 	[7740] = 7733, -- Gni'kiv Medallion
 	[7741] = 7733, -- The Shaft of Tsol
+	[12845] = { 17044, 17045, type = 4 }, -- Medallion of Faith
 
 	-- Quests
 	[10441] = { 10657, 10658, type = 3 }, -- Glowing Shard
