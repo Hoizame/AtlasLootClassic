@@ -3163,8 +3163,7 @@ data["LowerBlackrockSpire"] = {
 				{ 3,  13258 }, -- Slaghide Gauntlets
 				{ 4,  22232 }, -- Marksman's Girdle
 				{ 5,  13259 }, -- Ribsteel Footguards
-				{ 6,  13178 }, -- Rosewine Circle
-				{ 8,  18784 }, -- Top Half of Advanced Armorsmithing: Volume III
+				{ 7,  18784 }, -- Top Half of Advanced Armorsmithing: Volume III
 			},
 		},
 		{ -- LBRSZigris
