@@ -14,6 +14,7 @@ local GetTradeskillLink = AtlasLoot.TooltipScan.GetTradeskillLink
 local ProfClickHandler = nil
 
 local PROF_COLOR = "|cffffff00"
+local WHITE_TEXT = "|cffffffff%s|r"
 local ITEM_COLORS = {}
 
 AtlasLoot.ClickHandler:Add(
@@ -82,7 +83,7 @@ function Prof.OnEnter(button)
 	tooltip:SetOwner(button, "ANCHOR_RIGHT", -(button:GetWidth() * 0.5), 5)
 	tooltip:SetSpellByID(button.SpellID)
 	if AtlasLoot.db.showIDsInTT then
-		tooltip:AddDoubleLine("SpellID:", button.SpellID)
+		tooltip:AddDoubleLine("SpellID:", format(WHITE_TEXT, button.SpellID))
 	end
 	tooltip:Show()
 end
