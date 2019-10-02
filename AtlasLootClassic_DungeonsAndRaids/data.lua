@@ -1712,6 +1712,7 @@ data["RazorfenDowns"] = {
 			Level = 40,
 			DisplayIDs = {{11382}},
 			AtlasMapBossID = 5,
+			specialType = "rare",
 			[NORMAL_DIFF] = {
 				{ 1,  10768 }, -- Boar Champion's Belt
 				{ 2,  10767 }, -- Savage Boar's Guard
