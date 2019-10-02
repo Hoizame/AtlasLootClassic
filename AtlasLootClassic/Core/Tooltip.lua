@@ -117,6 +117,7 @@ local PLAYER_GUID_REGISTER = {
 	["Player-4455-00D28DDC"] = format(SILVER, "AtlasLoot Friend"),
 	["Player-4463-00A5D43D"] = format(SILVER, "AtlasLoot Friend"),
 	["Player-4476-0054EED9"] = format(COPPER, "aka god of shadow"),
+	["Player-4476-0166DB51"] = format(COPPER, "god of shadow"),
 }
 
 local function AddText(self)

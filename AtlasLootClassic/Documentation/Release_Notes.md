@@ -2,6 +2,11 @@
 
 This mod is distributed under Version 2 of the GPL.  A copy of the GPL is included in this zip file with links to non-english translations.
 
+## v1.2.1 (Oct. 01, 2019)
+
+- Add a option to show level for bosses
+- Small fixes
+
 ## v1.2.0 (Sep. 30, 2019)
 
 - Add droprates for dungeons / raids

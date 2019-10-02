@@ -6,4 +6,6 @@ DROPRATE_OV = {
     [15410] = false, -- Scale of Onyxia
     [12382] = 100, -- Key to the City
     [13873] = 100, -- Viewing Room Key
+    --TF
+    [18563] = 3, [18564] = 3,
 }

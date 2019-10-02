@@ -109,7 +109,17 @@ local function UpdateFrames(noPageUpdate)
 	end
 
 	-- npcID
-	GUI.ItemFrame.npcID = moduleData[dataID].items[bossID].npcID
+	local usedNpcID = moduleData[dataID].items[bossID].npcID
+	if not usedNpcID then
+		usedNpcID = moduleData[dataID].items[bossID].ObjectID
+	end
+	if usedNpcID then
+		if type(moduleData[dataID].items[bossID].npcID) == "table" then
+			GUI.ItemFrame.npcID = usedNpcID[1]
+		else
+			GUI.ItemFrame.npcID = usedNpcID
+		end
+	end
 
 	-- Search
 	if contentFrame.shownFrame and contentFrame.shownFrame.OnSearch then

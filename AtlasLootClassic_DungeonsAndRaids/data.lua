@@ -1712,6 +1712,7 @@ data["RazorfenDowns"] = {
 			Level = 40,
 			DisplayIDs = {{11382}},
 			AtlasMapBossID = 5,
+			specialType = "rare",
 			[NORMAL_DIFF] = {
 				{ 1,  10768 }, -- Boar Champion's Belt
 				{ 2,  10767 }, -- Savage Boar's Guard
@@ -2613,7 +2614,6 @@ data["BlackrockDepths"] = {
 			[NORMAL_DIFF] = {
 				{ 1,  11685 }, -- Splinthide Shoulders
 				{ 2,  11679 }, -- Rubicund Armguards
-				{ 3,  11730 }, -- Savage Gladiator Grips
 				{ 4,  11686 }, -- Girdle of Beastial Fury
 			},
 		},
@@ -2648,10 +2648,9 @@ data["BlackrockDepths"] = {
 			DisplayIDs = {{8271}},
 			AtlasMapBossID = 6,
 			[NORMAL_DIFF] = {
-				{ 1,  11729 }, -- Savage Gladiator Helm
-				{ 2,  11633 }, -- Spiderfang Carapace
-				{ 3,  11634 }, -- Silkweb Gloves
-				{ 4,  11635 }, -- Hookfang Shanker
+				{ 1,  11633 }, -- Spiderfang Carapace
+				{ 2,  11634 }, -- Silkweb Gloves
+				{ 3,  11635 }, -- Hookfang Shanker
 			},
 		},
 		-- RING END
@@ -2879,6 +2878,7 @@ data["BlackrockDepths"] = {
 			name = AL["Chest of The Seven"],
 			SubAreaID = 26784,
 			npcID = {9034, 9035, 9036, 9037, 9038, 9039, 9040},
+			ObjectID = 169243,
 			Level = {55, 57},
 			DisplayIDs = {{8690},{8686},{8692},{8689},{8691},{8687},{8688}},
 			AtlasMapBossID = 18,
@@ -3039,14 +3039,13 @@ data["LowerBlackrockSpire"] = {
 			DisplayIDs = {{11565}},
 			AtlasMapBossID = 5,
 			[NORMAL_DIFF] = {
-				{ 1,  16670 }, -- Boots of the Elements
-				{ 3,  13166 }, -- Slamshot Shoulders
-				{ 4,  13168 }, -- Plate of the Shaman King
-				{ 5,  13170 }, -- Skyshroud Leggings
-				{ 6,  13169 }, -- Tressermane Leggings
-				{ 7,  13167 }, -- Fist of Omokk
-				{ 9,  12336 }, -- Gemstone of Spirestone
-				{ 11, 12534 }, -- Omokk's Head
+				{ 1,  13166 }, -- Slamshot Shoulders
+				{ 2,  13168 }, -- Plate of the Shaman King
+				{ 3,  13170 }, -- Skyshroud Leggings
+				{ 4,  13169 }, -- Tressermane Leggings
+				{ 5,  13167 }, -- Fist of Omokk
+				{ 7,  12336 }, -- Gemstone of Spirestone
+				{ 9, 12534 }, -- Omokk's Head
 			},
 		},
 		{ -- LBRSSpirestoneBattleLord
@@ -3163,8 +3162,7 @@ data["LowerBlackrockSpire"] = {
 				{ 3,  13258 }, -- Slaghide Gauntlets
 				{ 4,  22232 }, -- Marksman's Girdle
 				{ 5,  13259 }, -- Ribsteel Footguards
-				{ 6,  13178 }, -- Rosewine Circle
-				{ 8,  18784 }, -- Top Half of Advanced Armorsmithing: Volume III
+				{ 7,  18784 }, -- Top Half of Advanced Armorsmithing: Volume III
 			},
 		},
 		{ -- LBRSZigris
@@ -4471,11 +4469,10 @@ data["Stratholme"] = {
 			AtlasMapBossID = 3,
 			specialType = "rare",
 			[NORMAL_DIFF] = {
-				{ 1,  16682 }, -- Magister's Boots
-				{ 3,  13378 }, -- Songbird Blouse
-				{ 4,  13384 }, -- Rainbow Girdle
-				{ 5,  13383 }, -- Woollies of the Prancing Minstrel
-				{ 6,  13379 }, -- Piccolo of the Flaming Fire
+				{ 1,  13378 }, -- Songbird Blouse
+				{ 2,  13384 }, -- Rainbow Girdle
+				{ 3,  13383 }, -- Woollies of the Prancing Minstrel
+				{ 4,  13379 }, -- Piccolo of the Flaming Fire
 			},
 		},
 		{ -- STRATTheUnforgiven
@@ -4510,6 +4507,7 @@ data["Stratholme"] = {
 		{ -- STRATMalorsStrongbox
 			name = AL["Malor the Zealous"],
 			npcID = 11032,
+			ObjectID = 176112,
 			Level = 60,
 			SubAreaID = 32319,
 			DisplayIDs = {{10458}},
@@ -4528,7 +4526,7 @@ data["Stratholme"] = {
 			AtlasMapBossID = 8,
 			[NORMAL_DIFF] = {
 				{ 1,  18781 }, -- Bottom Half of Advanced Armorsmithing: Volume II
-				{ 3,  12824 }, -- Plans: Enchanted Battlehammer
+				--{ 3,  12824 }, -- Plans: Enchanted Battlehammer
 			},
 		},
 		{ -- STRATCannonMasterWilley
@@ -4572,10 +4570,10 @@ data["Stratholme"] = {
 		},
 		{ -- STRATBalnazzar
 			name = AL["Balnazzar"],
-			npcID = 10813,
+			npcID = {10812, 10813},
 			Level = 999,
 			SubAreaID = 32367,
-			DisplayIDs = {{10691}},
+			DisplayIDs = {{10545}, {10691}},
 			AtlasMapBossID = 11,
 			[NORMAL_DIFF] = {
 				{ 1,  13353 }, -- Book of the Dead
@@ -4589,7 +4587,8 @@ data["Stratholme"] = {
 				{ 11, 13369 }, -- Fire Striders
 				{ 12, 13360 }, -- Gift of the Elven Magi
 				{ 13, 18717 }, -- Hammer of the Grand Crusader
-				{ 14, 13348 }, -- Demonshear
+				{ 14,  22334 }, -- Band of Mending
+				{ 15, 13348 }, -- Demonshear
 				{ 16, 13520 }, -- Recipe: Flask of Distilled Wisdom
 				{ 18, 13250 }, -- Head of Balnazzar
 			},
@@ -4655,7 +4654,7 @@ data["Stratholme"] = {
 				{ 1,  18783 }, -- Bottom Half of Advanced Armorsmithing: Volume III
 				--{ 2,  12725 }, -- Plans: Enchanted Thorium Helm
 				--{ 3,  12620 }, -- Enchanted Thorium Helm
-				{ 3,  12825 }, -- Plans: Blazing Rapier
+				--{ 3,  12825 }, -- Plans: Blazing Rapier
 				--{ 6,  12777 }, -- Blazing Rapier
 			},
 		},
@@ -4757,12 +4756,13 @@ data["Stratholme"] = {
 			DisplayIDs = {{10669}},
 			AtlasMapBossID = "6'",
 			[NORMAL_DIFF] = {
-				{ 1,  13390 }, -- The Postmaster's Band
-				{ 2,  13388 }, -- The Postmaster's Tunic
-				{ 3,  13389 }, -- The Postmaster's Trousers
-				{ 4,  13391 }, -- The Postmaster's Treads
-				{ 5,  13392 }, -- The Postmaster's Seal
-				{ 6,  13393 }, -- Malown's Slam
+				{ 1,  16682 }, -- Magister's Boots
+				{ 3,  13390 }, -- The Postmaster's Band
+				{ 4,  13388 }, -- The Postmaster's Tunic
+				{ 5,  13389 }, -- The Postmaster's Trousers
+				{ 6,  13391 }, -- The Postmaster's Treads
+				{ 7,  13392 }, -- The Postmaster's Seal
+				{ 8,  13393 }, -- Malown's Slam
 			},
 		},
 		{ -- STRATTrash

@@ -33,6 +33,7 @@ local GetItemString = AtlasLoot.ItemString.Create
 local ITEM_COLORS = {}
 local DUMMY_ITEM_ICON = "Interface\\Icons\\INV_Misc_QuestionMark"
 local SET_ITEM = "|cff00ff00"..AL["Set item"]..":|r "
+local WHITE_TEXT = "|cffffffff%s|r"
 
 local itemIsOnEnter, buttonOnEnter = nil, nil
 
@@ -209,13 +210,13 @@ function Item.OnEnter(button, owner)
 		tooltip:SetHyperlink("item:"..button.ItemID)
 	end
 	if button.Droprate then
-		tooltip:AddDoubleLine(AL["Droprate:"], button.Droprate.."%")
+		tooltip:AddDoubleLine(AL["Droprate:"], format(WHITE_TEXT, button.Droprate.."%"))
 	end
 	if AtlasLoot.db.showIDsInTT then
-		tooltip:AddDoubleLine("ItemID:", button.ItemID or 0)
+		tooltip:AddDoubleLine("ItemID:", format(WHITE_TEXT, button.ItemID or 0))
 	end
 	if AtlasLoot.db.ContentPhase.enableTT and ContentPhase:GetForItemID(button.ItemID) then
-		tooltip:AddDoubleLine(AL["Content phase:"], ContentPhase:GetForItemID(button.ItemID))
+		tooltip:AddDoubleLine(AL["Content phase:"], format(WHITE_TEXT, ContentPhase:GetForItemID(button.ItemID)))
 	end
 	if button.ItemID == 12784 then tooltip:AddLine("Arcanite Reaper Hoooooo!") end
 	tooltip:Show()
