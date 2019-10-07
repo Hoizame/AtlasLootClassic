@@ -880,7 +880,3 @@ end
 function Recipe.GetRecipeSkillRankForSpell(spellID)
 	return RECIPE_TO_SPELL[spellID or 0] and RECIPE[ RECIPE_TO_SPELL[spellID or 0][2] ] or nil
 end
-
-function Recipe.GetPhaseTextureForItemID(itemID)
-	return Profession.GetPhaseTextureForSpellID(RECIPE[itemID][3])
-end
