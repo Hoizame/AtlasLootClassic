@@ -233,6 +233,7 @@ local function FrameOnShow(self)
 		if AtlasLoot.db.enableAutoSelectBoss and boss and boss ~= db.selected[3] then
 			self.boss:SetSelected(boss)
 		end
+		UpdateFrames()
 	end
 end
 
