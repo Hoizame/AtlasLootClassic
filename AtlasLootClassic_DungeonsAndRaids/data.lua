@@ -2027,6 +2027,7 @@ data["Zul'Farrak"] = {
 			DisplayIDs = {{9292}},
 			ContentPhase = 5,
 			AtlasMapBossID = 4,
+			specialType = "rare",
 			[NORMAL_DIFF] = {
 				{ 1,  12471 }, -- Desertwalker Cane
 			},
@@ -2095,6 +2096,7 @@ data["Zul'Farrak"] = {
 			Level = 45,
 			DisplayIDs = {{9293}},
 			AtlasMapBossID = 8,
+			specialType = "rare",
 			[NORMAL_DIFF] = {
 				{ 1,  12470 }, -- Sandstalker Ankleguards
 			},
