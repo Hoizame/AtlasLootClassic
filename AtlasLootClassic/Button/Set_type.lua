@@ -46,12 +46,7 @@ function Set.OnSet(button, second)
 	if not SetClickHandler then
 		SetClickHandler = ClickHandler:GetHandler("Set")
 
-		for k,v in pairs(RAID_CLASS_COLORS) do
-			if v.colorStr then
-				CLASS_NAMES_WITH_COLORS[k] = format(CLASS_COLOR_FORMAT,  v.colorStr, ALIL[k] or k)
-			end
-		end
-		CLASS_COLOR_FORMAT = nil
+		CLASS_NAMES_WITH_COLORS = AtlasLoot:GetColoredClassNames()
 
 		Sets = AtlasLoot.Data.Sets
 	end
