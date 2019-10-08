@@ -3571,6 +3571,7 @@ data["DireMaulEast"] = {
 			npcID = 11492,
 			DisplayIDs = {{14416}},
 			AtlasMapBossID = 5,
+			SubAreaID = 33730,
 			[NORMAL_DIFF] = {
 				{ 1,  18328 }, -- Shadewood Cloak
 				{ 2,  18312 }, -- Energized Chestplate
@@ -3637,6 +3638,7 @@ data["DireMaulWest"] = {
 			npcID = 11489,
 			DisplayIDs = {{14383}},
 			AtlasMapBossID = 2,
+			SubAreaID = 33748,
 			[NORMAL_DIFF] = {
 				{ 1,  18393 }, -- Warpwood Binding
 				{ 2,  18390 }, -- Tanglemoss Leggings
@@ -3648,6 +3650,7 @@ data["DireMaulWest"] = {
 			name = AL["Illyanna Ravenoak"],
 			npcID = 11488,
 			DisplayIDs = {{11270}},
+			SubAreaID = 33749,
 			AtlasMapBossID = 3,
 			[NORMAL_DIFF] = {
 				{ 1,  18383 }, -- Force Imbued Gauntlets
@@ -3661,6 +3664,7 @@ data["DireMaulWest"] = {
 			npcID = 11487,
 			DisplayIDs = {{14384}},
 			AtlasMapBossID = 4,
+			SubAreaID = 33749,
 			[NORMAL_DIFF] = {
 				{ 1,  18374 }, -- Flamescarred Shoulders
 				{ 2,  18397 }, -- Elder Magus Pendant
@@ -3677,6 +3681,7 @@ data["DireMaulWest"] = {
 			DisplayIDs = {{11250}},
 			specialType = "rare",
 			AtlasMapBossID = 5,
+			SubAreaID = 33749,
 			[NORMAL_DIFF] = {
 				{ 1,  18387 }, -- Brightspark Gloves
 				{ 3,  18346 }, -- Threadbare Trousers
@@ -3688,6 +3693,7 @@ data["DireMaulWest"] = {
 			npcID = 11496,
 			DisplayIDs = {{14173}},
 			AtlasMapBossID = 6,
+			SubAreaID = 33750,
 			[NORMAL_DIFF] = {
 				{ 1,  18381 }, -- Evil Eye Pendant
 				{ 2,  18384 }, -- Bile-etched Spaulders
