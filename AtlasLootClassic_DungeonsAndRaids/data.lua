@@ -193,13 +193,13 @@ local DM_BOOKS = { -- DMBooks
 		{ 11, 18357 }, -- Codex of Defense
 		--{ 16, 18348 }, -- Quel'Serrar
 		{ 18, 18333 }, -- Libram of Focus
-		{ 19, 11733 }, -- Libram of Constitution
-		{ 20, 18334 }, -- Libram of Protection
-		{ 21, 18332 }, -- Libram of Rapidity
-		{ 22, 11736 }, -- Libram of Resilience
-		{ 23, 11732 }, -- Libram of Rumination
-		{ 24, 11734 }, -- Libram of Tenacity
-		{ 25, 11737 }, -- Libram of Voracity
+		{ 19, 18334 }, -- Libram of Protection
+		{ 20, 18332 }, -- Libram of Rapidity
+		{ 22, 11733 }, -- Libram of Constitution
+		{ 23, 11736 }, -- Libram of Resilience
+		{ 24, 11732 }, -- Libram of Rumination
+		{ 25, 11734 }, -- Libram of Tenacity
+		{ 26, 11737 }, -- Libram of Voracity
 	},
 }
 
