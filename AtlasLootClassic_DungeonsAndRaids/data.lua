@@ -193,13 +193,13 @@ local DM_BOOKS = { -- DMBooks
 		{ 11, 18357 }, -- Codex of Defense
 		--{ 16, 18348 }, -- Quel'Serrar
 		{ 18, 18333 }, -- Libram of Focus
-		{ 19, 11733 }, -- Libram of Constitution
-		{ 20, 18334 }, -- Libram of Protection
-		{ 21, 18332 }, -- Libram of Rapidity
-		{ 22, 11736 }, -- Libram of Resilience
-		{ 23, 11732 }, -- Libram of Rumination
-		{ 24, 11734 }, -- Libram of Tenacity
-		{ 25, 11737 }, -- Libram of Voracity
+		{ 19, 18334 }, -- Libram of Protection
+		{ 20, 18332 }, -- Libram of Rapidity
+		{ 22, 11733 }, -- Libram of Constitution
+		{ 23, 11736 }, -- Libram of Resilience
+		{ 24, 11732 }, -- Libram of Rumination
+		{ 25, 11734 }, -- Libram of Tenacity
+		{ 26, 11737 }, -- Libram of Voracity
 	},
 }
 
@@ -2027,6 +2027,7 @@ data["Zul'Farrak"] = {
 			DisplayIDs = {{9292}},
 			ContentPhase = 5,
 			AtlasMapBossID = 4,
+			specialType = "rare",
 			[NORMAL_DIFF] = {
 				{ 1,  12471 }, -- Desertwalker Cane
 			},
@@ -2095,6 +2096,7 @@ data["Zul'Farrak"] = {
 			Level = 45,
 			DisplayIDs = {{9293}},
 			AtlasMapBossID = 8,
+			specialType = "rare",
 			[NORMAL_DIFF] = {
 				{ 1,  12470 }, -- Sandstalker Ankleguards
 			},
@@ -3569,6 +3571,7 @@ data["DireMaulEast"] = {
 			npcID = 11492,
 			DisplayIDs = {{14416}},
 			AtlasMapBossID = 5,
+			SubAreaID = 33730,
 			[NORMAL_DIFF] = {
 				{ 1,  18328 }, -- Shadewood Cloak
 				{ 2,  18312 }, -- Energized Chestplate
@@ -3635,6 +3638,7 @@ data["DireMaulWest"] = {
 			npcID = 11489,
 			DisplayIDs = {{14383}},
 			AtlasMapBossID = 2,
+			SubAreaID = 33748,
 			[NORMAL_DIFF] = {
 				{ 1,  18393 }, -- Warpwood Binding
 				{ 2,  18390 }, -- Tanglemoss Leggings
@@ -3646,6 +3650,7 @@ data["DireMaulWest"] = {
 			name = AL["Illyanna Ravenoak"],
 			npcID = 11488,
 			DisplayIDs = {{11270}},
+			SubAreaID = 33749,
 			AtlasMapBossID = 3,
 			[NORMAL_DIFF] = {
 				{ 1,  18383 }, -- Force Imbued Gauntlets
@@ -3659,6 +3664,7 @@ data["DireMaulWest"] = {
 			npcID = 11487,
 			DisplayIDs = {{14384}},
 			AtlasMapBossID = 4,
+			SubAreaID = 33749,
 			[NORMAL_DIFF] = {
 				{ 1,  18374 }, -- Flamescarred Shoulders
 				{ 2,  18397 }, -- Elder Magus Pendant
@@ -3675,6 +3681,7 @@ data["DireMaulWest"] = {
 			DisplayIDs = {{11250}},
 			specialType = "rare",
 			AtlasMapBossID = 5,
+			SubAreaID = 33749,
 			[NORMAL_DIFF] = {
 				{ 1,  18387 }, -- Brightspark Gloves
 				{ 3,  18346 }, -- Threadbare Trousers
@@ -3686,6 +3693,7 @@ data["DireMaulWest"] = {
 			npcID = 11496,
 			DisplayIDs = {{14173}},
 			AtlasMapBossID = 6,
+			SubAreaID = 33750,
 			[NORMAL_DIFF] = {
 				{ 1,  18381 }, -- Evil Eye Pendant
 				{ 2,  18384 }, -- Bile-etched Spaulders

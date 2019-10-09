@@ -4,15 +4,20 @@ AtlasLoot.Data.Token = Token
 local AL = AtlasLoot.Locales
 
 local type, pairs = type, pairs
+local format = format
 
+local TOKEN_FORMAT_STRING = "|cff00ff00"..AL["L-Click"]..":|r %s"
 local TOKEN_TYPE_DEFAULT = 1
 local TOKEN_TYPE_TEXT = {
 	[0] = nil,	-- empty
-	[1] = "|cff00ff00"..AL["L-Click"]..":|r "..AL["Show additional items."],		-- default
-	[2] = "|cff00ff00"..AL["L-Click"]..":|r "..AL["Show possible items."],
-	[3] = "|cff00ff00"..AL["L-Click"]..":|r "..AL["Show quest rewards."],
-	[4] = "|cff00ff00"..AL["L-Click"]..":|r "..AL["Quest objective."],
-	[5] = "|cff00ff00"..AL["L-Click"]..":|r "..AL["Reagent for..."],
+	[1] = format(TOKEN_FORMAT_STRING, AL["Show additional items."]), -- default
+	[2] = format(TOKEN_FORMAT_STRING, AL["Show possible items."]),
+	[3] = format(TOKEN_FORMAT_STRING, AL["Show quest rewards."]),
+	[4] = format(TOKEN_FORMAT_STRING, AL["Quest objective."]),
+	[5] = format(TOKEN_FORMAT_STRING, AL["Reagent for..."]),
+
+	-- classes get set with the init
+	-- "DRUID", "HUNTER", "MAGE", "PALADIN", "PRIEST", "ROGUE", "SHAMAN", "WARLOCK", "WARRIOR"
 }
 
 local TOKEN = {
@@ -21,23 +26,23 @@ local TOKEN = {
 	-- optional: itemID == 0 	-	creates a new line
 	-- Dire Maul books
 	[18401] = { 18348 },	-- Foror's Compendium of Dragon Slaying
-	[18362] = { 18469 },	-- Holy Bologna: What the Light Won't Tell You
-	[18358] = { 18468 },	-- The Arcanist's Cookbook
-	[18360] = { 18467 },	-- Harnessing Shadows
-	[18356] = { 18465 },	-- Garona: A Study on Stealth and Treachery
-	[18364] = { 18470 },	-- The Emerald Dream
-	[18361] = { 18473 },	-- The Greatest Race of Hunters
-	[18363] = { 18471 },	-- Frost Shock and You
-	[18359] = { 18472 },	-- The Light and How to Swing It
-	[18357] = { 18466 },	-- Codex of Defense
-	[18333] = { 18330 },	-- Libram of Focus
-	[11733] = { 11642 },	-- Libram of Constitution
-	[18334] = { 18331 },	-- Libram of Protection
-	[18332] = { 18329 },	-- Libram of Rapidity
-	[11736] = { 11644 },	-- Libram of Resilience
-	[11732] = { 11622 },	-- Libram of Rumination
-	[11734] = { 11643 },	-- Libram of Tenacity
-	[11737] = { 11647, 11648, 11649, 11645, 11646 },	-- Libram of Voracity
+	[18362] = { 18469, type = "PRIEST" },	-- Holy Bologna: What the Light Won't Tell You
+	[18358] = { 18468, type = "MAGE" },	-- The Arcanist's Cookbook
+	[18360] = { 18467, type = "WARLOCK" },	-- Harnessing Shadows
+	[18356] = { 18465, type = "ROGUE" },	-- Garona: A Study on Stealth and Treachery
+	[18364] = { 18470, type = "DRUID" },	-- The Emerald Dream
+	[18361] = { 18473, type = "HUNTER" },	-- The Greatest Race of Hunters
+	[18363] = { 18471, type = "SHAMAN" },	-- Frost Shock and You
+	[18359] = { 18472, type = "PALADIN" },	-- The Light and How to Swing It
+	[18357] = { 18466, type = "WARRIOR" },	-- Codex of Defense
+	[18333] = { 18330, 0, 18333, 18335, {14344, 4}, {12753, 2}, type = 4 },	-- Libram of Focus
+	[11733] = { 11642, 0, 11733, 11754, 8411, {11952, 4}, type = 4 },		-- Libram of Constitution
+	[18334] = { 18331, 0, 18334, 18335, {14344, 2}, 12735, type = 4  },		-- Libram of Protection
+	[18332] = { 18329, 0, 18332, 18335, {14344, 2}, {12938, 2}, type = 4 },	-- Libram of Rapidity
+	[11736] = { 11644, 0, 11736, 11754, 11751, {11567, 4}, type = 4 },		-- Libram of Resilience
+	[11732] = { 11622, 0, 11732, 11754, 11752, 8424, type = 4 },			-- Libram of Rumination
+	[11734] = { 11643, 0, 11734, 11754, 11753, {11564, 4}, type = 4 },		-- Libram of Tenacity
+	[11737] = { 11647, 11648, 11649, 11645, 11646, 0, 11737, 11754, {11951, 4}, {11563, 4}, type = 4 },	-- Libram of Voracity
 
 	--- Darkmoon cards
 	-- Portals / Darkmoon Card: Twisting Nether
@@ -244,11 +249,21 @@ local TOKEN = {
 	[12335] = 12219, -- Gemstone of Smolderthorn
 	[12337] = 12219, -- Gemstone of Bloodaxe
 }
-for k, v in pairs(TOKEN) do
-	if TOKEN[v] then
-		TOKEN[k] = TOKEN[v]
+
+local function Init()
+	local coloredClassNames = AtlasLoot:GetColoredClassNames()
+
+	for k, v in pairs(TOKEN) do
+		if TOKEN[v] then
+			TOKEN[k] = TOKEN[v]
+		end
+	end
+
+	for className, cClassName in pairs(coloredClassNames) do
+		TOKEN_TYPE_TEXT[className] = format(TOKEN_FORMAT_STRING, cClassName)
 	end
 end
+AtlasLoot:AddInitFunc(Init)
 
 function Token.IsToken(itemID)
 	return TOKEN[itemID or 0] and true or false
