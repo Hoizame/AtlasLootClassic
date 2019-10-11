@@ -46,6 +46,7 @@ local KEYS = {	-- Keys
 	name = AL["Keys"],
 	TableType = NORMAL_ITTYPE,
 	ExtraList = true,
+	IgnoreAsSource = true,
 	[NORMAL_DIFF] = {
 		{ 1, "INV_Box_01", nil, AL["Key"], nil },
 		{ 2, 16309,},
@@ -84,6 +85,7 @@ local T1_SET = {
 	ExtraList = true,
 	LoadDifficulty = LOAD_DIFF,
 	TableType = SET_ITTYPE,
+	IgnoreAsSource = true,
 	[ALLIANCE_DIFF] = {
 		{ 1, 203 }, -- Warlock
 		{ 3, 202 }, -- Priest
@@ -108,6 +110,7 @@ local T2_SET = {
 	LoadDifficulty = LOAD_DIFF,
 	TableType = SET_ITTYPE,
 	ContentPhase = 3,
+	IgnoreAsSource = true,
 	[ALLIANCE_DIFF] = {
 		{ 1, 212 }, -- Warlock
 		{ 3, 211 }, -- Priest
@@ -132,6 +135,7 @@ local T3_SET = {
 	LoadDifficulty = LOAD_DIFF,
 	TableType = SET_ITTYPE,
 	ContentPhase = 6,
+	IgnoreAsSource = true,
 	[ALLIANCE_DIFF] = {
 		{ 1, 529 }, -- Warlock
 		{ 3, 525 }, -- Priest
@@ -155,6 +159,7 @@ local AQ_OPENING = {	-- Keys
 	TableType = NORMAL_ITTYPE,
 	ExtraList = true,
 	ContentPhase = 5,
+	IgnoreAsSource = true,
 	[NORMAL_DIFF] = {
 		{ 1,  21138 }, -- Red Scepter Shard
 		{ 2,  21529 }, -- Amulet of Shadow Shielding
@@ -180,6 +185,7 @@ local DM_BOOKS = { -- DMBooks
 	name = AL["Books"],
 	ExtraList = true,
 	ContentPhase = 2,
+	IgnoreAsSource = true,
 	[NORMAL_DIFF] = {
 		{ 1,  18401 }, -- Foror's Compendium of Dragon Slaying
 		{ 3,  18362 }, -- Holy Bologna: What the Light Won't Tell You
@@ -1159,7 +1165,7 @@ data["ScarletMonasteryGraveyard"] = {
 			},
 		},
 		{ -- SMGTrash
-			name = AL["Graveyard"] .." ".. AL["Trash"],
+			name = AL["Trash"],
 			ExtraList = true,
 			[NORMAL_DIFF] = {
 				{ 1,  5819 }, -- Sunblaze Coif
@@ -1222,7 +1228,7 @@ data["ScarletMonasteryLibrary"] = {
 			},
 		},
 		{ -- SMLTrash
-			name = AL["Library"] .." ".. AL["Trash"],
+			name = AL["Trash"],
 			ExtraList = true,
 			[NORMAL_DIFF] = {
 				{ 1,  5819 }, -- Sunblaze Coif
@@ -1289,7 +1295,7 @@ data["ScarletMonasteryArmory"] = {
 			},
 		},
 		{ -- SMATrash
-			name = AL["Armory"] .." ".. AL["Trash"],
+			name = AL["Trash"],
 			ExtraList = true,
 			[NORMAL_DIFF] = {
 				{ 1,  5819 }, -- Sunblaze Coif
@@ -1372,7 +1378,7 @@ data["ScarletMonasteryCathedral"] = {
 			},
 		},
 		{ -- SMCTrash
-			name = AL["Cathedral"] .." ".. AL["Trash"],
+			name = AL["Trash"],
 			ExtraList = true,
 			[NORMAL_DIFF] = {
 				{ 1,  5819 }, -- Sunblaze Coif
@@ -2978,6 +2984,7 @@ data["BlackrockDepths"] = {
 		{ -- BRDBSPlans
 			name = AL["Plans"],
 			ExtraList = true,
+			IgnoreAsSource = true,
 			[NORMAL_DIFF] = {
 				{ 1,  11614 }, -- Plans: Dark Iron Mail
 				{ 2,  11615 }, -- Plans: Dark Iron Shoulders
@@ -3743,9 +3750,10 @@ data["DireMaulWest"] = {
 			DisplayIDs = {{14412}},
 			ExtraList = true,
 			AtlasMapBossID = "1'",
+			IgnoreAsSource = true,
 			[NORMAL_DIFF] = {
 				{ 1,  18487, [PRICE_EXTRA_ITTYPE] = "money:40000" }, -- Pattern: Mooncloth Robe
-				{ 2,  18486 }, -- Mooncloth Robe
+				--{ 2,  18486 }, -- Mooncloth Robe
 			},
 		},
 		{ -- DMWHelnurath
@@ -4810,6 +4818,7 @@ data["Stratholme"] = {
 		{ -- STRATBSPlansSerenity / STRATBSPlansCorruption
 			name = AL["Plans"],
 			ExtraList = true,
+			IgnoreAsSource = true,
 			[NORMAL_DIFF] = {
 				{ 1,  12827 }, -- Plans: Serenity
 				{ 2,  12781 }, -- Serenity
@@ -5157,23 +5166,15 @@ data["MoltenCore"] = {
 			ExtraList = true,
 			[NORMAL_DIFF] = {
 				{ 1,  18264 }, -- Plans: Elemental Sharpening Stone
-				{ 2,  18262 }, -- Elemental Sharpening Stone
-				{ 4,  18292 }, -- Schematic: Core Marksman Rifle
-				{ 5,  18282 }, -- Core Marksman Rifle
-				{ 7,  18291 }, -- Schematic: Force Reactive Disk
-				{ 8,  18168 }, -- Force Reactive Disk
-				{ 10, 18290 }, -- Schematic: Biznicks 247x128 Accurascope
-				{ 11, 18283 }, -- Biznicks 247x128 Accurascope
-				{ 13, 18259 }, -- Formula: Enchant Weapon - Spell Power
+				{ 3,  18292 }, -- Schematic: Core Marksman Rifle
+				{ 4,  18291 }, -- Schematic: Force Reactive Disk
+				{ 5, 18290 }, -- Schematic: Biznicks 247x128 Accurascope
+				{ 7, 18259 }, -- Formula: Enchant Weapon - Spell Power
+				{ 8, 18260 }, -- Formula: Enchant Weapon - Healing Power
 				{ 16, 18252 }, -- Pattern: Core Armor Kit
-				{ 17, 18251 }, -- Core Armor Kit
-				{ 19, 18265 }, -- Pattern: Flarecore Wraps
-				{ 20, 18263 }, -- Flarecore Wraps
-				{ 22, 21371 }, -- Pattern: Core Felcloth Bag
-				{ 23, 21342 }, -- Core Felcloth Bag
-				{ 25, 18257 }, -- Recipe: Major Rejuvenation Potion
-				{ 26, 18253 }, -- Major Rejuvenation Potion
-				{ 28, 18260 }, -- Formula: Enchant Weapon - Healing Power
+				{ 18, 18265 }, -- Pattern: Flarecore Wraps
+				{ 19, 21371 }, -- Pattern: Core Felcloth Bag
+				{ 21, 18257 }, -- Recipe: Major Rejuvenation Potion
 			},
 		},
 		{ -- MCTrashMobs

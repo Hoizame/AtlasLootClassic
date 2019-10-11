@@ -244,6 +244,7 @@ function ItemDB:GetModuleList(addonName)
 	return contentList[addonName]
 end
 
+-- iniName, bossName
 function ItemDB:GetNameData_UNSAFE(addonName, contentName, boss)
 	if not ItemDB.Storage[addonName] then return end
 	return ItemDB.Storage[addonName][contentName]:GetName(true), ItemDB.Storage[addonName][contentName]:GetNameForItemTable(boss, true)
