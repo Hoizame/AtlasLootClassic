@@ -4,7 +4,7 @@ local _G = getfenv(0)
 local AtlasLoot = _G.AtlasLoot
 local Addons = AtlasLoot.Addons
 local AL = AtlasLoot.Locales
-local ALIL = AtlasLoot.Locales
+local ALIL = AtlasLoot.IngameLocales
 local Sources = Addons:RegisterNewAddon("Sources")
 local Tooltip = AtlasLoot.Tooltip
 
@@ -55,7 +55,7 @@ local SOURCE_TYPES = {
 	[13] = ALIL["Enchanting"],          -- Enchanting
 	[14] = ALIL["Fishing"],             -- Fishing
     [15] = ALIL["Skinning"],            -- Skinning
-    [16] = ALIL["Poisons"],             -- Rogue: Poisons
+    [16] = ALIL["ROGUE"]..": "..ALIL["Poisons"],             -- Rogue: Poisons
 }
 local SOURCE_DATA
 local KEY_WEAK_MT = {__mode="k"}
@@ -69,6 +69,7 @@ Sources.DbDefaults = {
     enabled = true,
     ["Sources"] = {
         ["*"] = true,
+        [16] = false,
     }
 }
 
@@ -99,22 +100,31 @@ local function OnTooltipSetItem_Hook(self)
 
     item = TooltipCache[item]
     if item and SOURCE_DATA.ItemData[item] then
-        if not TooltipTextCache[item] then
-            TooltipTextCache[item] = {}
-            if type(SOURCE_DATA.ItemData[item][1]) == "table" then
-                for i = 1, #SOURCE_DATA.ItemData[item] do
-                    local data = SOURCE_DATA.ItemData[item][i]
-                    TooltipTextCache[item][i] = format(TT_F, ICON_TEXTURE[data[3] or 0], BuildSource(SOURCE_DATA.AtlasLootIDs[data[1]],data[2],data[3]))
-                    self:AddLine(TooltipTextCache[item][i])
+        if TooltipTextCache[item] ~= false then
+            if not TooltipTextCache[item] then
+                TooltipTextCache[item] = {}
+                if type(SOURCE_DATA.ItemData[item][1]) == "table" then
+                    for i = 1, #SOURCE_DATA.ItemData[item] do
+                        local data = SOURCE_DATA.ItemData[item][i]
+                        if data[3] and Sources.db.Sources[data[3]] then
+                            TooltipTextCache[item][i] = format(TT_F, ICON_TEXTURE[data[3] or 0], BuildSource(SOURCE_DATA.AtlasLootIDs[data[1]],data[2],data[3]))
+                            self:AddLine(TooltipTextCache[item][i])
+                        end
+                    end
+                else
+                    local data = SOURCE_DATA.ItemData[item]
+                    if data[3] and Sources.db.Sources[data[3]] then
+                        TooltipTextCache[item][1] = format(TT_F, ICON_TEXTURE[data[3] or 0], BuildSource(SOURCE_DATA.AtlasLootIDs[data[1]],data[2],data[3]))
+                        self:AddLine(TooltipTextCache[item][1])
+                    end
+                end
+                if #TooltipTextCache[item] < 1 then
+                    TooltipTextCache[item] = false
                 end
             else
-                local data = SOURCE_DATA.ItemData[item]
-                TooltipTextCache[item][1] = format(TT_F, ICON_TEXTURE[data[3] or 0], BuildSource(SOURCE_DATA.AtlasLootIDs[data[1]],data[2],data[3]))
-                self:AddLine(TooltipTextCache[item][1])
-            end
-        else
-            for i = 1, #TooltipTextCache[item] do
-                self:AddLine(TooltipTextCache[item][i])
+                for i = 1, #TooltipTextCache[item] do
+                    self:AddLine(TooltipTextCache[item][i])
+                end
             end
         end
     end
@@ -152,6 +162,10 @@ end
 function Sources:SetData(dataTable)
     if SOURCE_DATA then return end
     SOURCE_DATA = dataTable
+end
+
+function Sources:GetSourceTypes()
+    return SOURCE_TYPES
 end
 
 Sources:Finalize()
