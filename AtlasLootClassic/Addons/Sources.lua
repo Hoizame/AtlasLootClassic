@@ -9,6 +9,7 @@ local Sources = Addons:RegisterNewAddon("Sources")
 local Tooltip = AtlasLoot.Tooltip
 local Droprate = AtlasLoot.Data.Droprate
 local Profession = AtlasLoot.Data.Profession
+local Recipe = AtlasLoot.Data.Recipe
 
 -- lua
 local type = type
@@ -21,6 +22,7 @@ local format = format
 local TT_F = "%s |cFF00ccff%s|r"
 local DUMMY_ICON = "Interface\\Icons\\INV_Misc_QuestionMark"
 local TEXTURE_ICON_F, ATLAS_ICON_F = "|T%s:0|t ", "|A:%s:0:0|a "
+local RECIPE_ICON = format(TEXTURE_ICON_F, "134939")
 local ICON_TEXTURE = {
     [0]  = format(TEXTURE_ICON_F, DUMMY_ICON),	            -- UNKNOWN
     [1]  = format(ATLAS_ICON_F, "ParagonReputation_Bag"),   -- Loot
@@ -71,6 +73,7 @@ Sources.DbDefaults = {
     enabled = true,
     showDropRate = true,
     showProfRank = true,
+    showRecipeSource = true,
     ["Sources"] = {
         ["*"] = true,
         [16] = false,
@@ -81,15 +84,25 @@ Sources.DbDefaults = {
 local function BuildSource(ini, boss, typ, item)
     if typ and typ > 3 then
         -- Profession
+        local src = ""
+        --RECIPE_ICON
+        if Sources.db.showRecipeSource then
+            local recipe = Recipe.GetRecipeForSpell(item)
+            if recipe and SOURCE_DATA.ItemData[recipe] then
+                local data = SOURCE_DATA.ItemData[recipe]
+                src = format(TT_F, RECIPE_ICON, BuildSource(SOURCE_DATA.AtlasLootIDs[data[1]],data[2],data[3],data[4] or item))
+                src = "\n"..src
+            end
+        end
         if Sources.db.showProfRank then
             local prof = Profession.GetProfessionData(item)
             if prof and prof[3] > 1 then
-                return SOURCE_TYPES[typ].." ("..prof[3]..")"
+                return SOURCE_TYPES[typ].." ("..prof[3]..")"..src
             else
-                return SOURCE_TYPES[typ]
+                return SOURCE_TYPES[typ]..src
             end
         else
-            return SOURCE_TYPES[typ]
+            return SOURCE_TYPES[typ]..src
         end
     end
     if ini then

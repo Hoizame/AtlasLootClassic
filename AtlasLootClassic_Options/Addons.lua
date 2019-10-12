@@ -346,7 +346,12 @@ local function CreateSourceOptions()
                 type = "toggle",
                 width = "full",
                 name = AL["Show profession rank if aviable."],
-                desc = format(AL["This loads the |cff999999%s|r module."], "AtlasLootClassic_DungeonsAndRaids")
+            },
+            showRecipeSource = {
+                order = 4,
+                type = "toggle",
+                width = "full",
+                name = AL["Show recipe source if aviable."],
             },
             typeSelection = {
                 type = "group",
