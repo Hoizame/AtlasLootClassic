@@ -3864,6 +3864,7 @@ data["DireMaulNorth"] = {
 		{ -- DMNThimblejack
 			name = AL["Knot Thimblejack's Cache"],
 			AtlasMapBossID = 4,
+			ObjectID = 179501,
 			[NORMAL_DIFF] = {
 				{ 1,  18414 }, -- Pattern: Belt of the Archmage
 				{ 16,  18517 }, -- Pattern: Chromatic Cloak
@@ -4863,7 +4864,6 @@ data["Stratholme"] = {
 	},
 }
 
-
 -- ########################
 -- Raids
 -- ########################
@@ -4877,7 +4877,7 @@ data["WorldBosses"] = {
 		{ -- AAzuregos
 			name = AL["Azuregos"],
 			AtlasMapFile = "Azuregos",
-			npcId = 6109,
+			npcID = 6109,
 			Level = 999,
 			ContentPhase = 2,
 			DisplayIDs = {{11460}},
@@ -4899,7 +4899,7 @@ data["WorldBosses"] = {
 		{ -- KKazzak
 			name = AL["Lord Kazzak"],
 			AtlasMapFile = "LordKazzak",
-			npcId = 12397,
+			npcID = 12397,
 			Level = 999,
 			ContentPhase = 2,
 			DisplayIDs = {{12449}},
@@ -4921,7 +4921,7 @@ data["WorldBosses"] = {
 		{ -- DLethon
 			name = AL["Lethon"],
 			AtlasMapFile = "FourDragons",
-			npcId = 14888,
+			npcID = 14888,
 			Level = 999,
 			ContentPhase = 4,
 			DisplayIDs = {{15365}},
@@ -4949,7 +4949,7 @@ data["WorldBosses"] = {
 		{ -- DEmeriss
 			name = AL["Emeriss"],
 			AtlasMapFile = "FourDragons",
-			npcId = 14889,
+			npcID = 14889,
 			Level = 999,
 			ContentPhase = 4,
 			DisplayIDs = {{15366}},
@@ -4976,7 +4976,7 @@ data["WorldBosses"] = {
 		{ -- DTaerar
 			name = AL["Taerar"],
 			AtlasMapFile = "FourDragons",
-			npcId = 14890,
+			npcID = 14890,
 			Level = 999,
 			ContentPhase = 4,
 			DisplayIDs = {{15363}, {15367}},
@@ -5003,7 +5003,7 @@ data["WorldBosses"] = {
 		{ -- DYsondre
 			name = AL["Ysondre"],
 			AtlasMapFile = "FourDragons",
-			npcId = 14887,
+			npcID = 14887,
 			Level = 999,
 			ContentPhase = 4,
 			DisplayIDs = {{15364}},
