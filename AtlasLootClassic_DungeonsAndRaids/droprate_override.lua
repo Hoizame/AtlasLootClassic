@@ -6,6 +6,8 @@ DROPRATE_OV = {
     [15410] = false, -- Scale of Onyxia
     [12382] = 100, -- Key to the City
     [13873] = 100, -- Viewing Room Key
+    [19802] = 100, -- Heart of Hakkar
+    [18249] = 100, -- Crescent Key
     --TF
     [18563] = 3, [18564] = 3,
 }

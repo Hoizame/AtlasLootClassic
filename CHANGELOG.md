@@ -4,9 +4,8 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 
 [Changelog history](https://github.com/Hoizame/AtlasLootClassic/blob/master/AtlasLootClassic/Documentation/Release_Notes.md)
 
-## v1.2.3 (Oct. 09, 2019)
+## v1.3.0-beta (Oct. 12, 2019)
 
-- Update content phases
-- Mark Zul'Farrak rares
-- Fix bug with autoselection lootpage update
-- Add quest requirements for DireMaul books
+- Add Sources addon that allows dropsources in item tooltips
+- Update DireMaul content phase
+- Middle click on MiniMapButton now ignores auto selection
