@@ -4630,6 +4630,7 @@ data["Stratholme"] = {
 			SubAreaID = 32303,
 			DisplayIDs = {{7856}},
 			AtlasMapBossID = 14,
+			specialType = "rare",
 			[NORMAL_DIFF] = {
 				{ 1,  13397 }, -- Stoneskin Gargoyle Cape
 				{ 2,  13954 }, -- Verdant Footpads
