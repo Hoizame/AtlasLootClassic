@@ -332,6 +332,21 @@ local function CreateSourceOptions()
                 type = "toggle",
                 width = "full",
                 name = _G.ENABLE,
+                desc = format(AL["This loads the |cff999999%s|r module."], "AtlasLootClassic_Data")
+            },
+            showDropRate = {
+                order = 2,
+                type = "toggle",
+                width = "full",
+                name = AL["Show drop rate if aviable."],
+                desc = format(AL["This loads the |cff999999%s|r module."], "AtlasLootClassic_DungeonsAndRaids")
+            },
+            showProfRank = {
+                order = 3,
+                type = "toggle",
+                width = "full",
+                name = AL["Show profession rank if aviable."],
+                desc = format(AL["This loads the |cff999999%s|r module."], "AtlasLootClassic_DungeonsAndRaids")
             },
             typeSelection = {
                 type = "group",

@@ -79,7 +79,7 @@ Options.config.args.atlasloot = {
 			type = "toggle",
 			width = "full",
 			name = AL["Enable auto selection of instances if available."],
-			desc = AL["Select instance loottable on open."],
+			desc = AL["Select instance loottable on open."].."\n"..format(AL["This loads the |cff999999%s|r module."], "AtlasLootClassic_DungeonsAndRaids"),
 			set = function(info, value) AtlasLoot.db.enableAutoSelect = value AtlasLoot.Data.AutoSelect:RefreshOptions() end,
 		},
 		enableAutoSelectBoss = {

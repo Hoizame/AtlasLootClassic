@@ -250,6 +250,11 @@ function ItemDB:GetNameData_UNSAFE(addonName, contentName, boss)
 	return ItemDB.Storage[addonName][contentName]:GetName(true), ItemDB.Storage[addonName][contentName]:GetNameForItemTable(boss, true)
 end
 
+function ItemDB:GetNpcID_UNSAFE(addonName, contentName, boss)
+	if not ItemDB.Storage[addonName] or not ItemDB.Storage[addonName][contentName] or not ItemDB.Storage[addonName][contentName].items[boss] then return end
+	return ItemDB.Storage[addonName][contentName].items[boss].npcID
+end
+
 -- ##################################################
 --	TableProto
 -- ##################################################

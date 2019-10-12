@@ -7,6 +7,8 @@ local AL = AtlasLoot.Locales
 local ALIL = AtlasLoot.IngameLocales
 local Sources = Addons:RegisterNewAddon("Sources")
 local Tooltip = AtlasLoot.Tooltip
+local Droprate = AtlasLoot.Data.Droprate
+local Profession = AtlasLoot.Data.Profession
 
 -- lua
 local type = type
@@ -67,6 +69,8 @@ local TooltipCache, TooltipTextCache = {}
 -- Addon
 Sources.DbDefaults = {
     enabled = true,
+    showDropRate = true,
+    showProfRank = true,
     ["Sources"] = {
         ["*"] = true,
         [16] = false,
@@ -74,17 +78,39 @@ Sources.DbDefaults = {
 }
 
 --Sources.GlobalDbDefaults = {}
-local function BuildSource(ini, boss, typ)
+local function BuildSource(ini, boss, typ, item)
     if typ and typ > 3 then
         -- Profession
-        return SOURCE_TYPES[typ]
+        if Sources.db.showProfRank then
+            local prof = Profession.GetProfessionData(item)
+            if prof and prof[3] > 1 then
+                return SOURCE_TYPES[typ].." ("..prof[3]..")"
+            else
+                return SOURCE_TYPES[typ]
+            end
+        else
+            return SOURCE_TYPES[typ]
+        end
     end
     if ini then
         local iniName, bossName = AtlasLoot.ItemDB:GetNameData_UNSAFE(AL_MODULE, ini, boss)
+        local dropRate
+        if Sources.db.showDropRate then
+            local npcID = AtlasLoot.ItemDB:GetNpcID_UNSAFE(AL_MODULE, ini, boss)
+            dropRate = Droprate:GetData(npcID, item)
+        end
         if iniName and bossName then
-            return iniName.." - "..bossName
+            if dropRate then
+                return iniName.." - "..bossName.." ("..dropRate.."%)"
+            else
+                return iniName.." - "..bossName
+            end
         elseif iniName then
-            return iniName
+            if dropRate then
+                return iniName.." ("..dropRate.."%)"
+            else
+                return iniName
+            end
         end
     end
     return ""
@@ -107,21 +133,20 @@ local function OnTooltipSetItem_Hook(self)
                     for i = 1, #SOURCE_DATA.ItemData[item] do
                         local data = SOURCE_DATA.ItemData[item][i]
                         if data[3] and Sources.db.Sources[data[3]] then
-                            TooltipTextCache[item][i] = format(TT_F, ICON_TEXTURE[data[3] or 0], BuildSource(SOURCE_DATA.AtlasLootIDs[data[1]],data[2],data[3]))
-                            self:AddLine(TooltipTextCache[item][i])
+                            TooltipTextCache[item][i] = format(TT_F, ICON_TEXTURE[data[3] or 0], BuildSource(SOURCE_DATA.AtlasLootIDs[data[1]],data[2],data[3],data[4] or item))
                         end
                     end
                 else
                     local data = SOURCE_DATA.ItemData[item]
                     if data[3] and Sources.db.Sources[data[3]] then
-                        TooltipTextCache[item][1] = format(TT_F, ICON_TEXTURE[data[3] or 0], BuildSource(SOURCE_DATA.AtlasLootIDs[data[1]],data[2],data[3]))
-                        self:AddLine(TooltipTextCache[item][1])
+                        TooltipTextCache[item][1] = format(TT_F, ICON_TEXTURE[data[3] or 0], BuildSource(SOURCE_DATA.AtlasLootIDs[data[1]],data[2],data[3],data[4] or item))
                     end
                 end
                 if #TooltipTextCache[item] < 1 then
                     TooltipTextCache[item] = false
                 end
-            else
+            end
+            if TooltipTextCache[item] then
                 for i = 1, #TooltipTextCache[item] do
                     self:AddLine(TooltipTextCache[item][i])
                 end
@@ -144,6 +169,9 @@ function Sources:UpdateDb()
 
     if self.db.enabled then
         AtlasLoot.Loader:LoadModule("AtlasLootClassic_Data", InitTooltips)
+        if self.db.showDropRate then
+            AtlasLoot.Loader:LoadModule("AtlasLootClassic_DungeonsAndRaids")
+        end
     end
 end
 
