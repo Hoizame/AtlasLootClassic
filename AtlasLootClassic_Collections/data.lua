@@ -39,7 +39,7 @@ local PRICE_EXTRA_ITTYPE = data:AddExtraItemTableType("Price")
 local SET_EXTRA_ITTYPE = data:AddExtraItemTableType("Set")
 
 local SET_CONTENT = data:AddContentType(AL["Sets"], ATLASLOOT_PVP_COLOR)
-local WORLD_BOSS_CONTENT = data:AddContentType(AL["World Bosses"], ATLASLOOT_WORLD_BOSS_COLOR)
+--local WORLD_BOSS_CONTENT = data:AddContentType(AL["World Bosses"], ATLASLOOT_WORLD_BOSS_COLOR)
 local COLLECTIONS_CONTENT = data:AddContentType(AL["Collections"], ATLASLOOT_COLLECTIONS_COLOR)
 local WORLD_EVENT_CONTENT = data:AddContentType(AL["World Events"], ATLASLOOT_SEASONALEVENTS_COLOR)
 
@@ -308,6 +308,7 @@ data["MiscSets"] = {
 	},
 }
 
+--[[
 data["Azuregos"] = {
 	name = AL["Azuregos"],
 	AtlasMapFile = "Azuregos",
@@ -499,6 +500,7 @@ data["DragonsOfNightmare"] = {
 		},
 	},
 }
+]]--
 
 data["WorldEpics"] = {
 	name = AL["World Epics"],

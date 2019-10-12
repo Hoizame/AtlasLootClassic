@@ -36,8 +36,6 @@
 ## X-Category: Map
 ## X-License: GPL v2
 
-## X-AtlasLoot-LootModule: 0
-
 embeds.xml
 
 Locales\constants.cn.lua

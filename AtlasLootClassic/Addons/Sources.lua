@@ -110,6 +110,7 @@ local function BuildSource(ini, boss, typ, item)
         local dropRate
         if Sources.db.showDropRate then
             local npcID = AtlasLoot.ItemDB:GetNpcID_UNSAFE(AL_MODULE, ini, boss)
+            if type(npcID) == "table" then npcID = npcID[1] end
             dropRate = Droprate:GetData(npcID, item)
         end
         if iniName and bossName then

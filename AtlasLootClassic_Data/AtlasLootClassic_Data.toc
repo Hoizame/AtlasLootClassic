@@ -36,8 +36,6 @@
 ## X-Category: Map
 ## X-License: GPL v2
 
-## X-AtlasLootClassic-LootModule: 1
-
 core.lua
 
 locales.lua
