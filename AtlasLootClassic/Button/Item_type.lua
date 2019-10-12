@@ -209,7 +209,7 @@ function Item.OnEnter(button, owner)
 		--tooltip:SetItemByID(button.ItemID)
 		tooltip:SetHyperlink("item:"..button.ItemID)
 	end
-	if button.Droprate then
+	if button.Droprate and AtlasLoot.db.showDropRate then
 		tooltip:AddDoubleLine(AL["Droprate:"], format(WHITE_TEXT, button.Droprate.."%"))
 	end
 	if AtlasLoot.db.showIDsInTT then

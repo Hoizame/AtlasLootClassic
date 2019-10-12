@@ -37,6 +37,12 @@ Options.config.args.atlasloot = {
 			width = "full",
 			name = AL["Show ID's in tooltip."],
 		},
+		showDropRate = {
+			order = 2.5,
+			type = "toggle",
+			width = "full",
+			name = AL["Show drop rate if aviable."],
+		},
 		showLvlRange = {
 			order = 3,
 			type = "toggle",
