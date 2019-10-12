@@ -338,20 +338,20 @@ local function CreateSourceOptions()
                 order = 2,
                 type = "toggle",
                 width = "full",
-                name = AL["Show drop rate if aviable."],
+                name = AL["Show drop rate if available."],
                 desc = format(AL["This loads the |cff999999%s|r module."], "AtlasLootClassic_DungeonsAndRaids")
             },
             showProfRank = {
                 order = 3,
                 type = "toggle",
                 width = "full",
-                name = AL["Show profession rank if aviable."],
+                name = AL["Show profession rank if available."],
             },
             showRecipeSource = {
                 order = 4,
                 type = "toggle",
                 width = "full",
-                name = AL["Show recipe source if aviable."],
+                name = AL["Show recipe source if available."],
             },
             typeSelection = {
                 type = "group",
