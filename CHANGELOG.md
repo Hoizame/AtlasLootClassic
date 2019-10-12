@@ -6,4 +6,5 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 
 ## v1.2.4 (Oct. XX, 2019)
 
-- DireMaul things
+- Update DireMaul content phase
+- Middle click on MiniMapButton now ignores auto selection
