@@ -8,6 +8,7 @@ local AL = AtlasLoot.Locales
 local Addons = _G.AtlasLoot.Addons
 local GetAddon = Addons.GetAddon
 local FavAddon = _G.AtlasLoot.Addons:GetAddon("Favourites")
+local Sources = _G.AtlasLoot.Addons:GetAddon("Sources")
 
 local AceGUI = LibStub("AceGUI-3.0")
 
@@ -315,6 +316,69 @@ local function CreateFavouriteOptions()
     return t
 end
 
+local function CreateSourceOptions()
+    local AddonName = Sources:GetName()
+    count = count + 1
+
+    local t = {
+        type = "group",
+        name = AL["Sources"],
+        order = count,
+        get = function(info) return Sources.db[info[#info]] end,
+        set = function(info, value) Sources.db[info[#info]] = value Addons:UpdateStatus("Sources") end,
+        args = {
+            enabled = {
+                order = 1,
+                type = "toggle",
+                width = "full",
+                name = _G.ENABLE,
+                desc = format(AL["This loads the |cff999999%s|r module."], "AtlasLootClassic_Data")
+            },
+            showDropRate = {
+                order = 2,
+                type = "toggle",
+                width = "full",
+                name = AL["Show drop rate if available."],
+                desc = format(AL["This loads the |cff999999%s|r module."], "AtlasLootClassic_DungeonsAndRaids")
+            },
+            showProfRank = {
+                order = 3,
+                type = "toggle",
+                width = "full",
+                name = AL["Show profession rank if available."],
+            },
+            showRecipeSource = {
+                order = 4,
+                type = "toggle",
+                width = "full",
+                name = AL["Show recipe source if available."],
+            },
+            typeSelection = {
+                type = "group",
+                name = AL["Icon"],
+                inline = true,
+                order = -1,
+                get = function(info) return Sources.db["Sources"][tonumber(info[#info])] end,
+                set = function(info, value) Sources.db["Sources"][tonumber(info[#info])] = value Addons:UpdateStatus("Sources") end,
+                args = {},
+            },
+        }
+    }
+
+    local data = t.args.typeSelection.args
+
+    for num, srcName in ipairs(Sources:GetSourceTypes()) do
+        data[tostring(num)] = {
+            order = num,
+            type = "toggle",
+            --width = "full",
+            name = srcName,
+        }
+    end
+
+    return t
+end
+
 -- Addons
 Options.orderNumber = Options.orderNumber + 1
 Options.config.args.addons = {
@@ -322,6 +386,7 @@ Options.config.args.addons = {
 	name = _G.ADDONS,
 	order = Options.orderNumber,
 	args = {
+        sources = CreateSourceOptions(),
         favourite = CreateFavouriteOptions(),
 	},
 }
