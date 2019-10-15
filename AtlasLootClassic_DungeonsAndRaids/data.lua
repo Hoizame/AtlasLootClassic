@@ -5264,7 +5264,6 @@ data["MoltenCore"] = {
 				{ 24, 17077 }, -- Crimson Shocker
 				{ 25, 18878 }, -- Sorcerous Dagger
 				{ 26, 17074 }, -- Shadowstrike
-				{ 27, 17223 }, -- Thunderstrike
 			},
 		},
 		{ -- MCMajordomo
