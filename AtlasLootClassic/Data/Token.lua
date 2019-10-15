@@ -184,6 +184,7 @@ local TOKEN = {
 	[7740] = 7733, -- Gni'kiv Medallion
 	[7741] = 7733, -- The Shaft of Tsol
 	[12845] = { 17044, 17045, type = 4 }, -- Medallion of Faith
+	[17771] = { 17771, 0, 18562, {12360,10}, 17010, {18567,3} }, -- Elementium Bar
 
 	-- Quests
 	[10441] = { 10657, 10658, type = 3 }, -- Glowing Shard

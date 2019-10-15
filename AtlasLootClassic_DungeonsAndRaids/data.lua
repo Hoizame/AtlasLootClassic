@@ -2030,7 +2030,6 @@ data["Zul'Farrak"] = {
 			npcID = 10081,
 			Level = 47,
 			DisplayIDs = {{9292}},
-			ContentPhase = 5,
 			AtlasMapBossID = 4,
 			specialType = "rare",
 			[NORMAL_DIFF] = {

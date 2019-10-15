@@ -799,16 +799,35 @@ data["Mounts"] = {
 	}
 }
 
---[[
-data["DireMaul"] = {
-	MapID = 2597,
-	AtlasMapID = "AlteracValley",
-	ContentType = PVP_CONTENT,
+data["Insignia"] = {
+	name = AL["Insignia"],
+	ContentType = GENERAL_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
+	ContentPhase = 2,
 	items = {
+		{
+			name = AL["Insignia"],
+			[ALLIANCE_DIFF] = {
+				{ 1,  18854 }, -- Warrior
+				{ 2,  18856 }, -- Hunter
+				{ 3,  18857 }, -- Rogue
+				{ 4,  18858 }, -- Warlock
+				{ 5,  18862 }, -- Priest
+				{ 6,  18863 }, -- Druid
+				{ 7,  18864 }, -- Paladin
+				{ 8,  18859 }, -- Mage
 
-		ExtraList = true,
-	},
+			},
+			[HORDE_DIFF] = {
+				{ 1,  18834 }, -- Warrior
+				{ 2,  18846 }, -- Hunter
+				{ 3,  18849 }, -- Rogue
+				{ 4,  18852 }, -- Warlock
+				{ 5,  18851 }, -- Priest
+				{ 6,  18853 }, -- Druid
+				{ 7,  18845 }, -- Shaman
+				{ 8,  18850 }, -- Mage
+			},
+		},
+	}
 }
-
-]]--
