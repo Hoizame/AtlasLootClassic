@@ -7,3 +7,5 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 ## v1.3.1 (Oct. XX, 2019)
 
 - Add Legendarys into Collections
+- Add PvP Insignia
+- Move Zul'Farrak / Dustwraith into Phase 1
