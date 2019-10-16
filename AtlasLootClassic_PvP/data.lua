@@ -716,13 +716,13 @@ data["ClassSets"] = {
 }
 
 data["Weapons"] = {
-	name = ALIL["Weapons"],
+	name = AL["Weapons"],
 	ContentType = GENERAL_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
 	ContentPhase = 2,
 	items = {
 		{ -- PVPWeapons
-			name = ALIL["Weapons"],
+			name = AL["Weapons"],
 			[ALLIANCE_DIFF] = {
 				{ 1,  18827 }, -- Grand Marshal's Handaxe
 				{ 2,  18830 }, -- Grand Marshal's Sunderer

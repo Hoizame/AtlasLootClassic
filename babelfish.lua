@@ -31,6 +31,7 @@ local FILE_LIST = {
 	-- optional: { "path", <bool>ParseXML } -- disable/enable xml parsing for single files
 	Global = {
 		"AtlasLootClassic/AtlasLootClassic.toc",
+		"SpecialLoc.lua",
 	},
 	Collections = {
 		"AtlasLootClassic_Collections/AtlasLootClassic_Collections.toc",
