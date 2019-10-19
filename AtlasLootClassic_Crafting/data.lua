@@ -1823,7 +1823,7 @@ data["Cooking"] = {
 			},
 		},
 		{
-			name = ALIL["Special"],
+			name = AL["Special"],
 			[NORMAL_DIFF] = {
 				{ 1, 15906 }, --Dragonbreath Chili / 240
 				{ 2, 8238 }, --Savory Deviate Delight / 125
