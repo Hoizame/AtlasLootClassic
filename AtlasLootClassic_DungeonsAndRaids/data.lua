@@ -3005,7 +3005,7 @@ data["BlackrockDepths"] = {
 }
 
 data["LowerBlackrockSpire"] = {
-	name = AL["Lower "] .. C_Map.GetAreaInfo(1583),
+	name = AL["Lower Blackrock Spire"],
 	MapID = 1583,
 	InstanceID = 229,
 	SubAreaIDs = { 26683, 26718, 26711, 26713, 26686, 32528, 26688 },
@@ -3294,7 +3294,7 @@ data["LowerBlackrockSpire"] = {
 }
 
 data["UpperBlackrockSpire"] = {
-	name = AL["Upper "] .. C_Map.GetAreaInfo(1583),
+	name = AL["Upper Blackrock Spire"],
 	MapID = 1583,
 	InstanceID = 229,
 	SubAreaIDs = { 26670, 26668, 26684, 26662, 26642, 26683, 15492, 26666, 26715 },
@@ -3511,7 +3511,7 @@ data["UpperBlackrockSpire"] = {
 }
 
 data["DireMaulEast"] = {
-	name = C_Map.GetAreaInfo(2557) .." ".. AL["East"],
+	name = AL["Dire Maul East"],
 	MapID = 2557,
 	InstanceID = 429,
 	SubAreaIDs = { 34776, 33730 },
@@ -3631,7 +3631,7 @@ data["DireMaulEast"] = {
 }
 
 data["DireMaulWest"] = {
-	name = C_Map.GetAreaInfo(2557) .." ".. AL["West"],
+	name = AL["Dire Maul West"],
 	MapID = 2557,
 	InstanceID = 429,
 	SubAreaIDs = { 33748, 33749, 33750, 33710 },
@@ -3782,7 +3782,7 @@ data["DireMaulWest"] = {
 }
 
 data["DireMaulNorth"] = {
-	name = C_Map.GetAreaInfo(2557) .." ".. AL["North"],
+	name = AL["Dire Maul North"],
 	MapID = 2557,
 	InstanceID = 429,
 	SubAreaIDs = { 33774, 33775 },
