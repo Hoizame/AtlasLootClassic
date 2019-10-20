@@ -8,3 +8,4 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 
 - Add Boss level for Dire Maul bosses
 - Add missing translations for Spanish big thanks @Rick !
+- Also big thanks to all the other translators
