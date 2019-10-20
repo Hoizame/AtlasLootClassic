@@ -3020,7 +3020,8 @@ data["LowerBlackrockSpire"] = {
 			npcID = 10263,
 			Level = {56, 57},
 			DisplayIDs = {{5047}},
-			AtlasMapBossID = "1'",
+			AtlasMapBossID = 1,
+			specialType = "rare",
 			[NORMAL_DIFF] = {
 				{ 1,  13181 }, -- Demonskin Gloves
 				{ 2,  13182 }, -- Phase Blade
@@ -3073,6 +3074,7 @@ data["LowerBlackrockSpire"] = {
 			Level = {57, 58},
 			DisplayIDs = {{11578}},
 			AtlasMapBossID = 6,
+			specialType = "rare",
 			[NORMAL_DIFF] = {
 				{ 1,  13282 }, -- Ogreseer Tower Boots
 				{ 2,  13283 }, -- Magus Ring
@@ -3163,7 +3165,6 @@ data["LowerBlackrockSpire"] = {
 			Level = 60,
 			DisplayIDs = {{11583}},
 			AtlasMapBossID = 15,
-			specialType = "rare",
 			[NORMAL_DIFF] = {
 				{ 1,  16670 }, -- Boots of Elements
 				{ 3,  13258 }, -- Slaghide Gauntlets
