@@ -48,6 +48,9 @@ local FILE_LIST = {
 	Options = {
 		"AtlasLootClassic_Options/AtlasLootClassic_Options.toc",
 	},
+	Factions = {
+		"AtlasLootClassic_Factions/AtlasLootClassic_Factions.toc",
+	}
 }
 
 -- Ignore Files / Pathes
