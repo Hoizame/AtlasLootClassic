@@ -8,7 +8,7 @@ declare -A LOC_FILES=(
   ["DungeonsAndRaids"]="DungeonsAndRaids.lua"
   ["PvP"]="PvP.lua"
   ["Options"]="Options.lua"
-  ["Factions"] = "Factions.lua"
+  ["Factions"]="Factions.lua"
 )
 
 tempfile=$( mktemp )
