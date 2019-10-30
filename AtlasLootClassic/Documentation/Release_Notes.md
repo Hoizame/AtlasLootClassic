@@ -2,6 +2,11 @@
 
 This mod is distributed under Version 2 of the GPL.  A copy of the GPL is included in this zip file with links to non-english translations.
 
+## v1.3.3 (Oct. 28, 2019)
+
+- Fix bug with kr translation
+- Droprate for Leaf and Eye should be 50% ( yes @MadSeasonShow )
+
 ## v1.3.2 (Oct. 20, 2019)
 
 - Add Boss level for Dire Maul bosses
