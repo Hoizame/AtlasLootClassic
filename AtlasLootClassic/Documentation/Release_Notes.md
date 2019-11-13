@@ -2,6 +2,12 @@
 
 This mod is distributed under Version 2 of the GPL.  A copy of the GPL is included in this zip file with links to non-english translations.
 
+## v1.3.4 (Nov. 13, 2019)
+
+- Set content phase 2
+- Update drop data
+- Fix bug with auto selection
+
 ## v1.3.3 (Oct. 28, 2019)
 
 - Fix bug with kr translation
