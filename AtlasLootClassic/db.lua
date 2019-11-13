@@ -15,7 +15,6 @@ AtlasLoot.AtlasLootDBDefaults = {
 			enableOnCrafting = true,
 			enableOnSets = true,
 			enableTT = false,
-			activePhase = 1,
 		},
 		Tooltip = {	-- Core\Tooltip.lua
 			tooltip = "AtlasLootTooltip",

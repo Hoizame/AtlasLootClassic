@@ -144,8 +144,8 @@ function Set.Refresh(button)
 		end
 	end
 	if AtlasLoot.db.ContentPhase.enableOnSets then
-		local phaseT = Sets:GetPhaseTextureForSetID(button.SetID)
-		if phaseT then
+		local phaseT, active = Sets:GetPhaseTextureForSetID(button.SetID)
+		if phaseT and not active then
 			button.phaseIndicator:SetTexture(phaseT)
 			button.phaseIndicator:Show()
 		end
