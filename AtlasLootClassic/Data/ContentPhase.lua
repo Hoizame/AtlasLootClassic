@@ -5,6 +5,7 @@ local ContentPhase = {}
 AtlasLoot.Data.ContentPhase = ContentPhase
 local AL = AtlasLoot.Locales
 local IMAGE_PATH = ALPrivate.IMAGE_PATH
+local ACTIVE_PHASE = 2
 
 --##START-DATA##
 local PHASE_ITEMS = {
@@ -236,6 +237,7 @@ local PHASE_ITEMS = {
 	[24222] = 6
 }
 --##END-DATA##
+PHASE_ITEMS[0] = 0
 
 local PHASE_TEXTURE_PATH = {
     [2] = IMAGE_PATH.."P2",
@@ -246,21 +248,21 @@ local PHASE_TEXTURE_PATH = {
 }
 
 function ContentPhase:GetForItemID(itemID)
-    return PHASE_ITEMS[itemID or 0]
+    return PHASE_ITEMS[itemID or 0], self:IsActive(PHASE_ITEMS[itemID or 0])
 end
 
 function ContentPhase:GetPhaseTexture(phase)
-    return PHASE_TEXTURE_PATH[phase]
+    return PHASE_TEXTURE_PATH[phase], self:IsActive(phase)
 end
 
 function ContentPhase:GetPhaseTextureForItemID(itemID)
-    return PHASE_TEXTURE_PATH[PHASE_ITEMS[itemID or 0] or 0]
+    return PHASE_TEXTURE_PATH[PHASE_ITEMS[itemID or 0] or 0], self:IsActive(PHASE_ITEMS[itemID or 0])
 end
 
 function ContentPhase:GetActivePhase()
-    return AtlasLoot.db.ContentPhase.activePhase
+    return ACTIVE_PHASE
 end
 
 function ContentPhase:IsActive(phase)
-    return (phase or 0) < AtlasLoot.db.ContentPhase.activePhase
+    return (phase or 0) <= ACTIVE_PHASE
 end

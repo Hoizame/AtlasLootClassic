@@ -309,8 +309,8 @@ function Item.Refresh(button)
 	end
 	--elseif Recipe.IsRecipe(itemID) then
 	if AtlasLoot.db.ContentPhase.enableOnItems then
-		local phaseT = ContentPhase:GetPhaseTextureForItemID(itemID)
-		if phaseT then
+		local phaseT, active = ContentPhase:GetPhaseTextureForItemID(itemID)
+		if phaseT and not active then
 			button.phaseIndicator:SetTexture(phaseT)
 			button.phaseIndicator:Show()
 		end
