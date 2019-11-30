@@ -4,8 +4,8 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 
 [Changelog history](https://github.com/Hoizame/AtlasLootClassic/blob/master/AtlasLootClassic/Documentation/Release_Notes.md)
 
-## v1.3.4 (Nov. 13, 2019)
+## v1.3.5 (Nov. 30, 2019)
 
-- Set content phase 2
-- Update drop data
-- Fix bug with auto selection
+- add Phase 2.5 for PvP
+- move out Phalanx (BRD) into own boss
+- fix bug with item display on first load

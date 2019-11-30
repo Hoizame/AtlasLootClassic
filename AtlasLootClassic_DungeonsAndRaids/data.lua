@@ -2818,9 +2818,9 @@ data["BlackrockDepths"] = {
 		{ -- BRDGuzzler
 			name = AL["Guzzler"],
 			SubAreaID = 26751,
-			npcID = {9537, 9502, 12944, 9543, 9499},
+			npcID = {9537, 12944, 9543, 9499},
 			Level = 55,
-			DisplayIDs = {{8658},{8177},{14666},{8667},{8652}},
+			DisplayIDs = {{8658},{14666},{8667},{8652}},
 			AtlasMapBossID = 15,
 			[NORMAL_DIFF] = {
 				{ 1, "INV_Box_01", nil, AL["Hurley Blackbreath"], nil },
@@ -2828,13 +2828,8 @@ data["BlackrockDepths"] = {
 				{ 3,  18043 }, -- Coal Miner Boots
 				{ 4,  22275 }, -- Firemoss Boots
 				{ 5,  18044 }, -- Hurley's Tankard
-				{ 7, "INV_Box_01", nil, AL["Phalanx"], nil },
-				{ 8,  11746 }, -- Golem Skull Helm
-				{ 9,  22212 }, -- Golem Fitted Pauldrons
-				{ 10,  11745 }, -- Fists of Phalanx
-				{ 11, 11744 }, -- Bloodfist
-				{ 13, "INV_Box_01", nil, AL["Lokhtos Darkbargainer"], nil },
-				{ 14, 18592 }, -- Plans: Sulfuron Hammer
+				{ 7, "INV_Box_01", nil, AL["Lokhtos Darkbargainer"], nil },
+				{ 8, 18592 }, -- Plans: Sulfuron Hammer
 				{ 16, "INV_Box_01", nil, AL["Ribbly Screwspigot"], nil },
 				{ 17, 11612 }, -- Plans: Dark Iron Plate
 				{ 18, 2662 }, -- Ribbly's Quiver
@@ -2848,6 +2843,21 @@ data["BlackrockDepths"] = {
 				{ 27, 15759 }, -- Pattern: Black Dragonscale Breastplate
 				{ 28, 11325 }, -- Dark Iron Ale Mug
 				{ 29, 11602 }, -- Grim Guzzler Key
+			},
+		},
+		{ -- Phalanx
+			name = AL["Phalanx"],
+			npcID = 9502,
+			Level = 55,
+			SubAreaID = 26751,
+			DisplayIDs = {{8177}},
+			AtlasMapBossID = 15,
+			[NORMAL_DIFF] = {
+				{ 1,  11746 }, -- Golem Skull Helm
+				{ 2,  22212 }, -- Golem Fitted Pauldrons
+				{ 3,  11745 }, -- Fists of Phalanx
+				{ 4, 11744 }, -- Bloodfist
+				{ 5, 11743 }, -- Rockfist
 			},
 		},
 		{ -- BRDFlamelash
@@ -3944,6 +3954,7 @@ data["DireMaulNorth"] = {
 		{ -- DMNTRIBUTERUN
 			name = AL["Tribute"],
 			ExtraList = true,
+			npcID = 14324,
 			ObjectID = 179564,
 			[NORMAL_DIFF] = {
 				{ 1,  18538 }, -- Treant's Bane

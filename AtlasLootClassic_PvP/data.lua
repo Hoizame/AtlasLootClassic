@@ -96,7 +96,7 @@ data["AlteracValley"] = {
 	AtlasMapID = "AlteracValley",
 	ContentType = PVP_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
-	ContentPhase = 3,
+	ContentPhase = 2.5,
 	items = {
 		{ -- AVRepExalted
 			name = _G["FACTION_STANDING_LABEL8"],
@@ -218,7 +218,7 @@ data["WarsongGulch"] = {
 	AtlasMapID = "WarsongGulch",
 	ContentType = PVP_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
-	ContentPhase = 3,
+	ContentPhase = 2.5,
 	items = {
 		{ -- WSGRepExalted
 			name = _G["FACTION_STANDING_LABEL8"],
@@ -689,7 +689,7 @@ data["ClassSets"] = {
 		},
 		{ -- Rare
 			name = ALIL["Rare"],
-			ContentPhase = 6,
+			ContentPhase = 2,
 			[ALLIANCE_DIFF] = {
 				{ 1, 547 }, -- Warlock
 				{ 3, 549 }, -- Priest

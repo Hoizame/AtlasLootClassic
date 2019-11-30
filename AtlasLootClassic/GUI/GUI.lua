@@ -29,7 +29,7 @@ local TT_INFO_ENTRY = "|cFFCFCFCF%s:|r %s"
 
 local db
 
-local function UpdateFrames(noPageUpdate)
+local function UpdateFrames(noPageUpdate, forceContentUpdate)
 	local moduleData = AtlasLoot.ItemDB:Get(db.selected[1])
 	local dataID = db.selected[2]
 	local bossID = db.selected[3]
@@ -172,7 +172,7 @@ local function UpdateFrames(noPageUpdate)
 
 		-- refresh current page
 		if contentFrame.shownFrame and contentFrame.shownFrame.Refresh then
-			contentFrame.shownFrame:Refresh()
+			contentFrame.shownFrame:Refresh(forceContentUpdate)
 		elseif not contentFrame.shownFrame then
 			GUI.ItemFrame:Show()
 		end
@@ -224,21 +224,25 @@ local function FrameOnShow(self)
 	FIRST_SHOW = false
 	if (AtlasLoot.db.enableAutoSelect) then
 		local module, instance, boss = AtlasLoot.Data.AutoSelect:GetCurrrentPlayerData()
+		local pass = false
 		if module ~= db.selected[1] then
 			self.moduleSelect:SetSelected(module)
+			pass = true
 		end
-		if instance ~= db.selected[2] then
-			self.subCatSelect:SetSelected(instance)
-			if AtlasLoot.db.enableAutoSelectBoss and boss then
-				-- waite
+		if ( pass and instance ) or ( instance ~= db.selected[2] ) then
+			if instance ~= db.selected[2] then
+				pass = true
 			else
-				self.boss:SetSelected(1)
+				pass = false
 			end
+			self.subCatSelect:SetSelected(instance)
 		end
-		if AtlasLoot.db.enableAutoSelectBoss and boss and boss ~= db.selected[3] then
-			self.boss:SetSelected(boss)
+		if AtlasLoot.db.enableAutoSelectBoss and (pass or (boss and boss ~= db.selected[3])) then
+			self.boss:SetSelected(boss or 1)
+		elseif pass then
+			self.boss:SetSelected(1)
 		end
-		UpdateFrames()
+		UpdateFrames(false, true) -- force a update
 	end
 end
 
