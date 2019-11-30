@@ -3954,6 +3954,7 @@ data["DireMaulNorth"] = {
 		{ -- DMNTRIBUTERUN
 			name = AL["Tribute"],
 			ExtraList = true,
+			npcID = 14324,
 			ObjectID = 179564,
 			[NORMAL_DIFF] = {
 				{ 1,  18538 }, -- Treant's Bane
