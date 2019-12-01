@@ -5,3 +5,7 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 [Changelog history](https://github.com/Hoizame/AtlasLootClassic/blob/master/AtlasLootClassic/Documentation/Release_Notes.md)
 
 ## v1.3.X (Dec. XX, 2019)
+
+- Set Panzor in BRD as rare
+- Add level for Avatar of Hakkar
+- Fix bug with empty boss names
