@@ -2377,6 +2377,7 @@ data["TheTempleOfAtal'Hakkar"] = {
 			npcID = 8443,
 			DisplayIDs = {{8053}},
 			AtlasMapBossID = 3,
+			Level = 48,
 			[NORMAL_DIFF] = {
 				{ 1,  12462 }, -- Embrace of the Wind Serpent
 				{ 3,  10843 }, -- Featherskin Cape
