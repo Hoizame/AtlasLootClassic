@@ -2990,21 +2990,22 @@ local ReqData = {
 --##END-DATA##
 
 local CLASS = {
-    NONE 			= 0,
-    WARRIOR 		= 2,
-    PALADIN 		= 4,
-    HUNTER 			= 8,
-    ROGUE 			= 16,
-    PRIEST 			= 32,
-    --DEATHKNIGHT 	= 64,
-    SHAMAN 			= 128,
-    MAGE 			= 256,
-    WARLOCK 		= 512,
-    --MONK	 		= 1024,
-    DRUID 			= 2048,
-    --DEMONHUNTER 	= 4096,
+    --NONE 			= 0,
+    WARRIOR 		= 1,
+    PALADIN 		= 2,
+    HUNTER 			= 4,
+    ROGUE 			= 8,
+    PRIEST 			= 16,
+    --DEATHKNIGHT 	= 32,
+    SHAMAN 			= 64,
+    MAGE 			= 128,
+    WARLOCK 		= 256,
+    --MONK	 		= 512,
+    DRUID 			= 1024,
+    --DEMONHUNTER 	= 2048,
 }
 local CLASS_SORT = { "WARRIOR", "PALADIN", "HUNTER", "ROGUE", "PRIEST", "SHAMAN", "MAGE", "WARLOCK", "DRUID" }
+
 
 local CLASS_ICON_PATH = ALPrivate.CLASS_ICON_PATH
 local TEXTURE_STRING, TEXTURE_STRING_ID = "|T%s:0|t ", "|T%d:0|t "
@@ -3035,12 +3036,14 @@ local ClassStrings = {}
 local function BuildClassString(classBit)
 	if not ClassStrings[classBit] then
 		local output = ""
+		local counter = 0
 		for _, class in ipairs(CLASS_SORT) do
 			if bit_band(classBit, CLASS[class]) ~= 0 then
 				output = output..format(TEXTURE_STRING, CLASS_ICON_PATH[class])
+				counter = counter + 1
 			end
 		end
-		ClassStrings[classBit] = output
+		ClassStrings[classBit] = counter < 9 and output or ""
 	end
 	return ClassStrings[classBit]
 end
