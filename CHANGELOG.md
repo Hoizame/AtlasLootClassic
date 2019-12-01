@@ -9,5 +9,5 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 - New: Items now show class / PvP rank icons
 - Add PvP Non set armor
 - Set Panzor in BRD as rare
-- Add level for Avatar of Hakkar
+- Add level for Avatar of Hakkar-
 - Fix bug with empty boss names
