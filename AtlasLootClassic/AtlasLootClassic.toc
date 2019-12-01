@@ -70,6 +70,7 @@ Data\Mount.lua
 Data\ContentPhase.lua
 Data\Droprate.lua
 Data\AutoSelect.lua
+Data\Requirements.lua
 
 ItemDB\ItemDB.lua
 ItemDB\SoundData.lua
