@@ -2,6 +2,14 @@
 
 This mod is distributed under Version 2 of the GPL.  A copy of the GPL is included in this zip file with links to non-english translations.
 
+## v1.4.0 (Dec. 01, 2019)
+
+- New: Items now show class / PvP rank icons
+- Add PvP Non set armor
+- Set Panzor in BRD as rare
+- Add level for Avatar of Hakkar
+- Fix bug with empty boss names
+
 ## v1.3.5 (Nov. 30, 2019)
 
 - add Phase 2.5 for PvP
