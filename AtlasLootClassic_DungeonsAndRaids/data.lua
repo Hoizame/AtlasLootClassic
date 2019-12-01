@@ -2377,6 +2377,7 @@ data["TheTempleOfAtal'Hakkar"] = {
 			npcID = 8443,
 			DisplayIDs = {{8053}},
 			AtlasMapBossID = 3,
+			Level = 48,
 			[NORMAL_DIFF] = {
 				{ 1,  12462 }, -- Embrace of the Wind Serpent
 				{ 3,  10843 }, -- Featherskin Cape
@@ -2883,6 +2884,7 @@ data["BlackrockDepths"] = {
 			SubAreaID = 26764,
 			DisplayIDs = {{8270}},
 			AtlasMapBossID = 17,
+			specialType = "rare",
 			[NORMAL_DIFF] = {
 				{ 1,  22245 }, -- Soot Encrusted Footwear
 				{ 2,  11787 }, -- Shalehusk Boots

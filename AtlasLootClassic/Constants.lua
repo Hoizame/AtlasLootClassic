@@ -49,7 +49,8 @@ ALPrivate.ACCOUNT_LOCALE = GetLocale()
 
 -- Image path
 ALPrivate.IMAGE_PATH = "Interface\\AddOns\\"..ALName.."\\Images\\"
-ALPrivate.ICONS_PATH = ALPrivate.IMAGE_PATH.."Icons\\"
+local ICONS_PATH = ALPrivate.IMAGE_PATH.."Icons\\"
+ALPrivate.ICONS_PATH = ICONS_PATH
 
 -- Mostly used in selection template
 ALPrivate.COIN_TEXTURE = {
@@ -70,4 +71,17 @@ ALPrivate.BOX_BORDER_BACKDROP = {
 	tileSize = 16,
 	edgeSize = 16,
 	insets = { left = 4, right = 4, top = 4, bottom = 4 },
+}
+
+ALPrivate.CLASS_ICON_PATH = {
+	-- class icons
+	WARRIOR 	= 	ICONS_PATH.."classicon_warrior",
+	PALADIN 	= 	ICONS_PATH.."classicon_paladin",
+	HUNTER 		= 	ICONS_PATH.."classicon_hunter",
+	ROGUE 		= 	ICONS_PATH.."classicon_rogue",
+	PRIEST 		= 	ICONS_PATH.."classicon_priest",
+	SHAMAN 		= 	ICONS_PATH.."classicon_shaman",
+	MAGE 		= 	ICONS_PATH.."classicon_mage",
+	WARLOCK 	= 	ICONS_PATH.."classicon_warlock",
+	DRUID 		= 	ICONS_PATH.."classicon_druid",
 }

@@ -13,6 +13,7 @@ local Sets = AtlasLoot.Data.Sets
 local Mount = AtlasLoot.Data.Mount
 local ContentPhase = AtlasLoot.Data.ContentPhase
 local Droprate = AtlasLoot.Data.Droprate
+local Requirements = AtlasLoot.Data.Requirements
 local ItemFrame, Favourites
 
 -- lua
@@ -300,6 +301,9 @@ function Item.Refresh(button)
 			(Mount.IsMount(button.ItemID) and ALIL["Mount"] or nil) or
 			( Sets:GetItemSetForItemID(itemID) and AL["|cff00ff00Set item:|r "] or "")..GetItemDescInfo(itemEquipLoc, itemType, itemSubType)
 		)
+		if Requirements.HasRequirements(itemID) then
+			button.extra:SetText(Requirements.GetReqString(itemID)..button.extra:GetText())
+		end
 	end
 	if Favourites and Favourites:IsFavouriteItemID(itemID) then
 		Favourites:SetFavouriteIcon(itemID, button.favourite)

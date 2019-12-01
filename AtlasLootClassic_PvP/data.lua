@@ -715,6 +715,76 @@ data["ClassSets"] = {
 	},
 }
 
+data["Armor"] = {
+	name = AL["Armor"],
+	ContentType = GENERAL_CONTENT,
+	LoadDifficulty = LOAD_DIFF,
+	ContentPhase = 2,
+	items = {
+		{ -- PVPWeapons
+			name = AL["Armor"],
+			[ALLIANCE_DIFF] = {
+				{ 1,  18664 }, -- A Treatise on Military Ranks
+
+				{ 3, 18443 }, -- Master Sergeant's Insignia
+				{ 4, 18444 }, -- Master Sergeant's Insignia
+				{ 5, 18442 }, -- Master Sergeant's Insignia
+
+				{ 7, 18456 }, -- Sergeant Major's Silk Cuffs
+				{ 8, 18457 }, -- Sergeant Major's Silk Cuffs
+
+				{ 10, 18452 }, -- Sergeant Major's Leather Armsplints
+				{ 11, 18453 }, -- Sergeant Major's Leather Armsplints
+
+				{ 13, 18448 }, -- Sergeant Major's Chain Armguards
+				{ 14, 18449 }, -- Sergeant Major's Chain Armguards
+
+				{ 16,  15196 }, -- Private's Tabard
+
+				{ 18, 16342 }, -- Sergeant's Cape
+				{ 19, 18441 }, -- Sergeant's Cape
+				{ 20, 18440 }, -- Sergeant's Cape
+
+				{ 22, 18445 }, -- Sergeant Major's Plate Wristguards
+				{ 23, 18447 }, -- Sergeant Major's Plate Wristguards
+
+				{ 25, 18454 }, -- Sergeant Major's Dragonhide Armsplints
+				{ 26, 18455 }, -- Sergeant Major's Dragonhide Armsplints
+
+			},
+			[HORDE_DIFF] = {
+				{ 1, 18675 }, -- Military Ranks of the Horde & Alliance
+
+				{ 3, 16335 }, -- Senior Sergeant's Insignia
+				{ 4, 18428 }, -- Senior Sergeant's Insignia
+				{ 5, 15200 }, -- Senior Sergeant's Insignia
+
+				{ 7, 16486 }, -- First Sergeant's Silk Cuffs
+				{ 8, 18437 }, -- First Sergeant's Silk Cuffs
+
+				{ 10, 16497 }, -- First Sergeant's Leather Armguards
+				{ 11, 18435 }, -- First Sergeant's Leather Armguards
+
+				{ 13, 18429 }, -- First Sergeant's Plate Bracers
+				{ 14, 18430 }, -- First Sergeant's Plate Bracers
+
+				{ 16,  15197 }, -- Scout's Tabard
+
+				{ 18, 18461 }, -- Sergeant's Cloak
+				{ 19, 16341 }, -- Sergeant's Cloak
+				{ 20, 18427 }, -- Sergeant's Cloak
+
+				{ 22, 16532 }, -- First Sergeant's Mail Wristguards
+				{ 23, 18432 }, -- First Sergeant's Mail Wristguards
+
+				{ 25, 18434 }, -- First Sergeant's Dragonhide Armguards
+				{ 26, 18436 }, -- First Sergeant's Dragonhide Armguards
+
+			},
+		},
+	},
+}
+
 data["Weapons"] = {
 	name = AL["Weapons"],
 	ContentType = GENERAL_CONTENT,

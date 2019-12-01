@@ -4,8 +4,10 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 
 [Changelog history](https://github.com/Hoizame/AtlasLootClassic/blob/master/AtlasLootClassic/Documentation/Release_Notes.md)
 
-## v1.3.5 (Nov. 30, 2019)
+## v1.4.0 (Dec. 01, 2019)
 
-- add Phase 2.5 for PvP
-- move out Phalanx (BRD) into own boss
-- fix bug with item display on first load
+- New: Items now show class / PvP rank icons
+- Add PvP Non set armor
+- Set Panzor in BRD as rare
+- Add level for Avatar of Hakkar
+- Fix bug with empty boss names

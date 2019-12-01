@@ -131,7 +131,6 @@ local function ShowSelectedCoin(self, enabled)
 	self.showSelectedCoin = enabled
 end
 
-
 local function SetButtonOnClick(self, func)
 	if func and type(func) == "function" then
 		self.ButtonOnClick = func
@@ -155,6 +154,7 @@ local function SetToolTipFunc(self, OnEnter, OnLeave)
 	self.OnEnterButton = OnEnter or ShowToolTip
 	self.OnLeaveButton = OnLeave or HideToolTip
 end
+
 -- local UpdateContent, UpdateScroll
 do
 	local BUTTON_COUNT = 0
@@ -224,8 +224,11 @@ do
 
 			frame.label = frame:CreateFontString(frameName.."-label", "ARTWORK", "GameFontNormal")
 			--frame.label:SetPoint("LEFT", frame, "LEFT")
-			frame.label:SetHeight(self.buttonHeight)
+			--frame.label:SetHeight(self.buttonHeight)
+			frame.label:SetPoint("TOPLEFT", frame, "TOPLEFT")
+			frame.label:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", -18, 0)
 			frame.label:SetJustifyH("LEFT")
+			frame.label:SetJustifyV("MIDDLE")
 			frame.label:SetText(frameName.."-label")
 
 			frame.coin = frame:CreateTexture(frameName.."-coin", "ARTWORK")
@@ -234,20 +237,19 @@ do
 			frame.coin:SetHeight(16)
 			frame.coin:SetWidth(16)
 
-			frame.label:SetPoint("LEFT", frame, "LEFT")
-			frame.label:SetPoint("RIGHT", frame.coin, "LEFT")
-
 		end
-		frame.obj = self
-		frame:SetWidth(self.buttonWidth)
-		frame:SetHeight(self.buttonHeight)
-		frame.label:SetHeight(self.buttonHeight)
-		frame:SetScript("OnEnter", self.OnEnterButton)
-		frame:SetScript("OnLeave", self.OnLeaveButton)
 
 		frame:ClearAllPoints()
 		frame:SetParent(self.frame)
 		frame:SetFrameLevel(self.frame:GetFrameLevel()+1)
+
+		frame.obj = self
+		frame:SetWidth(self.buttonWidth)
+		frame:SetHeight(self.buttonHeight)
+		--frame.label:SetHeight(self.buttonHeight)
+		frame:SetScript("OnEnter", self.OnEnterButton)
+		frame:SetScript("OnLeave", self.OnLeaveButton)
+
 		if #self.buttons > 0 then
 			frame:SetPoint("TOPLEFT", self.buttons[#self.buttons], "BOTTOMLEFT", 0, -self.space)
 		else
@@ -300,7 +302,6 @@ do
 				button.info = info
 				button.ttTitle = info.tt_title
 				button.ttText = info.tt_text
-				button.label:SetText(info.name or UNKNOWN)
 				if self.selected and self.selected[2] == info.id then
 					button:SetChecked(true)
 					if self.showSelectedCoin then
@@ -310,7 +311,9 @@ do
 						button.coin:Hide()
 					end
 				else
-					button:SetChecked(false)
+					if button:GetChecked() then
+						button:SetChecked(false)
+					end
 					if self.showSelectedCoin then
 						SetupCoin(info.coinTexture, button, false)
 						button.coin:Show()
@@ -318,6 +321,8 @@ do
 						button.coin:Hide()
 					end
 				end
+				button.label:SetText(info.name or UNKNOWN)
+				button.label:GetWidth() -- this "fix" a bug with text is not shown
 			else
 				button:Hide()
 			end
