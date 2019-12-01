@@ -18,18 +18,8 @@ local GetItemQualityColor, GetItemIcon = _G.GetItemQualityColor, _G.GetItemIcon
 
 local GLOBAL_SETS = "global"
 local NO_ICON = "Interface\\Icons\\inv_helmet_08"
-local ICON_PATH_PRE = {
-	-- class icons
-	WARRIOR 	= 	IMAGE_PATH.."classicon_warrior",
-	PALADIN 	= 	IMAGE_PATH.."classicon_paladin",
-	HUNTER 		= 	IMAGE_PATH.."classicon_hunter",
-	ROGUE 		= 	IMAGE_PATH.."classicon_rogue",
-	PRIEST 		= 	IMAGE_PATH.."classicon_priest",
-	SHAMAN 		= 	IMAGE_PATH.."classicon_shaman",
-	MAGE 		= 	IMAGE_PATH.."classicon_mage",
-	WARLOCK 	= 	IMAGE_PATH.."classicon_warlock",
-	DRUID 		= 	IMAGE_PATH.."classicon_druid",
-}
+local ICON_PATH_PRE = ALPrivate.CLASS_ICON_PATH
+
 local SPECIAL_ICONS = {
 	[466] = GetItemIcon(19898), -- Major Mojo Infusion
 	[462] = GetItemIcon(19905), -- Zanzil's Concentration

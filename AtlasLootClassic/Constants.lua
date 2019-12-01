@@ -71,3 +71,16 @@ ALPrivate.BOX_BORDER_BACKDROP = {
 	edgeSize = 16,
 	insets = { left = 4, right = 4, top = 4, bottom = 4 },
 }
+
+ALPrivate.CLASS_ICON_PATH = {
+	-- class icons
+	WARRIOR 	= 	ALPrivate.IMAGE_PATH.."classicon_warrior",
+	PALADIN 	= 	ALPrivate.IMAGE_PATH.."classicon_paladin",
+	HUNTER 		= 	ALPrivate.IMAGE_PATH.."classicon_hunter",
+	ROGUE 		= 	ALPrivate.IMAGE_PATH.."classicon_rogue",
+	PRIEST 		= 	ALPrivate.IMAGE_PATH.."classicon_priest",
+	SHAMAN 		= 	ALPrivate.IMAGE_PATH.."classicon_shaman",
+	MAGE 		= 	ALPrivate.IMAGE_PATH.."classicon_mage",
+	WARLOCK 	= 	ALPrivate.IMAGE_PATH.."classicon_warlock",
+	DRUID 		= 	ALPrivate.IMAGE_PATH.."classicon_druid",
+}
