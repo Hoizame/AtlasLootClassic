@@ -3066,6 +3066,10 @@ function Requirements.HasRequirements(itemID)
 	return ReqData[itemID] and true or false
 end
 
+function Requirements.HasPvPRequirements(itemID)
+	return ( ReqData[itemID] and ReqData[itemID][2] ) and true or false
+end
+
 function Requirements.GetReqString(itemID, noClass, noPvP)
 	local ret = ""
 	local data = ReqData[itemID]
