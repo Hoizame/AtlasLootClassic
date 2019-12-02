@@ -205,6 +205,7 @@ local TOKEN = {
 	[7666] = { 7673, type = 3 }, -- Shattered Necklace
 	[19003] = { 19383, 19384, 19366, type = 3 }, -- Head of Nefarian
 	[18423] = { 18404, 18403, 18406, type = 3 }, -- Head of Onyxia
+	[20644] = { 20600, type = 3 }, -- Shrouded in Nightmare
 
 	-- Quest objective
 	[18705] = { 18713, type = 4 }, -- Mature Black Dragon Sinew
