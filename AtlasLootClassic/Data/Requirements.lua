@@ -3050,7 +3050,16 @@ end
 
 function Requirements.GetPvPRankInfo(rank, faction)
 	faction = faction or PLAYER_FACTION
-	return PVP_RANK[faction == HORDE and 1 or 2], PVP_RANK[3]
+	return PVP_RANK[faction == HORDE and 1 or 2], PVP_RANK[rank][3]
+end
+
+function Requirements.GetPvPRankIcon(rank)
+	return PVP_RANK[rank][3]
+end
+
+function Requirements.GetPvPRankIconForItem(itemID)
+	if not ReqData[itemID] then return end
+	return PVP_RANK[ReqData[itemID][2]][3]
 end
 
 function Requirements.HasRequirements(itemID)
