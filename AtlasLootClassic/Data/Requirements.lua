@@ -2249,7 +2249,12 @@ local ReqData = {
 	[21560] = {32767},
 	[21561] = {32767},
 	[21562] = {32767},
+	[21563] = {-1136},
 	[21564] = {32767},
+	[21565] = {-48},
+	[21566] = {-48},
+	[21567] = {-1521},
+	[21568] = {-1521},
 	[21569] = {32767},
 	[21570] = {32767},
 	[21571] = {32767},
@@ -3050,11 +3055,24 @@ end
 
 function Requirements.GetPvPRankInfo(rank, faction)
 	faction = faction or PLAYER_FACTION
-	return PVP_RANK[faction == HORDE and 1 or 2], PVP_RANK[3]
+	return PVP_RANK[faction == HORDE and 1 or 2], PVP_RANK[rank][3]
+end
+
+function Requirements.GetPvPRankIcon(rank)
+	return PVP_RANK[rank][3]
+end
+
+function Requirements.GetPvPRankIconForItem(itemID)
+	if not ReqData[itemID] then return end
+	return PVP_RANK[ReqData[itemID][2]][3]
 end
 
 function Requirements.HasRequirements(itemID)
 	return ReqData[itemID] and true or false
+end
+
+function Requirements.HasPvPRequirements(itemID)
+	return ( ReqData[itemID] and ReqData[itemID][2] ) and true or false
 end
 
 function Requirements.GetReqString(itemID, noClass, noPvP)

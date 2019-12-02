@@ -254,6 +254,7 @@ function Item.OnClear(button)
 	button.secButton.ItemString = nil
 	button.secButton.SetData = nil
 	button.secButton.RawName = nil
+	button.secButton.pvp:Hide()
 
 	itemIsOnEnter = nil
 	buttonOnEnter = nil
@@ -280,6 +281,11 @@ function Item.Refresh(button)
 
 	if button.type == "secButton" then
 		button:SetNormalTexture(itemTexture or DUMMY_ITEM_ICON)
+
+		if Requirements.HasPvPRequirements(itemID) then
+			button.pvp:SetTexture(Requirements.GetPvPRankIconForItem(itemID))
+			button.pvp:Show()
+		end
 	else
 		-- ##################
 		-- icon

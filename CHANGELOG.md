@@ -4,10 +4,10 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 
 [Changelog history](https://github.com/Hoizame/AtlasLootClassic/blob/master/AtlasLootClassic/Documentation/Release_Notes.md)
 
-## v1.4.0 (Dec. 01, 2019)
+## v1.4.1 (Dec. 02, 2019)
 
-- New: Items now show class / PvP rank icons
-- Add PvP Non set armor
-- Set Panzor in BRD as rare
-- Add level for Avatar of Hakkar-
-- Fix bug with empty boss names
+- Items for Sets now show PvP Rank requirements
+- Set Sack of Gems for every Dragon (Ony, Nef,...)
+- Add some missing Class requirements
+- Fix bug with selected boss reset after every reopen
+- Translation updates. Big thanks to all the translators!!!

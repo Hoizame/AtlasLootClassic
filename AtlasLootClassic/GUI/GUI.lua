@@ -225,11 +225,11 @@ local function FrameOnShow(self)
 	if (AtlasLoot.db.enableAutoSelect) then
 		local module, instance, boss = AtlasLoot.Data.AutoSelect:GetCurrrentPlayerData()
 		local pass = false
-		if module ~= db.selected[1] then
+		if module and module ~= db.selected[1] then
 			self.moduleSelect:SetSelected(module)
 			pass = true
 		end
-		if ( pass and instance ) or ( instance ~= db.selected[2] ) then
+		if ( pass and instance ) or ( instance and instance ~= db.selected[2] ) then
 			if instance ~= db.selected[2] then
 				pass = true
 			else

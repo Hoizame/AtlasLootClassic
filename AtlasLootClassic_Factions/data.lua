@@ -365,8 +365,8 @@ data["BroodOfNozdormu"] = {
 			[NORMAL_DIFF] = {
 				{ 1, "f910rep6" },
 				{ 2, 21208 }, --Signet Ring of the Bronze Dragonflight / 70
-				{ 2, 21203 }, --Signet Ring of the Bronze Dragonflight / 70
-				{ 3, 21198 }, --Signet Ring of the Bronze Dragonflight / 70
+				{ 3, 21203 }, --Signet Ring of the Bronze Dragonflight / 70
+				{ 4, 21198 }, --Signet Ring of the Bronze Dragonflight / 70
 			},
 		},
 		{ -- Friendly
