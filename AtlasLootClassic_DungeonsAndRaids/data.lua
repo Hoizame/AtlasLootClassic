@@ -3891,6 +3891,7 @@ data["DireMaulNorth"] = {
 		{ -- DMNThimblejack
 			name = AL["Knot Thimblejack's Cache"],
 			AtlasMapBossID = 4,
+			npcID = 14338,
 			ObjectID = 179501,
 			[NORMAL_DIFF] = {
 				{ 1,  18414 }, -- Pattern: Belt of the Archmage
