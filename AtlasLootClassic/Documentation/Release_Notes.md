@@ -2,6 +2,12 @@
 
 This mod is distributed under Version 2 of the GPL.  A copy of the GPL is included in this zip file with links to non-english translations.
 
+## v1.4.2 (Dec. 11, 2019)
+
+- Set Phase 2.5
+- Add PvP Ranks overview
+- Fix missing random enchants on gear
+
 ## v1.4.1 (Dec. 02, 2019)
 
 - Items for Sets now show PvP Rank requirements
