@@ -34,6 +34,7 @@ end
 
 local NORMAL_ITTYPE = data:AddItemTableType("Item", "Item")
 local SET_ITTYPE = data:AddItemTableType("Set", "Item")
+local ICON_ITTYPE = data:AddItemTableType("Dummy")
 
 local QUEST_EXTRA_ITTYPE = data:AddExtraItemTableType("Quest")
 local PRICE_EXTRA_ITTYPE = data:AddExtraItemTableType("Price")
@@ -76,6 +77,46 @@ local KEYS = {	-- Keys
 		{ 27, 10818 },
 		{ 29, 22057 },
 		{ 30, 21986 },
+	},
+}
+
+local HORDE, ALLIANCE, RANK_FORMAT = "Horde", "Alliance", AL["|cff33ff99Rank:|r %s"]
+local GetRankName, GetRankIcon = AtlasLoot.Data.Requirements.GetPvPRankName, AtlasLoot.Data.Requirements.GetPvPRankIcon
+local PVP_RANKS = {	-- Keys
+	name = AL["PvP Ranks"],
+	TableType = ICON_ITTYPE,
+	ExtraList = true,
+	[NORMAL_DIFF] = {
+		{ 1, 136782, FACTION_HORDE },
+		{ 2, GetRankIcon(1), GetRankName(1, HORDE), format(RANK_FORMAT, 1) },
+		{ 3, GetRankIcon(2), GetRankName(2, HORDE), format(RANK_FORMAT, 2) },
+		{ 4, GetRankIcon(3), GetRankName(3, HORDE), format(RANK_FORMAT, 3) },
+		{ 5, GetRankIcon(4), GetRankName(4, HORDE), format(RANK_FORMAT, 4) },
+		{ 6, GetRankIcon(5), GetRankName(5, HORDE), format(RANK_FORMAT, 5) },
+		{ 7, GetRankIcon(6), GetRankName(6, HORDE), format(RANK_FORMAT, 6) },
+		{ 8, GetRankIcon(7), GetRankName(7, HORDE), format(RANK_FORMAT, 7) },
+		{ 9, GetRankIcon(8), GetRankName(8, HORDE), format(RANK_FORMAT, 8) },
+		{ 10, GetRankIcon(9), GetRankName(9, HORDE), format(RANK_FORMAT, 9) },
+		{ 11, GetRankIcon(10), GetRankName(10, HORDE), format(RANK_FORMAT, 10) },
+		{ 12, GetRankIcon(11), GetRankName(11, HORDE), format(RANK_FORMAT, 11) },
+		{ 13, GetRankIcon(12), GetRankName(12, HORDE), format(RANK_FORMAT, 12) },
+		{ 14, GetRankIcon(13), GetRankName(13, HORDE), format(RANK_FORMAT, 13) },
+		{ 15, GetRankIcon(14), GetRankName(14, HORDE), format(RANK_FORMAT, 14) },
+		{ 16, 136781, FACTION_ALLIANCE },
+		{ 17, GetRankIcon(1), GetRankName(1, ALLIANCE), format(RANK_FORMAT, 1) },
+		{ 18, GetRankIcon(2), GetRankName(2, ALLIANCE), format(RANK_FORMAT, 2) },
+		{ 19, GetRankIcon(3), GetRankName(3, ALLIANCE), format(RANK_FORMAT, 3) },
+		{ 20, GetRankIcon(4), GetRankName(4, ALLIANCE), format(RANK_FORMAT, 4) },
+		{ 21, GetRankIcon(5), GetRankName(5, ALLIANCE), format(RANK_FORMAT, 5) },
+		{ 22, GetRankIcon(6), GetRankName(6, ALLIANCE), format(RANK_FORMAT, 6) },
+		{ 23, GetRankIcon(7), GetRankName(7, ALLIANCE), format(RANK_FORMAT, 7) },
+		{ 24, GetRankIcon(8), GetRankName(8, ALLIANCE), format(RANK_FORMAT, 8) },
+		{ 25, GetRankIcon(9), GetRankName(9, ALLIANCE), format(RANK_FORMAT, 9) },
+		{ 26, GetRankIcon(10), GetRankName(10, ALLIANCE), format(RANK_FORMAT, 10) },
+		{ 27, GetRankIcon(11), GetRankName(11, ALLIANCE), format(RANK_FORMAT, 11) },
+		{ 28, GetRankIcon(12), GetRankName(12, ALLIANCE), format(RANK_FORMAT, 12) },
+		{ 29, GetRankIcon(13), GetRankName(13, ALLIANCE), format(RANK_FORMAT, 13) },
+		{ 30, GetRankIcon(14), GetRankName(14, ALLIANCE), format(RANK_FORMAT, 14) },
 	},
 }
 
@@ -210,6 +251,7 @@ data["AlteracValley"] = {
 				{ 17, 19031 }, -- Frostwolf Battle Tabard
 			},
 		},
+		PVP_RANKS,
 	},
 }
 
@@ -438,6 +480,7 @@ data["WarsongGulch"] = {
 				{ 21, 19066 }, -- Warsong Gulch Runecloth Bandage
 			},
 		},
+		PVP_RANKS,
 	},
 }
 
@@ -652,6 +695,7 @@ data["ArathiBasin"] = {
 				{ 23, 20072 }, -- Defiler's Talisman
 			},
 		},
+		PVP_RANKS,
 	},
 }
 
@@ -712,6 +756,7 @@ data["ClassSets"] = {
 				{ 22, 538 }, -- Shaman
 			},
 		},
+		PVP_RANKS,
 	},
 }
 
@@ -782,6 +827,7 @@ data["Armor"] = {
 
 			},
 		},
+		PVP_RANKS,
 	},
 }
 
@@ -840,6 +886,7 @@ data["Weapons"] = {
 				{ 23, 23469 }, -- High Warlord's Tome of Mending
 			},
 		},
+		PVP_RANKS,
 	},
 }
 
@@ -866,7 +913,8 @@ data["Mounts"] = {
 				{ 5, 18248 }, -- Red Skeletal Warhorse
 			},
 		},
-	}
+		PVP_RANKS,
+	},
 }
 
 data["Insignia"] = {
@@ -899,5 +947,6 @@ data["Insignia"] = {
 				{ 8,  18850 }, -- Mage
 			},
 		},
-	}
+		PVP_RANKS,
+	},
 }

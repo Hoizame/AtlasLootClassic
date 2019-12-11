@@ -1117,7 +1117,7 @@ data["ElementalInvasions"] = {
 	ContentType = WORLD_EVENT_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = NORMAL_ITTYPE,
-	ContentPhase = 2,
+	ContentPhase = 2.5,
 	items = {
 		{ -- ElementalInvasion
 			name = AL["Elemental Invasions"],

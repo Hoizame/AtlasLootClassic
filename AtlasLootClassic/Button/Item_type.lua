@@ -207,8 +207,13 @@ function Item.OnEnter(button, owner)
 	if button.ItemString then
 		tooltip:SetHyperlink(button.ItemString)
 	else
-		--tooltip:SetItemByID(button.ItemID)
-		tooltip:SetHyperlink("item:"..button.ItemID)
+		tooltip:SetItemByID(button.ItemID)
+		--tooltip:SetHyperlink("item:"..button.ItemID)
+		-- small fix for auctionatorTT as it not hooks SetItemByID
+		if _G.Atr_ShowTipWithPricing then
+			local itemName, itemLink = GetItemInfo(button.ItemID)
+			_G.Atr_ShowTipWithPricing(tooltip, itemLink)
+		end
 	end
 	if button.Droprate and AtlasLoot.db.showDropRate then
 		tooltip:AddDoubleLine(AL["Droprate:"], format(WHITE_TEXT, button.Droprate.."%"))

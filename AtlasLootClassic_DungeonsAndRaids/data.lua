@@ -3891,6 +3891,7 @@ data["DireMaulNorth"] = {
 		{ -- DMNThimblejack
 			name = AL["Knot Thimblejack's Cache"],
 			AtlasMapBossID = 4,
+			npcID = 14338,
 			ObjectID = 179501,
 			[NORMAL_DIFF] = {
 				{ 1,  18414 }, -- Pattern: Belt of the Archmage
@@ -3979,8 +3980,7 @@ data["DireMaulNorth"] = {
 				{ 21, 18476 }, -- Mud Stained Boots
 				{ 22, 18482 }, -- Ogre Toothpick Shooter
 				{ 23, 18481 }, -- Skullcracking Mace
-				{ 24, 18637 }, -- Major Recombobulator
-				{ 26, 18655 }, -- Schematic: Major Recombobulator
+				{ 25, 18655 }, -- Schematic: Major Recombobulator
 			},
 		},
 		{ -- DMNTrash

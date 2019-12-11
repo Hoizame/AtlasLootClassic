@@ -46,7 +46,7 @@ function Dummy.Refresh(button)
 		button.extra:SetText(button.Description)
 	end
 	button.overlay:Hide()
-	button.icon:SetTexture(button.Texture and INTERFACE_PATH..button.Texture or DUMMY_ICON)
+	button.icon:SetTexture(tonumber(button.Texture) or (button.Texture and INTERFACE_PATH..button.Texture or DUMMY_ICON))
 end
 
 function Dummy.GetStringContent(str)
