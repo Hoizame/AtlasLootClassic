@@ -739,7 +739,7 @@ data["ClassSets"] = {
 				{ 3, 549 }, -- Priest
 				{ 16, 546 }, -- Mage
 				{ 5, 548 }, -- Rogue
-				{ 20, 539 }, -- Druid
+				{ 20, 551 }, -- Druid
 				{ 7, 550 }, -- Hunter
 				{ 9, 545 }, -- Warrior
 				{ 24, 544 }, -- Paladin
@@ -750,7 +750,7 @@ data["ClassSets"] = {
 				{ 3, 540 }, -- Priest
 				{ 16, 542 }, -- Mage
 				{ 5, 522 }, -- Rogue
-				{ 20, 551 }, -- Druid
+				{ 20, 539 }, -- Druid
 				{ 7, 543 }, -- Hunter
 				{ 9, 537 }, -- Warrior
 				{ 22, 538 }, -- Shaman
