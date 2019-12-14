@@ -750,7 +750,7 @@ data["ClassSets"] = {
 				{ 3, 540 }, -- Priest
 				{ 16, 542 }, -- Mage
 				{ 5, 522 }, -- Rogue
-				{ 20, 539 }, -- Druid
+				{ 20, 551 }, -- Druid
 				{ 7, 543 }, -- Hunter
 				{ 9, 537 }, -- Warrior
 				{ 22, 538 }, -- Shaman
