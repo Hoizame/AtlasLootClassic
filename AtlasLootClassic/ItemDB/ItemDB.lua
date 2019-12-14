@@ -70,7 +70,7 @@ function ItemDB:Add(addonName, tierID)
 end
 
 function ItemDB:Get(addonName)
-	assert(ItemDB.Storage[addonName], addonName.." not found!")
+	--assert(ItemDB.Storage[addonName], addonName.." not found!")
 	return ItemDB.Storage[addonName]
 end
 
