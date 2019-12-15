@@ -31,6 +31,7 @@ local db
 
 local function UpdateFrames(noPageUpdate, forceContentUpdate)
 	local moduleData = AtlasLoot.ItemDB:Get(db.selected[1])
+	if not moduleData then return end
 	local dataID = db.selected[2]
 	local bossID = db.selected[3]
 	if not GUI.frame.contentFrame.shownFrame then
