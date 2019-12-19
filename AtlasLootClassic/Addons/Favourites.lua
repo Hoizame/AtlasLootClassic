@@ -387,7 +387,7 @@ local function GetSortedList(list, isGlobal)
             nameIcon = Favourites:GetListName(k, isGlobal, true),
         }
     end
-    table.sort(new, SortedListFunc)
+    tblsort(new, SortedListFunc)
     return new
 end
 
