@@ -646,19 +646,16 @@ function GUI:UpdateDropDown()
     local listDb
     local db = Favourites:GetDb()
     if db.activeList[2] == true then
-        listDb = Favourites:GetGlobaleLists()
+        listDb = Favourites:GetGlobaleLists(true)
     else
-        listDb = Favourites:GetProfileLists()
+        listDb = Favourites:GetProfileLists(true)
     end
-    for k,v in pairs(listDb) do
+    for i,v in ipairs(listDb) do
         dataEntrys[ #dataEntrys + 1 ] = {
-            id = k,
-            name = Favourites:GetListName(k, db.activeList[2] == true, true),
-            --coinTexture = tabVal.CoinTexture,
-            tt_title = Favourites:GetListName(k, db.activeList[2] == true, true),
+            id = v.id,
+            name = v.nameIcon,
+            tt_title = v.nameIcon,
         }
-
-        Favourites:GetListName(k, db.activeList[2] == true, true)
     end
 
     self.dropDownData = data

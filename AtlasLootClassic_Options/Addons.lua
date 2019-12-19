@@ -137,6 +137,20 @@ local function CreateFavouriteOptions()
                     end
                     return list
                 end,
+                sorting = function()
+                    local db = FavAddon:GetDb()
+                    local listDb
+                    local list = {}
+                    if db.activeList[2] == true then
+                        listDb = FavAddon:GetGlobaleLists(true)
+                    else
+                        listDb = FavAddon:GetProfileLists(true)
+                    end
+                    for k,v in ipairs(listDb) do
+                        list[ k ] = v.id
+                    end
+                    return list
+                end,
                 get = function(info) return FavAddon:GetDb().activeList[1] end,
                 set = function(info, value)
                     FavAddon:GetDb().activeList[1] = value
