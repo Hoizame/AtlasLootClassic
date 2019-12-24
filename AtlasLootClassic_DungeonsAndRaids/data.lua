@@ -1964,7 +1964,7 @@ data["Zul'Farrak"] = {
 	AtlasMapFile = "ZulFarrak",
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
-	LevelRange = {39, 42, 46},
+	LevelRange = {39, 44, 54},
 	items = {
 		{ -- ZFAntusul
 			name = AL["Antu'sul"],
@@ -3652,7 +3652,7 @@ data["DireMaulWest"] = {
 	AtlasMapFile = {"DireMaulWest", "DireMaulEnt"},
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
-	LevelRange = {31, 55, 60},
+	LevelRange = {31, 58, 60},
 	items = {
 		{ -- DMWTendrisWarpwood
 			name = AL["Tendris Warpwood"],
@@ -3803,7 +3803,7 @@ data["DireMaulNorth"] = {
 	AtlasMapFile = {"DireMaulNorth", "DireMaulEnt"},
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
-	LevelRange = {31, 55, 60},
+	LevelRange = {31, 58, 60},
 	items = {
 		{ -- DMNGuardMoldar
 			name = AL["Guard Mol'dar"],
@@ -4468,8 +4468,8 @@ data["Stratholme"] = {
 		32319, 32320, 32367, 32331, 32357, 32281, 32285, 32277,
 		-- Undead
 		32342, 32322, 32303, 32301, 32352,
-			-- Ziggurats
-			32344, 32345, 32349,
+		-- Ziggurats
+		32344, 32345, 32349,
 	},
 	AtlasMapID = "Stratholme",
 	AtlasMapFile = "Stratholme",
