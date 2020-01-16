@@ -122,7 +122,7 @@ local PLAYER_GUID_REGISTER = {
 	["Player-4466-00B9FEDF"] = format(SILVER, "AtlasLoot Friend"), --K
 	["player-4466-00BB4DD8"] = format(SILVER, "AtlasLoot Friend"), --D
 	["Player-4463-00784DB2"] = format("|T132800:0|t "..COLOR, "AtlasLoot Friend"),
-	--["Player-4463-00C0F307"]
+	["Player-4463-00C0F307"] = format("|T135349:0|t "..COLOR, "AtlasLoot Friend"),
 }
 
 local function AddText(self)
