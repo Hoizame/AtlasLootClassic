@@ -4,6 +4,4 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 
 [Changelog history](https://github.com/Hoizame/AtlasLootClassic/blob/master/AtlasLootClassic/Documentation/Release_Notes.md)
 
-## v1.4.6 (Feb. 12, 2020)
-
-- Updates for BWL
+## v1.4.7 (Feb. XX, 2020)
