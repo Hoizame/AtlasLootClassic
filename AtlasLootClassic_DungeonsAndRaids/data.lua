@@ -2283,16 +2283,16 @@ data["Maraudon"] = {
 				{ 1,  17757 }, -- Amulet of Spirits
 			},
 		},
-		{ -- MaraKhanMagra
-			name = AL["Magra"],
-			npcID = 13740,
-			DisplayIDs = {{9433}},
+		{ -- MaraKhanKolk
+			name = AL["Kolk"],
+			npcID = 13742,
+			DisplayIDs = {{4860}},
 			AtlasMapFile = "MaraudonEnt",
 			AtlasMapBossID = "*1",
 			ExtraList = true,
 			specialType = "quest",
 			[NORMAL_DIFF] = {
-				{ 1,  17763 }, -- Gem of the Third Khan
+				{ 1,  17761 }, -- Gem of the First Khan
 			},
 		},
 		{ -- MaraKhanGelk
@@ -2307,16 +2307,16 @@ data["Maraudon"] = {
 				{ 1,  17762 }, -- Gem of the Second Khan
 			},
 		},
-		{ -- MaraKhanKolk
-			name = AL["Kolk"],
-			npcID = 13742,
-			DisplayIDs = {{4860}},
+		{ -- MaraKhanMagra
+			name = AL["Magra"],
+			npcID = 13740,
+			DisplayIDs = {{9433}},
 			AtlasMapFile = "MaraudonEnt",
 			AtlasMapBossID = "*3",
 			ExtraList = true,
 			specialType = "quest",
 			[NORMAL_DIFF] = {
-				{ 1,  17761 }, -- Gem of the First Khan
+				{ 1,  17763 }, -- Gem of the Third Khan
 			},
 		},
 	},
