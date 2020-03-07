@@ -383,6 +383,7 @@ function Item.ShowQuickDressUp(itemLink, ttFrame)
 	local frame = Item.previewTooltipFrame
 
 	-- calculate point for frame
+	if not ttFrame.GetOwner or not ttFrame:GetOwner() then return end
 	local x,y = ttFrame:GetOwner():GetCenter()
 	local fPoint, oPoint = "BOTTOMLEFT", "TOPRIGHT"
 
