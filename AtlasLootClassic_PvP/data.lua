@@ -412,33 +412,33 @@ data["WarsongGulch"] = {
 			[HORDE_DIFF] = {
 				{ 1, "f889rep6" },
 				{ 2, "INV_Box_01", nil, "10 - 19", nil }, -- WSGRepHonored1019
-				{ 3, 20444 }, -- Sentinel's Medallion
-				{ 4, 20428 }, -- Caretaker's Cape
-				{ 5, 20431 }, -- Lorekeeper's Ring
-				{ 6, 20439 }, -- Protector's Band
+				{ 3, 20442 }, -- Scout's Medallion
+				{ 4, 20427 }, -- Battle Healer's Cloak
+				{ 5, 20426 }, -- Advisor's Ring
+				{ 6, 20429 }, -- Legionnaire's Band
 				{ 8, "INV_Box_01", nil, "20 - 29", nil }, -- WSGRepHonored2029
-				{ 9, 19541 }, -- Sentinel's Medallion
-				{ 10, 19533 }, -- Caretaker's Cape
-				{ 11, 19525 }, -- Lorekeeper's Ring
-				{ 12, 19517 }, -- Protector's Band
+				{ 9, 19537 }, -- Scout's Medallion
+				{ 10, 19529 }, -- Battle Healer's Cloak
+				{ 11, 19521 }, -- Advisor's Ring
+				{ 12, 19513 }, -- Legionnaire's Band
 				{ 17, "INV_Box_01", nil, "30 - 39", nil }, -- WSGRepHonored3039
-				{ 18, 19540 }, -- Sentinel's Medallion
-				{ 19, 19532 }, -- Caretaker's Cape
-				{ 20, 19524 }, -- Lorekeeper's Ring
-				{ 21, 19515 }, -- Protector's Band
+				{ 18, 19536 }, -- Scout's Medallion
+				{ 19, 19528 }, -- Battle Healer's Cloak
+				{ 20, 19520 }, -- Advisor's Ring
+				{ 21, 19512 }, -- Legionnaire's Band
 				{ 23, "INV_Box_01", nil, "40 - 49", nil }, -- WSGRepHonored4049
-				{ 24, 19539 }, -- Sentinel's Medallion
-				{ 25, 19531 }, -- Caretaker's Cape
-				{ 26, 19523 }, -- Lorekeeper's Ring
-				{ 27, 19516 }, -- Protector's Band
+				{ 24, 19535 }, -- Scout's Medallion
+				{ 25, 19527 }, -- Battle Healer's Cloak
+				{ 26, 19519 }, -- Advisor's Ring
+				{ 27, 19511 }, -- Legionnaire's Band
 				{ 28, 17348 }, -- Major Healing Draught
 				{ 29, 17351 }, -- Major Mana Draught
 				{ 101, "f889rep6" },
 				{ 102, "INV_Box_01", nil, "50 - 59", nil }, -- WSGRepHonored5059
-				{ 103, 19538 }, -- Sentinel's Medallion
-				{ 104, 19530 }, -- Caretaker's Cape
-				{ 105, 19522 }, -- Lorekeeper's Ring
-				{ 106, 19514 }, -- Protector's Band
+				{ 103, 19534 }, -- Scout's Medallion
+				{ 104, 19526 }, -- Battle Healer's Cloak
+				{ 105, 19518 }, -- Advisor's Ring
+				{ 106, 19510 }, -- Legionnaire's Band
 			},
 		},
 		{ -- WSGRepFriendly
