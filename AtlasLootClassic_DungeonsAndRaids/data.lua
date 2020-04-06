@@ -4427,20 +4427,6 @@ data["Scholomance"] = {
 				{ 29, 13920 }, -- Healthy Dragon Scale
 			},
 		},
-		{ -- SCHOLODeathKnight
-			name = AL["Death Knight Darkreaver"],
-			npcID = 14516,
-			ExtraList = true,
-			SubAreaID = 32577,
-			DisplayIDs = {{14591}},
-			AtlasMapBossID = 5,
-			[NORMAL_DIFF] = {
-				{ 1,  18760 }, -- Necromantic Band
-				{ 2,  18761 }, -- Oblivion's Touch
-				{ 3,  18758 }, -- Specter's Blade
-				{ 4,  18759 }, -- Malicious Axe
-			},
-		},
 		{ -- SCHOLOKormok
 			name = AL["Kormok"].." - "..format(AL["Tier %s Sets"], "0.5"),
 			npcID = 16118,
