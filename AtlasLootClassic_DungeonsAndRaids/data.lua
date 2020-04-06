@@ -1990,6 +1990,18 @@ data["Zul'Farrak"] = {
 				{ 1,  10660 }, -- First Mosh'aru Tablet
 			},
 		},
+		{ -- ZFSandarrDunereaver
+			name = AL["Sandarr Dunereaver"],
+			npcID = 10080,
+			Level = 45,
+			DisplayIDs = {{9291}},
+			IgnoreAsSource = true,
+			--AtlasMapBossID = 2,
+			specialType = "rare",
+			[NORMAL_DIFF] = {
+				{ 1,  9523, [ATLASLOOT_IT_AMOUNT1] = "2-4" }, -- First Mosh'aru Tablet
+			},
+		},
 		{ -- ZFWitchDoctorZumrah
 			name = AL["Witch Doctor Zum'rah"],
 			npcID = 7271,
@@ -4425,20 +4437,6 @@ data["Scholomance"] = {
 				{ 26, 15773 }, -- Pattern: Wicked Leather Armor
 				{ 27, 15776 }, -- Pattern: Runic Leather Armor
 				{ 29, 13920 }, -- Healthy Dragon Scale
-			},
-		},
-		{ -- SCHOLODeathKnight
-			name = AL["Death Knight Darkreaver"],
-			npcID = 14516,
-			ExtraList = true,
-			SubAreaID = 32577,
-			DisplayIDs = {{14591}},
-			AtlasMapBossID = 5,
-			[NORMAL_DIFF] = {
-				{ 1,  18760 }, -- Necromantic Band
-				{ 2,  18761 }, -- Oblivion's Touch
-				{ 3,  18758 }, -- Specter's Blade
-				{ 4,  18759 }, -- Malicious Axe
 			},
 		},
 		{ -- SCHOLOKormok
