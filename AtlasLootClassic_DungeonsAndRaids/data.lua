@@ -1990,6 +1990,18 @@ data["Zul'Farrak"] = {
 				{ 1,  10660 }, -- First Mosh'aru Tablet
 			},
 		},
+		{ -- ZFSandarrDunereaver
+			name = AL["Sandarr Dunereaver"],
+			npcID = 10080,
+			Level = 45,
+			DisplayIDs = {{9291}},
+			IgnoreAsSource = true,
+			--AtlasMapBossID = 2,
+			specialType = "rare",
+			[NORMAL_DIFF] = {
+				{ 1,  9523, [ATLASLOOT_IT_AMOUNT1] = "2-4" }, -- First Mosh'aru Tablet
+			},
+		},
 		{ -- ZFWitchDoctorZumrah
 			name = AL["Witch Doctor Zum'rah"],
 			npcID = 7271,
