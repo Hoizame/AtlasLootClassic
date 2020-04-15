@@ -252,7 +252,7 @@ data["WailingCaverns"] = {
 	AtlasMapFile = {"WailingCaverns", "WailingCavernsEnt"},
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
-	LevelRange = {10, 15, 25},
+	LevelRange = {10, 17, 24},
 	items = {
 		{ -- WCLordCobrahn
 			name = AL["Lord Cobrahn"],
@@ -382,7 +382,7 @@ data["TheDeadmines"] = {
 	AtlasMapFile = {"TheDeadmines", "TheDeadminesEnt"},
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
-	LevelRange = {10, 18, 23},
+	LevelRange = {10, 17, 26},
 	items = {
 		{	--DMRhahkZor
 			name = AL["Rhahk'Zor"],
@@ -806,7 +806,7 @@ data["TheStockade"] = {
 	AtlasMapFile = "TheStockade",
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
-	LevelRange = {15, 22, 30},
+	LevelRange = {15, 24, 32},
 	items = {
 		{ -- SWStKamDeepfury
 			name = AL["Kam Deepfury"],
@@ -974,7 +974,7 @@ data["RazorfenKraul"] = {
 	AtlasMapFile = "RazorfenKraul",
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
-	LevelRange = {25, 30, 40},
+	LevelRange = {25, 29, 38},
 	items = {
 		{ -- RFKAggem
 			name = AL["Aggem Thorncurse"],
@@ -1096,7 +1096,7 @@ data["ScarletMonasteryGraveyard"] = {
 	AtlasMapFile = {"SMGraveyard", "SMEnt"},
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
-	LevelRange = {20, 28, 38},
+	LevelRange = {20, 26, 36},
 	items = {
 		-- Graveyard
 		{ -- SMVishas
@@ -1663,7 +1663,7 @@ data["RazorfenDowns"] = {
 	AtlasMapFile = "RazorfenDowns",
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
-	LevelRange = {35, 40, 50},
+	LevelRange = {35, 37, 46},
 	items = {
 		{ -- RFDTutenkash
 			name = AL["Tuten'kash"],
@@ -1787,7 +1787,7 @@ data["Uldaman"] = {
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	AtlasMapFile = {"Uldaman", "UldamanEnt"},
-	LevelRange = {30, 44, 54},
+	LevelRange = {30, 41, 51},
 	items = {
 		{ -- UldEric
 			name = AL["Eric \"The Swift\""],
@@ -3327,7 +3327,7 @@ data["UpperBlackrockSpire"] = {
 	AtlasMapFile = {"BlackrockSpireUpper", "BlackrockMountainEnt"},
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
-	LevelRange = {48, 58, 60},
+	LevelRange = {48, 55, 60},
 	items = {
 		{ -- UBRSEmberseer
 			name = AL["Pyroguard Emberseer"],
