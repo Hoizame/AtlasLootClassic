@@ -18,6 +18,10 @@ AtlasLoot Classic is an UI mod allowing for loot tables of bosses to be browsed 
 * Collections with item sets and world events
 * Favourites are the new wishlist
 
+## Options
+
+* Open with `Shift + Left Click` on MiniMap Button or with `/al options`
+
 ## Favourites
 
 * Add items directly from AtlasLoot with `Alt + Left Click`

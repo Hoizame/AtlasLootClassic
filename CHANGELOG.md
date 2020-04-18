@@ -5,3 +5,5 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 [Changelog history](https://github.com/Hoizame/AtlasLootClassic/blob/master/AtlasLootClassic/Documentation/Release_Notes.md)
 
 ## v1.5.1 (Apr. XX, 2020)
+
+- Tome of Polymorph: Turtle available in P4
