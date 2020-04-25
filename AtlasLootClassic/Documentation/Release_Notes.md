@@ -2,6 +2,11 @@
 
 This mod is distributed under Version 2 of the GPL.  A copy of the GPL is included in this zip file with links to non-english translations.
 
+## v1.5.0 (Apr. 16, 2020)
+
+- Content phase 4
+- revert some lvl range changes
+
 ## v1.4.8 (Apr. 07, 2020)
 
 - Update .toc version
