@@ -5708,7 +5708,7 @@ data["Zul'Gurub"] = {
 				{ 19, 19913 }, -- Bloodsoaked Greaves
 				{ 20, 19912 }, -- Overlord's Onyx Band
 				{ 21, 19922 }, -- Arlokk's Hoodoo Stick
-				{ 22, 19914 }, -- Panther Hide Sack
+				{ 23, 19914 }, -- Panther Hide Sack
 			},
 		},
 		{ -- ZGJindo
