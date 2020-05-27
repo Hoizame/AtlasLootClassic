@@ -5992,7 +5992,7 @@ data["BlackwingLair"] = {
 			npcID = 14601,
 			Level = 999,
 			DisplayIDs = {{6377}},
-			AtlasMapBossID = 6,
+			AtlasMapBossID = 5,
 			[NORMAL_DIFF] = {
 				{ 1,  16920 }, -- Handguards of Transcendence
 				{ 2,  16913 }, -- Netherwind Gloves
@@ -6023,7 +6023,7 @@ data["BlackwingLair"] = {
 			npcID = 11981,
 			Level = 999,
 			DisplayIDs = {{6377}},
-			AtlasMapBossID = 7,
+			AtlasMapBossID = 6,
 			[NORMAL_DIFF] = {
 				{ 1,  16920 }, -- Handguards of Transcendence
 				{ 2,  16913 }, -- Netherwind Gloves
@@ -6053,7 +6053,7 @@ data["BlackwingLair"] = {
 			npcID = 14020,
 			Level = 999,
 			DisplayIDs = {{14367}},
-			AtlasMapBossID = 8,
+			AtlasMapBossID = 7,
 			[NORMAL_DIFF] = {
 				{ 1,  16924 }, -- Pauldrons of Transcendence
 				{ 2,  16917 }, -- Netherwind Mantle
@@ -6084,7 +6084,7 @@ data["BlackwingLair"] = {
 			npcID = 11583,
 			Level = 999,
 			DisplayIDs = {{11380}},
-			AtlasMapBossID = 9,
+			AtlasMapBossID = 8,
 			[NORMAL_DIFF] = {
 				{ 1,  16923 }, -- Robes of Transcendence
 				{ 2,  16916 }, -- Netherwind Robes
