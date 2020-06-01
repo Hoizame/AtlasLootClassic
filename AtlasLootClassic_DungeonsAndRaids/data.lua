@@ -5792,11 +5792,10 @@ data["Zul'Gurub"] = {
 				{ 4,  19921 }, -- Zulian Hacker
 				{ 5,  19908 }, -- Sceptre of Smiting
 				{ 6,  20258 }, -- Zulian Ceremonial Staff
-				{ 8,  19727 }, -- Blood Scythe
-				{ 10, 19726 }, -- Bloodvine
-				{ 11, 19774 }, -- Souldarite
-				{ 12, 19767 }, -- Primal Bat Leather
-				{ 13, 19768 }, -- Primal Tiger Leather
+				{ 8, 19726 }, -- Bloodvine
+				{ 9, 19774 }, -- Souldarite
+				{ 10, 19767 }, -- Primal Bat Leather
+				{ 11, 19768 }, -- Primal Tiger Leather
 				{ 16, 19820 }, -- Punctured Voodoo Doll
 				{ 17, 19818 }, -- Punctured Voodoo Doll
 				{ 18, 19819 }, -- Punctured Voodoo Doll
