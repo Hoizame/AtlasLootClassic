@@ -6402,19 +6402,22 @@ data["TheTempleofAhnQiraj"] = { -- AQ40
 				{ 6,  21695 }, -- Angelista's Touch
 				{ 8,  21237 }, -- Imperial Qiraji Regalia
 				{ 9,  21232 }, -- Imperial Qiraji Armaments
-				{ 11, 21680 }, -- Vest of Swift Execution
-				{ 12, 21681 }, -- Ring of the Devoured
-				{ 13, 21685 }, -- Petrified Scarab
-				{ 14, 21603 }, -- Wand of Qiraji Nobility
-				{ 16, 21690 }, -- Angelista's Charm
-				{ 17, 21689 }, -- Gloves of Ebru
-				{ 18, 21691 }, -- Ooze-ridden Gauntlets
-				{ 19, 21688 }, -- Boots of the Fallen Hero
-				{ 21, 21686 }, -- Mantle of Phrenic Power
-				{ 22, 21684 }, -- Mantle of the Desert's Fury
-				{ 23, 21683 }, -- Mantle of the Desert Crusade
-				{ 24, 21682 }, -- Bile-Covered Gauntlets
-				{ 25, 21687 }, -- Ukko's Ring of Darkness
+				{ 11, "INV_BOX_02", nil, format(AL["%s killed last"], AL["Lord Kri"]) },
+				{ 12, 21680 }, -- Vest of Swift Execution
+				{ 13, 21681 }, -- Ring of the Devoured
+				{ 14, 21685 }, -- Petrified Scarab
+				{ 15, 21603 }, -- Wand of Qiraji Nobility
+				{ 16, "INV_BOX_02", nil, format(AL["%s killed last"], AL["Vem"]) },
+				{ 17, 21690 }, -- Angelista's Charm
+				{ 18, 21689 }, -- Gloves of Ebru
+				{ 19, 21691 }, -- Ooze-ridden Gauntlets
+				{ 20, 21688 }, -- Boots of the Fallen Hero
+				{ 22, "INV_BOX_02", nil, format(AL["%s killed last"], AL["Princess Yauj"]) },
+				{ 23, 21686 }, -- Mantle of Phrenic Power
+				{ 24, 21684 }, -- Mantle of the Desert's Fury
+				{ 25, 21683 }, -- Mantle of the Desert Crusade
+				{ 26, 21682 }, -- Bile-Covered Gauntlets
+				{ 27, 21687 }, -- Ukko's Ring of Darkness
 			},
 		},
 		{ -- AQ40Sartura
