@@ -746,7 +746,8 @@ data["Legendarys"] = {
 		{
 			name = AL["Unobtainable"],
 			[NORMAL_ITTYPE] = {
-				{ 1,  20221 }, -- Foror's Fabled Steed
+				{ 1,  17782 }, -- Talisman of Binding Shard
+				{ 16,  20221 }, -- Foror's Fabled Steed
 			},
 		},
 	},
