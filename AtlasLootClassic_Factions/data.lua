@@ -403,6 +403,7 @@ data["HydraxianWaterlords"] = {
 				{ 3, 22698 }, -- Pattern: Icy Scale Bracers
 				{ 4, 22705 }, -- Plans: Icebane Bracers
 				{ 5, 22695 }, -- Pattern: Polar Bracers
+				{ 17, 22754 }, -- Eternal Quintessence
 			},
 		},
 		{ -- Honored
