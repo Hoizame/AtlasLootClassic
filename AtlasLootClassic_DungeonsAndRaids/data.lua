@@ -5750,9 +5750,9 @@ data["Zul'Gurub"] = {
 			AtlasMapBossID = 11,
 			[NORMAL_DIFF] = {
 				{ 1,  19857 }, -- Cloak of Consumption
-				{ 2,  20257 }, -- Seafury Gauntlets
-				{ 3,  20264 }, -- Peacekeeper Gauntlets
-				{ 4,  19855 }, -- Bloodsoaked Legplates
+				{ 2,  20257, [ATLASLOOT_IT_ALLIANCE] = 20264 }, -- Seafury Gauntlets
+				--{ 3,  20264, [ATLASLOOT_IT_HORDE] = 20257 }, -- Peacekeeper Gauntlets
+				{ 3,  19855 }, -- Bloodsoaked Legplates
 				{ 6,  19876 }, -- Soul Corrupter's Necklace
 				{ 7,  19856 }, -- The Eye of Hakkar
 				{ 8,  19861 }, -- Touch of Chaos
