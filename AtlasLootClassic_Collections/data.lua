@@ -1250,6 +1250,38 @@ data["SilithusAbyssal"] = {
 	},
 }
 
+data["AQOpening"] = {
+	name = AL["AQ opening"],
+	ContentType = WORLD_EVENT_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = NORMAL_ITTYPE,
+	ContentPhase = 5,
+	items = {
+		{
+			name = AL["AQ opening"],
+			[NORMAL_DIFF] = {
+				{ 1,  21138 }, -- Red Scepter Shard
+				{ 2,  21529 }, -- Amulet of Shadow Shielding
+				{ 3,  21530 }, -- Onyx Embedded Leggings
+				{ 5,  21139 }, -- Green Scepter Shard
+				{ 6,  21531 }, -- Drake Tooth Necklace
+				{ 7,  21532 }, -- Drudge Boots
+				{ 9,  21137 }, -- Blue Scepter Shard
+				{ 10, 21517 }, -- Gnomish Turban of Psychic Might
+				{ 11, 21527 }, -- Darkwater Robes
+				{ 12, 21526 }, -- Band of Icy Depths
+				{ 13, 21025 }, -- Recipe: Dirge's Kickin' Chimaerok Chops
+				{ 16, 21175 }, -- The Scepter of the Shifting Sands
+				{ 17, 21176 }, -- Black Qiraji Resonating Crystal
+				{ 18, 21523 }, -- Fang of Korialstrasz
+				{ 19, 21521 }, -- Runesword of the Red
+				{ 20, 21522 }, -- Shadowsong's Sorrow
+				{ 21, 21520 }, -- Ravencrest's Legacy
+			},
+		},
+	},
+}
+
 data["ScourgeInvasion"] = {
 	name = AL["Scourge Invasion"],
 	ContentType = WORLD_EVENT_CONTENT,
