@@ -134,4 +134,7 @@ local function AddText(self)
 		self:AddLine(PLAYER_GUID_REGISTER[guid])
 	end
 end
-Tooltip:AddHookFunction("OnTooltipSetUnit", AddText)
+
+if GetRealmName() == "Lucifron" then
+	Tooltip:AddHookFunction("OnTooltipSetUnit", AddText)
+end
