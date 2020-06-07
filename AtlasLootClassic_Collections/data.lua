@@ -746,7 +746,8 @@ data["Legendarys"] = {
 		{
 			name = AL["Unobtainable"],
 			[NORMAL_ITTYPE] = {
-				{ 1,  20221 }, -- Foror's Fabled Steed
+				{ 1,  17782 }, -- Talisman of Binding Shard
+				{ 16,  20221 }, -- Foror's Fabled Steed
 			},
 		},
 	},
@@ -1158,12 +1159,22 @@ data["Darkmoon"] = {
 				{ 2,  19267 }, -- Darkmoon Card: Maelstrom
 				{ 3,  19257 }, -- Darkmoon Card: Heroism
 				{ 4,  19277 }, -- Darkmoon Card: Twisting Nether
-				{ 16,  19491 }, -- Amulet of the Darkmoon
-				{ 17,  19426 }, -- Orb of the Darkmoon
+				{ 16,  19491, 19182, [ATLASLOOT_IT_AMOUNT2] = 1200 }, -- Amulet of the Darkmoon
+				{ 17,  19426, 19182, [ATLASLOOT_IT_AMOUNT2] = 1200 }, -- Orb of the Darkmoon
+				{ 19,  19293, 19182, [ATLASLOOT_IT_AMOUNT2] = 50 }, -- Last Year's Mutton
+				{ 20,  19291, 19182, [ATLASLOOT_IT_AMOUNT2] = 50 }, -- Darkmoon Storage Box
+				{ 22,  9249, 19182, [ATLASLOOT_IT_AMOUNT2] = 40 }, -- Schematic: Steam Tonk Controller
+				{ 23,  19296, 19182, [ATLASLOOT_IT_AMOUNT2] = 40 }, -- Greater Darkmoon Prize
+				{ 25,  19297, 19182, [ATLASLOOT_IT_AMOUNT2] = 12 }, -- Lesser Darkmoon Prize
+				{ 27,  19292, 19182, [ATLASLOOT_IT_AMOUNT2] = 10 }, -- Last Month's Mutton
+				{ 29,  19298, 19182, [ATLASLOOT_IT_AMOUNT2] = 5 }, -- Minor Darkmoon Prize
+				{ 30,  19295, 19182, [ATLASLOOT_IT_AMOUNT2] = 5 }, -- Darkmoon Flower
 			},
 		},
 	},
 }
+
+-- { 17,  22523, 22524, [ATLASLOOT_IT_AMOUNT1] = 12, [ATLASLOOT_IT_AMOUNT2] = 11 }, -- Insignia of the Dawn / Crusade
 
 data["SilithusAbyssal"] = {
 	name = AL["Silithus Abyssal"],
@@ -1245,6 +1256,38 @@ data["SilithusAbyssal"] = {
 				{ 24, 20661 }, -- Abyssal Leather Gloves
 				{ 25, 20662 }, -- Abyssal Plate Greaves
 				{ 26, 20513 }, -- Abyssal Crest
+			},
+		},
+	},
+}
+
+data["AQOpening"] = {
+	name = AL["AQ opening"],
+	ContentType = WORLD_EVENT_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = NORMAL_ITTYPE,
+	ContentPhase = 5,
+	items = {
+		{
+			name = AL["AQ opening"],
+			[NORMAL_DIFF] = {
+				{ 1,  21138 }, -- Red Scepter Shard
+				{ 2,  21529 }, -- Amulet of Shadow Shielding
+				{ 3,  21530 }, -- Onyx Embedded Leggings
+				{ 5,  21139 }, -- Green Scepter Shard
+				{ 6,  21531 }, -- Drake Tooth Necklace
+				{ 7,  21532 }, -- Drudge Boots
+				{ 9,  21137 }, -- Blue Scepter Shard
+				{ 10, 21517 }, -- Gnomish Turban of Psychic Might
+				{ 11, 21527 }, -- Darkwater Robes
+				{ 12, 21526 }, -- Band of Icy Depths
+				{ 13, 21025 }, -- Recipe: Dirge's Kickin' Chimaerok Chops
+				{ 16, 21175 }, -- The Scepter of the Shifting Sands
+				{ 17, 21176 }, -- Black Qiraji Resonating Crystal
+				{ 18, 21523 }, -- Fang of Korialstrasz
+				{ 19, 21521 }, -- Runesword of the Red
+				{ 20, 21522 }, -- Shadowsong's Sorrow
+				{ 21, 21520 }, -- Ravencrest's Legacy
 			},
 		},
 	},

@@ -230,6 +230,9 @@ data["CenarionCircle"] = {
 			[NORMAL_DIFF] = {
 				{ 1, "f609rep8" },
 				{ 2,  20382 }, -- Pattern: Dreamscale Breastplate
+				{ 17,  21188 }, -- Fist of Cenarius
+				{ 18,  21180 }, -- Earthstrike
+				{ 19,  21190 }, -- Wrath of Cenarius
 			},
 		},
 		{ -- Revered
@@ -244,6 +247,10 @@ data["CenarionCircle"] = {
 				{ 7,  20511 }, -- Pattern: Sandstalker Breastplate
 				{ 8,  22766 }, -- Plans: Ironvine Breastplate
 				{ 9,  22219 }, -- Plans: Jagged Obsidian Shield
+				{ 17,  21184 }, -- Deeprock Bracers
+				{ 18,  21186 }, -- Rockfury Bracers
+				{ 19,  21185 }, -- Earthcalm Orb
+				{ 20,  21189 }, -- Might of Cenarius
 			},
 		},
 		{ -- Honored
@@ -257,6 +264,9 @@ data["CenarionCircle"] = {
 				{ 6,  22767 }, -- Plans: Ironvine Gloves
 				{ 7,  22214 }, -- Plans: Light Obsidian Belt
 				{ 8,  20733 }, -- Formula: Enchant Cloak - Greater Nature Resistance
+				{ 17,  21181 }, -- Grace of Earth
+				{ 18,  21183 }, -- Earthpower Vest
+				{ 19,  21182 }, -- Band of Earthen Might
 			},
 		},
 		{ -- Friendly
@@ -271,6 +281,9 @@ data["CenarionCircle"] = {
 				{ 7,  22768 }, -- Plans: Ironvine Belt
 				{ 8,  22209 }, -- Plans: Heavy Obsidian Belt
 				{ 9,  20732 }, -- Formula: Enchant Cloak - Greater Fire Resistance
+				{ 17,  21178 }, -- Gloves of Earthen Power
+				{ 18,  21187 }, -- Earthweave Cloak
+				{ 19,  21179 }, -- Band of Earthen Wrath
 			},
 		},
 	},
@@ -403,6 +416,7 @@ data["HydraxianWaterlords"] = {
 				{ 3, 22698 }, -- Pattern: Icy Scale Bracers
 				{ 4, 22705 }, -- Plans: Icebane Bracers
 				{ 5, 22695 }, -- Pattern: Polar Bracers
+				{ 17, 22754 }, -- Eternal Quintessence
 			},
 		},
 		{ -- Honored
