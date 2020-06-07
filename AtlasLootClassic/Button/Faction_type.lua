@@ -201,7 +201,9 @@ function Faction.OnClear(button)
 	button.RepID = nil
 	button.secButton.RepID = nil
 
-	button.icon:SetDesaturated(false)
+	if button.icon then
+		button.icon:SetDesaturated(false)
+	end
 	button.secButton.icon:SetDesaturated(false)
 end
 
@@ -277,6 +279,8 @@ function Faction.ShowToolTipFrame(button)
 
 		frame.name = frame:CreateFontString(name.."-name", "ARTWORK", "GameFontNormal")
 		frame.name:SetPoint("TOPLEFT", frame.icon, "TOPRIGHT", 3, 0)
+		frame.name:SetPoint("RIGHT", frame, -3, 0)
+		frame.name:SetNonSpaceWrap(false)
 		frame.name:SetJustifyH("LEFT")
 		frame.name:SetWidth(WIDTH-25)
 		frame.name:SetHeight(15)
@@ -322,6 +326,10 @@ function Faction.ShowToolTipFrame(button)
 	local factionStandingtext
 	barMin, barMax, barValue = barMin or 0, barMax or 1, barValue or 0
 	factionStandingtext = GetLocRepStanding(standingID)
+	name = name or "Faction "..button.FactionID
+	if button.RepID and name then
+		name = format("%s (%s)", name, GetLocRepStanding(button.RepID))
+	end
 
 	frame:ClearAllPoints()
 	frame:SetParent(button:GetParent():GetParent())
@@ -329,7 +337,7 @@ function Faction.ShowToolTipFrame(button)
 	frame:SetPoint("BOTTOMLEFT", button, "TOPLEFT", (button:GetWidth() * 0.5), 5)
 
 	frame.icon:SetTexture(FACTION_IMAGES[button.FactionID] or FACTION_IMAGES[0])
-	frame.name:SetText(name or "Faction "..button.FactionID)
+	frame.name:SetText(name)
 	frame.desc:SetText(description)
 
 	frame.standing.bar:SetMinMaxValues(barMin, barMax)
@@ -338,6 +346,8 @@ function Faction.ShowToolTipFrame(button)
 	frame.standing.bar:SetStatusBarColor(color.r, color.g, color.b)
 	frame.standing.text:SetText(str_format("%s ( %d / %d )", factionStandingtext, barValue - barMin, barMax - barMin))
 
+	local newWidth = 30 + frame.name:GetUnboundedStringWidth()
+	frame:SetWidth(newWidth > 200 and newWidth or 200)
 	frame:SetHeight(20+21+frame.desc:GetHeight()+5)
 	frame:Show()
 end

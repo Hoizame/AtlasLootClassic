@@ -5750,9 +5750,9 @@ data["Zul'Gurub"] = {
 			AtlasMapBossID = 11,
 			[NORMAL_DIFF] = {
 				{ 1,  19857 }, -- Cloak of Consumption
-				{ 2,  20257 }, -- Seafury Gauntlets
-				{ 3,  20264 }, -- Peacekeeper Gauntlets
-				{ 4,  19855 }, -- Bloodsoaked Legplates
+				{ 2,  20257, [ATLASLOOT_IT_ALLIANCE] = 20264 }, -- Seafury Gauntlets
+				--{ 3,  20264, [ATLASLOOT_IT_HORDE] = 20257 }, -- Peacekeeper Gauntlets
+				{ 3,  19855 }, -- Bloodsoaked Legplates
 				{ 6,  19876 }, -- Soul Corrupter's Necklace
 				{ 7,  19856 }, -- The Eye of Hakkar
 				{ 8,  19861 }, -- Touch of Chaos
@@ -5792,11 +5792,10 @@ data["Zul'Gurub"] = {
 				{ 4,  19921 }, -- Zulian Hacker
 				{ 5,  19908 }, -- Sceptre of Smiting
 				{ 6,  20258 }, -- Zulian Ceremonial Staff
-				{ 8,  19727 }, -- Blood Scythe
-				{ 10, 19726 }, -- Bloodvine
-				{ 11, 19774 }, -- Souldarite
-				{ 12, 19767 }, -- Primal Bat Leather
-				{ 13, 19768 }, -- Primal Tiger Leather
+				{ 8, 19726 }, -- Bloodvine
+				{ 9, 19774 }, -- Souldarite
+				{ 10, 19767 }, -- Primal Bat Leather
+				{ 11, 19768 }, -- Primal Tiger Leather
 				{ 16, 19820 }, -- Punctured Voodoo Doll
 				{ 17, 19818 }, -- Punctured Voodoo Doll
 				{ 18, 19819 }, -- Punctured Voodoo Doll
@@ -5992,7 +5991,7 @@ data["BlackwingLair"] = {
 			npcID = 14601,
 			Level = 999,
 			DisplayIDs = {{6377}},
-			AtlasMapBossID = 6,
+			AtlasMapBossID = 5,
 			[NORMAL_DIFF] = {
 				{ 1,  16920 }, -- Handguards of Transcendence
 				{ 2,  16913 }, -- Netherwind Gloves
@@ -6023,7 +6022,7 @@ data["BlackwingLair"] = {
 			npcID = 11981,
 			Level = 999,
 			DisplayIDs = {{6377}},
-			AtlasMapBossID = 7,
+			AtlasMapBossID = 6,
 			[NORMAL_DIFF] = {
 				{ 1,  16920 }, -- Handguards of Transcendence
 				{ 2,  16913 }, -- Netherwind Gloves
@@ -6053,7 +6052,7 @@ data["BlackwingLair"] = {
 			npcID = 14020,
 			Level = 999,
 			DisplayIDs = {{14367}},
-			AtlasMapBossID = 8,
+			AtlasMapBossID = 7,
 			[NORMAL_DIFF] = {
 				{ 1,  16924 }, -- Pauldrons of Transcendence
 				{ 2,  16917 }, -- Netherwind Mantle
@@ -6084,7 +6083,7 @@ data["BlackwingLair"] = {
 			npcID = 11583,
 			Level = 999,
 			DisplayIDs = {{11380}},
-			AtlasMapBossID = 9,
+			AtlasMapBossID = 8,
 			[NORMAL_DIFF] = {
 				{ 1,  16923 }, -- Robes of Transcendence
 				{ 2,  16916 }, -- Netherwind Robes
@@ -6219,9 +6218,9 @@ data["TheRuinsofAhnQiraj"] = { -- AQ20
 			DisplayIDs = {{15654}},
 			AtlasMapBossID = 4,
 			[NORMAL_DIFF] = {
-				{ 1,  21487 }, -- Slimy Scaled Gauntlets
-				{ 2,  21486 }, -- Gloves of the Swarm
-				{ 3,  21485 }, -- Buru's Skull Fragment
+				{ 1,  21487, [ATLASLOOT_IT_ALLIANCE] = 21486 }, -- Slimy Scaled Gauntlets
+				--{ 2,  21486 }, -- Gloves of the Swarm
+				{ 2,  21485 }, -- Buru's Skull Fragment
 				{ 5,  21491 }, -- Scaled Bracers of the Gorger
 				{ 6,  21489 }, -- Quicksand Waders
 				{ 7,  21490 }, -- Slime Kickers
@@ -6265,18 +6264,18 @@ data["TheRuinsofAhnQiraj"] = { -- AQ20
 			AtlasMapBossID = 6,
 			[NORMAL_DIFF] = {
 				{ 1,  21460 }, -- Helm of Domination
-				{ 2,  21454 }, -- Runic Stone Shoulders
-				{ 3,  21453 }, -- Mantle of the Horusath
-				{ 4,  21456 }, -- Sandstorm Cloak
-				{ 5,  21464 }, -- Shackles of the Unscarred
-				{ 6,  21457 }, -- Bracers of Brutality
-				{ 7,  21462 }, -- Gloves of Dark Wisdom
-				{ 8,  21458 }, -- Gauntlets of New Life
-				{ 9,  21463 }, -- Ossirian's Binding
-				{ 10, 21461 }, -- Leggings of the Black Blizzard
-				{ 11, 21459 }, -- Crossbow of Imminent Doom
-				{ 12, 21715 }, -- Sand Polished Hammer
-				{ 13, 21452 }, -- Staff of the Ruins
+				{ 2,  21454, [ATLASLOOT_IT_ALLIANCE] = 21453 }, -- Runic Stone Shoulders
+				--{ 3,  21453 }, -- Mantle of the Horusath
+				{ 3,  21456 }, -- Sandstorm Cloak
+				{ 4,  21464 }, -- Shackles of the Unscarred
+				{ 5,  21457 }, -- Bracers of Brutality
+				{ 6,  21462 }, -- Gloves of Dark Wisdom
+				{ 7,  21458 }, -- Gauntlets of New Life
+				{ 8,  21463 }, -- Ossirian's Binding
+				{ 9, 21461 }, -- Leggings of the Black Blizzard
+				{ 10, 21459 }, -- Crossbow of Imminent Doom
+				{ 11, 21715 }, -- Sand Polished Hammer
+				{ 12, 21452 }, -- Staff of the Ruins
 				{ 16, 20890 }, -- Qiraji Ornate Hilt
 				{ 17, 20886 }, -- Qiraji Spiked Hilt
 				{ 20, 20888 }, -- Qiraji Ceremonial Ring
@@ -6288,9 +6287,9 @@ data["TheRuinsofAhnQiraj"] = { -- AQ20
 			name = AL["Trash"],
 			ExtraList = true,
 			[NORMAL_DIFF] = {
-				{ 1,  21804 }, -- Coif of Elemental Fury
-				{ 2,  21803 }, -- Helm of the Holy Avenger
-				{ 3,  21805 }, -- Polished Obsidian Pauldrons
+				{ 1,  21804, [ATLASLOOT_IT_ALLIANCE] = 21803 }, -- Coif of Elemental Fury
+				--{ 2,  21803 }, -- Helm of the Holy Avenger
+				{ 2,  21805 }, -- Polished Obsidian Pauldrons
 				{ 5,  20873 }, -- Alabaster Idol
 				{ 6,  20869 }, -- Amber Idol
 				{ 7,  20866 }, -- Azure Idol
@@ -6403,19 +6402,22 @@ data["TheTempleofAhnQiraj"] = { -- AQ40
 				{ 6,  21695 }, -- Angelista's Touch
 				{ 8,  21237 }, -- Imperial Qiraji Regalia
 				{ 9,  21232 }, -- Imperial Qiraji Armaments
-				{ 11, 21680 }, -- Vest of Swift Execution
-				{ 12, 21681 }, -- Ring of the Devoured
-				{ 13, 21685 }, -- Petrified Scarab
-				{ 14, 21603 }, -- Wand of Qiraji Nobility
-				{ 16, 21690 }, -- Angelista's Charm
-				{ 17, 21689 }, -- Gloves of Ebru
-				{ 18, 21691 }, -- Ooze-ridden Gauntlets
-				{ 19, 21688 }, -- Boots of the Fallen Hero
-				{ 21, 21686 }, -- Mantle of Phrenic Power
-				{ 22, 21684 }, -- Mantle of the Desert's Fury
-				{ 23, 21683 }, -- Mantle of the Desert Crusade
-				{ 24, 21682 }, -- Bile-Covered Gauntlets
-				{ 25, 21687 }, -- Ukko's Ring of Darkness
+				{ 11, "INV_BOX_02", nil, format(AL["%s killed last"], AL["Lord Kri"]) },
+				{ 12, 21680 }, -- Vest of Swift Execution
+				{ 13, 21681 }, -- Ring of the Devoured
+				{ 14, 21685 }, -- Petrified Scarab
+				{ 15, 21603 }, -- Wand of Qiraji Nobility
+				{ 16, "INV_BOX_02", nil, format(AL["%s killed last"], AL["Vem"]) },
+				{ 17, 21690 }, -- Angelista's Charm
+				{ 18, 21689 }, -- Gloves of Ebru
+				{ 19, 21691 }, -- Ooze-ridden Gauntlets
+				{ 20, 21688 }, -- Boots of the Fallen Hero
+				{ 22, "INV_BOX_02", nil, format(AL["%s killed last"], AL["Princess Yauj"]) },
+				{ 23, 21686 }, -- Mantle of Phrenic Power
+				{ 24, 21684 }, -- Mantle of the Desert's Fury
+				{ 25, 21683 }, -- Mantle of the Desert Crusade
+				{ 26, 21682 }, -- Bile-Covered Gauntlets
+				{ 27, 21687 }, -- Ukko's Ring of Darkness
 			},
 		},
 		{ -- AQ40Sartura

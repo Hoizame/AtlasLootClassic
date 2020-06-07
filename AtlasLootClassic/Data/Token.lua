@@ -258,6 +258,25 @@ local TOKEN = {
 	[12336] = 12219, -- Gemstone of Spirestone
 	[12335] = 12219, -- Gemstone of Smolderthorn
 	[12337] = 12219, -- Gemstone of Bloodaxe
+
+	--- Cenarion Circle Dailies
+	-- Exalted
+	[21188] = { "f609rep8", 0, {20802, 15}, {20800, 20}, {20801, 20}, 21508 }, -- Fist of Cenarius
+	[21180] = 21188, -- Earthstrike
+	[21190] = 21188, -- Wrath of Cenarius
+	-- Revered
+	[21184] = { "f609rep7", 0, {20802, 15}, {20800, 20}, {20801, 17}, 21515 }, -- Deeprock Bracers
+	[21186] = 21184, -- Rockfury Bracers
+	[21185] = 21184, -- Earthcalm Orb
+	[21189] = 21184, -- Might of Cenarius
+	-- Honored
+	[21181] = { "f609rep6", 0, {20802, 7}, {20800, 4}, {20801, 4} }, -- Grace of Earth
+	[21183] = 21181, -- Earthpower Vest
+	[21182] = 21181, -- Band of Earthen Might
+	-- Friendly
+	[21178] = { "f609rep5", 0, {20802, 5}, {20800, 3}, {20801, 7} }, -- Gloves of Earthen Power
+	[21187] = 21178, -- Earthweave Cloak
+	[21179] = 21178, -- Band of Earthen Wrath
 }
 
 local function Init()

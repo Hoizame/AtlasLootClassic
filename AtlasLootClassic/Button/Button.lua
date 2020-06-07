@@ -569,13 +569,20 @@ function Proto:SetContentTable(tab, formatTab, setOnlySec)
 			end
 
 			if not tab[FACTION_INFO_IS_SET_ID] then
-				horde = ( horde and alliance ) and ( PLAYER_FACTION_ID == 0 and horde or alliance ) or horde and horde or ( alliance and alliance or nil )
-				if type(horde) == "table" then
-					for i = 1, #horde do
-						tab[i+1] = horde[i]
+				local usedFaction
+
+				if PLAYER_FACTION_ID == 0  then
+					usedFaction = horde
+				else
+					usedFaction = alliance
+				end
+
+				if type(usedFaction) == "table" then
+					for i = 1, #usedFaction do
+						tab[i+1] = usedFaction[i]
 					end
-				elseif horde and horde ~= true then
-					tab[2] = horde
+				elseif usedFaction and usedFaction ~= true then
+					tab[2] = usedFaction
 				end
 				tab[FACTION_INFO_IS_SET_ID] = true
 			end
@@ -652,6 +659,11 @@ function Proto:SetContentTable(tab, formatTab, setOnlySec)
 				self:SetExtraType(formatTab.extra[i], tab[i+100])
 			end
 		end
+	end
+
+	-- dumb but that fix vanishing text...
+	if self.name then
+		self.name:GetWidth()
 	end
 end
 
