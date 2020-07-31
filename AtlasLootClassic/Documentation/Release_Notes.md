@@ -2,6 +2,10 @@
 
 This mod is distributed under Version 2 of the GPL.  A copy of the GPL is included in this zip file with links to non-english translations.
 
+## v1.5.3 (Jul. 30, 2020)
+
+- Update content phase
+
 ## v1.5.2 (Jul. 10, 2020)
 
 - Update .toc version
