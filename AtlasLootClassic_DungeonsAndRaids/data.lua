@@ -952,6 +952,7 @@ data["Gnomeregan"] = {
 				{ 7,  9488 }, -- Oscillating Power Hammer
 				{ 8,  9486 }, -- Supercharger Battle Axe
 				{ 9,  9490 }, -- Gizmotron Megachopper
+				{ 11, 9489 }, -- Gyromatic Icemaker
 				{ 16, 9327 }, -- Security DELTA Data Access Card
 				{ 18, 7191 }, -- Fused Wiring
 				{ 19, 9308 }, -- Grime-Encrusted Object
