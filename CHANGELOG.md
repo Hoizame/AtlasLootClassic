@@ -5,3 +5,6 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 [Changelog history](https://github.com/Hoizame/AtlasLootClassic/blob/master/AtlasLootClassic/Documentation/Release_Notes.md)
 
 ## v1.5.5 (Jul. XX, 2020)
+
+- Add Gyromatic Icemaker in Gnomeregan
+- Replace "The Darksoul" in "Misc Sets" with "Shard of the Gods"
