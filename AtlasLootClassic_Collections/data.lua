@@ -302,7 +302,7 @@ data["MiscSets"] = {
 				-- Dagger / Mace
 				{ 5,  65 }, -- Spider's Kiss
 				-- Trinket
-				{ 16,  444 }, -- Shard of the Gods / 60
+				{ 16,  241 }, -- Shard of the Gods / 60
 			},
 		},
 	},
