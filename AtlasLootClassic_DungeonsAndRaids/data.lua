@@ -5754,17 +5754,18 @@ data["Zul'Gurub"] = {
 				{ 2,  20257, [ATLASLOOT_IT_ALLIANCE] = 20264 }, -- Seafury Gauntlets
 				--{ 3,  20264, [ATLASLOOT_IT_HORDE] = 20257 }, -- Peacekeeper Gauntlets
 				{ 3,  19855 }, -- Bloodsoaked Legplates
-				{ 6,  19876 }, -- Soul Corrupter's Necklace
-				{ 7,  19856 }, -- The Eye of Hakkar
-				{ 8,  19861 }, -- Touch of Chaos
-				{ 9,  19853 }, -- Gurubashi Dwarf Destroyer
-				{ 10, 19862 }, -- Aegis of the Blood God
-				{ 11, 19864 }, -- Bloodcaller
-				{ 12, 19865 }, -- Warblade of the Hakkari
-				{ 13, 19852 }, -- Ancient Hakkari Manslayer
-				{ 14, 19859 }, -- Fang of the Faceless
-				{ 15, 19854 }, -- Zin'rokh, Destroyer of Worlds
-				{ 16, 19802 }, -- Heart of Hakkar
+				{ 4,  19876 }, -- Soul Corrupter's Necklace
+				{ 5,  19856 }, -- The Eye of Hakkar
+				{ 7, 19802 }, -- Heart of Hakkar
+				{ 16,  19861 }, -- Touch of Chaos
+				{ 17,  19853 }, -- Gurubashi Dwarf Destroyer
+				{ 18, 19862 }, -- Aegis of the Blood God
+				{ 19, 19864 }, -- Bloodcaller
+				{ 20, 19865 }, -- Warblade of the Hakkari
+				{ 21, 19866 }, -- Warblade of the Hakkari
+				{ 22, 19852 }, -- Ancient Hakkari Manslayer
+				{ 23, 19859 }, -- Fang of the Faceless
+				{ 24, 19854 }, -- Zin'rokh, Destroyer of Worlds
 			},
 		},
 		{ -- ZGShared
