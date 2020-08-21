@@ -2,6 +2,13 @@
 
 This mod is distributed under Version 2 of the GPL.  A copy of the GPL is included in this zip file with links to non-english translations.
 
+## v1.5.5 (Aug. 21, 2020)
+
+- Add Gyromatic Icemaker in Gnomeregan
+- Replace "The Darksoul" in "Misc Sets" with "Shard of the Gods"
+- Add General Rajaxx encounter loot
+- Add Warblade of the Hakkari (Off hand) for Hakkar
+
 ## v1.5.4 (Jul. 31, 2020)
 
 - update loot sources for Phase 5
