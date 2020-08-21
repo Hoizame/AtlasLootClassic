@@ -6179,6 +6179,14 @@ data["TheRuinsofAhnQiraj"] = { -- AQ20
 				{ 5,  21494 }, -- Southwind's Grasp
 				{ 6,  21495 }, -- Legplates of the Qiraji Command
 				{ 7,  21497 }, -- Boots of the Qiraji General
+				{ 9,  "INV_Box_01", nil, AL["Trash"] },
+
+				{ 10,  21810 }, -- Treads of the Wandering Nomad
+				{ 11,  21809 }, -- Fury of the Forgotten Swarm
+				{ 12,  21806 }, -- Gavel of Qiraji Authority
+
+
+
 				{ 19, 20885 }, -- Qiraji Martial Drape
 				{ 20, 20889 }, -- Qiraji Regal Drape
 				{ 21, 20888 }, -- Qiraji Ceremonial Ring
