@@ -5769,7 +5769,7 @@ data["Zul'Gurub"] = {
 			},
 		},
 		{ -- ZGShared
-			name = AL["Shared loot"],
+			name = AL["High Priest Shared loot"],
 			ExtraList = true,
 			[NORMAL_DIFF] = {
 				{ 1,  22721 }, -- Band of Servitude
@@ -5793,14 +5793,11 @@ data["Zul'Gurub"] = {
 				{ 3,  20261 }, -- Shadow Panther Hide Belt
 				{ 4,  19921 }, -- Zulian Hacker
 				{ 5,  19908 }, -- Sceptre of Smiting
-
 				{ 16,  20258 }, -- Zulian Ceremonial Staff
 				{ 17, 19726 }, -- Bloodvine
 				{ 18, 19774 }, -- Souldarite
 				{ 19, 19767 }, -- Primal Bat Leather
 				{ 20, 19768 }, -- Primal Tiger Leather
-
-
 				{ 7, 19706 }, -- Bloodscalp Coin
 				{ 8, 19701 }, -- Gurubashi Coin
 				{ 9, 19700 }, -- Hakkari Coin
