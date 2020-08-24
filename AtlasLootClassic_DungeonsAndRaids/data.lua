@@ -5793,38 +5793,32 @@ data["Zul'Gurub"] = {
 				{ 3,  20261 }, -- Shadow Panther Hide Belt
 				{ 4,  19921 }, -- Zulian Hacker
 				{ 5,  19908 }, -- Sceptre of Smiting
-				{ 6,  20258 }, -- Zulian Ceremonial Staff
-				{ 8, 19726 }, -- Bloodvine
-				{ 9, 19774 }, -- Souldarite
-				{ 10, 19767 }, -- Primal Bat Leather
-				{ 11, 19768 }, -- Primal Tiger Leather
-				{ 16, 19820 }, -- Punctured Voodoo Doll
-				{ 17, 19818 }, -- Punctured Voodoo Doll
-				{ 18, 19819 }, -- Punctured Voodoo Doll
-				{ 19, 19814 }, -- Punctured Voodoo Doll
-				{ 20, 19821 }, -- Punctured Voodoo Doll
-				{ 21, 19816 }, -- Punctured Voodoo Doll
-				{ 22, 19817 }, -- Punctured Voodoo Doll
-				{ 23, 19815 }, -- Punctured Voodoo Doll
-				{ 24, 19813 }, -- Punctured Voodoo Doll
-				{ 101, 19706 }, -- Bloodscalp Coin
-				{ 102, 19701 }, -- Gurubashi Coin
-				{ 103, 19700 }, -- Hakkari Coin
-				{ 104, 19699 }, -- Razzashi Coin
-				{ 105, 19704 }, -- Sandfury Coin
-				{ 106, 19705 }, -- Skullsplitter Coin
-				{ 107, 19702 }, -- Vilebranch Coin
-				{ 108, 19703 }, -- Witherbark Coin
-				{ 109, 19698 }, -- Zulian Coin
-				{ 116, 19708 }, -- Blue Hakkari Bijou
-				{ 117, 19713 }, -- Bronze Hakkari Bijou
-				{ 118, 19715 }, -- Gold Hakkari Bijou
-				{ 119, 19711 }, -- Green Hakkari Bijou
-				{ 120, 19710 }, -- Orange Hakkari Bijou
-				{ 121, 19712 }, -- Purple Hakkari Bijou
-				{ 122, 19707 }, -- Red Hakkari Bijou
-				{ 123, 19714 }, -- Silver Hakkari Bijou
-				{ 124, 19709 }, -- Yellow Hakkari Bijou
+
+				{ 16,  20258 }, -- Zulian Ceremonial Staff
+				{ 17, 19726 }, -- Bloodvine
+				{ 18, 19774 }, -- Souldarite
+				{ 19, 19767 }, -- Primal Bat Leather
+				{ 20, 19768 }, -- Primal Tiger Leather
+
+
+				{ 7, 19706 }, -- Bloodscalp Coin
+				{ 8, 19701 }, -- Gurubashi Coin
+				{ 9, 19700 }, -- Hakkari Coin
+				{ 10, 19699 }, -- Razzashi Coin
+				{ 11, 19704 }, -- Sandfury Coin
+				{ 12, 19705 }, -- Skullsplitter Coin
+				{ 13, 19702 }, -- Vilebranch Coin
+				{ 14, 19703 }, -- Witherbark Coin
+				{ 15, 19698 }, -- Zulian Coin
+				{ 22, 19708 }, -- Blue Hakkari Bijou
+				{ 23, 19713 }, -- Bronze Hakkari Bijou
+				{ 24, 19715 }, -- Gold Hakkari Bijou
+				{ 25, 19711 }, -- Green Hakkari Bijou
+				{ 26, 19710 }, -- Orange Hakkari Bijou
+				{ 27, 19712 }, -- Purple Hakkari Bijou
+				{ 28, 19707 }, -- Red Hakkari Bijou
+				{ 29, 19714 }, -- Silver Hakkari Bijou
+				{ 30, 19709 }, -- Yellow Hakkari Bijou
 			},
 		},
 		{ -- ZGEnchants
