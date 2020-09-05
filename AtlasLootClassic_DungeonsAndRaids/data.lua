@@ -161,6 +161,49 @@ local T3_SET = {
 	},
 }
 
+local AQ_SCARABS = { -- AQ40Trash2
+	name = AL["Ahn'Qiraj scarabs"],
+	ExtraList = true,
+	[NORMAL_DIFF] = {
+		{ 1,  20876 }, -- Idol of Death
+		{ 2,  20879 }, -- Idol of Life
+		{ 3,  20875 }, -- Idol of Night
+		{ 4,  20878 }, -- Idol of Rebirth
+		{ 5,  20881 }, -- Idol of Strife
+		{ 6,  20877 }, -- Idol of the Sage
+		{ 7,  20874 }, -- Idol of the Sun
+		{ 8,  20882 }, -- Idol of War
+		{ 10, 21762 }, -- Greater Scarab Coffer Key
+		{ 12, 21156 }, -- Scarab Bag
+		{ 14, 21230 }, -- Ancient Qiraji Artifact
+		{ 16, 20864 }, -- Bone Scarab
+		{ 17, 20861 }, -- Bronze Scarab
+		{ 18, 20863 }, -- Clay Scarab
+		{ 19, 20862 }, -- Crystal Scarab
+		{ 20, 20859 }, -- Gold Scarab
+		{ 21, 20865 }, -- Ivory Scarab
+		{ 22, 20860 }, -- Silver Scarab
+		{ 23, 20858 }, -- Stone Scarab
+		{ 26, 22203 }, -- Large Obsidian Shard
+		{ 27, 22202 }, -- Small Obsidian Shard
+		{ 29, 21229 }, -- Qiraji Lord's Insignia
+	},
+}
+
+local AQ_ENCHANTS = { -- AQEnchants
+	name = AL["Ahn'Qiraj enchants"],
+	ExtraList = true,
+	[NORMAL_DIFF] = {
+		{ 1,  20728 }, -- Formula: Enchant Gloves - Frost Power
+		{ 2,  20731 }, -- Formula: Enchant Gloves - Superior Agility
+		{ 3,  20734 }, -- Formula: Enchant Cloak - Stealth
+		{ 4,  20729 }, -- Formula: Enchant Gloves - Fire Power
+		{ 5,  20736 }, -- Formula: Enchant Cloak - Dodge
+		{ 6,  20730 }, -- Formula: Enchant Gloves - Healing Power
+		{ 7,  20727 }, -- Formula: Enchant Gloves - Shadow Power
+	},
+}
+
 local AQ_OPENING = {	-- Keys
 	name = AL["AQ opening"],
 	TableType = NORMAL_ITTYPE,
@@ -6352,6 +6395,8 @@ data["TheRuinsofAhnQiraj"] = { -- AQ20
 				{ 27, 21297 }, -- Manual of Heroic Strike IX
 			},
 		},
+		AQ_SCARABS,
+		AQ_ENCHANTS,
 		AQ_OPENING,
 	},
 }
@@ -6603,47 +6648,8 @@ data["TheTempleofAhnQiraj"] = { -- AQ40
 				{ 19, 21321 }, -- Red Qiraji Resonating Crystal
 			},
 		},
-		{ -- AQ40Trash2
-			name = AL["Ahn'Qiraj scarabs"],
-			ExtraList = true,
-			[NORMAL_DIFF] = {
-				{ 1,  20876 }, -- Idol of Death
-				{ 2,  20879 }, -- Idol of Life
-				{ 3,  20875 }, -- Idol of Night
-				{ 4,  20878 }, -- Idol of Rebirth
-				{ 5,  20881 }, -- Idol of Strife
-				{ 6,  20877 }, -- Idol of the Sage
-				{ 7,  20874 }, -- Idol of the Sun
-				{ 8,  20882 }, -- Idol of War
-				{ 10, 21762 }, -- Greater Scarab Coffer Key
-				{ 12, 21156 }, -- Scarab Bag
-				{ 14, 21230 }, -- Ancient Qiraji Artifact
-				{ 16, 20864 }, -- Bone Scarab
-				{ 17, 20861 }, -- Bronze Scarab
-				{ 18, 20863 }, -- Clay Scarab
-				{ 19, 20862 }, -- Crystal Scarab
-				{ 20, 20859 }, -- Gold Scarab
-				{ 21, 20865 }, -- Ivory Scarab
-				{ 22, 20860 }, -- Silver Scarab
-				{ 23, 20858 }, -- Stone Scarab
-				{ 26, 22203 }, -- Large Obsidian Shard
-				{ 27, 22202 }, -- Small Obsidian Shard
-				{ 29, 21229 }, -- Qiraji Lord's Insignia
-			},
-		},
-		{ -- AQEnchants
-			name = AL["Ahn'Qiraj enchants"],
-			ExtraList = true,
-			[NORMAL_DIFF] = {
-				{ 1,  20728 }, -- Formula: Enchant Gloves - Frost Power
-				{ 2,  20731 }, -- Formula: Enchant Gloves - Superior Agility
-				{ 3,  20734 }, -- Formula: Enchant Cloak - Stealth
-				{ 4,  20729 }, -- Formula: Enchant Gloves - Fire Power
-				{ 5,  20736 }, -- Formula: Enchant Cloak - Dodge
-				{ 6,  20730 }, -- Formula: Enchant Gloves - Healing Power
-				{ 7,  20727 }, -- Formula: Enchant Gloves - Shadow Power
-			},
-		},
+		AQ_SCARABS,
+		AQ_ENCHANTS,
 		AQ_OPENING,
 	},
 }
