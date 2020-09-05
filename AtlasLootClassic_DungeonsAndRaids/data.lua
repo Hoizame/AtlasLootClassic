@@ -42,6 +42,13 @@ local DUNGEON_CONTENT = data:AddContentType(AL["Dungeons"], ATLASLOOT_DUNGEON_CO
 local RAID20_CONTENT = data:AddContentType(AL["20 Raids"], ATLASLOOT_RAID20_COLOR)
 local RAID40_CONTENT = data:AddContentType(AL["40 Raids"], ATLASLOOT_RAID40_COLOR)
 
+local BLUE = "|cff6666ff"
+local GREY = "|cff999999"
+local GREN = "|cff66cc33"
+local _RED = "|cffcc6666"
+local PURP = "|cff9900ff"
+local WHIT = "|cffffffff"
+
 local KEYS = {	-- Keys
 	name = AL["Keys"],
 	TableType = NORMAL_ITTYPE,
@@ -4476,7 +4483,7 @@ data["Stratholme"] = {
 	LevelRange = {37, 58, 60},
 	items = {
 		{ -- STRATSkull
-			name = AL["Skul"],
+			name = GREN..AL["Skul"],
 			npcID = 10393,
 			Level = 58,
 			DisplayIDs = {{2606}},
@@ -4489,7 +4496,7 @@ data["Stratholme"] = {
 			},
 		},
 		{ -- STRATStratholmeCourier
-			name = AL["Stratholme Courier"],
+			name = GREN..AL["Stratholme Courier"],
 			npcID = 11082,
 			Level = 57,
 			DisplayIDs = {{10547}},
@@ -4504,7 +4511,7 @@ data["Stratholme"] = {
 			},
 		},
 		{ -- STRATHearthsingerForresten
-			name = AL["Hearthsinger Forresten"],
+			name = GREN..AL["Hearthsinger Forresten"],
 			npcID = 10558,
 			Level = 57,
 			SubAreaID = 32277,
@@ -4520,7 +4527,7 @@ data["Stratholme"] = {
 			},
 		},
 		{ -- STRATTheUnforgiven
-			name = AL["The Unforgiven"],
+			name = GREN..AL["The Unforgiven"],
 			npcID = 10516,
 			Level = 57,
 			SubAreaID = 32281,
@@ -4534,8 +4541,23 @@ data["Stratholme"] = {
 				{ 6,  13408 }, -- Soul Breaker
 			},
 		},
+		{ -- STRATPostmaster
+			name = GREN..AL["Postmaster Malown"],
+			npcID = 11143,
+			Level = 60,
+			DisplayIDs = {{10669}},
+			AtlasMapBossID = "6'",
+			[NORMAL_DIFF] = {
+				{ 1,  13390 }, -- The Postmaster's Band
+				{ 2,  13388 }, -- The Postmaster's Tunic
+				{ 3,  13389 }, -- The Postmaster's Trousers
+				{ 4,  13391 }, -- The Postmaster's Treads
+				{ 5,  13392 }, -- The Postmaster's Seal
+				{ 6,  13393 }, -- Malown's Slam
+			},
+		},
 		{ -- STRATTimmytheCruel
-			name = AL["Timmy the Cruel"],
+			name = GREN..AL["Timmy the Cruel"],
 			npcID = 10808,
 			Level = 58,
 			SubAreaID = 32319,
@@ -4550,7 +4572,7 @@ data["Stratholme"] = {
 			},
 		},
 		{ -- STRATMalorsStrongbox
-			name = AL["Malor the Zealous"],
+			name = GREN..AL["Malor the Zealous"],
 			npcID = 11032,
 			ObjectID = 176112,
 			Level = 60,
@@ -4563,7 +4585,7 @@ data["Stratholme"] = {
 			},
 		},
 		{ -- STRATCrimsonHammersmith
-			name = AL["Crimson Hammersmith"],
+			name = GREN..AL["Crimson Hammersmith"],
 			npcID = 11120,
 			Level = 60,
 			SubAreaID = 32357,
@@ -4575,7 +4597,7 @@ data["Stratholme"] = {
 			},
 		},
 		{ -- STRATCannonMasterWilley
-			name = AL["Cannon Master Willey"],
+			name = GREN..AL["Cannon Master Willey"],
 			npcID = 10997,
 			Level = 60,
 			SubAreaID = 32357,
@@ -4597,7 +4619,7 @@ data["Stratholme"] = {
 			},
 		},
 		{ -- STRATArchivistGalford
-			name = AL["Archivist Galford"],
+			name = GREN..AL["Archivist Galford"],
 			npcID = 10811,
 			Level = 60,
 			SubAreaID = 32331,
@@ -4614,7 +4636,7 @@ data["Stratholme"] = {
 			},
 		},
 		{ -- STRATBalnazzar
-			name = AL["Balnazzar"],
+			name = GREN..AL["Balnazzar"],
 			npcID = {10812, 10813},
 			Level = 999,
 			SubAreaID = 32367,
@@ -4639,7 +4661,7 @@ data["Stratholme"] = {
 			},
 		},
 		{ -- STRATMagistrateBarthilas
-			name = AL["Magistrate Barthilas"],
+			name = PURP..AL["Magistrate Barthilas"],
 			npcID = 10435,
 			Level = 58,
 			SubAreaID = 32342,
@@ -4656,7 +4678,7 @@ data["Stratholme"] = {
 			},
 		},
 		{ -- STRATStonespine
-			name = AL["Stonespine"],
+			name = PURP..AL["Stonespine"],
 			npcID = 10809,
 			Level = 60,
 			SubAreaID = 32303,
@@ -4670,7 +4692,7 @@ data["Stratholme"] = {
 			},
 		},
 		{ -- STRATBaronessAnastari
-			name = AL["Baroness Anastari"],
+			name = PURP..AL["Baroness Anastari"],
 			npcID = 10436,
 			Level = 59,
 			SubAreaID = 32344,
@@ -4690,7 +4712,7 @@ data["Stratholme"] = {
 			},
 		},
 		{ -- STRATBlackGuardSwordsmith
-			name = AL["Black Guard Swordsmith"],
+			name = PURP..AL["Black Guard Swordsmith"],
 			npcID = 11121,
 			Level = {61, 62},
 			SubAreaID = 32345,
@@ -4705,7 +4727,7 @@ data["Stratholme"] = {
 			},
 		},
 		{ -- STRATNerubenkan
-			name = AL["Nerub'enkan"],
+			name = PURP..AL["Nerub'enkan"],
 			npcID = 10437,
 			Level = 60,
 			SubAreaID = 32345,
@@ -4725,7 +4747,7 @@ data["Stratholme"] = {
 			},
 		},
 		{ -- STRATMalekithePallid
-			name = AL["Maleki the Pallid"],
+			name = PURP..AL["Maleki the Pallid"],
 			npcID = 10438,
 			Level = 61,
 			SubAreaID = 32349,
@@ -4746,7 +4768,7 @@ data["Stratholme"] = {
 			},
 		},
 		{ -- STRATRamsteintheGorger
-			name = AL["Ramstein the Gorger"],
+			name = PURP..AL["Ramstein the Gorger"],
 			npcID = 10439,
 			Level = 61,
 			SubAreaID = 32301,
@@ -4763,7 +4785,7 @@ data["Stratholme"] = {
 			},
 		},
 		{ -- STRATBaronRivendare
-			name = AL["Baron Rivendare"],
+			name = PURP..AL["Baron Rivendare"],
 			npcID = 10440,
 			Level = 62,
 			SubAreaID = 32352,
@@ -4793,21 +4815,6 @@ data["Stratholme"] = {
 				{ 22, 16668 }, -- Kilt of Elements
 				{ 23, 16728 }, -- Lightforge Legplates
 				{ 24, 16732 }, -- Legplates of Valor
-			},
-		},
-		{ -- STRATPostmaster
-			name = AL["Postmaster Malown"],
-			npcID = 11143,
-			Level = 60,
-			DisplayIDs = {{10669}},
-			AtlasMapBossID = "6'",
-			[NORMAL_DIFF] = {
-				{ 1,  13390 }, -- The Postmaster's Band
-				{ 2,  13388 }, -- The Postmaster's Tunic
-				{ 3,  13389 }, -- The Postmaster's Trousers
-				{ 4,  13391 }, -- The Postmaster's Treads
-				{ 5,  13392 }, -- The Postmaster's Seal
-				{ 6,  13393 }, -- Malown's Slam
 			},
 		},
 		{ -- STRATTrash
@@ -4856,7 +4863,7 @@ data["Stratholme"] = {
 			},
 		},
 		{ -- STRATAtiesh
-			name = AL["Atiesh"],
+			name = GREN..AL["Atiesh"],
 			ExtraList = true,
 			AtlasMapBossID = 2,
 			ContentPhase = 6,
@@ -4865,7 +4872,7 @@ data["Stratholme"] = {
 			},
 		},
 		{ -- STRATBalzaphon
-			name = AL["Balzaphon"],
+			name = GREN..AL["Balzaphon"],
 			ExtraList = true,
 			npcID = 14684,
 			DisplayIDs = {{7919}},
@@ -4878,7 +4885,7 @@ data["Stratholme"] = {
 			},
 		},
 		{ -- STRATSothosJarien
-			name = AL["Sothos and Jarien's Heirlooms"].." - "..format(AL["Tier %s Sets"], "0.5"),
+			name = GREN..AL["Sothos and Jarien's Heirlooms"].." - "..format(AL["Tier %s Sets"], "0.5"),
 			ExtraList = true,
 			ContentPhase = 5,
 			AtlasMapBossID = 11,
@@ -6641,12 +6648,6 @@ data["TheTempleofAhnQiraj"] = { -- AQ40
 	},
 }
 
-local BLUE = "|cff6666ff"
-local GREY = "|cff999999"
-local GREN = "|cff66cc33"
-local _RED = "|cffcc6666"
-local PURP = "|cff9900ff"
-local WHIT = "|cffffffff"
 data["Naxxramas"] = {
 	MapID = 3456,
 	InstanceID = 533,
