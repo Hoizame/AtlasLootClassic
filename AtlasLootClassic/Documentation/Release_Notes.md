@@ -2,6 +2,12 @@
 
 This mod is distributed under Version 2 of the GPL.  A copy of the GPL is included in this zip file with links to non-english translations.
 
+## v1.5.6 (Sep. 05, 2020)
+
+- remove Voodoo Dolls from ZG trash as they are included in the Piles
+- Colorize Stratholme UD / Linving
+- Add Scarabs and Enchants into AQ20 extra list
+
 ## v1.5.5 (Aug. 21, 2020)
 
 - Add Gyromatic Icemaker in Gnomeregan
