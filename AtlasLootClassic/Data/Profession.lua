@@ -1503,3 +1503,7 @@ function Profession.GetCraftSpellForCreatedItem(itemID)
     end
     return CraftedToSpellID[itemID]
 end
+
+function Profession.GetRecipeForCreatedItem(itemID)
+    return Recipe.GetRecipeForSpell(Profession.GetCraftSpellForCreatedItem(itemID))
+end
