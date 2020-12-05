@@ -5,7 +5,7 @@ local ContentPhase = {}
 AtlasLoot.Data.ContentPhase = ContentPhase
 local AL = AtlasLoot.Locales
 local IMAGE_PATH = ALPrivate.IMAGE_PATH
-local ACTIVE_PHASE = 5
+local ACTIVE_PHASE = 6
 
 --##START-DATA##
 local PHASE_ITEMS = {
