@@ -1377,6 +1377,7 @@ local PROFESSION_ITEM_SKILL = {
 -- maybe weak table?
 local ProfessionCache = {}
 local ContentPhaseCache = {}
+local CraftedToSpellID
 
 local function OnInit()
     Recipe = AtlasLoot.Data.Recipe
@@ -1488,4 +1489,21 @@ end
 
 function Profession.GetProfessionID(spellID)
     return PROFESSION[spellID or 0] and PROFESSION[spellID][2] or nil
+end
+
+-- Request #101
+function Profession.GetCraftSpellForCreatedItem(itemID)
+    if not CraftedToSpellID then
+        CraftedToSpellID = {}
+        for craftSpell, craftData in pairs(PROFESSION) do
+            if craftData[1] then
+                CraftedToSpellID[craftData[1]] = craftSpell
+            end
+        end
+    end
+    return CraftedToSpellID[itemID]
+end
+
+function Profession.GetRecipeForCreatedItem(itemID)
+    return Recipe.GetRecipeForSpell(Profession.GetCraftSpellForCreatedItem(itemID))
 end
