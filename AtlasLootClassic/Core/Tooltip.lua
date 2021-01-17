@@ -124,6 +124,9 @@ local PLAYER_GUID_REGISTER = {
 	--holz
 	["Player-4463-00784DB2"] = format("|T132800:0|t "..COLOR, "AtlasLoot Friend"),
 	["Player-4749-01CB4830"] = format("|T132800:0|t "..COLOR, "AtlasLoot Friend"),
+	-- oob
+	["Player-4749-020C714C"] = format("|T135349:0|t "..COLOR, "AtlasLoot Friend"), --mage
+	["Player-4749-020BE873"] = format("|T135349:0|t "..COLOR, "AtlasLoot Friend"), --war
 	--
 	["Player-4463-00C0F307"] = format("|T135349:0|t "..COLOR, "AtlasLoot Friend"),
 }

@@ -2,6 +2,10 @@
 
 This mod is distributed under Version 2 of the GPL.  A copy of the GPL is included in this zip file with links to non-english translations.
 
+## v1.5.7 (Dec. 05, 2020)
+
+- Update content phase
+
 ## v1.5.6 (Sep. 05, 2020)
 
 - remove Voodoo Dolls from ZG trash as they are included in the Piles
