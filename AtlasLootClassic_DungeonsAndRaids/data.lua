@@ -492,13 +492,6 @@ data["TheDeadmines"] = {
 				{ 3, 5199 },	-- Smelting Pants
 			},
 		},
-		{	--DMDefiasGunpowder
-			name = AL["Defias Gunpowder"],
-			AtlasMapBossID = 5,
-			[NORMAL_DIFF] = {
-				{ 1, 5397 },	-- Defias Gunpowder
-			},
-		},
 		{	--DMMrSmite
 			name = AL["Mr. Smite"],
 			npcID = 646,
@@ -549,6 +542,14 @@ data["TheDeadmines"] = {
 				{ 1, 5198 },	-- Cookie's Stirring Rod
 				{ 3, 5197 },	-- Cookie's Tenderizer
 				{ 5, 8490 },	-- Cat Carrier (Siamese)
+			},
+		},
+		{	--DMDefiasGunpowder
+			name = AL["Defias Gunpowder"],
+			ExtraList = true,
+			AtlasMapBossID = 5,
+			[NORMAL_DIFF] = {
+				{ 1, 5397 },	-- Defias Gunpowder
 			},
 		},
 		{	--DMTrash
@@ -4069,7 +4070,7 @@ data["Scholomance"] = {
 	AtlasMapFile = "Scholomance",
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
-	LevelRange = {33, 58, 60},
+	LevelRange = {45, 58, 60},
 	items = {
 		{ -- SCHOLOBlood
 			name = AL["Blood Steward of Kirtonos"],
@@ -6823,9 +6824,9 @@ data["Naxxramas"] = {
 		},
 		{ -- NAXTheFourHorsemen
 			name = AL["The Four Horsemen"],
-			npcID = {16064, 16065, 30549, 16063},
+			npcID = {16064, 16065, 16062, 16063},
 			Level = 999,
-			DisplayIDs = {{16155},{16153},{10729},{16154}},
+			DisplayIDs = {{16155},{16153},{16139},{16154}},
 			AtlasMapBossID = _RED.."3",
 			[NORMAL_DIFF] = {
 				{ 1,  22726 }, -- Splinter of Atiesh
