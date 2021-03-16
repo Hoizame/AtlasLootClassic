@@ -492,13 +492,6 @@ data["TheDeadmines"] = {
 				{ 3, 5199 },	-- Smelting Pants
 			},
 		},
-		{	--DMDefiasGunpowder
-			name = AL["Defias Gunpowder"],
-			AtlasMapBossID = 5,
-			[NORMAL_DIFF] = {
-				{ 1, 5397 },	-- Defias Gunpowder
-			},
-		},
 		{	--DMMrSmite
 			name = AL["Mr. Smite"],
 			npcID = 646,
@@ -549,6 +542,14 @@ data["TheDeadmines"] = {
 				{ 1, 5198 },	-- Cookie's Stirring Rod
 				{ 3, 5197 },	-- Cookie's Tenderizer
 				{ 5, 8490 },	-- Cat Carrier (Siamese)
+			},
+		},
+		{	--DMDefiasGunpowder
+			name = AL["Defias Gunpowder"],
+			ExtraList = true,
+			AtlasMapBossID = 5,
+			[NORMAL_DIFF] = {
+				{ 1, 5397 },	-- Defias Gunpowder
 			},
 		},
 		{	--DMTrash

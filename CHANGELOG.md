@@ -9,3 +9,4 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 - update .toc version
 - replace Rivendare with Mograine
 - fix minLvl for Scholomance
+- move Defias Gunpowder into extra list
