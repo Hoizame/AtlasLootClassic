@@ -2,7 +2,7 @@
 
 This mod is distributed under Version 2 of the GPL.  A copy of the GPL is included in this zip file with links to non-english translations.
 
-## v1.5.8 (Mar. 16, 2021)
+## v1.5.8 + v1.5.9 (Mar. 16, 2021)
 
 - update .toc version
 - replace Rivendare with Mograine
