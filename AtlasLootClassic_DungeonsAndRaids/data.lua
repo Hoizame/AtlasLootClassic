@@ -6823,9 +6823,9 @@ data["Naxxramas"] = {
 		},
 		{ -- NAXTheFourHorsemen
 			name = AL["The Four Horsemen"],
-			npcID = {16064, 16065, 30549, 16063},
+			npcID = {16064, 16065, 16062, 16063},
 			Level = 999,
-			DisplayIDs = {{16155},{16153},{10729},{16154}},
+			DisplayIDs = {{16155},{16153},{16139},{16154}},
 			AtlasMapBossID = _RED.."3",
 			[NORMAL_DIFF] = {
 				{ 1,  22726 }, -- Splinter of Atiesh
