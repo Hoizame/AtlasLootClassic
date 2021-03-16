@@ -4069,7 +4069,7 @@ data["Scholomance"] = {
 	AtlasMapFile = "Scholomance",
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
-	LevelRange = {33, 58, 60},
+	LevelRange = {45, 58, 60},
 	items = {
 		{ -- SCHOLOBlood
 			name = AL["Blood Steward of Kirtonos"],
