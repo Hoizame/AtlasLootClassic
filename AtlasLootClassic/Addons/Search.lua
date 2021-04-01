@@ -37,7 +37,7 @@ function Search:Open()
 	if not Search.GUI then
 		local frameName = "AtlasLoot_Search-Frame"
 
-		local frame = CreateFrame("Frame", frameName)
+		local frame = CreateFrame("Frame", frameName, nil, _G.BackdropTemplateMixin and "BackdropTemplate" or nil)
 		frame:ClearAllPoints()
 		frame:SetParent(UIParent)
 		frame:SetPoint(unpack(db.point))

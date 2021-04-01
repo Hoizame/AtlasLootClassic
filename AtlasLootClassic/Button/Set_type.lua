@@ -175,7 +175,7 @@ function Set.ShowToolTipFrame(button)
 		frame:SetClampedToScreen(true)
 		frame:SetSize(230, 280)
 
-		frame.modelFrame = CreateFrame("DressUpModel", name.."-ModelFrame", frame)
+		frame.modelFrame = CreateFrame("DressUpModel", name.."-ModelFrame", frame, _G.BackdropTemplateMixin and "BackdropTemplate" or nil)
 		frame.modelFrame:ClearAllPoints()
 		frame.modelFrame:SetParent(frame)
 		frame.modelFrame:SetAllPoints(frame)

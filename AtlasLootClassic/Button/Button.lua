@@ -1017,7 +1017,7 @@ function Button:ExtraItemFrame_GetFrame(button, itemList)
 			ExtraItemFrame_Frame:Clear()
 		end
 	elseif not frame then
-		frame = CreateFrame("frame")
+		frame = CreateFrame("frame", nil, nil, _G.BackdropTemplateMixin and "BackdropTemplate" or nil)
 		frame:SetClampedToScreen(true)
 		frame:SetHeight(ITEM_ICON_SIZE+(BORDER_DISTANCE*2))
 		frame:SetWidth(BORDER_DISTANCE*2)

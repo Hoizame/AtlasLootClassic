@@ -352,7 +352,7 @@ function Item.ShowQuickDressUp(itemLink, ttFrame)
 	if not itemLink or not ttFrame or ( not IsEquippableItem(itemLink) and not Mount.IsMount(itemLink) ) then return end
 	if not Item.previewTooltipFrame then
 		local name = "AtlasLoot-SetToolTip"
-		local frame = CreateFrame("Frame", name)
+		local frame = CreateFrame("Frame", name, nil, _G.BackdropTemplateMixin and "BackdropTemplate" or nil)
 		frame:SetClampedToScreen(true)
 		frame:SetSize(230, 280)
 		frame:SetBackdrop(ALPrivate.BOX_BORDER_BACKDROP)

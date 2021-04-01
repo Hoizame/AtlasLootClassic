@@ -367,7 +367,7 @@ local function ClassFilterButton_OnClick(self, button)
 	else
 		-- show spec selection here
 		if not self.selectionFrame then
-			local frame = CreateFrame("FRAME", nil, self)
+			local frame = CreateFrame("FRAME", nil, self, _G.BackdropTemplateMixin and "BackdropTemplate" or nil)
 			frame:SetBackdrop({bgFile = "Interface/Tooltips/UI-Tooltip-Background",
 						edgeFile = "Interface/Tooltips/UI-Tooltip-Border",
 						tile = true, tileSize = 16, edgeSize = 16,
@@ -382,7 +382,7 @@ local function ClassFilterButton_OnClick(self, button)
 			local button_height = 20
 			local id, name, description, icon
 
-			local button = CreateFrame("BUTTON", nil, frame)
+			local button = CreateFrame("BUTTON", nil, frame, _G.BackdropTemplateMixin and "BackdropTemplate" or nil)
 			button:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
 			button:SetPoint("TOPLEFT", frame, "TOPLEFT", 5, -5)
 			button:SetBackdrop(ALPrivate.BOX_BACKDROP)
@@ -919,7 +919,7 @@ function GUI:Create()
 	GUI_CREATED = true
 	local frameName = "AtlasLoot_GUI-Frame"
 
-	local frame = CreateFrame("Frame", frameName)
+	local frame = CreateFrame("Frame", frameName, nil, _G.BackdropTemplateMixin and "BackdropTemplate" or nil)
 	frame:ClearAllPoints()
 	frame:SetParent(UIParent)
 	frame:SetPoint(db.point[1], db.point[2], db.point[3], db.point[4], db.point[5])

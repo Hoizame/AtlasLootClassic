@@ -436,7 +436,7 @@ function GUI.CreateSelect()
 	self.ttSource = GameTooltip
 
 
-	self.frame = CreateFrame("ScrollFrame", frameName)
+	self.frame = CreateFrame("ScrollFrame", frameName, nil, _G.BackdropTemplateMixin and "BackdropTemplate" or nil)
 	local frame = self.frame
 	frame:ClearAllPoints()
 	frame:EnableMouse(true)
