@@ -41,4 +41,5 @@
 Locales\Locales.xml
 
 data.lua
+data-tbc.lua
 droprate.lua
