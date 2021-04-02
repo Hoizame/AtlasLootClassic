@@ -615,34 +615,39 @@ end
 local function loadModule(addonName)
 	local moduleList = AtlasLoot.ItemDB:GetModuleList(db.selected[1])
 	local moduleData = AtlasLoot.ItemDB:Get(db.selected[1])
+	local gameVersion = moduleData:GetAviableGameVersion(db.selectedGameVersion)
 	local contentTypes = moduleData:GetContentTypes()
 	local data = {}
 	local _, contentIndex
 	local first
 	local foundDbValue
-	for i = 1, #contentTypes do
-		if not data[i] then
-			data[i] = {
-				info = {
-					name = contentTypes[i][1],
-					bgColor = contentTypes[i][2],
-				}
-			}
-		end
-	end
 	local content
 	for i = 1, #moduleList do
 		content = moduleList[i]
-		if not first then first = content end
-		if content == db.selected[2] then foundDbValue = true end
-		-- contentName, contentIndex, contentColor
-		_, contentIndex = moduleData[content]:GetContentType()
-		data[contentIndex][ #data[contentIndex]+1 ] = {
-			id			= content,
-			name		= moduleData[content]:GetName(),
-			tt_title	= moduleData[content]:GetName(),
-			tt_text		= moduleData[content]:GetInfo(),
-		}
+		if moduleData[content].gameVersion == gameVersion then
+			if not first then first = content end
+			if content == db.selected[2] then foundDbValue = true end
+			-- contentName, contentIndex, contentColor
+			_, contentIndex = moduleData[content]:GetContentType()
+			-- add cat
+			if not data[contentIndex] then
+				if not data[contentIndex] then
+					data[contentIndex] = {
+						info = {
+							name = contentTypes[contentIndex][1],
+							bgColor = contentTypes[contentIndex][2],
+						}
+					}
+				end
+			end
+			-- add ini
+			data[contentIndex][ #data[contentIndex]+1 ] = {
+				id			= content,
+				name		= moduleData[content]:GetName(),
+				tt_title	= moduleData[content]:GetName(),
+				tt_text		= moduleData[content]:GetInfo(),
+			}
+		end
 	end
 	if data[0] and #data[0] > 0 then
 		data[#data+1] = data[0]
@@ -810,6 +815,33 @@ local function DifficultySelectFunction(self, id, arg, start)
 	UpdateFrames()
 end
 
+local function UpdateGameVersionTexture()
+	if AtlasLoot:GetGameVersion() < 2 then return end
+	if not GUI.frame or not GUI.frame.gameVersionLogo then return end
+	local frame = GUI.frame.gameVersionLogo
+
+	local curGameVersion = db.selectedGameVersion
+
+	if curGameVersion == 2 then
+		frame:SetTexture(131194)
+	else
+		frame:SetTexture(538639)
+	end
+end
+
+local function GameVersionSwitch_OnClick(self)
+	if AtlasLoot:GetGameVersion() < 2 then return end
+	local curGameVersion = db.selectedGameVersion
+
+	if curGameVersion == 2 then
+		db.selectedGameVersion = 1
+	else
+		db.selectedGameVersion = 2
+	end
+	UpdateGameVersionTexture()
+	loadModule()
+end
+
 -- ################################
 -- GUI functions
 -- ################################
@@ -964,16 +996,27 @@ function GUI:Create()
 	frame.titleFrame.version:SetJustifyV("BOTTOM")
 	frame.titleFrame.version:SetText(AtlasLoot.__addonversion)
 
+	frame.gameVersionButton = CreateFrame("Button", frameName.."-gameVersionButton", frame)
+	frame.gameVersionButton:SetPoint("TOPLEFT", frame, "TOPLEFT", 258, -37)
+	frame.gameVersionButton:SetWidth(64)
+	frame.gameVersionButton:SetHeight(32)
+	frame.gameVersionButton:SetScript("OnClick", GameVersionSwitch_OnClick)
+
+	frame.gameVersionLogo = frame:CreateTexture(frameName.."-downBG", "ARTWORK")
+	frame.gameVersionLogo:SetTexture(538639)
+	frame.gameVersionLogo:SetAllPoints(frame.gameVersionButton)
+	frame.gameVersionButton.texture = frame.gameVersionLogo
+
 	frame.moduleSelect = GUI:CreateDropDown()
-	frame.moduleSelect:SetParPoint("TOPLEFT", frame, "TOPLEFT", 10, -40)
-	frame.moduleSelect:SetWidth(270)
+	frame.moduleSelect:SetParPoint("RIGHT", frame.gameVersionButton, "LEFT", -5, 0)
+	frame.moduleSelect:SetWidth(245)
 	frame.moduleSelect:SetTitle(AL["Select Module"])
 	frame.moduleSelect:SetText("Select Module")
 	frame.moduleSelect:SetButtonOnClick(ModuleSelectFunction)
 
 	frame.subCatSelect = GUI:CreateDropDown()
-	frame.subCatSelect:SetParPoint("TOPLEFT", frame.moduleSelect.frame, "TOPRIGHT", 20, 0)
-	frame.subCatSelect:SetWidth(270)
+	frame.subCatSelect:SetParPoint("LEFT", frame.gameVersionButton, "RIGHT", 5, 0)
+	frame.subCatSelect:SetWidth(245)
 	frame.subCatSelect:SetTitle(AL["Select Subcategory"])
 	frame.subCatSelect:SetText("Select Subcategory")
 	frame.subCatSelect:SetButtonOnClick(SubCatSelectFunction)
@@ -1296,6 +1339,7 @@ function GUI.RefreshMainFrame()
 	frame:SetBackdropColor(db.mainFrame.bgColor.r, db.mainFrame.bgColor.b, db.mainFrame.bgColor.g, db.mainFrame.bgColor.a)
 	frame.titleFrame:SetBackdropColor(db.mainFrame.title.bgColor.r, db.mainFrame.title.bgColor.g, db.mainFrame.title.bgColor.b, db.mainFrame.title.bgColor.a)
 	GUI.RefreshFonts("title")
+	UpdateGameVersionTexture()
 
 	frame:SetScale(db.mainFrame.scale)
 end

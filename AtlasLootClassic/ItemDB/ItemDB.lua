@@ -45,6 +45,7 @@ ItemDB.mt = {
 		contentList[t.__atlaslootdata.addonName][k] = t.__atlaslootdata.contentCount
 		v.__atlaslootdata = t.__atlaslootdata
 		AtlasLoot.Data.AutoSelect:AddInstanceTable(t.__atlaslootdata.addonName, k, v)
+		v.gameVersion = t.__atlaslootdata.__gameVersion
 		rawset(t, k, v)
 	end
 }
@@ -52,7 +53,8 @@ ItemDB.mt = {
 --- Adds/Gets the table for a item database
 -- @param	addonName		<string> full name of the addon folder (eg "AtlasLoot_MistsofPandaria")
 -- @param	tierID			<number> the tier id of the EJ
-function ItemDB:Add(addonName, tierID)
+function ItemDB:Add(addonName, tierID, gameVersion)
+	gameVersion = gameVersion or 1
 	if not ItemDB.Storage[addonName] then
 		ItemDB.Storage[addonName] = {}
 		for k,v in pairs(ItemDB.Proto) do
@@ -61,11 +63,14 @@ function ItemDB:Add(addonName, tierID)
 		ItemDB.Storage[addonName].__atlaslootdata = {
 			addonName = addonName,
 			contentCount = 0,
-			tierID = tierID
+			tierID = tierID,
+			gameVersions = {}
 		}
 		setmetatable(ItemDB.Storage[addonName], ItemDB.mt)
 		contentList[addonName] = {}
 	end
+	ItemDB.Storage[addonName].__atlaslootdata.gameVersions[gameVersion] = true
+	ItemDB.Storage[addonName].__atlaslootdata.__gameVersion = gameVersion
 	return ItemDB.Storage[addonName]
 end
 
@@ -400,6 +405,20 @@ end
 
 function ItemDB.Proto:GetDifficulty(dataID, boss, dif)
 	return ItemDB:GetDifficulty(self.__atlaslootdata.addonName, dataID, boss, dif)
+end
+
+function ItemDB.Proto:IsGameVersionAviable(version)
+	return self.__atlaslootdata.gameVersions[version] and true or false
+end
+
+function ItemDB.Proto:GetAviableGameVersion(version)
+	if self.__atlaslootdata.gameVersions[version] then
+		return version
+	elseif self.__atlaslootdata.gameVersions[AtlasLoot:GetGameVersion()] then
+		return AtlasLoot:GetGameVersion()
+	else
+		return self.__atlaslootdata.__gameVersion
+	end
 end
 -- ##################################################
 --	ContentProto
