@@ -21,8 +21,8 @@ local ALIL = AtlasLoot.IngameLocales
 
 local NORMAL_DIFF = data:AddDifficulty(AL["Normal"], "n", 1, nil, true)
 local HEROIC_DIFF = data:AddDifficulty(AL["Heroic"], "h", 2, nil, true)
-local RAID20_DIFF = data:AddDifficulty(AL["20 Raid"], "r20", 9)
-local RAID40_DIFF = data:AddDifficulty(AL["40 Raid"], "r40", 9)
+local RAID10_DIFF = data:AddDifficulty(AL["10 Raid"], "r10", 3)
+local RAID25_DIFF = data:AddDifficulty(AL["25 Raid"], "r25", 4)
 local ALLIANCE_DIFF, HORDE_DIFF, LOAD_DIFF
 if UnitFactionGroup("player") == "Horde" then
 	HORDE_DIFF = data:AddDifficulty(FACTION_HORDE, "horde", nil, 1)
@@ -41,8 +41,8 @@ local QUEST_EXTRA_ITTYPE = data:AddExtraItemTableType("Quest")
 local PRICE_EXTRA_ITTYPE = data:AddExtraItemTableType("Price")
 
 local DUNGEON_CONTENT = data:AddContentType(AL["Dungeons"], ATLASLOOT_DUNGEON_COLOR)
-local RAID20_CONTENT = data:AddContentType(AL["10 Raids"], ATLASLOOT_RAID20_COLOR)
-local RAID40_CONTENT = data:AddContentType(AL["25 Raids"], ATLASLOOT_RAID40_COLOR)
+local RAID10_CONTENT = data:AddContentType(AL["10 Raids"], ATLASLOOT_RAID20_COLOR)
+local RAID25_CONTENT = data:AddContentType(AL["25 Raids"], ATLASLOOT_RAID40_COLOR)
 
 
 local KEYS = {	-- Keys
@@ -733,5 +733,261 @@ data["MagistersTerrace"] = {
             }
         },
         KEYS
+    }
+}
+
+data["BlackTemple"] = {
+	MapID = 3959,
+	InstanceID = 564,
+	--AtlasMapID = "",
+	--AtlasMapFile = "",
+	ContentType = RAID25_CONTENT,
+	items = {
+        { -- BTNajentus
+            name = AL["High Warlord Naj'entus"],
+            npcID = 22887,
+            Level = 999,
+            DisplayIDs = {{21174}},
+            -- AtlasMapBossID = 0,
+            [NORMAL_DIFF] = {
+                { 1, 32239 }, -- Slippers of the Seacaller
+                { 2, 32240 }, -- Guise of the Tidal Lurker
+                { 3, 32377 }, -- Mantle of Darkness
+                { 4, 32241 }, -- Helm of Soothing Currents
+                { 5, 32234 }, -- Fists of Mukoa
+                { 6, 32242 }, -- Boots of Oceanic Fury
+                { 7, 32232 }, -- Eternium Shell Bracers
+                { 8, 32243 }, -- Pearl Inlaid Boots
+                { 9, 32245 }, -- Tide-stomper's Greaves
+                { 16, 32238 }, -- Ring of Calming Waves
+                { 17, 32247 }, -- Ring of Captured Storms
+                { 18, 32237 }, -- The Maelstrom's Fury
+                { 19, 32236 }, -- Rising Tide
+                { 20, 32248 }, -- Halberd of Desolation
+            }
+        },
+        { -- BTSupremus
+            name = AL["Supremus"],
+            npcID = 22898,
+            Level = 999,
+            DisplayIDs = {{21145}},
+            -- AtlasMapBossID = 0,
+            [NORMAL_DIFF] = {
+                { 1, 32256 }, -- Waistwrap of Infinity
+                { 2, 32252 }, -- Nether Shadow Tunic
+                { 3, 32259 }, -- Bands of the Coming Storm
+                { 4, 32251 }, -- Wraps of Precise Flight
+                { 5, 32258 }, -- Naturalist's Preserving Cinch
+                { 6, 32250 }, -- Pauldrons of Abyssal Fury
+                { 16, 32260 }, -- Choker of Endless Nightmares
+                { 17, 32261 }, -- Band of the Abyssal Lord
+                { 18, 32257 }, -- Idol of the White Stag
+                { 19, 32254 }, -- The Brutalizer
+                { 20, 32262 }, -- Syphon of the Nathrezim
+                { 21, 32255 }, -- Felstone Bulwark
+                { 22, 32253 }, -- Legionkiller
+            }
+        },
+        { -- BTAkama
+            name = AL["Shade of Akama"],
+            npcID = 22841,
+            Level = 999,
+            DisplayIDs = {{21357}},
+            -- AtlasMapBossID = 0,
+            [NORMAL_DIFF] = {
+                { 1, 32273 }, -- Amice of Brilliant Light
+                { 2, 32270 }, -- Focused Mana Bindings
+                { 3, 32513 }, -- Wristbands of Divine Influence
+                { 4, 32265 }, -- Shadow-walker's Cord
+                { 5, 32271 }, -- Kilt of Immortal Nature
+                { 6, 32264 }, -- Shoulders of the Hidden Predator
+                { 7, 32275 }, -- Spiritwalker Gauntlets
+                { 8, 32276 }, -- Flashfire Girdle
+                { 9, 32279 }, -- The Seeker's Wristguards
+                { 10, 32278 }, -- Grips of Silent Justice
+                { 11, 32263 }, -- Praetorian's Legguards
+                { 12, 32268 }, -- Myrmidon's Treads
+                { 16, 32266 }, -- Ring of Deceitful Intent
+                { 17, 32361 }, -- Blind-Seers Icon
+            }
+        },
+        { -- BTGorefiend
+            name = AL["Teron Gorefiend"],
+            npcID = 22871,
+            Level = 999,
+            DisplayIDs = {{21254}},
+            -- AtlasMapBossID = 0,
+            [NORMAL_DIFF] = {
+                { 1, 32323 }, -- Shadowmoon Destroyer's Drape
+                { 2, 32329 }, -- Cowl of Benevolence
+                { 3, 32327 }, -- Robe of the Shadow Council
+                { 4, 32324 }, -- Insidious Bands
+                { 5, 32328 }, -- Botanist's Gloves of Growth
+                { 6, 32510 }, -- Softstep Boots of Tracking
+                { 7, 32280 }, -- Gauntlets of Enforcement
+                { 8, 32512 }, -- Girdle of Lordaeron's Fallen
+                { 16, 32330 }, -- Totem of Ancestral Guidance
+                { 17, 32348 }, -- Soul Cleaver
+                { 18, 32326 }, -- Twisted Blades of Zarak
+                { 19, 32325 }, -- Rifle of the Stoic Guardian
+            }
+        },
+        { -- BTBloodboil
+            name = AL["Gurtogg Bloodboil"],
+            npcID = 22948,
+            Level = 999,
+            DisplayIDs = {{21443}},
+            -- AtlasMapBossID = 0,
+            [NORMAL_DIFF] = {
+                { 1, 32337 }, -- Shroud of Forgiveness
+                { 2, 32338 }, -- Blood-cursed Shoulderpads
+                { 3, 32340 }, -- Garments of Temperance
+                { 4, 32339 }, -- Belt of Primal Majesty
+                { 5, 32334 }, -- Vest of Mounting Assault
+                { 6, 32342 }, -- Girdle of Mighty Resolve
+                { 7, 32333 }, -- Girdle of Stability
+                { 8, 32341 }, -- Leggings of Divine Retribution
+                { 16, 32335 }, -- Unstoppable Aggressor's Ring
+                { 17, 32501 }, -- Shadowmoon Insignia
+                { 18, 32269 }, -- Messenger of Fate
+                { 19, 32344 }, -- Staff of Immaculate Recovery
+                { 20, 32343 }, -- Wand of Prismatic Focus
+            }
+        },
+        { -- BTEssencofSouls
+            name = AL["Reliquary of the Lost"],
+            npcID = 22856,
+            Level = 999,
+            DisplayIDs = {{21146}},
+            -- AtlasMapBossID = 0,
+            [NORMAL_DIFF] = {
+                { 1, 32353 }, -- Gloves of Unfailing Faith
+                { 2, 32351 }, -- Elunite Empowered Bracers
+                { 3, 32347 }, -- Grips of Damnation
+                { 4, 32352 }, -- Naturewarden's Treads
+                { 5, 32517 }, -- The Wavemender's Mantle
+                { 6, 32346 }, -- Boneweave Girdle
+                { 7, 32354 }, -- Crown of Empowered Fate
+                { 8, 32345 }, -- Dreadboots of the Legion
+                { 16, 32349 }, -- Translucent Spellthread Necklace
+                { 17, 32362 }, -- Pendant of Titans
+                { 18, 32350 }, -- Touch of Inspiration
+                { 19, 32332 }, -- Torch of the Damned
+                { 20, 32363 }, -- Naaru-Blessed Life Rod
+            }
+        },
+        { -- BTShahraz
+            name = AL["Mother Shahraz"],
+            npcID = 22947,
+            Level = 999,
+            DisplayIDs = {{21252}},
+            -- AtlasMapBossID = 0,
+            [NORMAL_DIFF] = {
+                { 1, 32367 }, -- Leggings of Devastation
+                { 2, 32366 }, -- Shadowmaster's Boots
+                { 3, 32365 }, -- Heartshatter Breastplate
+                { 4, 32370 }, -- Nadina's Pendant of Purity
+                { 5, 32368 }, -- Tome of the Lightbringer
+                { 6, 32369 }, -- Blade of Savagery
+                { 16, 31101 }, -- Pauldrons of the Forgotten Conqueror
+                { 17, 31103 }, -- Pauldrons of the Forgotten Protector
+                { 18, 31102 }, -- Pauldrons of the Forgotten Vanquisher
+            }
+        },
+        { -- BTCouncil
+            name = AL["The Illidari Council"],
+            npcID = {23426, 22949, 22950, 22951, 22952},
+            Level = 999,
+            DisplayIDs = {{21416},{21417},{21419},{21418}},
+            -- AtlasMapBossID = 0,
+            [NORMAL_DIFF] = {
+                { 1, 32331 }, -- Cloak of the Illidari Council
+                { 2, 32519 }, -- Belt of Divine Guidance
+                { 3, 32518 }, -- Veil of Turning Leaves
+                { 4, 32376 }, -- Forest Prowler's Helm
+                { 5, 32373 }, -- Helm of the Illidari Shatterer
+                { 6, 32505 }, -- Madness of the Betrayer
+                { 16, 31098 }, -- Leggings of the Forgotten Conqueror
+                { 17, 31100 }, -- Leggings of the Forgotten Protector
+                { 18, 31099 }, -- Leggings of the Forgotten Vanquisher
+            }
+        },
+        { -- BTIllidanStormrage
+            name = AL["Illidan Stormrage"],
+            npcID = 22917,
+            Level = 999,
+            DisplayIDs = {{21135}},
+            -- AtlasMapBossID = 0,
+            [NORMAL_DIFF] = {
+                { 1, 32524 }, -- Shroud of the Highborne
+                { 2, 32525 }, -- Cowl of the Illidari High Lord
+                { 3, 32235 }, -- Cursed Vision of Sargeras
+                { 4, 32521 }, -- Faceplate of the Impenetrable
+                { 5, 32497 }, -- Stormrage Signet Ring
+                { 6, 32483 }, -- The Skull of Gul'dan
+                { 7, 32496 }, -- Memento of Tyrande
+                { 9, 32837 }, -- Warglaive of Azzinoth
+                { 10, 32838 }, -- Warglaive of Azzinoth
+                { 16, 31089 }, -- Chestguard of the Forgotten Conqueror
+                { 17, 31091 }, -- Chestguard of the Forgotten Protector
+                { 18, 31090 }, -- Chestguard of the Forgotten Vanquisher
+                { 20, 32471 }, -- Shard of Azzinoth
+                { 21, 32500 }, -- Crystal Spire of Karabor
+                { 22, 32374 }, -- Zhar'doom, Greatstaff of the Devourer
+                { 23, 32375 }, -- Bulwark of Azzinoth
+                { 24, 32336 }, -- Black Bow of the Betrayer
+            }
+        },
+        { -- BTTrash
+            name = AL["Trash"],
+            ExtraList = true,
+            [NORMAL_DIFF] = {
+                { 1, 32590 }, -- Nethervoid Cloak
+                { 2, 34012 }, -- Shroud of the Final Stand
+                { 3, 32609 }, -- Boots of the Divine Light
+                { 4, 32593 }, -- Treads of the Den Mother
+                { 5, 32592 }, -- Chestguard of Relentless Storms
+                { 6, 32608 }, -- Pillager's Gauntlets
+                { 7, 32606 }, -- Girdle of the Lightbearer
+                { 8, 32591 }, -- Choker of Serrated Blades
+                { 9, 32589 }, -- Hellfire-Encased Pendant
+                { 10, 32526 }, -- Band of Devastation
+                { 11, 32528 }, -- Blessed Band of Karabor
+                { 12, 32527 }, -- Ring of Ancient Knowledge
+                { 16, 34009 }, -- Hammer of Judgement
+                { 17, 32943 }, -- Swiftsteel Bludgeon
+                { 18, 34011 }, -- Illidari Runeshield
+                { 20, 32228 }, -- Empyrean Sapphire
+                { 21, 32231 }, -- Pyrestone
+                { 22, 32229 }, -- Lionseye
+                { 23, 32249 }, -- Seaspray Emerald
+                { 24, 32230 }, -- Shadowsong Amethyst
+                { 25, 32227 }, -- Crimson Spinel
+                { 27, 32428 }, -- Heart of Darkness
+                { 28, 32897 }, -- Mark of the Illidari
+            }
+        },
+        { -- BTPatterns
+            name = AL["Patterns"],
+            ExtraList = true,
+            [NORMAL_DIFF] = {
+                { 1, 32738 }, -- Plans: Dawnsteel Bracers
+                { 2, 32739 }, -- Plans: Dawnsteel Shoulders
+                { 3, 32736 }, -- Plans: Swiftsteel Bracers
+                { 4, 32737 }, -- Plans: Swiftsteel Shoulders
+                { 5, 32748 }, -- Pattern: Bindings of Lightning Reflexes
+                { 6, 32744 }, -- Pattern: Bracers of Renewed Life
+                { 7, 32750 }, -- Pattern: Living Earth Bindings
+                { 8, 32751 }, -- Pattern: Living Earth Shoulders
+                { 9, 32749 }, -- Pattern: Shoulders of Lightning Reflexes
+                { 10, 32745 }, -- Pattern: Shoulderpads of Renewed Life
+                { 11, 32746 }, -- Pattern: Swiftstrike Bracers
+                { 12, 32747 }, -- Pattern: Swiftstrike Shoulders
+                { 16, 32754 }, -- Pattern: Bracers of Nimble Thought
+                { 17, 32755 }, -- Pattern: Mantle of Nimble Thought
+                { 18, 32753 }, -- Pattern: Swiftheal Mantle
+                { 19, 32752 }, -- Pattern: Swiftheal Wraps
+            }
+        }
     }
 }

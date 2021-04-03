@@ -1,3 +1,5 @@
+local ALName, ALPrivate = ...
+
 local AtlasLoot = _G.AtlasLoot
 local Token = {}
 AtlasLoot.Data.Token = Token
@@ -5,6 +7,8 @@ local AL = AtlasLoot.Locales
 
 local type, pairs = type, pairs
 local format = format
+
+local CLASS_ICON_PATH = ALPrivate.CLASS_ICON_PATH
 
 local TOKEN_FORMAT_STRING = "|cff00ff00"..AL["L-Click"]..":|r %s"
 local TOKEN_TYPE_DEFAULT = 1
@@ -15,9 +19,22 @@ local TOKEN_TYPE_TEXT = {
 	[3] = format(TOKEN_FORMAT_STRING, AL["Show quest rewards."]),
 	[4] = format(TOKEN_FORMAT_STRING, AL["Quest objective."]),
 	[5] = format(TOKEN_FORMAT_STRING, AL["Reagent for..."]),
+	[6] = format(TOKEN_FORMAT_STRING, AL["Token for..."]),
 
 	-- classes get set with the init
 	-- "DRUID", "HUNTER", "MAGE", "PALADIN", "PRIEST", "ROGUE", "SHAMAN", "WARLOCK", "WARRIOR"
+}
+
+local ICONS = {
+	WARRIOR 	= 	"ADDON_classicon_warrior",
+	PALADIN 	= 	"ADDON_classicon_paladin",
+	HUNTER 		= 	"ADDON_classicon_hunter",
+	ROGUE 		= 	"ADDON_classicon_rogue",
+	PRIEST 		= 	"ADDON_classicon_priest",
+	SHAMAN 		= 	"ADDON_classicon_shaman",
+	MAGE 		= 	"ADDON_classicon_mage",
+	WARLOCK 	= 	"ADDON_classicon_warlock",
+	DRUID 		= 	"ADDON_classicon_druid",
 }
 
 local TOKEN = {
@@ -277,6 +294,22 @@ local TOKEN = {
 	[21178] = { "f609rep5", 0, {20802, 5}, {20800, 3}, {20801, 7} }, -- Gloves of Earthen Power
 	[21187] = 21178, -- Earthweave Cloak
 	[21179] = 21178, -- Band of Earthen Wrath
+
+--@version-classic@
+	--- T6
+	-- Shoulders
+	[31101] = { ICONS.PALADIN, 30996, 30997, 30998, 0, ICONS.PRIEST, 31069, 31070, 0, ICONS.WARLOCK, 31054, type = 6 }, -- Pauldrons of the Forgotten Conqueror
+	[31102] = { ICONS.ROGUE, 31030, 0, ICONS.MAGE, 31059, 0, ICONS.DRUID, 31047, 31048, 31049, type = 6 }, -- Pauldrons of the Forgotten Vanquisher
+	[31103] = { ICONS.WARRIOR, 30979, 30980, 0, ICONS.HUNTER, 31006, 0, ICONS.SHAMAN, 31022, 31023, 31024, type = 6 }, -- Pauldrons of the Forgotten Protector
+	-- Legs
+	[31098] = { ICONS.PALADIN, 30993, 30994, 30995, 0, ICONS.PRIEST, 31067, 31068, 0, ICONS.WARLOCK, 31053, type = 6 }, -- Leggings of the Forgotten Conqueror
+	[31099] = { ICONS.ROGUE, 31029, 0, ICONS.MAGE, 31058, 0, ICONS.DRUID, 31044, 31045, 31046, type = 6 }, -- Leggings of the Forgotten Vanquisher
+	[31100] = { ICONS.WARRIOR, 30977, 30978, 0, ICONS.HUNTER, 31005, 0, ICONS.SHAMAN, 31019, 31020, 31021, type = 6 }, -- Leggings of the Forgotten Protector
+	-- Chest
+	[31089] = { ICONS.PALADIN, 30990, 30991, 30992, 0, ICONS.PRIEST, 31065, 31066, 0, ICONS.WARLOCK, 31052, type = 6 }, -- Chestguard of the Forgotten Conqueror
+	[31090] = { ICONS.ROGUE, 31028, 0, ICONS.MAGE, 31057, 0, ICONS.DRUID, 31041, 31042, 31043, type = 6 }, -- Chestguard of the Forgotten Vanquisher
+	[31091] = { ICONS.WARRIOR, 30975, 30976, 0, ICONS.HUNTER, 31004, 0, ICONS.SHAMAN, 31016, 31017, 31018, type = 6 }, -- Chestguard of the Forgotten Protector
+--@end-version-classic@
 }
 
 local function Init()
