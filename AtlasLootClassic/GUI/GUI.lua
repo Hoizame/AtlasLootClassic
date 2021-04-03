@@ -618,6 +618,7 @@ local function loadModule(addonName)
 	local gameVersion = moduleData:GetAviableGameVersion(db.selectedGameVersion)
 	local contentTypes = moduleData:GetContentTypes()
 	local data = {}
+	local loadedContent = {}
 	local _, contentIndex
 	local first
 	local foundDbValue
@@ -630,16 +631,16 @@ local function loadModule(addonName)
 			-- contentName, contentIndex, contentColor
 			_, contentIndex = moduleData[content]:GetContentType()
 			-- add cat
-			if not data[contentIndex] then
-				if not data[contentIndex] then
-					data[contentIndex] = {
-						info = {
-							name = contentTypes[contentIndex][1],
-							bgColor = contentTypes[contentIndex][2],
-						}
+			if not loadedContent[contentIndex] then
+				data[#data+1] = {
+					info = {
+						name = contentTypes[contentIndex][1],
+						bgColor = contentTypes[contentIndex][2],
 					}
-				end
+				}
+				loadedContent[contentIndex] = #data
 			end
+			contentIndex = loadedContent[contentIndex]
 			-- add ini
 			data[contentIndex][ #data[contentIndex]+1 ] = {
 				id			= content,
