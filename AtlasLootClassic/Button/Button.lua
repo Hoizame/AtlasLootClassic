@@ -32,7 +32,12 @@ local CreateFrame = CreateFrame
 
 -- UnitFactionGroup("player")		"Alliance", "Horde", "Neutral" or nil.
 -- :SetAtlas()
-local WOW_HEAD_LINK, WOW_HEAD_LINK_LOC = "https://classic.wowhead.com/%s=%d", "https://%s.classic.wowhead.com/%s=%d"
+local WOW_HEAD_LINK, WOW_HEAD_LINK_LOC
+if AtlasLoot:GetGameVersion() == 2 then
+	WOW_HEAD_LINK, WOW_HEAD_LINK_LOC = "https://tbc.wowhead.com/%s=%d", "https://%s.tbc.wowhead.com/%s=%d"
+else
+	WOW_HEAD_LINK, WOW_HEAD_LINK_LOC = "https://classic.wowhead.com/%s=%d", "https://%s.classic.wowhead.com/%s=%d"
+end
 local WOW_HEAD_LOCALE
 local FACTION_INFO_IS_SET_ID = 998
 local IGNORE_THIS_BUTTON_ID = 999
