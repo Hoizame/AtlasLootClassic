@@ -632,17 +632,15 @@ local function loadModule(addonName)
 			_, contentIndex = moduleData[content]:GetContentType()
 			-- add cat
 			if not loadedContent[contentIndex] then
-				data[#data+1] = {
+				loadedContent[contentIndex] = {
 					info = {
 						name = contentTypes[contentIndex][1],
 						bgColor = contentTypes[contentIndex][2],
 					}
 				}
-				loadedContent[contentIndex] = #data
 			end
-			contentIndex = loadedContent[contentIndex]
 			-- add ini
-			data[contentIndex][ #data[contentIndex]+1 ] = {
+			loadedContent[contentIndex][ #loadedContent[contentIndex]+1 ] = {
 				id			= content,
 				name		= moduleData[content]:GetName(),
 				tt_title	= moduleData[content]:GetName(),
@@ -650,6 +648,14 @@ local function loadModule(addonName)
 			}
 		end
 	end
+
+	for i = 1, #contentTypes do
+		if loadedContent[i] then
+			data[#data+1] = loadedContent[i]
+		end
+	end
+	loadedContent = nil
+
 	if data[0] and #data[0] > 0 then
 		data[#data+1] = data[0]
 		data[0] = nil
