@@ -736,6 +736,174 @@ data["MagistersTerrace"] = {
     }
 }
 
+data["SerpentshrineCavern"] = {
+	MapID = 3607,
+	InstanceID = 548,
+	--AtlasMapID = "",
+	--AtlasMapFile = "",
+	ContentType = RAID25_CONTENT,
+	items = {
+        { -- CFRSerpentHydross
+            name = AL["Hydross the Unstable"],
+            npcID = 21216,
+            Level = 999,
+            DisplayIDs = {{20162}},
+            -- AtlasMapBossID = 0,
+            [NORMAL_DIFF] = {
+                { 1, 30056 }, -- Robe of Hateful Echoes
+                { 2, 32516 }, -- Wraps of Purification
+                { 3, 30050 }, -- Boots of the Shifting Nightmare
+                { 4, 30055 }, -- Shoulderpads of the Stranger
+                { 5, 30047 }, -- Blackfathom Warbands
+                { 6, 30054 }, -- Ranger-General's Chestguard
+                { 7, 30048 }, -- Brighthelm of Justice
+                { 8, 30053 }, -- Pauldrons of the Wardancer
+                { 16, 30052 }, -- Ring of Lethality
+                { 17, 33055 }, -- Band of Vile Aggression
+                { 18, 30664 }, -- Living Root of the Wildheart
+                { 19, 30629 }, -- Scarab of Displacement
+                { 20, 30049 }, -- Fathomstone
+                { 21, 30051 }, -- Idol of the Crescent Goddess
+            }
+        },
+        { -- CFRSerpentLurker
+            name = AL["The Lurker Below"],
+            npcID = 21217,
+            Level = 999,
+            DisplayIDs = {{20216}},
+            -- AtlasMapBossID = 0,
+            [NORMAL_DIFF] = {
+                { 1, 30064 }, -- Cord of Screaming Terrors
+                { 2, 30067 }, -- Velvet Boots of the Guardian
+                { 3, 30062 }, -- Grove-Bands of Remulos
+                { 4, 30060 }, -- Boots of Effortless Striking
+                { 5, 30066 }, -- Tempest-Strider Boots
+                { 6, 30065 }, -- Glowing Breastplate of Truth
+                { 7, 30057 }, -- Bracers of Eradication
+                { 16, 30059 }, -- Choker of Animalistic Fury
+                { 17, 30061 }, -- Ancestral Ring of Conquest
+                { 18, 33054 }, -- The Seal of Danzalar
+                { 19, 30665 }, -- Earring of Soulful Meditation
+                { 20, 30063 }, -- Libram of Absolute Truth
+                { 21, 30058 }, -- Mallet of the Tides
+            }
+        },
+        { -- CFRSerpentLeotheras
+            name = AL["Leotheras the Blind"],
+            npcID = 21215,
+            Level = 999,
+            DisplayIDs = {{20514}},
+            -- AtlasMapBossID = 0,
+            [NORMAL_DIFF] = {
+                { 1, 30092 }, -- Orca-Hide Boots
+                { 2, 30097 }, -- Coral-Barbed Shoulderpads
+                { 3, 30091 }, -- True-Aim Stalker Bands
+                { 4, 30096 }, -- Girdle of the Invulnerable
+                { 5, 30627 }, -- Tsunami Talisman
+                { 6, 30095 }, -- Fang of the Leviathan
+                { 16, 30239 }, -- Gloves of the Vanquished Champion
+                { 17, 30240 }, -- Gloves of the Vanquished Defender
+                { 18, 30241 }, -- Gloves of the Vanquished Hero
+            }
+        },
+        { -- CFRSerpentKarathress
+            name = AL["Fathom-Lord Karathress"],
+            npcID = 21214,
+            Level = 999,
+            DisplayIDs = {{20662},{20671},{20670},{20672}},
+            -- AtlasMapBossID = 0,
+            [NORMAL_DIFF] = {
+                { 1, 30100 }, -- Soul-Strider Boots
+                { 2, 30101 }, -- Bloodsea Brigand's Vest
+                { 3, 30099 }, -- Frayed Tether of the Drowned
+                { 4, 30663 }, -- Fathom-Brooch of the Tidewalker
+                { 5, 30626 }, -- Sextant of Unstable Currents
+                { 6, 30090 }, -- World Breaker
+                { 16, 30245 }, -- Leggings of the Vanquished Champion
+                { 17, 30246 }, -- Leggings of the Vanquished Defender
+                { 18, 30247 }, -- Leggings of the Vanquished Hero
+            }
+        },
+        { -- CFRSerpentMorogrim
+            name = AL["Morogrim Tidewalker"],
+            npcID = 21213,
+            Level = 999,
+            DisplayIDs = {{20739}},
+            -- AtlasMapBossID = 0,
+            [NORMAL_DIFF] = {
+                { 1, 30098 }, -- Razor-Scale Battlecloak
+                { 2, 30079 }, -- Illidari Shoulderpads
+                { 3, 30075 }, -- Gnarled Chestpiece of the Ancients
+                { 4, 30085 }, -- Mantle of the Tireless Tracker
+                { 5, 30068 }, -- Girdle of the Tidal Call
+                { 6, 30084 }, -- Pauldrons of the Argent Sentinel
+                { 7, 30081 }, -- Warboots of Obliteration
+                { 16, 30008 }, -- Pendant of the Lost Ages
+                { 17, 30083 }, -- Ring of Sundered Souls
+                { 18, 33058 }, -- Band of the Vigilant
+                { 19, 30720 }, -- Serpent-Coil Braid
+                { 20, 30082 }, -- Talon of Azshara
+                { 21, 30080 }, -- Luminescent Rod of the Naaru
+            }
+        },
+        { -- CFRSerpentVashj
+            name = AL["Lady Vashj"],
+            npcID = 21212,
+            Level = 999,
+            DisplayIDs = {{20748}},
+            -- AtlasMapBossID = 0,
+            [NORMAL_DIFF] = {
+                { 1, 30107 }, -- Vestments of the Sea-Witch
+                { 2, 30111 }, -- Runetotem's Mantle
+                { 3, 30106 }, -- Belt of One-Hundred Deaths
+                { 4, 30104 }, -- Cobra-Lash Boots
+                { 5, 30102 }, -- Krakken-Heart Breastplate
+                { 6, 30112 }, -- Glorious Gauntlets of Crestfall
+                { 7, 30109 }, -- Ring of Endless Coils
+                { 8, 30110 }, -- Coral Band of the Revived
+                { 9, 30621 }, -- Prism of Inner Calm
+                { 10, 30103 }, -- Fang of Vashj
+                { 11, 30108 }, -- Lightfathom Scepter
+                { 12, 30105 }, -- Serpent Spine Longbow
+                { 16, 30242 }, -- Helm of the Vanquished Champion
+                { 17, 30243 }, -- Helm of the Vanquished Defender
+                { 18, 30244 }, -- Helm of the Vanquished Hero
+                { 20, 29906 }, -- Vashj's Vial Remnant
+            }
+        },
+        { -- CFRSerpentTrash
+            name = AL["Trash"],
+            ExtraList = true,
+            [NORMAL_DIFF] = {
+                { 1, 30027 }, -- Boots of Courage Unending
+                { 2, 30022 }, -- Pendant of the Perilous
+                { 3, 30620 }, -- Spyglass of the Hidden Fleet
+                { 4, 30023 }, -- Totem of the Maelstrom
+                { 5, 30021 }, -- Wildfury Greatstaff
+                { 6, 30025 }, -- Serpentshrine Shuriken
+                { 8, 30324 }, -- Plans: Red Havoc Boots
+                { 9, 30322 }, -- Plans: Red Belt of Battle
+                { 10, 30323 }, -- Plans: Boots of the Protector
+                { 11, 30321 }, -- Plans: Belt of the Guardian
+                { 12, 30280 }, -- Pattern: Belt of Blasting
+                { 13, 30282 }, -- Pattern: Boots of Blasting
+                { 14, 30283 }, -- Pattern: Boots of the Long Road
+                { 15, 30281 }, -- Pattern: Belt of the Long Road
+                { 16, 30308 }, -- Pattern: Hurricane Boots
+                { 17, 30304 }, -- Pattern: Monsoon Belt
+                { 18, 30305 }, -- Pattern: Boots of Natural Grace
+                { 19, 30307 }, -- Pattern: Boots of the Crimson Hawk
+                { 20, 30306 }, -- Pattern: Boots of Utter Darkness
+                { 21, 30301 }, -- Pattern: Belt of Natural Power
+                { 22, 30303 }, -- Pattern: Belt of the Black Eagle
+                { 23, 30302 }, -- Pattern: Belt of Deep Shadow
+                { 25, 30183 }, -- Nether Vortex
+                { 27, 32897 }, -- Mark of the Illidari
+            }
+        }
+    }
+}
+
 data["BlackTemple"] = {
 	MapID = 3959,
 	InstanceID = 564,
