@@ -625,7 +625,7 @@ local function loadModule(addonName)
 	local content
 	for i = 1, #moduleList do
 		content = moduleList[i]
-		if moduleData[content].gameVersion == gameVersion then
+		if moduleData[content].gameVersion == gameVersion or moduleData[content].gameVersion == 0 then
 			if not first then first = content end
 			if content == db.selected[2] then foundDbValue = true end
 			-- contentName, contentIndex, contentColor

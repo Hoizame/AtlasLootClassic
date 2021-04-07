@@ -6,6 +6,7 @@ AtlasLoot.Data.ContentPhase = ContentPhase
 local AL = AtlasLoot.Locales
 local IMAGE_PATH = ALPrivate.IMAGE_PATH
 local ACTIVE_PASE_LIST = {
+    [0] = 99, -- dummy
     [1] = 6, -- classic
     [2] = 1, -- bc
 }
