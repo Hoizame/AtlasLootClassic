@@ -40,6 +40,7 @@ local NAME_TEMPEST_KEEP = NAME_COLOR..AL["TK"]..":|r %s" -- Tempest Keep
 local NAME_CAVERNS_OF_TIME = NAME_COLOR..AL["CoT"]..":|r %s" -- Caverns of Time
 local NAME_AUCHINDOUN = NAME_COLOR..AL["Auch"]..":|r %s" -- Auchindoun
 local NAME_COILFANG_RESERVOIR = NAME_COLOR..AL["CR"]..":|r %s"-- Coilfang Reservoir
+local NAME_HELLFIRE_CITADEL = NAME_COLOR..AL["HC"]..":|r %s"-- Hellfire Citadel
 
 local KEYS = {	-- Keys
 	name = AL["Keys"],
@@ -66,6 +67,380 @@ local KEYS = {	-- Keys
 		{ 22, 32092 }, -- The Eye of Haramad
 		{ 23, 24140 }, -- Blackened Urn
 		{ 24, 32449 }, -- Essence-Infused Moonstone
+    }
+}
+
+
+
+data["HellfireRamparts"] = {
+    nameFormat = NAME_HELLFIRE_CITADEL,
+	MapID = 3562,
+	InstanceID = 543,
+	--AtlasMapID = "",
+	--AtlasMapFile = "",
+	ContentType = DUNGEON_CONTENT,
+	--LoadDifficulty = NORMAL_DIFF,
+	LevelRange = {57, 59, 67},
+	items = {
+        { -- HCRampWatchkeeper
+            name = AL["Watchkeeper Gargolmar"],
+            npcID = {17306,18436},
+            Level = 62,
+            DisplayIDs = {{18236}},
+            -- AtlasMapBossID = 0,
+            [NORMAL_DIFF] = {
+                { 1, 24024 }, -- Pauldrons of Arcane Rage
+                { 2, 24023 }, -- Bracers of Finesse
+                { 3, 24022 }, -- Scale Leggings of the Skirmisher
+                { 4, 24021 }, -- Light-Touched Breastplate
+                { 5, 24020 }, -- Shadowrend Longblade
+                { 7, 23881 }, -- Gargolmar's Hand
+            },
+            [HEROIC_DIFF] = {
+                { 1, 29434 }, -- Badge of Justice
+                { 2, 30593 }, -- Iridescent Fire Opal
+                { 3, 30594 }, -- Effulgent Chrysoprase
+                { 4, 30592 }, -- Steady Chrysoprase
+                { 6, 27448 }, -- Cloak of the Everliving
+                { 7, 27451 }, -- Boots of the Darkwalker
+                { 8, 27450 }, -- Wild Stalker Boots
+                { 9, 27447 }, -- Bracers of Just Rewards
+                { 10, 27449 }, -- Blood Knight Defender
+                { 12, 23881 }, -- Gargolmar's Hand
+            }
+        },
+        { -- HCRampOmor
+            name = AL["Omor the Unscarred"],
+            npcID = {17308,18433},
+            Level = 62,
+            DisplayIDs = {{18237}},
+            -- AtlasMapBossID = 0,
+            [NORMAL_DIFF] = {
+                { 1, 24090 }, -- Bloodstained Ravager Gauntlets
+                { 2, 24091 }, -- Tenacious Defender
+                { 3, 24073 }, -- Garrote-String Necklace
+                { 4, 24096 }, -- Heartblood Prayer Beads
+                { 5, 24094 }, -- Heart Fire Warhammer
+                { 6, 24069 }, -- Crystalfire Staff
+                { 8, 23886 }, -- Omor's Hoof
+            },
+            [HEROIC_DIFF] = {
+                { 1, 29434 }, -- Badge of Justice
+                { 3, 27466 }, -- Headdress of Alacrity
+                { 4, 27462 }, -- Crimson Bracers of Gloom
+                { 5, 27467 }, -- Silent-Strider Kneeboots
+                { 6, 27478 }, -- Girdle of the Blasted Reaches
+                { 7, 27539 }, -- Justice Bearer's Pauldrons
+                { 8, 27906 }, -- Crimsonforge Breastplate
+                { 9, 27464 }, -- Omor's Unyielding Will
+                { 10, 27895 }, -- Band of Many Prisms
+                { 11, 27477 }, -- Faol's Signet of Cleansing
+                { 12, 27463 }, -- Terror Flame Dagger
+                { 13, 27476 }, -- Truncheon of Five Hells
+                { 15, 23886 }, -- Omor's Hoof
+                { 16, 30593 }, -- Iridescent Fire Opal
+                { 17, 30594 }, -- Effulgent Chrysoprase
+                { 18, 30592 }, -- Steady Chrysoprase
+                { 20, 27465 }, -- Mana-Etched Gloves
+            }
+        },
+        { -- HCRampFelIronChest
+            name = AL["Nazan & Vazruden"],
+            npcID = {17537,18434,17536,18432},
+            ObjectID = 185168,
+            Level = 62,
+            DisplayIDs = {{18812},{18407}},
+            -- AtlasMapBossID = 0,
+            [NORMAL_DIFF] = {
+                { 1, 24150 }, -- Mok'Nathal Wildercloak
+                { 2, 24083 }, -- Lifegiver Britches
+                { 3, 24063 }, -- Shifting Sash of Midnight
+                { 4, 24046 }, -- Kilt of Rolling Thunders
+                { 5, 24064 }, -- Ironsole Clompers
+                { 6, 24045 }, -- Band of Renewal
+                { 7, 24154 }, -- Witching Band
+                { 8, 24151 }, -- Mok'Nathal Clan Ring
+                { 9, 24044 }, -- Hellreaver
+                { 10, 24155 }, -- Ursol's Claw
+            },
+            [HEROIC_DIFF] = {
+                { 1, 29434 }, -- Badge of Justice
+                { 2, 29264 }, -- Tree-Mender's Belt
+                { 3, 32077 }, -- Wrath Infused Gauntlets
+                { 4, 29238 }, -- Lion's Heart Girdle
+                { 5, 29346 }, -- Feltooth Eviscerator
+                { 7, 27452 }, -- Light Scribe Bands
+                { 8, 27461 }, -- Chestguard of the Prowler
+                { 9, 27456 }, -- Raiments of Nature's Breath
+                { 10, 27454 }, -- Volcanic Pauldrons
+                { 11, 27458 }, -- Oceansong Kilt
+                { 12, 27455 }, -- Irondrake Faceguard
+                { 13, 27459 }, -- Vambraces of Daring
+                { 14, 27457 }, -- Life Bearer's Gauntlets
+                { 16, 30593 }, -- Iridescent Fire Opal
+                { 17, 30594 }, -- Effulgent Chrysoprase
+                { 18, 30592 }, -- Steady Chrysoprase
+                { 20, 27453 }, -- Averinn's Ring of Slaying
+                { 21, 27460 }, -- Reavers' Ring
+            }
+        },
+        KEYS
+    }
+}
+
+data["TheBloodFurnace"] = {
+    nameFormat = NAME_HELLFIRE_CITADEL,
+	MapID = 3713,
+	InstanceID = 542,
+	--AtlasMapID = "",
+	--AtlasMapFile = "",
+	ContentType = DUNGEON_CONTENT,
+	--LoadDifficulty = NORMAL_DIFF,
+	LevelRange = {58, 60, 68},
+	items = {
+        { -- HCFurnaceMaker
+            name = AL["The Maker"],
+            npcID = {17381,18621},
+            Level = 62,
+            DisplayIDs = {{18369}},
+            -- AtlasMapBossID = 0,
+            [NORMAL_DIFF] = {
+                { 1, 24388 }, -- Girdle of the Gale Storm
+                { 2, 24387 }, -- Ironblade Gauntlets
+                { 3, 24385 }, -- Pendant of Battle-Lust
+                { 4, 24386 }, -- Libram of Saints Departed
+                { 5, 24384 }, -- Diamond-Core Sledgemace
+            },
+            [HEROIC_DIFF] = {
+                { 1, 29434 }, -- Badge of Justice
+                { 2, 30601 }, -- Beaming Fire Opal
+                { 3, 30600 }, -- Fluorescent Tanzanite
+                { 4, 30602 }, -- Jagged Chrysoprase
+                { 6, 27485 }, -- Embroidered Cape of Mysteries
+                { 7, 27488 }, -- Mage-Collar of the Firestorm
+                { 8, 27483 }, -- Moon-Touched Bands
+                { 9, 27487 }, -- Bloodlord Legplates
+                { 10, 27484 }, -- Libram of Avengement
+            }
+        },
+        { -- HCFurnaceBroggok
+            name = AL["Broggok"],
+            npcID = {17380,18601},
+            Level = 63,
+            DisplayIDs = {{19372}},
+            -- AtlasMapBossID = 0,
+            [NORMAL_DIFF] = {
+                { 1, 24392 }, -- Arcing Bracers
+                { 2, 24393 }, -- Bloody Surgeon's Mitts
+                { 3, 24391 }, -- Kilt of the Night Strider
+                { 4, 24390 }, -- Auslese's Light Channeler
+                { 5, 24389 }, -- Legion Blunderbuss
+            },
+            [HEROIC_DIFF] = {
+                { 1, 29434 }, -- Badge of Justice
+                { 2, 30601 }, -- Beaming Fire Opal
+                { 3, 30600 }, -- Fluorescent Tanzanite
+                { 4, 30602 }, -- Jagged Chrysoprase
+                { 6, 27848 }, -- Embroidered Spellpyre Boots
+                { 7, 27492 }, -- Moonchild Leggings
+                { 8, 27489 }, -- Virtue Bearer's Vambraces
+                { 9, 27491 }, -- Signet of Repose
+                { 10, 27490 }, -- Firebrand Battleaxe
+            }
+        },
+        { -- HCFurnaceBreaker
+            name = AL["Keli'dan the Breaker"],
+            npcID = {17377,18607},
+            Level = 63,
+            DisplayIDs = {{17153}},
+            -- AtlasMapBossID = 0,
+            [NORMAL_DIFF] = {
+                { 1, 24397 }, -- Raiments of Divine Authority
+                { 2, 24395 }, -- Mindfire Waistband
+                { 3, 24398 }, -- Mantle of the Dusk-Dweller
+                { 4, 24396 }, -- Vest of Vengeance
+                { 5, 24394 }, -- Warsong Howling Axe
+            },
+            [HEROIC_DIFF] = {
+                { 1, 29434 }, -- Badge of Justice
+                { 2, 32080 }, -- Mantle of Shadowy Embrace
+                { 3, 29245 }, -- Wave-Crest Striders
+                { 4, 29239 }, -- Eaglecrest Warboots
+                { 5, 29347 }, -- Talisman of the Breaker
+                { 7, 27506 }, -- Robe of Effervescent Light
+                { 8, 27514 }, -- Leggings of the Unrepentant
+                { 9, 27522 }, -- World's End Bracers
+                { 10, 27494 }, -- Emerald Eye Bracer
+                { 11, 27505 }, -- Ruby Helm of the Just
+                { 12, 27788 }, -- Bloodsworn Warboots
+                { 13, 27495 }, -- Soldier's Dog Tags
+                { 14, 28121 }, -- Icon of Unyielding Courage
+                { 16, 30601 }, -- Beaming Fire Opal
+                { 17, 30600 }, -- Fluorescent Tanzanite
+                { 18, 30602 }, -- Jagged Chrysoprase
+                { 20, 28264 }, -- Wastewalker Tunic
+                { 21, 27497 }, -- Doomplate Gauntlets
+                { 23, 27512 }, -- The Willbreaker
+                { 24, 27507 }, -- Adamantine Repeater
+                { 26, 33814 }, -- Keli'dan's Feathered Stave
+            }
+        },
+        KEYS
+    }
+}
+
+data["TheShatteredHalls"] = {
+    nameFormat = NAME_HELLFIRE_CITADEL,
+	MapID = 3714,
+	InstanceID = 540,
+	--AtlasMapID = "",
+	--AtlasMapFile = "",
+	ContentType = DUNGEON_CONTENT,
+	--LoadDifficulty = NORMAL_DIFF,
+	LevelRange = {65, 69, 70},
+	items = {
+        { -- HCHallsNethekurse
+        name = AL["Grand Warlock Nethekurse"],
+            npcID = {16807,20568},
+            Level = 71,
+            DisplayIDs = {{16628}},
+            -- AtlasMapBossID = 0,
+            [NORMAL_DIFF] = {
+                { 1, 24312 }, -- Pattern: Spellstrike Hood
+                { 3, 27519 }, -- Cloak of Malice
+                { 4, 27517 }, -- Bands of Nethekurse
+                { 5, 27521 }, -- Telaari Hunting Girdle
+                { 6, 27520 }, -- Greathelm of the Unbreakable
+                { 7, 27518 }, -- Ivory Idol of the Moongoddess
+                { 9, 21525 }, -- Green Winter Hat
+                { 11, 23735 }, -- Grand Warlock's Amulet
+            },
+            [HEROIC_DIFF] = {
+                { 1, 29434 }, -- Badge of Justice
+                { 2, 24312 }, -- Pattern: Spellstrike Hood
+                { 3, 30548 }, -- Polished Chrysoprase
+                { 4, 30547 }, -- Luminous Fire Opal
+                { 5, 30546 }, -- Sovereign Tanzanite
+                { 7, 27519 }, -- Cloak of Malice
+                { 8, 27517 }, -- Bands of Nethekurse
+                { 9, 27521 }, -- Telaari Hunting Girdle
+                { 10, 27520 }, -- Greathelm of the Unbreakable
+                { 11, 27518 }, -- Ivory Idol of the Moongoddess
+                { 13, 23735 }, -- Grand Warlock's Amulet
+                { 14, 25462 }, -- Tome of Dusk
+                { 16, 21525 }, -- Green Winter Hat
+            }
+        },
+        { -- HCHallsPorung
+            name = AL["Blood Guard Porung"],
+            npcID = 20923,
+            Level = 72,
+            DisplayIDs = {{17725}},
+            -- AtlasMapBossID = 0,
+            [HEROIC_DIFF] = {
+                { 1, 29434 }, -- Badge of Justice
+                { 2, 30548 }, -- Polished Chrysoprase
+                { 3, 30547 }, -- Luminous Fire Opal
+                { 4, 30546 }, -- Sovereign Tanzanite
+                { 6, 30709 }, -- Pantaloons of Flaming Wrath
+                { 7, 30707 }, -- Nimble-foot Treads
+                { 8, 30708 }, -- Belt of Flowing Thought
+                { 9, 30705 }, -- Spaulders of Slaughter
+                { 10, 30710 }, -- Blood Guard's Necklace of Ferocity
+            }
+        },
+        { -- HCHallsOmrogg
+            name = AL["Warbringer O'mrogg"],
+            npcID = {16809,20596},
+            Level = 72,
+            DisplayIDs = {{18031}},
+            -- AtlasMapBossID = 0,
+            [NORMAL_DIFF] = {
+                { 1, 27525 }, -- Jeweled Boots of Sanctification
+                { 2, 27868 }, -- Runesong Dagger
+                { 3, 27524 }, -- Firemaul of Destruction
+                { 4, 27526 }, -- Skyfire Hawk-Bow
+                { 6, 30829 }, -- Tear of the Earthmother
+                { 16, 27802 }, -- Tidefury Shoulderguards
+            },
+            [HEROIC_DIFF] = {
+                { 1, 29434 }, -- Badge of Justice
+                { 2, 30548 }, -- Polished Chrysoprase
+                { 3, 30547 }, -- Luminous Fire Opal
+                { 4, 30546 }, -- Sovereign Tanzanite
+                { 6, 27525 }, -- Jeweled Boots of Sanctification
+                { 7, 27868 }, -- Runesong Dagger
+                { 8, 27524 }, -- Firemaul of Destruction
+                { 9, 27526 }, -- Skyfire Hawk-Bow
+                { 11, 30829 }, -- Tear of the Earthmother
+                { 16, 27802 }, -- Tidefury Shoulderguards
+            }
+        },
+        { -- HCHallsKargath
+            name = AL["Warchief Kargath Bladefist"],
+            npcID = {16808,20597},
+            Level = 72,
+            DisplayIDs = {{19799}},
+            -- AtlasMapBossID = 0,
+            [NORMAL_DIFF] = {
+                { 1, 27527 }, -- Greaves of the Shatterer
+                { 2, 27529 }, -- Figurine of the Colossus
+                { 3, 27534 }, -- Hortus' Seal of Brilliance
+                { 4, 27533 }, -- Demonblood Eviscerator
+                { 5, 27538 }, -- Lightsworn Hammer
+                { 6, 27540 }, -- Nexus Torch
+                { 8, 23723 }, -- Warchief Kargath's Fist
+                { 16, 27536 }, -- Hallowed Handwraps
+                { 17, 27537 }, -- Gloves of Oblivion
+                { 18, 27531 }, -- Wastewalker Gloves
+                { 19, 27474 }, -- Beast Lord Handguards
+                { 20, 27528 }, -- Gauntlets of Desolation
+                { 21, 27535 }, -- Gauntlets of the Righteous
+            },
+            [HEROIC_DIFF] = {
+                { 1, 29434 }, -- Badge of Justice
+                { 2, 29255 }, -- Bands of Rarefied Magic
+                { 3, 29263 }, -- Forestheart Bracers
+                { 4, 29254 }, -- Boots of the Righteous Path
+                { 5, 29348 }, -- The Bladefist
+                { 7, 27527 }, -- Greaves of the Shatterer
+                { 8, 27529 }, -- Figurine of the Colossus
+                { 9, 27534 }, -- Hortus' Seal of Brilliance
+                { 10, 27533 }, -- Demonblood Eviscerator
+                { 11, 27538 }, -- Lightsworn Hammer
+                { 12, 27540 }, -- Nexus Torch
+                { 14, 23723 }, -- Warchief Kargath's Fist
+                { 15, 33815 }, -- Bladefist's Seal
+                { 16, 30548 }, -- Polished Chrysoprase
+                { 17, 30547 }, -- Luminous Fire Opal
+                { 18, 30546 }, -- Sovereign Tanzanite
+                { 20, 27536 }, -- Hallowed Handwraps
+                { 21, 27537 }, -- Gloves of Oblivion
+                { 22, 27531 }, -- Wastewalker Gloves
+                { 23, 27474 }, -- Beast Lord Handguards
+                { 24, 27528 }, -- Gauntlets of Desolation
+                { 25, 27535 }, -- Gauntlets of the Righteous
+            }
+        },
+        { -- HCHallsExecutioner
+            name = AL["Shattered Hand Executioner"],
+            npcID = {17301,20585},
+            Level = 70,
+            DisplayIDs = {{16969}},
+            ExtraList = true,
+            -- AtlasMapBossID = 0,
+            [HEROIC_DIFF] = {
+                { 1, 31716 }, -- Unused Axe of the Executioner
+            }
+        },
+        { -- HCHallsTrash
+            name = AL["Trash"],
+            ExtraList = true,
+            [NORMAL_DIFF] = {
+                { 1, 22554 }, -- Formula: Enchant 2H Weapon - Savagery
+            }
+        },
+        KEYS
     }
 }
 
