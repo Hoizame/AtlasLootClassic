@@ -249,6 +249,7 @@ local TOKEN = {
 	-- ZG
 	[19802] = { 19950, 19949, 19948, type = 3 }, -- Heart of Hakkar
 	[19939] = { 19939, 19940, 19941, 19942, 0,
+				ICONS.WARLOCK, ICONS.PRIEST, ICONS.MAGE, ICONS.ROGUE, ICONS.DRUID, ICONS.HUNTER, ICONS.SHAMAN, ICONS.WARRIOR, ICONS.PALADIN, 0,
 				19819, 19820, 19818, 19814, 19821, 19816, 19817, 19813, 19815, 0,
 				19957, 19958, 19959, 19954, 19955, 19953, 19956, 19951, 19952 }, -- Gri'lek's Blood
 	[19940] = 19939, -- Renataki's Tooth
@@ -310,7 +311,7 @@ local TOKEN = {
 	[31090] = { ICONS.ROGUE, 31028, 0, ICONS.MAGE, 31057, 0, ICONS.DRUID, 31041, 31042, 31043, type = 6 }, -- Chestguard of the Forgotten Vanquisher
 	[31091] = { ICONS.WARRIOR, 30975, 30976, 0, ICONS.HUNTER, 31004, 0, ICONS.SHAMAN, 31016, 31017, 31018, type = 6 }, -- Chestguard of the Forgotten Protector
 
-	--- T4
+	--- T5
 	-- Hands
 	[30239] = { ICONS.PALADIN, 30130, 30135, 30124, 0, ICONS.ROGUE, 30145, 0, ICONS.SHAMAN, 30189, 30165, 30170, type = 6 }, -- Gloves of the Vanquished Champion
 	[30240] = { ICONS.WARRIOR, 30114, 30119, 0, ICONS.PRIEST, 30160, 30151, 0, ICONS.DRUID, 30223, 30217, 30232, type = 6 }, -- Gloves of the Vanquished Defender
