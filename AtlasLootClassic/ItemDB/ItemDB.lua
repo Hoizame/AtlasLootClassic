@@ -430,6 +430,7 @@ local SpecialMobList = {
 	quest = format(ATLAS_TEXTURE, "QuestNormal"),
 	questTurnIn = format(ATLAS_TEXTURE, "QuestTurnin"),
 	boss = format(PATH_TEXTURE, "Interface\\TargetingFrame\\UI-TargetingFrame-Skull"),
+	vendor = format(ATLAS_TEXTURE, "auctioneer"),
 }
 
 --- Get the content Type
@@ -456,7 +457,7 @@ function ItemDB.ContentProto:GetName(raw)
 				addEnd = format(LEVEL_RANGE_FORMAT2, self.LevelRange[2] or 0, self.LevelRange[3] or 0 )
 			end
 		end
-		if AtlasLoot.db.ContentPhase.enableOnLootTable and self.ContentPhase and not ContentPhase:IsActive(self.ContentPhase) then
+		if AtlasLoot.db.ContentPhase.enableOnLootTable and self.ContentPhase and not ContentPhase:IsActive(self.ContentPhase, self.gameVersion) then
 			addEnd = addEnd.."  "..format(CONTENT_PHASE_FORMAT, self.ContentPhase)
 		end
 	end
@@ -486,7 +487,7 @@ function ItemDB.ContentProto:GetNameForItemTable(index, raw)
 	index = self.items[index]
 	local addStart, addEnd = "", ""
 	if not raw then
-		if AtlasLoot.db.ContentPhase.enableOnLootTable and index.ContentPhase and not ContentPhase:IsActive(index.ContentPhase) then
+		if AtlasLoot.db.ContentPhase.enableOnLootTable and index.ContentPhase and not ContentPhase:IsActive(index.ContentPhase, index.gameVersion) then
 			addEnd = addEnd.." "..format(CONTENT_PHASE_FORMAT, index.ContentPhase)
 		end
 		if IsMapsModuleAviable() and index.AtlasMapBossID then
