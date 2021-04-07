@@ -36,10 +36,10 @@ local RAID25_CONTENT = data:AddContentType(AL["25 Raids"], ATLASLOOT_RAID40_COLO
 
 -- name formats
 local NAME_COLOR = "|cffC0C0C0"
-local NAME_TEMPEST_KEEP = NAME_COLOR..AL["Tempest Keep"]..":|r %s"
-local NAME_CAVERNS_OF_TIME = NAME_COLOR..AL["Caverns of Time"]..":|r %s"
-local NAME_AUCHINDOUN = NAME_COLOR..AL["Auchindoun"]..":|r %s"
-local NAME_COILFANG_RESERVOIR = NAME_COLOR..AL["Coilfang Reservoir"]..":|r %s"
+local NAME_TEMPEST_KEEP = NAME_COLOR..AL["TK"]..":|r %s" -- Tempest Keep
+local NAME_CAVERNS_OF_TIME = NAME_COLOR..AL["CoT"]..":|r %s" -- Caverns of Time
+local NAME_AUCHINDOUN = NAME_COLOR..AL["Auch"]..":|r %s" -- Auchindoun
+local NAME_COILFANG_RESERVOIR = NAME_COLOR..AL["CR"]..":|r %s"-- Coilfang Reservoir
 
 local KEYS = {	-- Keys
 	name = AL["Keys"],
@@ -1886,15 +1886,59 @@ data["MagistersTerrace"] = {
 
 
 
-
-
-
-
-
-
-
-
-
+data["GruulsLair"] = {
+	MapID = 3923,
+	InstanceID = 565,
+	--AtlasMapID = "",
+	--AtlasMapFile = "",
+	ContentType = RAID25_CONTENT,
+	items = {
+        { -- GruulsLairHighKingMaulgar
+            name = AL["High King Maulgar"],
+            npcID = 18831,
+            Level = 999,
+            DisplayIDs = {{18649},{12472},{11585},{20195},{20194}},
+            -- AtlasMapBossID = 0,
+            [NORMAL_DIFF] = {
+                { 1, 28797 }, -- Brute Cloak of the Ogre-Magi
+                { 2, 28799 }, -- Belt of Divine Inspiration
+                { 3, 28796 }, -- Malefic Mask of the Shadows
+                { 4, 28801 }, -- Maulgar's Warhelm
+                { 5, 28795 }, -- Bladespire Warbands
+                { 6, 28800 }, -- Hammer of the Naaru
+                { 16, 29763 }, -- Pauldrons of the Fallen Champion
+                { 17, 29764 }, -- Pauldrons of the Fallen Defender
+                { 18, 29762 }, -- Pauldrons of the Fallen Hero
+            }
+        },
+        { -- GruulGruul
+            name = AL["Gruul the Dragonkiller"],
+            npcID = 19044,
+            Level = 999,
+            DisplayIDs = {{18698}},
+            -- AtlasMapBossID = 0,
+            [NORMAL_DIFF] = {
+                { 1, 28804 }, -- Collar of Cho'gall
+                { 2, 28803 }, -- Cowl of Nature's Breath
+                { 3, 28828 }, -- Gronn-Stitched Girdle
+                { 4, 28827 }, -- Gauntlets of the Dragonslayer
+                { 5, 28810 }, -- Windshear Boots
+                { 6, 28824 }, -- Gauntlets of Martial Perfection
+                { 7, 28822 }, -- Teeth of Gruul
+                { 8, 28823 }, -- Eye of Gruul
+                { 9, 28830 }, -- Dragonspine Trophy
+                { 11, 31750 }, -- Earthen Signet
+                { 16, 29766 }, -- Leggings of the Fallen Champion
+                { 17, 29767 }, -- Leggings of the Fallen Defender
+                { 18, 29765 }, -- Leggings of the Fallen Hero
+                { 20, 28802 }, -- Bloodmaw Magus-Blade
+                { 21, 28794 }, -- Axe of the Gronn Lords
+                { 22, 28825 }, -- Aldori Legacy Defender
+                { 23, 28826 }, -- Shuriken of Negation
+            }
+        }
+    }
+}
 
 data["SerpentshrineCavern"] = {
 	MapID = 3607,
