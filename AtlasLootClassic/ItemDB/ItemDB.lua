@@ -45,7 +45,7 @@ ItemDB.mt = {
 		contentList[t.__atlaslootdata.addonName][k] = t.__atlaslootdata.contentCount
 		v.__atlaslootdata = t.__atlaslootdata
 		AtlasLoot.Data.AutoSelect:AddInstanceTable(t.__atlaslootdata.addonName, k, v)
-		v.gameVersion = t.__atlaslootdata.__gameVersion
+		v.gameVersion = v.gameVersion or t.__atlaslootdata.__gameVersion
 		rawset(t, k, v)
 	end
 }
@@ -464,9 +464,17 @@ function ItemDB.ContentProto:GetName(raw)
 	if self.name then
 		return self.name..addEnd
 	elseif self.MapID then
-		return C_Map.GetAreaInfo(self.MapID)..addEnd or "MapID:"..self.MapID
+		if self.nameFormat then
+			return format(self.nameFormat, C_Map.GetAreaInfo(self.MapID)..addEnd or "MapID:"..self.MapID)
+		else
+			return C_Map.GetAreaInfo(self.MapID)..addEnd or "MapID:"..self.MapID
+		end
 	elseif self.FactionID then
-		return AtlasLoot:Faction_GetFactionName(self.FactionID)..addEnd
+		if self.nameFormat then
+			return format(self.nameFormat, AtlasLoot:Faction_GetFactionName(self.FactionID)..addEnd)
+		else
+			return AtlasLoot:Faction_GetFactionName(self.FactionID)..addEnd
+		end
 	else
 		return UNKNOWN
 	end
@@ -487,7 +495,7 @@ function ItemDB.ContentProto:GetNameForItemTable(index, raw)
 	index = self.items[index]
 	local addStart, addEnd = "", ""
 	if not raw then
-		if AtlasLoot.db.ContentPhase.enableOnLootTable and index.ContentPhase and not ContentPhase:IsActive(index.ContentPhase, index.gameVersion) then
+		if AtlasLoot.db.ContentPhase.enableOnLootTable and index.ContentPhase and not ContentPhase:IsActive(index.ContentPhase, index.gameVersion or self.gameVersion) then
 			addEnd = addEnd.." "..format(CONTENT_PHASE_FORMAT, index.ContentPhase)
 		end
 		if IsMapsModuleAviable() and index.AtlasMapBossID then
