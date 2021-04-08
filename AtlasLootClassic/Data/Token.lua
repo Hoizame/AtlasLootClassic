@@ -138,30 +138,30 @@ local TOKEN = {
 	[20886] = { 21395, 21404, 21398, 21401, 21392 },	-- Qiraji Spiked Hilt
 
 	-- Tier 3
-	[22370] = { 22518, 22502, 22510 },			-- Desecrated Belt
-	[22369] = { 22519, 22503, 22511 },			-- Desecrated Bindings
-	[22365] = { 22440, 22492, 22468, 22430 },	-- Desecrated Boots
-	[22355] = { 22483, 22423 },					-- Desecrated Bracers
-	[22349] = { 22476, 22416 },					-- Desecrated Breastplate
-	[22367] = { 22514, 22498, 22506 },			-- Desecrated Circlet
-	[22357] = { 22481, 22421 },					-- Desecrated Gauntlets
-	[22363] = { 22442, 22494, 22470, 22431 },	-- Desecrated Girdle
-	[22371] = { 22501, 22517, 22509 },			-- Desecrated Gloves
-	[22364] = { 22441, 22493, 22469, 22426 },	-- Desecrated Handguards
-	[22360] = { 22438, 22490, 22466, 22428 },	-- Desecrated Headpiece
-	[22353] = { 22478, 22418 },					-- Desecrated Helmet
-	[22366] = { 22497, 22513, 22505 },			-- Desecrated Leggings
-	[22359] = { 22437, 22489, 22465, 22427 },	-- Desecrated Legguards
-	[22352] = { 22477, 22417 },					-- Desecrated Legplates
-	[22354] = { 22479, 22419 },					-- Desecrated Pauldrons
-	[22351] = { 22496, 22504, 22512 },			-- Desecrated Robe
-	[22358] = { 22480, 22420 },					-- Desecrated Sabatons
-	[22372] = { 22500, 22508, 22516 },			-- Desecrated Robe
-	[22368] = { 22499, 22507, 22515 },			-- Desecrated Shoulderpads
-	[22361] = { 22439, 22491, 22467, 22429 },	-- Desecrated Spaulders
-	[22350] = { 22436, 22488, 22464, 22425 },	-- Desecrated Tunic
-	[22356] = { 22482, 22422 },					-- Desecrated Waistguard
-	[22362] = { 22443, 22495, 22471, 22424 },	-- Desecrated Wristguards
+	[22360] = { ICONS.PALADIN, 22428, 0, ICONS.HUNTER, 22438, 0, ICONS.SHAMAN, 22466, 0, ICONS.DRUID, 22490, type = 6 }, -- Desecrated Headpiece
+	[22361] = { ICONS.PALADIN, 22429, 0, ICONS.HUNTER, 22439, 0, ICONS.SHAMAN, 22467, 0, ICONS.DRUID, 22491, type = 6 }, -- Desecrated Spaulders
+	[22350] = { ICONS.PALADIN, 22425, 0, ICONS.HUNTER, 22436, 0, ICONS.SHAMAN, 22464, 0, ICONS.DRUID, 22488, type = 6 }, -- Desecrated Tunic
+	[22362] = { ICONS.PALADIN, 22424, 0, ICONS.HUNTER, 22443, 0, ICONS.SHAMAN, 22471, 0, ICONS.DRUID, 22495, type = 6 }, -- Desecrated Wristguards
+	[22364] = { ICONS.PALADIN, 22426, 0, ICONS.HUNTER, 22441, 0, ICONS.SHAMAN, 22469, 0, ICONS.DRUID, 22493, type = 6 }, -- Desecrated Handguards
+	[22363] = { ICONS.PALADIN, 22431, 0, ICONS.HUNTER, 22442, 0, ICONS.SHAMAN, 22470, 0, ICONS.DRUID, 22494, type = 6 }, -- Desecrated Girdle
+	[22359] = { ICONS.PALADIN, 22427, 0, ICONS.HUNTER, 22437, 0, ICONS.SHAMAN, 22465, 0, ICONS.DRUID, 22489, type = 6 }, -- Desecrated Legguards
+	[22365] = { ICONS.PALADIN, 22430, 0, ICONS.HUNTER, 22440, 0, ICONS.SHAMAN, 22468, 0, ICONS.DRUID, 22492, type = 6 }, -- Desecrated Boots
+	[22367] = { ICONS.PRIEST, 22514, 0, ICONS.MAGE ,22498, 0, ICONS.WARLOCK, 22506, type = 6 },	-- Desecrated Circlet
+	[22368] = { ICONS.PRIEST, 22515, 0, ICONS.MAGE ,22499, 0, ICONS.WARLOCK, 22507, type = 6 },	-- Desecrated Shoulderpads
+	[22351] = { ICONS.PRIEST, 22512, 0, ICONS.MAGE ,22496, 0, ICONS.WARLOCK, 22504, type = 6 }, -- Desecrated Robe
+	[22369] = { ICONS.PRIEST, 22519, 0, ICONS.MAGE ,22503, 0, ICONS.WARLOCK, 22511, type = 6 }, -- Desecrated Bindings
+	[22371] = { ICONS.PRIEST, 22517, 0, ICONS.MAGE ,22501, 0, ICONS.WARLOCK, 22509, type = 6 },	-- Desecrated Gloves
+	[22370] = { ICONS.PRIEST, 22518, 0, ICONS.MAGE ,22502, 0, ICONS.WARLOCK, 22510, type = 6 },	-- Desecrated Belt
+	[22366] = { ICONS.PRIEST, 22513, 0, ICONS.MAGE ,22497, 0, ICONS.WARLOCK, 22505, type = 6 }, -- Desecrated Leggings
+	[22372] = { ICONS.PRIEST, 22516, 0, ICONS.MAGE ,22500, 0, ICONS.WARLOCK, 22508, type = 6 }, -- Desecrated Sandals
+	[22353] = { ICONS.WARRIOR, 22418, 0, ICONS.ROGUE, 22478, type = 6 }, -- Desecrated Helmet
+	[22354] = { ICONS.WARRIOR, 22419, 0, ICONS.ROGUE, 22479, type = 6 }, -- Desecrated Pauldrons
+	[22349] = { ICONS.WARRIOR, 22416, 0, ICONS.ROGUE, 22476, type = 6 }, -- Desecrated Breastplate
+	[22355] = { ICONS.WARRIOR, 22423, 0, ICONS.ROGUE, 22483, type = 6 }, -- Desecrated Bracers
+	[22357] = { ICONS.WARRIOR, 22421, 0, ICONS.ROGUE, 22481, type = 6 }, -- Desecrated Gauntlets
+	[22356] = { ICONS.WARRIOR, 22422, 0, ICONS.ROGUE, 22482, type = 6 }, -- Desecrated Waistguard
+	[22352] = { ICONS.WARRIOR, 22417, 0, ICONS.ROGUE, 22477, type = 6 }, -- Desecrated Legplates
+	[22358] = { ICONS.WARRIOR, 22420, 0, ICONS.ROGUE, 22480, type = 6 }, -- Desecrated Sabatons
 
 	-- Gem Sacks
 	[17962] = { 12361, 7971, 13926, {1529, "1-2"}, {7909, "1-3"}, {7910, "1-3"}, {3864, "1-3"}, type = 2 },		-- Blue Sack of Gems

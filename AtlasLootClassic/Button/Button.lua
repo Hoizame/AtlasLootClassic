@@ -1069,7 +1069,7 @@ function Button:ExtraItemFrame_GetFrame(button, itemList)
 		end
 
 		if not skipScaling then
-			if fixedCounter > MAX_ITEMS_PER_LINE and fixedCounter % (MAX_ITEMS_PER_LINE+1) == 0 then
+			if fixedCounter > MAX_ITEMS_PER_LINE and fixedCounter % (MAX_ITEMS_PER_LINE) == 1 then
 				frame:SetHeight(frame:GetHeight() + ITEM_ICON_SIZE + ITEM_DISTANCE)
 			elseif fixedCounter == 1 then
 				frame:SetWidth(frame:GetWidth() + ITEM_ICON_SIZE)
