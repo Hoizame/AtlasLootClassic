@@ -125,6 +125,7 @@ local MOUNT_LIST = {
     [35513] = 19483, -- Swift White Hawkstrider
     [32458] = 17890, -- Ashes of Al'ar
     [30480] = 19250, -- Fiery Warhorse's Reins
+    [33809] = 22464, -- Amani War Bear
 --@end-version-classic@
 }
 

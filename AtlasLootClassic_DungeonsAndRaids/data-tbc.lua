@@ -2630,14 +2630,179 @@ data["Karazhan"] = {
     }
 }
 
-
-
-
-
-
-
-
-
+data["ZulAman"] = {
+	MapID = 3805,
+	InstanceID = 568,
+	--AtlasMapID = "",
+	--AtlasMapFile = "",
+	ContentType = RAID10_CONTENT,
+    ContentPhase = 4,
+	items = {
+        { -- ZAAkilZon
+            name = AL["Akil'zon"],
+            npcID = 23574,
+            Level = 999,
+            DisplayIDs = {{21630}},
+            -- AtlasMapBossID = 0,
+            [NORMAL_DIFF] = {
+                { 1, 29434 }, -- Badge of Justice
+                { 2, 33286 }, -- Mojo-mender's Mask
+                { 3, 33215 }, -- Bloodstained Elven Battlevest
+                { 4, 33216 }, -- Chestguard of Hidden Purpose
+                { 5, 33281 }, -- Brooch of Nature's Mercy
+                { 6, 33293 }, -- Signet of Ancient Magics
+                { 7, 33214 }, -- Akil'zon's Talonblade
+                { 8, 33283 }, -- Amani Punisher
+                { 16, 33307 }, -- Formula: Enchant Weapon - Executioner
+            }
+        },
+        { -- ZANalorakk
+            name = AL["Nalorakk"],
+            npcID = 23576,
+            Level = 999,
+            DisplayIDs = {{21631}},
+            -- AtlasMapBossID = 0,
+            [NORMAL_DIFF] = {
+                { 1, 29434 }, -- Badge of Justice
+                { 2, 33203 }, -- Robes of Heavenly Purpose
+                { 3, 33285 }, -- Fury of the Ursine
+                { 4, 33211 }, -- Bladeangel's Money Belt
+                { 5, 33206 }, -- Pauldrons of Primal Fury
+                { 6, 33327 }, -- Mask of Introspection
+                { 7, 33191 }, -- Jungle Stompers
+                { 8, 33640 }, -- Fury
+                { 10, 33307 }, -- Formula: Enchant Weapon - Executioner
+            }
+        },
+        { -- ZAJanAlai
+            name = AL["Jan'alai"],
+            npcID = 23578,
+            Level = 999,
+            DisplayIDs = {{21633}},
+            -- AtlasMapBossID = 0,
+            [NORMAL_DIFF] = {
+                { 1, 29434 }, -- Badge of Justice
+                { 2, 33357 }, -- Footpads of Madness
+                { 3, 33356 }, -- Helm of Natural Regeneration
+                { 4, 33329 }, -- Shadowtooth Trollskin Cuirass
+                { 5, 33328 }, -- Arrow-fall Chestguard
+                { 6, 33354 }, -- Wub's Cursed Hexblade
+                { 7, 33326 }, -- Bulwark of the Amani Empire
+                { 8, 33332 }, -- Enamelled Disc of Mojo
+                { 10, 33307 }, -- Formula: Enchant Weapon - Executioner
+            }
+        },
+        { -- ZAHalazzi
+            name = AL["Halazzi"],
+            npcID = 23577,
+            Level = 999,
+            DisplayIDs = {{21632}},
+            -- AtlasMapBossID = 0,
+            [NORMAL_DIFF] = {
+                { 1, 29434 }, -- Badge of Justice
+                { 2, 33317 }, -- Robe of Departed Spirits
+                { 3, 33300 }, -- Shoulderpads of Dancing Blades
+                { 4, 33322 }, -- Shimmer-pelt Vest
+                { 5, 33533 }, -- Avalanche Leggings
+                { 6, 33299 }, -- Spaulders of the Advocate
+                { 7, 33303 }, -- Skullshatter Warboots
+                { 8, 33297 }, -- The Savage's Choker
+                { 10, 33307 }, -- Formula: Enchant Weapon - Executioner
+            }
+        },
+        { -- ZAMalacrass
+            name = AL["Hex Lord Malacrass"],
+            npcID = 24239,
+            Level = 999,
+            DisplayIDs = {{22332}},
+            -- AtlasMapBossID = 0,
+            [NORMAL_DIFF] = {
+                { 1, 29434 }, -- Badge of Justice
+                { 2, 33592 }, -- Cloak of Ancient Rituals
+                { 3, 33453 }, -- Hood of Hexing
+                { 4, 33463 }, -- Hood of the Third Eye
+                { 5, 33432 }, -- Coif of the Jungle Stalker
+                { 6, 33464 }, -- Hex Lord's Voodoo Pauldrons
+                { 7, 33421 }, -- Battleworn Tuskguard
+                { 8, 33446 }, -- Girdle of Stromgarde's Hope
+                { 10, 33307 }, -- Formula: Enchant Weapon - Executioner
+                { 16, 33829 }, -- Hex Shrunken Head
+                { 17, 34029 }, -- Tiny Voodoo Mask
+                { 18, 33828 }, -- Tome of Diabolic Remedy
+                { 19, 33389 }, -- Dagger of Bad Mojo
+                { 20, 33298 }, -- Prowler's Strikeblade
+                { 21, 33388 }, -- Heartless
+                { 22, 33465 }, -- Staff of Primal Fury
+            }
+        },
+        { -- ZAZuljin
+            name = AL["Zul'jin"],
+            npcID = 23863,
+            Level = 999,
+            DisplayIDs = {{21899}},
+            -- AtlasMapBossID = 0,
+            [NORMAL_DIFF] = {
+                { 1, 29434 }, -- Badge of Justice
+                { 2, 33471 }, -- Two-toed Sandals
+                { 3, 33479 }, -- Grimgrin Faceguard
+                { 4, 33469 }, -- Hauberk of the Empire's Champion
+                { 5, 33473 }, -- Chestguard of the Warlord
+                { 6, 33466 }, -- Loop of Cursed Bones
+                { 7, 33830 }, -- Ancient Aqir Artifact
+                { 8, 33831 }, -- Berserker's Call
+                { 10, 33307 }, -- Formula: Enchant Weapon - Executioner
+                { 16, 33467 }, -- Blade of Twisted Visions
+                { 17, 33478 }, -- Jin'rohk, The Great Apocalypse
+                { 18, 33476 }, -- Cleaver of the Unforgiving
+                { 19, 33468 }, -- Dark Blessing
+                { 20, 33474 }, -- Ancient Amani Longbow
+                { 22, 33102 }, -- Blood of Zul'jin
+            }
+        },
+        { -- ZATimedChest
+            name = AL["Timed Chest"],
+            ExtraList = true,
+            [NORMAL_DIFF] = {
+                { 1, "INV_Box_01", nil, format(AL["Timed Reward Chest %d"], 1), nil },
+                { 2, 33590 }, -- Cloak of Fiends
+                { 3, 33591 }, -- Shadowcaster's Drape
+                { 4, 33489 }, -- Mantle of Ill Intent
+                { 5, 33480 }, -- Cord of Braided Troll Hair
+                { 6, 33483 }, -- Life-step Belt
+                { 7, 33971 }, -- Elunite Imbued Leggings
+                { 8, 33805 }, -- Shadowhunter's Treads
+                { 9, 33481 }, -- Pauldrons of Stone Resolve
+                { 10, "INV_Box_01", nil, format(AL["Timed Reward Chest %d"], 2), nil },
+                { 11, 33497 }, -- Mana Attuned Band
+                { 12, 33500 }, -- Signet of Eternal Life
+                { 13, 33496 }, -- Signet of Primal Wrath
+                { 14, 33499 }, -- Signet of the Last Defender
+                { 15, 33498 }, -- Signet of the Quiet Forest
+                { 16, "INV_Box_01", nil, format(AL["Timed Reward Chest %d"], 3), nil },
+                { 17, 33495 }, -- Rage
+                { 18, 33493 }, -- Umbral Shiv
+                { 19, 33492 }, -- Trollbane
+                { 20, 33490 }, -- Staff of Dark Mending
+                { 21, 33494 }, -- Amani Divining Staff
+                { 22, 33491 }, -- Tuskbreaker
+                { 24, "INV_Box_01", nil, format(AL["Timed Reward Chest %d"], 4), nil },
+                { 25, 33809 }, -- Amani War Bear
+            }
+        },
+        { -- ZATrash
+            name = AL["Trash"],
+            ExtraList = true,
+            [NORMAL_DIFF] = {
+                { 1, 33993 }, -- Mojo
+                { 3, 33865 }, -- Amani Hex Stick
+                { 4, 33930 }, -- Amani Charm of the Bloodletter
+                { 5, 33932 }, -- Amani Charm of the Witch Doctor
+                { 6, 33931 }, -- Amani Charm of Mighty Mojo
+                { 7, 33933 }, -- Amani Charm of the Raging Defender
+            }
+        },
+    }
+}
 
 
 data["MagtheridonsLair"] = {
@@ -3441,5 +3606,250 @@ data["BlackTemple"] = {
                 { 19, 32752 }, -- Pattern: Swiftheal Wraps
             }
         }
+    }
+}
+
+data["SunwellPlateau"] = {
+	MapID = 4075,
+	InstanceID = 580,
+	--AtlasMapID = "",
+	--AtlasMapFile = "",
+	ContentType = RAID25_CONTENT,
+    ContentPhase = 5,
+	items = {
+        { -- SPKalecgos
+            name = AL["Kalecgos"],
+            npcID = {24850,24892},
+            Level = 999,
+            DisplayIDs = {{23345},{6686}},
+            -- AtlasMapBossID = 0,
+            [NORMAL_DIFF] = {
+                { 1, 34170 }, -- Pantaloons of Calming Strife
+                { 2, 34386 }, -- Pantaloons of Growing Strife
+                { 3, 34169 }, -- Breeches of Natural Aggression
+                { 4, 34384 }, -- Breeches of Natural Splendor
+                { 5, 34168 }, -- Starstalker Legguards
+                { 6, 34167 }, -- Legplates of the Holy Juggernaut
+                { 7, 34382 }, -- Judicator's Legguards
+                { 8, 34166 }, -- Band of Lucent Beams
+                { 9, 34165 }, -- Fang of Kalecgos
+                { 10, 34164 }, -- Dragonscale-Encrusted Longblade
+                { 16, 34848 }, -- Bracers of the Forgotten Conqueror
+                { 17, 34851 }, -- Bracers of the Forgotten Protector
+                { 18, 34852 }, -- Bracers of the Forgotten Vanquisher
+            }
+        },
+        { -- SPBrutallus
+            name = AL["Brutallus"],
+            npcID = 24882,
+            Level = 999,
+            DisplayIDs = {{22711}},
+            -- AtlasMapBossID = 0,
+            [NORMAL_DIFF] = {
+                { 1, 34181 }, -- Leggings of Calamity
+                { 2, 34180 }, -- Felfury Legplates
+                { 3, 34381 }, -- Felstrength Legplates
+                { 4, 34178 }, -- Collar of the Pit Lord
+                { 5, 34177 }, -- Clutch of Demise
+                { 6, 34179 }, -- Heart of the Pit
+                { 7, 34176 }, -- Reign of Misery
+                { 16, 34853 }, -- Belt of the Forgotten Conqueror
+                { 17, 34854 }, -- Belt of the Forgotten Protector
+                { 18, 34855 }, -- Belt of the Forgotten Vanquisher
+            }
+        },
+        { -- SPFelmyst
+            name = AL["Felmyst"],
+            npcID = 25038,
+            Level = 999,
+            DisplayIDs = {{22838}},
+            -- AtlasMapBossID = 0,
+            [NORMAL_DIFF] = {
+                { 1, 34352 }, -- Borderland Fortress Grips
+                { 2, 34188 }, -- Leggings of the Immortal Night
+                { 3, 34385 }, -- Leggings of the Immortal Beast
+                { 4, 34186 }, -- Chain Links of the Tumultuous Storm
+                { 5, 34383 }, -- Kilt of Spiritual Reconstruction
+                { 6, 34184 }, -- Brooch of the Highborne
+                { 7, 34185 }, -- Sword Breaker's Bulwark
+                { 8, 34182 }, -- Grand Magister's Staff of Torrents
+                { 16, 34856 }, -- Boots of the Forgotten Conqueror
+                { 17, 34857 }, -- Boots of the Forgotten Protector
+                { 18, 34858 }, -- Boots of the Forgotten Vanquisher
+            }
+        },
+        { -- SPEredarTwins
+            name = AL["Eredar Twins"],
+            npcID = {25166,25165},
+            Level = 999,
+            DisplayIDs = {{23334},{23177}},
+            -- AtlasMapBossID = 0,
+            [NORMAL_DIFF] = {
+                { 1, 34205 }, -- Shroud of Redeemed Souls
+                { 2, 34190 }, -- Crimson Paragon's Cover
+                { 3, 34210 }, -- Amice of the Convoker
+                { 4, 34202 }, -- Shawl of Wonderment
+                { 5, 34393 }, -- Shoulderpads of Knowledge's Pursuit
+                { 6, 34209 }, -- Spaulders of Reclamation
+                { 7, 34391 }, -- Spaulders of Devastation
+                { 8, 34195 }, -- Shoulderpads of Vehemence
+                { 9, 34392 }, -- Demontooth Shoulderpads
+                { 10, 34194 }, -- Mantle of the Golden Forest
+                { 11, 34208 }, -- Equilibrium Epaulets
+                { 12, 34390 }, -- Erupting Epaulets
+                { 13, 34192 }, -- Pauldrons of Perseverance
+                { 14, 34388 }, -- Pauldrons of Berserking
+                { 16, 34193 }, -- Spaulders of the Thalassian Savior
+                { 17, 34389 }, -- Spaulders of the Thalassian Defender
+                { 18, 35290 }, -- Sin'dorei Pendant of Conquest
+                { 19, 35291 }, -- Sin'dorei Pendant of Salvation
+                { 20, 35292 }, -- Sin'dorei Pendant of Triumph
+                { 21, 34204 }, -- Amulet of Unfettered Magics
+                { 22, 34189 }, -- Band of Ruinous Delight
+                { 23, 34206 }, -- Book of Highborne Hymns
+                { 24, 34197 }, -- Shiv of Exsanguination
+                { 25, 34199 }, -- Archon's Gavel
+                { 26, 34203 }, -- Grip of Mannoroth
+                { 27, 34198 }, -- Stanchion of Primal Instinct
+                { 28, 34196 }, -- Golden Bow of Quel'Thalas
+            }
+        },
+        { -- SPMuru
+            name = AL["M'uru"],
+            npcID = {25741,25840},
+            Level = 999,
+            DisplayIDs = {{23404},{23428}},
+            -- AtlasMapBossID = 0,
+            [NORMAL_DIFF] = {
+                { 1, 34232 }, -- Fel Conquerer Raiments
+                { 2, 34233 }, -- Robes of Faltered Light
+                { 3, 34399 }, -- Robes of Ghostly Hatred
+                { 4, 34212 }, -- Sunglow Vest
+                { 5, 34398 }, -- Utopian Tunic of Elune
+                { 6, 34211 }, -- Harness of Carnal Instinct
+                { 7, 34397 }, -- Bladed Chaos Tunic
+                { 8, 34234 }, -- Shadowed Gauntlets of Paroxysm
+                { 9, 34408 }, -- Gloves of the Forest Drifter
+                { 10, 34229 }, -- Garments of Serene Shores
+                { 11, 34396 }, -- Garments of Crashing Shores
+                { 12, 34228 }, -- Vicious Hawkstrider Hauberk
+                { 13, 34215 }, -- Warharness of Reckless Fury
+                { 14, 34394 }, -- Breastplate of Agony's Aversion
+                { 15, 34240 }, -- Gauntlets of the Soothed Soul
+                { 16, 34216 }, -- Heroic Judicator's Chestguard
+                { 17, 34395 }, -- Noble Judicator's Chestguard
+                { 18, 34213 }, -- Ring of Hardened Resolve
+                { 19, 34230 }, -- Ring of Omnipotence
+                { 20, 35282 }, -- Sin'dorei Band of Dominance
+                { 21, 35283 }, -- Sin'dorei Band of Salvation
+                { 22, 35284 }, -- Sin'dorei Band of Triumph
+                { 23, 34427 }, -- Blackened Naaru Sliver
+                { 24, 34430 }, -- Glimmering Naaru Sliver
+                { 25, 34429 }, -- Shifting Naaru Sliver
+                { 26, 34428 }, -- Steely Naaru Sliver
+                { 27, 34214 }, -- Muramasa
+                { 28, 34231 }, -- Aegis of Angelic Fortune
+            }
+        },
+        { -- SPKiljaeden
+            name = AL["Kil'jaeden"],
+            npcID = 25315,
+            Level = 999,
+            DisplayIDs = {{23200}},
+            -- AtlasMapBossID = 0,
+            [NORMAL_DIFF] = {
+                { 1, 34241 }, -- Cloak of Unforgivable Sin
+                { 2, 34242 }, -- Tattered Cape of Antonidas
+                { 3, 34339 }, -- Cowl of Light's Purity
+                { 4, 34405 }, -- Helm of Arcane Purity
+                { 5, 34340 }, -- Dark Conjuror's Collar
+                { 6, 34342 }, -- Handguards of the Dawn
+                { 7, 34406 }, -- Gloves of Tyri's Power
+                { 8, 34344 }, -- Handguards of Defiled Worlds
+                { 9, 34244 }, -- Duplicitous Guise
+                { 10, 34404 }, -- Mask of the Fury Hunter
+                { 11, 34245 }, -- Cover of Ursol the Wise
+                { 12, 34403 }, -- Cover of Ursoc the Mighty
+                { 13, 34333 }, -- Coif of Alleria
+                { 14, 34332 }, -- Cowl of Gul'dan
+                { 15, 34402 }, -- Shroud of Chieftain Ner'zhul
+                { 16, 34343 }, -- Thalassian Ranger Gauntlets
+                { 17, 34243 }, -- Helm of Burning Righteousness
+                { 18, 34401 }, -- Helm of Uther's Resolve
+                { 19, 34345 }, -- Crown of Anasterian
+                { 20, 34400 }, -- Crown of Dath'Remar
+                { 21, 34341 }, -- Borderland Paingrips
+                { 23, 34334 }, -- Thori'dal, the Stars' Fury
+                { 25, 34329 }, -- Crux of the Apocalypse
+                { 26, 34247 }, -- Apolyon, the Soul-Render
+                { 27, 34335 }, -- Hammer of Sanctification
+                { 28, 34331 }, -- Hand of the Deceiver
+                { 29, 34336 }, -- Sunflare
+                { 30, 34337 }, -- Golden Staff of the Sin'dorei
+            }
+        },
+        { -- SPPatterns
+            name = AL["Patterns"],
+            ExtraList = true,
+            [NORMAL_DIFF] = {
+                { 1, 35212 }, -- Pattern: Leather Gauntlets of the Sun
+                { 2, 35216 }, -- Pattern: Leather Chestguard of the Sun
+                { 3, 35213 }, -- Pattern: Fletcher's Gloves of the Phoenix
+                { 4, 35217 }, -- Pattern: Embrace of the Phoenix
+                { 5, 35214 }, -- Pattern: Gloves of Immortal Dusk
+                { 6, 35218 }, -- Pattern: Carapace of Sun and Shadow
+                { 7, 35215 }, -- Pattern: Sun-Drenched Scale Gloves
+                { 8, 35219 }, -- Pattern: Sun-Drenched Scale Chestguard
+                { 9, 35204 }, -- Pattern: Sunfire Handwraps
+                { 10, 35206 }, -- Pattern: Sunfire Robe
+                { 11, 35205 }, -- Pattern: Hands of Eternal Light
+                { 12, 35207 }, -- Pattern: Robe of Eternal Light
+                { 13, 35198 }, -- Design: Loop of Forged Power
+                { 14, 35201 }, -- Design: Pendant of Sunfire
+                { 15, 35199 }, -- Design: Ring of Flowing Life
+                { 16, 35202 }, -- Design: Amulet of Flowing Life
+                { 17, 35200 }, -- Design: Hard Khorium Band
+                { 18, 35203 }, -- Design: Hard Khorium Choker
+                { 19, 35186 }, -- Schematic: Annihilator Holo-Gogs
+                { 20, 35187 }, -- Schematic: Justicebringer 3000 Specs
+                { 21, 35189 }, -- Schematic: Powerheal 9000 Lens
+                { 22, 35190 }, -- Schematic: Hyper-Magnified Moon Specs
+                { 23, 35191 }, -- Schematic: Wonderheal XT68 Shades
+                { 24, 35192 }, -- Schematic: Primal-Attuned Goggles
+                { 25, 35193 }, -- Schematic: Lightning Etched Specs
+                { 26, 35194 }, -- Schematic: Surestrike Goggles v3.0
+                { 27, 35195 }, -- Schematic: Mayhem Projection Goggles
+                { 28, 35196 }, -- Schematic: Hard Khorium Goggles
+                { 29, 35197 }, -- Schematic: Quad Deathblow X44 Goggles
+            }
+        },
+        { -- SPTrash
+            name = AL["Trash"],
+            ExtraList = true,
+            [NORMAL_DIFF] = {
+                { 1, 34351 }, -- Tranquil Majesty Wraps
+                { 2, 34407 }, -- Tranquil Moonlight Wraps
+                { 3, 34350 }, -- Gauntlets of the Ancient Shadowmoon
+                { 4, 34409 }, -- Gauntlets of the Ancient Frostwolf
+                { 5, 35733 }, -- Ring of Harmonic Beauty
+                { 6, 34183 }, -- Shivering Felspine
+                { 7, 34346 }, -- Mounting Vengeance
+                { 8, 34349 }, -- Blade of Life's Inevitability
+                { 9, 34348 }, -- Wand of Cleansing Light
+                { 10, 34347 }, -- Wand of the Demonsoul
+                { 12, 35273 }, -- Study of Advanced Smelting
+                { 14, 34664 }, -- Sunmote
+                { 16, 32228 }, -- Empyrean Sapphire
+                { 17, 32231 }, -- Pyrestone
+                { 18, 32229 }, -- Lionseye
+                { 19, 32249 }, -- Seaspray Emerald
+                { 20, 32230 }, -- Shadowsong Amethyst
+                { 21, 32227 }, -- Crimson Spinel
+                { 23, 35208 }, -- Plans: Sunblessed Gauntlets
+                { 24, 35210 }, -- Plans: Sunblessed Breastplate
+                { 25, 35209 }, -- Plans: Hard Khorium Battlefists
+                { 26, 35211 }, -- Plans: Hard Khorium Battleplate
+            }
+        },
     }
 }
