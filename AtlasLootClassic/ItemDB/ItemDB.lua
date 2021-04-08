@@ -431,6 +431,7 @@ local SpecialMobList = {
 	questTurnIn = format(ATLAS_TEXTURE, "QuestTurnin"),
 	boss = format(PATH_TEXTURE, "Interface\\TargetingFrame\\UI-TargetingFrame-Skull"),
 	vendor = format(ATLAS_TEXTURE, "auctioneer"),
+	summon = format(ATLAS_TEXTURE, "poi-rift1"),
 }
 
 --- Get the content Type
@@ -515,9 +516,17 @@ function ItemDB.ContentProto:GetNameForItemTable(index, raw)
 		end
 	end
 	if index.name then
-		return addStart..index.name..addEnd
+		if index.nameFormat then
+			return format(addStart..index.nameFormat, index.name..addEnd)
+		else
+			return addStart..index.name..addEnd
+		end
 	elseif index.FactionID then
-		return addStart..GetFactionInfoByID(index.FactionID)..addEnd --or "Faction "..self.items[index].FactionID
+		if index.nameFormat then
+			return format(addStart..index.nameFormat, GetFactionInfoByID(index.FactionID)..addEnd)
+		else
+			return addStart..GetFactionInfoByID(index.FactionID)..addEnd
+		end
 	else
 		return UNKNOWN
 	end
