@@ -44,6 +44,6 @@ Locales\Locales.xml
 
 data.lua
 #@version-bc@
-data-tbc.lua-
+data-tbc.lua
 #@end-version-bc@
 droprate.lua
