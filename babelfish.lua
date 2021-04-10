@@ -27,34 +27,44 @@ local BASE_NAMESPACE = "Global"
 local REBASE_LOCALES = true
 
 -- FileList, supports toc, xml and lua
-local FILE_LIST = {
+local FILE_LIST_ID = {
 	-- optional: { "path", <bool>ParseXML } -- disable/enable xml parsing for single files
-	Global = {
+	{
+		name = "Global",
 		"AtlasLootClassic/AtlasLootClassic.toc",
 		"SpecialLoc.lua",
 	},
-	Collections = {
+	{
+		name = "Collections",
 		"AtlasLootClassic_Collections/AtlasLootClassic_Collections.toc",
 	},
-	Crafting = {
+	{
+		name = "Crafting",
 		"AtlasLootClassic_Crafting/AtlasLootClassic_Crafting.toc",
 	},
-	DungeonsAndRaids = {
+	{
+		name = "DungeonsAndRaids",
 		"AtlasLootClassic_DungeonsAndRaids/data.lua",
 	},
-	DungeonsAndRaidsTBC = {
+	{
+		name = "DungeonsAndRaidsTBC",
+		base = "DungeonsAndRaids",
 		"AtlasLootClassic_DungeonsAndRaids/data-tbc.lua",
 	},
-	PvP = {
+	{
+		name = "PvP",
 		"AtlasLootClassic_PvP/AtlasLootClassic_PvP.toc",
 	},
-	Options = {
+	{
+		name = "Options",
 		"AtlasLootClassic_Options/AtlasLootClassic_Options.toc",
 	},
-	Factions = {
+	{
+		name = "Factions",
 		"AtlasLootClassic_Factions/AtlasLootClassic_Factions.toc",
-	}
+	},
 }
+
 
 -- Ignore Files / Pathes
 local IGNORE_LIST = {
@@ -68,6 +78,11 @@ local IGNORE_LIST = {
 local gmatch, sub, format, lower, gsub, match, byte = string.gmatch, string.sub, string.format, string.lower, string.gsub, string.match, string.byte
 local unpack = table.unpack or unpack
 local io_lines = io.lines
+
+local FILE_LIST = {}
+for k,v in ipairs(FILE_LIST_ID) do
+	FILE_LIST[v.name] = v
+end
 
 assert(not BASE_NAMESPACE or (type(BASE_NAMESPACE) == "string"), "BASE_NAMESPACE must be a string")
 assert(not BASE_NAMESPACE or (FILE_LIST[BASE_NAMESPACE]), "BASE_NAMESPACE not found in FILE_LIST")
@@ -107,18 +122,18 @@ local function FileExists(fileName)
 	return f ~= nil
 end
 
-local function AddIntoITable(d, s)
+local function AddIntoITable(d, s, d2)
 	if not s or not d then return end
 	DuplicateProtection[d] = DuplicateProtection[d] or {}
 	if type(s) == "table" then
 		for k,v in ipairs(s) do
-			if not DuplicateProtection[d][v] then
+			if not DuplicateProtection[d][v] and (not d2 or not DuplicateProtection[d2][v]) then
 				d[#d+1] = v
 				DuplicateProtection[d][v] = #d
 			end
 		end
 	else
-		if not DuplicateProtection[d][s] then
+		if not DuplicateProtection[d][s] and (not d2 or not DuplicateProtection[d2][s]) then
 			d[#d+1] = s
 			DuplicateProtection[d][s] = #d
 		end
@@ -191,7 +206,7 @@ local function IsOnIgnoreList(fileName)
 	end
 end
 
-local function ParseLuaFile(fileName)
+local function ParseLuaFile(fileName, base)
 	if not FileExists(fileName) then return end
 	local _
 	_, _, _, fileName = SplitPathAndFileName(fileName)
@@ -232,7 +247,7 @@ local function ParseLuaFile(fileName)
 				elseif start and c == "\"" and not loc then --start
 					loc = ""
 				elseif loc and start and c == "\"" and lastC ~= "\\" then
-					AddIntoITable(t, loc)
+					AddIntoITable(t, loc, base)
 					loc, start, tmp = nil, false, ""
 				elseif loc and start then
 					loc = loc..c
@@ -406,7 +421,8 @@ local function BuildFileList()
 	if BASE_NAMESPACE then
 		t[BASE_NAMESPACE] = ParseNamespace(BASE_NAMESPACE)
 	end
-	for namespace, nt in pairs(FILE_LIST) do
+	for nsID, nt in pairs(FILE_LIST_ID) do
+		namespace = nt.name
 		if namespace ~= BASE_NAMESPACE then
 			t[namespace] = ParseNamespace(namespace)
 		end
@@ -417,10 +433,13 @@ end
 local function BuildLocaleList(fileList)
 	if not fileList then return end
 	local t = {}
-	for ns,nst in pairs(fileList) do
+	for nsID, fliNs in pairs(FILE_LIST_ID) do
+	--for ns,nst in pairs(fileList) do
+		local ns = fliNs.name
+		local nst = fileList[ns]
 		t[ns] = {}
 		for k,v in ipairs(nst) do
-			AddIntoITable(t[ns], ParseLuaFile(v))
+			AddIntoITable(t[ns], ParseLuaFile(v), fliNs.base and t[fliNs.base] or nil)
 		end
 	end
 	return t

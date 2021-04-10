@@ -46,25 +46,49 @@ local FACTION_IMAGES = {
 	[890] = "Interface\\Icons\\INV_BannerPVP_02", -- Silverwing Sentinels
 
 	-- Classic
-	[47] = "Interface\\Icons\\inv_misc_tournaments_symbol_dwarf",			--Ironforge
-	[54] = "Interface\\Icons\\inv_misc_tournaments_symbol_gnome",			--Gnomeregan
-	[59] = "Interface\\Icons\\INV_Ingot_Mithril",					--Thorium Brotherhood
-	[68] = "Interface\\Icons\\inv_misc_tournaments_symbol_scourge",			--Undercity
-	[69] = "Interface\\Icons\\inv_misc_tournaments_banner_nightelf",		--Darnassus
-	[72] = "Interface\\Icons\\inv_misc_tournaments_symbol_human",			--Stormwind
+	[47] = "Interface\\Icons\\inv_misc_tournaments_symbol_dwarf",		--Ironforge
+	[54] = "Interface\\Icons\\inv_misc_tournaments_symbol_gnome",		--Gnomeregan
+	[59] = "Interface\\Icons\\INV_Ingot_Mithril",						--Thorium Brotherhood
+	[68] = "Interface\\Icons\\inv_misc_tournaments_symbol_scourge",		--Undercity
+	[69] = "Interface\\Icons\\inv_misc_tournaments_banner_nightelf",	--Darnassus
+	[72] = "Interface\\Icons\\inv_misc_tournaments_symbol_human",		--Stormwind
 	[76] = "Interface\\Icons\\inv_misc_tournaments_symbol_orc",			--Orgrimmar
-	[81] = "Interface\\Icons\\inv_misc_tournaments_symbol_tauren",			--Thunder Bluff
-	[87] = "Interface\\Icons\\INV_Helmet_66",					--Bloodsail Buccaneers
+	[81] = "Interface\\Icons\\inv_misc_tournaments_symbol_tauren",		--Thunder Bluff
+	[87] = "Interface\\Icons\\INV_Helmet_66",							--Bloodsail Buccaneers
 	[270] = "Interface\\Icons\\inv_jewelry_ring_46",					--Bloodsail Buccaneers
 	[529] = "Interface\\Icons\\inv_jewelry_talisman_07",				--Argent Dawn
-	[530] = "Interface\\Icons\\inv_misc_tournaments_symbol_troll",			--Darkspear Trolls
-	[576] = "Interface\\Icons\\inv_misc_horn_01",			--Timbermaw Hold
-	[589] = "Interface\\Icons\\ability_mount_pinktiger",			--Wintersaber Trainers
+	[530] = "Interface\\Icons\\inv_misc_tournaments_symbol_troll",		--Darkspear Trolls
+	[576] = "Interface\\Icons\\inv_misc_horn_01",						--Timbermaw Hold
+	[589] = "Interface\\Icons\\ability_mount_pinktiger",				--Wintersaber Trainers
 	[609] = "Interface\\Icons\\ability_racial_ultravision",				--Cenarion Circle
 	[749] = "Interface\\Icons\\spell_shadow_demonbreath",				--Hydraxian Waterlords
 	[910] = "Interface\\Icons\\inv_misc_head_dragon_bronze",			--Brood of Nozdormu
+--@version-bc@
+	-- BC
+	[922] = "Interface\\Icons\\INV_Misc_Bandana_03", 					-- Tranquillien
+	[932] = "Interface\\Icons\\Spell_Holy_SealOfSalvation",				-- The Aldor
+	[933] = "Interface\\Icons\\INV_Weapon_Shortblade_31", 				-- TheConsortium
+	[934] = "Interface\\Icons\\Spell_Holy_ChampionsBond",				-- The Scryers
+	[935] = "Interface\\Icons\\Spell_Nature_LightningOverload",			-- The Sha'tar
+	[941] = "Interface\\Icons\\INV_Misc_Foot_Centaur", 					-- The Mag'har
+	[942] = "Interface\\Icons\\INV_Misc_Ammo_Arrow_02",			 		-- Cenarion Expedition
+	[946] = "Interface\\Icons\\INV_BannerPVP_02", 						-- Honor Hold
+	[947] = "Interface\\Icons\\INV_BannerPVP_01", 						-- Thrallmar
+	[967] = "Interface\\Icons\\INV_Jewelry_Ring_62", 					-- The Violet Eye
+	[970] = "Interface\\Icons\\INV_Mushroom_10", 						-- Sporeggar
+	[978] = "Interface\\Icons\\INV_Misc_Foot_Centaur", 					-- Kurenai
+	[989] = "Interface\\Icons\\Ability_Warrior_VictoryRush", 			-- Keepers of Time
+	[990] = "Interface\\Icons\\INV_Misc_MonsterScales_13", 				-- The Scale of the Sands
+	[1011] = "Interface\\Icons\\Ability_Rogue_MasterOfSubtlety",		-- Lower City
+	[1012] = "Interface\\Icons\\INV_Misc_Gem_Pearl_05", 				-- Ashtongue Deathsworn
+	[1015] = "Interface\\Icons\\Ability_Mount_Netherdrakepurple", 		-- Netherwing
+	[1031] = "Interface\\Icons\\INV_Misc_Ribbon_01",					-- Sha'tari Skyguard
+	[1038] = "Interface\\Icons\\INV_DataCrystal01", 					-- Ogri'la
+	[1077] = "Interface\\Icons\\INV_Misc_Statue_04",					-- Shattered Sun Offensive
+--@end-version-bc@
 }
 
+-- Name fallbacks
 local FACTION_KEY = {
 	-- Classic
 	[47] = "Ironforge",
@@ -82,8 +106,16 @@ local FACTION_KEY = {
 	[576] = "Timbermaw Hold",
 	[589] = AL["Wintersaber Trainers"], -- Alliance only, Horde gets no info :/
 	[609] = "Cenarion Circle",
-	[719] = "Hydraxian Waterlords",
+	[749] = "Hydraxian Waterlords",
 	[910] = "Brood of Nozdormu",
+	-- BC
+--@version-bc@
+	[922] = AL["Tranquillien"], -- Horde only
+	[941] = AL["The Mag'har"], -- Horde only
+	[946] = AL["Honor Hold"], -- Alli only
+	[947] = AL["Thrallmar"], -- Horde only
+	[978] = AL["Kurenai"], -- Alli only
+--@end-version-bc@
 }
 
 ClickHandler:Add(

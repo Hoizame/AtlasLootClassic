@@ -126,8 +126,37 @@ local MOUNT_LIST = {
     [32458] = 17890, -- Ashes of Al'ar
     [30480] = 19250, -- Fiery Warhorse's Reins
     [33809] = 22464, -- Amani War Bear
+    [32319] = 21156, -- Blue Riding Nether Ray
+    [32314] = 21152, -- Green Riding Nether Ray
+    [32317] = 21158, -- Red Riding Nether Ray
+    [32316] = 21155, -- Purple Riding Nether Ray
+    [32318] = 21157, -- Silver Riding Nether Ray
+    [33999] = 22473, -- Cenarion War Hippogryph
+    [29102] = 19375, -- Reins of the Cobalt War Talbuk / The Maghar
+    [29104] = 19378, -- Reins of the Silver War Talbuk / The Maghar
+    [29105] = 19376, -- Reins of the Tan War Talbuk / The Maghar
+    [29103] = 19377, -- Reins of the White War Talbuk / The Maghar
+    [31829] = 21073, -- Reins of the Cobalt Riding Talbuk / The Maghar
+    [31831] = 21075, -- Reins of the Silver Riding Talbuk / The Maghar
+    [31833] = 21077, -- Reins of the Tan Riding Talbuk / The Maghar
+    [31835] = 21076, -- Reins of the White Riding Talbuk / The Maghar
+    [32858] = 21521, -- Reins of the Azure Netherwing Drake
+    [32859] = 21525, -- Reins of the Cobalt Netherwing Drake
+    [32857] = 21520, -- Reins of the Onyx Netherwing Drake
+    [32860] = 21523, -- Reins of the Purple Netherwing Drake
+    [32861] = 21522, -- Reins of the Veridian Netherwing Drake
+    [32862] = 21524, -- Reins of the Violet Netherwing Drake
+    [29227] = 19375, -- Reins of the Cobalt War Talbuk / Kurenai
+    [29229] = 19378, -- Reins of the Silver War Talbuk / Kurenai
+    [29230] = 19376, -- Reins of the Tan War Talbuk / Kurenai
+    [29231] = 19377, -- Reins of the White War Talbuk / Kurenai
+    [31830] = 21073, -- Reins of the Cobalt Riding Talbuk / Kurenai
+    [31832] = 21075, -- Reins of the Silver Riding Talbuk / Kurenai
+    [31834] = 21077, -- Reins of the Tan Riding Talbuk / Kurenai
+    [31836] = 21076, -- Reins of the White Riding Talbuk / Kurenai
 --@end-version-bc@
 }
+
 
 function Mount.IsMount(itemID)
     return MOUNT_LIST[itemID] and true or false

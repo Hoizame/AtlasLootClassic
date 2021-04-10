@@ -29,11 +29,16 @@ local STRING_RED = "|cffff0000"
 local STRING_GREEN = "|cff1eff00"
 
 local PRICE_INFO = {
+	--- Classic
 	-- items
 	["burningblossom"] 	= { itemID = 23247 }, -- Burning Blossom
 	["ancestrycoin"] 	= { itemID = 21100 }, -- Coin of Ancestry
 	-- others
 	["money"] 		= { func = GetCoinTextureString },
+
+	--- BC
+	["holydust"] = { itemID = 29735 }, -- Holy Dust (Aldor)
+	["arcanerune"] = { itemID = 29736 }, -- Holy Dust (Scryers)
 }
 
 local Cache = {}
