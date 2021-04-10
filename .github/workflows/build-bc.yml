@@ -5,7 +5,7 @@ on:
     branches:
       - bc
     tags:
-      - '*'
+      - '**-bc**'
 
 jobs:
   build:

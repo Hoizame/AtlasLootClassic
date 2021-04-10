@@ -5,7 +5,7 @@ on:
     branches:
       - classic
     tags:
-      - '*'
+      - '**-classic**'
 
 jobs:
   build:
