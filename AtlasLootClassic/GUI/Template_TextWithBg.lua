@@ -87,7 +87,7 @@ local templateFunctions = {
 function GUI.CreateTextWithBg(parent, width, height, bgColor, textColor)
 	local frame = getFrame(TEMPLATE_NAME)
 	if not frame then
-		frame = CreateFrame("Frame")
+		frame = CreateFrame("Frame", nil, nil, _G.BackdropTemplateMixin and "BackdropTemplate" or nil)
 		--frame:SetParent(SVF.frame.containerFrame)
 		frame:SetSize(1, 1)
 		frame:SetBackdrop(BACKDROP_DATA)

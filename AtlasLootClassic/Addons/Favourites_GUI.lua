@@ -675,7 +675,7 @@ end
 function GUI:Create()
     if not self.frame then
         local frameName = "AtlasLoot_GUI-FavouritesFrame"
-        local frame = CreateFrame("Frame", frameName)
+        local frame = CreateFrame("Frame", frameName, nil, _G.BackdropTemplateMixin and "BackdropTemplate" or nil)
         frame:ClearAllPoints()
         frame:SetParent(UIParent)
         --frame:SetPoint(db.point[1], db.point[2], db.point[3], db.point[4], db.point[5])
@@ -712,22 +712,22 @@ function GUI:Create()
         frame.content:SetPoint("TOPLEFT", frame.titleFrame, "BOTTOMLEFT", 0, -3)
         frame.content:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", -5, 5)
 
-        frame.content.slotBg = CreateFrame("Frame", nil, frame.content)
+        frame.content.slotBg = CreateFrame("Frame", nil, frame.content, _G.BackdropTemplateMixin and "BackdropTemplate" or nil)
         frame.content.slotBg:SetPoint("TOPLEFT", frame.content, "TOPLEFT", 0, 0)
         frame.content.slotBg:SetPoint("BOTTOMRIGHT", frame.content, "BOTTOMLEFT", 275, 0)
         frame.content.slotBg:SetBackdrop(ALPrivate.BOX_BACKDROP)
 
-        frame.content.headerBg = CreateFrame("Frame", nil, frame.content)
+        frame.content.headerBg = CreateFrame("Frame", nil, frame.content, _G.BackdropTemplateMixin and "BackdropTemplate" or nil)
         frame.content.headerBg:SetPoint("TOPLEFT", frame.content.slotBg, "TOPRIGHT", 0, 0)
         frame.content.headerBg:SetPoint("BOTTOMRIGHT", frame.content, "TOPRIGHT", 0, -27)
         frame.content.headerBg:SetBackdrop(ALPrivate.BOX_BACKDROP)
 
-        frame.content.bottomBg = CreateFrame("Frame", nil, frame.content)
+        frame.content.bottomBg = CreateFrame("Frame", nil, frame.content, _G.BackdropTemplateMixin and "BackdropTemplate" or nil)
         frame.content.bottomBg:SetPoint("TOPLEFT", frame.content.slotBg, "BOTTOMRIGHT", 2, 27)
         frame.content.bottomBg:SetPoint("BOTTOMRIGHT", frame.content, "BOTTOMRIGHT", 0, 0)
         frame.content.bottomBg:SetBackdrop(ALPrivate.BOX_BACKDROP)
 
-        frame.content.itemListBg = CreateFrame("Frame", nil, frame.content)
+        frame.content.itemListBg = CreateFrame("Frame", nil, frame.content, _G.BackdropTemplateMixin and "BackdropTemplate" or nil)
         frame.content.itemListBg:SetPoint("TOPLEFT", frame.content.headerBg, "BOTTOMLEFT", 2, -2)
         frame.content.itemListBg:SetPoint("BOTTOMRIGHT", frame.content.bottomBg, "TOPRIGHT", 0, 2)
         frame.content.itemListBg:SetBackdrop(ALPrivate.BOX_BACKDROP)

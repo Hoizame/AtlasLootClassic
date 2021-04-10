@@ -24,6 +24,7 @@ AtlasLoot.AtlasLootDBDefaults = {
 			point = {"CENTER"},
 			DefaultFrameLocked = false,
 			selected = {"AtlasLootClassic_DungeonsAndRaids", "Deadmines", 1, 0},
+			selectedGameVersion = AtlasLoot:GetGameVersion(),
 			classFilter = false,
 			autoselect = true,
 			ExpansionIcon = true,

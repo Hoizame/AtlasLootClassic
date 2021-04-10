@@ -2,6 +2,7 @@ Global.lua
 Collections.lua
 Crafting.lua
 DungeonsAndRaids.lua
+DungeonsAndRaidsTBC.lua
 PvP.lua
 Options.lua
 Factions.lua

@@ -40,7 +40,10 @@ local FILE_LIST = {
 		"AtlasLootClassic_Crafting/AtlasLootClassic_Crafting.toc",
 	},
 	DungeonsAndRaids = {
-		"AtlasLootClassic_DungeonsAndRaids/AtlasLootClassic_DungeonsAndRaids.toc",
+		"AtlasLootClassic_DungeonsAndRaids/data.lua",
+	},
+	DungeonsAndRaidsTBC = {
+		"AtlasLootClassic_DungeonsAndRaids/data-tbc.lua",
 	},
 	PvP = {
 		"AtlasLootClassic_PvP/AtlasLootClassic_PvP.toc",

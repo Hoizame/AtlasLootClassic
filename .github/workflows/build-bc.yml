@@ -3,16 +3,19 @@ name: CI
 on:
   push:
     branches:
-      - master
+      - bc
     tags:
       - '*'
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
+    - uses: actions/checkout@v1
+      with:
+        fetch-depth: 500
+
     - name: Install and run Luacheck
       uses: nebularg/actions-luacheck@v1
       with:
@@ -22,15 +25,6 @@ jobs:
       run: ./cf_translations.sh
       env:
         CF_API_KEY: ${{ secrets.CF_API_KEY }}
-
-    - name: Create Classic Package
-      uses: BigWigsMods/packager@master
-      with:
-        args: -g classic -m .pkgmeta-classic -w 25185
-      env:
-        CF_API_KEY: ${{ secrets.CF_API_KEY }}
-        GITHUB_OAUTH: ${{ secrets.GITHUB_OAUTH }}
-        WOWI_API_TOKEN: ${{ secrets.WOWI_API_TOKEN }}
 
     - name: Create BC Package
       uses: BigWigsMods/packager@master

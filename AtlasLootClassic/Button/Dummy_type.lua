@@ -1,9 +1,12 @@
+local ALName, ALPrivate = ...
+
 local _G = _G
 local AtlasLoot = _G.AtlasLoot
-local TYPE, ID_INV, ID_ICON, ID_ABILITY = "Dummy", "INV_", "ICON_", "ABILITY_"
+local TYPE, ID_INV, ID_ICON, ID_ABILITY, ID_ADDON = "Dummy", "INV_", "ICON_", "ABILITY_", "ADDON_"
 local Dummy = AtlasLoot.Button:AddType(TYPE, ID_INV)
 local Dummy_ID_ICON = AtlasLoot.Button:AddIdentifier(TYPE, ID_ICON)
 local Ability_ID_ICON = AtlasLoot.Button:AddIdentifier(TYPE, ID_ABILITY)
+local Addon_ID_ADDON = AtlasLoot.Button:AddIdentifier(TYPE, ID_ADDON)
 
 -- lua
 local str_match = _G.string.match
@@ -46,13 +49,17 @@ function Dummy.Refresh(button)
 		button.extra:SetText(button.Description)
 	end
 	button.overlay:Hide()
-	button.icon:SetTexture(tonumber(button.Texture) or (button.Texture and INTERFACE_PATH..button.Texture or DUMMY_ICON))
+	button.icon:SetTexture(tonumber(button.Texture) or (button.Texture and button.Texture or DUMMY_ICON))
 end
 
 function Dummy.GetStringContent(str)
-	return ID_INV..str
+	return INTERFACE_PATH..ID_INV..str
 end
 
 function Dummy_ID_ICON.GetStringContent(str)
-	return str
+	return INTERFACE_PATH..str
+end
+
+function Addon_ID_ADDON.GetStringContent(str)
+	return ALPrivate.ICONS_PATH..str
 end

@@ -262,7 +262,7 @@ function Faction.ShowToolTipFrame(button)
 	if not Faction.tooltipFrame then
 		local WIDTH = 200
 		local name = "AtlasLoot-FactionToolTip"
-		local frame = CreateFrame("Frame", name)
+		local frame = CreateFrame("Frame", name, nil, _G.BackdropTemplateMixin and "BackdropTemplate" or nil)
 		frame:SetClampedToScreen(true)
 		frame:SetWidth(WIDTH)
 		frame:SetBackdrop({bgFile = "Interface/Tooltips/UI-Tooltip-Background",
@@ -286,7 +286,7 @@ function Faction.ShowToolTipFrame(button)
 		frame.name:SetHeight(15)
 		--frame.name:SetTextColor(1, 1, 1, 1)
 
-		frame.standing = CreateFrame("FRAME", name.."-standing", frame)
+		frame.standing = CreateFrame("FRAME", name.."-standing", frame, _G.BackdropTemplateMixin and "BackdropTemplate" or nil)
 		frame.standing:SetWidth(WIDTH-10)
 		frame.standing:SetHeight(20)
 		frame.standing:SetPoint("TOPLEFT", frame.icon, "BOTTOMLEFT", 0, -1)

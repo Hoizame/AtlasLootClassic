@@ -349,7 +349,7 @@ do
 			CAT_FRAME_COUNT = CAT_FRAME_COUNT + 1
 			local frameName = "AtlasLoot-DropDown-CatFrame"..CAT_FRAME_COUNT
 
-			frame = CreateFrame("Frame", frameName)
+			frame = CreateFrame("Frame", frameName, nil, _G.BackdropTemplateMixin and "BackdropTemplate" or nil)
 			frame:EnableMouse(true)
 			frame:SetBackdrop(ALPrivate.BOX_BORDER_BACKDROP)
 
@@ -467,7 +467,7 @@ function GUI.CreateDropDown()
 	self.EnableIcon = EnableIcon
 	--self.SetIcon = SetIcon
 
-	self.frame = CreateFrame("Button", frameName)
+	self.frame = CreateFrame("Button", frameName, nil, _G.BackdropTemplateMixin and "BackdropTemplate" or nil)
 	local frame = self.frame
 	frame:ClearAllPoints()
 	frame:SetHeight(25)
@@ -479,11 +479,15 @@ function GUI.CreateDropDown()
 	frame.par = self
 
 	frame.label = frame:CreateFontString(frameName.."-label", "ARTWORK", "GameFontNormalSmall")
-	frame.label:SetPoint("TOPLEFT", frame, "TOPLEFT", 7, 0)
-	frame.label:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", -29, 0)
+	--frame.label:SetPoint("TOPLEFT", frame, "TOPLEFT", 7, 0)
+	--frame.label:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", -29, 0)
+	frame.label:SetPoint("LEFT", frame, "LEFT", 7, 0)
+	frame.label:SetPoint("RIGHT", frame, "RIGHT", -29, 0)
+	frame.label:SetHeight(15)
 	frame.label:SetTextColor(1, 1, 1)
 	frame.label:SetJustifyH("RIGHT")
 	frame.label:SetJustifyV("MIDDLE")
+	frame.label:SetNonSpaceWrap(true)
 	--frame.label:SetHeight(15)
 	frame.label:SetText(frameName.."-label")
 

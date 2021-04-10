@@ -1,4 +1,6 @@
 ﻿## Interface: 11306
+## Interface-Classic: 11306
+## Interface-BC: 20501
 ## Author: Lag
 ## Version: @project-version@
 ## SavedVariables: AtlasLootClassicDB
@@ -35,7 +37,6 @@
 ## X-License: GPL v2
 ## X-Localizations: enUS, deDE, frFR, esES, koKR, zhCN, zhTW, esMX, ptBR, ruRU, itIT
 ## X-Curse-Project-ID: 326516
-## X-WoWI-ID: 25185
 
 embeds.xml
 
