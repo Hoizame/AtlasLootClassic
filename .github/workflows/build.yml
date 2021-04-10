@@ -2,8 +2,6 @@ name: CI
 
 on:
   push:
-    branches:
-      - master
     tags:
       - '*'
       - '!**-bc**'
@@ -38,7 +36,7 @@ jobs:
     - name: Create BC Package
       uses: BigWigsMods/packager@master
       with:
-        args: -g bc -m .pkgmeta-bc
+        args: -g bc -m .pkgmeta-bc -w 25953
       env:
         CF_API_KEY: ${{ secrets.CF_API_KEY }}
         GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
