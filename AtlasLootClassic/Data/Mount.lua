@@ -119,14 +119,14 @@ local MOUNT_LIST = {
     [23720] = 17158, -- Riding Turtle
     [21176] = 15677, -- Black Qiraji Resonating Crystal
     [20221] = 15293, -- Foror's Fabled Steed
---@version-classic@
+--@version-bc@
     -- BC
     [32768] = 21473, -- Swift Raven Lord Mount
     [35513] = 19483, -- Swift White Hawkstrider
     [32458] = 17890, -- Ashes of Al'ar
     [30480] = 19250, -- Fiery Warhorse's Reins
     [33809] = 22464, -- Amani War Bear
---@end-version-classic@
+--@end-version-bc@
 }
 
 function Mount.IsMount(itemID)

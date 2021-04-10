@@ -43,7 +43,7 @@
 Locales\Locales.xml
 
 data.lua
-#@version-classic@
-data-tbc.lua
-#@end-version-classic@
+#@version-bc@
+data-tbc.lua-
+#@end-version-bc@
 droprate.lua

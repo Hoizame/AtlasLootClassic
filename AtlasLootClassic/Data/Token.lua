@@ -296,7 +296,7 @@ local TOKEN = {
 	[21187] = 21178, -- Earthweave Cloak
 	[21179] = 21178, -- Band of Earthen Wrath
 
---@version-classic@
+--@version-bc@
 
 	--- T4
 	-- Head
@@ -386,7 +386,7 @@ local TOKEN = {
 	},
 	-- Tempest Keep
 	[32405] = { 30018, 30017, 30007, 30015 }, -- Verdant Sphere
---@end-version-classic@
+--@end-version-bc@
 }
 
 local function Init()
