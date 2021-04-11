@@ -7,6 +7,7 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 ## v2.0.0 (Apr. XX, 2021)
 
 - reimplement a basic class filter for loot pages
+- (classic) move Lady Falther'ess from Razorfen Downs into extra list and mark as Scourge Invasions npc
 - (classic) add class icons for tokens from: Nax
 - (bc) add bc support
 - (bc) add bc dungeons and raids

@@ -1729,17 +1729,6 @@ data["RazorfenDowns"] = {
 				{ 3,  10777 }, -- Arachnid Gloves
 			},
 		},
-		{ -- RFDLadyF
-			name = AL["Lady Falther'ess"],
-			npcID = 14686,
-			DisplayIDs = {{10698}},
-			AtlasMapBossID = 2,
-			ContentPhase = 6,
-			[NORMAL_DIFF] = {
-				{ 1,  23178 }, -- Mantle of Lady Falther'ess
-				{ 2,  23177 }, -- Lady Falther'ess' Finger
-			},
-		},
 		{ -- RFDMordreshFireEye
 			name = AL["Mordresh Fire Eye"],
 			npcID = 7357,
@@ -1801,6 +1790,7 @@ data["RazorfenDowns"] = {
 				{ 3,  10760 }, -- Swine Fists
 			},
 		},
+
 		{ -- RFDTrash
 			name = AL["Trash"],
 			ExtraList = true,
@@ -1816,6 +1806,19 @@ data["RazorfenDowns"] = {
 				{ 9,  10571 }, -- Ebony Boneclub
 				{ 10, 10570 }, -- Manslayer
 				{ 11, 10573 }, -- Boneslasher
+			},
+		},
+		{ -- RFDLadyF
+			name = AL["Lady Falther'ess"],
+			npcID = 14686,
+			DisplayIDs = {{10698}},
+			AtlasMapBossID = 2,
+			ContentPhase = 6,
+			specialType = "scourgeInvasion",
+			ExtraList = true,
+			[NORMAL_DIFF] = {
+				{ 1,  23178 }, -- Mantle of Lady Falther'ess
+				{ 2,  23177 }, -- Lady Falther'ess' Finger
 			},
 		},
 		{ -- RFDHenryStern
