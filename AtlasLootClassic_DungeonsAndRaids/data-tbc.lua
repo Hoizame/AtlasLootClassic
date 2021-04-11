@@ -3325,7 +3325,7 @@ data["HyjalSummit"] = {
             }
         },
         { -- MountHyjalTrash
-            name = AL["Patterns"],
+            name = AL["Trash"],
             ExtraList = true,
             [NORMAL_DIFF] = {
                 { 1, 32590 }, -- Nethervoid Cloak
