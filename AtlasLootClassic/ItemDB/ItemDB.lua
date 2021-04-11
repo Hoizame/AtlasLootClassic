@@ -250,9 +250,9 @@ function ItemDB:GetModuleList(addonName)
 end
 
 -- iniName, bossName
-function ItemDB:GetNameData_UNSAFE(addonName, contentName, boss)
+function ItemDB:GetNameData_UNSAFE(addonName, contentName, boss, diff)
 	if not ItemDB.Storage[addonName] or not ItemDB.Storage[addonName][contentName] then return end
-	return ItemDB.Storage[addonName][contentName]:GetName(true), ItemDB.Storage[addonName][contentName]:GetNameForItemTable(boss, true)
+	return ItemDB.Storage[addonName][contentName]:GetName(true), ItemDB.Storage[addonName][contentName]:GetNameForItemTable(boss, true), ItemDB.Storage[addonName]:GetDifficultyName(diff)
 end
 
 function ItemDB:GetNpcID_UNSAFE(addonName, contentName, boss)

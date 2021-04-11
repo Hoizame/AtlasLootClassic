@@ -81,7 +81,7 @@ Sources.DbDefaults = {
 }
 
 --Sources.GlobalDbDefaults = {}
-local function BuildSource(ini, boss, typ, item)
+local function BuildSource(ini, boss, typ, item, isHeroic)
     if typ and typ > 3 then
         -- Profession
         local src = ""
@@ -118,6 +118,9 @@ local function BuildSource(ini, boss, typ, item)
             local npcID = AtlasLoot.ItemDB:GetNpcID_UNSAFE(AL_MODULE, ini, boss)
             if type(npcID) == "table" then npcID = npcID[1] end
             dropRate = Droprate:GetData(npcID, item)
+        end
+        if bossName and isHeroic then
+            bossName = bossName.." <"..AL["Heroic"]..">"
         end
         if iniName and bossName then
             if dropRate then
@@ -161,13 +164,13 @@ local function OnTooltipSetItem_Hook(self)
                     for i = 1, #sourceData.ItemData[item] do
                         local data = sourceData.ItemData[item][i]
                         if data[3] and Sources.db.Sources[data[3]] then
-                            TooltipTextCache[item][i] = format(TT_F, ICON_TEXTURE[data[3] or 0], BuildSource(sourceData.AtlasLootIDs[data[1]],data[2],data[3],data[4] or item))
+                            TooltipTextCache[item][i] = format(TT_F, ICON_TEXTURE[data[3] or 0], BuildSource(sourceData.AtlasLootIDs[data[1]], data[2], data[3], data[4] or item, data[5]))
                         end
                     end
                 else
                     local data = sourceData.ItemData[item]
                     if data[3] and Sources.db.Sources[data[3]] then
-                        TooltipTextCache[item][1] = format(TT_F, ICON_TEXTURE[data[3] or 0], BuildSource(sourceData.AtlasLootIDs[data[1]],data[2],data[3],data[4] or item))
+                        TooltipTextCache[item][1] = format(TT_F, ICON_TEXTURE[data[3] or 0], BuildSource(sourceData.AtlasLootIDs[data[1]], data[2], data[3], data[4] or item, data[5]))
                     end
                 end
                 if #TooltipTextCache[item] < 1 then
