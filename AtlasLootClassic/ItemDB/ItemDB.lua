@@ -432,6 +432,7 @@ local SpecialMobList = {
 	boss = format(PATH_TEXTURE, "Interface\\TargetingFrame\\UI-TargetingFrame-Skull"),
 	vendor = format(ATLAS_TEXTURE, "auctioneer"),
 	summon = format(ATLAS_TEXTURE, "poi-rift1"),
+	scourgeInvasion = format(PATH_TEXTURE, "133446"),
 }
 
 --- Get the content Type

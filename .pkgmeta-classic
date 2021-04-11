@@ -28,6 +28,7 @@ ignore:
  - README.md
  - AtlasLootClassic_DungeonsAndRaids/data-tbc.lua
  - AtlasLootClassic_Factions/data-tbc.lua
+ - AtlasLootClassic_Data/source-tbc.lua
 
 move-folders:
  AtlasLootClassic/AtlasLootClassic: AtlasLootClassic

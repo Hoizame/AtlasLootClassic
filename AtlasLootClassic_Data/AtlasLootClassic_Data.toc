@@ -43,3 +43,6 @@ core.lua
 locales.lua
 items.lua
 source.lua
+#@version-bc@
+source-tbc.lua
+#@end-version-bc@

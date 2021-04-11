@@ -10,6 +10,7 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 - (classic) move Lady Falther'ess from Razorfen Downs into extra list and mark as Scourge Invasions npc
 - (classic) add class icons for tokens from: Nax
 - (bc) add bc support
-- (bc) add bc dungeons and raids
+- (bc) add dungeons and raids
 - (bc) add Tier token items
 - (bc) add factions
+- (bc) add tooltip source support

@@ -61,7 +61,7 @@ local SOURCE_TYPES = {
     [15] = ALIL["Skinning"],            -- Skinning
     [16] = ALIL["ROGUE"]..": "..ALIL["Poisons"],             -- Rogue: Poisons
 }
-local SOURCE_DATA
+local SOURCE_DATA = {}
 local KEY_WEAK_MT = {__mode="k"}
 local AL_MODULE = "AtlasLootClassic_DungeonsAndRaids"
 
@@ -88,9 +88,15 @@ local function BuildSource(ini, boss, typ, item)
         --RECIPE_ICON
         if Sources.db.showRecipeSource then
             local recipe = Recipe.GetRecipeForSpell(item)
-            if recipe and SOURCE_DATA.ItemData[recipe] then
-                local data = SOURCE_DATA.ItemData[recipe]
-                src = format(TT_F, RECIPE_ICON, BuildSource(SOURCE_DATA.AtlasLootIDs[data[1]],data[2],data[3],data[4] or item))
+            local sourceData
+            for i = #SOURCE_DATA, 1, -1 do
+                if recipe and SOURCE_DATA[i].ItemData[recipe] then
+                    sourceData = SOURCE_DATA[i]
+                end
+            end
+            if recipe and sourceData then
+                local data = sourceData.ItemData[recipe]
+                src = format(TT_F, RECIPE_ICON, BuildSource(sourceData.AtlasLootIDs[data[1]],data[2],data[3],data[4] or item))
                 src = "\n"..src
             end
         end
@@ -139,21 +145,29 @@ local function OnTooltipSetItem_Hook(self)
     end
 
     item = TooltipCache[item]
-    if item and SOURCE_DATA.ItemData[item] then
+
+    local sourceData
+    for i = #SOURCE_DATA, 1, -1 do
+        if item and SOURCE_DATA[i].ItemData[item] then
+            sourceData = SOURCE_DATA[i]
+        end
+    end
+
+    if item and sourceData then
         if TooltipTextCache[item] ~= false then
             if not TooltipTextCache[item] then
                 TooltipTextCache[item] = {}
-                if type(SOURCE_DATA.ItemData[item][1]) == "table" then
-                    for i = 1, #SOURCE_DATA.ItemData[item] do
-                        local data = SOURCE_DATA.ItemData[item][i]
+                if type(sourceData.ItemData[item][1]) == "table" then
+                    for i = 1, #sourceData.ItemData[item] do
+                        local data = sourceData.ItemData[item][i]
                         if data[3] and Sources.db.Sources[data[3]] then
-                            TooltipTextCache[item][i] = format(TT_F, ICON_TEXTURE[data[3] or 0], BuildSource(SOURCE_DATA.AtlasLootIDs[data[1]],data[2],data[3],data[4] or item))
+                            TooltipTextCache[item][i] = format(TT_F, ICON_TEXTURE[data[3] or 0], BuildSource(sourceData.AtlasLootIDs[data[1]],data[2],data[3],data[4] or item))
                         end
                     end
                 else
-                    local data = SOURCE_DATA.ItemData[item]
+                    local data = sourceData.ItemData[item]
                     if data[3] and Sources.db.Sources[data[3]] then
-                        TooltipTextCache[item][1] = format(TT_F, ICON_TEXTURE[data[3] or 0], BuildSource(SOURCE_DATA.AtlasLootIDs[data[1]],data[2],data[3],data[4] or item))
+                        TooltipTextCache[item][1] = format(TT_F, ICON_TEXTURE[data[3] or 0], BuildSource(sourceData.AtlasLootIDs[data[1]],data[2],data[3],data[4] or item))
                     end
                 end
                 if #TooltipTextCache[item] < 1 then
@@ -202,8 +216,7 @@ function Sources:OnStatusChanged()
 end
 
 function Sources:SetData(dataTable)
-    if SOURCE_DATA then return end
-    SOURCE_DATA = dataTable
+    SOURCE_DATA[#SOURCE_DATA+1] = dataTable
 end
 
 function Sources:GetSourceTypes()
