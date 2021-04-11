@@ -5317,23 +5317,8 @@ local ReqData = {
 }
 --##END-DATA##
 
-local CLASS = {
-    --NONE 			= 0,
-    WARRIOR 		= 1,
-    PALADIN 		= 2,
-    HUNTER 			= 4,
-    ROGUE 			= 8,
-    PRIEST 			= 16,
-    --DEATHKNIGHT 	= 32,
-    SHAMAN 			= 64,
-    MAGE 			= 128,
-    WARLOCK 		= 256,
-    --MONK	 		= 512,
-    DRUID 			= 1024,
-    --DEMONHUNTER 	= 2048,
-}
-local CLASS_SORT = { "WARRIOR", "PALADIN", "HUNTER", "ROGUE", "PRIEST", "SHAMAN", "MAGE", "WARLOCK", "DRUID" }
-
+local CLASS = ALPrivate.CLASS_BITS
+local CLASS_SORT = ALPrivate.CLASS_SORT
 
 local CLASS_ICON_PATH = ALPrivate.CLASS_ICON_PATH
 local TEXTURE_STRING, TEXTURE_STRING_ID = "|T%s:0|t ", "|T%d:0|t "
@@ -5374,6 +5359,14 @@ local function BuildClassString(classBit)
 		ClassStrings[classBit] = counter < 9 and output or ""
 	end
 	return ClassStrings[classBit]
+end
+
+function Requirements.ClassCanUseItem(className, itemID)
+	if ReqData[itemID] then
+		return bit_band(ReqData[itemID][1], CLASS[className]) ~= 0
+	else
+		return true
+	end
 end
 
 function Requirements.GetPvPRankInfo(rank, faction)

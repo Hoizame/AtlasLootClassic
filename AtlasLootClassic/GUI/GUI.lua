@@ -15,6 +15,9 @@ local type, tonumber, tostring = type, tonumber, tostring
 local tab_insert = table.insert
 local str_format = string.format
 
+local CLASS_ICON_PATH = ALPrivate.CLASS_ICON_PATH
+local CLASS_SORT = ALPrivate.CLASS_SORT
+
 -- AL functions
 local GetAlTooltip = AtlasLoot.Tooltip.GetTooltip
 local IsMapsModuleAviable = AtlasLoot.Loader.IsMapsModuleAviable
@@ -293,34 +296,15 @@ end
 local function ClassFilterButton_Refresh(self)
 	-- insert class selection?
 	self.texture:SetDesaturated(not db.classFilter)
+
+	self.selectedClassName = self.selectedClassName or PLAYER_CLASS_FN
+
+	self.texture:SetTexture(CLASS_ICON_PATH[self.selectedClassName])
+
 	if self.selectionFrame and self.selectionFrame:IsShown() then self.selectionFrame:Hide() end
 
-	self.selectedPlayerSpecID = self.selectedPlayerSpecID or GetSpecialization() and ( GetLootSpecialization() == 0 and GetSpecializationInfo(GetSpecialization()) or GetLootSpecialization() ) or 0
-
-	if self.selectedPlayerSpecID == 0 then
-		self.specName = PLAYER_CLASS
-		self.specDesc = str_format(AL["Shows items for all %s specializations."], PLAYER_CLASS)
-		self.texture:SetTexture("Interface\\Glues\\CharacterCreate\\UI-CharacterCreate-Classes")
-		self.texture:SetTexCoord(CLASS_ICON_TCOORDS[PLAYER_CLASS_FN][1], CLASS_ICON_TCOORDS[PLAYER_CLASS_FN][2], CLASS_ICON_TCOORDS[PLAYER_CLASS_FN][3], CLASS_ICON_TCOORDS[PLAYER_CLASS_FN][4])
-	else
-		local id, name, description, icon, background, role = GetSpecializationInfoByID(self.selectedPlayerSpecID)
-		self.specName = name
-		self.specDesc = description
-		self.texture:SetTexture(icon)
-		self.texture:SetTexCoord(0, 1, 0, 1)
-	end
 	if GUI.frame.contentFrame.shownFrame and GUI.frame.contentFrame.shownFrame.OnClassFilterUpdate then
 		GUI.frame.contentFrame.shownFrame.OnClassFilterUpdate()
-	end
-end
-
-local function ClassFilterButton_OnEvent(self, event)
-	if event == "PLAYER_LOOT_SPEC_UPDATED" then
-		local spec = GetLootSpecialization() == 0 and GetSpecializationInfo(GetSpecialization()) or GetLootSpecialization()
-		if spec ~= self.selectedPlayerSpecID then
-			self.selectedPlayerSpecID = spec
-			ClassFilterButton_Refresh(self)
-		end
 	end
 end
 
@@ -332,11 +316,9 @@ local function ClassFilterButton_OnEnter(self, owner)
 	else
 		tooltip:SetOwner(self, "ANCHOR_RIGHT", -(self:GetWidth() * 0.5), 5)
 	end
-	tooltip:AddLine(self.specName)
-	tooltip:AddLine(self.specDesc, 1, 1, 1, true)
+	tooltip:AddLine(self.className)
 	if self.mainButton then
-		tooltip:AddLine(" ")
-		tooltip:AddLine(AL["|cff00ff00Right-Click:|r Change Spec"])
+		tooltip:AddLine(AL["|cff00ff00Right-Click:|r Change Class"])
 	end
 	tooltip:Show()
 end
@@ -346,17 +328,12 @@ local function ClassFilterButton_OnLeave(self)
 end
 
 local function ClassFilterButton_OnShow(self)
-	self:RegisterEvent("PLAYER_LOOT_SPEC_UPDATED")
 	ClassFilterButton_Refresh(self)
-end
-
-local function ClassFilterButton_OnHide(self)
-	self:UnregisterEvent("PLAYER_LOOT_SPEC_UPDATED")
 end
 
 local function ClassFilterSpecButton_OnClick(self)
 	self.obj:Hide()
-	self.obj.obj.selectedPlayerSpecID = self.specID
+	self.obj.obj.selectedClassName = self.className
 	ClassFilterButton_Refresh(self.obj.obj)
 end
 
@@ -382,81 +359,46 @@ local function ClassFilterButton_OnClick(self, button)
 			local button_height = 20
 			local id, name, description, icon
 
-			local button = CreateFrame("BUTTON", nil, frame, _G.BackdropTemplateMixin and "BackdropTemplate" or nil)
-			button:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
-			button:SetPoint("TOPLEFT", frame, "TOPLEFT", 5, -5)
-			button:SetBackdrop(ALPrivate.BOX_BACKDROP)
-			button:SetBackdropColor(RAID_CLASS_COLORS[PLAYER_CLASS_FN].r, RAID_CLASS_COLORS[PLAYER_CLASS_FN].g, RAID_CLASS_COLORS[PLAYER_CLASS_FN].b, 1)
-			button.obj = frame
-			button.specID = 0
-			button.specName = PLAYER_CLASS
-			button.specDesc = str_format(AL["Shows items for all %s specializations."], PLAYER_CLASS)
+			for classSortID = 1, #CLASS_SORT do
+				local className = CLASS_SORT[classSortID]
 
-			button.icon = button:CreateTexture(nil, button)
-			button.icon:SetPoint("LEFT", button, "LEFT", 0, 0)
-			button.icon:SetSize(button_height, button_height)
-			button.icon:SetTexture("Interface\\Glues\\CharacterCreate\\UI-CharacterCreate-Classes")
-			button.icon:SetTexCoord(CLASS_ICON_TCOORDS[PLAYER_CLASS_FN][1], CLASS_ICON_TCOORDS[PLAYER_CLASS_FN][2], CLASS_ICON_TCOORDS[PLAYER_CLASS_FN][3], CLASS_ICON_TCOORDS[PLAYER_CLASS_FN][4])
-
-			button.text = button:CreateFontString(nil, "ARTWORK", "GameFontNormal")
-			button.text:SetPoint("LEFT", button.icon, "RIGHT", 2, 0)
-			button.text:SetJustifyH("LEFT")
-			button.text:SetText(PLAYER_CLASS)
-			button.text:SetSize(button.text:GetStringWidth(), button_height)
-
-			newWidth = button_height + 2 + button.text:GetWidth()
-			width = newWidth+10 > width and newWidth+10 or width
-			height = height + button_height + 1
-
-			button:SetScript("OnClick", ClassFilterSpecButton_OnClick)
-			button:SetScript("OnEnter", ClassFilterButton_OnEnter)
-			button:SetScript("OnLeave", ClassFilterButton_OnLeave)
-
-			frame.buttons[1] = button
-
-			for i=1,GetNumSpecializations() do
-				id, name, description, icon = GetSpecializationInfo(i)
-
-				button = CreateFrame("BUTTON", nil, frame)
+				local button = CreateFrame("BUTTON", nil, frame, _G.BackdropTemplateMixin and "BackdropTemplate" or nil)
 				button:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
-				--button:SetAlpha(0.5)
-				--if i == 1 then
-				--	button:SetPoint("TOPLEFT", frame, "TOPLEFT", 5, -5)
-				--else
-					button:SetPoint("TOPLEFT", frame.buttons[#frame.buttons], "BOTTOMLEFT", 0, -1)
-				--end
+				if #frame.buttons == 0 then
+					button:SetPoint("TOPLEFT", frame, "TOPLEFT", 5, -5)
+				else
+					button:SetPoint("TOPLEFT", frame.buttons[classSortID - 1], "BOTTOMLEFT", 0, -2)
+				end
+				button:SetBackdrop(ALPrivate.BOX_BACKDROP)
+				button:SetBackdropColor(RAID_CLASS_COLORS[className].r, RAID_CLASS_COLORS[className].g, RAID_CLASS_COLORS[className].b, 1)
+				button:SetScript("OnClick", ClassFilterSpecButton_OnClick)
 				button.obj = frame
-				button.specID = id
-				button.specName = name
-				button.specDesc = description
+				button.className = className
 
 				button.icon = button:CreateTexture(nil, button)
 				button.icon:SetPoint("LEFT", button, "LEFT", 0, 0)
 				button.icon:SetSize(button_height, button_height)
-				button.icon:SetTexture(icon or "Interface\\Icons\\INV_Misc_QuestionMark")
+				button.icon:SetTexture(CLASS_ICON_PATH[className])
 
 				button.text = button:CreateFontString(nil, "ARTWORK", "GameFontNormal")
 				button.text:SetPoint("LEFT", button.icon, "RIGHT", 2, 0)
 				button.text:SetJustifyH("LEFT")
-				button.text:SetText(name)
+				button.text:SetText(ALPrivate.LOC_CLASSES[className] or PLAYER_CLASS)
 				button.text:SetSize(button.text:GetStringWidth(), button_height)
+
 
 				newWidth = button_height + 2 + button.text:GetWidth()
 				width = newWidth+10 > width and newWidth+10 or width
-				--button:SetSize(newWidth, button_height)
-				height = height + button_height + 1
+				height = height + button_height + 2
 
-				button:SetScript("OnClick", ClassFilterSpecButton_OnClick)
-				button:SetScript("OnEnter", ClassFilterButton_OnEnter)
-				button:SetScript("OnLeave", ClassFilterButton_OnLeave)
-
-				frame.buttons[i+1] = button
+				frame.buttons[#frame.buttons + 1] = button
 			end
+			-- resize
 			for i = 1, #frame.buttons do
 				frame.buttons[i]:SetSize(width-10, button_height)
 			end
 
-			frame:SetSize(width, height)
+			frame:SetSize(width, height - 2)
 			frame:Hide()
 
 			self.selectionFrame = frame
@@ -468,7 +410,7 @@ local function ClassFilterButton_OnClick(self, button)
 			local button
 			for i = 1, #self.selectionFrame.buttons do
 				button = self.selectionFrame.buttons[i]
-				if button.specID == self.selectedPlayerSpecID then
+				if button.className == self.selectedClassName then
 					button:SetAlpha(1.0)
 				else
 					button:SetAlpha(0.5)
@@ -477,6 +419,7 @@ local function ClassFilterButton_OnClick(self, button)
 			self.selectionFrame:Show()
 		end
 	end
+
 end
 
 -- Next / Prev buttons
@@ -1223,16 +1166,14 @@ function GUI:Create()
 	frame.contentFrame.clasFilterButton:SetPoint("LEFT", frame.contentFrame.itemsButton, "RIGHT", 5, 0)
 	frame.contentFrame.clasFilterButton:SetScript("OnClick", ClassFilterButton_OnClick)
 	frame.contentFrame.clasFilterButton:SetScript("OnShow", ClassFilterButton_OnShow)
-	frame.contentFrame.clasFilterButton:SetScript("OnHide", ClassFilterButton_OnHide)
-	frame.contentFrame.clasFilterButton:SetScript("OnEvent", ClassFilterButton_OnEvent)
 	frame.contentFrame.clasFilterButton:SetScript("OnEnter", ClassFilterButton_OnEnter)
 	frame.contentFrame.clasFilterButton:SetScript("OnLeave", ClassFilterButton_OnLeave)
 	frame.contentFrame.clasFilterButton.mainButton = true
-	frame.contentFrame.clasFilterButton:Hide()
+	--frame.contentFrame.clasFilterButton:Hide()
 
 	frame.contentFrame.clasFilterButton.texture = frame.contentFrame.clasFilterButton:CreateTexture(frameName.."-clasFilterButton-texture","ARTWORK")
 	frame.contentFrame.clasFilterButton.texture:SetAllPoints(frame.contentFrame.clasFilterButton)
-	frame.contentFrame.clasFilterButton.texture:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark")
+	--frame.contentFrame.clasFilterButton.texture:SetTexture(CLASS_ICON_PATH[PLAYER_CLASS_FN])
 
 	self.frame = frame
 

@@ -72,6 +72,7 @@ Data\ContentPhase.lua
 Data\Droprate.lua
 Data\AutoSelect.lua
 Data\Requirements.lua
+Data\ClassFilter.lua
 
 ItemDB\ItemDB.lua
 ItemDB\SoundData.lua

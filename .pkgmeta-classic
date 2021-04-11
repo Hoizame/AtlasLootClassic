@@ -27,6 +27,7 @@ ignore:
  - AtlasLootClassic_DungeonsAndRaids/droprate_override.lua
  - README.md
  - AtlasLootClassic_DungeonsAndRaids/data-tbc.lua
+ - AtlasLootClassic_Factions/data-tbc.lua
 
 move-folders:
  AtlasLootClassic/AtlasLootClassic: AtlasLootClassic

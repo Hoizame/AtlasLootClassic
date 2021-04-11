@@ -4,6 +4,7 @@ local ItemDB = AtlasLoot.ItemDB
 local ItemFrame = {}
 AtlasLoot.GUI.ItemFrame = ItemFrame
 local AL = AtlasLoot.Locales
+local ClassFilter = AtlasLoot.Data.ClassFilter
 
 -- lua
 local type, tostring = type, tostring
@@ -77,8 +78,22 @@ end
 function ItemFrame.UpdateFilter()
 	local Reset = true
 	if AtlasLoot.db.GUI.classFilter then
-		-- NYI
-		-- Reset = false
+		if AtlasLoot.db.GUI.classFilter then
+			local button
+			for i = 1,30 do
+				button = ItemFrame.frame.ItemButtons[i]
+				if button and button.__atlaslootinfo and not button.__atlaslootinfo.filterIgnore and button.__atlaslootinfo.type and button.__atlaslootinfo.type[1] == "Item" then
+					if button.ItemID and ClassFilter.ClassCanUseItem(GUI.frame.contentFrame.clasFilterButton.selectedClassName, button.ItemID) then
+						button:SetAlpha(1)
+					else
+						button:SetAlpha(0.33)
+					end
+				else
+					button:SetAlpha(1)
+				end
+			end
+		end
+		Reset = false
 	end
 	if ItemFrame.SearchString then
 		local searchString = ItemFrame.SearchString
@@ -87,7 +102,7 @@ function ItemFrame.UpdateFilter()
 			local text = button.RawName or button.name:GetText()
 			if text and not sfind(slower(text), searchString, 1, true) then
 				button:SetAlpha(FILTER_ALPHA)
-			else
+			elseif Reset then
 				button:SetAlpha(1.0)
 			end
 		end
@@ -100,32 +115,8 @@ function ItemFrame.UpdateFilter()
 	end
 end
 
-function ItemFrame.OnClassFilterUpdate(filterTab)
-	--[[ NEED REWORK
-	if AtlasLoot.db.GUI.classFilter and GUI.__EJData then
-		if not filterTab then
-			AtlasLoot.EncounterJournal:SetLootQuery(GUI.__EJData[1], GUI.__EJData[2], ItemFrame.CurDiff, ItemFrame.CurTier, nil, GUI.frame.contentFrame.clasFilterButton.selectedPlayerSpecID, ItemFrame.OnClassFilterUpdate )
-		else
-			local button
-			for i = 1,30 do
-				button = ItemFrame.frame.ItemButtons[i]
-				if button and button.__atlaslootinfo and not button.__atlaslootinfo.filterIgnore and button.__atlaslootinfo.type and button.__atlaslootinfo.type[1] == "Item" then
-					if button.ItemID and filterTab[button.ItemID] then
-						button:SetAlpha(1)
-					else
-						button:SetAlpha(0.33)
-					end
-				else
-					button:SetAlpha(1)
-				end
-			end
-		end
-	else
-		for i=1,30 do
-			ItemFrame.frame.ItemButtons[i]:SetAlpha(1)
-		end
-	end
-	]]--
+function ItemFrame.OnClassFilterUpdate()
+	ItemFrame.UpdateFilter()
 end
 
 function ItemFrame.OnSearch(msg)

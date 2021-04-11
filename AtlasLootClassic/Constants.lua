@@ -87,3 +87,25 @@ ALPrivate.CLASS_ICON_PATH = {
 	WARLOCK 	= 	ICONS_PATH.."classicon_warlock",
 	DRUID 		= 	ICONS_PATH.."classicon_druid",
 }
+
+ALPrivate.CLASS_BITS = {
+    --NONE 			= 0,
+    WARRIOR 		= 1,
+    PALADIN 		= 2,
+    HUNTER 			= 4,
+    ROGUE 			= 8,
+    PRIEST 			= 16,
+    --DEATHKNIGHT 	= 32,
+    SHAMAN 			= 64,
+    MAGE 			= 128,
+    WARLOCK 		= 256,
+    --MONK	 		= 512,
+    DRUID 			= 1024,
+    --DEMONHUNTER 	= 2048,
+}
+ALPrivate.CLASS_SORT = { "WARRIOR", "PALADIN", "HUNTER", "ROGUE", "PRIEST", "SHAMAN", "MAGE", "WARLOCK", "DRUID" }
+ALPrivate.CLASS_NAME_TO_ID = {}
+for classID = 1, #ALPrivate.CLASS_SORT do ALPrivate.CLASS_NAME_TO_ID[ALPrivate.CLASS_SORT[classID]] = classID end
+
+ALPrivate.LOC_CLASSES = {}
+FillLocalizedClassList(ALPrivate.LOC_CLASSES)
