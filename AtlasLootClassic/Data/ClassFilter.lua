@@ -265,6 +265,8 @@ local function BuildClassFilterList()
             end
         end
     end
+
+    FILTER_DATA = nil
 end
 
 

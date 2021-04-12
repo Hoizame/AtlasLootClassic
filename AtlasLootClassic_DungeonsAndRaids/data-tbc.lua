@@ -2785,8 +2785,8 @@ data["ZulAman"] = {
                 { 20, 33490 }, -- Staff of Dark Mending
                 { 21, 33494 }, -- Amani Divining Staff
                 { 22, 33491 }, -- Tuskbreaker
-                { 24, "INV_Box_01", nil, format(AL["Timed Reward Chest %d"], 4), nil },
-                { 25, 33809 }, -- Amani War Bear
+                { 25, "INV_Box_01", nil, format(AL["Timed Reward Chest %d"], 4), nil },
+                { 26, 33809 }, -- Amani War Bear
             }
         },
         { -- ZATrash

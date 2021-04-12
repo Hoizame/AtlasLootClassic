@@ -118,16 +118,16 @@ local TOKEN = {
 	[19722] = { 19828, 19825, 19838 },	-- Primal Hakkari Tabard
 
 	-- AQ40
-	[21237] = { 21268, 21273, 21275 },														-- Imperial Qiraji Regalia
-	[21232] = { 21242, 21244, 21272, 21269 },												-- Imperial Qiraji Armaments
-	[20928] = { 21333, 21330, 21359, 21361, 21349, 21350, 21365, 21367 },					-- Qiraji Bindings of Command
-	[20932] = { 21388, 21391, 21338, 21335, 21344, 21345, 21355, 21354, 21373, 21376 },		-- Qiraji Bindings of Dominance
-	[20930] = { 21387, 21360, 21353, 21372, 21366 },										-- Vek'lor's Diadem
-	[20926] = { 21329, 21337, 21347, 21348 },												-- Vek'nilash's Circlet
-	[20927] = { 21332, 21362, 21346, 21352 },												-- Ouro's Intact Hide
-	[20931] = { 21390, 21336, 21356, 21375, 21368 },										-- Skin of the Great Sandworm
-	[20929] = { 21389, 21331, 21364, 21374, 21370 },										-- Carapace of the Old God
-	[20933] = { 21334, 21343, 21357, 21351 },												-- Ouro's Intact Hide
+	[21237] = { 21268, 21273, 21275 },			-- Imperial Qiraji Regalia
+	[21232] = { 21242, 21244, 21272, 21269 },	-- Imperial Qiraji Armaments
+	[20928] = { ICONS.WARRIOR, 21330, 21333, 0, ICONS.HUNTER, 21367, 21365, 0, ICONS.ROGUE, 21361, 21359, 0, ICONS.PRIEST, 21350, 21349  }, -- Qiraji Bindings of Command
+	[20932] = { ICONS.PALADIN, 21391, 21388, 0, ICONS.SHAMAN, 21376, 21373, 0, ICONS.MAGE, 21345, 21344, 0, ICONS.WARLOCK, 21335, 21338, 0, ICONS.DRUID, 21354, 21355 }, -- Qiraji Bindings of Dominance
+	[20930] = { ICONS.PALADIN, 21387, 0, ICONS.HUNTER, 21366, 0, ICONS.ROGUE, 21360, 0, ICONS.SHAMAN, 21372, 0, ICONS.DRUID, 21353 }, -- Vek'lor's Diadem
+	[20926] = { ICONS.WARRIOR, 21329, 0, ICONS.PRIEST, 21348, 0, ICONS.MAGE, 21347, 0, ICONS.WARLOCK, 21337 }, -- Vek'nilash's Circlet
+	[20927] = { ICONS.WARRIOR, 21332, 0, ICONS.ROGUE, 21362, 0, ICONS.PRIEST, 21352, 0, ICONS.MAGE, 21346 }, -- Ouro's Intact Hide
+	[20931] = { ICONS.PALADIN, 21390, 0, ICONS.HUNTER, 21368, 0, ICONS.SHAMAN, 21375, 0, ICONS.WARLOCK, 21336, 0, ICONS.DRUID, 21356 }, -- Skin of the Great Sandworm
+	[20929] = { ICONS.WARRIOR, 21331, 0, ICONS.PALADIN, 21389, 0, ICONS.HUNTER, 21370, 0, ICONS.ROGUE, 21364, 0, ICONS.SHAMAN, 21374 }, -- Carapace of the Old God
+	[20933] = { ICONS.PRIEST, 21351, 0, ICONS.MAGE, 21343, 0, ICONS.WARLOCK, 21334, 0, ICONS.DRUID, 21357 }, -- Husk of the Old God
 
 	-- AQ20
 	[20888] = { 21405, 21411, 21417, 21402 },			-- Qiraji Ceremonial Ring
