@@ -44,7 +44,7 @@ local TOKEN = {
 	-- Dire Maul books
 	[18401] = { 18348 },	-- Foror's Compendium of Dragon Slaying
 	[18362] = { 18469, type = "PRIEST" },	-- Holy Bologna: What the Light Won't Tell You
-	[18358] = { 18468, type = "MAGE" },	-- The Arcanist's Cookbook
+	[18358] = { 18468, type = "MAGE" },		-- The Arcanist's Cookbook
 	[18360] = { 18467, type = "WARLOCK" },	-- Harnessing Shadows
 	[18356] = { 18465, type = "ROGUE" },	-- Garona: A Study on Stealth and Treachery
 	[18364] = { 18470, type = "DRUID" },	-- The Emerald Dream
@@ -118,24 +118,24 @@ local TOKEN = {
 	[19722] = { 19828, 19825, 19838 },	-- Primal Hakkari Tabard
 
 	-- AQ40
-	[21237] = { 21268, 21273, 21275 },			-- Imperial Qiraji Regalia
-	[21232] = { 21242, 21244, 21272, 21269 },	-- Imperial Qiraji Armaments
-	[20928] = { ICONS.WARRIOR, 21330, 21333, 0, ICONS.HUNTER, 21367, 21365, 0, ICONS.ROGUE, 21361, 21359, 0, ICONS.PRIEST, 21350, 21349  }, -- Qiraji Bindings of Command
-	[20932] = { ICONS.PALADIN, 21391, 21388, 0, ICONS.SHAMAN, 21376, 21373, 0, ICONS.MAGE, 21345, 21344, 0, ICONS.WARLOCK, 21335, 21338, 0, ICONS.DRUID, 21354, 21355 }, -- Qiraji Bindings of Dominance
-	[20930] = { ICONS.PALADIN, 21387, 0, ICONS.HUNTER, 21366, 0, ICONS.ROGUE, 21360, 0, ICONS.SHAMAN, 21372, 0, ICONS.DRUID, 21353 }, -- Vek'lor's Diadem
-	[20926] = { ICONS.WARRIOR, 21329, 0, ICONS.PRIEST, 21348, 0, ICONS.MAGE, 21347, 0, ICONS.WARLOCK, 21337 }, -- Vek'nilash's Circlet
-	[20927] = { ICONS.WARRIOR, 21332, 0, ICONS.ROGUE, 21362, 0, ICONS.PRIEST, 21352, 0, ICONS.MAGE, 21346 }, -- Ouro's Intact Hide
-	[20931] = { ICONS.PALADIN, 21390, 0, ICONS.HUNTER, 21368, 0, ICONS.SHAMAN, 21375, 0, ICONS.WARLOCK, 21336, 0, ICONS.DRUID, 21356 }, -- Skin of the Great Sandworm
-	[20929] = { ICONS.WARRIOR, 21331, 0, ICONS.PALADIN, 21389, 0, ICONS.HUNTER, 21370, 0, ICONS.ROGUE, 21364, 0, ICONS.SHAMAN, 21374 }, -- Carapace of the Old God
-	[20933] = { ICONS.PRIEST, 21351, 0, ICONS.MAGE, 21343, 0, ICONS.WARLOCK, 21334, 0, ICONS.DRUID, 21357 }, -- Husk of the Old God
+	[21237] = { 21268, 21273, 21275, type = 6 },			-- Imperial Qiraji Regalia
+	[21232] = { 21242, 21244, 21272, 21269, type = 6 },	-- Imperial Qiraji Armaments
+	[20928] = { ICONS.WARRIOR, 21330, 21333, 0, ICONS.HUNTER, 21367, 21365, 0, ICONS.ROGUE, 21361, 21359, 0, ICONS.PRIEST, 21350, 21349, type = 6  }, -- Qiraji Bindings of Command
+	[20932] = { ICONS.PALADIN, 21391, 21388, 0, ICONS.SHAMAN, 21376, 21373, 0, ICONS.MAGE, 21345, 21344, 0, ICONS.WARLOCK, 21335, 21338, 0, ICONS.DRUID, 21354, 21355, type = 6 }, -- Qiraji Bindings of Dominance
+	[20930] = { ICONS.PALADIN, 21387, 0, ICONS.HUNTER, 21366, 0, ICONS.ROGUE, 21360, 0, ICONS.SHAMAN, 21372, 0, ICONS.DRUID, 21353, type = 6 }, -- Vek'lor's Diadem
+	[20926] = { ICONS.WARRIOR, 21329, 0, ICONS.PRIEST, 21348, 0, ICONS.MAGE, 21347, 0, ICONS.WARLOCK, 21337, type = 6 }, -- Vek'nilash's Circlet
+	[20927] = { ICONS.WARRIOR, 21332, 0, ICONS.ROGUE, 21362, 0, ICONS.PRIEST, 21352, 0, ICONS.MAGE, 21346, type = 6 }, -- Ouro's Intact Hide
+	[20931] = { ICONS.PALADIN, 21390, 0, ICONS.HUNTER, 21368, 0, ICONS.SHAMAN, 21375, 0, ICONS.WARLOCK, 21336, 0, ICONS.DRUID, 21356, type = 6 }, -- Skin of the Great Sandworm
+	[20929] = { ICONS.WARRIOR, 21331, 0, ICONS.PALADIN, 21389, 0, ICONS.HUNTER, 21370, 0, ICONS.ROGUE, 21364, 0, ICONS.SHAMAN, 21374, type = 6 }, -- Carapace of the Old God
+	[20933] = { ICONS.PRIEST, 21351, 0, ICONS.MAGE, 21343, 0, ICONS.WARLOCK, 21334, 0, ICONS.DRUID, 21357, type = 6 }, -- Husk of the Old God
 
 	-- AQ20
-	[20888] = { 21405, 21411, 21417, 21402 },			-- Qiraji Ceremonial Ring
-	[20884] = { 21408, 21414, 21396, 21399, 21393 },	-- Qiraji Magisterial Ring
-	[20885] = { 21406, 21394, 21415, 21412 },			-- Qiraji Martial Drape
-	[20889] = { 21397, 21409, 21400, 21403, 21418 },	-- Qiraji Regal Drape
-	[20890] = { 21413, 21410, 21416, 21407 },			-- Qiraji Ornate Hilt
-	[20886] = { 21395, 21404, 21398, 21401, 21392 },	-- Qiraji Spiked Hilt
+	[20888] = { ICONS.HUNTER, 21402, 0, ICONS.ROGUE, 21405, 0, ICONS.PRIEST, 21411, 0, ICONS.WARLOCK, 21417, type = 6 },							-- Qiraji Ceremonial Ring
+	[20884] = { ICONS.WARRIOR, 21393, 0, ICONS.PALADIN, 21396, 0, ICONS.SHAMAN, 21399, 0, ICONS.MAGE, 21414, 0, ICONS.DRUID, 21408, type = 6 },		-- Qiraji Magisterial Ring
+	[20885] = { ICONS.WARRIOR, 21394, 0, ICONS.ROGUE, 21406, 0, ICONS.PRIEST, 21412, 0, ICONS.MAGE, 21415, type = 6 },								-- Qiraji Martial Drape
+	[20889] = { ICONS.PALADIN, 21397, 0, ICONS.HUNTER, 21403, 0, ICONS.SHAMAN, 21400, 0, ICONS.WARLOCK, 21418, 0, ICONS.DRUID, 21409, type = 6 },	-- Qiraji Regal Drape
+	[20890] = { ICONS.PRIEST, 21410, 0, ICONS.MAGE, 21413, 0, ICONS.WARLOCK, 21416, 0, ICONS.DRUID, 21407, type = 6 },								-- Qiraji Ornate Hilt
+	[20886] = { ICONS.WARRIOR, 21392, 0, ICONS.PALADIN, 21395, 0, ICONS.HUNTER, 21401, 0, ICONS.ROGUE, 21404, 0, ICONS.SHAMAN, 21398, type = 6  },	-- Qiraji Spiked Hilt
 
 	-- Tier 3
 	[22360] = { ICONS.PALADIN, 22428, 0, ICONS.HUNTER, 22438, 0, ICONS.SHAMAN, 22466, 0, ICONS.DRUID, 22490, type = 6 }, -- Desecrated Headpiece
