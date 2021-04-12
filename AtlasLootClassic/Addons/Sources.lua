@@ -95,6 +95,10 @@ local function BuildSource(ini, boss, typ, item, isHeroic)
                 end
             end
             if recipe and sourceData then
+                if type(sourceData.ItemData[item]) == "number" then
+                    sourceData.ItemData[item] = sourceData.ItemData[sourceData.ItemData[item]]
+                end
+
                 local data = sourceData.ItemData[recipe]
                 src = format(TT_F, RECIPE_ICON, BuildSource(sourceData.AtlasLootIDs[data[1]],data[2],data[3],data[4] or item))
                 src = "\n"..src
@@ -157,6 +161,9 @@ local function OnTooltipSetItem_Hook(self)
     end
 
     if item and sourceData then
+        if type(sourceData.ItemData[item]) == "number" then
+            item = sourceData.ItemData[item]
+        end
         if TooltipTextCache[item] ~= false then
             if not TooltipTextCache[item] then
                 TooltipTextCache[item] = {}

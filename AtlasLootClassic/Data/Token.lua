@@ -8,8 +8,6 @@ local AL = AtlasLoot.Locales
 local type, pairs = type, pairs
 local format = format
 
-local CLASS_ICON_PATH = ALPrivate.CLASS_ICON_PATH
-
 local TOKEN_FORMAT_STRING = "|cff00ff00"..AL["L-Click"]..":|r %s"
 local TOKEN_TYPE_DEFAULT = 1
 local TOKEN_TYPE_TEXT = {
@@ -419,3 +417,9 @@ end
 function Token.GetTokenType(itemID)
 	return ( itemID and TOKEN[itemID] ) and (TOKEN[itemID].type or TOKEN_TYPE_DEFAULT) or nil
 end
+
+--@debug@
+function Token.GetFullTokenTable()
+	return TOKEN
+end
+--@end-debug@
