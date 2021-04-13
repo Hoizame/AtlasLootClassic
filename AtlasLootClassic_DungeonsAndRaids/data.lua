@@ -4904,9 +4904,7 @@ data["Stratholme"] = {
 			IgnoreAsSource = true,
 			[NORMAL_DIFF] = {
 				{ 1,  12827 }, -- Plans: Serenity
-				{ 2,  12781 }, -- Serenity
 				{ 16,  12830 }, -- Plans: Corruption
-				{ 17,  12782 }, -- Corruption
 			},
 		},
 		{ -- STRATAtiesh

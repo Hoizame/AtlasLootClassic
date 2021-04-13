@@ -21,7 +21,7 @@ local format = format
 -- locals
 local TT_F = "%s |cFF00ccff%s|r"
 local DUMMY_ICON = "Interface\\Icons\\INV_Misc_QuestionMark"
-local TEXTURE_ICON_F, ATLAS_ICON_F = "|T%s:0|t ", "|A:%s:0:0|a "
+local TEXTURE_ICON_F, TEXTURE_ICON_FN, ATLAS_ICON_F = "|T%s:0|t ", "|T%d:0|t ", "|A:%s:0:0|a "
 local RECIPE_ICON = format(TEXTURE_ICON_F, "134939")
 local ICON_TEXTURE = {
     [0]  = format(TEXTURE_ICON_F, DUMMY_ICON),	            -- UNKNOWN
@@ -161,23 +161,25 @@ local function OnTooltipSetItem_Hook(self)
     end
 
     if item and sourceData then
+        local iconTexture, baseItem
         if type(sourceData.ItemData[item]) == "number" then
-            item = sourceData.ItemData[item]
+            iconTexture = format(TEXTURE_ICON_FN, GetItemIcon(sourceData.ItemData[item]))
+            baseItem = sourceData.ItemData[item]
         end
         if TooltipTextCache[item] ~= false then
             if not TooltipTextCache[item] then
                 TooltipTextCache[item] = {}
-                if type(sourceData.ItemData[item][1]) == "table" then
-                    for i = 1, #sourceData.ItemData[item] do
-                        local data = sourceData.ItemData[item][i]
+                if type(sourceData.ItemData[baseItem or item][1]) == "table" then
+                    for i = 1, #sourceData.ItemData[baseItem or item] do
+                        local data = sourceData.ItemData[baseItem or item][i]
                         if data[3] and Sources.db.Sources[data[3]] then
-                            TooltipTextCache[item][i] = format(TT_F, ICON_TEXTURE[data[3] or 0], BuildSource(sourceData.AtlasLootIDs[data[1]], data[2], data[3], data[4] or item, data[5]))
+                            TooltipTextCache[item][i] = format(TT_F, iconTexture or ICON_TEXTURE[data[3] or 0], BuildSource(sourceData.AtlasLootIDs[data[1]], data[2], data[3], data[4] or baseItem or item, data[5]))
                         end
                     end
                 else
-                    local data = sourceData.ItemData[item]
+                    local data = sourceData.ItemData[baseItem or item]
                     if data[3] and Sources.db.Sources[data[3]] then
-                        TooltipTextCache[item][1] = format(TT_F, ICON_TEXTURE[data[3] or 0], BuildSource(sourceData.AtlasLootIDs[data[1]], data[2], data[3], data[4] or item, data[5]))
+                        TooltipTextCache[item][1] = format(TT_F, iconTexture or ICON_TEXTURE[data[3] or 0], BuildSource(sourceData.AtlasLootIDs[data[1]], data[2], data[3], data[4] or baseItem or item, data[5]))
                     end
                 end
                 if #TooltipTextCache[item] < 1 then
