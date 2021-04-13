@@ -105,15 +105,15 @@ local TOKEN = {
 	[19236] = 19228,	-- Eight of Beasts
 
 	-- Zul'Gurub
-	[19724] = { 19841, 19834, 19831 },	-- Primal Hakkari Aegis
-	[19717] = { 19830, 19836, 19824 },	-- Primal Hakkari Armsplint
-	[19716] = { 19827, 19846, 19833 },	-- Primal Hakkari Bindings
-	[19719] = { 19829, 19835, 19823 },	-- Primal Hakkari Girdle
-	[19723] = { 20033, 20034, 19822 },	-- Primal Hakkari Kossack
-	[19720] = { 19842, 19849, 19839 },	-- Primal Hakkari Sash
-	[19721] = { 19826, 19845, 19832 },	-- Primal Hakkari Shawl
-	[19718] = { 19843, 19848, 19840 },	-- Primal Hakkari Stanchion
-	[19722] = { 19828, 19825, 19838 },	-- Primal Hakkari Tabard
+	[19724] = { ICONS.HUNTER, 19831, 0, ICONS.ROGUE, 19834, 0, ICONS.PRIEST, 19841, type = 6 },		-- Primal Hakkari Aegis
+	[19717] = { ICONS.WARRIOR, 19824, 0, ICONS.ROGUE, 19836, 0, ICONS.SHAMAN, 19830, type = 6 },	-- Primal Hakkari Armsplint
+	[19716] = { ICONS.PALADIN, 19827, 0, ICONS.HUNTER, 19833, 0, ICONS.MAGE, 19846, type = 6 },		-- Primal Hakkari Bindings
+	[19719] = { ICONS.WARRIOR, 19823, 0, ICONS.ROGUE, 19835, 0, ICONS.SHAMAN, 19829, type = 6 },	-- Primal Hakkari Girdle
+	[19723] = { ICONS.WARRIOR, 19822, 0, ICONS.MAGE, 20034, 0, ICONS.WARLOCK, 20033, type = 6 },	-- Primal Hakkari Kossack
+	[19720] = { ICONS.PRIEST, 19842, 0, ICONS.WARLOCK, 19849, 0, ICONS.DRUID, 19839, type = 6 },	-- Primal Hakkari Sash
+	[19721] = { ICONS.PALADIN, 19826, 0, ICONS.HUNTER, 19832, 0, ICONS.MAGE, 19845, type = 6 },		-- Primal Hakkari Shawl
+	[19718] = { ICONS.PRIEST, 19843, 0, ICONS.WARLOCK, 19848, 0, ICONS.DRUID, 19840, type = 6 },	-- Primal Hakkari Stanchion
+	[19722] = { ICONS.PALADIN, 19825, 0, ICONS.SHAMAN, 19828, 0, ICONS.DRUID, 19838, type = 6 },	-- Primal Hakkari Tabard
 
 	-- AQ40
 	[21237] = { 21268, 21273, 21275, type = 6 },			-- Imperial Qiraji Regalia
