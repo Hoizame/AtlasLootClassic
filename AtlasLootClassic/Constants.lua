@@ -103,6 +103,8 @@ ALPrivate.CLASS_BITS = {
     DRUID 			= 1024,
     --DEMONHUNTER 	= 2048,
 }
+ALPrivate.CLASS_BIT_TO_CLASS = {}
+for k,v in pairs(ALPrivate.CLASS_BITS) do ALPrivate.CLASS_BIT_TO_CLASS[v] = k end
 ALPrivate.CLASS_SORT = { "WARRIOR", "PALADIN", "HUNTER", "ROGUE", "PRIEST", "SHAMAN", "MAGE", "WARLOCK", "DRUID" }
 ALPrivate.CLASS_NAME_TO_ID = {}
 for classID = 1, #ALPrivate.CLASS_SORT do ALPrivate.CLASS_NAME_TO_ID[ALPrivate.CLASS_SORT[classID]] = classID end

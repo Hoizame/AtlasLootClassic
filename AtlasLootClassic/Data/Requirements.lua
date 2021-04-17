@@ -5346,7 +5346,8 @@ local PVP_RANK = {
 for k,v in ipairs(PVP_RANK) do v[4] = format(TEXTURE_STRING_ID, v[3]) end
 local ClassStrings = {}
 
-local function BuildClassString(classBit)
+function Requirements.BuildClassString(classBit)
+	if classBit <= 0 then return "" end
 	if not ClassStrings[classBit] then
 		local output = ""
 		local counter = 0
@@ -5404,7 +5405,7 @@ function Requirements.GetReqString(itemID, noClass, noPvP)
 			ret = ret..PVP_RANK[data[2]][4]
 		end
 		if not noClass and data[1] then
-			ret = ret..BuildClassString(data[1])
+			ret = ret..Requirements.BuildClassString(data[1])
 		end
 		return ret
 	end

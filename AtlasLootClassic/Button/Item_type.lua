@@ -10,6 +10,7 @@ local Token = AtlasLoot.Data.Token
 local Recipe = AtlasLoot.Data.Recipe
 local Profession = AtlasLoot.Data.Profession
 local Sets = AtlasLoot.Data.Sets
+local ItemSet = AtlasLoot.Data.ItemSet
 local Mount = AtlasLoot.Data.Mount
 local ContentPhase = AtlasLoot.Data.ContentPhase
 local Droprate = AtlasLoot.Data.Droprate
@@ -96,7 +97,7 @@ function Item.OnSet(button, second)
 			end
 		end
 		button.secButton.Droprate = button.__atlaslootinfo.Droprate
-		button.secButton.SetID = Sets:GetItemSetForItemID(button.secButton.ItemID)
+		button.secButton.SetID = ItemSet.GetSetIDforItemID(button.secButton.ItemID)
 
 		Item.Refresh(button.secButton)
 	else
@@ -140,7 +141,7 @@ function Item.OnMouseAction(button, mouseButton)
 			AtlasLoot.Button:ExtraItemFrame_GetFrame(button, Recipe.GetRecipeDataForExtraFrame(button.ItemID))
 		elseif button.type ~= "secButton" and ( button.SetData or Sets:GetItemSetForItemID(button.ItemID) ) then -- sec buttons should not be clickable for sets
 			if not button.SetData then
-				button.SetData = Sets:GetSetItems(Sets:GetItemSetForItemID(button.ItemID))
+				button.SetData = ItemSet.GetSetDataForExtraFrame(ItemSet:GetSetIDforItemID(button.ItemID))
 			end
 			button.ExtraFrameShown = true
 			AtlasLoot.Button:ExtraItemFrame_GetFrame(button, button.SetData)
@@ -310,7 +311,7 @@ function Item.Refresh(button)
 			Recipe.GetRecipeDescriptionWithRank(itemID) or
 			Profession.GetColorSkillRankItem(itemID) or
 			(Mount.IsMount(button.ItemID) and ALIL["Mount"] or nil) or
-			( Sets:GetItemSetForItemID(itemID) and AL["|cff00ff00Set item:|r "] or "")..GetItemDescInfo(itemEquipLoc, itemType, itemSubType)
+			( ItemSet.GetSetIDforItemID(itemID) and AL["|cff00ff00Set item:|r "] or "")..GetItemDescInfo(itemEquipLoc, itemType, itemSubType)
 		)
 		if Requirements.HasRequirements(itemID) then
 			button.extra:SetText(Requirements.GetReqString(itemID)..button.extra:GetText())

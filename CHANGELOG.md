@@ -8,6 +8,7 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 
 - reimplement a basic class filter for loot pages
 - add source tooltip support for tokens
+- add average item level and class icons for item sets
 - (classic) move Lady Falther'ess from Razorfen Downs into extra list and mark as Scourge Invasions npc
 - (classic) add class icons for tokens from: Nax, AQ40, AQ20, ZG
 - (bc) add bc support
@@ -15,3 +16,4 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 - (bc) add Tier token items
 - (bc) add factions
 - (bc) add tooltip source support
+- (bc) add item sets data

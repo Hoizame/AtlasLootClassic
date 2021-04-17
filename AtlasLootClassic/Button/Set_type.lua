@@ -4,7 +4,7 @@ local Set = AtlasLoot.Button:AddType("Set", "set")
 local AL = AtlasLoot.Locales
 local ALIL = AtlasLoot.IngameLocales
 local ClickHandler = AtlasLoot.ClickHandler
-local Sets
+local ItemSet
 
 --local db
 
@@ -18,7 +18,6 @@ local GetAlTooltip = AtlasLoot.Tooltip.GetTooltip
 local SetClickHandler = nil
 
 local CLASS_COLOR_FORMAT = "|c%s%s|r"
-local CLASS_NAMES_WITH_COLORS = {}
 
 ClickHandler:Add(
 	"Set",
@@ -46,29 +45,27 @@ function Set.OnSet(button, second)
 	if not SetClickHandler then
 		SetClickHandler = ClickHandler:GetHandler("Set")
 
-		CLASS_NAMES_WITH_COLORS = AtlasLoot:GetColoredClassNames()
-
-		Sets = AtlasLoot.Data.Sets
+		ItemSet = AtlasLoot.Data.ItemSet
 	end
 	if not button then return end
 	if second and button.__atlaslootinfo.secType then
 		button.secButton.SetID = button.__atlaslootinfo.secType[2]
 
-		local name, items, icon, classID, className = Sets:GetItemSetData(button.secButton.SetID)
-		button.secButton.SetName = name
-		button.secButton.Items = items
-		button.secButton.SetIcon = icon
-		button.secButton.SetClassName = className
+		button.secButton.SetName = ItemSet.GetSetName(button.secButton.SetID, true)
+		button.secButton.Items = ItemSet.GetSetItems(button.secButton.SetID)
+		button.secButton.ExtraFrameData = ItemSet.GetSetDataForExtraFrame(button.secButton.SetID)
+		button.secButton.SetIcon = ItemSet.GetSetIcon(button.secButton.SetID, true)
+		button.secButton.SetDescription = ItemSet.GetSetDescriptionString(button.secButton.SetID)
 
 		Set.Refresh(button.secButton)
 	else
 		button.SetID = button.__atlaslootinfo.type[2]
 
-		local name, items, icon, classID, className = Sets:GetItemSetData(button.SetID)
-		button.SetName = name
-		button.Items = items
-		button.SetIcon = icon
-		button.SetClassName = className
+		button.SetName = ItemSet.GetSetName(button.SetID, true)
+		button.Items = ItemSet.GetSetItems(button.SetID)
+		button.ExtraFrameData = ItemSet.GetSetDataForExtraFrame(button.SetID)
+		button.SetIcon = ItemSet.GetSetIcon(button.SetID, true)
+		button.SetDescription = ItemSet.GetSetDescriptionString(button.SetID)
 
 		Set.Refresh(button)
 	end
@@ -121,16 +118,21 @@ end
 function Set.OnClear(button)
 	button.SetName = nil
 	button.Items = nil
+	button.ExtraFrameData = nil
 	button.SetIcon = nil
-	button.SetClassName = nil
+	button.SetDescription = nil
 	button.SetID = nil
 
 	button.secButton.SetName = nil
 	button.secButton.Items = nil
+	button.secButton.ExtraFrameData = nil
 	button.secButton.SetIcon = nil
-	button.secButton.SetClassName = nil
+	button.secButton.SetDescription = nil
 	button.secButton.SetID = nil
-	AtlasLoot.Button:ExtraItemFrame_ClearFrame()
+	if button.ExtraFrameShown then
+		AtlasLoot.Button:ExtraItemFrame_ClearFrame()
+		button.ExtraFrameShown = false
+	end
 end
 
 function Set.Refresh(button)
@@ -138,13 +140,13 @@ function Set.Refresh(button)
 		button:SetNormalTexture(button.SetIcon)
 	else
 		button.icon:SetTexture(button.SetIcon)
-		button.name:SetText(Sets:GetSetColor(button.SetID)..button.SetName)
-		if button.SetClassName then
-			button.extra:SetText(CLASS_NAMES_WITH_COLORS[button.SetClassName])
+		button.name:SetText(button.SetName)
+		if button.SetDescription then
+			button.extra:SetText(button.SetDescription)
 		end
 	end
 	if AtlasLoot.db.ContentPhase.enableOnSets then
-		local phaseT, active = Sets:GetPhaseTextureForSetID(button.SetID)
+		local phaseT, active = ItemSet.GetPhaseTextureForSetID(button.SetID)
 		if phaseT and not active then
 			button.phaseIndicator:SetTexture(phaseT)
 			button.phaseIndicator:Show()
@@ -163,8 +165,9 @@ end
 -- #########
 
 function Set.OnClickItemList(button)
-	if not button.Items then return end
-	AtlasLoot.Button:ExtraItemFrame_GetFrame(button, button.Items)
+	if not button.ExtraFrameData then return end
+	button.ExtraFrameShown = true
+	AtlasLoot.Button:ExtraItemFrame_GetFrame(button, button.ExtraFrameData)
 end
 
 function Set.ShowToolTipFrame(button)

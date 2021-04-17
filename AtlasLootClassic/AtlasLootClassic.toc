@@ -4,7 +4,7 @@
 ## Author: Lag
 ## Version: @project-version@
 ## SavedVariables: AtlasLootClassicDB
-## OptionalDeps: Ace3, LibSharedMedia-3.0, AceGUI-3.0-SharedMediaWidgets, LibDBIcon-1.0, LibDataBroker-1.1, LibClassicItemSets-1.0
+## OptionalDeps: Ace3, LibSharedMedia-3.0, AceGUI-3.0-SharedMediaWidgets, LibDBIcon-1.0, LibDataBroker-1.1
 ## DefaultState: Enabled
 ## LoadOnDemand: 0
 
@@ -64,7 +64,6 @@ Core\TargetScan.lua
 MiniMapButton.lua
 
 Data\Token.lua
-Data\Sets.lua
 Data\Profession.lua
 Data\Recipe.lua
 Data\Mount.lua
@@ -73,6 +72,7 @@ Data\Droprate.lua
 Data\AutoSelect.lua
 Data\Requirements.lua
 Data\ClassFilter.lua
+Data\ItemSet.lua
 
 ItemDB\ItemDB.lua
 ItemDB\SoundData.lua
