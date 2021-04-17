@@ -46,51 +46,11 @@ local WORLD_EVENT_CONTENT = data:AddContentType(AL["World Events"], ATLASLOOT_SE
 data["TierSets"] = {
 	name = AL["Tier Sets"],
 	ContentType = SET_CONTENT,
-	LoadDifficulty = LOAD_DIFF,
 	TableType = SET_ITTYPE,
 	items = {
-		{ -- T0
-			name = format(AL["Tier %s Sets"], "0"),
-			[ALLIANCE_DIFF] = {
-				{ 1, 183 }, -- Warlock
-				{ 3, 182 }, -- Priest
-				{ 16, 181 }, -- Mage
-				{ 5, 184 }, -- Rogue
-				{ 20, 185 }, -- Druid
-				{ 7, 186 }, -- Hunter
-				{ 9, 189 }, -- Warrior
-				{ 24, 188 }, -- Paladin
-			},
-
-			[HORDE_DIFF] = {
-				GetItemsFromDiff = ALLIANCE_DIFF,
-				{ 22, 187 }, -- Shaman
-				{ 24 }, -- Paladin
-			},
-		},
-		{ -- T0.5
-			name = format(AL["Tier %s Sets"], "0.5"),
-			ContentPhase = 5,
-			[ALLIANCE_DIFF] = {
-				{ 1, 518 }, -- Warlock
-				{ 3, 514 }, -- Priest
-				{ 16, 517 }, -- Mage
-				{ 5, 512 }, -- Rogue
-				{ 20, 513 }, -- Druid
-				{ 7, 515 }, -- Hunter
-				{ 9, 511 }, -- Warrior
-				{ 24, 516 }, -- Paladin
-			},
-
-			[HORDE_DIFF] = {
-				GetItemsFromDiff = ALLIANCE_DIFF,
-				{ 22, 519 }, -- Shaman
-				{ 24 }, -- Paladin
-			},
-		},
 		{ -- T1
 			name = format(AL["Tier %s Sets"], "1"),
-			[ALLIANCE_DIFF] = {
+			[NORMAL_DIFF] = {
 				{ 1, 203 }, -- Warlock
 				{ 3, 202 }, -- Priest
 				{ 16, 201 }, -- Mage
@@ -98,19 +58,13 @@ data["TierSets"] = {
 				{ 20, 205 }, -- Druid
 				{ 7, 206 }, -- Hunter
 				{ 9, 209 }, -- Warrior
-				{ 24, 208 }, -- Paladin
-			},
-
-			[HORDE_DIFF] = {
-				GetItemsFromDiff = ALLIANCE_DIFF,
 				{ 22, 207 }, -- Shaman
-				{ 24 }, -- Paladin
+				{ 24, 208 }, -- Paladin
 			},
 		},
 		{ -- T2
 			name = format(AL["Tier %s Sets"], "2"),
-			ContentPhase = 3,
-			[ALLIANCE_DIFF] = {
+			[NORMAL_DIFF] = {
 				{ 1, 212 }, -- Warlock
 				{ 3, 211 }, -- Priest
 				{ 16, 210 }, -- Mage
@@ -118,19 +72,13 @@ data["TierSets"] = {
 				{ 20, 214 }, -- Druid
 				{ 7, 215 }, -- Hunter
 				{ 9, 218 }, -- Warrior
-				{ 24, 217 }, -- Paladin
-			},
-
-			[HORDE_DIFF] = {
-				GetItemsFromDiff = ALLIANCE_DIFF,
 				{ 22, 216 }, -- Shaman
-				{ 24 }, -- Paladin
+				{ 24, 217 }, -- Paladin
 			},
 		},
 		{ -- T3
 			name = format(AL["Tier %s Sets"], "3"),
-			ContentPhase = 6,
-			[ALLIANCE_DIFF] = {
+			[NORMAL_DIFF] = {
 				{ 1, 529 }, -- Warlock
 				{ 3, 525 }, -- Priest
 				{ 16, 526 }, -- Mage
@@ -138,16 +86,135 @@ data["TierSets"] = {
 				{ 20, 521 }, -- Druid
 				{ 7, 530 }, -- Hunter
 				{ 9, 523 }, -- Warrior
+				{ 22, 527 }, -- Shaman
 				{ 24, 528 }, -- Paladin
 			},
-
-			[HORDE_DIFF] = {
-				GetItemsFromDiff = ALLIANCE_DIFF,
-				{ 22, 527 }, -- Shaman
-				{ 24 }, -- Paladin
+		},
+--@version-bc@
+		{ -- T4
+			name = format(AL["Tier %s Sets"], "4"),
+			[NORMAL_DIFF] = {
+				{ 1,    645 }, -- Warlock
+				{ 3,    663 }, -- Priest / Heal
+				{ 4,    664 }, -- Priest / Shadow
+				{ 6,    621 }, -- Rogue
+				{ 8,    651 }, -- Hunter
+				{ 10,    654 }, -- Warrior / Prot
+				{ 11,    655 }, -- Warrior / DD
+				{ 16,   648 }, -- Mage
+				{ 18,   638 }, -- Druid / Heal
+				{ 19,   639 }, -- Druid / Owl
+				{ 20,   640 }, -- Druid / Feral
+				{ 22,   631 }, -- Shaman / Heal
+				{ 23,   632 }, -- Shaman / Ele
+				{ 24,   633 }, -- Shaman / Enh
+				{ 26,   624 }, -- Paladin / Heal
+				{ 27,   625 }, -- Paladin / Prot
+				{ 28,   626 }, -- Paladin / DD
 			},
 		},
+		{ -- T5
+			name = format(AL["Tier %s Sets"], "5"),
+			[NORMAL_DIFF] = {
+				{ 1,    646 }, -- Warlock
+				{ 3,    665 }, -- Priest / Heal
+				{ 4,    666 }, -- Priest / Shadow
+				{ 6,    622 }, -- Rogue
+				{ 8,    652 }, -- Hunter
+				{ 10,    656 }, -- Warrior / Prot
+				{ 11,    657 }, -- Warrior / DD
+				{ 16,   649 }, -- Mage
+				{ 18,   642 }, -- Druid / Heal
+				{ 19,   643 }, -- Druid / Owl
+				{ 20,   641 }, -- Druid / Feral
+				{ 22,   634 }, -- Shaman / Heal
+				{ 23,   635 }, -- Shaman / Ele
+				{ 24,   636 }, -- Shaman / Enh
+				{ 26,   627 }, -- Paladin / Heal
+				{ 27,   628 }, -- Paladin / Prot
+				{ 28,   629 }, -- Paladin / DD
+			},
+		},
+		{
+			name = format(AL["Tier %s Sets"], "6"),
+			[NORMAL_DIFF] = {
+				{ 1,    670 }, -- Warlock
+				{ 3,    675 }, -- Priest / Heal
+				{ 4,    674 }, -- Priest / Shadow
+				{ 6,    668 }, -- Rogue
+				{ 8,    669 }, -- Hunter
+				{ 10,    673 }, -- Warrior / Prot
+				{ 11,    672 }, -- Warrior / DD
+				{ 16,   671 }, -- Mage
+				{ 18,   678 }, -- Druid / Heal
+				{ 19,   677 }, -- Druid / Owl
+				{ 20,   676 }, -- Druid / Feral
+				{ 22,   683 }, -- Shaman / Heal
+				{ 23,   684 }, -- Shaman / Ele
+				{ 24,   682 }, -- Shaman / Enh
+				{ 26,   681 }, -- Paladin / Heal
+				{ 27,   679 }, -- Paladin / Prot
+				{ 28,   680 }, -- Paladin / DD
+			},
+		},
+--@end-version-bc@
 	},
+}
+
+data["DungeonSets"] = {
+	name = AL["Dungeon Sets"],
+	ContentType = SET_CONTENT,
+	TableType = SET_ITTYPE,
+	items = {
+		{ -- T0 / D1
+			name = format(AL["Dungeon Set %s"], "1"),
+			[NORMAL_DIFF] = {
+				{ 1, 183 }, -- Warlock
+				{ 3, 182 }, -- Priest
+				{ 16, 181 }, -- Mage
+				{ 5, 184 }, -- Rogue
+				{ 20, 185 }, -- Druid
+				{ 7, 186 }, -- Hunter
+				{ 9, 189 }, -- Warrior
+				{ 22, 187 }, -- Shaman
+				{ 24, 188 }, -- Paladin
+			},
+		},
+		{ -- T0.5 / D2
+			name = format(AL["Dungeon Set %s"], "2"),
+			[NORMAL_DIFF] = {
+				{ 1, 518 }, -- Warlock
+				{ 3, 514 }, -- Priest
+				{ 16, 517 }, -- Mage
+				{ 5, 512 }, -- Rogue
+				{ 20, 513 }, -- Druid
+				{ 7, 515 }, -- Hunter
+				{ 9, 511 }, -- Warrior
+				{ 22, 519 }, -- Shaman
+				{ 24, 516 }, -- Paladin
+			},
+		},
+--@version-bc@
+		{ -- T0.5 / D2
+			name = format(AL["Dungeon Set %s"], "3"),
+			[NORMAL_DIFF] = {
+				{ 1, 658 },
+				{ 2, 647 },
+				{ 3, 644 },
+				{ 4, 662 },
+				{ 6, 659 },
+				{ 7, 637 },
+				{ 8, 620 },
+				{ 16, 650 },
+				{ 17, 660 },
+				{ 18, 630 },
+				{ 20, 623 },
+				{ 21, 661 },
+				{ 22, 653 },
+			},
+		},
+--@end-version-bc@
+	}
 }
 
 data["ZGSets"] = {
