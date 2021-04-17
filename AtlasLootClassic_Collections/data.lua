@@ -76,6 +76,20 @@ data["TierSets"] = {
 				{ 24, 217 }, -- Paladin
 			},
 		},
+		{ -- T2.5
+			name = format(AL["Tier %s Sets"], "2.5"),
+			[NORMAL_DIFF] = {
+				{ 1, 499 }, -- Warlock
+				{ 3, 507 }, -- Priest
+				{ 16, 503 }, -- Mage
+				{ 5, 497 }, -- Rogue
+				{ 20, 493 }, -- Druid
+				{ 7, 509 }, -- Hunter
+				{ 9, 496 }, -- Warrior
+				{ 22, 501 }, -- Shaman
+				{ 24, 505 }, -- Paladin
+			},
+		},
 		{ -- T3
 			name = format(AL["Tier %s Sets"], "3"),
 			[NORMAL_DIFF] = {
@@ -331,10 +345,10 @@ data["MiscSets"] = {
 				{ 5,  141 }, -- Volcanic Armor / 54-61
 				{ 6,  143 }, -- Devilsaur Armor / 58-60
 				{ 7,  144 }, -- Ironfeather Armor / 54-58
-				{ 8,  221 }, -- Garb of Thero-shan / 32-42
+				{ 8,  534 }, -- Undead Slayer's Armor / 63
 				{ 9,  161 }, -- Defias Leather / 18-24
 				{ 10,  162 }, -- Embrace of the Viper / 19-23
-				{ 16,  534 }, -- Undead Slayer's Armor / 63
+				{ 16,  221 }, -- Garb of Thero-shan / 32-42
 			},
 		},
 		{ -- Mail
