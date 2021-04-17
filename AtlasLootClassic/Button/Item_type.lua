@@ -139,9 +139,9 @@ function Item.OnMouseAction(button, mouseButton)
 		elseif Recipe.IsRecipe(button.ItemID) then
 			button.ExtraFrameShown = true
 			AtlasLoot.Button:ExtraItemFrame_GetFrame(button, Recipe.GetRecipeDataForExtraFrame(button.ItemID))
-		elseif button.type ~= "secButton" and ( button.SetData or Sets:GetItemSetForItemID(button.ItemID) ) then -- sec buttons should not be clickable for sets
+		elseif button.type ~= "secButton" and ( button.SetData or ItemSet.GetSetIDforItemID(button.ItemID) ) then -- sec buttons should not be clickable for sets
 			if not button.SetData then
-				button.SetData = ItemSet.GetSetDataForExtraFrame(ItemSet:GetSetIDforItemID(button.ItemID))
+				button.SetData = ItemSet.GetSetDataForExtraFrame(ItemSet.GetSetIDforItemID(button.ItemID))
 			end
 			button.ExtraFrameShown = true
 			AtlasLoot.Button:ExtraItemFrame_GetFrame(button, button.SetData)
