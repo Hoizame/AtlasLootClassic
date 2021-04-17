@@ -73,6 +73,86 @@ local KEYS = {	-- Keys
     }
 }
 
+local T4_SET = {
+	name = format(AL["Tier %s Sets"], "4"),
+	ExtraList = true,
+	TableType = SET_ITTYPE,
+	--ContentPhase = 6,
+	IgnoreAsSource = true,
+	[NORMAL_DIFF] = {
+		{ 1,    645 }, -- Warlock
+		{ 3,    663 }, -- Priest / Heal
+        { 4,    664 }, -- Priest / Shadow
+        { 6,    621 }, -- Rogue
+		{ 8,    651 }, -- Hunter
+		{ 10,    654 }, -- Warrior / Prot
+        { 11,    655 }, -- Warrior / DD
+		{ 16,   648 }, -- Mage
+		{ 18,   638 }, -- Druid / Heal
+        { 19,   639 }, -- Druid / Owl
+        { 20,   640 }, -- Druid / Feral
+        { 22,   631 }, -- Shaman / Heal
+        { 23,   632 }, -- Shaman / Ele
+        { 24,   633 }, -- Shaman / Enh
+		{ 26,   624 }, -- Paladin / Heal
+        { 27,   625 }, -- Paladin / Prot
+        { 28,   626 }, -- Paladin / DD
+	},
+}
+
+local T5_SET = {
+	name = format(AL["Tier %s Sets"], "5"),
+	ExtraList = true,
+	TableType = SET_ITTYPE,
+	--ContentPhase = 6,
+	IgnoreAsSource = true,
+	[NORMAL_DIFF] = {
+		{ 1,    646 }, -- Warlock
+		{ 3,    665 }, -- Priest / Heal
+        { 4,    666 }, -- Priest / Shadow
+        { 6,    622 }, -- Rogue
+		{ 8,    652 }, -- Hunter
+		{ 10,    656 }, -- Warrior / Prot
+        { 11,    657 }, -- Warrior / DD
+		{ 16,   649 }, -- Mage
+		{ 18,   642 }, -- Druid / Heal
+        { 19,   643 }, -- Druid / Owl
+        { 20,   641 }, -- Druid / Feral
+        { 22,   634 }, -- Shaman / Heal
+        { 23,   635 }, -- Shaman / Ele
+        { 24,   636 }, -- Shaman / Enh
+		{ 26,   627 }, -- Paladin / Heal
+        { 27,   628 }, -- Paladin / Prot
+        { 28,   629 }, -- Paladin / DD
+	},
+}
+
+local T6_SET = {
+	name = format(AL["Tier %s Sets"], "6"),
+	ExtraList = true,
+	TableType = SET_ITTYPE,
+	--ContentPhase = 6,
+	IgnoreAsSource = true,
+	[NORMAL_DIFF] = {
+		{ 1,    670 }, -- Warlock
+		{ 3,    675 }, -- Priest / Heal
+        { 4,    674 }, -- Priest / Shadow
+        { 6,    668 }, -- Rogue
+		{ 8,    669 }, -- Hunter
+		{ 10,    673 }, -- Warrior / Prot
+        { 11,    672 }, -- Warrior / DD
+		{ 16,   671 }, -- Mage
+		{ 18,   678 }, -- Druid / Heal
+        { 19,   677 }, -- Druid / Owl
+        { 20,   676 }, -- Druid / Feral
+        { 22,   683 }, -- Shaman / Heal
+        { 23,   684 }, -- Shaman / Ele
+        { 24,   682 }, -- Shaman / Enh
+		{ 26,   681 }, -- Paladin / Heal
+        { 27,   679 }, -- Paladin / Prot
+        { 28,   680 }, -- Paladin / DD
+	},
+}
 
 
 data["HellfireRamparts"] = {
@@ -2627,6 +2707,7 @@ data["Karazhan"] = {
                 { 21, 22545 }, -- Formula: Enchant Boots - Surefooted
             }
         },
+        T4_SET
     }
 }
 
@@ -2838,7 +2919,8 @@ data["MagtheridonsLair"] = {
                 { 22, 34845 }, -- Pit Lord's Satchel
                 { 24, 34846 }, -- Black Sack of Gems
             }
-        }
+        },
+        T4_SET
     }
 }
 
@@ -2893,7 +2975,8 @@ data["GruulsLair"] = {
                 { 23, 28826 }, -- Shuriken of Negation
             }
         }
-    }
+    },
+    T4_SET
 }
 
 data["SerpentshrineCavern"] = {
@@ -3061,7 +3144,8 @@ data["SerpentshrineCavern"] = {
                 { 25, 30183 }, -- Nether Vortex
                 { 27, 32897 }, -- Mark of the Illidari
             }
-        }
+        },
+        T5_SET
     }
 }
 
@@ -3207,6 +3291,7 @@ data["TempestKeep"] = {
                 { 27, 32897 }, -- Mark of the Illidari
             }
         },
+        T5_SET
     }
 }
 
@@ -3348,7 +3433,8 @@ data["HyjalSummit"] = {
                 { 22, 32289 }, -- Design: Stormy Empyrean Sapphire
                 { 23, 32307 }, -- Design: Veiled Pyrestone
             }
-        }
+        },
+        T6_SET
     }
 }
 
@@ -3605,7 +3691,8 @@ data["BlackTemple"] = {
                 { 18, 32753 }, -- Pattern: Swiftheal Mantle
                 { 19, 32752 }, -- Pattern: Swiftheal Wraps
             }
-        }
+        },
+        T6_SET
     }
 }
 
@@ -3851,5 +3938,6 @@ data["SunwellPlateau"] = {
                 { 26, 35211 }, -- Plans: Hard Khorium Battleplate
             }
         },
+        T6_SET
     }
 }
