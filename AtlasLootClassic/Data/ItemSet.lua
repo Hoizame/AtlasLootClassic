@@ -641,7 +641,7 @@ local ITEM_TO_SET = {
 function ItemSet.GetSetName(setID, addQualityColor)
     if not ITEM_SET_DATA[setID] then return end
     if addQualityColor then
-        return format("%s%s|r", COLOR_STRINGS[ITEM_SET_DATA[setID][3]], GetItemSetInfo(setID))
+        return format("%s%s|r", COLOR_STRINGS[ITEM_SET_DATA[setID][3]], GetItemSetInfo(setID) or UNKNOWN)
     else
         return GetItemSetInfo(setID)
     end
