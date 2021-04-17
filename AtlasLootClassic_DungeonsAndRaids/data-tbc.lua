@@ -604,8 +604,8 @@ data["Mana-Tombs"] = {
                 { 4, 25954 }, -- Sigil of Shaffar
                 { 5, 25962 }, -- Longstrider's Loop
                 { 6, 25953 }, -- Ethereal Warp-Bow
-                { 8, 22921 }, -- Recipe: Major Frost Protection Potion
-                { 10, 28490 }, -- Shaffar's Wrappings
+                { 16, 22921 }, -- Recipe: Major Frost Protection Potion
+                { 18, 28490 }, -- Shaffar's Wrappings
             },
             [HEROIC_DIFF] = {
                 { 1, 29434 }, -- Badge of Justice
@@ -735,7 +735,7 @@ data["AuchenaiCrypts"] = {
                 { 16, 30587 }, -- Champion's Fire Opal
                 { 17, 30588 }, -- Potent Fire Opal
                 { 18, 30586 }, -- Seer's Chrysoprase
-                { 20, 27870 }, -- Doomplate Legguards
+                { 21, 27870 }, -- Doomplate Legguards
             }
         },
         { -- AuchCryptsAvatar
