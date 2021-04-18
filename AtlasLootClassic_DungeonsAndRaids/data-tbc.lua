@@ -2362,7 +2362,7 @@ data["Karazhan"] = {
                 { 7, 28454 }, -- Stalker's War Bands
                 { 8, 28502 }, -- Vambraces of Courage
                 { 9, 28505 }, -- Gauntlets of Renewed Hope
-                { 11, 29434 }, -- Badge of Justice
+                --{ 11, 29434 }, -- Badge of Justice
                 { 16, 28509 }, -- Worgen Claw Necklace
                 { 17, 28510 }, -- Spectral Band of Innervation
                 { 18, 28504 }, -- Steelhawk Crossbow
@@ -2429,7 +2429,7 @@ data["Karazhan"] = {
                 { 5, 28567 }, -- Belt of Gale Force
                 { 6, 28566 }, -- Crimson Girdle of the Indomitable
                 { 7, 28569 }, -- Boots of Valiance
-                { 9, 29434 }, -- Badge of Justice
+                --{ 9, 29434 }, -- Badge of Justice
                 { 16, 28530 }, -- Brooch of Unquenchable Fury
                 { 17, 28528 }, -- Moroes' Lucky Pocket Watch
                 { 18, 28525 }, -- Signet of Unshakable Faith
@@ -2454,7 +2454,7 @@ data["Karazhan"] = {
                 { 7, 28519 }, -- Gloves of Quickening
                 { 8, 28512 }, -- Bracers of Justice
                 { 9, 28518 }, -- Iron Gauntlets of the Maiden
-                { 11, 29434 }, -- Badge of Justice
+                --{ 11, 29434 }, -- Badge of Justice
                 { 16, 28516 }, -- Barbed Choker of Discipline
                 { 17, 28523 }, -- Totem of Healing Rains
                 { 18, 28522 }, -- Shard of the Virtuous
@@ -2472,7 +2472,7 @@ data["Karazhan"] = {
                 { 2, 28585 }, -- Ruby Slippers
                 { 3, 28587 }, -- Legacy
                 { 4, 28588 }, -- Blue Diamond Witchwand
-                { 6, 29434 }, -- Badge of Justice
+                --{ 6, 29434 }, -- Badge of Justice
                 { 16, 28594 }, -- Trial-Fire Trousers
                 { 17, 28591 }, -- Earthsoul Leggings
                 { 18, 28589 }, -- Beastmaw Pauldrons
@@ -2493,7 +2493,7 @@ data["Karazhan"] = {
                 { 2, 28583 }, -- Big Bad Wolf's Head
                 { 3, 28584 }, -- Big Bad Wolf's Paw
                 { 4, 28581 }, -- Wolfslayer Sniper Rifle
-                { 6, 29434 }, -- Badge of Justice
+                --{ 6, 29434 }, -- Badge of Justice
                 { 16, 28594 }, -- Trial-Fire Trousers
                 { 17, 28591 }, -- Earthsoul Leggings
                 { 18, 28589 }, -- Beastmaw Pauldrons
@@ -2514,7 +2514,7 @@ data["Karazhan"] = {
                 { 2, 28579 }, -- Romulo's Poison Vial
                 { 3, 28572 }, -- Blade of the Unrequited
                 { 4, 28573 }, -- Despair
-                { 6, 29434 }, -- Badge of Justice
+                --{ 6, 29434 }, -- Badge of Justice
                 { 16, 28594 }, -- Trial-Fire Trousers
                 { 17, 28591 }, -- Earthsoul Leggings
                 { 18, 28589 }, -- Beastmaw Pauldrons
@@ -2536,7 +2536,7 @@ data["Karazhan"] = {
                 { 4, 28621 }, -- Wrynn Dynasty Greaves
                 { 5, 28649 }, -- Garona's Signet Ring
                 { 6, 28633 }, -- Staff of Infinite Mysteries
-                { 8, 29434 }, -- Badge of Justice
+                --{ 8, 29434 }, -- Badge of Justice
                 { 16, 29757 }, -- Gloves of the Fallen Champion
                 { 17, 29758 }, -- Gloves of the Fallen Defender
                 { 18, 29756 }, -- Gloves of the Fallen Hero
@@ -2556,7 +2556,7 @@ data["Karazhan"] = {
                 { 5, 28655 }, -- Cord of Nature's Sustenance
                 { 6, 28656 }, -- Girdle of the Prowler
                 { 7, 28662 }, -- Breastplate of the Lightbinder
-                { 9, 29434 }, -- Badge of Justice
+                --{ 9, 29434 }, -- Badge of Justice
                 { 16, 28661 }, -- Mender's Heart-Ring
                 { 17, 28785 }, -- The Lightning Capacitor
                 { 18, 28657 }, -- Fool's Bane
@@ -2579,8 +2579,8 @@ data["Karazhan"] = {
                 { 5, 28669 }, -- Rapscallion Boots
                 { 6, 28671 }, -- Steelspine Faceguard
                 { 7, 28666 }, -- Pauldrons of the Justice-Seeker
-                { 9, 29434 }, -- Badge of Justice
-                { 11, 23933 }, -- Medivh's Journal
+                --{ 9, 29434 }, -- Badge of Justice
+                { 9, 23933 }, -- Medivh's Journal
                 { 16, 28674 }, -- Saberclaw Talisman
                 { 17, 28675 }, -- Shermanar Great-Ring
                 { 18, 28727 }, -- Pendant of the Violet Eye
@@ -2604,7 +2604,7 @@ data["Karazhan"] = {
                 { 6, 28740 }, -- Rip-Flayer Leggings
                 { 7, 28743 }, -- Mantle of Abrahmis
                 { 8, 28733 }, -- Girdle of Truth
-                { 10, 29434 }, -- Badge of Justice
+                --{ 10, 29434 }, -- Badge of Justice
                 { 16, 28731 }, -- Shining Chain of the Afterworld
                 { 17, 28730 }, -- Mithril Band of the Unscarred
                 { 18, 28734 }, -- Jewel of Infinite Possibilities
@@ -2626,7 +2626,7 @@ data["Karazhan"] = {
                 { 6, 28746 }, -- Fiend Slayer Boots
                 { 7, 28748 }, -- Legplates of the Innocent
                 { 8, 28747 }, -- Battlescar Boots
-                { 10, 29434 }, -- Badge of Justice
+                --{ 10, 29434 }, -- Badge of Justice
                 { 16, 28745 }, -- Mithril Chain of Heroism
                 { 17, 28753 }, -- Ring of Recurrence
                 { 18, 28749 }, -- King's Defender
@@ -2652,7 +2652,7 @@ data["Karazhan"] = {
                 { 11, 28773 }, -- Gorehowl
                 { 12, 28771 }, -- Light's Justice
                 { 13, 28772 }, -- Sunfury Bow of the Phoenix
-                { 15, 29434 }, -- Badge of Justice
+                --{ 15, 29434 }, -- Badge of Justice
                 { 16, 29760 }, -- Helm of the Fallen Champion
                 { 17, 29761 }, -- Helm of the Fallen Defender
                 { 18, 29759 }, -- Helm of the Fallen Hero
@@ -2673,9 +2673,9 @@ data["Karazhan"] = {
                 { 5, 28610 }, -- Ferocious Swift-Kickers
                 { 6, 28597 }, -- Panzar'Thar Breastplate
                 { 7, 28608 }, -- Ironstriders of Urgency
-                { 9, 29434 }, -- Badge of Justice
-                { 11, 31751 }, -- Blazing Signet
-                { 12, 24139 }, -- Faint Arcane Essence
+                --{ 9, 29434 }, -- Badge of Justice
+                { 9, 31751 }, -- Blazing Signet
+                { 10, 24139 }, -- Faint Arcane Essence
                 { 16, 28609 }, -- Emberspur Talisman
                 { 17, 28603 }, -- Talisman of Nightbane
                 { 18, 28604 }, -- Nightstaff of the Everliving
