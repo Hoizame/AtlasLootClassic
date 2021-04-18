@@ -17,3 +17,4 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 - (bc) add factions
 - (bc) add tooltip source support
 - (bc) add item sets data
+- (bc) add profession and recipe data

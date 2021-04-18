@@ -86,6 +86,7 @@ local IngameLocales = {
 	["Fishing"] = GetSpellInfo(7732),
 	["Skinning"] = GetSpellInfo(8618),
 	["Poisons"] = GetSpellInfo(2842),
+	["Jewelcrafting"] = GetSpellInfo(353970) or UNKNOWN,
 
 	-- ######################################################################
 	-- Months

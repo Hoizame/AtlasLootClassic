@@ -41,6 +41,7 @@ local ICON_TEXTURE = {
 	[14] = format(TEXTURE_ICON_F, GetSpellTexture(7732)),   -- Fishing
     [15] = format(TEXTURE_ICON_F, GetSpellTexture(8618)),   -- Skinning
     [16] = format(TEXTURE_ICON_F, GetSpellTexture(2842)),   -- Rogue: Poisons
+    [17] = format(TEXTURE_ICON_F, 134071),                  -- Jewelcrafting
 }
 local SOURCE_TYPES = {
     [0]  = UNKNOWN,	                    -- UNKNOWN
@@ -60,6 +61,7 @@ local SOURCE_TYPES = {
 	[14] = ALIL["Fishing"],             -- Fishing
     [15] = ALIL["Skinning"],            -- Skinning
     [16] = ALIL["ROGUE"]..": "..ALIL["Poisons"],             -- Rogue: Poisons
+    [17] = ALIL["Jewelcrafting"],       -- Jewelcrafting
 }
 local SOURCE_DATA = {}
 local KEY_WEAK_MT = {__mode="k"}
@@ -100,16 +102,21 @@ local function BuildSource(ini, boss, typ, item, isHeroic)
                 end
 
                 local data = sourceData.ItemData[recipe]
-                src = format(TT_F, RECIPE_ICON, BuildSource(sourceData.AtlasLootIDs[data[1]],data[2],data[3],data[4] or item))
-                src = "\n"..src
+                if type(data[1]) == "table" then
+                    for i = 1, #data do
+                        src = src..format(TT_F, RECIPE_ICON, BuildSource(sourceData.AtlasLootIDs[data[i][1]],data[i][2],data[i][3],data[i][4] or item))..(i==#data and "" or "\n")
+                    end
+                else
+                    src = src..format(TT_F, RECIPE_ICON, BuildSource(sourceData.AtlasLootIDs[data[1]],data[2],data[3],data[4] or item))
+                end
             end
         end
         if Sources.db.showProfRank then
             local prof = Profession.GetProfessionData(item)
             if prof and prof[3] > 1 then
-                return SOURCE_TYPES[typ].." ("..prof[3]..")"..src
+                return SOURCE_TYPES[typ].." ("..prof[3]..")"..(src ~= "" and "\n"..src or src)
             else
-                return SOURCE_TYPES[typ]..src
+                return SOURCE_TYPES[typ]..(src ~= "" and "\n"..src or src)
             end
         else
             return SOURCE_TYPES[typ]..src
@@ -161,13 +168,13 @@ local function OnTooltipSetItem_Hook(self)
     end
 
     if item and sourceData then
-        local iconTexture, baseItem
-        if type(sourceData.ItemData[item]) == "number" then
-            iconTexture = format(TEXTURE_ICON_FN, GetItemIcon(sourceData.ItemData[item]))
-            baseItem = sourceData.ItemData[item]
-        end
         if TooltipTextCache[item] ~= false then
             if not TooltipTextCache[item] then
+                local iconTexture, baseItem
+                if type(sourceData.ItemData[item]) == "number" then
+                    iconTexture = format(TEXTURE_ICON_FN, GetItemIcon(sourceData.ItemData[item]))
+                    baseItem = sourceData.ItemData[item]
+                end
                 TooltipTextCache[item] = {}
                 if type(sourceData.ItemData[baseItem or item][1]) == "table" then
                     for i = 1, #sourceData.ItemData[baseItem or item] do
@@ -184,6 +191,8 @@ local function OnTooltipSetItem_Hook(self)
                 end
                 if #TooltipTextCache[item] < 1 then
                     TooltipTextCache[item] = false
+                else
+                    TooltipTextCache[item][1] = "\n"..TooltipTextCache[item][1]
                 end
             end
             if TooltipTextCache[item] then
