@@ -2885,6 +2885,49 @@ data["ZulAman"] = {
 }
 
 
+data["WorldBossesBC"] = {
+	name = AL["World Bosses"],
+	ContentType = RAID25_CONTENT,
+	items = {
+        { -- DDoomwalker
+            name = AL["Doomwalker"],
+            npcID = 17711,
+            Level = 999,
+            DisplayIDs = {{21435}},
+            [NORMAL_DIFF] = {
+                { 1, 30729 }, -- Black-Iron Battlecloak
+                { 2, 30725 }, -- Anger-Spark Gloves
+                { 3, 30727 }, -- Gilded Trousers of Benediction
+                { 4, 30730 }, -- Terrorweave Tunic
+                { 5, 30728 }, -- Fathom-Helm of the Deeps
+                { 6, 30731 }, -- Faceguard of the Endless Watch
+                { 7, 30726 }, -- Archaic Charm of Presence
+                { 8, 30723 }, -- Talon of the Tempest
+                { 9, 30722 }, -- Ethereum Nexus-Reaver
+                { 10, 30724 }, -- Barrel-Blade Longrifle
+            }
+        },
+        { -- KKruul
+            name = AL["Doom Lord Kazzak"],
+            npcID = 18728,
+            Level = 999,
+            DisplayIDs = {{17887}},
+            [NORMAL_DIFF] = {
+                { 1, 30735 }, -- Ancient Spellcloak of the Highborne
+                { 2, 30734 }, -- Leggings of the Seventh Circle
+                { 3, 30737 }, -- Gold-Leaf Wildboots
+                { 4, 30739 }, -- Scaled Greaves of the Marksman
+                { 5, 30740 }, -- Ripfiend Shoulderplates
+                { 6, 30741 }, -- Topaz-Studded Battlegrips
+                { 7, 30736 }, -- Ring of Flowing Light
+                { 8, 30738 }, -- Ring of Reciprocity
+                { 9, 30733 }, -- Hope Ender
+                { 10, 30732 }, -- Exodar Life-Staff
+            }
+        }
+	}
+}
+
 data["MagtheridonsLair"] = {
 	MapID = 3836,
 	InstanceID = 544,
