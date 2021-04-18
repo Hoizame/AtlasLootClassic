@@ -3016,9 +3016,9 @@ data["GruulsLair"] = {
                 { 22, 28825 }, -- Aldori Legacy Defender
                 { 23, 28826 }, -- Shuriken of Negation
             }
-        }
-    },
-    T4_SET
+        },
+        T4_SET
+    }
 }
 
 data["SerpentshrineCavern"] = {
