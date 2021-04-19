@@ -1013,7 +1013,7 @@ local function ExtraItemFrame_Refresh(self, triggerButton)
 end
 
 function Button:ExtraItemFrame_GetFrame(button, itemList)
-	if button and button.IsExtraItemFrameButton then return end -- skip own buttons
+	if not itemList or (button and button.IsExtraItemFrameButton) then return end -- skip own buttons
 	local frame = ExtraItemFrame_Frame
 	if frame and frame.ItemList then
 		if frame.button == button then
