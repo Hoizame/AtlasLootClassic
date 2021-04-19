@@ -46,6 +46,10 @@ ATLASLOOT_ITEM_BACKGROUND_ALPHA = 0.9
 -- AtlasLoot Private things
 -- ##############################
 
+-- GameVersion
+ALPrivate.IS_CLASSIC = AtlasLoot:GetGameVersion() == 1
+ALPrivate.IS_BC = AtlasLoot:GetGameVersion() == 2
+
 -- Account specific
 ALPrivate.ACCOUNT_LOCALE = GetLocale()
 

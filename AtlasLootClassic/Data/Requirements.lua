@@ -5363,7 +5363,7 @@ function Requirements.BuildClassString(classBit)
 end
 
 function Requirements.ClassCanUseItem(className, itemID)
-	if ReqData[itemID] then
+	if ReqData[itemID] and ReqData[itemID][1] then
 		return bit_band(ReqData[itemID][1], CLASS[className]) ~= 0
 	else
 		return true
@@ -5394,14 +5394,14 @@ function Requirements.HasRequirements(itemID)
 end
 
 function Requirements.HasPvPRequirements(itemID)
-	return ( ReqData[itemID] and ReqData[itemID][2] ) and true or false
+	return (ALPrivate.IS_CLASSIC and ReqData[itemID] and ReqData[itemID][2] ) and true or false
 end
 
 function Requirements.GetReqString(itemID, noClass, noPvP)
 	local ret = ""
 	local data = ReqData[itemID]
 	if data then
-		if not noPvP and data[2] then
+		if ALPrivate.IS_CLASSIC and not noPvP and data[2] then
 			ret = ret..PVP_RANK[data[2]][4]
 		end
 		if not noClass and data[1] then

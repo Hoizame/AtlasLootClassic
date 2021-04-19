@@ -274,6 +274,7 @@ end
 
 function Item.GetDescription(itemID, itemEquipLoc, itemType, itemSubType)
 	if not itemEquipLoc then
+		local _
 		_, itemType, itemSubType, itemEquipLoc = GetItemInfoInstant(itemID)
 	end
 	local ret = Token.GetTokenDescription(itemID) or

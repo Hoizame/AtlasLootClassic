@@ -52,12 +52,7 @@ _G.AtlasLoot.Init = {}
 _G.AtlasLoot.Data = {}
 
 -- Version
-local CurrentGameVersion
+local CurrentGameVersion = tonumber(string.sub(GetBuildInfo(), 0, 1))
 function AtlasLoot:GetGameVersion()
-	if not CurrentGameVersion then
-		local version = GetBuildInfo()
-		local versionShort = tonumber(string.sub(version, 0, 1))
-		CurrentGameVersion = versionShort
-	end
 	return CurrentGameVersion
 end
