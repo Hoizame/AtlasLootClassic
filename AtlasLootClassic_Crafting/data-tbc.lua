@@ -14,7 +14,7 @@ local RAID_CLASS_COLORS = _G["RAID_CLASS_COLORS"]
 -- ----------------------------------------------------------------------------
 local addonname = ...
 local AtlasLoot = _G.AtlasLoot
-local data = AtlasLoot.ItemDB:Add(addonname, 1, 1)
+local data = AtlasLoot.ItemDB:Add(addonname, 1, 2)
 
 local GetColorSkill = AtlasLoot.Data.Profession.GetColorSkillRankNoSpell
 
@@ -35,10 +35,9 @@ local PRICE_EXTRA_ITTYPE = data:AddExtraItemTableType("Price")
 local PROF_CONTENT = data:AddContentType(ALIL["Professions"], ATLASLOOT_PRIMPROFESSION_COLOR)
 local PROF_SEC_CONTENT = data:AddContentType(AL["Secondary Professions"], ATLASLOOT_SECPROFESSION_COLOR)
 local PROF_CLASS_CONTENT = data:AddContentType(AL["Class Professions"], ATLASLOOT_CLASSPROFESSION_COLOR)
---local RAID20_CONTENT = data:AddContentType(AL["20 Raids"], ATLASLOOT_RAID20_COLOR)
---local RAID40_CONTENT = data:AddContentType(AL["40 Raids"], ATLASLOOT_RAID40_COLOR)
 
-data["Alchemy"] = {
+
+data["AlchemyBC"] = {
 	name = ALIL["Alchemy"],
 	ContentType = PROF_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
@@ -47,165 +46,121 @@ data["Alchemy"] = {
 		{
 			name = AL["Flasks"],
 			[NORMAL_DIFF] = {
-				{ 1, 17635 }, --Flask of the Titans
-				{ 2, 17636 }, --Flask of Distilled Wisdom
-				{ 3, 17637 }, --Flask of Supreme Power
-				{ 4, 17638 }, --Flask of Chromatic Resistance
-				{ 16, 17634 }, --Flask of Petrification
+				{ 1, 28591 }, -- Flask of Pure Death (390)
+				{ 2, 28589 }, -- Flask of Relentless Assault (390)
+				{ 3, 28588 }, -- Flask of Mighty Restoration (390)
+				{ 4, 28587 }, -- Flask of Fortification (390)
+				{ 5, 28590 }, -- Flask of Blinding Light (390)
+				{ 6, 42736 }, -- Flask of Chromatic Wonder (375)
 			},
 		},
 		{
 			name = AL["Transmutes"],
 			[NORMAL_DIFF] = {
-				{ 1, 17560 }, --Transmute: Fire to Earth
-				{ 2, 17565 }, --Transmute: Life to Earth
-				{ 4, 17561 }, --Transmute: Earth to Water
-				{ 5, 17563 }, --Transmute: Undeath to Water
-				{ 7, 17562 }, --Transmute: Water to Air
-				{ 9, 17564 }, --Transmute: Water to Undeath
-				{ 11, 17566 }, --Transmute: Earth to Life
-				{ 13, 17559 }, --Transmute: Air to Fire
-				{ 16, 17187 }, --Transmute: Arcanite
-				{ 17, 11479 }, --Transmute: Iron to Gold
-				{ 18, 11480 }, --Transmute: Mithril to Truesilver
-				{ 20, 25146 }, --Transmute: Elemental Fire
+				{ 1, 28581 }, -- Transmute: Primal Water to Shadow (385)
+				{ 2, 28580 }, -- Transmute: Primal Shadow to Water (385)
+				{ 3, 28582 }, -- Transmute: Primal Mana to Fire (385)
+				{ 4, 28584 }, -- Transmute: Primal Life to Earth (385)
+				{ 5, 28583 }, -- Transmute: Primal Fire to Mana (385)
+				{ 6, 28585 }, -- Transmute: Primal Earth to Life (385)
+				{ 7, 32766 }, -- Transmute: Skyfire Diamond (350)
+				{ 8, 32765 }, -- Transmute: Earthstorm Diamond (350)
+				{ 9, 29688 }, -- Transmute: Primal Might (350)
+				{ 10, 28569 }, -- Transmute: Primal Water to Air (350)
+				{ 11, 28568 }, -- Transmute: Primal Fire to Earth (350)
+				{ 12, 28567 }, -- Transmute: Primal Earth to Water (350)
+				{ 13, 28566 }, -- Transmute: Primal Air to Fire (350)
 			},
 		},
 		{
 			name = AL["Healing/Mana Potions"],
 			[NORMAL_DIFF] = {
-				{ 1, 17556 }, --Major Healing Potion
-				{ 2, 11457 }, --Superior Healing Potion
-				{ 3, 7181 }, --Greater Healing Potion
-				{ 4, 3447 }, --Healing Potion
-				{ 5, 2337 }, --Lesser Healing Potion
-				{ 6, 2330 }, --Minor Healing Potion
-				{ 8, 2332 }, --Minor Rejuvenation Potion
-				{ 10, 24366 }, --Greater Dreamless Sleep Potion
-				{ 12, 11458 }, --Wildvine Potion
-				{ 13, 4508 }, --Discolored Healing Potion
-				{ 16, 17580 }, --Major Mana Potion
-				{ 17, 17553 }, --Superior Mana Potion
-				{ 18, 11448 }, --Greater Mana Potion
-				{ 19, 3452 }, --Mana Potion
-				{ 20, 3173 }, --Lesser Mana Potion
-				{ 21, 2331 }, --Minor Mana Potion
-				{ 23, 22732 }, --Major Rejuvenation Potion
-				{ 25, 15833 }, --Dreamless Sleep Potion
-				{ 27, 24365 }, --Mageblood Potion
+				{ 1, 28586 }, -- Super Rejuvenation Potion (390)
+				{ 3, 28551 }, -- Super Healing Potion (340)
+				{ 4, 33732 }, -- Volatile Healing Potion (315)
+
+
+				{ 16, 38961 }, -- Fel Mana Potion (360)
+				{ 17, 28555 }, -- Super Mana Potion (340)
+				{ 18, 33733 }, -- Unstable Mana Potion (325)
 			},
 		},
 		{
 			name = AL["Protection Potions"],
 			[NORMAL_DIFF] = {
-				{ 1, 17574 }, --Greater Fire Protection Potion
-				{ 2, 17576 }, --Greater Nature Protection Potion
-				{ 3, 17575 }, --Greater Frost Protection Potion
-				{ 4, 17578 }, --Greater Shadow Protection Potion
-				{ 5, 17577 }, --Greater Arcane Protection Potion
-				{ 7, 11453 }, --Magic Resistance Potion
-				{ 8, 3174 }, --Elixir of Poison Resistance
-				{ 16, 7257 }, --Fire Protection Potion
-				{ 17, 7259 }, --Nature Protection Potion
-				{ 18, 7258 }, --Frost Protection Potion
-				{ 19, 7256 }, --Shadow Protection Potion
-				{ 20, 7255 }, --Holy Protection Potion
-				{ 22, 3172 }, --Minor Magic Resistance Potion
+				{ 1, 28576 }, -- Major Shadow Protection Potion (360)
+				{ 2, 28573 }, -- Major Nature Protection Potion (360)
+				{ 3, 28577 }, -- Major Holy Protection Potion (360)
+				{ 4, 28572 }, -- Major Frost Protection Potion (360)
+				{ 5, 28571 }, -- Major Fire Protection Potion (360)
+				{ 6, 28575 }, -- Major Arcane Protection Potion (360)
 			},
 		},
 		{
 			name = AL["Util Potions"],
 			[NORMAL_DIFF] = {
-				{ 1, 11464 }, --Invisibility Potion
-				{ 2, 2335 }, --Swiftness Potion
-				{ 3, 6624 }, --Free Action Potion
-				{ 4, 3175 }, --Limited Invulnerability Potion
-				{ 5, 24367 }, --Living Action Potion
-				{ 6, 7841 }, --Swim Speed Potion
-				{ 8, 17572 }, --Purification Potion
-				{ 10, 17552 }, --Mighty Rage Potion
-				{ 11, 6618 }, --Great Rage Potion
-				{ 12, 6617 }, --Rage Potion
-				{ 16, 3448 }, --Lesser Invisibility Potion
-				{ 23, 11452 }, --Restorative Potion
-				{ 25, 17570 }, --Greater Stoneshield Potion
-				{ 26, 4942 }, --Lesser Stoneshield Potion
+				{ 1, 28579 }, -- Ironshield Potion (365)
+				{ 2, 28565 }, -- Destruction Potion (350)
+				{ 3, 28564 }, -- Haste Potion (350)
+				{ 4, 28563 }, -- Heroic Potion (350)
+				{ 5, 28562 }, -- Major Dreamless Sleep Potion (350)
+				{ 6, 38962 }, -- Fel Regeneration Potion (345)
+				{ 7, 45061 }, -- Mad Alchemist's Potion (335)
+				{ 8, 28554 }, -- Shrouding Potion (335)
+				{ 9, 28550 }, -- Insane Strength Potion (320)
+				{ 10, 28546 }, -- Sneaking Potion (315)
 			},
 		},
 		{
-			name = AL["Stat Elixirs"],
+			name = AL["Elixirs"],
 			[NORMAL_DIFF] = {
-				{ 1, 24368 }, --Mighty Troll
-				{ 2, 3451 }, --Major Troll
-				{ 3, 3176 }, --Strong Troll
-				{ 4, 3170 }, --Weak Troll
-				{ 6, 17554 }, --Elixir of Superior Defense
-				{ 7, 11450 }, --Elixir of Greater Defense
-				{ 8, 3177 }, --Elixir of Defense
-				{ 9, 7183 }, --Elixir of Minor Defense
-				{ 11, 11472 }, --Elixir of Giants
-				{ 12, 3188 }, --Elixir of Ogre
-				{ 13, 2329 }, --Elixir of Lion
-				{ 16, 11467 }, --Elixir of Greater Agility
-				{ 17, 11449 }, --Elixir of Agility
-				{ 18, 2333 }, --Elixir of Lesser Agility
-				{ 19, 3230 }, --Elixir of Minor Agility
-				{ 21, 11465 }, --Elixir of Greater Intellect
-				{ 22, 3171 }, --Elixir of Wisdom
-				{ 24, 17573 }, --Greater Arcane Elixir
-				{ 25, 11461 }, --Arcane Elixir
+				--{ 1, 11478 }, --Elixir of Detect Demon
+				{ 1, 28578 }, -- Elixir of Empowerment (365)
+				{ 2, 28570 }, -- Elixir of Major Mageblood (355)
+				{ 3, 28558 }, -- Elixir of Major Shadow Power (350)
+				{ 4, 28557 }, -- Elixir of Major Defense (345)
+				{ 5, 28556 }, -- Elixir of Major Firepower (345)
+				{ 6, 39638 }, -- Elixir of Draenic Wisdom (335)
+				{ 7, 38960 }, -- Fel Strength Elixir (335)
+				{ 8, 39639 }, -- Elixir of Ironskin (330)
+				{ 9, 33741 }, -- Elixir of Mastery (330)
+				{ 10, 28553 }, -- Elixir of Major Agility (330)
+				{ 11, 39636 }, -- Elixir of Major Fortitude (325)
+				{ 12, 28552 }, -- Elixir of the Searching Eye (325)
+				{ 13, 28545 }, -- Elixir of Healing Power (325)
+				{ 14, 39637 }, -- Earthen Elixir (320)
+				{ 15, 28549 }, -- Elixir of Major Frost Power (320)
+				{ 16, 28544 }, -- Elixir of Major Strength (320)
+				{ 17, 33740 }, -- Adept's Elixir (315)
+				{ 18, 33738 }, -- Onslaught Elixir (315)
+				{ 19, 28543 }, -- Elixir of Camouflage (305)
 			},
 		},
 		{
-			name = AL["Special Elixirs"],
+			name = AL["Cauldrons"],
 			[NORMAL_DIFF] = {
-				{ 1, 26277 }, --Elixir of Greater Firepower
-				{ 2, 17555 }, --Elixir of the Sages
-				{ 5, 3450 }, --Elixir of Fortitude
-				{ 7, 17557 }, --Elixir of Brute Force
-				{ 8, 17571 }, --Elixir of the Mongoose
-				{ 10, 11477 }, --Elixir of Demonslaying
-				{ 16, 7845 }, --Elixir of Firepower
-				{ 17, 21923 }, --Elixir of Frost Power
-				{ 18, 11476 }, --Elixir of Shadow Power
-				{ 20, 2334 }, --Elixir of Minor Fortitude
-				{ 22, 8240 }, --Elixir of Giant Growth
+				{ 1, 41503 }, -- Cauldron of Major Shadow Protection (360)
+				{ 2, 41502 }, -- Cauldron of Major Nature Protection (360)
+				{ 3, 41501 }, -- Cauldron of Major Frost Protection (360)
+				{ 4, 41500 }, -- Cauldron of Major Fire Protection (360)
+				{ 5, 41458 }, -- Cauldron of Major Arcane Protection (360)
 			},
 		},
 		{
-			name = AL["Misc Elixirs"],
+			name = AL["Stones"],
 			[NORMAL_DIFF] = {
-				{ 1, 11478 }, --Elixir of Detect Demon
-				{ 2, 12609 }, --Catseye Elixir
-				{ 4, 22808 }, --Elixir of Greater Water Breathing
-				{ 6, 11468 }, --Elixir of Dream Vision
-
-				{ 16, 11460 }, --Elixir of Detect Undead
-				{ 17, 3453 }, --Elixir of Detect Lesser Invisibility
-				{ 19, 7179 }, --Elixir of Water Breathing
-			},
-		},
-		{
-			name = AL["Misc"],
-			[NORMAL_DIFF] = {
-				{ 1, 17632 }, --Alchemist's Stone
-				{ 3, 11473 }, --Ghost Dye
-				{ 5, 24266 }, --Gurubashi Mojo Madness
-				{ 7, 11466 }, --Gift of Arthas
-				{ 8, 3449 }, --Shadow Oil
-				{ 9, 3454 }, --Frost Oil
-				{ 10, 11451 }, --Oil of Immolation
-				{ 16, 11459 }, --Philosophers' Stone
-				{ 18, 11456 }, --Goblin Rocket Fuel
-				{ 23, 7836 }, --Blackmouth Oil
-				{ 24, 7837 }, --Fire Oil
-				{ 25, 17551 }, --Stonescale Oil
+				{ 1, 47048 }, -- Sorcerer's Alchemist Stone (375)
+				{ 2, 47049 }, -- Redeemer's Alchemist Stone (375)
+				{ 3, 47046 }, -- Guardian's Alchemist Stone (375)
+				{ 4, 47050 }, -- Assassin's Alchemist Stone (375)
+				{ 16, 38070 }, -- Mercurial Stone (340)
 			},
 		},
 	},
 }
 
-data["Blacksmithing"] = {
+
+data["BlacksmithingBC"] = {
 	name = ALIL["Blacksmithing"],
 	ContentType = PROF_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
@@ -560,7 +515,7 @@ data["Blacksmithing"] = {
 	}
 }
 
-data["Enchanting"] = {
+data["EnchantingBC"] = {
 	name = ALIL["Enchanting"],
 	ContentType = PROF_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
@@ -775,7 +730,7 @@ data["Enchanting"] = {
 	}
 }
 
-data["Engineering"] = {
+data["EngineeringBC"] = {
 	name = ALIL["Engineering"],
 	ContentType = PROF_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
@@ -1000,7 +955,7 @@ data["Engineering"] = {
 	}
 }
 
-data["Tailoring"] = {
+data["TailoringBC"] = {
 	name = ALIL["Tailoring"],
 	ContentType = PROF_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
@@ -1294,7 +1249,7 @@ data["Tailoring"] = {
 	}
 }
 
-data["Leatherworking"] = {
+data["LeatherworkingBC"] = {
 	name = ALIL["Leatherworking"],
 	ContentType = PROF_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
@@ -1606,7 +1561,7 @@ data["Leatherworking"] = {
 	}
 }
 
-data["Mining"] = {
+data["MiningBC"] = {
 	name = ALIL["Mining"],
 	ContentType = PROF_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
@@ -1632,12 +1587,27 @@ data["Mining"] = {
 	}
 }
 
-data["Herbalism"] = {
+data["HerbalismBC"] = {
 	name = ALIL["Herbalism"],
 	ContentType = PROF_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = NORMAL_ITTYPE,
 	items = {
+		{
+			name = AL["Master"],
+			[NORMAL_DIFF] = {
+				{ 1,  22793 }, -- Mana Thistle
+				{ 2,  22792 }, -- Nightmare Vine
+				{ 3,  22791, 22576 }, -- Netherbloom
+				{ 4,  22790 }, -- Ancient Lichen
+				{ 5,  22789 }, -- Terocone
+				{ 6,  22787 }, -- Ragveil
+				{ 7,  22786 }, -- Dreaming Glory
+				{ 8,  22785, 22795 }, -- Felweed
+				{ 16,  22794 }, -- Fel Lotus
+				{ 17,  22575 }, -- Mote of Life
+			}
+		},
 		{
 			name = AL["Artisan"],
 			[NORMAL_DIFF] = {
@@ -1693,7 +1663,7 @@ data["Herbalism"] = {
 	}
 }
 
-data["Cooking"] = {
+data["CookingBC"] = {
 	name = ALIL["Cooking"],
 	ContentType = PROF_SEC_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
@@ -1833,7 +1803,7 @@ data["Cooking"] = {
 	}
 }
 
-data["FirstAid"] = {
+data["FirstAidBC"] = {
 	name = ALIL["First Aid"],
 	ContentType = PROF_SEC_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
@@ -1842,16 +1812,18 @@ data["FirstAid"] = {
 		{
 			name = ALIL["First Aid"],
 			[NORMAL_DIFF] = {
-				{ 1, 18630 }, --Heavy Runecloth Bandage / 290
-				{ 2, 18629 }, --Runecloth Bandage / 260
-				{ 3, 10841 }, --Heavy Mageweave Bandage / 240
-				{ 4, 10840 }, --Mageweave Bandage / 210
-				{ 5, 7929 }, --Heavy Silk Bandage / 180
-				{ 6, 7928 }, --Silk Bandage / 150
-				{ 7, 3278 }, --Heavy Wool Bandage / 115
-				{ 8, 3277 }, --Wool Bandage / 80
-				{ 9, 3276 }, --Heavy Linen Bandage / 50
-				{ 10, 3275 }, --Linen Bandage / 30
+				{ 1, 27033 }, -- Heavy Netherweave Bandage (360)
+				{ 2, 27032 }, -- Netherweave Bandage (330)
+				{ 3, 18630 }, --Heavy Runecloth Bandage / 290
+				{ 4, 18629 }, --Runecloth Bandage / 260
+				{ 5, 10841 }, --Heavy Mageweave Bandage / 240
+				{ 6, 10840 }, --Mageweave Bandage / 210
+				{ 7, 7929 }, --Heavy Silk Bandage / 180
+				{ 8, 7928 }, --Silk Bandage / 150
+				{ 9, 3278 }, --Heavy Wool Bandage / 115
+				{ 10, 3277 }, --Wool Bandage / 80
+				{ 11, 3276 }, --Heavy Linen Bandage / 50
+				{ 12, 3275 }, --Linen Bandage / 30
 				{ 16, 23787 }, --Powerful Anti-Venom / 300
 				{ 17, 7935 }, --Strong Anti-Venom / 130
 				{ 18, 7934 }, --Anti-Venom / 80
@@ -1860,7 +1832,7 @@ data["FirstAid"] = {
 	}
 }
 
-data["RoguePoisons"] = {
+data["RoguePoisonsBC"] = {
 	name = format("|c%s%s|r", RAID_CLASS_COLORS["ROGUE"].colorStr, ALIL["ROGUE"]),
 	ContentType = PROF_CLASS_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
@@ -1869,26 +1841,30 @@ data["RoguePoisons"] = {
 		{
 			name = ALIL["Poisons"],
 			[NORMAL_DIFF] = {
-				{ 1, 11343 }, -- Instant Poison VI
-				{ 2, 11342 }, -- Instant Poison V
-				{ 3, 11341 }, -- Instant Poison IV
-				{ 4, 8691  }, -- Instant Poison III
-				{ 5, 8687  }, -- Instant Poison II
-				{ 6, 8681  }, -- Instant Poison
-				{ 8, 13230 },  -- Wound Poison IV
-				{ 9, 13229 },  -- Wound Poison III
-				{ 10, 13228 }, -- Wound Poison II
-				{ 11, 13220 }, -- Wound Poison
-				{ 13, 3420  }, -- Crippling Poison
-				{ 17, 25347 }, -- Deadly Poison V
-				{ 18, 11358 }, -- Deadly Poison IV
-				{ 19, 11357 }, -- Deadly Poison III
-				{ 20, 2837  }, -- Deadly Poison II
-				{ 21, 2835  }, -- Deadly Poison
-				{ 24, 11400 }, -- Mind-numbing Poison III
-				{ 25, 8694  }, -- Mind-numbing Poison II
-				{ 26, 5763  }, -- Mind-numbing Poison
-				{ 28, 6510  }, -- Blinding Powder
+				{ 1, 26892 }, -- Instant Poison VII
+				{ 2, 11343 }, -- Instant Poison VI
+				{ 3, 11342 }, -- Instant Poison V
+				{ 4, 11341 }, -- Instant Poison IV
+				{ 5, 8691  }, -- Instant Poison III
+				{ 6, 8687  }, -- Instant Poison II
+				{ 7, 8681  }, -- Instant Poison
+				{ 9, 27283 },  -- Wound Poison V
+				{ 10, 13230 },  -- Wound Poison IV
+				{ 11, 13229 },  -- Wound Poison III
+				{ 12, 13228 }, -- Wound Poison II
+				{ 13, 13220 }, -- Wound Poison
+				{ 15, 3420  }, -- Crippling Poison
+				{ 16, 27282 }, -- Deadly Poison VII
+				{ 17, 26969 }, -- Deadly Poison VI
+				{ 18, 25347 }, -- Deadly Poison V
+				{ 19, 11358 }, -- Deadly Poison IV
+				{ 20, 11357 }, -- Deadly Poison III
+				{ 21, 2837  }, -- Deadly Poison II
+				{ 22, 2835  }, -- Deadly Poison
+				{ 26, 11400 }, -- Mind-numbing Poison III
+				{ 27, 8694  }, -- Mind-numbing Poison II
+				{ 28, 5763  }, -- Mind-numbing Poison
+				{ 30, 26786  }, -- Anesthetic Poison
 			}
 		},
 	}

@@ -3584,6 +3584,17 @@ local PROFESSION_ITEM_SKILL = {
     [785] = { 50, 75, 150 }, -- Mageroyal
     [2450] = { 70, 95, 170 }, -- Briarthorn
     --[2452] = { 0, 0, 0 }, -- Swiftthistle
+--@version-bc@
+	[22793] = { 375, 375, 375 }, -- Mana Thistle
+	[22792] = { 365, 365, 365 }, -- Nightmare Vine
+	[22791] = { 350, 350, 350 }, -- Netherbloom
+	[22790] = { 340, 340, 340 }, -- Ancient Lichen
+	[22789] = { 325, 325, 325 }, -- Terocone
+	[22787] = { 325, 325, 325 }, -- Ragveil
+	[22786] = { 315, 315, 315 }, -- Dreaming Glory
+	[22785] = { 300, 300, 300 }, -- Felweed
+	--[22794] = { 0, 0, 0 }, -- Fel Lotus
+--@end-version-bc@
 }
 
 -- maybe weak table?
