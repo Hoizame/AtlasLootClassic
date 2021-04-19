@@ -14,6 +14,7 @@ local AtlasLoot = _G.AtlasLoot
 local Price = AtlasLoot.Button:AddExtraType("Price")
 local AL = AtlasLoot.Locales
 
+local ItemButtonType = AtlasLoot.Button:GetType("Item")
 
 local FIRST_RUN = true
 local ITEMS_NOT_FOUND = true
@@ -105,6 +106,9 @@ function Price.OnSet(mainButton, descFrame)
 		for i = 1, #info, 2 do
 			SetContentInfo(descFrame, info[i], info[i+1], i+1 == #info and STRING_DELIMITER_END or STRING_DELIMITER_AND)
 		end
+	end
+	if mainButton.ItemID then
+		descFrame:AddText(" | "..ItemButtonType.GetDescription(mainButton.ItemID))
 	end
 
 	descFrame.info = info

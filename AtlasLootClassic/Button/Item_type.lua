@@ -24,7 +24,7 @@ local next, wipe, tab_remove = _G.next, _G.wipe, _G.table.remove
 local format, split, sfind, slower = _G.string.format, _G.string.split, _G.string.find, _G.string.lower
 
 -- WoW
-local GetItemInfo, IsEquippableItem = _G.GetItemInfo, _G.IsEquippableItem
+local GetItemInfo, IsEquippableItem, GetItemInfoInstant = _G.GetItemInfo, _G.IsEquippableItem, _G.GetItemInfoInstant
 local LOOT_BORDER_BY_QUALITY = _G["LOOT_BORDER_BY_QUALITY"]
 
 -- AL
@@ -272,6 +272,21 @@ function Item.OnClear(button)
 	end
 end
 
+function Item.GetDescription(itemID, itemEquipLoc, itemType, itemSubType)
+	if not itemEquipLoc then
+		_, itemType, itemSubType, itemEquipLoc = GetItemInfoInstant(itemID)
+	end
+	local ret = Token.GetTokenDescription(itemID) or
+	Recipe.GetRecipeDescriptionWithRank(itemID) or
+	Profession.GetColorSkillRankItem(itemID) or
+	(Mount.IsMount(itemID) and ALIL["Mount"] or nil) or
+	( ItemSet.GetSetIDforItemID(itemID) and AL["|cff00ff00Set item:|r "] or "")..GetItemDescInfo(itemEquipLoc, itemType, itemSubType)
+	if Requirements.HasRequirements(itemID) then
+		ret = Requirements.GetReqString(itemID)..ret
+	end
+	return ret
+end
+
 function Item.Refresh(button)
 	if not button.ItemID then return end
 	local itemID = button.ItemID
@@ -306,16 +321,7 @@ function Item.Refresh(button)
 		-- ##################
 		-- description
 		-- ##################
-		button.extra:SetText(
-			Token.GetTokenDescription(itemID) or
-			Recipe.GetRecipeDescriptionWithRank(itemID) or
-			Profession.GetColorSkillRankItem(itemID) or
-			(Mount.IsMount(button.ItemID) and ALIL["Mount"] or nil) or
-			( ItemSet.GetSetIDforItemID(itemID) and AL["|cff00ff00Set item:|r "] or "")..GetItemDescInfo(itemEquipLoc, itemType, itemSubType)
-		)
-		if Requirements.HasRequirements(itemID) then
-			button.extra:SetText(Requirements.GetReqString(itemID)..button.extra:GetText())
-		end
+		button.extra:SetText(Item.GetDescription(itemID, itemEquipLoc, itemType, itemSubType))
 	end
 	if Favourites and Favourites:IsFavouriteItemID(itemID) then
 		Favourites:SetFavouriteIcon(itemID, button.favourite)
