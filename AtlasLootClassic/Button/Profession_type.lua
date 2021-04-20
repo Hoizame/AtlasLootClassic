@@ -147,6 +147,7 @@ function Prof.Refresh(button)
 
 		if button.type == "secButton" then
 			itemTexture = nil
+			itemCount = nil
 		else
 			if itemName then
 				button.name:SetText("|c"..ITEM_COLORS[itemQuality or 0]..(spellName or itemName))
