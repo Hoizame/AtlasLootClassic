@@ -13,23 +13,28 @@ local FORMAT_STRING_SKILL = "|cffff8040%d|r |cffffff00%d|r |cff40bf40%d|r |cff80
 local FORMAT_STRING_SKILL2 = "|cffffff00%d|r |cff40bf40%d|r |cff808080%d|r"
 
 local PROFESSION_DEFAULT = 0
+local PROFESSION_NAME = {
+	[0]  = UNKNOWN,	   			   -- UNKNOWN
+	[1]  = ALIL["First Aid"],      -- First Aid
+	[2]  = ALIL["Blacksmithing"],  -- Blacksmithing
+	[3]  = ALIL["Leatherworking"], -- Leatherworking
+	[4]  = ALIL["Alchemy"],        -- Alchemy
+	[5]  = ALIL["Herbalism"],      -- Herbalism
+	[6]  = ALIL["Cooking"],        -- Cooking
+	[7]  = ALIL["Mining"],         -- Mining
+	[8]  = ALIL["Tailoring"],      -- Tailoring
+	[9]  = ALIL["Engineering"],    -- Engineering
+	[10] = ALIL["Enchanting"],     -- Enchanting
+	[11] = ALIL["Fishing"],        -- Fishing
+    [12] = ALIL["Skinning"],       -- Skinning
+    [13] = ALIL["Poisons"],        -- Poisons
+    [14] = ALIL["Jewelcrafting"],  -- Jewelcrafting
+}
+
 local PROFESSION_TEXT = {
 	[0]  = LOC_STRING_DESC2,	                            -- UNKNOWN
-	[1]  = format(LOC_STRING_DESC, ALIL["First Aid"]),      -- First Aid
-	[2]  = format(LOC_STRING_DESC, ALIL["Blacksmithing"]),  -- Blacksmithing
-	[3]  = format(LOC_STRING_DESC, ALIL["Leatherworking"]), -- Leatherworking
-	[4]  = format(LOC_STRING_DESC, ALIL["Alchemy"]),        -- Alchemy
-	[5]  = format(LOC_STRING_DESC, ALIL["Herbalism"]),      -- Herbalism
-	[6]  = format(LOC_STRING_DESC, ALIL["Cooking"]),        -- Cooking
-	[7]  = format(LOC_STRING_DESC, ALIL["Mining"]),         -- Mining
-	[8]  = format(LOC_STRING_DESC, ALIL["Tailoring"]),      -- Tailoring
-	[9]  = format(LOC_STRING_DESC, ALIL["Engineering"]),    -- Engineering
-	[10] = format(LOC_STRING_DESC, ALIL["Enchanting"]),     -- Enchanting
-	[11] = format(LOC_STRING_DESC, ALIL["Fishing"]),        -- Fishing
-    [12] = format(LOC_STRING_DESC, ALIL["Skinning"]),       -- Skinning
-    [13] = format(LOC_STRING_DESC, ALIL["Poisons"]),        -- Poisons
-    [14] = format(LOC_STRING_DESC, ALIL["Jewelcrafting"]),  -- Jewelcrafting
 }
+for i = 1, #PROFESSION_NAME do PROFESSION_TEXT[i] = format(LOC_STRING_DESC, PROFESSION_NAME[i]) end
 Profession.PROFESSION_TEXT = PROFESSION_TEXT
 
 local DUMMY_ICON = "Interface\\Icons\\INV_Misc_QuestionMark";
@@ -3712,6 +3717,12 @@ end
 
 function Profession.GetProfessionID(spellID)
     return PROFESSION[spellID or 0] and PROFESSION[spellID][2] or nil
+end
+
+local PROF_STRING = "|cffffd000|Henchant:%d|h[%s: %s]|h|r"
+function Profession.GetChatLink(spellID)
+	if not PROFESSION[spellID] then return end
+	return format(PROF_STRING, spellID, PROFESSION_NAME[ PROFESSION[spellID][2] ], GetSpellInfo(spellID))
 end
 
 -- Request #101
