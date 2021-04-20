@@ -140,13 +140,13 @@ function Prof.Refresh(button)
 
 		button.overlay:Show()
 		-- enchanting border
-		if not button.ItemID then
+		if not button.ItemID or button.type == "secButton" then
 			itemQuality = "gold"
 		end
 		button.overlay:SetQualityBorder(itemQuality)
 
 		if button.type == "secButton" then
-
+			itemTexture = nil
 		else
 			if itemName then
 				button.name:SetText("|c"..ITEM_COLORS[itemQuality or 0]..(spellName or itemName))

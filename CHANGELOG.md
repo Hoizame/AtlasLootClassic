@@ -11,6 +11,7 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 - add average item level and class icons for item sets
 - add missing profession ranks
 - items with price now also show item description
+- profession extra info now also shows crafting spell
 - (classic) move Lady Falther'ess from Razorfen Downs into extra list and mark as Scourge Invasions npc
 - (classic) add class icons for tokens from: Nax, AQ40, AQ20, ZG
 - (bc) add bc support
