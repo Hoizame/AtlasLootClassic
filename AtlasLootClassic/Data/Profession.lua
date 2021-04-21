@@ -3665,7 +3665,7 @@ function Profession.GetSpellDescription(spellID)
 end
 
 function Profession.GetColorSkillRankNoSpell(min, low, high)
-    return min <= 1 and format(FORMAT_STRING_SKILL2, low, ((high - low) * 0.5)+low, high) or format(FORMAT_STRING_SKILL, min, low, ((high - low) * 0.5)+low, high)
+    return min <= 0 and format(FORMAT_STRING_SKILL2, low, ((high - low) * 0.5)+low, high) or format(FORMAT_STRING_SKILL, min, low, ((high - low) * 0.5)+low, high)
 end
 
 function Profession.GetColorSkillRank(spellID)

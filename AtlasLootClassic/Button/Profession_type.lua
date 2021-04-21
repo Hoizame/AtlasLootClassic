@@ -92,7 +92,6 @@ function Prof.OnLeave(button)
 	GetAlTooltip():Hide()
 end
 
-local PROF_STRING = "|cffffd000|Henchant:%d|h[%s]|h|r"
 function Prof.OnMouseAction(button, mouseButton)
 	if not mouseButton then return end
 	mouseButton = ProfClickHandler:Get(mouseButton)
