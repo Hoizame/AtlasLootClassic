@@ -169,351 +169,302 @@ data["BlacksmithingBC"] = {
 		{
 			name = AL["Weapons"].." - "..ALIL["Daggers"],
 			[NORMAL_DIFF] = {
-				{ 1, 23638 }, --Black Amnesty / 66
-				{ 2, 16995 }, --Heartseeker / 63
-				{ 3, 10013 }, --Ebon Shiv / 51
-				{ 4, 15973 }, --Searing Golden Blade / 39
-				{ 5, 15972 }, --Glinting Steel Dagger / 36
-				{ 6, 3295 }, --Deadly Bronze Poniard / 25
-				{ 7, 6517 }, --Pearl-handled Dagger / 23
-				{ 8, 3491 }, --Big Bronze Knife / 20
-				{ 9, 8880 }, --Copper Dagger / 11
+				{ 1, 29698 }, -- Eternium Runed Blade (365)
+				{ 2, 29699 }, -- Dirge (365)
+				{ 3, 29569 }, -- Adamantite Dagger (330)
 			}
 		},
 		{
 			name = AL["Weapons"].." - "..AL["Axes"],
 			[NORMAL_DIFF] = {
 				{ 1, "INV_sword_04", nil, ALIL["One-Handed Axes"] },
-				{ 2, 20897 }, --Dark Iron Destroyer / 65
-				{ 3, 16991 }, --Annihilator / 63
-				{ 4, 16970 }, --Dawn / 55
-				{ 5, 16969 }, --Ornate Thorium Handaxe / 55
-				{ 6, 9995 }, --Blue Glittering Axe / 44
-				{ 7, 9993 }, --Heavy Mithril Axe / 42
-				{ 8, 21913 }, --Edge of Winter / 38
-				{ 9, 2741 }, --Bronze Axe / 23
-				{ 10, 3294 }, --Thick War Axe / 17
-				{ 11, 2738 }, --Copper Axe / 9
+				{ 2, 36260 }, -- Wicked Edge of the Planes (385)
+				{ 3, 34542 }, -- Black Planar Edge (385)
+				{ 4, 34541 }, -- The Planar Edge (360)
+				{ 6, 29694 }, -- Fel Edged Battleaxe (365)
+				{ 7, 36134 }, -- Stormforged Axe (340)
+				{ 8, 29557 }, -- Fel Iron Hatchet (320)
 				{ 16, "INV_sword_04", nil, ALIL["Two-Handed Axes"] },
-				{ 17, 23653 }, --Nightfall / 70
-				{ 18, 16994 }, --Arcanite Reaper / 63
-				{ 19, 15294 }, --Dark Iron Sunderer / 57
-				{ 20, 16971 }, --Huge Thorium Battleaxe / 56
-				{ 21, 3500 }, --Shadow Crescent Axe / 40
-				{ 22, 3498 }, --Massive Iron Axe / 37
-				{ 23, 9987 }, --Bronze Battle Axe / 27
-				{ 24, 3293 }, --Copper Battle Axe / 13
+				{ 17, 36261 }, -- Bloodmoon (385)
+				{ 18, 34544 }, -- Mooncleaver (385)
+				{ 19, 34543 }, -- Lunar Crescent (360)
+				{ 21, 29695 }, -- Felsteel Reaper (365)
+				{ 22, 29568 }, -- Adamantite Cleaver (330)
+				{ 23, 36135 }, -- Skyforged Great Axe (340)
 			}
 		},
 		{
 			name = AL["Weapons"].." - "..AL["Maces"],
 			[NORMAL_DIFF] = {
 				{ 1, "INV_sword_04", nil, ALIL["One-Handed Maces"] },
-				{ 2, 23650 }, --Ebon Hand / 70
-				{ 3, 16993 }, --Masterwork Stormhammer / 63
-				{ 4, 27830 }, --Persuader / 63
-				{ 5, 16984 }, --Volcanic Hammer / 58
-				{ 6, 16983 }, --Serenity / 57
-				{ 7, 10009 }, --Runed Mithril Hammer / 49
-				{ 8, 10003 }, --The Shatterer / 47
-				{ 9, 10001 }, --Big Black Mace / 46
-				{ 10, 3297 }, --Mighty Iron Hammer / 30
-				{ 11, 6518 }, --Iridescent Hammer / 28
-				{ 12, 3296 }, --Heavy Bronze Mace / 25
-				{ 13, 2740 }, --Bronze Mace / 22
-				{ 14, 2737 }, --Copper Mace / 9
+				{ 2, 36262 }, -- Dragonstrike (385)
+				{ 3, 34546 }, -- Dragonmaw (385)
+				{ 4, 34545 }, -- Drakefist Hammer (360)
+				{ 6, 29700 }, -- Hand of Eternity (365)
+				{ 7, 29696 }, -- Runic Hammer (365)
+				{ 8, 36136 }, -- Lavaforged Warhammer (340)
+				{ 9, 29558 }, -- Fel Iron Hammer (325)
 				{ 16, "INV_sword_04", nil, ALIL["Two-Handed Maces"] },
-				{ 17, 21161 }, --Sulfuron Hammer / 67
-				{ 18, 16988 }, --Hammer of the Titans / 63
-				{ 19, 16973 }, --Enchanted Battlehammer / 56
-				{ 20, 15292 }, --Dark Iron Pulverizer / 55
-				{ 21, 3495 }, --Golden Iron Destroyer / 34
-				{ 22, 3494 }, --Solid Iron Maul / 31
-				{ 23, 9985 }, --Bronze Warhammer / 25
-				{ 24, 7408 }, --Heavy Copper Maul / 16
+				{ 17, 36263 }, -- Stormherald (385)
+				{ 18, 34548 }, -- Deep Thunder (385)
+				{ 19, 34547 }, -- Thunder (360)
+				{ 21, 43846 }, -- Hammer of Righteous Might (365)
+				{ 22, 29697 }, -- Fel Hardened Maul (365)
+				{ 23, 36137 }, -- Great Earthforged Hammer (340)
+				{ 24, 29566 }, -- Adamantite Maul (325)
 			}
 		},
 		{
 			name = AL["Weapons"].." - "..AL["Swords"],
 			[NORMAL_DIFF] = {
 				{ 1, "INV_sword_04", nil, ALIL["One-Handed Swords"] },
-				{ 2, 23652 }, --Blackguard / 70
-				{ 3, 20890 }, --Dark Iron Reaver / 65
-				{ 4, 27832 }, --Sageblade / 64
-				{ 5, 16992 }, --Frostguard / 63
-				{ 6, 16978 }, --Blazing Rapier / 56
-				{ 7, 10007 }, --Phantom Blade / 49
-				{ 8, 10005 }, --Dazzling Mithril Rapier / 48
-				{ 9, 9997 }, --Wicked Mithril Blade / 45
-				{ 10, 3493 }, --Jade Serpentblade / 35
-				{ 11, 3492 }, --Hardened Iron Shortsword / 32
-				{ 12, 2742 }, --Bronze Shortsword / 24
-				{ 13, 2739 }, --Copper Shortsword / 9
+				{ 2, 36258 }, -- Blazefury (385)
+				{ 3, 34537 }, -- Blazeguard (385)
+				{ 4, 34535 }, -- Fireguard (360)
+				{ 6, 29692 }, -- Felsteel Longblade (365)
+				{ 7, 29571 }, -- Adamantite Rapier (335)
+				{ 8, 36131 }, -- Windforged Rapier (340)
 				{ 16, "INV_sword_06", nil, ALIL["Two-Handed Swords"] },
-				{ 17, 16990 }, --Arcanite Champion / 63
-				{ 18, 16985 }, --Corruption / 58
-				{ 19, 10015 }, --Truesilver Champion / 52
-				{ 20, 3497 }, --Frost Tiger Blade / 40
-				{ 21, 3496 }, --Moonsteel Broadsword / 36
-				{ 22, 9986 }, --Bronze Greatsword / 26
-				{ 23, 3292 }, --Heavy Copper Broadsword / 19
-				{ 24, 9983 }, --Copper Claymore / 11
+				{ 17, 36259 }, -- Lionheart Executioner (385)
+				{ 18, 34540 }, -- Lionheart Champion (385)
+				{ 19, 34538 }, -- Lionheart Blade (360)
+				{ 21, 29693 }, -- Khorium Champion (365)
+				{ 22, 36133 }, -- Stoneforged Claymore (340)
+				{ 23, 29565 }, -- Fel Iron Greatsword (330)
 			}
 		},
 		{
-			name = AL["Weapons"].." - "..ALIL["Polearms"],
+			name = AL["Weapons"].." - "..ALIL["Thrown"],
 			[NORMAL_DIFF] = {
-				{ 1, 23639 }, --Blackfury / 66
-				{ 2, 10011 }, --Blight / 50
+
 			}
 		},
 		{
 			name = AL["Armor"].." - "..ALIL["Chest"],
 			[MAIL_DIFF] = {
-				{ 1, 27590 }, --Obsidian Mail Tunic / 72
-				{ 2, 24136 }, --Bloodsoul Breastplate / 65
-				{ 3, 16746 }, --Invulnerable Mail / 63
-				{ 4, 15293 }, --Dark Iron Mail / 56
-				{ 5, 16650 }, --Wildthorn Mail / 54
-				{ 6, 16648 }, --Radiant Breastplate / 54
-				{ 7, 3511 }, --Golden Scale Cuirass / 40
-				{ 8, 9916 }, --Steel Breastplate / 40
-				{ 9, 3508 }, --Green Iron Hauberk / 36
-				{ 10, 9813 }, --Barbaric Iron Breastplate / 32
-				{ 11, 2675 }, --Shining Silver Breastplate / 29
-				{ 12, 2673 }, --Silvered Bronze Breastplate / 26
-				{ 13, 2670 }, --Rough Bronze Cuirass / 23
-				{ 14, 8367 }, --Ironforge Breastplate / 20
-				{ 15, 2667 }, --Runed Copper Breastplate / 18
-				{ 16, 3321 }, --Copper Chain Vest / 10
-				{ 17, 12260 }, --Rough Copper Vest / 7
+
 			},
 			[PLATE_DIFF] = {
-				{ 1, 28242 }, --Icebane Breastplate / 80
-				{ 2, 27587 }, --Thick Obsidian Breastplate / 72
-				{ 3, 28461 }, --Ironvine Breastplate / 70
-				{ 4, 24139 }, --Darksoul Breastplate / 65
-				{ 5, 24914 }, --Darkrune Breastplate / 63
-				{ 6, 16745 }, --Enchanted Thorium Breastplate / 63
-				{ 7, 16731 }, --Runic Breastplate / 62
-				{ 8, 16663 }, --Imperial Plate Chest / 60
-				{ 9, 15296 }, --Dark Iron Plate / 59
-				{ 10, 16667 }, --Demon Forged Breastplate / 57
-				{ 11, 16642 }, --Thorium Armor / 50
-				{ 12, 9974 }, --Truesilver Breastplate / 49
-				{ 13, 9972 }, --Ornate Mithril Breastplate / 48
-				{ 14, 9959 }, --Heavy Mithril Breastplate / 46
+
 			},
 		},
 		{
 			name = AL["Armor"].." - "..ALIL["Feet"],
 			[MAIL_DIFF] = {
-				{ 1, 23629 }, --Heavy Timbermaw Boots / 64
-				{ 2, 16656 }, --Radiant Boots / 58
-				{ 3, 3515 }, --Golden Scale Boots / 40
-				{ 4, 3513 }, --Polished Steel Boots / 37
-				{ 5, 9818 }, --Barbaric Iron Boots / 36
-				{ 6, 3334 }, --Green Iron Boots / 29
-				{ 7, 3331 }, --Silvered Bronze Boots / 26
-				{ 8, 7817 }, --Rough Bronze Boots / 18
-				{ 9, 3319 }, --Copper Chain Boots / 9
+
 			},
 			[PLATE_DIFF] = {
-				{ 1, 24399 }, --Dark Iron Boots / 70
-				{ 2, 16657 }, --Imperial Plate Boots / 59
-				{ 3, 16652 }, --Thorium Boots / 56
-				{ 4, 9979 }, --Ornate Mithril Boots / 49
-				{ 5, 9968 }, --Heavy Mithril Boots / 47
+
 			},
 		},
 		{
 			name = AL["Armor"].." - "..ALIL["Hand"],
 			[MAIL_DIFF] = {
-				{ 1, 27589 }, --Black Grasp of the Destroyer / 70
-				{ 2, 24138 }, --Bloodsoul Gauntlets / 65
-				{ 3, 16661 }, --Storm Gauntlets / 59
-				{ 4, 16654 }, --Radiant Gloves / 57
-				{ 5, 11643 }, --Golden Scale Gauntlets / 41
-				{ 6, 9820 }, --Barbaric Iron Gloves / 37
-				{ 7, 3336 }, --Green Iron Gauntlets / 30
-				{ 8, 3333 }, --Silvered Bronze Gauntlets / 27
-				{ 9, 3325 }, --Gemmed Copper Gauntlets / 15
-				{ 10, 3323 }, --Runed Copper Gauntlets / 12
+
 			},
 			[PLATE_DIFF] = {
-				{ 1, 28243 }, --Icebane Gauntlets / 80
-				{ 2, 23637 }, --Dark Iron Gauntlets / 70
-				{ 3, 28462 }, --Ironvine Gloves / 70
-				{ 4, 23633 }, --Gloves of the Dawn / 64
-				{ 5, 24912 }, --Darkrune Gauntlets / 63
-				{ 6, 16741 }, --Stronghold Gauntlets / 62
-				{ 7, 16655 }, --Fiery Plate Gauntlets / 58
-				{ 8, 9954 }, --Truesilver Gauntlets / 45
-				{ 9, 9950 }, --Ornate Mithril Gloves / 44
-				{ 10, 9928 }, --Heavy Mithril Gauntlet / 41
+
 			},
 		},
 		{
 			name = AL["Armor"].." - "..ALIL["Head"],
 			[MAIL_DIFF] = {
-				{ 1, 16728 }, --Helm of the Great Chief / 61
-				{ 2, 16659 }, --Radiant Circlet / 59
-				{ 3, 9961 }, --Mithril Coif / 46
-				{ 4, 3503 }, --Golden Scale Coif / 38
-				{ 5, 9814 }, --Barbaric Iron Helm / 35
-				{ 6, 3502 }, --Green Iron Helm / 34
+
 			},
 			[PLATE_DIFF] = {
-				{ 1, 23636 }, --Dark Iron Helm / 66
-				{ 2, 24913 }, --Darkrune Helm / 63
-				{ 3, 16742 }, --Enchanted Thorium Helm / 62
-				{ 4, 16729 }, --Lionheart Helm / 61
-				{ 5, 16726 }, --Runic Plate Helm / 61
-				{ 6, 16724 }, --Whitesoul Helm / 60
-				{ 7, 16658 }, --Imperial Plate Helm / 59
-				{ 8, 16653 }, --Thorium Helm / 56
-				{ 9, 9980 }, --Ornate Mithril Helm / 49
-				{ 10, 9970 }, --Heavy Mithril Helm / 47
-				{ 11, 9935 }, --Steel Plate Helm / 43
+
 			},
 		},
 		{
 			name = AL["Armor"].." - "..ALIL["Legs"],
 			[MAIL_DIFF] = {
-				{ 1, 16725 }, --Radiant Leggings / 61
-				{ 2, 9931 }, --Mithril Scale Pants / 42
-				{ 3, 9957 }, --Orcish War Leggings / 42
-				{ 4, 3507 }, --Golden Scale Leggings / 34
-				{ 5, 3506 }, --Green Iron Leggings / 31
-				{ 6, 12259 }, --Silvered Bronze Leggings / 31
-				{ 7, 2668 }, --Rough Bronze Leggings / 21
-				{ 8, 3324 }, --Runed Copper Pants / 13
-				{ 9, 2662 }, --Copper Chain Pants / 9
+
 			},
 			[PLATE_DIFF] = {
-				{ 1, 24140 }, --Darksoul Leggings / 65
-				{ 2, 16744 }, --Enchanted Thorium Leggings / 63
-				{ 3, 16732 }, --Runic Plate Leggings / 62
-				{ 4, 16730 }, --Imperial Plate Leggings / 61
-				{ 5, 16662 }, --Thorium Leggings / 60
-				{ 6, 20876 }, --Dark Iron Leggings / 60
-				{ 7, 27829 }, --Titanic Leggings / 60
-				{ 8, 9945 }, --Ornate Mithril Pants / 44
-				{ 9, 9933 }, --Heavy Mithril Pants / 42
+
 			},
 		},
 		{
 			name = AL["Armor"].." - "..ALIL["Shoulder"],
 			[MAIL_DIFF] = {
-				{ 1, 24137 }, --Bloodsoul Shoulders / 65
-				{ 2, 20873 }, --Fiery Chain Shoulders / 62
-				{ 3, 9966 }, --Mithril Scale Shoulders / 47
-				{ 4, 3505 }, --Golden Scale Shoulders / 35
-				{ 5, 9811 }, --Barbaric Iron Shoulders / 32
-				{ 6, 3504 }, --Green Iron Shoulders / 32
-				{ 7, 3330 }, --Silvered Bronze Shoulders / 25
-				{ 8, 3328 }, --Rough Bronze Shoulders / 22
+
 			},
 			[PLATE_DIFF] = {
-				{ 1, 24141 }, --Darksoul Shoulders / 65
-				{ 2, 16664 }, --Runic Plate Shoulders / 60
-				{ 3, 15295 }, --Dark Iron Shoulders / 58
-				{ 4, 16660 }, --Dawnbringer Shoulders / 58
-				{ 5, 16646 }, --Imperial Plate Shoulders / 53
-				{ 6, 9952 }, --Ornate Mithril Shoulder / 45
-				{ 7, 9926 }, --Heavy Mithril Shoulder / 41
+
 			},
 		},
 		{
 			name = AL["Armor"].." - "..ALIL["Waist"],
 			[MAIL_DIFF] = {
-				{ 1, 27588 }, --Light Obsidian Belt / 68
-				{ 2, 20872 }, --Fiery Chain Girdle / 59
-				{ 3, 23628 }, --Heavy Timbermaw Belt / 58
-				{ 4, 16645 }, --Radiant Belt / 52
-				{ 5, 2666 }, --Runed Copper Belt / 18
-				{ 6, 2661 }, --Copper Chain Belt / 11
+
 			},
 			[PLATE_DIFF] = {
-				{ 1, 28463 }, --Ironvine Belt / 70
-				{ 2, 27585 }, --Heavy Obsidian Belt / 68
-				{ 3, 23632 }, --Girdle of the Dawn / 58
-				{ 4, 16647 }, --Imperial Plate Belt / 53
-				{ 5, 16643 }, --Thorium Belt / 50
+
 			},
 		},
 		{
 			name = AL["Armor"].." - "..ALIL["Wrist"],
 			[MAIL_DIFF] = {
-				{ 1, 9937 }, --Mithril Scale Bracers / 43
-				{ 2, 7223 }, --Golden Scale Bracers / 37
-				{ 3, 3501 }, --Green Iron Bracers / 33
-				{ 4, 2672 }, --Patterned Bronze Bracers / 25
-				{ 5, 2664 }, --Runed Copper Bracers / 19
-				{ 6, 2663 }, --Copper Bracers / 7
+
 			},
 			[PLATE_DIFF] = {
-				{ 1, 28244 }, --Icebane Bracers / 80
-				{ 2, 20874 }, --Dark Iron Bracers / 59
-				{ 3, 16649 }, --Imperial Plate Bracers / 54
-				{ 4, 16644 }, --Thorium Bracers / 51
+
 			},
 		},
 		{
 			name = ALIL["Shields"],
 			[NORMAL_DIFF] = {
-				{ 1, 27586 }, --Jagged Obsidian Shield / 70
 			},
 		},
 		{
 			name = AL["Enhancements"],
 			[NORMAL_DIFF] = {
-				{ 1, 9964 }, --Mithril Spurs / 43
 
-				{ 3, 7224 }, --Steel Weapon Chain / 38
-				{ 18, 7222 }, --Iron Counterweight / 33
-
-				{ 5, 16651 }, --Thorium Shield Spike / 55
-				{ 6, 9939 }, --Mithril Shield Spike / 43
-				{ 20, 7221 }, --Iron Shield Spike / 30
-
-
-				{ 8, 22757 }, --Elemental Sharpening Stone / 60
-				{ 9, 16641 }, --Dense Sharpening Stone / 45
-				{ 10, 9918 }, --Solid Sharpening Stone / 35
-				{ 11, 2674 }, --Heavy Sharpening Stone / 25
-				{ 12, 2665 }, --Coarse Sharpening Stone / 15
-				{ 13, 2660 }, --Rough Sharpening Stone / 5
-
-				{ 24, 16640 }, --Dense Weightstone / 45
-				{ 25, 9921 }, --Solid Weightstone / 35
-				{ 26, 3117 }, --Heavy Weightstone / 25
-				{ 27, 3116 }, --Coarse Weightstone / 15
-				{ 28, 3115 }, --Rough Weightstone / 5
 			},
 		},
 		{
 			name = AL["Misc"],
 			[NORMAL_DIFF] = {
-				{ 1, 20201 }, --Arcanite Rod / 55
-				{ 2, 14380 }, --Truesilver Rod / 40
-				{ 16, 14379 }, --Golden Rod / 30
-				{ 17, 7818 }, --Silver Rod / 20
-				{ 4, 19669 }, --Arcanite Skeleton Key / 55
-				{ 5, 19668 }, --Truesilver Skeleton Key / 40
-				{ 19, 19667 }, --Golden Skeleton Key / 30
-				{ 20, 19666 }, --Silver Skeleton Key / 20
-				{ 7, 11454 }, --Inlaid Mithril Cylinder / 42
-				{ 22, 8768 }, --Iron Buckle / 30
-				{ 9, 16639 }, --Dense Grinding Stone / 45
-				{ 10, 9920 }, --Solid Grinding Stone / 35
-				{ 11, 3337 }, --Heavy Grinding Stone / 25
-				{ 24, 3326 }, --Coarse Grinding Stone / 20
-				{ 25, 3320 }, --Rough Grinding Stone / 10
+
 			},
 		},
 	}
 }
+
+--[[
+
+
+
+
+
+
+{ 0, 36257 }, -- Bulwark of the Ancient Kings (385)
+{ 0, 36256 }, -- Embrace of the Twisting Nether (385)
+{ 0, 34530 }, -- Twisting Nether Chain Shirt (385)
+
+
+
+
+
+{ 0, 34534 }, -- Bulwark of Kings (385)
+
+{ 0, 41134 }, -- Dawnsteel Bracers (375)
+{ 0, 41135 }, -- Dawnsteel Shoulders (375)
+{ 0, 41133 }, -- Swiftsteel Shoulders (375)
+{ 0, 41132 }, -- Swiftsteel Bracers (375)
+{ 0, 40033 }, -- Shadesteel Sabots (375)
+{ 0, 40035 }, -- Shadesteel Greaves (375)
+{ 0, 40036 }, -- Shadesteel Girdle (375)
+{ 0, 40034 }, -- Shadesteel Bracers (375)
+{ 0, 38479 }, -- Iceguard Helm (375)
+{ 0, 38478 }, -- Iceguard Leggings (375)
+{ 0, 38477 }, -- Iceguard Breastplate (375)
+{ 0, 38476 }, -- Wildguard Helm (375)
+{ 0, 38475 }, -- Wildguard Leggings (375)
+{ 0, 38473 }, -- Wildguard Breastplate (375)
+{ 0, 36392 }, -- Red Havoc Boots (375)
+{ 0, 36391 }, -- Boots of the Protector (375)
+{ 0, 36390 }, -- Red Belt of Battle (375)
+{ 0, 36389 }, -- Belt of the Guardian (375)
+{ 0, 32657 }, -- Eternium Rod (375)
+{ 0, 29729 }, -- Greater Ward of Shielding (375)
+{ 0, 29649 }, -- Earthpeace Breastplate (370)
+{ 0, 29648 }, -- Swiftsteel Gloves (370)
+{ 0, 29645 }, -- Ragesteel Breastplate (370)
+{ 0, 46140 }, -- Sunblessed Gauntlets (365)
+{ 0, 46142 }, -- Sunblessed Breastplate (365)
+{ 0, 46144 }, -- Hard Khorium Battleplate (365)
+{ 0, 46141 }, -- Hard Khorium Battlefists (365)
+
+{ 0, 42662 }, -- Ragesteel Shoulders (365)
+
+
+
+
+
+{ 0, 29672 }, -- Blessed Bracers (365)
+{ 0, 29671 }, -- Bracers of the Green Fortress (365)
+{ 0, 29669 }, -- Black Felsteel Bracers (365)
+{ 0, 29668 }, -- Oathkeeper's Helm (365)
+{ 0, 29664 }, -- Helm of the Stalwart Defender (365)
+{ 0, 29663 }, -- Storm Helm (365)
+{ 0, 29662 }, -- Steelgrip Gauntlets (365)
+{ 0, 29622 }, -- Gauntlets of the Iron Tower (365)
+{ 0, 29658 }, -- Felfury Gauntlets (365)
+{ 0, 29643 }, -- Ragesteel Helm (365)
+{ 0, 29642 }, -- Ragesteel Gloves (365)
+{ 0, 29630 }, -- Khorium Boots (365)
+{ 0, 29621 }, -- Felsteel Helm (365)
+{ 0, 29617 }, -- Flamebane Breastplate (365)
+{ 0, 29613 }, -- Enchanted Adamantite Leggings (365)
+{ 0, 34983 }, -- Felsteel Whisper Knives (360)
+
+
+
+
+
+{ 0, 34529 }, -- Nether Chain Shirt (360)
+
+
+{ 0, 34533 }, -- Breastplate of Kings (360)
+{ 0, 29657 }, -- Felsteel Shield Spike (360)
+{ 0, 29629 }, -- Khorium Pants (360)
+{ 0, 29628 }, -- Khorium Belt (360)
+{ 0, 29620 }, -- Felsteel Leggings (360)
+{ 0, 29619 }, -- Felsteel Gloves (360)
+{ 0, 29616 }, -- Flamebane Gloves (360)
+{ 0, 29610 }, -- Enchanted Adamantite Breastplate (360)
+{ 0, 29615 }, -- Flamebane Helm (355)
+{ 0, 29611 }, -- Enchanted Adamantite Boots (355)
+{ 0, 29608 }, -- Enchanted Adamantite Belt (355)
+{ 0, 34608 }, -- Adamantite Weightstone (350)
+{ 0, 32656 }, -- Adamantite Rod (350)
+{ 0, 32285 }, -- Greater Rune of Warding (350)
+{ 0, 29656 }, -- Adamantite Sharpening Stone (350)
+{ 0, 29614 }, -- Flamebane Bracers (350)
+
+{ 0, 36130 }, -- Stormforged Hauberk (340)
+
+
+
+{ 0, 36129 }, -- Heavy Earthforged Breastplate (340)
+
+{ 0, 29728 }, -- Lesser Ward of Shielding (340)
+{ 0, 29606 }, -- Adamantite Breastplate (340)
+{ 0, 42688 }, -- Adamantite Weapon Chain (335)
+{ 0, 29605 }, -- Adamantite Plate Gloves (335)
+{ 0, 29603 }, -- Adamantite Plate Bracers (335)
+
+{ 0, 29550 }, -- Fel Iron Breastplate (335)
+
+
+
+{ 0, 29556 }, -- Fel Iron Chain Tunic (330)
+{ 0, 32284 }, -- Lesser Rune of Warding (325)
+
+
+{ 0, 29553 }, -- Fel Iron Chain Bracers (325)
+{ 0, 29549 }, -- Fel Iron Plate Pants (325)
+{ 0, 29548 }, -- Fel Iron Plate Boots (325)
+{ 0, 34982 }, -- Enchanted Thorium Blades (320)
+
+{ 0, 29552 }, -- Fel Iron Chain Gloves (320)
+{ 0, 29547 }, -- Fel Iron Plate Belt (315)
+{ 0, 29551 }, -- Fel Iron Chain Coif (310)
+{ 0, 29545 }, -- Fel Iron Plate Gloves (310)
+{ 0, 34607 }, -- Fel Weightstone (300)
+{ 0, 32655 }, -- Fel Iron Rod (300)
+{ 0, 29654 }, -- Fel Sharpening Stone (300)
+{ 0, 36124 }, -- Windforged Leggings (280)
+{ 0, 36126 }, -- Light Skyforged Axe (280)
+{ 0, 36128 }, -- Light Emberforged Hammer (280)
+{ 0, 36125 }, -- Light Earthforged Blade (280)
+{ 0, 36122 }, -- Earthforged Leggings (280)
+{ 0, 34981 }, -- Whirling Steel Axes (220)
+{ 0, 34979 }, -- Thick Bronze Darts (130)
+{ 0, 43549 }, -- Heavy Copper Longsword (35)
+
+]]--
 
 data["EnchantingBC"] = {
 	name = ALIL["Enchanting"],
