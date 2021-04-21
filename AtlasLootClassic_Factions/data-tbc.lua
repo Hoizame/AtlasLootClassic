@@ -734,7 +734,7 @@ data["ShatteredSunOffensive"] = {
 	FactionID = 1077,
 	ContentType = FACTIONS_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
-    ContentPhase = 5,
+    ContentPhaseBC = 5,
 	items = {
 		{ -- Exalted
 			name = ALIL["Exalted"],

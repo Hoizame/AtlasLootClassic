@@ -1,3 +1,5 @@
+local ALName, ALPrivate = ...
+
 local _G = _G
 local AtlasLoot = _G.AtlasLoot
 local ItemDB = {}
@@ -49,6 +51,14 @@ ItemDB.mt = {
 		rawset(t, k, v)
 	end
 }
+
+local function GetContentPhaseFromTable(tab)
+	if ALPrivate.IS_BC then
+		return tab.ContentPhaseBC
+	elseif ALPrivate.IS_CLASSIC then
+		return tab.ContentPhase
+	end
+end
 
 --- Adds/Gets the table for a item database
 -- @param	addonName		<string> full name of the addon folder (eg "AtlasLoot_MistsofPandaria")
@@ -459,8 +469,8 @@ function ItemDB.ContentProto:GetName(raw)
 				addEnd = format(LEVEL_RANGE_FORMAT2, self.LevelRange[2] or 0, self.LevelRange[3] or 0 )
 			end
 		end
-		if AtlasLoot.db.ContentPhase.enableOnLootTable and self.ContentPhase and not ContentPhase:IsActive(self.ContentPhase, self.gameVersion) then
-			addEnd = addEnd.."  "..format(CONTENT_PHASE_FORMAT, self.ContentPhase)
+		if AtlasLoot.db.ContentPhase.enableOnLootTable and not ContentPhase:IsActive(GetContentPhaseFromTable(self), self.gameVersion) then
+			addEnd = addEnd.."  "..format(CONTENT_PHASE_FORMAT, GetContentPhaseFromTable(self))
 		end
 	end
 	if self.name then
@@ -497,8 +507,8 @@ function ItemDB.ContentProto:GetNameForItemTable(index, raw)
 	index = self.items[index]
 	local addStart, addEnd = "", ""
 	if not raw then
-		if AtlasLoot.db.ContentPhase.enableOnLootTable and index.ContentPhase and not ContentPhase:IsActive(index.ContentPhase, index.gameVersion or self.gameVersion) then
-			addEnd = addEnd.." "..format(CONTENT_PHASE_FORMAT, index.ContentPhase)
+		if AtlasLoot.db.ContentPhase.enableOnLootTable and not ContentPhase:IsActive(GetContentPhaseFromTable(index), index.gameVersion or self.gameVersion) then
+			addEnd = addEnd.." "..format(CONTENT_PHASE_FORMAT, GetContentPhaseFromTable(index))
 		end
 		if IsMapsModuleAviable() and index.AtlasMapBossID then
 			addStart = addStart.."|cffffffff"..index.AtlasMapBossID..")|r "
