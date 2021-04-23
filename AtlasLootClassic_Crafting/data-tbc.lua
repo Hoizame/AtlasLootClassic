@@ -42,6 +42,9 @@ data["AlchemyBC"] = {
 	ContentType = PROF_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = PROF_ITTYPE,
+	CorrespondingFields = {
+		[1] = "Alchemy",
+	},
 	items = {
 		{
 			name = AL["Flasks"],
@@ -159,12 +162,14 @@ data["AlchemyBC"] = {
 	},
 }
 
-
 data["BlacksmithingBC"] = {
 	name = ALIL["Blacksmithing"],
 	ContentType = PROF_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = PROF_ITTYPE,
+	CorrespondingFields = {
+		[1] = "Blacksmithing",
+	},
 	items = {
 		{
 			name = AL["Weapons"].." - "..ALIL["Daggers"],
@@ -395,6 +400,9 @@ data["EnchantingBC"] = {
 	ContentType = PROF_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = PROF_ITTYPE,
+	CorrespondingFields = {
+		[1] = "Enchanting",
+	},
 	items = {
 		{
 			name = AL["Oil"],
@@ -610,6 +618,9 @@ data["EngineeringBC"] = {
 	ContentType = PROF_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = PROF_ITTYPE,
+	CorrespondingFields = {
+		[1] = "Engineering",
+	},
 	items = {
 		{
 			name = AL["Armor"],
@@ -835,6 +846,9 @@ data["TailoringBC"] = {
 	ContentType = PROF_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = PROF_ITTYPE,
+	CorrespondingFields = {
+		[1] = "Tailoring",
+	},
 	items = {
 		{
 			name = AL["Armor"].." - "..ALIL["Cloak"],
@@ -1129,6 +1143,9 @@ data["LeatherworkingBC"] = {
 	ContentType = PROF_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = PROF_ITTYPE,
+	CorrespondingFields = {
+		[1] = "Leatherworking",
+	},
 	items = {
 		{
 			name = AL["Armor"].." - "..ALIL["Cloak"],
@@ -1441,6 +1458,9 @@ data["MiningBC"] = {
 	ContentType = PROF_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = PROF_ITTYPE,
+	CorrespondingFields = {
+		[1] = "Mining",
+	},
 	items = {
 		{
 			name = AL["Smelting"],
@@ -1476,6 +1496,9 @@ data["HerbalismBC"] = {
 	ContentType = PROF_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = NORMAL_ITTYPE,
+	CorrespondingFields = {
+		[1] = "Herbalism",
+	},
 	items = {
 		{
 			name = AL["Master"],
@@ -1552,6 +1575,9 @@ data["CookingBC"] = {
 	ContentType = PROF_SEC_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = PROF_ITTYPE,
+	CorrespondingFields = {
+		[1] = "Cooking",
+	},
 	items = {
 		{
 			name = ALIL["Stamina"],
@@ -1692,6 +1718,9 @@ data["FirstAidBC"] = {
 	ContentType = PROF_SEC_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = PROF_ITTYPE,
+	CorrespondingFields = {
+		[1] = "FirstAid",
+	},
 	items = {
 		{
 			name = ALIL["First Aid"],
@@ -1721,6 +1750,9 @@ data["RoguePoisonsBC"] = {
 	ContentType = PROF_CLASS_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = PROF_ITTYPE,
+	CorrespondingFields = {
+		[1] = "RoguePoisons",
+	},
 	items = {
 		{
 			name = ALIL["Poisons"],

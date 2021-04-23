@@ -23,3 +23,4 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 - (bc) add profession and recipe data
 - (bc) add world bosses
 - (bc) no longer show PvP rank requirements for classic PvP items
+- (bc) switching classic<->bc in crafting now switches between same profession

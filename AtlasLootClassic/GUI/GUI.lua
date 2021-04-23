@@ -788,6 +788,9 @@ local function GameVersionSwitch_OnClick(self)
 	else
 		db.selectedGameVersion = 2
 	end
+
+	db.selected[2] = AtlasLoot.ItemDB:GetCorrespondingField(db.selected[1], db.selected[2], db.selectedGameVersion)
+
 	UpdateGameVersionTexture()
 	loadModule()
 end
