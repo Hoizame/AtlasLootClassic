@@ -169,6 +169,7 @@ local IngameLocales = {
 	["Runes Per 5 Sec."] = _G["ITEM_MOD_POWER_REGEN5_SHORT"],
 	["Hit (Melee)"] = _G["ITEM_MOD_HIT_MELEE_RATING_SHORT"],
 	["Dodge"] = _G["ITEM_MOD_DODGE_RATING_SHORT"],
+	["Attack Power"] = _G["ITEM_MOD_ATTACK_POWER_SHORT"],
 
 	-- ######################################################################
 	-- Slots
