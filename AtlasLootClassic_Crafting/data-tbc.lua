@@ -541,217 +541,151 @@ data["EngineeringBC"] = {
 		{
 			name = AL["Armor"],
 			[NORMAL_DIFF] = {
-				{ 1, 22797 }, --Force Reactive Disk / 65
-				{ 3, 12903 }, --Gnomish Harm Prevention Belt / 43
-				{ 5, 8895 }, --Goblin Rocket Boots / 45
-				{ 16, 19819 }, --Voice Amplification Modulator / 58
-				{ 18, 12616 }, --Parachute Cloak / 45
-				{ 20, 12905 }, --Gnomish Rocket Boots / 45
+				{ 1, 46697 }, -- Rocket Boots Xtreme Lite (355)
+				{ 2, 30556 }, -- Rocket Boots Xtreme (355)
+				{ 16, 30570 }, -- Nigh-Invulnerability Belt (360)
 			}
 		},
 		{
-			name = AL["Armor"].." - "..ALIL["Head"],
+			name = AL["Armor"].." - "..ALIL["Head"].." - "..ALIL["Cloth"],
 			[NORMAL_DIFF] = {
-				{ 1, 24357 }, --Bloodvine Lens / 65
-				{ 2, 24356 }, --Bloodvine Goggles / 65
-				{ 3, 19825 }, --Master Engineer / 58
-				{ 4, 19794 }, --Spellpower Goggles Xtreme Plus / 54
-				{ 5, 12622 }, --Green Lens / 49
-				{ 6, 12758 }, --Goblin Rocket Helmet / 47
-				{ 7, 12907 }, --Gnomish Mind Control Cap / 47
-				{ 8, 12618 }, --Rose Colored Goggles / 46
-				{ 9, 12617 }, --Deepdive Helmet / 46
-				{ 10, 12607 }, --Catseye Ultra Goggles / 44
-				{ 11, 12615 }, --Spellpower Goggles Xtreme / 43
-				{ 12, 12897 }, --Gnomish Goggles / 42
-				{ 13, 12594 }, --Fire Goggles / 41
-				{ 14, 12717 }, --Goblin Mining Helmet / 41
-				{ 15, 12718 }, --Goblin Construction Helmet / 41
-				{ 16, 3966 }, --Craftsman / 37
-				{ 17, 12587 }, --Bright-Eye Goggles / 35
-				{ 18, 3956 }, --Green Tinted Goggles / 30
-				{ 19, 3940 }, --Shadow Goggles / 24
-				{ 20, 3934 }, --Flying Tiger Goggles / 20
+				{ 1, 46111 }, -- Annihilator Holo-Gogs (375)
+				{ 2, 41320 }, -- Destruction Holo-gogs (370)
+				{ 16, 46108 }, -- Powerheal 9000 Lens (375)
+				{ 17, 41321 }, -- Powerheal 4000 Lens (370)
+				{ 4, 30565 }, -- Foreman's Enchanted Helmet (375)
+				{ 5, 30574 }, -- Gnomish Power Goggles (375)
+				{ 6, 30318 }, -- Ultra-Spectropic Detection Goggles (350)
+				{ 7, 30317 }, -- Power Amplification Goggles (340)
+			}
+		},
+		{
+			name = AL["Armor"].." - "..ALIL["Head"].." - "..ALIL["Leather"],
+			[NORMAL_DIFF] = {
+				{ 1, 46106 }, -- Wonderheal XT68 Shades (375)
+				{ 2, 41318 }, -- Wonderheal XT40 Shades (370)
+				{ 4, 46116 }, -- Quad Deathblow X44 Goggles (375)
+				{ 5, 41317 }, -- Deathblow X11 Goggles (370)
+				{ 7, 30575 }, -- Gnomish Battle Goggles (375)
+				{ 8, 30325 }, -- Hyper-Vision Goggles (360)
+				{ 9, 30316 }, -- Cogspinner Goggles (340)
+				{ 16, 46109 }, -- Hyper-Magnified Moon Specs (375)
+				{ 17, 41319 }, -- Magnified Moon Specs (370)
+			}
+		},
+		{
+			name = AL["Armor"].." - "..ALIL["Head"].." - "..ALIL["Mail"],
+			[NORMAL_DIFF] = {
+				{ 1, 46112 }, -- Lightning Etched Specs (375)
+				{ 2, 41315 }, -- Gadgetstorm Goggles (370)
+				{ 4, 46113 }, -- Surestrike Goggles v3.0 (375)
+				{ 5, 41314 }, -- Surestrike Goggles v2.0 (370)
+				{ 7, 30566 }, -- Foreman's Reinforced Helmet (375)
+				{ 16, 46110 }, -- Primal-Attuned Goggles (375)
+				{ 17, 41316 }, -- Living Replicator Specs (370)
+			}
+		},
+		{
+			name = AL["Armor"].." - "..ALIL["Head"].." - "..ALIL["Plate"],
+			[NORMAL_DIFF] = {
+				{ 1, 46115 }, -- Hard Khorium Goggles (375)
+				{ 2, 41312 }, -- Tankatronic Goggles (370)
+				{ 4, 46114 }, -- Mayhem Projection Goggles (375)
+				{ 5, 40274 }, -- Furious Gizmatic Goggles (370)
+				{ 16, 46107 }, -- Justicebringer 3000 Specs (375)
+				{ 17, 41311 }, -- Justicebringer 2000 Specs (370)
 			}
 		},
 		{
 			name = AL["Armor"].." - "..ALIL["Trinket"],
 			[NORMAL_DIFF] = {
-				{ 1, 19830 }, --Arcanite Dragonling / 60
-				{ 2, 23082 }, --Ultra-Flash Shadow Reflector / 60
-				{ 3, 23081 }, --Hyper-Radiant Flame Reflector / 58
-				{ 4, 23486 }, --Dimensional Ripper - Everlook / 55
-				{ 5, 23079 }, --Major Recombobulator / 55
-				{ 6, 23078 }, --Goblin Jumper Cables XL / 53
-				{ 7, 23077 }, --Gyrofreeze Ice Reflector / 52
-				{ 8, 23489 }, --Ultrasafe Transporter: Gadgetzan / 52
-				{ 9, 12624 }, --Mithril Mechanical Dragonling / 50
-				{ 10, 12908 }, --Goblin Dragon Gun / 48
-				{ 11, 12759 }, --Gnomish Death Ray / 48
-				{ 12, 12906 }, --Gnomish Battle Chicken / 46
-				{ 13, 12755 }, --Goblin Bomb Dispenser / 46
-				{ 14, 12902 }, --Gnomish Net-o-Matic Projector / 42
-				{ 15, 12899 }, --Gnomish Shrink Ray / 41
-				{ 16, 3969 }, --Mechanical Dragonling / 40
-				{ 17, 3971 }, --Gnomish Cloaking Device / 40
-				{ 18, 9273 }, --Goblin Jumper Cables / 33
-				{ 19, 3952 }, --Minor Recombobulator / 28
-				{ 20, 9269 }, --Gnomish Universal Remote / 25
+				{ 1, 30563 }, -- Goblin Rocket Launcher (360)
+				{ 2, 30569 }, -- Gnomish Poultryizer (360)
 			}
 		},
 		{
 			name = ALIL["Weapon"].." - "..AL["Enhancements"],
 			[NORMAL_DIFF] = {
-				{ 1, 22793 }, --Biznicks 247x128 Accurascope / 60
-				{ 2, 12620 }, --Sniper Scope / 48
-				{ 3, 12597 }, --Deadly Scope / 42
-				{ 4, 3979 }, --Accurate Scope / 36
-				{ 5, 3978 }, --Standard Scope / 22
-				{ 6, 3977 }, --Crude Scope / 12
+				{ 1, 30334 }, -- Stabilized Eternium Scope (375)
+				{ 2, 30332 }, -- Khorium Scope (360)
+				{ 3, 30329 }, -- Adamantite Scope (335)
 			}
 		},
 		{
 			name = AL["Weapons"].." - "..ALIL["Guns"],
 			[NORMAL_DIFF] = {
-				{ 1, 22795 }, --Core Marksman Rifle / 65
-				{ 2, 19833 }, --Flawless Arcanite Rifle / 61
-				{ 3, 19796 }, --Dark Iron Rifle / 55
-				{ 4, 19792 }, --Thorium Rifle / 52
-				{ 5, 12614 }, --Mithril Heavy-bore Rifle / 44
-				{ 6, 12595 }, --Mithril Blunderbuss / 41
-				{ 7, 3954 }, --Moonsight Rifle / 29
-				{ 8, 3949 }, --Silver-plated Shotgun / 26
-				{ 9, 3939 }, --Lovingly Crafted Boomstick / 24
-				{ 10, 3936 }, --Deadly Blunderbuss / 21
-				{ 11, 3925 }, --Rough Boomstick / 10
+				{ 1, 30315 }, -- Ornate Khorium Rifle (375)
+				{ 2, 30314 }, -- Felsteel Boomstick (360)
+				{ 3, 30313 }, -- Adamantite Rifle (350)
+				{ 4, 30312 }, -- Fel Iron Musket (330)
 			}
 		},
 		{
-			name = ALIL["Projectile"].." - "..ALIL["Bullet"],
+			name = ALIL["Projectile"],
 			[NORMAL_DIFF] = {
-				{ 1, 19800 }, --Thorium Shells / 57
-				{ 2, 12621 }, --Mithril Gyro-Shot / 49
-				{ 3, 12596 }, --Hi-Impact Mithril Slugs / 42
-				{ 4, 3947 }, --Crafted Solid Shot / 35
-				{ 5, 3930 }, --Crafted Heavy Shot / 20
-				{ 6, 3920 }, --Crafted Light Shot / 10
+				{ 1, 30347, 23773 }, -- Adamantite Shell Machine (335)
+				{ 3, 30346 }, -- Fel Iron Shells (310)
+				{ 16, 43676, 33803 }, -- Adamantite Arrow Maker (335)
 			}
 		},
 		{
 			name = ALIL["Parts"],
 			[NORMAL_DIFF] = {
-				{ 1, 19815 }, --Delicate Arcanite Converter / 58
-				{ 2, 19791 }, --Thorium Widget / 52
-				{ 3, 19788 }, --Dense Blasting Powder / 50
-				{ 4, 23071 }, --Truesilver Transformer / 50
-				{ 5, 12599 }, --Mithril Casing / 43
-				{ 6, 12591 }, --Unstable Trigger / 40
-				{ 7, 19795 }, --Thorium Tube / 39
-				{ 8, 12589 }, --Mithril Tube / 39
-				{ 9, 12585 }, --Solid Blasting Powder / 35
-				{ 10, 3961 }, --Gyrochronatom / 34
-				{ 11, 3958 }, --Iron Strut / 32
-				{ 12, 12584 }, --Gold Power Core / 30
-				{ 13, 3953 }, --Bronze Framework / 29
-				{ 14, 3945 }, --Heavy Blasting Powder / 25
-				{ 15, 3942 }, --Whirring Bronze Gizmo / 25
-				{ 16, 3938 }, --Bronze Tube / 21
-				{ 17, 3973 }, --Silver Contact / 18
-				{ 18, 3926 }, --Copper Modulator / 13
-				{ 19, 3929 }, --Coarse Blasting Powder / 15
-				{ 20, 3924 }, --Copper Tube / 10
-				{ 21, 3922 }, --Handful of Copper Bolts / 8
-				{ 22, 3918 }, --Rough Blasting Powder / 5
+				{ 1, 30308 }, -- Khorium Power Core (350)
+				{ 2, 30309 }, -- Felsteel Stabilizer (350)
+				{ 3, 30307 }, -- Hardened Adamantite Tube (350)
+				{ 4, 39971 }, -- Icy Blasting Primers (335)
+				{ 5, 30306 }, -- Adamantite Frame (325)
+				{ 6, 30303 }, -- Elemental Blasting Powder (300)
+				{ 7, 30305 }, -- Handful of Fel Iron Bolts (300)
+				{ 8, 30304 }, -- Fel Iron Casing (300)
+				{ 10, 39895 }, -- Fused Wiring (275)
 			}
 		},
 		{
 			name = AL["Fireworks"],
 			[NORMAL_DIFF] = {
-				{ 16, 26443 }, --Cluster Launcher / 1
-				{ 1, 26442 }, --Firework Launcher / 1
-				{ 3, 26418 }, --Small Red Rocket / 1
-				{ 4, 26417 }, --Small Green Rocket / 1
-				{ 5, 26416 }, --Small Blue Rocket / 1
-				{ 7, 26425 }, --Red Rocket Cluster / 1
-				{ 8, 26424 }, --Green Rocket Cluster / 1
-				{ 9, 26423 }, --Blue Rocket Cluster / 1
-				{ 12, 23066 }, --Red Firework / 20
-				{ 13, 23068 }, --Green Firework / 20
-				{ 14, 23067 }, --Blue Firework / 20
-				{ 18, 26422 }, --Large Red Rocket / 1
-				{ 19, 26421 }, --Large Green Rocket / 1
-				{ 20, 26420 }, --Large Blue Rocket / 1
-				{ 22, 26428 }, --Large Red Rocket Cluster / 1
-				{ 23, 26427 }, --Large Green Rocket Cluster / 1
-				{ 24, 26426 }, --Large Blue Rocket Cluster / 1
-				{ 27, 23507 }, --Snake Burst Firework / 50
+				{ 1, 30343 }, -- Blue Smoke Flare (undefined)
+				{ 2, 30342 }, -- Red Smoke Flare (undefined)
+				{ 3, 32814 }, -- Purple Smoke Flare (335)
+				{ 4, 30344 }, -- Green Smoke Flare (335)
+				{ 5, 30341 }, -- White Smoke Flare (335)
 			}
 		},
 		{
 			name = ALIL["Explosives"],
 			[NORMAL_DIFF] = {
-				{ 1, 19831 }, --Arcane Bomb / 60
-				{ 2, 19799 }, --Dark Iron Bomb / 57
-				{ 3, 19790 }, --Thorium Grenade / 55
-				{ 4, 23070 }, --Dense Dynamite / 45
-				{ 5, 12619 }, --Hi-Explosive Bomb / 47
-				{ 6, 12754 }, --The Big One / 45
-				{ 7, 3968 }, --Goblin Land Mine / 39
-				{ 8, 12603 }, --Mithril Frag Bomb / 43
-				{ 9, 12760 }, --Goblin Sapper Charge / 41
-				{ 10, 23069 }, --Ez-Thro Dynamite II / 40
-				{ 11, 3967 }, --Big Iron Bomb / 43
-				{ 12, 8243 }, --Flash Bomb / 37
-				{ 13, 3962 }, --Iron Grenade / 35
-				{ 14, 12586 }, --Solid Dynamite / 35
-				{ 15, 3955 }, --Explosive Sheep / 30
-				{ 16, 3950 }, --Big Bronze Bomb / 33
-				{ 17, 3946 }, --Heavy Dynamite / 30
-				{ 18, 3941 }, --Small Bronze Bomb / 29
-				{ 19, 8339 }, --Ez-Thro Dynamite / 25
-				{ 20, 3937 }, --Large Copper Bomb / 26
-				{ 21, 3931 }, --Coarse Dynamite / 20
-				{ 22, 3923 }, --Rough Copper Bomb / 14
-				{ 23, 3919 }, --Rough Dynamite / 10
+				{ 1, 30547 }, -- Elemental Seaforium Charge (350)
+				{ 2, 39973 }, -- Frost Grenades (345)
+				{ 3, 30560 }, -- Super Sapper Charge (340)
+				{ 4, 30311 }, -- Adamantite Grenade (335)
+				{ 5, 30558 }, -- The Bigger One (325)
+				{ 6, 30310 }, -- Fel Iron Bomb (320)
+				{ 16, 30568 }, -- Gnomish Flame Turret (335)
 			}
 		},
 		{
 			name = AL["Pets"],
 			[NORMAL_DIFF] = {
-				{ 1, 19793 }, --Lifelike Mechanical Toad / 53
-				{ 2, 15633 }, --Lil / 41
-				{ 3, 15628 }, --Pet Bombling / 41
-				{ 4, 3928 }, --Mechanical Squirrel Box / 15
+				{ 1, 30337 }, -- Crashin' Thrashin' Robot (325)
 			}
 		},
 		{
 			name = AL["Misc"],
 			[NORMAL_DIFF] = {
-				{ 1, 23080 }, --Powerful Seaforium Charge / 52
-				{ 2, 3972 }, --Large Seaforium Charge / 40
-				{ 3, 3933 }, --Small Seaforium Charge / 20
-				{ 5, 22704 }, --Field Repair Bot 74A / 60
-				{ 6, 15255 }, --Mechanical Repair Kit / 40
-				{ 8, 19814 }, --Masterwork Target Dummy / 55
-				{ 9, 3965 }, --Advanced Target Dummy / 37
-				{ 10, 3932 }, --Target Dummy / 17
-				{ 12, 28327 }, --Steam Tonk Controller / 55
-				{ 13, 9271 }, --Aquadynamic Fish Attractor / 30
-				{ 15, 12715 }, --Recipe: Goblin Rocket Fuel / 42
-				{ 16, 3957 }, --Ice Deflector / 31
-				{ 17, 3944 }, --Flame Deflector / 25
-				{ 19, 23129 }, --World Enlarger / 50
-				{ 20, 12590 }, --Gyromatic Micro-Adjustor / 35
-				{ 21, 3959 }, --Discombobulator Ray / 32
-				{ 22, 26011 }, --Tranquil Mechanical Yeti / 60
-				{ 23, 23096 }, --Gnomish Alarm-O-Bot / 53
-				{ 24, 19567 }, --Salt Shaker / 50
-				{ 25, 21940 }, --SnowMaster 9000 / 38
-				{ 26, 3963 }, --Compact Harvest Reaper Kit / 35
-				{ 27, 3960 }, --Portable Bronze Mortar / 33
-				{ 28, 6458 }, --Ornate Spyglass / 27
-				{ 29, 8334 }, --Practice Lock / 20
-				{ 30, 12895 }, --Plans: Inlaid Mithril Cylinder / 40
+				{ 1, 44157 }, -- Turbo-Charged Flying Machine (385)
+				{ 2, 44155 }, -- Flying Machine (375)
+				{ 4, 30349 }, -- Khorium Toolbox (350)
+				{ 5, 30348 }, -- Fel Iron Toolbox (325)
+				{ 7, 36955 }, -- Ultrasafe Transporter - Toshley's Station (350)
+				{ 8, 36954 }, -- Dimensional Ripper - Area 52 (350)
+				{ 10, 30573 }, -- Gnomish Tonk Controller (undefined)
+				{ 11, 30561 }, -- Goblin Tonk Controller (undefined)
+				{ 13, 30552 }, -- Mana Potion Injector (345)
+				{ 14, 30551 }, -- Healing Potion Injector (330)
+				{ 16, 30548 }, -- Zapthrottle Mote Extractor (305)
+				{ 18, 44391 }, -- Field Repair Bot 110G (360)
+				{ 20, 30549 }, -- Critter Enlarger (undefined)
 			}
 		},
 	}

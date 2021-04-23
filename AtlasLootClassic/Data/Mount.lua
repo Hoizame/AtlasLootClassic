@@ -154,6 +154,8 @@ local MOUNT_LIST = {
     [31832] = 21075, -- Reins of the Silver Riding Talbuk / Kurenai
     [31834] = 21077, -- Reins of the Tan Riding Talbuk / Kurenai
     [31836] = 21076, -- Reins of the White Riding Talbuk / Kurenai
+    [34060] = 22719, -- Flying Machine Control
+    [34061] = 22720, -- Turbo-Charged Flying Machine Control
 --@end-version-bc@
 }
 
