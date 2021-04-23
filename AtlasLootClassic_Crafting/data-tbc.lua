@@ -184,6 +184,7 @@ data["BlacksmithingBC"] = {
 				{ 6, 29694 }, -- Fel Edged Battleaxe (365)
 				{ 7, 36134 }, -- Stormforged Axe (340)
 				{ 8, 29557 }, -- Fel Iron Hatchet (320)
+				{ 10, 36126 }, -- Light Skyforged Axe (280)
 				{ 16, "INV_sword_04", nil, ALIL["Two-Handed Axes"] },
 				{ 17, 36261 }, -- Bloodmoon (385)
 				{ 18, 34544 }, -- Mooncleaver (385)
@@ -204,6 +205,7 @@ data["BlacksmithingBC"] = {
 				{ 7, 29696 }, -- Runic Hammer (365)
 				{ 8, 36136 }, -- Lavaforged Warhammer (340)
 				{ 9, 29558 }, -- Fel Iron Hammer (325)
+				{ 11, 36128 }, -- Light Emberforged Hammer (280)
 				{ 16, "INV_sword_04", nil, ALIL["Two-Handed Maces"] },
 				{ 17, 36263 }, -- Stormherald (385)
 				{ 18, 34548 }, -- Deep Thunder (385)
@@ -224,6 +226,7 @@ data["BlacksmithingBC"] = {
 				{ 6, 29692 }, -- Felsteel Longblade (365)
 				{ 7, 29571 }, -- Adamantite Rapier (335)
 				{ 8, 36131 }, -- Windforged Rapier (340)
+				{ 10, 36125 }, -- Light Earthforged Blade (280)
 				{ 16, "INV_sword_06", nil, ALIL["Two-Handed Swords"] },
 				{ 17, 36259 }, -- Lionheart Executioner (385)
 				{ 18, 34540 }, -- Lionheart Champion (385)
@@ -231,240 +234,161 @@ data["BlacksmithingBC"] = {
 				{ 21, 29693 }, -- Khorium Champion (365)
 				{ 22, 36133 }, -- Stoneforged Claymore (340)
 				{ 23, 29565 }, -- Fel Iron Greatsword (330)
+				{ 25, 43549 }, -- Heavy Copper Longsword (35)
 			}
 		},
 		{
 			name = AL["Weapons"].." - "..ALIL["Thrown"],
 			[NORMAL_DIFF] = {
-
+				{ 1, 34983 }, -- Felsteel Whisper Knives (360)
+				{ 2, 34982 }, -- Enchanted Thorium Blades (320)
+				{ 4, 34981 }, -- Whirling Steel Axes (220)
+				{ 5, 34979 }, -- Thick Bronze Darts (130)
 			}
 		},
 		{
 			name = AL["Armor"].." - "..ALIL["Chest"],
 			[MAIL_DIFF] = {
+				{ 1, 36256 }, -- Embrace of the Twisting Nether (385)
+				{ 2, 34530 }, -- Twisting Nether Chain Shirt (385)
+				{ 3, 34529 }, -- Nether Chain Shirt (360)
 
+				{ 16, 29649 }, -- Earthpeace Breastplate (370)
+				{ 17, 36130 }, -- Stormforged Hauberk (340)
+				{ 18, 29556 }, -- Fel Iron Chain Tunic (330)
 			},
 			[PLATE_DIFF] = {
+				{ 1, 36257 }, -- Bulwark of the Ancient Kings (385)
+				{ 2, 34534 }, -- Bulwark of Kings (385)
+				{ 3, 34533 }, -- Breastplate of Kings (360)
 
+				{ 16, 38477 }, -- Iceguard Breastplate (375)
+				{ 17, 38473 }, -- Wildguard Breastplate (375)
+				{ 18, 29645 }, -- Ragesteel Breastplate (370)
+				{ 19, 46144 }, -- Hard Khorium Battleplate (365)
+				{ 20, 46142 }, -- Sunblessed Breastplate (365)
+				{ 21, 29617 }, -- Flamebane Breastplate (365)
+				{ 22, 29610 }, -- Enchanted Adamantite Breastplate (360)
+				{ 23, 29606 }, -- Adamantite Breastplate (340)
+				{ 24, 36129 }, -- Heavy Earthforged Breastplate (340)
+				{ 25, 29550 }, -- Fel Iron Breastplate (335)
 			},
 		},
 		{
 			name = AL["Armor"].." - "..ALIL["Feet"],
-			[MAIL_DIFF] = {
-
-			},
 			[PLATE_DIFF] = {
-
+				{ 1, 40033 }, -- Shadesteel Sabots (375)
+				{ 2, 36392 }, -- Red Havoc Boots (375)
+				{ 3, 36391 }, -- Boots of the Protector (375)
+				{ 4, 29630 }, -- Khorium Boots (365)
+				{ 5, 29611 }, -- Enchanted Adamantite Boots (355)
+				{ 6, 29548 }, -- Fel Iron Plate Boots (325)
 			},
 		},
 		{
 			name = AL["Armor"].." - "..ALIL["Hand"],
 			[MAIL_DIFF] = {
-
+				{ 1, 29648 }, -- Swiftsteel Gloves (370)
+				{ 2, 29658 }, -- Felfury Gauntlets (365)
+				{ 3, 29552 }, -- Fel Iron Chain Gloves (320)
 			},
 			[PLATE_DIFF] = {
-
+				{ 1, 46141 }, -- Hard Khorium Battlefists (365)
+				{ 2, 46140 }, -- Sunblessed Gauntlets (365)
+				{ 3, 29642 }, -- Ragesteel Gloves (365)
+				{ 4, 29662 }, -- Steelgrip Gauntlets (365)
+				{ 5, 29622 }, -- Gauntlets of the Iron Tower (365)
+				{ 6, 29616 }, -- Flamebane Gloves (360)
+				{ 7, 29619 }, -- Felsteel Gloves (360)
+				{ 8, 29605 }, -- Adamantite Plate Gloves (335)
+				{ 9, 29545 }, -- Fel Iron Plate Gloves (310)
 			},
 		},
 		{
 			name = AL["Armor"].." - "..ALIL["Head"],
 			[MAIL_DIFF] = {
-
+				{ 1, 29663 }, -- Storm Helm (365)
+				{ 2, 29551 }, -- Fel Iron Chain Coif (310)
 			},
 			[PLATE_DIFF] = {
-
+				{ 1, 38479 }, -- Iceguard Helm (375)
+				{ 2, 38476 }, -- Wildguard Helm (375)
+				{ 3, 29668 }, -- Oathkeeper's Helm (365)
+				{ 4, 29664 }, -- Helm of the Stalwart Defender (365)
+				{ 5, 29643 }, -- Ragesteel Helm (365)
+				{ 6, 29621 }, -- Felsteel Helm (365)
+				{ 7, 29615 }, -- Flamebane Helm (355)
 			},
 		},
 		{
 			name = AL["Armor"].." - "..ALIL["Legs"],
 			[MAIL_DIFF] = {
-
+				{ 1, 36124 }, -- Windforged Leggings (280)
 			},
 			[PLATE_DIFF] = {
-
+				{ 1, 40035 }, -- Shadesteel Greaves (375)
+				{ 2, 38478 }, -- Iceguard Leggings (375)
+				{ 3, 38475 }, -- Wildguard Leggings (375)
+				{ 4, 29613 }, -- Enchanted Adamantite Leggings (365)
+				{ 5, 29620 }, -- Felsteel Leggings (360)
+				{ 6, 29629 }, -- Khorium Pants (360)
+				{ 7, 29549 }, -- Fel Iron Plate Pants (325)
+				{ 9, 36122 }, -- Earthforged Leggings (280)
 			},
 		},
 		{
 			name = AL["Armor"].." - "..ALIL["Shoulder"],
-			[MAIL_DIFF] = {
-
-			},
 			[PLATE_DIFF] = {
-
+				{ 1, 41135 }, -- Dawnsteel Shoulders (375)
+				{ 2, 41133 }, -- Swiftsteel Shoulders (375)
+				{ 3, 42662 }, -- Ragesteel Shoulders (365)
 			},
 		},
 		{
 			name = AL["Armor"].." - "..ALIL["Waist"],
-			[MAIL_DIFF] = {
-
-			},
 			[PLATE_DIFF] = {
-
+				{ 1, 40036 }, -- Shadesteel Girdle (375)
+				{ 2, 36390 }, -- Red Belt of Battle (375)
+				{ 3, 36389 }, -- Belt of the Guardian (375)
+				{ 4, 29628 }, -- Khorium Belt (360)
+				{ 5, 29608 }, -- Enchanted Adamantite Belt (355)
+				{ 6, 29547 }, -- Fel Iron Plate Belt (315)
 			},
 		},
 		{
 			name = AL["Armor"].." - "..ALIL["Wrist"],
-			[MAIL_DIFF] = {
-
-			},
 			[PLATE_DIFF] = {
-
-			},
-		},
-		{
-			name = ALIL["Shields"],
-			[NORMAL_DIFF] = {
-			},
-		},
-		{
-			name = AL["Enhancements"],
-			[NORMAL_DIFF] = {
-
+				{ 1, 41134 }, -- Dawnsteel Bracers (375)
+				{ 2, 41132 }, -- Swiftsteel Bracers (375)
+				{ 3, 40034 }, -- Shadesteel Bracers (375)
+				{ 4, 29672 }, -- Blessed Bracers (365)
+				{ 5, 29671 }, -- Bracers of the Green Fortress (365)
+				{ 6, 29669 }, -- Black Felsteel Bracers (365)
+				{ 7, 29614 }, -- Flamebane Bracers (350)
+				{ 8, 29603 }, -- Adamantite Plate Bracers (335)
+				{ 9, 29553 }, -- Fel Iron Chain Bracers (325)
 			},
 		},
 		{
 			name = AL["Misc"],
 			[NORMAL_DIFF] = {
-
+				{ 1, 32657 }, -- Eternium Rod (375)
+				{ 2, 32656 }, -- Adamantite Rod (350)
+				{ 3, 32655 }, -- Fel Iron Rod (300)
+				{ 5, 34608 }, -- Adamantite Weightstone (350)
+				{ 6, 34607 }, -- Fel Weightstone (300)
+				{ 8, 29729 }, -- Greater Ward of Shielding (375)
+				{ 9, 29728 }, -- Lesser Ward of Shielding (340)
+				{ 16, 42688 }, -- Adamantite Weapon Chain (335)
+				{ 18, 29657 }, -- Felsteel Shield Spike (360)
+				{ 20, 29656 }, -- Adamantite Sharpening Stone (350)
+				{ 21, 29654 }, -- Fel Sharpening Stone (300)
+				{ 23, 32285 }, -- Greater Rune of Warding (350)
+				{ 24, 32284 }, -- Lesser Rune of Warding (325)
 			},
 		},
 	}
 }
-
---[[
-
-
-
-
-
-
-{ 0, 36257 }, -- Bulwark of the Ancient Kings (385)
-{ 0, 36256 }, -- Embrace of the Twisting Nether (385)
-{ 0, 34530 }, -- Twisting Nether Chain Shirt (385)
-
-
-
-
-
-{ 0, 34534 }, -- Bulwark of Kings (385)
-
-{ 0, 41134 }, -- Dawnsteel Bracers (375)
-{ 0, 41135 }, -- Dawnsteel Shoulders (375)
-{ 0, 41133 }, -- Swiftsteel Shoulders (375)
-{ 0, 41132 }, -- Swiftsteel Bracers (375)
-{ 0, 40033 }, -- Shadesteel Sabots (375)
-{ 0, 40035 }, -- Shadesteel Greaves (375)
-{ 0, 40036 }, -- Shadesteel Girdle (375)
-{ 0, 40034 }, -- Shadesteel Bracers (375)
-{ 0, 38479 }, -- Iceguard Helm (375)
-{ 0, 38478 }, -- Iceguard Leggings (375)
-{ 0, 38477 }, -- Iceguard Breastplate (375)
-{ 0, 38476 }, -- Wildguard Helm (375)
-{ 0, 38475 }, -- Wildguard Leggings (375)
-{ 0, 38473 }, -- Wildguard Breastplate (375)
-{ 0, 36392 }, -- Red Havoc Boots (375)
-{ 0, 36391 }, -- Boots of the Protector (375)
-{ 0, 36390 }, -- Red Belt of Battle (375)
-{ 0, 36389 }, -- Belt of the Guardian (375)
-{ 0, 32657 }, -- Eternium Rod (375)
-{ 0, 29729 }, -- Greater Ward of Shielding (375)
-{ 0, 29649 }, -- Earthpeace Breastplate (370)
-{ 0, 29648 }, -- Swiftsteel Gloves (370)
-{ 0, 29645 }, -- Ragesteel Breastplate (370)
-{ 0, 46140 }, -- Sunblessed Gauntlets (365)
-{ 0, 46142 }, -- Sunblessed Breastplate (365)
-{ 0, 46144 }, -- Hard Khorium Battleplate (365)
-{ 0, 46141 }, -- Hard Khorium Battlefists (365)
-
-{ 0, 42662 }, -- Ragesteel Shoulders (365)
-
-
-
-
-
-{ 0, 29672 }, -- Blessed Bracers (365)
-{ 0, 29671 }, -- Bracers of the Green Fortress (365)
-{ 0, 29669 }, -- Black Felsteel Bracers (365)
-{ 0, 29668 }, -- Oathkeeper's Helm (365)
-{ 0, 29664 }, -- Helm of the Stalwart Defender (365)
-{ 0, 29663 }, -- Storm Helm (365)
-{ 0, 29662 }, -- Steelgrip Gauntlets (365)
-{ 0, 29622 }, -- Gauntlets of the Iron Tower (365)
-{ 0, 29658 }, -- Felfury Gauntlets (365)
-{ 0, 29643 }, -- Ragesteel Helm (365)
-{ 0, 29642 }, -- Ragesteel Gloves (365)
-{ 0, 29630 }, -- Khorium Boots (365)
-{ 0, 29621 }, -- Felsteel Helm (365)
-{ 0, 29617 }, -- Flamebane Breastplate (365)
-{ 0, 29613 }, -- Enchanted Adamantite Leggings (365)
-{ 0, 34983 }, -- Felsteel Whisper Knives (360)
-
-
-
-
-
-{ 0, 34529 }, -- Nether Chain Shirt (360)
-
-
-{ 0, 34533 }, -- Breastplate of Kings (360)
-{ 0, 29657 }, -- Felsteel Shield Spike (360)
-{ 0, 29629 }, -- Khorium Pants (360)
-{ 0, 29628 }, -- Khorium Belt (360)
-{ 0, 29620 }, -- Felsteel Leggings (360)
-{ 0, 29619 }, -- Felsteel Gloves (360)
-{ 0, 29616 }, -- Flamebane Gloves (360)
-{ 0, 29610 }, -- Enchanted Adamantite Breastplate (360)
-{ 0, 29615 }, -- Flamebane Helm (355)
-{ 0, 29611 }, -- Enchanted Adamantite Boots (355)
-{ 0, 29608 }, -- Enchanted Adamantite Belt (355)
-{ 0, 34608 }, -- Adamantite Weightstone (350)
-{ 0, 32656 }, -- Adamantite Rod (350)
-{ 0, 32285 }, -- Greater Rune of Warding (350)
-{ 0, 29656 }, -- Adamantite Sharpening Stone (350)
-{ 0, 29614 }, -- Flamebane Bracers (350)
-
-{ 0, 36130 }, -- Stormforged Hauberk (340)
-
-
-
-{ 0, 36129 }, -- Heavy Earthforged Breastplate (340)
-
-{ 0, 29728 }, -- Lesser Ward of Shielding (340)
-{ 0, 29606 }, -- Adamantite Breastplate (340)
-{ 0, 42688 }, -- Adamantite Weapon Chain (335)
-{ 0, 29605 }, -- Adamantite Plate Gloves (335)
-{ 0, 29603 }, -- Adamantite Plate Bracers (335)
-
-{ 0, 29550 }, -- Fel Iron Breastplate (335)
-
-
-
-{ 0, 29556 }, -- Fel Iron Chain Tunic (330)
-{ 0, 32284 }, -- Lesser Rune of Warding (325)
-
-
-{ 0, 29553 }, -- Fel Iron Chain Bracers (325)
-{ 0, 29549 }, -- Fel Iron Plate Pants (325)
-{ 0, 29548 }, -- Fel Iron Plate Boots (325)
-{ 0, 34982 }, -- Enchanted Thorium Blades (320)
-
-{ 0, 29552 }, -- Fel Iron Chain Gloves (320)
-{ 0, 29547 }, -- Fel Iron Plate Belt (315)
-{ 0, 29551 }, -- Fel Iron Chain Coif (310)
-{ 0, 29545 }, -- Fel Iron Plate Gloves (310)
-{ 0, 34607 }, -- Fel Weightstone (300)
-{ 0, 32655 }, -- Fel Iron Rod (300)
-{ 0, 29654 }, -- Fel Sharpening Stone (300)
-{ 0, 36124 }, -- Windforged Leggings (280)
-{ 0, 36126 }, -- Light Skyforged Axe (280)
-{ 0, 36128 }, -- Light Emberforged Hammer (280)
-{ 0, 36125 }, -- Light Earthforged Blade (280)
-{ 0, 36122 }, -- Earthforged Leggings (280)
-{ 0, 34981 }, -- Whirling Steel Axes (220)
-{ 0, 34979 }, -- Thick Bronze Darts (130)
-{ 0, 43549 }, -- Heavy Copper Longsword (35)
-
-]]--
 
 data["EnchantingBC"] = {
 	name = ALIL["Enchanting"],
