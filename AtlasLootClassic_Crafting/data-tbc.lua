@@ -1445,18 +1445,27 @@ data["MiningBC"] = {
 		{
 			name = AL["Smelting"],
 			[NORMAL_DIFF] = {
-				{ 1, 22967 }, --Smelt Elementium / 310
-				{ 2, 16153 }, --Smelt Thorium / 250
-				{ 3, 10098 }, --Smelt Truesilver / 230
-				{ 4, 14891 }, --Smelt Dark Iron / 230
-				{ 5, 10097 }, --Smelt Mithril / 175
-				{ 6, 3308 }, --Smelt Gold / 170
-				{ 7, 3569 }, --Smelt Steel / 165
-				{ 8, 3307 }, --Smelt Iron / 130
-				{ 9, 2658 }, --Smelt Silver / 100
-				{ 10, 2659 }, --Smelt Bronze / 65
-				{ 11, 3304 }, --Smelt Tin / 50
-				{ 12, 2657 }, --Smelt Copper / 25
+				{ 1, 46353 }, -- Smelt Hardened Khorium (375)
+				{ 2, 29686 }, -- Smelt Hardened Adamantite (375)
+				{ 3, 29361 }, -- Smelt Khorium (375)
+				{ 4, 29360 }, -- Smelt Felsteel (355)
+				{ 5, 29359 }, -- Smelt Eternium (350)
+				{ 6, 29358 }, -- Smelt Adamantite (325)
+				{ 7, 35751 }, -- Fire Sunder (300)
+				{ 8, 35750 }, -- Earth Shatter (300)
+				{ 9, 29356 }, -- Smelt Fel Iron (300)
+				{ 16, 22967 }, --Smelt Elementium / 310
+				{ 17, 16153 }, --Smelt Thorium / 250
+				{ 18, 10098 }, --Smelt Truesilver / 230
+				{ 19, 14891 }, --Smelt Dark Iron / 230
+				{ 20, 10097 }, --Smelt Mithril / 175
+				{ 21, 3308 }, --Smelt Gold / 170
+				{ 22, 3569 }, --Smelt Steel / 165
+				{ 23, 3307 }, --Smelt Iron / 130
+				{ 24, 2658 }, --Smelt Silver / 100
+				{ 25, 2659 }, --Smelt Bronze / 65
+				{ 26, 3304 }, --Smelt Tin / 50
+				{ 27, 2657 }, --Smelt Copper / 25
 			}
 		},
 	}
