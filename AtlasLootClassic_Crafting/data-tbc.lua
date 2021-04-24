@@ -643,7 +643,7 @@ data["EngineeringBC"] = {
 			}
 		},
 		{
-			name = AL["Fireworks"],
+			name = AL["Flares"],
 			[NORMAL_DIFF] = {
 				{ 1, 30343 }, -- Blue Smoke Flare (undefined)
 				{ 2, 30342 }, -- Red Smoke Flare (undefined)
@@ -655,12 +655,11 @@ data["EngineeringBC"] = {
 		{
 			name = ALIL["Explosives"],
 			[NORMAL_DIFF] = {
-				{ 1, 30547 }, -- Elemental Seaforium Charge (350)
-				{ 2, 39973 }, -- Frost Grenades (345)
-				{ 3, 30560 }, -- Super Sapper Charge (340)
-				{ 4, 30311 }, -- Adamantite Grenade (335)
-				{ 5, 30558 }, -- The Bigger One (325)
-				{ 6, 30310 }, -- Fel Iron Bomb (320)
+				{ 1, 39973 }, -- Frost Grenades (345)
+				{ 2, 30560 }, -- Super Sapper Charge (340)
+				{ 3, 30311 }, -- Adamantite Grenade (335)
+				{ 4, 30558 }, -- The Bigger One (325)
+				{ 5, 30310 }, -- Fel Iron Bomb (320)
 				{ 16, 30568 }, -- Gnomish Flame Turret (335)
 			}
 		},
@@ -686,6 +685,7 @@ data["EngineeringBC"] = {
 				{ 16, 30548 }, -- Zapthrottle Mote Extractor (305)
 				{ 18, 44391 }, -- Field Repair Bot 110G (360)
 				{ 20, 30549 }, -- Critter Enlarger (undefined)
+				{ 22, 30547 }, -- Elemental Seaforium Charge (350)
 			}
 		},
 	}

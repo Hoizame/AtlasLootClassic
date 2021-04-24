@@ -3555,6 +3555,13 @@ local PROFESSION = {
 --@end-version-bc@
 }
 
+-- fix
+--@version-bc@
+PROFESSION[36686][1] = 24272
+PROFESSION[31373][1] = 24271
+PROFESSION[26751][1] = 21845
+--@end-version-bc@
+
 local PROFESSION_ITEM_SKILL = {
     -- Herb
     [8838] = { 230, 255, 330 }, -- Sungrass
