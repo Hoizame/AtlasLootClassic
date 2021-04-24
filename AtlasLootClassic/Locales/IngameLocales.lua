@@ -230,7 +230,17 @@ local IngameLocales = {
 	["Bullet"] = GetItemSubClassInfo(6,3),
 	["Explosives"] = GetItemSubClassInfo(7,2),
 
-
+	-- ######################################################################
+	-- Gems
+	-- ######################################################################
+--@version-bc@
+	["Socket Gems"]	 	= _G["SOCKET_GEMS"],
+	["Gems"]			= _G["AUCTION_CATEGORY_GEMS"],
+	["Meta"]	 		= _G["META_GEM"],
+	["Red"]	 			= _G["RED_GEM"],
+	["Yellow"]	 		= _G["YELLOW_GEM"],
+	["Blue"]	 		= _G["BLUE_GEM"],
+--@end-version-bc@
 	-- ######################################################################
 	-- Zones
 	-- ######################################################################

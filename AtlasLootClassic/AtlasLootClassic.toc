@@ -1,5 +1,5 @@
-﻿## Interface: 11306
-## Interface-Classic: 11306
+﻿## Interface: 11307
+## Interface-Classic: 11307
 ## Interface-BC: 20501
 ## Author: Lag
 ## Version: @project-version@
