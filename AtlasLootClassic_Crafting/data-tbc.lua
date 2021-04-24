@@ -36,6 +36,8 @@ local PROF_CONTENT = data:AddContentType(ALIL["Professions"], ATLASLOOT_PRIMPROF
 local PROF_SEC_CONTENT = data:AddContentType(AL["Secondary Professions"], ATLASLOOT_SECPROFESSION_COLOR)
 local PROF_CLASS_CONTENT = data:AddContentType(AL["Class Professions"], ATLASLOOT_CLASSPROFESSION_COLOR)
 
+local GEM_FORMAT1 = ALIL["Gems"].." - %s"
+local GEM_FORMAT2 = ALIL["Gems"].." - %s & %s"
 
 data["AlchemyBC"] = {
 	name = ALIL["Alchemy"],
@@ -1087,6 +1089,334 @@ data["LeatherworkingBC"] = {
 				{ 18, 32482 }, -- Comfortable Insoles (300)
 
 			},
+		},
+	}
+}
+
+data["JewelcraftingBC"] = {
+	name = ALIL["Jewelcrafting"],
+	ContentType = PROF_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = PROF_ITTYPE,
+	items = {
+		{
+			name = AL["Armor"].." - "..ALIL["Head"],
+			[NORMAL_DIFF] = {
+				{ 1, 41418 }, -- Crown of the Sea Witch (375)
+				{ 2, 31077 }, -- Coronet of the Verdant Flame (370)
+				{ 3, 31078 }, -- Circlet of Arcane Might (370)
+				{ 4, 26920 }, -- Blood Crown (325)
+				{ 5, 26906 }, -- Emerald Crown of Destruction (275)
+				{ 6, 26878 }, -- Ruby Crown of Restoration (225)
+				{ 7, 25321 }, -- Moonsoul Crown (150)
+			}
+		},
+		{
+			name = AL["Armor"].." - "..ALIL["Neck"],
+			[NORMAL_DIFF] = {
+				{ 1, 31072 }, -- Embrace of the Dawn (365)
+				{ 2, 46127 }, -- Hard Khorium Choker (365)
+				{ 3, 46126 }, -- Amulet of Flowing Life (365)
+				{ 4, 46125 }, -- Pendant of Sunfire (365)
+				{ 5, 31076 }, -- Chain of the Twilight Owl (365)
+				{ 6, 31070 }, -- Braided Eternium Chain (360)
+				{ 7, 31071 }, -- Eye of the Night (360)
+				{ 8, 31066 }, -- Pendant of the Null Rune (360)
+				{ 9, 31065 }, -- Pendant of Shadow's End (360)
+				{ 10, 31064 }, -- Pendant of Withering (360)
+				{ 11, 31063 }, -- Pendant of Thawing (360)
+				{ 12, 31062 }, -- Pendant of Frozen Flame (360)
+				{ 13, 31068 }, -- Living Ruby Pendant (355)
+				{ 14, 31067 }, -- Thick Felsteel Necklace (355)
+				{ 15, 31051 }, -- Thick Adamantite Necklace (345)
+				{ 16, 40514 }, -- Necklace of the Deep (340)
+				{ 17, 26918 }, -- Arcanite Sword Pendant (315)
+				{ 18, 26915 }, -- Necklace of the Diamond Tower (305)
+				{ 19, 26911 }, -- Living Emerald Pendant (300)
+				{ 20, 26908 }, -- Sapphire Pendant of Winter Night (290)
+				{ 21, 26883 }, -- Ruby Pendant of Fire (260)
+				{ 22, 26897 }, -- Opal Necklace of Impact (250)
+				{ 23, 26876 }, -- Aquamarine Pendant of the Warrior (245)
+				{ 24, 25622 }, -- Citrine Pendant of Golden Healing (190)
+				{ 25, 25618 }, -- Jade Pendant of Blasting (160)
+				{ 26, 25320 }, -- Heavy Golden Necklace of Battle (150)
+				{ 27, 25614 }, -- Silver Rose Pendant (145)
+				{ 28, 25498 }, -- Barbaric Iron Collar (140)
+				{ 29, 25610 }, -- Pendant of the Agate Shield (120)
+				{ 30, 38175 }, -- Bronze Torc (110)
+				{ 101, 25339 }, -- Amulet of the Moon (110)
+				{ 102, 36523 }, -- Brilliant Necklace (105)
+				{ 103, 26927 }, -- Thick Bronze Necklace (80)
+				{ 104, 26928 }, -- Ornate Tigerseye Necklace (60)
+				{ 105, 32178 }, -- Malachite Pendant (50)
+			}
+		},
+		{
+			name = AL["Armor"].." - "..AL["Ring"],
+			[NORMAL_DIFF] = {
+				{ 1, 38504 }, -- The Natural Ward (375)
+				{ 2, 46122 }, -- Loop of Forged Power (365)
+				{ 3, 38503 }, -- The Frozen Eye (375)
+				{ 4, 37855 }, -- Ring of Arcane Shielding (360)
+				{ 5, 36526 }, -- Diamond Focus Ring (285)
+				{ 6, 36525 }, -- Red Ring of Destruction (255)
+				{ 7, 34959 }, -- Truesilver Commander's Ring (210)
+				{ 8, 34955 }, -- Golden Ring of Power (190)
+				{ 9, 36524 }, -- Heavy Jade Ring (135)
+				{ 10, 37818 }, -- Bronze Band of Force (95)
+				{ 11, 46123 }, -- Ring of Flowing Life (365)
+				{ 12, 46124 }, -- Hard Khorium Band (365)
+				{ 13, 31061 }, -- Blazing Eternium Band (365)
+				{ 14, 31057 }, -- Arcane Khorium Band (365)
+				{ 15, 31056 }, -- Khorium Band of Leaves (360)
+				{ 16, 31060 }, -- Delicate Eternium Ring (355)
+				{ 17, 31055 }, -- Khorium Inferno Band (355)
+				{ 18, 31054 }, -- Khorium Band of Frost (355)
+				{ 19, 31053 }, -- Khorium Band of Shadows (350)
+				{ 20, 31058 }, -- Heavy Felsteel Ring (345)
+				{ 21, 31052 }, -- Heavy Adamantite Ring (345)
+				{ 22, 41415 }, -- The Black Pearl (340)
+				{ 23, 41414 }, -- Brilliant Pearl Band (335)
+				{ 24, 31050 }, -- Azure Moonstone Ring (330)
+				{ 25, 31049 }, -- Golden Draenite Ring (320)
+				{ 26, 31048 }, -- Fel Iron Blood Ring (320)
+				{ 27, 26916 }, -- Band of Natural Fire (320)
+				{ 28, 34961 }, -- Emerald Lion Ring (300)
+				{ 29, 34960 }, -- Glowing Thorium Band (290)
+				{ 30, 26907 }, -- Onslaught Ring (290)
+				{ 101, 26910 }, -- Ring of Bitter Shadows (285)
+				{ 102, 26903 }, -- Sapphire Signet (285)
+				{ 103, 26902 }, -- Simple Opal Ring (280)
+				{ 104, 26885 }, -- Truesilver Healing Ring (265)
+				{ 105, 26896 }, -- Gem Studded Band (250)
+				{ 106, 26887 }, -- The Aquamarine Ward (245)
+				{ 107, 26874 }, -- Aquamarine Signet (235)
+				{ 108, 25621 }, -- Citrine Ring of Rapid Healing (210)
+				{ 109, 25620 }, -- Engraved Truesilver Ring (200)
+				{ 110, 25619 }, -- The Jade Eye (170)
+				{ 111, 25613 }, -- Golden Dragon Ring (165)
+				{ 112, 25617 }, -- Blazing Citrine Ring (150)
+				{ 113, 25318 }, -- Ring of Twilight Shadows (130)
+				{ 114, 25323 }, -- Wicked Moonstone Ring (125)
+				{ 115, 25305 }, -- Heavy Silver Ring (120)
+				{ 116, 25317 }, -- Ring of Silver Might (110)
+				{ 117, 25287 }, -- Gloom Band (100)
+				{ 118, 25284 }, -- Simple Pearl Ring (90)
+				{ 119, 25490 }, -- Solid Bronze Ring (80)
+				{ 120, 25280 }, -- Elegant Silver Ring (80)
+				{ 121, 25283 }, -- Inlaid Malachite Ring (60)
+				{ 122, 32179 }, -- Tigerseye Band (50)
+				{ 123, 26926 }, -- Heavy Copper Ring (35)
+				{ 124, 26925 }, -- Woven Copper Ring (30)
+				{ 125, 25493 }, -- Braided Copper Ring (30)
+			}
+		},
+		{
+			name = AL["Armor"].." - "..ALIL["Trinket"],
+			[NORMAL_DIFF] = {
+				{ 1, 46779 }, -- Figurine - Seaspray Albatross (375)
+				{ 2, 31082 }, -- Figurine - Talasite Owl (370)
+				{ 3, 26909 }, -- Figurine - Emerald Owl (285)
+				{ 4, 26872 }, -- Figurine - Jade Owl (225)
+				{ 6, 46778 }, -- Figurine - Shadowsong Panther (375)
+				{ 7, 31083 }, -- Figurine - Nightseye Panther (370)
+				{ 8, 26875 }, -- Figurine - Black Pearl Panther (215)
+				{ 16, 46775 }, -- Figurine - Empyrean Tortoise (375)
+				{ 17, 31080 }, -- Figurine - Dawnstone Crab (370)
+				{ 18, 26912 }, -- Figurine - Black Diamond Crab (300)
+				{ 19, 26881 }, -- Figurine - Truesilver Crab (225)
+				{ 10, 46776 }, -- Figurine - Khorium Boar (375)
+				{ 11, 31079 }, -- Figurine - Felsteel Boar (370)
+				{ 12, 26882 }, -- Figurine - Truesilver Boar (235)
+				{ 21, 46777 }, -- Figurine - Crimson Serpent (375)
+				{ 22, 31081 }, -- Figurine - Living Ruby Serpent (370)
+				{ 23, 26900 }, -- Figurine - Ruby Serpent (260)
+				{ 25, 26914 }, -- Figurine - Dark Iron Scorpid (300)
+				{ 27, 26873 }, -- Figurine - Golden Hare (200)
+			}
+		},
+		{
+			name = AL["Weapons"].." - "..ALIL["Fist Weapons"],
+			[NORMAL_DIFF] = {
+				{ 1, 25612 }, -- Heavy Iron Knuckles (125)
+			}
+		},
+		{
+			name = format(GEM_FORMAT1, ALIL["Meta"]),
+			[NORMAL_DIFF] = {
+				{ 1, 46601 }, -- Ember Skyfire Diamond (370)
+				{ 2, 39963 }, -- Thundering Skyfire Diamond (365)
+				{ 3, 44794 }, -- Chaotic Skyfire Diamond (365)
+				{ 4, 32873 }, -- Swift Skyfire Diamond (365)
+				{ 5, 32872 }, -- Mystical Skyfire Diamond (365)
+				{ 6, 32874 }, -- Enigmatic Skyfire Diamond (365)
+				{ 7, 32871 }, -- Destructive Skyfire Diamond (365)
+				{ 16, 46597 }, -- Eternal Earthstorm Diamond (370)
+				{ 17, 39961 }, -- Relentless Earthstorm Diamond (365)
+				{ 18, 32868 }, -- Tenacious Earthstorm Diamond (365)
+				{ 19, 32866 }, -- Powerful Earthstorm Diamond (365)
+				{ 20, 32870 }, -- Insightful Earthstorm Diamond (365)
+				{ 21, 32869 }, -- Brutal Earthstorm Diamond (365)
+				{ 22, 32867 }, -- Bracing Earthstorm Diamond (365)
+			}
+		},
+		{
+			name = format(GEM_FORMAT1, ALIL["Red"]),
+			[NORMAL_DIFF] = {
+				{ 1, 42588 }, -- Kailee's Rose (360)
+				{ 2, 39710 }, -- Teardrop Crimson Spinel (375)
+				{ 3, 31087 }, -- Teardrop Living Ruby (350)
+				{ 4, 28903 }, -- Teardrop Blood Garnet (300)
+				{ 6, 42558 }, -- Don Julio's Heart (360)
+				{ 7, 39711 }, -- Runed Crimson Spinel (375)
+				{ 8, 31088 }, -- Runed Living Ruby (350)
+				{ 9, 28906 }, -- Runed Blood Garnet (315)
+				{ 11, 42589 }, -- Crimson Sun (360)
+				{ 12, 39712 }, -- Bright Crimson Spinel (375)
+				{ 13, 31089 }, -- Bright Living Ruby (350)
+				{ 14, 34590 }, -- Bright Blood Garnet (305)
+				{ 16, 39706 }, -- Delicate Crimson Spinel (375)
+				{ 17, 31085 }, -- Delicate Living Ruby (350)
+				{ 18, 28907 }, -- Delicate Blood Garnet (325)
+				{ 20, 39705 }, -- Bold Crimson Spinel (375)
+				{ 21, 31084 }, -- Bold Living Ruby (350)
+				{ 22, 28905 }, -- Bold Blood Garnet (305)
+				{ 24, 39713 }, -- Subtle Crimson Spinel (375)
+				{ 25, 31090 }, -- Subtle Living Ruby (350)
+				{ 27, 39714 }, -- Flashing Crimson Spinel (375)
+				{ 28, 31091 }, -- Flashing Living Ruby (350)
+			}
+		},
+		{
+			name = format(GEM_FORMAT1, ALIL["Yellow"]),
+			[NORMAL_DIFF] = {
+				{ 1, 42591 }, -- Stone of Blades (360)
+				{ 2, 39720 }, -- Smooth Lionseye (375)
+				{ 3, 31097 }, -- Smooth Dawnstone (350)
+				{ 4, 34069 }, -- Smooth Golden Draenite (325)
+				{ 6, 42592 }, -- Blood of Amber (360)
+				{ 7, 39722 }, -- Gleaming Lionseye (375)
+				{ 8, 31099 }, -- Gleaming Dawnstone (350)
+				{ 9, 28944 }, -- Gleaming Golden Draenite (305)
+				{ 11, 42593 }, -- Facet of Eternity (360)
+				{ 12, 39723 }, -- Thick Lionseye (375)
+				{ 13, 31100 }, -- Thick Dawnstone (350)
+				{ 14, 28947 }, -- Thick Golden Draenite (315)
+				{ 16, 39721 }, -- Rigid Lionseye (375)
+				{ 17, 31098 }, -- Rigid Dawnstone (350)
+				{ 18, 28948 }, -- Rigid Golden Draenite (325)
+				{ 20, 39725 }, -- Great Lionseye (375)
+				{ 21, 39452 }, -- Great Dawnstone (350)
+				{ 22, 39451 }, -- Great Golden Draenite (325)
+				{ 24, 39719 }, -- Brilliant Lionseye (375)
+				{ 25, 31096 }, -- Brilliant Dawnstone (350)
+				{ 26, 28938 }, -- Brilliant Golden Draenite (300)
+				{ 27, 47056 }, -- Quick Lionseye (375)
+				{ 28, 46403 }, -- Quick Dawnstone (350)
+				{ 29, 39724 }, -- Mystic Lionseye (375)
+				{ 30, 31101 }, -- Mystic Dawnstone (350)
+			}
+		},
+		{
+			name = format(GEM_FORMAT1, ALIL["Blue"]),
+			[NORMAL_DIFF] = {
+				{ 1, 42590 }, -- Falling Star (360)
+				{ 2, 39715 }, -- Solid Empyrean Sapphire (375)
+				{ 3, 31092 }, -- Solid Star of Elune (350)
+				{ 4, 28950 }, -- Solid Azure Moonstone (300)
+				{ 6, 39718 }, -- Stormy Empyrean Sapphire (375)
+				{ 7, 31095 }, -- Stormy Star of Elune (350)
+				{ 8, 28955 }, -- Stormy Azure Moonstone (315)
+				{ 17, 39716 }, -- Sparkling Empyrean Sapphire (375)
+				{ 18, 31149 }, -- Sparkling Star of Elune (350)
+				{ 19, 28953 }, -- Sparkling Azure Moonstone (305)
+				{ 21, 39717 }, -- Lustrous Empyrean Sapphire (375)
+				{ 22, 31094 }, -- Lustrous Star of Elune (350)
+				{ 23, 28957 }, -- Lustrous Azure Moonstone (325)
+			}
+		},
+		{
+			name = format(GEM_FORMAT1, ALIL["Orange"]),
+			[NORMAL_DIFF] = {
+				{ 1, 39738 }, -- Wicked Pyrestone (375)
+				{ 2, 39471 }, -- Wicked Noble Topaz (350)
+				{ 3, 39467 }, -- Wicked Flame Spessarite (325)
+				{ 5, 39737 }, -- Veiled Pyrestone (375)
+				{ 6, 39470 }, -- Veiled Noble Topaz (350)
+				{ 7, 39466 }, -- Veiled Flame Spessarite (325)
+				{ 9, 39734 }, -- Potent Pyrestone (375)
+				{ 10, 31107 }, -- Potent Noble Topaz (350)
+				{ 11, 28915 }, -- Potent Flame Spessarite (325)
+				{ 13, 47055 }, -- Reckless Pyrestone (375)
+				{ 14, 46404 }, -- Reckless Noble Topaz (350)
+				{ 16, 39735 }, -- Luminous Pyrestone (375)
+				{ 17, 31108 }, -- Luminous Noble Topaz (350)
+				{ 18, 28912 }, -- Luminous Flame Spessarite (305)
+				{ 20, 39733 }, -- Inscribed Pyrestone (375)
+				{ 21, 31106 }, -- Inscribed Noble Topaz (350)
+				{ 22, 28910 }, -- Inscribed Flame Spessarite (300)
+				{ 24, 39736 }, -- Glinting Pyrestone (375)
+				{ 25, 31109 }, -- Glinting Noble Topaz (350)
+				{ 26, 28914 }, -- Glinting Flame Spessarite (315)
+			}
+		},
+		{
+			name = format(GEM_FORMAT1, ALIL["Green"]),
+			[NORMAL_DIFF] = {
+				{ 1, 39739 }, -- Enduring Seaspray Emerald (375)
+				{ 2, 31110 }, -- Enduring Talasite (350)
+				{ 3, 28918 }, -- Enduring Deep Peridot (315)
+				{ 5, 39740 }, -- Radiant Seaspray Emerald (375)
+				{ 6, 31111 }, -- Radiant Talasite (350)
+				{ 7, 28916 }, -- Radiant Deep Peridot (300)
+				{ 9, 47054 }, -- Steady Seaspray Emerald (375)
+				{ 10, 43493 }, -- Steady Talasite (350)
+				{ 16, 39742 }, -- Jagged Seaspray Emerald (375)
+				{ 17, 31113 }, -- Jagged Talasite (350)
+				{ 18, 28917 }, -- Jagged Deep Peridot (305)
+				{ 20, 39741 }, -- Dazzling Seaspray Emerald (375)
+				{ 21, 31112 }, -- Dazzling Talasite (350)
+				{ 22, 28924 }, -- Dazzling Deep Peridot (325)
+				{ 24, 47053 }, -- Forceful Seaspray Emerald (375)
+				{ 25, 46405 }, -- Forceful Talasite (350)
+			}
+		},
+		{
+			name = format(GEM_FORMAT1, ALIL["Purple"]),
+			[NORMAL_DIFF] = {
+				{ 1, 39462 }, -- Infused Nightseye (350)
+				{ 2, 39458 }, -- Infused Shadow Draenite (325)
+				{ 4, 39463 }, -- Balanced Nightseye (350)
+				{ 5, 39455 }, -- Balanced Shadow Draenite (325)
+				{ 7, 31102 }, -- Sovereign Nightseye (350)
+				{ 8, 28936 }, -- Sovereign Shadow Draenite (325)
+				{ 10, 46803 }, -- Regal Nightseye (350)
+				{ 16, 31103 }, -- Shifting Nightseye (350)
+				{ 17, 28933 }, -- Shifting Shadow Draenite (315)
+				{ 19, 31105 }, -- Royal Nightseye (350)
+				{ 20, 28927 }, -- Royal Shadow Draenite (305)
+				{ 22, 31104 }, -- Glowing Nightseye (350)
+				{ 23, 28925 }, -- Glowing Shadow Draenite (300)
+				{ 25, 41429 }, -- Purified Shadow Pearl (350)
+				{ 26, 41420 }, -- Purified Jaggal Pearl (325)
+			}
+		},
+		{
+			name = AL["Misc"],
+			[NORMAL_DIFF] = {
+				{ 1, 38068 }, -- Mercurial Adamantite (325)
+				{ 2, 26880 }, -- Thorium Setting (235)
+				{ 3, 25615 }, -- Mithril Filigree (170)
+				{ 4, 25278 }, -- Bronze Setting (70)
+				{ 5, 25255 }, -- Delicate Copper Wire (20)
+				{ 16, 47280 }, -- Brilliant Glass (350)
+				{ 18, 32810 }, -- Primal Stone Statue (undefined)
+				{ 19, 32809 }, -- Dense Stone Statue (225)
+				{ 20, 32808 }, -- Solid Stone Statue (175)
+				{ 21, 32807 }, -- Heavy Stone Statue (120)
+				{ 22, 32801 }, -- Coarse Stone Statue (70)
+				{ 23, 32259 }, -- Rough Stone Statue (30)
+			}
 		},
 	}
 }
