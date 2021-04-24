@@ -703,286 +703,151 @@ data["TailoringBC"] = {
 		{
 			name = AL["Armor"].." - "..ALIL["Cloak"],
 			[NORMAL_DIFF] = {
-				{ 1, 28208 }, --Glacial Cloak / 80
-				{ 2, 28210 }, --Gaea's Embrace / 70
-				{ 3, 22870 }, --Cloak of Warding / 62
-				{ 4, 18418 }, --Cindercloth Cloak / 55
-				{ 5, 18420 }, --Brightcloth Cloak / 55
-				{ 6, 18422 }, --Cloak of Fire / 55
-				{ 7, 18409 }, --Runecloth Cloak / 53
-				{ 8, 3862 }, --Icy Cloak / 40
-				{ 9, 3861 }, --Long Silken Cloak / 37
-				{ 10, 8789 }, --Crimson Silk Cloak / 36
-				{ 11, 8786 }, --Azure Silk Cloak / 35
-				{ 12, 3844 }, --Heavy Woolen Cloak / 21
-				{ 13, 6521 }, --Pearl-clasped Cloak / 19
-				{ 14, 2402 }, --Woolen Cape / 16
-				{ 15, 2397 }, --Reinforced Linen Cape / 12
-				{ 16, 2387 }, --Linen Cloak / 6
+				{ 1, 40060 }, -- Night's End (375)
+				{ 2, 31449 }, -- Vengeance Wrap (365)
+				{ 3, 31450 }, -- Manaweave Cloak (365)
+				{ 4, 31448 }, -- Resolute Cape (365)
+				{ 5, 37873 }, -- Cloak of Arcane Evasion (350)
+				{ 6, 31441 }, -- White Remedy Cape (350)
+				{ 7, 31440 }, -- Cloak of Eternity (350)
+				{ 8, 31438 }, -- Cloak of the Black Void (350)
 			}
 		},
 		{
 			name = AL["Armor"].." - "..ALIL["Chest"],
 			[NORMAL_DIFF] = {
-				{ 1, 28207 }, --Glacial Vest / 80
-				{ 2, 28480 }, --Sylvan Vest / 70
-				{ 3, 23666 }, --Flarecore Robe / 66
-				{ 4, 24091 }, --Bloodvine Vest / 65
-				{ 5, 18457 }, --Robe of the Archmage / 62
-				{ 6, 18456 }, --Truefaith Vestments / 62
-				{ 7, 18458 }, --Robe of the Void / 62
-				{ 8, 22902 }, --Mooncloth Robe / 61
-				{ 9, 18451 }, --Felcloth Robe / 61
-				{ 10, 18446 }, --Wizardweave Robe / 60
-				{ 11, 18447 }, --Mooncloth Vest / 60
-				{ 12, 18436 }, --Robe of Winter Night / 57
-				{ 13, 18416 }, --Ghostweave Vest / 55
-				{ 14, 18414 }, --Brightcloth Robe / 54
-				{ 15, 18408 }, --Cindercloth Vest / 52
-				{ 16, 18407 }, --Runecloth Tunic / 52
-				{ 17, 18406 }, --Runecloth Robe / 52
-				{ 18, 18404 }, --Frostweave Robe / 51
-				{ 19, 18403 }, --Frostweave Tunic / 51
-				{ 20, 12077 }, --Simple Black Dress / 47
-				{ 21, 12070 }, --Dreamweave Vest / 45
-				{ 22, 12069 }, --Cindercloth Robe / 45
-				{ 23, 12056 }, --Red Mageweave Vest / 43
-				{ 24, 12055 }, --Shadoweave Robe / 43
-				{ 25, 12050 }, --Black Mageweave Robe / 42
-				{ 26, 12048 }, --Black Mageweave Vest / 41
-				{ 27, 8802 }, --Crimson Silk Robe / 41
-				{ 28, 8770 }, --Robe of Power / 38
-				{ 29, 8791 }, --Crimson Silk Vest / 37
-				{ 30, 12091 }, --White Wedding Dress / 35
-				{ 101, 12093 }, --Tuxedo Jacket / 35
-				{ 102, 8764 }, --Earthen Vest / 34
-				{ 103, 8784 }, --Green Silk Armor / 33
-				{ 104, 6692 }, --Robes of Arcana / 30
-				{ 105, 3859 }, --Azure Silk Vest / 30
-				{ 106, 6690 }, --Lesser Wizard's Robe / 27
-				{ 107, 7643 }, --Greater Adept's Robe / 23
-				{ 108, 8467 }, --White Woolen Dress / 22
-				{ 109, 2403 }, --Gray Woolen Robe / 21
-				{ 110, 7639 }, --Blue Overalls / 20
-				{ 111, 2399 }, --Green Woolen Vest / 17
-				{ 112, 2395 }, --Barbaric Linen Vest / 14
-				{ 113, 7633 }, --Blue Linen Robe / 14
-				{ 114, 7629 }, --Red Linen Vest / 12
-				{ 115, 7630 }, --Blue Linen Vest / 12
-				{ 116, 8465 }, --Simple Dress / 10
-				{ 117, 7624 }, --White Linen Robe / 10
-				{ 118, 2389 }, --Red Linen Robe / 10
-				{ 119, 7623 }, --Brown Linen Robe / 10
-				{ 120, 2385 }, --Brown Linen Vest / 8
-				{ 121, 26407 }, --Festival Suit / 1
-				{ 122, 26403 }, --Festival Dress / 1
+				{ 1, 26762 }, -- Primal Mooncloth Robe (375)
+				{ 2, 26758 }, -- Frozen Shadoweave Robe (375)
+				{ 3, 26754 }, -- Spellfire Robe (375)
+				{ 4, 26781 }, -- Soulcloth Vest (375)
+				{ 5, 37884 }, -- Flameheart Vest (370)
+				{ 6, 26784 }, -- Arcanoweave Robe (370)
+				{ 7, 46130 }, -- Sunfire Robe (365)
+				{ 8, 46131 }, -- Robe of Eternal Light (365)
+				{ 9, 26778 }, -- Imbued Netherweave Tunic (360)
+				{ 10, 26777 }, -- Imbued Netherweave Robe (360)
+				{ 11, 36665 }, -- Netherflame Robe (355)
+				{ 12, 26774 }, -- Netherweave Tunic (345)
+				{ 13, 26773 }, -- Netherweave Robe (340)
+				{ 16, 50644 }, -- Haliscan Jacket (250)
+				{ 18, 44950 }, -- Green Winter Clothes (250)
+				{ 19, 44958 }, -- Red Winter Clothes (250)
 			},
 		},
 		{
 			name = AL["Armor"].." - "..ALIL["Feet"],
 			[NORMAL_DIFF] = {
-				{ 1, 24093 }, --Bloodvine Boots / 65
-				{ 2, 24903 }, --Runed Stygian Boots / 63
-				{ 3, 23664 }, --Argent Boots / 58
-				{ 4, 18437 }, --Felcloth Boots / 57
-				{ 5, 19435 }, --Mooncloth Boots / 56
-				{ 6, 18423 }, --Runecloth Boots / 56
-				{ 7, 12088 }, --Cindercloth Boots / 49
-				{ 8, 12082 }, --Shadoweave Boots / 48
-				{ 9, 12073 }, --Black Mageweave Boots / 46
-				{ 10, 3860 }, --Boots of the Enchanter / 35
-				{ 11, 3856 }, --Spider Silk Slippers / 28
-				{ 12, 3855 }, --Spidersilk Boots / 25
-				{ 13, 3847 }, --Red Woolen Boots / 20
-				{ 14, 2401 }, --Woolen Boots / 19
-				{ 15, 3845 }, --Soft-soled Linen Boots / 16
-				{ 16, 2386 }, --Linen Boots / 13
-				{ 17, 12045 }, --Simple Linen Boots / 9
+				{ 1, 40020 }, -- Soulguard Slippers (375)
+				{ 2, 36318 }, -- Boots of the Long Road (375)
+				{ 3, 36317 }, -- Boots of Blasting (375)
+				{ 4, 26757 }, -- Frozen Shadoweave Boots (365)
+				{ 5, 26783 }, -- Arcanoweave Boots (360)
+				{ 6, 36668 }, -- Netherflame Boots (355)
+				{ 7, 26776 }, -- Imbued Netherweave Boots (350)
+				{ 8, 26772 }, -- Netherweave Boots (345)
+				{ 16, 49677 }, -- Dress Shoes (250)
 			}
 		},
 		{
 			name = AL["Armor"].." - "..ALIL["Hand"],
 			[NORMAL_DIFF] = {
-				{ 1, 28205 }, --Glacial Gloves / 80
-				{ 2, 22869 }, --Mooncloth Gloves / 62
-				{ 3, 22867 }, --Felcloth Gloves / 62
-				{ 4, 20849 }, --Flarecore Gloves / 62
-				{ 5, 22868 }, --Inferno Gloves / 62
-				{ 6, 18454 }, --Gloves of Spell Mastery / 62
-				{ 7, 18417 }, --Runecloth Gloves / 55
-				{ 8, 18415 }, --Brightcloth Gloves / 54
-				{ 9, 18413 }, --Ghostweave Gloves / 54
-				{ 10, 18412 }, --Cindercloth Gloves / 54
-				{ 11, 18411 }, --Frostweave Gloves / 53
-				{ 12, 12071 }, --Shadoweave Gloves / 45
-				{ 13, 12066 }, --Red Mageweave Gloves / 45
-				{ 14, 12067 }, --Dreamweave Gloves / 45
-				{ 15, 12053 }, --Black Mageweave Gloves / 43
-				{ 16, 8804 }, --Crimson Silk Gloves / 42
-				{ 17, 8782 }, --Truefaith Gloves / 30
-				{ 18, 8780 }, --Hands of Darkness / 29
-				{ 19, 3854 }, --Azure Silk Gloves / 29
-				{ 20, 3852 }, --Gloves of Meditation / 26
-				{ 21, 3868 }, --Phoenix Gloves / 25
-				{ 22, 3843 }, --Heavy Woolen Gloves / 17
-				{ 23, 3840 }, --Heavy Linen Gloves / 10
+				{ 1, 46128 }, -- Sunfire Handwraps (365)
+				{ 2, 46129 }, -- Hands of Eternal Light (365)
+				{ 3, 26753 }, -- Spellfire Gloves (365)
+				{ 4, 37883 }, -- Flameheart Gloves (360)
+				{ 5, 26779 }, -- Soulcloth Gloves (355)
+				{ 6, 26770 }, -- Netherweave Gloves (330)
 			}
 		},
 		{
 			name = AL["Armor"].." - "..ALIL["Head"],
 			[NORMAL_DIFF] = {
-				{ 1, 28481 }, --Sylvan Crown / 70
-				{ 2, 18452 }, --Mooncloth Circlet / 62
-				{ 3, 18450 }, --Wizardweave Turban / 61
-				{ 4, 18444 }, --Runecloth Headband / 59
-				{ 5, 18442 }, --Felcloth Hood / 58
-				{ 6, 12092 }, --Dreamweave Circlet / 50
-				{ 7, 12086 }, --Shadoweave Mask / 49
-				{ 8, 12084 }, --Red Mageweave Headband / 48
-				{ 9, 12081 }, --Admiral's Hat / 48
-				{ 10, 12072 }, --Black Mageweave Headband / 46
-				{ 11, 12059 }, --White Bandit Mask / 43
-				{ 12, 3858 }, --Shadow Hood / 34
-				{ 13, 3857 }, --Enchanter's Cowl / 33
-				{ 14, 8762 }, --Silk Headband / 32
-				{ 15, 8760 }, --Azure Silk Hood / 29
+				{ 1, 31456 }, -- Battlecast Hood (375)
+				{ 2, 31455 }, -- Spellstrike Hood (375)
+				{ 3, 31454 }, -- Whitemend Hood (375)
 			}
 		},
 		{
 			name = AL["Armor"].." - "..ALIL["Legs"],
 			[NORMAL_DIFF] = {
-				{ 1, 23667 }, --Flarecore Leggings / 70
-				{ 2, 24092 }, --Bloodvine Leggings / 65
-				{ 3, 24901 }, --Runed Stygian Leggings / 63
-				{ 4, 18440 }, --Mooncloth Leggings / 58
-				{ 5, 18439 }, --Brightcloth Pants / 58
-				{ 6, 18441 }, --Ghostweave Pants / 58
-				{ 7, 18438 }, --Runecloth Pants / 57
-				{ 8, 18424 }, --Frostweave Pants / 56
-				{ 9, 18434 }, --Cindercloth Pants / 56
-				{ 10, 18419 }, --Felcloth Pants / 55
-				{ 11, 18421 }, --Wizardweave Leggings / 55
-				{ 12, 12060 }, --Red Mageweave Pants / 43
-				{ 13, 12052 }, --Shadoweave Pants / 42
-				{ 14, 12049 }, --Black Mageweave Leggings / 41
-				{ 15, 8799 }, --Crimson Silk Pantaloons / 39
-				{ 16, 12089 }, --Tuxedo Pants / 35
-				{ 17, 8758 }, --Azure Silk Pants / 28
-				{ 18, 3851 }, --Phoenix Pants / 25
-				{ 19, 12047 }, --Colorful Kilt / 24
-				{ 20, 3850 }, --Heavy Woolen Pants / 22
-				{ 21, 12046 }, --Simple Kilt / 15
-				{ 22, 3842 }, --Handstitched Linen Britches / 14
-				{ 23, 3914 }, --Brown Linen Pants / 10
-				{ 24, 12044 }, --Simple Linen Pants / 7
-			}
-		},
-		{
-			name = AL["Armor"].." - "..ALIL["Body"],
-			[NORMAL_DIFF] = {
-				{ 1, 12085 }, --Tuxedo Shirt / 1 / 245
-				{ 2, 12080 }, --Pink Mageweave Shirt / 47 / 240
-				{ 3, 12075 }, --Lavender Mageweave Shirt / 46 / 235
-				{ 4, 12064 }, --Orange Martial Shirt / 40 / 225
-				{ 5, 12061 }, --Orange Mageweave Shirt / 43 / 220
-				{ 6, 3873 }, --Black Swashbuckler's Shirt / 40 / 210
-				{ 7, 21945 }, --Green Holiday Shirt / 40 / 200
-				{ 8, 3872 }, --Rich Purple Silk Shirt / 37 / 195
-				{ 9, 8489 }, --Red Swashbuckler's Shirt / 35 / 185
-				{ 10, 3871 }, --Formal White Shirt / 34 / 180
-				{ 11, 8483 }, --White Swashbuckler's Shirt / 32 / 170
-				{ 12, 3870 }, --Dark Silk Shirt / 31 / 165
-				{ 13, 7893 }, --Stylish Green Shirt / 25 / 145
-				{ 14, 3869 }, --Bright Yellow Shirt / 27 / 145
-				{ 15, 7892 }, --Stylish Blue Shirt / 25 / 145
-				{ 16, 3866 }, --Stylish Red Shirt / 22 / 135
-				{ 17, 2406 }, --Gray Woolen Shirt / 20 / 110
-				{ 18, 2396 }, --Green Linen Shirt / 14 / 95
-				{ 19, 2394 }, --Blue Linen Shirt / 10 / 65
-				{ 20, 2392 }, --Red Linen Shirt / 10 / 65
-				{ 21, 2393 }, --White Linen Shirt / 7 / 35
-				{ 22, 3915 }, --Brown Linen Shirt / 7 / 35
+				{ 1, 40023 }, -- Soulguard Leggings (375)
+				{ 2, 31453 }, -- Battlecast Pants (375)
+				{ 3, 31452 }, -- Spellstrike Pants (375)
+				{ 4, 31451 }, -- Whitemend Pants (375)
+				{ 5, 36669 }, -- Lifeblood Leggings (undefined)
+				{ 6, 26775 }, -- Imbued Netherweave Pants (340)
+				{ 7, 26771 }, -- Netherweave Pants (335)
+				{ 16, 50647 }, -- Haliscan Pantaloons (245)
 			}
 		},
 		{
 			name = AL["Armor"].." - "..ALIL["Shoulder"],
 			[NORMAL_DIFF] = {
-				{ 1, 28482 }, --Sylvan Shoulders / 70 / 315
-				{ 2, 23663 }, --Mantle of the Timbermaw / 64 / 315
-				{ 3, 23665 }, --Argent Shoulders / 64 / 315
-				{ 4, 18453 }, --Felcloth Shoulders / 62 / 315
-				{ 5, 20848 }, --Flarecore Mantle / 61 / 315
-				{ 6, 18449 }, --Runecloth Shoulders / 61 / 315
-				{ 7, 18448 }, --Mooncloth Shoulders / 61 / 315
-				{ 8, 12078 }, --Red Mageweave Shoulders / 47 / 250
-				{ 9, 12076 }, --Shadoweave Shoulders / 47 / 250
-				{ 10, 12074 }, --Black Mageweave Shoulders / 46 / 245
-				{ 11, 8793 }, --Crimson Silk Shoulders / 38 / 210
-				{ 12, 8795 }, --Azure Shoulders / 38 / 210
-				{ 13, 8774 }, --Green Silken Shoulders / 36 / 200
-				{ 14, 3849 }, --Reinforced Woolen Shoulders / 24 / 145
-				{ 15, 3848 }, --Double-stitched Woolen Shoulders / 22 / 135
+				{ 1, 41206 }, -- Mantle of Nimble Thought (375)
+				{ 2, 41208 }, -- Swiftheal Mantle (375)
+				{ 3, 26780 }, -- Soulcloth Shoulders (365)
+				{ 4, 26761 }, -- Primal Mooncloth Shoulders (365)
+				{ 5, 26756 }, -- Frozen Shadoweave Shoulders (355)
 			}
 		},
 		{
 			name = AL["Armor"].." - "..ALIL["Waist"],
 			[NORMAL_DIFF] = {
-				{ 1, 24902 }, --Runed Stygian Belt / 63 / 315
-				{ 2, 22866 }, --Belt of the Archmage / 62 / 315
-				{ 3, 23662 }, --Wisdom of the Timbermaw / 58 / 305
-				{ 4, 18410 }, --Ghostweave Belt / 53 / 280
-				{ 5, 18402 }, --Runecloth Belt / 51 / 270
-				{ 6, 3864 }, --Star Belt / 40 / 220
-				{ 7, 8797 }, --Earthen Silk Belt / 39 / 215
-				{ 8, 3863 }, --Spider Belt / 36 / 200
-				{ 9, 8772 }, --Crimson Silk Belt / 35 / 195
-				{ 10, 8766 }, --Azure Silk Belt / 35 / 195
-				{ 11, 8776 }, --Linen Belt / 9 / 50
+				{ 1, 40024 }, -- Soulguard Girdle (375)
+				{ 2, 36316 }, -- Belt of the Long Road (375)
+				{ 3, 36315 }, -- Belt of Blasting (375)
+				{ 4, 31443 }, -- Girdle of Ruination (365)
+				{ 5, 31442 }, -- Unyielding Girdle (365)
+				{ 6, 31444 }, -- Black Belt of Knowledge (365)
+				{ 7, 36667 }, -- Netherflame Belt (undefined)
+				{ 8, 36670 }, -- Lifeblood Belt (undefined)
+				{ 9, 26760 }, -- Primal Mooncloth Belt (355)
+				{ 10, 26752 }, -- Spellfire Belt (355)
+				{ 11, 26765 }, -- Netherweave Belt (320)
 			}
 		},
 		{
 			name = AL["Armor"].." - "..ALIL["Wrist"],
 			[NORMAL_DIFF] = {
-				{ 1, 28209 }, --Glacial Wrists / 80 / 315
-				{ 2, 22759 }, --Flarecore Wraps / 64 / 320
-				{ 3, 3841 }, --Green Linen Bracers / 12 / 85
+				{ 1, 41207 }, -- Swiftheal Wraps (375)
+				{ 2, 41205 }, -- Bracers of Nimble Thought (375)
+				{ 3, 40021 }, -- Soulguard Bracers (375)
+				{ 4, 36672 }, -- Lifeblood Bracers (355)
+				{ 5, 37882 }, -- Flameheart Bracers (350)
+				{ 6, 31437 }, -- Blackstrike Bracers (350)
+				{ 7, 31435 }, -- Bracers of Havok (350)
+				{ 8, 31434 }, -- Unyielding Bracers (350)
+				{ 9, 26782 }, -- Arcanoweave Bracers (350)
+				{ 10, 26764 }, -- Netherweave Bracers (320)
 			}
 		},
 		{
 			name = ALIL["Bag"],
 			[NORMAL_DIFF] = {
-				{ 1, 18455 }, --Bottomless Bag / 62 / 315
-				{ 2, 18445 }, --Mooncloth Bag / 60 / 315
-				{ 3, 18405 }, --Runecloth Bag / 52 / 275
-				{ 4, 12079 }, --Red Mageweave Bag / 35 / 250
-				{ 5, 12065 }, --Mageweave Bag / 35 / 240
-				{ 6, 6695 }, --Black Silk Pack / 25 / 205
-				{ 7, 6693 }, --Green Silk Pack / 25 / 195
-				{ 8, 3813 }, --Small Silk Pack / 25 / 170
-				{ 9, 6688 }, --Red Woolen Bag / 15 / 140
-				{ 10, 3758 }, --Green Woolen Bag / 15 / 120
-				{ 11, 3757 }, --Woolen Bag / 15 / 105
-				{ 12, 6686 }, --Red Linen Bag / 5 / 95
-				{ 13, 3755 }, --Linen Bag / 5 / 70
-				{ 16, 27725 }, --Satchel of Cenarius / 65 / 315
-				{ 17, 27724 }, --Cenarion Herb Bag / 55 / 290
-				{ 19, 27660 }, --Big Bag of Enchantment / 65 / 315
-				{ 20, 27659 }, --Enchanted Runecloth Bag / 55 / 290
-				{ 21, 27658 }, --Enchanted Mageweave Pouch / 45 / 240
-				{ 23, 26087 }, --Core Felcloth Bag / 60 / 315
-				{ 24, 26086 }, --Felcloth Bag / 57 / 300
-				{ 25, 26085 }, --Soul Pouch / 52 / 275
+				{ 1, 26763 }, -- Primal Mooncloth Bag (375)
+				{ 2, 26749 }, -- Imbued Netherweave Bag (340)
+				{ 3, 26746 }, -- Netherweave Bag (320)
+				{ 16, 50194 }, -- Mycah's Botanical Bag (375)
+				{ 18, 26759 }, -- Ebon Shadowbag (375)
+				{ 20, 26755 }, -- Spellfire Bag (375)
+				{ 22, 31459 }, -- Bag of Jewels (340)
 			}
 		},
 		{
 			name = AL["Misc"],
 			[NORMAL_DIFF] = {
-				{ 1, 18560 }, --Mooncloth / 55 / 290
-				{ 2, 18401 }, --Bolt of Runecloth / 55 / 255
-				{ 3, 3865 }, --Bolt of Mageweave / 45 / 180
-				{ 4, 3839 }, --Bolt of Silk Cloth / 35 / 135
-				{ 5, 2964 }, --Bolt of Woolen Cloth / 25 / 90
-				{ 6, 2963 }, --Bolt of Linen Cloth / 10 / 25
+				{ 1, 31433 }, -- Golden Spellthread (375)
+				{ 2, 31431 }, -- Silver Spellthread (335)
+				{ 4, 36686 }, -- Shadowcloth (350)
+				{ 6, 26751 }, -- Primal Mooncloth (350)
+				{ 8, 26750 }, -- Bolt of Soulcloth (345)
+				{ 9, 26747 }, -- Bolt of Imbued Netherweave (325)
+				{ 10, 26745 }, -- Bolt of Netherweave (305)
+				{ 16, 31432 }, -- Runic Spellthread (375)
+				{ 17, 31430 }, -- Mystic Spellthread (335)
+				{ 19, 31373 }, -- Spellcloth (350)
+				{ 23, 31461 }, -- Heavy Netherweave Net (undefined)
+				{ 24, 31460 }, -- Netherweave Net (300)
 			}
 		},
 	}
@@ -1321,21 +1186,9 @@ data["MiningBC"] = {
 				{ 4, 29360 }, -- Smelt Felsteel (355)
 				{ 5, 29359 }, -- Smelt Eternium (350)
 				{ 6, 29358 }, -- Smelt Adamantite (325)
-				{ 7, 35751 }, -- Fire Sunder (300)
-				{ 8, 35750 }, -- Earth Shatter (300)
-				{ 9, 29356 }, -- Smelt Fel Iron (300)
-				{ 16, 22967 }, --Smelt Elementium / 310
-				{ 17, 16153 }, --Smelt Thorium / 250
-				{ 18, 10098 }, --Smelt Truesilver / 230
-				{ 19, 14891 }, --Smelt Dark Iron / 230
-				{ 20, 10097 }, --Smelt Mithril / 175
-				{ 21, 3308 }, --Smelt Gold / 170
-				{ 22, 3569 }, --Smelt Steel / 165
-				{ 23, 3307 }, --Smelt Iron / 130
-				{ 24, 2658 }, --Smelt Silver / 100
-				{ 25, 2659 }, --Smelt Bronze / 65
-				{ 26, 3304 }, --Smelt Tin / 50
-				{ 27, 2657 }, --Smelt Copper / 25
+				{ 7, 29356 }, -- Smelt Fel Iron (300)
+				{ 16, 35751 }, -- Fire Sunder (300)
+				{ 17, 35750 }, -- Earth Shatter (300)
 			}
 		},
 	}
@@ -1538,19 +1391,6 @@ data["FirstAidBC"] = {
 			[NORMAL_DIFF] = {
 				{ 1, 27033 }, -- Heavy Netherweave Bandage (360)
 				{ 2, 27032 }, -- Netherweave Bandage (330)
-				{ 3, 18630 }, --Heavy Runecloth Bandage / 290
-				{ 4, 18629 }, --Runecloth Bandage / 260
-				{ 5, 10841 }, --Heavy Mageweave Bandage / 240
-				{ 6, 10840 }, --Mageweave Bandage / 210
-				{ 7, 7929 }, --Heavy Silk Bandage / 180
-				{ 8, 7928 }, --Silk Bandage / 150
-				{ 9, 3278 }, --Heavy Wool Bandage / 115
-				{ 10, 3277 }, --Wool Bandage / 80
-				{ 11, 3276 }, --Heavy Linen Bandage / 50
-				{ 12, 3275 }, --Linen Bandage / 30
-				{ 16, 23787 }, --Powerful Anti-Venom / 300
-				{ 17, 7935 }, --Strong Anti-Venom / 130
-				{ 18, 7934 }, --Anti-Venom / 80
 			}
 		},
 	}
