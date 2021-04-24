@@ -13,7 +13,7 @@ local format = string.format
 -- ----------------------------------------------------------------------------
 local addonname = ...
 local AtlasLoot = _G.AtlasLoot
-local data = AtlasLoot.ItemDB:Add(addonname, 1)
+local data = AtlasLoot.ItemDB:Add(addonname, 1, 1)
 
 local AL = AtlasLoot.Locales
 local ALIL = AtlasLoot.IngameLocales

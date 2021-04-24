@@ -29,6 +29,7 @@ ignore:
  - AtlasLootClassic_Factions/data-tbc.lua
  - AtlasLootClassic_Data/source-tbc.lua
  - AtlasLootClassic_Crafting/data-tbc.lua
+ - AtlasLootClassic_PvP/data-tbc.lua
 
 move-folders:
  AtlasLootClassic/AtlasLootClassic: AtlasLootClassic
