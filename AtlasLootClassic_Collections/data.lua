@@ -1006,6 +1006,7 @@ data["ElementalInvasions"] = {
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = NORMAL_ITTYPE,
 	ContentPhase = 2.5,
+	gameVersion = 1,
 	items = {
 		{ -- ElementalInvasion
 			name = AL["Elemental Invasions"],
@@ -1073,6 +1074,7 @@ data["SilithusAbyssal"] = {
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = NORMAL_ITTYPE,
 	ContentPhase = 4,
+	gameVersion = 1,
 	items = {
 		{ -- AbyssalDukes
 			name = AL["Abyssal Dukes"],
@@ -1158,6 +1160,7 @@ data["AQOpening"] = {
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = NORMAL_ITTYPE,
 	ContentPhase = 5,
+	gameVersion = 1,
 	items = {
 		{
 			name = AL["AQ opening"],
@@ -1190,6 +1193,7 @@ data["ScourgeInvasion"] = {
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = NORMAL_ITTYPE,
 	ContentPhase = 6,
+	gameVersion = 1,
 	items = {
 		{ -- ScourgeInvasionEvent1
 			name = AL["Scourge Invasion"],

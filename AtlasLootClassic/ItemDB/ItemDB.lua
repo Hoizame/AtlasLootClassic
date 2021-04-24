@@ -48,6 +48,9 @@ ItemDB.mt = {
 		v.__atlaslootdata = t.__atlaslootdata
 		AtlasLoot.Data.AutoSelect:AddInstanceTable(t.__atlaslootdata.addonName, k, v)
 		v.gameVersion = v.gameVersion or t.__atlaslootdata.__gameVersion
+		if not t.__atlaslootdata.gameVersions[v.gameVersion] then
+			t.__atlaslootdata.gameVersions[v.gameVersion] = true
+		end
 		rawset(t, k, v)
 	end
 }
@@ -64,7 +67,7 @@ end
 -- @param	addonName		<string> full name of the addon folder (eg "AtlasLoot_MistsofPandaria")
 -- @param	tierID			<number> the tier id of the EJ
 function ItemDB:Add(addonName, tierID, gameVersion)
-	gameVersion = gameVersion or 1
+	gameVersion = gameVersion or 0
 	if not ItemDB.Storage[addonName] then
 		ItemDB.Storage[addonName] = {}
 		for k,v in pairs(ItemDB.Proto) do
