@@ -393,6 +393,11 @@ local extra_iTable_types = {}
 
 function ItemDB.Proto:AddExtraItemTableType(typ)
 	if not extra_iTable_types[self.__atlaslootdata.addonName] then extra_iTable_types[self.__atlaslootdata.addonName] = {} end
+	for i = 1, #extra_iTable_types[self.__atlaslootdata.addonName] do
+		if extra_iTable_types[self.__atlaslootdata.addonName][i] == type then
+			return i + 100
+		end
+	end
 	extra_iTable_types[self.__atlaslootdata.addonName][#extra_iTable_types[self.__atlaslootdata.addonName]+1] = typ
 	return #extra_iTable_types[self.__atlaslootdata.addonName] + 100
 end

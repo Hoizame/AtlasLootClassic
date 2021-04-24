@@ -81,8 +81,10 @@ function Set.OnMouseAction(button, mouseButton)
 	elseif mouseButton == "WoWHeadLink" then
 		AtlasLoot.Button:OpenWoWHeadLink(button, "item-set", button.SetID)
 	elseif mouseButton == "DressUp" then
-		for i = 1, #button.Items do
-			DressUpItemLink(type(button.Items[i]) == "string" and button.Items[i] or "item:"..button.Items[i])
+		if button.Items then
+			for i = 1, #button.Items do
+				DressUpItemLink(type(button.Items[i]) == "string" and button.Items[i] or "item:"..button.Items[i])
+			end
 		end
 	elseif mouseButton == "OpenSet" then
 		Set.OnClickItemList(button)

@@ -40,6 +40,11 @@ local PRICE_INFO = {
 	--- BC
 	["holydust"] = { itemID = 29735 }, -- Holy Dust (Aldor)
 	["arcanerune"] = { itemID = 29736 }, -- Holy Dust (Scryers)
+	["SpiritShard"] = { itemID = 28558 }, -- Spirit Shard
+	["HalaaRT"] = { itemID = 26044 }, -- Halaa Research Token
+	["HalaaBT"] = { itemID = 26045 }, -- Halaa Battle Token
+	["MarkOfThrallmar"] = { itemID = 24581 }, -- Mark of Thrallmar
+	["MarkOfHonorHold"] = { itemID = 24579 }, -- Mark of Honor Hold
 }
 
 local Cache = {}
