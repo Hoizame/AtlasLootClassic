@@ -1046,6 +1046,12 @@ data["Darkmoon"] = {
 				{ 2,  19267 }, -- Darkmoon Card: Maelstrom
 				{ 3,  19257 }, -- Darkmoon Card: Heroism
 				{ 4,  19277 }, -- Darkmoon Card: Twisting Nether
+--@version-bc@
+				{ 6,  31907 }, -- Darkmoon Card: Vengeance
+				{ 7,  31890 }, -- Darkmoon Card: Crusade
+				{ 8,  31891 }, -- Darkmoon Card: Wrath
+				{ 9,  31914 }, -- Darkmoon Card: Madness
+--@end-version-bc@
 				{ 16,  19491, 19182, [ATLASLOOT_IT_AMOUNT2] = 1200 }, -- Amulet of the Darkmoon
 				{ 17,  19426, 19182, [ATLASLOOT_IT_AMOUNT2] = 1200 }, -- Orb of the Darkmoon
 				{ 19,  19293, 19182, [ATLASLOOT_IT_AMOUNT2] = 50 }, -- Last Year's Mutton
