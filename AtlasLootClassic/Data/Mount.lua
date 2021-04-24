@@ -156,6 +156,8 @@ local MOUNT_LIST = {
     [31836] = 21076, -- Reins of the White Riding Talbuk / Kurenai
     [34060] = 22719, -- Flying Machine Control
     [34061] = 22720, -- Turbo-Charged Flying Machine Control
+    [28915] = 21074, -- Reins of the Dark Riding Talbuk
+    [29228] = 19303, -- Reins of the Dark War Talbuk
 --@end-version-bc@
 }
 

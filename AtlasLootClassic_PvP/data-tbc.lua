@@ -474,14 +474,14 @@ data["HellfirePeninsulaPvP"] = {
 			MapID = 3483,
 			[ALLIANCE_DIFF] = {
 				{ 1, 24520 }, -- Honor Hold Favor
-				{ 2, 24579 }, -- Mark of Honor Hold
+				{ 3, 24579 }, -- Mark of Honor Hold
 				{ 16, 27830 }, -- Circlet of the Victor
 				{ 17, 27785 }, -- Notched Deep Peridot
 				{ 18, 27777 }, -- Stark Blood Garnet
 			},
 			[HORDE_DIFF] = {
 				{ 1, 24522 }, -- Thrallmar Favor
-				{ 2, 24581 }, -- Mark of Thrallmar
+				{ 3, 24581 }, -- Mark of Thrallmar
 				{ 16, 27833 }, -- Band of the Victor
 				{ 17, 27786 }, -- Barbed Deep Peridot
 				{ 18, 28360 }, -- Mighty Blood Garnet
