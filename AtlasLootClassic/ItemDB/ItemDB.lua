@@ -549,6 +549,12 @@ function ItemDB.ContentProto:GetNameForItemTable(index, raw)
 		else
 			return addStart..GetFactionInfoByID(index.FactionID)..addEnd
 		end
+	elseif index.MapID then
+		if index.nameFormat then
+			return format(index.nameFormat, C_Map.GetAreaInfo(index.MapID)..addEnd or "MapID:"..index.MapID)
+		else
+			return C_Map.GetAreaInfo(index.MapID)..addEnd or "MapID:"..index.MapID
+		end
 	else
 		return UNKNOWN
 	end
