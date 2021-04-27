@@ -322,8 +322,8 @@ data["ArenaS3PvP"] = {
 				{ 9, 32014 }, -- Gladiator's Maul
 
 				{ 16, 33766 }, -- Gladiator's War Staff
-				{ 22, 34540 }, -- Vengeful Gladiator's Battle Staff
-				{ 23, 33716 }, -- Vengeful Gladiator's Staff
+				{ 17, 34540 }, -- Vengeful Gladiator's Battle Staff
+				{ 19, 33716 }, -- Vengeful Gladiator's Staff
 			},
 		},
 		{
@@ -424,8 +424,8 @@ data["ArenaS4PvP"] = {
 				{ 8, 34989 }, -- Gladiator's Bonegrinder
 
 				{ 16, 35109 }, -- Gladiator's War Staff
-				{ 22, 34987 }, -- Vengeful Gladiator's Battle Staff
-				{ 23, 35103 }, -- Vengeful Gladiator's Staff
+				{ 17, 34987 }, -- Vengeful Gladiator's Battle Staff
+				{ 19, 35103 }, -- Vengeful Gladiator's Staff
 			},
 		},
 		{
