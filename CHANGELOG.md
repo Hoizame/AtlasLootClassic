@@ -4,4 +4,6 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 
 [Changelog history](https://github.com/Hoizame/AtlasLootClassic/blob/master/AtlasLootClassic/Documentation/Release_Notes.md)
 
-## v2.0.1 (Apr. XX, 2021)
+## v2.0.1-bc (Apr. 27, 2021)
+
+- fix wrong NYI marker for Arena weapons

@@ -49,13 +49,14 @@ local HORDE, ALLIANCE, RANK_FORMAT = "Horde", "Alliance", AL["|cff33ff99Rank:|r 
 local BLIZZARD_NYI = " |cff00ccff<NYI |T130946:12:20:0:0:32:16:4:28:0:16|t>|r"
 
 data["ArenaS1PvP"] = {
-	name = format(AL["Season %s"], "1")..BLIZZARD_NYI,
+	name = format(AL["Season %s"], "1"),
 	ContentType = ARENA_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
-	TableType = SET_ITTYPE,
+	TableType = NORMAL_ITTYPE,
 	items = {
 		{
 			name = AL["Sets"],
+			TableType = SET_ITTYPE,
 			[NORMAL_DIFF] = {
 				{ 1,    568 }, -- Warlock
 				{ 2,    615 }, -- Warlock 2
@@ -77,7 +78,7 @@ data["ArenaS1PvP"] = {
 			},
 		},
 		{
-			name = AL["Weapons"].." - "..AL["One-Handed"]..BLIZZARD_NYI,
+			name = AL["Weapons"].." - "..AL["One-Handed"],
 			[NORMAL_DIFF] = {
 				{ 1, 28312 }, -- Gladiator's Shanker
 				{ 2, 28310 }, -- Gladiator's Shiv
@@ -101,7 +102,7 @@ data["ArenaS1PvP"] = {
 			},
 		},
 		{
-			name = AL["Weapons"].." - "..AL["Two-Handed"]..BLIZZARD_NYI,
+			name = AL["Weapons"].." - "..AL["Two-Handed"],
 			[NORMAL_DIFF] = {
 				{ 1, 24550 }, -- Gladiator's Greatsword
 
@@ -116,7 +117,7 @@ data["ArenaS1PvP"] = {
 			},
 		},
 		{
-			name = AL["Weapons"].." - "..AL["Ranged"]..BLIZZARD_NYI,
+			name = AL["Weapons"].." - "..AL["Ranged"],
 			[NORMAL_DIFF] = {
 				{ 1, 28294 }, -- Gladiator's Heavy Crossbow
 				{ 3, 28319 }, -- Gladiator's War Edge
@@ -125,7 +126,7 @@ data["ArenaS1PvP"] = {
 			},
 		},
 		{
-			name = AL["Weapons"].." - "..ALIL["Off Hand"]..BLIZZARD_NYI,
+			name = AL["Weapons"].." - "..ALIL["Off Hand"],
 			[NORMAL_DIFF] = {
 				{ 1, 28358 }, -- Gladiator's Shield Wall
 				{ 16, 28346 }, -- Gladiator's Endgame
@@ -133,7 +134,7 @@ data["ArenaS1PvP"] = {
 			},
 		},
 		{
-			name = ALIL["Relic"]..BLIZZARD_NYI,
+			name = ALIL["Relic"],
 			[NORMAL_DIFF] = {
 				{ 1, 33942 }, -- Gladiator's Idol of Steadfastness
 				{ 2, 33945 }, -- Gladiator's Idol of Resolve
@@ -150,13 +151,14 @@ data["ArenaS1PvP"] = {
 }
 
 data["ArenaS2PvP"] = {
-	name = format(AL["Season %s"], "2")..BLIZZARD_NYI,
+	name = format(AL["Season %s"], "2"),
 	ContentType = ARENA_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
-	TableType = SET_ITTYPE,
+	TableType = NORMAL_ITTYPE,
 	items = {
 		{
 			name = AL["Sets"]..BLIZZARD_NYI,
+			TableType = SET_ITTYPE,
 			[NORMAL_DIFF] = {
 				{ 1,    702 }, -- Warlock
 				{ 2,    704 }, -- Warlock 2
@@ -178,7 +180,7 @@ data["ArenaS2PvP"] = {
 			},
 		},
 		{
-			name = AL["Weapons"].." - "..AL["One-Handed"]..BLIZZARD_NYI,
+			name = AL["Weapons"].." - "..AL["One-Handed"],
 			[NORMAL_DIFF] = {
 				{ 1, 32044 }, -- Gladiator's Shanker
 				{ 2, 32046 }, -- Gladiator's Shiv
@@ -202,7 +204,7 @@ data["ArenaS2PvP"] = {
 			},
 		},
 		{
-			name = AL["Weapons"].." - "..AL["Two-Handed"]..BLIZZARD_NYI,
+			name = AL["Weapons"].." - "..AL["Two-Handed"],
 			[NORMAL_DIFF] = {
 				{ 1, 31984 }, -- Gladiator's Greatsword
 
@@ -217,7 +219,7 @@ data["ArenaS2PvP"] = {
 			},
 		},
 		{
-			name = AL["Weapons"].." - "..AL["Ranged"]..BLIZZARD_NYI,
+			name = AL["Weapons"].." - "..AL["Ranged"],
 			[NORMAL_DIFF] = {
 				{ 1, 31986 }, -- Gladiator's Heavy Crossbow
 				{ 3, 32054 }, -- Gladiator's War Edge
@@ -226,7 +228,7 @@ data["ArenaS2PvP"] = {
 			},
 		},
 		{
-			name = AL["Weapons"].." - "..ALIL["Off Hand"]..BLIZZARD_NYI,
+			name = AL["Weapons"].." - "..ALIL["Off Hand"],
 			[NORMAL_DIFF] = {
 				{ 1, 32045 }, -- Gladiator's Shield Wall
 				{ 16, 31978 }, -- Gladiator's Endgame
@@ -251,13 +253,14 @@ data["ArenaS2PvP"] = {
 }
 
 data["ArenaS3PvP"] = {
-	name = format(AL["Season %s"], "3")..BLIZZARD_NYI,
+	name = format(AL["Season %s"], "3"),
 	ContentType = ARENA_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
-	TableType = SET_ITTYPE,
+	TableType = NORMAL_ITTYPE,
 	items = {
 		{
 			name = AL["Sets"]..BLIZZARD_NYI,
+			TableType = SET_ITTYPE,
 			[NORMAL_DIFF] = {
 				{ 1,    734 }, -- Warlock
 				{ 2,    735 }, -- Warlock 2
@@ -279,7 +282,7 @@ data["ArenaS3PvP"] = {
 			},
 		},
 		{
-			name = AL["Weapons"].." - "..AL["One-Handed"]..BLIZZARD_NYI,
+			name = AL["Weapons"].." - "..AL["One-Handed"],
 			[NORMAL_DIFF] = {
 				{ 1, 33754 }, -- Gladiator's Shanker
 				{ 2, 33756 }, -- Gladiator's Shiv
@@ -306,7 +309,7 @@ data["ArenaS3PvP"] = {
 			},
 		},
 		{
-			name = AL["Weapons"].." - "..AL["Two-Handed"]..BLIZZARD_NYI,
+			name = AL["Weapons"].." - "..AL["Two-Handed"],
 			[NORMAL_DIFF] = {
 				{ 1, 33688 }, -- Gladiator's Greatsword
 
@@ -324,7 +327,7 @@ data["ArenaS3PvP"] = {
 			},
 		},
 		{
-			name = AL["Weapons"].." - "..AL["Ranged"]..BLIZZARD_NYI,
+			name = AL["Weapons"].." - "..AL["Ranged"],
 			[NORMAL_DIFF] = {
 				{ 1, 34529 }, -- Vengeful Gladiator's Longbow
 				{ 3, 33006 }, -- Gladiator's Heavy Crossbow
@@ -337,7 +340,7 @@ data["ArenaS3PvP"] = {
 			},
 		},
 		{
-			name = AL["Weapons"].." - "..ALIL["Off Hand"]..BLIZZARD_NYI,
+			name = AL["Weapons"].." - "..ALIL["Off Hand"],
 			[NORMAL_DIFF] = {
 				{ 1, 33755 }, -- Vengeful Gladiator's Shield Wall
 				{ 3, 33661 }, -- Vengeful Gladiator's Barrier
@@ -349,7 +352,7 @@ data["ArenaS3PvP"] = {
 		},
 
 		{
-			name = ALIL["Relic"]..BLIZZARD_NYI,
+			name = ALIL["Relic"],
 			[NORMAL_DIFF] = {
 				{ 1, 33944 }, -- Gladiator's Idol of Steadfastness
 				{ 2, 33947 }, -- Gladiator's Idol of Resolve
@@ -366,19 +369,20 @@ data["ArenaS3PvP"] = {
 }
 
 data["ArenaS4PvP"] = {
-	name = format(AL["Season %s"], "4")..BLIZZARD_NYI,
+	name = format(AL["Season %s"], "4"),
 	ContentType = ARENA_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
-	TableType = SET_ITTYPE,
+	TableType = NORMAL_ITTYPE,
 	items = {
 		{
 			name = AL["Sets"]..BLIZZARD_NYI,
+			TableType = SET_ITTYPE,
 			[NORMAL_DIFF] = {
 				-- NYI
 			},
 		},
 		{
-			name = AL["Weapons"].." - "..AL["One-Handed"]..BLIZZARD_NYI,
+			name = AL["Weapons"].." - "..AL["One-Handed"],
 			[NORMAL_DIFF] = {
 				{ 1, 35093 }, -- Gladiator's Shanker
 				{ 2, 35095 }, -- Gladiator's Shiv
@@ -408,7 +412,7 @@ data["ArenaS4PvP"] = {
 			},
 		},
 		{
-			name = AL["Weapons"].." - "..AL["Two-Handed"]..BLIZZARD_NYI,
+			name = AL["Weapons"].." - "..AL["Two-Handed"],
 			[NORMAL_DIFF] = {
 				{ 1, 35015 }, -- Gladiator's Greatsword
 
@@ -425,7 +429,7 @@ data["ArenaS4PvP"] = {
 			},
 		},
 		{
-			name = AL["Weapons"].." - "..AL["Ranged"]..BLIZZARD_NYI,
+			name = AL["Weapons"].." - "..AL["Ranged"],
 			[NORMAL_DIFF] = {
 				{ 1, 35047 }, -- Vengeful Gladiator's Longbow
 				{ 3, 35018 }, -- Gladiator's Heavy Crossbow
@@ -438,7 +442,7 @@ data["ArenaS4PvP"] = {
 			},
 		},
 		{
-			name = AL["Weapons"].." - "..ALIL["Off Hand"]..BLIZZARD_NYI,
+			name = AL["Weapons"].." - "..ALIL["Off Hand"],
 			[NORMAL_DIFF] = {
 				{ 1, 35094 }, -- Vengeful Gladiator's Shield Wall
 				{ 3, 34986 }, -- Vengeful Gladiator's Barrier
@@ -449,7 +453,7 @@ data["ArenaS4PvP"] = {
 			},
 		},
 		{
-			name = ALIL["Relic"]..BLIZZARD_NYI,
+			name = ALIL["Relic"],
 			[NORMAL_DIFF] = {
 				{ 1, 35020 }, -- Gladiator's Idol of Steadfastness
 				{ 2, 35019 }, -- Gladiator's Idol of Resolve
