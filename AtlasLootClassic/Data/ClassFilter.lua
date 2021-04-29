@@ -10,6 +10,7 @@ local Requirements = AtlasLoot.Data.Requirements
 local GetItemInfoInstant = GetItemInfoInstant
 
 -- ## lua
+local wipe = table.wipe
 local format = string.format
 local bit_band = bit.band
 
@@ -18,6 +19,7 @@ local CLASS_BITS = ALPrivate.CLASS_BITS
 local CLASS_SORT = ALPrivate.CLASS_SORT
 local CLASS_NAME_TO_ID = ALPrivate.CLASS_NAME_TO_ID
 local C = CLASS_BITS
+local db
 
 -- ## Filter settings
 local FILTER_DATA = {
@@ -234,7 +236,183 @@ local FILTER_DATA = {
         },
     }
 }
+local LINKED_STATS = {
+    ["ITEM_MOD_HEALTH"] = "ITEM_MOD_HEALTH_SHORT",
+    ["ITEM_MOD_AGILITY"] = "ITEM_MOD_AGILITY_SHORT",
+    ["ITEM_MOD_STRENGTH"] = "ITEM_MOD_STRENGTH_SHORT",
+    ["ITEM_MOD_SPIRIT"] = "ITEM_MOD_SPIRIT_SHORT",
+    ["ITEM_MOD_STAMINA"] = "ITEM_MOD_STAMINA_SHORT",
+    ["ITEM_MOD_INTELLECT"] = "ITEM_MOD_INTELLECT_SHORT",
+    ["ITEM_MOD_MANA"] = "ITEM_MOD_MANA_SHORT",
+
+    ["ITEM_MOD_HEALTH_REGEN"] = "ITEM_MOD_HEALTH_REGEN_SHORT",
+    ["ITEM_MOD_HEALTH_REGENERATION"] = "ITEM_MOD_HEALTH_REGEN_SHORT",
+    ["ITEM_MOD_HEALTH_REGEN"] = "ITEM_MOD_HEALTH_REGEN_SHORT",
+
+    ["ITEM_MOD_HIT_RATING"] = "ITEM_MOD_HIT_RATING_SHORT",
+    ["ITEM_MOD_HIT_MELEE_RATING"] = "ITEM_MOD_HIT_MELEE_RATING_SHORT",
+    ["ITEM_MOD_HIT_RANGED_RATING"] = "ITEM_MOD_HIT_RANGED_RATING_SHORT",
+    ["ITEM_MOD_HIT_SPELL_RATING"] = "ITEM_MOD_HIT_SPELL_RATING_SHORT",
+
+    ["ITEM_MOD_CRIT_RATING"] = "ITEM_MOD_CRIT_RATING_SHORT",
+    ["ITEM_MOD_CRIT_MELEE_RATING"] = "ITEM_MOD_CRIT_MELEE_RATING_SHORT",
+    ["ITEM_MOD_CRIT_RANGED_RATING"] = "ITEM_MOD_CRIT_RANGED_RATING_SHORT",
+    ["ITEM_MOD_CRIT_SPELL_RATING"] = "ITEM_MOD_CRIT_SPELL_RATING_SHORT",
+
+    ["ITEM_MOD_ATTACK_POWER"] = "ITEM_MOD_ATTACK_POWER_SHORT",
+    ["ITEM_MOD_MELEE_ATTACK_POWER"] = "ITEM_MOD_MELEE_ATTACK_POWER_SHORT",
+    ["ITEM_MOD_RANGED_ATTACK_POWER"] = "ITEM_MOD_RANGED_ATTACK_POWER_SHORT",
+    ["ITEM_MOD_FERAL_ATTACK_POWER"] = "ITEM_MOD_FERAL_ATTACK_POWER_SHORT",
+
+    ["ITEM_MOD_SPELL_POWER"] = "ITEM_MOD_SPELL_POWER_SHORT",
+    ["ITEM_MOD_SPELL_HEALING"] = "ITEM_MOD_SPELL_HEALING_DONE_SHORT",
+    ["ITEM_MOD_SPELL_DAMAGE"] = "ITEM_MOD_SPELL_DAMAGE_DONE_SHORT",
+    ["ITEM_MOD_SPELL_DAMAGE_DONE"] = "ITEM_MOD_SPELL_DAMAGE_DONE_SHORT",
+    ["ITEM_MOD_SPELL_HEALING_DONE"] = "ITEM_MOD_SPELL_HEALING_DONE_SHORT",
+
+    ["ITEM_MOD_DEFENSE_SKILL_RATING"] = "ITEM_MOD_DEFENSE_SKILL_RATING_SHORT",
+    ["ITEM_MOD_DODGE_RATING"] = "ITEM_MOD_DODGE_RATING_SHORT",
+    ["ITEM_MOD_PARRY_RATING"] = "ITEM_MOD_PARRY_RATING_SHORT",
+    ["ITEM_MOD_EXTRA_ARMOR"] = "ITEM_MOD_EXTRA_ARMOR_SHORT",
+
+    ["ITEM_MOD_ARMOR_PENETRATION_RATING"] = "ITEM_MOD_ARMOR_PENETRATION_RATING_SHORT",
+    ["ITEM_MOD_SPELL_PENETRATION"] = "ITEM_MOD_SPELL_PENETRATION_SHORT",
+
+    ["ITEM_MOD_MANA_REGENERATION"] = "ITEM_MOD_MANA_REGENERATION_SHORT",
+    ["ITEM_MOD_HEALTH_REGENERATION"] = "ITEM_MOD_HEALTH_REGENERATION_SHORT",
+
+    ["ITEM_MOD_RESILIENCE_RATING"] = "ITEM_MOD_RESILIENCE_RATING_SHORT",
+}
+
+local STAT_LIST = {
+    {
+        name = AL["Main"],
+        --"ITEM_MOD_HEALTH_SHORT", -- Health
+        "ITEM_MOD_AGILITY_SHORT", -- Agility
+        "ITEM_MOD_STRENGTH_SHORT", -- Strength
+        "ITEM_MOD_INTELLECT_SHORT", -- Intellect
+        "ITEM_MOD_SPIRIT_SHORT", -- Spirit
+        "ITEM_MOD_STAMINA_SHORT", -- Stamina
+        "ITEM_MOD_MANA_SHORT", -- Mana
+    },
+    {
+        name = AL["Regen"],
+        "ITEM_MOD_POWER_REGEN0_SHORT", -- Mana Per 5 Sec.
+        "ITEM_MOD_POWER_REGEN1_SHORT", -- Rage Per 5 Sec.
+        "ITEM_MOD_POWER_REGEN2_SHORT", -- Focus Per 5 Sec.
+        "ITEM_MOD_POWER_REGEN3_SHORT", -- Energy Per 5 Sec.
+        "ITEM_MOD_POWER_REGEN4_SHORT", -- Happiness Per 5 Sec.
+        --"ITEM_MOD_POWER_REGEN5_SHORT", -- Runes Per 5 Sec.
+        --"ITEM_MOD_POWER_REGEN6_SHORT", -- Runic Power Per 5 Sec.
+        "ITEM_MOD_HEALTH_REGEN_SHORT", -- Health Per 5 Sec.
+    },
+    {
+        name = AL["Bonus"],
+        "ITEM_MOD_SPELL_POWER_SHORT", -- Spell Power
+        "ITEM_MOD_SPELL_HEALING_DONE_SHORT", -- Increases healing done by magical spells and effects by up to %s.
+        "ITEM_MOD_SPELL_DAMAGE_DONE_SHORT", -- Increases damage done by magical spells and effects by up to %s.
+        "",
+        "ITEM_MOD_ATTACK_POWER_SHORT", -- Attack Power
+        "ITEM_MOD_MELEE_ATTACK_POWER_SHORT", -- Melee Attack Power
+        "ITEM_MOD_RANGED_ATTACK_POWER_SHORT", -- Ranged Attack Power
+        "ITEM_MOD_FERAL_ATTACK_POWER_SHORT", -- Attack Power In Forms
+        "",
+        "ITEM_MOD_HIT_RATING_SHORT", -- Hit
+        "ITEM_MOD_HIT_MELEE_RATING_SHORT", -- Hit (Melee)
+        "ITEM_MOD_HIT_RANGED_RATING_SHORT", -- Hit (Ranged)
+        "ITEM_MOD_HIT_SPELL_RATING_SHORT", -- Hit (Spell)
+        "",
+        "ITEM_MOD_CRIT_RATING_SHORT", -- Critical Strike
+        "ITEM_MOD_CRIT_MELEE_RATING_SHORT", -- Critical Strike (Melee)
+        "ITEM_MOD_CRIT_RANGED_RATING_SHORT", -- Critical Strike (Ranged)
+        "ITEM_MOD_CRIT_SPELL_RATING_SHORT", -- Critical Strike (Spell)
+    },
+    {
+        name = AL["Special"],
+        "ITEM_MOD_DEFENSE_SKILL_RATING_SHORT", -- Defense
+        "ITEM_MOD_DODGE_RATING_SHORT", -- Dodge
+        "ITEM_MOD_PARRY_RATING_SHORT", -- Parry
+        "ITEM_MOD_EXTRA_ARMOR_SHORT", -- Bonus Armor
+        "",
+        "ITEM_MOD_ARMOR_PENETRATION_RATING_SHORT", -- Armor Penetration
+        "ITEM_MOD_SPELL_PENETRATION_SHORT", -- Spell Penetration
+        "",
+        "ITEM_MOD_MANA_REGENERATION_SHORT", -- Mana Regeneration
+        "ITEM_MOD_HEALTH_REGENERATION_SHORT", -- Health Regeneration
+        "",
+        "ITEM_MOD_RESILIENCE_RATING_SHORT", -- PvP Resilience
+    }
+}
 local CLASS_FILTER
+
+-- defaults
+-- "WARRIOR", "PALADIN", "HUNTER", "ROGUE", "PRIEST", "SHAMAN", "MAGE", "WARLOCK", "DRUID"
+AtlasLoot.AtlasLootDBDefaults.profile.ClassFilter = {
+	["WARRIOR"] = {
+        ["*"] = true,
+        ["ITEM_MOD_INTELLECT_SHORT"] = false,
+    },
+    ["PALADIN"] = {
+        ["*"] = true,
+    },
+    ["HUNTER"] = {
+        ["*"] = true,
+    },
+    ["ROGUE"] = {
+        ["*"] = true,
+        ["ITEM_MOD_INTELLECT_SHORT"] = false,
+    },
+    ["PRIEST"] = {
+        ["*"] = true,
+        ["ITEM_MOD_STRENGTH_SHORT"] = false,
+        ["ITEM_MOD_AGILITY_SHORT"] = false,
+        ["ITEM_MOD_ATTACK_POWER_SHORT"] = false,
+        ["ITEM_MOD_MELEE_ATTACK_POWER_SHORT"] = false,
+        ["ITEM_MOD_RANGED_ATTACK_POWER_SHORT"] = false,
+        ["ITEM_MOD_FERAL_ATTACK_POWER_SHORT"] = false,
+        ["ITEM_MOD_HIT_MELEE_RATING_SHORT"] = false,
+        ["ITEM_MOD_HIT_RANGED_RATING_SHORT"] = false,
+        ["ITEM_MOD_CRIT_MELEE_RATING_SHORT"] = false,
+        ["ITEM_MOD_CRIT_RANGED_RATING_SHORT"] = false,
+    },
+    ["SHAMAN"] = {
+        ["*"] = true,
+    },
+    ["MAGE"] = {
+        ["*"] = true,
+        ["ITEM_MOD_STRENGTH_SHORT"] = false,
+        ["ITEM_MOD_AGILITY_SHORT"] = false,
+        ["ITEM_MOD_ATTACK_POWER_SHORT"] = false,
+        ["ITEM_MOD_MELEE_ATTACK_POWER_SHORT"] = false,
+        ["ITEM_MOD_RANGED_ATTACK_POWER_SHORT"] = false,
+        ["ITEM_MOD_FERAL_ATTACK_POWER_SHORT"] = false,
+        ["ITEM_MOD_HIT_MELEE_RATING_SHORT"] = false,
+        ["ITEM_MOD_HIT_RANGED_RATING_SHORT"] = false,
+        ["ITEM_MOD_CRIT_MELEE_RATING_SHORT"] = false,
+        ["ITEM_MOD_CRIT_RANGED_RATING_SHORT"] = false,
+    },
+    ["WARLOCK"] = {
+        ["*"] = true,
+        ["ITEM_MOD_STRENGTH_SHORT"] = false,
+        ["ITEM_MOD_AGILITY_SHORT"] = false,
+        ["ITEM_MOD_ATTACK_POWER_SHORT"] = false,
+        ["ITEM_MOD_MELEE_ATTACK_POWER_SHORT"] = false,
+        ["ITEM_MOD_RANGED_ATTACK_POWER_SHORT"] = false,
+        ["ITEM_MOD_FERAL_ATTACK_POWER_SHORT"] = false,
+        ["ITEM_MOD_HIT_MELEE_RATING_SHORT"] = false,
+        ["ITEM_MOD_HIT_RANGED_RATING_SHORT"] = false,
+        ["ITEM_MOD_CRIT_MELEE_RATING_SHORT"] = false,
+        ["ITEM_MOD_CRIT_RANGED_RATING_SHORT"] = false,
+    },
+    ["DRUID"] = {
+        ["*"] = true,
+    },
+}
+
+local function OnInit()
+    db = AtlasLoot.db.ClassFilter
+end
+AtlasLoot:AddInitFunc(OnInit)
 
 local function BitToTable(bit)
     local t = {}
@@ -269,6 +447,9 @@ local function BuildClassFilterList()
     FILTER_DATA = nil
 end
 
+function ClassFilter.GetStatListForOptions()
+    return STAT_LIST, CLASS_SORT, db
+end
 
 function ClassFilter.ClassCanUseItem(className, itemID)
     if not className or not itemID then return true end
@@ -291,6 +472,16 @@ function ClassFilter.ClassCanUseItem(className, itemID)
 
     if CLASS_FILTER.itemSubClass[itemClassID][itemSubClassID] and not CLASS_FILTER.itemSubClass[itemClassID][itemSubClassID][classID] then
         return false
+    end
+
+    -- check stats
+    local stats = GetItemStats(type(itemID) == "string" and itemID or "item:"..itemID)
+    if stats then
+        for stat in pairs(stats) do
+            if db[className][LINKED_STATS[stat] or stat] == false then
+                return false
+            end
+        end
     end
 
     return true

@@ -142,3 +142,61 @@ Options.config.args.atlasloot = {
 		},
 	},
 }
+
+Options.orderNumber = Options.orderNumber + 1
+Options.config.args.classfilter = {
+	type = "group",
+	name = AL["Class Filter"],
+	childGroups = "select",
+	order = Options.orderNumber,
+	--get = function(info) return AtlasLoot.db[info[#info]] end,
+	--set = function(info, value) AtlasLoot.db[info[#info]] = value end,
+	args = {
+
+	}
+}
+
+-- build class filter list
+local ClassFilterStatList, SortedClassList, ClassFilterDB = AtlasLoot.Data.ClassFilter.GetStatListForOptions()
+local classFilterTab = Options.config.args.classfilter.args
+local CLASS_NAMES_WITH_COLORS = AtlasLoot:GetColoredClassNames()
+
+-- build filterList
+local OptionsFilterList = {}
+for filterStatCatIndex, filterStatCat in ipairs(ClassFilterStatList) do
+	OptionsFilterList[filterStatCatIndex..""] = {
+		order = filterStatCatIndex,
+		name = filterStatCat.name,
+		type = "group",
+		args = {}
+	}
+	local tab = OptionsFilterList[filterStatCatIndex..""].args
+	for statIndex, stat in ipairs(filterStatCat) do
+		if stat == "" then
+			tab[statIndex..stat] = {
+				order = statIndex,
+				name = "",
+				type = "header",
+				width = "full"
+			}
+		elseif _G[stat] then
+			tab[stat] = {
+				order = statIndex,
+				name = _G[stat],
+				type = "toggle",
+			}
+		end
+	end
+end
+
+for classIndex, className in ipairs(SortedClassList) do
+	classFilterTab[className] = {
+		order = classIndex,
+		name = CLASS_NAMES_WITH_COLORS[className],
+		type = "group",
+		childGroups = "tab",
+		get = function(info) return ClassFilterDB[className][info[#info]] end,
+		set = function(info, value) ClassFilterDB[className][info[#info]] = value end,
+		args = OptionsFilterList,
+	}
+end
