@@ -100,6 +100,7 @@ globals = {
 	"LibStub",
 
 	-- FrameXML misc
+	"C_ChatInfo",
 	"ChatEdit_InsertLink",
 	"ChatFrameEditBox",
 	"FACTION_BAR_COLORS",

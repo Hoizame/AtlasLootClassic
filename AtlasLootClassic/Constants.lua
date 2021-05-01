@@ -52,6 +52,7 @@ ALPrivate.IS_BC = AtlasLoot:GetGameVersion() == 2
 
 -- Account specific
 ALPrivate.ACCOUNT_LOCALE = GetLocale()
+ALPrivate.PLAYER_NAME = UnitName("player")
 
 -- Image path
 ALPrivate.IMAGE_PATH = "Interface\\AddOns\\"..ALName.."\\Images\\"
@@ -115,3 +116,5 @@ for classID = 1, #ALPrivate.CLASS_SORT do ALPrivate.CLASS_NAME_TO_ID[ALPrivate.C
 
 ALPrivate.LOC_CLASSES = {}
 FillLocalizedClassList(ALPrivate.LOC_CLASSES)
+
+ALPrivate.ADDON_MSG_PREFIX = "ATLASLOOT_MSG"

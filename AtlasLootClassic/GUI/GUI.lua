@@ -949,6 +949,14 @@ function GUI:Create()
 	frame.titleFrame.version:SetJustifyV("BOTTOM")
 	frame.titleFrame.version:SetText(AtlasLoot.__addonversion)
 
+	frame.titleFrame.newVersion = frame.titleFrame:CreateFontString(nil, "ARTWORK")
+	frame.titleFrame.newVersion:SetPoint("LEFT", frame.titleFrame, "LEFT", 5, 1)
+	frame.titleFrame.newVersion:SetTextColor(0, 1, 0, 1)
+	frame.titleFrame.newVersion:SetFont(_G["SystemFont_Tiny"]:GetFont(), 10)
+	frame.titleFrame.newVersion:SetJustifyH("LEFT")
+	frame.titleFrame.newVersion:SetJustifyV("MIDDLE")
+	frame.titleFrame.newVersion:SetText(AL["New version aviable!"])
+
 	frame.gameVersionButton = CreateFrame("Button", frameName.."-gameVersionButton", frame)
 	frame.gameVersionButton:SetPoint("TOPLEFT", frame, "TOPLEFT", 258, -37)
 	frame.gameVersionButton:SetWidth(64)
@@ -1186,6 +1194,8 @@ function GUI:Create()
 	-- Set itemframe as start frame
 	frame.contentFrame.shownFrame = GUI.ItemFrame.frame
 	--self.SoundFrame:Create()
+
+	GUI.RefreshVersionUpdate()
 end
 
 function GUI:ForceUpdate()
@@ -1243,6 +1253,15 @@ function GUI.Temp_SetParPoint(self, ...)
 		end
 	else
 		frame:SetPoint(...)
+	end
+end
+
+function GUI.RefreshVersionUpdate()
+	if not GUI.frame then return end
+	if AtlasLoot.IsAddonUpdateAviable() then
+		GUI.frame.titleFrame.newVersion:Show()
+	else
+		GUI.frame.titleFrame.newVersion:Hide()
 	end
 end
 

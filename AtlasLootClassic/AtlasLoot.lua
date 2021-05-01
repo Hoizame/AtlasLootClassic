@@ -1,3 +1,4 @@
+local ALName, ALPrivate = ...
 -- ----------------------------------------------------------------------------
 -- Localized Lua globals.
 -- ----------------------------------------------------------------------------
@@ -22,6 +23,9 @@ local LibStub = _G.LibStub
 -- lua
 
 -- WoW
+local SendAddonMessage = C_ChatInfo.SendAddonMessage
+local RegisterAddonMessagePrefix = C_ChatInfo.RegisterAddonMessagePrefix
+
 -- DisableAddOn
 
 local EventFrame = CreateFrame("FRAME")
@@ -72,9 +76,14 @@ function AtlasLoot:OnInitialize()
 
 	self.dbGlobal.__addonrevision = self.IsDevVersion and 0 or self.__addonrevision
 
+	RegisterAddonMessagePrefix(ALPrivate.ADDON_MSG_PREFIX)
+
 	-- bindings
 	BINDING_HEADER_ATLASLOOT = AL["AtlasLoot"]
 	BINDING_NAME_ATLASLOOT_TOGGLE = AL["Toggle AtlasLoot"]
+
+	-- version
+	AtlasLoot.SendAddonVersion("GUILD")
 end
 
 function AtlasLoot:AddInitFunc(func, module)
@@ -103,4 +112,51 @@ function AtlasLoot:GetColoredClassNames()
 		end
 	end
 	return CLASS_NAMES_WITH_COLORS
+end
+
+-- #############################
+-- UpdateChecker
+-- #############################
+local UpdateSendMsg = "#v:"
+local UpdateGetMsg = "#v:(%d+)"
+local UpdateCheckerFrame = CreateFrame("FRAME")
+local IsAddonUpdateAviable = false
+local UpdatedVersionRev = AtlasLoot.__addonrevision
+
+local function UpdateCheckFrameOnEvent(frame, event, arg1, ...)
+	if event == "CHAT_MSG_ADDON" and arg1 == ALPrivate.ADDON_MSG_PREFIX then
+		local text, channel, sender, target, zoneChannelID, localID, name, instanceID = ...
+		--if sender ~= ALPrivate.PLAYER_NAME then
+			local v = text:match(UpdateGetMsg)
+			v = tonumber(v or 0)
+			if v and v > 0 and v > UpdatedVersionRev and v < 99999999 then
+				IsAddonUpdateAviable = true
+				UpdatedVersionRev = v
+				AtlasLoot.GUI.RefreshVersionUpdate()
+			end
+		--end
+	elseif event == "GROUP_JOINED" then
+		AtlasLoot.SendAddonVersion("RAID")
+		AtlasLoot.SendAddonVersion("PARTY")
+	elseif event == "RAID_ROSTER_UPDATE" then
+		AtlasLoot.SendAddonVersion("RAID")
+	end
+end
+
+UpdateCheckerFrame:SetScript("OnEvent", UpdateCheckFrameOnEvent)
+UpdateCheckerFrame:RegisterEvent("CHAT_MSG_ADDON")
+UpdateCheckerFrame:RegisterEvent("GROUP_JOINED")
+UpdateCheckerFrame:RegisterEvent("RAID_ROSTER_UPDATE")
+
+function AtlasLoot.SendAddonVersion(channel, target)
+	if AtlasLoot.IsDevVersion then return end
+	if not channel then return end
+	if channel == "GUILD" and not IsInGuild() then return end
+	if channel == "PARTY" and not IsInGroup() then return end
+	if channel == "RAID" and not IsInRaid() then return end
+	SendAddonMessage(ALPrivate.ADDON_MSG_PREFIX, UpdateSendMsg..UpdatedVersionRev, channel, target)
+end
+
+function AtlasLoot.IsAddonUpdateAviable()
+	return IsAddonUpdateAviable
 end
