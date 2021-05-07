@@ -75,40 +75,42 @@ function ItemFrame:ClearItems()
 	end
 end
 
-function ItemFrame.UpdateFilter()
-	local Reset = true
+function ItemFrame.UpdateFilterItem(buttonID, reset)
+	local button = ItemFrame.frame.ItemButtons[buttonID] or buttonID
+	if not button then return end
 	if AtlasLoot.db.GUI.classFilter then
-		if AtlasLoot.db.GUI.classFilter then
-			local button
-			for i = 1,30 do
-				button = ItemFrame.frame.ItemButtons[i]
-				if button and button.__atlaslootinfo and not button.__atlaslootinfo.filterIgnore and button.__atlaslootinfo.type and button.__atlaslootinfo.type[1] == "Item" then
-					if button.ItemID and ClassFilter.ClassCanUseItem(GUI.frame.contentFrame.clasFilterButton.selectedClassName, button.ItemID) then
-						button:SetAlpha(1)
-					else
-						button:SetAlpha(0.33)
-					end
-				else
-					button:SetAlpha(1)
-				end
+		if button and button.__atlaslootinfo and not button.__atlaslootinfo.filterIgnore and button.__atlaslootinfo.type and button.__atlaslootinfo.type[1] == "Item" then
+			if button.ItemID and ClassFilter.ClassCanUseItem(GUI.frame.contentFrame.clasFilterButton.selectedClassName, button.ItemID) then
+				button:SetAlpha(1)
+			else
+				button:SetAlpha(0.33)
 			end
+		else
+			button:SetAlpha(1)
 		end
-		Reset = false
+		reset = false
 	end
+
 	if ItemFrame.SearchString then
-		local searchString = ItemFrame.SearchString
-		for i=1,30 do
-			local button = ItemFrame.frame.ItemButtons[i]
-			local text = button.RawName or button.name:GetText()
-			if text and not sfind(slower(text), searchString, 1, true) then
-				button:SetAlpha(FILTER_ALPHA)
-			elseif Reset then
-				button:SetAlpha(1.0)
-			end
+		local text = button.RawName or button.name:GetText()
+		if text and not sfind(slower(text), ItemFrame.SearchString, 1, true) then
+			button:SetAlpha(FILTER_ALPHA)
+		elseif reset then
+			button:SetAlpha(1.0)
 		end
-		Reset = false
+		reset = false
 	end
-	if Reset then
+
+	return reset
+end
+
+function ItemFrame.UpdateFilter()
+	local reset = true
+	for i = 1,30 do
+		reset = ItemFrame.UpdateFilterItem(i, reset)
+	end
+
+	if reset then
 		for i=1,30 do
 			ItemFrame.frame.ItemButtons[i]:SetAlpha(1)
 		end

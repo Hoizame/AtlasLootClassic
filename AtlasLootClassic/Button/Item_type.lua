@@ -453,11 +453,8 @@ local function EventFrame_OnEvent(frame, event, arg1, arg2)
 					local typFunc = button:GetTypeFunctions()
 					if typFunc then
 						typFunc.Refresh(button)
-						if ItemFrame and ItemFrame.SearchString then
-							local text = button.RawName or button.name:GetText()
-							if text and not sfind(slower(text), ItemFrame.SearchString, 1, true) then
-								button:SetAlpha(0.33)
-							end
+						if ItemFrame then
+							ItemFrame.UpdateFilterItem(button)
 						end
 					end
 				end

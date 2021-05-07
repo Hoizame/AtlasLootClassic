@@ -55,6 +55,12 @@ function AtlasLoot:Print(msg)
 	print("|cff33ff99AtlasLoot|r: "..(msg or ""))
 end
 
+function AtlasLoot:DevPrint(msg)
+	if AtlasLoot.IsDevVersion then
+		print("|cff33ff99AtlasLoot|r: "..(msg or ""))
+	end
+end
+
 function AtlasLoot:OnProfileChanged()
 	AtlasLoot.db = AtlasLoot.dbRaw.profile
 
@@ -129,6 +135,9 @@ local function UpdateCheckFrameOnEvent(frame, event, arg1, ...)
 		--if sender ~= ALPrivate.PLAYER_NAME then
 			local v = text:match(UpdateGetMsg)
 			v = tonumber(v or 0)
+			if v and v > 0 and AtlasLoot.IsDevVersion then
+				AtlasLoot:DevPrint(format("Player '|cff00FAF6%s|r' sends version '|cff00FF96%d|r'!", sender, v))
+			end
 			if v and v > 0 and v > UpdatedVersionRev and v < 99999999 then
 				IsAddonUpdateAviable = true
 				UpdatedVersionRev = v
