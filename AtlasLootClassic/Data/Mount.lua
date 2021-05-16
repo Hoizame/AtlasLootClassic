@@ -119,7 +119,7 @@ local MOUNT_LIST = {
     [23720] = 17158, -- Riding Turtle
     [21176] = 15677, -- Black Qiraji Resonating Crystal
     [20221] = 15293, -- Foror's Fabled Steed
---@version-bc@
+--@version-bcc@
     -- BC
     [32768] = 21473, -- Swift Raven Lord Mount
     [35513] = 19483, -- Swift White Hawkstrider
@@ -158,7 +158,7 @@ local MOUNT_LIST = {
     [34061] = 22720, -- Turbo-Charged Flying Machine Control
     [28915] = 21074, -- Reins of the Dark Riding Talbuk
     [29228] = 19303, -- Reins of the Dark War Talbuk
---@end-version-bc@
+--@end-version-bcc@
 }
 
 

@@ -104,7 +104,7 @@ data["TierSets"] = {
 				{ 24, 528 }, -- Paladin
 			},
 		},
---@version-bc@
+--@version-bcc@
 		{ -- T4
 			name = format(AL["Tier %s Sets"], "4"),
 			[NORMAL_DIFF] = {
@@ -171,7 +171,7 @@ data["TierSets"] = {
 				{ 28,   680 }, -- Paladin / DD
 			},
 		},
---@end-version-bc@
+--@end-version-bcc@
 	},
 }
 
@@ -208,7 +208,7 @@ data["DungeonSets"] = {
 				{ 24, 516 }, -- Paladin
 			},
 		},
---@version-bc@
+--@version-bcc@
 		{ -- T0.5 / D2
 			name = format(AL["Dungeon Set %s"], "3"),
 			[NORMAL_DIFF] = {
@@ -227,7 +227,7 @@ data["DungeonSets"] = {
 				{ 22, 653 },
 			},
 		},
---@end-version-bc@
+--@end-version-bcc@
 	}
 }
 
@@ -1047,12 +1047,12 @@ data["Darkmoon"] = {
 				{ 2,  19267 }, -- Darkmoon Card: Maelstrom
 				{ 3,  19257 }, -- Darkmoon Card: Heroism
 				{ 4,  19277 }, -- Darkmoon Card: Twisting Nether
---@version-bc@
+--@version-bcc@
 				{ 6,  31907 }, -- Darkmoon Card: Vengeance
 				{ 7,  31890 }, -- Darkmoon Card: Crusade
 				{ 8,  31891 }, -- Darkmoon Card: Wrath
 				{ 9,  31914 }, -- Darkmoon Card: Madness
---@end-version-bc@
+--@end-version-bcc@
 				{ 16,  19491, 19182, [ATLASLOOT_IT_AMOUNT2] = 1200 }, -- Amulet of the Darkmoon
 				{ 17,  19426, 19182, [ATLASLOOT_IT_AMOUNT2] = 1200 }, -- Orb of the Darkmoon
 				{ 19,  19293, 19182, [ATLASLOOT_IT_AMOUNT2] = 50 }, -- Last Year's Mutton

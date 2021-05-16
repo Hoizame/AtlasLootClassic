@@ -992,7 +992,7 @@ local RECIPE = {
 	[23684] = {1,225,30020}, -- Crystal Infused Bandage
 	[23689] = {1,300,30021}, -- Manual: Crystal Infused Bandage
 	[23690] = {6,300,30047}, -- Recipe: Crystal Flake Throat Lozenge
---@version-bc@
+--@version-bcc@
 	[2770] = {14,1,0}, -- Copper Ore
 	[2771] = {14,50,0}, -- Tin Ore
 	[2772] = {14,125,0}, -- Iron Ore
@@ -1870,7 +1870,7 @@ local RECIPE = {
 	[185924] = {3,375,351769}, -- Pattern: Greater Drums of Restoration
 	[185925] = {3,375,351770}, -- Pattern: Greater Drums of Panic
 	[185926] = {3,375,351771}, -- Pattern: Greater Drums of Battle
---@end-version-bc@
+--@end-version-bcc@
 }
 
 RECIPE[21302] = { 13, 300, 25347 } -- Handbook of Deadly Poison V

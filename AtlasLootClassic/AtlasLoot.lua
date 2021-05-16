@@ -57,7 +57,7 @@ end
 
 function AtlasLoot:DevPrint(msg)
 	if AtlasLoot.IsDevVersion then
-		print("|cff33ff99AtlasLoot|r: "..(msg or ""))
+		print("|cff33ff99AtlasLoot-Dev|r: "..(msg or ""))
 	end
 end
 

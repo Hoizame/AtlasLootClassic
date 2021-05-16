@@ -3,9 +3,9 @@ name: CI
 on:
   push:
     branches:
-      - bc
+      - bcc
     tags:
-      - '**-bc**'
+      - '**-bcc**'
 
 jobs:
   build:
@@ -24,10 +24,10 @@ jobs:
       env:
         CF_API_KEY: ${{ secrets.CF_API_KEY }}
 
-    - name: Create BC Package
+    - name: Create BCC Package
       uses: BigWigsMods/packager@master
       with:
-        args: -g bc -m .pkgmeta-bc -w 25953 -n "{package-name}-{project-version}"
+        args: -g bcc -m .pkgmeta-bcc -w 25953 -n "{package-name}-{project-version}"
       env:
         CF_API_KEY: ${{ secrets.CF_API_KEY }}
         GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}

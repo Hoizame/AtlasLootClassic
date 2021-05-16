@@ -294,7 +294,7 @@ local TOKEN = {
 	[21187] = 21178, -- Earthweave Cloak
 	[21179] = 21178, -- Band of Earthen Wrath
 
---@version-bc@
+--@version-bcc@
 
 	--- T4
 	-- Head
@@ -409,7 +409,7 @@ local TOKEN = {
 	-- Lunacy Deck / Darkmoon Card: Madness
 	[31914] = { 31914, 31859, 0, 31910, 31918, 31917, 31913, 31912, 31916, 31915, 31911 },
 	[31910] = 31914, [31918] = 31914, [31917] = 31914, [31913] = 31914, [31912] = 31914, [31916] = 31914, [31915] = 31914, [31911] = 31914,
---@end-version-bc@
+--@end-version-bcc@
 }
 
 local function Init()

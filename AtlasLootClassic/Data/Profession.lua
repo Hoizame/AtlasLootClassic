@@ -1355,7 +1355,7 @@ local PROFESSION = {
 	[28482] = {22758,8,300,315,345,{14048,12803,14227},{2,4,2}},
 	[30021] = {23684,1,300,300,360,{23567,14047},{1,10},4},
 	[30047] = {23683,6,300,325,365,{23567,8150},{1,1},2},
---@version-bc@
+--@version-bcc@
 	[2658] = {2842,7,75,115,130,{2775},{1}},
 	[2795] = {2888,6,10,60,100,{2886,2894},{1,1}},
 	[3304] = {3576,7,65,65,75,{2771},{1}},
@@ -2391,15 +2391,15 @@ local PROFESSION = {
 	[351769] = {29531,3,375,375,405,{23793,29548},{6,4}},
 	[351770] = {185849,3,375,375,405,{23793,25707},{6,4}},
 	[351771] = {185848,3,375,375,405,{23793,25708},{6,4}},
---@end-version-bc@
+--@end-version-bcc@
 }
 
 -- fix
---@version-bc@
+--@version-bcc@
 PROFESSION[36686][1] = 24272
 PROFESSION[31373][1] = 24271
 PROFESSION[26751][1] = 21845
---@end-version-bc@
+--@end-version-bcc@
 
 local PROFESSION_ITEM_SKILL = {
     -- Herb
@@ -2434,7 +2434,7 @@ local PROFESSION_ITEM_SKILL = {
     [785] = { 50, 75, 150 }, -- Mageroyal
     [2450] = { 70, 95, 170 }, -- Briarthorn
     --[2452] = { 0, 0, 0 }, -- Swiftthistle
---@version-bc@
+--@version-bcc@
 	[22793] = { 375, 375, 375 }, -- Mana Thistle
 	[22792] = { 365, 365, 365 }, -- Nightmare Vine
 	[22791] = { 350, 350, 350 }, -- Netherbloom
@@ -2444,7 +2444,7 @@ local PROFESSION_ITEM_SKILL = {
 	[22786] = { 315, 315, 315 }, -- Dreaming Glory
 	[22785] = { 300, 300, 300 }, -- Felweed
 	--[22794] = { 0, 0, 0 }, -- Fel Lotus
---@end-version-bc@
+--@end-version-bcc@
 }
 
 -- maybe weak table?
