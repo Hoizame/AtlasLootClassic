@@ -158,8 +158,8 @@ data["HellfireRamparts"] = {
     nameFormat = NAME_HELLFIRE_CITADEL,
 	MapID = 3562,
 	InstanceID = 543,
-	--AtlasMapID = "",
-	--AtlasMapFile = "",
+	AtlasMapID = "HCHellfireRamparts",
+	AtlasMapFile = {"HCHellfireRamparts", "HellfireCitadelEnt"},
 	ContentType = DUNGEON_CONTENT,
 	--LoadDifficulty = NORMAL_DIFF,
 	LevelRange = {57, 59, 67},
@@ -169,7 +169,7 @@ data["HellfireRamparts"] = {
             npcID = {17306,18436},
             Level = 62,
             DisplayIDs = {{18236}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 1,
             [NORMAL_DIFF] = {
                 { 1, 24024 }, -- Pauldrons of Arcane Rage
                 { 2, 24023 }, -- Bracers of Finesse
@@ -196,7 +196,7 @@ data["HellfireRamparts"] = {
             npcID = {17308,18433},
             Level = 62,
             DisplayIDs = {{18237}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 2,
             [NORMAL_DIFF] = {
                 { 1, 24090 }, -- Bloodstained Ravager Gauntlets
                 { 2, 24091 }, -- Tenacious Defender
@@ -232,7 +232,7 @@ data["HellfireRamparts"] = {
             ObjectID = 185168,
             Level = 62,
             DisplayIDs = {{18812},{18407}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 3,
             [NORMAL_DIFF] = {
                 { 1, 24150 }, -- Mok'Nathal Wildercloak
                 { 2, 24083 }, -- Lifegiver Britches
@@ -274,8 +274,8 @@ data["TheBloodFurnace"] = {
     nameFormat = NAME_HELLFIRE_CITADEL,
 	MapID = 3713,
 	InstanceID = 542,
-	--AtlasMapID = "",
-	--AtlasMapFile = "",
+	AtlasMapID = "HCBloodFurnace",
+	AtlasMapFile = {"HCBloodFurnace", "HellfireCitadelEnt"},
 	ContentType = DUNGEON_CONTENT,
 	--LoadDifficulty = NORMAL_DIFF,
 	LevelRange = {58, 60, 68},
@@ -285,7 +285,7 @@ data["TheBloodFurnace"] = {
             npcID = {17381,18621},
             Level = 62,
             DisplayIDs = {{18369}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 1,
             [NORMAL_DIFF] = {
                 { 1, 24388 }, -- Girdle of the Gale Storm
                 { 2, 24387 }, -- Ironblade Gauntlets
@@ -310,7 +310,7 @@ data["TheBloodFurnace"] = {
             npcID = {17380,18601},
             Level = 63,
             DisplayIDs = {{19372}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 2,
             [NORMAL_DIFF] = {
                 { 1, 24392 }, -- Arcing Bracers
                 { 2, 24393 }, -- Bloody Surgeon's Mitts
@@ -335,7 +335,7 @@ data["TheBloodFurnace"] = {
             npcID = {17377,18607},
             Level = 63,
             DisplayIDs = {{17153}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 3,
             [NORMAL_DIFF] = {
                 { 1, 24397 }, -- Raiments of Divine Authority
                 { 2, 24395 }, -- Mindfire Waistband
@@ -375,8 +375,8 @@ data["TheShatteredHalls"] = {
     nameFormat = NAME_HELLFIRE_CITADEL,
 	MapID = 3714,
 	InstanceID = 540,
-	--AtlasMapID = "",
-	--AtlasMapFile = "",
+	AtlasMapID = "HCTheShatteredHalls",
+	AtlasMapFile = {"HCTheShatteredHalls", "HellfireCitadelEnt"},
 	ContentType = DUNGEON_CONTENT,
 	--LoadDifficulty = NORMAL_DIFF,
 	LevelRange = {65, 69, 70},
@@ -386,7 +386,7 @@ data["TheShatteredHalls"] = {
             npcID = {16807,20568},
             Level = 71,
             DisplayIDs = {{16628}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 2,
             [NORMAL_DIFF] = {
                 { 1, 24312 }, -- Pattern: Spellstrike Hood
                 { 3, 27519 }, -- Cloak of Malice
@@ -418,7 +418,7 @@ data["TheShatteredHalls"] = {
             npcID = 20923,
             Level = 72,
             DisplayIDs = {{17725}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 3,
             [HEROIC_DIFF] = {
                 { 1, 29434 }, -- Badge of Justice
                 { 2, 30548 }, -- Polished Chrysoprase
@@ -436,7 +436,7 @@ data["TheShatteredHalls"] = {
             npcID = {16809,20596},
             Level = 72,
             DisplayIDs = {{18031}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 4,
             [NORMAL_DIFF] = {
                 { 1, 27525 }, -- Jeweled Boots of Sanctification
                 { 2, 27868 }, -- Runesong Dagger
@@ -463,7 +463,7 @@ data["TheShatteredHalls"] = {
             npcID = {16808,20597},
             Level = 72,
             DisplayIDs = {{19799}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 5,
             [NORMAL_DIFF] = {
                 { 1, 27527 }, -- Greaves of the Shatterer
                 { 2, 27529 }, -- Figurine of the Colossus
@@ -530,8 +530,8 @@ data["Mana-Tombs"] = {
     nameFormat = NAME_AUCHINDOUN,
 	MapID = 3792,
 	InstanceID = 557,
-	--AtlasMapID = "",
-	--AtlasMapFile = "",
+	AtlasMapID = "AuchManaTombs",
+	AtlasMapFile = {"AuchManaTombs", "AuchindounEnt"},
 	ContentType = DUNGEON_CONTENT,
 	--LoadDifficulty = NORMAL_DIFF,
 	LevelRange = {61, 63, 70},
@@ -541,7 +541,7 @@ data["Mana-Tombs"] = {
             npcID = {18341, 20267},
             Level = 66,
             DisplayIDs = {{19338}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 1,
             [NORMAL_DIFF] = {
                 { 1, 25941 }, -- Boots of the Outlander
                 { 2, 25942 }, -- Faith Bearer's Gauntlets
@@ -568,7 +568,7 @@ data["Mana-Tombs"] = {
             npcID = {18343, 20268},
             Level = 66,
             DisplayIDs = {{19332}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 3,
             [NORMAL_DIFF] = {
                 { 1, 25945 }, -- Cloak of Revival
                 { 2, 25946 }, -- Nethershade Boots
@@ -595,7 +595,7 @@ data["Mana-Tombs"] = {
             npcID = {18344, 20266},
             Level = 66,
             DisplayIDs = {{19780}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 5,
             [NORMAL_DIFF] = {
                 { 1, 25957 }, -- Ethereal Boots of the Skystrider
                 { 2, 25955 }, -- Mask of the Howling Storm
@@ -637,7 +637,7 @@ data["Mana-Tombs"] = {
             npcID = 22930,
             Level = 70,
             DisplayIDs = {{14173}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 5,
             ExtraList = true,
             [HEROIC_DIFF] = {
                 { 1, 29434 }, -- Badge of Justice
@@ -672,8 +672,8 @@ data["AuchenaiCrypts"] = {
     nameFormat = NAME_AUCHINDOUN,
 	MapID = 3790,
 	InstanceID = 558,
-	--AtlasMapID = "",
-	--AtlasMapFile = "",
+	AtlasMapID = "AuchAuchenaiCrypts",
+	AtlasMapFile = {"AuchAuchenaiCrypts", "AuchindounEnt"},
 	ContentType = DUNGEON_CONTENT,
 	--LoadDifficulty = NORMAL_DIFF,
 	LevelRange = {62, 64, 70},
@@ -683,7 +683,7 @@ data["AuchenaiCrypts"] = {
             npcID = {18371, 20318},
             Level = 66,
             DisplayIDs = {{18916}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 1,
             [NORMAL_DIFF] = {
                 { 1, 27410 }, -- Collar of Command
                 { 2, 27409 }, -- Raven-Heart Headdress
@@ -709,7 +709,7 @@ data["AuchenaiCrypts"] = {
             npcID = {18373, 20306},
             Level = 67,
             DisplayIDs = {{17715}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 2,
             [NORMAL_DIFF] = {
                 { 1, 27411 }, -- Slippers of Serenity
                 { 2, 27415 }, -- Darkguard Face Mask
@@ -769,8 +769,8 @@ data["SethekkHalls"] = {
     nameFormat = NAME_AUCHINDOUN,
 	MapID = 3791,
 	InstanceID = 556,
-	--AtlasMapID = "",
-	--AtlasMapFile = "",
+	AtlasMapID = "AuchSethekkHalls",
+	AtlasMapFile = {"AuchSethekkHalls", "AuchindounEnt"},
 	ContentType = DUNGEON_CONTENT,
 	--LoadDifficulty = NORMAL_DIFF,
 	LevelRange = {63, 66, 70},
@@ -780,7 +780,7 @@ data["SethekkHalls"] = {
             npcID = {18472, 20690},
             Level = 69,
             DisplayIDs = {{20599}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 1,
             [NORMAL_DIFF] = {
                 { 1, 27919 }, -- Light-Woven Slippers
                 { 2, 27914 }, -- Moonstrider Boots
@@ -812,7 +812,7 @@ data["SethekkHalls"] = {
             npcID = {18473, 20706},
             Level = 69,
             DisplayIDs = {{18636}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 3,
             [NORMAL_DIFF] = {
                 { 1, 27946 }, -- Avian Cloak of Feathers
                 { 2, 27981 }, -- Sethekk Oracle Cloak
@@ -860,7 +860,7 @@ data["SethekkHalls"] = {
             npcID = 23035,
             Level = 72,
             DisplayIDs = {{21492}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 2,
             ExtraList = true,
             [HEROIC_DIFF] = {
                 { 1, 29434 }, -- Badge of Justice
@@ -878,6 +878,7 @@ data["SethekkHalls"] = {
         { -- AuchSethekkTheSagaofTerokk
             name = AL["The Saga of Terokk"],
             ObjectID = 183050,
+            AtlasMapBossID = 2,
             ExtraList = true,
             [NORMAL_DIFF] = {
                 { 1, 27634 }, -- The Saga of Terokk
@@ -899,8 +900,8 @@ data["ShadowLabyrinth"] = {
     nameFormat = NAME_AUCHINDOUN,
 	MapID = 3789,
 	InstanceID = 555,
-	--AtlasMapID = "",
-	--AtlasMapFile = "",
+	AtlasMapID = "AuchShadowLabyrinth",
+	AtlasMapFile = {"AuchShadowLabyrinth", "AuchindounEnt"},
 	ContentType = DUNGEON_CONTENT,
 	--LoadDifficulty = NORMAL_DIFF,
 	LevelRange = {65, 69, 70},
@@ -910,7 +911,7 @@ data["ShadowLabyrinth"] = {
             npcID = {18731, 20636},
             Level = 72,
             DisplayIDs = {{18821}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 2,
             [NORMAL_DIFF] = {
                 { 1, 27889 }, -- Jaedenfire Gloves of Annihilation
                 { 2, 27888 }, -- Dream-Wing Helm
@@ -937,7 +938,7 @@ data["ShadowLabyrinth"] = {
             npcID = {18667, 20637},
             Level = 72,
             DisplayIDs = {{18058}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 3,
             [NORMAL_DIFF] = {
                 { 1, 27892 }, -- Cloak of the Inciter
                 { 2, 27893 }, -- Ornate Leggings of the Venerated
@@ -968,7 +969,7 @@ data["ShadowLabyrinth"] = {
             npcID = {18732, 20653},
             Level = 72,
             DisplayIDs = {{18535}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 4,
             [NORMAL_DIFF] = {
                 { 1, 27897 }, -- Breastplate of Many Graces
                 { 2, 27900 }, -- Jewel of Charismatic Mystique
@@ -997,7 +998,7 @@ data["ShadowLabyrinth"] = {
             npcID = {18708, 20657},
             Level = 72,
             DisplayIDs = {{18839}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 5,
             [NORMAL_DIFF] = {
                 { 1, 24309 }, -- Pattern: Spellstrike Pants
                 { 3, 27902 }, -- Silent Slippers of Meditation
@@ -1044,7 +1045,7 @@ data["ShadowLabyrinth"] = {
             npcID = 22890,
             Level = 70,
             DisplayIDs = {{19113}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 6,
             ExtraList = true,
             [NORMAL_DIFF] = {
                 { 1, 24514 }, -- First Key Fragment
@@ -1065,8 +1066,8 @@ data["TheSlavePens"] = {
     nameFormat = NAME_COILFANG_RESERVOIR,
 	MapID = 3717,
 	InstanceID = 547,
-	--AtlasMapID = "",
-	--AtlasMapFile = "",
+	AtlasMapID = "CFRTheSlavePens",
+	AtlasMapFile = {"CFRTheSlavePens", "CoilfangReservoirEnt"},
 	ContentType = DUNGEON_CONTENT,
 	--LoadDifficulty = NORMAL_DIFF,
 	LevelRange = {59, 61, 69},
@@ -1076,7 +1077,7 @@ data["TheSlavePens"] = {
             npcID = {17941, 19893},
             Level = 64,
             DisplayIDs = {{17728}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 2,
             [NORMAL_DIFF] = {
                 { 1, 24359 }, -- Princely Reign Leggings
                 { 2, 24357 }, -- Vest of Living Lightning
@@ -1104,7 +1105,7 @@ data["TheSlavePens"] = {
             npcID = {17991, 19895},
             Level = 64,
             DisplayIDs = {{17729}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 5,
             [NORMAL_DIFF] = {
                 { 1, 24379 }, -- Bogstrok Scale Cloak
                 { 2, 24376 }, -- Runed Fungalcap
@@ -1130,7 +1131,7 @@ data["TheSlavePens"] = {
             npcID = {17942, 19894},
             Level = 64,
             DisplayIDs = {{18224}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 7,
             [NORMAL_DIFF] = {
                 { 1, 24362 }, -- Spore-Soaked Vaneer
                 { 2, 24365 }, -- Deft Handguards
@@ -1170,8 +1171,8 @@ data["TheUnderbog"] = {
     nameFormat = NAME_COILFANG_RESERVOIR,
 	MapID = 3716,
 	InstanceID = 546,
-	--AtlasMapID = "",
-	--AtlasMapFile = "",
+	AtlasMapID = "CFRTheUnderbog",
+	AtlasMapFile = {"CFRTheUnderbog", "CoilfangReservoirEnt"},
 	ContentType = DUNGEON_CONTENT,
 	--LoadDifficulty = NORMAL_DIFF,
 	LevelRange = {60, 62, 70},
@@ -1181,7 +1182,7 @@ data["TheUnderbog"] = {
             npcID = {17770,20169},
             Level = 65,
             DisplayIDs = {{17228}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 1,
             [NORMAL_DIFF] = {
                 { 1, 24450 }, -- Manaspark Gloves
                 { 2, 24452 }, -- Starlight Gauntlets
@@ -1207,7 +1208,7 @@ data["TheUnderbog"] = {
             npcID = {18105,20168},
             Level = 65,
             DisplayIDs = {{17528}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 2,
             [NORMAL_DIFF] = {
                 { 1, 24459 }, -- Cloak of Healing Rays
                 { 2, 24458 }, -- Studded Girdle of Virtue
@@ -1233,7 +1234,7 @@ data["TheUnderbog"] = {
             npcID = {17826,20183},
             Level = 65,
             DisplayIDs = {{18570}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 4,
             [NORMAL_DIFF] = {
                 { 1, 24454 }, -- Cloak of Enduring Swiftness
                 { 2, 24455 }, -- Tunic of the Nightwatcher
@@ -1259,7 +1260,7 @@ data["TheUnderbog"] = {
             npcID = {17882,20184},
             Level = 65,
             DisplayIDs = {{18194}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 5,
             [NORMAL_DIFF] = {
                 { 1, 24481 }, -- Robes of the Augurer
                 { 2, 24466 }, -- Skulldugger's Leggings
@@ -1301,8 +1302,8 @@ data["TheSteamvault"] = {
     nameFormat = NAME_COILFANG_RESERVOIR,
 	MapID = 3715,
 	InstanceID = 545,
-	--AtlasMapID = "",
-	--AtlasMapFile = "",
+	AtlasMapID = "CFRTheSteamvault",
+	AtlasMapFile = {"CFRTheSteamvault", "CoilfangReservoirEnt"},
 	ContentType = DUNGEON_CONTENT,
 	--LoadDifficulty = NORMAL_DIFF,
 	LevelRange = {65, 69, 70},
@@ -1312,7 +1313,7 @@ data["TheSteamvault"] = {
             npcID = {17797, 20629},
             Level = 72,
             DisplayIDs = {{11268}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 1,
             [NORMAL_DIFF] = {
                 { 1, 27789 }, -- Cloak of Whispering Shells
                 { 2, 27787 }, -- Chestguard of No Remorse
@@ -1341,7 +1342,7 @@ data["TheSteamvault"] = {
             npcID = {17796, 20630},
             Level = 72,
             DisplayIDs = {{18638}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 3,
             [NORMAL_DIFF] = {
                 { 1, 27793 }, -- Earth Mantle Handwraps
                 { 2, 27790 }, -- Mask of Penance
@@ -1368,7 +1369,7 @@ data["TheSteamvault"] = {
             npcID = {17798, 20633},
             Level = 72,
             DisplayIDs = {{20235}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 4,
             [NORMAL_DIFF] = {
                 { 1, 24313 }, -- Pattern: Battlecast Hood
                 { 3, 27804 }, -- Devilshark Cape
@@ -1428,8 +1429,8 @@ data["OldHillsbradFoothills"] = {
     nameFormat = NAME_CAVERNS_OF_TIME,
 	MapID = 2367,
 	InstanceID = 560,
-	--AtlasMapID = "",
-	--AtlasMapFile = "",
+	AtlasMapID = "CoTOldHillsbrad",
+	AtlasMapFile = {"CoTOldHillsbrad", "CoTEnt"},
 	ContentType = DUNGEON_CONTENT,
 	--LoadDifficulty = NORMAL_DIFF,
 	LevelRange = {63, 66, 70},
@@ -1439,7 +1440,7 @@ data["OldHillsbradFoothills"] = {
             npcID = {17848,20535},
             Level = 68,
             DisplayIDs = {{17386}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 1,
             [NORMAL_DIFF] = {
                 { 1, 27423 }, -- Cloak of Impulsiveness
                 { 2, 27418 }, -- Stormreaver Shadow-Kilt
@@ -1465,7 +1466,7 @@ data["OldHillsbradFoothills"] = {
             npcID = {17862,20521},
             Level = 68,
             DisplayIDs = {{17387}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 3,
             [NORMAL_DIFF] = {
                 { 1, 27428 }, -- Stormfront Gauntlets
                 { 2, 27430 }, -- Scaled Greaves of Patience
@@ -1495,7 +1496,7 @@ data["OldHillsbradFoothills"] = {
             npcID = {18096,20531},
             Level = 68,
             DisplayIDs = {{19135}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 5,
             [NORMAL_DIFF] = {
                 { 1, 24173 }, -- Design: Circlet of Arcane Might
                 { 3, 27433 }, -- Pauldrons of Sufferance
@@ -1584,8 +1585,8 @@ data["TheBlackMorass"] = {
     nameFormat = NAME_CAVERNS_OF_TIME,
 	MapID = 2366,
 	InstanceID = 269,
-	--AtlasMapID = "",
-	--AtlasMapFile = "",
+	AtlasMapID = "CoTBlackMorass",
+	AtlasMapFile = {"CoTBlackMorass", "CoTEnt"},
 	ContentType = DUNGEON_CONTENT,
 	--LoadDifficulty = NORMAL_DIFF,
 	LevelRange = {65, 68, 70},
@@ -1705,8 +1706,8 @@ data["TheArcatraz"] = {
     nameFormat = NAME_TEMPEST_KEEP,
 	MapID = 3848,
 	InstanceID = 552,
-	--AtlasMapID = "",
-	--AtlasMapFile = "",
+	AtlasMapID = "TempestKeepArcatraz",
+	AtlasMapFile = {"TempestKeepArcatraz", "TempestKeepEnt"},
 	ContentType = DUNGEON_CONTENT,
 	--LoadDifficulty = NORMAL_DIFF,
 	LevelRange = {65, 69, 70},
@@ -1716,7 +1717,7 @@ data["TheArcatraz"] = {
             npcID = {20870,21626},
             Level = 72,
             DisplayIDs = {{19882}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 1,
             [NORMAL_DIFF] = {
                 { 1, 28373 }, -- Cloak of Scintillating Auras
                 { 2, 28374 }, -- Mana-Sphere Shoulderguards
@@ -1741,7 +1742,7 @@ data["TheArcatraz"] = {
             npcID = {20885,21590},
             Level = 72,
             DisplayIDs = {{19888}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 3,
             [NORMAL_DIFF] = {
                 { 1, 24308 }, -- Pattern: Whitemend Pants
                 { 3, 28391 }, -- Worldfire Chestguard
@@ -1768,7 +1769,7 @@ data["TheArcatraz"] = {
             npcID = {20886,21624},
             Level = 72,
             DisplayIDs = {{19977}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 4,
             [NORMAL_DIFF] = {
                 { 1, 28396 }, -- Gloves of the Unbound
                 { 2, 28398 }, -- The Sleeper's Cord
@@ -1793,7 +1794,7 @@ data["TheArcatraz"] = {
             npcID = {20912,21599},
             Level = 72,
             DisplayIDs = {{19943}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID =6,
             [NORMAL_DIFF] = {
                 { 1, 28406 }, -- Sigil-Laced Boots
                 { 2, 28419 }, -- Choker of Fluid Thought
@@ -1838,7 +1839,7 @@ data["TheArcatraz"] = {
             Level = 70,
             DisplayIDs = {{19113}},
             ExtraList = true,
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 2,
             [NORMAL_DIFF] = {
                 { 1, 24488 }, -- Third Key Fragment
             }
@@ -1861,8 +1862,8 @@ data["TheBotanica"] = {
     nameFormat = NAME_TEMPEST_KEEP,
 	MapID = 3847,
 	InstanceID = 553,
-	--AtlasMapID = "",
-	--AtlasMapFile = "",
+	AtlasMapID = "TempestKeepBotanica",
+	AtlasMapFile = {"TempestKeepBotanica", "TempestKeepEnt"},
 	ContentType = DUNGEON_CONTENT,
 	--LoadDifficulty = NORMAL_DIFF,
 	LevelRange = {65, 69, 70},
@@ -1872,7 +1873,7 @@ data["TheBotanica"] = {
             npcID = {17976,21551},
             Level = 72,
             DisplayIDs = {{18929}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 1,
             [NORMAL_DIFF] = {
                 { 1, 28301 }, -- Syrannis' Mystic Sheen
                 { 2, 28304 }, -- Prismatic Mittens of Mending
@@ -1898,7 +1899,7 @@ data["TheBotanica"] = {
             npcID = {17975,21558},
             Level = 72,
             DisplayIDs = {{19045}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 2,
             [NORMAL_DIFF] = {
                 { 1, 28317 }, -- Energis Armwraps
                 { 2, 28318 }, -- Obsidian Clodstompers
@@ -1929,7 +1930,7 @@ data["TheBotanica"] = {
             npcID = {17978,21581},
             Level = 72,
             DisplayIDs = {{14416}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 3,
             [NORMAL_DIFF] = {
                 { 1, 24310 }, -- Pattern: Battlecast Pants
                 { 3, 28324 }, -- Gauntlets of Cruel Intention
@@ -1956,7 +1957,7 @@ data["TheBotanica"] = {
             npcID = {17980,21559},
             Level = 72,
             DisplayIDs = {{13109}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 4,
             [NORMAL_DIFF] = {
                 { 1, 28328 }, -- Mithril-Bark Cloak
                 { 2, 28338 }, -- Devil-Stitched Leggings
@@ -1981,7 +1982,7 @@ data["TheBotanica"] = {
             npcID = {17977,21582},
             Level = 72,
             DisplayIDs = {{19438}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 5,
             [NORMAL_DIFF] = {
                 { 1, 24311 }, -- Pattern: Whitemend Hood
                 { 3, 28371 }, -- Netherfury Cape
@@ -2041,8 +2042,8 @@ data["TheMechanar"] = {
     nameFormat = NAME_TEMPEST_KEEP,
 	MapID = 3849,
 	InstanceID = 554,
-	--AtlasMapID = "",
-	--AtlasMapFile = "",
+	AtlasMapID = "TempestKeepMechanar",
+	AtlasMapFile = {"TempestKeepMechanar", "TempestKeepEnt"},
 	ContentType = DUNGEON_CONTENT,
 	--LoadDifficulty = NORMAL_DIFF,
 	LevelRange = {65, 68, 70},
@@ -2052,7 +2053,7 @@ data["TheMechanar"] = {
             npcID = {19219,21533},
             Level = 72,
             DisplayIDs = {{19162}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 3,
             [NORMAL_DIFF] = {
                 { 1, 28256 }, -- Thoriumweave Cloak
                 { 2, 28255 }, -- Lunar-Claw Pauldrons
@@ -2079,7 +2080,7 @@ data["TheMechanar"] = {
             npcID = {19221,21536},
             Level = 72,
             DisplayIDs = {{19166}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 4,
             [NORMAL_DIFF] = {
                 { 1, 28262 }, -- Jade-Skull Breastplate
                 { 2, 28259 }, -- Cosmic Lifeband
@@ -2108,7 +2109,7 @@ data["TheMechanar"] = {
             npcID = {19220,21537},
             Level = 72,
             DisplayIDs = {{20033}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 5,
             [NORMAL_DIFF] = {
                 { 1, 28269 }, -- Baba's Cloak of Arcanistry
                 { 2, 28266 }, -- Molten Earth Kilt
@@ -2155,7 +2156,7 @@ data["TheMechanar"] = {
             name = AL["Cache of the Legion"],
             ObjectID = 184465,
             ExtraList = true,
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 2,
             [HEROIC_DIFF] = {
                 { 1, 29434 }, -- Badge of Justice
                 { 3, 28249 }, -- Capacitus' Cloak of Calibration
@@ -2171,7 +2172,7 @@ data["TheMechanar"] = {
             Level = 72,
             DisplayIDs = {{18816}},
             ExtraList = true,
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 1,
             [NORMAL_DIFF] = {
                 { 1, 30436 }, -- Jagged Blue Crystal
             }
@@ -2182,7 +2183,7 @@ data["TheMechanar"] = {
             Level = 72,
             DisplayIDs = {{21191}},
             ExtraList = true,
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 2,
             [NORMAL_DIFF] = {
                 { 1, 30437 }, -- Jagged Red Crystal
             }
@@ -2191,7 +2192,7 @@ data["TheMechanar"] = {
             name = AL["Overcharged Manacell"],
             ObjectID = 185015,
             ExtraList = true,
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 3,
             [NORMAL_DIFF] = {
                 { 1, 30824 }, -- Overcharged Manacell
             }
@@ -2210,8 +2211,8 @@ data["TheMechanar"] = {
 data["MagistersTerrace"] = {
 	MapID = 4131,
 	InstanceID = 585,
-	--AtlasMapID = "",
-	--AtlasMapFile = "",
+	AtlasMapID = "MagistersTerrace",
+	AtlasMapFile = "MagistersTerrace",
 	ContentType = DUNGEON_CONTENT,
     ContentPhaseBC = 5,
 	LevelRange = {65, 69, 70},
@@ -2221,7 +2222,7 @@ data["MagistersTerrace"] = {
             npcID = {24723, 25562},
             Level = 71,
             DisplayIDs = {{22642}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 1,
             [NORMAL_DIFF] = {
                 { 1, 34702 }, -- Cloak of Swift Mending
                 { 2, 34697 }, -- Bindings of Raging Fire
@@ -2244,7 +2245,7 @@ data["MagistersTerrace"] = {
             npcID = {24744, 25573},
             Level = 71,
             DisplayIDs = {{22731}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 3,
             [NORMAL_DIFF] = {
                 { 1, 34708 }, -- Cloak of the Coming Night
                 { 2, 34705 }, -- Bracers of Divine Infusion
@@ -2267,7 +2268,7 @@ data["MagistersTerrace"] = {
             npcID = {24560, 25560},
             Level = 70,
             DisplayIDs = {{22596},{22540},{22542},{22539},{20986},{22598},{2007},{22541},{17457}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 5,
             [NORMAL_DIFF] = {
                 { 1, 34792 }, -- Cloak of the Betrayed
                 { 2, 34788 }, -- Duskhallow Mantle
@@ -2292,7 +2293,7 @@ data["MagistersTerrace"] = {
             npcID = {24664,24857},
             Level = 72,
             DisplayIDs = {{22906}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 6,
             [NORMAL_DIFF] = {
                 { 1, 34810 }, -- Cloak of Blade Turning
                 { 2, 34808 }, -- Gloves of Arcane Acuity
@@ -2342,16 +2343,61 @@ data["MagistersTerrace"] = {
 data["Karazhan"] = {
 	MapID = 3457,
 	InstanceID = 532,
-	--AtlasMapID = "",
-	--AtlasMapFile = "",
+	AtlasMapID = "KarazhanStart",
+	AtlasMapFile = {"KarazhanStart", "KarazhanEnd", "KarazhanEnt"},
 	ContentType = RAID10_CONTENT,
 	items = {
+        { -- KaraNamed
+            name = AL["Rokad the Ravager"],
+            nameFormat = NAME_KARA_QUARTERS,
+            npcID = 16181,
+            Level = 999,
+            DisplayIDs = {{16054}},
+            specialType = "rare",
+            AtlasMapBossID = 2,
+            [NORMAL_DIFF] = {
+                { 1, 30684 }, -- Ravager's Cuffs
+                { 2, 30685 }, -- Ravager's Wrist-Wraps
+                { 3, 30686 }, -- Ravager's Bands
+                { 4, 30687 }, -- Ravager's Bracers
+            }
+        },
+        { -- KaraNamed
+            name = AL["Shadikith the Glider"],
+            nameFormat = NAME_KARA_QUARTERS,
+            npcID = 16180,
+            Level = 999,
+            DisplayIDs = {{16053}},
+            specialType = "rare",
+            AtlasMapBossID = 2,
+            [NORMAL_DIFF] = {
+                { 1, 30680 }, -- Glider's Foot-Wraps
+                { 2, 30681 }, -- Glider's Boots
+                { 3, 30682 }, -- Glider's Sabatons
+                { 4, 30683 }, -- Glider's Greaves
+            }
+        },
+        { -- KaraNamed
+            name = AL["Hyakiss the Lurker"],
+            nameFormat = NAME_KARA_QUARTERS,
+            npcID = 16179,
+            Level = 999,
+            DisplayIDs = {{15938}},
+            specialType = "rare",
+            AtlasMapBossID = 2,
+            [NORMAL_DIFF] = {
+                { 1, 30675 }, -- Lurker's Cord
+                { 2, 30676 }, -- Lurker's Grasp
+                { 3, 30677 }, -- Lurker's Belt
+                { 4, 30678 }, -- Lurker's Girdle
+            }
+        },
         { -- KaraAttumen
             name = AL["Attumen the Huntsman"],
             npcID = 16152,
             Level = 999,
             DisplayIDs = {{16040}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 5,
             [NORMAL_DIFF] = {
                 { 1, 28477 }, -- Harbinger Bands
                 { 2, 28507 }, -- Handwraps of Flowing Thought
@@ -2370,57 +2416,12 @@ data["Karazhan"] = {
                 { 22, 23809 }, -- Schematic: Stabilized Eternium Scope
             }
         },
-        { -- KaraNamed
-            name = AL["Rokad the Ravager"],
-            nameFormat = NAME_KARA_QUARTERS,
-            npcID = 16181,
-            Level = 999,
-            DisplayIDs = {{16054}},
-            specialType = "rare",
-            -- AtlasMapBossID = 0,
-            [NORMAL_DIFF] = {
-                { 1, 30684 }, -- Ravager's Cuffs
-                { 2, 30685 }, -- Ravager's Wrist-Wraps
-                { 3, 30686 }, -- Ravager's Bands
-                { 4, 30687 }, -- Ravager's Bracers
-            }
-        },
-        { -- KaraNamed
-            name = AL["Shadikith the Glider"],
-            nameFormat = NAME_KARA_QUARTERS,
-            npcID = 16180,
-            Level = 999,
-            DisplayIDs = {{16053}},
-            specialType = "rare",
-            -- AtlasMapBossID = 0,
-            [NORMAL_DIFF] = {
-                { 1, 30680 }, -- Glider's Foot-Wraps
-                { 2, 30681 }, -- Glider's Boots
-                { 3, 30682 }, -- Glider's Sabatons
-                { 4, 30683 }, -- Glider's Greaves
-            }
-        },
-        { -- KaraNamed
-            name = AL["Hyakiss the Lurker"],
-            nameFormat = NAME_KARA_QUARTERS,
-            npcID = 16179,
-            Level = 999,
-            DisplayIDs = {{15938}},
-            specialType = "rare",
-            -- AtlasMapBossID = 0,
-            [NORMAL_DIFF] = {
-                { 1, 30675 }, -- Lurker's Cord
-                { 2, 30676 }, -- Lurker's Grasp
-                { 3, 30677 }, -- Lurker's Belt
-                { 4, 30678 }, -- Lurker's Girdle
-            }
-        },
         { -- KaraMoroes
             name = AL["Moroes"],
             npcID = 15687,
             Level = 999,
             DisplayIDs = {{16540},{19327},{16637},{16640},{16639},{19328},{16638}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 7,
             [NORMAL_DIFF] = {
                 { 1, 28529 }, -- Royal Cloak of Arathi Kings
                 { 2, 28570 }, -- Shadow-Cloak of Dalaran
@@ -2443,7 +2444,7 @@ data["Karazhan"] = {
             npcID = 16457,
             Level = 999,
             DisplayIDs = {{16198}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 11,
             [NORMAL_DIFF] = {
                 { 1, 28511 }, -- Bands of Indwelling
                 { 2, 28515 }, -- Bands of Nefarious Deeds
@@ -2466,7 +2467,7 @@ data["Karazhan"] = {
             npcID = {18168,17535,17548,17543,17547,17546},
             Level = 999,
             DisplayIDs = {{18168},{17069},{17079},{17076},{17187},{18261}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 14,
             [NORMAL_DIFF] = {
                 { 1, 28586 }, -- Wicked Witch's Hat
                 { 2, 28585 }, -- Ruby Slippers
@@ -2487,7 +2488,7 @@ data["Karazhan"] = {
             npcID = 17521,
             Level = 999,
             DisplayIDs = {{17121},{17053}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 14,
             [NORMAL_DIFF] = {
                 { 1, 28582 }, -- Red Riding Hood's Cloak
                 { 2, 28583 }, -- Big Bad Wolf's Head
@@ -2508,7 +2509,7 @@ data["Karazhan"] = {
             npcID = {17533,17534},
             Level = 999,
             DisplayIDs = {{17067},{17068}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 14,
             [NORMAL_DIFF] = {
                 { 1, 28578 }, -- Masquerade Gown
                 { 2, 28579 }, -- Romulo's Poison Vial
@@ -2528,7 +2529,8 @@ data["Karazhan"] = {
             npcID = 15691,
             Level = 999,
             DisplayIDs = {{16958}},
-            -- AtlasMapBossID = 0,
+            AtlasMapFile = "KarazhanEnd",
+            AtlasMapBossID = 16,
             [NORMAL_DIFF] = {
                 { 1, 28612 }, -- Pauldrons of the Solace-Giver
                 { 2, 28647 }, -- Forest Wind Shoulderpads
@@ -2546,8 +2548,9 @@ data["Karazhan"] = {
             name = AL["Terestian Illhoof"],
             npcID = 15688,
             Level = 999,
+            AtlasMapFile = "KarazhanEnd",
             DisplayIDs = {{11343}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 20,
             [NORMAL_DIFF] = {
                 { 1, 28660 }, -- Gilded Thorium Cloak
                 { 2, 28653 }, -- Shadowvine Cloak of Infusion
@@ -2570,7 +2573,8 @@ data["Karazhan"] = {
             npcID = 16524,
             Level = 999,
             DisplayIDs = {{16621}},
-            -- AtlasMapBossID = 0,
+            AtlasMapFile = "KarazhanEnd",
+            AtlasMapBossID = 21,
             [NORMAL_DIFF] = {
                 { 1, 28672 }, -- Drape of the Dark Reavers
                 { 2, 28726 }, -- Mantle of the Mind Flayer
@@ -2593,8 +2597,9 @@ data["Karazhan"] = {
             name = AL["Netherspite"],
             npcID = 15689,
             Level = 999,
+            AtlasMapFile = "KarazhanEnd",
             DisplayIDs = {{15363}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 22,
             [NORMAL_DIFF] = {
                 { 1, 28744 }, -- Uni-Mind Headdress
                 { 2, 28742 }, -- Pantaloons of Repentance
@@ -2616,7 +2621,8 @@ data["Karazhan"] = {
             ObjectID = 185119,
             Level = 999,
             DisplayIDs = {{51}},
-            -- AtlasMapBossID = 0,
+            AtlasMapFile = "KarazhanEnd",
+            AtlasMapBossID = 24,
             [NORMAL_DIFF] = {
                 { 1, 28756 }, -- Headdress of the High Potentate
                 { 2, 28755 }, -- Bladed Shoulderpads of the Merciless
@@ -2637,8 +2643,9 @@ data["Karazhan"] = {
             name = AL["Prince Malchezaar"],
             npcID = 15690,
             Level = 999,
+            AtlasMapFile = "KarazhanEnd",
             DisplayIDs = {{19274}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 26,
             [NORMAL_DIFF] = {
                 { 1, 28765 }, -- Stainless Cloak of the Pure Hearted
                 { 2, 28766 }, -- Ruby Drape of the Mysticant
@@ -2664,7 +2671,7 @@ data["Karazhan"] = {
             Level = 999,
             DisplayIDs = {{18062}},
             specialType = "summon",
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 15,
             [NORMAL_DIFF] = {
                 { 1, 28602 }, -- Robe of the Elder Scribes
                 { 2, 28600 }, -- Stonebough Jerkin
@@ -2713,35 +2720,17 @@ data["Karazhan"] = {
 data["ZulAman"] = {
 	MapID = 3805,
 	InstanceID = 568,
-	--AtlasMapID = "",
-	--AtlasMapFile = "",
+	AtlasMapID = "ZulAman",
+	AtlasMapFile = "ZulAman",
 	ContentType = RAID10_CONTENT,
     ContentPhaseBC = 4,
 	items = {
-        { -- ZAAkilZon
-            name = AL["Akil'zon"],
-            npcID = 23574,
-            Level = 999,
-            DisplayIDs = {{21630}},
-            -- AtlasMapBossID = 0,
-            [NORMAL_DIFF] = {
-                { 1, 29434 }, -- Badge of Justice
-                { 2, 33286 }, -- Mojo-mender's Mask
-                { 3, 33215 }, -- Bloodstained Elven Battlevest
-                { 4, 33216 }, -- Chestguard of Hidden Purpose
-                { 5, 33281 }, -- Brooch of Nature's Mercy
-                { 6, 33293 }, -- Signet of Ancient Magics
-                { 7, 33214 }, -- Akil'zon's Talonblade
-                { 8, 33283 }, -- Amani Punisher
-                { 16, 33307 }, -- Formula: Enchant Weapon - Executioner
-            }
-        },
         { -- ZANalorakk
             name = AL["Nalorakk"],
             npcID = 23576,
             Level = 999,
             DisplayIDs = {{21631}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 1,
             [NORMAL_DIFF] = {
                 { 1, 29434 }, -- Badge of Justice
                 { 2, 33203 }, -- Robes of Heavenly Purpose
@@ -2754,12 +2743,30 @@ data["ZulAman"] = {
                 { 10, 33307 }, -- Formula: Enchant Weapon - Executioner
             }
         },
+        { -- ZAAkilZon
+            name = AL["Akil'zon"],
+            npcID = 23574,
+            Level = 999,
+            DisplayIDs = {{21630}},
+            AtlasMapBossID = 2,
+            [NORMAL_DIFF] = {
+                { 1, 29434 }, -- Badge of Justice
+                { 2, 33286 }, -- Mojo-mender's Mask
+                { 3, 33215 }, -- Bloodstained Elven Battlevest
+                { 4, 33216 }, -- Chestguard of Hidden Purpose
+                { 5, 33281 }, -- Brooch of Nature's Mercy
+                { 6, 33293 }, -- Signet of Ancient Magics
+                { 7, 33214 }, -- Akil'zon's Talonblade
+                { 8, 33283 }, -- Amani Punisher
+                { 16, 33307 }, -- Formula: Enchant Weapon - Executioner
+            }
+        },
         { -- ZAJanAlai
             name = AL["Jan'alai"],
             npcID = 23578,
             Level = 999,
             DisplayIDs = {{21633}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 3,
             [NORMAL_DIFF] = {
                 { 1, 29434 }, -- Badge of Justice
                 { 2, 33357 }, -- Footpads of Madness
@@ -2777,7 +2784,7 @@ data["ZulAman"] = {
             npcID = 23577,
             Level = 999,
             DisplayIDs = {{21632}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 4,
             [NORMAL_DIFF] = {
                 { 1, 29434 }, -- Badge of Justice
                 { 2, 33317 }, -- Robe of Departed Spirits
@@ -2795,7 +2802,7 @@ data["ZulAman"] = {
             npcID = 24239,
             Level = 999,
             DisplayIDs = {{22332}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 6,
             [NORMAL_DIFF] = {
                 { 1, 29434 }, -- Badge of Justice
                 { 2, 33592 }, -- Cloak of Ancient Rituals
@@ -2820,7 +2827,7 @@ data["ZulAman"] = {
             npcID = 23863,
             Level = 999,
             DisplayIDs = {{21899}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 7,
             [NORMAL_DIFF] = {
                 { 1, 29434 }, -- Badge of Justice
                 { 2, 33471 }, -- Two-toed Sandals
@@ -2931,8 +2938,8 @@ data["WorldBossesBC"] = {
 data["MagtheridonsLair"] = {
 	MapID = 3836,
 	InstanceID = 544,
-	--AtlasMapID = "",
-	--AtlasMapFile = "",
+	AtlasMapID = "HCMagtheridonsLair",
+	AtlasMapFile = {"HCMagtheridonsLair", "HellfireCitadelEnt"},
 	ContentType = RAID25_CONTENT,
 	items = {
         { -- HCMagtheridon
@@ -2940,7 +2947,7 @@ data["MagtheridonsLair"] = {
             npcID = 17257,
             Level = 999,
             DisplayIDs = {{18527}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 1,
             [NORMAL_DIFF] = {
                 { 1, 28777 }, -- Cloak of the Pit Stalker
                 { 2, 28780 }, -- Soul-Eater's Handwraps
@@ -2969,8 +2976,8 @@ data["MagtheridonsLair"] = {
 data["GruulsLair"] = {
 	MapID = 3923,
 	InstanceID = 565,
-	--AtlasMapID = "",
-	--AtlasMapFile = "",
+	AtlasMapID = "GruulsLair",
+	AtlasMapFile = "GruulsLair",
 	ContentType = RAID25_CONTENT,
 	items = {
         { -- GruulsLairHighKingMaulgar
@@ -2978,7 +2985,7 @@ data["GruulsLair"] = {
             npcID = 18831,
             Level = 999,
             DisplayIDs = {{18649},{12472},{11585},{20195},{20194}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 1,
             [NORMAL_DIFF] = {
                 { 1, 28797 }, -- Brute Cloak of the Ogre-Magi
                 { 2, 28799 }, -- Belt of Divine Inspiration
@@ -2996,7 +3003,7 @@ data["GruulsLair"] = {
             npcID = 19044,
             Level = 999,
             DisplayIDs = {{18698}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 2,
             [NORMAL_DIFF] = {
                 { 1, 28804 }, -- Collar of Cho'gall
                 { 2, 28803 }, -- Cowl of Nature's Breath
@@ -3024,8 +3031,8 @@ data["GruulsLair"] = {
 data["SerpentshrineCavern"] = {
 	MapID = 3607,
 	InstanceID = 548,
-	--AtlasMapID = "",
-	--AtlasMapFile = "",
+	AtlasMapID = "CFRSerpentshrineCavern",
+	AtlasMapFile = {"CFRSerpentshrineCavern", "CoilfangReservoirEnt"},
 	ContentType = RAID25_CONTENT,
     ContentPhaseBC = 2,
 	items = {
@@ -3034,7 +3041,7 @@ data["SerpentshrineCavern"] = {
             npcID = 21216,
             Level = 999,
             DisplayIDs = {{20162}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 1,
             [NORMAL_DIFF] = {
                 { 1, 30056 }, -- Robe of Hateful Echoes
                 { 2, 32516 }, -- Wraps of Purification
@@ -3057,7 +3064,7 @@ data["SerpentshrineCavern"] = {
             npcID = 21217,
             Level = 999,
             DisplayIDs = {{20216}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 2,
             [NORMAL_DIFF] = {
                 { 1, 30064 }, -- Cord of Screaming Terrors
                 { 2, 30067 }, -- Velvet Boots of the Guardian
@@ -3079,7 +3086,7 @@ data["SerpentshrineCavern"] = {
             npcID = 21215,
             Level = 999,
             DisplayIDs = {{20514}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 3,
             [NORMAL_DIFF] = {
                 { 1, 30092 }, -- Orca-Hide Boots
                 { 2, 30097 }, -- Coral-Barbed Shoulderpads
@@ -3097,7 +3104,7 @@ data["SerpentshrineCavern"] = {
             npcID = 21214,
             Level = 999,
             DisplayIDs = {{20662},{20671},{20670},{20672}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 4,
             [NORMAL_DIFF] = {
                 { 1, 30100 }, -- Soul-Strider Boots
                 { 2, 30101 }, -- Bloodsea Brigand's Vest
@@ -3115,7 +3122,7 @@ data["SerpentshrineCavern"] = {
             npcID = 21213,
             Level = 999,
             DisplayIDs = {{20739}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 5,
             [NORMAL_DIFF] = {
                 { 1, 30098 }, -- Razor-Scale Battlecloak
                 { 2, 30079 }, -- Illidari Shoulderpads
@@ -3137,7 +3144,7 @@ data["SerpentshrineCavern"] = {
             npcID = 21212,
             Level = 999,
             DisplayIDs = {{20748}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 6,
             [NORMAL_DIFF] = {
                 { 1, 30107 }, -- Vestments of the Sea-Witch
                 { 2, 30111 }, -- Runetotem's Mantle
@@ -3194,8 +3201,8 @@ data["SerpentshrineCavern"] = {
 data["TempestKeep"] = {
 	MapID = 3845,
 	InstanceID = 550,
-	--AtlasMapID = "",
-	--AtlasMapFile = "",
+	AtlasMapID = "TempestKeepTheEye",
+	AtlasMapFile = {"TempestKeepTheEye", "TempestKeepEnt"},
 	ContentType = RAID25_CONTENT,
     ContentPhaseBC = 2,
 	items = {
@@ -3204,7 +3211,7 @@ data["TempestKeep"] = {
             npcID = 19514,
             Level = 999,
             DisplayIDs = {{18945}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 1,
             [NORMAL_DIFF] = {
                 { 1, 29925 }, -- Phoenix-Wing Cloak
                 { 2, 29918 }, -- Mindstorm Wristbands
@@ -3226,7 +3233,7 @@ data["TempestKeep"] = {
             npcID = 19516,
             Level = 999,
             DisplayIDs = {{18951}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 2,
             [NORMAL_DIFF] = {
                 { 1, 29986 }, -- Cowl of the Grand Engineer
                 { 2, 29984 }, -- Girdle of Zaetar
@@ -3245,7 +3252,7 @@ data["TempestKeep"] = {
             npcID = 18805,
             Level = 999,
             DisplayIDs = {{18239}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 3,
             [NORMAL_DIFF] = {
                 { 1, 29977 }, -- Star-Soul Breeches
                 { 2, 29972 }, -- Trousers of the Astromancer
@@ -3267,7 +3274,7 @@ data["TempestKeep"] = {
             npcID = 19622,
             Level = 999,
             DisplayIDs = {{20023}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 4,
             [NORMAL_DIFF] = {
                 { 1, 29992 }, -- Royal Cloak of the Sunstriders
                 { 2, 29989 }, -- Sunshower Light Cloak
@@ -3340,8 +3347,8 @@ data["TempestKeep"] = {
 data["HyjalSummit"] = {
 	MapID = 3606,
 	InstanceID = 534,
-	--AtlasMapID = "",
-	--AtlasMapFile = "",
+	AtlasMapID = "CoTHyjal",
+	AtlasMapFile = {"CoTHyjal", "CoTEnt"},
 	ContentType = RAID25_CONTENT,
     ContentPhaseBC = 3,
 	items = {
@@ -3350,7 +3357,7 @@ data["HyjalSummit"] = {
             npcID = 17767,
             Level = 999,
             DisplayIDs = {{17444}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 1,
             [NORMAL_DIFF] = {
                 { 1, 30871 }, -- Bracers of Martyrdom
                 { 2, 30870 }, -- Cuffs of Devastation
@@ -3372,7 +3379,7 @@ data["HyjalSummit"] = {
             npcID = 17808,
             Level = 999,
             DisplayIDs = {{21069}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 2,
             [NORMAL_DIFF] = {
                 { 1, 30884 }, -- Hatefury Mantle
                 { 2, 30888 }, -- Anetheron's Noose
@@ -3393,7 +3400,7 @@ data["HyjalSummit"] = {
             npcID = 17888,
             Level = 999,
             DisplayIDs = {{17886}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 3,
             [NORMAL_DIFF] = {
                 { 1, 30895 }, -- Angelista's Sash
                 { 2, 30916 }, -- Leggings of Channeled Elements
@@ -3414,7 +3421,7 @@ data["HyjalSummit"] = {
             npcID = 17842,
             Level = 999,
             DisplayIDs = {{18526}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 4,
             [NORMAL_DIFF] = {
                 { 1, 30899 }, -- Don Rodrigo's Poncho
                 { 2, 30898 }, -- Shady Dealer's Pantaloons
@@ -3432,7 +3439,7 @@ data["HyjalSummit"] = {
             npcID = 17968,
             Level = 999,
             DisplayIDs = {{20939}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 5,
             [NORMAL_DIFF] = {
                 { 1, 30913 }, -- Robes of Rhonin
                 { 2, 30912 }, -- Leggings of Eternity
@@ -3483,8 +3490,8 @@ data["HyjalSummit"] = {
 data["BlackTemple"] = {
 	MapID = 3959,
 	InstanceID = 564,
-	--AtlasMapID = "",
-	--AtlasMapFile = "",
+	AtlasMapID = "BlackTempleStart",
+	AtlasMapFile = {"BlackTempleStart", "BlackTempleBasement", "BlackTempleTop"},
 	ContentType = RAID25_CONTENT,
     ContentPhaseBC = 3,
 	items = {
@@ -3493,7 +3500,7 @@ data["BlackTemple"] = {
             npcID = 22887,
             Level = 999,
             DisplayIDs = {{21174}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 2,
             [NORMAL_DIFF] = {
                 { 1, 32239 }, -- Slippers of the Seacaller
                 { 2, 32240 }, -- Guise of the Tidal Lurker
@@ -3516,7 +3523,7 @@ data["BlackTemple"] = {
             npcID = 22898,
             Level = 999,
             DisplayIDs = {{21145}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 3,
             [NORMAL_DIFF] = {
                 { 1, 32256 }, -- Waistwrap of Infinity
                 { 2, 32252 }, -- Nether Shadow Tunic
@@ -3538,7 +3545,7 @@ data["BlackTemple"] = {
             npcID = 22841,
             Level = 999,
             DisplayIDs = {{21357}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 4,
             [NORMAL_DIFF] = {
                 { 1, 32273 }, -- Amice of Brilliant Light
                 { 2, 32270 }, -- Focused Mana Bindings
@@ -3556,33 +3563,13 @@ data["BlackTemple"] = {
                 { 17, 32361 }, -- Blind-Seers Icon
             }
         },
-        { -- BTGorefiend
-            name = AL["Teron Gorefiend"],
-            npcID = 22871,
-            Level = 999,
-            DisplayIDs = {{21254}},
-            -- AtlasMapBossID = 0,
-            [NORMAL_DIFF] = {
-                { 1, 32323 }, -- Shadowmoon Destroyer's Drape
-                { 2, 32329 }, -- Cowl of Benevolence
-                { 3, 32327 }, -- Robe of the Shadow Council
-                { 4, 32324 }, -- Insidious Bands
-                { 5, 32328 }, -- Botanist's Gloves of Growth
-                { 6, 32510 }, -- Softstep Boots of Tracking
-                { 7, 32280 }, -- Gauntlets of Enforcement
-                { 8, 32512 }, -- Girdle of Lordaeron's Fallen
-                { 16, 32330 }, -- Totem of Ancestral Guidance
-                { 17, 32348 }, -- Soul Cleaver
-                { 18, 32326 }, -- Twisted Blades of Zarak
-                { 19, 32325 }, -- Rifle of the Stoic Guardian
-            }
-        },
         { -- BTBloodboil
             name = AL["Gurtogg Bloodboil"],
             npcID = 22948,
             Level = 999,
             DisplayIDs = {{21443}},
-            -- AtlasMapBossID = 0,
+            AtlasMapFile = "BlackTempleBasement",
+            AtlasMapBossID = 6,
             [NORMAL_DIFF] = {
                 { 1, 32337 }, -- Shroud of Forgiveness
                 { 2, 32338 }, -- Blood-cursed Shoulderpads
@@ -3604,7 +3591,8 @@ data["BlackTemple"] = {
             npcID = 22856,
             Level = 999,
             DisplayIDs = {{21146}},
-            -- AtlasMapBossID = 0,
+            AtlasMapFile = "BlackTempleBasement",
+            AtlasMapBossID = 7,
             [NORMAL_DIFF] = {
                 { 1, 32353 }, -- Gloves of Unfailing Faith
                 { 2, 32351 }, -- Elunite Empowered Bracers
@@ -3621,12 +3609,35 @@ data["BlackTemple"] = {
                 { 20, 32363 }, -- Naaru-Blessed Life Rod
             }
         },
+        { -- BTGorefiend
+            name = AL["Teron Gorefiend"],
+            npcID = 22871,
+            Level = 999,
+            DisplayIDs = {{21254}},
+            AtlasMapFile = "BlackTempleBasement",
+            AtlasMapBossID = 8,
+            [NORMAL_DIFF] = {
+                { 1, 32323 }, -- Shadowmoon Destroyer's Drape
+                { 2, 32329 }, -- Cowl of Benevolence
+                { 3, 32327 }, -- Robe of the Shadow Council
+                { 4, 32324 }, -- Insidious Bands
+                { 5, 32328 }, -- Botanist's Gloves of Growth
+                { 6, 32510 }, -- Softstep Boots of Tracking
+                { 7, 32280 }, -- Gauntlets of Enforcement
+                { 8, 32512 }, -- Girdle of Lordaeron's Fallen
+                { 16, 32330 }, -- Totem of Ancestral Guidance
+                { 17, 32348 }, -- Soul Cleaver
+                { 18, 32326 }, -- Twisted Blades of Zarak
+                { 19, 32325 }, -- Rifle of the Stoic Guardian
+            }
+        },
         { -- BTShahraz
             name = AL["Mother Shahraz"],
             npcID = 22947,
             Level = 999,
             DisplayIDs = {{21252}},
-            -- AtlasMapBossID = 0,
+            AtlasMapFile = "BlackTempleTop",
+            AtlasMapBossID = 9,
             [NORMAL_DIFF] = {
                 { 1, 32367 }, -- Leggings of Devastation
                 { 2, 32366 }, -- Shadowmaster's Boots
@@ -3644,7 +3655,8 @@ data["BlackTemple"] = {
             npcID = {23426, 22949, 22950, 22951, 22952},
             Level = 999,
             DisplayIDs = {{21416},{21417},{21419},{21418}},
-            -- AtlasMapBossID = 0,
+            AtlasMapFile = "BlackTempleTop",
+            AtlasMapBossID = 10,
             [NORMAL_DIFF] = {
                 { 1, 32331 }, -- Cloak of the Illidari Council
                 { 2, 32519 }, -- Belt of Divine Guidance
@@ -3662,7 +3674,8 @@ data["BlackTemple"] = {
             npcID = 22917,
             Level = 999,
             DisplayIDs = {{21135}},
-            -- AtlasMapBossID = 0,
+            AtlasMapFile = "BlackTempleTop",
+            AtlasMapBossID = 11,
             [NORMAL_DIFF] = {
                 { 1, 32524 }, -- Shroud of the Highborne
                 { 2, 32525 }, -- Cowl of the Illidari High Lord
@@ -3741,8 +3754,8 @@ data["BlackTemple"] = {
 data["SunwellPlateau"] = {
 	MapID = 4075,
 	InstanceID = 580,
-	--AtlasMapID = "",
-	--AtlasMapFile = "",
+	AtlasMapID = "SunwellPlateau",
+	AtlasMapFile = "SunwellPlateau",
 	ContentType = RAID25_CONTENT,
     ContentPhaseBC = 5,
 	items = {
@@ -3751,7 +3764,7 @@ data["SunwellPlateau"] = {
             npcID = {24850,24892},
             Level = 999,
             DisplayIDs = {{23345},{6686}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 1,
             [NORMAL_DIFF] = {
                 { 1, 34170 }, -- Pantaloons of Calming Strife
                 { 2, 34386 }, -- Pantaloons of Growing Strife
@@ -3773,7 +3786,7 @@ data["SunwellPlateau"] = {
             npcID = 24882,
             Level = 999,
             DisplayIDs = {{22711}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 2,
             [NORMAL_DIFF] = {
                 { 1, 34181 }, -- Leggings of Calamity
                 { 2, 34180 }, -- Felfury Legplates
@@ -3792,7 +3805,7 @@ data["SunwellPlateau"] = {
             npcID = 25038,
             Level = 999,
             DisplayIDs = {{22838}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 2,
             [NORMAL_DIFF] = {
                 { 1, 34352 }, -- Borderland Fortress Grips
                 { 2, 34188 }, -- Leggings of the Immortal Night
@@ -3812,7 +3825,7 @@ data["SunwellPlateau"] = {
             npcID = {25166,25165},
             Level = 999,
             DisplayIDs = {{23334},{23177}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 3,
             [NORMAL_DIFF] = {
                 { 1, 34205 }, -- Shroud of Redeemed Souls
                 { 2, 34190 }, -- Crimson Paragon's Cover
@@ -3848,7 +3861,7 @@ data["SunwellPlateau"] = {
             npcID = {25741,25840},
             Level = 999,
             DisplayIDs = {{23404},{23428}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 3,
             [NORMAL_DIFF] = {
                 { 1, 34232 }, -- Fel Conquerer Raiments
                 { 2, 34233 }, -- Robes of Faltered Light
@@ -3885,7 +3898,7 @@ data["SunwellPlateau"] = {
             npcID = 25315,
             Level = 999,
             DisplayIDs = {{23200}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 4,
             [NORMAL_DIFF] = {
                 { 1, 34241 }, -- Cloak of Unforgivable Sin
                 { 2, 34242 }, -- Tattered Cape of Antonidas
