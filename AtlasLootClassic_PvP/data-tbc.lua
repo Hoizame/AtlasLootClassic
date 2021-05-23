@@ -87,6 +87,22 @@ local PVP_INSIGNIA = {	-- Insignias
 	},
 }
 
+local PVP_GEMS = {	-- Insignias
+	name = ALIL["Gems"],
+	NORMAL_ITTYPE = ICON_ITTYPE,
+	ExtraList = true,
+	[NORMAL_DIFF] = {
+		{ 1, 28118, [PRICE_EXTRA_ITTYPE] = "honor:8500" }, -- Runed Ornate Ruby
+		{ 2, 28362, [PRICE_EXTRA_ITTYPE] = "honor:8500" }, -- Bold Ornate Ruby
+
+		{ 4, 28119, [PRICE_EXTRA_ITTYPE] = "honor:8500" }, -- Smooth Ornate Dawnstone
+		{ 5, 28120, [PRICE_EXTRA_ITTYPE] = "honor:8500" }, -- Gleaming Ornate Dawnstone
+
+		{ 16, 28123, [PRICE_EXTRA_ITTYPE] = "honor:8500" }, -- Potent Ornate Topaz
+		{ 17, 28363, [PRICE_EXTRA_ITTYPE] = "honor:8500" }, -- Inscribed Ornate Topaz
+	},
+}
+
 data["BCCHonorSet"] = {
 	name = AL["Honor"],
 	ContentType = GENERAL_CONTENT,
@@ -219,6 +235,7 @@ data["BCCHonorSet"] = {
 			},
 		},
 		PVP_INSIGNIA,
+		PVP_GEMS,
 	},
 }
 
@@ -249,6 +266,7 @@ data["BCCReputationSet"] = {
 			},
 		},
 		PVP_INSIGNIA,
+		PVP_GEMS,
 	},
 }
 
@@ -542,6 +560,7 @@ data["ArenaS1PvP"] = {
 			},
 		},
 		PVP_INSIGNIA,
+		PVP_GEMS,
 		{
 			name = AL["Gladiator Mount"],
 			ExtraList = true,
@@ -745,6 +764,7 @@ data["ArenaS2PvP"] = {
 			},
 		},
 		PVP_INSIGNIA,
+		PVP_GEMS,
 		{
 			name = AL["Gladiator Mount"],
 			ExtraList = true,
@@ -965,6 +985,7 @@ data["ArenaS3PvP"] = {
 			},
 		},
 		PVP_INSIGNIA,
+		PVP_GEMS,
 		{
 			name = AL["Gladiator Mount"],
 			ExtraList = true,
@@ -1170,6 +1191,7 @@ data["ArenaS4PvP"] = {
 			},
 		},
 		PVP_INSIGNIA,
+		PVP_GEMS,
 		{
 			name = AL["Gladiator Mount"]..BLIZZARD_NYI,
 			ExtraList = true,
