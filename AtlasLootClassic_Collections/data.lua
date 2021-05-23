@@ -49,6 +49,7 @@ data["BadgeofJustice"] = {
 	name = format(AL["'%s' Vendor"], "Badge of Justice"),
 	ContentType = VENDOR_CONTENT,
 	TableType = NORMAL_ITTYPE,
+	gameVersion = 2,
 	items = {
 		{
 			name = ALIL["Cloth"],
