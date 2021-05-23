@@ -6,7 +6,7 @@ local string = string
 local type, tonumber, pairs = type, tonumber, pairs
 local str_split = string.split
 -- WoW
-local GetCurrencyInfo, GetItemInfo, GetItemCount, GetItemIcon = GetCurrencyInfo, GetItemInfo, GetItemCount, GetItemIcon
+local GetCurrencyInfo, GetItemInfo, GetItemCount, GetItemIcon = C_CurrencyInfo.GetCurrencyInfo, GetItemInfo, GetItemCount, GetItemIcon
 -- ----------------------------------------------------------------------------
 -- AddOn namespace.
 -- ----------------------------------------------------------------------------
@@ -46,6 +46,20 @@ local PRICE_INFO = {
 	["MarkOfThrallmar"] = { itemID = 24581 }, -- Mark of Thrallmar
 	["MarkOfHonorHold"] = { itemID = 24579 }, -- Mark of Honor Hold
 	["BoJ"] = { itemID = 29434 }, -- Badge of Justice
+	-- pvp
+	["honor"] =  { currencyID = 1901 }, -- Honor
+	["honorH"] =  { currencyID = 1901 }, -- Honor / Horde
+	["honorA"] =  { currencyID = 1901 }, -- Honor / Alli
+	["pvpAlterac"] =  { itemID = 20560 }, -- Alterac Valley Mark of Honor
+	["pvpWarsong"] =  { itemID = 20558 }, -- Warsong Gulch Mark of Honor
+	["pvpArathi"] =  { itemID = 20559 }, -- Arathi Basin Mark of Honor
+	["pvpEye"] =  { itemID = 29024 }, -- Eye of the Storm Mark of Honor
+}
+
+local ICON_REPLACE = {
+	["honor"] = UnitFactionGroup("player") == "Horde" and 136782 or 136781,
+	["honorH"] = 136782,
+	["honorA"] = 136781,
 }
 
 local Cache = {}
@@ -62,9 +76,9 @@ local function SetContentInfo(frame, typ, value, delimiter)
 			frame:AddIcon(PRICE_INFO[typ].icon, 12)
 			frame:AddText(value..delimiter)
 		elseif PRICE_INFO[typ].currencyID then
-			local name, currentAmount, texture = GetCurrencyInfo(PRICE_INFO[typ].currencyID) --name, currentAmount, texture, earnedThisWeek, weeklyMax, totalMax, isDiscovered, rarity
-			frame:AddIcon(texture, 12)
-			frame:AddText(currentAmount >= tonumber(value) and STRING_GREEN..value..delimiter or STRING_RED..value..delimiter)
+			local info = GetCurrencyInfo(PRICE_INFO[typ].currencyID)
+			frame:AddIcon(ICON_REPLACE[typ] or info.iconFileID, 12)
+			frame:AddText(info.quantity >= tonumber(value) and STRING_GREEN..value..delimiter or STRING_RED..value..delimiter)
 		elseif PRICE_INFO[typ].itemID then
 			PRICE_INFO[typ].icon = GetItemIcon(PRICE_INFO[typ].itemID)
 			SetContentInfo(frame, typ, value, delimiter)
@@ -138,11 +152,11 @@ local function SetTooltip(tooltip, typ, value)
 		--	tooltip:AddLine(TT_ICON_AND_NAME:format(PRICE_INFO[typ].icon, PRICE_INFO[typ].name or ""))
 		--	tooltip:AddLine(TT_HAVE_AND_NEED_GREEN:format(value))
 		elseif PRICE_INFO[typ].currencyID then
-			local name, currentAmount, texture = GetCurrencyInfo(PRICE_INFO[typ].currencyID) --name, currentAmount, texture, earnedThisWeek, weeklyMax, totalMax, isDiscovered, rarity
-			if texture then
-				tooltip:AddLine(TT_ICON_AND_NAME:format(texture, name or ""))
+			local info = GetCurrencyInfo(PRICE_INFO[typ].currencyID)
+			if info.iconFileID then
+				tooltip:AddLine(TT_ICON_AND_NAME:format(ICON_REPLACE[typ] or info.iconFileID, info.name or ""))
 			end
-			tooltip:AddLine(currentAmount >= value and TT_HAVE_AND_NEED_GREEN:format(currentAmount, value) or  TT_HAVE_AND_NEED_RED:format(currentAmount, value))
+			tooltip:AddLine(info.quantity >= value and TT_HAVE_AND_NEED_GREEN:format(info.quantity, value) or  TT_HAVE_AND_NEED_RED:format(info.quantity, value))
 		elseif PRICE_INFO[typ].itemID then
 			local itemName = GetItemInfo(PRICE_INFO[typ].itemID)
 			tooltip:AddLine(TT_ICON_AND_NAME:format(GetItemIcon(PRICE_INFO[typ].itemID), GetItemInfo(PRICE_INFO[typ].itemID) or ""))
