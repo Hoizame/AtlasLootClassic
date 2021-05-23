@@ -2,6 +2,10 @@
 
 This mod is distributed under Version 2 of the GPL.  A copy of the GPL is included in this zip file with links to non-english translations.
 
+## v2.1.0 (May 01, 2021)
+
+- add customizable stats settings for class filter, there are some problems as blizzard not always returns all item stats
+
 ## v2.0.1 (Apr. 27, 2021)
 
 - (classic) fix missing recipes for crafting spells

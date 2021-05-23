@@ -48,6 +48,81 @@ local GENERAL_CONTENT = data:AddContentType(GENERAL, ATLASLOOT_RAID40_COLOR)
 local HORDE, ALLIANCE, RANK_FORMAT = "Horde", "Alliance", AL["|cff33ff99Rank:|r %s"]
 local BLIZZARD_NYI = " |cff00ccff<NYI |T130946:12:20:0:0:32:16:4:28:0:16|t>|r"
 
+local PVP_INSIGNIA = {	-- Insignias
+	name = AL["Insignia"],
+	NORMAL_ITTYPE = ICON_ITTYPE,
+	ExtraList = true,
+	[ALLIANCE_DIFF] = {
+		{ 1, 37864, [PRICE_EXTRA_ITTYPE] = "honorA:40000" }, -- Medallion of the Alliance
+		{ 3, 28235, [PRICE_EXTRA_ITTYPE] = "honorA:8000" }, -- Medallion of the Alliance
+		{ 4, 28237, [PRICE_EXTRA_ITTYPE] = "honorA:8000" }, -- Medallion of the Alliance
+		{ 5, 28238, [PRICE_EXTRA_ITTYPE] = "honorA:8000" }, -- Medallion of the Alliance
+		{ 6, 28236, [PRICE_EXTRA_ITTYPE] = "honorA:8000" }, -- Medallion of the Alliance
+		{ 7, 30349, [PRICE_EXTRA_ITTYPE] = "honorA:8000" }, -- Medallion of the Alliance
+		{ 8, 28234, [PRICE_EXTRA_ITTYPE] = "honorA:8000" }, -- Medallion of the Alliance
+		{ 9, 30351, [PRICE_EXTRA_ITTYPE] = "honorA:8000" }, -- Medallion of the Alliance
+		{ 10, 30348, [PRICE_EXTRA_ITTYPE] = "honorA:8000" }, -- Medallion of the Alliance
+		{ 11, 30350, [PRICE_EXTRA_ITTYPE] = "honorA:8000" }, -- Medallion of the Alliance
+
+
+		--{ 2, 25829, [PRICE_EXTRA_ITTYPE] = "honorA:22950:pvpEye:10" }, -- Talisman of the Alliance
+		--{ 16, 28246 }, -- Band of Triumph
+		--{ 17, 28247 }, -- Band of Dominance
+	},
+	[HORDE_DIFF] = {
+		{ 1, 37865, [PRICE_EXTRA_ITTYPE] = "honorH:40000" }, -- Medallion of the Horde
+		{ 3, 28241, [PRICE_EXTRA_ITTYPE] = "honorH:8000" }, -- Medallion of the Horde
+		{ 4, 28243, [PRICE_EXTRA_ITTYPE] = "honorH:8000" }, -- Medallion of the Horde
+		{ 5, 28239, [PRICE_EXTRA_ITTYPE] = "honorH:8000" }, -- Medallion of the Horde
+		{ 6, 28242, [PRICE_EXTRA_ITTYPE] = "honorH:8000" }, -- Medallion of the Horde
+		{ 7, 30346, [PRICE_EXTRA_ITTYPE] = "honorH:8000" }, -- Medallion of the Horde
+		{ 8, 28240, [PRICE_EXTRA_ITTYPE] = "honorH:8000" }, -- Medallion of the Horde
+		{ 9, 30345, [PRICE_EXTRA_ITTYPE] = "honorH:8000" }, -- Medallion of the Horde
+		{ 10, 30343, [PRICE_EXTRA_ITTYPE] = "honorH:8000" }, -- Medallion of the Horde
+		{ 11, 30344, [PRICE_EXTRA_ITTYPE] = "honorH:8000" }, -- Medallion of the Horde
+
+		--{ 2, 24551, [PRICE_EXTRA_ITTYPE] = "honorH:22950:pvpEye:10" }, -- Talisman of the Horde
+		--{ 16, 28246 }, -- Band of Triumph
+		--{ 17, 28247 }, -- Band of Dominance
+	},
+}
+
+local PVP_MOUNT_PRICE = "pvpAlterac:30:pvpArathi:30:pvpWarsong:30"
+data["PvPMountsBCC"] = {
+	name = ALIL["Mounts"],
+	ContentType = GENERAL_CONTENT,
+	LoadDifficulty = LOAD_DIFF,
+	items = {
+		{ -- PvPMountsPvP
+			name = ALIL["Mounts"],
+			[ALLIANCE_DIFF] = {
+				{ 1,  19030, [PRICE_EXTRA_ITTYPE] = "pvpAlterac:50" }, -- Stormpike Battle Charger
+				{ 3,  18244, [PRICE_EXTRA_ITTYPE] = PVP_MOUNT_PRICE }, -- Black War Ram
+				{ 4,  18243, [PRICE_EXTRA_ITTYPE] = PVP_MOUNT_PRICE }, -- Black Battlestrider
+				{ 5,  18241, [PRICE_EXTRA_ITTYPE] = PVP_MOUNT_PRICE }, -- Black War Steed Bridle
+				{ 6,  18242, [PRICE_EXTRA_ITTYPE] = PVP_MOUNT_PRICE }, -- Reins of the Black War Tiger
+				{ 7,  35906, [PRICE_EXTRA_ITTYPE] = PVP_MOUNT_PRICE }, -- Reins of the Black War Elekk
+				{ 16,  30609 }, -- Swift Nether Drake
+				{ 17,  37676 }, -- Vengeful Nether Drake
+				{ 18,  34092 }, -- Merciless Nether Drake
+				{ 19,  43516 }, -- Brutal Nether Drake NYI
+			},
+			[HORDE_DIFF] = {
+				{ 1, 19029, [PRICE_EXTRA_ITTYPE] = "pvpAlterac:50"  }, -- Horn of the Frostwolf Howler
+				{ 3, 18245, [PRICE_EXTRA_ITTYPE] = PVP_MOUNT_PRICE }, -- Horn of the Black War Wolf
+				{ 4, 18247, [PRICE_EXTRA_ITTYPE] = PVP_MOUNT_PRICE }, -- Black War Kodo
+				{ 5, 18246, [PRICE_EXTRA_ITTYPE] = PVP_MOUNT_PRICE }, -- Whistle of the Black War Raptor
+				{ 6, 18248, [PRICE_EXTRA_ITTYPE] = PVP_MOUNT_PRICE }, -- Red Skeletal Warhorse
+				{ 7, 34129, [PRICE_EXTRA_ITTYPE] = PVP_MOUNT_PRICE }, -- Swift Warstrider
+				{ 16,  30609 }, -- Swift Nether Drake
+				{ 17,  37676 }, -- Vengeful Nether Drake
+				{ 18,  34092 }, -- Merciless Nether Drake
+				{ 19,  43516 }, -- Brutal Nether Drake NYI
+			},
+		},
+	},
+}
+
 data["ArenaS1PvP"] = {
 	name = format(AL["Season %s"], "1"),
 	ContentType = ARENA_CONTENT,
@@ -147,6 +222,168 @@ data["ArenaS1PvP"] = {
 				{ 18, 33939 }, -- Gladiator's Totem of Indomitability
 			},
 		},
+		{
+			name = ALIL["Neck"],
+			[NORMAL_DIFF] = {
+				{ 1, 28244 }, -- Pendant of Triumph
+				{ 2, 28245 }, -- Pendant of Dominance
+			},
+		},
+		{
+			name = ALIL["Finger"],
+			[NORMAL_DIFF] = {
+				{ 1, 28246 }, -- Band of Triumph
+				{ 2, 28247 }, -- Band of Dominance
+			},
+		},
+		{
+			name = format(AL["Non Set '%s'"], ALIL["Cloth"]),
+			[HORDE_DIFF] = {
+				{ 1, 28411 }, -- General's Silk Cuffs
+				{ 2, 28409 }, -- General's Silk Belt
+				{ 3, 28410 }, -- General's Silk Footguards
+
+				{ 5, 28405 }, -- General's Dreadweave Cuffs
+				{ 6, 28404 }, -- General's Dreadweave Belt
+				{ 7, 28402 }, -- General's Dreadweave Stalkers
+
+				{ 9, 32973 }, -- General's Mooncloth Cuffs
+				{ 10, 32974 }, -- General's Mooncloth Belt
+				{ 11, 32975 }, -- General's Mooncloth Slippers
+			},
+			[ALLIANCE_DIFF] = {
+				{ 1, 29002 }, -- Marshal's Silk Cuffs
+				{ 2, 28409 }, -- Marshal's Silk Belt
+				{ 3, 29003 }, -- Marshal's Silk Footguards
+
+				{ 5, 28981 }, -- Marshal's Dreadweave Cuffs
+				{ 6, 28980 }, -- Marshal's Dreadweave Belt
+				{ 7, 28982 }, -- Marshal's Dreadweave Stalkers
+
+				{ 9, 32977 }, -- Marshal's Mooncloth Cuffs
+				{ 10, 32976 }, -- Marshal's Mooncloth Belt
+				{ 11, 32978 }, -- Marshal's Mooncloth Slippers
+			},
+		},
+		{
+			name = format(AL["Non Set '%s'"], ALIL["Leather"]),
+			[HORDE_DIFF] = {
+				{ 1, 28445 }, -- General's Dragonhide Bracers
+				{ 2, 28443 }, -- General's Dragonhide Belt
+				{ 3, 28444 }, -- General's Dragonhide Boots
+
+				{ 5, 28424 }, -- General's Leather Bracers
+				{ 6, 28423 }, -- General's Leather Belt
+				{ 7, 28422 }, -- General's Leather Boots
+
+				{ 16, 31598 }, -- General's Kodohide Bracers
+				{ 17, 31594 }, -- General's Kodohide Belt
+				{ 18, 31595 }, -- General's Kodohide Boots
+
+				{ 20, 28448 }, -- General's Wyrmhide Bracers
+				{ 21, 28446 }, -- General's Wyrmhide Belt
+				{ 22, 28447 }, -- General's Wyrmhide Boots
+			},
+			[ALLIANCE_DIFF] = {
+				{ 1, 28978 }, -- Marshal's Dragonhide Bracers
+				{ 2, 28976 }, -- Marshal's Dragonhide Belt
+				{ 3, 28977 }, -- Marshal's Dragonhide Boots
+
+				{ 5, 28988 }, -- Marshal's Leather Bracers
+				{ 6, 28986 }, -- Marshal's Leather Belt
+				{ 7, 28987 }, -- Marshal's Leather Boots
+
+				{ 16, 31599 }, -- Marshal's Kodohide Bracers
+				{ 17, 31596 }, -- Marshal's Kodohide Belt
+				{ 18, 31597 }, -- Marshal's Kodohide Boots
+
+				{ 20, 29006 }, -- Marshal's Wyrmhide Bracers
+				{ 21, 29004 }, -- Marshal's Wyrmhide Belt
+				{ 22, 29005 }, -- Marshal's Wyrmhide Boots
+			},
+		},
+		{
+			name = format(AL["Non Set '%s'"], ALIL["Mail"]),
+			[HORDE_DIFF] = {
+				{ 1, 32991 }, -- General's Ringmail Bracers
+				{ 2, 32992 }, -- General's Ringmail Girdle
+				{ 3, 32993 }, -- General's Ringmail Sabatons
+
+				{ 5, 28638 }, -- General's Mail Bracers
+				{ 6, 28639 }, -- General's Mail Girdle
+				{ 7, 28640 }, -- General's Mail Sabatons
+
+				{ 16, 28605 }, -- General's Linked Bracers
+				{ 17, 28629 }, -- General's Linked Girdle
+				{ 18, 28630 }, -- General's Linked Sabatons
+
+				{ 20, 28451 }, -- General's Chain Bracers
+				{ 21, 28450 }, -- General's Chain Girdle
+				{ 22, 28449 }, -- General's Chain Sabatons
+			},
+			[ALLIANCE_DIFF] = {
+				{ 1, 32994 }, -- Marshal's Ringmail Bracers
+				{ 2, 32995 }, -- Marshal's Ringmail Girdle
+				{ 3, 32996 }, -- Marshal's Ringmail Sabatons
+
+				{ 5, 28992 }, -- Marshal's Mail Bracers
+				{ 6, 28993 }, -- Marshal's Mail Girdle
+				{ 7, 28994 }, -- Marshal's Mail Sabatons
+
+				{ 16, 28989 }, -- Marshal's Linked Bracers
+				{ 17, 28990 }, -- Marshal's Linked Girdle
+				{ 18, 28991 }, -- Marshal's Linked Sabatons
+
+				{ 20, 28973 }, -- Marshal's Chain Bracers
+				{ 21, 28974 }, -- Marshal's Chain Girdle
+				{ 22, 28975 }, -- Marshal's Chain Sabatons
+			},
+		},
+		{
+			name = format(AL["Non Set '%s'"], ALIL["Plate"]),
+			[HORDE_DIFF] = {
+				{ 1, 28646 }, -- General's Scaled Bracers
+				{ 2, 28644 }, -- General's Scaled Belt
+				{ 3, 28645 }, -- General's Scaled Greaves
+
+				{ 5, 28381 }, -- General's Plate Bracers
+				{ 6, 28385 }, -- General's Plate Belt
+				{ 7, 28383 }, -- General's Plate Greaves
+
+				{ 16, 32983 }, -- General's Ornamented Bracers
+				{ 17, 32982 }, -- General's Ornamented Belt
+				{ 18, 32984 }, -- General's Ornamented Greaves
+
+				{ 20, 28643 }, -- General's Lamellar Bracers
+				{ 21, 28641 }, -- General's Lamellar Belt
+				{ 22, 28642 }, -- General's Lamellar Greaves
+			},
+			[ALLIANCE_DIFF] = {
+				{ 1, 28999 }, -- Marshal's Scaled Bracers
+				{ 2, 28998 }, -- Marshal's Scaled Belt
+				{ 3, 29000 }, -- Marshal's Scaled Greaves
+
+				{ 5, 28996 }, -- Marshal's Plate Bracers
+				{ 6, 28995 }, -- Marshal's Plate Belt
+				{ 7, 28997 }, -- Marshal's Plate Greaves
+
+				{ 16, 32986 }, -- Marshal's Ornamented Bracers
+				{ 17, 32985 }, -- Marshal's Ornamented Belt
+				{ 18, 32987 }, -- Marshal's Ornamented Greaves
+
+				{ 20, 28984 }, -- Marshal's Lamellar Bracers
+				{ 21, 28983 }, -- Marshal's Lamellar Belt
+				{ 22, 28985 }, -- Marshal's Lamellar Greaves
+			},
+		},
+		PVP_INSIGNIA,
+		{
+			name = AL["Gladiator Mount"],
+			ExtraList = true,
+			[NORMAL_DIFF] = {
+				{ 1,  30609 }, -- Swift Nether Drake
+			}
+		}
 	}
 }
 
@@ -249,6 +486,107 @@ data["ArenaS2PvP"] = {
 				{ 18, 33940 }, -- Gladiator's Totem of Indomitability
 			},
 		},
+		{
+			name = ALIL["Neck"],
+			[NORMAL_DIFF] = {
+				{ 1, 33066 }, -- Veteran's Pendant of Triumph
+				{ 2, 33068 }, -- Veteran's Pendant of Salvation
+				{ 3, 33065 }, -- Veteran's Pendant of Dominance
+				{ 4, 33067 }, -- Veteran's Pendant of Conquest
+			},
+		},
+		{
+			name = ALIL["Finger"],
+			[NORMAL_DIFF] = {
+				{ 1, 33057 }, -- Veteran's Band of Triumph
+				{ 2, 33064 }, -- Veteran's Band of Salvation
+				{ 3, 33056 }, -- Veteran's Band of Dominance
+			},
+		},
+		{
+			name = format(AL["Non Set '%s'"], ALIL["Cloth"]),
+			[NORMAL_DIFF] = {
+				{ 1, 32820 }, -- Veteran's Silk Cuffs
+				{ 2, 32807 }, -- Veteran's Silk Belt
+				{ 3, 32795 }, -- Veteran's Silk Footguards
+
+				{ 5, 32811 }, -- Veteran's Dreadweave Cuffs
+				{ 6, 32799 }, -- Veteran's Dreadweave Belt
+				{ 7, 32787 }, -- Veteran's Dreadweave Stalkers
+
+				{ 9, 32980 }, -- Veteran's Mooncloth Cuffs
+				{ 10, 32979 }, -- Veteran's Mooncloth Belt
+				{ 11, 32981 }, -- Veteran's Mooncloth Slippers
+			},
+		},
+		{
+			name = format(AL["Non Set '%s'"], ALIL["Leather"]),
+			[NORMAL_DIFF] = {
+				{ 1, 32810 }, -- Veteran's Dragonhide Bracers
+				{ 2, 32798 }, -- Veteran's Dragonhide Belt
+				{ 3, 32786 }, -- Veteran's Dragonhide Boots
+
+				{ 5, 32814 }, -- Veteran's Leather Bracers
+				{ 6, 32802 }, -- Veteran's Leather Belt
+				{ 7, 32790 }, -- Veteran's Leather Boots
+
+				{ 16, 32812 }, -- Veteran's Kodohide Bracers
+				{ 17, 32800 }, -- Veteran's Kodohide Belt
+				{ 18, 32788 }, -- Veteran's Kodohide Boots
+
+				{ 20, 32821 }, -- Veteran's Wyrmhide Bracers
+				{ 21, 32808 }, -- Veteran's Wyrmhide Belt
+				{ 22, 32796 }, -- Veteran's Wyrmhide Boots
+			},
+		},
+		{
+			name = format(AL["Non Set '%s'"], ALIL["Mail"]),
+			[NORMAL_DIFF] = {
+				{ 1, 32997 }, -- Veteran's Ringmail Bracers
+				{ 2, 32998 }, -- Veteran's Ringmail Girdle
+				{ 3, 32999 }, -- Veteran's Ringmail Sabatons
+
+				{ 5, 32817 }, -- Veteran's Mail Bracers
+				{ 6, 32804 }, -- Veteran's Mail Girdle
+				{ 7, 32792 }, -- Veteran's Mail Sabatons
+
+				{ 16, 32816 }, -- Veteran's Linked Bracers
+				{ 17, 32803 }, -- Veteran's Linked Girdle
+				{ 18, 32791 }, -- Veteran's Linked Sabatons
+
+				{ 20, 32809 }, -- Veteran's Chain Bracers
+				{ 21, 32797 }, -- Veteran's Chain Girdle
+				{ 22, 32785 }, -- Veteran's Chain Sabatons
+			},
+		},
+		{
+			name = format(AL["Non Set '%s'"], ALIL["Plate"]),
+			[NORMAL_DIFF] = {
+				{ 1, 32819 }, -- Veteran's Scaled Bracers
+				{ 2, 32806 }, -- Veteran's Scaled Belt
+				{ 3, 32794 }, -- Veteran's Scaled Greaves
+
+				{ 5, 32818 }, -- Veteran's Plate Bracers
+				{ 6, 32805 }, -- Veteran's Plate Belt
+				{ 7, 32793 }, -- Veteran's Plate Greaves
+
+				{ 16, 32989 }, -- Veteran's Ornamented Bracers
+				{ 17, 32988 }, -- Veteran's Ornamented Belt
+				{ 18, 32990 }, -- Veteran's Ornamented Greaves
+
+				{ 20, 32813 }, -- Veteran's Lamellar Bracers
+				{ 21, 32801 }, -- Veteran's Lamellar Belt
+				{ 22, 32789 }, -- Veteran's Lamellar Greaves
+			},
+		},
+		PVP_INSIGNIA,
+		{
+			name = AL["Gladiator Mount"],
+			ExtraList = true,
+			[NORMAL_DIFF] = {
+				{ 1,  37676 }, -- Vengeful Nether Drake
+			}
+		}
 	}
 }
 
@@ -365,6 +703,110 @@ data["ArenaS3PvP"] = {
 				{ 18, 33941 }, -- Gladiator's Totem of Indomitability
 			},
 		},
+		{
+			name = ALIL["Neck"],
+			[NORMAL_DIFF] = {
+				{ 1, 33923 }, -- Vindicator's Pendant of Triumph
+				{ 2, 35319 }, -- Vindicator's Pendant of Subjugation
+				{ 3, 33922 }, -- Vindicator's Pendant of Salvation
+				{ 4, 35317 }, -- Vindicator's Pendant of Reprieve
+				{ 5, 33921 }, -- Vindicator's Pendant of Dominance
+				{ 6, 33920 }, -- Vindicator's Pendant of Conquest
+			},
+		},
+		{
+			name = ALIL["Finger"],
+			[NORMAL_DIFF] = {
+				{ 1, 33919 }, -- Vindicator's Band of Triumph
+				{ 2, 35320 }, -- Vindicator's Band of Subjugation
+				{ 3, 33918 }, -- Vindicator's Band of Salvation
+				{ 4, 33853 }, -- Vindicator's Band of Dominance
+			},
+		},
+		{
+			name = format(AL["Non Set '%s'"], ALIL["Cloth"]),
+			[NORMAL_DIFF] = {
+				{ 1, 33913 }, -- Vindicator's Silk Cuffs
+				{ 2, 33912 }, -- Vindicator's Silk Belt
+				{ 3, 33914 }, -- Vindicator's Silk Footguards
+
+				{ 5, 33883 }, -- Vindicator's Dreadweave Cuffs
+				{ 6, 33882 }, -- Vindicator's Dreadweave Belt
+				{ 7, 33884 }, -- Vindicator's Dreadweave Stalkers
+
+				{ 9, 33901 }, -- Vindicator's Mooncloth Cuffs
+				{ 10, 33900 }, -- Vindicator's Mooncloth Belt
+				{ 11, 33902 }, -- Vindicator's Mooncloth Slippers
+			},
+		},
+		{
+			name = format(AL["Non Set '%s'"], ALIL["Leather"]),
+			[NORMAL_DIFF] = {
+				{ 1, 33881 }, -- Vindicator's Dragonhide Bracers
+				{ 2, 33879 }, -- Vindicator's Dragonhide Belt
+				{ 3, 33880 }, -- Vindicator's Dragonhide Boots
+
+				{ 5, 33893 }, -- Vindicator's Leather Bracers
+				{ 6, 33891 }, -- Vindicator's Leather Belt
+				{ 7, 33892 }, -- Vindicator's Leather Boots
+
+				{ 16, 33887 }, -- Vindicator's Kodohide Bracers
+				{ 17, 33885 }, -- Vindicator's Kodohide Belt
+				{ 18, 33886 }, -- Vindicator's Kodohide Boots
+
+				{ 20, 33917 }, -- Vindicator's Wyrmhide Bracers
+				{ 21, 33915 }, -- Vindicator's Wyrmhide Belt
+				{ 22, 33916 }, -- Vindicator's Wyrmhide Boots
+			},
+		},
+		{
+			name = format(AL["Non Set '%s'"], ALIL["Mail"]),
+			[NORMAL_DIFF] = {
+				{ 1, 33906 }, -- Vindicator's Ringmail Bracers
+				{ 2, 33907 }, -- Vindicator's Ringmail Girdle
+				{ 3, 33908 }, -- Vindicator's Ringmail Sabatons
+
+				{ 5, 33897 }, -- Vindicator's Mail Bracers
+				{ 6, 33898 }, -- Vindicator's Mail Girdle
+				{ 7, 33899 }, -- Vindicator's Mail Sabatons
+
+				{ 16, 33894 }, -- Vindicator's Linked Bracers
+				{ 17, 33895 }, -- Vindicator's Linked Girdle
+				{ 18, 33896 }, -- Vindicator's Linked Sabatons
+
+				{ 20, 33876 }, -- Vindicator's Chain Bracers
+				{ 21, 33877 }, -- Vindicator's Chain Girdle
+				{ 22, 33878 }, -- Vindicator's Chain Sabatons
+			},
+		},
+		{
+			name = format(AL["Non Set '%s'"], ALIL["Plate"]),
+			[NORMAL_DIFF] = {
+				{ 1, 33910 }, -- Vindicator's Scaled Bracers
+				{ 2, 33909 }, -- Vindicator's Scaled Belt
+				{ 3, 33911 }, -- Vindicator's Scaled Greaves
+
+				{ 5, 33813 }, -- Vindicator's Plate Bracers
+				{ 6, 33811 }, -- Vindicator's Plate Belt
+				{ 7, 33812 }, -- Vindicator's Plate Greaves
+
+				{ 16, 33904 }, -- Vindicator's Ornamented Bracers
+				{ 17, 33903 }, -- Vindicator's Ornamented Belt
+				{ 18, 33905 }, -- Vindicator's Ornamented Greaves
+
+				{ 20, 33889 }, -- Vindicator's Lamellar Bracers
+				{ 21, 33888 }, -- Vindicator's Lamellar Belt
+				{ 22, 33890 }, -- Vindicator's Lamellar Greaves
+			},
+		},
+		PVP_INSIGNIA,
+		{
+			name = AL["Gladiator Mount"],
+			ExtraList = true,
+			[NORMAL_DIFF] = {
+				{ 1,  34092 }, -- Merciless Nether Drake
+			}
+		}
 	}
 }
 
@@ -466,6 +908,110 @@ data["ArenaS4PvP"] = {
 				{ 18, 35104 }, -- Gladiator's Totem of Indomitability
 			},
 		},
+		{
+			name = ALIL["Neck"],
+			[NORMAL_DIFF] = {
+				{ 1, 35135 }, -- Guardian's Pendant of Triumph
+				{ 2, 37928 }, -- Guardian's Pendant of Subjugation
+				{ 3, 35134 }, -- Guardian's Pendant of Salvation
+				{ 4, 37929 }, -- Guardian's Pendant of Reprieve
+				{ 5, 35133 }, -- Guardian's Pendant of Dominance
+				{ 6, 35132 }, -- Guardian's Pendant of Conquest
+			},
+		},
+		{
+			name = ALIL["Finger"],
+			[NORMAL_DIFF] = {
+				{ 1, 35131 }, -- Guardian's Band of Triumph
+				{ 2, 37927 }, -- Guardian's Band of Subjugation
+				{ 3, 35130 }, -- Guardian's Band of Salvation
+				{ 4, 35129 }, -- Guardian's Band of Dominance
+			},
+		},
+		{
+			name = format(AL["Non Set '%s'"], ALIL["Cloth"]),
+			[NORMAL_DIFF] = {
+				{ 1, 35179 }, -- Guardian's Silk Cuffs
+				{ 2, 35164 }, -- Guardian's Silk Belt
+				{ 3, 35149 }, -- Guardian's Silk Footguards
+
+				{ 5, 35168 }, -- Guardian's Dreadweave Cuffs
+				{ 6, 35153 }, -- Guardian's Dreadweave Belt
+				{ 7, 35138 }, -- Guardian's Dreadweave Stalkers
+
+				{ 9, 35174 }, -- Guardian's Mooncloth Cuffs
+				{ 10, 35159 }, -- Guardian's Mooncloth Belt
+				{ 11, 35144 }, -- Guardian's Mooncloth Slippers
+			},
+		},
+		{
+			name = format(AL["Non Set '%s'"], ALIL["Leather"]),
+			[NORMAL_DIFF] = {
+				{ 1, 35167 }, -- Guardian's Dragonhide Bracers
+				{ 2, 35152 }, -- Guardian's Dragonhide Belt
+				{ 3, 35137 }, -- Guardian's Dragonhide Boots
+
+				{ 5, 35171 }, -- Guardian's Leather Bracers
+				{ 6, 35156 }, -- Guardian's Leather Belt
+				{ 7, 35141 }, -- Guardian's Leather Boots
+
+				{ 16, 35169 }, -- Guardian's Kodohide Bracers
+				{ 17, 35154 }, -- Guardian's Kodohide Belt
+				{ 18, 35139 }, -- Guardian's Kodohide Boots
+
+				{ 20, 35180 }, -- Guardian's Wyrmhide Bracers
+				{ 21, 35165 }, -- Guardian's Wyrmhide Belt
+				{ 22, 35150 }, -- Guardian's Wyrmhide Boots
+			},
+		},
+		{
+			name = format(AL["Non Set '%s'"], ALIL["Mail"]),
+			[NORMAL_DIFF] = {
+				{ 1, 35177 }, -- Guardian's Ringmail Bracers
+				{ 2, 35162 }, -- Guardian's Ringmail Girdle
+				{ 3, 35147 }, -- Guardian's Ringmail Sabatons
+
+				{ 5, 35173 }, -- Guardian's Mail Bracers
+				{ 6, 35158 }, -- Guardian's Mail Girdle
+				{ 7, 35143 }, -- Guardian's Mail Sabatons
+
+				{ 16, 35172 }, -- Guardian's Linked Bracers
+				{ 17, 35157 }, -- Guardian's Linked Girdle
+				{ 18, 35142 }, -- Guardian's Linked Sabatons
+
+				{ 20, 35166 }, -- Guardian's Chain Bracers
+				{ 21, 35151 }, -- Guardian's Chain Girdle
+				{ 22, 35136 }, -- Guardian's Chain Sabatons
+			},
+		},
+		{
+			name = format(AL["Non Set '%s'"], ALIL["Plate"]),
+			[NORMAL_DIFF] = {
+				{ 1, 35178 }, -- Guardian's Scaled Bracers
+				{ 2, 35163 }, -- Guardian's Scaled Belt
+				{ 3, 35148 }, -- Guardian's Scaled Greaves
+
+				{ 5, 35176 }, -- Guardian's Plate Bracers
+				{ 6, 35161 }, -- Guardian's Plate Belt
+				{ 7, 35146 }, -- Guardian's Plate Greaves
+
+				{ 16, 35175 }, -- Guardian's Ornamented Bracers
+				{ 17, 35160 }, -- Guardian's Ornamented Belt
+				{ 18, 35145 }, -- Guardian's Ornamented Greaves
+
+				{ 20, 35170 }, -- Guardian's Lamellar Bracers
+				{ 21, 35155 }, -- Guardian's Lamellar Belt
+				{ 22, 35140 }, -- Guardian's Lamellar Greaves
+			},
+		},
+		PVP_INSIGNIA,
+		{
+			name = AL["Gladiator Mount"]..BLIZZARD_NYI,
+			ExtraList = true,
+			[NORMAL_DIFF] = {
+				{ 1,  43516 }, -- Brutal Nether Drake NYI
+			}
+		}
 	}
 }
 

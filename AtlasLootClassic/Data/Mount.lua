@@ -158,6 +158,12 @@ local MOUNT_LIST = {
     [34061] = 22720, -- Turbo-Charged Flying Machine Control
     [28915] = 21074, -- Reins of the Dark Riding Talbuk
     [29228] = 19303, -- Reins of the Dark War Talbuk
+    [35906] = 23928, -- Reins of the Black War Elekk
+    [34129] = 20359, -- Swift Warstrider
+    [30609] = 20344, -- Swift Nether Drake
+    [37676] = 24725, -- Vengeful Nether Drake
+    [34092] = 22620, -- Merciless Nether Drake
+    [43516] = 27507, -- Brutal Nether Drake
 --@end-version-bcc@
 }
 
