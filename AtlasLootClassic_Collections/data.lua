@@ -685,6 +685,9 @@ data["Tabards"] = {
 				{ 18, 23192 }, -- Tabard of the Scarlet Crusade
 				{ 19, 23705 }, -- Tabard of Flame
 				{ 20, 23709 }, -- Tabard of Frost
+--@version-bcc@
+				{ 22, 28788 }, -- Tabard of the Protector
+--@end-version-bcc@
 			},
 			[HORDE_DIFF] = {
 				GetItemsFromDiff = ALLIANCE_DIFF,
