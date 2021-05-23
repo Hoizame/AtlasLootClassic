@@ -45,6 +45,7 @@ local PRICE_INFO = {
 	["HalaaBT"] = { itemID = 26045 }, -- Halaa Battle Token
 	["MarkOfThrallmar"] = { itemID = 24581 }, -- Mark of Thrallmar
 	["MarkOfHonorHold"] = { itemID = 24579 }, -- Mark of Honor Hold
+	["BoJ"] = { itemID = 29434 }, -- Badge of Justice
 }
 
 local Cache = {}

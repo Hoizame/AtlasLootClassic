@@ -38,10 +38,116 @@ local QUEST_EXTRA_ITTYPE = data:AddExtraItemTableType("Quest")
 local PRICE_EXTRA_ITTYPE = data:AddExtraItemTableType("Price")
 local SET_EXTRA_ITTYPE = data:AddExtraItemTableType("Set")
 
+local VENDOR_CONTENT = data:AddContentType(AL["Vendor"], ATLASLOOT_DUNGEON_COLOR)
 local SET_CONTENT = data:AddContentType(AL["Sets"], ATLASLOOT_PVP_COLOR)
 --local WORLD_BOSS_CONTENT = data:AddContentType(AL["World Bosses"], ATLASLOOT_WORLD_BOSS_COLOR)
 local COLLECTIONS_CONTENT = data:AddContentType(AL["Collections"], ATLASLOOT_COLLECTIONS_COLOR)
 local WORLD_EVENT_CONTENT = data:AddContentType(AL["World Events"], ATLASLOOT_SEASONALEVENTS_COLOR)
+
+--@version-bcc@
+data["BadgeofJustice"] = {
+	name = format(AL["'%s' Vendor"], "Badge of Justice"),
+	ContentType = VENDOR_CONTENT,
+	TableType = NORMAL_ITTYPE,
+	items = {
+		{
+			name = ALIL["Cloth"],
+			[NORMAL_DIFF] = {
+				{ 1, 30762, [PRICE_EXTRA_ITTYPE] = "BoJ:30" }, -- Infernoweave Robe
+				{ 2, 30764, [PRICE_EXTRA_ITTYPE] = "BoJ:20" }, -- Infernoweave Gloves
+				{ 3, 30761, [PRICE_EXTRA_ITTYPE] = "BoJ:30" }, -- Infernoweave Leggings
+				{ 4, 30763, [PRICE_EXTRA_ITTYPE] = "BoJ:20" }, -- Infernoweave Boots
+			},
+		},
+		{
+			name = ALIL["Leather"],
+			[NORMAL_DIFF] = {
+				{ 1, 30776, [PRICE_EXTRA_ITTYPE] = "BoJ:30" }, -- Inferno Hardened Chestguard
+				{ 2, 30780, [PRICE_EXTRA_ITTYPE] = "BoJ:20" }, -- Inferno Hardened Gloves
+				{ 3, 30778, [PRICE_EXTRA_ITTYPE] = "BoJ:30" }, -- Inferno Hardened Leggings
+				{ 4, 30779, [PRICE_EXTRA_ITTYPE] = "BoJ:20" }, -- Inferno Hardened Boots
+			},
+		},
+		{
+			name = ALIL["Mail"],
+			[NORMAL_DIFF] = {
+				{ 1, 30773, [PRICE_EXTRA_ITTYPE] = "BoJ:30" }, -- Inferno Forged Hauberk
+				{ 2, 30774, [PRICE_EXTRA_ITTYPE] = "BoJ:20" }, -- Inferno Forged Gloves
+				{ 3, 30770, [PRICE_EXTRA_ITTYPE] = "BoJ:20" }, -- Inferno Forged Boots
+				{ 4, 30772, [PRICE_EXTRA_ITTYPE] = "BoJ:30" }, -- Inferno Forged Leggings
+			},
+		},
+		{
+			name = ALIL["Plate"],
+			[NORMAL_DIFF] = {
+				{ 1, 30769, [PRICE_EXTRA_ITTYPE] = "BoJ:30" }, -- Inferno Tempered Chestguard
+				{ 2, 30767, [PRICE_EXTRA_ITTYPE] = "BoJ:20" }, -- Inferno Tempered Gauntlets
+				{ 3, 30766, [PRICE_EXTRA_ITTYPE] = "BoJ:30" }, -- Inferno Tempered Leggings
+				{ 4, 30768, [PRICE_EXTRA_ITTYPE] = "BoJ:20" }, -- Inferno Tempered Boots
+			},
+		},
+		{
+			name = ALIL["Off Hand"],
+			[NORMAL_DIFF] = {
+				{ 1, 29266, [PRICE_EXTRA_ITTYPE] = "BoJ:33" }, -- Azure-Shield of Coldarra
+				{ 2, 29267, [PRICE_EXTRA_ITTYPE] = "BoJ:33" }, -- Light-Bearer's Faith Shield
+				{ 3, 29268, [PRICE_EXTRA_ITTYPE] = "BoJ:33" }, -- Mazthoril Honor Shield
+				{ 5, 29269, [PRICE_EXTRA_ITTYPE] = "BoJ:25" }, -- Sapphiron's Wing Bone
+				{ 6, 29270, [PRICE_EXTRA_ITTYPE] = "BoJ:25" }, -- Flametongue Seal
+				{ 7, 29271, [PRICE_EXTRA_ITTYPE] = "BoJ:25" }, -- Talisman of Kalecgos
+				{ 8, 29272, [PRICE_EXTRA_ITTYPE] = "BoJ:25" }, -- Orb of the Soul-Eater
+				{ 9, 29273, [PRICE_EXTRA_ITTYPE] = "BoJ:25" }, -- Khadgar's Knapsack
+				{ 10, 29274, [PRICE_EXTRA_ITTYPE] = "BoJ:25" }, -- Tears of Heaven
+				{ 16, 29275, [PRICE_EXTRA_ITTYPE] = "BoJ:50" }, -- Searing Sunblade
+			},
+		},
+		{
+			name = ALIL["Neck"],
+			[NORMAL_DIFF] = {
+				{ 1, 29368, [PRICE_EXTRA_ITTYPE] = "BoJ:25" }, -- Manasurge Pendant
+				{ 2, 29374, [PRICE_EXTRA_ITTYPE] = "BoJ:25" }, -- Necklace of Eternal Hope
+				{ 3, 29381, [PRICE_EXTRA_ITTYPE] = "BoJ:25" }, -- Choker of Vile Intent
+				{ 4, 29386, [PRICE_EXTRA_ITTYPE] = "BoJ:25" }, -- Necklace of the Juggernaut
+			},
+		},
+		{
+			name = ALIL["Cloak"],
+			[NORMAL_DIFF] = {
+				{ 1, 29369, [PRICE_EXTRA_ITTYPE] = "BoJ:25" }, -- Shawl of Shifting Probabilities
+				{ 2, 29375, [PRICE_EXTRA_ITTYPE] = "BoJ:25" }, -- Bishop's Cloak
+				{ 3, 29382, [PRICE_EXTRA_ITTYPE] = "BoJ:25" }, -- Blood Knight War Cloak
+				{ 4, 29385, [PRICE_EXTRA_ITTYPE] = "BoJ:25" }, -- Farstrider Defender's Cloak
+			},
+		},
+		{
+			name = ALIL["Finger"],
+			[NORMAL_DIFF] = {
+				{ 1, 29367, [PRICE_EXTRA_ITTYPE] = "BoJ:25" }, -- Ring of Cryptic Dreams
+				{ 2, 29373, [PRICE_EXTRA_ITTYPE] = "BoJ:25" }, -- Band of Halos
+				{ 3, 29379, [PRICE_EXTRA_ITTYPE] = "BoJ:25" }, -- Ring of Arathi Warlords
+				{ 4, 29384, [PRICE_EXTRA_ITTYPE] = "BoJ:25" }, -- Ring of Unyielding Force
+			},
+		},
+		{
+			name = ALIL["Trinket"],
+			[NORMAL_DIFF] = {
+				{ 1, 29370, [PRICE_EXTRA_ITTYPE] = "BoJ:41" }, -- Icon of the Silver Crescent
+				{ 2, 29376, [PRICE_EXTRA_ITTYPE] = "BoJ:41" }, -- Essence of the Martyr
+				{ 3, 29383, [PRICE_EXTRA_ITTYPE] = "BoJ:41" }, -- Bloodlust Brooch
+				{ 4, 29387, [PRICE_EXTRA_ITTYPE] = "BoJ:41" }, -- Gnomeregan Auto-Blocker 600
+			},
+		},
+		{
+			name = ALIL["Relic"],
+			[NORMAL_DIFF] = {
+				{ 1, 29388, [PRICE_EXTRA_ITTYPE] = "BoJ:15" }, -- Libram of Repentance
+				{ 2, 29389, [PRICE_EXTRA_ITTYPE] = "BoJ:15" }, -- Totem of the Pulsing Earth
+				{ 3, 29390, [PRICE_EXTRA_ITTYPE] = "BoJ:15" }, -- Everbloom Idol
+			},
+		},
+	}
+}
+--@end-version-bcc@
 
 data["TierSets"] = {
 	name = AL["Tier Sets"],

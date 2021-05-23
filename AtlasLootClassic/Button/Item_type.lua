@@ -453,9 +453,9 @@ local function EventFrame_OnEvent(frame, event, arg1, arg2)
 					local typFunc = button:GetTypeFunctions()
 					if typFunc then
 						typFunc.Refresh(button)
-						if ItemFrame then
-							ItemFrame.UpdateFilterItem(button)
-						end
+					end
+					if ItemFrame then
+						ItemFrame.UpdateFilterItem(button)
 					end
 				end
 			end
