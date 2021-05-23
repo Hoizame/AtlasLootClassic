@@ -191,11 +191,10 @@ local function OnTooltipSetItem_Hook(self)
                 end
                 if #TooltipTextCache[item] < 1 then
                     TooltipTextCache[item] = false
-                else
-                    TooltipTextCache[item][1] = "\n"..TooltipTextCache[item][1]
                 end
             end
             if TooltipTextCache[item] then
+                self:AddLine(" ")
                 for i = 1, #TooltipTextCache[item] do
                     self:AddLine(TooltipTextCache[item][i])
                 end
