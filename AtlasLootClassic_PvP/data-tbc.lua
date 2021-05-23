@@ -88,7 +88,7 @@ local PVP_INSIGNIA = {	-- Insignias
 }
 
 data["BCCHonorSet"] = {
-	name = AL["Honor Set"],
+	name = AL["Honor"],
 	ContentType = GENERAL_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
 	items = {
@@ -132,7 +132,122 @@ data["BCCHonorSet"] = {
 				{ 28,   608 }, -- Paladin / DD
 			},
 		},
+		{
+			name = AL["Weapons"].." - "..AL["One-Handed"],
+			[ALLIANCE_DIFF] = {
+				{ 1, 28954 }, -- Grand Marshal's Shanker
+				{ 2, 28955 }, -- Grand Marshal's Shiv
 
+				{ 4, 28951 }, -- Grand Marshal's Pummeler
+				{ 5, 28950 }, -- Grand Marshal's Bonecracker
+
+				{ 7, 28956 }, -- Grand Marshal's Slicer
+				{ 8, 28952 }, -- Grand Marshal's Quickblade
+
+				{ 10, 28944 }, -- Grand Marshal's Cleaver
+				{ 11, 28946 }, -- Grand Marshal's Hacker
+
+				{ 13, 28953 }, -- Grand Marshal's Right Ripper
+				{ 14, 28947 }, -- Grand Marshal's Left Ripper
+
+				{ 16, 28957 }, -- Grand Marshal's Spellblade
+			},
+			[HORDE_DIFF] = {
+				{ 1, 28929 }, -- High Warlord's Shanker
+				{ 2, 28930 }, -- High Warlord's Shiv
+
+				{ 4, 28925 }, -- High Warlord's Pummeler
+				{ 5, 28924 }, -- High Warlord's Bonecracker
+
+				{ 7, 28937 }, -- High Warlord's Slicer
+				{ 8, 28926 }, -- High Warlord's Quickblade
+
+				{ 10, 28920 }, -- High Warlord's Cleaver
+				{ 11, 28921 }, -- High Warlord's Hacker
+
+				{ 13, 28928 }, -- High Warlord's Right Ripper
+				{ 14, 28922 }, -- High Warlord's Left Ripper
+
+				{ 16, 28931 }, -- High Warlord's Spellblade
+			},
+		},
+		{
+			name = AL["Weapons"].." - "..AL["Two-Handed"],
+			[ALLIANCE_DIFF] = {
+				{ 1, 28943 }, -- Grand Marshal's Warblade
+
+				{ 3, 28945 }, -- Grand Marshal's Decapitator
+
+				{ 5, 28949 }, -- Grand Marshal's Painsaw
+
+				{ 7, 28942 }, -- Grand Marshal's Bonegrinder
+				{ 8, 28948 }, -- Grand Marshal's Maul
+
+				{ 16, 28959 }, -- Grand Marshal's War Staff
+			},
+			[HORDE_DIFF] = {
+				{ 1, 28293 }, -- High Warlord's Claymore
+
+				{ 3, 28918 }, -- High Warlord's Decapitator
+
+				{ 5, 28923 }, -- High Warlord's Painsaw
+
+				{ 7, 28917 }, -- High Warlord's Bonegrinder
+				{ 8, 28919 }, -- High Warlord's Maul
+
+				{ 16, 28935 }, -- High Warlord's War Staff
+			},
+		},
+		{
+			name = AL["Weapons"].." - "..AL["Ranged"],
+			[ALLIANCE_DIFF] = {
+				{ 1, 28960 }, -- Grand Marshal's Heavy Crossbow
+			},
+			[HORDE_DIFF] = {
+				{ 1, 28933 }, -- High Warlord's Heavy Crossbow
+			},
+		},
+		{
+			name = AL["Weapons"].." - "..ALIL["Off Hand"],
+			[ALLIANCE_DIFF] = {
+				{ 1, 28940 }, -- Grand Marshal's Barricade
+				{ 16, 28941 }, -- Grand Marshal's Battletome
+			},
+			[HORDE_DIFF] = {
+				{ 1, 28939 }, -- High Warlord's Barricade
+				{ 16, 28938 }, -- High Warlord's Battletome
+			},
+		},
+		PVP_INSIGNIA,
+	},
+}
+
+data["BCCReputationSet"] = {
+	name = AL["Reputation"],
+	ContentType = GENERAL_CONTENT,
+	LoadDifficulty = LOAD_DIFF,
+	items = {
+		{
+			name = ALIL["Sets"],
+			TableType = SET_ITTYPE,
+			[NORMAL_DIFF] = {
+				{ 1,    738 }, -- Warlock
+				{ 4,    739 }, -- Priest / Heal
+				{ 5,    740 }, -- Priest / Shadow
+				{ 7,    745 }, -- Rogue
+				{ 9,    749 }, -- Hunter
+				{ 11,   750 }, -- Warrior
+				{ 16,   741 }, -- Mage
+				{ 18,   744 }, -- Druid / Heal
+				{ 19,   743 }, -- Druid / Owl
+				{ 20,   742 }, -- Druid / Feral
+				{ 22,   747 }, -- Shaman / Heal
+				{ 23,   746 }, -- Shaman / Ele
+				{ 24,   748 }, -- Shaman / Enh
+				{ 26,   751 }, -- Paladin / Heal
+				{ 27,   752 }, -- Paladin / DD
+			},
+		},
 		PVP_INSIGNIA,
 	},
 }
