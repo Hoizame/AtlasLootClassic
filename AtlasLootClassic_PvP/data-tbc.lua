@@ -87,6 +87,56 @@ local PVP_INSIGNIA = {	-- Insignias
 	},
 }
 
+data["BCCHonorSet"] = {
+	name = AL["Honor Set"],
+	ContentType = GENERAL_CONTENT,
+	LoadDifficulty = LOAD_DIFF,
+	items = {
+		{
+			name = ALIL["Sets"],
+			TableType = SET_ITTYPE,
+			[ALLIANCE_DIFF] = {
+				{ 1,    591 }, -- Warlock
+				{ 4,    691 }, -- Priest / Heal
+				{ 5,    597 }, -- Priest / Shadow
+				{ 7,    605 }, -- Rogue
+				{ 9,    595 }, -- Hunter
+				{ 11,   590 }, -- Warrior
+				{ 16,   599 }, -- Mage
+				{ 18,   688 }, -- Druid / Heal
+				{ 19,   609 }, -- Druid / Owl
+				{ 20,   601 }, -- Druid / Feral
+				{ 22,   603 }, -- Shaman / Heal
+				{ 23,   695 }, -- Shaman / Ele
+				{ 24,   593 }, -- Shaman / Enh
+				{ 26,   693 }, -- Paladin / Heal
+				{ 27,   589 }, -- Paladin / Prot
+				{ 28,   607 }, -- Paladin / DD
+			},
+			[HORDE_DIFF] = {
+				{ 1,    592 }, -- Warlock
+				{ 4,    692 }, -- Priest / Heal
+				{ 5,    598 }, -- Priest / Shadow
+				{ 7,    606 }, -- Rogue
+				{ 9,    596 }, -- Hunter
+				{ 11,   588 }, -- Warrior
+				{ 16,   600 }, -- Mage
+				{ 18,   689 }, -- Druid / Heal
+				{ 19,   610 }, -- Druid / Owl
+				{ 20,   602 }, -- Druid / Feral
+				{ 22,   604 }, -- Shaman / Heal
+				{ 23,   696 }, -- Shaman / Ele
+				{ 24,   594 }, -- Shaman / Enh
+				{ 26,   694 }, -- Paladin / Heal
+				{ 27,   587 }, -- Paladin / Prot
+				{ 28,   608 }, -- Paladin / DD
+			},
+		},
+
+		PVP_INSIGNIA,
+	},
+}
+
 local PVP_MOUNT_PRICE = "pvpAlterac:30:pvpArathi:30:pvpWarsong:30"
 data["PvPMountsBCC"] = {
 	name = ALIL["Mounts"],
@@ -105,7 +155,7 @@ data["PvPMountsBCC"] = {
 				{ 16,  30609 }, -- Swift Nether Drake
 				{ 17,  37676 }, -- Vengeful Nether Drake
 				{ 18,  34092 }, -- Merciless Nether Drake
-				{ 19,  43516 }, -- Brutal Nether Drake NYI
+				--{ 19,  43516 }, -- Brutal Nether Drake NYI
 			},
 			[HORDE_DIFF] = {
 				{ 1, 19029, [PRICE_EXTRA_ITTYPE] = "pvpAlterac:50"  }, -- Horn of the Frostwolf Howler
@@ -117,7 +167,7 @@ data["PvPMountsBCC"] = {
 				{ 16,  30609 }, -- Swift Nether Drake
 				{ 17,  37676 }, -- Vengeful Nether Drake
 				{ 18,  34092 }, -- Merciless Nether Drake
-				{ 19,  43516 }, -- Brutal Nether Drake NYI
+				--{ 19,  43516 }, -- Brutal Nether Drake NYI
 			},
 		},
 	},

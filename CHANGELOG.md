@@ -6,6 +6,7 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 
 ## v2.2.0-bcc (May XX, 2021)
 
+- (new) item sets now also show set bonuses in tooltip
 - (bc) add Badge of Justice vendor for P1
 - (bc) add pvp insignias
 - (bc) add pvp non set items
