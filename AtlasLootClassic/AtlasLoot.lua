@@ -102,6 +102,13 @@ function AtlasLoot:AddInitFunc(func, module)
 	AtlasLoot.Init[module][#AtlasLoot.Init[module]+1] = func
 end
 
+function AtlasLoot.ReturnForGameVersion(classic, bcc)
+	if ALPrivate.IS_CLASSIC then
+		return classic
+	elseif ALPrivate.IS_BC then
+		return bcc
+	end
+end
 -- #############################
 -- ClassColors
 -- #############################
