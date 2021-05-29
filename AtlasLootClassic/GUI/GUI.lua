@@ -70,16 +70,20 @@ local function UpdateFrames(noPageUpdate, forceContentUpdate)
 		GUI.frame.contentFrame.mapButton:Hide()
 	end
 	]]--
-	if IsMapsModuleAviable() then
-		if moduleData[dataID] and moduleData[dataID].AtlasMapFile then
-			GUI.frame.contentFrame.mapButton.atlasMapFile = moduleData[dataID].items[bossID].AtlasMapFile or moduleData[dataID].AtlasMapFile
-			GUI.frame.contentFrame.mapButton:Show()
+	if moduleData[dataID] and moduleData[dataID].AtlasMapFile and IsMapsModuleAviable(moduleData[dataID].items[bossID].AtlasModule or moduleData[dataID].AtlasModule) then
+		GUI.frame.contentFrame.map.atlasMapModule = moduleData[dataID].items[bossID].AtlasModule or moduleData[dataID].AtlasModule
+		if GUI.frame.contentFrame.map.atlasMapModule then
+			GUI.frame.contentFrame.map.atlasMapFile = moduleData[dataID].items[bossID].AtlasMapFile or moduleData[dataID].AtlasMapFile
 		else
-			GUI.frame.contentFrame.mapButton.atlasMapFile = nil
-			GUI.frame.contentFrame.mapButton:Hide()
+			GUI.frame.contentFrame.map.atlasMapFile = moduleData[dataID].items[bossID].AtlasMapFile_AL or moduleData[dataID].AtlasMapFile_AL or moduleData[dataID].items[bossID].AtlasMapFile or moduleData[dataID].AtlasMapFile
 		end
-		contentFrame.map:SetMap(GUI.frame.contentFrame.mapButton.atlasMapFile)
+		GUI.frame.contentFrame.mapButton:Show()
+	else
+		GUI.frame.contentFrame.map.atlasMapFile = nil
+		GUI.frame.contentFrame.map.atlasMapModule = nil
+		GUI.frame.contentFrame.mapButton:Hide()
 	end
+	contentFrame.map:SetMap(GUI.frame.contentFrame.map.atlasMapFile)
 
 	-- MODEL
 	if moduleData[dataID].items[bossID].DisplayIDs then
@@ -464,13 +468,22 @@ local function SearchBoxOnTextChanged(self, pI)
 end
 
 -- AtlasMaps
-local ATLAS_MAPS_PATH = "Interface\\AddOns\\AtlasLootClassic_Maps\\"
+local ATLAS_MAPS_PATH = "Interface\\AddOns\\AtlasLootClassic_Maps\\%s"
+local ATLAS_MODULE_MAP_PATH_FORMAT = "Interface\\AddOns\\%s\\Images\\%s"
+local function AtlasMaps_GetMapPath(mapName, atlasModule)
+	if atlasModule then
+		return format(ATLAS_MODULE_MAP_PATH_FORMAT, atlasModule, mapName)
+	else
+		return format(ATLAS_MAPS_PATH, mapName)
+	end
+end
+
 local function AtlasMaps_SetMaps(self, map, entranceMap)
 	if map == self.map and self.entranceMap == entranceMap then
 		self:ShowOverlay(true)
 		return
 	end
-	if not map or not IsMapsModuleAviable() then
+	if not map or not IsMapsModuleAviable(self.atlasMapModule) then
 		self:Hide()
 		self.overlay:Hide()
 		return
@@ -480,6 +493,7 @@ local function AtlasMaps_SetMaps(self, map, entranceMap)
 	end
 
 	self.map = map
+	self.atlasModule = self.atlasMapModule
 	self.entranceMap = entranceMap
 
 	self:ShowEntranceMap(false, true, true)
@@ -487,10 +501,10 @@ end
 
 local function AtlasMaps_ShowEntranceMap(self, flag, showOverlay, force)
 	if (self.isEntranceMap and not flag) or (not flag and force) then
-		self:SetTexture(ATLAS_MAPS_PATH..self.map)
+		self:SetTexture(AtlasMaps_GetMapPath(self.map, self.atlasModule))
 		self.isEntranceMap = false
 	elseif (not self.isEntranceMap and flag and self.entranceMap) or (flag and self.entranceMap and force) then
-		self:SetTexture(ATLAS_MAPS_PATH..self.entranceMap)
+		self:SetTexture(AtlasMaps_GetMapPath(self.entranceMap, self.atlasModule))
 		self.isEntranceMap = true
 	end
 	self:Show()
@@ -1043,7 +1057,7 @@ function GUI:Create()
 	frame.contentFrame.map.overlay = frame.contentFrame:CreateTexture(frameName.."-map3","BACKGROUND")
 	frame.contentFrame.map.overlay:SetAllPoints(frame.contentFrame.itemBG)
 	frame.contentFrame.map.overlay:SetDrawLayer(frame.contentFrame.itemBG:GetDrawLayer(), 4)
-	frame.contentFrame.map.overlay:SetColorTexture(0, 0, 0, 0.4)
+	frame.contentFrame.map.overlay:SetColorTexture(0, 0, 0, 0.7)
 	frame.contentFrame.map.overlay:Hide()
 
 	frame.contentFrame.map.maxWidth = frame.contentFrame.map:GetWidth()

@@ -526,7 +526,7 @@ function ItemDB.ContentProto:GetNameForItemTable(index, raw)
 		if AtlasLoot.db.ContentPhase.enableOnLootTable and not ContentPhase:IsActive(GetContentPhaseFromTable(index), index.gameVersion or self.gameVersion) then
 			addEnd = addEnd.." "..format(CONTENT_PHASE_FORMAT, GetContentPhaseFromTable(index))
 		end
-		if IsMapsModuleAviable() and index.AtlasMapBossID then
+		if IsMapsModuleAviable(self.AtlasModule or index.AtlasModule) and index.AtlasMapBossID then
 			addStart = addStart.."|cffffffff"..index.AtlasMapBossID..")|r "
 		end
 		if AtlasLoot.db.enableBossLevel and index.Level then

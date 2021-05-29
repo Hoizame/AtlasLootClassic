@@ -9,6 +9,7 @@ AtlasLoot.AtlasLootDBDefaults = {
 		enableAutoSelect = true,
 		enableAutoSelectBoss = true,
 		showDropRate = true,
+		enableAtlasMapIntegration = true,
 		ContentPhase = {
 			enableOnLootTable = true,
 			enableOnItems = true,

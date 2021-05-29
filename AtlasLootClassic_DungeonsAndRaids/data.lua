@@ -42,6 +42,8 @@ local DUNGEON_CONTENT = data:AddContentType(AL["Dungeons"], ATLASLOOT_DUNGEON_CO
 local RAID20_CONTENT = data:AddContentType(AL["20 Raids"], ATLASLOOT_RAID20_COLOR)
 local RAID40_CONTENT = data:AddContentType(AL["40 Raids"], ATLASLOOT_RAID40_COLOR)
 
+local ATLAS_MODULE_NAME = "Atlas_ClassicWoW"
+
 local BLUE = "|cff6666ff"
 local GREY = "|cff999999"
 local GREN = "|cff66cc33"
@@ -261,6 +263,7 @@ local DM_BOOKS = { -- DMBooks
 data["Ragefire"] = {
 	MapID = 2437,
 	InstanceID = 389,
+	AtlasModule = ATLAS_MODULE_NAME,
 	AtlasMapID = "Ragefire",
 	AtlasMapFile = "RagefireChasm",
 	ContentType = DUNGEON_CONTENT,
@@ -298,8 +301,10 @@ data["WailingCaverns"] = {
 	MapID = 718,
 	InstanceID = 43,
 	SubAreaIDs = { 15285, 15301, 15294, 15300, 15292, 17731 },
+	AtlasModule = ATLAS_MODULE_NAME,
 	AtlasMapID = "WailingCaverns",
-	AtlasMapFile = {"WailingCaverns", "WailingCavernsEnt"},
+	AtlasMapFile = {"CL_WailingCaverns", "CL_WailingCavernsEnt"},
+	AtlasMapFile_AL = {"WailingCaverns", "WailingCavernsEnt"},
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	LevelRange = {10, 17, 24},
@@ -428,8 +433,10 @@ data["TheDeadmines"] = {
 	MapID = 1581,
 	InstanceID = 36,
 	SubAreaIDs = { 19444, 19529, 19502, 26104 },
+	AtlasModule = ATLAS_MODULE_NAME,
 	AtlasMapID = "TheDeadmines",
-	AtlasMapFile = {"TheDeadmines", "TheDeadminesEnt"},
+	AtlasMapFile_AL = {"TheDeadmines", "TheDeadminesEnt"},
+	AtlasMapFile = {"CL_TheDeadmines", "CL_TheDeadminesEnt"},
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	LevelRange = {10, 17, 26},
@@ -566,8 +573,10 @@ data["TheDeadmines"] = {
 data["ShadowfangKeep"] = {
 	MapID = 209,
 	InstanceID = 33,
+	AtlasModule = ATLAS_MODULE_NAME,
 	AtlasMapID = "ShadowfangKeep",
-	AtlasMapFile = "ShadowfangKeep",
+	AtlasMapFile = "CL_ShadowfangKeep",
+	AtlasMapFile_AL = "ShadowfangKeep",
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	LevelRange = {11, 22, 30},
@@ -744,8 +753,10 @@ data["ShadowfangKeep"] = {
 data["BlackfathomDeeps"] = {
 	MapID = 719,
 	InstanceID = 48,
+	AtlasModule = ATLAS_MODULE_NAME,
 	AtlasMapID = "BlackfathomDeeps",
-	AtlasMapFile = {"BlackfathomDeeps", "BlackfathomDeepsEnt"},
+	AtlasMapFile = {"CL_BlackfathomDeepsA", "CL_BlackfathomDeepsEnt"},
+	AtlasMapFile_AL = {"BlackfathomDeeps", "BlackfathomDeepsEnt"},
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	LevelRange = {15, 24, 32},
@@ -790,6 +801,7 @@ data["BlackfathomDeeps"] = {
 			npcID = 12876,
 			Level = 28,
 			DisplayIDs = {{110}},
+			AtlasMapFile = {"CL_BlackfathomDeepsB", "CL_BlackfathomDeepsEnt"},
 			AtlasMapBossID = 7,
 			[NORMAL_DIFF] = {
 				{ 1,  16782 }, -- Strange Water Globe
@@ -800,6 +812,7 @@ data["BlackfathomDeeps"] = {
 			npcID = 4832,
 			Level = 27,
 			DisplayIDs = {{4939}},
+			AtlasMapFile = {"CL_BlackfathomDeepsB", "CL_BlackfathomDeepsEnt"},
 			AtlasMapBossID = 8,
 			[NORMAL_DIFF] = {
 				{ 1,  1155 }, -- Rod of the Sleepwalker
@@ -811,6 +824,7 @@ data["BlackfathomDeeps"] = {
 			npcID = 4830,
 			Level = 26,
 			DisplayIDs = {{1816}},
+			AtlasMapFile = {"CL_BlackfathomDeepsC", "CL_BlackfathomDeepsEnt"},
 			AtlasMapBossID = 9,
 			[NORMAL_DIFF] = {
 				{ 1,  6901 }, -- Glowing Thresher Cape
@@ -824,6 +838,7 @@ data["BlackfathomDeeps"] = {
 			Level = 28,
 			DisplayIDs = {{2837}},
 			AtlasMapBossID = 10,
+			AtlasMapFile = {"CL_BlackfathomDeepsB", "CL_BlackfathomDeepsEnt"},
 			[NORMAL_DIFF] = {
 				{ 1,  6911 }, -- Moss Cinch
 				{ 2,  6910 }, -- Leech Pants
@@ -853,8 +868,10 @@ data["BlackfathomDeeps"] = {
 data["TheStockade"] = {
 	MapID = 717,
 	InstanceID = 34,
+	AtlasModule = ATLAS_MODULE_NAME,
 	AtlasMapID = "TheStockade",
-	AtlasMapFile = "TheStockade",
+	AtlasMapFile = "CL_TheStockade",
+	AtlasMapFile_AL = "TheStockade",
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	LevelRange = {15, 24, 32},
@@ -895,8 +912,10 @@ data["TheStockade"] = {
 data["Gnomeregan"] = {
 	MapID = 721,
 	InstanceID = 90,
+	AtlasModule = ATLAS_MODULE_NAME,
 	AtlasMapID = "Gnomeregan",
-	AtlasMapFile = {"Gnomeregan", "GnomereganEnt"},
+	AtlasMapFile = {"CL_Gnomeregan", "CL_GnomereganEnt"},
+	AtlasMapFile_AL = {"Gnomeregan", "GnomereganEnt"},
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	LevelRange = {19, 29, 38},
@@ -1022,8 +1041,10 @@ data["Gnomeregan"] = {
 data["RazorfenKraul"] = {
 	MapID = 491,
 	InstanceID = 47,
+	AtlasModule = ATLAS_MODULE_NAME,
 	AtlasMapID = "RazorfenKraul",
-	AtlasMapFile = "RazorfenKraul",
+	AtlasMapFile = "CL_RazorfenKraul",
+	AtlasMapFile_AL = "RazorfenKraul",
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	LevelRange = {25, 29, 38},
@@ -1144,8 +1165,10 @@ data["ScarletMonasteryGraveyard"] = {
 	InstanceID = 189,
 	SubAreaIDs = { 21379, 24000, 23805 },
 	name = C_Map.GetAreaInfo(796) .." - ".. AL["Graveyard"],
+	AtlasModule = ATLAS_MODULE_NAME,
 	AtlasMapID = "ScarletMonastery",
-	AtlasMapFile = {"SMGraveyard", "SMEnt"},
+	AtlasMapFile = {"CL_SMGraveyard", "CL_ScarletMonasteryEnt"},
+	AtlasMapFile_AL = {"SMGraveyard", "SMEnt"},
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	LevelRange = {20, 26, 36},
@@ -1244,8 +1267,10 @@ data["ScarletMonasteryLibrary"] = {
 	InstanceID = 189,
 	SubAreaIDs = { 21426, 21444, 21420 },
 	name = C_Map.GetAreaInfo(796) .." - ".. AL["Library"],
+	AtlasModule = ATLAS_MODULE_NAME,
 	AtlasMapID = "ScarletMonastery",
-	AtlasMapFile = {"SMLibrary", "SMEnt"},
+	AtlasMapFile = {"CL_SMLibrary", "CL_ScarletMonasteryEnt"},
+	AtlasMapFile_AL = {"SMLibrary", "SMEnt"},
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	LevelRange = {20, 29, 39},
@@ -1324,8 +1349,10 @@ data["ScarletMonasteryArmory"] = {
 	InstanceID = 189,
 	SubAreaIDs = { 21460, 21455, 21448, 21457 },
 	name = C_Map.GetAreaInfo(796) .." - ".. AL["Armory"],
+	AtlasModule = ATLAS_MODULE_NAME,
 	AtlasMapID = "ScarletMonastery",
-	AtlasMapFile = {"SMArmory", "SMEnt"},
+	AtlasMapFile = {"CL_SMArmory", "CL_ScarletMonasteryEnt"},
+	AtlasMapFile_AL = {"SMArmory", "SMEnt"},
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	LevelRange = {20, 32, 42},
@@ -1384,8 +1411,10 @@ data["ScarletMonasteryCathedral"] = {
 	InstanceID = 189,
 	SubAreaIDs = { 21401, 21410 },
 	name = C_Map.GetAreaInfo(796) .." - ".. AL["Cathedral"],
+	AtlasModule = ATLAS_MODULE_NAME,
 	AtlasMapID = "ScarletMonastery",
-	AtlasMapFile = {"SMCathedral", "SMEnt"},
+	AtlasMapFile = {"CL_SMCathedral", "CL_ScarletMonasteryEnt"},
+	AtlasMapFile_AL = {"SMCathedral", "SMEnt"},
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	LevelRange = {20, 35, 45},
@@ -1464,255 +1493,13 @@ data["ScarletMonasteryCathedral"] = {
 	},
 }
 
---[[
-data["ScarletMonastery"] = {
-	MapID = 796,
-	AtlasMapID = "ScarletMonastery",
-	ContentType = DUNGEON_CONTENT,
-	LoadDifficulty = NORMAL_DIFF,
-	LevelRange = {20, 34, 45},
-	items = {
-		-- Graveyard
-		{ -- SMVishas
-			name = AL["Interrogator Vishas"],
-			npcID = 3983,
-			DisplayIDs = {{2044}},
-			[NORMAL_DIFF] = {
-				{ 1,  7682 }, -- Torturing Poker
-				{ 3,  7683 }, -- Bloody Brass Knuckles
-			},
-		},
-		{ -- SMAzshir
-			name = AL["Azshir the Sleepless"],
-			npcID = 6490,
-			DisplayIDs = {{5534}},
-			specialType = "rare",
-			[NORMAL_DIFF] = {
-				{ 1,  7709 }, -- Blighted Leggings
-				{ 2,  7708 }, -- Necrotic Wand
-				{ 3,  7731 }, -- Ghostshard Talisman
-			},
-		},
-		{ -- SMFallenChampion
-			name = AL["Fallen Champion"],
-			npcID = 6488,
-			DisplayIDs = {{5230}},
-			specialType = "rare",
-			[NORMAL_DIFF] = {
-				{ 1,  7691 }, -- Embalmed Shroud
-				{ 2,  7690 }, -- Ebon Vise
-				{ 3,  7689 }, -- Morbid Dawn
-			},
-		},
-		{ -- SMIronspine
-			name = AL["Ironspine"],
-			npcID = 6489,
-			DisplayIDs = {{5231}},
-			specialType = "rare",
-			[NORMAL_DIFF] = {
-				{ 1,  7688 }, -- Ironspine's Ribcage
-				{ 2,  7687 }, -- Ironspine's Fist
-				{ 3,  7686 }, -- Ironspine's Eye
-			},
-		},
-		{ -- SMBloodmageThalnos
-			name = AL["Bloodmage Thalnos"],
-			npcID = 4543,
-			DisplayIDs = {{11396}},
-			[NORMAL_DIFF] = {
-				{ 1,  7685 }, -- Orb of the Forgotten Seer
-				{ 3,  7684 }, -- Bloodmage Mantle
-			},
-		},
-		-- Library
-		{ -- SMHoundmasterLoksey
-			name = AL["Houndmaster Loksey"],
-			npcID = 3974,
-			DisplayIDs = {{2040}},
-			[NORMAL_DIFF] = {
-				{ 1,  7710 }, -- Loksey's Training Stick
-				{ 3,  7756 }, -- Dog Training Gloves
-				{ 4,  3456 }, -- Dog Whistle
-			},
-		},
-		{ -- SMDoan
-			name = AL["Arcanist Doan"],
-			npcID = 6487,
-			DisplayIDs = {{5266}},
-			[NORMAL_DIFF] = {
-				{ 1,  7714 }, -- Hypnotic Blade
-				{ 2,  7713 }, -- Illusionary Rod
-				{ 4,  7712 }, -- Mantle of Doan
-				{ 5,  7711 }, -- Robe of Doan
-			},
-		},
-		-- Armory
-		{ -- SMHerod
-			name = AL["Herod"],
-			npcID = 3975,
-			DisplayIDs = {{2041}},
-			[NORMAL_DIFF] = {
-				{ 1,  7719 }, -- Raging Berserker's Helm
-				{ 2,  7718 }, -- Herod's Shoulder
-				{ 3,  10330 }, -- Scarlet Leggings
-				{ 4,  7717 }, -- Ravager
-			},
-		},
-		-- Cathedral
-		{ -- SMFairbanks
-			name = AL["High Inquisitor Fairbanks"],
-			npcID = 4542,
-			DisplayIDs = {{2605}},
-			[NORMAL_DIFF] = {
-				{ 1,  19507 }, -- Inquisitor's Shawl
-				{ 2,  19508 }, -- Branded Leather Bracers
-				{ 3,  19509 }, -- Dusty Mail Boots
-			},
-		},
-		{ -- SMMograine
-			name = AL["Scarlet Commander Mograine"],
-			npcID = 3976,
-			DisplayIDs = {{2042}},
-			[NORMAL_DIFF] = {
-				{ 1,  7724 }, -- Gauntlets of Divinity
-				{ 2,  10330 }, -- Scarlet Leggings
-				{ 3,  7726 }, -- Aegis of the Scarlet Commander
-				{ 4,  7723 }, -- Mograine's Might
-			},
-		},
-		{ -- SMWhitemane
-			name = AL["High Inquisitor Whitemane"],
-			npcID = 3977,
-			DisplayIDs = {{2043}},
-			[NORMAL_DIFF] = {
-				{ 1,  7720 }, -- Whitemane's Chapeau
-				{ 2,  7722 }, -- Triune Amulet
-				{ 3,  7721 }, -- Hand of Righteousness
-			},
-		},
-
-
-		{ -- SMGTrash
-			name = AL["Graveyard"] .." ".. AL["Trash"],
-			ExtraList = true,
-			[NORMAL_DIFF] = {
-				{ 1,  5819 }, -- Sunblaze Coif
-				{ 2,  7727 }, -- Watchman Pauldrons
-				{ 3,  7728 }, -- Beguiler Robes
-				{ 4,  7754 }, -- Harbinger Boots
-				{ 5,  10332 }, -- Scarlet Boots
-				{ 6,  2262 }, -- Mark of Kern
-				{ 7,  7787 }, -- Resplendent Guardian
-				{ 8,  7729 }, -- Chesterfall Musket
-				{ 9,  7761 }, -- Steelclaw Reaver
-				{ 10, 7752 }, -- Dreamslayer
-				{ 11, 8226 }, -- The Butcher
-				{ 12, 7786 }, -- Headsplitter
-				{ 13, 7753 }, -- Bloodspiller
-				{ 14, 7730 }, -- Cobalt Crusher
-			},
-		},
-		{ -- SMLTrash
-			name = AL["Library"] .." ".. AL["Trash"],
-			ExtraList = true,
-			[NORMAL_DIFF] = {
-				{ 1,  5819 }, -- Sunblaze Coif
-				{ 2,  7755 }, -- Flintrock Shoulders
-				{ 3,  7727 }, -- Watchman Pauldrons
-				{ 4,  7728 }, -- Beguiler Robes
-				{ 5,  7759 }, -- Archon Chestpiece
-				{ 6,  7760 }, -- Warchief Kilt
-				{ 7,  7754 }, -- Harbinger Boots
-				{ 8,  10332 }, -- Scarlet Boots
-				{ 9,  1992 }, -- Swampchill Fetish
-				{ 10, 2262 }, -- Mark of Kern
-				{ 11, 7787 }, -- Resplendent Guardian
-				{ 12, 7729 }, -- Chesterfall Musket
-				{ 13, 7761 }, -- Steelclaw Reaver
-				{ 14, 7752 }, -- Dreamslayer
-				{ 15, 8226 }, -- The Butcher
-				{ 16, 7786 }, -- Headsplitter
-				{ 17, 5756 }, -- Sliverblade
-				{ 18, 7736 }, -- Fight Club
-				{ 19, 8225 }, -- Tainted Pierce
-				{ 20, 7753 }, -- Bloodspiller
-				{ 21, 7730 }, -- Cobalt Crusher
-				{ 22, 7758 }, -- Ruthless Shiv
-				{ 23, 7757 }, -- Windweaver Staff
-			},
-		},
-		{ -- SMATrash
-			name = AL["Armory"] .." ".. AL["Trash"],
-			ExtraList = true,
-			[NORMAL_DIFF] = {
-				{ 1,  5819 }, -- Sunblaze Coif
-				{ 2,  7755 }, -- Flintrock Shoulders
-				{ 3,  7727 }, -- Watchman Pauldrons
-				{ 4,  7728 }, -- Beguiler Robes
-				{ 5,  7759 }, -- Archon Chestpiece
-				{ 6,  7754 }, -- Harbinger Boots
-				{ 7,  10332 }, -- Scarlet Boots
-				{ 8,  1992 }, -- Swampchill Fetish
-				{ 9,  2262 }, -- Mark of Kern
-				{ 10, 7787 }, -- Resplendent Guardian
-				{ 11, 7729 }, -- Chesterfall Musket
-				{ 12, 7761 }, -- Steelclaw Reaver
-				{ 13, 7752 }, -- Dreamslayer
-				{ 14, 8226 }, -- The Butcher
-				{ 15, 7786 }, -- Headsplitter
-				{ 16, 5756 }, -- Sliverblade
-				{ 17, 7736 }, -- Fight Club
-				{ 18, 8225 }, -- Tainted Pierce
-				{ 19, 7753 }, -- Bloodspiller
-				{ 20, 7730 }, -- Cobalt Crusher
-				{ 21, 7757 }, -- Windweaver Staff
-				{ 23, 10333 }, -- Scarlet Wristguards
-				{ 24, 10329 }, -- Scarlet Belt
-				{ 26, 23192 }, -- Tabard of the Scarlet Crusade
-			},
-		},
-		{ -- SMCTrash
-			name = AL["Cathedral"] .." ".. AL["Trash"],
-			ExtraList = true,
-			[NORMAL_DIFF] = {
-				{ 1,  5819 }, -- Sunblaze Coif
-				{ 2,  7755 }, -- Flintrock Shoulders
-				{ 3,  7727 }, -- Watchman Pauldrons
-				{ 4,  7728 }, -- Beguiler Robes
-				{ 5,  7759 }, -- Archon Chestpiece
-				{ 6,  7760 }, -- Warchief Kilt
-				{ 7,  7754 }, -- Harbinger Boots
-				{ 8,  10332 }, -- Scarlet Boots
-				{ 9,  1992 }, -- Swampchill Fetish
-				{ 10, 2262 }, -- Mark of Kern
-				{ 11, 7787 }, -- Resplendent Guardian
-				{ 12, 7729 }, -- Chesterfall Musket
-				{ 13, 7761 }, -- Steelclaw Reaver
-				{ 14, 7752 }, -- Dreamslayer
-				{ 15, 8226 }, -- The Butcher
-				{ 16, 7786 }, -- Headsplitter
-				{ 17, 5756 }, -- Sliverblade
-				{ 18, 7736 }, -- Fight Club
-				{ 19, 8225 }, -- Tainted Pierce
-				{ 20, 7753 }, -- Bloodspiller
-				{ 21, 7730 }, -- Cobalt Crusher
-				{ 22, 7758 }, -- Ruthless Shiv
-				{ 23, 7757 }, -- Windweaver Staff
-				{ 25, 10328 }, -- Scarlet Chestpiece
-				{ 26, 10331 }, -- Scarlet Gauntlets
-				{ 27, 10329 }, -- Scarlet Belt
-			},
-		},
-		KEYS,
-	},
-}
-]]--
-
 data["RazorfenDowns"] = {
 	MapID = 722,
 	InstanceID = 129,
+	AtlasModule = ATLAS_MODULE_NAME,
 	AtlasMapID = "RazorfenDowns",
-	AtlasMapFile = "RazorfenDowns",
+	AtlasMapFile = "CL_RazorfenDowns",
+	AtlasMapFile_AL = "RazorfenDowns",
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	LevelRange = {35, 37, 46},
@@ -1838,10 +1625,12 @@ data["RazorfenDowns"] = {
 data["Uldaman"] = {
 	MapID = 1337, -- just no...
 	InstanceID = 70,
+	AtlasModule = ATLAS_MODULE_NAME,
 	AtlasMapID = "Uldaman",
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
-	AtlasMapFile = {"Uldaman", "UldamanEnt"},
+	AtlasMapFile = {"CL_Uldaman", "CL_UldamanEnt"},
+	AtlasMapFile_AL = {"Uldaman", "UldamanEnt"},
 	LevelRange = {30, 41, 51},
 	items = {
 		{ -- UldEric
@@ -2015,8 +1804,10 @@ data["Uldaman"] = {
 data["Zul'Farrak"] = {
 	MapID = 1176,
 	InstanceID = 209,
+	AtlasModule = ATLAS_MODULE_NAME,
 	AtlasMapID = "Zul'Farrak",
-	AtlasMapFile = "ZulFarrak",
+	AtlasMapFile = "CL_ZulFarrak",
+	AtlasMapFile_AL = "ZulFarrak",
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	LevelRange = {39, 44, 54},
@@ -2196,8 +1987,10 @@ data["Zul'Farrak"] = {
 data["Maraudon"] = {
 	MapID = 2100,
 	InstanceID = 349,
+	AtlasModule = ATLAS_MODULE_NAME,
 	AtlasMapID = "Maraudon",
-	AtlasMapFile = {"Maraudon", "MaraudonEnt"},
+	AtlasMapFile = {"CL_Maraudon", "CL_MaraudonEnt"},
+	AtlasMapFile_AL = {"Maraudon", "MaraudonEnt"},
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	LevelRange = {25, 46, 55},
@@ -2392,8 +2185,10 @@ data["Maraudon"] = {
 data["TheTempleOfAtal'Hakkar"] = {
 	MapID = 1477,
 	InstanceID = 109,
+	AtlasModule = ATLAS_MODULE_NAME,
 	AtlasMapID = "TheTempleOfAtal'Hakkar",
-	AtlasMapFile = { "TheSunkenTemple", "TheSunkenTempleEnt" },
+	AtlasMapFile = { "CL_TheSunkenTemple", "CL_TheSunkenTempleEnt" },
+	AtlasMapFile_AL = { "TheSunkenTemple", "TheSunkenTempleEnt" },
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	LevelRange = {45, 50, 60},
@@ -2594,8 +2389,10 @@ data["BlackrockDepths"] = {
 	MapID = 1584,
 	InstanceID = 230,
 	SubAreaIDs = { 26758, 26761, 26747, 26733, 26755, 26740, 26751, 26759, 26735, 26769, 26768, 26766, 26781, 26765, 26764, 26742, 26750, 26745, 26784, 26749 },
+	AtlasModule = ATLAS_MODULE_NAME,
 	AtlasMapID = "BlackrockDepths",
-	AtlasMapFile = {"BlackrockDepths", "BlackrockMountainEnt"},
+	AtlasMapFile = {"CL_BlackrockDepths", "CL_BlackrockMountainEnt"},
+	AtlasMapFile_AL = {"BlackrockDepths", "BlackrockMountainEnt"},
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	LevelRange = {42, 52, 60},
@@ -3087,8 +2884,10 @@ data["LowerBlackrockSpire"] = {
 	MapID = 1583,
 	InstanceID = 229,
 	SubAreaIDs = { 26683, 26718, 26711, 26713, 26686, 32528, 26688 },
+	AtlasModule = ATLAS_MODULE_NAME,
 	AtlasMapID = "LowerBlackrockSpire",
-	AtlasMapFile = {"BlackrockSpireLower", "BlackrockMountainEnt"},
+	AtlasMapFile = {"CL_BlackrockSpireLower", "CL_BlackrockMountainEnt"},
+	AtlasMapFile_AL = {"BlackrockSpireLower", "BlackrockMountainEnt"},
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	LevelRange = {48, 55, 60},
@@ -3377,8 +3176,10 @@ data["UpperBlackrockSpire"] = {
 	MapID = 1583,
 	InstanceID = 229,
 	SubAreaIDs = { 26670, 26668, 26684, 26662, 26642, 26683, 15492, 26666, 26715 },
+	AtlasModule = ATLAS_MODULE_NAME,
 	AtlasMapID = "UpperBlackrockSpire",
-	AtlasMapFile = {"BlackrockSpireUpper", "BlackrockMountainEnt"},
+	AtlasMapFile = {"CL_BlackrockSpireUpper", "CL_BlackrockMountainEnt"},
+	AtlasMapFile_AL = {"BlackrockSpireUpper", "BlackrockMountainEnt"},
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	LevelRange = {48, 55, 60},
@@ -3594,6 +3395,7 @@ data["DireMaulEast"] = {
 	MapID = 2557,
 	--InstanceID = 429,
 	SubAreaIDs = { 34776, 33730 },
+	AtlasModule = ATLAS_MODULE_NAME,
 	AtlasMapID = "DireMaul",
 	AtlasMapFile = {"DireMaulEast", "DireMaulEnt"},
 	ContentType = DUNGEON_CONTENT,
@@ -3714,6 +3516,7 @@ data["DireMaulWest"] = {
 	MapID = 2557,
 	--InstanceID = 429,
 	SubAreaIDs = { 33748, 33749, 33750, 33710 },
+	AtlasModule = ATLAS_MODULE_NAME,
 	AtlasMapID = "DireMaul",
 	AtlasMapFile = {"DireMaulWest", "DireMaulEnt"},
 	ContentType = DUNGEON_CONTENT,
@@ -3865,6 +3668,7 @@ data["DireMaulNorth"] = {
 	MapID = 2557,
 	--InstanceID = 429,
 	SubAreaIDs = { 33774, 33775 },
+	AtlasModule = ATLAS_MODULE_NAME,
 	AtlasMapID = "DireMaulNorth",
 	AtlasMapFile = {"DireMaulNorth", "DireMaulEnt"},
 	ContentType = DUNGEON_CONTENT,
@@ -4069,8 +3873,10 @@ data["Scholomance"] = {
 	MapID = 2057,
 	InstanceID = 289,
 	SubAreaIDs = { 32549, 32574, 32567, 32577, 32566, 32565, 32581, 32579, 32573, 32568, 32576, 32569 },
+	AtlasModule = ATLAS_MODULE_NAME,
 	AtlasMapID = "Scholomance",
-	AtlasMapFile = "Scholomance",
+	AtlasMapFile = "CL_Scholomance",
+	AtlasMapFile_AL = "Scholomance",
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	LevelRange = {45, 58, 60},
@@ -4523,8 +4329,10 @@ data["Stratholme"] = {
 		-- Ziggurats
 		32344, 32345, 32349,
 	},
+	AtlasModule = ATLAS_MODULE_NAME,
 	AtlasMapID = "Stratholme",
-	AtlasMapFile = "Stratholme",
+	AtlasMapFile = "CL_Stratholme",
+	AtlasMapFile_AL = "Stratholme",
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	LevelRange = {37, 58, 60},
@@ -5155,8 +4963,10 @@ data["WorldBosses"] = {
 data["MoltenCore"] = {
 	MapID = 2717,
 	InstanceID = 409,
+	AtlasModule = ATLAS_MODULE_NAME,
 	AtlasMapID = "MoltenCore",
-	AtlasMapFile = "MoltenCore",
+	AtlasMapFile = "CL_MoltenCore",
+	AtlasMapFile_AL = "MoltenCore",
 	ContentType = RAID40_CONTENT,
 	LoadDifficulty = RAID40_DIFF,
 	items = {
@@ -5494,8 +5304,10 @@ data["MoltenCore"] = {
 data["Onyxia"] = {
 	MapID = 2159,
 	InstanceID = 249,
+	AtlasModule = ATLAS_MODULE_NAME,
 	AtlasMapID = "Onyxia",
-	AtlasMapFile = "OnyxiasLair",
+	AtlasMapFile = "CL_OnyxiasLair",
+	AtlasMapFile_AL = "OnyxiasLair",
 	ContentType = RAID40_CONTENT,
 	LoadDifficulty = RAID40_DIFF,
 	items = {
@@ -5541,8 +5353,10 @@ data["Onyxia"] = {
 data["Zul'Gurub"] = {
 	MapID = 1977,
 	InstanceID = 309,
+	AtlasModule = ATLAS_MODULE_NAME,
 	AtlasMapID = "Zul'Gurub", -- ??
-	AtlasMapFile = "ZulGurub",
+	AtlasMapFile = "CL_ZulGurub",
+	AtlasMapFile_AL = "ZulGurub",
 	ContentType = RAID20_CONTENT,
 	LoadDifficulty = RAID20_DIFF,
 	ContentPhase = 4,
@@ -5920,8 +5734,10 @@ data["Zul'Gurub"] = {
 data["BlackwingLair"] = {
 	MapID = 2677,
 	InstanceID = 469,
+	AtlasModule = ATLAS_MODULE_NAME,
 	AtlasMapID = "BlackwingLair",
-	AtlasMapFile = "BlackwingLair",
+	AtlasMapFile = "CL_BlackwingLair",
+	AtlasMapFile_AL = "BlackwingLair",
 	ContentType = RAID40_CONTENT,
 	LoadDifficulty = RAID40_DIFF,
 	ContentPhase = 3,
@@ -6184,8 +6000,10 @@ data["BlackwingLair"] = {
 data["TheRuinsofAhnQiraj"] = { -- AQ20
 	MapID = 3429,
 	InstanceID = 509,
+	AtlasModule = ATLAS_MODULE_NAME,
 	AtlasMapID = "TheRuinsofAhnQiraj",
-	AtlasMapFile = "TheRuinsofAhnQiraj",
+	AtlasMapFile = "CL_TheRuinsofAhnQiraj",
+	AtlasMapFile_AL = "TheRuinsofAhnQiraj",
 	ContentType = RAID20_CONTENT,
 	LoadDifficulty = RAID20_DIFF,
 	ContentPhase = 5,
@@ -6406,8 +6224,10 @@ data["TheRuinsofAhnQiraj"] = { -- AQ20
 data["TheTempleofAhnQiraj"] = { -- AQ40
 	MapID = 3428,
 	InstanceID = 531,
+	AtlasModule = ATLAS_MODULE_NAME,
 	AtlasMapID = "TheTempleofAhnQiraj",
-	AtlasMapFile = "TheTempleofAhnQiraj",
+	AtlasMapFile = "CL_TheTempleofAhnQiraj",
+	AtlasMapFile_AL = "TheTempleofAhnQiraj",
 	ContentType = RAID40_CONTENT,
 	LoadDifficulty = RAID40_DIFF,
 	ContentPhase = 5,
@@ -6659,8 +6479,10 @@ data["TheTempleofAhnQiraj"] = { -- AQ40
 data["Naxxramas"] = {
 	MapID = 3456,
 	InstanceID = 533,
+	AtlasModule = ATLAS_MODULE_NAME,
 	AtlasMapID = "Naxxramas",
-	AtlasMapFile = "Naxxramas",
+	AtlasMapFile = "CL_Naxxramas",
+	AtlasMapFile_AL = "Naxxramas",
 	ContentType = RAID40_CONTENT,
 	LoadDifficulty = RAID40_DIFF,
 	ContentPhase = 6,

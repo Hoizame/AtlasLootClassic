@@ -23,6 +23,7 @@ local AllLoaded
 local LoaderQueue = {}
 local LoaderQueueSaves = {}
 local ModuleList = {}
+local AtlasModuleList = {}
 local LoadModuleSpam = {}
 
 local AtlasMapsModuleLoaded = false
@@ -117,6 +118,8 @@ function Loader.Init()
 				moduleName = GetAddOnMetadata(tmp[1], "X-AtlasLootClassic-ModuleName") or tmp[1],
 				lootModule = GetAddOnMetadata(tmp[1], "X-AtlasLootClassic-LootModule"),
 			}
+		elseif tmp[1] and str_find(tmp[1], "Atlas_") then
+			AtlasModuleList[tmp[1]] = GetAddOnEnableState(playerName, i) ~= 0
 		end
 	end
 	IsInit = true
@@ -259,6 +262,14 @@ function Loader:LoadAllModules(loadCustom)
 	end
 end
 
-function Loader:IsMapsModuleAviable()
-	return AtlasMapsModuleLoaded
+function Loader.IsMapsModuleAviable(moduleName)
+	if moduleName then
+		if AtlasLoot.db.enableAtlasMapIntegration then
+			return AtlasModuleList[moduleName]
+		else
+			return false
+		end
+	else
+		return AtlasMapsModuleLoaded
+	end
 end

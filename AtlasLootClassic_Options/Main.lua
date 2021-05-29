@@ -95,6 +95,13 @@ Options.config.args.atlasloot = {
 			disabled = function() return not AtlasLoot.db.enableAutoSelect end,
 			name = AL["Enable auto selection of bosses if available."],
 		},
+		enableAtlasMapIntegration = {
+			order = 9,
+			type = "toggle",
+			width = "full",
+			name = AL["Enable Atlas map integration if available."],
+			set = function(info, value) AtlasLoot.db.enableAtlasMapIntegration = value AtlasLoot.GUI.OnLevelRangeRefresh() end,
+		},
 		headerSetting = {
 			order = 10,
 			type = "header",

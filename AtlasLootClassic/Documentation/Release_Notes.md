@@ -2,6 +2,10 @@
 
 This mod is distributed under Version 2 of the GPL.  A copy of the GPL is included in this zip file with links to non-english translations.
 
+## v2.2.1 (May 29, 2021)
+
+- (bc) fix lua error on loading with gem socket filter
+
 ## v2.2.0-bcc (May 23, 2021)
 
 - (new) item sets now also show set bonuses in tooltip
