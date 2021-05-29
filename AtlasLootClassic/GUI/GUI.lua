@@ -974,10 +974,38 @@ function GUI:Create()
 	frame.titleFrame.newVersion:SetText(AL["New version aviable!"])
 
 	frame.gameVersionButton = CreateFrame("Button", frameName.."-gameVersionButton", frame)
-	frame.gameVersionButton:SetPoint("TOPLEFT", frame, "TOPLEFT", 258, -37)
+	frame.gameVersionButton:SetPoint("TOPLEFT", frame, "TOPLEFT", 258, -33)
 	frame.gameVersionButton:SetWidth(64)
 	frame.gameVersionButton:SetHeight(32)
+	frame.gameVersionButton:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
 	frame.gameVersionButton:SetScript("OnClick", GameVersionSwitch_OnClick)
+
+	frame.gameVersionButton.Box = {}
+
+	local function CreateLineForGameVersion()
+		local l = frame.gameVersionButton:CreateLine()
+		l:SetThickness(1)
+		l:SetColorTexture(1,0.82,0,0.4)
+		frame.gameVersionButton.Box[#frame.gameVersionButton.Box+1] = l
+		return l
+	end
+
+	local lineGap = 1
+	local l = CreateLineForGameVersion()
+	l:SetStartPoint("TOPLEFT",-lineGap,lineGap)
+	l:SetEndPoint("TOPRIGHT",lineGap,lineGap)
+
+	l = CreateLineForGameVersion()
+	l:SetStartPoint("TOPRIGHT",lineGap,lineGap)
+	l:SetEndPoint("BOTTOMRIGHT",lineGap,-lineGap)
+
+	l = CreateLineForGameVersion()
+	l:SetStartPoint("BOTTOMRIGHT",lineGap,-lineGap)
+	l:SetEndPoint("BOTTOMLEFT",-lineGap,-lineGap)
+
+	l = CreateLineForGameVersion()
+	l:SetStartPoint("BOTTOMLEFT",-lineGap,-lineGap)
+	l:SetEndPoint("TOPLEFT",-lineGap,lineGap)
 
 	frame.gameVersionLogo = frame:CreateTexture(frameName.."-downBG", "ARTWORK")
 	frame.gameVersionLogo:SetTexture(538639)
@@ -985,14 +1013,14 @@ function GUI:Create()
 	frame.gameVersionButton.texture = frame.gameVersionLogo
 
 	frame.moduleSelect = GUI:CreateDropDown()
-	frame.moduleSelect:SetParPoint("RIGHT", frame.gameVersionButton, "LEFT", -5, 0)
+	frame.moduleSelect:SetParPoint("RIGHT", frame.gameVersionButton, "LEFT", -5, -4)
 	frame.moduleSelect:SetWidth(245)
 	frame.moduleSelect:SetTitle(AL["Select Module"])
 	frame.moduleSelect:SetText("Select Module")
 	frame.moduleSelect:SetButtonOnClick(ModuleSelectFunction)
 
 	frame.subCatSelect = GUI:CreateDropDown()
-	frame.subCatSelect:SetParPoint("LEFT", frame.gameVersionButton, "RIGHT", 5, 0)
+	frame.subCatSelect:SetParPoint("LEFT", frame.gameVersionButton, "RIGHT", 5, -4)
 	frame.subCatSelect:SetWidth(245)
 	frame.subCatSelect:SetTitle(AL["Select Subcategory"])
 	frame.subCatSelect:SetText("Select Subcategory")
