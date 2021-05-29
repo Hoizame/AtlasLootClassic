@@ -76,6 +76,7 @@ Sources.DbDefaults = {
     showDropRate = true,
     showProfRank = true,
     showRecipeSource = true,
+    showLineBreak = true,
     ["Sources"] = {
         ["*"] = true,
         [16] = false,
@@ -194,7 +195,9 @@ local function OnTooltipSetItem_Hook(self)
                 end
             end
             if TooltipTextCache[item] then
-                self:AddLine(" ")
+                if Sources.db.showLineBreak then
+                    self:AddLine(" ")
+                end
                 for i = 1, #TooltipTextCache[item] do
                     self:AddLine(TooltipTextCache[item][i])
                 end

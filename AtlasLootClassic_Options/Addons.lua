@@ -367,6 +367,12 @@ local function CreateSourceOptions()
                 width = "full",
                 name = AL["Show recipe source if available."],
             },
+            showLineBreak = {
+                order = 5,
+                type = "toggle",
+                width = "full",
+                name = AL["Add line break before source."],
+            },
             typeSelection = {
                 type = "group",
                 name = AL["Icon"],
