@@ -487,6 +487,8 @@ local function AtlasMaps_SetMaps(self, map, entranceMap)
 		self:Hide()
 		self.overlay:Hide()
 		return
+	else
+		self:Show()
 	end
 	if type(map) == "table" then
 		return AtlasMaps_SetMaps(self, unpack(map))
