@@ -122,18 +122,14 @@ local FILTER_DATA = {
             [LE_ITEM_WEAPON_FISHINGPOLE] 	= true, -- Fishing Poles
         },
         [LE_ITEM_CLASS_GEM] = {
-            [LE_ITEM_GEM_INTELLECT] 		= true, -- Intellect
-            [LE_ITEM_GEM_AGILITY] 		    = true, -- Agility
-            [LE_ITEM_GEM_STRENGTH] 		    = true, -- Strength
-            [LE_ITEM_GEM_STAMINA] 		    = true, -- Stamina
-            [LE_ITEM_GEM_SPIRIT] 		    = true, -- Spirit
-            [LE_ITEM_GEM_CRITICALSTRIKE]    = true, -- Critical Strike
-            [LE_ITEM_GEM_MASTERY] 		    = true, -- Mastery
-            [LE_ITEM_GEM_HASTE] 			= true, -- Haste
-            [LE_ITEM_GEM_VERSATILITY] 	    = true, -- Versatility
-            -- [9] -- ignore Other
-            [LE_ITEM_GEM_MULTIPLESTATS] 	= true, -- Multiple Stats
-            [LE_ITEM_GEM_ARTIFACTRELIC] 	= true, -- Artifact Relic
+            [1] = true, -- Blue
+            [2] = true, -- Yellow
+            [3] = true, -- Purple
+            [4] = true, -- Green
+            [5] = true, -- Orange
+            [6] = true, -- Meta
+            --[7] = true, -- Simple
+            [8] = true, -- Prismatic
         },
         [LE_ITEM_CLASS_ARMOR] = {
             [LE_ITEM_ARMOR_GENERIC] 	= true, -- Miscellaneous

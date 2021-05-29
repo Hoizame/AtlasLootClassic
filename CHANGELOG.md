@@ -4,11 +4,6 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 
 [Changelog history](https://github.com/Hoizame/AtlasLootClassic/blob/master/AtlasLootClassic/Documentation/Release_Notes.md)
 
-## v2.2.0-bcc (May 23, 2021)
+## v2.2.1 (May 29, 2021)
 
-- (new) item sets now also show set bonuses in tooltip
-- (bc) add Badge of Justice vendor for P1
-- (bc) add pvp insignias
-- (bc) add pvp non set items
-- (bc) add pvp mounts
-- (bc) add missing honor 70 sets
+- (bc) fix lua error on loading with gem socket filter
