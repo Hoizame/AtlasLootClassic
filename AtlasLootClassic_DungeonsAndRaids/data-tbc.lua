@@ -1712,7 +1712,7 @@ data["TheArcatraz"] = {
 	LevelRange = {65, 69, 70},
 	items = {
         { -- TKArcUnbound
-            name = AL["Zereketh the Unboun"],
+            name = AL["Zereketh the Unbound"],
             npcID = {20870,21626},
             Level = 72,
             DisplayIDs = {{19882}},
