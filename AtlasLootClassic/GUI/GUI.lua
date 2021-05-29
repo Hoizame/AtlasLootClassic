@@ -977,7 +977,7 @@ function GUI:Create()
 	frame.gameVersionButton:SetPoint("TOPLEFT", frame, "TOPLEFT", 258, -33)
 	frame.gameVersionButton:SetWidth(64)
 	frame.gameVersionButton:SetHeight(32)
-	frame.gameVersionButton:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
+	frame.gameVersionButton:SetHighlightTexture("Interface\\Buttons\\UI-Common-MouseHilight", "ADD")
 	frame.gameVersionButton:SetScript("OnClick", GameVersionSwitch_OnClick)
 
 	frame.gameVersionButton.Box = {}
