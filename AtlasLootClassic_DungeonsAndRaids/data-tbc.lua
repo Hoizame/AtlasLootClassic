@@ -1522,11 +1522,10 @@ data["OldHillsbradFoothills"] = {
                 { 1, 29434 }, -- Badge of Justice
                 { 2, 29250 }, -- Cord of Sanctification
                 { 3, 29246 }, -- Nightfall Wristguards
-                { 4, 29357 }, -- Master Thief's Gloves
-                { 5, 30534 }, -- Wyrmscale Greaves
-                { 6, 30536 }, -- Greaves of the Martyr
-                { 8, 27911 }, -- Epoch's Whispering Cinch
-                { 9, 28344 }, -- Wyrmfury Pauldrons
+                { 4, 30534 }, -- Wyrmscale Greaves
+                { 5, 30536 }, -- Greaves of the Martyr
+                { 6, 27911 }, -- Epoch's Whispering Cinch
+                { 7, 28344 }, -- Wyrmfury Pauldrons
                 { 10, 28233 }, -- Necklace of Resplendent Hope
                 { 11, 27904 }, -- Resounding Ring of Glory
                 { 12, 28227 }, -- Sparking Arcanite Ring
