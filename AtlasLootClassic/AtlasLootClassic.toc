@@ -74,6 +74,7 @@ Data\AutoSelect.lua
 Data\Requirements.lua
 Data\ClassFilter.lua
 Data\ItemSet.lua
+Data\VendorPrice.lua
 
 ItemDB\ItemDB.lua
 ItemDB\SoundData.lua

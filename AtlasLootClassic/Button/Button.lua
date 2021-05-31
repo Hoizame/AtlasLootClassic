@@ -702,7 +702,7 @@ function Proto:SetSecType(typ, val)
 end
 
 function Proto:SetExtraType(typ, val)
-	if extra_button_types[typ] then
+	if extra_button_types[typ] and ((not self.setExtraTypes) or (self.setExtraTypes and not self.setExtraTypes[typ])) then
 		self:AddEnhancedDescription()
 		--if self.__atlaslootinfo.extraType  then
 		--	if type(self.__atlaslootinfo.extraType[1]) ~= "table" then
@@ -714,6 +714,9 @@ function Proto:SetExtraType(typ, val)
 		--end
 		self.enhancedDesc.ttInfo = typ
 		extra_button_types[typ].OnSet(self, self.enhancedDesc)
+
+		--self.setExtraTypes = self.setExtraTypes or {}
+		--self.setExtraTypes[typ] = true
 	end
 end
 
@@ -755,6 +758,7 @@ local EnhancedDescriptionProto = {
 		self.contentSize = 0
 		self.info = nil
 		self.ttInfo = nil
+		self.setExtraTypes = nil
 		if self.removerInfo then
 			self.removerInfo[1](self.removerInfo[2])
 			self.removerInfo = nil
