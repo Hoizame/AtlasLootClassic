@@ -164,6 +164,14 @@ local MOUNT_LIST = {
     [37676] = 24725, -- Vengeful Nether Drake
     [34092] = 22620, -- Merciless Nether Drake
     [43516] = 27507, -- Brutal Nether Drake
+    [29471] = 14330, -- Black War Tiger
+    [29468] = 14337, -- Black War Steed
+    [29465] = 14372, -- Black Battlestrider
+    [29467] = 14577, -- Black War Ram
+    [29470] = 10719, -- Red Skeletal Warhorse
+    [29472] = 14388, -- Black War Raptor
+    [29466] = 14348, -- Black War Kodo
+    [29469] = 14334, -- Black War Wolf
 --@end-version-bcc@
 }
 

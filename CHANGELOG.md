@@ -9,3 +9,4 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 - add missing support for Atlas Map modules
 - add "Add line break before source." option for source tooltips
 - (bcc) update classic dungeons level ranges
+- (bcc) add much more vendor prices
