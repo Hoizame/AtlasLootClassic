@@ -971,7 +971,7 @@ function GUI:Create()
 	frame.titleFrame.newVersion:SetFont(_G["SystemFont_Tiny"]:GetFont(), 10)
 	frame.titleFrame.newVersion:SetJustifyH("LEFT")
 	frame.titleFrame.newVersion:SetJustifyV("MIDDLE")
-	frame.titleFrame.newVersion:SetText(AL["New version aviable!"])
+	frame.titleFrame.newVersion:SetText(AL["New version available!"])
 
 	frame.gameVersionButton = CreateFrame("Button", frameName.."-gameVersionButton", frame)
 	frame.gameVersionButton:SetPoint("TOPLEFT", frame, "TOPLEFT", 258, -33)

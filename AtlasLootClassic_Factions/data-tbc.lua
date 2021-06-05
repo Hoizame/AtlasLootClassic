@@ -256,6 +256,7 @@ data["TheShatar"] = {
                 { 2, 29180 }, -- Blessed Scale Girdle
                 { 3, 29179 }, -- Xi'ri's Gift
                 { 5, 29191 }, -- Glyph of Power
+				{ 7, 30634 }, -- Warpforged Key
                 { 17, 24182 }, -- Design: Talasite Owl
                 { 19, 28281 }, -- Formula: Enchant Weapon - Major Healing
                 { 20, 22537 }, -- Formula: Enchant Ring - Healing Power
@@ -269,7 +270,6 @@ data["TheShatar"] = {
 			[NORMAL_DIFF] = {
 				{ 1, "f935rep6" },
                 { 2, 29195 }, -- Glyph of Arcane Warding
-                { 4, 30634 }, -- Warpforged Key
                 { 17, 30826 }, -- Design: Ring of Arcane Shielding
                 { 18, 33155 }, -- Design: Kailee's Rose
                 { 20, 28273 }, -- Formula: Enchant Gloves - Major Healing
@@ -311,6 +311,7 @@ data["LowerCity"] = {
                 { 3, 30835 }, -- Salvager's Hauberk
                 { 4, 30841 }, -- Lower City Prayerbook
                 { 6, 30846 }, -- Glyph of the Outcast
+				{ 8, 30633 }, -- Auchenai Key
                 { 17, 24179 }, -- Design: Felsteel Boar
                 { 18, 24175 }, -- Design: Pendant of Thawing
                 { 19, 33157 }, -- Design: Falling Star
@@ -323,7 +324,6 @@ data["LowerCity"] = {
 			[NORMAL_DIFF] = {
 				{ 1, "f1011rep6" },
                 { 2, 29199 }, -- Glyph of Shadow Warding
-                { 4, 30633 }, -- Auchenai Key
                 { 17, 22538 }, -- Formula: Enchant Ring - Stats
                 { 19, 30833 }, -- Pattern: Cloak of Arcane Evasion
 
@@ -363,6 +363,7 @@ data["KeepersOfTime"] = {
                 { 2, 29184 }, -- Timewarden's Leggings
                 { 3, 29185 }, -- Continuum Blade
                 { 5, 29186 }, -- Glyph of the Defender
+				{ 7, 30635 }, -- Key of Time
                 { 17, 24181 }, -- Design: Living Ruby Serpent
                 { 18, 24174 }, -- Design: Pendant of Frozen Flame
                 { 19, 33158 }, -- Design: Stone of Blades
@@ -373,7 +374,6 @@ data["KeepersOfTime"] = {
 			[NORMAL_DIFF] = {
 				{ 1, "f989rep6" },
                 { 2, 29198 }, -- Glyph of Frost Warding
-                { 4, 30635 }, -- Key of Time
                 { 17, 28272 }, -- Formula: Enchant Gloves - Major Spellpower
                 { 18, 22536 }, -- Formula: Enchant Ring - Spellpower
                 { 20, 25910 }, -- Design: Enigmatic Skyfire Diamond
@@ -570,6 +570,7 @@ data["CenarionExpedition"] = {
                 { 3, 31949 }, -- Warden's Arrow
                 { 4, 29173 }, -- Strength of the Untamed
                 { 6, 29192 }, -- Glyph of Ferocity
+				{ 8, 30623 }, -- Reservoir Key
                 { 17, 31392 }, -- Plans: Wildguard Helm
                 { 18, 31391 }, -- Plans: Wildguard Leggings
                 { 20, 24183 }, -- Design: Nightseye Panther
@@ -585,7 +586,6 @@ data["CenarionExpedition"] = {
                 { 3, 25836 }, -- Preserver's Cudgel
                 { 4, 25835 }, -- Explorer's Walking Stick
                 { 6, 29194 }, -- Glyph of Nature Warding
-                { 8, 30623 }, -- Reservoir Key
                 { 17, 25735 }, -- Pattern: Heavy Clefthoof Vest
                 { 18, 25736 }, -- Pattern: Heavy Clefthoof Leggings
                 { 19, 29720 }, -- Pattern: Clefthide Leg Armor

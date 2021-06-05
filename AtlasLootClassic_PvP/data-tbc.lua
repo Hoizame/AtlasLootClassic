@@ -274,6 +274,9 @@ data["PvPMountsBCC"] = {
 	name = ALIL["Mounts"],
 	ContentType = GENERAL_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
+	CorrespondingFields = {
+		[1] = "Mounts",
+	},
 	items = {
 		{ -- PvPMountsPvP
 			name = ALIL["Mounts"],
