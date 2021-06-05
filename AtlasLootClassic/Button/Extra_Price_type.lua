@@ -46,6 +46,9 @@ local PRICE_INFO = {
 	["MarkOfThrallmar"] = { itemID = 24581 }, -- Mark of Thrallmar
 	["MarkOfHonorHold"] = { itemID = 24579 }, -- Mark of Honor Hold
 	["BoJ"] = { itemID = 29434 }, -- Badge of Justice
+	["glowcap"] = { itemID = 24245 }, -- Glowcap
+	["ApexisC"] = { itemID = 32572 }, -- Apexis Crystal
+	["ApexisS"] = { itemID = 32569 }, -- Apexis Shard
 	-- pvp
 	["honor"] = { currencyID = 1901 }, -- Honor
 	["arena"] = { currencyID = 1900 },  -- Arena

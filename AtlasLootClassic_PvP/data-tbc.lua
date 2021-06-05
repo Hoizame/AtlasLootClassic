@@ -1292,24 +1292,24 @@ data["TerokkarPvP"] = {
 		{
 			MapID = 3519,
 			[NORMAL_DIFF] = {
-				{ 1, 28553, [PRICE_EXTRA_ITTYPE] = "SpiritShard:50" }, -- Band of the Exorcist
-				{ 2, 28557, [PRICE_EXTRA_ITTYPE] = "SpiritShard:8" }, -- Swift Starfire Diamond
-				{ 3, 28759, [PRICE_EXTRA_ITTYPE] = "SpiritShard:18" }, -- Exorcist's Dreadweave Hood
-				{ 4, 28574, [PRICE_EXTRA_ITTYPE] = "SpiritShard:18" }, -- Exorcist's Dragonhide Helm
-				{ 5, 28575, [PRICE_EXTRA_ITTYPE] = "SpiritShard:18" }, -- Exorcist's Wyrmhide Helm
-				{ 6, 28577, [PRICE_EXTRA_ITTYPE] = "SpiritShard:18" }, -- Exorcist's Linked Helm
-				{ 7, 28560, [PRICE_EXTRA_ITTYPE] = "SpiritShard:18" }, -- Exorcist's Lamellar Helm
-				{ 8, 28761, [PRICE_EXTRA_ITTYPE] = "SpiritShard:18" }, -- Exorcist's Scaled Helm
-				{ 10, 32947, [PRICE_EXTRA_ITTYPE] = "SpiritShard:2" }, -- Auchenai Healing Potion
+				{ 1, 28553 }, -- Band of the Exorcist
+				{ 2, 28557}, -- Swift Starfire Diamond
+				{ 3, 28759 }, -- Exorcist's Dreadweave Hood
+				{ 4, 28574 }, -- Exorcist's Dragonhide Helm
+				{ 5, 28575 }, -- Exorcist's Wyrmhide Helm
+				{ 6, 28577 }, -- Exorcist's Linked Helm
+				{ 7, 28560 }, -- Exorcist's Lamellar Helm
+				{ 8, 28761 }, -- Exorcist's Scaled Helm
+				{ 10, 32947 }, -- Auchenai Healing Potion
 				{ 12, 28558 }, -- Spirit Shard
-				{ 16, 28555, [PRICE_EXTRA_ITTYPE] = "SpiritShard:50" }, -- Seal of the Exorcist
-				{ 17, 28556, [PRICE_EXTRA_ITTYPE] = "SpiritShard:8" }, -- Swift Windfire Diamond
-				{ 18, 28760, [PRICE_EXTRA_ITTYPE] = "SpiritShard:18" }, -- Exorcist's Silk Hood
-				{ 19, 28561, [PRICE_EXTRA_ITTYPE] = "SpiritShard:18" }, -- Exorcist's Leather Helm
-				{ 20, 28576, [PRICE_EXTRA_ITTYPE] = "SpiritShard:18" }, -- Exorcist's Chain Helm
-				{ 21, 28758, [PRICE_EXTRA_ITTYPE] = "SpiritShard:18" }, -- Exorcist's Mail Helm
-				{ 22, 28559, [PRICE_EXTRA_ITTYPE] = "SpiritShard:18" }, -- Exorcist's Plate Helm
-				{ 25, 32948, [PRICE_EXTRA_ITTYPE] = "SpiritShard:2" }, -- Auchenai Mana Potion
+				{ 16, 28555 }, -- Seal of the Exorcist
+				{ 17, 28556 }, -- Swift Windfire Diamond
+				{ 18, 28760 }, -- Exorcist's Silk Hood
+				{ 19, 28561 }, -- Exorcist's Leather Helm
+				{ 20, 28576 }, -- Exorcist's Chain Helm
+				{ 21, 28758 }, -- Exorcist's Mail Helm
+				{ 22, 28559 }, -- Exorcist's Plate Helm
+				{ 25, 32948 }, -- Auchenai Mana Potion
 			}
 		}
 	}
