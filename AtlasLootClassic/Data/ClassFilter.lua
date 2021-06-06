@@ -279,6 +279,7 @@ local LINKED_STATS = {
 
     ["ITEM_MOD_RESILIENCE_RATING"] = "ITEM_MOD_RESILIENCE_RATING_SHORT",
 }
+for k,v in pairs(LINKED_STATS) do LINKED_STATS[v] = v end
 
 local STAT_LIST = {
     {
@@ -370,6 +371,9 @@ AtlasLoot.AtlasLootDBDefaults.profile.ClassFilter = {
         ["ITEM_MOD_HIT_RANGED_RATING_SHORT"] = false,
         ["ITEM_MOD_CRIT_MELEE_RATING_SHORT"] = false,
         ["ITEM_MOD_CRIT_RANGED_RATING_SHORT"] = false,
+        ["ITEM_MOD_DEFENSE_SKILL_RATING_SHORT"] = false,
+        ["ITEM_MOD_PARRY_RATING_SHORT"] = false,
+        ["ITEM_MOD_DODGE_RATING_SHORT"] = false,
     },
     ["SHAMAN"] = {
         ["*"] = true,
@@ -386,6 +390,9 @@ AtlasLoot.AtlasLootDBDefaults.profile.ClassFilter = {
         ["ITEM_MOD_HIT_RANGED_RATING_SHORT"] = false,
         ["ITEM_MOD_CRIT_MELEE_RATING_SHORT"] = false,
         ["ITEM_MOD_CRIT_RANGED_RATING_SHORT"] = false,
+        ["ITEM_MOD_DEFENSE_SKILL_RATING_SHORT"] = false,
+        ["ITEM_MOD_PARRY_RATING_SHORT"] = false,
+        ["ITEM_MOD_DODGE_RATING_SHORT"] = false,
     },
     ["WARLOCK"] = {
         ["*"] = true,
@@ -399,6 +406,9 @@ AtlasLoot.AtlasLootDBDefaults.profile.ClassFilter = {
         ["ITEM_MOD_HIT_RANGED_RATING_SHORT"] = false,
         ["ITEM_MOD_CRIT_MELEE_RATING_SHORT"] = false,
         ["ITEM_MOD_CRIT_RANGED_RATING_SHORT"] = false,
+        ["ITEM_MOD_DEFENSE_SKILL_RATING_SHORT"] = false,
+        ["ITEM_MOD_PARRY_RATING_SHORT"] = false,
+        ["ITEM_MOD_DODGE_RATING_SHORT"] = false,
     },
     ["DRUID"] = {
         ["*"] = true,
@@ -443,8 +453,18 @@ local function BuildClassFilterList()
     FILTER_DATA = nil
 end
 
+local OptionsClassSort
 function ClassFilter.GetStatListForOptions()
-    return STAT_LIST, CLASS_SORT, db
+    if not OptionsClassSort then
+        local ownClass = UnitClassBase("player")
+        OptionsClassSort = { ownClass }
+        for k,v in ipairs(CLASS_SORT) do
+            if v ~= ownClass then
+                OptionsClassSort[#OptionsClassSort+1] = v
+            end
+        end
+    end
+    return STAT_LIST, OptionsClassSort, db
 end
 
 function ClassFilter.ClassCanUseItem(className, itemID)
