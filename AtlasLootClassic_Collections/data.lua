@@ -19,6 +19,8 @@ local data = AtlasLoot.ItemDB:Add(addonname, 1)
 local AL = AtlasLoot.Locales
 local ALIL = AtlasLoot.IngameLocales
 
+local GetForVersion = AtlasLoot.ReturnForGameVersion
+
 local NORMAL_DIFF = data:AddDifficulty(AL["Normal"], "n", 1, nil, true)
 local ALLIANCE_DIFF, HORDE_DIFF, LOAD_DIFF
 if UnitFactionGroup("player") == "Horde" then
@@ -726,6 +728,151 @@ data["Mounts"] = {
 				{ 28,  13333 }, -- Brown Skeletal Horse
 				{ 29,  13332 }, -- Blue Skeletal Horse
 				{ 30,  13331 }, -- Red Skeletal Horse
+			},
+		},
+		{ -- PvPMountsPvP
+			name = AL["PvP"],
+			[ALLIANCE_DIFF] = {
+				{ 1,  19030 }, -- Stormpike Battle Charger
+				{ 3,  GetForVersion(18244,29467) }, -- Black War Ram
+				{ 4,  GetForVersion(18243,29465) }, -- Black Battlestrider
+				{ 5,  GetForVersion(18241,29468) }, -- Black War Steed Bridle
+				{ 6,  GetForVersion(18242,29471) }, -- Reins of the Black War Tiger
+--@version-bcc@
+				{ 7,  35906 }, -- Reins of the Black War Elekk
+				{ 16,  30609 }, -- Swift Nether Drake
+				{ 17,  37676 }, -- Vengeful Nether Drake
+				{ 18,  34092 }, -- Merciless Nether Drake
+				--{ 19,  43516 }, -- Brutal Nether Drake NYI
+--@end-version-bcc@
+			},
+			[HORDE_DIFF] = {
+				{ 1, 19029 }, -- Horn of the Frostwolf Howler
+				{ 3, GetForVersion(18245,29469) }, -- Horn of the Black War Wolf
+				{ 4, GetForVersion(18247,29466) }, -- Black War Kodo
+				{ 5, GetForVersion(18246,29472) }, -- Whistle of the Black War Raptor
+				{ 6, GetForVersion(18248,29470) }, -- Red Skeletal Warhorse
+--@version-bcc@
+				{ 7, 34129 }, -- Swift Warstrider
+				{ 16,  30609 }, -- Swift Nether Drake
+				{ 17,  37676 }, -- Vengeful Nether Drake
+				{ 18,  34092 }, -- Merciless Nether Drake
+				--{ 19,  43516 }, -- Brutal Nether Drake NYI
+--@end-version-bcc@
+			},
+		},
+		{
+			name = AL["Drops"],
+			[NORMAL_DIFF] = {
+				{ 1, 13335 }, -- Deathcharger's Reins
+				{ 3, 19872 }, -- Swift Razzashi Raptor
+				{ 5, 19902 }, -- Swift Zulian Tiger
+--@version-bcc@
+				{ 7, 32768 }, -- Reins of the Raven Lord
+				{ 9, 33809 }, -- Amani War Bear
+				{ 16, 30480 }, -- Fiery Warhorse's Reins
+				{ 18, 32458 }, -- Ashes of Al'ar
+--@end-version-bcc@
+			},
+		},
+		{
+			name = AL["Reputation"],
+			[ALLIANCE_DIFF] = {
+				{ 1, 13086 }, -- Reins of the Winterspring Frostsaber
+--@version-bcc@
+				{ 3, 29227 }, -- Reins of the Cobalt War Talbuk
+				{ 4, 29229 }, -- Reins of the Silver War Talbuk
+				{ 5, 29230 }, -- Reins of the Tan War Talbuk
+				{ 6, 29231 }, -- Reins of the White War Talbuk
+				{ 7, 31830 }, -- Reins of the Cobalt Riding Talbuk
+				{ 8, 31832 }, -- Reins of the Silver Riding Talbuk
+				{ 9, 31834 }, -- Reins of the Tan Riding Talbuk
+				{ 10, 31836 }, -- Reins of the White Riding Talbuk
+				{ 16, 33999 }, -- Cenarion War Hippogryph
+				{ 18, 32319 }, -- Blue Riding Nether Ray
+				{ 19, 32314 }, -- Green Riding Nether Ray
+                { 20, 32317 }, -- Red Riding Nether Ray
+                { 21, 32316 }, -- Purple Riding Nether Ray
+                { 22, 32318 }, -- Silver Riding Nether Ray
+				{ 24, 32858 }, -- Reins of the Azure Netherwing Drake
+                { 25, 32859 }, -- Reins of the Cobalt Netherwing Drake
+                { 26, 32857 }, -- Reins of the Onyx Netherwing Drake
+                { 27, 32860 }, -- Reins of the Purple Netherwing Drake
+                { 28, 32861 }, -- Reins of the Veridian Netherwing Drake
+                { 29, 32862 }, -- Reins of the Violet Netherwing Drake
+--@end-version-bcc@
+			},
+--@version-bcc@
+			[HORDE_DIFF] = {
+				{ 1, 29102 }, -- Reins of the Cobalt War Talbuk
+				{ 2, 29104 }, -- Reins of the Silver War Talbuk
+				{ 3, 29105 }, -- Reins of the Tan War Talbuk
+				{ 4, 29103 }, -- Reins of the White War Talbuk
+				{ 5, 31829 }, -- Reins of the Cobalt Riding Talbuk
+				{ 6, 31831 }, -- Reins of the Silver Riding Talbuk
+				{ 7, 31833 }, -- Reins of the Tan Riding Talbuk
+				{ 8, 31835 }, -- Reins of the White Riding Talbuk
+				{ 9, 31836 }, -- Reins of the White Riding Talbuk
+				{ 16, 33999 }, -- Cenarion War Hippogryph
+				{ 18, 32319 }, -- Blue Riding Nether Ray
+				{ 19, 32314 }, -- Green Riding Nether Ray
+                { 20, 32317 }, -- Red Riding Nether Ray
+                { 21, 32316 }, -- Purple Riding Nether Ray
+                { 22, 32318 }, -- Silver Riding Nether Ray
+				{ 24, 32858 }, -- Reins of the Azure Netherwing Drake
+                { 25, 32859 }, -- Reins of the Cobalt Netherwing Drake
+                { 26, 32857 }, -- Reins of the Onyx Netherwing Drake
+                { 27, 32860 }, -- Reins of the Purple Netherwing Drake
+                { 28, 32861 }, -- Reins of the Veridian Netherwing Drake
+                { 29, 32862 }, -- Reins of the Violet Netherwing Drake
+
+			},
+--@end-version-bcc@
+		},
+--@version-bcc@
+		{
+			name = AL["World Events"],
+			[NORMAL_DIFF] = {
+				{ 1, 33977 }, -- Swift Brewfest Ram
+				{ 2, 33976 }, -- Brewfest Ram
+				{ 4, 37012 }, -- The Horseman's Reins
+				{ 16, 33182 }, -- Swift Flying Broom
+				{ 17, 33184 }, -- Swift Magic Broom
+				{ 18, 33176 }, -- Flying Broom
+				{ 19, 37011 }, -- Magic Broom
+				{ 20, 33183 }, -- Old Magic Broom
+				{ 21, 33189 }, -- Rickety Magic Broom
+			},
+		},
+		{
+			name = AL["Crafting"],
+			[NORMAL_DIFF] = {
+				{ 1, 34061 }, -- Turbo-Charged Flying Machine Control
+				{ 2, 34060 }, -- Flying Machine Control
+			},
+		},
+--@end-version-bcc@
+		{
+			name = ALIL["Special"],
+			[NORMAL_DIFF] = {
+				{ 1, 21176 }, -- Black Qiraji Resonating Crystal
+				{ 3, 23720 }, -- Riding Turtle
+--@version-bcc@
+				{ 5, 33225 }, -- Reins of the Swift Spectral Tiger
+				{ 6, 33224 }, -- Reins of the Spectral Tiger
+				{ 8, 38576 }, -- Big Battle Bear
+				{ 16, 35226 }, -- X-51 Nether-Rocket X-TREME
+				{ 17, 35225 }, -- X-51 Nether-Rocket
+--@end-version-bcc@
+			},
+		},
+		{ -- AQ40
+			MapID = 3428,
+			[NORMAL_DIFF] = {
+				{ 1, 21218 }, -- Blue Qiraji Resonating Crystal
+				{ 2, 21323 }, -- Green Qiraji Resonating Crystal
+				{ 3, 21321 }, -- Red Qiraji Resonating Crystal
+				{ 4, 21324 }, -- Yellow Qiraji Resonating Crystal
 			},
 		},
 	},

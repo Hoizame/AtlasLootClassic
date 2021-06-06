@@ -895,22 +895,25 @@ data["Mounts"] = {
 	ContentType = GENERAL_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
 	ContentPhase = 2,
+	CorrespondingFields = {
+		[2] = "PvPMountsBCC",
+	},
 	items = {
 		{ -- PvPMountsPvP
 			name = ALIL["Mounts"],
 			[ALLIANCE_DIFF] = {
 				{ 1,  19030 }, -- Stormpike Battle Charger
-				{ 2,  18244 }, -- Black War Ram
-				{ 3,  18243 }, -- Black Battlestrider
-				{ 4,  18241 }, -- Black War Steed Bridle
-				{ 5,  18242 }, -- Reins of the Black War Tiger
+				{ 3,  18244 }, -- Black War Ram
+				{ 4,  18243 }, -- Black Battlestrider
+				{ 5,  18241 }, -- Black War Steed Bridle
+				{ 6,  18242 }, -- Reins of the Black War Tiger
 			},
 			[HORDE_DIFF] = {
 				{ 1, 19029 }, -- Horn of the Frostwolf Howler
-				{ 2, 18245 }, -- Horn of the Black War Wolf
-				{ 3, 18247 }, -- Black War Kodo
-				{ 4, 18246 }, -- Whistle of the Black War Raptor
-				{ 5, 18248 }, -- Red Skeletal Warhorse
+				{ 3, 18245 }, -- Horn of the Black War Wolf
+				{ 4, 18247 }, -- Black War Kodo
+				{ 5, 18246 }, -- Whistle of the Black War Raptor
+				{ 6, 18248 }, -- Red Skeletal Warhorse
 			},
 		},
 		PVP_RANKS,

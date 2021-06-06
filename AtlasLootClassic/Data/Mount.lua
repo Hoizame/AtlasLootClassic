@@ -172,6 +172,21 @@ local MOUNT_LIST = {
     [29472] = 14388, -- Black War Raptor
     [29466] = 14348, -- Black War Kodo
     [29469] = 14334, -- Black War Wolf
+
+    [33225] = 21974, -- Reins of the Swift Spectral Tiger
+    [33224] = 21973, -- Reins of the Spectral Tiger
+    [38576] = 25335, -- Big Battle Bear
+    [35226] = 23647, -- X-51 Nether-Rocket X-TREME
+    [35225] = 23656, -- X-51 Nether-Rocket
+    [33977] = 22350, -- Swift Brewfest Ram
+    [33976] = 22265, -- Brewfest Ram
+    [37012] = 25159, -- The Horseman's Reins
+    [33182] = 21939, -- Swift Flying Broom
+    [33184] = 21939, -- Swift Magic Broom
+    [33176] = 21939, -- Flying Broom
+    [37011] = 21939, -- Magic Broom
+    [33183] = 21939, -- Old Magic Broom
+    [33189] = 21939, -- Rickety Magic Broom
 --@end-version-bcc@
 }
 
