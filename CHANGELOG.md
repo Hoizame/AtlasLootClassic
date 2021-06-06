@@ -4,7 +4,7 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 
 [Changelog history](https://github.com/Hoizame/AtlasLootClassic/blob/master/AtlasLootClassic/Documentation/Release_Notes.md)
 
-## v2.3.1-bcc (Jun XX, 2021)
+## v2.3.1-bcc (Jun. 06, 2021)
 
 - fix bug with some stats in class filter
 - own class is now on top for class filter options
