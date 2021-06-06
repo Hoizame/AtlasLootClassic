@@ -496,11 +496,76 @@ data["MiscSets"] = {
 	},
 }
 
+--@version-bcc@
+data["WorldEpicsBCC"] = {
+	name = AL["World Epics"],
+	ContentType = COLLECTIONS_CONTENT,
+	LoadDifficulty = LOAD_DIFF,
+	TableType = NORMAL_ITTYPE,
+	gameVersion = 2,
+	CorrespondingFields = {
+		[1] = "WorldEpics",
+	},
+	items = {
+		{
+			name = AL["One-Handed Weapons"],
+			[NORMAL_ITTYPE] = {
+				{ 1, 31331 }, -- The Night Blade
+				{ 3, 31332 }, -- Blinkstrike
+				{ 16, 31336 }, -- Blade of Wizardry
+				{ 18, 31342 }, -- The Ancient Scepter of Sue-Min
+			}
+		},
+		{
+			name = AL["Two-Handed Weapons"],
+			[NORMAL_ITTYPE] = {
+				{ 1, 31318 }, -- Singing Crystal Axe
+				{ 16, 31322 }, -- The Hammer of Destiny
+				{ 18, 31334 }, -- Staff of Natural Fury
+			}
+		},
+		{
+			name = AL["Ranged Weapons"],
+			[NORMAL_ITTYPE] = {
+				{ 1, 31323 }, -- Don Santos' Famous Hunting Rifle
+				{ 16, 34622 }, -- Spinesever
+			}
+		},
+		{
+			name = ALIL["Trinket"].." & "..ALIL["Finger"].." & "..ALIL["Neck"],
+			[NORMAL_ITTYPE] = {
+				{ 1, 31339 }, -- Lola's Eve
+				{ 3, 31319 }, -- Band of Impenetrable Defenses
+				{ 4, 31326 }, -- Truestrike Ring
+				{ 16, 31338 }, -- Charlotte's Ivy
+				{ 18, 31321 }, -- Choker of Repentance
+			}
+		},
+		{
+			name = AL["Equip"],
+			[NORMAL_ITTYPE] = {
+				{ 1, 31329 }, -- Lifegiving Cloak
+				{ 3, 31340 }, -- Will of Edward the Odd
+				{ 4, 31343 }, -- Kamaei's Cerulean Skirt
+				{ 6, 31333 }, -- The Night Watchman
+				{ 7, 31335 }, -- Pants of Living Growth
+				{ 18, 31330 }, -- Lightning Crown
+				{ 19, 31328 }, -- Leggings of Beast Mastery
+				{ 21, 31320 }, -- Chestguard of Exile
+			},
+		},
+	},
+}
+--@end-version-bcc@
 data["WorldEpics"] = {
 	name = AL["World Epics"],
 	ContentType = COLLECTIONS_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
 	TableType = NORMAL_ITTYPE,
+	gameVersion = 1,
+	CorrespondingFields = {
+		[2] = "WorldEpicsBCC",
+	},
 	items = {
 		{
 			name = AL["One-Handed Weapons"],

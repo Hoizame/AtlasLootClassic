@@ -7,3 +7,5 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 ## v2.3.1-bcc (Jun XX, 2021)
 
 - (bcc) add missing honor prices for horde
+- (bcc) add missing legendarys
+- (bcc) add missing world epics
