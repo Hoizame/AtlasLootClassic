@@ -701,11 +701,52 @@ data["Tabards"] = {
 	},
 }
 
+--@version-bcc@
+data["LegendarysBCC"] = {
+	name = AL["Legendarys"],
+	ContentType = COLLECTIONS_CONTENT,
+	LoadDifficulty = LOAD_DIFF,
+	TableType = NORMAL_ITTYPE,
+	gameVersion = 2,
+	CorrespondingFields = {
+		[1] = "Legendarys",
+	},
+	items = {
+		{
+			name = AL["Legendarys"],
+			[NORMAL_ITTYPE] = {
+				{ 1,  34334 }, -- Thori'dal, the Stars' Fury
+
+				{ 16,  32837 }, -- Warglaive of Azzinoth
+				{ 17,  32838 }, -- Warglaive of Azzinoth
+			},
+		},
+		{
+			MapID = 3845,
+			[NORMAL_ITTYPE] = {
+				{ 1,  30312 }, -- Infinity Blade
+				{ 2,  30311 }, -- Warp Slicer
+				{ 3,  30317 }, -- Cosmic Infuser
+				{ 4,  30316 }, -- Devastation
+				{ 5,  30313 }, -- Staff of Disintegration
+				{ 6,  30314 }, -- Phaseshift Bulwark
+				{ 7,  30318 }, -- Netherstrand Longbow
+				{ 8,  30319 }, -- Nether Spike
+			},
+		},
+	},
+}
+--@end-version-bcc@
+
 data["Legendarys"] = {
 	name = AL["Legendarys"],
 	ContentType = COLLECTIONS_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
 	TableType = NORMAL_ITTYPE,
+	gameVersion = 1,
+	CorrespondingFields = {
+		[2] = "LegendarysBCC",
+	},
 	items = {
 		{
 			name = AL["Legendarys"],
