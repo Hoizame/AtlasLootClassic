@@ -247,6 +247,7 @@ data["HellfireRamparts"] = {
                 { 8, 24151 }, -- Mok'Nathal Clan Ring
                 { 9, 24044 }, -- Hellreaver
                 { 10, 24155 }, -- Ursol's Claw
+                { 16, 23891 }, -- Ominous Letter
             },
             [HEROIC_DIFF] = {
                 { 1, 29434 }, -- Badge of Justice
@@ -267,6 +268,7 @@ data["HellfireRamparts"] = {
                 { 18, 30592 }, -- Steady Chrysoprase
                 { 22, 27453 }, -- Averinn's Ring of Slaying
                 { 23, 27460 }, -- Reavers' Ring
+                { 25, 23891 }, -- Ominous Letter
             }
         },
         KEYS
