@@ -1087,6 +1087,7 @@ data["Thrallmar"] = {
                 { 3, 29167 }, -- Blackened Spear
                 { 4, 32882 }, -- Hellfire Shot
                 { 6, 29190 }, -- Glyph of Renewal
+				{ 7, 30637 }, -- Flamewrought Key
                 { 17, 31358 }, -- Design: Dawnstone Crab
                 { 19, 24003 }, -- Formula: Enchant Chest - Exceptional Stats
                 { 21, 34201 }, -- Pattern: Netherscale Ammo Pouch
@@ -1099,7 +1100,6 @@ data["Thrallmar"] = {
                 { 2, 25824 }, -- Farseer's Band
                 { 3, 25823 }, -- Grunt's Waraxe
                 { 5, 29197 }, -- Glyph of Fire Warding
-                { 7, 30637 }, -- Flamewrought Key
                 { 17, 25739 }, -- Pattern: Felstalker Bracers
                 { 18, 25740 }, -- Pattern: Felstalker Breastplate
                 { 19, 31361 }, -- Pattern: Cobrahide Leg Armor
