@@ -6,4 +6,6 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 
 ## v2.3.2-bcc (Jun, XX, 2021)
 
+- increase max scale to 2.0
 - (bcc) add classic enchantments with bcc mats also into bcc crafting module
+- (bcc) fix mage shoulders for T5 token
