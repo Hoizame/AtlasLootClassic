@@ -4,6 +4,15 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 
 [Changelog history](https://github.com/Hoizame/AtlasLootClassic/blob/master/AtlasLootClassic/Documentation/Release_Notes.md)
 
+## v2.3.#-bcc (Aug. 09, 2021)
+
+- Moved Flamewrought-Key from honored to revered (#152)
+- Added missing Badge of Justice Helmets (#147)
+
+- Added some Classic-Era Enchantments that were updated with TBC to the TBC-Lists
+- Added some Classic-Era Engineering-Recipes that were updated with TBC to the TBC-Lists
+- Removed some Engineering-Recipes that never made it into the game
+
 ## v2.3.1-bcc (Jun. 06, 2021)
 
 - fix bug with some stats in class filter

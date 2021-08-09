@@ -441,6 +441,8 @@ data["EnchantingBC"] = {
 				{ 5, 34003 }, -- Enchant Cloak - Spell Penetration (325)
 				{ 6, 34004 }, -- Enchant Cloak - Greater Agility (320)
 				{ 7, 27961 }, -- Enchant Cloak - Major Armor (320)
+				{ 8, 25086 }, --Enchant Cloak - Dodge / 320 (got updated from classic-era)
+				{ 9, 25084 }, --Enchant Cloak - Subtlety / 320 (got updated from classic-era)
 			}
 		},
 		{
@@ -475,6 +477,8 @@ data["EnchantingBC"] = {
 				{ 4, 33995 }, -- Enchant Gloves - Major Strength (350)
 				{ 5, 33996 }, -- Enchant Gloves - Assault (320)
 				{ 6, 33993 }, -- Enchant Gloves - Blasting (315)
+				{ 7, 25080 }, --Enchant Gloves - Superior Agility / 320 (got updated from classic-era)
+				{ 8, 25072 }, --Enchant Gloves - Threat / 320 (got updated from classic-era)
 			}
 		},
 		{
@@ -676,18 +680,29 @@ data["EngineeringBC"] = {
 			[NORMAL_DIFF] = {
 				{ 1, 44157 }, -- Turbo-Charged Flying Machine (385)
 				{ 2, 44155 }, -- Flying Machine (375)
+
 				{ 4, 30349 }, -- Khorium Toolbox (350)
 				{ 5, 30348 }, -- Fel Iron Toolbox (325)
+
 				{ 7, 36955 }, -- Ultrasafe Transporter - Toshley's Station (350)
 				{ 8, 36954 }, -- Dimensional Ripper - Area 52 (350)
-				{ 10, 30573 }, -- Gnomish Tonk Controller (undefined)
-				{ 11, 30561 }, -- Goblin Tonk Controller (undefined)
-				{ 13, 30552 }, -- Mana Potion Injector (345)
-				{ 14, 30551 }, -- Healing Potion Injector (330)
+
+				{ 10, 30552 }, -- Mana Potion Injector (345)
+				{ 11, 30551 }, -- Healing Potion Injector (330)
+
+				{ 13, 23078 }, -- Goblin Jumper Cables XL (265) (got updated from classic-era and is not a trinket anymore)
+				{ 14, 9273 },  -- Goblin Jumper Cables (165) (got updated from classic-era and is not a trinket anymore)
+
 				{ 16, 30548 }, -- Zapthrottle Mote Extractor (305)
+
 				{ 18, 44391 }, -- Field Repair Bot 110G (360)
-				{ 20, 30549 }, -- Critter Enlarger (undefined)
-				{ 22, 30547 }, -- Elemental Seaforium Charge (350)
+
+				{ 20, 30547 }, -- Elemental Seaforium Charge (350)
+
+				-- The following Items were in the Beta but never made it into the game
+				--{ 10, 30573 }, -- Gnomish Tonk Controller (undefined)
+				--{ 11, 30561 }, -- Goblin Tonk Controller (undefined)
+				--{ 20, 30549 }, -- Critter Enlarger (undefined)
 			}
 		},
 	}
