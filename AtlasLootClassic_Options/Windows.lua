@@ -61,8 +61,8 @@ Options.config.args.windows.args.main = {
 					order = 1,
 					type = "range",
 					name = AL["Scale"],
-					min = 0.1, max = 1.25, step = 0.00001,
-					softMin = 0.40, softMax = 1.15, bigStep = 0.01,
+					min = 0.1, max = 2.0, step = 0.00001,
+					softMin = 0.40, softMax = 2.0, bigStep = 0.01,
 					set = function(info, value)
 						AtlasLoot.db.GUI.mainFrame[info[#info]] = value
 						AtlasLoot.GUI.RefreshMainFrame()
