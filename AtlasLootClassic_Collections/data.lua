@@ -1348,16 +1348,21 @@ data["MidsummerFestival"] = {
 		{ -- MidsummerFestival
 			name = AL["Midsummer Festival"],
 			[NORMAL_DIFF] = {
-				{ 1,  23379 }, -- Cinder Bracers
-				{ 3,  23323 }, -- Crown of the Fire Festival
+				{ 1,  23083 }, -- Captured Flame
+				{ 2,  34686 }, -- Brazier of Dancing Flames
 				{ 4,  23324 }, -- Mantle of the Fire Festival
-				{ 6,  23083 }, -- Captured Flame
-				{ 7,  23247 }, -- Burning Blossom
-				{ 8,  23246 }, -- Fiery Festival Brew
-				{ 9,  23435 }, -- Elderberry Pie
-				{ 10, 23327 }, -- Fire-toasted Bun
-				{ 11, 23326 }, -- Midsummer Sausage
-				{ 12, 23211 }, -- Toasted Smorc
+				{ 5,  23323 }, -- Crown of the Fire Festival
+				{ 6,  34683 }, -- Sandals of Summer
+				{ 7,  34685 }, -- Vestment of Summer
+				{ 9,  23247 }, -- Burning Blossom
+				{ 10,  34599 }, -- Juggling Torch
+				{ 11,  34684 }, -- Handful of Summer Petals
+				{ 12,  23246 }, -- Fiery Festival Brew
+				{ 16, 23215 }, -- Bag of Smorc Ingredients
+				{ 17, 23211 }, -- Toasted Smorc
+				{ 18,  23435 }, -- Elderberry Pie
+				{ 19, 23327 }, -- Fire-toasted Bun
+				{ 20, 23326 }, -- Midsummer Sausage
 			},
 		},
 	},
