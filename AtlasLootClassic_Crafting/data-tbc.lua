@@ -441,8 +441,11 @@ data["EnchantingBC"] = {
 				{ 5, 34003 }, -- Enchant Cloak - Spell Penetration (325)
 				{ 6, 34004 }, -- Enchant Cloak - Greater Agility (320)
 				{ 7, 27961 }, -- Enchant Cloak - Major Armor (320)
-				{ 8, 25086 }, --Enchant Cloak - Dodge / 320 (got updated from classic-era)
-				{ 9, 25084 }, --Enchant Cloak - Subtlety / 320 (got updated from classic-era)
+				{ 8, 25086 }, -- Enchant Cloak - Dodge (320)
+				{ 9, 25081 }, -- Enchant Cloak - Greater Fire Resistance (320)
+				{ 10, 25082 }, --Enchant Cloak - Greater Nature Resistance (320)
+				{ 11, 25084 }, --Enchant Cloak - Subtlety (320)
+				{ 12, 25083 }, --Enchant Cloak - Stealth (320)
 			}
 		},
 		{
@@ -477,8 +480,8 @@ data["EnchantingBC"] = {
 				{ 4, 33995 }, -- Enchant Gloves - Major Strength (350)
 				{ 5, 33996 }, -- Enchant Gloves - Assault (320)
 				{ 6, 33993 }, -- Enchant Gloves - Blasting (315)
-				{ 7, 25080 }, --Enchant Gloves - Superior Agility / 320 (got updated from classic-era)
-				{ 8, 25072 }, --Enchant Gloves - Threat / 320 (got updated from classic-era)
+        { 7, 25080 }, -- Enchant Gloves - Superior Agility (320)
+				{ 8, 25072 }, -- Enchant Gloves - Threat (320)
 			}
 		},
 		{
