@@ -1173,6 +1173,48 @@ data["TheSlavePens"] = {
                 { 28, 27741 }, -- Bleeding Hollow Warhammer
             }
         },
+        { -- CFRSlaveAhune
+            name = AL["Ahune <The Frost Lord>"],
+            npcID = 25740,
+            Level = 73,
+            DisplayIDs = {{23344}},
+            AtlasMapBossID = nil,
+            ExtraList = true,
+            [NORMAL_DIFF] = {
+                { 1, 35514 }, -- Frostscythe of Lord Ahune
+                { 2, 35494 }, -- Shroud of Winter's Chill
+                { 3, 35495 }, -- The Frost Lord's War Cloak
+                { 4, 35496 }, -- Icebound Cloak
+                { 5, 35497 }, -- Cloak of the Frigid Winds
+
+                { 7, 35498 }, -- Formula: Enchant Weapon - Deathfrost
+
+                { 9, 34955 }, -- Scorched Stone
+                { 10, 35557 } -- Huge Snowball
+
+                { 12, 35723 } -- Shards of Ahune
+            },
+            [HEROIC_DIFF] = {
+                { 1, 29434 }, -- Badge of Justice
+                { 3, 35507 }, -- Amulet of Bitter Hatred
+                { 4, 35508 }, -- Choker of the Arctic Flow
+                { 5, 35509 }, -- Amulet of Glacial Tranquility
+                { 6, 35511 }, -- Hailstone Pendant
+
+                { 8, 35514 }, -- Frostscythe of Lord Ahune
+                { 9, 35494 }, -- Shroud of Winter's Chill
+                { 10, 35495 }, -- The Frost Lord's War Cloak
+                { 11, 35496 }, -- Icebound Cloak
+                { 12, 35497 }, -- Cloak of the Frigid Winds
+
+                { 14, 35498 }, -- Formula: Enchant Weapon - Deathfrost
+
+                { 23, 34955 }, -- Scorched Stone
+                { 24, 35557 } -- Huge Snowball
+
+                { 26, 35723 } -- Shards of Ahune
+            }
+        },
         KEYS
     }
 }
