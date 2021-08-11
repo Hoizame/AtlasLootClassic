@@ -26,3 +26,4 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 - Added missing Badge of Justice Helmets (#147)
 - Add classic Engineering-Recipes with bcc mats also into bcc crafting module
 - Removed some Engineering-Recipes that never made it into the game
+- Add Boss Ahune (Midsummer Event) to SlavePens (#162)
