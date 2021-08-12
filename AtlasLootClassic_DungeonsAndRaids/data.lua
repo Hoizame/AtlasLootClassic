@@ -1255,13 +1255,14 @@ data["ScarletMonasteryGraveyard"] = {
                 { 3,  34074 }, -- Witches Band
                 { 5,  33808 }, -- The Horseman's Helm
                 { 6,  38175 }, -- The Horseman's Blade
-                { 8,  34068 }, -- Weighted Jack-o'-Lantern
-                { 16,  37012 }, -- The Horseman's Reins
-                { 18,  33182 }, -- Swift Flying Broom        280% flying
-                { 19,  33176 }, -- Flying Broom              60% flying
-                { 21,  33184 }, -- Swift Magic Broom         100% ground
-                { 22,  37011 }, -- Magic Broom               60% ground
-                { 24,  33154 }, -- Sinister Squashling
+                { 8,  33292 }, -- Hallowed Helm
+                { 9,  34068 }, -- Weighted Jack-o'-Lantern
+                { 16, 37012 }, -- The Horseman's Reins
+                { 18, 33182 }, -- Swift Flying Broom        280% flying
+                { 19, 33176 }, -- Flying Broom              60% flying
+                { 21, 33184 }, -- Swift Magic Broom         100% ground
+                { 22, 37011 }, -- Magic Broom               60% ground
+                { 24, 33154 }, -- Sinister Squashling
             }
         },
 		{ -- SMGTrash
