@@ -1250,6 +1250,7 @@ data["ScarletMonasteryGraveyard"] = {
             Level = 70,
             DisplayIDs = {{22351}},
             AtlasMapBossID = nil,
+			ExtraList = true,
             [NORMAL_DIFF] = {
                 { 1,  34075 }, -- Ring of Ghoulish Delight
                 { 2,  34073 }, -- The Horseman's Signet Ring
