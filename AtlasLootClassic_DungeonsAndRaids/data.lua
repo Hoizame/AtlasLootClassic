@@ -1243,6 +1243,26 @@ data["ScarletMonasteryGraveyard"] = {
 				{ 3,  7684 }, -- Bloodmage Mantle
 			},
 		},
+		{ -- SMGTrash
+			name = AL["Trash"],
+			ExtraList = true,
+			[NORMAL_DIFF] = {
+				{ 1,  5819 }, -- Sunblaze Coif
+				{ 2,  7727 }, -- Watchman Pauldrons
+				{ 3,  7728 }, -- Beguiler Robes
+				{ 4,  7754 }, -- Harbinger Boots
+				{ 5,  10332 }, -- Scarlet Boots
+				{ 6,  2262 }, -- Mark of Kern
+				{ 7,  7787 }, -- Resplendent Guardian
+				{ 8,  7729 }, -- Chesterfall Musket
+				{ 9,  7761 }, -- Steelclaw Reaver
+				{ 10, 7752 }, -- Dreamslayer
+				{ 11, 8226 }, -- The Butcher
+				{ 12, 7786 }, -- Headsplitter
+				{ 13, 7753 }, -- Bloodspiller
+				{ 14, 7730 }, -- Cobalt Crusher
+			},
+		},
 --@version-bcc@
         { -- SMHeadlessHorseman
             name = AL["Headless Horseman"],
@@ -1268,26 +1288,6 @@ data["ScarletMonasteryGraveyard"] = {
             }
         },
 --@end-version-bcc@
-		{ -- SMGTrash
-			name = AL["Trash"],
-			ExtraList = true,
-			[NORMAL_DIFF] = {
-				{ 1,  5819 }, -- Sunblaze Coif
-				{ 2,  7727 }, -- Watchman Pauldrons
-				{ 3,  7728 }, -- Beguiler Robes
-				{ 4,  7754 }, -- Harbinger Boots
-				{ 5,  10332 }, -- Scarlet Boots
-				{ 6,  2262 }, -- Mark of Kern
-				{ 7,  7787 }, -- Resplendent Guardian
-				{ 8,  7729 }, -- Chesterfall Musket
-				{ 9,  7761 }, -- Steelclaw Reaver
-				{ 10, 7752 }, -- Dreamslayer
-				{ 11, 8226 }, -- The Butcher
-				{ 12, 7786 }, -- Headsplitter
-				{ 13, 7753 }, -- Bloodspiller
-				{ 14, 7730 }, -- Cobalt Crusher
-			},
-		},
 		KEYS,
 	},
 }
