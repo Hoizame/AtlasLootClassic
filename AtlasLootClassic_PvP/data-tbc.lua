@@ -234,6 +234,17 @@ data["BCCHonorSet"] = {
 				{ 16, 28938 }, -- High Warlord's Battletome
 			},
 		},
+		{
+			name = ALIL["Back"],
+			[ALLIANCE_DIFF] = {
+				{ 1, 28377 }, -- Sergeant's Heavy Cloak
+				{ 2, 28378 }, --Sergeant's Heavy Cloak
+			},
+			[HORDE_DIFF] = {
+				{ 1, 28377 }, -- Sergeant's Heavy Cloak
+				{ 2, 28378 }, --Sergeant's Heavy Cloak
+			},
+		},
 		PVP_INSIGNIA,
 		PVP_GEMS,
 	},

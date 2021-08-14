@@ -455,9 +455,9 @@ data["EnchantingBC"] = {
 				{ 2, 33992 }, -- Enchant Chest - Major Resilience (345)
 				{ 3, 27960 }, -- Enchant Chest - Exceptional Stats (345)
 				{ 4, 33990 }, -- Enchant Chest - Major Spirit (330)
-				{ 5, 27958 }, -- Enchant Chest - Exceptional Mana (325)
-				{ 6, 27957 }, -- Enchant Chest - Exceptional Health (325)
-				{ 7, 33991 }, -- Enchant Chest - Restore Mana Prime (310)
+				--{ 5, 27958 }, -- Enchant Chest - Exceptional Mana (325) (Never added to the retail game)
+				{ 5, 27957 }, -- Enchant Chest - Exceptional Health (325)
+				{ 6, 33991 }, -- Enchant Chest - Restore Mana Prime (310)
 			}
 		},
 		{
@@ -526,8 +526,8 @@ data["EnchantingBC"] = {
 				{ 5, 45765 }, -- Void Shatter (375)
 				{ 6, 28022 }, -- Large Prismatic Shard (335)
 				{ 7, 42615 }, -- Small Prismatic Shard (315)
-				{ 9, 42613 }, -- Nexus Transformation (295)
-				{ 10, 28021 }, -- Arcane Dust (undefined)
+				{ 8, 42613 }, -- Nexus Transformation (295)
+				--{ 10, 28021 }, -- Arcane Dust (undefined) (Never added to the retail game)
 				{ 16, 32667 }, -- Runed Eternium Rod (375)
 				{ 17, 32665 }, -- Runed Adamantite Rod (350)
 				{ 18, 32664 }, -- Runed Fel Iron Rod (310)
