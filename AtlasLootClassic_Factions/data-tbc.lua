@@ -1087,6 +1087,9 @@ data["Thrallmar"] = {
                 { 3, 29167 }, -- Blackened Spear
                 { 4, 32882 }, -- Hellfire Shot
                 { 6, 29190 }, -- Glyph of Renewal
+
+				{ 8, 30637 }, -- Flamewrought Key
+
                 { 17, 31358 }, -- Design: Dawnstone Crab
                 { 19, 24003 }, -- Formula: Enchant Chest - Exceptional Stats
                 { 21, 34201 }, -- Pattern: Netherscale Ammo Pouch
@@ -1099,7 +1102,7 @@ data["Thrallmar"] = {
                 { 2, 25824 }, -- Farseer's Band
                 { 3, 25823 }, -- Grunt's Waraxe
                 { 5, 29197 }, -- Glyph of Fire Warding
-                { 7, 30637 }, -- Flamewrought Key
+                
                 { 17, 25739 }, -- Pattern: Felstalker Bracers
                 { 18, 25740 }, -- Pattern: Felstalker Breastplate
                 { 19, 31361 }, -- Pattern: Cobrahide Leg Armor
@@ -1203,6 +1206,9 @@ data["HonorHold"] = {
                 { 3, 29166 }, -- Hellforged Halberd
                 { 4, 32883 }, -- Felbane Slugs
                 { 6, 29189 }, -- Glyph of Renewal
+
+				{ 8, 30622 }, -- Flamewrought Key
+
                 { 17, 24180 }, -- Design: Dawnstone Crab
                 { 19, 22547 }, -- Formula: Enchant Chest - Exceptional Stats
                 { 21, 34218 }, -- Pattern: Netherscale Ammo Pouch
@@ -1215,7 +1221,7 @@ data["HonorHold"] = {
                 { 2, 25826 }, -- Sage's Band
                 { 3, 25825 }, -- Footman's Longsword
                 { 5, 29196 }, -- Glyph of Fire Warding
-                { 7, 30622 }, -- Flamewrought Key
+                
                 { 17, 29214 }, -- Pattern: Felstalker Bracers
                 { 18, 29215 }, -- Pattern: Felstalker Breastplate
                 { 19, 29719 }, -- Pattern: Cobrahide Leg Armor

@@ -56,37 +56,49 @@ data["BadgeofJustice"] = {
 		{
 			name = ALIL["Cloth"],
 			[NORMAL_DIFF] = {
-				{ 1, 30762 }, -- Infernoweave Robe
-				{ 2, 30764 }, -- Infernoweave Gloves
-				{ 3, 30761 }, -- Infernoweave Leggings
-				{ 4, 30763 }, -- Infernoweave Boots
+				{ 1, 32089 }, -- Mana-Binders Cowl
+				{ 2, 32090 }, -- Cowl of Naaru Blessings
+
+				{ 4, 30762 }, -- Infernoweave Robe
+				{ 5, 30764 }, -- Infernoweave Gloves
+				{ 6, 30761 }, -- Infernoweave Leggings
+				{ 7, 30763 }, -- Infernoweave Boots
 			},
 		},
 		{
 			name = ALIL["Leather"],
 			[NORMAL_DIFF] = {
-				{ 1, 30776 }, -- Inferno Hardened Chestguard
-				{ 2, 30780 }, -- Inferno Hardened Gloves
-				{ 3, 30778 }, -- Inferno Hardened Leggings
-				{ 4, 30779 }, -- Inferno Hardened Boots
+				{ 1, 32087 }, -- Mask of the Deceiver
+				{ 2, 32088 }, -- Cowl of Beastly Rage
+
+				{ 4, 30776 }, -- Inferno Hardened Chestguard
+				{ 5, 30780 }, -- Inferno Hardened Gloves
+				{ 6, 30778 }, -- Inferno Hardened Leggings
+				{ 7, 30779 }, -- Inferno Hardened Boots
 			},
 		},
 		{
 			name = ALIL["Mail"],
 			[NORMAL_DIFF] = {
-				{ 1, 30773 }, -- Inferno Forged Hauberk
-				{ 2, 30774 }, -- Inferno Forged Gloves
-				{ 3, 30770 }, -- Inferno Forged Boots
-				{ 4, 30772 }, -- Inferno Forged Leggings
+				{ 1, 32085 }, -- Warpstalker Helm
+				{ 2, 32086 }, -- Storm Master's Helmet
+
+				{ 4, 30773 }, -- Inferno Forged Hauberk
+				{ 5, 30774 }, -- Inferno Forged Gloves
+				{ 6, 30770 }, -- Inferno Forged Boots
+				{ 7, 30772 }, -- Inferno Forged Leggings
 			},
 		},
 		{
 			name = ALIL["Plate"],
 			[NORMAL_DIFF] = {
-				{ 1, 30769,  }, -- Inferno Tempered Chestguard
-				{ 2, 30767,  }, -- Inferno Tempered Gauntlets
-				{ 3, 30766 }, -- Inferno Tempered Leggings
-				{ 4, 30768 }, -- Inferno Tempered Boots
+				{ 1, 32083 }, -- Faceguard of Determination
+				{ 2, 32084 }, -- Helmet of the Steadfast Champion
+
+				{ 4, 30769,  }, -- Inferno Tempered Chestguard
+				{ 5, 30767,  }, -- Inferno Tempered Gauntlets
+				{ 6, 30766 }, -- Inferno Tempered Leggings
+				{ 7, 30768 }, -- Inferno Tempered Boots
 			},
 		},
 		{
