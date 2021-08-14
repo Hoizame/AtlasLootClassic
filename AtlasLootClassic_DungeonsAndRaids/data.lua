@@ -1243,6 +1243,7 @@ data["ScarletMonasteryGraveyard"] = {
 				{ 3,  7684 }, -- Bloodmage Mantle
 			},
 		},
+--@version-bcc@
         { -- SMHeadlessHorseman
             name = AL["Headless Horseman"],
             npcID = 23682,
@@ -1265,6 +1266,7 @@ data["ScarletMonasteryGraveyard"] = {
                 { 24, 33154 }, -- Sinister Squashling
             }
         },
+--@end-version-bcc@
 		{ -- SMGTrash
 			name = AL["Trash"],
 			ExtraList = true,
