@@ -6,3 +6,6 @@ DungeonsAndRaidsTBC.lua
 PvP.lua
 Options.lua
 Factions.lua
+
+make.sh
+DevBuild
