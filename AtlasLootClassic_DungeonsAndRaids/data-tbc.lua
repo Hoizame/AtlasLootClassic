@@ -1196,7 +1196,7 @@ data["TheSlavePens"] = {
                 { 18, 34955 }, -- Scorched Stone
                 { 19, 35557 }, -- Huge Snowball
 
-                
+
             },
             [HEROIC_DIFF] = {
                 { 1, 29434 }, -- Badge of Justice

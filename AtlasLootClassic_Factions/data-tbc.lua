@@ -1102,7 +1102,7 @@ data["Thrallmar"] = {
                 { 2, 25824 }, -- Farseer's Band
                 { 3, 25823 }, -- Grunt's Waraxe
                 { 5, 29197 }, -- Glyph of Fire Warding
-                
+
                 { 17, 25739 }, -- Pattern: Felstalker Bracers
                 { 18, 25740 }, -- Pattern: Felstalker Breastplate
                 { 19, 31361 }, -- Pattern: Cobrahide Leg Armor
@@ -1221,7 +1221,7 @@ data["HonorHold"] = {
                 { 2, 25826 }, -- Sage's Band
                 { 3, 25825 }, -- Footman's Longsword
                 { 5, 29196 }, -- Glyph of Fire Warding
-                
+
                 { 17, 29214 }, -- Pattern: Felstalker Bracers
                 { 18, 29215 }, -- Pattern: Felstalker Breastplate
                 { 19, 29719 }, -- Pattern: Cobrahide Leg Armor
