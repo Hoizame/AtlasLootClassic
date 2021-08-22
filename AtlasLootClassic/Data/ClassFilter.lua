@@ -415,6 +415,12 @@ AtlasLoot.AtlasLootDBDefaults.profile.ClassFilter = {
     },
 }
 
+local ITEM_SUB_CLASS_IGNORE = {
+    [LE_ITEM_CLASS_ARMOR] = {
+        ["INVTYPE_CLOAK"] = true,
+    }
+}
+
 local function OnInit()
     db = AtlasLoot.db.ClassFilter
 end
@@ -486,7 +492,9 @@ function ClassFilter.ClassCanUseItem(className, itemID)
         return false
     end
 
-    if CLASS_FILTER.itemSubClass[itemClassID][itemSubClassID] and not CLASS_FILTER.itemSubClass[itemClassID][itemSubClassID][classID] then
+    if ITEM_SUB_CLASS_IGNORE[itemClassID] and ITEM_SUB_CLASS_IGNORE[itemClassID][itemEquipLoc] then
+        -- ignore
+    elseif CLASS_FILTER.itemSubClass[itemClassID][itemSubClassID] and not CLASS_FILTER.itemSubClass[itemClassID][itemSubClassID][classID] then
         return false
     end
 
