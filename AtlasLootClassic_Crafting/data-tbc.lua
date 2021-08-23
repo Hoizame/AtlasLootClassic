@@ -1606,15 +1606,15 @@ data["CookingBC"] = {
 			},
 		},
 		{
-			name = ALIL["Hit"],
+			name = ALIL["Stamina"].." + "..ALIL["Mana Per 5 Sec."],
 			[NORMAL_DIFF] = {
-				{ 1, 43765 }, -- Spicy Hot Talbuk (325)
+				{ 1, 33292 }, -- Blackened Sporefish (310)
 			},
 		},
 		{
-			name = ALIL["Mana Per 5 Sec."],
+			name = ALIL["Hit"].." + "..ALIL["Spirit"],
 			[NORMAL_DIFF] = {
-				{ 1, 33292 }, -- Blackened Sporefish (310)
+				{ 1, 43765 }, -- Spicy Hot Talbuk (325)
 			},
 		},
 		{
@@ -1639,9 +1639,21 @@ data["CookingBC"] = {
 			},
 		},
 		{
+			name = AL["Misc"],
+			[NORMAL_DIFF] = {
+				{ 1, 46684 }, -- Charred Bear Kabobs (250)
+				{ 2, 46688 }, -- Juicy Bear Burger (250)
+				{ 4, 28267 }, -- Crunchy Spider Surprise (60)
+				{ 5, 33278 }, -- Bat Bites (50)
+				{ 16, 33277 }, -- Roasted Moongraze Tenderloin (1)
+				{ 17, 33276 }, --Lynx Steak (1)
+			},
+		},
+		{
 			name = AL["Special"],
 			[NORMAL_DIFF] = {
 				{ 1, 43779 }, -- Delicious Chocolate Cake (1)
+				{ 3, 45695 }, -- Captain Rumsey's Lager (100)
 				{ 16, 43758 }, -- Stormchops (300)
 			},
 		},
