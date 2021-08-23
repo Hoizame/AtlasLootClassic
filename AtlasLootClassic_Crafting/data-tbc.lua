@@ -610,6 +610,8 @@ data["EngineeringBC"] = {
 			[NORMAL_DIFF] = {
 				{ 1, 30563 }, -- Goblin Rocket Launcher (360)
 				{ 2, 30569 }, -- Gnomish Poultryizer (360)
+				{ 16, 36955 }, -- Ultrasafe Transporter - Toshley's Station (350)
+				{ 17, 36954 }, -- Dimensional Ripper - Area 52 (350)
 			}
 		},
 		{
@@ -683,23 +685,14 @@ data["EngineeringBC"] = {
 			[NORMAL_DIFF] = {
 				{ 1, 44157 }, -- Turbo-Charged Flying Machine (385)
 				{ 2, 44155 }, -- Flying Machine (375)
-
 				{ 4, 30349 }, -- Khorium Toolbox (350)
 				{ 5, 30348 }, -- Fel Iron Toolbox (325)
-
-				{ 7, 36955 }, -- Ultrasafe Transporter - Toshley's Station (350)
-				{ 8, 36954 }, -- Dimensional Ripper - Area 52 (350)
-
-				{ 10, 30552 }, -- Mana Potion Injector (345)
-				{ 11, 30551 }, -- Healing Potion Injector (330)
-
-				{ 13, 23078 }, -- Goblin Jumper Cables XL (265) (got updated from classic-era and is not a trinket anymore)
-				{ 14, 9273 },  -- Goblin Jumper Cables (165) (got updated from classic-era and is not a trinket anymore)
-
+				{ 7, 30552 }, -- Mana Potion Injector (345)
+				{ 8, 30551 }, -- Healing Potion Injector (330)
+				{ 10, 23078 }, -- Goblin Jumper Cables XL (265) (got updated from classic-era and is not a trinket anymore)
+				{ 11, 9273 },  -- Goblin Jumper Cables (165) (got updated from classic-era and is not a trinket anymore)
 				{ 16, 30548 }, -- Zapthrottle Mote Extractor (305)
-
 				{ 18, 44391 }, -- Field Repair Bot 110G (360)
-
 				{ 20, 30547 }, -- Elemental Seaforium Charge (350)
 
 				-- The following Items were in the Beta but never made it into the game
