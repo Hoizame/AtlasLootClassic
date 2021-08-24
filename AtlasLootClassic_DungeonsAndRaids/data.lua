@@ -1725,6 +1725,16 @@ data["Uldaman"] = {
 				{ 3,  9408 }, -- Ironshod Bludgeon
 			},
 		},
+		{ -- UldObsidianSentinel
+			name = AL["Obsidian Sentinel"],
+			npcID = 7023,
+			Level = GetForVersion(42,40),
+			DisplayIDs = {{5285}},
+			AtlasMapBossID = 5,
+			[NORMAL_DIFF] = {
+				{ 1,  8053 }, -- Obsidian Power Source
+			},
+		},
 		{ -- UldAncientStoneKeeper
 			name = AL["Ancient Stone Keeper"],
 			npcID = 7206,
@@ -1759,6 +1769,7 @@ data["Uldaman"] = {
 				{ 1,  9415 }, -- Grimlok's Tribal Vestments
 				{ 2,  9416 }, -- Grimlok's Charge
 				{ 4,  9414 }, -- Oilskin Leggings
+				{ 16, 7670 }, -- Shattered Necklace Sapphire
 			},
 		},
 		{ -- UldArchaedas
@@ -1810,6 +1821,14 @@ data["Uldaman"] = {
 			AtlasMapBossID = 1,
 			[NORMAL_DIFF] = {
 				{ 1,  7740 }, -- Gni'kiv Medallion
+			},
+		},
+		{ -- UldConspicuousUrn
+			name = AL["Conspicuous Urn"],
+			ExtraList = true,
+			AtlasMapBossID = 1,
+			[NORMAL_DIFF] = {
+				{ 1,  7671 }, -- Shattered Necklace Topaz
 			},
 		},
 		{ -- UldShadowforgeCache
