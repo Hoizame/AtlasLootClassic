@@ -238,11 +238,11 @@ data["BCCHonorSet"] = {
 			name = ALIL["Back"],
 			[ALLIANCE_DIFF] = {
 				{ 1, 28377 }, -- Sergeant's Heavy Cloak
-				{ 2, 28378 }, --Sergeant's Heavy Cloak
+				{ 2, 28378 }, -- Sergeant's Heavy Cape
 			},
 			[HORDE_DIFF] = {
 				{ 1, 28377 }, -- Sergeant's Heavy Cloak
-				{ 2, 28378 }, --Sergeant's Heavy Cloak
+				{ 2, 28378 }, -- Sergeant's Heavy Cape
 			},
 		},
 		PVP_INSIGNIA,
