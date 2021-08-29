@@ -665,6 +665,8 @@ data["ArenaS2PvP"] = {
 			name = AL["Weapons"].." - "..ALIL["Off Hand"],
 			[NORMAL_DIFF] = {
 				{ 1, 32045 }, -- Gladiator's Shield Wall
+				{ 3, 33309 }, -- Merciless Gladiator's Redoubt
+				{ 4, 33313 }, -- Merciless Gladiator's Barrier
 				{ 16, 31978 }, -- Gladiator's Endgame
 				{ 17, 32961 }, -- Gladiator's Repriev
 			},
