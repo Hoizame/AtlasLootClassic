@@ -7,3 +7,4 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 ## v2.3.3-bcc (Aug, XX, 2021)
 - (bcc) minor typo fix
 - (bcc) added epic purple gems
+- (bcc) added missing s2 pvp shields
