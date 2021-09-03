@@ -9,3 +9,5 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 - (bcc) update .toc version
 - (bcc) add new low level cooking recipes (#125)
 - (bcc) moved engineer port-trinkets to correct category
+- (bcc) added epic purple gems
+- (bcc) added missing s2 pvp shields
