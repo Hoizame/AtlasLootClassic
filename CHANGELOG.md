@@ -6,5 +6,6 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 
 ## v2.3.3-bcc (Aug, XX, 2021)
 
+- (bcc) update .toc version
 - (bcc) add new low level cooking recipes (#125)
 - (bcc) moved engineer port-trinkets to correct category
