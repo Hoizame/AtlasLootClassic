@@ -1350,7 +1350,7 @@ function GUI.RefreshMainFrame()
 	if not GUI.frame then return end
 
 	local frame = GUI.frame
-	frame:SetBackdropColor(db.mainFrame.bgColor.r, db.mainFrame.bgColor.b, db.mainFrame.bgColor.g, db.mainFrame.bgColor.a)
+	frame:SetBackdropColor(db.mainFrame.bgColor.r, db.mainFrame.bgColor.g, db.mainFrame.bgColor.b, db.mainFrame.bgColor.a)
 	frame.titleFrame:SetBackdropColor(db.mainFrame.title.bgColor.r, db.mainFrame.title.bgColor.g, db.mainFrame.title.bgColor.b, db.mainFrame.title.bgColor.a)
 	GUI.RefreshFonts("title")
 	UpdateGameVersionTexture()

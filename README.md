@@ -46,8 +46,8 @@ This currently only supports items
 
 `"i:16703,i:16704,i:16698,i:16699,i:11287"`
 
-## AtlasLootClassic_Maps
+## Maps
 
-[Curseforge](https://www.curseforge.com/wow/addons/atlaslootclassic_maps)
+[Atlas Classic WoW](https://www.curseforge.com/wow/addons/atlas-classicwow)
 
-[WoWInterface](https://www.wowinterface.com/downloads/info25232-AtlasLootClassic_Maps.html)
+[Atlas Burning Crusade](https://www.curseforge.com/wow/addons/atlas-burningcrusade)
