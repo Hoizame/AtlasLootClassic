@@ -710,13 +710,13 @@ data["Mounts"] = {
 				{ 26,  5656 }, -- Brown Horse Bridle
 				{ 27,  5655 }, -- Chestnut Mare Bridle
 				{ 28,  2411 }, -- Black Stallion Bridle
-
 				{ 101,  18902 }, -- Reins of the Swift Stormsaber
 				{ 102,  18767 }, -- Reins of the Swift Mistsaber
 				{ 103,  18766 }, -- Reins of the Swift Frostsaber
 				{ 116,  8632 }, -- Reins of the Spotted Frostsaber
 				{ 117,  8631 }, -- Reins of the Striped Frostsaber
 				{ 118,  8629 }, -- Reins of the Striped Nightsaber
+			-- bcc
 				{ 105, 29745 }, -- Great Blue Elekk
 				{ 106, 29746 }, -- Great Green Elekk
 				{ 107, 29747 }, -- Great Purple Elekk
@@ -754,6 +754,7 @@ data["Mounts"] = {
 				{ 28,  13333 }, -- Brown Skeletal Horse
 				{ 29,  13332 }, -- Blue Skeletal Horse
 				{ 30,  13331 }, -- Red Skeletal Horse
+			-- bcc
 				{ 101, 29223 }, -- Swift Green Hawkstrider
 				{ 102, 29224 }, -- Swift Purple Hawkstrider
 				{ 103, 28936 }, -- Swift Pink Hawkstrider
@@ -765,9 +766,9 @@ data["Mounts"] = {
 				{ 107, 25532 }, -- Swift Yellow Windrider
 				{ 108, 25533 }, -- Swift Purple Windrider
 				{ 109, 25477 }, -- Swift Red Windrider
-				{ 121, 25476 }, -- Green Windrider
+				{ 121, 25474 }, -- Tawny Windrider
 				{ 122, 25475 }, -- Blue Windrider
-				{ 123, 25474 }, -- Tawny Windrider
+				{ 123, 25476 }, -- Green Windrider
 			},
 		},
 		{ -- PvPMountsPvP
