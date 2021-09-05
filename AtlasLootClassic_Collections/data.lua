@@ -716,7 +716,7 @@ data["Mounts"] = {
 				{ 116,  8632 }, -- Reins of the Spotted Frostsaber
 				{ 117,  8631 }, -- Reins of the Striped Frostsaber
 				{ 118,  8629 }, -- Reins of the Striped Nightsaber
-			-- bcc
+			--@version-bcc@
 				{ 105, 29745 }, -- Great Blue Elekk
 				{ 106, 29746 }, -- Great Green Elekk
 				{ 107, 29747 }, -- Great Purple Elekk
@@ -730,6 +730,7 @@ data["Mounts"] = {
 				{ 124, 25470 }, -- Golden Gryphon
 				{ 125, 25471 }, -- Ebon Gryphon
 				{ 126, 25472 }, -- Snowy Gryphon
+			--@end-version-bcc@
 			},
 			[HORDE_DIFF] = {
 				{ 1,  18798 }, -- Horn of the Swift Gray Wolf
@@ -754,7 +755,7 @@ data["Mounts"] = {
 				{ 28,  13333 }, -- Brown Skeletal Horse
 				{ 29,  13332 }, -- Blue Skeletal Horse
 				{ 30,  13331 }, -- Red Skeletal Horse
-			-- bcc
+			-- @version-bcc@
 				{ 101, 29223 }, -- Swift Green Hawkstrider
 				{ 102, 29224 }, -- Swift Purple Hawkstrider
 				{ 103, 28936 }, -- Swift Pink Hawkstrider
@@ -769,6 +770,7 @@ data["Mounts"] = {
 				{ 121, 25474 }, -- Tawny Windrider
 				{ 122, 25475 }, -- Blue Windrider
 				{ 123, 25476 }, -- Green Windrider
+			--@end-version-bcc@
 			},
 		},
 		{ -- PvPMountsPvP
