@@ -876,9 +876,10 @@ data["Mounts"] = {
 		{
 			name = AL["World Events"],
 			[NORMAL_DIFF] = {
-				{ 1, 33977 }, -- Swift Brewfest Ram
-				{ 2, 33976 }, -- Brewfest Ram
-				{ 4, 37012 }, -- The Horseman's Reins
+				{ 1, 37828 }, -- Great Brewfest Kodo
+				{ 2, 33977 }, -- Swift Brewfest Ram
+				{ 3, 33976 }, -- Brewfest Ram
+				{ 5, 37012 }, -- The Horseman's Reins
 				{ 16, 33182 }, -- Swift Flying Broom
 				{ 17, 33184 }, -- Swift Magic Broom
 				{ 18, 33176 }, -- Flying Broom

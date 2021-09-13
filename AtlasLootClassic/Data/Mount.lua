@@ -208,6 +208,7 @@ local MOUNT_LIST = {
     [35225] = 23656, -- X-51 Nether-Rocket
     [33977] = 22350, -- Swift Brewfest Ram
     [33976] = 22265, -- Brewfest Ram
+    [37828] = 24757, -- Great Brewfest Kodo
     [37012] = 25159, -- The Horseman's Reins
     [33182] = 21939, -- Swift Flying Broom
     [33184] = 21939, -- Swift Magic Broom
