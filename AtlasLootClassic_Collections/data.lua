@@ -703,19 +703,34 @@ data["Mounts"] = {
 				{ 21,  13322 }, -- Unpainted Mechanostrider
 				{ 22,  8563 }, -- Red Mechanostrider
 				{ 23,  8595 }, -- Blue Mechanostrider
-				{ 9,  18776 }, -- Swift Palomino
-				{ 10,  18777 }, -- Swift Brown Steed
-				{ 11,  18778 }, -- Swift White Steed
-				{ 24,  2414 }, -- Pinto Bridle
-				{ 25,  5656 }, -- Brown Horse Bridle
-				{ 26,  5655 }, -- Chestnut Mare Bridle
-				{ 27,  2411 }, -- Black Stallion Bridle
-				{ 13,  18902 }, -- Reins of the Swift Stormsaber
-				{ 14,  18767 }, -- Reins of the Swift Mistsaber
-				{ 15,  18766 }, -- Reins of the Swift Frostsaber
-				{ 28,  8632 }, -- Reins of the Spotted Frostsaber
-				{ 29,  8631 }, -- Reins of the Striped Frostsaber
-				{ 30,  8629 }, -- Reins of the Striped Nightsaber
+				{ 10,  18776 }, -- Swift Palomino
+				{ 11,  18777 }, -- Swift Brown Steed
+				{ 12,  18778 }, -- Swift White Steed
+				{ 25,  2414 }, -- Pinto Bridle
+				{ 26,  5656 }, -- Brown Horse Bridle
+				{ 27,  5655 }, -- Chestnut Mare Bridle
+				{ 28,  2411 }, -- Black Stallion Bridle
+				{ 101,  18902 }, -- Reins of the Swift Stormsaber
+				{ 102,  18767 }, -- Reins of the Swift Mistsaber
+				{ 103,  18766 }, -- Reins of the Swift Frostsaber
+				{ 116,  8632 }, -- Reins of the Spotted Frostsaber
+				{ 117,  8631 }, -- Reins of the Striped Frostsaber
+				{ 118,  8629 }, -- Reins of the Striped Nightsaber
+			--@version-bcc@
+				{ 105, 29745 }, -- Great Blue Elekk
+				{ 106, 29746 }, -- Great Green Elekk
+				{ 107, 29747 }, -- Great Purple Elekk
+				{ 120, 28481 }, -- Brown Elekk
+				{ 121, 29743 }, -- Purple Elekk
+				{ 122, 29744 }, -- Gray Elekk
+				{ 109, 25527 }, -- Swift Red Gryphon
+				{ 110, 25528 }, -- Swift Green Gryphon
+				{ 111, 25529 }, -- Swift Purple Gryphon
+				{ 112, 25473 }, -- Swift Blue Gryphon
+				{ 124, 25470 }, -- Golden Gryphon
+				{ 125, 25471 }, -- Ebon Gryphon
+				{ 126, 25472 }, -- Snowy Gryphon
+			--@end-version-bcc@
 			},
 			[HORDE_DIFF] = {
 				{ 1,  18798 }, -- Horn of the Swift Gray Wolf
@@ -740,6 +755,22 @@ data["Mounts"] = {
 				{ 28,  13333 }, -- Brown Skeletal Horse
 				{ 29,  13332 }, -- Blue Skeletal Horse
 				{ 30,  13331 }, -- Red Skeletal Horse
+			-- @version-bcc@
+				{ 101, 29223 }, -- Swift Green Hawkstrider
+				{ 102, 29224 }, -- Swift Purple Hawkstrider
+				{ 103, 28936 }, -- Swift Pink Hawkstrider
+				{ 116, 29220 }, -- Blue Hawkstrider
+				{ 117, 29221 }, -- Black Hawkstrider
+				{ 118, 29222 }, -- Purple Hawkstrider
+				{ 119, 28927 }, -- Red Hawkstrider
+				{ 106, 25531 }, -- Swift Green Windrider
+				{ 107, 25532 }, -- Swift Yellow Windrider
+				{ 108, 25533 }, -- Swift Purple Windrider
+				{ 109, 25477 }, -- Swift Red Windrider
+				{ 121, 25474 }, -- Tawny Windrider
+				{ 122, 25475 }, -- Blue Windrider
+				{ 123, 25476 }, -- Green Windrider
+			--@end-version-bcc@
 			},
 		},
 		{ -- PvPMountsPvP
@@ -845,9 +876,10 @@ data["Mounts"] = {
 		{
 			name = AL["World Events"],
 			[NORMAL_DIFF] = {
-				{ 1, 33977 }, -- Swift Brewfest Ram
-				{ 2, 33976 }, -- Brewfest Ram
-				{ 4, 37012 }, -- The Horseman's Reins
+				{ 1, 37828 }, -- Great Brewfest Kodo
+				{ 2, 33977 }, -- Swift Brewfest Ram
+				{ 3, 33976 }, -- Brewfest Ram
+				{ 5, 37012 }, -- The Horseman's Reins
 				{ 16, 33182 }, -- Swift Flying Broom
 				{ 17, 33184 }, -- Swift Magic Broom
 				{ 18, 33176 }, -- Flying Broom

@@ -120,7 +120,35 @@ local MOUNT_LIST = {
     [21176] = 15677, -- Black Qiraji Resonating Crystal
     [20221] = 15293, -- Foror's Fabled Steed
 --@version-bcc@
-    -- BC
+    -- factionMounts
+    [29745] = 19871, -- Great Blue Elekk
+    [29746] = 19873, -- Great Green Elekk
+    [29747] = 19872, -- Great Purple Elekk
+    [28481] = 17063, -- Brown Elekk
+    [29743] = 19870, -- Purple Elekk
+    [29744] = 19869, -- Gray Elekk
+    [25527] = 17718, -- Swift Red Gryphon
+    [25528] = 17703, -- Swift Green Gryphon
+    [25529] = 17717, -- Swift Purple Gryphon
+    [25473] = 17759, -- Swift Blue Gryphon
+    [25470] = 17697, -- Golden Gryphon
+    [25471] = 17694, -- Ebon Gryphon
+    [25472] = 17696, -- Snowy Gryphon
+    [29223] = 19484, -- Swift Green Hawkstrider
+    [29224] = 19482, -- Swift Purple Hawkstrider
+    [28936] = 18697, -- Swift Pink Hawkstrider
+    [29220] = 19480, -- Blue Hawkstrider
+    [29221] = 19478, -- Black Hawkstrider
+    [29222] = 19479, -- Purple Hawkstrider
+    [28927] = 18696, -- Red Hawkstrider
+    [25531] = 17720, -- Swift Green Windrider
+    [25532] = 17722, -- Swift Yellow Windrider
+    [25533] = 17721, -- Swift Purple Windrider
+    [25477] = 17719, -- Swift Red Windrider
+    [25474] = 17699, -- Tawny Windrider
+    [25475] = 17700, -- Blue Windrider
+    [25476] = 17701, -- Green Windrider
+    -- end-factionMounts
     [32768] = 21473, -- Swift Raven Lord Mount
     [35513] = 19483, -- Swift White Hawkstrider
     [32458] = 17890, -- Ashes of Al'ar
@@ -180,6 +208,7 @@ local MOUNT_LIST = {
     [35225] = 23656, -- X-51 Nether-Rocket
     [33977] = 22350, -- Swift Brewfest Ram
     [33976] = 22265, -- Brewfest Ram
+    [37828] = 24757, -- Great Brewfest Kodo
     [37012] = 25159, -- The Horseman's Reins
     [33182] = 21939, -- Swift Flying Broom
     [33184] = 21939, -- Swift Magic Broom
