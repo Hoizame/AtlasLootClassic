@@ -18,3 +18,4 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 - (bcc) added pvp cloaks
 - (bcc) added new midsummer festival items
 - (bcc) removed Enchanting formulas that never made it into the game
+- (bcc) add/update vendor prices
