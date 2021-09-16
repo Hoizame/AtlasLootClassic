@@ -87,7 +87,7 @@ local PVP_INSIGNIA = {	-- Insignias
 	},
 }
 
-local PVP_GEMS = {	-- Insignias
+local PVP_GEMS = {	-- Gems
 	name = ALIL["Gems"],
 	NORMAL_ITTYPE = ICON_ITTYPE,
 	ExtraList = true,
@@ -449,7 +449,7 @@ data["ArenaS1PvP"] = {
 			},
 			[ALLIANCE_DIFF] = {
 				{ 1, 29002 }, -- Marshal's Silk Cuffs
-				{ 2, 28409 }, -- Marshal's Silk Belt
+				{ 2, 29001 }, -- Marshal's Silk Belt
 				{ 3, 29003 }, -- Marshal's Silk Footguards
 
 				{ 5, 28981 }, -- Marshal's Dreadweave Cuffs
