@@ -4,7 +4,7 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 
 [Changelog history](https://github.com/Hoizame/AtlasLootClassic/blob/master/AtlasLootClassic/Documentation/Release_Notes.md)
 
-## v2.3.3-bcc (Aug, XX, 2021)
+## v2.3.3-bcc (Sep, 18, 2021)
 
 - fixed bug on colorpicker which caused it to pick the wrong color for background (#169)
 - add missing questitems and boss for magequest to Uldaman
