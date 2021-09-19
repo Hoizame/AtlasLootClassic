@@ -784,9 +784,9 @@ data["Mounts"] = {
 --@version-bcc@
 				{ 7,  35906 }, -- Reins of the Black War Elekk
 				{ 16,  30609 }, -- Swift Nether Drake
-				{ 17,  37676 }, -- Vengeful Nether Drake
-				{ 18,  34092 }, -- Merciless Nether Drake
-				--{ 19,  43516 }, -- Brutal Nether Drake NYI
+				{ 17,  34092 }, -- Merciless Nether Drake
+				{ 18,  37676 }, -- Vengeful Nether Drake
+				{ 19,  43516 }, -- Brutal Nether Drake 
 --@end-version-bcc@
 			},
 			[HORDE_DIFF] = {
@@ -798,9 +798,9 @@ data["Mounts"] = {
 --@version-bcc@
 				{ 7, 34129 }, -- Swift Warstrider
 				{ 16,  30609 }, -- Swift Nether Drake
-				{ 17,  37676 }, -- Vengeful Nether Drake
-				{ 18,  34092 }, -- Merciless Nether Drake
-				--{ 19,  43516 }, -- Brutal Nether Drake NYI
+				{ 17,  34092 }, -- Merciless Nether Drake
+				{ 18,  37676 }, -- Vengeful Nether Drake
+				{ 19,  43516 }, -- Brutal Nether Drake 
 --@end-version-bcc@
 			},
 		},
