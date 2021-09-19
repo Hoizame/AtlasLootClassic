@@ -1208,10 +1208,10 @@ data["ArenaS4PvP"] = {
 		PVP_INSIGNIA,
 		PVP_GEMS,
 		{
-			name = AL["Gladiator Mount"]..BLIZZARD_NYI,
+			name = AL["Gladiator Mount"],
 			ExtraList = true,
 			[NORMAL_DIFF] = {
-				{ 1,  43516 }, -- Brutal Nether Drake NYI
+				{ 1,  43516 }, -- Brutal Nether Drake
 			}
 		}
 	}
