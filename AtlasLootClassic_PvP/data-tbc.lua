@@ -591,7 +591,7 @@ data["ArenaS2PvP"] = {
 	TableType = NORMAL_ITTYPE,
 	items = {
 		{
-			name = AL["Sets"]..BLIZZARD_NYI,
+			name = AL["Sets"],
 			TableType = SET_ITTYPE,
 			[NORMAL_DIFF] = {
 				{ 1,    702 }, -- Warlock
@@ -797,7 +797,7 @@ data["ArenaS3PvP"] = {
 	TableType = NORMAL_ITTYPE,
 	items = {
 		{
-			name = AL["Sets"]..BLIZZARD_NYI,
+			name = AL["Sets"],
 			TableType = SET_ITTYPE,
 			[NORMAL_DIFF] = {
 				{ 1,    734 }, -- Warlock
