@@ -53,7 +53,8 @@ local PVP_INSIGNIA = {	-- Insignias
 	NORMAL_ITTYPE = ICON_ITTYPE,
 	ExtraList = true,
 	[ALLIANCE_DIFF] = {
-		{ 1, 37864, [PRICE_EXTRA_ITTYPE] = "honorA:40000" }, -- Medallion of the Alliance
+		{ 1, 25829, [PRICE_EXTRA_ITTYPE] = "honorA:22950:pvpEye:10" }, -- Talisman of the Alliance
+		{ 2, 37864, [PRICE_EXTRA_ITTYPE] = "honorA:40000" }, -- Medallion of the Alliance
 		{ 3, 28235, [PRICE_EXTRA_ITTYPE] = "honorA:8000" }, -- Medallion of the Alliance
 		{ 4, 28237, [PRICE_EXTRA_ITTYPE] = "honorA:8000" }, -- Medallion of the Alliance
 		{ 5, 28238, [PRICE_EXTRA_ITTYPE] = "honorA:8000" }, -- Medallion of the Alliance
@@ -63,14 +64,10 @@ local PVP_INSIGNIA = {	-- Insignias
 		{ 9, 30351, [PRICE_EXTRA_ITTYPE] = "honorA:8000" }, -- Medallion of the Alliance
 		{ 10, 30348, [PRICE_EXTRA_ITTYPE] = "honorA:8000" }, -- Medallion of the Alliance
 		{ 11, 30350, [PRICE_EXTRA_ITTYPE] = "honorA:8000" }, -- Medallion of the Alliance
-
-
-		--{ 2, 25829, [PRICE_EXTRA_ITTYPE] = "honorA:22950:pvpEye:10" }, -- Talisman of the Alliance
-		--{ 16, 28246 }, -- Band of Triumph
-		--{ 17, 28247 }, -- Band of Dominance
 	},
 	[HORDE_DIFF] = {
-		{ 1, 37865, [PRICE_EXTRA_ITTYPE] = "honorH:40000" }, -- Medallion of the Horde
+		{ 1, 24551, [PRICE_EXTRA_ITTYPE] = "honorH:22950:pvpEye:10" }, -- Talisman of the Horde
+		{ 2, 37865, [PRICE_EXTRA_ITTYPE] = "honorH:40000" }, -- Medallion of the Horde
 		{ 3, 28241, [PRICE_EXTRA_ITTYPE] = "honorH:8000" }, -- Medallion of the Horde
 		{ 4, 28243, [PRICE_EXTRA_ITTYPE] = "honorH:8000" }, -- Medallion of the Horde
 		{ 5, 28239, [PRICE_EXTRA_ITTYPE] = "honorH:8000" }, -- Medallion of the Horde
@@ -80,10 +77,6 @@ local PVP_INSIGNIA = {	-- Insignias
 		{ 9, 30345, [PRICE_EXTRA_ITTYPE] = "honorH:8000" }, -- Medallion of the Horde
 		{ 10, 30343, [PRICE_EXTRA_ITTYPE] = "honorH:8000" }, -- Medallion of the Horde
 		{ 11, 30344, [PRICE_EXTRA_ITTYPE] = "honorH:8000" }, -- Medallion of the Horde
-
-		--{ 2, 24551, [PRICE_EXTRA_ITTYPE] = "honorH:22950:pvpEye:10" }, -- Talisman of the Horde
-		--{ 16, 28246 }, -- Band of Triumph
-		--{ 17, 28247 }, -- Band of Dominance
 	},
 }
 
@@ -299,9 +292,9 @@ data["PvPMountsBCC"] = {
 				{ 6,  29471 }, -- Reins of the Black War Tiger
 				{ 7,  35906 }, -- Reins of the Black War Elekk
 				{ 16,  30609 }, -- Swift Nether Drake
-				{ 17,  37676 }, -- Vengeful Nether Drake
-				{ 18,  34092 }, -- Merciless Nether Drake
-				--{ 19,  43516 }, -- Brutal Nether Drake NYI
+				{ 17,  34092 }, -- Merciless Nether Drake
+				{ 18,  37676 }, -- Vengeful Nether Drake
+				{ 19,  43516 }, -- Brutal Nether Drake
 			},
 			[HORDE_DIFF] = {
 				{ 1, 19029  }, -- Horn of the Frostwolf Howler
@@ -311,9 +304,9 @@ data["PvPMountsBCC"] = {
 				{ 6, 29470 }, -- Red Skeletal Warhorse
 				{ 7, 34129 }, -- Swift Warstrider
 				{ 16,  30609 }, -- Swift Nether Drake
-				{ 17,  37676 }, -- Vengeful Nether Drake
-				{ 18,  34092 }, -- Merciless Nether Drake
-				--{ 19,  43516 }, -- Brutal Nether Drake NYI
+				{ 17,  34092 }, -- Merciless Nether Drake
+				{ 18,  37676 }, -- Vengeful Nether Drake
+				{ 19,  43516 }, -- Brutal Nether Drake
 			},
 		},
 	},
