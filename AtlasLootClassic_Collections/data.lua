@@ -1484,27 +1484,29 @@ data["Brewfest"] = {
 		{ -- Brewfest
 			name = AL["Brewfest"],
 			[NORMAL_DIFF] = {
-				{ 1,  34008 }, -- Blix's Eyesight Enhancing Romance Goggles
-				{ 2,  33968 }, -- Blue Brewfest Hat
-				{ 3,  33864 }, -- Brown Brewfest Hat
-				{ 4,  33967 }, -- Green Brewfest Hat
-				{ 5,  33969 }, -- Purple Brewfest Hat
-				{ 6,  33863 }, -- Brewfest Dress
-				{ 7,  33862 }, -- Brewfest Regalia
-				{ 8,  33966 }, -- Brewfest Slippers
-				{ 9,  33868 }, -- Brewfest Boots
-				{ 11,  33016 }, -- Blue Brewfest Stein
-				{ 12,  33017 }, -- Filled Blue Brewfest Stein
-				{ 13,  33018 }, -- Filled Blue Brewfest Stein
-				{ 14,  33019 }, -- Filled Blue Brewfest Stein
-				{ 15,  33020 }, -- Filled Blue Brewfest Stein
-				{ 16,  32233 }, -- Wolpertinger's Tankard
-				{ 18,  37599 }, -- "Brew of the Month" Club Membership Form
-				{ 20,  37829 }, -- Brewfest Prize Token
-				{ 22,  33927 }, -- Brewfest Pony Keg
-				{ 24,  37750 }, -- Fresh Brewfest Hops
-				{ 25,  39477 }, -- Fresh Dwarven Brewfest Hops
-				{ 26,  39476 }, -- Fresh Goblin Brewfest Hops
+				{ 1,  33968 }, -- Blue Brewfest Hat
+				{ 2,  33864 }, -- Brown Brewfest Hat
+				{ 3,  33967 }, -- Green Brewfest Hat
+				{ 4,  33969 }, -- Purple Brewfest Hat
+				{ 5,  33863 }, -- Brewfest Dress
+				{ 6,  33862 }, -- Brewfest Regalia
+				{ 7,  33966 }, -- Brewfest Slippers
+				{ 8,  33868 }, -- Brewfest Boots
+				{ 10,  33016 }, -- Blue Brewfest Stein
+				{ 11,  33017 }, -- Filled Blue Brewfest Stein
+				{ 12,  33018 }, -- Filled Blue Brewfest Stein
+				{ 13,  33019 }, -- Filled Blue Brewfest Stein
+				{ 14,  33020 }, -- Filled Blue Brewfest Stein
+				{ 16,  33047  }, -- Belbi's Eyesight Enhancing Romance Goggles (Alliance)
+				{ 17,  34008 }, -- Blix's Eyesight Enhancing Romance Goggles (Horde)
+				{ 19,  32233 }, -- Wolpertinger's Tankard
+				{ 21,  37599 }, -- "Brew of the Month" Club Membership Form
+				{ 23,  37829 }, -- Brewfest Prize Token
+				{ 25,  33927 }, -- Brewfest Pony Keg
+				{ 27,  37750 }, -- Fresh Brewfest Hops
+				{ 28,  39477 }, -- Fresh Dwarven Brewfest Hops
+				{ 29,  39476 }, -- Fresh Goblin Brewfest Hops
+				{ 30,  37816 }, -- Preserved Brewfest Hops
 			},
 		},
 		{
