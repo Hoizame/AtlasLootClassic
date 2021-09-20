@@ -2936,6 +2936,25 @@ data["BlackrockDepths"] = {
 				{ 4,  22317 }, -- Lefty's Brass Knuckle
 			},
 		},
+		{ -- BRRDCorenDirebrew 
+			name = AL["Coren Direbrew"],
+			npcID = 23872,
+			DisplayIDs = {{21824}},
+			AtlasMapBossID = 15,
+			ExtraList = true,
+			[NORMAL_DIFF] = {
+				{ 1,  37128 }, -- Balebrew Charm
+				{ 2,  37127 }, -- Brightbrew Charm
+				{ 3,  38287 }, -- Empty Mug of Direbrew
+				{ 4,  38290 }, -- Dark Iron Smoking Pipe
+				{ 5,  38288 }, -- Direbrew Hops
+				{ 6,  38289 }, -- Coren's Lucky Coin
+				{ 16,  33977 }, -- Swift Brewfest Ram
+				{ 17,  37828 }, -- Great Brewfest Kodo
+				{ 19,  37863 }, -- Direbrew's Remote				
+				{ 21,  38280 }, -- Direbrew's Dire Brew
+			},
+		},
 	},
 }
 
