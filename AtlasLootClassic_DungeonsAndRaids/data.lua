@@ -2928,6 +2928,7 @@ data["BlackrockDepths"] = {
 			npcID = 16059,
 			DisplayIDs = {{15981}},
 			AtlasMapBossID = 6,
+			Level = 60,
 			ExtraList = true,
 			[NORMAL_DIFF] = {
 				{ 1,  22305 }, -- Ironweave Mantle
@@ -2941,6 +2942,7 @@ data["BlackrockDepths"] = {
 			npcID = 23872,
 			DisplayIDs = {{21824}},
 			AtlasMapBossID = 15,
+			Level = 73,
 			ExtraList = true,
 			[NORMAL_DIFF] = {
 				{ 1,  37128 }, -- Balebrew Charm
