@@ -1383,13 +1383,75 @@ data["LunarFestival"] = {
 	},
 }
 
+data["Darkmoon"] = {
+	FactionID = 909,
+	ContentType = WORLD_EVENT_CONTENT,
+	LoadDifficulty = LOAD_DIFF,
+	ContentPhase = 3,
+	items = {
+		{ -- Exalted
+			name = GetFactionInfoByID(909),
+			[NORMAL_DIFF] = {
+				{ 1, "", nil, AL["Classic"] },
+				{ 2,  19228 }, -- Darkmoon Card: Blue Dragon
+				{ 3,  19267 }, -- Darkmoon Card: Maelstrom
+				{ 4,  19257 }, -- Darkmoon Card: Heroism
+				{ 5,  19277 }, -- Darkmoon Card: Twisting Nether
+--@version-bcc@
+				{ 7, "", nil, AL["Burning Crusade"] },
+				{ 8,  31907 }, -- Darkmoon Card: Vengeance
+				{ 9,  31890 }, -- Darkmoon Card: Crusade
+				{ 10,  31891 }, -- Darkmoon Card: Wrath
+				{ 11,  31914 }, -- Darkmoon Card: Madness
+--@end-version-bcc@
+				{ 16,  19491, 19182, [ATLASLOOT_IT_AMOUNT2] = 1200 }, -- Amulet of the Darkmoon
+				{ 17,  19426, 19182, [ATLASLOOT_IT_AMOUNT2] = 1200 }, -- Orb of the Darkmoon
+				{ 19,  19293, 19182, [ATLASLOOT_IT_AMOUNT2] = 50 }, -- Last Year's Mutton
+				{ 20,  19291, 19182, [ATLASLOOT_IT_AMOUNT2] = 50 }, -- Darkmoon Storage Box
+				{ 22,  9249, 19182, [ATLASLOOT_IT_AMOUNT2] = 40 }, -- Schematic: Steam Tonk Controller
+				{ 23,  19296, 19182, [ATLASLOOT_IT_AMOUNT2] = 40 }, -- Greater Darkmoon Prize
+				{ 25,  19297, 19182, [ATLASLOOT_IT_AMOUNT2] = 12 }, -- Lesser Darkmoon Prize
+				{ 27,  19292, 19182, [ATLASLOOT_IT_AMOUNT2] = 10 }, -- Last Month's Mutton
+				{ 29,  19298, 19182, [ATLASLOOT_IT_AMOUNT2] = 5 }, -- Minor Darkmoon Prize
+				{ 30,  19295, 19182, [ATLASLOOT_IT_AMOUNT2] = 5 }, -- Darkmoon Flower
+			},
+		},
+	},
+}
+
 data["MidsummerFestival"] = {
 	name = AL["Midsummer Festival"],
 	ContentType = WORLD_EVENT_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = NORMAL_ITTYPE,
+	gameVersion = 1,
 	items = {
 		{ -- MidsummerFestival
+			name = AL["Midsummer Festival"],
+			[NORMAL_DIFF] = {
+				{ 1,  23379 }, -- Cinder Bracers
+				{ 3,  23323 }, -- Crown of the Fire Festival
+				{ 4,  23324 }, -- Mantle of the Fire Festival
+				{ 6,  23083 }, -- Captured Flame
+				{ 7,  23247 }, -- Burning Blossom
+				{ 8,  23246 }, -- Fiery Festival Brew
+				{ 9,  23435 }, -- Elderberry Pie
+				{ 10, 23327 }, -- Fire-toasted Bun
+				{ 11, 23326 }, -- Midsummer Sausage
+				{ 12, 23211 }, -- Toasted Smorc
+			},
+		},
+	},
+}
+
+data["MidsummerFestivalTBC"] = {
+	name = AL["Midsummer Festival"],
+	ContentType = WORLD_EVENT_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = NORMAL_ITTYPE,
+	gameVersion = 2,
+	items = {
+		{ -- MidsummerFestivalTBC
 			name = AL["Midsummer Festival"],
 			[NORMAL_DIFF] = {
 				{ 1,  23083 }, -- Captured Flame
@@ -1408,6 +1470,57 @@ data["MidsummerFestival"] = {
 				{ 19, 23327 }, -- Fire-toasted Bun
 				{ 20, 23326 }, -- Midsummer Sausage
 			},
+		},
+	},
+}
+
+data["Brewfest"] = {
+	name = AL["Brewfest"],
+	ContentType = WORLD_EVENT_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = NORMAL_ITTYPE,
+	gameVersion = 2,
+	items = {
+		{ -- Brewfest
+			name = AL["Brewfest"],
+			[NORMAL_DIFF] = {
+				{ 1,  34008 }, -- Blix's Eyesight Enhancing Romance Goggles
+				{ 2,  33968 }, -- Blue Brewfest Hat
+				{ 3,  33864 }, -- Brown Brewfest Hat
+				{ 4,  33967 }, -- Green Brewfest Hat
+				{ 5,  33969 }, -- Purple Brewfest Hat
+				{ 6,  33863 }, -- Brewfest Dress
+				{ 7,  33862 }, -- Brewfest Regalia
+				{ 8,  33966 }, -- Brewfest Slippers
+				{ 9,  33868 }, -- Brewfest Boots
+				{ 11,  33016 }, -- Blue Brewfest Stein
+				{ 12,  33017 }, -- Filled Blue Brewfest Stein
+				{ 13,  33018 }, -- Filled Blue Brewfest Stein
+				{ 14,  33019 }, -- Filled Blue Brewfest Stein
+				{ 15,  33020 }, -- Filled Blue Brewfest Stein
+				{ 16,  32233 }, -- Wolpertinger's Tankard
+				{ 18,  37599 }, -- "Brew of the Month" Club Membership Form
+				{ 20,  37829 }, -- Brewfest Prize Token
+				{ 22,  33927 }, -- Brewfest Pony Keg
+				{ 24,  37750 }, -- Fresh Brewfest Hops
+				{ 25,  39477 }, -- Fresh Dwarven Brewfest Hops
+				{ 26,  39476 }, -- Fresh Goblin Brewfest Hops
+			},
+		},
+		{
+			name = C_Map_GetAreaInfo(1584).." - "..AL["Coren Direbrew"],
+			[NORMAL_DIFF] = {
+				{ 1,  37128 }, -- Balebrew Charm
+				{ 2,  37127 }, -- Brightbrew Charm
+				{ 3,  38287 }, -- Empty Mug of Direbrew
+				{ 4,  38290 }, -- Dark Iron Smoking Pipe
+				{ 5,  38288 }, -- Direbrew Hops
+				{ 6,  38289 }, -- Coren's Lucky Coin
+				{ 16,  33977 }, -- Swift Brewfest Ram
+				{ 17,  37828 }, -- Great Brewfest Kodo
+				{ 19,  37863 }, -- Direbrew's Remote				
+				{ 21,  38280 }, -- Direbrew's Dire Brew
+			}
 		},
 	},
 }
@@ -1441,40 +1554,6 @@ data["ElementalInvasions"] = {
 				{ 23, 19268 }, -- Ace of Elementals
 				{ 24, 21548 }, -- Pattern: Stormshroud Gloves
 				{ 25, 18677 }, -- Zephyr Cloak
-			},
-		},
-	},
-}
-
-data["Darkmoon"] = {
-	FactionID = 909,
-	ContentType = WORLD_EVENT_CONTENT,
-	LoadDifficulty = LOAD_DIFF,
-	ContentPhase = 3,
-	items = {
-		{ -- Exalted
-			name = GetFactionInfoByID(909),
-			[NORMAL_DIFF] = {
-				{ 1,  19228 }, -- Darkmoon Card: Blue Dragon
-				{ 2,  19267 }, -- Darkmoon Card: Maelstrom
-				{ 3,  19257 }, -- Darkmoon Card: Heroism
-				{ 4,  19277 }, -- Darkmoon Card: Twisting Nether
---@version-bcc@
-				{ 6,  31907 }, -- Darkmoon Card: Vengeance
-				{ 7,  31890 }, -- Darkmoon Card: Crusade
-				{ 8,  31891 }, -- Darkmoon Card: Wrath
-				{ 9,  31914 }, -- Darkmoon Card: Madness
---@end-version-bcc@
-				{ 16,  19491, 19182, [ATLASLOOT_IT_AMOUNT2] = 1200 }, -- Amulet of the Darkmoon
-				{ 17,  19426, 19182, [ATLASLOOT_IT_AMOUNT2] = 1200 }, -- Orb of the Darkmoon
-				{ 19,  19293, 19182, [ATLASLOOT_IT_AMOUNT2] = 50 }, -- Last Year's Mutton
-				{ 20,  19291, 19182, [ATLASLOOT_IT_AMOUNT2] = 50 }, -- Darkmoon Storage Box
-				{ 22,  9249, 19182, [ATLASLOOT_IT_AMOUNT2] = 40 }, -- Schematic: Steam Tonk Controller
-				{ 23,  19296, 19182, [ATLASLOOT_IT_AMOUNT2] = 40 }, -- Greater Darkmoon Prize
-				{ 25,  19297, 19182, [ATLASLOOT_IT_AMOUNT2] = 12 }, -- Lesser Darkmoon Prize
-				{ 27,  19292, 19182, [ATLASLOOT_IT_AMOUNT2] = 10 }, -- Last Month's Mutton
-				{ 29,  19298, 19182, [ATLASLOOT_IT_AMOUNT2] = 5 }, -- Minor Darkmoon Prize
-				{ 30,  19295, 19182, [ATLASLOOT_IT_AMOUNT2] = 5 }, -- Darkmoon Flower
 			},
 		},
 	},
