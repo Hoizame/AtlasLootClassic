@@ -1492,25 +1492,21 @@ data["Brewfest"] = {
 				{ 6,  33862 }, -- Brewfest Regalia
 				{ 7,  33966 }, -- Brewfest Slippers
 				{ 8,  33868 }, -- Brewfest Boots
-				{ 10,  33016 }, -- Blue Brewfest Stein
-				{ 11,  33017 }, -- Filled Blue Brewfest Stein
-				{ 12,  33018 }, -- Filled Blue Brewfest Stein
-				{ 13,  33019 }, -- Filled Blue Brewfest Stein
-				{ 14,  33020 }, -- Filled Blue Brewfest Stein
-				{ 16,  33047  }, -- Belbi's Eyesight Enhancing Romance Goggles (Alliance)
-				{ 17,  34008 }, -- Blix's Eyesight Enhancing Romance Goggles (Horde)
-				{ 19,  32233 }, -- Wolpertinger's Tankard
-				{ 21,  37599 }, -- "Brew of the Month" Club Membership Form
-				{ 23,  37829 }, -- Brewfest Prize Token
-				{ 25,  33927 }, -- Brewfest Pony Keg
-				{ 27,  37750 }, -- Fresh Brewfest Hops
-				{ 28,  39477 }, -- Fresh Dwarven Brewfest Hops
-				{ 29,  39476 }, -- Fresh Goblin Brewfest Hops
-				{ 30,  37816 }, -- Preserved Brewfest Hops
+				{ 10,  33047 }, -- Belbi's Eyesight Enhancing Romance Goggles (Alliance)
+				{ 11,  34008 }, -- Blix's Eyesight Enhancing Romance Goggles (Horde)
+				{ 13,  33016 }, -- Blue Brewfest Stein
+				{ 16,  32233 }, -- Wolpertinger's Tankard
+				{ 18,  37599 }, -- "Brew of the Month" Club Membership Form
+				{ 20,  37829 }, -- Brewfest Prize Token
+				{ 22,  33927 }, -- Brewfest Pony Keg
+				{ 24,  37750 }, -- Fresh Brewfest Hops
+				{ 25,  39477 }, -- Fresh Dwarven Brewfest Hops
+				{ 26,  39476 }, -- Fresh Goblin Brewfest Hops
+				{ 27,  37816 }, -- Preserved Brewfest Hops
 			},
 		},
 		{
-			name = AL["Food & Drinks"],
+			name = AL["Food"],
 			[NORMAL_DIFF] = {
 				{ 1, 33043 }, -- The Essential Brewfest Pretzel
 				{ 3,  34017 }, -- Small Step Brew
