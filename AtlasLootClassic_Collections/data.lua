@@ -1495,14 +1495,17 @@ data["Brewfest"] = {
 				{ 10,  33047 }, -- Belbi's Eyesight Enhancing Romance Goggles (Alliance)
 				{ 11,  34008 }, -- Blix's Eyesight Enhancing Romance Goggles (Horde)
 				{ 13,  33016 }, -- Blue Brewfest Stein
-				{ 16,  32233 }, -- Wolpertinger's Tankard
-				{ 18,  37599 }, -- "Brew of the Month" Club Membership Form
-				{ 20,  37829 }, -- Brewfest Prize Token
-				{ 22,  33927 }, -- Brewfest Pony Keg
-				{ 24,  37750 }, -- Fresh Brewfest Hops
-				{ 25,  39477 }, -- Fresh Dwarven Brewfest Hops
-				{ 26,  39476 }, -- Fresh Goblin Brewfest Hops
-				{ 27,  37816 }, -- Preserved Brewfest Hops
+				{ 15,  37829 }, -- Brewfest Prize Token
+				{ 16,  33976 }, -- Brewfest Ram
+				{ 17,  33977 }, -- Swift Brewfest Ram
+				{ 19,  32233 }, -- Wolpertinger's Tankard
+				{ 21,  34028 }, -- "Honorary Brewer" Hand Stamp
+				{ 22,  37599 }, -- "Brew of the Month" Club Membership Form
+				{ 24,  33927 }, -- Brewfest Pony Keg
+				{ 26,  37750 }, -- Fresh Brewfest Hops
+				{ 27,  39477 }, -- Fresh Dwarven Brewfest Hops
+				{ 28,  39476 }, -- Fresh Goblin Brewfest Hops
+				{ 29,  37816 }, -- Preserved Brewfest Hops
 			},
 		},
 		{
