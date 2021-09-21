@@ -1510,6 +1510,22 @@ data["Brewfest"] = {
 			},
 		},
 		{
+			name = AL["Food & Drinks"],
+			[NORMAL_DIFF] = {
+				{ 1, 33043 }, -- The Essential Brewfest Pretzel
+				{ 3,  34017 }, -- Small Step Brew
+				{ 4,  34018 }, -- long Stride Brew
+				{ 5,  34019 }, -- Path of Brew
+				{ 6,  34020 }, -- Jungle River Water
+				{ 7,  34021 }, -- Brewdoo Magic
+				{ 8,  34022 }, -- Stout Shrunken Head
+				{ 9,  33034 }, -- Gordok Grog
+				{ 10,  33035 }, -- Ogre Mead
+				{ 11,  33036 }, -- Mudder's Milk
+
+			},
+		},
+		{
 			name = C_Map_GetAreaInfo(1584).." - "..AL["Coren Direbrew"],
 			[NORMAL_DIFF] = {
 				{ 1,  37128 }, -- Balebrew Charm
