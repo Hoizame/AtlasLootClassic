@@ -22,6 +22,7 @@ local ALIL = AtlasLoot.IngameLocales
 local GetForVersion = AtlasLoot.ReturnForGameVersion
 
 local NORMAL_DIFF = data:AddDifficulty(AL["Normal"], "n", 1, nil, true)
+local HEROIC_DIFF = data:AddDifficulty(AL["Heroic"], "h", 2, nil, true)
 local ALLIANCE_DIFF, HORDE_DIFF, LOAD_DIFF
 if UnitFactionGroup("player") == "Horde" then
 	HORDE_DIFF = data:AddDifficulty(FACTION_HORDE, "horde", nil, 1)
@@ -786,7 +787,7 @@ data["Mounts"] = {
 				{ 16,  30609 }, -- Swift Nether Drake
 				{ 17,  34092 }, -- Merciless Nether Drake
 				{ 18,  37676 }, -- Vengeful Nether Drake
-				{ 19,  43516 }, -- Brutal Nether Drake
+				{ 19,  43516 }, -- Brutal Nether Drake 
 --@end-version-bcc@
 			},
 			[HORDE_DIFF] = {
@@ -800,7 +801,7 @@ data["Mounts"] = {
 				{ 16,  30609 }, -- Swift Nether Drake
 				{ 17,  34092 }, -- Merciless Nether Drake
 				{ 18,  37676 }, -- Vengeful Nether Drake
-				{ 19,  43516 }, -- Brutal Nether Drake
+				{ 19,  43516 }, -- Brutal Nether Drake 
 --@end-version-bcc@
 			},
 		},
@@ -1148,6 +1149,7 @@ data["Halloween"] = {
 	ContentType = WORLD_EVENT_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = NORMAL_ITTYPE,
+	gameVersion = 1,
 	items = {
 		{ -- Halloween1
 			name = AL["Hallow's End"].." - "..AL["Misc"],
@@ -1196,6 +1198,84 @@ data["Halloween"] = {
 				{ 23, 20574 }, -- Flimsy Female Undead Mask
 			},
 		},
+	},
+}
+
+data["HalloweenTBC"] = {
+	name = AL["Hallow's End"],
+	ContentType = WORLD_EVENT_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = NORMAL_ITTYPE,
+	gameVersion = 2,
+	items = {
+		{ -- Halloween1
+			name = AL["Hallow's End"].." - "..AL["Misc"],
+			[NORMAL_DIFF] = {
+				{ 1,  20400 }, -- Pumpkin Bag
+				{ 3,  18633 }, -- Styleen's Sour Suckerpop
+				{ 4,  18632 }, -- Moonbrook Riot Taffy
+				{ 5,  18635 }, -- Bellara's Nutterbar
+				{ 6,  20557 }, -- Hallow's End Pumpkin Treat
+				{ 8,  20389 }, -- Candy Corn
+				{ 9,  20388 }, -- Lollipop
+				{ 10, 20390 }, -- Candy Bar
+			},
+		},
+		{ -- Halloween1
+			name = AL["Hallow's End"].." - "..AL["Wands"],
+			[NORMAL_DIFF] = {
+				{ 1, 20410 }, -- Hallowed Wand - Bat
+				{ 2, 20409 }, -- Hallowed Wand - Ghost
+				{ 3, 20399 }, -- Hallowed Wand - Leper Gnome
+				{ 4, 20398 }, -- Hallowed Wand - Ninja
+				{ 5, 20397 }, -- Hallowed Wand - Pirate
+				{ 6, 20413 }, -- Hallowed Wand - Random
+				{ 7, 20411 }, -- Hallowed Wand - Skeleton
+				{ 8, 20414 }, -- Hallowed Wand - Wisp
+			},
+		},
+		{ -- Halloween3
+			name = AL["Hallow's End"].." - "..AL["Masks"],
+			[NORMAL_DIFF] = {
+				{ 1,  20561 }, -- Flimsy Male Dwarf Mask
+				{ 2,  20391 }, -- Flimsy Male Gnome Mask
+				{ 3,  20566 }, -- Flimsy Male Human Mask
+				{ 4,  20564 }, -- Flimsy Male Nightelf Mask
+				{ 5,  20570 }, -- Flimsy Male Orc Mask
+				{ 6,  20572 }, -- Flimsy Male Tauren Mask
+				{ 7,  20568 }, -- Flimsy Male Troll Mask
+				{ 8,  20573 }, -- Flimsy Male Undead Mask
+				{ 16, 20562 }, -- Flimsy Female Dwarf Mask
+				{ 17, 20392 }, -- Flimsy Female Gnome Mask
+				{ 18, 20565 }, -- Flimsy Female Human Mask
+				{ 19, 20563 }, -- Flimsy Female Nightelf Mask
+				{ 20, 20569 }, -- Flimsy Female Orc Mask
+				{ 21, 20571 }, -- Flimsy Female Tauren Mask
+				{ 22, 20567 }, -- Flimsy Female Troll Mask
+				{ 23, 20574 }, -- Flimsy Female Undead Mask
+			},
+		},
+--@version-bcc@
+		{ -- SMHeadlessHorseman
+			name = C_Map_GetAreaInfo(796).." - "..AL["Graveyard - Headless Horseman"],
+			[NORMAL_DIFF] = {
+                { 1, 34075 }, -- Ring of Ghoulish Delight
+                { 2, 34073 }, -- The Horseman's Signet Ring
+                { 3, 34074 }, -- Witches Band
+                { 5, 33808 }, -- The Horseman's Helm
+                { 6, 38175 }, -- The Horseman's Blade
+                { 8, 33292 }, -- Hallowed Helm
+                { 10, 34068 }, -- Weighted Jack-o'-Lantern
+                { 12, 33277 }, -- Tome of Thomas Thomson
+                { 16, 37012 }, -- The Horseman's Reins
+                { 18, 33182 }, -- Swift Flying Broom        280% flying
+                { 19, 33176 }, -- Flying Broom              60% flying
+                { 21, 33184 }, -- Swift Magic Broom         100% ground
+                { 22, 37011 }, -- Magic Broom               60% ground
+                { 24, 33154 }, -- Sinister Squashling
+			},
+		},
+--@end-version-bcc@
 	},
 }
 
@@ -1392,13 +1472,13 @@ data["Darkmoon"] = {
 		{ -- Exalted
 			name = GetFactionInfoByID(909),
 			[NORMAL_DIFF] = {
-				{ 1, "INV_Box_01", nil, AL["Classic"] },
+				{ 1, "", nil, AL["Classic"] },
 				{ 2,  19228 }, -- Darkmoon Card: Blue Dragon
 				{ 3,  19267 }, -- Darkmoon Card: Maelstrom
 				{ 4,  19257 }, -- Darkmoon Card: Heroism
 				{ 5,  19277 }, -- Darkmoon Card: Twisting Nether
 --@version-bcc@
-				{ 7, "INV_Box_01", nil, AL["Burning Crusade"] },
+				{ 7, "", nil, AL["Burning Crusade"] },
 				{ 8,  31907 }, -- Darkmoon Card: Vengeance
 				{ 9,  31890 }, -- Darkmoon Card: Crusade
 				{ 10,  31891 }, -- Darkmoon Card: Wrath
@@ -1470,6 +1550,36 @@ data["MidsummerFestivalTBC"] = {
 				{ 19, 23327 }, -- Fire-toasted Bun
 				{ 20, 23326 }, -- Midsummer Sausage
 			},
+		},	
+		{ -- CFRSlaveAhune
+			name = C_Map_GetAreaInfo(3717).." - "..AL["Ahune"],
+			[NORMAL_DIFF] = {
+                { 1, 35514 }, -- Frostscythe of Lord Ahune
+                { 2, 35494 }, -- Shroud of Winter's Chill
+                { 3, 35495 }, -- The Frost Lord's War Cloak
+                { 4, 35496 }, -- Icebound Cloak
+                { 5, 35497 }, -- Cloak of the Frigid Winds
+                { 7, 35723 }, -- Shards of Ahune
+                { 16, 35498 }, -- Formula: Enchant Weapon - Deathfrost
+                { 18, 34955 }, -- Scorched Stone
+                { 19, 35557 }, -- Huge Snowball
+			},
+			[HEROIC_DIFF] = {
+                { 1, 29434 }, -- Badge of Justice
+                { 2, 35507 }, -- Amulet of Bitter Hatred
+                { 3, 35508 }, -- Choker of the Arctic Flow
+                { 4, 35509 }, -- Amulet of Glacial Tranquility
+                { 5, 35511 }, -- Hailstone Pendant
+                { 7, 35514 }, -- Frostscythe of Lord Ahune
+                { 8, 35494 }, -- Shroud of Winter's Chill
+                { 9, 35495 }, -- The Frost Lord's War Cloak
+                { 10, 35496 }, -- Icebound Cloak
+                { 11, 35497 }, -- Cloak of the Frigid Winds
+                { 13, 35723 }, -- Shards of Ahune
+                { 22, 35498 }, -- Formula: Enchant Weapon - Deathfrost
+                { 24, 34955 }, -- Scorched Stone
+                { 25, 35557 }, -- Huge Snowball
+			},
 		},
 	},
 }
@@ -1511,7 +1621,7 @@ data["Brewfest"] = {
 		{
 			name = AL["Food"],
 			[NORMAL_DIFF] = {
-				{ 1, 33043 }, -- The Essential Brewfest Pretzel
+				{ 1,  33043 }, -- The Essential Brewfest Pretzel
 				{ 3,  34017 }, -- Small Step Brew
 				{ 4,  34018 }, -- long Stride Brew
 				{ 5,  34019 }, -- Path of Brew
@@ -1533,11 +1643,12 @@ data["Brewfest"] = {
 				{ 4,  38290 }, -- Dark Iron Smoking Pipe
 				{ 5,  38288 }, -- Direbrew Hops
 				{ 6,  38289 }, -- Coren's Lucky Coin
+				{ 8,  37597 }, -- Direbrew's Shanker
 				{ 16,  33977 }, -- Swift Brewfest Ram
 				{ 17,  37828 }, -- Great Brewfest Kodo
-				{ 19,  37863 }, -- Direbrew's Remote
+				{ 19,  37863 }, -- Direbrew's Remote				
 				{ 21,  38280 }, -- Direbrew's Dire Brew
-			}
+			},
 		},
 	},
 }
