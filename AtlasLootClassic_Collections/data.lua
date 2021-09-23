@@ -787,7 +787,7 @@ data["Mounts"] = {
 				{ 16,  30609 }, -- Swift Nether Drake
 				{ 17,  34092 }, -- Merciless Nether Drake
 				{ 18,  37676 }, -- Vengeful Nether Drake
-				{ 19,  43516 }, -- Brutal Nether Drake 
+				{ 19,  43516 }, -- Brutal Nether Drake
 --@end-version-bcc@
 			},
 			[HORDE_DIFF] = {
@@ -801,7 +801,7 @@ data["Mounts"] = {
 				{ 16,  30609 }, -- Swift Nether Drake
 				{ 17,  34092 }, -- Merciless Nether Drake
 				{ 18,  37676 }, -- Vengeful Nether Drake
-				{ 19,  43516 }, -- Brutal Nether Drake 
+				{ 19,  43516 }, -- Brutal Nether Drake
 --@end-version-bcc@
 			},
 		},
