@@ -1472,13 +1472,13 @@ data["Darkmoon"] = {
 		{ -- Exalted
 			name = GetFactionInfoByID(909),
 			[NORMAL_DIFF] = {
-				{ 1, "", nil, AL["Classic"] },
+				{ 1, "INV_Box_01", nil, AL["Classic"] },
 				{ 2,  19228 }, -- Darkmoon Card: Blue Dragon
 				{ 3,  19267 }, -- Darkmoon Card: Maelstrom
 				{ 4,  19257 }, -- Darkmoon Card: Heroism
 				{ 5,  19277 }, -- Darkmoon Card: Twisting Nether
 --@version-bcc@
-				{ 7, "", nil, AL["Burning Crusade"] },
+				{ 7, "INV_Box_01", nil, AL["Burning Crusade"] },
 				{ 8,  31907 }, -- Darkmoon Card: Vengeance
 				{ 9,  31890 }, -- Darkmoon Card: Crusade
 				{ 10,  31891 }, -- Darkmoon Card: Wrath
@@ -1631,7 +1631,6 @@ data["Brewfest"] = {
 				{ 9,  33034 }, -- Gordok Grog
 				{ 10,  33035 }, -- Ogre Mead
 				{ 11,  33036 }, -- Mudder's Milk
-
 			},
 		},
 		{
@@ -1646,7 +1645,7 @@ data["Brewfest"] = {
 				{ 8,  37597 }, -- Direbrew's Shanker
 				{ 16,  33977 }, -- Swift Brewfest Ram
 				{ 17,  37828 }, -- Great Brewfest Kodo
-				{ 19,  37863 }, -- Direbrew's Remote				
+				{ 19,  37863 }, -- Direbrew's Remote
 				{ 21,  38280 }, -- Direbrew's Dire Brew
 			},
 		},
