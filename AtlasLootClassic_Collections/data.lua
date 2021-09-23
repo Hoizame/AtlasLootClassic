@@ -786,7 +786,7 @@ data["Mounts"] = {
 				{ 16,  30609 }, -- Swift Nether Drake
 				{ 17,  34092 }, -- Merciless Nether Drake
 				{ 18,  37676 }, -- Vengeful Nether Drake
-				{ 19,  43516 }, -- Brutal Nether Drake 
+				{ 19,  43516 }, -- Brutal Nether Drake
 --@end-version-bcc@
 			},
 			[HORDE_DIFF] = {
@@ -800,7 +800,7 @@ data["Mounts"] = {
 				{ 16,  30609 }, -- Swift Nether Drake
 				{ 17,  34092 }, -- Merciless Nether Drake
 				{ 18,  37676 }, -- Vengeful Nether Drake
-				{ 19,  43516 }, -- Brutal Nether Drake 
+				{ 19,  43516 }, -- Brutal Nether Drake
 --@end-version-bcc@
 			},
 		},
@@ -1535,7 +1535,7 @@ data["Brewfest"] = {
 				{ 6,  38289 }, -- Coren's Lucky Coin
 				{ 16,  33977 }, -- Swift Brewfest Ram
 				{ 17,  37828 }, -- Great Brewfest Kodo
-				{ 19,  37863 }, -- Direbrew's Remote				
+				{ 19,  37863 }, -- Direbrew's Remote
 				{ 21,  38280 }, -- Direbrew's Dire Brew
 			}
 		},

@@ -5,10 +5,50 @@ local VendorPrice = {}
 AtlasLoot.Data.VendorPrice = VendorPrice
 local AL = AtlasLoot.Locales
 
+local PRICE_INFO_LIST = {
+	--- Classic
+	-- items
+	["burningblossom"] 	= { itemID = 23247 }, -- Burning Blossom
+	["ancestrycoin"] 	= { itemID = 21100 }, -- Coin of Ancestry
+	-- others
+	["money"] 			= { func = GetCoinTextureString },
+
+	--- BC
+	["holydust"] = { itemID = 29735 }, -- Holy Dust (Aldor)
+	["arcanerune"] = { itemID = 29736 }, -- Holy Dust (Scryers)
+	["SpiritShard"] = { itemID = 28558 }, -- Spirit Shard
+	["HalaaRT"] = { itemID = 26044 }, -- Halaa Research Token
+	["HalaaBT"] = { itemID = 26045 }, -- Halaa Battle Token
+	["MarkOfThrallmar"] = { itemID = 24581 }, -- Mark of Thrallmar
+	["MarkOfHonorHold"] = { itemID = 24579 }, -- Mark of Honor Hold
+	["BoJ"] = { itemID = 29434 }, -- Badge of Justice
+	["glowcap"] = { itemID = 24245 }, -- Glowcap
+	["ApexisC"] = { itemID = 32572 }, -- Apexis Crystal
+	["ApexisS"] = { itemID = 32569 }, -- Apexis Shard
+	["Brewfest"] = { itemID = 37829 }, -- Brewfest Prize Token
+	-- pvp
+	["honor"] = { currencyID = 1901 }, -- Honor
+	["arena"] = { currencyID = 1900 },  -- Arena
+	["honorH"] = { currencyID = 1901 }, -- Honor / Horde
+	["honorA"] = { currencyID = 1901 }, -- Honor / Alli
+	["pvpAlterac"] = { itemID = 20560 }, -- Alterac Valley Mark of Honor
+	["pvpWarsong"] = { itemID = 20558 }, -- Warsong Gulch Mark of Honor
+	["pvpArathi"] = { itemID = 20559 }, -- Arathi Basin Mark of Honor
+	["pvpEye"] = { itemID = 29024 }, -- Eye of the Storm Mark of Honor
+}
+
 local VENDOR_PRICES = {
---@version-bcc@
+    --@version-bcc@
+    [34028] = "Brewfest:600",
+	[33978] = "Brewfest:600",
+    [39477] = "Brewfest:5",
+    [39476] = "Brewfest:5",
     [38628] = "money:400000",
     [38229] = "glowcap:25",
+    [37816] = "Brewfest:20",
+    [37750] = "Brewfest:2",
+    [37737] = "Brewfest:200",
+    [37736] = "Brewfest:200",
     [35906] = "pvpAlterac:30:pvpArathi:30:pvpWarsong:30",
     [34478] = "glowcap:30",
     [34175] = "money:160000",
@@ -16,7 +56,12 @@ local VENDOR_PRICES = {
     [34173] = "money:160000",
     [34172] = "money:160000",
     [34129] = "pvpAlterac:30:pvpArathi:30:pvpWarsong:30",
+    [34008] = "Brewfest:100",
     [33999] = "money:18000000",
+    [33969] = "Brewfest:50",
+    [33968] = "Brewfest:50",
+    [33967] = "Brewfest:50",
+    [33966] = "Brewfest:100",
     [33951] = "arena:1000",
     [33948] = "arena:1000",
     [33945] = "arena:1000",
@@ -25,10 +70,16 @@ local VENDOR_PRICES = {
     [33936] = "arena:1000",
     [33935] = "ApexisS:50",
     [33934] = "ApexisS:50",
+    [33927] = "Brewfest:100",
+    [33868] = "Brewfest:100",
+    [33864] = "Brewfest:50",
+    [33863] = "Brewfest:200",
+    [33862] = "Brewfest:200",
     [33149] = "money:90000",
     [33064] = "honor:15300:pvpAlterac:10",
     [33057] = "honor:15300:pvpAlterac:10",
     [33056] = "honor:15300:pvpAlterac:10",
+    [33047] = "Brewfest:100",
     [32978] = "honor:17850:pvpEye:40",
     [32977] = "honor:11794:pvpWarsong:20",
     [32976] = "honor:17850:pvpArathi:40",
@@ -65,6 +116,7 @@ local VENDOR_PRICES = {
     [32317] = "money:2000000",
     [32316] = "money:2000000",
     [32314] = "money:2000000",
+    [32233] = "money:5000",
     [32090] = "BoJ:50",
     [32089] = "BoJ:50",
     [32088] = "BoJ:50",
@@ -1297,4 +1349,8 @@ end
 
 function VendorPrice.GetVendorPriceForItem(itemID)
     return VENDOR_PRICES[itemID]
+end
+
+function VendorPrice.GetPriceInfoList()
+    return PRICE_INFO_LIST
 end
