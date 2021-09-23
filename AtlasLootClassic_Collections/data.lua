@@ -1392,13 +1392,13 @@ data["Darkmoon"] = {
 		{ -- Exalted
 			name = GetFactionInfoByID(909),
 			[NORMAL_DIFF] = {
-				{ 1, "", nil, AL["Classic"] },
+				{ 1, "INV_Box_01", nil, AL["Classic"] },
 				{ 2,  19228 }, -- Darkmoon Card: Blue Dragon
 				{ 3,  19267 }, -- Darkmoon Card: Maelstrom
 				{ 4,  19257 }, -- Darkmoon Card: Heroism
 				{ 5,  19277 }, -- Darkmoon Card: Twisting Nether
 --@version-bcc@
-				{ 7, "", nil, AL["Burning Crusade"] },
+				{ 7, "INV_Box_01", nil, AL["Burning Crusade"] },
 				{ 8,  31907 }, -- Darkmoon Card: Vengeance
 				{ 9,  31890 }, -- Darkmoon Card: Crusade
 				{ 10,  31891 }, -- Darkmoon Card: Wrath
