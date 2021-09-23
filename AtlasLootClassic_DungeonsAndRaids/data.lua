@@ -1272,13 +1272,14 @@ data["ScarletMonasteryGraveyard"] = {
             AtlasMapBossID = nil,
 			ExtraList = true,
             [NORMAL_DIFF] = {
-                { 1,  34075 }, -- Ring of Ghoulish Delight
-                { 2,  34073 }, -- The Horseman's Signet Ring
-                { 3,  34074 }, -- Witches Band
-                { 5,  33808 }, -- The Horseman's Helm
-                { 6,  38175 }, -- The Horseman's Blade
-                { 8,  33292 }, -- Hallowed Helm
-                { 9,  34068 }, -- Weighted Jack-o'-Lantern
+                { 1, 34075 }, -- Ring of Ghoulish Delight
+                { 2, 34073 }, -- The Horseman's Signet Ring
+                { 3, 34074 }, -- Witches Band
+                { 5, 33808 }, -- The Horseman's Helm
+                { 6, 38175 }, -- The Horseman's Blade
+                { 8, 33292 }, -- Hallowed Helm
+                { 10, 34068 }, -- Weighted Jack-o'-Lantern
+                { 12, 33277 }, -- Tome of Thomas Thomson
                 { 16, 37012 }, -- The Horseman's Reins
                 { 18, 33182 }, -- Swift Flying Broom        280% flying
                 { 19, 33176 }, -- Flying Broom              60% flying
@@ -2937,7 +2938,7 @@ data["BlackrockDepths"] = {
 				{ 4,  22317 }, -- Lefty's Brass Knuckle
 			},
 		},
-		{ -- BRRDCorenDirebrew
+		{ -- BRRDCorenDirebrew 
 			name = AL["Coren Direbrew"],
 			npcID = 23872,
 			DisplayIDs = {{21824}},
@@ -2951,9 +2952,10 @@ data["BlackrockDepths"] = {
 				{ 4,  38290 }, -- Dark Iron Smoking Pipe
 				{ 5,  38288 }, -- Direbrew Hops
 				{ 6,  38289 }, -- Coren's Lucky Coin
+				{ 8,  37597 }, -- Direbrew's Shanker
 				{ 16,  33977 }, -- Swift Brewfest Ram
 				{ 17,  37828 }, -- Great Brewfest Kodo
-				{ 19,  37863 }, -- Direbrew's Remote
+				{ 19,  37863 }, -- Direbrew's Remote				
 				{ 21,  38280 }, -- Direbrew's Dire Brew
 			},
 		},
