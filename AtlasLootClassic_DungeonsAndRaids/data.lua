@@ -2938,7 +2938,7 @@ data["BlackrockDepths"] = {
 				{ 4,  22317 }, -- Lefty's Brass Knuckle
 			},
 		},
-		{ -- BRRDCorenDirebrew 
+		{ -- BRRDCorenDirebrew
 			name = AL["Coren Direbrew"],
 			npcID = 23872,
 			DisplayIDs = {{21824}},
@@ -2955,7 +2955,7 @@ data["BlackrockDepths"] = {
 				{ 8,  37597 }, -- Direbrew's Shanker
 				{ 16,  33977 }, -- Swift Brewfest Ram
 				{ 17,  37828 }, -- Great Brewfest Kodo
-				{ 19,  37863 }, -- Direbrew's Remote				
+				{ 19,  37863 }, -- Direbrew's Remote
 				{ 21,  38280 }, -- Direbrew's Dire Brew
 			},
 		},
