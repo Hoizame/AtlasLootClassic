@@ -1011,10 +1011,26 @@ data["ArenaS4PvP"] = {
 	TableType = NORMAL_ITTYPE,
 	items = {
 		{
-			name = AL["Sets"]..BLIZZARD_NYI,
+			name = AL["Sets"],
 			TableType = SET_ITTYPE,
 			[NORMAL_DIFF] = {
-				-- NYI
+				{ 1,    200568 }, -- Warlock
+				{ 2,    200615 }, -- Warlock 2
+				{ 4,    200687 }, -- Priest / Heal
+				{ 5,    200581 }, -- Priest / Shadow
+				{ 7,    200577 }, -- Rogue
+				{ 9,    200586 }, -- Hunter
+				{ 11,   200567 }, -- Warrior
+				{ 16,   200579 }, -- Mage
+				{ 18,   200685 }, -- Druid / Heal
+				{ 19,   200585 }, -- Druid / Owl
+				{ 20,   200584 }, -- Druid / Feral
+				{ 22,   200580 }, -- Shaman / Heal
+				{ 23,   200686 }, -- Shaman / Ele
+				{ 24,   200578 }, -- Shaman / Enh
+				{ 26,   200690 }, -- Paladin / Heal
+				{ 27,   200582 }, -- Paladin / Prot
+				{ 28,   200583 }, -- Paladin / DD
 			},
 		},
 		{
