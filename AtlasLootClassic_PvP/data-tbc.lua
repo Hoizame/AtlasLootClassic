@@ -54,30 +54,30 @@ local PVP_INSIGNIA = {	-- Insignias
 	ExtraList = true,
 	[ALLIANCE_DIFF] = {
 		{ 1, 37864, [PRICE_EXTRA_ITTYPE] = "honorA:40000" }, -- Medallion of the Alliance
-		{ 3, 28235, [PRICE_EXTRA_ITTYPE] = "honorA:8000" }, -- Medallion of the Alliance
-		{ 4, 28237, [PRICE_EXTRA_ITTYPE] = "honorA:8000" }, -- Medallion of the Alliance
-		{ 5, 28238, [PRICE_EXTRA_ITTYPE] = "honorA:8000" }, -- Medallion of the Alliance
-		{ 6, 28236, [PRICE_EXTRA_ITTYPE] = "honorA:8000" }, -- Medallion of the Alliance
-		{ 7, 30349, [PRICE_EXTRA_ITTYPE] = "honorA:8000" }, -- Medallion of the Alliance
-		{ 8, 28234, [PRICE_EXTRA_ITTYPE] = "honorA:8000" }, -- Medallion of the Alliance
-		{ 9, 30351, [PRICE_EXTRA_ITTYPE] = "honorA:8000" }, -- Medallion of the Alliance
-		{ 10, 30348, [PRICE_EXTRA_ITTYPE] = "honorA:8000" }, -- Medallion of the Alliance
-		{ 11, 30350, [PRICE_EXTRA_ITTYPE] = "honorA:8000" }, -- Medallion of the Alliance
+		{ 3, 28235, [PRICE_EXTRA_ITTYPE] = "honorA:4000" }, -- Medallion of the Alliance
+		{ 4, 28237, [PRICE_EXTRA_ITTYPE] = "honorA:4000" }, -- Medallion of the Alliance
+		{ 5, 28238, [PRICE_EXTRA_ITTYPE] = "honorA:4000" }, -- Medallion of the Alliance
+		{ 6, 28236, [PRICE_EXTRA_ITTYPE] = "honorA:4000" }, -- Medallion of the Alliance
+		{ 7, 30349, [PRICE_EXTRA_ITTYPE] = "honorA:4000" }, -- Medallion of the Alliance
+		{ 8, 28234, [PRICE_EXTRA_ITTYPE] = "honorA:4000" }, -- Medallion of the Alliance
+		{ 9, 30351, [PRICE_EXTRA_ITTYPE] = "honorA:4000" }, -- Medallion of the Alliance
+		{ 10, 30348, [PRICE_EXTRA_ITTYPE] = "honorA:4000" }, -- Medallion of the Alliance
+		{ 11, 30350, [PRICE_EXTRA_ITTYPE] = "honorA:4000" }, -- Medallion of the Alliance
 		{ 16, 25829, [PRICE_EXTRA_ITTYPE] = "honorA:11475:pvpEye:10" }, -- Talisman of the Alliance
 		--{ 16, 28246 }, -- Band of Triumph
 		--{ 17, 28247 }, -- Band of Dominance
 	},
 	[HORDE_DIFF] = {
 		{ 1, 37865, [PRICE_EXTRA_ITTYPE] = "honorH:40000" }, -- Medallion of the Horde
-		{ 3, 28241, [PRICE_EXTRA_ITTYPE] = "honorH:8000" }, -- Medallion of the Horde
-		{ 4, 28243, [PRICE_EXTRA_ITTYPE] = "honorH:8000" }, -- Medallion of the Horde
-		{ 5, 28239, [PRICE_EXTRA_ITTYPE] = "honorH:8000" }, -- Medallion of the Horde
-		{ 6, 28242, [PRICE_EXTRA_ITTYPE] = "honorH:8000" }, -- Medallion of the Horde
-		{ 7, 30346, [PRICE_EXTRA_ITTYPE] = "honorH:8000" }, -- Medallion of the Horde
-		{ 8, 28240, [PRICE_EXTRA_ITTYPE] = "honorH:8000" }, -- Medallion of the Horde
-		{ 9, 30345, [PRICE_EXTRA_ITTYPE] = "honorH:8000" }, -- Medallion of the Horde
-		{ 10, 30343, [PRICE_EXTRA_ITTYPE] = "honorH:8000" }, -- Medallion of the Horde
-		{ 11, 30344, [PRICE_EXTRA_ITTYPE] = "honorH:8000" }, -- Medallion of the Horde
+		{ 3, 28241, [PRICE_EXTRA_ITTYPE] = "honorH:4000" }, -- Medallion of the Horde
+		{ 4, 28243, [PRICE_EXTRA_ITTYPE] = "honorH:4000" }, -- Medallion of the Horde
+		{ 5, 28239, [PRICE_EXTRA_ITTYPE] = "honorH:4000" }, -- Medallion of the Horde
+		{ 6, 28242, [PRICE_EXTRA_ITTYPE] = "honorH:4000" }, -- Medallion of the Horde
+		{ 7, 30346, [PRICE_EXTRA_ITTYPE] = "honorH:4000" }, -- Medallion of the Horde
+		{ 8, 28240, [PRICE_EXTRA_ITTYPE] = "honorH:4000" }, -- Medallion of the Horde
+		{ 9, 30345, [PRICE_EXTRA_ITTYPE] = "honorH:4000" }, -- Medallion of the Horde
+		{ 10, 30343, [PRICE_EXTRA_ITTYPE] = "honorH:4000" }, -- Medallion of the Horde
+		{ 11, 30344, [PRICE_EXTRA_ITTYPE] = "honorH:4000" }, -- Medallion of the Horde
 		{ 16, 24551, [PRICE_EXTRA_ITTYPE] = "honorH:11475:pvpEye:10" }, -- Talisman of the Horde
 		--{ 16, 28246 }, -- Band of Triumph
 		--{ 17, 28247 }, -- Band of Dominance
