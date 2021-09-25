@@ -63,9 +63,7 @@ local PVP_INSIGNIA = {	-- Insignias
 		{ 9, 30351, [PRICE_EXTRA_ITTYPE] = "honorA:8000" }, -- Medallion of the Alliance
 		{ 10, 30348, [PRICE_EXTRA_ITTYPE] = "honorA:8000" }, -- Medallion of the Alliance
 		{ 11, 30350, [PRICE_EXTRA_ITTYPE] = "honorA:8000" }, -- Medallion of the Alliance
-
-
-		--{ 2, 25829, [PRICE_EXTRA_ITTYPE] = "honorA:22950:pvpEye:10" }, -- Talisman of the Alliance
+		{ 16, 25829, [PRICE_EXTRA_ITTYPE] = "honorA:11475:pvpEye:10" }, -- Talisman of the Alliance
 		--{ 16, 28246 }, -- Band of Triumph
 		--{ 17, 28247 }, -- Band of Dominance
 	},
@@ -80,8 +78,7 @@ local PVP_INSIGNIA = {	-- Insignias
 		{ 9, 30345, [PRICE_EXTRA_ITTYPE] = "honorH:8000" }, -- Medallion of the Horde
 		{ 10, 30343, [PRICE_EXTRA_ITTYPE] = "honorH:8000" }, -- Medallion of the Horde
 		{ 11, 30344, [PRICE_EXTRA_ITTYPE] = "honorH:8000" }, -- Medallion of the Horde
-
-		--{ 2, 24551, [PRICE_EXTRA_ITTYPE] = "honorH:22950:pvpEye:10" }, -- Talisman of the Horde
+		{ 16, 24551, [PRICE_EXTRA_ITTYPE] = "honorH:11475:pvpEye:10" }, -- Talisman of the Horde
 		--{ 16, 28246 }, -- Band of Triumph
 		--{ 17, 28247 }, -- Band of Dominance
 	},
