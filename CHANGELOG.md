@@ -15,3 +15,4 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 - (bcc) add talisman of the alliance/horde
 - (bcc) add missing Season 2, 3 & 4 sets
 - (bcc) add brutal glladiator mount
+- (bcc) added reins of the dark war talbuk
