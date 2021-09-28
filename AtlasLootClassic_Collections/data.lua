@@ -787,7 +787,7 @@ data["Mounts"] = {
 				{ 16,  30609 }, -- Swift Nether Drake
 				{ 17,  34092 }, -- Merciless Nether Drake
 				{ 18,  37676 }, -- Vengeful Nether Drake
-				{ 19,  43516 }, -- Brutal Nether Drake
+				{ 19,  43516 }, -- Brutal Nether Drake 
 --@end-version-bcc@
 			},
 			[HORDE_DIFF] = {
@@ -798,10 +798,11 @@ data["Mounts"] = {
 				{ 6, GetForVersion(18248,29470) }, -- Red Skeletal Warhorse
 --@version-bcc@
 				{ 7, 34129 }, -- Swift Warstrider
+				{ 9, 29228 }, -- Reins of the Dark War Talbuk
 				{ 16,  30609 }, -- Swift Nether Drake
 				{ 17,  34092 }, -- Merciless Nether Drake
 				{ 18,  37676 }, -- Vengeful Nether Drake
-				{ 19,  43516 }, -- Brutal Nether Drake
+				{ 19,  43516 }, -- Brutal Nether Drake 
 --@end-version-bcc@
 			},
 		},
@@ -1631,6 +1632,7 @@ data["Brewfest"] = {
 				{ 9,  33034 }, -- Gordok Grog
 				{ 10,  33035 }, -- Ogre Mead
 				{ 11,  33036 }, -- Mudder's Milk
+
 			},
 		},
 		{
@@ -1645,7 +1647,7 @@ data["Brewfest"] = {
 				{ 8,  37597 }, -- Direbrew's Shanker
 				{ 16,  33977 }, -- Swift Brewfest Ram
 				{ 17,  37828 }, -- Great Brewfest Kodo
-				{ 19,  37863 }, -- Direbrew's Remote
+				{ 19,  37863 }, -- Direbrew's Remote				
 				{ 21,  38280 }, -- Direbrew's Dire Brew
 			},
 		},
