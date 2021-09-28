@@ -799,6 +799,7 @@ data["Mounts"] = {
 --@version-bcc@
 				{ 7, 34129 }, -- Swift Warstrider
 				{ 9, 29228 }, -- Reins of the Dark War Talbuk
+				{ 10, 28915 }, -- Reins of the Dark Riding Talbuk
 				{ 16,  30609 }, -- Swift Nether Drake
 				{ 17,  34092 }, -- Merciless Nether Drake
 				{ 18,  37676 }, -- Vengeful Nether Drake
