@@ -64,8 +64,6 @@ local PVP_INSIGNIA = {	-- Insignias
 		{ 10, 30348, [PRICE_EXTRA_ITTYPE] = "honorA:4000" }, -- Medallion of the Alliance
 		{ 11, 30350, [PRICE_EXTRA_ITTYPE] = "honorA:4000" }, -- Medallion of the Alliance
 		{ 16, 25829, [PRICE_EXTRA_ITTYPE] = "honorA:11475:pvpEye:10" }, -- Talisman of the Alliance
-		--{ 16, 28246 }, -- Band of Triumph
-		--{ 17, 28247 }, -- Band of Dominance
 	},
 	[HORDE_DIFF] = {
 		{ 1, 37865, [PRICE_EXTRA_ITTYPE] = "honorH:40000" }, -- Medallion of the Horde
@@ -79,8 +77,6 @@ local PVP_INSIGNIA = {	-- Insignias
 		{ 10, 30343, [PRICE_EXTRA_ITTYPE] = "honorH:4000" }, -- Medallion of the Horde
 		{ 11, 30344, [PRICE_EXTRA_ITTYPE] = "honorH:4000" }, -- Medallion of the Horde
 		{ 16, 24551, [PRICE_EXTRA_ITTYPE] = "honorH:11475:pvpEye:10" }, -- Talisman of the Horde
-		--{ 16, 28246 }, -- Band of Triumph
-		--{ 17, 28247 }, -- Band of Dominance
 	},
 }
 
@@ -232,7 +228,7 @@ data["BCCHonorSet"] = {
 			},
 		},
 		{
-			name = ALIL["Back"],
+			name = ALIL["Cloak"],
 			[ALLIANCE_DIFF] = {
 				{ 1, 28377 }, -- Sergeant's Heavy Cloak
 				{ 2, 28378 }, -- Sergeant's Heavy Cape
