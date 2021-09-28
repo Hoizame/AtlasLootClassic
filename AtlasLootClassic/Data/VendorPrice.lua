@@ -1304,7 +1304,8 @@ local VENDOR_PRICES = {
     [15197] = "pvpArathi:3:pvpWarsong:3",
     [15196] = "pvpArathi:3:pvpWarsong:3",
     [12584] = "honor:9563:pvpArathi:20",
-    [29228] = "HalaaBT:20:HalaaRT:100"
+    [29228] = "HalaaBT:20:HalaaRT:100",
+    [28915] = "HalaaBT:15:HalaaRT:70"
 --@end-version-bcc@
 }
 
