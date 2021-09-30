@@ -1272,13 +1272,14 @@ data["ScarletMonasteryGraveyard"] = {
             AtlasMapBossID = nil,
 			ExtraList = true,
             [NORMAL_DIFF] = {
-                { 1,  34075 }, -- Ring of Ghoulish Delight
-                { 2,  34073 }, -- The Horseman's Signet Ring
-                { 3,  34074 }, -- Witches Band
-                { 5,  33808 }, -- The Horseman's Helm
-                { 6,  38175 }, -- The Horseman's Blade
-                { 8,  33292 }, -- Hallowed Helm
-                { 9,  34068 }, -- Weighted Jack-o'-Lantern
+                { 1, 34075 }, -- Ring of Ghoulish Delight
+                { 2, 34073 }, -- The Horseman's Signet Ring
+                { 3, 34074 }, -- Witches Band
+                { 5, 33808 }, -- The Horseman's Helm
+                { 6, 38175 }, -- The Horseman's Blade
+                { 8, 33292 }, -- Hallowed Helm
+                { 10, 34068 }, -- Weighted Jack-o'-Lantern
+                { 12, 33277 }, -- Tome of Thomas Thomson
                 { 16, 37012 }, -- The Horseman's Reins
                 { 18, 33182 }, -- Swift Flying Broom        280% flying
                 { 19, 33176 }, -- Flying Broom              60% flying
@@ -2928,12 +2929,34 @@ data["BlackrockDepths"] = {
 			npcID = 16059,
 			DisplayIDs = {{15981}},
 			AtlasMapBossID = 6,
+			Level = 60,
 			ExtraList = true,
 			[NORMAL_DIFF] = {
 				{ 1,  22305 }, -- Ironweave Mantle
 				{ 2,  22330 }, -- Shroud of Arcane Mastery
 				{ 3,  22318 }, -- Malgen's Long Bow
 				{ 4,  22317 }, -- Lefty's Brass Knuckle
+			},
+		},
+		{ -- BRRDCorenDirebrew
+			name = AL["Coren Direbrew"],
+			npcID = 23872,
+			DisplayIDs = {{21824}},
+			AtlasMapBossID = 15,
+			Level = 73,
+			ExtraList = true,
+			[NORMAL_DIFF] = {
+				{ 1,  37128 }, -- Balebrew Charm
+				{ 2,  37127 }, -- Brightbrew Charm
+				{ 3,  38287 }, -- Empty Mug of Direbrew
+				{ 4,  38290 }, -- Dark Iron Smoking Pipe
+				{ 5,  38288 }, -- Direbrew Hops
+				{ 6,  38289 }, -- Coren's Lucky Coin
+				{ 8,  37597 }, -- Direbrew's Shanker
+				{ 16,  33977 }, -- Swift Brewfest Ram
+				{ 17,  37828 }, -- Great Brewfest Kodo
+				{ 19,  37863 }, -- Direbrew's Remote
+				{ 21,  38280 }, -- Direbrew's Dire Brew
 			},
 		},
 	},
