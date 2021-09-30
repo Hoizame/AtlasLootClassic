@@ -5,6 +5,39 @@ local VendorPrice = {}
 AtlasLoot.Data.VendorPrice = VendorPrice
 local AL = AtlasLoot.Locales
 
+local PRICE_INFO_LIST = {
+	--- Classic
+	-- items
+	["burningblossom"] 	= { itemID = 23247 }, -- Burning Blossom
+	["ancestrycoin"] 	= { itemID = 21100 }, -- Coin of Ancestry
+
+	-- others
+	["money"] 			= { func = GetCoinTextureString },
+
+	--- BC
+	["holydust"] = { itemID = 29735 }, -- Holy Dust (Aldor)
+	["arcanerune"] = { itemID = 29736 }, -- Holy Dust (Scryers)
+	["SpiritShard"] = { itemID = 28558 }, -- Spirit Shard
+	["HalaaRT"] = { itemID = 26044 }, -- Halaa Research Token
+	["HalaaBT"] = { itemID = 26045 }, -- Halaa Battle Token
+	["MarkOfThrallmar"] = { itemID = 24581 }, -- Mark of Thrallmar
+	["MarkOfHonorHold"] = { itemID = 24579 }, -- Mark of Honor Hold
+	["BoJ"] = { itemID = 29434 }, -- Badge of Justice
+	["glowcap"] = { itemID = 24245 }, -- Glowcap
+	["ApexisC"] = { itemID = 32572 }, -- Apexis Crystal
+	["ApexisS"] = { itemID = 32569 }, -- Apexis Shard
+	["Brewfest"] = { itemID = 37829 }, -- Brewfest Prize Token
+	-- pvp
+	["honor"] = { currencyID = 1901 }, -- Honor
+	["arena"] = { currencyID = 1900 },  -- Arena
+	["honorH"] = { currencyID = 1901 }, -- Honor / Horde
+	["honorA"] = { currencyID = 1901 }, -- Honor / Alli
+	["pvpAlterac"] = { itemID = 20560 }, -- Alterac Valley Mark of Honor
+	["pvpWarsong"] = { itemID = 20558 }, -- Warsong Gulch Mark of Honor
+	["pvpArathi"] = { itemID = 20559 }, -- Arathi Basin Mark of Honor
+	["pvpEye"] = { itemID = 29024 }, -- Eye of the Storm Mark of Honor
+}
+
 local VENDOR_PRICES = {
 --@version-bcc@
     [39477] = "Brewfest:5",
@@ -1502,4 +1535,8 @@ end
 
 function VendorPrice.GetVendorPriceForItem(itemID)
     return VENDOR_PRICES[itemID]
+end
+
+function VendorPrice.GetPriceInfoList()
+    return PRICE_INFO_LIST
 end
