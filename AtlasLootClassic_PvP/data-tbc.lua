@@ -292,9 +292,9 @@ data["PvPMountsBCC"] = {
 				{ 6,  29471 }, -- Reins of the Black War Tiger
 				{ 7,  35906 }, -- Reins of the Black War Elekk
 				{ 16,  30609 }, -- Swift Nether Drake
-				{ 17,  37676 }, -- Vengeful Nether Drake
-				{ 18,  34092 }, -- Merciless Nether Drake
-				--{ 19,  43516 }, -- Brutal Nether Drake NYI
+				{ 17,  34092 }, -- Merciless Nether Drake
+				{ 18,  37676 }, -- Vengeful Nether Drake
+				{ 19,  43516 }, -- Brutal Nether Drake
 			},
 			[HORDE_DIFF] = {
 				{ 1, 19029  }, -- Horn of the Frostwolf Howler
@@ -304,9 +304,9 @@ data["PvPMountsBCC"] = {
 				{ 6, 29470 }, -- Red Skeletal Warhorse
 				{ 7, 34129 }, -- Swift Warstrider
 				{ 16,  30609 }, -- Swift Nether Drake
-				{ 17,  37676 }, -- Vengeful Nether Drake
-				{ 18,  34092 }, -- Merciless Nether Drake
-				--{ 19,  43516 }, -- Brutal Nether Drake NYI
+				{ 17,  34092 }, -- Merciless Nether Drake
+				{ 18,  37676 }, -- Vengeful Nether Drake
+				{ 19,  43516 }, -- Brutal Nether Drake
 			},
 		},
 	},
@@ -1011,10 +1011,26 @@ data["ArenaS4PvP"] = {
 	TableType = NORMAL_ITTYPE,
 	items = {
 		{
-			name = AL["Sets"]..BLIZZARD_NYI,
+			name = AL["Sets"],
 			TableType = SET_ITTYPE,
 			[NORMAL_DIFF] = {
-				-- NYI
+				{ 1,    200568 }, -- Warlock
+				{ 2,    200615 }, -- Warlock 2
+				{ 4,    200687 }, -- Priest / Heal
+				{ 5,    200581 }, -- Priest / Shadow
+				{ 7,    200577 }, -- Rogue
+				{ 9,    200586 }, -- Hunter
+				{ 11,   200567 }, -- Warrior
+				{ 16,   200579 }, -- Mage
+				{ 18,   200685 }, -- Druid / Heal
+				{ 19,   200585 }, -- Druid / Owl
+				{ 20,   200584 }, -- Druid / Feral
+				{ 22,   200580 }, -- Shaman / Heal
+				{ 23,   200686 }, -- Shaman / Ele
+				{ 24,   200578 }, -- Shaman / Enh
+				{ 26,   200690 }, -- Paladin / Heal
+				{ 27,   200582 }, -- Paladin / Prot
+				{ 28,   200583 }, -- Paladin / DD
 			},
 		},
 		{
