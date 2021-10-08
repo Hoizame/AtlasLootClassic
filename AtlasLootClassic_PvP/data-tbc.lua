@@ -53,30 +53,30 @@ local PVP_INSIGNIA = {	-- Insignias
 	NORMAL_ITTYPE = ICON_ITTYPE,
 	ExtraList = true,
 	[ALLIANCE_DIFF] = {
-		{ 1, 37864, [PRICE_EXTRA_ITTYPE] = "honorA:40000" }, -- Medallion of the Alliance
-		{ 3, 28235, [PRICE_EXTRA_ITTYPE] = "honorA:4000" }, -- Medallion of the Alliance
-		{ 4, 28237, [PRICE_EXTRA_ITTYPE] = "honorA:4000" }, -- Medallion of the Alliance
-		{ 5, 28238, [PRICE_EXTRA_ITTYPE] = "honorA:4000" }, -- Medallion of the Alliance
-		{ 6, 28236, [PRICE_EXTRA_ITTYPE] = "honorA:4000" }, -- Medallion of the Alliance
-		{ 7, 30349, [PRICE_EXTRA_ITTYPE] = "honorA:4000" }, -- Medallion of the Alliance
-		{ 8, 28234, [PRICE_EXTRA_ITTYPE] = "honorA:4000" }, -- Medallion of the Alliance
-		{ 9, 30351, [PRICE_EXTRA_ITTYPE] = "honorA:4000" }, -- Medallion of the Alliance
-		{ 10, 30348, [PRICE_EXTRA_ITTYPE] = "honorA:4000" }, -- Medallion of the Alliance
-		{ 11, 30350, [PRICE_EXTRA_ITTYPE] = "honorA:4000" }, -- Medallion of the Alliance
-		{ 16, 25829, [PRICE_EXTRA_ITTYPE] = "honorA:11475:pvpEye:10" }, -- Talisman of the Alliance
+		{ 1,   37864, }, -- Medallion of the Alliance
+		{ 3,   28235, }, -- Medallion of the Alliance
+		{ 4,   28237, }, -- Medallion of the Alliance
+		{ 5,   28238, }, -- Medallion of the Alliance
+		{ 6,   28236, }, -- Medallion of the Alliance
+		{ 7,   30349, }, -- Medallion of the Alliance
+		{ 8,   28234, }, -- Medallion of the Alliance
+		{ 9,   30351, }, -- Medallion of the Alliance
+		{ 10,  30348, }, -- Medallion of the Alliance
+		{ 11,  30350, }, -- Medallion of the Alliance
+		{ 16,  25829, }, -- Talisman of the Alliance
 	},
 	[HORDE_DIFF] = {
-		{ 1, 37865, [PRICE_EXTRA_ITTYPE] = "honorH:40000" }, -- Medallion of the Horde
-		{ 3, 28241, [PRICE_EXTRA_ITTYPE] = "honorH:4000" }, -- Medallion of the Horde
-		{ 4, 28243, [PRICE_EXTRA_ITTYPE] = "honorH:4000" }, -- Medallion of the Horde
-		{ 5, 28239, [PRICE_EXTRA_ITTYPE] = "honorH:4000" }, -- Medallion of the Horde
-		{ 6, 28242, [PRICE_EXTRA_ITTYPE] = "honorH:4000" }, -- Medallion of the Horde
-		{ 7, 30346, [PRICE_EXTRA_ITTYPE] = "honorH:4000" }, -- Medallion of the Horde
-		{ 8, 28240, [PRICE_EXTRA_ITTYPE] = "honorH:4000" }, -- Medallion of the Horde
-		{ 9, 30345, [PRICE_EXTRA_ITTYPE] = "honorH:4000" }, -- Medallion of the Horde
-		{ 10, 30343, [PRICE_EXTRA_ITTYPE] = "honorH:4000" }, -- Medallion of the Horde
-		{ 11, 30344, [PRICE_EXTRA_ITTYPE] = "honorH:4000" }, -- Medallion of the Horde
-		{ 16, 24551, [PRICE_EXTRA_ITTYPE] = "honorH:11475:pvpEye:10" }, -- Talisman of the Horde
+		{ 1,   37865, }, -- Medallion of the Horde
+		{ 3,   28241, }, -- Medallion of the Horde
+		{ 4,   28243, }, -- Medallion of the Horde
+		{ 5,   28239, }, -- Medallion of the Horde
+		{ 6,   28242, }, -- Medallion of the Horde
+		{ 7,   30346, }, -- Medallion of the Horde
+		{ 8,   28240, }, -- Medallion of the Horde
+		{ 9,   30345, }, -- Medallion of the Horde
+		{ 10,  30343, }, -- Medallion of the Horde
+		{ 11,  30344, }, -- Medallion of the Horde
+		{ 16,  24551, }, -- Talisman of the Horde
 	},
 }
 
@@ -85,14 +85,14 @@ local PVP_GEMS = {	-- Gems
 	NORMAL_ITTYPE = ICON_ITTYPE,
 	ExtraList = true,
 	[NORMAL_DIFF] = {
-		{ 1, 28118, [PRICE_EXTRA_ITTYPE] = "honor:8500" }, -- Runed Ornate Ruby
-		{ 2, 28362, [PRICE_EXTRA_ITTYPE] = "honor:8500" }, -- Bold Ornate Ruby
+		{ 1, 28118, }, -- Runed Ornate Ruby
+		{ 2, 28362, }, -- Bold Ornate Ruby
 
-		{ 4, 28119, [PRICE_EXTRA_ITTYPE] = "honor:8500" }, -- Smooth Ornate Dawnstone
-		{ 5, 28120, [PRICE_EXTRA_ITTYPE] = "honor:8500" }, -- Gleaming Ornate Dawnstone
+		{ 4, 28119, }, -- Smooth Ornate Dawnstone
+		{ 5, 28120, }, -- Gleaming Ornate Dawnstone
 
-		{ 16, 28123, [PRICE_EXTRA_ITTYPE] = "honor:8500" }, -- Potent Ornate Topaz
-		{ 17, 28363, [PRICE_EXTRA_ITTYPE] = "honor:8500" }, -- Inscribed Ornate Topaz
+		{ 16, 28123, }, -- Potent Ornate Topaz
+		{ 17, 28363, }, -- Inscribed Ornate Topaz
 	},
 }
 
