@@ -44,6 +44,8 @@ local VENDOR_PRICES = {
     [39476] = "Brewfest:5",
     [38628] = "money:400000",
     [38229] = "glowcap:25",
+    -- [37865] = "honor:40000",
+    -- [37864] = "honorA:40000",
     [37816] = "Brewfest:20",
     [37750] = "Brewfest:2",
     [37737] = "Brewfest:200",
@@ -1538,8 +1540,6 @@ local VENDOR_PRICES = {
     [15197] = "pvpArathi:3:pvpWarsong:3",
     [15196] = "pvpArathi:3:pvpWarsong:3",
     [12584] = "honor:9563:pvpArathi:20",
---    [37864] = "honorA:40000",
---    [37865] = "honor:40000",
 --@end-version-bcc@
 }
 
