@@ -5,7 +5,8 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 [Changelog history](https://github.com/Hoizame/AtlasLootClassic/blob/master/AtlasLootClassic/Documentation/Release_Notes.md)
 
 
-## v2.3.4-bcc (Sep, XX, 2021)
+## v2.3.5-bcc (Sep, XX, 2021)
 
-- (bcc) add missing Season 2 & 3 sets. Sets for S4 are still not ingame
-- (bcc) update cost of S1 pvp-items and add cost of S2 pvp-items
+- update classic .toc version
+- (bcc) add cost of Season 2 pvp items
+- (bcc) update cost of Season 1 pvp items
