@@ -3092,7 +3092,7 @@ data["SerpentshrineCavern"] = {
 	AtlasMapID = "CL_CFRSerpentshrineCavern",
 	AtlasMapFile = {"CL_CFRSerpentshrineCavern", "CL_CoilfangReservoirEnt"},
 	ContentType = RAID25_CONTENT,
-    ContentPhaseBC = 2,
+    --ContentPhaseBC = 2,
 	items = {
         { -- CFRSerpentHydross
             name = AL["Hydross the Unstable"],
@@ -3263,7 +3263,7 @@ data["TempestKeep"] = {
 	AtlasMapID = "CL_TempestKeepTheEye",
 	AtlasMapFile = {"CL_TempestKeepTheEye", "TempestKeepEnt"},
 	ContentType = RAID25_CONTENT,
-    ContentPhaseBC = 2,
+    --ContentPhaseBC = 2,
 	items = {
         { -- TKEyeAlar
             name = AL["Al'ar"],
