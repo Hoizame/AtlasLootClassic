@@ -232,55 +232,115 @@ data["TheScryers"] = {
 	},
 }
 
-data["TheShatar"] = {
-	FactionID = 935,
+data["CenarionExpedition"] = {
+	FactionID = 942,
 	ContentType = FACTIONS_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
 	items = {
 		{ -- Exalted
 			name = ALIL["Exalted"],
 			[NORMAL_DIFF] = {
-				{ 1, "f935rep8" },
-                { 2, 29177 }, -- A'dal's Command
-                { 3, 29175 }, -- Gavel of Pure Light
-                { 4, 29176 }, -- Crest of the Sha'tar
-                { 6, 31781 }, -- Sha'tar Tabard
-                { 17, 33153 }, -- Formula: Enchant Gloves - Threat
-                { 199, 31354 }, -- Recipe: Flask of the Titans
+				{ 1, "f942rep8" },
+                { 2, 33999 }, -- Cenarion War Hippogryph
+                { 4, 29170 }, -- Windcaller's Orb
+                { 5, 29172 }, -- Ashyen's Gift
+                { 6, 29171 }, -- Earthwarden
+                { 8, 31804 }, -- Cenarion Expedition Tabard
+                { 17, 31390 }, -- Plans: Wildguard Breastplate
+                { 19, 31402 }, -- Design: The Natural Ward
+                { 21, 33149 }, -- Formula: Enchant Cloak - Stealth
+                { 23, 31356 }, -- Recipe: Flask of Distilled Wisdom
+                { 24, 22922 }, -- Recipe: Major Nature Protection Potion
+                { 26, 29721 }, -- Pattern: Nethercleft Leg Armor
 			},
 		},
 		{ -- Revered
 			name = ALIL["Revered"],
 			[NORMAL_DIFF] = {
-				{ 1, "f935rep7" },
-                { 2, 29180 }, -- Blessed Scale Girdle
-                { 3, 29179 }, -- Xi'ri's Gift
-                { 5, 29191 }, -- Glyph of Power
-				{ 7, 30634 }, -- Warpforged Key
-                { 17, 24182 }, -- Design: Talasite Owl
-                { 19, 28281 }, -- Formula: Enchant Weapon - Major Healing
-                { 20, 22537 }, -- Formula: Enchant Ring - Healing Power
-                { 22, 22915 }, -- Recipe: Transmute Primal Air to Fire
-                { 23, 13517 }, -- Recipe: Alchemist's Stone
-                { 25, 33159 }, -- Design: Blood of Amber
+				{ 1, "f942rep7" },
+                { 2, 29174 }, -- Watcher's Cowl
+                { 3, 31949 }, -- Warden's Arrow
+                { 4, 29173 }, -- Strength of the Untamed
+                { 6, 29192 }, -- Glyph of Ferocity
+				{ 8, 30623 }, -- Reservoir Key
+                { 17, 31392 }, -- Plans: Wildguard Helm
+                { 18, 31391 }, -- Plans: Wildguard Leggings
+                { 20, 24183 }, -- Design: Nightseye Panther
+                { 22, 22918 }, -- Recipe: Transmute Primal Water to Air
+                { 24, 28271 }, -- Formula: Enchant Gloves - Spell Strike
 			},
 		},
 		{ -- Honored
 			name = ALIL["Honored"],
 			[NORMAL_DIFF] = {
-				{ 1, "f935rep6" },
-                { 2, 29195 }, -- Glyph of Arcane Warding
-                { 17, 30826 }, -- Design: Ring of Arcane Shielding
-                { 18, 33155 }, -- Design: Kailee's Rose
-                { 20, 28273 }, -- Formula: Enchant Gloves - Major Healing
-                { 22, 29717 }, -- Pattern: Drums of Battle
+				{ 1, "f942rep6" },
+                { 2, 25838 }, -- Warden's Hauberk
+                { 3, 25836 }, -- Preserver's Cudgel
+                { 4, 25835 }, -- Explorer's Walking Stick
+                { 6, 29194 }, -- Glyph of Nature Warding
+                { 17, 25735 }, -- Pattern: Heavy Clefthoof Vest
+                { 18, 25736 }, -- Pattern: Heavy Clefthoof Leggings
+                { 19, 29720 }, -- Pattern: Clefthide Leg Armor
+                { 21, 25869 }, -- Recipe: Transmute Earthstorm Diamond
+                { 22, 32070 }, -- Recipe: Earthen Elixir
+                { 24, 23618 }, -- Plans: Adamantite Sharpening Stone
+                { 25, 28632 }, -- Plans: Adamantite Weightstone
+                { 26, 25526 }, -- Plans: Greater Rune of Warding
 			},
 		},
 		{ -- Friendly
 			name = ALIL["Friendly"],
 			[NORMAL_DIFF] = {
-				{ 1, "f935rep5" },
-                { 17, 25904 }, -- Design: Insightful Earthstorm Diamond
+				{ 1, "f942rep5" },
+                { 2, 24417 }, -- Scout's Arrow
+                { 3, 24429 }, -- Expedition Flare
+                { 17, 25737 }, -- Pattern: Heavy Clefthoof Boots
+                { 19, 23814 }, -- Schematic: Green Smoke Flare
+			},
+		},
+	},
+}
+
+data["KeepersOfTime"] = {
+	FactionID = 989,
+	ContentType = FACTIONS_CONTENT,
+	LoadDifficulty = LOAD_DIFF,
+	items = {
+		{ -- Exalted
+			name = ALIL["Exalted"],
+			[NORMAL_DIFF] = {
+				{ 1, "f989rep8" },
+                { 2, 29183 }, -- Bindings of the Timewalker
+                { 3, 29181 }, -- Timelapse Shard
+                { 4, 29182 }, -- Riftmaker
+                { 6, 31777 }, -- Keepers of Time Tabard
+                { 17, 33152 }, -- Formula: Enchant Gloves - Superior Agility
+                { 19, 31355 }, -- Recipe: Flask of Supreme Power
+			},
+		},
+		{ -- Revered
+			name = ALIL["Revered"],
+			[NORMAL_DIFF] = {
+				{ 1, "f989rep7" },
+                { 2, 29184 }, -- Timewarden's Leggings
+                { 3, 29185 }, -- Continuum Blade
+                { 5, 29186 }, -- Glyph of the Defender
+				{ 7, 30635 }, -- Key of Time
+                { 17, 24181 }, -- Design: Living Ruby Serpent
+                { 18, 24174 }, -- Design: Pendant of Frozen Flame
+                { 19, 33158 }, -- Design: Stone of Blades
+			},
+		},
+		{ -- Honored
+			name = ALIL["Honored"],
+			[NORMAL_DIFF] = {
+				{ 1, "f989rep6" },
+                { 2, 29198 }, -- Glyph of Frost Warding
+                { 17, 28272 }, -- Formula: Enchant Gloves - Major Spellpower
+                { 18, 22536 }, -- Formula: Enchant Ring - Spellpower
+                { 20, 25910 }, -- Design: Enigmatic Skyfire Diamond
+                { 21, 33160 }, -- Design: Facet of Eternity
+                { 23, 29713 }, -- Pattern: Drums of Panic
 			},
 		},
 	},
@@ -339,46 +399,117 @@ data["LowerCity"] = {
 	},
 }
 
-data["KeepersOfTime"] = {
-	FactionID = 989,
+data["TheShatar"] = {
+	FactionID = 935,
 	ContentType = FACTIONS_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
 	items = {
 		{ -- Exalted
 			name = ALIL["Exalted"],
 			[NORMAL_DIFF] = {
-				{ 1, "f989rep8" },
-                { 2, 29183 }, -- Bindings of the Timewalker
-                { 3, 29181 }, -- Timelapse Shard
-                { 4, 29182 }, -- Riftmaker
-                { 6, 31777 }, -- Keepers of Time Tabard
-                { 17, 33152 }, -- Formula: Enchant Gloves - Superior Agility
-                { 19, 31355 }, -- Recipe: Flask of Supreme Power
+				{ 1, "f935rep8" },
+                { 2, 29177 }, -- A'dal's Command
+                { 3, 29175 }, -- Gavel of Pure Light
+                { 4, 29176 }, -- Crest of the Sha'tar
+                { 6, 31781 }, -- Sha'tar Tabard
+                { 17, 33153 }, -- Formula: Enchant Gloves - Threat
+                { 199, 31354 }, -- Recipe: Flask of the Titans
 			},
 		},
 		{ -- Revered
 			name = ALIL["Revered"],
 			[NORMAL_DIFF] = {
-				{ 1, "f989rep7" },
-                { 2, 29184 }, -- Timewarden's Leggings
-                { 3, 29185 }, -- Continuum Blade
-                { 5, 29186 }, -- Glyph of the Defender
-				{ 7, 30635 }, -- Key of Time
-                { 17, 24181 }, -- Design: Living Ruby Serpent
-                { 18, 24174 }, -- Design: Pendant of Frozen Flame
-                { 19, 33158 }, -- Design: Stone of Blades
+				{ 1, "f935rep7" },
+                { 2, 29180 }, -- Blessed Scale Girdle
+                { 3, 29179 }, -- Xi'ri's Gift
+                { 5, 29191 }, -- Glyph of Power
+				{ 7, 30634 }, -- Warpforged Key
+                { 17, 24182 }, -- Design: Talasite Owl
+                { 19, 28281 }, -- Formula: Enchant Weapon - Major Healing
+                { 20, 22537 }, -- Formula: Enchant Ring - Healing Power
+                { 22, 22915 }, -- Recipe: Transmute Primal Air to Fire
+                { 23, 13517 }, -- Recipe: Alchemist's Stone
+                { 25, 33159 }, -- Design: Blood of Amber
 			},
 		},
 		{ -- Honored
 			name = ALIL["Honored"],
 			[NORMAL_DIFF] = {
-				{ 1, "f989rep6" },
-                { 2, 29198 }, -- Glyph of Frost Warding
-                { 17, 28272 }, -- Formula: Enchant Gloves - Major Spellpower
-                { 18, 22536 }, -- Formula: Enchant Ring - Spellpower
-                { 20, 25910 }, -- Design: Enigmatic Skyfire Diamond
-                { 21, 33160 }, -- Design: Facet of Eternity
-                { 23, 29713 }, -- Pattern: Drums of Panic
+				{ 1, "f935rep6" },
+                { 2, 29195 }, -- Glyph of Arcane Warding
+                { 17, 30826 }, -- Design: Ring of Arcane Shielding
+                { 18, 33155 }, -- Design: Kailee's Rose
+                { 20, 28273 }, -- Formula: Enchant Gloves - Major Healing
+                { 22, 29717 }, -- Pattern: Drums of Battle
+			},
+		},
+		{ -- Friendly
+			name = ALIL["Friendly"],
+			[NORMAL_DIFF] = {
+				{ 1, "f935rep5" },
+                { 17, 25904 }, -- Design: Insightful Earthstorm Diamond
+			},
+		},
+	},
+}
+
+data["TheConsortium"] = {
+	FactionID = 933,
+	ContentType = FACTIONS_CONTENT,
+	LoadDifficulty = LOAD_DIFF,
+	items = {
+		{ -- Exalted
+			name = ALIL["Exalted"],
+			[NORMAL_DIFF] = {
+				{ 1, "f933rep8" },
+                { 2, 29122 }, -- Nether Runner's Cowl
+                { 3, 29119 }, -- Haramad's Bargain
+                { 4, 29121 }, -- Guile of Khoraazi
+                { 6, 31776 }, -- Consortium Tabard
+                { 17, 33622 }, -- Design: Relentless Earthstorm Diamond
+			},
+		},
+		{ -- Revered
+			name = ALIL["Revered"],
+			[NORMAL_DIFF] = {
+				{ 1, "f933rep7" },
+                { 2, 29117 }, -- Stormspire Vest
+                { 3, 29116 }, -- Nomad's Leggings
+                { 4, 29115 }, -- Consortium Blaster
+                { 17, 24178 }, -- Design: Pendant of the Null Rune
+                { 18, 25903 }, -- Design: Bracing Earthstorm Diamond
+                { 19, 33156 }, -- Design: Crimson Sun
+                { 20, 33305 }, -- Design: Don Julio's Heart
+                { 22, 25734 }, -- Pattern: Fel Leather Leggings
+                { 24, 22535 }, -- Formula: Enchant Ring - Striking
+                { 26, 23874 }, -- Schematic: Elemental Seaforium Charge
+			},
+		},
+		{ -- Honored
+			name = ALIL["Honored"],
+			[NORMAL_DIFF] = {
+				{ 1, "f933rep6" },
+                { 2, 29457 }, -- Nethershard
+                { 3, 29118 }, -- Smuggler's Ammo Pouch
+                { 5, 29456 }, -- Gift of the Ethereal
+                { 17, 25733 }, -- Pattern: Fel Leather Boots
+                { 19, 24314 }, -- Pattern: Bag of Jewels
+                { 21, 23134 }, -- Design: Delicate Blood Garnet
+                { 22, 23155 }, -- Design: Lustrous Azure Moonstone
+                { 23, 23150 }, -- Design: Thick Golden Draenite
+                { 24, 25908 }, -- Design: Swift Skyfire Diamond
+                { 25, 25902 }, -- Design: Powerful Earthstorm Diamond
+                { 27, 22552 }, -- Formula: Enchant Weapon - Major Striking
+			},
+		},
+		{ -- Friendly
+			name = ALIL["Friendly"],
+			[NORMAL_DIFF] = {
+				{ 1, "f933rep5" },
+                { 17, 25732 }, -- Pattern: Fel Leather Gloves
+                { 19, 28274 }, -- Formula: Enchant Cloak - Spell Penetration
+                { 21, 23146 }, -- Design: Shifting Shadow Draenite
+                { 22, 23136 }, -- Design: Luminous Flame Spessarite
 			},
 		},
 	},
@@ -464,6 +595,7 @@ data["TheScaleOfTheSands"] = {
 	FactionID = 990,
 	ContentType = FACTIONS_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
+    ContentPhaseBC = 3,
 	items = {
         { -- Exalted
 			name = ALIL["Exalted"],
@@ -540,141 +672,11 @@ data["TheScaleOfTheSands"] = {
 	},
 }
 
-data["CenarionExpedition"] = {
-	FactionID = 942,
-	ContentType = FACTIONS_CONTENT,
-	LoadDifficulty = LOAD_DIFF,
-	items = {
-		{ -- Exalted
-			name = ALIL["Exalted"],
-			[NORMAL_DIFF] = {
-				{ 1, "f942rep8" },
-                { 2, 33999 }, -- Cenarion War Hippogryph
-                { 4, 29170 }, -- Windcaller's Orb
-                { 5, 29172 }, -- Ashyen's Gift
-                { 6, 29171 }, -- Earthwarden
-                { 8, 31804 }, -- Cenarion Expedition Tabard
-                { 17, 31390 }, -- Plans: Wildguard Breastplate
-                { 19, 31402 }, -- Design: The Natural Ward
-                { 21, 33149 }, -- Formula: Enchant Cloak - Stealth
-                { 23, 31356 }, -- Recipe: Flask of Distilled Wisdom
-                { 24, 22922 }, -- Recipe: Major Nature Protection Potion
-                { 26, 29721 }, -- Pattern: Nethercleft Leg Armor
-			},
-		},
-		{ -- Revered
-			name = ALIL["Revered"],
-			[NORMAL_DIFF] = {
-				{ 1, "f942rep7" },
-                { 2, 29174 }, -- Watcher's Cowl
-                { 3, 31949 }, -- Warden's Arrow
-                { 4, 29173 }, -- Strength of the Untamed
-                { 6, 29192 }, -- Glyph of Ferocity
-				{ 8, 30623 }, -- Reservoir Key
-                { 17, 31392 }, -- Plans: Wildguard Helm
-                { 18, 31391 }, -- Plans: Wildguard Leggings
-                { 20, 24183 }, -- Design: Nightseye Panther
-                { 22, 22918 }, -- Recipe: Transmute Primal Water to Air
-                { 24, 28271 }, -- Formula: Enchant Gloves - Spell Strike
-			},
-		},
-		{ -- Honored
-			name = ALIL["Honored"],
-			[NORMAL_DIFF] = {
-				{ 1, "f942rep6" },
-                { 2, 25838 }, -- Warden's Hauberk
-                { 3, 25836 }, -- Preserver's Cudgel
-                { 4, 25835 }, -- Explorer's Walking Stick
-                { 6, 29194 }, -- Glyph of Nature Warding
-                { 17, 25735 }, -- Pattern: Heavy Clefthoof Vest
-                { 18, 25736 }, -- Pattern: Heavy Clefthoof Leggings
-                { 19, 29720 }, -- Pattern: Clefthide Leg Armor
-                { 21, 25869 }, -- Recipe: Transmute Earthstorm Diamond
-                { 22, 32070 }, -- Recipe: Earthen Elixir
-                { 24, 23618 }, -- Plans: Adamantite Sharpening Stone
-                { 25, 28632 }, -- Plans: Adamantite Weightstone
-                { 26, 25526 }, -- Plans: Greater Rune of Warding
-			},
-		},
-		{ -- Friendly
-			name = ALIL["Friendly"],
-			[NORMAL_DIFF] = {
-				{ 1, "f942rep5" },
-                { 2, 24417 }, -- Scout's Arrow
-                { 3, 24429 }, -- Expedition Flare
-                { 17, 25737 }, -- Pattern: Heavy Clefthoof Boots
-                { 19, 23814 }, -- Schematic: Green Smoke Flare
-			},
-		},
-	},
-}
-
-data["TheConsortium"] = {
-	FactionID = 933,
-	ContentType = FACTIONS_CONTENT,
-	LoadDifficulty = LOAD_DIFF,
-	items = {
-		{ -- Exalted
-			name = ALIL["Exalted"],
-			[NORMAL_DIFF] = {
-				{ 1, "f933rep8" },
-                { 2, 29122 }, -- Nether Runner's Cowl
-                { 3, 29119 }, -- Haramad's Bargain
-                { 4, 29121 }, -- Guile of Khoraazi
-                { 6, 31776 }, -- Consortium Tabard
-                { 17, 33622 }, -- Design: Relentless Earthstorm Diamond
-			},
-		},
-		{ -- Revered
-			name = ALIL["Revered"],
-			[NORMAL_DIFF] = {
-				{ 1, "f933rep7" },
-                { 2, 29117 }, -- Stormspire Vest
-                { 3, 29116 }, -- Nomad's Leggings
-                { 4, 29115 }, -- Consortium Blaster
-                { 17, 24178 }, -- Design: Pendant of the Null Rune
-                { 18, 25903 }, -- Design: Bracing Earthstorm Diamond
-                { 19, 33156 }, -- Design: Crimson Sun
-                { 20, 33305 }, -- Design: Don Julio's Heart
-                { 22, 25734 }, -- Pattern: Fel Leather Leggings
-                { 24, 22535 }, -- Formula: Enchant Ring - Striking
-                { 26, 23874 }, -- Schematic: Elemental Seaforium Charge
-			},
-		},
-		{ -- Honored
-			name = ALIL["Honored"],
-			[NORMAL_DIFF] = {
-				{ 1, "f933rep6" },
-                { 2, 29457 }, -- Nethershard
-                { 3, 29118 }, -- Smuggler's Ammo Pouch
-                { 5, 29456 }, -- Gift of the Ethereal
-                { 17, 25733 }, -- Pattern: Fel Leather Boots
-                { 19, 24314 }, -- Pattern: Bag of Jewels
-                { 21, 23134 }, -- Design: Delicate Blood Garnet
-                { 22, 23155 }, -- Design: Lustrous Azure Moonstone
-                { 23, 23150 }, -- Design: Thick Golden Draenite
-                { 24, 25908 }, -- Design: Swift Skyfire Diamond
-                { 25, 25902 }, -- Design: Powerful Earthstorm Diamond
-                { 27, 22552 }, -- Formula: Enchant Weapon - Major Striking
-			},
-		},
-		{ -- Friendly
-			name = ALIL["Friendly"],
-			[NORMAL_DIFF] = {
-				{ 1, "f933rep5" },
-                { 17, 25732 }, -- Pattern: Fel Leather Gloves
-                { 19, 28274 }, -- Formula: Enchant Cloak - Spell Penetration
-                { 21, 23146 }, -- Design: Shifting Shadow Draenite
-                { 22, 23136 }, -- Design: Luminous Flame Spessarite
-			},
-		},
-	},
-}
-
 data["AshtongueDeathsworn"] = {
 	FactionID = 1012,
 	ContentType = FACTIONS_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
+    ContentPhaseBC = 3,
 	items = {
 		{ -- Exalted
 			name = ALIL["Exalted"],
@@ -837,93 +839,6 @@ data["ShatteredSunOffensive"] = {
 }
 
 -- ## Second
-data["ShatariSkyguard"] = {
-	FactionID = 1031,
-	ContentType = FACTIONS2_CONTENT,
-	LoadDifficulty = LOAD_DIFF,
-	items = {
-		{ -- Exalted
-			name = ALIL["Exalted"],
-			[NORMAL_DIFF] = {
-				{ 1, "f1031rep8" },
-                { 2, 32770 }, -- Skyguard Silver Cross
-                { 3, 32771 }, -- Airman's Ribbon of Gallantry
-                { 5, 32445 }, -- Skyguard Tabard
-                { 17, 38628 }, -- Nether Ray Fry
-                { 19, 32319 }, -- Blue Riding Nether Ray
-                { 20, 32314 }, -- Green Riding Nether Ray
-                { 21, 32317 }, -- Red Riding Nether Ray
-                { 22, 32316 }, -- Purple Riding Nether Ray
-                { 23, 32318 }, -- Silver Riding Nether Ray
-			},
-		},
-		{ -- Revered
-			name = ALIL["Revered"],
-			[NORMAL_DIFF] = {
-				{ 1, "f1031rep7" },
-                { 2, 32539 }, -- Skyguard's Drape
-                { 3, 32538 }, -- Skywitch's Drape
-			},
-		},
-		{ -- Honored
-			name = ALIL["Honored"],
-			[NORMAL_DIFF] = {
-				{ 1, "f1031rep6" },
-                { 2, 32721 }, -- Skyguard Rations
-			},
-		},
-		{ -- Friendly
-			name = ALIL["Friendly"],
-			[NORMAL_DIFF] = {
-				{ 1, "f1031rep5" },
-                { 2, 32722 }, -- Enriched Terocone Juice
-			},
-		},
-	},
-}
-
-data["Netherwing"] = {
-	FactionID = 1015,
-	ContentType = FACTIONS2_CONTENT,
-	LoadDifficulty = LOAD_DIFF,
-	items = {
-		{ -- Exalted
-			name = ALIL["Exalted"],
-			[NORMAL_DIFF] = {
-				{ 1, "f1015rep8" },
-                { 2, 32858 }, -- Reins of the Azure Netherwing Drake
-                { 3, 32859 }, -- Reins of the Cobalt Netherwing Drake
-                { 4, 32857 }, -- Reins of the Onyx Netherwing Drake
-                { 5, 32860 }, -- Reins of the Purple Netherwing Drake
-                { 6, 32861 }, -- Reins of the Veridian Netherwing Drake
-                { 7, 32862 }, -- Reins of the Violet Netherwing Drake
-			},
-		},
-		{ -- Revered
-			name = ALIL["Revered"],
-			[NORMAL_DIFF] = {
-				{ 1, "f1015rep7" },
-                { 2, 32864 }, -- Commander's Badge
-			},
-		},
-		{ -- Honored
-			name = ALIL["Honored"],
-			[NORMAL_DIFF] = {
-				{ 1, "f1015rep6" },
-                { 2, 32695 }, -- Captain's Badge
-                { 3, 32863 }, -- Skybreaker Whip
-			},
-		},
-		{ -- Friendly
-			name = ALIL["Friendly"],
-			[NORMAL_DIFF] = {
-				{ 1, "f1015rep5" },
-                { 2, 32694 }, -- Overseer's Badge
-			},
-		},
-	},
-}
-
 data["Sporeggar"] = {
 	FactionID = 970,
 	ContentType = FACTIONS2_CONTENT,
@@ -965,6 +880,51 @@ data["Sporeggar"] = {
                 { 3, 24539 }, -- Marsh Lichen
                 { 17, 27689 }, -- Recipe: Sporeling Snack
                 { 18, 30156 }, -- Recipe: Clam Bar
+			},
+		},
+	},
+}
+
+data["ShatariSkyguard"] = {
+	FactionID = 1031,
+	ContentType = FACTIONS2_CONTENT,
+	LoadDifficulty = LOAD_DIFF,
+	items = {
+		{ -- Exalted
+			name = ALIL["Exalted"],
+			[NORMAL_DIFF] = {
+				{ 1, "f1031rep8" },
+                { 2, 32770 }, -- Skyguard Silver Cross
+                { 3, 32771 }, -- Airman's Ribbon of Gallantry
+                { 5, 32445 }, -- Skyguard Tabard
+                { 17, 38628 }, -- Nether Ray Fry
+                { 19, 32319 }, -- Blue Riding Nether Ray
+                { 20, 32314 }, -- Green Riding Nether Ray
+                { 21, 32317 }, -- Red Riding Nether Ray
+                { 22, 32316 }, -- Purple Riding Nether Ray
+                { 23, 32318 }, -- Silver Riding Nether Ray
+			},
+		},
+		{ -- Revered
+			name = ALIL["Revered"],
+			[NORMAL_DIFF] = {
+				{ 1, "f1031rep7" },
+                { 2, 32539 }, -- Skyguard's Drape
+                { 3, 32538 }, -- Skywitch's Drape
+			},
+		},
+		{ -- Honored
+			name = ALIL["Honored"],
+			[NORMAL_DIFF] = {
+				{ 1, "f1031rep6" },
+                { 2, 32721 }, -- Skyguard Rations
+			},
+		},
+		{ -- Friendly
+			name = ALIL["Friendly"],
+			[NORMAL_DIFF] = {
+				{ 1, "f1031rep5" },
+                { 2, 32722 }, -- Enriched Terocone Juice
 			},
 		},
 	},
@@ -1012,6 +972,48 @@ data["Ogrila"] = {
 				{ 1, "f1038rep5" },
                 { 2, 32910 }, -- Red Ogre Brew Special
                 { 3, 32909 }, -- Blue Ogre Brew Special
+			},
+		},
+	},
+}
+
+data["Netherwing"] = {
+	FactionID = 1015,
+	ContentType = FACTIONS2_CONTENT,
+	LoadDifficulty = LOAD_DIFF,
+	items = {
+		{ -- Exalted
+			name = ALIL["Exalted"],
+			[NORMAL_DIFF] = {
+				{ 1, "f1015rep8" },
+                { 2, 32858 }, -- Reins of the Azure Netherwing Drake
+                { 3, 32859 }, -- Reins of the Cobalt Netherwing Drake
+                { 4, 32857 }, -- Reins of the Onyx Netherwing Drake
+                { 5, 32860 }, -- Reins of the Purple Netherwing Drake
+                { 6, 32861 }, -- Reins of the Veridian Netherwing Drake
+                { 7, 32862 }, -- Reins of the Violet Netherwing Drake
+			},
+		},
+		{ -- Revered
+			name = ALIL["Revered"],
+			[NORMAL_DIFF] = {
+				{ 1, "f1015rep7" },
+                { 2, 32864 }, -- Commander's Badge
+			},
+		},
+		{ -- Honored
+			name = ALIL["Honored"],
+			[NORMAL_DIFF] = {
+				{ 1, "f1015rep6" },
+                { 2, 32695 }, -- Captain's Badge
+                { 3, 32863 }, -- Skybreaker Whip
+			},
+		},
+		{ -- Friendly
+			name = ALIL["Friendly"],
+			[NORMAL_DIFF] = {
+				{ 1, "f1015rep5" },
+                { 2, 32694 }, -- Overseer's Badge
 			},
 		},
 	},
