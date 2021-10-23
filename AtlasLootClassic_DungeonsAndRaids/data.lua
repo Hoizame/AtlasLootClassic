@@ -1279,13 +1279,9 @@ data["ScarletMonasteryGraveyard"] = {
                 { 6, 38175 }, -- The Horseman's Blade
                 { 8, 33292 }, -- Hallowed Helm
                 { 10, 34068 }, -- Weighted Jack-o'-Lantern
-                { 12, 33277 }, -- Tome of Thomas Thomson
                 { 16, 37012 }, -- The Horseman's Reins
-                { 18, 33182 }, -- Swift Flying Broom        280% flying
-                { 19, 33176 }, -- Flying Broom              60% flying
-                { 21, 33184 }, -- Swift Magic Broom         100% ground
-                { 22, 37011 }, -- Magic Broom               60% ground
-                { 24, 33154 }, -- Sinister Squashling
+                { 18, 37011 }, -- Magic Broom
+                { 20, 33154 }, -- Sinister Squashling
             }
         },
 --@end-version-bcc@
