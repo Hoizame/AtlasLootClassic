@@ -7,7 +7,10 @@ local string = _G.string
 local format = string.format
 
 -- WoW
-local C_Map_GetAreaInfo = C_Map.GetAreaInfo
+local function C_Map_GetAreaInfo(id)
+	local d = C_Map.GetAreaInfo(id)
+	return d or "GetAreaInfo"..id
+end
 
 -- ----------------------------------------------------------------------------
 -- AddOn namespace.
