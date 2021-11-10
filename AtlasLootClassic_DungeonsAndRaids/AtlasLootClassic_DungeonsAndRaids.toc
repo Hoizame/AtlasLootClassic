@@ -1,5 +1,5 @@
 ﻿## Interface: 20502
-## Interface-Classic: 11400
+## Interface-Classic: 11401
 ## Interface-BCC: 20502
 ## Author: Lag
 ## Version: @project-version@
