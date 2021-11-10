@@ -4,7 +4,7 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 
 [Changelog history](https://github.com/Hoizame/AtlasLootClassic/blob/master/AtlasLootClassic/Documentation/Release_Notes.md)
 
-## v2.4.0 (Nov, XX, 2021)
+## v2.4.0 (Nov, 10, 2021)
 
 - update classic .toc version
 - (classic) fix lua error on start

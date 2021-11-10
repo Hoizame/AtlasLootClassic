@@ -131,6 +131,8 @@ local PLAYER_GUID_REGISTER = {
 	["Player-4749-020BE873"] = format("|T135349:0|t "..COLOR, "AtlasLoot Friend"), --war
 	--
 	["Player-4463-00C0F307"] = format("|T135349:0|t "..COLOR, "AtlasLoot Friend"),
+	-- Tassy
+	["Player-4440-025D610F"] = format("|T135349:0|t "..COLOR, "AtlasLoot Friend"),
 }
 
 local function AddText(self)
