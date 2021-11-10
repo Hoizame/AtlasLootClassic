@@ -7,4 +7,5 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 ## v2.4.0 (Nov, XX, 2021)
 
 - update classic .toc version
+- (classic) fix lua error on start
 - (bcc) update vendor prices

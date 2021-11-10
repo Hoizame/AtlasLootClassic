@@ -39,7 +39,7 @@ local PRICE_INFO_LIST = {
 }
 
 local VENDOR_PRICES = {
-    --@version-bcc@
+--@version-bcc@
     [39477] = "Brewfest:5",
     [39476] = "Brewfest:5",
     [38628] = "money:320000",
