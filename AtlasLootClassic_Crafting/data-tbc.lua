@@ -859,8 +859,8 @@ data["TailoringBC"] = {
 				{ 16, 31432 }, -- Runic Spellthread (375)
 				{ 17, 31430 }, -- Mystic Spellthread (335)
 				{ 19, 31373 }, -- Spellcloth (350)
-				{ 23, 31461 }, -- Heavy Netherweave Net (undefined)
-				{ 24, 31460 }, -- Netherweave Net (300)
+				--{ 23, 31461 }, -- Heavy Netherweave Net (undefined)
+				{ 23, 31460 }, -- Netherweave Net (300)
 			}
 		},
 	}

@@ -8,3 +8,4 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 
 - (bcc) update .toc version
 - (bcc) update vendor prices
+- (bcc) remove Heavy Netherweave Net
