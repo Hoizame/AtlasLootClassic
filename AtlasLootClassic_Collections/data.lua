@@ -168,6 +168,169 @@ data["BadgeofJustice"] = {
 }
 --@end-version-bcc@
 
+data["BadgeofJustice4"] = {
+	name = format(AL["'%s' Vendor"], "Badge of Justice Phase 4"),
+	ContentType = VENDOR_CONTENT,
+	TableType = NORMAL_ITTYPE,
+	gameVersion = 2,
+	items = {
+		{
+			name = ALIL["Accessories"],
+			[NORMAL_DIFF] = {
+				{ 1, "INV_Box_01", nil, AL["Off-Hand"] },
+				{ 2, 33334 },
+				{ 3, 33325 },
+				
+				{ 5, "INV_Box_01", nil, AL["Neck"] },
+				{ 6, 33296 },
+				
+				{ 8, "INV_Box_01", nil, AL["Back"] },
+				{ 9, 33593 },			
+				
+				{11, "INV_Box_01", nil, AL["Ranged"] },
+				{12, 33192 },
+			},
+		},
+		{
+			name = ALIL["Back"],
+			[NORMAL_DIFF] = {
+				{ 1, 33593 },	
+			},
+		},
+		{
+			name = ALIL["Cloth"],
+			[NORMAL_DIFF] = {
+				{1, 33588 },
+				{2, 33586 },
+				{3, 33291 },
+				{5, 33584 },
+				{6, 33589 },
+				{7, 33587 },
+				{8, 33585 },
+			},
+		},
+		{
+			name = ALIL["Leather"],
+			[NORMAL_DIFF] = {
+				{1, 33972 },
+				{2, 33973 },
+				{3, 33566 },
+				{4, 33578 },
+				{5, 33974 },
+				{6, 33559 },
+				{7, 33577 },
+
+				{9, 33287 },
+				{10, 33557 },
+				{11, 33552 },
+
+				{16, 33579 }, -- bonus armor
+				{17, 33580 }, -- bonus armor
+				{18, 33583 }, -- bonus armor
+				{19, 33582 }, -- bonus armor
+
+				{21, 33540 },
+				{22, 33539 },
+				{23, 33538 },
+				{24, 33222 },
+			},
+		},
+		{
+			name = ALIL["Mail"],
+			[NORMAL_DIFF] = {
+				{1, 33970 },
+				{2, 33965 },
+				{3, 33535 },
+				{4, 33524 },
+				{5, 33536 },
+				{6, 33537 },
+
+				{8, 33529 },
+				{9, 33528 },
+				{10, 33280 },
+				{11, 33527 },
+
+				{16, 33532 },
+				{17, 33531 },
+				{18, 33386 },
+				{19, 33530 },
+				{20, 33324 },
+			},
+		},
+		{
+			name = ALIL["Back"],
+			[NORMAL_DIFF] = {
+				{ 1, 33593 },	
+			},
+		},
+		{
+			name = ALIL["Off-Hand"],
+			[NORMAL_DIFF] = {
+				{ 1, 33334 },
+				{ 2, 33325 },	
+			},
+		},
+		{
+			name = ALIL["Plate"],
+			[NORMAL_DIFF] = {
+				{1, 33810 },
+				{2, 33514 },
+				{3, 33513 },
+				{4, 33331 },
+				{5, 33512 },
+				{6, 33501 },
+
+				{8, 33520 },
+				{9, 33519 },
+				{10, 33518 },
+				{11, 33207 },
+
+				{16, 33522 },
+				{17, 33516 },
+				{18, 33517 },
+				{19, 33279 },
+				{20, 33524 },
+				{21, 33515 },
+				{22, 33523 },
+			},
+		},
+		{
+			name = ALIL["Trinket"],
+			[NORMAL_DIFF] = {
+				{1, 35326 },
+				{2, 34049 },
+				{3, 34162 },
+				{4, 34163 },
+				{5, 33832 },
+				{6, 34050 },
+			},
+		},
+		{
+			name = ALIL["Ranged"],
+			[NORMAL_DIFF] = {
+				{ 1, 33192 }, -- Carved Witch Doctor Stick
+			},
+		},
+		{
+			name = ALIL["Relic"],
+			[NORMAL_DIFF] = {
+				{1, "INV_Box_01", nil, AL["Idols"] },
+				{2, 33510 },
+				{3, 33509 },
+				{4, 33508 },
+				{6, "INV_Box_01", nil, AL["Librams"] },
+				{7, 33503 },
+				{8, 33502 },
+				{10, "INV_Box_01", nil, AL["Totems"] },
+				{11, 33506 },
+				{12, 33507 },
+				{13, 33505 },
+			},
+		},
+	}
+}
+--@end-version-bcc@
+
 data["TierSets"] = {
 	name = AL["Tier Sets"],
 	ContentType = SET_CONTENT,
