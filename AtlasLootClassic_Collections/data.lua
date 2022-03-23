@@ -51,6 +51,20 @@ local COLLECTIONS_CONTENT = data:AddContentType(AL["Collections"], ATLASLOOT_COL
 local WORLD_EVENT_CONTENT = data:AddContentType(AL["World Events"], ATLASLOOT_SEASONALEVENTS_COLOR)
 
 --@version-bcc@
+local function Phase4Header(index, phase)
+	return { index, "INV_OffHand_Zulaman_D_01", nil, format("Phase %d", 4) };
+end
+
+local function Phase5Header(index)
+	return { index, "INV_OffHand_Sunwell_D_01", nil, format("Phase %d", 5) };
+end
+
+local CASTER_DIFF = data:AddDifficulty(AL["Caster"], "c", 1, nil, true)
+local HEALER_DIFF = data:AddDifficulty(AL["Healer"], "h", 3, nil, true)
+local TANK_DIFF = data:AddDifficulty(AL["Tank"], "t", 4, nil, true)
+local MELEE_DIFF = data:AddDifficulty(AL["Melee"], "m", 2, nil, true)
+local OTHER_DIFF = data:AddDifficulty(AL["Other"], "o", 5, nil, true)
+
 data["BadgeofJustice"] = {
 	name = format(AL["'%s' Vendor"], "Badge of Justice"),
 	ContentType = VENDOR_CONTENT,
@@ -59,54 +73,194 @@ data["BadgeofJustice"] = {
 	items = {
 		{
 			name = ALIL["Cloth"],
-			[NORMAL_DIFF] = {
+			[CASTER_DIFF] = {
 				{ 1, 32089 }, -- Mana-Binders Cowl
-				{ 2, 32090 }, -- Cowl of Naaru Blessings
+				Phase4Header(3),
+				{ 4, 33588 }, -- Runed Spell-cuffs / 35
+				{ 5, 33586 }, -- Studious Wraps / 60
+				{ 6, 33291 }, -- Voodoo-woven Belt / 60
+				{ 7, 33584 }, -- Pantaloons of Arcane Annihilation / 75
+				{ 8, 33585 }, -- Achromic Trousers of the Naaru / 75
 
-				{ 4, 30762 }, -- Infernoweave Robe
-				{ 5, 30764 }, -- Infernoweave Gloves
-				{ 6, 30761 }, -- Infernoweave Leggings
-				{ 7, 30763 }, -- Infernoweave Boots
+				Phase5Header(16),
+				{ 17, 34917 }, -- Shroud of the Lore`nial / 100
+				{ 18, 34936 }, -- Tormented Demonsoul Robes / 100
+				{ 19, 34938 }, -- Enslaved Doomguard Soulgrips / 75
+				{ 20, 34937 }, -- Corrupted Soulcloth Pantaloons / 100
+				{ 21, 34918 }, -- Legwraps of Sweltering Flame / 100
+				{ 22, 34919 }, -- Boots of Incantations / 75
+			},
+			[HEALER_DIFF] = {
+				{ 1, 32090 }, -- Cowl of Naaru Blessings
+				Phase4Header(3),
+				{ 4, 33589 }, -- Wristguards of Tranquil Thought / 35
+				{ 5, 33587 }, -- Light-Blessed Bonds / 60
+				Phase5Header(7),
+				{ 8, 34924 }, -- Gown of Spiritual Wonder / 100
+				{ 9, 34925 }, -- Adorned Supernal Legwraps / 100
+				{ 10, 34926 }, -- Slippers of Dutiful Mending / 75
+			},
+			[OTHER_DIFF] = {
+				{ 1, 30762 }, -- Infernoweave Robe
+				{ 2, 30764 }, -- Infernoweave Gloves
+				{ 3, 30761 }, -- Infernoweave Leggings
+				{ 4, 30763 }, -- Infernoweave Boots
 			},
 		},
 		{
 			name = ALIL["Leather"],
-			[NORMAL_DIFF] = {
+			[CASTER_DIFF] = {
+				Phase4Header(1),
+				{ 2, 33972 }, -- Mask of Primal Power / 75
+				{ 3, 33973 }, -- Pauldrons of Tribal Fury / 60
+				{ 4, 33566 }, -- Blessed Elunite Coverings / 75
+				{ 5, 33578 }, -- Armwraps of the Kaldorei Protector / 35
+				{ 6, 33974 }, -- Grasp of the Moonkin / 60
+				{ 7, 33559 }, -- Starfire Waistband / 60
+				{ 8, 33577 }, -- Moon-walkers / 60
+				Phase5Header(10),
+				{ 11, 34903 }, -- Embrace of Starlight / 100
+				{ 12, 34904 }, -- Barbed Gloves of the Sage / 75
+				{ 13, 34905 }, -- Crystalwind Leggings / 100
+			},
+			[HEALER_DIFF] = {
+				Phase4Header(1),
+				{ 2, 33287 }, -- Gnarled Ironwood Pauldrons / 60
+				{ 3, 33557 }, -- Gargon's Bracers Peaceful Slumber / 35
+				{ 4, 33552 }, -- Pants of Splendid Recovery / 75
+				Phase5Header(6),
+				{ 7, 34900 }, -- Shroud of Nature's Harmony / 100
+				{ 8, 34902 }, -- Oakleaf-Spun Handguards / 75
+				{ 9, 34901 }, -- Grovewalker's Leggings / 100
+			},
+			[MELEE_DIFF] = {
 				{ 1, 32087 }, -- Mask of the Deceiver
 				{ 2, 32088 }, -- Cowl of Beastly Rage
-
-				{ 4, 30776 }, -- Inferno Hardened Chestguard
-				{ 5, 30780 }, -- Inferno Hardened Gloves
-				{ 6, 30778 }, -- Inferno Hardened Leggings
-				{ 7, 30779 }, -- Inferno Hardened Boots
+				Phase4Header(4),
+				{ 5, 33579 }, -- Vestments of Hibernation / 75
+				{ 6, 33580 }, -- Band of the Swift Paw / 35
+				{ 7, 33540 }, -- Master Assassin Wristwraps / 35
+				{ 8, 33539 }, -- Trickster's Stickyfingers / 60
+				{ 9, 33583 }, -- Waistguard of the Great Beast / 60
+				{ 10, 33538 }, -- Shallow-grave Trousers / 75
+				{ 11, 33582 }, -- Footwraps of Wild Encroachment / 60
+				{ 12, 33222 }, -- Nyn'jah's Tabi Boots / 60
+				Phase5Header(16),
+				{ 17, 34906 }, -- Embrace of Everlasting Prowess / 100
+				{ 18, 34927 }, -- Tunic of the Dark Hour / 100
+				{ 19, 34911 }, -- Handwraps of the Aggressor / 75
+				{ 20, 34929 }, -- Belt of the Silent Path / 75
+				{ 21, 34910 }, -- Tameless Breeches / 100
+				{ 22, 34928 }, -- Trousers of the Scryers' Retainer / 100
+			},
+			[OTHER_DIFF] = {
+				{ 1, 30776 }, -- Inferno Hardened Chestguard
+				{ 2, 30780 }, -- Inferno Hardened Gloves
+				{ 3, 30778 }, -- Inferno Hardened Leggings
+				{ 4, 30779 }, -- Inferno Hardened Boots
 			},
 		},
 		{
 			name = ALIL["Mail"],
-			[NORMAL_DIFF] = {
+			[CASTER_DIFF] = {
+				{ 1, 32086 }, -- Storm Master's Helmet
+				Phase4Header(3),
+				{ 4, 33970 }, -- Pauldrons of the Furious Elements / 60
+				{ 5, 33965 }, -- Hauberk of the Furious Elements / 75
+				{ 6, 33535 }, -- Earthquake Bracers / 35
+				{ 7, 33534 }, -- Grips of Nature's Wrath / 60
+				{ 8, 33536 }, -- Stormwrap / 60
+				{ 9, 33537 }, -- Treads of Booming Thunder / 60
+				Phase5Header(11),
+				{ 12, 34933 }, -- Hauberk of Whirling Fury / 100
+				{ 13, 34935 }, -- Aftershock Waistguard / 75
+				{ 14, 34934 }, -- Rushing Storm Kilt / 100
+			},
+			[HEALER_DIFF] = {
+				Phase4Header(1),
+				{ 2, 33532 }, -- Gleaming Earthen Bracers / 35
+				{ 3, 33531 }, -- Polished Waterscale Gloves / 60
+				{ 4, 33386 }, -- Man'kin'do's Belt / 60
+				{ 5, 33530 }, -- Natural Life Leggings / 75
+				{ 6, 33324 }, -- Treads of Life Path / 60
+				Phase5Header(8),
+				{ 9, 34930 }, -- Wave of Life Chestguard / 100
+				{ 10, 34932 }, -- Clutch of the Soothing Breeze / 75
+				{ 11, 34931 }, -- Runed Scales of Antiquity / 100
+			},
+			[MELEE_DIFF] = {
 				{ 1, 32085 }, -- Warpstalker Helm
-				{ 2, 32086 }, -- Storm Master's Helmet
-
-				{ 4, 30773 }, -- Inferno Forged Hauberk
-				{ 5, 30774 }, -- Inferno Forged Gloves
-				{ 6, 30770 }, -- Inferno Forged Boots
-				{ 7, 30772 }, -- Inferno Forged Leggings
+				Phase4Header(3),
+				{ 4, 33529 }, -- Steadying Bracers / 35
+				{ 5, 33528 }, -- Gauntlets of Sniping / 60
+				{ 6, 33280 }, -- War-Feathered Loop / 60
+				{ 7, 33527 }, -- Shifting Camouflage Pants / 75
+				Phase5Header(9),
+				{ 10, 34912 }, -- Scaled Drakeskin Chestguard / 100
+				{ 11, 34916 }, -- Gauntlets of Rapidity / 75
+				{ 12, 34914 }, -- Leggings of the Pursuit / 100
+			},
+			[OTHER_DIFF] = {
+				{ 1, 30773 }, -- Inferno Forged Hauberk
+				{ 2, 30774 }, -- Inferno Forged Gloves
+				{ 3, 30770 }, -- Inferno Forged Boots
+				{ 4, 30772 }, -- Inferno Forged Leggings
 			},
 		},
 		{
 			name = ALIL["Plate"],
-			[NORMAL_DIFF] = {
+			[HEALER_DIFF] = {
+				{ 1, 32084 }, -- Helmet of the Steadfast Champion
+				Phase4Header(3),
+				{ 4, 33520 }, -- Vambraces of the Naaru / 35
+				{ 5, 33519 }, -- Handguards of the Templar / 60
+				{ 6, 33518 }, -- High Justicar's Legplates / 75
+				{ 7, 33207 }, -- Implacable Guardian Sabatons / 60
+				Phase5Header(9),
+				{ 10, 34921 }, -- Ecclesiastical Cuirass / 100
+				{ 11, 34923 }, -- Waistguard of Reparation / 75
+				{ 12, 34922 }, -- Greaves of Pacification / 100
+			},
+			[MELEE_DIFF] = {
+				Phase4Header(1),
+				{ 2, 33810 }, -- Amani Mask of Death / 75
+				{ 3, 33514 }, -- Pauldrons of Gruesome Fate / 60
+				{ 4, 33513 }, -- Eternium Rage-shackles / 35
+				{ 5, 33512 }, -- Furious Deathgrips / 60
+				{ 6, 33331 }, -- Chain of Unleashed Rage / 60
+				{ 7, 33501 }, -- Bloodthirster's Greaves / 75
+				Phase5Header(9),
+				{ 10, 34942 }, -- Breastplate of Ire / 100
+				{ 11, 34944 }, -- Girdle of Seething Rage / 75
+				{ 12, 34943 }, -- Legplates of Unending Fury / 100
+			},
+			[TANK_DIFF] = {
 				{ 1, 32083 }, -- Faceguard of Determination
-				{ 2, 32084 }, -- Helmet of the Steadfast Champion
-
-				{ 4, 30769,  }, -- Inferno Tempered Chestguard
-				{ 5, 30767,  }, -- Inferno Tempered Gauntlets
-				{ 6, 30766 }, -- Inferno Tempered Leggings
-				{ 7, 30768 }, -- Inferno Tempered Boots
+				Phase4Header(3),
+				{ 4, 33522 }, -- Chestguard of the Stoic Guardian / 75
+				{ 5, 33516 }, -- Bracers of Ancient Phalanx / 35
+				{ 6, 33517 }, -- Bonefist Gauntlets / 60
+				{ 7, 33524 }, -- Girdle of the Protector / 60
+				{ 8, 33279 }, -- Iron-tusk Girdle / 60
+				{ 9, 33515 }, -- Unwavering Legguards / 75
+				{ 10, 33523 }, -- Sabatons of the Righteous Defender / 60
+				Phase5Header(16),
+				{ 17, 34939 }, -- Chestplate of Stoicism / 100
+				{ 18, 34945 }, -- Shattrath Protectorate's Breastplate / 100
+				{ 19, 34941 }, -- Girdle of the Fearless / 75
+				{ 20, 34946 }, -- Inscribed Legplates of the Aldor / 100
+				{ 21, 34940 }, -- Sunguard Legplates / 100
+				{ 22, 34947 }, -- Blue's Greaves of the Righteous Guardian / 75
+			},
+			[OTHER_DIFF] = {
+				{ 1, 30769,  }, -- Inferno Tempered Chestguard
+				{ 2, 30767,  }, -- Inferno Tempered Gauntlets
+				{ 3, 30766 }, -- Inferno Tempered Leggings
+				{ 4, 30768 }, -- Inferno Tempered Boots
 			},
 		},
 		{
-			name = ALIL["Off Hand"],
+			name = ALIL["Weapons"],
 			[NORMAL_DIFF] = {
 				{ 1, 29266 }, -- Azure-Shield of Coldarra
 				{ 2, 29267 }, -- Light-Bearer's Faith Shield
@@ -117,7 +271,22 @@ data["BadgeofJustice"] = {
 				{ 8, 29272 }, -- Orb of the Soul-Eater
 				{ 9, 29273 }, -- Khadgar's Knapsack
 				{ 10, 29274 }, -- Tears of Heaven
-				{ 16, 29275 }, -- Searing Sunblade
+				{ 12, 29275 }, -- Searing Sunblade
+				Phase4Header(16),
+				{ 17, 33334 }, -- Fetish of the Primal Gods / 35
+				{ 18, 33325 }, -- Voodoo Shaker / 35
+				Phase5Header(20),
+				{ 21, 34894 }, -- Blade of Serration / 105
+				{ 22, 34896 }, -- Gavel of Naaru Blessings / 150
+				{ 23, 34895 }, -- Scryer's Blade of Focus / 150
+				{ 24, 34893 }, -- Vanir's Right Fist of Brutality / 105
+				{ 25, 34951 }, -- Vanir's Left Fist of Brutality / 45
+				{ 26, 34950 }, -- Vanir's Left Fist of Savagery / 45
+				{ 27, 34949 }, -- Swift Blade of Uncertainty / 45
+				{ 28, 34952 }, -- The Mutilator / 45
+				{ 29, 34891 }, -- The Blade of Harbingers / 150
+				{ 30, 34898 }, -- Staff of the Forest Lord / 150
+				{ 31, 34892 }, -- Crossbow of Relentless Strikes / 150
 			},
 		},
 		{
@@ -127,6 +296,8 @@ data["BadgeofJustice"] = {
 				{ 2, 29374 }, -- Necklace of Eternal Hope
 				{ 3, 29381 }, -- Choker of Vile Intent
 				{ 4, 29386 }, -- Necklace of the Juggernaut
+				Phase4Header(6),
+				{ 7, 33296 }, -- Brooch of Deftness / 35
 			},
 		},
 		{
@@ -136,6 +307,13 @@ data["BadgeofJustice"] = {
 				{ 2, 29375 }, -- Bishop's Cloak
 				{ 3, 29382 }, -- Blood Knight War Cloak
 				{ 4, 29385 }, -- Farstrider Defender's Cloak
+				Phase4Header(6),
+				{ 7, 35321 }, -- Cloak of Arcane Alacrity / 60
+				{ 8, 33304 }, -- Cloak of Subjugated Power / 60
+				{ 9, 35324 }, -- Cloak of Swift Reprieve / 60
+				{ 10, 33484 }, -- Dory's Embrace / 60
+				{ 11, 33333 }, -- Kharmaa's Shroud of Hope / 60
+				{ 12, 33593 }, -- Slikk's Cloak of Placation / 35
 			},
 		},
 		{
@@ -145,6 +323,11 @@ data["BadgeofJustice"] = {
 				{ 2, 29373 }, -- Band of Halos
 				{ 3, 29379 }, -- Ring of Arathi Warlords
 				{ 4, 29384 }, -- Ring of Unyielding Force
+				Phase5Header(6),
+				{ 7, 34887 }, -- Angelista's Revenge / 60
+				{ 8, 34890 }, -- Anveena's Touch / 60
+				{ 9, 34889 }, -- Fused Nethergon Band / 60
+				{ 10, 34888 }, -- Ring of the Stalwart Protector / 60
 			},
 		},
 		{
@@ -154,14 +337,51 @@ data["BadgeofJustice"] = {
 				{ 2, 29376 }, -- Essence of the Martyr
 				{ 3, 29383 }, -- Bloodlust Brooch
 				{ 4, 29387 }, -- Gnomeregan Auto-Blocker 600
+				Phase4Header(6),
+				{ 7, 35326 }, -- Battlemaster's Alacrity / 75
+				{ 8, 34049 }, -- Battlemaster's Audacity / 75
+				{ 9, 34163 }, -- Battlemaster's Cruelty / 75
+				{ 10, 34162 }, -- Battlemaster's Depravity / 75
+				{ 11, 33832 }, -- Battlemaster's Determination / 75
+				{ 12, 34050 }, -- Battlemaster's Perseverance / 75
 			},
 		},
 		{
 			name = ALIL["Relic"],
 			[NORMAL_DIFF] = {
-				{ 1, 29388 }, -- Libram of Repentance
-				{ 2, 29389 }, -- Totem of the Pulsing Earth
-				{ 3, 29390 }, -- Everbloom Idol
+				{ 1, 29390 }, -- Everbloom Idol / 15
+
+				Phase4Header(2),
+				{ 3, 33508 }, -- Idol of Budding Life / 20
+				{ 4, 33509 }, -- Idol of Terror / 20
+				{ 5, 33510 }, -- Idol of the Unseen Moon / 20
+
+				{ 8, 29389 }, -- Totem of the Pulsing Earth / 15
+				Phase4Header(9),
+				{ 10, 33506 }, -- Skycall Totem / 20
+				{ 11, 33507 }, -- Stonebreaker's Totem / 20
+				{ 12, 33505 }, -- Totem of Living Water / 20
+
+				{ 16, 29388 }, -- Libram of Repentance / 15
+				Phase4Header(17),
+				{ 18, 33503 }, -- Libram of Divine Judgement / 20
+				{ 19, 33504 }, -- Libram of Divine Purpose / 20
+				{ 20, 33502 }, -- Libram of Mending / 20
+			},
+		},
+		{
+			name = ALIL["Reagent"],
+			[NORMAL_DIFF] = {
+				{ 1, 23572 }, -- Primal Nether
+				Phase4Header(3),
+				{ 4, 30183 }, -- Nether Vortex / 15
+				Phase5Header(6),
+				{ 7, 32227 }, -- Crimson Spinel / 15
+				{ 8, 32228 }, -- Empyrean Sapphire / 15
+				{ 9, 32229 }, -- Lionseye / 15
+				{ 10, 32249 }, -- Seaspray Emerald / 15
+				{ 11, 32230 }, -- Shadowsong Amethyst / 15
+				{ 12, 32231 }, -- Pyrestone / 15
 			},
 		},
 	}
