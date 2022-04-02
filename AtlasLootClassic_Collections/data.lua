@@ -175,26 +175,14 @@ data["BadgeofJustice4"] = {
 	gameVersion = 2,
 	items = {
 		{
-			name = ALIL["Accessories"],
-			[NORMAL_DIFF] = {
-				{ 1, "INV_Box_01", nil, AL["Off-Hand"] },
-				{ 2, 33334 },
-				{ 3, 33325 },
-				
-				{ 5, "INV_Box_01", nil, AL["Neck"] },
-				{ 6, 33296 },
-				
-				{ 8, "INV_Box_01", nil, AL["Back"] },
-				{ 9, 33593 },			
-				
-				{11, "INV_Box_01", nil, AL["Ranged"] },
-				{12, 33192 },
-			},
-		},
-		{
 			name = ALIL["Back"],
 			[NORMAL_DIFF] = {
-				{ 1, 33593 },	
+				{ 1, 33593 },
+				{ 2, 35321 },
+				{ 3, 33304 },
+				{ 4, 35324 },
+				{ 5, 33484 },
+				{ 6, 33333 },	
 			},
 		},
 		{
@@ -203,7 +191,7 @@ data["BadgeofJustice4"] = {
 				{1, 33588 },
 				{2, 33586 },
 				{3, 33291 },
-				{5, 33584 },
+				{4, 33584 },
 				{6, 33589 },
 				{7, 33587 },
 				{8, 33585 },
@@ -258,12 +246,6 @@ data["BadgeofJustice4"] = {
 			},
 		},
 		{
-			name = ALIL["Back"],
-			[NORMAL_DIFF] = {
-				{ 1, 33593 },	
-			},
-		},
-		{
 			name = ALIL["Off-Hand"],
 			[NORMAL_DIFF] = {
 				{ 1, 33334 },
@@ -306,12 +288,6 @@ data["BadgeofJustice4"] = {
 			},
 		},
 		{
-			name = ALIL["Ranged"],
-			[NORMAL_DIFF] = {
-				{ 1, 33192 }, -- Carved Witch Doctor Stick
-			},
-		},
-		{
 			name = ALIL["Relic"],
 			[NORMAL_DIFF] = {
 				{1, "INV_Box_01", nil, AL["Idols"] },
@@ -327,9 +303,125 @@ data["BadgeofJustice4"] = {
 				{13, 33505 },
 			},
 		},
+		{
+			name = ALIL["Wand"],
+			[NORMAL_DIFF] = {
+				{ 1, 33192 }, -- Carved Witch Doctor Stick
+			},
+		},
 	}
 }
 --@end-version-bcc@
+
+--copy/paste from Rootkit for P5 badge items - githup issue #199
+data["BadgeofJusticeP5"] = {
+	name = format(AL["'%s' Vendor"], "Badge of Justice P5"),
+	ContentType = VENDOR_CONTENT,
+	TableType = NORMAL_ITTYPE,
+	gameVersion = 2,
+	items = {
+		{
+			name = ALIL["Cloth"],
+			[NORMAL_DIFF] = {
+				{1, 34926},
+				{2, 34924},
+				{3, 34925},
+				{5, 34919},
+				{6, 34917},
+				{7, 34918},
+				{9, 34938},
+				{10, 34936},
+				{11, 34937},
+			},
+		},
+		{
+			name = ALIL["Gem"],
+			[NORMAL_DIFF] = {
+				{1, 32228},
+				{2, 32249},
+				{3, 32231},
+				{4, 32230},
+				{5, 32227},
+				{6, 32229},
+			},
+		},
+		{
+			name = ALIL["Leather"],
+			[NORMAL_DIFF] = {
+				{1, 34911}, --bonus armor
+				{2, 34906},  --bonus armor
+				{3, 34910}, --bonus armor
+				{5, 34929}, -- AP
+				{6, 34927}, -- AP
+				{7, 34928}, --AP
+				{16, 34902},  -- healing
+				{17, 34901}, -- healing
+				{18, 34900}, -- healing
+				{20, 34904},  -- SP
+				{21, 34903},  --SP
+				{22, 34905},  -- SP
+			},
+		},
+		{
+			name = ALIL["Mail"],
+			[NORMAL_DIFF] = {
+				{1, 34932}, -- Heal
+				{2, 34931}, -- heal
+				{3, 34930}, -- Heal
+				{5, 34916}, -- AP
+				{6, 34912}, -- AP
+				{7, 34914}, -- AP
+				{9, 34935}, -- SP
+				{10, 34934}, -- SP
+				{11, 34933}, -- SP
+			},
+		},
+		{
+			name = ALIL["Plate"],
+			[NORMAL_DIFF] = {
+				{1, 34947}, -- DEF + SP
+				{2, 34945}, -- Def + SP
+				{3, 34946}, -- DEF + SP
+				{5, 34941}, -- Def + Expertise
+				{6, 34939}, -- Def 
+				{7, 34940}, -- Def + Expertise
+				{16, 34923}, -- Healing
+				{17, 34921}, -- Healing
+				{18, 34922}, -- Healing
+				{20, 34944}, -- STR + Haste
+				{21, 34942}, -- STR + Haste
+				{22, 34943}, -- STR + Haste
+			},
+		},
+		{
+			name = ALIL["Finger"],
+			[NORMAL_DIFF] = {
+				{1, 34887},
+				{2, 34890},
+				{3, 34889},
+				{4, 34888},
+			},
+		},
+		{
+			name = ALIL["Weapon"],
+			[NORMAL_DIFF] = {
+				{1, 34894},  -- 1H Dagger
+				{2, 34949}, -- OH Dagger
+				{3, 34952}, -- OH Dagger
+				{4, 34950}, -- OH Fist 1.5
+				{6, 34893}, -- MH Fist 2.5
+				{7, 34951}, -- OH - Fist 2.5
+				{16, 34891}, -- 2H Axe
+				{18, 34892}, -- Crossbow
+				{20, 34898}, -- Staff AP
+				{22, 34895}, -- MH Dagger - SP
+				{24, 34896}, -- MH Mace - Healing
+			},
+		},
+	}
+}
+--@end-version-bcc@
+
 
 data["TierSets"] = {
 	name = AL["Tier Sets"],
