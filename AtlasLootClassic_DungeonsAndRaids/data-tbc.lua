@@ -2914,13 +2914,13 @@ data["ZulAman"] = {
                 { 7, 33971 }, -- Elunite Imbued Leggings
                 { 8, 33805 }, -- Shadowhunter's Treads
                 { 9, 33481 }, -- Pauldrons of Stone Resolve
-                { 10, "INV_Box_01", nil, format(AL["Timed Reward Chest %d"], 2), nil },
+                { 10, "INV_Box_01", nil, format(AL["Timed Reward Chest %d"], 3), nil },
                 { 11, 33497 }, -- Mana Attuned Band
                 { 12, 33500 }, -- Signet of Eternal Life
                 { 13, 33496 }, -- Signet of Primal Wrath
                 { 14, 33499 }, -- Signet of the Last Defender
                 { 15, 33498 }, -- Signet of the Quiet Forest
-                { 16, "INV_Box_01", nil, format(AL["Timed Reward Chest %d"], 3), nil },
+                { 16, "INV_Box_01", nil, format(AL["Timed Reward Chest %d"], 2), nil },
                 { 17, 33495 }, -- Rage
                 { 18, 33493 }, -- Umbral Shiv
                 { 19, 33492 }, -- Trollbane
