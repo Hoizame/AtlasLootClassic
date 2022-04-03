@@ -246,6 +246,12 @@ data["BadgeofJustice4"] = {
 			},
 		},
 		{
+			name = ALIL["Neck"],
+			[NORMAL_DIFF] = {
+				{1, 33296},
+			},
+		},
+		{
 			name = ALIL["Off-Hand"],
 			[NORMAL_DIFF] = {
 				{ 1, 33334 },
