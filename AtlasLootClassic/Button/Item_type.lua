@@ -431,7 +431,7 @@ function Item.ShowQuickDressUp(itemLink, ttFrame)
 		frame:SetCamDistanceScale(1)
 		frame:SetUnit("player")
 		local info = {GetItemInfo(itemLink)}
-		if not (info[9] == "INVTYPE_CLOAK") then
+		if info[9] ~= "INVTYPE_CLOAK" then
 			frame:SetRotation(frame.curRotation)
 		else
 			frame:SetRotation(frame.curRotation + math.pi)
