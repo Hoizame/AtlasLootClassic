@@ -166,7 +166,6 @@ data["BadgeofJustice"] = {
 		},
 	}
 }
---@end-version-bcc@
 
 data["BadgeofJustice4"] = {
 	name = format(AL["'%s' Vendor"], "Badge of Justice Phase 4"),
@@ -182,7 +181,7 @@ data["BadgeofJustice4"] = {
 				{ 3, 33304 },
 				{ 4, 35324 },
 				{ 5, 33484 },
-				{ 6, 33333 },	
+				{ 6, 33333 },
 			},
 		},
 		{
@@ -255,7 +254,7 @@ data["BadgeofJustice4"] = {
 			name = ALIL["Off-Hand"],
 			[NORMAL_DIFF] = {
 				{ 1, 33334 },
-				{ 2, 33325 },	
+				{ 2, 33325 },
 			},
 		},
 		{
@@ -317,7 +316,6 @@ data["BadgeofJustice4"] = {
 		},
 	}
 }
---@end-version-bcc@
 
 --copy/paste from Rootkit for P5 badge items - githup issue #199
 data["BadgeofJusticeP5"] = {
@@ -389,7 +387,7 @@ data["BadgeofJusticeP5"] = {
 				{2, 34945}, -- Def + SP
 				{3, 34946}, -- DEF + SP
 				{5, 34941}, -- Def + Expertise
-				{6, 34939}, -- Def 
+				{6, 34939}, -- Def
 				{7, 34940}, -- Def + Expertise
 				{16, 34923}, -- Healing
 				{17, 34921}, -- Healing
@@ -427,7 +425,6 @@ data["BadgeofJusticeP5"] = {
 	}
 }
 --@end-version-bcc@
-
 
 data["TierSets"] = {
 	name = AL["Tier Sets"],
