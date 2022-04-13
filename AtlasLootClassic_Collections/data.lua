@@ -52,7 +52,7 @@ local WORLD_EVENT_CONTENT = data:AddContentType(AL["World Events"], ATLASLOOT_SE
 
 --@version-bcc@
 data["BadgeofJustice"] = {
-	name = format(AL["'%s' Vendor"], "Badge of Justice"),
+	name = format(AL["'%s' Vendor"], AL["Badge of Justice"]),
 	ContentType = VENDOR_CONTENT,
 	TableType = NORMAL_ITTYPE,
 	gameVersion = 2,
@@ -168,7 +168,7 @@ data["BadgeofJustice"] = {
 }
 
 data["BadgeofJustice4"] = {
-	name = format(AL["'%s' Vendor"], "Badge of Justice Phase 4"),
+	name = format(AL["'%s %s' Vendor"], AL["Badge of Justice"], "P4"),
 	ContentType = VENDOR_CONTENT,
 	TableType = NORMAL_ITTYPE,
 	gameVersion = 2,
@@ -317,9 +317,9 @@ data["BadgeofJustice4"] = {
 	}
 }
 
---copy/paste from Rootkit for P5 badge items - githup issue #199
+--copy/paste from Rootkit for P5 badge items - github issue #199
 data["BadgeofJusticeP5"] = {
-	name = format(AL["'%s' Vendor"], "Badge of Justice P5"),
+	name = format(AL["'%s %s' Vendor"], AL["Badge of Justice"], "P5"),
 	ContentType = VENDOR_CONTENT,
 	TableType = NORMAL_ITTYPE,
 	gameVersion = 2,
