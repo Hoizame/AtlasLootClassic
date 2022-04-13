@@ -2775,8 +2775,9 @@ data["Karazhan"] = {
 data["ZulAman"] = {
 	MapID = 3805,
 	InstanceID = 568,
-	--AtlasMapID = "CL_",
-	--AtlasMapFile = "",
+	AtlasModule = ATLAS_MODULE_NAME,
+	AtlasMapID = "ZulAman",
+	AtlasMapFile = "ZulAman",
 	ContentType = RAID10_CONTENT,
     ContentPhaseBC = 4,
 	items = {
@@ -2785,7 +2786,7 @@ data["ZulAman"] = {
             npcID = 23574,
             Level = 999,
             DisplayIDs = {{21630}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 1,
             [NORMAL_DIFF] = {
                 { 1, 29434 }, -- Badge of Justice
                 { 2, 33286 }, -- Mojo-mender's Mask
@@ -2803,7 +2804,7 @@ data["ZulAman"] = {
             npcID = 23576,
             Level = 999,
             DisplayIDs = {{21631}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 2,
             [NORMAL_DIFF] = {
                 { 1, 29434 }, -- Badge of Justice
                 { 2, 33203 }, -- Robes of Heavenly Purpose
@@ -2821,7 +2822,7 @@ data["ZulAman"] = {
             npcID = 23578,
             Level = 999,
             DisplayIDs = {{21633}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 3,
             [NORMAL_DIFF] = {
                 { 1, 29434 }, -- Badge of Justice
                 { 2, 33357 }, -- Footpads of Madness
@@ -2839,7 +2840,7 @@ data["ZulAman"] = {
             npcID = 23577,
             Level = 999,
             DisplayIDs = {{21632}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 4,
             [NORMAL_DIFF] = {
                 { 1, 29434 }, -- Badge of Justice
                 { 2, 33317 }, -- Robe of Departed Spirits
@@ -2857,7 +2858,7 @@ data["ZulAman"] = {
             npcID = 24239,
             Level = 999,
             DisplayIDs = {{22332}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 5,
             [NORMAL_DIFF] = {
                 { 1, 29434 }, -- Badge of Justice
                 { 2, 33592 }, -- Cloak of Ancient Rituals
@@ -2882,7 +2883,7 @@ data["ZulAman"] = {
             npcID = 23863,
             Level = 999,
             DisplayIDs = {{21899}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 6,
             [NORMAL_DIFF] = {
                 { 1, 29434 }, -- Badge of Justice
                 { 2, 33471 }, -- Two-toed Sandals
