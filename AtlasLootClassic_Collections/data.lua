@@ -117,7 +117,7 @@ data["BadgeofJustice"] = {
 				{ 8, 29272 }, -- Orb of the Soul-Eater
 				{ 9, 29273 }, -- Khadgar's Knapsack
 				{ 10, 29274 }, -- Tears of Heaven
-				{ 16, 29275 }, -- Searing Sunblade
+				{ 12, 29275 }, -- Searing Sunblade
 			},
 		},
 		{
