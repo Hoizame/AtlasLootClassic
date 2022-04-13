@@ -2775,8 +2775,9 @@ data["Karazhan"] = {
 data["ZulAman"] = {
 	MapID = 3805,
 	InstanceID = 568,
-	--AtlasMapID = "CL_",
-	--AtlasMapFile = "",
+	AtlasModule = ATLAS_MODULE_NAME,
+	AtlasMapID = "ZulAman",
+	AtlasMapFile = "ZulAman",
 	ContentType = RAID10_CONTENT,
     ContentPhaseBC = 4,
 	items = {
@@ -2785,7 +2786,7 @@ data["ZulAman"] = {
             npcID = 23574,
             Level = 999,
             DisplayIDs = {{21630}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 1,
             [NORMAL_DIFF] = {
                 { 1, 29434 }, -- Badge of Justice
                 { 2, 33286 }, -- Mojo-mender's Mask
@@ -2803,7 +2804,7 @@ data["ZulAman"] = {
             npcID = 23576,
             Level = 999,
             DisplayIDs = {{21631}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 2,
             [NORMAL_DIFF] = {
                 { 1, 29434 }, -- Badge of Justice
                 { 2, 33203 }, -- Robes of Heavenly Purpose
@@ -2821,7 +2822,7 @@ data["ZulAman"] = {
             npcID = 23578,
             Level = 999,
             DisplayIDs = {{21633}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 3,
             [NORMAL_DIFF] = {
                 { 1, 29434 }, -- Badge of Justice
                 { 2, 33357 }, -- Footpads of Madness
@@ -2839,7 +2840,7 @@ data["ZulAman"] = {
             npcID = 23577,
             Level = 999,
             DisplayIDs = {{21632}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 4,
             [NORMAL_DIFF] = {
                 { 1, 29434 }, -- Badge of Justice
                 { 2, 33317 }, -- Robe of Departed Spirits
@@ -2857,7 +2858,7 @@ data["ZulAman"] = {
             npcID = 24239,
             Level = 999,
             DisplayIDs = {{22332}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 5,
             [NORMAL_DIFF] = {
                 { 1, 29434 }, -- Badge of Justice
                 { 2, 33592 }, -- Cloak of Ancient Rituals
@@ -2882,7 +2883,7 @@ data["ZulAman"] = {
             npcID = 23863,
             Level = 999,
             DisplayIDs = {{21899}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 6,
             [NORMAL_DIFF] = {
                 { 1, 29434 }, -- Badge of Justice
                 { 2, 33471 }, -- Two-toed Sandals
@@ -2914,13 +2915,13 @@ data["ZulAman"] = {
                 { 7, 33971 }, -- Elunite Imbued Leggings
                 { 8, 33805 }, -- Shadowhunter's Treads
                 { 9, 33481 }, -- Pauldrons of Stone Resolve
-                { 10, "INV_Box_01", nil, format(AL["Timed Reward Chest %d"], 2), nil },
+                { 10, "INV_Box_01", nil, format(AL["Timed Reward Chest %d"], 3), nil },
                 { 11, 33497 }, -- Mana Attuned Band
                 { 12, 33500 }, -- Signet of Eternal Life
                 { 13, 33496 }, -- Signet of Primal Wrath
                 { 14, 33499 }, -- Signet of the Last Defender
                 { 15, 33498 }, -- Signet of the Quiet Forest
-                { 16, "INV_Box_01", nil, format(AL["Timed Reward Chest %d"], 3), nil },
+                { 16, "INV_Box_01", nil, format(AL["Timed Reward Chest %d"], 2), nil },
                 { 17, 33495 }, -- Rage
                 { 18, 33493 }, -- Umbral Shiv
                 { 19, 33492 }, -- Trollbane

@@ -917,6 +917,17 @@ data["ArenaS3PvP"] = {
 			},
 		},
 		{
+			name = ALIL["Trinket"],
+			[NORMAL_DIFF] = {
+				{ 1, 35327 }, -- Alacrity
+				{ 2, 34579 }, -- 
+				{ 3, 34576 }, -- 
+				{ 4, 34577 }, -- 
+				{ 5, 34578 }, -- 
+				{ 6, 34580 }, -- 
+			},
+		},
+		{
 			name = format(AL["Non Set '%s'"], ALIL["Cloth"]),
 			[NORMAL_DIFF] = {
 				{ 1, 33913 }, -- Vindicator's Silk Cuffs
