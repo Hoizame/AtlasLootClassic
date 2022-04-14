@@ -7,3 +7,4 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 ## v2.4.3 (Apr, XX, 2022)
 
 - Update .toc version
+- Add Vendor scan that updates prices after visiting a vendor

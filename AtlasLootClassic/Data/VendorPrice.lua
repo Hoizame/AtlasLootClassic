@@ -38,6 +38,49 @@ local PRICE_INFO_LIST = {
 	["pvpEye"] = { itemID = 29024 }, -- Eye of the Storm Mark of Honor
 }
 
+local VENDOR_PRICE_FORMAT = {}
+for k, v in pairs(PRICE_INFO_LIST) do
+    if v.itemID then
+        VENDOR_PRICE_FORMAT[v.itemID] = k..":%d"
+    elseif v.currencyID and C_CurrencyInfo and C_CurrencyInfo.GetCurrencyInfo then
+        local currencyInfo = C_CurrencyInfo.GetCurrencyInfo(v.currencyID)
+        if currencyInfo and currencyInfo.iconFileID then
+            VENDOR_PRICE_FORMAT[currencyInfo.iconFileID] = k..":%d"
+        end
+    end
+end
+
+local VENDOR_LIST_I = {
+    -- # Badge of Justice
+    18525,
+    -- # PvP
+    -- Alliance
+    12784, 12785, 12783, 12781, 12782, 13217,
+    -- Horde
+    12794, 12795, 12793, 12796, 12792, 13219, 14581,
+    --- Arena
+    -- 20278, 27668>
+    23367, -- Grella <Skyguard Quartermaster>
+    18382, -- Mycah <Sporeggar Quartermaster> - glowcap
+    23428, -- Jho'nass <Ogri'la Quartermaster> - Apexis
+    19773, -- Spirit Sage Zran - spirit shards
+    20240, -- Trader Narasu <Kurenai Quartermaster> / Alli
+    17904, -- Fedryen Swiftspear <Cenarion Expedition Quartermaster>
+    20241, -- Horde
+    -- Warsong
+    14753, 14754, -- Illiyana Moonblaze <Silverwing Supply Officer> & Kelm Hargunth <Warsong Supply Officer>
+    -- Arathi
+    15127, 15126,
+    -- Arena
+    27668, 12777,
+    --Brewfest
+    24495, 23710,
+}
+local VENDOR_LIST = {}
+for i = 1, #VENDOR_LIST_I do
+    VENDOR_LIST[ VENDOR_LIST_I[i] ] = true
+end
+
 -- updated with script
 local VENDOR_PRICES_AUTO = {
 --@version-bcc@
@@ -1933,14 +1976,76 @@ local VENDOR_PRICES = {
 }
 setmetatable(VENDOR_PRICES, {__index = VENDOR_PRICES_AUTO})
 
+local function GetItemPriceString(itemID)
+    return AtlasLoot.dbGlobal.VendorPrice[itemID] or VENDOR_PRICES_AUTO[itemID] or VENDOR_PRICES[itemID]
+end
+
 function VendorPrice.ItemHasVendorPrice(itemID)
-    return VENDOR_PRICES[itemID] ~= nil
+    return GetItemPriceString(itemID) ~= nil
 end
 
 function VendorPrice.GetVendorPriceForItem(itemID)
-    return VENDOR_PRICES[itemID]
+    return GetItemPriceString(itemID)
 end
 
 function VendorPrice.GetPriceInfoList()
     return PRICE_INFO_LIST
 end
+
+--################################
+-- Vendor scan
+--################################
+local UnitGUID, GetMerchantNumItems, GetMerchantItemID, GetMerchantItemCostInfo, GetMerchantItemCostItem, GetItemInfoInstant =
+      UnitGUID, GetMerchantNumItems, GetMerchantItemID, GetMerchantItemCostInfo, GetMerchantItemCostItem, GetItemInfoInstant
+
+local function GetNpcIDFromGuid(guid)
+	local npcID = select(6,strsplit("-",guid))
+	if npcID then
+		return tonumber(npcID)
+	end
+end
+
+function VendorPrice.ScanShownVendor()
+    local targetGUID = UnitGUID("target")
+    if not targetGUID then return end
+    local npcID = GetNpcIDFromGuid(targetGUID)
+    if not npcID or not VENDOR_LIST[npcID] then return end
+
+    for i = 1, GetMerchantNumItems() do
+        local vItemID = GetMerchantItemID(i)
+        local itemCost = ""
+        for j = 1, GetMerchantItemCostInfo(i) do
+            local itemTexture, itemValue, itemLink, currencyName = GetMerchantItemCostItem(i, j)
+            if itemLink then
+                local bItemID = GetItemInfoInstant(itemLink)
+                local fString
+                if VENDOR_PRICE_FORMAT[bItemID] then
+                    fString = VENDOR_PRICE_FORMAT[bItemID]
+                elseif VENDOR_PRICE_FORMAT[itemTexture] then
+                    fString = VENDOR_PRICE_FORMAT[itemTexture]
+                end
+                if fString then
+                    if itemCost == "" then
+                        itemCost = format(fString, itemValue)
+                    else
+                        itemCost = itemCost..":"..format(fString, itemValue)
+                    end
+                end
+            end
+        end
+
+        if itemCost ~= "" then
+            AtlasLoot.dbGlobal.VendorPrice[vItemID] = itemCost
+        end
+    end
+end
+
+VendorPrice.EventFrame = CreateFrame("FRAME")
+local function EventFrame_OnEvent(frame, event, arg1, arg2)
+	if event == "MERCHANT_SHOW" then
+		VendorPrice.ScanShownVendor()
+	end
+end
+VendorPrice.EventFrame:SetScript("OnEvent", EventFrame_OnEvent)
+VendorPrice.EventFrame:RegisterEvent("MERCHANT_SHOW")
+

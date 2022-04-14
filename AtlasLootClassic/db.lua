@@ -84,5 +84,6 @@ AtlasLoot.AtlasLootDBDefaults = {
 	},
 	global = {
 		Addons = {},
+		VendorPrice = {}
 	}
 }
