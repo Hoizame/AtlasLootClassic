@@ -4,9 +4,9 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 
 ## v2.4.2 (Apr, 13, 2022)
 
-- Update vendor prices
-- #203 add Fist weapons for Hunter
-- Update BoJ Vendors
+- (bcc) Update vendor prices
+- (bcc) #203 add Fist weapons for Hunter
+- (bcc) Update BoJ Vendors
 
 ## v2.4.1-bcc (Jan, 19, 2022)
 

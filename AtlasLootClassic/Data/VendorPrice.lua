@@ -2010,6 +2010,7 @@ function VendorPrice.ScanShownVendor()
     if not targetGUID then return end
     local npcID = GetNpcIDFromGuid(targetGUID)
     if not npcID or not VENDOR_LIST[npcID] then return end
+    -- print("Vendor Scanned", npcID)
 
     for i = 1, GetMerchantNumItems() do
         local vItemID = GetMerchantItemID(i)
@@ -2026,9 +2027,9 @@ function VendorPrice.ScanShownVendor()
                 end
                 if fString then
                     if itemCost == "" then
-                        itemCost = format(fString, itemValue)
+                        itemCost = format(fString, itemValue or 0)
                     else
-                        itemCost = itemCost..":"..format(fString, itemValue)
+                        itemCost = itemCost..":"..format(fString, itemValue or 0)
                     end
                 end
             end
