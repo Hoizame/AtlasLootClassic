@@ -3830,18 +3830,18 @@ data["SunwellPlateau"] = {
             AtlasMapBossID = 1,
             [NORMAL_DIFF] = {
                 { 1, 34170 }, -- Pantaloons of Calming Strife
-                { 2, 34386 }, -- Pantaloons of Growing Strife
-                { 3, 34169 }, -- Breeches of Natural Aggression
-                { 4, 34384 }, -- Breeches of Natural Splendor
-                { 5, 34168 }, -- Starstalker Legguards
-                { 6, 34167 }, -- Legplates of the Holy Juggernaut
-                { 7, 34382 }, -- Judicator's Legguards
-                { 8, 34166 }, -- Band of Lucent Beams
-                { 9, 34165 }, -- Fang of Kalecgos
-                { 10, 34164 }, -- Dragonscale-Encrusted Longblade
+                --{ 2, 34386 }, -- Pantaloons of Growing Strife
+                { 2, 34169 }, -- Breeches of Natural Aggression
+                --{ 4, 34384 }, -- Breeches of Natural Splendor
+                { 3, 34168 }, -- Starstalker Legguards
+                { 4, 34167 }, -- Legplates of the Holy Juggernaut
+                --{ 7, 34382 }, -- Judicator's Legguards
+                { 5, 34166 }, -- Band of Lucent Beams
                 { 16, 34848 }, -- Bracers of the Forgotten Conqueror
                 { 17, 34851 }, -- Bracers of the Forgotten Protector
                 { 18, 34852 }, -- Bracers of the Forgotten Vanquisher
+                { 20, 34165 }, -- Fang of Kalecgos
+                { 21, 34164 }, -- Dragonscale-Encrusted Longblade
             }
         },
         { -- SPBrutallus
@@ -3853,14 +3853,14 @@ data["SunwellPlateau"] = {
             [NORMAL_DIFF] = {
                 { 1, 34181 }, -- Leggings of Calamity
                 { 2, 34180 }, -- Felfury Legplates
-                { 3, 34381 }, -- Felstrength Legplates
-                { 4, 34178 }, -- Collar of the Pit Lord
-                { 5, 34177 }, -- Clutch of Demise
-                { 6, 34179 }, -- Heart of the Pit
-                { 7, 34176 }, -- Reign of Misery
+                --{ 3, 34381 }, -- Felstrength Legplates
+                { 3, 34178 }, -- Collar of the Pit Lord
+                { 4, 34177 }, -- Clutch of Demise
                 { 16, 34853 }, -- Belt of the Forgotten Conqueror
                 { 17, 34854 }, -- Belt of the Forgotten Protector
                 { 18, 34855 }, -- Belt of the Forgotten Vanquisher
+                { 20, 34176 }, -- Reign of Misery
+                { 21, 34179 }, -- Heart of the Pit
             }
         },
         { -- SPFelmyst
@@ -3872,15 +3872,15 @@ data["SunwellPlateau"] = {
             [NORMAL_DIFF] = {
                 { 1, 34352 }, -- Borderland Fortress Grips
                 { 2, 34188 }, -- Leggings of the Immortal Night
-                { 3, 34385 }, -- Leggings of the Immortal Beast
-                { 4, 34186 }, -- Chain Links of the Tumultuous Storm
-                { 5, 34383 }, -- Kilt of Spiritual Reconstruction
-                { 6, 34184 }, -- Brooch of the Highborne
-                { 7, 34185 }, -- Sword Breaker's Bulwark
-                { 8, 34182 }, -- Grand Magister's Staff of Torrents
+                --{ 3, 34385 }, -- Leggings of the Immortal Beast
+                { 3, 34186 }, -- Chain Links of the Tumultuous Storm
+                --{ 5, 34383 }, -- Kilt of Spiritual Reconstruction
+                { 4, 34184 }, -- Brooch of the Highborne
                 { 16, 34856 }, -- Boots of the Forgotten Conqueror
                 { 17, 34857 }, -- Boots of the Forgotten Protector
                 { 18, 34858 }, -- Boots of the Forgotten Vanquisher
+                { 20, 34182 }, -- Grand Magister's Staff of Torrents
+                { 21, 34185 }, -- Sword Breaker's Bulwark
             }
         },
         { -- SPEredarTwins
@@ -3894,29 +3894,29 @@ data["SunwellPlateau"] = {
                 { 2, 34190 }, -- Crimson Paragon's Cover
                 { 3, 34210 }, -- Amice of the Convoker
                 { 4, 34202 }, -- Shawl of Wonderment
-                { 5, 34393 }, -- Shoulderpads of Knowledge's Pursuit
-                { 6, 34209 }, -- Spaulders of Reclamation
-                { 7, 34391 }, -- Spaulders of Devastation
-                { 8, 34195 }, -- Shoulderpads of Vehemence
-                { 9, 34392 }, -- Demontooth Shoulderpads
-                { 10, 34194 }, -- Mantle of the Golden Forest
-                { 11, 34208 }, -- Equilibrium Epaulets
-                { 12, 34390 }, -- Erupting Epaulets
-                { 13, 34192 }, -- Pauldrons of Perseverance
-                { 14, 34388 }, -- Pauldrons of Berserking
-                { 16, 34193 }, -- Spaulders of the Thalassian Savior
-                { 17, 34389 }, -- Spaulders of the Thalassian Defender
-                { 18, 35290 }, -- Sin'dorei Pendant of Conquest
-                { 19, 35291 }, -- Sin'dorei Pendant of Salvation
-                { 20, 35292 }, -- Sin'dorei Pendant of Triumph
-                { 21, 34204 }, -- Amulet of Unfettered Magics
-                { 22, 34189 }, -- Band of Ruinous Delight
+                --{ 5, 34393 }, -- Shoulderpads of Knowledge's Pursuit
+                { 5, 34209 }, -- Spaulders of Reclamation
+                --{ 7, 34391 }, -- Spaulders of Devastation
+                { 6, 34195 }, -- Shoulderpads of Vehemence
+                --{ 9, 34392 }, -- Demontooth Shoulderpads
+                { 7, 34194 }, -- Mantle of the Golden Forest
+                { 8, 34208 }, -- Equilibrium Epaulets
+                --{ 12, 34390 }, -- Erupting Epaulets
+                { 9, 34192 }, -- Pauldrons of Perseverance
+                --{ 14, 34388 }, -- Pauldrons of Berserking
+                { 10, 34193 }, -- Spaulders of the Thalassian Savior
+                --{ 17, 34389 }, -- Spaulders of the Thalassian Defender
+                { 16, 35290 }, -- Sin'dorei Pendant of Conquest
+                { 17, 35291 }, -- Sin'dorei Pendant of Salvation
+                { 18, 35292 }, -- Sin'dorei Pendant of Triumph
+                { 19, 34204 }, -- Amulet of Unfettered Magics
+                { 21, 34189 }, -- Band of Ruinous Delight
                 { 23, 34206 }, -- Book of Highborne Hymns
-                { 24, 34197 }, -- Shiv of Exsanguination
-                { 25, 34199 }, -- Archon's Gavel
-                { 26, 34203 }, -- Grip of Mannoroth
-                { 27, 34198 }, -- Stanchion of Primal Instinct
-                { 28, 34196 }, -- Golden Bow of Quel'Thalas
+                { 25, 34197 }, -- Shiv of Exsanguination
+                { 26, 34199 }, -- Archon's Gavel
+                { 27, 34203 }, -- Grip of Mannoroth
+                { 28, 34198 }, -- Stanchion of Primal Instinct
+                { 29, 34196 }, -- Golden Bow of Quel'Thalas
             }
         },
         { -- SPMuru
@@ -3928,30 +3928,30 @@ data["SunwellPlateau"] = {
             [NORMAL_DIFF] = {
                 { 1, 34232 }, -- Fel Conquerer Raiments
                 { 2, 34233 }, -- Robes of Faltered Light
-                { 3, 34399 }, -- Robes of Ghostly Hatred
-                { 4, 34212 }, -- Sunglow Vest
-                { 5, 34398 }, -- Utopian Tunic of Elune
-                { 6, 34211 }, -- Harness of Carnal Instinct
-                { 7, 34397 }, -- Bladed Chaos Tunic
-                { 8, 34234 }, -- Shadowed Gauntlets of Paroxysm
-                { 9, 34408 }, -- Gloves of the Forest Drifter
-                { 10, 34229 }, -- Garments of Serene Shores
-                { 11, 34396 }, -- Garments of Crashing Shores
-                { 12, 34228 }, -- Vicious Hawkstrider Hauberk
-                { 13, 34215 }, -- Warharness of Reckless Fury
-                { 14, 34394 }, -- Breastplate of Agony's Aversion
-                { 15, 34240 }, -- Gauntlets of the Soothed Soul
-                { 16, 34216 }, -- Heroic Judicator's Chestguard
-                { 17, 34395 }, -- Noble Judicator's Chestguard
-                { 18, 34213 }, -- Ring of Hardened Resolve
-                { 19, 34230 }, -- Ring of Omnipotence
-                { 20, 35282 }, -- Sin'dorei Band of Dominance
-                { 21, 35283 }, -- Sin'dorei Band of Salvation
-                { 22, 35284 }, -- Sin'dorei Band of Triumph
-                { 23, 34427 }, -- Blackened Naaru Sliver
-                { 24, 34430 }, -- Glimmering Naaru Sliver
-                { 25, 34429 }, -- Shifting Naaru Sliver
-                { 26, 34428 }, -- Steely Naaru Sliver
+                --{ 3, 34399 }, -- Robes of Ghostly Hatred
+                { 3, 34212 }, -- Sunglow Vest
+                --{ 5, 34398 }, -- Utopian Tunic of Elune
+                { 4, 34211 }, -- Harness of Carnal Instinct
+                --{ 7, 34397 }, -- Bladed Chaos Tunic
+                { 5, 34234 }, -- Shadowed Gauntlets of Paroxysm
+                --{ 9, 34408 }, -- Gloves of the Forest Drifter
+                { 6, 34229 }, -- Garments of Serene Shores
+                --{ 11, 34396 }, -- Garments of Crashing Shores
+                { 7, 34228 }, -- Vicious Hawkstrider Hauberk
+                { 8, 34215 }, -- Warharness of Reckless Fury
+                --{ 14, 34394 }, -- Breastplate of Agony's Aversion
+                { 9, 34240 }, -- Gauntlets of the Soothed Soul
+                { 10, 34216 }, -- Heroic Judicator's Chestguard
+                --{ 17, 34395 }, -- Noble Judicator's Chestguard
+                { 16, 34213 }, -- Ring of Hardened Resolve
+                { 17, 34230 }, -- Ring of Omnipotence
+                { 18, 35282 }, -- Sin'dorei Band of Dominance
+                { 19, 35283 }, -- Sin'dorei Band of Salvation
+                { 20, 35284 }, -- Sin'dorei Band of Triumph
+                { 22, 34427 }, -- Blackened Naaru Sliver
+                { 23, 34430 }, -- Glimmering Naaru Sliver
+                { 24, 34429 }, -- Shifting Naaru Sliver
+                { 25, 34428 }, -- Steely Naaru Sliver
                 { 27, 34214 }, -- Muramasa
                 { 28, 34231 }, -- Aegis of Angelic Fortune
             }
@@ -3966,31 +3966,31 @@ data["SunwellPlateau"] = {
                 { 1, 34241 }, -- Cloak of Unforgivable Sin
                 { 2, 34242 }, -- Tattered Cape of Antonidas
                 { 3, 34339 }, -- Cowl of Light's Purity
-                { 4, 34405 }, -- Helm of Arcane Purity
-                { 5, 34340 }, -- Dark Conjuror's Collar
-                { 6, 34342 }, -- Handguards of the Dawn
-                { 7, 34406 }, -- Gloves of Tyri's Power
-                { 8, 34344 }, -- Handguards of Defiled Worlds
-                { 9, 34244 }, -- Duplicitous Guise
-                { 10, 34404 }, -- Mask of the Fury Hunter
-                { 11, 34245 }, -- Cover of Ursol the Wise
-                { 12, 34403 }, -- Cover of Ursoc the Mighty
-                { 13, 34333 }, -- Coif of Alleria
-                { 14, 34332 }, -- Cowl of Gul'dan
-                { 15, 34402 }, -- Shroud of Chieftain Ner'zhul
-                { 16, 34343 }, -- Thalassian Ranger Gauntlets
-                { 17, 34243 }, -- Helm of Burning Righteousness
-                { 18, 34401 }, -- Helm of Uther's Resolve
-                { 19, 34345 }, -- Crown of Anasterian
-                { 20, 34400 }, -- Crown of Dath'Remar
-                { 21, 34341 }, -- Borderland Paingrips
-                { 23, 34334 }, -- Thori'dal, the Stars' Fury
-                { 25, 34329 }, -- Crux of the Apocalypse
-                { 26, 34247 }, -- Apolyon, the Soul-Render
-                { 27, 34335 }, -- Hammer of Sanctification
-                { 28, 34331 }, -- Hand of the Deceiver
-                { 29, 34336 }, -- Sunflare
-                { 30, 34337 }, -- Golden Staff of the Sin'dorei
+                --{ 4, 34405 }, -- Helm of Arcane Purity
+                { 4, 34340 }, -- Dark Conjuror's Collar
+                { 5, 34342 }, -- Handguards of the Dawn
+                --{ 7, 34406 }, -- Gloves of Tyri's Power
+                { 6, 34344 }, -- Handguards of Defiled Worlds
+                { 7, 34244 }, -- Duplicitous Guise
+                --{ 10, 34404 }, -- Mask of the Fury Hunter
+                { 8, 34245 }, -- Cover of Ursol the Wise
+                --{ 12, 34403 }, -- Cover of Ursoc the Mighty
+                { 9, 34333 }, -- Coif of Alleria
+                { 10, 34332 }, -- Cowl of Gul'dan
+                --{ 15, 34402 }, -- Shroud of Chieftain Ner'zhul
+                { 11, 34343 }, -- Thalassian Ranger Gauntlets
+                { 12, 34243 }, -- Helm of Burning Righteousness
+                --{ 18, 34401 }, -- Helm of Uther's Resolve
+                { 13, 34345 }, -- Crown of Anasterian
+                --{ 20, 34400 }, -- Crown of Dath'Remar
+                { 14, 34341 }, -- Borderland Paingrips
+                { 16, 34334 }, -- Thori'dal, the Stars' Fury
+                { 18, 34329 }, -- Crux of the Apocalypse
+                { 19, 34247 }, -- Apolyon, the Soul-Render
+                { 20, 34335 }, -- Hammer of Sanctification
+                { 21, 34331 }, -- Hand of the Deceiver
+                { 22, 34336 }, -- Sunflare
+                { 23, 34337 }, -- Golden Staff of the Sin'dorei
             }
         },
         { -- SPPatterns
@@ -4033,17 +4033,17 @@ data["SunwellPlateau"] = {
             ExtraList = true,
             [NORMAL_DIFF] = {
                 { 1, 34351 }, -- Tranquil Majesty Wraps
-                { 2, 34407 }, -- Tranquil Moonlight Wraps
-                { 3, 34350 }, -- Gauntlets of the Ancient Shadowmoon
-                { 4, 34409 }, -- Gauntlets of the Ancient Frostwolf
-                { 5, 35733 }, -- Ring of Harmonic Beauty
-                { 6, 34183 }, -- Shivering Felspine
-                { 7, 34346 }, -- Mounting Vengeance
-                { 8, 34349 }, -- Blade of Life's Inevitability
-                { 9, 34348 }, -- Wand of Cleansing Light
-                { 10, 34347 }, -- Wand of the Demonsoul
-                { 12, 35273 }, -- Study of Advanced Smelting
-                { 14, 34664 }, -- Sunmote
+                --{ 2, 34407 }, -- Tranquil Moonlight Wraps
+                { 2, 34350 }, -- Gauntlets of the Ancient Shadowmoon
+                --{ 4, 34409 }, -- Gauntlets of the Ancient Frostwolf
+                { 3, 35733 }, -- Ring of Harmonic Beauty
+                { 4, 34183 }, -- Shivering Felspine
+                { 5, 34346 }, -- Mounting Vengeance
+                { 6, 34349 }, -- Blade of Life's Inevitability
+                { 7, 34348 }, -- Wand of Cleansing Light
+                { 8, 34347 }, -- Wand of the Demonsoul
+                { 10, 35273 }, -- Study of Advanced Smelting
+                { 12, 34664 }, -- Sunmote
                 { 16, 32228 }, -- Empyrean Sapphire
                 { 17, 32231 }, -- Pyrestone
                 { 18, 32229 }, -- Lionseye
