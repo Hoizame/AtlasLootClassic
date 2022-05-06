@@ -27,6 +27,7 @@ local PRICE_INFO_LIST = {
 	["ApexisC"] = { itemID = 32572 }, -- Apexis Crystal
 	["ApexisS"] = { itemID = 32569 }, -- Apexis Shard
 	["Brewfest"] = { itemID = 37829 }, -- Brewfest Prize Token
+    ["sunmote"] = { itemID = 34664 }, -- Sunmote
 	-- pvp
 	["honor"] = { currencyID = 1901 }, -- Honor
 	["arena"] = { currencyID = 1900 },  -- Arena
@@ -1972,6 +1973,34 @@ local VENDOR_PRICES = {
     [34162] = "BoJ:75", --P4 Badge item Battlemaster's Depravity
     [33832] = "BoJ:75", --P4 Badge item Battlemaster's Determination
     [34050] = "BoJ:75", --P4 Badge item Battlemaster's Perserverance
+    [34399] = "sunmote:1:34233:1", -- Robes of Ghostly Hatred
+    [34397] = "sunmote:1:34211:1", -- Bladed Chaos Tunic
+    [34398] = "sunmote:1:34212:1", -- Utopian Tunic of Elune
+    [34396] = "sunmote:1:34229:1", -- Garments of Crashing Shores
+    [34394] = "sunmote:1:34215:1", -- Breastplate of Agony's Aversion
+    [34395] = "sunmote:1:34216:1", -- Noble Judicator's Chestguard
+    [34406] = "sunmote:1:34342:1", -- Gloves of Tyri's Power
+    [34408] = "sunmote:1:34234:1", -- Gloves of the Forest Drifter
+    [34407] = "sunmote:1:34351:1", -- Tranquil Moonlight Wraps
+    [34409] = "sunmote:1:34350:1", -- Gauntlets of the Ancient Frostwolf
+    [34405] = "sunmote:1:34339:1", -- Helm of Arcane Purity
+    [34403] = "sunmote:1:34245:1", -- Cover of Ursoc the Mighty
+    [34404] = "sunmote:1:34244:1", -- Mask of the Fury Hunter
+    [34402] = "sunmote:1:34332:1", -- Shroud of Chieftain Ner'zhul
+    [34400] = "sunmote:1:34345:1", -- Crown of Dath'Remar
+    [34401] = "sunmote:1:34243:1", -- Helm of Uther's Resolve
+    [34386] = "sunmote:1:34170:1", -- Pantaloons of Growing Strife
+    [34384] = "sunmote:1:34169:1", -- Breeches of Natural Splendor
+    [34385] = "sunmote:1:34188:1", -- Leggings of the Immortal Beast
+    [34383] = "sunmote:1:34186:1", -- Kilt of Spiritual Reconstruction
+    [34381] = "sunmote:1:34180:1", -- Felstrength Legplates
+    [34382] = "sunmote:1:34167:1", -- Judicator's Legguards
+    [34393] = "sunmote:1:34202:1", -- Shoulderpads of Knowledge's Pursuit
+    [34392] = "sunmote:1:34195:1", -- Demontooth Shoulderpads
+    [34391] = "sunmote:1:34209:1", -- Spaulders of Devastation
+    [34390] = "sunmote:1:34208:1", -- Erupting Epaulets
+    [34388] = "sunmote:1:34192:1", -- Pauldrons of Berserking
+    [34389] = "sunmote:1:34193:1", -- Spaulders of the Thalassian Defender
 --@end-version-bcc@
 }
 setmetatable(VENDOR_PRICES, {__index = VENDOR_PRICES_AUTO})
