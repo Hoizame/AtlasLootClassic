@@ -850,7 +850,7 @@ data["ArenaS3PvP"] = {
 				{ 6, 33727 }, -- Gladiator's Painsaw
 
 				{ 8, 33663 }, -- Gladiator's Bonegrinder
-				{ 9, 32014 }, -- Gladiator's Maul
+				--{ 9, 32014 }, -- Gladiator's Maul
 
 				{ 16, 33766 }, -- Gladiator's War Staff
 				{ 17, 34540 }, -- Vengeful Gladiator's Battle Staff
