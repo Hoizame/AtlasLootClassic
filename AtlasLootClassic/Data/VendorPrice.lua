@@ -2146,6 +2146,7 @@ local VENDOR_PRICES = {
     [34162] = "BoJ:75", --P4 Badge item Battlemaster's Depravity
     [33832] = "BoJ:75", --P4 Badge item Battlemaster's Determination
     [34050] = "BoJ:75", --P4 Badge item Battlemaster's Perserverance
+    --[[
     [34399] = "sunmote:1:34233:1", -- Robes of Ghostly Hatred
     [34397] = "sunmote:1:34211:1", -- Bladed Chaos Tunic
     [34398] = "sunmote:1:34212:1", -- Utopian Tunic of Elune
@@ -2174,6 +2175,7 @@ local VENDOR_PRICES = {
     [34390] = "sunmote:1:34208:1", -- Erupting Epaulets
     [34388] = "sunmote:1:34192:1", -- Pauldrons of Berserking
     [34389] = "sunmote:1:34193:1", -- Spaulders of the Thalassian Defender
+    ]]--
 --@end-version-bcc@
 }
 setmetatable(VENDOR_PRICES, {__index = VENDOR_PRICES_AUTO})

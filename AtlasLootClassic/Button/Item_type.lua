@@ -37,6 +37,7 @@ local ITEM_COLORS = {}
 local DUMMY_ITEM_ICON = "Interface\\Icons\\INV_Misc_QuestionMark"
 local SET_ITEM = "|cff00ff00"..AL["Set item"]..":|r "
 local WHITE_TEXT = "|cffffffff%s|r"
+local ITEM_DESC_EXTRA_SEP = "%s | %s"
 
 local itemIsOnEnter, buttonOnEnter = nil, nil
 
@@ -283,12 +284,24 @@ function Item.GetDescription(itemID, itemEquipLoc, itemType, itemSubType)
 		local _
 		_, itemType, itemSubType, itemEquipLoc = GetItemInfoInstant(itemID)
 	end
-	local ret = Token.GetTokenDescription(itemID) or
-	Recipe.GetRecipeDescriptionWithRank(itemID) or
-	Profession.GetColorSkillRankItem(itemID) or
-	(Mount.IsMount(itemID) and ALIL["Mount"] or nil) or
-	( ItemSet.GetSetIDforItemID(itemID) and AL["|cff00ff00Set item:|r "] or "")..GetItemDescInfo(itemEquipLoc, itemType, itemSubType)
-	if Requirements.HasRequirements(itemID) then
+	local ret
+	if Token.IsToken(itemID) then
+		local tokenDesc = Token.GetTokenDescription(itemID)
+		if Token.TokenTypeAddDescription(itemID) then
+			ret = format(ITEM_DESC_EXTRA_SEP, GetItemDescInfo(itemEquipLoc, itemType, itemSubType), tokenDesc)
+		else
+			ret = tokenDesc
+		end
+	elseif Mount.IsMount(itemID) then
+		ret = ALIL["Mount"]
+	elseif ItemSet.GetSetIDforItemID(itemID) then
+		ret = AL["|cff00ff00Set item:|r "]..GetItemDescInfo(itemEquipLoc, itemType, itemSubType)
+	else
+		ret = Recipe.GetRecipeDescriptionWithRank(itemID) or
+		Profession.GetColorSkillRankItem(itemID) or
+		GetItemDescInfo(itemEquipLoc, itemType, itemSubType)
+	end
+	if ret and Requirements.HasRequirements(itemID) then
 		ret = Requirements.GetReqString(itemID)..ret
 	end
 	return ret

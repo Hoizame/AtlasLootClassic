@@ -18,9 +18,16 @@ local TOKEN_TYPE_TEXT = {
 	[4] = format(TOKEN_FORMAT_STRING, AL["Quest objective."]),
 	[5] = format(TOKEN_FORMAT_STRING, AL["Reagent for..."]),
 	[6] = format(TOKEN_FORMAT_STRING, AL["Token for..."]),
+	[7] = format(TOKEN_FORMAT_STRING, AL["Bought with..."]),
+	[8] = format(TOKEN_FORMAT_STRING, AL["Token for..."]), -- same as '6' but with itemDesc added
 
 	-- classes get set with the init
 	-- "DRUID", "HUNTER", "MAGE", "PALADIN", "PRIEST", "ROGUE", "SHAMAN", "WARLOCK", "WARRIOR"
+}
+
+local TOKEN_TYPE_ADD_ITEM_DESCRIPTION = {
+	[7] = true,
+	[8] = true
 }
 
 local ICONS = {
@@ -374,6 +381,72 @@ local TOKEN = {
 	[34858] = { ICONS.ROGUE, 34575, 0, ICONS.MAGE, 34574, 0, ICONS.DRUID, 34571, 34572, 34573, type = 6 }, -- Boots of the Forgotten Vanquisher
 	[34857] = { ICONS.WARRIOR, 34568, 34569, 0, ICONS.HUNTER, 34570, 0, ICONS.SHAMAN, 34565, 34566, 34567, type = 6 }, -- Boots of the Forgotten Protector
 
+	--- Sunwell Sunmote tokens
+	-- Cloth
+	[34399] = { 34399, 0, {34664, "1"}, {34233, "1"}, type = 7 }, -- Robes of Ghostly Hatred
+	[34233] = { 34399, 0, {34664, "1"}, {34233, "1"}, type = 8 }, -- Robes of Faltered Light
+	[34406] = { 34406, 0, {34664, "1"}, {34342, "1"}, type = 7 }, -- Gloves of Tyri's Power
+	[34342] = { 34406, 0, {34664, "1"}, {34342, "1"}, type = 8 }, -- Handguards of the Dawn
+	[34405] = { 34405, 0, {34664, "1"}, {34339, "1"}, type = 7 }, -- Helm of Arcane Purity
+	[34339] = { 34405, 0, {34664, "1"}, {34339, "1"}, type = 8 }, -- Cowl of Light's Purity
+	[34386] = { 34386, 0, {34664, "1"}, {34170, "1"}, type = 7 }, -- Pantaloons of Growing Strife
+	[34170] = { 34386, 0, {34664, "1"}, {34170, "1"}, type = 8 }, -- Pantaloons of Calming Strife
+	[34393] = { 34393, 0, {34664, "1"}, {34202, "1"}, type = 7 }, -- Shoulderpads of Knowledge's Pursuit
+	[34202] = { 34393, 0, {34664, "1"}, {34202, "1"}, type = 8 }, -- Shawl of Wonderment
+
+	-- Leather
+	[34397] = { 34397, 0, {34664, "1"}, {34211, "1"}, type = 7 }, -- Bladed Chaos Tunic
+	[34211] = { 34397, 0, {34664, "1"}, {34211, "1"}, type = 8 }, -- Harness of Carnal Instinct
+	[34398] = { 34398, 0, {34664, "1"}, {34212, "1"}, type = 7 }, -- Utopian Tunic of Elune
+	[34212] = { 34398, 0, {34664, "1"}, {34212, "1"}, type = 8 }, -- Sunglow Vest
+	[34408] = { 34408, 0, {34664, "1"}, {34234, "1"}, type = 7 }, -- Gloves of the Forest Drifter
+	[34234] = { 34408, 0, {34664, "1"}, {34234, "1"}, type = 8 }, -- Shadowed Gauntlets of Paroxysm
+	[34407] = { 34407, 0, {34664, "1"}, {34351, "1"}, type = 7 }, -- Tranquil Moonlight Wraps
+	[34351] = { 34407, 0, {34664, "1"}, {34351, "1"}, type = 8 }, -- Tranquil Majesty Wraps
+	[34403] = { 34403, 0, {34664, "1"}, {34245, "1"}, type = 7 }, -- Cover of Ursoc the Mighty
+	[34245] = { 34403, 0, {34664, "1"}, {34245, "1"}, type = 8 }, -- Cover of Ursol the Wise
+	[34404] = { 34404, 0, {34664, "1"}, {34244, "1"}, type = 7 }, -- Mask of the Fury Hunter
+	[34244] = { 34404, 0, {34664, "1"}, {34244, "1"}, type = 8 }, -- Duplicitous Guise
+	[34384] = { 34384, 0, {34664, "1"}, {34169, "1"}, type = 7 }, -- Breeches of Natural Splendor
+	[34169] = { 34384, 0, {34664, "1"}, {34169, "1"}, type = 8 }, -- Breeches of Natural Aggression
+	[34385] = { 34385, 0, {34664, "1"}, {34188, "1"}, type = 7 }, -- Leggings of the Immortal Beast
+	[34188] = { 34385, 0, {34664, "1"}, {34188, "1"}, type = 8 }, -- Leggings of the Immortal Night
+	[34392] = { 34392, 0, {34664, "1"}, {34195, "1"}, type = 7 }, -- Demontooth Shoulderpads
+	[34195] = { 34392, 0, {34664, "1"}, {34195, "1"}, type = 8 }, -- Shoulderpads of Vehemence
+	[34391] = { 34391, 0, {34664, "1"}, {34209, "1"}, type = 7 }, -- Spaulders of Devastation
+	[34209] = { 34391, 0, {34664, "1"}, {34209, "1"}, type = 8 }, -- Spaulders of Reclamation
+
+	-- Mail
+	[34402] = { 34402, 0, {34664, "1"}, {34332, "1"}, type = 7 }, -- Cover of Ursoc the Mighty
+	[34332] = { 34402, 0, {34664, "1"}, {34332, "1"}, type = 8 }, -- Cowl of Gul'dan
+	[34396] = { 34396, 0, {34664, "1"}, {34229, "1"}, type = 7 }, -- Garments of Crashing Shores
+	[34229] = { 34396, 0, {34664, "1"}, {34229, "1"}, type = 8 }, -- Garments of Serene Shores
+	[34390] = { 34390, 0, {34664, "1"}, {34208, "1"}, type = 7 }, -- Erupting Epaulets
+	[34208] = { 34390, 0, {34664, "1"}, {34208, "1"}, type = 8 }, -- Equilibrium Epaulets
+	[34409] = { 34409, 0, {34664, "1"}, {34350, "1"}, type = 7 }, -- Gauntlets of the Ancient Frostwolf
+	[34350] = { 34409, 0, {34664, "1"}, {34350, "1"}, type = 8 }, -- Gauntlets of the Ancient Shadowmoon
+	[34383] = { 34383, 0, {34664, "1"}, {34186, "1"}, type = 7 }, -- Kilt of Spiritual Reconstruction
+	[34186] = { 34383, 0, {34664, "1"}, {34186, "1"}, type = 8 }, -- Chain Links of the Tumultuous Storm
+
+	-- Plate
+	[34401] = { 34401, 0, {34664, "1"}, {34243, "1"}, type = 7 }, -- Helm of Uther's Resolve
+	[34243] = { 34401, 0, {34664, "1"}, {34243, "1"}, type = 8 }, -- Helm of Burning Righteousness
+	[34400] = { 34400, 0, {34664, "1"}, {34345, "1"}, type = 7 }, -- Crown of Dath'Remar
+	[34345] = { 34400, 0, {34664, "1"}, {34345, "1"}, type = 8 }, -- Crown of Anasterian
+	[34389] = { 34389, 0, {34664, "1"}, {34193, "1"}, type = 7 }, -- Spaulders of the Thalassian Defender
+	[34193] = { 34389, 0, {34664, "1"}, {34193, "1"}, type = 8 }, -- Spaulders of the Thalassian Savior
+	[34388] = { 34388, 0, {34664, "1"}, {34192, "1"}, type = 7 }, -- Pauldrons of Berserking
+	[34192] = { 34388, 0, {34664, "1"}, {34192, "1"}, type = 8 }, -- Pauldrons of Perseverance
+	[34395] = { 34395, 0, {34664, "1"}, {34216, "1"}, type = 7 }, -- Noble Judicator's Chestguard
+	[34216] = { 34395, 0, {34664, "1"}, {34216, "1"}, type = 8 }, -- Heroic Judicator's Chestguard
+	[34394] = { 34394, 0, {34664, "1"}, {34215, "1"}, type = 7 }, -- Breastplate of Agony's Aversion
+	[34215] = { 34394, 0, {34664, "1"}, {34215, "1"}, type = 8 }, -- Warharness of Reckless Fury
+	[34382] = { 34382, 0, {34664, "1"}, {34167, "1"}, type = 7 }, -- Judicator's Legguards
+	[34167] = { 34382, 0, {34664, "1"}, {34167, "1"}, type = 8 }, -- Legplates of the Holy Juggernaut
+	[34381] = { 34381, 0, {34664, "1"}, {34180, "1"}, type = 7 }, -- Felstrength Legplates
+	[34180] = { 34381, 0, {34664, "1"}, {34180, "1"}, type = 8 }, -- Felfury Legplates
+
+
 	--- Misc
 	-- Magtheridon's Lair
 	[32385] = { 28791, 28790, 28793, 28792, type = 3 }, -- Magtheridon's Head
@@ -447,6 +520,11 @@ function Token.GetTokenType(itemID)
 	return ( itemID and TOKEN[itemID] ) and (TOKEN[itemID].type or TOKEN_TYPE_DEFAULT) or nil
 end
 
+function Token.TokenTypeAddDescription(itemID)
+	return ( itemID and TOKEN[itemID] ) and TOKEN_TYPE_ADD_ITEM_DESCRIPTION[TOKEN[itemID].type or TOKEN_TYPE_DEFAULT] or false
+end
+
+-- TOKEN_TYPE_ADD_ITEM_DESCRIPTION
 --@debug@
 function Token.GetFullTokenTable()
 	return TOKEN
