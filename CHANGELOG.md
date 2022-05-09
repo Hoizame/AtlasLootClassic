@@ -4,7 +4,7 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 
 [Changelog history](https://github.com/Hoizame/AtlasLootClassic/blob/master/AtlasLootClassic/Documentation/Release_Notes.md)
 
-## v2.4.3 (May, 06, 2022)
+## v2.4.3 (May, 09, 2022)
 
 - Update .toc version
 - (bcc) Remove vendor items from sunwell loot tables and add them as tokens
