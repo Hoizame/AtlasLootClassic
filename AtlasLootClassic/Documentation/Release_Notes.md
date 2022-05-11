@@ -2,6 +2,15 @@
 
 This mod is distributed under Version 2 of the GPL.  A copy of the GPL is included in this zip file with links to non-english translations.
 
+## v2.4.3 (May, 09, 2022)
+
+- Update .toc version
+- (bcc) Remove vendor items from sunwell loot tables and add them as tokens
+- (bcc) Add sunmote vendor
+- (bcc) Add sunwell sunmote prices to boss drops (PR #204)
+- (bcc) Remove Gladiators Maul from S3 (#205)
+- (bcc) Add Vendor scan that updates prices after visiting a vendor
+
 ## v2.4.2 (Apr, 13, 2022)
 
 - (bcc) Update vendor prices
