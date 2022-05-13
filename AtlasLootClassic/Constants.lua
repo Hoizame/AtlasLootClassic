@@ -93,6 +93,12 @@ ALPrivate.CLASS_ICON_PATH = {
 	DRUID 		= 	ICONS_PATH.."classicon_druid",
 }
 
+ALPrivate.PRICE_ICON_REPLACE = {
+	["honor"] = UnitFactionGroup("player") == "Horde" and 136782 or 136781,
+	["honorH"] = 136782,
+	["honorA"] = 136781,
+}
+
 ALPrivate.CLASS_BITS = {
     --NONE 			= 0,
     WARRIOR 		= 1,

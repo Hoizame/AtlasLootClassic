@@ -10,6 +10,7 @@ local GetCurrencyInfo, GetItemInfo, GetItemCount, GetItemIcon = C_CurrencyInfo.G
 -- ----------------------------------------------------------------------------
 -- AddOn namespace.
 -- ----------------------------------------------------------------------------
+local ALName, ALPrivate = ...
 local AtlasLoot = _G.AtlasLoot
 local Price = AtlasLoot.Button:AddExtraType("Price")
 local AL = AtlasLoot.Locales
@@ -31,11 +32,7 @@ local STRING_GREEN = "|cff1eff00"
 
 local PRICE_INFO = AtlasLoot.Data.VendorPrice.GetPriceInfoList()
 
-local ICON_REPLACE = {
-	["honor"] = UnitFactionGroup("player") == "Horde" and 136782 or 136781,
-	["honorH"] = 136782,
-	["honorA"] = 136781,
-}
+local ICON_REPLACE = ALPrivate.PRICE_ICON_REPLACE
 
 local Cache = {}
 setmetatable(Cache, {__mode = "kv"})
