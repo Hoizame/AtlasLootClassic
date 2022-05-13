@@ -76,8 +76,8 @@ local KEY_WEAK_MT = {__mode="k"}
 local AL_MODULE = "AtlasLootClassic_DungeonsAndRaids"
 local PRICE_STRING_SPLIT_OR = "-"
 local PRICE_STRING_SPLIT_AND = ":"
-local PRICE_DELIMITER = " |cFFffffff&|r "
-local PRICE_INFO_TT_START = format(TT_F.."  ", ICON_TEXTURE[3], AL["Vendor:"])
+local PRICE_DELIMITER = " |cFFffffff&|r  "
+local PRICE_INFO_TT_START = format(TT_F.."  ", ICON_TEXTURE[3], AL["Vendor"]..":")
 
 local TooltipsHooked = false
 local TooltipCache, TooltipTextCache = {}
