@@ -52,9 +52,16 @@ _G.AtlasLoot.Init = {}
 _G.AtlasLoot.Data = {}
 
 -- Version
-local CurrentGameVersion = tonumber(string.sub(GetBuildInfo(), 0, 1))
-AtlasLoot.CLASSIC_VERSION_NUM = 1
-AtlasLoot.BC_VERSION_NUM = 2
+local PROJECT_TO_VERSION = {
+	[WOW_PROJECT_MAINLINE] 					= 0, -- retail
+	[WOW_PROJECT_CLASSIC] 					= 1, -- classic
+	[WOW_PROJECT_BURNING_CRUSADE_CLASSIC] 	= 2, -- bcc
+	[99] 									= 3, -- wotlk
+}
+local CurrentGameVersion 		= PROJECT_TO_VERSION[WOW_PROJECT_ID]
+AtlasLoot.CLASSIC_VERSION_NUM 	= PROJECT_TO_VERSION[WOW_PROJECT_CLASSIC]
+AtlasLoot.BC_VERSION_NUM 		= PROJECT_TO_VERSION[WOW_PROJECT_BURNING_CRUSADE_CLASSIC]
+AtlasLoot.WOTLK_VERSION_NUM 	= PROJECT_TO_VERSION[99]
 function AtlasLoot:GetGameVersion()
 	return CurrentGameVersion
 end

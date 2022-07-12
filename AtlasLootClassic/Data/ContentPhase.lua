@@ -7,8 +7,8 @@ local AL = AtlasLoot.Locales
 local IMAGE_PATH = ALPrivate.IMAGE_PATH
 local ACTIVE_PASE_LIST = {
     [0] = 99, -- dummy
-    [1] = 6, -- classic
-    [2] = 1, -- bc
+    [AtlasLoot.CLASSIC_VERSION_NUM] = 6, -- classic
+    [AtlasLoot.BC_VERSION_NUM]      = 6, -- bc
 }
 local ACTIVE_PHASE = ACTIVE_PASE_LIST[AtlasLoot:GetGameVersion()] or ACTIVE_PASE_LIST[1]
 

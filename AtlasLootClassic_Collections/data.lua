@@ -55,7 +55,7 @@ data["BadgeofJustice"] = {
 	name = format(AL["'%s' Vendor"], AL["Badge of Justice"]),
 	ContentType = VENDOR_CONTENT,
 	TableType = NORMAL_ITTYPE,
-	gameVersion = 2,
+	gameVersion = AtlasLoot.BC_VERSION_NUM,
 	items = {
 		{
 			name = ALIL["Cloth"],
@@ -171,7 +171,7 @@ data["BadgeofJustice4"] = {
 	name = format(AL["'%s %s' Vendor"], AL["Badge of Justice"], "P4"),
 	ContentType = VENDOR_CONTENT,
 	TableType = NORMAL_ITTYPE,
-	gameVersion = 2,
+	gameVersion = AtlasLoot.BC_VERSION_NUM,
 	items = {
 		{
 			name = ALIL["Cloth"],
@@ -322,7 +322,7 @@ data["BadgeofJusticeP5"] = {
 	name = format(AL["'%s %s' Vendor"], AL["Badge of Justice"], "P5"),
 	ContentType = VENDOR_CONTENT,
 	TableType = NORMAL_ITTYPE,
-	gameVersion = 2,
+	gameVersion = AtlasLoot.BC_VERSION_NUM,
 	items = {
 		{
 			name = ALIL["Cloth"],
@@ -429,7 +429,7 @@ data["BCCSunmote"] = {
 	name = format(AL["'%s' Vendor"], AL["Sunmote"]),
 	ContentType = VENDOR_CONTENT,
 	TableType = NORMAL_ITTYPE,
-	gameVersion = 2,
+	gameVersion = AtlasLoot.BC_VERSION_NUM,
 	items = {
 		{
 			name = ALIL["Cloth"],
@@ -839,7 +839,7 @@ data["WorldEpicsBCC"] = {
 	ContentType = COLLECTIONS_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
 	TableType = NORMAL_ITTYPE,
-	gameVersion = 2,
+	gameVersion = AtlasLoot.BC_VERSION_NUM,
 	CorrespondingFields = {
 		[1] = "WorldEpics",
 	},
@@ -899,7 +899,7 @@ data["WorldEpics"] = {
 	ContentType = COLLECTIONS_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
 	TableType = NORMAL_ITTYPE,
-	gameVersion = 1,
+	gameVersion = AtlasLoot.CLASSIC_VERSION_NUM,
 	CorrespondingFields = {
 		[2] = "WorldEpicsBCC",
 	},
@@ -1290,7 +1290,7 @@ data["LegendarysBCC"] = {
 	ContentType = COLLECTIONS_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
 	TableType = NORMAL_ITTYPE,
-	gameVersion = 2,
+	gameVersion = AtlasLoot.BC_VERSION_NUM,
 	CorrespondingFields = {
 		[1] = "Legendarys",
 	},
@@ -1326,7 +1326,7 @@ data["Legendarys"] = {
 	ContentType = COLLECTIONS_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
 	TableType = NORMAL_ITTYPE,
-	gameVersion = 1,
+	gameVersion = AtlasLoot.CLASSIC_VERSION_NUM,
 	CorrespondingFields = {
 		[2] = "LegendarysBCC",
 	},
@@ -1475,7 +1475,7 @@ data["Halloween"] = {
 	ContentType = WORLD_EVENT_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = NORMAL_ITTYPE,
-	gameVersion = 1,
+	gameVersion = AtlasLoot.CLASSIC_VERSION_NUM,
 	items = {
 		{ -- Halloween1
 			name = AL["Hallow's End"].." - "..AL["Misc"],
@@ -1532,7 +1532,7 @@ data["HalloweenTBC"] = {
 	ContentType = WORLD_EVENT_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = NORMAL_ITTYPE,
-	gameVersion = 2,
+	gameVersion = AtlasLoot.BC_VERSION_NUM,
 	items = {
 		{ -- Halloween1
 			name = AL["Hallow's End"].." - "..AL["Misc"],
@@ -1830,7 +1830,7 @@ data["MidsummerFestival"] = {
 	ContentType = WORLD_EVENT_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = NORMAL_ITTYPE,
-	gameVersion = 1,
+	gameVersion = AtlasLoot.CLASSIC_VERSION_NUM,
 	items = {
 		{ -- MidsummerFestival
 			name = AL["Midsummer Festival"],
@@ -1855,7 +1855,7 @@ data["MidsummerFestivalTBC"] = {
 	ContentType = WORLD_EVENT_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = NORMAL_ITTYPE,
-	gameVersion = 2,
+	gameVersion = AtlasLoot.BC_VERSION_NUM,
 	items = {
 		{ -- MidsummerFestivalTBC
 			name = AL["Midsummer Festival"],
@@ -1915,7 +1915,7 @@ data["Brewfest"] = {
 	ContentType = WORLD_EVENT_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = NORMAL_ITTYPE,
-	gameVersion = 2,
+	gameVersion = AtlasLoot.BC_VERSION_NUM,
 	items = {
 		{ -- Brewfest
 			name = AL["Brewfest"],
@@ -1985,7 +1985,7 @@ data["ElementalInvasions"] = {
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = NORMAL_ITTYPE,
 	ContentPhase = 2.5,
-	gameVersion = 1,
+	gameVersion = AtlasLoot.CLASSIC_VERSION_NUM,
 	items = {
 		{ -- ElementalInvasion
 			name = AL["Elemental Invasions"],
@@ -2019,7 +2019,7 @@ data["SilithusAbyssal"] = {
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = NORMAL_ITTYPE,
 	ContentPhase = 4,
-	gameVersion = 1,
+	gameVersion = AtlasLoot.CLASSIC_VERSION_NUM,
 	items = {
 		{ -- AbyssalDukes
 			name = AL["Abyssal Dukes"],
@@ -2105,7 +2105,7 @@ data["AQOpening"] = {
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = NORMAL_ITTYPE,
 	ContentPhase = 5,
-	gameVersion = 1,
+	gameVersion = AtlasLoot.CLASSIC_VERSION_NUM,
 	items = {
 		{
 			name = AL["AQ opening"],
@@ -2138,7 +2138,7 @@ data["ScourgeInvasion"] = {
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = NORMAL_ITTYPE,
 	ContentPhase = 6,
-	gameVersion = 1,
+	gameVersion = AtlasLoot.CLASSIC_VERSION_NUM,
 	items = {
 		{ -- ScourgeInvasionEvent1
 			name = AL["Scourge Invasion"],

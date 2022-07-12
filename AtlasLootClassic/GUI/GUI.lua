@@ -782,7 +782,7 @@ local function DifficultySelectFunction(self, id, arg, start)
 end
 
 local function UpdateGameVersionTexture()
-	if AtlasLoot:GetGameVersion() < 2 then return end
+	if AtlasLoot:GetGameVersion() < AtlasLoot.BC_VERSION_NUM then return end
 	if not GUI.frame or not GUI.frame.gameVersionLogo then return end
 	local frame = GUI.frame.gameVersionLogo
 
@@ -796,13 +796,13 @@ local function UpdateGameVersionTexture()
 end
 
 local function GameVersionSwitch_OnClick(self)
-	if AtlasLoot:GetGameVersion() < 2 then return end
+	if AtlasLoot:GetGameVersion() < AtlasLoot.BC_VERSION_NUM then return end
 	local curGameVersion = db.selectedGameVersion
 
 	if curGameVersion == 2 then
-		db.selectedGameVersion = 1
+		db.selectedgameVersion = AtlasLoot.CLASSIC_VERSION_NUM
 	else
-		db.selectedGameVersion = 2
+		db.selectedgameVersion = AtlasLoot.BC_VERSION_NUM
 	end
 
 	db.selected[2] = AtlasLoot.ItemDB:GetCorrespondingField(db.selected[1], db.selected[2], db.selectedGameVersion)
