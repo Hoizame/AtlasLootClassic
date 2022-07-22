@@ -52,6 +52,11 @@ local FILE_LIST_ID = {
 		"AtlasLootClassic_DungeonsAndRaids/data-tbc.lua",
 	},
 	{
+		name = "DungeonsAndRaidsWrath",
+		base = "DungeonsAndRaidsTBC",
+		"AtlasLootClassic_DungeonsAndRaids/data-wrath.lua",
+	},
+	{
 		name = "PvP",
 		"AtlasLootClassic_PvP/AtlasLootClassic_PvP.toc",
 	},
@@ -130,12 +135,16 @@ local function AddIntoITable(d, s, d2)
 			if not DuplicateProtection[d][v] and (not d2 or not DuplicateProtection[d2][v]) then
 				d[#d+1] = v
 				DuplicateProtection[d][v] = #d
+			else
+				DuplicateProtection[d][v] = 0
 			end
 		end
 	else
 		if not DuplicateProtection[d][s] and (not d2 or not DuplicateProtection[d2][s]) then
 			d[#d+1] = s
 			DuplicateProtection[d][s] = #d
+		else
+			DuplicateProtection[d][v] = 0
 		end
 	end
 end
@@ -439,7 +448,11 @@ local function BuildLocaleList(fileList)
 		local nst = fileList[ns]
 		t[ns] = {}
 		for k,v in ipairs(nst) do
-			AddIntoITable(t[ns], ParseLuaFile(v), fliNs.base and t[fliNs.base] or nil)
+			if fliNs.base and type(fliNs.base) == "string" and t[fliNs.base] then
+				AddIntoITable(t[ns], ParseLuaFile(v), t[fliNs.base])
+			else
+				AddIntoITable(t[ns], ParseLuaFile(v), nil)
+			end
 		end
 	end
 	return t
