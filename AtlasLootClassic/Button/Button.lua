@@ -36,7 +36,8 @@ local WOW_HEAD_LINK, WOW_HEAD_LINK_LOC
 if AtlasLoot:GetGameVersion() == AtlasLoot.BC_VERSION_NUM then
 	WOW_HEAD_LINK, WOW_HEAD_LINK_LOC = "https://tbc.wowhead.com/%s=%d", "https://%s.tbc.wowhead.com/%s=%d"
 elseif AtlasLoot:GetGameVersion() == AtlasLoot.WRATH_VERSION_NUM then
-	WOW_HEAD_LINK, WOW_HEAD_LINK_LOC = "https://wotlk.wowhead.com/%s=%d", "https://%s.wotlk.wowhead.com/%s=%d"
+	--WOW_HEAD_LINK, WOW_HEAD_LINK_LOC = "https://wotlk.wowhead.com/%s=%d", "https://%s.wotlk.wowhead.com/%s=%d"
+	WOW_HEAD_LINK, WOW_HEAD_LINK_LOC = "https://www.wowhead.com/wotlk/%s=%d", "https://%s.wowhead.com/wotlk/%s=%d"
 else
 	WOW_HEAD_LINK, WOW_HEAD_LINK_LOC = "https://classic.wowhead.com/%s=%d", "https://%s.classic.wowhead.com/%s=%d"
 end
