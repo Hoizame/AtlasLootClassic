@@ -53,20 +53,81 @@ _G.AtlasLoot.Data = {}
 
 -- Version
 local WOW_PROJECT_ID = _G.WOW_PROJECT_ID or 99
-local WOW_PROJECT_MAINLINE = _G.WOW_PROJECT_MAINLINE or 5
+local WOW_PROJECT_MAINLINE = _G.WOW_PROJECT_MAINLINE or 99
 local WOW_PROJECT_CLASSIC = _G.WOW_PROJECT_CLASSIC or 1
 local WOW_PROJECT_BURNING_CRUSADE_CLASSIC = _G.WOW_PROJECT_BURNING_CRUSADE_CLASSIC or 2
 
-local PROJECT_TO_VERSION = {
-	[WOW_PROJECT_MAINLINE] 					= 0, -- retail
-	[WOW_PROJECT_CLASSIC] 					= 1, -- classic
-	[WOW_PROJECT_BURNING_CRUSADE_CLASSIC] 	= 2, -- bcc
-	[99] 									= 3, -- wotlk
-}
-local CurrentGameVersion 		= PROJECT_TO_VERSION[WOW_PROJECT_ID]
-AtlasLoot.CLASSIC_VERSION_NUM 	= PROJECT_TO_VERSION[WOW_PROJECT_CLASSIC]
-AtlasLoot.BC_VERSION_NUM 		= PROJECT_TO_VERSION[WOW_PROJECT_BURNING_CRUSADE_CLASSIC]
-AtlasLoot.WRATH_VERSION_NUM 	= PROJECT_TO_VERSION[99]
+AtlasLoot.RETAIL_VERSION_NUM 	= 99
+AtlasLoot.CLASSIC_VERSION_NUM 	= 1
+AtlasLoot.BC_VERSION_NUM 		= 2
+AtlasLoot.WRATH_VERSION_NUM 	= 3
+
+AtlasLoot.IS_CLASSIC = false
+AtlasLoot.IS_BC = false
+AtlasLoot.IS_WRATH = false
+AtlasLoot.IS_RETAIL = false
+
+local CurrentGameVersion = AtlasLoot.RETAIL_VERSION_NUM
+if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
+	CurrentGameVersion = AtlasLoot.RETAIL_VERSION_NUM
+	AtlasLoot.IS_RETAIL = true
+elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then
+	if LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_NORTHREND then
+		CurrentGameVersion = AtlasLoot.WRATH_VERSION_NUM
+		AtlasLoot.IS_WRATH = true
+	elseif LE_EXPANSION_LEVEL_CURRENT == LE_EXPANSION_BURNING_CRUSADE then
+		CurrentGameVersion = AtlasLoot.BC_VERSION_NUM
+		AtlasLoot.IS_BC = true
+	end
+elseif WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
+	CurrentGameVersion = AtlasLoot.CLASSIC_VERSION_NUM
+	AtlasLoot.IS_CLASSIC = true
+end
+
+AtlasLoot.CURRENT_VERSION_NUM = CurrentGameVersion
+
 function AtlasLoot:GetGameVersion()
 	return CurrentGameVersion
+end
+
+-- equal
+function AtlasLoot:GameVersion_EQ(gameVersion, ret)
+	if CurrentGameVersion == gameVersion then
+		return ret or true
+	end
+end
+
+-- not equal
+function AtlasLoot:GameVersion_NE(gameVersion, ret)
+	if CurrentGameVersion ~= gameVersion then
+		return ret or true
+	end
+end
+
+-- not greater then
+function AtlasLoot:GameVersion_GT(gameVersion, ret)
+	if CurrentGameVersion > gameVersion then
+		return ret or true
+	end
+end
+
+-- not lesser then
+function AtlasLoot:GameVersion_LT(gameVersion, ret)
+	if CurrentGameVersion < gameVersion then
+		return ret or true
+	end
+end
+
+-- not greater equal
+function AtlasLoot:GameVersion_GE(gameVersion, ret)
+	if CurrentGameVersion >= gameVersion then
+		return ret or true
+	end
+end
+
+-- not lesser equal
+function AtlasLoot:GameVersion_LE(gameVersion, ret)
+	if CurrentGameVersion <= gameVersion then
+		return ret or true
+	end
 end

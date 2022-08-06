@@ -128,6 +128,28 @@ function AtlasLoot:GetColoredClassNames()
 end
 
 -- #############################
+-- Faction switch
+-- #############################
+function AtlasLoot:GetRetByFaction(horde, alliance)
+	return UnitFactionGroup("player") == "Horde" and horde or alliance
+end
+
+-- #############################
+-- Tables for different game versions
+-- #############################
+function AtlasLoot:GetGameVersionDataTable()
+    local useTable = {}
+    local dataTable = setmetatable({}, {
+        __newindex = function(t,k,v)
+			for k,v in pairs(v) do
+				useTable[k] = v
+			end
+        end,
+    })
+    return useTable, dataTable
+end
+
+-- #############################
 -- UpdateChecker
 -- #############################
 local UpdateSendMsg = "#v:"

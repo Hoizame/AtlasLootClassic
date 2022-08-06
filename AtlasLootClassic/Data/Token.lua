@@ -42,7 +42,9 @@ local ICONS = {
 	DRUID 		= 	"ADDON_classicon_druid",
 }
 
-local TOKEN = {
+local TOKEN, TOKEN_DATA = AtlasLoot:GetGameVersionDataTable()
+
+TOKEN_DATA.CLASSIC = {
 	-- [itemID] = { itemID or {itemID, count} }
 	-- optional: type=0 		-	select the desc from the TOKEN_TYPE_TEXT table
 	-- optional: itemID == 0 	-	creates a new line
@@ -300,194 +302,205 @@ local TOKEN = {
 	[21178] = { "f609rep5", 0, {20802, 5}, {20800, 3}, {20801, 7} }, -- Gloves of Earthen Power
 	[21187] = 21178, -- Earthweave Cloak
 	[21179] = 21178, -- Band of Earthen Wrath
-
---@version-bcc@
-
-	--- T4
-	-- Head
-	[29760] = { ICONS.PALADIN, 29061, 29068, 29073, 0, ICONS.ROGUE, 29044, 0, ICONS.SHAMAN, 29028, 29035, 29040, type = 6 }, -- Helm of the Fallen Champion
-	[29761] = { ICONS.WARRIOR, 29011, 29021, 0, ICONS.PRIEST, 29049, 29058, 0, ICONS.DRUID, 29086, 29093, 29098, type = 6 }, -- Helm of the Fallen Defender
-	[29759] = { ICONS.HUNTER, 29081, 0, ICONS.MAGE, 29076, 0, ICONS.WARLOCK, 28963, type = 6 }, -- Helm of the Fallen Hero
-	-- Shoulder
-	[29763] = { ICONS.PALADIN, 29064, 29070, 29075, 0, ICONS.ROGUE, 29047, 0, ICONS.SHAMAN, 29037, 29031, 29043, type = 6 }, -- Pauldrons of the Fallen Champion
-	[29764] = { ICONS.WARRIOR, 29016, 29023, 0, ICONS.PRIEST, 29054, 29060, 0, ICONS.DRUID, 29100, 29095, 29089, type = 6 }, -- Pauldrons of the Fallen Defender
-	[29762] = { ICONS.HUNTER, 29084, 0, ICONS.MAGE, 29079, 0, ICONS.WARLOCK, 28967, type = 6 }, -- Pauldrons of the Fallen Hero
-	-- Chest
-	[29754] = { ICONS.PALADIN, 29071, 29066, 29062, 0, ICONS.ROGUE, 29045, 0, ICONS.SHAMAN, 29038, 29033, 29029, type = 6 }, -- Chestguard of the Fallen Champion
-	[29753] = { ICONS.WARRIOR, 29012, 29019, 0, ICONS.PRIEST, 29050, 29056, 0, ICONS.DRUID, 29087, 29091, 29096, type = 6 }, -- Chestguard of the Fallen Defender
-	[29755] = { ICONS.HUNTER, 29082, 0, ICONS.MAGE, 29077, 0, ICONS.WARLOCK, 28964, type = 6 }, -- Chestguard of the Fallen Hero
-	-- Hands
-	[29757] = { ICONS.PALADIN, 29065, 29067, 29072, 0, ICONS.ROGUE, 29048, 0, ICONS.SHAMAN, 29032, 29034, 29039, type = 6 }, -- Gloves of the Fallen Champion
-	[29758] = { ICONS.WARRIOR, 29017, 29020, 0, ICONS.PRIEST, 29055, 29057, 0, ICONS.DRUID, 29090, 29092, 29097, type = 6 }, -- Gloves of the Fallen Defender
-	[29756] = { ICONS.HUNTER, 29085, 0, ICONS.MAGE, 29080, 0, ICONS.WARLOCK, 28968, type = 6 }, -- Gloves of the Fallen Hero
-	--Legs
-	[29766] = { ICONS.PALADIN, 29074, 29063, 29069, 0, ICONS.ROGUE, 29046, 0, ICONS.SHAMAN, 29030, 29036, 29042, type = 6 }, -- Leggings of the Fallen Champion
-	[29767] = { ICONS.WARRIOR, 29022, 29015, 0, ICONS.PRIEST, 29059, 29053, 0, ICONS.DRUID, 29094, 29099, 29088, type = 6 }, -- Leggings of the Fallen Defender
-	[29765] = { ICONS.HUNTER, 29083, 0, ICONS.MAGE, 29078, 0, ICONS.WARLOCK, 28966, type = 6 }, -- Leggings of the Fallen Hero
-
-	--- T5
-	-- Head
-	[30242] = { ICONS.PALADIN, 30125, 30136, 30131, 0, ICONS.ROGUE, 30146, 0, ICONS.SHAMAN, 30166, 30171, 30190, type = 6 }, -- Helm of the Vanquished Champion
-	[30243] = { ICONS.WARRIOR, 30120, 30115, 0, ICONS.PRIEST, 30161, 30152, 0, ICONS.DRUID, 30228, 30219, 30233, type = 6 }, -- Helm of the Vanquished Defender
-	[30244] = { ICONS.HUNTER, 30141, 0, ICONS.MAGE, 30206, 0, ICONS.WARLOCK, 30212, type = 6 }, -- Helm of the Vanquished Hero
-	-- Shoulder
-	[30248] = { ICONS.PALADIN, 30127, 30133, 30138, 0, ICONS.ROGUE, 30149, 0, ICONS.SHAMAN, 30168, 30173, 30194, type = 6 }, -- Pauldrons of the Vanquished Champion
-	[30249] = { ICONS.WARRIOR, 30117, 30122, 0, ICONS.PRIEST, 30154, 30163, 0, ICONS.DRUID, 30221, 30230, 30235, type = 6 }, -- Pauldrons of the Vanquished Defender
-	[30250] = { ICONS.HUNTER, 30143, 0, ICONS.MAGE, 30210, 0, ICONS.WARLOCK, 30215, type = 6 }, -- Pauldrons of the Vanquished Hero
-	-- Chest
-	[30236] = { ICONS.PALADIN, 30123, 30129, 30134, 0, ICONS.ROGUE, 30144, 0, ICONS.SHAMAN, 30164, 30169, 30185, type = 6 }, -- Chestguard of the Vanquished Champion
-	[30237] = { ICONS.WARRIOR, 30113, 30118, 0, ICONS.PRIEST, 30150, 30159, 0, ICONS.DRUID, 30216, 30222, 30231, type = 6 }, -- Chestguard of the Vanquished Defender
-	[30238] = { ICONS.HUNTER, 30139, 0, ICONS.MAGE, 30196, 0, ICONS.WARLOCK, 30214, type = 6 }, -- Chestguard of the Vanquished Hero
-	-- Hands
-	[30239] = { ICONS.PALADIN, 30130, 30135, 30124, 0, ICONS.ROGUE, 30145, 0, ICONS.SHAMAN, 30189, 30165, 30170, type = 6 }, -- Gloves of the Vanquished Champion
-	[30240] = { ICONS.WARRIOR, 30114, 30119, 0, ICONS.PRIEST, 30160, 30151, 0, ICONS.DRUID, 30223, 30217, 30232, type = 6 }, -- Gloves of the Vanquished Defender
-	[30241] = { ICONS.HUNTER, 30140, 0, ICONS.MAGE, 30205, 0, ICONS.WARLOCK, 30211, type = 6 }, -- Gloves of the Vanquished Hero
-	-- Legs
-	[30245] = { ICONS.PALADIN, 30132, 30137, 30126, 0, ICONS.ROGUE, 30148, 0, ICONS.SHAMAN, 30172, 30167, 30192, type = 6 }, -- Leggings of the Vanquished Champion
-	[30246] = { ICONS.WARRIOR, 30121, 30116, 0, ICONS.PRIEST, 30153, 30162, 0, ICONS.DRUID, 30229, 30220, 30234, type = 6 }, -- Leggings of the Vanquished Defender
-	[30247] = { ICONS.HUNTER, 30142, 0, ICONS.MAGE, 30207, 0, ICONS.WARLOCK, 30213, type = 6 }, -- Leggings of the Vanquished Hero
-
-	--- T6
-	-- Head
-	[31097] = { ICONS.PALADIN, 30987, 30988, 30989, 0, ICONS.PRIEST, 31063, 31064, 0, ICONS.WARLOCK, 31051, type = 6 }, -- Helm of the Forgotten Conqueror
-	[31096] = { ICONS.ROGUE, 31027, 0, ICONS.MAGE, 31056, 0, ICONS.DRUID, 31037, 31040, 31039, type = 6 }, -- Helm of the Forgotten Vanquisher
-	[31095] = { ICONS.WARRIOR, 30972, 30974, 0, ICONS.HUNTER, 31003, 0, ICONS.SHAMAN, 31012, 31014, 31015, type = 6 }, -- Helm of the Forgotten Protector
-	-- Shoulders
-	[31101] = { ICONS.PALADIN, 30996, 30997, 30998, 0, ICONS.PRIEST, 31069, 31070, 0, ICONS.WARLOCK, 31054, type = 6 }, -- Pauldrons of the Forgotten Conqueror
-	[31102] = { ICONS.ROGUE, 31030, 0, ICONS.MAGE, 31059, 0, ICONS.DRUID, 31047, 31048, 31049, type = 6 }, -- Pauldrons of the Forgotten Vanquisher
-	[31103] = { ICONS.WARRIOR, 30979, 30980, 0, ICONS.HUNTER, 31006, 0, ICONS.SHAMAN, 31022, 31023, 31024, type = 6 }, -- Pauldrons of the Forgotten Protector
-	-- Chest
-	[31089] = { ICONS.PALADIN, 30990, 30991, 30992, 0, ICONS.PRIEST, 31065, 31066, 0, ICONS.WARLOCK, 31052, type = 6 }, -- Chestguard of the Forgotten Conqueror
-	[31090] = { ICONS.ROGUE, 31028, 0, ICONS.MAGE, 31057, 0, ICONS.DRUID, 31041, 31042, 31043, type = 6 }, -- Chestguard of the Forgotten Vanquisher
-	[31091] = { ICONS.WARRIOR, 30975, 30976, 0, ICONS.HUNTER, 31004, 0, ICONS.SHAMAN, 31016, 31017, 31018, type = 6 }, -- Chestguard of the Forgotten Protector
-	-- Hands
-	[31092] = { ICONS.PALADIN, 30982, 30983, 30985, 0, ICONS.PRIEST, 31060, 31061, 0, ICONS.WARLOCK, 31050, type = 6 }, -- Gloves of the Forgotten Conqueror
-	[31093] = { ICONS.ROGUE, 31026, 0, ICONS.MAGE, 31055, 0, ICONS.DRUID, 31032, 31034, 31035, type = 6 }, -- Gloves of the Forgotten Vanquisher
-	[31094] = { ICONS.WARRIOR, 30969, 30970, 0, ICONS.HUNTER, 31001, 0, ICONS.SHAMAN, 31007, 31008, 31011, type = 6 }, -- Gloves of the Forgotten Protector
-	-- Legs
-	[31098] = { ICONS.PALADIN, 30993, 30994, 30995, 0, ICONS.PRIEST, 31067, 31068, 0, ICONS.WARLOCK, 31053, type = 6 }, -- Leggings of the Forgotten Conqueror
-	[31099] = { ICONS.ROGUE, 31029, 0, ICONS.MAGE, 31058, 0, ICONS.DRUID, 31044, 31045, 31046, type = 6 }, -- Leggings of the Forgotten Vanquisher
-	[31100] = { ICONS.WARRIOR, 30977, 30978, 0, ICONS.HUNTER, 31005, 0, ICONS.SHAMAN, 31019, 31020, 31021, type = 6 }, -- Leggings of the Forgotten Protector
-	-- Wrist
-	[34848] = { ICONS.PALADIN, 34431, 34432, 34433, 0, ICONS.PRIEST, 34434, 34435, 0, ICONS.WARLOCK, 34436, type = 6 }, -- Bracers of the Forgotten Conqueror
-	[34852] = { ICONS.ROGUE, 34448, 0, ICONS.MAGE, 34447, 0, ICONS.DRUID, 34444, 34445, 34446, type = 6 }, -- Bracers of the Forgotten Vanquisher
-	[34851] = { ICONS.WARRIOR, 34441, 34442, 0, ICONS.HUNTER, 34443, 0, ICONS.SHAMAN, 34437, 34438, 34439, type = 6 }, -- Bracers of the Forgotten Protector
-	-- Belt
-	[34853] = { ICONS.PALADIN, 34485, 34487, 34488, 0, ICONS.PRIEST, 34527, 34528, 0, ICONS.WARLOCK, 34541, type = 6 }, -- Belt of the Forgotten Conqueror
-	[34855] = { ICONS.ROGUE, 34558, 0, ICONS.MAGE, 34557, 0, ICONS.DRUID, 34554, 34555, 34556, type = 6 }, -- Belt of the Forgotten Vanquisher
-	[34854] = { ICONS.WARRIOR, 34546, 34547, 0, ICONS.HUNTER, 34549, 0, ICONS.SHAMAN, 34542, 34543, 34545, type = 6 }, -- Belt of the Forgotten Protector
-	-- Boots
-	[34856] = { ICONS.PALADIN, 34559, 34560, 34561, 0, ICONS.PRIEST, 34562, 34563, 0, ICONS.WARLOCK, 34564, type = 6 }, -- Boots of the Forgotten Conqueror
-	[34858] = { ICONS.ROGUE, 34575, 0, ICONS.MAGE, 34574, 0, ICONS.DRUID, 34571, 34572, 34573, type = 6 }, -- Boots of the Forgotten Vanquisher
-	[34857] = { ICONS.WARRIOR, 34568, 34569, 0, ICONS.HUNTER, 34570, 0, ICONS.SHAMAN, 34565, 34566, 34567, type = 6 }, -- Boots of the Forgotten Protector
-
-	--- Sunwell Sunmote tokens
-	-- Cloth
-	[34399] = { 34399, 0, {34664, "1"}, {34233, "1"}, type = 7 }, -- Robes of Ghostly Hatred
-	[34233] = { 34399, 0, {34664, "1"}, {34233, "1"}, type = 8 }, -- Robes of Faltered Light
-	[34406] = { 34406, 0, {34664, "1"}, {34342, "1"}, type = 7 }, -- Gloves of Tyri's Power
-	[34342] = { 34406, 0, {34664, "1"}, {34342, "1"}, type = 8 }, -- Handguards of the Dawn
-	[34405] = { 34405, 0, {34664, "1"}, {34339, "1"}, type = 7 }, -- Helm of Arcane Purity
-	[34339] = { 34405, 0, {34664, "1"}, {34339, "1"}, type = 8 }, -- Cowl of Light's Purity
-	[34386] = { 34386, 0, {34664, "1"}, {34170, "1"}, type = 7 }, -- Pantaloons of Growing Strife
-	[34170] = { 34386, 0, {34664, "1"}, {34170, "1"}, type = 8 }, -- Pantaloons of Calming Strife
-	[34393] = { 34393, 0, {34664, "1"}, {34202, "1"}, type = 7 }, -- Shoulderpads of Knowledge's Pursuit
-	[34202] = { 34393, 0, {34664, "1"}, {34202, "1"}, type = 8 }, -- Shawl of Wonderment
-
-	-- Leather
-	[34397] = { 34397, 0, {34664, "1"}, {34211, "1"}, type = 7 }, -- Bladed Chaos Tunic
-	[34211] = { 34397, 0, {34664, "1"}, {34211, "1"}, type = 8 }, -- Harness of Carnal Instinct
-	[34398] = { 34398, 0, {34664, "1"}, {34212, "1"}, type = 7 }, -- Utopian Tunic of Elune
-	[34212] = { 34398, 0, {34664, "1"}, {34212, "1"}, type = 8 }, -- Sunglow Vest
-	[34408] = { 34408, 0, {34664, "1"}, {34234, "1"}, type = 7 }, -- Gloves of the Forest Drifter
-	[34234] = { 34408, 0, {34664, "1"}, {34234, "1"}, type = 8 }, -- Shadowed Gauntlets of Paroxysm
-	[34407] = { 34407, 0, {34664, "1"}, {34351, "1"}, type = 7 }, -- Tranquil Moonlight Wraps
-	[34351] = { 34407, 0, {34664, "1"}, {34351, "1"}, type = 8 }, -- Tranquil Majesty Wraps
-	[34403] = { 34403, 0, {34664, "1"}, {34245, "1"}, type = 7 }, -- Cover of Ursoc the Mighty
-	[34245] = { 34403, 0, {34664, "1"}, {34245, "1"}, type = 8 }, -- Cover of Ursol the Wise
-	[34404] = { 34404, 0, {34664, "1"}, {34244, "1"}, type = 7 }, -- Mask of the Fury Hunter
-	[34244] = { 34404, 0, {34664, "1"}, {34244, "1"}, type = 8 }, -- Duplicitous Guise
-	[34384] = { 34384, 0, {34664, "1"}, {34169, "1"}, type = 7 }, -- Breeches of Natural Splendor
-	[34169] = { 34384, 0, {34664, "1"}, {34169, "1"}, type = 8 }, -- Breeches of Natural Aggression
-	[34385] = { 34385, 0, {34664, "1"}, {34188, "1"}, type = 7 }, -- Leggings of the Immortal Beast
-	[34188] = { 34385, 0, {34664, "1"}, {34188, "1"}, type = 8 }, -- Leggings of the Immortal Night
-	[34392] = { 34392, 0, {34664, "1"}, {34195, "1"}, type = 7 }, -- Demontooth Shoulderpads
-	[34195] = { 34392, 0, {34664, "1"}, {34195, "1"}, type = 8 }, -- Shoulderpads of Vehemence
-	[34391] = { 34391, 0, {34664, "1"}, {34209, "1"}, type = 7 }, -- Spaulders of Devastation
-	[34209] = { 34391, 0, {34664, "1"}, {34209, "1"}, type = 8 }, -- Spaulders of Reclamation
-
-	-- Mail
-	[34402] = { 34402, 0, {34664, "1"}, {34332, "1"}, type = 7 }, -- Cover of Ursoc the Mighty
-	[34332] = { 34402, 0, {34664, "1"}, {34332, "1"}, type = 8 }, -- Cowl of Gul'dan
-	[34396] = { 34396, 0, {34664, "1"}, {34229, "1"}, type = 7 }, -- Garments of Crashing Shores
-	[34229] = { 34396, 0, {34664, "1"}, {34229, "1"}, type = 8 }, -- Garments of Serene Shores
-	[34390] = { 34390, 0, {34664, "1"}, {34208, "1"}, type = 7 }, -- Erupting Epaulets
-	[34208] = { 34390, 0, {34664, "1"}, {34208, "1"}, type = 8 }, -- Equilibrium Epaulets
-	[34409] = { 34409, 0, {34664, "1"}, {34350, "1"}, type = 7 }, -- Gauntlets of the Ancient Frostwolf
-	[34350] = { 34409, 0, {34664, "1"}, {34350, "1"}, type = 8 }, -- Gauntlets of the Ancient Shadowmoon
-	[34383] = { 34383, 0, {34664, "1"}, {34186, "1"}, type = 7 }, -- Kilt of Spiritual Reconstruction
-	[34186] = { 34383, 0, {34664, "1"}, {34186, "1"}, type = 8 }, -- Chain Links of the Tumultuous Storm
-
-	-- Plate
-	[34401] = { 34401, 0, {34664, "1"}, {34243, "1"}, type = 7 }, -- Helm of Uther's Resolve
-	[34243] = { 34401, 0, {34664, "1"}, {34243, "1"}, type = 8 }, -- Helm of Burning Righteousness
-	[34400] = { 34400, 0, {34664, "1"}, {34345, "1"}, type = 7 }, -- Crown of Dath'Remar
-	[34345] = { 34400, 0, {34664, "1"}, {34345, "1"}, type = 8 }, -- Crown of Anasterian
-	[34389] = { 34389, 0, {34664, "1"}, {34193, "1"}, type = 7 }, -- Spaulders of the Thalassian Defender
-	[34193] = { 34389, 0, {34664, "1"}, {34193, "1"}, type = 8 }, -- Spaulders of the Thalassian Savior
-	[34388] = { 34388, 0, {34664, "1"}, {34192, "1"}, type = 7 }, -- Pauldrons of Berserking
-	[34192] = { 34388, 0, {34664, "1"}, {34192, "1"}, type = 8 }, -- Pauldrons of Perseverance
-	[34395] = { 34395, 0, {34664, "1"}, {34216, "1"}, type = 7 }, -- Noble Judicator's Chestguard
-	[34216] = { 34395, 0, {34664, "1"}, {34216, "1"}, type = 8 }, -- Heroic Judicator's Chestguard
-	[34394] = { 34394, 0, {34664, "1"}, {34215, "1"}, type = 7 }, -- Breastplate of Agony's Aversion
-	[34215] = { 34394, 0, {34664, "1"}, {34215, "1"}, type = 8 }, -- Warharness of Reckless Fury
-	[34382] = { 34382, 0, {34664, "1"}, {34167, "1"}, type = 7 }, -- Judicator's Legguards
-	[34167] = { 34382, 0, {34664, "1"}, {34167, "1"}, type = 8 }, -- Legplates of the Holy Juggernaut
-	[34381] = { 34381, 0, {34664, "1"}, {34180, "1"}, type = 7 }, -- Felstrength Legplates
-	[34180] = { 34381, 0, {34664, "1"}, {34180, "1"}, type = 8 }, -- Felfury Legplates
-
-
-	--- Misc
-	-- Magtheridon's Lair
-	[32385] = { 28791, 28790, 28793, 28792, type = 3 }, -- Magtheridon's Head
-	[34846] = { -- Black Sack of Gems
-		{32230,"1-3"}, {32249,"1-3"}, {32228,"1-3"}, {32229,"1-3"}, {32231,"1-3"}, {32227,"1-3"}, 0, -- Epic
-		{23441,"1-2"}, {23437,"1-2"}, {23436,"1-2"}, {23438,"1-2"}, {23440,"1-2"}, {23439,"1-2"}, -- Blue
-		type = 2,
-	},
-	-- Tempest Keep
-	[32405] = { 30018, 30017, 30007, 30015 }, -- Verdant Sphere
-
-	-- Motes
-	[22574] = { {22574,"10"}, 0, 21884 }, -- Mote of Fire
-	[22576] = { {22576,"10"}, 0, 22457 }, -- Mote of Mana
-	[22573] = { {22573,"10"}, 0, 22452 }, -- Mote of Earth
-	[22572] = { {22572,"10"}, 0, 22451 }, -- Mote of Air
-	[22575] = { {22575,"10"}, 0, 21886 }, -- Mote of Life
-	[22578] = { {22578,"10"}, 0, 21885 }, -- Mote of Water
-
-		--- Darkmoon cards
-	-- Furies Deck / Darkmoon Card: Vengeance
-	[31907] = { 31907, 31858, 0, 31901, 31909, 31908, 31904, 31903, 31906, 31905, 31902 },
-	[31901] = 31907, [31909] = 31907, [31908] = 31907, [31904] = 31907, [31903] = 31907, [31906] = 31907, [31905] = 31907, [31902] = 31907,
-
-	-- Blessings Deck / Darkmoon Card: Crusade
-	[31890] = { 31890, 31856, 0, 31882, 31889, 31888, 31885, 31884, 31887, 31886, 31883 },
-	[31882] = 31890, [31889] = 31890, [31888] = 31890, [31885] = 31890, [31884] = 31890, [31887] = 31890, [31886] = 31890, [31883] = 31890,
-
-	-- Storms Deck / Darkmoon Card: Wrath
-	[31891] = { 31891, 31857, 0, 31892, 31900, 31899, 31895, 31894, 31898, 31896, 31893 },
-	[31892] = 31891, [31900] = 31891, [31899] = 31891, [31899] = 31891, [31895] = 31891, [31898] = 31891, [31896] = 31891, [31893] = 31891,
-
-	-- Lunacy Deck / Darkmoon Card: Madness
-	[31914] = { 31914, 31859, 0, 31910, 31918, 31917, 31913, 31912, 31916, 31915, 31911 },
-	[31910] = 31914, [31918] = 31914, [31917] = 31914, [31913] = 31914, [31912] = 31914, [31916] = 31914, [31915] = 31914, [31911] = 31914,
-
-	-- Brewfest
-	[33016] = { 33017, 33018, 33019, 33020, 33021 }, -- Blue Brewfest Stein
-	[32912] = { 32917, 32918, 32920, 32915, 32919 }, -- Yellow Brewfest Stein
---@end-version-bcc@
 }
+
+if AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM) then
+	TOKEN_DATA.BCC = {
+
+		--- T4
+		-- Head
+		[29760] = { ICONS.PALADIN, 29061, 29068, 29073, 0, ICONS.ROGUE, 29044, 0, ICONS.SHAMAN, 29028, 29035, 29040, type = 6 }, -- Helm of the Fallen Champion
+		[29761] = { ICONS.WARRIOR, 29011, 29021, 0, ICONS.PRIEST, 29049, 29058, 0, ICONS.DRUID, 29086, 29093, 29098, type = 6 }, -- Helm of the Fallen Defender
+		[29759] = { ICONS.HUNTER, 29081, 0, ICONS.MAGE, 29076, 0, ICONS.WARLOCK, 28963, type = 6 }, -- Helm of the Fallen Hero
+		-- Shoulder
+		[29763] = { ICONS.PALADIN, 29064, 29070, 29075, 0, ICONS.ROGUE, 29047, 0, ICONS.SHAMAN, 29037, 29031, 29043, type = 6 }, -- Pauldrons of the Fallen Champion
+		[29764] = { ICONS.WARRIOR, 29016, 29023, 0, ICONS.PRIEST, 29054, 29060, 0, ICONS.DRUID, 29100, 29095, 29089, type = 6 }, -- Pauldrons of the Fallen Defender
+		[29762] = { ICONS.HUNTER, 29084, 0, ICONS.MAGE, 29079, 0, ICONS.WARLOCK, 28967, type = 6 }, -- Pauldrons of the Fallen Hero
+		-- Chest
+		[29754] = { ICONS.PALADIN, 29071, 29066, 29062, 0, ICONS.ROGUE, 29045, 0, ICONS.SHAMAN, 29038, 29033, 29029, type = 6 }, -- Chestguard of the Fallen Champion
+		[29753] = { ICONS.WARRIOR, 29012, 29019, 0, ICONS.PRIEST, 29050, 29056, 0, ICONS.DRUID, 29087, 29091, 29096, type = 6 }, -- Chestguard of the Fallen Defender
+		[29755] = { ICONS.HUNTER, 29082, 0, ICONS.MAGE, 29077, 0, ICONS.WARLOCK, 28964, type = 6 }, -- Chestguard of the Fallen Hero
+		-- Hands
+		[29757] = { ICONS.PALADIN, 29065, 29067, 29072, 0, ICONS.ROGUE, 29048, 0, ICONS.SHAMAN, 29032, 29034, 29039, type = 6 }, -- Gloves of the Fallen Champion
+		[29758] = { ICONS.WARRIOR, 29017, 29020, 0, ICONS.PRIEST, 29055, 29057, 0, ICONS.DRUID, 29090, 29092, 29097, type = 6 }, -- Gloves of the Fallen Defender
+		[29756] = { ICONS.HUNTER, 29085, 0, ICONS.MAGE, 29080, 0, ICONS.WARLOCK, 28968, type = 6 }, -- Gloves of the Fallen Hero
+		--Legs
+		[29766] = { ICONS.PALADIN, 29074, 29063, 29069, 0, ICONS.ROGUE, 29046, 0, ICONS.SHAMAN, 29030, 29036, 29042, type = 6 }, -- Leggings of the Fallen Champion
+		[29767] = { ICONS.WARRIOR, 29022, 29015, 0, ICONS.PRIEST, 29059, 29053, 0, ICONS.DRUID, 29094, 29099, 29088, type = 6 }, -- Leggings of the Fallen Defender
+		[29765] = { ICONS.HUNTER, 29083, 0, ICONS.MAGE, 29078, 0, ICONS.WARLOCK, 28966, type = 6 }, -- Leggings of the Fallen Hero
+
+		--- T5
+		-- Head
+		[30242] = { ICONS.PALADIN, 30125, 30136, 30131, 0, ICONS.ROGUE, 30146, 0, ICONS.SHAMAN, 30166, 30171, 30190, type = 6 }, -- Helm of the Vanquished Champion
+		[30243] = { ICONS.WARRIOR, 30120, 30115, 0, ICONS.PRIEST, 30161, 30152, 0, ICONS.DRUID, 30228, 30219, 30233, type = 6 }, -- Helm of the Vanquished Defender
+		[30244] = { ICONS.HUNTER, 30141, 0, ICONS.MAGE, 30206, 0, ICONS.WARLOCK, 30212, type = 6 }, -- Helm of the Vanquished Hero
+		-- Shoulder
+		[30248] = { ICONS.PALADIN, 30127, 30133, 30138, 0, ICONS.ROGUE, 30149, 0, ICONS.SHAMAN, 30168, 30173, 30194, type = 6 }, -- Pauldrons of the Vanquished Champion
+		[30249] = { ICONS.WARRIOR, 30117, 30122, 0, ICONS.PRIEST, 30154, 30163, 0, ICONS.DRUID, 30221, 30230, 30235, type = 6 }, -- Pauldrons of the Vanquished Defender
+		[30250] = { ICONS.HUNTER, 30143, 0, ICONS.MAGE, 30210, 0, ICONS.WARLOCK, 30215, type = 6 }, -- Pauldrons of the Vanquished Hero
+		-- Chest
+		[30236] = { ICONS.PALADIN, 30123, 30129, 30134, 0, ICONS.ROGUE, 30144, 0, ICONS.SHAMAN, 30164, 30169, 30185, type = 6 }, -- Chestguard of the Vanquished Champion
+		[30237] = { ICONS.WARRIOR, 30113, 30118, 0, ICONS.PRIEST, 30150, 30159, 0, ICONS.DRUID, 30216, 30222, 30231, type = 6 }, -- Chestguard of the Vanquished Defender
+		[30238] = { ICONS.HUNTER, 30139, 0, ICONS.MAGE, 30196, 0, ICONS.WARLOCK, 30214, type = 6 }, -- Chestguard of the Vanquished Hero
+		-- Hands
+		[30239] = { ICONS.PALADIN, 30130, 30135, 30124, 0, ICONS.ROGUE, 30145, 0, ICONS.SHAMAN, 30189, 30165, 30170, type = 6 }, -- Gloves of the Vanquished Champion
+		[30240] = { ICONS.WARRIOR, 30114, 30119, 0, ICONS.PRIEST, 30160, 30151, 0, ICONS.DRUID, 30223, 30217, 30232, type = 6 }, -- Gloves of the Vanquished Defender
+		[30241] = { ICONS.HUNTER, 30140, 0, ICONS.MAGE, 30205, 0, ICONS.WARLOCK, 30211, type = 6 }, -- Gloves of the Vanquished Hero
+		-- Legs
+		[30245] = { ICONS.PALADIN, 30132, 30137, 30126, 0, ICONS.ROGUE, 30148, 0, ICONS.SHAMAN, 30172, 30167, 30192, type = 6 }, -- Leggings of the Vanquished Champion
+		[30246] = { ICONS.WARRIOR, 30121, 30116, 0, ICONS.PRIEST, 30153, 30162, 0, ICONS.DRUID, 30229, 30220, 30234, type = 6 }, -- Leggings of the Vanquished Defender
+		[30247] = { ICONS.HUNTER, 30142, 0, ICONS.MAGE, 30207, 0, ICONS.WARLOCK, 30213, type = 6 }, -- Leggings of the Vanquished Hero
+
+		--- T6
+		-- Head
+		[31097] = { ICONS.PALADIN, 30987, 30988, 30989, 0, ICONS.PRIEST, 31063, 31064, 0, ICONS.WARLOCK, 31051, type = 6 }, -- Helm of the Forgotten Conqueror
+		[31096] = { ICONS.ROGUE, 31027, 0, ICONS.MAGE, 31056, 0, ICONS.DRUID, 31037, 31040, 31039, type = 6 }, -- Helm of the Forgotten Vanquisher
+		[31095] = { ICONS.WARRIOR, 30972, 30974, 0, ICONS.HUNTER, 31003, 0, ICONS.SHAMAN, 31012, 31014, 31015, type = 6 }, -- Helm of the Forgotten Protector
+		-- Shoulders
+		[31101] = { ICONS.PALADIN, 30996, 30997, 30998, 0, ICONS.PRIEST, 31069, 31070, 0, ICONS.WARLOCK, 31054, type = 6 }, -- Pauldrons of the Forgotten Conqueror
+		[31102] = { ICONS.ROGUE, 31030, 0, ICONS.MAGE, 31059, 0, ICONS.DRUID, 31047, 31048, 31049, type = 6 }, -- Pauldrons of the Forgotten Vanquisher
+		[31103] = { ICONS.WARRIOR, 30979, 30980, 0, ICONS.HUNTER, 31006, 0, ICONS.SHAMAN, 31022, 31023, 31024, type = 6 }, -- Pauldrons of the Forgotten Protector
+		-- Chest
+		[31089] = { ICONS.PALADIN, 30990, 30991, 30992, 0, ICONS.PRIEST, 31065, 31066, 0, ICONS.WARLOCK, 31052, type = 6 }, -- Chestguard of the Forgotten Conqueror
+		[31090] = { ICONS.ROGUE, 31028, 0, ICONS.MAGE, 31057, 0, ICONS.DRUID, 31041, 31042, 31043, type = 6 }, -- Chestguard of the Forgotten Vanquisher
+		[31091] = { ICONS.WARRIOR, 30975, 30976, 0, ICONS.HUNTER, 31004, 0, ICONS.SHAMAN, 31016, 31017, 31018, type = 6 }, -- Chestguard of the Forgotten Protector
+		-- Hands
+		[31092] = { ICONS.PALADIN, 30982, 30983, 30985, 0, ICONS.PRIEST, 31060, 31061, 0, ICONS.WARLOCK, 31050, type = 6 }, -- Gloves of the Forgotten Conqueror
+		[31093] = { ICONS.ROGUE, 31026, 0, ICONS.MAGE, 31055, 0, ICONS.DRUID, 31032, 31034, 31035, type = 6 }, -- Gloves of the Forgotten Vanquisher
+		[31094] = { ICONS.WARRIOR, 30969, 30970, 0, ICONS.HUNTER, 31001, 0, ICONS.SHAMAN, 31007, 31008, 31011, type = 6 }, -- Gloves of the Forgotten Protector
+		-- Legs
+		[31098] = { ICONS.PALADIN, 30993, 30994, 30995, 0, ICONS.PRIEST, 31067, 31068, 0, ICONS.WARLOCK, 31053, type = 6 }, -- Leggings of the Forgotten Conqueror
+		[31099] = { ICONS.ROGUE, 31029, 0, ICONS.MAGE, 31058, 0, ICONS.DRUID, 31044, 31045, 31046, type = 6 }, -- Leggings of the Forgotten Vanquisher
+		[31100] = { ICONS.WARRIOR, 30977, 30978, 0, ICONS.HUNTER, 31005, 0, ICONS.SHAMAN, 31019, 31020, 31021, type = 6 }, -- Leggings of the Forgotten Protector
+		-- Wrist
+		[34848] = { ICONS.PALADIN, 34431, 34432, 34433, 0, ICONS.PRIEST, 34434, 34435, 0, ICONS.WARLOCK, 34436, type = 6 }, -- Bracers of the Forgotten Conqueror
+		[34852] = { ICONS.ROGUE, 34448, 0, ICONS.MAGE, 34447, 0, ICONS.DRUID, 34444, 34445, 34446, type = 6 }, -- Bracers of the Forgotten Vanquisher
+		[34851] = { ICONS.WARRIOR, 34441, 34442, 0, ICONS.HUNTER, 34443, 0, ICONS.SHAMAN, 34437, 34438, 34439, type = 6 }, -- Bracers of the Forgotten Protector
+		-- Belt
+		[34853] = { ICONS.PALADIN, 34485, 34487, 34488, 0, ICONS.PRIEST, 34527, 34528, 0, ICONS.WARLOCK, 34541, type = 6 }, -- Belt of the Forgotten Conqueror
+		[34855] = { ICONS.ROGUE, 34558, 0, ICONS.MAGE, 34557, 0, ICONS.DRUID, 34554, 34555, 34556, type = 6 }, -- Belt of the Forgotten Vanquisher
+		[34854] = { ICONS.WARRIOR, 34546, 34547, 0, ICONS.HUNTER, 34549, 0, ICONS.SHAMAN, 34542, 34543, 34545, type = 6 }, -- Belt of the Forgotten Protector
+		-- Boots
+		[34856] = { ICONS.PALADIN, 34559, 34560, 34561, 0, ICONS.PRIEST, 34562, 34563, 0, ICONS.WARLOCK, 34564, type = 6 }, -- Boots of the Forgotten Conqueror
+		[34858] = { ICONS.ROGUE, 34575, 0, ICONS.MAGE, 34574, 0, ICONS.DRUID, 34571, 34572, 34573, type = 6 }, -- Boots of the Forgotten Vanquisher
+		[34857] = { ICONS.WARRIOR, 34568, 34569, 0, ICONS.HUNTER, 34570, 0, ICONS.SHAMAN, 34565, 34566, 34567, type = 6 }, -- Boots of the Forgotten Protector
+
+		--- Sunwell Sunmote tokens
+		-- Cloth
+		[34399] = { 34399, 0, {34664, "1"}, {34233, "1"}, type = 7 }, -- Robes of Ghostly Hatred
+		[34233] = { 34399, 0, {34664, "1"}, {34233, "1"}, type = 8 }, -- Robes of Faltered Light
+		[34406] = { 34406, 0, {34664, "1"}, {34342, "1"}, type = 7 }, -- Gloves of Tyri's Power
+		[34342] = { 34406, 0, {34664, "1"}, {34342, "1"}, type = 8 }, -- Handguards of the Dawn
+		[34405] = { 34405, 0, {34664, "1"}, {34339, "1"}, type = 7 }, -- Helm of Arcane Purity
+		[34339] = { 34405, 0, {34664, "1"}, {34339, "1"}, type = 8 }, -- Cowl of Light's Purity
+		[34386] = { 34386, 0, {34664, "1"}, {34170, "1"}, type = 7 }, -- Pantaloons of Growing Strife
+		[34170] = { 34386, 0, {34664, "1"}, {34170, "1"}, type = 8 }, -- Pantaloons of Calming Strife
+		[34393] = { 34393, 0, {34664, "1"}, {34202, "1"}, type = 7 }, -- Shoulderpads of Knowledge's Pursuit
+		[34202] = { 34393, 0, {34664, "1"}, {34202, "1"}, type = 8 }, -- Shawl of Wonderment
+
+		-- Leather
+		[34397] = { 34397, 0, {34664, "1"}, {34211, "1"}, type = 7 }, -- Bladed Chaos Tunic
+		[34211] = { 34397, 0, {34664, "1"}, {34211, "1"}, type = 8 }, -- Harness of Carnal Instinct
+		[34398] = { 34398, 0, {34664, "1"}, {34212, "1"}, type = 7 }, -- Utopian Tunic of Elune
+		[34212] = { 34398, 0, {34664, "1"}, {34212, "1"}, type = 8 }, -- Sunglow Vest
+		[34408] = { 34408, 0, {34664, "1"}, {34234, "1"}, type = 7 }, -- Gloves of the Forest Drifter
+		[34234] = { 34408, 0, {34664, "1"}, {34234, "1"}, type = 8 }, -- Shadowed Gauntlets of Paroxysm
+		[34407] = { 34407, 0, {34664, "1"}, {34351, "1"}, type = 7 }, -- Tranquil Moonlight Wraps
+		[34351] = { 34407, 0, {34664, "1"}, {34351, "1"}, type = 8 }, -- Tranquil Majesty Wraps
+		[34403] = { 34403, 0, {34664, "1"}, {34245, "1"}, type = 7 }, -- Cover of Ursoc the Mighty
+		[34245] = { 34403, 0, {34664, "1"}, {34245, "1"}, type = 8 }, -- Cover of Ursol the Wise
+		[34404] = { 34404, 0, {34664, "1"}, {34244, "1"}, type = 7 }, -- Mask of the Fury Hunter
+		[34244] = { 34404, 0, {34664, "1"}, {34244, "1"}, type = 8 }, -- Duplicitous Guise
+		[34384] = { 34384, 0, {34664, "1"}, {34169, "1"}, type = 7 }, -- Breeches of Natural Splendor
+		[34169] = { 34384, 0, {34664, "1"}, {34169, "1"}, type = 8 }, -- Breeches of Natural Aggression
+		[34385] = { 34385, 0, {34664, "1"}, {34188, "1"}, type = 7 }, -- Leggings of the Immortal Beast
+		[34188] = { 34385, 0, {34664, "1"}, {34188, "1"}, type = 8 }, -- Leggings of the Immortal Night
+		[34392] = { 34392, 0, {34664, "1"}, {34195, "1"}, type = 7 }, -- Demontooth Shoulderpads
+		[34195] = { 34392, 0, {34664, "1"}, {34195, "1"}, type = 8 }, -- Shoulderpads of Vehemence
+		[34391] = { 34391, 0, {34664, "1"}, {34209, "1"}, type = 7 }, -- Spaulders of Devastation
+		[34209] = { 34391, 0, {34664, "1"}, {34209, "1"}, type = 8 }, -- Spaulders of Reclamation
+
+		-- Mail
+		[34402] = { 34402, 0, {34664, "1"}, {34332, "1"}, type = 7 }, -- Cover of Ursoc the Mighty
+		[34332] = { 34402, 0, {34664, "1"}, {34332, "1"}, type = 8 }, -- Cowl of Gul'dan
+		[34396] = { 34396, 0, {34664, "1"}, {34229, "1"}, type = 7 }, -- Garments of Crashing Shores
+		[34229] = { 34396, 0, {34664, "1"}, {34229, "1"}, type = 8 }, -- Garments of Serene Shores
+		[34390] = { 34390, 0, {34664, "1"}, {34208, "1"}, type = 7 }, -- Erupting Epaulets
+		[34208] = { 34390, 0, {34664, "1"}, {34208, "1"}, type = 8 }, -- Equilibrium Epaulets
+		[34409] = { 34409, 0, {34664, "1"}, {34350, "1"}, type = 7 }, -- Gauntlets of the Ancient Frostwolf
+		[34350] = { 34409, 0, {34664, "1"}, {34350, "1"}, type = 8 }, -- Gauntlets of the Ancient Shadowmoon
+		[34383] = { 34383, 0, {34664, "1"}, {34186, "1"}, type = 7 }, -- Kilt of Spiritual Reconstruction
+		[34186] = { 34383, 0, {34664, "1"}, {34186, "1"}, type = 8 }, -- Chain Links of the Tumultuous Storm
+
+		-- Plate
+		[34401] = { 34401, 0, {34664, "1"}, {34243, "1"}, type = 7 }, -- Helm of Uther's Resolve
+		[34243] = { 34401, 0, {34664, "1"}, {34243, "1"}, type = 8 }, -- Helm of Burning Righteousness
+		[34400] = { 34400, 0, {34664, "1"}, {34345, "1"}, type = 7 }, -- Crown of Dath'Remar
+		[34345] = { 34400, 0, {34664, "1"}, {34345, "1"}, type = 8 }, -- Crown of Anasterian
+		[34389] = { 34389, 0, {34664, "1"}, {34193, "1"}, type = 7 }, -- Spaulders of the Thalassian Defender
+		[34193] = { 34389, 0, {34664, "1"}, {34193, "1"}, type = 8 }, -- Spaulders of the Thalassian Savior
+		[34388] = { 34388, 0, {34664, "1"}, {34192, "1"}, type = 7 }, -- Pauldrons of Berserking
+		[34192] = { 34388, 0, {34664, "1"}, {34192, "1"}, type = 8 }, -- Pauldrons of Perseverance
+		[34395] = { 34395, 0, {34664, "1"}, {34216, "1"}, type = 7 }, -- Noble Judicator's Chestguard
+		[34216] = { 34395, 0, {34664, "1"}, {34216, "1"}, type = 8 }, -- Heroic Judicator's Chestguard
+		[34394] = { 34394, 0, {34664, "1"}, {34215, "1"}, type = 7 }, -- Breastplate of Agony's Aversion
+		[34215] = { 34394, 0, {34664, "1"}, {34215, "1"}, type = 8 }, -- Warharness of Reckless Fury
+		[34382] = { 34382, 0, {34664, "1"}, {34167, "1"}, type = 7 }, -- Judicator's Legguards
+		[34167] = { 34382, 0, {34664, "1"}, {34167, "1"}, type = 8 }, -- Legplates of the Holy Juggernaut
+		[34381] = { 34381, 0, {34664, "1"}, {34180, "1"}, type = 7 }, -- Felstrength Legplates
+		[34180] = { 34381, 0, {34664, "1"}, {34180, "1"}, type = 8 }, -- Felfury Legplates
+
+
+		--- Misc
+		-- Magtheridon's Lair
+		[32385] = { 28791, 28790, 28793, 28792, type = 3 }, -- Magtheridon's Head
+		[34846] = { -- Black Sack of Gems
+			{32230,"1-3"}, {32249,"1-3"}, {32228,"1-3"}, {32229,"1-3"}, {32231,"1-3"}, {32227,"1-3"}, 0, -- Epic
+			{23441,"1-2"}, {23437,"1-2"}, {23436,"1-2"}, {23438,"1-2"}, {23440,"1-2"}, {23439,"1-2"}, -- Blue
+			type = 2,
+		},
+		-- Tempest Keep
+		[32405] = { 30018, 30017, 30007, 30015 }, -- Verdant Sphere
+
+		-- Motes
+		[22574] = { {22574,"10"}, 0, 21884 }, -- Mote of Fire
+		[22576] = { {22576,"10"}, 0, 22457 }, -- Mote of Mana
+		[22573] = { {22573,"10"}, 0, 22452 }, -- Mote of Earth
+		[22572] = { {22572,"10"}, 0, 22451 }, -- Mote of Air
+		[22575] = { {22575,"10"}, 0, 21886 }, -- Mote of Life
+		[22578] = { {22578,"10"}, 0, 21885 }, -- Mote of Water
+
+			--- Darkmoon cards
+		-- Furies Deck / Darkmoon Card: Vengeance
+		[31907] = { 31907, 31858, 0, 31901, 31909, 31908, 31904, 31903, 31906, 31905, 31902 },
+		[31901] = 31907, [31909] = 31907, [31908] = 31907, [31904] = 31907, [31903] = 31907, [31906] = 31907, [31905] = 31907, [31902] = 31907,
+
+		-- Blessings Deck / Darkmoon Card: Crusade
+		[31890] = { 31890, 31856, 0, 31882, 31889, 31888, 31885, 31884, 31887, 31886, 31883 },
+		[31882] = 31890, [31889] = 31890, [31888] = 31890, [31885] = 31890, [31884] = 31890, [31887] = 31890, [31886] = 31890, [31883] = 31890,
+
+		-- Storms Deck / Darkmoon Card: Wrath
+		[31891] = { 31891, 31857, 0, 31892, 31900, 31899, 31895, 31894, 31898, 31896, 31893 },
+		[31892] = 31891, [31900] = 31891, [31899] = 31891, [31899] = 31891, [31895] = 31891, [31898] = 31891, [31896] = 31891, [31893] = 31891,
+
+		-- Lunacy Deck / Darkmoon Card: Madness
+		[31914] = { 31914, 31859, 0, 31910, 31918, 31917, 31913, 31912, 31916, 31915, 31911 },
+		[31910] = 31914, [31918] = 31914, [31917] = 31914, [31913] = 31914, [31912] = 31914, [31916] = 31914, [31915] = 31914, [31911] = 31914,
+
+		-- Brewfest
+		[33016] = { 33017, 33018, 33019, 33020, 33021 }, -- Blue Brewfest Stein
+		[32912] = { 32917, 32918, 32920, 32915, 32919 }, -- Yellow Brewfest Stein
+	}
+end
+
+if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
+	TOKEN_DATA.WRATH = {
+		-- The Oculus
+		[52676] = {{47241,"2"}, 43953, 0,
+			{36918,"1-3"}, {36921,"1-3"}, {36924,"1-3"}, {36927,"1-3"}, {36930,"1-3"}, {36933,"1-3"}, type = 2
+		}, -- Cache of the Ley-Guardian
+	}
+end
 
 local function Init()
 	local coloredClassNames = AtlasLoot:GetColoredClassNames()

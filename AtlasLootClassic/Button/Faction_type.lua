@@ -63,7 +63,7 @@ local FACTION_IMAGES = {
 	[609] = "Interface\\Icons\\ability_racial_ultravision",				--Cenarion Circle
 	[749] = "Interface\\Icons\\spell_shadow_demonbreath",				--Hydraxian Waterlords
 	[910] = "Interface\\Icons\\inv_misc_head_dragon_bronze",			--Brood of Nozdormu
---@version-bcc@
+
 	-- BC
 	[922] = "Interface\\Icons\\INV_Misc_Bandana_03", 					-- Tranquillien
 	[932] = "Interface\\Icons\\Spell_Holy_SealOfSalvation",				-- The Aldor
@@ -85,7 +85,6 @@ local FACTION_IMAGES = {
 	[1031] = "Interface\\Icons\\INV_Misc_Ribbon_01",					-- Sha'tari Skyguard
 	[1038] = "Interface\\Icons\\INV_DataCrystal01", 					-- Ogri'la
 	[1077] = "Interface\\Icons\\INV_Misc_Statue_04",					-- Shattered Sun Offensive
---@end-version-bcc@
 }
 
 -- Name fallbacks
@@ -109,13 +108,11 @@ local FACTION_KEY = {
 	[749] = "Hydraxian Waterlords",
 	[910] = "Brood of Nozdormu",
 	-- BC
---@version-bcc@
 	[922] = AL["Tranquillien"], -- Horde only
 	[941] = AL["The Mag'har"], -- Horde only
 	[946] = AL["Honor Hold"], -- Alli only
 	[947] = AL["Thrallmar"], -- Horde only
 	[978] = AL["Kurenai"], -- Alli only
---@end-version-bcc@
 }
 
 ClickHandler:Add(
