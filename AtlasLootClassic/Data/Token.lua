@@ -499,6 +499,10 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
 		[52676] = {{47241,"2"}, 43953, 0,
 			{36918,"1-3"}, {36921,"1-3"}, {36924,"1-3"}, {36927,"1-3"}, {36930,"1-3"}, {36933,"1-3"}, type = 2
 		}, -- Cache of the Ley-Guardian
+
+		-- Battered Hilt
+		[50380] = {50047, 50046, 50049, 50048, type = 3}, -- horde
+		[50379] = 50380, -- alli
 	}
 end
 

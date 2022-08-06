@@ -41,7 +41,11 @@ local ATLAS_MODULE_NAME = "Atlas_WrathOfTheLichKing"
 local NAME_COLOR, NAME_COLOR_BOSS = "|cffC0C0C0", "|cffC0C0C0"
 local NAME_CAVERNS_OF_TIME = NAME_COLOR..AL["CoT"]..":|r %s" -- Caverns of Time
 local NAME_NEXUS = NAME_COLOR..AL["Nexus"]..":|r %s" -- The Nexus
-local NAME_AZJOL = NAME_COLOR..AL["Azjol"]..":|r %s" -- The Nexus
+local NAME_AZJOL = NAME_COLOR..AL["Azjol"]..":|r %s" -- Azjol
+local NAME_ULDUAR = NAME_COLOR..AL["Ulduar"]..":|r %s" -- Ulduar
+local NAME_UTGARDE = NAME_COLOR..AL["Utgarde"]..":|r %s" -- Utgarde
+local NAME_ICC = NAME_COLOR..AL["ICC"]..":|r %s" -- ICC
+local NAME_AT = NAME_COLOR..AL["AT"]..":|r %s" -- Argent Tournament
 
 
 local KEYS = {	-- Keys
@@ -273,6 +277,131 @@ data["AhnKahet"] = {
     }
 }
 
+data["TheCullingOfStratholme"] = {
+    nameFormat = NAME_CAVERNS_OF_TIME,
+	MapID = 4100,
+	--InstanceID = 560,
+    ContentType = DUNGEON_CONTENT,
+	AtlasModule = ATLAS_MODULE_NAME,
+	--AtlasMapID = "CL_CoTOldHillsbrad",
+	--AtlasMapFile = {"CoTOldHillsbrad", "CavernsOfTimeEnt"},
+	--LoadDifficulty = NORMAL_DIFF,
+	LevelRange = {75, 79, 80},
+	items = {
+        { -- CoTStratholmeSalramm
+            name = AL["Salramm the Fleshcrafter"],
+            -- npcID = 0,
+            -- Level = 0,
+            -- DisplayIDs = {{0}},
+            -- AtlasMapBossID = 0,
+            [NORMAL_DIFF] = {
+                { 1, 37084 }, -- Flowing Cloak of Command
+                { 2, 37095 }, -- Waistband of the Thuzadin
+                { 3, 37088 }, -- Spiked Metal Cilice
+                { 4, 37086 }, -- Tome of Salramm
+            },
+            [HEROIC_DIFF] = {
+                { 1, 47241 }, -- Emblem of Triumph
+                { 3, 37684 }, -- Forgotten Shadow Hood
+                { 4, 37682 }, -- Bindings of Dark Will
+                { 5, 37683 }, -- Necromancer's Amulet
+                { 6, 37681 }, -- Gavel of the Fleshcrafter
+            }
+        },
+        { -- CoTStratholmeMeathook
+            name = AL["Meathook"],
+            -- npcID = 0,
+            -- Level = 0,
+            -- DisplayIDs = {{0}},
+            -- AtlasMapBossID = 0,
+            [NORMAL_DIFF] = {
+                { 1, 37083 }, -- Kilt of Sewn Flesh
+                { 2, 37082 }, -- Slaughterhouse Sabatons
+                { 3, 37079 }, -- Enchanted Wire Stitching
+                { 4, 37081 }, -- Meathook's Slicer
+            },
+            [HEROIC_DIFF] = {
+                { 1, 47241 }, -- Emblem of Triumph
+                { 3, 37680 }, -- Belt of Unified Souls
+                { 4, 37678 }, -- Bile-Cured Gloves
+                { 5, 37679 }, -- Spaulders of the Abomination
+                { 6, 37675 }, -- Legplates of Steel Implants
+            }
+        },
+        { -- CoTStratholmeEpoch
+            name = AL["Chrono-Lord Epoch"],
+            -- npcID = 0,
+            -- Level = 0,
+            -- DisplayIDs = {{0}},
+            -- AtlasMapBossID = 0,
+            [NORMAL_DIFF] = {
+                { 1, 37106 }, -- Ouroboros Belt
+                { 2, 37105 }, -- Treads of Altered History
+                { 3, 37096 }, -- Necklace of the Chrono-Lord
+                { 4, 37099 }, -- Sempiternal Staff
+            },
+            [HEROIC_DIFF] = {
+                { 1, 47241 }, -- Emblem of Triumph
+                { 3, 37687 }, -- Gloves of Distorted Time
+                { 4, 37686 }, -- Cracked Epoch Grasps
+                { 5, 37688 }, -- Legplates of the Infinite Drakonid
+                { 6, 37685 }, -- Mobius Band
+            }
+        },
+        { -- CoTStratholmeMalGanis
+            name = AL["Mal'Ganis"],
+            -- npcID = 0,
+            -- Level = 0,
+            -- DisplayIDs = {{0}},
+            -- AtlasMapBossID = 0,
+            [NORMAL_DIFF] = {
+                { 1, 37113 }, -- Demonic Fabric Bands
+                { 2, 37114 }, -- Gloves of Northern Lordaeron
+                { 3, 37110 }, -- Gauntlets of Dark Conversion
+                { 4, 37109 }, -- Discarded Silver Hand Spaulders
+                { 5, 37111 }, -- Soul Preserver
+                { 6, 37108 }, -- Dreadlord's Blade
+                { 7, 37112 }, -- Beguiling Scepter
+                { 8, 37107 }, -- Leeka's Shield
+            },
+            [HEROIC_DIFF] = {
+                { 1, 47241 }, -- Emblem of Triumph
+                { 3, 37696 }, -- Plague-Infected Bracers
+                { 4, 37695 }, -- Legguards of Nature's Power
+                { 5, 37694 }, -- Band of Guile
+                { 6, 37693 }, -- Greed
+                { 7, 43085 }, -- Royal Crest of Lordaeron
+                { 8, 37691 }, -- Mantle of Deceit
+                { 9, 37690 }, -- Pauldrons of Destiny
+                { 10, 37689 }, -- Pendant of the Nathrezim
+                { 11, 37692 }, -- Pierce's Pistol
+                { 16, 43102 }, -- Frozen Orb
+            }
+        },
+        { -- CoTStratholmeInfiniteCorruptorHEROIC
+            name = AL["Infinite Corruptor"],
+            -- npcID = 0,
+            -- Level = 0,
+            -- DisplayIDs = {{0}},
+            -- AtlasMapBossID = 0,
+            [HEROIC_DIFF] = {
+                { 1, 47241 }, -- Emblem of Triumph
+		        { 16, 43951 }, -- Reins of the Bronze Drake
+            }
+        },
+        { -- CoTHillsbradTrash
+            name = AL["Trash"],
+            ExtraList = true,
+            [NORMAL_DIFF] = {
+                { 1, 37117 }, -- King's Square Bracers
+                { 2, 37116 }, -- Epaulets of Market Row
+                { 3, 37115 }, -- Crusader's Square Pauldrons
+            }
+        },
+        KEYS
+    }
+}
+
 data["DrakTharonKeep"] = {
 	MapID = 4196,
 	--InstanceID = 560,
@@ -498,96 +627,6 @@ data["Gundrak"] = {
                 { 1, 37647 }, -- Cloak of Bloodied Waters
                 { 2, 37648 }, -- Belt of Tasseled Lanterns
                 { 3, 37646 }, -- Burning Skull Pendant
-            },
-        },
-        KEYS
-    }
-}
-
-data["UtgardeKeep"] = {
-	MapID = 206,
-	--InstanceID = 560,
-    ContentType = DUNGEON_CONTENT,
-	AtlasModule = ATLAS_MODULE_NAME,
-	--AtlasMapID = "CL_CoTOldHillsbrad",
-	--AtlasMapFile = {"CoTOldHillsbrad", "CavernsOfTimeEnt"},
-	--LoadDifficulty = NORMAL_DIFF,
-	LevelRange = {65, 69, 72},
-	items = {
-        { -- UtgardeKeepKeleseth / 2
-            name = AL["Prince Keleseth"],
-            npcID = 23953,
-            Level = 72,
-            -- DisplayIDs = {{0}},
-            AtlasMapBossID = 1,
-            [NORMAL_DIFF] = {
-                { 1, 35572 }, -- Reinforced Velvet Helm
-                { 2, 35571 }, -- Dragon Stabler's Gauntlets
-                { 3, 35570 }, -- Keleseth's Blade of Evocation
-            },
-            [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
-                { 3, 37180 }, -- Battlemap Hide Helm
-                { 4, 37178 }, -- Strategist's Belt
-                { 5, 37179 }, -- Infantry Assault Blade
-                { 6, 37177 }, -- Wand of the San'layn
-            }
-        },
-        { -- UtgardeKeepSkarvald / 3
-            name = AL["Skarvald the Constructor & Dalronn the Controller"],
-            npcID = {24200, 24201},
-            Level = 72,
-            -- DisplayIDs = {{0}},
-            AtlasMapBossID = 2,
-            [NORMAL_DIFF] = {
-                { 1, 35575 }, -- Skarvald's Dragonskin Habergeon
-                { 2, 35574 }, -- Chestplate of the Northern Lights
-                { 3, 35573 }, -- Arm Blade of Augelmir
-            },
-            [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
-                { 3, 37183 }, -- Bindings of the Tunneler
-                { 4, 37184 }, -- Dalronn's Jerkin
-                { 5, 37182 }, -- Helmet of the Constructor
-                { 6, 37181 }, -- Dagger of Betrayal
-            }
-        },
-        { -- UtgardeKeepIngvar / 4
-            name = AL["Ingvar the Plunderer"],
-            npcID = 23954,
-            Level = 72,
-            -- DisplayIDs = {{0}},
-            AtlasMapBossID = 3,
-            [NORMAL_DIFF] = {
-                { 1, 35577 }, -- Holistic Patchwork Breeches
-                { 2, 35578 }, -- Overlaid Chain Spaulders
-                { 3, 35576 }, -- Ingvar's Monolithic Cleaver
-                { 16, 33330 }, -- Ingvar's Head
-            },
-            [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
-                { 3, 37194 }, -- Sharp-Barbed Leather Belt
-                { 4, 37193 }, -- Staggering Legplates
-                { 5, 37192 }, -- Annhylde's Ring
-                { 6, 37191 }, -- Drake-Mounted Crossbow
-                { 7, 37189 }, -- Breeches of the Caller
-                { 8, 37188 }, -- Plunderer's Helmet
-                { 9, 37186 }, -- Unsmashable Heavy Band
-                { 10, 37190 }, -- Enraged Feral Staff
-                { 16, 43102 }, -- Frozen Orb
-                { 18, 41793 }, -- Design: Fierce Monarch Topaz
-            }
-        },
-        { -- Trash
-            name = AL["Trash"],
-            ExtraList = true,
-            [NORMAL_DIFF] = {
-                { 1, 35580 }, -- Skein Woven Mantle
-		        { 2, 35579 }, -- Vrykul Shackles
-            },
-            [HEROIC_DIFF] = {
-                { 1, 37197 }, -- Tattered Castle Drape
-		        { 2, 37196 }, -- Runecaster's Mantle
             },
         },
         KEYS
@@ -830,10 +869,100 @@ data["TheOculus"] = {
     }
 }
 
+data["UtgardeKeep"] = {
+    nameFormat = NAME_UTGARDE,
+	MapID = 206,
+	--InstanceID = 560,
+    ContentType = DUNGEON_CONTENT,
+	AtlasModule = ATLAS_MODULE_NAME,
+	--AtlasMapID = "CL_CoTOldHillsbrad",
+	--AtlasMapFile = {"CoTOldHillsbrad", "CavernsOfTimeEnt"},
+	--LoadDifficulty = NORMAL_DIFF,
+	LevelRange = {65, 69, 72},
+	items = {
+        { -- UtgardeKeepKeleseth / 2
+            name = AL["Prince Keleseth"],
+            npcID = 23953,
+            Level = 72,
+            -- DisplayIDs = {{0}},
+            AtlasMapBossID = 1,
+            [NORMAL_DIFF] = {
+                { 1, 35572 }, -- Reinforced Velvet Helm
+                { 2, 35571 }, -- Dragon Stabler's Gauntlets
+                { 3, 35570 }, -- Keleseth's Blade of Evocation
+            },
+            [HEROIC_DIFF] = {
+                { 1, 47241 }, -- Emblem of Triumph
+                { 3, 37180 }, -- Battlemap Hide Helm
+                { 4, 37178 }, -- Strategist's Belt
+                { 5, 37179 }, -- Infantry Assault Blade
+                { 6, 37177 }, -- Wand of the San'layn
+            }
+        },
+        { -- UtgardeKeepSkarvald / 3
+            name = AL["Skarvald the Constructor & Dalronn the Controller"],
+            npcID = {24200, 24201},
+            Level = 72,
+            -- DisplayIDs = {{0}},
+            AtlasMapBossID = 2,
+            [NORMAL_DIFF] = {
+                { 1, 35575 }, -- Skarvald's Dragonskin Habergeon
+                { 2, 35574 }, -- Chestplate of the Northern Lights
+                { 3, 35573 }, -- Arm Blade of Augelmir
+            },
+            [HEROIC_DIFF] = {
+                { 1, 47241 }, -- Emblem of Triumph
+                { 3, 37183 }, -- Bindings of the Tunneler
+                { 4, 37184 }, -- Dalronn's Jerkin
+                { 5, 37182 }, -- Helmet of the Constructor
+                { 6, 37181 }, -- Dagger of Betrayal
+            }
+        },
+        { -- UtgardeKeepIngvar / 4
+            name = AL["Ingvar the Plunderer"],
+            npcID = 23954,
+            Level = 72,
+            -- DisplayIDs = {{0}},
+            AtlasMapBossID = 3,
+            [NORMAL_DIFF] = {
+                { 1, 35577 }, -- Holistic Patchwork Breeches
+                { 2, 35578 }, -- Overlaid Chain Spaulders
+                { 3, 35576 }, -- Ingvar's Monolithic Cleaver
+                { 16, 33330 }, -- Ingvar's Head
+            },
+            [HEROIC_DIFF] = {
+                { 1, 47241 }, -- Emblem of Triumph
+                { 3, 37194 }, -- Sharp-Barbed Leather Belt
+                { 4, 37193 }, -- Staggering Legplates
+                { 5, 37192 }, -- Annhylde's Ring
+                { 6, 37191 }, -- Drake-Mounted Crossbow
+                { 7, 37189 }, -- Breeches of the Caller
+                { 8, 37188 }, -- Plunderer's Helmet
+                { 9, 37186 }, -- Unsmashable Heavy Band
+                { 10, 37190 }, -- Enraged Feral Staff
+                { 16, 43102 }, -- Frozen Orb
+                { 18, 41793 }, -- Design: Fierce Monarch Topaz
+            }
+        },
+        { -- Trash
+            name = AL["Trash"],
+            ExtraList = true,
+            [NORMAL_DIFF] = {
+                { 1, 35580 }, -- Skein Woven Mantle
+		        { 2, 35579 }, -- Vrykul Shackles
+            },
+            [HEROIC_DIFF] = {
+                { 1, 37197 }, -- Tattered Castle Drape
+		        { 2, 37196 }, -- Runecaster's Mantle
+            },
+        },
+        KEYS
+    }
+}
 
-data["TheCullingOfStratholme"] = {
-    nameFormat = NAME_CAVERNS_OF_TIME,
-	MapID = 4100,
+data["UtgardePinnacle"] = {
+    nameFormat = NAME_UTGARDE,
+	MapID = 1196,
 	--InstanceID = 560,
     ContentType = DUNGEON_CONTENT,
 	AtlasModule = ATLAS_MODULE_NAME,
@@ -842,115 +971,342 @@ data["TheCullingOfStratholme"] = {
 	--LoadDifficulty = NORMAL_DIFF,
 	LevelRange = {75, 79, 80},
 	items = {
-        { -- CoTStratholmeSalramm
-            name = AL["Salramm the Fleshcrafter"],
-            -- npcID = 0,
-            -- Level = 0,
+        { -- UPSorrowgrave / 58
+            name = AL["Svala Sorrowgrave"],
+            npcID = 26668,
+            Level = 77,
             -- DisplayIDs = {{0}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 3,
             [NORMAL_DIFF] = {
-                { 1, 37084 }, -- Flowing Cloak of Command
-                { 2, 37095 }, -- Waistband of the Thuzadin
-                { 3, 37088 }, -- Spiked Metal Cilice
-                { 4, 37086 }, -- Tome of Salramm
+                { 1, 37043 }, -- Tear-Linked Gauntlets
+                { 2, 37040 }, -- Svala's Bloodied Shackles
+                { 3, 37037 }, -- Ritualistic Athame
+                { 4, 37038 }, -- Brazier Igniter
             },
             [HEROIC_DIFF] = {
                 { 1, 47241 }, -- Emblem of Triumph
-                { 3, 37684 }, -- Forgotten Shadow Hood
-                { 4, 37682 }, -- Bindings of Dark Will
-                { 5, 37683 }, -- Necromancer's Amulet
-                { 6, 37681 }, -- Gavel of the Fleshcrafter
+                { 3, 37370 }, -- Cuffs of the Trussed Hall
+                { 4, 37369 }, -- Sorrowgrave's Breeches
+                { 5, 37368 }, -- Silent Spectator Shoulderpads
+                { 6, 37367 }, -- Echoing Stompers
             }
         },
-        { -- CoTStratholmeMeathook
-            name = AL["Meathook"],
-            -- npcID = 0,
-            -- Level = 0,
+        { -- UPPalehoof / 59
+            name = AL["Gortok Palehoof"],
+            npcID = 26687,
+            Level = 77,
             -- DisplayIDs = {{0}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 4,
             [NORMAL_DIFF] = {
-                { 1, 37083 }, -- Kilt of Sewn Flesh
-                { 2, 37082 }, -- Slaughterhouse Sabatons
-                { 3, 37079 }, -- Enchanted Wire Stitching
-                { 4, 37081 }, -- Meathook's Slicer
+                { 1, 37048 }, -- Shroud of Resurrection
+                { 2, 37052 }, -- Reanimated Armor
+                { 3, 37051 }, -- Seal of Valgarde
+                { 4, 37050 }, -- Trophy Gatherer
             },
             [HEROIC_DIFF] = {
                 { 1, 47241 }, -- Emblem of Triumph
-                { 3, 37680 }, -- Belt of Unified Souls
-                { 4, 37678 }, -- Bile-Cured Gloves
-                { 5, 37679 }, -- Spaulders of the Abomination
-                { 6, 37675 }, -- Legplates of Steel Implants
+                { 3, 37374 }, -- Ravenous Leggings of the Furbolg
+                { 4, 37373 }, -- Massive Spaulders of the Jormungar
+                { 5, 37376 }, -- Ferocious Pauldrons of the Rhino
+                { 6, 37371 }, -- Ring of the Frenzied Wolvar
             }
         },
-        { -- CoTStratholmeEpoch
-            name = AL["Chrono-Lord Epoch"],
-            -- npcID = 0,
-            -- Level = 0,
+        { -- UPSkadi / 56
+            name = AL["Skadi the Ruthless"],
+            npcID = 26693,
+            Level = 77,
             -- DisplayIDs = {{0}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 1,
             [NORMAL_DIFF] = {
-                { 1, 37106 }, -- Ouroboros Belt
-                { 2, 37105 }, -- Treads of Altered History
-                { 3, 37096 }, -- Necklace of the Chrono-Lord
-                { 4, 37099 }, -- Sempiternal Staff
+                { 1, 37055 }, -- Silken Amice of the Ymirjar
+                { 2, 37057 }, -- Drake Rider's Tunic
+                { 3, 37056 }, -- Harpooner's Striders
+                { 4, 37053 }, -- Amulet of Deflected Blows
             },
             [HEROIC_DIFF] = {
                 { 1, 47241 }, -- Emblem of Triumph
-                { 3, 37687 }, -- Gloves of Distorted Time
-                { 4, 37686 }, -- Cracked Epoch Grasps
-                { 5, 37688 }, -- Legplates of the Infinite Drakonid
-                { 6, 37685 }, -- Mobius Band
+                { 3, 44151 }, -- Reins of the Blue Proto-Drake
+                { 4, 37389 }, -- Crenelation Leggings
+                { 5, 37379 }, -- Skadi's Iron Belt
+                { 6, 37377 }, -- Netherbreath Spellblade
+                { 7, 37384 }, -- Staff of Wayward Principles
             }
         },
-        { -- CoTStratholmeMalGanis
-            name = AL["Mal'Ganis"],
-            -- npcID = 0,
-            -- Level = 0,
+        { -- UPYmiron / 57
+            name = AL["King Ymiron"],
+            npcID = 26861,
+            Level = 77,
             -- DisplayIDs = {{0}},
-            -- AtlasMapBossID = 0,
+            AtlasMapBossID = 2,
             [NORMAL_DIFF] = {
-                { 1, 37113 }, -- Demonic Fabric Bands
-                { 2, 37114 }, -- Gloves of Northern Lordaeron
-                { 3, 37110 }, -- Gauntlets of Dark Conversion
-                { 4, 37109 }, -- Discarded Silver Hand Spaulders
-                { 5, 37111 }, -- Soul Preserver
-                { 6, 37108 }, -- Dreadlord's Blade
-                { 7, 37112 }, -- Beguiling Scepter
-                { 8, 37107 }, -- Leeka's Shield
+                { 1, 37067 }, -- Ceremonial Pyre Mantle
+                { 2, 37062 }, -- Crown of Forgotten Kings
+                { 3, 37066 }, -- Ancient Royal Legguards
+                { 4, 37058 }, -- Signet of Ranulf
+                { 5, 37064 }, -- Vestige of Haldor
+                { 6, 37060 }, -- Jeweled Coronation Sword
+                { 7, 37065 }, -- Ymiron's Blade
+                { 8, 37061 }, -- Tor's Crest
+                { 16, 41797 }, -- Design: Austere Earthsiege Diamond
             },
             [HEROIC_DIFF] = {
                 { 1, 47241 }, -- Emblem of Triumph
-                { 3, 37696 }, -- Plague-Infected Bracers
-                { 4, 37695 }, -- Legguards of Nature's Power
-                { 5, 37694 }, -- Band of Guile
-                { 6, 37693 }, -- Greed
-                { 7, 43085 }, -- Royal Crest of Lordaeron
-                { 8, 37691 }, -- Mantle of Deceit
-                { 9, 37690 }, -- Pauldrons of Destiny
-                { 10, 37689 }, -- Pendant of the Nathrezim
-                { 11, 37692 }, -- Pierce's Pistol
+                { 3, 37408 }, -- Girdle of Bane
+                { 4, 37409 }, -- Gilt-Edged Leather Gauntlets
+                { 5, 37407 }, -- Sovereign's Belt
+                { 6, 37401 }, -- Red Sword of Courage
+                { 7, 37398 }, -- Mantle of Discarded Ways
+                { 8, 37395 }, -- Ornamented Plate Regalia
+                { 9, 37397 }, -- Gold Amulet of Kings
+                { 10, 37390 }, -- Meteorite Whetstone
                 { 16, 43102 }, -- Frozen Orb
+                { 18, 41797 }, -- Design: Austere Earthsiege Diamond
             }
         },
-        { -- CoTStratholmeInfiniteCorruptorHEROIC
-            name = AL["Infinite Corruptor"],
-            -- npcID = 0,
-            -- Level = 0,
-            -- DisplayIDs = {{0}},
-            -- AtlasMapBossID = 0,
-            [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
-		        { 16, 43951 }, -- Reins of the Bronze Drake
-            }
-        },
-        { -- CoTHillsbradTrash
+        { -- Trash
             name = AL["Trash"],
             ExtraList = true,
             [NORMAL_DIFF] = {
-                { 1, 37117 }, -- King's Square Bracers
-                { 2, 37116 }, -- Epaulets of Market Row
-                { 3, 37115 }, -- Crusader's Square Pauldrons
+                { 1, 37070 }, -- Tundra Wolf Boots
+                { 2, 37069 }, -- Dragonflayer Seer's Bindings
+                { 3, 37068 }, -- Berserker's Sabatons
+            },
+            [HEROIC_DIFF] = {
+                { 1, 37587 }, -- Ymirjar Physician's Robe
+                { 2, 37590 }, -- Bands of Fading Light
+                { 3, 37410 }, -- Tracker's Balanced Knives
+            },
+        },
+        KEYS
+    }
+}
+
+data["HallsofStone"] = {
+    nameFormat = NAME_ULDUAR,
+	MapID = 4264,
+	--InstanceID = 560,
+    ContentType = DUNGEON_CONTENT,
+	AtlasModule = ATLAS_MODULE_NAME,
+	--AtlasMapID = "CL_CoTOldHillsbrad",
+	--AtlasMapFile = {"CoTOldHillsbrad", "CavernsOfTimeEnt"},
+	--LoadDifficulty = NORMAL_DIFF,
+	LevelRange = {72, 77, 79},
+	items = {
+        { -- HallsofStoneMaiden / 40
+            name = AL["Maiden of Grief"],
+            npcID = 27975,
+            Level = 77,
+            -- DisplayIDs = {{0}},
+            AtlasMapBossID = 1,
+            [NORMAL_DIFF] = {
+                { 1, 38614 }, -- Embrace of Sorrow
+                { 2, 38613 }, -- Chain of Fiery Orbs
+                { 3, 38611 }, -- Ringlet of Repose
+            },
+            [HEROIC_DIFF] = {
+                { 1, 47241 }, -- Emblem of Triumph
+                { 3, 38616 }, -- Maiden's Girdle
+                { 4, 38615 }, -- Lightning-Charged Gloves
+                { 5, 38617 }, -- Woeful Band
+                { 6, 38618 }, -- Hammer of Grief
             }
+        },
+        { -- HallsofStoneKrystallus / 41
+            name = AL["Krystallus"],
+            npcID = 27977,
+            Level = 77,
+            -- DisplayIDs = {{0}},
+            AtlasMapBossID = 2,
+            [NORMAL_DIFF] = {
+                { 1, 35673 }, -- Leggings of Burning Gleam
+                { 2, 35672 }, -- Hollow Geode Helm
+                { 3, 35670 }, -- Brann's Lost Mining Helmet
+            },
+            [HEROIC_DIFF] = {
+                { 1, 47241 }, -- Emblem of Triumph
+                { 3, 37652 }, -- Spaulders of Krystallus
+                { 4, 37650 }, -- Shardling Legguards
+                { 5, 37651 }, -- The Prospector's Prize
+            }
+        },
+        { -- HallsofStoneTribunal / 42
+            name = AL["The Tribunal of Ages"],
+            npcID = 28234,
+            Level = 77,
+            -- DisplayIDs = {{0}},
+            AtlasMapBossID = 3,
+            [NORMAL_DIFF] = {
+                { 1, 35677 }, -- Cosmos Vestments
+                { 2, 35676 }, -- Constellation Leggings
+                { 3, 35675 }, -- Linked Armor of the Sphere
+            },
+            [HEROIC_DIFF] = {
+                { 1, 47241 }, -- Emblem of Triumph
+                { 3, 37655 }, -- Mantle of the Tribunal
+                { 4, 37656 }, -- Raging Construct Bands
+                { 5, 37654 }, -- Sabatons of the Ages
+                { 6, 37653 }, -- Sword of Justice
+            }
+        },
+        { -- HallsofStoneSjonnir / 43
+            name = AL["Sjonnir The Ironshaper"],
+            npcID = 27978,
+            Level = 77,
+            -- DisplayIDs = {{0}},
+            AtlasMapBossID = 4,
+            [NORMAL_DIFF] = {
+                { 1, 35679 }, -- Static Cowl
+                { 2, 35678 }, -- Ironshaper's Legplates
+                { 3, 35680 }, -- Amulet of Wills
+            },
+            [HEROIC_DIFF] = {
+                { 1, 47241 }, -- Emblem of Triumph
+                { 3, 37669 }, -- Leggings of the Stone Halls
+                { 4, 37668 }, -- Bands of the Stoneforge
+                { 5, 37670 }, -- Sjonnir's Girdle
+                { 6, 37667 }, -- The Fleshshaper
+                { 7, 37666 }, -- Boots of the Whirling Mist
+                { 8, 37658 }, -- Sun-Emblazoned Chestplate
+                { 9, 37657 }, -- Spark of Life
+                { 10, 37660 }, -- Forge Ember
+                { 16, 43102 }, -- Frozen Orb
+                { 18, 41792 }, -- Design: Deft Monarch Topaz
+            }
+        },
+        { -- Trash
+            name = AL["Trash"],
+            ExtraList = true,
+            [NORMAL_DIFF] = {
+                { 1, 35682 }, -- Rune Giant Bindings
+                { 2, 35683 }, -- Palladium Ring
+                { 3, 35681 }, -- Unrelenting Blade
+            },
+            [HEROIC_DIFF] = {
+                { 1, 37673 }, -- Dark Runic Mantle
+                { 2, 37672 }, -- Patina-Coated Breastplate
+                { 3, 37671 }, -- Refined Ore Gloves
+            },
+        },
+        KEYS
+    }
+}
+
+data["HallsofLightning"] = {
+    nameFormat = NAME_ULDUAR,
+	MapID = 4272,
+	--InstanceID = 560,
+    ContentType = DUNGEON_CONTENT,
+	AtlasModule = ATLAS_MODULE_NAME,
+	--AtlasMapID = "CL_CoTOldHillsbrad",
+	--AtlasMapFile = {"CoTOldHillsbrad", "CavernsOfTimeEnt"},
+	--LoadDifficulty = NORMAL_DIFF,
+	LevelRange = {75, 79, 80},
+	items = {
+        { -- HallsofLightningBjarngrim / 45
+            name = AL["General Bjarngrim"],
+            npcID = 28586,
+            Level = 77,
+            -- DisplayIDs = {{0}},
+            AtlasMapBossID = 1,
+            [NORMAL_DIFF] = {
+                { 1, 36982 }, -- Mantle of Electrical Charges
+                { 2, 36979 }, -- Bjarngrim Family Signet
+                { 3, 36980 }, -- Hewn Sparring Quarterstaff
+                { 4, 36981 }, -- Hardened Vrykul Throwing Axe
+            },
+            [HEROIC_DIFF] = {
+                { 1, 47241 }, -- Emblem of Triumph
+                { 3, 37825 }, -- Traditionally Dyed Handguards
+                { 4, 37818 }, -- Patroller's War-Kilt
+                { 5, 37814 }, -- Iron Dwarf Smith Pauldrons
+                { 6, 37826 }, -- The General's Steel Girdle
+            }
+        },
+        { -- HallsofLightningVolkhan / 46
+            name = AL["Volkhan"],
+            npcID = 28587,
+            Level = 77,
+            -- DisplayIDs = {{0}},
+            AtlasMapBossID = 2,
+            [NORMAL_DIFF] = {
+                { 1, 36983 }, -- Cape of Seething Steam
+                { 2, 36985 }, -- Volkhan's Hood
+                { 3, 36986 }, -- Kilt of Molten Golems
+                { 4, 36984 }, -- Eternally Folded Blade
+            },
+            [HEROIC_DIFF] = {
+                { 1, 47241 }, -- Emblem of Triumph
+                { 3, 37840 }, -- Shroud of Reverberation
+                { 4, 37843 }, -- Giant-Hair Woven Gloves
+                { 5, 37842 }, -- Belt of Vivacity
+                { 6, 37841 }, -- Slag Footguards
+            }
+        },
+        { -- HallsofLightningIonar / 47
+            name = AL["Ionar"],
+            npcID = 28546,
+            Level = 77,
+            -- DisplayIDs = {{0}},
+            AtlasMapBossID = 3,
+            [NORMAL_DIFF] = {
+                { 1, 39536 }, -- Thundercloud Grasps
+                { 2, 39657 }, -- Tornado Cuffs
+                { 3, 39534 }, -- Pauldrons of the Lightning Revenant
+                { 4, 39535 }, -- Ionar's Girdle
+            },
+            [HEROIC_DIFF] = {
+                { 1, 47241 }, -- Emblem of Triumph
+                { 3, 37846 }, -- Charged-Bolt Grips
+                { 4, 37845 }, -- Cord of Swirling Winds
+                { 5, 37826 }, -- The General's Steel Girdle
+                { 6, 37844 }, -- Winged Talisman
+            }
+        },
+        { -- HallsofLightningLoken / 48
+            name = AL["Loken"],
+            npcID = 28923,
+            Level = 77,
+            -- DisplayIDs = {{0}},
+            AtlasMapBossID = 4,
+            [NORMAL_DIFF] = {
+                { 1, 36991 }, -- Raiments of the Titans
+                { 2, 36996 }, -- Hood of the Furtive Assassin
+                { 3, 36992 }, -- Leather-Braced Chain Leggings
+                { 4, 36995 }, -- Fists of Loken
+                { 5, 36988 }, -- Chaotic Spiral Amulet
+                { 6, 36993 }, -- Seal of the Pantheon
+                { 7, 36994 }, -- Projectile Activator
+                { 8, 36989 }, -- Ancient Measuring Rod
+                { 16, 41799 }, -- Design: Eternal Earthsiege Diamond
+                { 18, 43151 }, -- Loken's Tongue
+            },
+            [HEROIC_DIFF] = {
+                { 1, 47241 }, -- Emblem of Triumph
+                { 3, 37854 }, -- Woven Bracae Leggings
+                { 4, 37853 }, -- Advanced Tooled-Leather Bands
+                { 5, 37855 }, -- Mail Girdle of the Audient Earth
+                { 6, 37852 }, -- Colossal Skull-Clad Cleaver
+                { 7, 37851 }, -- Ornate Woolen Stola
+                { 8, 37850 }, -- Flowing Sash of Order
+                { 9, 37849 }, -- Planetary Helm
+                { 10, 37848 }, -- Lightning Giant Staff
+                { 16, 43102 }, -- Frozen Orb
+                { 18, 41799 }, -- Design: Eternal Earthsiege Diamond
+            }
+        },
+        { -- Trash
+            name = AL["Trash"],
+            ExtraList = true,
+            [NORMAL_DIFF] = {
+                { 1, 36997 }, -- Sash of the Hardened Watcher
+                { 2, 37000 }, -- Storming Vortex Bracers
+                { 3, 36999 }, -- Boots of the Terrestrial Guardian
+            },
+            [HEROIC_DIFF] = {
+                { 1, 37858 }, -- Awakened Handguards
+                { 2, 37857 }, -- Helm of the Lightning Halls
+                { 3, 37856 }, -- Librarian's Paper Cutter
+            },
         },
         KEYS
     }
@@ -1114,10 +1470,8 @@ data["VioletHold"] = {
     }
 }
 
-
-
-data["TStratholmeEpoch222"] = {
-    nameFormat = NAME_CAVERNS_OF_TIME,
+data["TrialoftheChampion"] = {
+    nameFormat = NAME_AT,
 	MapID = 4100,
 	--InstanceID = 560,
     ContentType = DUNGEON_CONTENT,
@@ -1125,39 +1479,444 @@ data["TStratholmeEpoch222"] = {
 	--AtlasMapID = "CL_CoTOldHillsbrad",
 	--AtlasMapFile = {"CoTOldHillsbrad", "CavernsOfTimeEnt"},
 	--LoadDifficulty = NORMAL_DIFF,
-	LevelRange = {75, 79, 80},
+	LevelRange = {80, 80, 80},
 	items = {
-        { -- CoTHillsbradDrake
-            name = AL["Lieutenant Drake"],
-            --npcID = 17848,
-            --Level = 68,
-            --DisplayIDs = {{17386}},
+        { -- TrialoftheChampionChampions / 213
+            name = AL["Grand Champions"],
+            npcID = {34705,34702,34701,34657,34703, 35572,35569,35571,35570,35617},
+            ObjectID = 195709,
+            Level = 80,
+            -- DisplayIDs = {{0}},
             AtlasMapBossID = 1,
             [NORMAL_DIFF] = {
-
+                { 1, 47173 }, -- Bindings of the Wicked
+                { 2, 47170 }, -- Belt of Fierce Competition
+                { 3, 47174 }, -- Binding of the Tranquil Glade
+                { 4, 47175 }, -- Scale Boots of the Outlander
+                { 5, 47172 }, -- Helm of the Bested Gallant
+                { 6, 47171 }, -- Legguards of Abandoned Fealty
             },
             [HEROIC_DIFF] = {
-
+                { 1, 47241 }, -- Emblem of Triumph
+                { 3, 47249 }, -- Leggings of the Snowy Bramble
+                { 4, 47248 }, -- Treads of Dismal Fortune
+                { 5, 47250 }, -- Pauldrons of the Deafening Gale
+                { 6, 47244 }, -- Chestguard of the Ravenous Fiend
+                { 7, 47243 }, -- Mark of the Relentless
+                { 8, 47493 }, -- Edge of Ruin
+                { 16, 44990 }, -- Champion's Seal
             }
         },
-
-        { -- Trash
-            name = AL["Trash"],
-            ExtraList = true,
+        { -- TrialoftheChampionConfessorPaletress / 214
+            name = AL["Argent Confessor Paletress"],
+            npcID = 34928,
+            Level = 80,
+            --DisplayIDs = {{17386}},
+            AtlasMapBossID = 2,
             [NORMAL_DIFF] = {
-                { 1, 37117 }, -- King's Square Bracers
-                { 2, 37116 }, -- Epaulets of Market Row
-                { 3, 37115 }, -- Crusader's Square Pauldrons
+                { 1, 47181 }, -- Belt of the Churning Blaze
+                { 2, 47218 }, -- The Confessor's Binding
+                { 3, 47185 }, -- Leggings of the Haggard Apprentice
+                { 4, 47217 }, -- Gaze of the Somber Keeper
+                { 5, 47177 }, -- Gloves of the Argent Fanatic
+                { 6, 47178 }, -- Carapace of Grim Visions
+                { 7, 47211 }, -- Wristguards of Ceaseless Regret
+                { 8, 47176 }, -- Breastplate of the Imperial Joust
+                { 9, 47212 }, -- Mercy's Hold
+                { 10, 47219 }, -- Brilliant Hailstone Amulet
+                { 11, 47213 }, -- Abyssal Rune
+                { 12, 47214 }, -- Banner of Victory
             },
             [HEROIC_DIFF] = {
-
+                { 1, 47241 }, -- Emblem of Triumph
+                { 3, 47498 }, -- Gloves of Dismal Fortune
+                { 4, 47496 }, -- Armbands of the Wary Lookout
+                { 5, 47245 }, -- Pauldrons of Concealed Loathing
+                { 6, 47497 }, -- Helm of the Crestfallen Challenger
+                { 7, 47514 }, -- Regal Aurous Shoulderplates
+                { 8, 47510 }, -- Trueheart Girdle
+                { 9, 47495 }, -- Legplates of Relentless Onslaught
+                { 10, 47511 }, -- Plated Greaves of Providence
+                { 11, 47494 }, -- Ancient Pendant of Arathor
+                { 12, 47512 }, -- Sinner's Confession
+                { 13, 47500 }, -- Peacekeeper Blade
+                { 14, 47522 }, -- Marrowstrike
+                { 16, 44990 }, -- Champion's Seal
+            }
+        },
+        { -- TrialoftheChampionEadricthePure / 215
+            name = AL["Eadric the Pure"],
+            npcID = 35119,
+            Level = 80,
+            -- DisplayIDs = {{0}},
+            AtlasMapBossID = 3,
+            [NORMAL_DIFF] = {
+                { 1, 47181 }, -- Belt of the Churning Blaze
+                { 2, 47185 }, -- Leggings of the Haggard Apprentice
+                { 3, 47210 }, -- Mantle of Gnarled Overgrowth
+                { 4, 47177 }, -- Gloves of the Argent Fanatic
+                { 5, 47202 }, -- Leggings of Brazen Trespass
+                { 6, 47178 }, -- Carapace of Grim Visions
+                { 7, 47176 }, -- Breastplate of the Imperial Joust
+                { 8, 47197 }, -- Gauntlets of the Stouthearted Crusader
+                { 9, 47201 }, -- Boots of Heartfelt Repentance
+                { 10, 47199 }, -- Greaves of the Grand Paladin
+                { 11, 47200 }, -- Signet of Purity
+                { 12, 47213 }, -- Abyssal Rune
             },
+            [HEROIC_DIFF] = {
+                { 1, 47241 }, -- Emblem of Triumph
+                { 3, 47501 }, -- Kurisu's Indecision
+                { 4, 47496 }, -- Armbands of the Wary Lookout
+                { 5, 47498 }, -- Gloves of Dismal Fortune
+                { 6, 47504 }, -- Barkhide Treads
+                { 7, 47497 }, -- Helm of the Crestfallen Challenger
+                { 8, 47502 }, -- Majestic Silversmith Shoulderplates
+                { 9, 47495 }, -- Legplates of Relentless Onslaught
+                { 10, 47503 }, -- Legplates of the Argent Armistice
+                { 11, 47494 }, -- Ancient Pendant of Arathor
+                { 12, 47500 }, -- Peacekeeper Blade
+                { 13, 47509 }, -- Mariel's Sorrow
+                { 14, 47508 }, -- Aledar's Battlestar
+                { 16, 44990 }, -- Champion's Seal
+            }
+        },
+        { -- TrialoftheChampionBlackKnight / 216
+            name = AL["The Black Knight"],
+            npcID = 35451,
+            Level = 80,
+            -- DisplayIDs = {{0}},
+            AtlasMapBossID = 4,
+            [NORMAL_DIFF] = {
+                { 1, 47232 }, -- Drape of the Undefeated
+                { 2, 47226 }, -- Mantle of Inconsolable Fear
+                { 3, 47230 }, -- Handwraps of Surrendered Hope
+                { 4, 47221 }, -- Shoulderpads of the Infamous Knave
+                { 5, 47231 }, -- Belt of Merciless Cruelty
+                { 6, 47228 }, -- Leggings of the Bloodless Knight
+                { 7, 47220 }, -- Helm of the Violent Fray
+                { 8, 47229 }, -- Girdle of Arrogant Downfall
+                { 9, 47227 }, -- Girdle of the Pallid Knight
+                { 10, 47222 }, -- Uruka's Band of Zeal
+                { 11, 47215 }, -- Tears of the Vanquished
+                { 12, 47216 }, -- The Black Heart
+            },
+            [HEROIC_DIFF] = {
+                { 1, 47241 }, -- Emblem of Triumph
+                { 3, 47564 }, -- Gaze of the Unknown
+                { 4, 47527 }, -- Embrace of Madness
+                { 5, 47560 }, -- Boots of the Crackling Flame
+                { 6, 47529 }, -- Mask of Distant Memory
+                { 7, 47561 }, -- Gloves of the Dark Exile
+                { 8, 47563 }, -- Girdle of the Dauntless Conqueror
+                { 9, 47565 }, -- Vambraces of Unholy Command
+                { 10, 47567 }, -- Gauntlets of Revelation
+                { 11, 47562 }, -- Symbol of Redemption
+                { 12, 47566 }, -- The Warlord's Depravity
+                { 13, 47569 }, -- Spectral Kris
+                { 14, 49682 }, -- Black Knight's Rondel
+                { 15, 47568 }, -- True-aim Long Rifle
+                { 16, 43102 }, -- Frozen Orb
+                { 18, 44990 }, -- Champion's Seal
+            }
         },
         KEYS
     }
 }
 
+local ICC_DUNGEONS_TRASH = { -- Trash
+    name = AL["Trash"],
+    ExtraList = true,
+    [NORMAL_DIFF] = {
+        { 1, 49854 }, -- Mantle of Tattered Feathers
+		{ 2, 49855 }, -- Plated Grips of Korth'azz
+		{ 3, 49853 }, -- Titanium Links of Lore
+		{ 4, 49852 }, -- Coffin Nail
+    },
+    [HEROIC_DIFF] = {
+        { 1, 50318 }, -- Ghostly Wristwraps
+		{ 2, 50315 }, -- Seven-Fingered Claws
+		{ 3, 50319 }, -- Unsharpened Ice Razor
+        { 4, 50051 }, -- Hammer of Purified Flame
+		{ 5, 50050 }, -- Cudgel of Furious Justice
+		{ 6, 50052 }, -- Lightborn Spire
+        { 16, AtlasLoot:GetRetByFaction(50380, 50379) }, -- Battered Hilt
+    },
+}
 
+data["ForgeOfSouls"] = {
+    nameFormat = NAME_ICC,
+	MapID = 4809,
+	--InstanceID = 560,
+    ContentType = DUNGEON_CONTENT,
+	AtlasModule = ATLAS_MODULE_NAME,
+	--AtlasMapID = "CL_CoTOldHillsbrad",
+	--AtlasMapFile = {"CoTOldHillsbrad", "CavernsOfTimeEnt"},
+	--LoadDifficulty = NORMAL_DIFF,
+	LevelRange = {80, 80, 80},
+	items = {
+        { -- FoSBronjahm / 268
+            name = AL["Bronjahm"],
+            npcID = 36497,
+            Level = 80,
+            -- DisplayIDs = {{0}},
+            AtlasMapBossID = 1,
+            [NORMAL_DIFF] = {
+                { 1, 49788 }, -- Cold Sweat Grips
+                { 2, 49785 }, -- Bewildering Shoulderpads
+                { 3, 49786 }, -- Robes of the Cheating Heart
+                { 4, 49787 }, -- Seven Stormy Mornings
+                { 5, 49784 }, -- Minister's Number One Legplates
+                { 6, 49783 }, -- Lucky Old Sun
+                { 7, 50317 }, -- Papa's New Bag
+                { 8, 50316 }, -- Papa's Brand New Bag
+            },
+            [HEROIC_DIFF] = {
+                { 1, 50193 }, -- Very Fashionable Shoulders
+                { 2, 50197 }, -- Eyes of Bewilderment
+                { 3, 50194 }, -- Weeping Gauntlets
+                { 4, 50196 }, -- Love's Prisoner
+                { 5, 50191 }, -- Nighttime
+                { 6, 50169 }, -- Papa's Brand New Knife
+                { 7, 50317 }, -- Papa's New Bag
+                { 8, 50316 }, -- Papa's Brand New Bag
+            }
+        },
+        { -- FoSDevourer / 269
+            name = AL["Devourer of Souls"],
+            npcID = 36502,
+            Level = 80,
+            -- DisplayIDs = {{0}},
+            AtlasMapBossID = 2,
+            [NORMAL_DIFF] = {
+                { 1, 49792 }, -- Accursed Crawling Cape
+                { 2, 49796 }, -- Essence of Anger
+                { 3, 49798 }, -- Soul Screaming Boots
+                { 4, 49791 }, -- Lost Reliquary Chestguard
+                { 5, 49797 }, -- Brace Guards of the Starless Night
+                { 6, 49794 }, -- Legplates of Frozen Granite
+                { 7, 49795 }, -- Sollerets of Suffering
+                { 8, 49799 }, -- Coil of Missing Gems
+                { 9, 49800 }, -- Spiteful Signet
+                { 10, 49789 }, -- Heartshiver
+                { 11, 49790 }, -- Blood Boil Lancet
+                { 12, 49793 }, -- Tower of the Mouldering Corpse
+            },
+            [HEROIC_DIFF] = {
+                { 1, 50213 }, -- Mord'rethar Robes
+                { 2, 50206 }, -- Frayed Scoundrel's Cap
+                { 3, 50212 }, -- Essence of Desire
+                { 4, 50214 }, -- Helm of the Spirit Shock
+                { 5, 50209 }, -- Essence of Suffering
+                { 6, 50208 }, -- Pauldrons of the Devourer
+                { 7, 50207 }, -- Black Spire Sabatons
+                { 8, 50215 }, -- Recovered Reliquary Boots
+                { 9, 50211 }, -- Arcane Loops of Anger
+                { 10, 50198 }, -- Needle-Encrusted Scorpion
+                { 11, 50203 }, -- Blood Weeper
+                { 12, 50210 }, -- Seethe
+            }
+        },
+        ICC_DUNGEONS_TRASH,
+        KEYS
+    }
+}
+
+data["PitOfSaron"] = {
+    nameFormat = NAME_ICC,
+	MapID = 4813,
+	--InstanceID = 560,
+    ContentType = DUNGEON_CONTENT,
+	AtlasModule = ATLAS_MODULE_NAME,
+	--AtlasMapID = "CL_CoTOldHillsbrad",
+	--AtlasMapFile = {"CoTOldHillsbrad", "CavernsOfTimeEnt"},
+	--LoadDifficulty = NORMAL_DIFF,
+	LevelRange = {80, 80, 80},
+	items = {
+        { -- PoSGarfrost / 271
+            name = AL["Forgemaster Garfrost"],
+            npcID = 36494,
+            Level = 80,
+            -- DisplayIDs = {{0}},
+            AtlasMapBossID = 1,
+            [NORMAL_DIFF] = {
+                { 1, 49805 }, -- Ice-Steeped Sandals
+                { 2, 49806 }, -- Flayer's Black Belt
+                { 3, 49804 }, -- Polished Mirror Helm
+                { 4, 49803 }, -- Ring of Carnelian and Bone
+                { 5, 49802 }, -- Garfrost's Two-Ton Hammer
+                { 6, 49801 }, -- Unspeakable Secret
+            },
+            [HEROIC_DIFF] = {
+                { 1, 50233 }, -- Spurned Val'kyr Shoulderguards
+                { 2, 50234 }, -- Shoulderplates of Frozen Blood
+                { 3, 50230 }, -- Malykriss Vambraces
+                { 4, 50229 }, -- Legguards of the Frosty Depths
+                { 5, 50228 }, -- Barbed Ymirheim Choker
+                { 6, 50227 }, -- Surgeon's Needle
+            }
+        },
+        { -- PoSKrickIck / 272
+            name = AL["Ick & Krick"],
+            npcID = {36476,36477},
+            Level = 80,
+            -- DisplayIDs = {{0}},
+            AtlasMapBossID = 2,
+            [NORMAL_DIFF] = {
+                { 1, 49809 }, -- Wristguards of Subterranean Moss
+                { 2, 49810 }, -- Scabrous Zombie Leather Belt
+                { 3, 49811 }, -- Black Dragonskin Breeches
+                { 4, 49808 }, -- Bent Gold Belt
+                { 5, 49812 }, -- Purloined Wedding Ring
+                { 6, 49807 }, -- Krick's Beetle Stabber
+            },
+            [HEROIC_DIFF] = {
+                { 1, 50266 }, -- Ancient Polar Bear Hide
+                { 2, 50263 }, -- Braid of Salt and Fire
+                { 3, 50264 }, -- Chewed Leather Wristguards
+                { 4, 50265 }, -- Blackened Ghoul Skin Leggings
+                { 5, 50235 }, -- Ick's Rotting Thumb
+                { 6, 50262 }, -- Felglacier Bolter
+            }
+        },
+        { -- PoSTyrannus / 273
+            name = AL["Scourgelord Tyrannus"],
+            npcID = 36658,
+            Level = 80,
+            -- DisplayIDs = {{0}},
+            AtlasMapBossID = 3,
+            [NORMAL_DIFF] = {
+                { 1, 49823 }, -- Cloak of the Fallen Cardinal
+                { 2, 49825 }, -- Palebone Robes
+                { 3, 49822 }, -- Rimewoven Silks
+                { 4, 49817 }, -- Shaggy Wyrmleather Leggings
+                { 5, 49824 }, -- Horns of the Spurned Val'kyr
+                { 6, 49826 }, -- Shroud of Rime
+                { 7, 49820 }, -- Gondria's Spectral Bracer
+                { 8, 49819 }, -- Skeleton Lord's Cranium
+                { 9, 49816 }, -- Scourgelord's Frigid Chestplate
+                { 10, 49818 }, -- Painfully Sharp Choker
+                { 11, 49821 }, -- Protector of Frigid Souls
+                { 12, 49813 }, -- Rimebane Rifle
+            },
+            [HEROIC_DIFF] = {
+                { 1, 50286 }, -- Prelate's Snowshoes
+                { 2, 50269 }, -- Fleshwerk Leggings
+                { 3, 50270 }, -- Belt of Rotted Fingernails
+                { 4, 50283 }, -- Mudslide Boots
+                { 5, 50272 }, -- Frost Wyrm Ribcage
+                { 6, 50285 }, -- Icebound Bronze Cuirass
+                { 7, 50284 }, -- Rusty Frozen Fingerguards
+                { 8, 50271 }, -- Band of Stained Souls
+                { 9, 50259 }, -- Nevermelting Ice Crystal
+                { 10, 50268 }, -- Rimefang's Claw
+                { 11, 50267 }, -- Tyrannical Beheader
+                { 12, 50273 }, -- Engraved Gargoyle Femur
+            }
+        },
+        ICC_DUNGEONS_TRASH,
+        KEYS
+    }
+}
+
+data["HallsOfReflection"] = {
+    nameFormat = NAME_ICC,
+	MapID = 4820,
+	--InstanceID = 560,
+    ContentType = DUNGEON_CONTENT,
+	AtlasModule = ATLAS_MODULE_NAME,
+	--AtlasMapID = "CL_CoTOldHillsbrad",
+	--AtlasMapFile = {"CoTOldHillsbrad", "CavernsOfTimeEnt"},
+	--LoadDifficulty = NORMAL_DIFF,
+	LevelRange = {80, 80, 80},
+	items = {
+        { -- HoRFalric / 275
+            name = AL["Falric"],
+            npcID = 38112,
+            Level = 80,
+            -- DisplayIDs = {{0}},
+            AtlasMapBossID = 1,
+            [NORMAL_DIFF] = {
+                { 1, 49832 }, -- Eerie Runeblade Polisher
+                { 2, 49828 }, -- Marwyn's Macabre Fingertips
+                { 3, 49830 }, -- Fallen Sentry's Hood
+                { 4, 49831 }, -- Muddied Boots of Brill
+                { 5, 49829 }, -- Valonforth's Tarnished Pauldrons
+                { 6, 49827 }, -- Ghoulslicer
+            },
+            [HEROIC_DIFF] = {
+                { 1, 50292 }, -- Bracer of Worn Molars
+                { 2, 50293 }, -- Spaulders of Black Betrayal
+                { 3, 50295 }, -- Spiked Toestompers
+                { 4, 50294 }, -- Chestpiece of High Treason
+                { 5, 50290 }, -- Falric's Wrist-Chopper
+                { 6, 50291 }, -- Soulsplinter
+            }
+        },
+        { -- HoRMarwyn / 276
+            name = AL["Marwyn"],
+            npcID = 38113,
+            Level = 80,
+            -- DisplayIDs = {{0}},
+            AtlasMapBossID = 2,
+            [NORMAL_DIFF] = {
+                { 1, 49834 }, -- Frayed Abomination Stitching Shoulders
+                { 2, 49838 }, -- Carpal Tunnelers
+                { 3, 49837 }, -- Mitts of Burning Hail
+                { 4, 49836 }, -- Frostsworn Bone Leggings
+                { 5, 49833 }, -- Splintered Icecrown Parapet
+                { 6, 49835 }, -- Splintered Door of the Citadel
+            },
+            [HEROIC_DIFF] = {
+                { 1, 50298 }, -- Sightless Crown of Ulmaas
+                { 2, 50299 }, -- Suspiciously Soft Gloves
+                { 3, 50300 }, -- Choking Hauberk
+                { 4, 50297 }, -- Frostsworn Bone Chestpiece
+                { 5, 50260 }, -- Ephemeral Snowflake
+                { 6, 50296 }, -- Orca-Hunter's Harpoon
+            }
+        },
+        { -- HoRLichKing / 277
+            name = AL["Wrath of the Lich King"],
+            npcID = 36954,
+            Level = 80,
+            -- DisplayIDs = {{0}},
+            AtlasMapBossID = 3,
+            [NORMAL_DIFF] = {
+                { 1, 49842 }, -- Tapestry of the Frozen Throne
+                { 2, 49849 }, -- Tattered Glacial-Woven Hood
+                { 3, 49848 }, -- Grim Lasher Shoulderguards
+                { 4, 49841 }, -- Blackened Geist Ribs
+                { 5, 49847 }, -- Legguards of Untimely Demise
+                { 6, 49851 }, -- Greathelm of the Silver Hand
+                { 7, 49843 }, -- Crystalline Citadel Gauntlets
+                { 8, 49846 }, -- Chilled Heart of the Glacier
+                { 9, 49839 }, -- Mourning Malice
+                { 10, 49840 }, -- Hate-Forged Cleaver
+                { 11, 49845 }, -- Bone Golem Scapula
+                { 12, 49844 }, -- Crypt Fiend Slayer
+            },
+            [HEROIC_DIFF] = {
+                { 1, 50314 }, -- Strip of Remorse
+                { 2, 50312 }, -- Chestguard of Broken Branches
+                { 3, 50308 }, -- Blighted Leather Footpads
+                { 4, 50304 }, -- Hoarfrost Gauntlets
+                { 5, 50311 }, -- Second Helm of the Executioner
+                { 6, 50305 }, -- Grinning Skull Boots
+                { 7, 50310 }, -- Fossilized Ammonite Choker
+                { 8, 50313 }, -- Oath of Empress Zoe
+                { 9, 50306 }, -- The Lady's Promise
+                { 10, 50309 }, -- Shriveled Heart
+                { 11, 50302 }, -- Liar's Tongue
+                { 12, 50303 }, -- Black Icicle
+            }
+        },
+        ICC_DUNGEONS_TRASH,
+        KEYS
+    }
+}
+
+-- ## RAIDS
 
 data["TheEyeOfEternity"] = {
     nameFormat = NAME_NEXUS,
@@ -1228,3 +1987,47 @@ data["TheEyeOfEternity"] = {
         KEYS
     }
 }
+
+
+
+
+--[[
+data["TStratholmeEpoch222"] = {
+    nameFormat = NAME_CAVERNS_OF_TIME,
+	MapID = 4100,
+	--InstanceID = 560,
+    ContentType = DUNGEON_CONTENT,
+	AtlasModule = ATLAS_MODULE_NAME,
+	--AtlasMapID = "CL_CoTOldHillsbrad",
+	--AtlasMapFile = {"CoTOldHillsbrad", "CavernsOfTimeEnt"},
+	--LoadDifficulty = NORMAL_DIFF,
+	LevelRange = {75, 79, 80},
+	items = {
+        { -- CoTHillsbradDrake
+            name = AL["Lieutenant Drake"],
+            --npcID = 17848,
+            --Level = 68,
+            --DisplayIDs = {{17386}},
+            AtlasMapBossID = 1,
+            [NORMAL_DIFF] = {
+
+            },
+            [HEROIC_DIFF] = {
+
+            }
+        },
+
+        { -- Trash
+            name = AL["Trash"],
+            ExtraList = true,
+            [NORMAL_DIFF] = {
+
+            },
+            [HEROIC_DIFF] = {
+
+            },
+        },
+        KEYS
+    }
+}
+]]
