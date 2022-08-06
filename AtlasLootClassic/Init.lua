@@ -62,6 +62,12 @@ AtlasLoot.CLASSIC_VERSION_NUM 	= 1
 AtlasLoot.BC_VERSION_NUM 		= 2
 AtlasLoot.WRATH_VERSION_NUM 	= 3
 
+AtlasLoot.GAME_VERSION_TEXTURES = {
+	[AtlasLoot.CLASSIC_VERSION_NUM] = 538639,
+	[AtlasLoot.BC_VERSION_NUM] = 131194,
+	[AtlasLoot.WRATH_VERSION_NUM] = 235509,
+}
+
 AtlasLoot.IS_CLASSIC = false
 AtlasLoot.IS_BC = false
 AtlasLoot.IS_WRATH = false

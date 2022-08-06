@@ -31,6 +31,7 @@ local LOADER_STRING = "GUI_LOADING"
 local TT_INFO_ENTRY = "|cFFCFCFCF%s:|r %s"
 
 local db
+local LoadAtlasLootModule
 
 local function UpdateFrames(noPageUpdate, forceContentUpdate)
 	local moduleData = AtlasLoot.ItemDB:Get(db.selected[1])
@@ -296,7 +297,7 @@ local function AtlasMapButton_OnEnter(self, owner)
 	tooltip:Show()
 end
 
--- Class Filer
+-- Class Filter
 local function ClassFilterButton_Refresh(self)
 	-- insert class selection?
 	self.texture:SetDesaturated(not db.classFilter)
@@ -422,6 +423,100 @@ local function ClassFilterButton_OnClick(self, button)
 			end
 			self.selectionFrame:Show()
 		end
+	end
+
+end
+
+-- GameVersion select
+local GAME_VERSION_TEXTURES = AtlasLoot.GAME_VERSION_TEXTURES
+
+local function GameVersionSelect_UpdateVersionTexture()
+	-- check if the game version is even aviable
+	if AtlasLoot:GameVersion_LT(db.selectedGameVersion) or not GAME_VERSION_TEXTURES[db.selectedGameVersion] then
+		db.selectedGameVersion = nil
+	end
+
+	GUI.frame.gameVersionLogo:SetTexture(GAME_VERSION_TEXTURES[db.selectedGameVersion])
+
+	if GUI.frame.gameVersionButton.selectionFrame then
+		GUI.frame.gameVersionButton.selectionFrame:Hide()
+	end
+end
+
+local function GameVersionSelect_Selection_OnClick(self, mouseButton)
+	db.selectedGameVersion = self.gameVersion
+
+	GameVersionSelect_UpdateVersionTexture()
+	LoadAtlasLootModule(db.selectedGameVersion)
+end
+
+local function GameVersionSelect_OnClick(self, mouseButton)
+	if AtlasLoot:GameVersion_EQ(AtlasLoot.CLASSIC_VERSION_NUM) then return end
+	if not self.selectionFrame then
+		local frame = CreateFrame("FRAME", nil, self, _G.BackdropTemplateMixin and "BackdropTemplate" or nil)
+		frame:SetBackdrop({bgFile = "Interface/Tooltips/UI-Tooltip-Background",
+					edgeFile = "Interface/Tooltips/UI-Tooltip-Border",
+					tile = true, tileSize = 16, edgeSize = 16,
+					insets = { left = 4, right = 4, top = 4, bottom = 4 }})
+		frame:SetBackdropColor(0,0,0,1)
+		frame:SetPoint("TOP", self, "BOTTOM", 0, -2)
+		frame:SetSize(10,10)
+		frame.obj = self
+		frame.buttons = {}
+
+		local width, height = 74, 10
+		local buttonGap = 2
+
+		local createGVButton = function(gameVersion, textureID)
+			local button = CreateFrame("Button", nil, frame)
+			button:SetSize(64,32)
+			button:SetHighlightTexture("Interface\\Buttons\\UI-Common-MouseHilight", "ADD")
+			button:SetScript("OnClick", GameVersionSelect_Selection_OnClick)
+
+			local texture = button:CreateTexture(nil, "ARTWORK")
+			texture:SetAllPoints(button)
+			texture:SetTexture(textureID)
+			button.texture = texture
+
+			button.gameVersion = gameVersion
+			button.textureID = textureID
+			frame.buttons[#frame.buttons+1] = button
+
+			return button
+		end
+
+		local classicButton = createGVButton(AtlasLoot.CLASSIC_VERSION_NUM, GAME_VERSION_TEXTURES[AtlasLoot.CLASSIC_VERSION_NUM])
+		classicButton:SetPoint("TOP", frame, "TOP", 0, -5)
+
+		if AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM) then
+			local bcButton = createGVButton(AtlasLoot.BC_VERSION_NUM, GAME_VERSION_TEXTURES[AtlasLoot.BC_VERSION_NUM])
+			bcButton:SetPoint("TOP", frame.buttons[#frame.buttons-1], "BOTTOM", 0, -buttonGap)
+		end
+
+		if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
+			local wrathButton = createGVButton(AtlasLoot.WRATH_VERSION_NUM, GAME_VERSION_TEXTURES[AtlasLoot.WRATH_VERSION_NUM])
+			wrathButton:SetPoint("TOP", frame.buttons[#frame.buttons-1], "BOTTOM", 0, -buttonGap)
+		end
+
+		frame:SetSize(width, height + (#frame.buttons * 32) + ((#frame.buttons-1) * buttonGap))
+		frame:Hide()
+
+		self.selectionFrame = frame
+	end
+
+	if self.selectionFrame:IsShown() then
+		self.selectionFrame:Hide()
+	else
+		local button
+		for i = 1, #self.selectionFrame.buttons do
+			button = self.selectionFrame.buttons[i]
+			if button.gameVersion == db.selectedGameVersion then
+				button:SetAlpha(1.0)
+			else
+				button:SetAlpha(0.5)
+			end
+		end
+		self.selectionFrame:Show()
 	end
 
 end
@@ -571,7 +666,7 @@ end
 -- DropDowns/Select
 -- ################################
 -- Called when the module is loaded
-local function loadModule(addonName)
+LoadAtlasLootModule = function(abc)
 	local moduleList = AtlasLoot.ItemDB:GetModuleList(db.selected[1])
 	local moduleData = AtlasLoot.ItemDB:Get(db.selected[1])
 	local gameVersion = moduleData:GetAviableGameVersion(db.selectedGameVersion)
@@ -681,7 +776,7 @@ local function ModuleSelectFunction(self, id, arg)
 	else
 		db.selected[4] = 1
 	end
-	local combat = AtlasLoot.Loader:LoadModule(id, loadModule, LOADER_STRING)
+	local combat = AtlasLoot.Loader:LoadModule(id, LoadAtlasLootModule, LOADER_STRING)
 	if combat == "InCombat" then
 		GUI:ShowLoadingInfo(id)
 	end
@@ -781,58 +876,6 @@ local function DifficultySelectFunction(self, id, arg, start)
 	UpdateFrames()
 end
 
-local function UpdateGameVersionTexture()
-	if AtlasLoot.CURRENT_VERSION_NUM < AtlasLoot.BC_VERSION_NUM then return end
-	if not GUI.frame or not GUI.frame.gameVersionLogo then return end
-	local frame = GUI.frame.gameVersionLogo
-
-	local curGameVersion = db.selectedgameVersion
-
-	print(db.selectedgameVersion, rawget(db, "selectedgameVersion"))
-
-	if curGameVersion == AtlasLoot.CLASSIC_VERSION_NUM then
-		print("classic", db.selectedGameVersion)
-		frame:SetTexture(538639)
-	elseif curGameVersion == AtlasLoot.BC_VERSION_NUM then
-		print("BC", db.selectedGameVersion)
-		frame:SetTexture(131194)
-	elseif curGameVersion == AtlasLoot.WRATH_VERSION_NUM then
-		print("Wrath", db.selectedGameVersion)
-		frame:SetTexture(131194)
-	else
-		-- fallback
-		frame:SetTexture(538639)
-	end
-end
-
-local function GameVersionSwitch_OnClick(self)
-	if AtlasLoot:GetGameVersion() < AtlasLoot.BC_VERSION_NUM then return end
-	local curGameVersion = db.selectedGameVersion
-
-	print(AtlasLoot.CURRENT_VERSION_NUM, curGameVersion, db.selectedGameVersion)
-
-	if curGameVersion == AtlasLoot.CLASSIC_VERSION_NUM then
-		db.selectedgameVersion = AtlasLoot.BC_VERSION_NUM
-	elseif AtlasLoot.CURRENT_VERSION_NUM >= AtlasLoot.BC_VERSION_NUM and curGameVersion == AtlasLoot.BC_VERSION_NUM then
-		if AtlasLoot.IS_BC then
-			db.selectedgameVersion = AtlasLoot.CLASSIC_VERSION_NUM
-		else
-			db.selectedgameVersion = AtlasLoot.WRATH_VERSION_NUM
-		end
-	elseif AtlasLoot.CURRENT_VERSION_NUM >= AtlasLoot.WRATH_VERSION_NUM and curGameVersion == AtlasLoot.WRATH_VERSION_NUM then
-		db.selectedgameVersion = AtlasLoot.BC_VERSION_NUM
-	else
-		db.selectedgameVersion = AtlasLoot.CLASSIC_VERSION_NUM
-	end
-
-	print(db.selectedgameVersion, rawget(db, "selectedgameVersion"))
-
-	db.selected[2] = AtlasLoot.ItemDB:GetCorrespondingField(db.selected[1], db.selected[2], db.selectedGameVersion)
-
-	UpdateGameVersionTexture()
-	loadModule()
-end
-
 -- ################################
 -- GUI functions
 -- ################################
@@ -905,7 +948,7 @@ function GUI.Init()
 
 	-- if auto-select is enabled, pre-load all instance modules to save the first-time AL frame's loading time
 	if (AtlasLoot.db.GUI.autoselect) then
-		--AtlasLoot:PreLoadModules();
+		--AtlasLoot:PreLoadAtlasLootModules();
 	end
 end
 AtlasLoot:AddInitFunc(GUI.Init)
@@ -1000,7 +1043,7 @@ function GUI:Create()
 	frame.gameVersionButton:SetWidth(64)
 	frame.gameVersionButton:SetHeight(32)
 	frame.gameVersionButton:SetHighlightTexture("Interface\\Buttons\\UI-Common-MouseHilight", "ADD")
-	frame.gameVersionButton:SetScript("OnClick", GameVersionSwitch_OnClick)
+	frame.gameVersionButton:SetScript("OnClick", GameVersionSelect_OnClick)
 
 	frame.gameVersionButton.Box = {}
 
@@ -1029,7 +1072,7 @@ function GUI:Create()
 	l:SetStartPoint("BOTTOMLEFT",-lineGap,-lineGap)
 	l:SetEndPoint("TOPLEFT",-lineGap,lineGap)
 
-	frame.gameVersionLogo = frame:CreateTexture(frameName.."-downBG", "ARTWORK")
+	frame.gameVersionLogo = frame:CreateTexture(frameName.."-gameVersionLogo", "ARTWORK")
 	frame.gameVersionLogo:SetTexture(538639)
 	frame.gameVersionLogo:SetAllPoints(frame.gameVersionButton)
 	frame.gameVersionButton.texture = frame.gameVersionLogo
@@ -1375,7 +1418,7 @@ function GUI.RefreshMainFrame()
 	frame:SetBackdropColor(db.mainFrame.bgColor.r, db.mainFrame.bgColor.g, db.mainFrame.bgColor.b, db.mainFrame.bgColor.a)
 	frame.titleFrame:SetBackdropColor(db.mainFrame.title.bgColor.r, db.mainFrame.title.bgColor.g, db.mainFrame.title.bgColor.b, db.mainFrame.title.bgColor.a)
 	GUI.RefreshFonts("title")
-	UpdateGameVersionTexture()
+	GameVersionSelect_UpdateVersionTexture()
 
 	frame:SetScale(db.mainFrame.scale)
 end
