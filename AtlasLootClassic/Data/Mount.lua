@@ -226,6 +226,7 @@ end
 
 if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
     MOUNT_LIST_DATA.WRATH = {
+        [43952] = 27785, -- Reins of the Azure Drake
         [43953] = 25832, -- Reins of the Blue Drake
     }
 end

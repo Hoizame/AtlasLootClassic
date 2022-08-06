@@ -45,3 +45,4 @@ locales.lua
 items.lua
 source.lua
 source-tbc.lua
+source-wrath.lua

@@ -13,7 +13,7 @@ local format = string.format
 -- ----------------------------------------------------------------------------
 local addonname = ...
 local AtlasLoot = _G.AtlasLoot
-if AtlasLoot:GetGameVersion() < AtlasLoot.BC_VERSION_NUM then return end
+if AtlasLoot:GameVersion_LT(AtlasLoot.BC_VERSION_NUM) then return end
 
 --##START-DATA##
 local SOURCE_DATA = {
