@@ -26,6 +26,7 @@ local FILTER_DATA = {
     -- https://wowpedia.fandom.com/wiki/Enum.InventoryType
     -- true = all classes are allowed
     itemEquipLoc = {
+        [""] = true,                        -- empty
         ["INVTYPE_NON_EQUIP"] = true,		-- Non-equippable
         ["INVTYPE_HEAD"] = true,				-- Head
         ["INVTYPE_NECK"] = true,				-- Neck
@@ -57,6 +58,7 @@ local FILTER_DATA = {
         ["INVTYPE_RELIC"] = C.SHAMAN + C.PALADIN + C.DRUID,			-- Relic
     },
     itemClass = {
+        [10] 			                    = true, -- Moneys
         [LE_ITEM_CLASS_CONSUMABLE] 			= true,
         [LE_ITEM_CLASS_CONTAINER] 			= true,
         [LE_ITEM_CLASS_WEAPON] 				= true,
@@ -73,6 +75,9 @@ local FILTER_DATA = {
         [LE_ITEM_CLASS_MISCELLANEOUS] 		= true,
     },
     itemSubClass = {
+        [10] = {
+            [0] = true, -- Money
+        },
         [LE_ITEM_CLASS_CONSUMABLE] = {
             [0] = true, -- Explosives and Devices
             [1] = true, -- Potion
