@@ -39,9 +39,21 @@ local contentList = {}
 ItemDB.contentMt = {
 	__index = ItemDB.ContentProto
 }
+-- clean nil boss entrys from DB
+local function CleanNilBossEntrys(oldTab)
+	local newItemTab = {}
+	for i = 1, #oldTab.items do
+		if oldTab.items[i] ~= nil then
+			newItemTab[#newItemTab + 1] = oldTab.items[i]
+		end
+	end
+	oldTab.items = newItemTab
+	return oldTab
+end
 ItemDB.mt = {
 	__newindex = function(t, k, v)
 		t.__atlaslootdata.contentCount = t.__atlaslootdata.contentCount + 1
+		v = CleanNilBossEntrys(v)
 		setmetatable(v, ItemDB.contentMt)
 		contentList[t.__atlaslootdata.addonName][t.__atlaslootdata.contentCount] = k
 		contentList[t.__atlaslootdata.addonName][k] = t.__atlaslootdata.contentCount
@@ -420,7 +432,7 @@ end
 function ItemDB.Proto:CheckForLink(dataID, boss, load)
 	assert(dataID, self[dataID], "dataID not found - "..dataID)
 	assert(boss, self[dataID].items[boss], "boss not found - "..boss)
-	if self[dataID].items[boss].link then
+	if self[dataID].items[boss] and self[dataID].items[boss].link then
 		local link = self[dataID].items[boss].link
 		if AtlasLoot.Loader:IsModuleLoaded(link[1]) then
 			assert(ItemDB.Storage[link[1]], "module "..link[1].." not found")

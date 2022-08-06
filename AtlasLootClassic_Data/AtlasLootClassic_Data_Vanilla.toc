@@ -1,7 +1,4 @@
-﻿## Interface: 30400
-## Interface-Classic: 11403
-## Interface-BCC: 20504
-## Interface-Wrath: 30400
+﻿## Interface: 11403
 ## Author: Lag
 ## Version: @project-version@
 ## Dependencies: AtlasLootClassic
@@ -44,5 +41,3 @@ core.lua
 locales.lua
 items.lua
 source.lua
-source-tbc.lua
-source-wrath.lua

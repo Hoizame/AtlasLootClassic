@@ -1,7 +1,4 @@
-﻿## Interface: 30400
-## Interface-Classic: 11403
-## Interface-BCC: 20504
-## Interface-Wrath: 30400
+﻿## Interface: 11403
 ## Author: Lag
 ## Version: @project-version@
 ## Dependencies: AtlasLootClassic
@@ -44,4 +41,3 @@
 Locales\Locales.xml
 
 data.lua
-data-tbc.lua

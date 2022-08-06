@@ -1,7 +1,4 @@
-﻿## Interface: 30400
-## Interface-Classic: 11403
-## Interface-BCC: 20504
-## Interface-Wrath: 30400
+﻿## Interface: 20504
 ## Author: Lag
 ## Version: @project-version@
 ## SavedVariables: AtlasLootClassicDB
@@ -38,6 +35,7 @@
 ## X-License: GPL v2
 ## X-Localizations: enUS, deDE, frFR, esES, koKR, zhCN, zhTW, esMX, ptBR, ruRU, itIT
 ## X-Curse-Project-ID: 326516
+## X-WoWI-ID: 25953
 ## X-Wago-ID: RXKqzoGy
 
 embeds.xml

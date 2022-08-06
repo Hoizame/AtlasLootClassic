@@ -1107,10 +1107,12 @@ function AutoSelect:AddInstanceTable(module, instanceAlID, iniTab)
         end
         -- SubAreaIDs / SubAreaID
         for i = 1, #iniTab.items do
-            local id = iniTab.items[i].SubAreaID
-            if id and content.sub[id] and not content.sub[id][3] then
-                content.sub[id][3] = i
-            end
+			if iniTab.items[i] then
+				local id = iniTab.items[i].SubAreaID
+				if id and content.sub[id] and not content.sub[id][3] then
+					content.sub[id][3] = i
+				end
+			end
         end
 
     end
