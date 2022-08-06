@@ -22,7 +22,7 @@ local TOKEN_TYPE_TEXT = {
 	[8] = format(TOKEN_FORMAT_STRING, AL["Token for..."]), -- same as '6' but with itemDesc added
 
 	-- classes get set with the init
-	-- "DRUID", "HUNTER", "MAGE", "PALADIN", "PRIEST", "ROGUE", "SHAMAN", "WARLOCK", "WARRIOR"
+	-- "DRUID", "HUNTER", "MAGE", "PALADIN", "PRIEST", "ROGUE", "SHAMAN", "WARLOCK", "WARRIOR", "DEATHKNIGHT"
 }
 
 local TOKEN_TYPE_ADD_ITEM_DESCRIPTION = {
@@ -40,6 +40,7 @@ local ICONS = {
 	MAGE 		= 	"ADDON_classicon_mage",
 	WARLOCK 	= 	"ADDON_classicon_warlock",
 	DRUID 		= 	"ADDON_classicon_druid",
+	DEATHKNIGHT = 	"ADDON_classicon_deathknight",
 }
 
 local TOKEN, TOKEN_DATA = AtlasLoot:GetGameVersionDataTable()

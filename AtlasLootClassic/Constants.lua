@@ -107,7 +107,7 @@ ALPrivate.CLASS_BITS = {
     HUNTER 			= 4,
     ROGUE 			= 8,
     PRIEST 			= 16,
-    --DEATHKNIGHT 	= 32,
+    DEATHKNIGHT 	= AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM, 32),
     SHAMAN 			= 64,
     MAGE 			= 128,
     WARLOCK 		= 256,
@@ -117,7 +117,7 @@ ALPrivate.CLASS_BITS = {
 }
 ALPrivate.CLASS_BIT_TO_CLASS = {}
 for k,v in pairs(ALPrivate.CLASS_BITS) do ALPrivate.CLASS_BIT_TO_CLASS[v] = k end
-ALPrivate.CLASS_SORT = { "WARRIOR", "PALADIN", "HUNTER", "ROGUE", "PRIEST", "SHAMAN", "MAGE", "WARLOCK", "DRUID" }
+ALPrivate.CLASS_SORT = { "WARRIOR", "PALADIN", "HUNTER", "ROGUE", "PRIEST", "SHAMAN", "MAGE", "WARLOCK", "DRUID", AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM, "DEATHKNIGHT") }
 ALPrivate.CLASS_NAME_TO_ID = {}
 for classID = 1, #ALPrivate.CLASS_SORT do ALPrivate.CLASS_NAME_TO_ID[ALPrivate.CLASS_SORT[classID]] = classID end
 

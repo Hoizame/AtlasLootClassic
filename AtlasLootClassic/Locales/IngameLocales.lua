@@ -247,15 +247,16 @@ local IngameLocales = {
 	-- ######################################################################
 	-- Class
 	-- ######################################################################
-	["DRUID"] 	= AtlasLootGLOBALetClassName("DRUID"),
-	["HUNTER"] 	= AtlasLootGLOBALetClassName("HUNTER"),
-	["MAGE"] 	= AtlasLootGLOBALetClassName("MAGE"),
+	["DRUID"] 		= AtlasLootGLOBALetClassName("DRUID"),
+	["HUNTER"] 		= AtlasLootGLOBALetClassName("HUNTER"),
+	["MAGE"] 		= AtlasLootGLOBALetClassName("MAGE"),
 	["PALADIN"] 	= AtlasLootGLOBALetClassName("PALADIN"),
-	["PRIEST"] 	= AtlasLootGLOBALetClassName("PRIEST"),
-	["ROGUE"] 	= AtlasLootGLOBALetClassName("ROGUE"),
-	["SHAMAN"] 	= AtlasLootGLOBALetClassName("SHAMAN"),
+	["PRIEST"] 		= AtlasLootGLOBALetClassName("PRIEST"),
+	["ROGUE"] 		= AtlasLootGLOBALetClassName("ROGUE"),
+	["SHAMAN"] 		= AtlasLootGLOBALetClassName("SHAMAN"),
 	["WARLOCK"] 	= AtlasLootGLOBALetClassName("WARLOCK"),
 	["WARRIOR"] 	= AtlasLootGLOBALetClassName("WARRIOR"),
+	["DEATHKNIGHT"] = AtlasLootGLOBALetClassName("DEATHKNIGHT"),
 
 
 	-- ######################################################################

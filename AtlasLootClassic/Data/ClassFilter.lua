@@ -418,6 +418,10 @@ AtlasLoot.AtlasLootDBDefaults.profile.ClassFilter = {
     ["DRUID"] = {
         ["*"] = true,
     },
+    ["DEATHKNIGHT"] = {
+        ["*"] = true,
+        ["ITEM_MOD_INTELLECT_SHORT"] = false,
+    },
 }
 
 local ITEM_SUB_CLASS_IGNORE = {
