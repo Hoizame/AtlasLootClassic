@@ -44,6 +44,4 @@
 Locales\Locales.xml
 
 data.lua
-#@version-bcc@
 data-tbc.lua
-#@end-version-bcc@

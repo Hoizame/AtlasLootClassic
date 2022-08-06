@@ -782,15 +782,25 @@ local function DifficultySelectFunction(self, id, arg, start)
 end
 
 local function UpdateGameVersionTexture()
-	if AtlasLoot:GetGameVersion() < AtlasLoot.BC_VERSION_NUM then return end
+	if AtlasLoot.CURRENT_VERSION_NUM < AtlasLoot.BC_VERSION_NUM then return end
 	if not GUI.frame or not GUI.frame.gameVersionLogo then return end
 	local frame = GUI.frame.gameVersionLogo
 
-	local curGameVersion = db.selectedGameVersion
+	local curGameVersion = db.selectedgameVersion
 
-	if curGameVersion == 2 then
+	print(db.selectedgameVersion, rawget(db, "selectedgameVersion"))
+
+	if curGameVersion == AtlasLoot.CLASSIC_VERSION_NUM then
+		print("classic", db.selectedGameVersion)
+		frame:SetTexture(538639)
+	elseif curGameVersion == AtlasLoot.BC_VERSION_NUM then
+		print("BC", db.selectedGameVersion)
+		frame:SetTexture(131194)
+	elseif curGameVersion == AtlasLoot.WRATH_VERSION_NUM then
+		print("Wrath", db.selectedGameVersion)
 		frame:SetTexture(131194)
 	else
+		-- fallback
 		frame:SetTexture(538639)
 	end
 end
@@ -799,11 +809,23 @@ local function GameVersionSwitch_OnClick(self)
 	if AtlasLoot:GetGameVersion() < AtlasLoot.BC_VERSION_NUM then return end
 	local curGameVersion = db.selectedGameVersion
 
-	if curGameVersion == 2 then
-		db.selectedgameVersion = AtlasLoot.CLASSIC_VERSION_NUM
-	else
+	print(AtlasLoot.CURRENT_VERSION_NUM, curGameVersion, db.selectedGameVersion)
+
+	if curGameVersion == AtlasLoot.CLASSIC_VERSION_NUM then
 		db.selectedgameVersion = AtlasLoot.BC_VERSION_NUM
+	elseif AtlasLoot.CURRENT_VERSION_NUM >= AtlasLoot.BC_VERSION_NUM and curGameVersion == AtlasLoot.BC_VERSION_NUM then
+		if AtlasLoot.IS_BC then
+			db.selectedgameVersion = AtlasLoot.CLASSIC_VERSION_NUM
+		else
+			db.selectedgameVersion = AtlasLoot.WRATH_VERSION_NUM
+		end
+	elseif AtlasLoot.CURRENT_VERSION_NUM >= AtlasLoot.WRATH_VERSION_NUM and curGameVersion == AtlasLoot.WRATH_VERSION_NUM then
+		db.selectedgameVersion = AtlasLoot.BC_VERSION_NUM
+	else
+		db.selectedgameVersion = AtlasLoot.CLASSIC_VERSION_NUM
 	end
+
+	print(db.selectedgameVersion, rawget(db, "selectedgameVersion"))
 
 	db.selected[2] = AtlasLoot.ItemDB:GetCorrespondingField(db.selected[1], db.selected[2], db.selectedGameVersion)
 

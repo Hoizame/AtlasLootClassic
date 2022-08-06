@@ -44,10 +44,6 @@
 Locales\Locales.xml
 
 data.lua
-#@version-bcc@
 data-tbc.lua
-#@end-version-bcc@
-#@version-wrath@
 data-wrath.lua
-#@end-version-wrath@
 droprate.lua

@@ -6,6 +6,7 @@ DungeonsAndRaidsTBC.lua
 PvP.lua
 Options.lua
 Factions.lua
+rawdata.lua
 
 # from @Blackwidow-sudo
 make.sh

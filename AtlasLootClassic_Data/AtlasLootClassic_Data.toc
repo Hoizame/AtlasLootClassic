@@ -44,6 +44,4 @@ core.lua
 locales.lua
 items.lua
 source.lua
-#@version-bcc@
 source-tbc.lua
-#@end-version-bcc@

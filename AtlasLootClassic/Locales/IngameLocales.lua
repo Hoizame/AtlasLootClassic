@@ -33,11 +33,11 @@ local months = {
 	MONTH_DECEMBER,
 }
 
-
+local GLOBAL = setmetatable({}, {__index = function(t,k) return _G[k] or k end})
 local GetMapNameByID = GetMapNameByID
 
 
-local function AtlasLoot_GetClassName(class)
+local function AtlasLootGLOBALetClassName(class)
 	if (not LOCALIZED_CLASS_NAMES_MALE[class]) then
 		return nil;
 	end
@@ -52,7 +52,7 @@ local function GetLocRepStanding(id)
 	if (id > 10) then
 		return FACTION_STANDING_LABEL4_FEMALE
 	else
-		return UnitSex("player")==3 and _G["FACTION_STANDING_LABEL"..(id or 4).."_FEMALE"] or _G["FACTION_STANDING_LABEL"..(id or 4)]
+		return UnitSex("player")==3 and GLOBAL["FACTION_STANDING_LABEL"..(id or 4).."_FEMALE"] or GLOBAL["FACTION_STANDING_LABEL"..(id or 4)]
 	end
 end
 
@@ -72,7 +72,7 @@ local IngameLocales = {
 	-- ######################################################################
 	-- Professions
 	-- ######################################################################
-	["Professions"] = _G["TRADE_SKILLS"],
+	["Professions"] = GLOBAL["TRADE_SKILLS"],
 	["First Aid"] = GetSpellInfo(3273),
 	["Blacksmithing"] = GetSpellInfo(2018),
 	["Leatherworking"] = GetSpellInfo(2108),
@@ -120,89 +120,89 @@ local IngameLocales = {
 	-- ######################################################################
 	-- Stats
 	-- ######################################################################
-	["Mana"] = _G["ITEM_MOD_MANA_SHORT"],
-	["Health"] = _G["ITEM_MOD_HEALTH_SHORT"],
-	["Agility"] = _G["ITEM_MOD_AGILITY_SHORT"],
-	["Strength"] = _G["ITEM_MOD_STRENGTH_SHORT"],
-	["Intellect"] = _G["ITEM_MOD_INTELLECT_SHORT"],
-	["Spirit"] = _G["ITEM_MOD_SPIRIT_SHORT"],
-	["Stamina"] = _G["ITEM_MOD_STAMINA_SHORT"],
-	["Happiness Per 5 Sec."] = _G["ITEM_MOD_POWER_REGEN4_SHORT"],
-	["Hit"] = _G["ITEM_MOD_HIT_RATING_SHORT"],
-	["PvP Resilience"] = _G["ITEM_MOD_RESILIENCE_RATING_SHORT"],
-	["Bonus Healing"] = _G["ITEM_MOD_SPELL_HEALING_DONE_SHORT"],
-	["Critical Strike"] = _G["ITEM_MOD_CRIT_RATING_SHORT"],
-	["Armor Penetration"] = _G["ITEM_MOD_ARMOR_PENETRATION_RATING_SHORT"],
-	["Critical Strike (Spell)"] = _G["ITEM_MOD_CRIT_SPELL_RATING_SHORT"],
-	["Critical Strike (Melee)"] = _G["ITEM_MOD_CRIT_MELEE_RATING_SHORT"],
-	["Runic Power Per 5 Sec."] = _G["ITEM_MOD_POWER_REGEN6_SHORT"],
-	["Hit Avoidance (Spell)"] = _G["ITEM_MOD_HIT_TAKEN_SPELL_RATING_SHORT"],
-	["Energy Per 5 Sec."] = _G["ITEM_MOD_POWER_REGEN3_SHORT"],
-	["Health Per 5 Sec."] = _G["ITEM_MOD_HEALTH_REGEN_SHORT"],
-	["Expertise"] = _G["ITEM_MOD_EXPERTISE_RATING_SHORT"],
-	["Parry"] = _G["ITEM_MOD_PARRY_RATING_SHORT"],
-	["Critical Strike Avoidance"] = _G["ITEM_MOD_CRIT_TAKEN_RATING_SHORT"],
-	["Hit (Spell)"] = _G["ITEM_MOD_HIT_SPELL_RATING_SHORT"],
-	["Block"] = _G["ITEM_MOD_BLOCK_RATING_SHORT"],
-	["Defense"] = _G["ITEM_MOD_DEFENSE_SKILL_RATING_SHORT"],
-	["Damage Per Second"] = _G["ITEM_MOD_DAMAGE_PER_SECOND_SHORT"],
-	["Hit Avoidance (Melee)"] = _G["ITEM_MOD_HIT_TAKEN_MELEE_RATING_SHORT"],
-	["Rage Per 5 Sec."] = _G["ITEM_MOD_POWER_REGEN1_SHORT"],
-	["Hit (Ranged)"] = _G["ITEM_MOD_HIT_RANGED_RATING_SHORT"],
-	["Critical Strike Avoidance (Spell)"] = _G["ITEM_MOD_CRIT_TAKEN_SPELL_RATING_SHORT"],
-	["Mana Regeneration"] = _G["ITEM_MOD_MANA_REGENERATION_SHORT"],
-	["Melee Attack Power"] = _G["ITEM_MOD_MELEE_ATTACK_POWER_SHORT"],
-	["Hit Avoidance (Ranged)"] = _G["ITEM_MOD_HIT_TAKEN_RANGED_RATING_SHORT"],
-	["Focus Per 5 Sec."] = _G["ITEM_MOD_POWER_REGEN2_SHORT"],
-	["Mana Per 5 Sec."] = _G["ITEM_MOD_POWER_REGEN0_SHORT"],
-	["PvP Power"] = _G["ITEM_MOD_PVP_POWER_SHORT"],
-	["Critical Strike Avoidance (Ranged)"] = _G["ITEM_MOD_CRIT_TAKEN_RANGED_RATING_SHORT"],
-	["Block Value"] = _G["ITEM_MOD_BLOCK_VALUE_SHORT"],
-	["Haste"] = _G["ITEM_MOD_HASTE_RATING_SHORT"],
-	["Critical Strike (Ranged)"] = _G["ITEM_MOD_CRIT_RANGED_RATING_SHORT"],
-	["Bonus Damage"] = _G["ITEM_MOD_SPELL_DAMAGE_DONE_SHORT"],
-	["Ranged Attack Power"] = _G["ITEM_MOD_RANGED_ATTACK_POWER_SHORT"],
-	["Attack Power In Forms"] = _G["ITEM_MOD_FERAL_ATTACK_POWER_SHORT"],
-	["Spell Power"] = _G["ITEM_MOD_SPELL_POWER_SHORT"],
-	["Hit Avoidance"] = _G["ITEM_MOD_HIT_TAKEN_RATING_SHORT"],
-	["Critical Strike Avoidance (Melee)"] = _G["ITEM_MOD_CRIT_TAKEN_MELEE_RATING_SHORT"],
-	["Runes Per 5 Sec."] = _G["ITEM_MOD_POWER_REGEN5_SHORT"],
-	["Hit (Melee)"] = _G["ITEM_MOD_HIT_MELEE_RATING_SHORT"],
-	["Dodge"] = _G["ITEM_MOD_DODGE_RATING_SHORT"],
-	["Attack Power"] = _G["ITEM_MOD_ATTACK_POWER_SHORT"],
+	["Mana"] = GLOBAL["ITEM_MOD_MANA_SHORT"],
+	["Health"] = GLOBAL["ITEM_MOD_HEALTH_SHORT"],
+	["Agility"] = GLOBAL["ITEM_MOD_AGILITY_SHORT"],
+	["Strength"] = GLOBAL["ITEM_MOD_STRENGTH_SHORT"],
+	["Intellect"] = GLOBAL["ITEM_MOD_INTELLECT_SHORT"],
+	["Spirit"] = GLOBAL["ITEM_MOD_SPIRIT_SHORT"],
+	["Stamina"] = GLOBAL["ITEM_MOD_STAMINA_SHORT"],
+	["Happiness Per 5 Sec."] = GLOBAL["ITEM_MOD_POWER_REGEN4_SHORT"],
+	["Hit"] = GLOBAL["ITEM_MOD_HIT_RATING_SHORT"],
+	["PvP Resilience"] = GLOBAL["ITEM_MOD_RESILIENCE_RATING_SHORT"],
+	["Bonus Healing"] = GLOBAL["ITEM_MOD_SPELL_HEALING_DONE_SHORT"],
+	["Critical Strike"] = GLOBAL["ITEM_MOD_CRIT_RATING_SHORT"],
+	["Armor Penetration"] = GLOBAL["ITEM_MOD_ARMOR_PENETRATION_RATING_SHORT"],
+	["Critical Strike (Spell)"] = GLOBAL["ITEM_MOD_CRIT_SPELL_RATING_SHORT"],
+	["Critical Strike (Melee)"] = GLOBAL["ITEM_MOD_CRIT_MELEE_RATING_SHORT"],
+	["Runic Power Per 5 Sec."] = GLOBAL["ITEM_MOD_POWER_REGEN6_SHORT"],
+	["Hit Avoidance (Spell)"] = GLOBAL["ITEM_MOD_HIT_TAKEN_SPELL_RATING_SHORT"],
+	["Energy Per 5 Sec."] = GLOBAL["ITEM_MOD_POWER_REGEN3_SHORT"],
+	["Health Per 5 Sec."] = GLOBAL["ITEM_MOD_HEALTH_REGEN_SHORT"],
+	["Expertise"] = GLOBAL["ITEM_MOD_EXPERTISE_RATING_SHORT"],
+	["Parry"] = GLOBAL["ITEM_MOD_PARRY_RATING_SHORT"],
+	["Critical Strike Avoidance"] = GLOBAL["ITEM_MOD_CRIT_TAKEN_RATING_SHORT"],
+	["Hit (Spell)"] = GLOBAL["ITEM_MOD_HIT_SPELL_RATING_SHORT"],
+	["Block"] = GLOBAL["ITEM_MOD_BLOCK_RATING_SHORT"],
+	["Defense"] = GLOBAL["ITEM_MOD_DEFENSE_SKILL_RATING_SHORT"],
+	["Damage Per Second"] = GLOBAL["ITEM_MOD_DAMAGE_PER_SECOND_SHORT"],
+	["Hit Avoidance (Melee)"] = GLOBAL["ITEM_MOD_HIT_TAKEN_MELEE_RATING_SHORT"],
+	["Rage Per 5 Sec."] = GLOBAL["ITEM_MOD_POWER_REGEN1_SHORT"],
+	["Hit (Ranged)"] = GLOBAL["ITEM_MOD_HIT_RANGED_RATING_SHORT"],
+	["Critical Strike Avoidance (Spell)"] = GLOBAL["ITEM_MOD_CRIT_TAKEN_SPELL_RATING_SHORT"],
+	["Mana Regeneration"] = GLOBAL["ITEM_MOD_MANA_REGENERATION_SHORT"],
+	["Melee Attack Power"] = GLOBAL["ITEM_MOD_MELEE_ATTACK_POWER_SHORT"],
+	["Hit Avoidance (Ranged)"] = GLOBAL["ITEM_MOD_HIT_TAKEN_RANGED_RATING_SHORT"],
+	["Focus Per 5 Sec."] = GLOBAL["ITEM_MOD_POWER_REGEN2_SHORT"],
+	["Mana Per 5 Sec."] = GLOBAL["ITEM_MOD_POWER_REGEN0_SHORT"],
+	["PvP Power"] = GLOBAL["ITEM_MOD_PVP_POWER_SHORT"],
+	["Critical Strike Avoidance (Ranged)"] = GLOBAL["ITEM_MOD_CRIT_TAKEN_RANGED_RATING_SHORT"],
+	["Block Value"] = GLOBAL["ITEM_MOD_BLOCK_VALUE_SHORT"],
+	["Haste"] = GLOBAL["ITEM_MOD_HASTE_RATING_SHORT"],
+	["Critical Strike (Ranged)"] = GLOBAL["ITEM_MOD_CRIT_RANGED_RATING_SHORT"],
+	["Bonus Damage"] = GLOBAL["ITEM_MOD_SPELL_DAMAGE_DONE_SHORT"],
+	["Ranged Attack Power"] = GLOBAL["ITEM_MOD_RANGED_ATTACK_POWER_SHORT"],
+	["Attack Power In Forms"] = GLOBAL["ITEM_MOD_FERAL_ATTACK_POWER_SHORT"],
+	["Spell Power"] = GLOBAL["ITEM_MOD_SPELL_POWER_SHORT"],
+	["Hit Avoidance"] = GLOBAL["ITEM_MOD_HIT_TAKEN_RATING_SHORT"],
+	["Critical Strike Avoidance (Melee)"] = GLOBAL["ITEM_MOD_CRIT_TAKEN_MELEE_RATING_SHORT"],
+	["Runes Per 5 Sec."] = GLOBAL["ITEM_MOD_POWER_REGEN5_SHORT"],
+	["Hit (Melee)"] = GLOBAL["ITEM_MOD_HIT_MELEE_RATING_SHORT"],
+	["Dodge"] = GLOBAL["ITEM_MOD_DODGE_RATING_SHORT"],
+	["Attack Power"] = GLOBAL["ITEM_MOD_ATTACK_POWER_SHORT"],
 
 	-- ######################################################################
 	-- Slots
 	-- ######################################################################
-	["Weapon"] = _G["ENCHSLOT_WEAPON"],
-	["2H Weapon"] = _G["ENCHSLOT_2HWEAPON"],
-	["Weapons"] = _G["WEAPONS"],
-	["Armor"] = _G["ARMOR"],
-	["Shield"] = _G["SHIELDSLOT"],
-	["Wrist"] = _G["INVTYPE_WRIST"],
-	["Trinket"]	= _G["INVTYPE_TRINKET"],
-	["Robe"] = _G["INVTYPE_ROBE"],
-	["Cloak"] = _G["INVTYPE_CLOAK"],
-	["Head"] = _G["INVTYPE_HEAD"],
-	["Holdable"] = _G["INVTYPE_HOLDABLE"],
-	["Chest"] = _G["INVTYPE_CHEST"],
-	["Neck"] = _G["INVTYPE_NECK"],
-	["Tabard"] = _G["INVTYPE_TABARD"],
-	["Legs"] = _G["INVTYPE_LEGS"],
-	["Hand"] = _G["INVTYPE_HAND"],
-	["Waist"] = _G["INVTYPE_WAIST"],
-	["Feet"] = _G["INVTYPE_FEET"],
-	["Shoulder"] = _G["INVTYPE_SHOULDER"],
-	["Finger"] = _G["INVTYPE_FINGER"],
-	["Bag"] = _G["INVTYPE_BAG"],
-	["Ammo"] = _G["INVTYPE_AMMO"],
-	["Body"] = _G["INVTYPE_BODY"], -- Shirt
-	["Quiver"] = _G["INVTYPE_QUIVER"],
-	["Relic"] = _G["INVTYPE_RELIC"],
-	["Thrown"] = _G["INVTYPE_THROWN"],
-	["Main Hand"] = _G["INVTYPE_WEAPONMAINHAND"],
-	["Main Attack"]	= _G["INVTYPE_WEAPONMAINHAND_PET"],	-- "Main Attack"
-	["Off Hand"] = _G["INVTYPE_WEAPONOFFHAND"],
+	["Weapon"] = GLOBAL["ENCHSLOT_WEAPON"],
+	["2H Weapon"] = GLOBAL["ENCHSLOT_2HWEAPON"],
+	["Weapons"] = GLOBAL["WEAPONS"],
+	["Armor"] = GLOBAL["ARMOR"],
+	["Shield"] = GLOBAL["SHIELDSLOT"],
+	["Wrist"] = GLOBAL["INVTYPE_WRIST"],
+	["Trinket"]	= GLOBAL["INVTYPE_TRINKET"],
+	["Robe"] = GLOBAL["INVTYPE_ROBE"],
+	["Cloak"] = GLOBAL["INVTYPE_CLOAK"],
+	["Head"] = GLOBAL["INVTYPE_HEAD"],
+	["Holdable"] = GLOBAL["INVTYPE_HOLDABLE"],
+	["Chest"] = GLOBAL["INVTYPE_CHEST"],
+	["Neck"] = GLOBAL["INVTYPE_NECK"],
+	["Tabard"] = GLOBAL["INVTYPE_TABARD"],
+	["Legs"] = GLOBAL["INVTYPE_LEGS"],
+	["Hand"] = GLOBAL["INVTYPE_HAND"],
+	["Waist"] = GLOBAL["INVTYPE_WAIST"],
+	["Feet"] = GLOBAL["INVTYPE_FEET"],
+	["Shoulder"] = GLOBAL["INVTYPE_SHOULDER"],
+	["Finger"] = GLOBAL["INVTYPE_FINGER"],
+	["Bag"] = GLOBAL["INVTYPE_BAG"],
+	["Ammo"] = GLOBAL["INVTYPE_AMMO"],
+	["Body"] = GLOBAL["INVTYPE_BODY"], -- Shirt
+	["Quiver"] = GLOBAL["INVTYPE_QUIVER"],
+	["Relic"] = GLOBAL["INVTYPE_RELIC"],
+	["Thrown"] = GLOBAL["INVTYPE_THROWN"],
+	["Main Hand"] = GLOBAL["INVTYPE_WEAPONMAINHAND"],
+	["Main Attack"]	= GLOBAL["INVTYPE_WEAPONMAINHAND_PET"],	-- "Main Attack"
+	["Off Hand"] = GLOBAL["INVTYPE_WEAPONOFFHAND"],
 	-- GetItemSubClassInfo(iC,isC)
 	["One-Handed Axes"] = GetItemSubClassInfo(2,0),
 	["Two-Handed Axes"] = GetItemSubClassInfo(2,1),
@@ -233,14 +233,12 @@ local IngameLocales = {
 	-- ######################################################################
 	-- Gems
 	-- ######################################################################
---@version-bcc@
-	["Socket Gems"]	 	= _G["SOCKET_GEMS"],
-	["Gems"]			= _G["AUCTION_CATEGORY_GEMS"],
-	["Meta"]	 		= _G["META_GEM"],
-	["Red"]	 			= _G["RED_GEM"],
-	["Yellow"]	 		= _G["YELLOW_GEM"],
-	["Blue"]	 		= _G["BLUE_GEM"],
---@end-version-bcc@
+	["Socket Gems"]	 	= GLOBAL["SOCKETGLOBALEMS"],
+	["Gems"]			= GLOBAL["AUCTION_CATEGORYGLOBALEMS"],
+	["Meta"]	 		= GLOBAL["METAGLOBALEM"],
+	["Red"]	 			= GLOBAL["REDGLOBALEM"],
+	["Yellow"]	 		= GLOBAL["YELLOWGLOBALEM"],
+	["Blue"]	 		= GLOBAL["BLUEGLOBALEM"],
 	-- ######################################################################
 	-- Zones
 	-- ######################################################################
@@ -249,40 +247,40 @@ local IngameLocales = {
 	-- ######################################################################
 	-- Class
 	-- ######################################################################
-	["DRUID"] 	= AtlasLoot_GetClassName("DRUID"),
-	["HUNTER"] 	= AtlasLoot_GetClassName("HUNTER"),
-	["MAGE"] 	= AtlasLoot_GetClassName("MAGE"),
-	["PALADIN"] 	= AtlasLoot_GetClassName("PALADIN"),
-	["PRIEST"] 	= AtlasLoot_GetClassName("PRIEST"),
-	["ROGUE"] 	= AtlasLoot_GetClassName("ROGUE"),
-	["SHAMAN"] 	= AtlasLoot_GetClassName("SHAMAN"),
-	["WARLOCK"] 	= AtlasLoot_GetClassName("WARLOCK"),
-	["WARRIOR"] 	= AtlasLoot_GetClassName("WARRIOR"),
+	["DRUID"] 	= AtlasLootGLOBALetClassName("DRUID"),
+	["HUNTER"] 	= AtlasLootGLOBALetClassName("HUNTER"),
+	["MAGE"] 	= AtlasLootGLOBALetClassName("MAGE"),
+	["PALADIN"] 	= AtlasLootGLOBALetClassName("PALADIN"),
+	["PRIEST"] 	= AtlasLootGLOBALetClassName("PRIEST"),
+	["ROGUE"] 	= AtlasLootGLOBALetClassName("ROGUE"),
+	["SHAMAN"] 	= AtlasLootGLOBALetClassName("SHAMAN"),
+	["WARLOCK"] 	= AtlasLootGLOBALetClassName("WARLOCK"),
+	["WARRIOR"] 	= AtlasLootGLOBALetClassName("WARRIOR"),
 
 
 	-- ######################################################################
 	-- Item Quality
 	-- ######################################################################
-	["Poor"]	 	= _G["ITEM_QUALITY0_DESC"],
-	["Common"] 		= _G["ITEM_QUALITY1_DESC"],
-	["Uncommon"] 	= _G["ITEM_QUALITY2_DESC"],
-	["Rare"] 		= _G["ITEM_QUALITY3_DESC"],
-	["Epic"]		= _G["ITEM_QUALITY4_DESC"],
-	["Legendary"] 	= _G["ITEM_QUALITY5_DESC"],
-	["Artifact"] 	= _G["ITEM_QUALITY6_DESC"],
-	["Heirloom"] 	= _G["ITEM_QUALITY7_DESC"],
+	["Poor"]	 	= GLOBAL["ITEM_QUALITY0_DESC"],
+	["Common"] 		= GLOBAL["ITEM_QUALITY1_DESC"],
+	["Uncommon"] 	= GLOBAL["ITEM_QUALITY2_DESC"],
+	["Rare"] 		= GLOBAL["ITEM_QUALITY3_DESC"],
+	["Epic"]		= GLOBAL["ITEM_QUALITY4_DESC"],
+	["Legendary"] 	= GLOBAL["ITEM_QUALITY5_DESC"],
+	["Artifact"] 	= GLOBAL["ITEM_QUALITY6_DESC"],
+	["Heirloom"] 	= GLOBAL["ITEM_QUALITY7_DESC"],
 
 	-- ######################################################################
 	-- Misc
 	-- ######################################################################
-	["Food"] = _G["POWER_TYPE_FOOD"],
-	["Special"] = _G["SPECIAL"],
-	["Mounts"] = _G["MOUNTS"],
-	["Mount"] = _G["MOUNT"],
-	["Default"] = _G["DEFAULT"],
-	["Settings"] = _G["SETTINGS"],
-	["Dressing Room"] = _G["DRESSUP_FRAME"],
-	["Quest Item"] = _G["ITEM_BIND_QUEST"],
+	["Food"] = GLOBAL["POWER_TYPE_FOOD"],
+	["Special"] = GLOBAL["SPECIAL"],
+	["Mounts"] = GLOBAL["MOUNTS"],
+	["Mount"] = GLOBAL["MOUNT"],
+	["Default"] = GLOBAL["DEFAULT"],
+	["Settings"] = GLOBAL["SETTINGS"],
+	["Dressing Room"] = GLOBAL["DRESSUP_FRAME"],
+	["Quest Item"] = GLOBAL["ITEM_BIND_QUEST"],
 }
 AtlasLoot.IngameLocales = IngameLocales
 
