@@ -307,7 +307,6 @@ TOKEN_DATA.CLASSIC = {
 
 if AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM) then
 	TOKEN_DATA.BCC = {
-
 		--- T4
 		-- Head
 		[29760] = { ICONS.PALADIN, 29061, 29068, 29073, 0, ICONS.ROGUE, 29044, 0, ICONS.SHAMAN, 29028, 29035, 29040, type = 6 }, -- Helm of the Fallen Champion
