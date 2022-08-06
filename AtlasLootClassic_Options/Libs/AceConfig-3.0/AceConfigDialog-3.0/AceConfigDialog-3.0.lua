@@ -1,13 +1,13 @@
 --- AceConfigDialog-3.0 generates AceGUI-3.0 based windows based on option tables.
 -- @class file
 -- @name AceConfigDialog-3.0
--- @release $Id: AceConfigDialog-3.0.lua 1248 2021-02-05 14:27:49Z funkehdude $
+-- @release $Id: AceConfigDialog-3.0.lua 1262 2022-04-07 23:00:32Z funkehdude $
 
 local LibStub = LibStub
 local gui = LibStub("AceGUI-3.0")
 local reg = LibStub("AceConfigRegistry-3.0")
 
-local MAJOR, MINOR = "AceConfigDialog-3.0", 81
+local MAJOR, MINOR = "AceConfigDialog-3.0", 82
 local AceConfigDialog, oldminor = LibStub:NewLibrary(MAJOR, MINOR)
 
 if not AceConfigDialog then return end
@@ -566,21 +566,10 @@ do
 			end
 		end)
 
-		if not frame.SetFixedFrameStrata then -- API capability check (classic check)
-			frame:SetBackdrop({
-				bgFile = [[Interface\DialogFrame\UI-DialogBox-Background-Dark]],
-				edgeFile = [[Interface\DialogFrame\UI-DialogBox-Border]],
-				tile = true,
-				tileSize = 32,
-				edgeSize = 32,
-				insets = { left = 11, right = 11, top = 11, bottom = 11 },
-			})
-		else
-			local border = CreateFrame("Frame", nil, frame, "DialogBorderOpaqueTemplate")
-			border:SetAllPoints(frame)
-			frame:SetFixedFrameStrata(true)
-			frame:SetFixedFrameLevel(true)
-		end
+		local border = CreateFrame("Frame", nil, frame, "DialogBorderOpaqueTemplate")
+		border:SetAllPoints(frame)
+		frame:SetFixedFrameStrata(true)
+		frame:SetFixedFrameLevel(true)
 
 		local text = frame:CreateFontString(nil, "ARTWORK", "GameFontHighlight")
 		text:SetSize(290, 0)
@@ -1368,7 +1357,7 @@ local function FeedOptions(appName, options,container,rootframe,path,group,inlin
 							elseif width == "half" then
 								check:SetWidth(width_multiplier / 2)
 							elseif (type(width) == "number") then
-								control:SetWidth(width_multiplier * width)
+								check:SetWidth(width_multiplier * width)
 							elseif width == "full" then
 								check.width = "fill"
 							else
