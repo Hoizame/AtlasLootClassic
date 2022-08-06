@@ -13,7 +13,7 @@ local format = string.format
 -- ----------------------------------------------------------------------------
 local addonname = ...
 local AtlasLoot = _G.AtlasLoot
-local data = AtlasLoot.ItemDB:Add(addonname, 1, 1)
+local data = AtlasLoot.ItemDB:Add(addonname, 1, AtlasLoot.CLASSIC_VERSION_NUM)
 
 local AL = AtlasLoot.Locales
 local ALIL = AtlasLoot.IngameLocales
@@ -1263,7 +1263,30 @@ data["ScarletMonasteryGraveyard"] = {
 				{ 14, 7730 }, -- Cobalt Crusher
 			},
 		},
---@version-bcc@
+		AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM, { -- SMHeadlessHorseman
+			name = AL["Headless Horseman"],
+			npcID = 23682,
+			Level = 70,
+			DisplayIDs = {{22351}},
+			AtlasMapBossID = nil,
+			ExtraList = true,
+			[NORMAL_DIFF] = {
+				{ 1, 34075 }, -- Ring of Ghoulish Delight
+				{ 2, 34073 }, -- The Horseman's Signet Ring
+				{ 3, 34074 }, -- Witches Band
+				{ 5, 33808 }, -- The Horseman's Helm
+				{ 6, 38175 }, -- The Horseman's Blade
+				{ 8, 33292 }, -- Hallowed Helm
+				{ 10, 34068 }, -- Weighted Jack-o'-Lantern
+				{ 12, 33277 }, -- Tome of Thomas Thomson
+				{ 16, 37012 }, -- The Horseman's Reins
+				{ 18, 33182 }, -- Swift Flying Broom        280% flying
+				{ 19, 33176 }, -- Flying Broom              60% flying
+				{ 21, 33184 }, -- Swift Magic Broom         100% ground
+				{ 22, 37011 }, -- Magic Broom               60% ground
+				{ 24, 33154 }, -- Sinister Squashling
+			}
+		}),
         { -- SMHeadlessHorseman
             name = AL["Headless Horseman"],
             npcID = 23682,
@@ -1288,7 +1311,6 @@ data["ScarletMonasteryGraveyard"] = {
                 { 24, 33154 }, -- Sinister Squashling
             }
         },
---@end-version-bcc@
 		KEYS,
 	},
 }
