@@ -23,6 +23,7 @@ local GetCurrencyInfo, GetItemIcon = C_CurrencyInfo.GetCurrencyInfo, GetItemIcon
 -- AtlasLoot
 local PRICE_INFO = VendorPrice.GetPriceInfoList()
 local PRICE_ICON_REPLACE = ALPrivate.PRICE_ICON_REPLACE
+local DIFFICULTY = AtlasLoot.DIFFICULTY
 
 
 -- locals
@@ -97,7 +98,7 @@ Sources.DbDefaults = {
 }
 
 --Sources.GlobalDbDefaults = {}
-local function BuildSource(ini, boss, typ, item, isHeroic)
+local function BuildSource(ini, boss, typ, item, diffID)
     if typ and typ > 3 then
         -- Profession
         local src = ""
@@ -144,8 +145,13 @@ local function BuildSource(ini, boss, typ, item, isHeroic)
             if type(npcID) == "table" then npcID = npcID[1] end
             dropRate = Droprate:GetData(npcID, item)
         end
-        if bossName and isHeroic then
-            bossName = bossName.." <"..AL["Heroic"]..">"
+        if bossName and diffID then
+            -- diff 0 means just heroic
+            if diffID == 0 then
+                bossName = bossName.." <"..DIFFICULTY.HEROIC.sourceLoc..">"
+            else
+                bossName = bossName.." <"..DIFFICULTY[diffID].sourceLoc..">"
+            end
         end
         if iniName and bossName then
             if dropRate then

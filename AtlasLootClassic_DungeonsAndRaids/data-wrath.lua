@@ -19,10 +19,10 @@ local data = AtlasLoot.ItemDB:Add(addonname, 3, AtlasLoot.WRATH_VERSION_NUM)
 local AL = AtlasLoot.Locales
 local ALIL = AtlasLoot.IngameLocales
 
-local NORMAL_DIFF = data:AddDifficulty(AL["Normal"], "n", 1, nil, true)
-local HEROIC_DIFF = data:AddDifficulty(AL["Heroic"], "h", 2, nil, true)
-local RAID10_DIFF = data:AddDifficulty(AL["10 Raid"], "r10", 3)
-local RAID25_DIFF = data:AddDifficulty(AL["25 Raid"], "r25", 4)
+local NORMAL_DIFF = data:AddDifficulty("NORMAL", nil, nil, nil, true)
+local HEROIC_DIFF = data:AddDifficulty("HEROIC", nil, nil, nil, true)
+local RAID10_DIFF = data:AddDifficulty("10RAID")
+local RAID25_DIFF = data:AddDifficulty("25RAID")
 
 local NORMAL_ITTYPE = data:AddItemTableType("Item", "Item")
 local SET_ITTYPE = data:AddItemTableType("Set", "Item")
@@ -1946,10 +1946,6 @@ data["TheEyeOfEternity"] = {
                 { 8, 40489 }, -- Greatstaff of the Nexus
                 { 9, 40497 }, -- Black Ice
                 { 10, 40475 }, -- Barricade of Eternity
-                { 11, 44658 }, -- Chain of the Ancient Wyrm
-                { 12, 44660 }, -- Drakescale Collar
-                { 13, 44659 }, -- Pendant of the Dragonsworn
-                { 14, 44657 }, -- Torque of the Red Dragonflight
                 { 16, 43952 }, -- Reins of the Azure Drake
                 { 18, 44569 }, -- Key to the Focusing Iris
                 { 19, 44650 }, -- Heart of Magic
@@ -1975,13 +1971,9 @@ data["TheEyeOfEternity"] = {
                 { 18, 40591 }, -- Melancholy Sabatons
                 { 19, 40532 }, -- Living Ice Crystals
                 { 20, 40531 }, -- Mark of Norgannon
-                { 21, 44664 }, -- Favor of the Dragon Queen
-                { 22, 44662 }, -- Life-Binder's Locket
-                { 23, 44665 }, -- Nexus War Champion Beads
-                { 24, 44661 }, -- Wyrmrest Necklace of Power
-                { 26, 43952 }, -- Reins of the Azure Drake
-                { 28, 44577 }, -- Heroic Key to the Focusing Iris
-                { 29, 44650 }, -- Heart of Magic
+                { 22, 43952 }, -- Reins of the Azure Drake
+                { 24, 44577 }, -- Heroic Key to the Focusing Iris
+                { 25, 44651 }, -- Heart of Magic
             }
         },
         KEYS

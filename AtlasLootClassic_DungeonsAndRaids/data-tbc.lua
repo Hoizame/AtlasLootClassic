@@ -19,10 +19,10 @@ local data = AtlasLoot.ItemDB:Add(addonname, 2, AtlasLoot.BC_VERSION_NUM)
 local AL = AtlasLoot.Locales
 local ALIL = AtlasLoot.IngameLocales
 
-local NORMAL_DIFF = data:AddDifficulty(AL["Normal"], "n", 1, nil, true)
-local HEROIC_DIFF = data:AddDifficulty(AL["Heroic"], "h", 2, nil, true)
-local RAID10_DIFF = data:AddDifficulty(AL["10 Raid"], "r10", 3)
-local RAID25_DIFF = data:AddDifficulty(AL["25 Raid"], "r25", 4)
+local NORMAL_DIFF = data:AddDifficulty("NORMAL", nil, nil, nil, true)
+local HEROIC_DIFF = data:AddDifficulty("HEROIC", nil, nil, nil, true)
+local RAID10_DIFF = data:AddDifficulty("10RAID")
+local RAID25_DIFF = data:AddDifficulty("25RAID")
 
 local NORMAL_ITTYPE = data:AddItemTableType("Item", "Item")
 local SET_ITTYPE = data:AddItemTableType("Set", "Item")

@@ -503,6 +503,14 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
 		-- Battered Hilt
 		[50380] = {50047, 50046, 50049, 50048, type = 3}, -- horde
 		[50379] = 50380, -- alli
+
+		-- Key to the Focusing Iris
+		[44569] = {44582, type = 3}, -- 10man
+		[44577] = {44581, type = 3}, -- 25man
+
+		-- Heart of Magic / Malygos
+		[44650] = {44658, 44657, 44659, 44660, type = 3}, -- 10man
+		[44651] = {44661, 44662, 44664, 44665, type = 3}, -- 25man
 	}
 end
 

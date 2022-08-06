@@ -1879,7 +1879,36 @@ end
 
 if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
     RECIPE_DATA.WRATH = {
-
+		[728] = {6,50,2543}, -- Recipe: Westfall Stew
+		[3831] = {4,180,3451}, -- Recipe: Major Troll's Blood Elixir
+		[4408] = {9,75,3928}, -- Schematic: Mechanical Squirrel Box
+		[8547] = {1,250,10844}, -- Formula: Powerful Smelling Salts [PH]
+		[13518] = {4,300,17634}, -- Recipe: Potion of Petrification
+		[18259] = {10,300,22749}, -- Formula: Enchant Weapon - Spellpower
+		[18645] = {9,265,0}, -- Gnomish Alarm-o-Bot
+		[18654] = {9,265,23096}, -- Schematic: Gnomish Alarm-o-Bot
+		[19447] = {10,300,23802}, -- Formula: Enchant Bracer - Healing Power
+		[20011] = {4,275,24365}, -- Recipe: Mageblood Elixir
+		[20014] = {4,290,24368}, -- Recipe: Mighty Troll's Blood Elixir
+		[21740] = {9,125,0}, -- Small Rocket Recipes
+		[21741] = {9,225,0}, -- Cluster Rocket Recipes
+		[21742] = {9,175,0}, -- Large Rocket Recipes
+		[21743] = {9,275,0}, -- Large Cluster Rocket Recipes
+		[21748] = {14,200,0}, -- Figurine - Jade Owl
+		[22546] = {10,325,27958}, -- DEPRECATED Formula: Enchant Chest - Exceptional Mana
+		[23684] = {1,225,0}, -- Crystal Infused Bandage [PH]
+		[23689] = {1,300,30021}, -- Manual: Crystal Infused Bandage [PH]
+		[23817] = {9,405,30349}, -- Schematic: Titanium Toolbox
+		[24124] = {14,370,0}, -- Figurine - Felsteel Boar
+		[24125] = {14,370,0}, -- Figurine - Dawnstone Crab
+		[24126] = {14,370,0}, -- Figurine - Living Ruby Serpent
+		[24127] = {14,370,0}, -- Figurine - Talasite Owl
+		[24128] = {14,370,0}, -- Figurine - Nightseye Panther
+		[25847] = {2,360,32657}, -- Plans: Eternium Rod
+		[28271] = {10,360,33994}, -- Formula: Enchant Gloves - Precise Strikes
+		[32430] = {3,375,52733}, -- Pattern: Bracers of Shackled Souls
+		[34060] = {9,300,44153}, -- Flying Machine Control
+		[34061] = {9,375,44151}, -- Turbo-Charged Flying Machine Control
     }
 end
 

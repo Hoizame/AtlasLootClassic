@@ -293,6 +293,13 @@ local difficultys = {}
 function ItemDB.Proto:AddDifficulty(dif, uniqueName, difficultyID, tierID, textIsHiddenInHeader)
 	assert(dif, "No 'dif' given.")
 
+	if dif and AtlasLoot.DIFFICULTY[dif] then
+		local difTab = AtlasLoot.DIFFICULTY[dif]
+		dif = difTab.loc
+		uniqueName = difTab.short
+		difficultyID = difTab.id
+	end
+
 	if not difficultys[self.__atlaslootdata.addonName] then
 		difficultys[self.__atlaslootdata.addonName] = {
 			counter = 0,
