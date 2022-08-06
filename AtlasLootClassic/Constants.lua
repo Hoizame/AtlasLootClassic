@@ -92,6 +92,7 @@ ALPrivate.CLASS_ICON_PATH = {
 	MAGE 		= 	ICONS_PATH.."classicon_mage",
 	WARLOCK 	= 	ICONS_PATH.."classicon_warlock",
 	DRUID 		= 	ICONS_PATH.."classicon_druid",
+	DEATHKNIGHT	= 	ICONS_PATH.."classicon_deathknight",
 }
 
 ALPrivate.PRICE_ICON_REPLACE = {
@@ -107,7 +108,7 @@ ALPrivate.CLASS_BITS = {
     HUNTER 			= 4,
     ROGUE 			= 8,
     PRIEST 			= 16,
-    DEATHKNIGHT 	= AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM, 32),
+    DEATHKNIGHT 	= 32,
     SHAMAN 			= 64,
     MAGE 			= 128,
     WARLOCK 		= 256,
