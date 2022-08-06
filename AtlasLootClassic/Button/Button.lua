@@ -209,7 +209,7 @@ function Button:Create()
 	button.highlightBg:Hide()
 
 	-- Icon <texture>
-	button.icon = button:CreateTexture(buttonName.."_icon")
+	button.icon = button:CreateTexture(buttonName.."_icon", "ARTWORK")
 	button.icon:SetPoint("TOPLEFT", button, "TOPLEFT", 1, -1)
 	button.icon:SetHeight(26)
 	button.icon:SetWidth(26)
@@ -233,26 +233,28 @@ function Button:Create()
 	]]--
 
 	-- secButtonTexture <texture>
-	button.overlay = button:CreateTexture(buttonName.."_overlay", "OVERLAY")
+	button.overlay = button:CreateTexture(buttonName.."_overlay")
 	button.overlay:SetPoint("TOPLEFT", button.icon, "TOPLEFT")
 	button.overlay:SetPoint("BOTTOMRIGHT", button.icon, "BOTTOMRIGHT")
 	button.overlay:Hide()
+	button.overlay:SetDrawLayer(button.icon:GetDrawLayer(), 1)
 	button.overlay.SetQualityBorder = Button_Overlay_SetQualityBorder
 
-	button.completed = button:CreateTexture(buttonName.."_completed", "OVERLAY")
+	button.completed = button:CreateTexture(buttonName.."_completed")
 	button.completed:SetPoint("BOTTOMRIGHT", button.icon)
 	button.completed:SetHeight(20)
 	button.completed:SetWidth(20)
+	button.completed:SetDrawLayer(button.overlay:GetDrawLayer(), 1)
 	button.completed:SetTexture("Interface\\RaidFrame\\ReadyCheck-Ready")
 	button.completed:Hide()
 
-	button.phaseIndicator = button:CreateTexture(buttonName.."_phaseIndicator", "OVERLAY")
+	button.phaseIndicator = button:CreateTexture(buttonName.."_phaseIndicator")
 	button.phaseIndicator:SetPoint("TOPLEFT", button.icon)
 	button.phaseIndicator:SetPoint("BOTTOMRIGHT", button.icon)
 	button.phaseIndicator:SetDrawLayer(button.overlay:GetDrawLayer(), 1)
 	button.phaseIndicator:Hide()
 
-	button.favourite = button:CreateTexture(buttonName.."_favourite", "OVERLAY")
+	button.favourite = button:CreateTexture(buttonName.."_favourite")
 	button.favourite:SetPoint("TOPLEFT", button.icon, -2, 2)
 	button.favourite:SetHeight(20)
 	button.favourite:SetWidth(20)
