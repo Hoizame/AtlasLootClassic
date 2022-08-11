@@ -802,26 +802,28 @@ local function SubCatSelectFunction(self, id, arg)
 	local tabVal
 	for i = 1, #moduleData[id].items do
 		tabVal = moduleData[id].items[i]
-		moduleData:CheckForLink(id, i)
-		if tabVal.ExtraList then
-			if not dataExtra then dataExtra = {} end
-			dataExtra[#dataExtra+1] = {
-				id = i,
-				name = moduleData[id]:GetNameForItemTable(i),
-				coinTexture = tabVal.CoinTexture,
-				tt_title = moduleData[id]:GetNameForItemTable(i),
-				tt_text = tabVal.info-- or AtlasLoot.EncounterJournal:GetBossInfo(tabVal.EncounterJournalID)
-			}
-			if not dataExtra[#dataExtra].name then dataExtra[#dataExtra] = nil end
-		else
-			data[#data+1] = {
-				id = i,
-				name = moduleData[id]:GetNameForItemTable(i),
-				coinTexture = tabVal.CoinTexture,
-				tt_title = moduleData[id]:GetNameForItemTable(i),
-				tt_text = tabVal.info-- or AtlasLoot.EncounterJournal:GetBossInfo(tabVal.EncounterJournalID)
-			}
-			if not data[#data].name then data[#data] = nil end
+		if tabVal then
+			moduleData:CheckForLink(id, i)
+			if tabVal.ExtraList then
+				if not dataExtra then dataExtra = {} end
+				dataExtra[#dataExtra+1] = {
+					id = i,
+					name = moduleData[id]:GetNameForItemTable(i),
+					coinTexture = tabVal.CoinTexture,
+					tt_title = moduleData[id]:GetNameForItemTable(i),
+					tt_text = tabVal.info-- or AtlasLoot.EncounterJournal:GetBossInfo(tabVal.EncounterJournalID)
+				}
+				if not dataExtra[#dataExtra].name then dataExtra[#dataExtra] = nil end
+			else
+				data[#data+1] = {
+					id = i,
+					name = moduleData[id]:GetNameForItemTable(i),
+					coinTexture = tabVal.CoinTexture,
+					tt_title = moduleData[id]:GetNameForItemTable(i),
+					tt_text = tabVal.info-- or AtlasLoot.EncounterJournal:GetBossInfo(tabVal.EncounterJournalID)
+				}
+				if not data[#data].name then data[#data] = nil end
+			end
 		end
 	end
 	-- change difficulty from some instances

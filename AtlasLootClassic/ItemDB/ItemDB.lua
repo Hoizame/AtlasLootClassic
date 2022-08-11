@@ -40,6 +40,7 @@ ItemDB.contentMt = {
 	__index = ItemDB.ContentProto
 }
 -- clean nil boss entrys from DB
+-- WARNING: This breaks Sources addon
 local function CleanNilBossEntrys(oldTab)
 	local newItemTab = {}
 	for i = 1, #oldTab.items do
@@ -50,10 +51,11 @@ local function CleanNilBossEntrys(oldTab)
 	oldTab.items = newItemTab
 	return oldTab
 end
+
 ItemDB.mt = {
 	__newindex = function(t, k, v)
 		t.__atlaslootdata.contentCount = t.__atlaslootdata.contentCount + 1
-		v = CleanNilBossEntrys(v)
+		-- v = CleanNilBossEntrys(v)
 		setmetatable(v, ItemDB.contentMt)
 		contentList[t.__atlaslootdata.addonName][t.__atlaslootdata.contentCount] = k
 		contentList[t.__atlaslootdata.addonName][k] = t.__atlaslootdata.contentCount
