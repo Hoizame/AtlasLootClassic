@@ -47,6 +47,14 @@ local NAME_UTGARDE = NAME_COLOR..AL["Utgarde"]..":|r %s" -- Utgarde
 local NAME_ICC = NAME_COLOR..AL["ICC"]..":|r %s" -- ICC
 local NAME_AT = NAME_COLOR..AL["AT"]..":|r %s" -- Argent Tournament
 
+-- colors
+local BLUE = "|cff6666ff"
+local GREY = "|cff999999"
+local GREN = "|cff66cc33"
+local _RED = "|cffcc6666"
+local PURP = "|cff9900ff"
+local WHIT = "|cffffffff"
+
 
 local KEYS = {	-- Keys
 	name = AL["Keys"],
@@ -1980,7 +1988,721 @@ data["TheEyeOfEternity"] = {
     }
 }
 
+data["NaxxramasWrath"] = {
+	MapID = 3456,
+	InstanceID = 533,
+	AtlasModule = ATLAS_MODULE_NAME,
+	--AtlasMapID = "Naxxramas",
+	--AtlasMapFile = "CL_Naxxramas",
+	--AtlasMapFile_AL = "Naxxramas",
+	ContentType = RAID_CONTENT,
+	--LoadDifficulty = RAID40_DIFF,
+	--ContentPhase = 6,
+    LevelRange = {80, 80, 80},
+	items = {
+		-- The Arachnid Quarter
+		{ -- NAXAnubRekhan
+			name = AL["Anub'Rekhan"],
+			npcID = 15956,
+			Level = 999,
+			DisplayIDs = {{15931}},
+			AtlasMapBossID = BLUE.."1",
+			[RAID10_DIFF] = {
+                { 1, 39192 }, -- Gloves of Dark Gestures
+                { 2, 39190 }, -- Agonal Sash
+                { 3, 39191 }, -- Splint-Bound Leggings
+                { 4, 39189 }, -- Boots of Persistence
+                { 5, 39188 }, -- Chivalric Chestguard
+                { 6, 39139 }, -- Ravaging Sabatons
+                { 7, 39146 }, -- Collar of Dissolution
+                { 8, 39193 }, -- Band of Neglected Pleas
+                { 9, 39141 }, -- Deflection Band
+                { 10, 39140 }, -- Knife of Incision
+            },
+            [RAID25_DIFF] = {
+                { 1, 39719 }, -- Mantle of the Locusts
+                { 2, 39721 }, -- Sash of the Parlor
+                { 3, 39720 }, -- Leggings of Atrophy
+                { 4, 39722 }, -- Swarm Bindings
+                { 5, 39701 }, -- Dawnwalkers
+                { 6, 39702 }, -- Arachnoid Gold Band
+                { 7, 39718 }, -- Corpse Scarab Handguards
+                { 8, 39704 }, -- Pauldrons of Unnatural Death
+                { 9, 39703 }, -- Rescinding Grips
+                { 10, 39717 }, -- Inexorable Sabatons
+                { 11, 39706 }, -- Sabatons of Sudden Reprisal
+                { 12, 40071 }, -- Chains of Adoration
+                { 13, 40065 }, -- Fool's Trial
+                { 14, 40069 }, -- Heritage
+                { 15, 40064 }, -- Thunderstorm Amulet
+                { 16, 40080 }, -- Lost Jewel
+                { 17, 40075 }, -- Ruthlessness
+                { 18, 40107 }, -- Sand-Worn Band
+                { 19, 40074 }, -- Strong-Handed Ring
+                { 20, 39714 }, -- Webbed Death
+                { 21, 40208 }, -- Cryptfiend's Bite
+                { 22, 39716 }, -- Shield of Assimilation
+                { 23, 39712 }, -- Gemmed Wand of the Nerubians
+            },
+		},
+		{ -- NAXGrandWidowFaerlina
+			name = AL["Grand Widow Faerlina"],
+			npcID = 15953,
+			Level = 999,
+			DisplayIDs = {{15940}},
+			AtlasMapBossID = BLUE.."2",
+			[RAID10_DIFF] = {
+                { 1, 39216 }, -- Sash of Mortal Desire
+                { 2, 39215 }, -- Boots of the Follower
+                { 3, 39196 }, -- Boots of the Worshiper
+                { 4, 39217 }, -- Avenging Combat Leggings
+                { 5, 39194 }, -- Rusted-Link Spiked Gauntlets
+                { 6, 39198 }, -- Frostblight Pauldrons
+                { 7, 39195 }, -- Bracers of Lost Sentiments
+                { 8, 39197 }, -- Gauntlets of the Master
+                { 9, 39199 }, -- Watchful Eye
+                { 10, 39200 }, -- Grieving Spellblade
+            },
+            [RAID25_DIFF] = {
+                { 1, 39732 }, -- Faerlina's Madness
+                { 2, 39731 }, -- Punctilious Bindings
+                { 3, 39733 }, -- Gloves of Token Respect
+                { 4, 39735 }, -- Belt of False Dignity
+                { 5, 39756 }, -- Tunic of Prejudice
+                { 6, 39727 }, -- Dislocating Handguards
+                { 7, 39724 }, -- Cult's Chestguard
+                { 8, 39734 }, -- Atonement Greaves
+                { 9, 39723 }, -- Fire-Scorched Greathelm
+                { 10, 39725 }, -- Epaulets of the Grieving Servant
+                { 11, 39729 }, -- Bracers of the Tyrant
+                { 12, 39726 }, -- Callous-Hearted Gauntlets
+                { 13, 40071 }, -- Chains of Adoration
+                { 14, 40065 }, -- Fool's Trial
+                { 15, 40069 }, -- Heritage
+                { 16, 40064 }, -- Thunderstorm Amulet
+                { 17, 40080 }, -- Lost Jewel
+                { 18, 40075 }, -- Ruthlessness
+                { 19, 40107 }, -- Sand-Worn Band
+                { 20, 40108 }, -- Seized Beauty
+                { 21, 40074 }, -- Strong-Handed Ring
+                { 22, 39757 }, -- Idol of Worship
+                { 23, 39728 }, -- Totem of Misery
+                { 24, 39730 }, -- Widow's Fury
+            },
+		},
+		{ -- NAXMaexxna
+			name = AL["Maexxna"],
+			npcID = 15952,
+			Level = 999,
+			DisplayIDs = {{15928}},
+			AtlasMapBossID = BLUE.."3",
+			[RAID10_DIFF] = {
+                { 1, 39225 }, -- Cloak of Armed Strife
+                { 2, 39230 }, -- Spaulders of the Monstrosity
+                { 3, 39224 }, -- Leggings of Discord
+                { 4, 39228 }, -- Web Cocoon Grips
+                { 5, 39232 }, -- Pendant of Lost Vocations
+                { 6, 39231 }, -- Timeworn Silken Band
+                { 7, 39229 }, -- Embrace of the Spider
+                { 8, 39226 }, -- Maexxna's Femur
+                { 9, 39221 }, -- Wraith Spear
+                { 10, 39233 }, -- Aegis of Damnation
+            },
+            [RAID25_DIFF] = {
+                { 1, 40250 }, -- Aged Winter Cloak
+                { 2, 40254 }, -- Cloak of Averted Crisis
+                { 3, 40252 }, -- Cloak of the Shadowed Sun
+                { 4, 40253 }, -- Shawl of the Old Maid
+                { 5, 40251 }, -- Shroud of Luminosity
+                { 6, 40062 }, -- Digested Silken Robes
+                { 7, 40060 }, -- Distorted Limbs
+                { 8, 39768 }, -- Cowl of the Perished
+                { 9, 40063 }, -- Mantle of Shattered Kinship
+                { 10, 39765 }, -- Sinner's Bindings
+                { 11, 39761 }, -- Infectious Skitterer Leggings
+                { 12, 40061 }, -- Quivering Tunic
+                { 13, 39762 }, -- Torn Web Wrapping
+                { 14, 39760 }, -- Helm of Diminished Pride
+                { 15, 39767 }, -- Undiminished Battleplate
+                { 16, 39764 }, -- Bindings of the Hapless Prey
+                { 17, 39759 }, -- Ablative Chitin Girdle
+                { 18, 40257 }, -- Defender's Code
+                { 19, 40255 }, -- Dying Curse
+                { 20, 40258 }, -- Forethought Talisman
+                { 21, 40256 }, -- Grim Toll
+                { 22, 39766 }, -- Matriarch's Spawn
+                { 23, 39763 }, -- Wraith Strike
+                { 24, 39758 }, -- The Jawbone
+            },
+		},
+		-- The Plague Quarter
+		{ -- NAXNoththePlaguebringer
+			name = AL["Noth the Plaguebringer"],
+			npcID = 15954,
+			Level = 999,
+			DisplayIDs = {{16590}},
+			AtlasMapBossID = PURP.."1",
+			[RAID10_DIFF] = {
+                { 1, 39241 }, -- Dark Shroud of the Scourge
+                { 2, 39242 }, -- Robes of Hoarse Breaths
+                { 3, 39240 }, -- Noth's Curse
+                { 4, 39237 }, -- Spaulders of Resumed Battle
+                { 5, 39243 }, -- Handgrips of the Foredoomed
+                { 6, 39236 }, -- Trespasser's Boots
+                { 7, 39239 }, -- Chestplate of the Risen Soldier
+                { 8, 39235 }, -- Bone-Framed Bracers
+                { 9, 39234 }, -- Plague-Impervious Boots
+                { 10, 39244 }, -- Ring of the Fated
+            },
+            [RAID25_DIFF] = {
+                { 1, 40602 }, -- Robes of Mutation
+                { 2, 40198 }, -- Bands of Impurity
+                { 3, 40197 }, -- Gloves of the Fallen Wizard
+                { 4, 40186 }, -- Thrusting Bands
+                { 5, 40200 }, -- Belt of Potent Chanting
+                { 6, 40193 }, -- Tunic of Masked Suffering
+                { 7, 40196 }, -- Legguards of the Undisturbed
+                { 8, 40184 }, -- Crippled Treads
+                { 9, 40185 }, -- Shoulderguards of Opportunity
+                { 10, 40188 }, -- Gauntlets of the Disobediant
+                { 11, 40187 }, -- Poignant Sabatons
+                { 12, 40071 }, -- Chains of Adoration
+                { 13, 40065 }, -- Fool's Trial
+                { 14, 40069 }, -- Heritage
+                { 15, 40064 }, -- Thunderstorm Amulet
+                { 16, 40080 }, -- Lost Jewel
+                { 17, 40075 }, -- Ruthlessness
+                { 18, 40107 }, -- Sand-Worn Band
+                { 19, 40074 }, -- Strong-Handed Ring
+                { 20, 40192 }, -- Accursed Spine
+                { 21, 40191 }, -- Libram of Radiance
+                { 22, 40189 }, -- Angry Dread
+                { 23, 40190 }, -- Spinning Fate
+            },
+		},
+		{ -- NAXHeigantheUnclean
+			name = AL["Heigan the Unclean"],
+			npcID = 15936,
+			Level = 999,
+			DisplayIDs = {{16309}},
+			AtlasMapBossID = PURP.."2",
+			[RAID10_DIFF] = {
+                { 1, 39252 }, -- Preceptor's Bindings
+                { 2, 39254 }, -- Saltarello Shoes
+                { 3, 39247 }, -- Cuffs of Dark Shadows
+                { 4, 39248 }, -- Tunic of the Lost Pack
+                { 5, 39251 }, -- Necrogenic Belt
+                { 6, 39249 }, -- Shoulderplates of Bloodshed
+                { 7, 39246 }, -- Amulet of Autopsy
+                { 8, 39250 }, -- Ring of Holy Cleansing
+                { 9, 39245 }, -- Demise
+                { 10, 39255 }, -- Staff of the Plague Beast
+            },
+            [RAID25_DIFF] = {
+                { 1, 40250 }, -- Aged Winter Cloak
+                { 2, 40254 }, -- Cloak of Averted Crisis
+                { 3, 40252 }, -- Cloak of the Shadowed Sun
+                { 4, 40253 }, -- Shawl of the Old Maid
+                { 5, 40251 }, -- Shroud of Luminosity
+                { 6, 40234 }, -- Heigan's Putrid Vestments
+                { 7, 40236 }, -- Serene Echoes
+                { 8, 40238 }, -- Gloves of the Dancing Bear
+                { 9, 40205 }, -- Stalk-Skin Belt
+                { 10, 40235 }, -- Helm of Pilgrimage
+                { 11, 40209 }, -- Bindings of the Decrepit
+                { 12, 40201 }, -- Leggings of Colossal Strides
+                { 13, 40237 }, -- Eruption-Scared Boots
+                { 14, 40203 }, -- Breastplate of Tormented Rage
+                { 15, 40210 }, -- Chestguard of Bitter Charms
+                { 16, 40204 }, -- Legguards of the Apostle
+                { 17, 40206 }, -- Iron-Spring Jumpers
+                { 18, 40257 }, -- Defender's Code
+                { 19, 40255 }, -- Dying Curse
+                { 20, 40258 }, -- Forethought Talisman
+                { 21, 40256 }, -- Grim Toll
+                { 22, 40207 }, -- Sigil of Awareness
+                { 23, 40208 }, -- Cryptfiend's Bite
+                { 24, 40233 }, -- The Undeath Carrier
+            },
+		},
+		{ -- NAXLoatheb
+			name = AL["Loatheb"],
+			npcID = 16011,
+			Level = 999,
+			DisplayIDs = {{16110}},
+			AtlasMapBossID = PURP.."3",
+			[RAID10_DIFF] = {
+                { 1, 39259 }, -- Fungi-Stained Coverings
+                { 2, 39260 }, -- Helm of the Corrupted Mind
+                { 3, 39258 }, -- Legplates of Inescapable Death
+                { 4, 39257 }, -- Loatheb's Shadow
+                { 5, 39256 }, -- Sulfur Stave
+                { 16, 40622 }, -- Spaulders of the Lost Conqueror
+                { 17, 40623 }, -- Spaulders of the Lost Protector
+                { 18, 40624 }, -- Spaulders of the Lost Vanquisher
+            },
+            [RAID25_DIFF] = {
+                { 1, 40247 }, -- Cowl of Innocent Delight
+                { 2, 40246 }, -- Boots of Impetuous Ideals
+                { 3, 40249 }, -- Vest of Vitality
+                { 4, 40243 }, -- Footwraps of Vile Deceit
+                { 5, 40242 }, -- Grotesque Handgrips
+                { 6, 40241 }, -- Girdle of Unity
+                { 7, 40240 }, -- Greaves of Turbulence
+                { 8, 40244 }, -- The Impossible Dream
+                { 9, 40239 }, -- The Hand of Nerub
+                { 10, 40245 }, -- Fading Glow
+                { 16, 40637 }, -- Mantle of the Lost Conqueror
+                { 17, 40638 }, -- Mantle of the Lost Protector
+                { 18, 40639 }, -- Mantle of the Lost Vanquisher
+            },
+		},
+		-- The Military Quarter
+		{ -- NAXInstructorRazuvious
+			name = AL["Instructor Razuvious"],
+			npcID = 16061,
+			Level = 999,
+			DisplayIDs = {{16582}},
+			AtlasMapBossID = _RED.."1",
+			[RAID10_DIFF] = {
+                { 1, 39297 }, -- Cloak of Darkening
+                { 2, 39310 }, -- Mantle of the Extensive Mind
+                { 3, 39309 }, -- Leggings of the Instructor
+                { 4, 39299 }, -- Rapid Attack Gloves
+                { 5, 39308 }, -- Girdle of Lenience
+                { 6, 39307 }, -- Iron Rings of Endurance
+                { 7, 39306 }, -- Plated Gloves of Relief
+                { 8, 39298 }, -- Waistguard of the Tutor
+                { 9, 39311 }, -- Scepter of Murmuring Spirits
+                { 10, 39296 }, -- Accursed Bow of the Elite
+            },
+            [RAID25_DIFF] = {
+                { 1, 40325 }, -- Bindings of the Expansive Mind
+                { 2, 40326 }, -- Boots of Forlorn Wishes
+                { 3, 40305 }, -- Spaulders of Egotism
+                { 4, 40319 }, -- Chestpiece of Suspicion
+                { 5, 40323 }, -- Esteemed Bindings
+                { 6, 40315 }, -- Shoulderpads of Secret Arts
+                { 7, 40324 }, -- Bands of Mutual Respect
+                { 8, 40327 }, -- Girdle of Recuperation
+                { 9, 40306 }, -- Bracers of the Unholy Knight
+                { 10, 40316 }, -- Gauntlets of Guiding Touch
+                { 11, 40317 }, -- Girdle of Razuvious
+                { 12, 40318 }, -- Legplates of Double Strikes
+                { 13, 40320 }, -- Faithful Steel Sabatons
+                { 14, 40071 }, -- Chains of Adoration
+                { 15, 40065 }, -- Fool's Trial
+                { 16, 40069 }, -- Heritage
+                { 17, 40064 }, -- Thunderstorm Amulet
+                { 18, 40080 }, -- Lost Jewel
+                { 19, 40075 }, -- Ruthlessness
+                { 20, 40107 }, -- Sand-Worn Band
+                { 21, 40074 }, -- Strong-Handed Ring
+                { 22, 40321 }, -- Idol of the Shooting Star
+                { 23, 40322 }, -- Totem of Dueling
+            },
+		},
+		{ -- NAXGothiktheHarvester
+			name = AL["Gothik the Harvester"],
+			npcID = 16060,
+			Level = 999,
+			DisplayIDs = {{16279}},
+			AtlasMapBossID = _RED.."2",
+			[RAID10_DIFF] = {
+                { 1, 39390 }, -- Resurgent Phantom Bindings
+                { 2, 39386 }, -- Tunic of Dislocation
+                { 3, 39391 }, -- Heinous Mail Chestguard
+                { 4, 39379 }, -- Spectral Rider's Girdle
+                { 5, 39345 }, -- Girdle of the Ascended Phantom
+                { 6, 39369 }, -- Sabatons of Deathlike Gloom
+                { 7, 39392 }, -- Veiled Amulet of Life
+                { 8, 39389 }, -- Signet of the Malevolent
+                { 9, 39388 }, -- Spirit-World Glass
+                { 10, 39344 }, -- Slayer of the Lifeless
+            },
+            [RAID25_DIFF] = {
+                { 1, 40250 }, -- Aged Winter Cloak
+                { 2, 40254 }, -- Cloak of Averted Crisis
+                { 3, 40252 }, -- Cloak of the Shadowed Sun
+                { 4, 40253 }, -- Shawl of the Old Maid
+                { 5, 40251 }, -- Shroud of Luminosity
+                { 6, 40339 }, -- Gothik's Cowl
+                { 7, 40338 }, -- Bindings of Yearning
+                { 8, 40329 }, -- Hood of the Exodus
+                { 9, 40341 }, -- Shackled Cinch
+                { 10, 40333 }, -- Leggings of Fleeting Moments
+                { 11, 40340 }, -- Helm of Unleashed Energy
+                { 12, 40331 }, -- Leggings of Failed Escape
+                { 13, 40328 }, -- Helm of Vital Protection
+                { 14, 40334 }, -- Burdened Shoulderplates
+                { 15, 40332 }, -- Abetment Bracers
+                { 16, 40330 }, -- Bracers of Unrelenting Attack
+                { 17, 40257 }, -- Defender's Code
+                { 18, 40255 }, -- Dying Curse
+                { 19, 40258 }, -- Forethought Talisman
+                { 20, 40256 }, -- Grim Toll
+                { 21, 40342 }, -- Idol of Awakening
+                { 22, 40337 }, -- Libram of Resurgence
+                { 23, 40336 }, -- Life and Death
+                { 24, 40335 }, -- Touch of Horror
+            },
+		},
+		{ -- NAXTheFourHorsemen
+			name = AL["The Four Horsemen"],
+			npcID = {16064, 16065, 16062, 16063},
+			Level = 999,
+			DisplayIDs = {{16155},{16153},{16139},{16154}},
+			AtlasMapBossID = _RED.."3",
+			[RAID10_DIFF] = {
+                { 1, 39396 }, -- Gown of Blaumeux
+                { 2, 39397 }, -- Pauldrons of Havoc
+                { 3, 39395 }, -- Thane's Tainted Greathelm
+                { 4, 39393 }, -- Claymore of Ancient Power
+                { 5, 39394 }, -- Charmed Cierge
+                { 16, 40610 }, -- Chestguard of the Lost Conqueror
+                { 17, 40611 }, -- Chestguard of the Lost Protector
+                { 18, 40612 }, -- Chestguard of the Lost Vanquisher
+            },
+            [RAID25_DIFF] = {
+                { 1, 40349 }, -- Gloves of Peaceful Death
+                { 2, 40344 }, -- Helm of the Grave
+                { 3, 40352 }, -- Leggings of Voracious Shadows
+                { 4, 40347 }, -- Zeliek's Gauntlets
+                { 5, 40350 }, -- Urn of Lost Memories
+                { 6, 40345 }, -- Broken Promise
+                { 7, 40343 }, -- Armageddon
+                { 8, 40348 }, -- Damnation
+                { 9, 40346 }, -- Final Voyage
+                { 16, 40625 }, -- Breastplate of the Lost Conqueror
+                { 17, 40626 }, -- Breastplate of the Lost Protector
+                { 18, 40627 }, -- Breastplate of the Lost Vanquisher
+            },
+		},
+		-- The Construct Quarter
+		{ -- NAXPatchwerk
+			name = AL["Patchwerk"],
+			npcID = 16028,
+			Level = 999,
+			DisplayIDs = {{16174}},
+			AtlasMapBossID = 1,
+			[RAID10_DIFF] = {
+                { 1, 39272 }, -- Drape of Surgery
+                { 2, 39273 }, -- Sullen Cloth Boots
+                { 3, 39275 }, -- Contagion Gloves
+                { 4, 39274 }, -- Retcher's Shoulderpads
+                { 5, 39267 }, -- Abomination Shoulderblades
+                { 6, 39262 }, -- Gauntlets of Combined Strength
+                { 7, 39261 }, -- Tainted Girdle of Mending
+                { 8, 39271 }, -- Blade of Dormant Memories
+                { 9, 39270 }, -- Hatestrike
+            },
+            [RAID25_DIFF] = {
+                { 1, 40271 }, -- Sash of Solitude
+                { 2, 40269 }, -- Boots of Persuasion
+                { 3, 40260 }, -- Belt of the Tortured
+                { 4, 40270 }, -- Boots of Septic Wounds
+                { 5, 40262 }, -- Gloves of Calculated Risk
+                { 6, 40272 }, -- Girdle of the Gambit
+                { 7, 40261 }, -- Crude Discolored Battlegrips
+                { 8, 40263 }, -- Fleshless Girdle
+                { 9, 40259 }, -- Waistguard of Divine Grace
+                { 10, 40071 }, -- Chains of Adoration
+                { 11, 40065 }, -- Fool's Trial
+                { 12, 40069 }, -- Heritage
+                { 13, 40064 }, -- Thunderstorm Amulet
+                { 14, 40080 }, -- Lost Jewel
+                { 15, 40075 }, -- Ruthlessness
+                { 16, 40107 }, -- Sand-Worn Band
+                { 17, 40074 }, -- Strong-Handed Ring
+                { 18, 40273 }, -- Surplus Limb
+                { 19, 40267 }, -- Totem of Hex
+                { 20, 40268 }, -- Libram of Tolerance
+                { 21, 40264 }, -- Split Greathammer
+                { 22, 40266 }, -- Hero's Surrender
+                { 23, 40265 }, -- Arrowsong
+            },
+		},
+		{ -- NAXGrobbulus
+			name = AL["Grobbulus"],
+			npcID = 15931,
+			Level = 999,
+			DisplayIDs = {{16035}},
+			AtlasMapBossID = 2,
+			[RAID10_DIFF] = {
+                { 1, 39284 }, -- Miasma Mantle
+                { 2, 39285 }, -- Handgrips of Turmoil
+                { 3, 39283 }, -- Putrescent Bands
+                { 4, 39279 }, -- Blistered Belt of Decay
+                { 5, 39278 }, -- Bands of Anxiety
+                { 6, 39280 }, -- Leggings of Innumerable Barbs
+                { 7, 39282 }, -- Bone-Linked Amulet
+                { 8, 39277 }, -- Sealing Ring of Grobbulus
+                { 9, 39281 }, -- Infection Repulser
+                { 10, 39276 }, -- The Skull of Ruin
+            },
+            [RAID25_DIFF] = {
+                { 1, 40250 }, -- Aged Winter Cloak
+                { 2, 40254 }, -- Cloak of Averted Crisis
+                { 3, 40252 }, -- Cloak of the Shadowed Sun
+                { 4, 40253 }, -- Shawl of the Old Maid
+                { 5, 40251 }, -- Shroud of Luminosity
+                { 6, 40287 }, -- Cowl of Vanity
+                { 7, 40286 }, -- Mantle of the Corrupted
+                { 8, 40351 }, -- Mantle of the Fatigued Sage
+                { 9, 40289 }, -- Sympathetic Amice
+                { 10, 40277 }, -- Tunic of Indulgence
+                { 11, 40285 }, -- Desecrated Past
+                { 12, 40288 }, -- Spaulders of Incoherence
+                { 13, 40283 }, -- Fallout Impervious Tunic
+                { 14, 40282 }, -- Slime Stream Bands
+                { 15, 40275 }, -- Depraved Linked Belt
+                { 16, 40279 }, -- Chestguard of the Exhausted
+                { 17, 40274 }, -- Bracers of Liberation
+                { 18, 40278 }, -- Girdle of Chivalry
+                { 19, 40257 }, -- Defender's Code
+                { 20, 40255 }, -- Dying Curse
+                { 21, 40258 }, -- Forethought Talisman
+                { 22, 40256 }, -- Grim Toll
+                { 23, 40281 }, -- Twilight Mist
+                { 24, 40280 }, -- Origin of Nightmares
+                { 25, 40284 }, -- Plague Igniter
+            },
+		},
+		{ -- NAXGluth
+			name = AL["Gluth"],
+			npcID = 15932,
+			Level = 999,
+			DisplayIDs = {{16064}},
+			AtlasMapBossID = 3,
+			[RAID10_DIFF] = {
+                { 1, 39272 }, -- Drape of Surgery
+                { 2, 39284 }, -- Miasma Mantle
+                { 3, 39396 }, -- Gown of Blaumeux
+                { 4, 39309 }, -- Leggings of the Instructor
+                { 5, 39237 }, -- Spaulders of Resumed Battle
+                { 6, 39279 }, -- Blistered Belt of Decay
+                { 7, 39191 }, -- Splint-Bound Leggings
+                { 8, 39215 }, -- Boots of the Follower
+                { 9, 39294 }, -- Arc-Scorched Helmet
+                { 10, 39248 }, -- Tunic of the Lost Pack
+                { 11, 39194 }, -- Rusted-Link Spiked Gauntlets
+                { 12, 39251 }, -- Necrogenic Belt
+                { 13, 39379 }, -- Spectral Rider's Girdle
+                { 14, 39188 }, -- Chivalric Chestguard
+                { 15, 39345 }, -- Girdle of the Ascended Phantom
+                { 16, 39146 }, -- Collar of Dissolution
+                { 17, 39232 }, -- Pendant of Lost Vocations
+                { 18, 39193 }, -- Band of Neglected Pleas
+                { 19, 39388 }, -- Spirit-World Glass
+                { 20, 39200 }, -- Grieving Spellblade
+                { 21, 39344 }, -- Slayer of the Lifeless
+                { 22, 39281 }, -- Infection Repulser
+                { 23, 39394 }, -- Charmed Cierge
 
+                { 101, 40622 }, -- Spaulders of the Lost Conqueror
+                { 102, 40623 }, -- Spaulders of the Lost Protector
+                { 103, 40624 }, -- Spaulders of the Lost Vanquisher
+                { 105, 40610 }, -- Chestguard of the Lost Conqueror
+                { 106, 40611 }, -- Chestguard of the Lost Protector
+                { 107, 40612 }, -- Chestguard of the Lost Vanquisher
+                { 116, 40619 }, -- Leggings of the Lost Conqueror
+                { 117, 40620 }, -- Leggings of the Lost Protector
+                { 118, 40621 }, -- Leggings of the Lost Vanquisher
+            },
+            [RAID25_DIFF] = {
+                { 1, 40247 }, -- Cowl of Innocent Delight
+                { 2, 40289 }, -- Sympathetic Amice
+                { 3, 40602 }, -- Robes of Mutation
+                { 4, 39733 }, -- Gloves of Token Respect
+                { 5, 40303 }, -- Wraps of the Persecuted
+                { 6, 40326 }, -- Boots of Forlorn Wishes
+                { 7, 40296 }, -- Cover of Silence
+                { 8, 39768 }, -- Cowl of the Perished
+                { 9, 40319 }, -- Chestpiece of Suspicion
+                { 10, 40260 }, -- Belt of the Tortured
+                { 11, 40205 }, -- Stalk-Skin Belt
+                { 12, 40270 }, -- Boots of Septic Wounds
+                { 13, 40193 }, -- Tunic of Masked Suffering
+                { 14, 40209 }, -- Bindings of the Decrepit
+                { 15, 40302 }, -- Benefactor's Gauntlets
+                { 16, 39718 }, -- Corpse Scarab Handguards
+                { 17, 40242 }, -- Grotesque Handgrips
+                { 18, 39760 }, -- Helm of Diminished Pride
+                { 19, 40185 }, -- Shoulderguards of Opportunity
+                { 20, 40203 }, -- Breastplate of Tormented Rage
+                { 21, 40332 }, -- Abetment Bracers
+                { 22, 40188 }, -- Gauntlets of the Disobediant
+                { 23, 40259 }, -- Waistguard of Divine Grace
+                { 24, 40204 }, -- Legguards of the Apostle
+                { 25, 39717 }, -- Inexorable Sabatons
+                { 26, 40206 }, -- Iron-Spring Jumpers
+                { 27, 40297 }, -- Sabatons of Endurance
+                { 28, 40350 }, -- Urn of Lost Memories
+                { 29, 40191 }, -- Libram of Radiance
+
+                { 101, 40281 }, -- Twilight Mist
+                { 102, 39714 }, -- Webbed Death
+                { 103, 39730 }, -- Widow's Fury
+                { 104, 40343 }, -- Armageddon
+                { 105, 40239 }, -- The Hand of Nerub
+                { 106, 40280 }, -- Origin of Nightmares
+                { 107, 39716 }, -- Shield of Assimilation
+                { 108, 40265 }, -- Arrowsong
+                { 109, 40346 }, -- Final Voyage
+                { 111, 40637 }, -- Mantle of the Lost Conqueror
+                { 112, 40638 }, -- Mantle of the Lost Protector
+                { 113, 40639 }, -- Mantle of the Lost Vanquisher
+                { 116, 40625 }, -- Breastplate of the Lost Conqueror
+                { 117, 40626 }, -- Breastplate of the Lost Protector
+                { 118, 40627 }, -- Breastplate of the Lost Vanquisher
+                { 120, 40634 }, -- Legplates of the Lost Conqueror
+                { 121, 40635 }, -- Legplates of the Lost Protector
+                { 122, 40636 }, -- Legplates of the Lost Vanquisher
+            },
+		},
+		{ -- NAXThaddius
+			name = AL["Thaddius"],
+			npcID = 15928,
+			Level = 999,
+			DisplayIDs = {{16137}},
+			AtlasMapBossID = 4,
+			[RAID10_DIFF] = {
+                { 1, 39295 }, -- Cowl of Sheet Lightning
+                { 2, 39294 }, -- Arc-Scorched Helmet
+                { 3, 39293 }, -- Blackened Legplates of Feugen
+                { 4, 39292 }, -- Repelling Charge
+                { 5, 39291 }, -- Torment of the Banished
+                { 16, 40619 }, -- Leggings of the Lost Conqueror
+                { 17, 40620 }, -- Leggings of the Lost Protector
+                { 18, 40621 }, -- Leggings of the Lost Vanquisher
+            },
+            [RAID25_DIFF] = {
+                { 1, 40303 }, -- Wraps of the Persecuted
+                { 2, 40301 }, -- Cincture of Polarity
+                { 3, 40296 }, -- Cover of Silence
+                { 4, 40304 }, -- Headpiece of Fungal Bloom
+                { 5, 40299 }, -- Pauldrons of the Abandoned
+                { 6, 40302 }, -- Benefactor's Gauntlets
+                { 7, 40298 }, -- Faceguard of the Succumbed
+                { 8, 40294 }, -- Riveted Abomination Leggings
+                { 9, 40297 }, -- Sabatons of Endurance
+                { 10, 40300 }, -- Spire of Sunset
+                { 16, 40634 }, -- Legplates of the Lost Conqueror
+                { 17, 40635 }, -- Legplates of the Lost Protector
+                { 18, 40636 }, -- Legplates of the Lost Vanquisher
+            },
+		},
+		-- Frostwyrm Lair
+		{ -- NAXSapphiron
+			name = AL["Sapphiron"],
+			npcID = 15989,
+			Level = 999,
+			DisplayIDs = {{16033}},
+			AtlasMapBossID = GREN.."1",
+			[RAID10_DIFF] = {
+                { 1, 39415 }, -- Shroud of the Citadel
+                { 2, 39404 }, -- Cloak of Mastery
+                { 3, 39409 }, -- Cowl of Winged Fear
+                { 4, 39408 }, -- Leggings of Sapphiron
+                { 5, 39399 }, -- Helm of the Vast Legions
+                { 6, 39405 }, -- Helmet of the Inner Sanctum
+                { 7, 39403 }, -- Helm of the Unsubmissive
+                { 8, 39398 }, -- Massive Skeletal Ribcage
+                { 9, 39401 }, -- Circle of Death
+                { 10, 39407 }, -- Circle of Life
+                { 16, 44569 }, -- Key to the Focusing Iris
+                { 17, 44582 }, -- Key to the Focusing Iris
+            },
+            [RAID25_DIFF] = {
+                { 1, 40381 }, -- Sympathy
+                { 2, 40380 }, -- Gloves of Grandeur
+                { 3, 40376 }, -- Legwraps of the Defeated Dragon
+                { 4, 40362 }, -- Gloves of Fast Reactions
+                { 5, 40379 }, -- Legguards of the Boneyard
+                { 6, 40367 }, -- Boots of the Great Construct
+                { 7, 40366 }, -- Platehelm of the Great Wyrm
+                { 8, 40377 }, -- Noble Birthright Pauldrons
+                { 9, 40365 }, -- Breastplate of Frozen Pain
+                { 10, 40363 }, --  Bone-Inlaid Legguards
+                { 11, 40378 }, -- Ceaseless Pity
+                { 12, 40374 }, -- Cosmic Lights
+                { 13, 40369 }, -- Icy Blast Amulet
+                { 14, 40370 }, -- Gatekeeper
+                { 15, 40375 }, -- Ring of Decaying Beauty
+                { 16, 40371 }, -- Bandit's Insignia
+                { 17, 40373 }, -- Extract of Necromatic Power
+                { 18, 40372 }, -- Rune of Repulsion
+                { 19, 40382 }, -- Soul of the Dead
+                { 20, 40368 }, -- Murder
+                { 22, 44577 }, -- Heroic Key to the Focusing Iris
+                { 23, 44581 }, -- Heroic Key to the Focusing Iris
+            },
+		},
+		{ -- NAXKelThuzard
+			name = AL["Kel'Thuzad"],
+			npcID = 15990,
+			Level = 999,
+			DisplayIDs = {{15945}},
+			AtlasMapBossID = GREN.."2",
+			[RAID10_DIFF] = {
+                { 1, 39425 }, -- Cloak of the Dying
+                { 2, 39421 }, -- Gem of Imprisoned Vassals
+                { 3, 39416 }, -- Kel'Thuzad's Reach
+                { 4, 39424 }, -- The Soulblade
+                { 5, 39420 }, -- Anarchy
+                { 6, 39417 }, -- Death's Bite
+                { 7, 39423 }, -- Hammer of the Astral Plane
+                { 8, 39422 }, -- Staff of the Plaguehound
+                { 9, 39426 }, -- Wand of the Archlich
+                { 10, 39419 }, -- Nerubian Conquerer
+                { 16, 40616 }, -- Helm of the Lost Conqueror
+                { 17, 40617 }, -- Helm of the Lost Protector
+                { 18, 40618 }, -- Helm of the Lost Vanquisher
+            },
+            [RAID25_DIFF] = {
+                { 1, 40405 }, -- Cape of the Unworthy Wizard
+                { 2, 40403 }, -- Drape of the Deadly Foe
+                { 3, 40398 }, -- Leggings of Mortal Arrogance
+                { 4, 40387 }, -- Boundless Ambition
+                { 5, 40399 }, -- Signet of Manifested Pain
+                { 6, 40383 }, -- Calamity's Grasp
+                { 7, 40386 }, -- Sinister Revenge
+                { 8, 40396 }, -- The Turning Tide
+                { 9, 40402 }, -- Last Laugh
+                { 10, 40384 }, -- Betrayer of Humanity
+                { 11, 40395 }, -- Torch of Holy Fire
+                { 12, 40388 }, -- Journey's End
+                { 13, 40401 }, -- Voice of Reason
+                { 14, 40400 }, -- Wall of Terror
+                { 15, 40385 }, -- Envoy of Mortality
+                { 16, 40631 }, -- Crown of the Lost Conqueror
+                { 17, 40632 }, -- Crown of the Lost Protector
+                { 18, 40633 }, -- Crown of the Lost Vanquisher
+            },
+		},
+		{ -- NAXTrash
+			name = AL["Trash"],
+			ExtraList = true,
+			[RAID10_DIFF] = {
+                { 1, 39467 }, -- Minion Bracers
+                { 2, 39472 }, -- Chain of Latent Energies
+                { 3, 39470 }, -- Medallion of the Disgraced
+                { 4, 39427 }, -- Omen of Ruin
+                { 5, 39468 }, -- The Stray
+                { 6, 39473 }, -- Contortion
+            },
+            [RAID25_DIFF] = {
+                { 1, 40410 }, -- Shadow of the Ghoul
+                { 2, 40409 }, -- Boots of the Escaped Captive
+                { 3, 40414 }, -- Shoulderguards of the Undaunted
+                { 4, 40412 }, -- Ousted Bead Necklace
+                { 5, 40408 }, -- Haunting Call
+                { 6, 40407 }, -- Silent Crusader
+                { 7, 40406 }, -- Inevitable Defeat
+            },
+		},
+	},
+}
 
 
 --[[
