@@ -32,9 +32,9 @@ local TT_INFO_ENTRY = "|cFFCFCFCF%s:|r %s"
 
 local RIGHT_SELECTION_ENTRYS = {
 	DIFF_MAX = 4,
-	DIFF_MIN = 1,	-- keep in sync with BOSS_MAX
+	DIFF_MIN = 2,
 	DIFF_DEFAULT = 2,
-	BOSS_MAX = 23,
+	BOSS_MAX = 24,
 }
 
 local db
@@ -1345,7 +1345,7 @@ function GUI:UpdateRightSelection(diffEntrys)
 	elseif diffEntrys < RIGHT_SELECTION_ENTRYS.DIFF_MIN then
 		diffEntrys = RIGHT_SELECTION_ENTRYS.DIFF_MIN
 	end
-	local bossEntrys = RIGHT_SELECTION_ENTRYS.BOSS_MAX - (diffEntrys - 1)
+	local bossEntrys = RIGHT_SELECTION_ENTRYS.BOSS_MAX - diffEntrys
 
 	frame.boss:SetNumEntrys(bossEntrys)
 	frame.difficulty:SetNumEntrys(diffEntrys)
