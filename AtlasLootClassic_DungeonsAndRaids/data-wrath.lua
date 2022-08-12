@@ -2611,7 +2611,6 @@ data["NaxxramasWrath"] = {
                 { 9, 39401 }, -- Circle of Death
                 { 10, 39407 }, -- Circle of Life
                 { 16, 44569 }, -- Key to the Focusing Iris
-                { 17, 44582 }, -- Key to the Focusing Iris
             },
             [RAID25_DIFF] = {
                 { 1, 40381 }, -- Sympathy
@@ -2635,7 +2634,6 @@ data["NaxxramasWrath"] = {
                 { 19, 40382 }, -- Soul of the Dead
                 { 20, 40368 }, -- Murder
                 { 22, 44577 }, -- Heroic Key to the Focusing Iris
-                { 23, 44581 }, -- Heroic Key to the Focusing Iris
             },
 		},
 		{ -- NAXKelThuzard
@@ -2702,6 +2700,85 @@ data["NaxxramasWrath"] = {
             },
 		},
 	},
+}
+
+
+data["Sartharion"] = {
+	MapID = 4493,
+	--InstanceID = 560,
+    ContentType = RAID_CONTENT,
+	AtlasModule = ATLAS_MODULE_NAME,
+	--AtlasMapID = "CL_CoTOldHillsbrad",
+	--AtlasMapFile = {"CoTOldHillsbrad", "CavernsOfTimeEnt"},
+	--LoadDifficulty = NORMAL_DIFF,
+	LevelRange = {80, 80, 80},
+	items = {
+        { -- CoTHillsbradDrake
+            name = AL["Sartharion"],
+            npcID = 28860,
+            Level = 999,
+            --DisplayIDs = {{17386}},
+            AtlasMapBossID = 1,
+            [RAID10_DIFF] = {
+                { 1, 40428 }, -- Titan's Outlook
+                { 2, 40427 }, -- Circle of Arcane Streams
+                { 3, 40426 }, -- Signet of the Accord
+                { 4, 40433 }, -- Wyrmrest Band
+                { 5, 40430 }, -- Majestic Dragon Figurine
+                { 6, 40429 }, -- Crimson Steel
+                { 7, 43345 }, -- Dragon Hide Bag
+                { 8, 43347 }, -- Satchel of Spoils
+                { 10, 40613 }, -- Gloves of the Lost Conqueror
+                { 11, 40614 }, -- Gloves of the Lost Protector
+                { 12, 40615 }, -- Gloves of the Lost Vanquisher
+                { 16, "INV_Box_01", nil, AL["Bonus Loot"], AL["One Drake Left"] },
+                { 17, 43988 }, -- Gale-Proof Cloak
+                { 18, 43990 }, -- Blade-Scarred Tunic
+                { 19, 43991 }, -- Legguards of Composure
+                { 20, 43989 }, -- Remembrance Girdle
+                { 21, 43992 }, -- Volitant Amulet
+                { 23, "INV_Box_01", nil, AL["Bonus Loot"], AL["Two Drakes Left"] },
+                { 24, 43995 }, -- Enamored Cowl
+                { 25, 43998 }, -- Chestguard of Flagrant Prowess
+                { 26, 43996 }, -- Sabatons of Firmament
+                { 27, 43994 }, -- Belabored Legplates
+                { 28, 43993 }, -- Greatring of Collision
+                { 29, "INV_Box_01", nil, AL["Bonus Loot"], AL["Three Drakes Left"] },
+                { 30, 43986 }, -- Reins of the Black Drake
+            },
+            [RAID25_DIFF] = {
+                { 1, 40437 }, -- Concealment Shoulderpads
+                { 2, 40439 }, -- Mantle of the Eternal Sentinel
+                { 3, 40451 }, -- Hyaline Helm of the Sniper
+                { 4, 40438 }, -- Council Chamber Epaulets
+                { 5, 40453 }, -- Chestplate of the Great Aspects
+                { 6, 40446 }, -- Dragon Brood Legguards
+                { 7, 40433 }, -- Wyrmrest Band
+                { 8, 40431 }, -- Fury of the Five Flights
+                { 9, 40432 }, -- Illustration of the Dragon Soul
+                { 10, 40455 }, -- Staff of Restraint
+                { 11, 43345 }, -- Dragon Hide Bag
+                { 12, 43346 }, -- Large Satchel of Spoils
+                { 13, 40628 }, -- Gauntlets of the Lost Conqueror
+                { 14, 40629 }, -- Gauntlets of the Lost Protector
+                { 15, 40630 }, -- Gauntlets of the Lost Vanquisher
+                { 16, "INV_Box_01", nil, AL["Bonus Loot"], AL["One Drake Left"] },
+                { 17, 44002 }, -- The Sanctum's Flowing Vestments
+                { 18, 44003 }, -- Upstanding Spaulders
+                { 19, 44004 }, -- Bountiful Gauntlets
+                { 20, 44000 }, -- Dragonstorm Breastplate
+                { 22, "INV_Box_01", nil, AL["Bonus Loot"], AL["Two Drakes Left"] },
+                { 23, 44005 }, -- Pennant Cloak
+                { 24, 44008 }, -- Unsullied Cuffs
+                { 25, 44007 }, -- Headpiece of Reconciliation
+                { 26, 44011 }, -- Leggings of the Honored
+                { 27, 44006 }, -- Obsidian Greathelm
+                { 29, "INV_Box_01", nil, AL["Bonus Loot"], AL["Three Drakes Left"] },
+                { 30, 43954 }, -- Reins of the Twilight Drake
+            }
+        },
+        KEYS
+    }
 }
 
 
