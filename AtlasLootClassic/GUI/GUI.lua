@@ -30,6 +30,13 @@ local TT_ENTRY = "|cFFCFCFCF%s:|r %s"
 local LOADER_STRING = "GUI_LOADING"
 local TT_INFO_ENTRY = "|cFFCFCFCF%s:|r %s"
 
+local RIGHT_SELECTION_ENTRYS = {
+	DIFF_MAX = 4,
+	DIFF_MIN = 1,	-- keep in sync with BOSS_MAX
+	DIFF_DEFAULT = 2,
+	BOSS_MAX = 23,
+}
+
 local db
 local LoadAtlasLootModule
 
@@ -845,6 +852,7 @@ local function BossSelectFunction(self, id, arg)
 	moduleData:CheckForLink(db.selected[2], db.selected[3], true)
 	local difficultys = moduleData:GetDifficultys()
 	local data = {}
+	local diffCount = 0
 	for count = 1, #difficultys do
 		if moduleData[db.selected[2]].items[id][count] then
 			data[ #data+1 ] = {
@@ -852,8 +860,11 @@ local function BossSelectFunction(self, id, arg)
 				name = difficultys[count].name,
 				tt_title = difficultys[count].name
 			}
+			diffCount = diffCount + 1
 		end
 	end
+
+	GUI:UpdateRightSelection(diffCount)
 	GUI.frame.difficulty:SetData(data, moduleData:GetDifficulty(db.selected[2], db.selected[3], db.selected[4]))
 	--UpdateFrames()
 end
@@ -866,6 +877,7 @@ local function ExtraSelectFunction(self, id, arg)
 	moduleData:CheckForLink(db.selected[2], id, true)
 	local difficultys = moduleData:GetDifficultys()
 	local data = {}
+	local diffCount = 0
 	for count = 1, #difficultys do
 		if moduleData[db.selected[2]].items[id][count] then
 			data[ #data+1 ] = {
@@ -873,9 +885,11 @@ local function ExtraSelectFunction(self, id, arg)
 				name = difficultys[count].name,
 				tt_title = difficultys[count].name
 			}
+			diffCount = diffCount + 1
 		end
 	end
 
+	GUI:UpdateRightSelection(diffCount)
 	GUI.frame.difficulty:SetData(data, moduleData:GetDifficulty(db.selected[2], db.selected[3], db.selected[4]))
 	--UpdateFrames()
 end
@@ -1309,6 +1323,7 @@ function GUI:Create()
 	self.frame = frame
 
 	GUI.RefreshMainFrame()
+	GUI:UpdateRightSelection()
 
 	self.ItemFrame:Create()
 	-- Set itemframe as start frame
@@ -1316,6 +1331,26 @@ function GUI:Create()
 	--self.SoundFrame:Create()
 
 	GUI.RefreshVersionUpdate()
+end
+
+local RightSelectionLastDiffEntrys = true
+function GUI:UpdateRightSelection(diffEntrys)
+	if RightSelectionLastDiffEntrys == diffEntrys then return end
+	local frame = GUI.frame
+	if not frame then return end
+
+	diffEntrys = diffEntrys or RIGHT_SELECTION_ENTRYS.DIFF_MIN
+	if diffEntrys > RIGHT_SELECTION_ENTRYS.DIFF_MAX then
+		diffEntrys = RIGHT_SELECTION_ENTRYS.DIFF_MAX
+	elseif diffEntrys < RIGHT_SELECTION_ENTRYS.DIFF_MIN then
+		diffEntrys = RIGHT_SELECTION_ENTRYS.DIFF_MIN
+	end
+	local bossEntrys = RIGHT_SELECTION_ENTRYS.BOSS_MAX - (diffEntrys - 1)
+
+	frame.boss:SetNumEntrys(bossEntrys)
+	frame.difficulty:SetNumEntrys(diffEntrys)
+
+	RightSelectionLastDiffEntrys = diffEntrys
 end
 
 function GUI:ForceUpdate()
