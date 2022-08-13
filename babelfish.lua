@@ -144,7 +144,7 @@ local function AddIntoITable(d, s, d2)
 			d[#d+1] = s
 			DuplicateProtection[d][s] = #d
 		else
-			DuplicateProtection[d][v] = 0
+			DuplicateProtection[d][s] = 0
 		end
 	end
 end
