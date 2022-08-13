@@ -51,12 +51,12 @@ local NAME_ICC = NAME_COLOR..AL["ICC"]..":|r %s" -- ICC
 local NAME_AT = NAME_COLOR..AL["AT"]..":|r %s" -- Argent Tournament
 
 -- colors
-local BLUE = "|cff6666ff"
-local GREY = "|cff999999"
-local GREN = "|cff66cc33"
-local _RED = "|cffcc6666"
-local PURP = "|cff9900ff"
-local WHIT = "|cffffffff"
+local BLUE = "|cff6666ff%s|r"
+--local GREY = "|cff999999%s|r"
+local GREEN = "|cff66cc33%s|r"
+local _RED = "|cffcc6666%s|r"
+local PURPLE = "|cff9900ff%s|r"
+--local WHIT = "|cffffffff%s|r"
 
 -- format
 local BONUS_LOOT_SPLIT = "%s - %s"
@@ -2012,7 +2012,8 @@ data["NaxxramasWrath"] = {
 			npcID = 15956,
 			Level = 999,
 			DisplayIDs = {{15931}},
-			AtlasMapBossID = BLUE.."1",
+			AtlasMapBossID = "1",
+            NameColor = BLUE,
 			[RAID10_DIFF] = {
                 { 1, 39192 }, -- Gloves of Dark Gestures
                 { 2, 39190 }, -- Agonal Sash
@@ -2056,7 +2057,8 @@ data["NaxxramasWrath"] = {
 			npcID = 15953,
 			Level = 999,
 			DisplayIDs = {{15940}},
-			AtlasMapBossID = BLUE.."2",
+			AtlasMapBossID = "2",
+            NameColor = BLUE,
 			[RAID10_DIFF] = {
                 { 1, 39216 }, -- Sash of Mortal Desire
                 { 2, 39215 }, -- Boots of the Follower
@@ -2101,7 +2103,8 @@ data["NaxxramasWrath"] = {
 			npcID = 15952,
 			Level = 999,
 			DisplayIDs = {{15928}},
-			AtlasMapBossID = BLUE.."3",
+			AtlasMapBossID = "3",
+            NameColor = BLUE,
 			[RAID10_DIFF] = {
                 { 1, 39225 }, -- Cloak of Armed Strife
                 { 2, 39230 }, -- Spaulders of the Monstrosity
@@ -2147,7 +2150,8 @@ data["NaxxramasWrath"] = {
 			npcID = 15954,
 			Level = 999,
 			DisplayIDs = {{16590}},
-			AtlasMapBossID = PURP.."1",
+			AtlasMapBossID = "1",
+            NameColor = PURPLE,
 			[RAID10_DIFF] = {
                 { 1, 39241 }, -- Dark Shroud of the Scourge
                 { 2, 39242 }, -- Robes of Hoarse Breaths
@@ -2191,7 +2195,8 @@ data["NaxxramasWrath"] = {
 			npcID = 15936,
 			Level = 999,
 			DisplayIDs = {{16309}},
-			AtlasMapBossID = PURP.."2",
+			AtlasMapBossID = "2",
+            NameColor = PURPLE,
 			[RAID10_DIFF] = {
                 { 1, 39252 }, -- Preceptor's Bindings
                 { 2, 39254 }, -- Saltarello Shoes
@@ -2236,7 +2241,8 @@ data["NaxxramasWrath"] = {
 			npcID = 16011,
 			Level = 999,
 			DisplayIDs = {{16110}},
-			AtlasMapBossID = PURP.."3",
+			AtlasMapBossID = "3",
+            NameColor = PURPLE,
 			[RAID10_DIFF] = {
                 { 1, 39259 }, -- Fungi-Stained Coverings
                 { 2, 39260 }, -- Helm of the Corrupted Mind
@@ -2269,7 +2275,8 @@ data["NaxxramasWrath"] = {
 			npcID = 16061,
 			Level = 999,
 			DisplayIDs = {{16582}},
-			AtlasMapBossID = _RED.."1",
+			AtlasMapBossID = "1",
+            NameColor = _RED,
 			[RAID10_DIFF] = {
                 { 1, 39297 }, -- Cloak of Darkening
                 { 2, 39310 }, -- Mantle of the Extensive Mind
@@ -2313,7 +2320,8 @@ data["NaxxramasWrath"] = {
 			npcID = 16060,
 			Level = 999,
 			DisplayIDs = {{16279}},
-			AtlasMapBossID = _RED.."2",
+			AtlasMapBossID = "2",
+            NameColor = _RED,
 			[RAID10_DIFF] = {
                 { 1, 39390 }, -- Resurgent Phantom Bindings
                 { 2, 39386 }, -- Tunic of Dislocation
@@ -2358,7 +2366,8 @@ data["NaxxramasWrath"] = {
 			npcID = {16064, 16065, 16062, 16063},
 			Level = 999,
 			DisplayIDs = {{16155},{16153},{16139},{16154}},
-			AtlasMapBossID = _RED.."3",
+			AtlasMapBossID = "3",
+            NameColor = _RED,
 			[RAID10_DIFF] = {
                 { 1, 39396 }, -- Gown of Blaumeux
                 { 2, 39397 }, -- Pauldrons of Havoc
@@ -2604,7 +2613,8 @@ data["NaxxramasWrath"] = {
 			npcID = 15989,
 			Level = 999,
 			DisplayIDs = {{16033}},
-			AtlasMapBossID = GREN.."1",
+			AtlasMapBossID = "1",
+            NameColor = GREEN,
 			[RAID10_DIFF] = {
                 { 1, 39415 }, -- Shroud of the Citadel
                 { 2, 39404 }, -- Cloak of Mastery
@@ -2647,7 +2657,8 @@ data["NaxxramasWrath"] = {
 			npcID = 15990,
 			Level = 999,
 			DisplayIDs = {{15945}},
-			AtlasMapBossID = GREN.."2",
+			AtlasMapBossID = "2",
+            NameColor = GREEN,
 			[RAID10_DIFF] = {
                 { 1, 39425 }, -- Cloak of the Dying
                 { 2, 39421 }, -- Gem of Imprisoned Vassals
@@ -3032,23 +3043,13 @@ data["VaultofArchavon"] = {
                 { 28, "CLASS_PALADIN",      nil, CLASS_NAME["PALADIN"],     AL["Retribution"],  "VoA_T_PALADIN_25_D" },
                 { 101, "SLOT_CLOTH",        nil, ALIL["Cloth"],         nil,  "VoA_T_CLOTH_25" },
                 { 102, "SLOT_LEATHER",      nil, ALIL["Leather"],       nil,  "VoA_T_LEATHER_25" },
-                { 103, "SLOT_MAIL",         nil, ALIL["Mail"],          nil,  "VoA_T_MAIL_25" },
+                { 103, "SLOT_MAIL4",         nil, ALIL["Mail"],          nil,  "VoA_T_MAIL_25" },
                 { 104, "SLOT_PLATE",        nil, ALIL["Plate"],         nil,  "VoA_T_PLATE_25" },
                 { 106, "SLOT_BACK",         nil, ALIL["Back"],          nil,  "VoA_T_BACK_25" },
                 { 107, "SLOT_NECK",         nil, ALIL["Neck"],          nil,  "VoA_T_NECK_25" },
                 { 108, "SLOT_FINGER",       nil, ALIL["Finger"],        nil,  "VoA_T_FINGER_25" },
                 { 116, AtlasLoot:GetRetByFaction(44083, 43959 ) }, -- Reins of the Grand Black War Mammoth
             }
-        },
-        { -- Trash
-            name = AL["Trash"],
-            ExtraList = true,
-            [NORMAL_DIFF] = {
-
-            },
-            [HEROIC_DIFF] = {
-
-            },
         },
         KEYS
     }

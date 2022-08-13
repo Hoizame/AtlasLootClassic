@@ -497,6 +497,7 @@ function ItemDB.ContentProto:GetName(raw)
 	if self.AreaID and not self.MapID then
 		self.MapID = self.AreaID
 	end
+	local name
 	local addEnd = ""
 	if not raw then
 		if AtlasLoot.db.showLvlRange and self.LevelRange then
@@ -511,22 +512,26 @@ function ItemDB.ContentProto:GetName(raw)
 		end
 	end
 	if self.name then
-		return self.name..addEnd
+		name = self.name..addEnd
 	elseif self.MapID then
 		if self.nameFormat then
-			return format(self.nameFormat, C_Map.GetAreaInfo(self.MapID)..addEnd or "MapID:"..self.MapID)
+			name = format(self.nameFormat, C_Map.GetAreaInfo(self.MapID)..addEnd or "MapID:"..self.MapID)
 		else
-			return C_Map.GetAreaInfo(self.MapID)..addEnd or "MapID:"..self.MapID
+			name = C_Map.GetAreaInfo(self.MapID)..addEnd or "MapID:"..self.MapID
 		end
 	elseif self.FactionID then
 		if self.nameFormat then
-			return format(self.nameFormat, AtlasLoot:Faction_GetFactionName(self.FactionID)..addEnd)
+			name = format(self.nameFormat, AtlasLoot:Faction_GetFactionName(self.FactionID)..addEnd)
 		else
-			return AtlasLoot:Faction_GetFactionName(self.FactionID)..addEnd
+			name = AtlasLoot:Faction_GetFactionName(self.FactionID)..addEnd
 		end
 	else
-		return UNKNOWN
+		name = UNKNOWN
 	end
+	if self.NameColor and not raw then
+		name = format(self.NameColor, name)
+	end
+	return name
 end
 
 function ItemDB.ContentProto:GetInfo()
@@ -542,6 +547,7 @@ function ItemDB.ContentProto:GetNameForItemTable(index, raw)
 	if raw and not self.items[index] then return end
 	assert(index and self.items[index], "index not found.")
 	index = self.items[index]
+	local name
 	local addStart, addEnd = "", ""
 	if not raw then
 		if AtlasLoot.db.ContentPhase.enableOnLootTable and not ContentPhase:IsActive(GetContentPhaseFromTable(index), index.gameVersion or self.gameVersion) then
@@ -565,23 +571,27 @@ function ItemDB.ContentProto:GetNameForItemTable(index, raw)
 	end
 	if index.name then
 		if index.nameFormat then
-			return format(addStart..index.nameFormat, index.name..addEnd)
+			name = format(addStart..index.nameFormat, index.name..addEnd)
 		else
-			return addStart..index.name..addEnd
+			name = addStart..index.name..addEnd
 		end
 	elseif index.FactionID then
 		if index.nameFormat then
-			return format(addStart..index.nameFormat, GetFactionInfoByID(index.FactionID)..addEnd)
+			name = format(addStart..index.nameFormat, GetFactionInfoByID(index.FactionID)..addEnd)
 		else
-			return addStart..GetFactionInfoByID(index.FactionID)..addEnd
+			name = addStart..GetFactionInfoByID(index.FactionID)..addEnd
 		end
 	elseif index.MapID then
 		if index.nameFormat then
-			return format(index.nameFormat, C_Map.GetAreaInfo(index.MapID)..addEnd or "MapID:"..index.MapID)
+			name = format(index.nameFormat, C_Map.GetAreaInfo(index.MapID)..addEnd or "MapID:"..index.MapID)
 		else
-			return C_Map.GetAreaInfo(index.MapID)..addEnd or "MapID:"..index.MapID
+			name = C_Map.GetAreaInfo(index.MapID)..addEnd or "MapID:"..index.MapID
 		end
 	else
-		return UNKNOWN
+		name = UNKNOWN
 	end
+	if index.NameColor and not raw then
+		name = format(index.NameColor, name)
+	end
+	return name
 end
