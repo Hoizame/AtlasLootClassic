@@ -8,6 +8,8 @@ local AL = AtlasLoot.Locales
 local type, pairs = type, pairs
 local format = format
 
+local TOKE_NUMBER_RANGE = 900000
+
 local TOKEN_FORMAT_STRING = "|cff00ff00"..AL["L-Click"]..":|r %s"
 local TOKEN_TYPE_DEFAULT = 1
 local TOKEN_TYPE_TEXT = {
@@ -503,7 +505,8 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
 		[44650] = {44658, 44657, 44659, 44660, type = 3}, -- 10man
 		[44651] = {44661, 44662, 44664, 44665, type = 3}, -- 25man
 
-		--- VaultofArchavon
+		--- ## VaultofArchavon
+		--- Archavon the Stone Watcher
 		-- Warlock
 		["VoA_A_WARLOCK_10"] = {39497, 39500, 39498, 0, 42001, 42015, 42003, type = 9},
 		["VoA_A_WARLOCK_25"] = {40423, 40420, 40422, 0, 41997, 42016, 42004, type = 9},
@@ -552,6 +555,57 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
 		["VoA_A_PALADIN_25_D"] = {40574, 40575, 40577, 0, 40785, 40805, 40846, type = 9},
 		["VoA_A_PALADIN_10_T"] = {39638, 39639, 39641, type = 9},
 		["VoA_A_PALADIN_25_T"] = {40579, 40580, 40583, type = 9},
+
+		--- Emalon the Storm Watcher
+		-- Warlock
+		["VoA_E_WARLOCK_10"] = {45419, 45420, 0, 42016, 42004, type = 9},
+		["VoA_E_WARLOCK_25"] = {46135, 46139, 0, 42017, 42005, type = 9},
+		-- Priest
+		["VoA_E_PRIEST_10_H"] = {45387, 45388, 0, 41873, 41863, type = 9},
+		["VoA_E_PRIEST_10_D"] = {45392, 45394, 0, 41939, 41926, type = 9},
+		["VoA_E_PRIEST_25_H"] = {46188, 46195, 0, 41874, 41864, type = 9},
+		["VoA_E_PRIEST_25_D"] = {46163, 46170, 0, 41940, 41927, type = 9},
+		-- Rogue
+		["VoA_E_ROGUE_10"] = {45397, 45399, 0, 41766, 41654, type = 9},
+		["VoA_E_ROGUE_25"] = {46124, 46126, 0, 41767, 41655, type = 9},
+		-- Hunter
+		["VoA_E_HUNTER_10"] = {45360, 45362, 0, 41142, 41204, type = 9},
+		["VoA_E_HUNTER_25"] = {46142, 46144, 0, 41143, 41205, type = 9},
+		-- Warrior
+		["VoA_E_WARRIOR_10_D"] = {45430, 45432, 0, 40804, 40844, type = 9},
+		["VoA_E_WARRIOR_10_T"] = {45426, 45427, type = 9},
+		["VoA_E_WARRIOR_25_D"] = {46148, 46150, 0, 40807, 40847, type = 9},
+		["VoA_E_WARRIOR_25_T"] = {46164, 46169, type = 9},
+		-- Deathknight
+		["VoA_E_DEATHKNIGHT_10_D"] = {45341, 45343, 0, 40806, 40845, type = 9},
+		["VoA_E_DEATHKNIGHT_10_T"] = {45337, 45338, type = 9},
+		["VoA_E_DEATHKNIGHT_25_D"] = {46113, 46116, 0, 46119, 46121, type = 9},
+		["VoA_E_DEATHKNIGHT_25_T"] = {40809, 40848, type = 9},
+		-- Mage
+		["VoA_E_MAGE_10"] = {46131, 45367, 0, 41970, 41958, type = 9},
+		["VoA_E_MAGE_25"] = {46132, 46133, 0, 41971, 41959, type = 9},
+		-- Druid
+		["VoA_E_DRUID_10_DR"] = {45351, 45353, 0, 41314, 41291, type = 9},
+		["VoA_E_DRUID_10_D"] = {45355, 45357, 0, 41659, 41771, type = 9},
+		["VoA_E_DRUID_10_H"]  = {45345, 45347, 0, 41308, 41284, type = 9},
+
+		["VoA_E_DRUID_25_DR"] = {46189, 46192, 0, 41293, 41304, type = 9},
+		["VoA_E_DRUID_25_D"] = {46158, 46160, 0, 41773, 41667, type = 9},
+		["VoA_E_DRUID_25_H"]  = {46183, 46185, 0, 41287, 41298, type = 9},
+		-- Shaman
+		["VoA_E_SHAMAN_10_DR"] = {45406, 45409, 0, 41006, 41032, type = 9},
+		["VoA_E_SHAMAN_10_D"] = {45414, 45416, 0, 41136, 41198, type = 9},
+		["VoA_E_SHAMAN_10_H"]  = {45401, 45403, 0, 41000, 41026, type = 9},
+		["VoA_E_SHAMAN_25_DR"] = {46207, 46210, 0, 41007, 41033, type = 9},
+		["VoA_E_SHAMAN_25_D"] = {46200, 46208, 0, 41137, 41199, type = 9},
+		["VoA_E_SHAMAN_25_H"]  = {46199, 46202, 0, 41001, 41027, type = 9},
+		-- Paladin
+		["VoA_E_PALADIN_10_H"] = {45370, 45371, 0, 40926, 40938, type = 9},
+		["VoA_E_PALADIN_10_D"] = {45376, 45379, 0, 40805, 40846, type = 9},
+		["VoA_E_PALADIN_10_T"] = {45383, 45384, type = 9},
+		["VoA_E_PALADIN_25_H"] = {46179, 46181, 0, 40927, 40939, type = 9},
+		["VoA_E_PALADIN_25_D"] = {46155, 46153, 0, 40808, 40849, type = 9},
+		["VoA_E_PALADIN_25_T"] = {46174, 46176, type = 9},
 	}
 end
 
@@ -589,6 +643,10 @@ end
 
 function Token.TokenTypeAddDescription(itemID)
 	return ( itemID and TOKEN[itemID] ) and TOKEN_TYPE_ADD_ITEM_DESCRIPTION[TOKEN[itemID].type or TOKEN_TYPE_DEFAULT] or false
+end
+
+function Token.GetTokenDummyNumberRange()
+	return TOKE_NUMBER_RANGE
 end
 
 -- TOKEN_TYPE_ADD_ITEM_DESCRIPTION
