@@ -1483,7 +1483,7 @@ data["VioletHold"] = {
 
 data["TrialoftheChampion"] = {
     nameFormat = NAME_AT,
-	MapID = 4100,
+	MapID = 4723,
 	--InstanceID = 560,
     ContentType = DUNGEON_CONTENT,
 	AtlasModule = ATLAS_MODULE_NAME,
