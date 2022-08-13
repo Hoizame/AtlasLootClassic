@@ -24,6 +24,7 @@ local GetCurrencyInfo, GetItemIcon = C_CurrencyInfo.GetCurrencyInfo, GetItemIcon
 local PRICE_INFO = VendorPrice.GetPriceInfoList()
 local PRICE_ICON_REPLACE = ALPrivate.PRICE_ICON_REPLACE
 local DIFFICULTY = AtlasLoot.DIFFICULTY
+local TOKEN_NUMBER_DUMMY = AtlasLoot.Data.Token.GetTokenDummyNumberRange()
 
 
 -- locals
@@ -229,7 +230,11 @@ local function OnTooltipSetItem_Hook(self)
         if sourceData and TooltipTextCache[item] ~= false and not TooltipTextCache[item] then
             local iconTexture, baseItem
             if type(sourceData.ItemData[item]) == "number" then
-                iconTexture = format(TEXTURE_ICON_FN, GetItemIcon(sourceData.ItemData[item]))
+                if sourceData.ItemData[item] >= TOKEN_NUMBER_DUMMY then
+                    iconTexture = ICON_TEXTURE[1]
+                else
+                    iconTexture = format(TEXTURE_ICON_FN, GetItemIcon(sourceData.ItemData[item]))
+                end
                 baseItem = sourceData.ItemData[item]
             end
             TooltipTextCache[item] = {}
