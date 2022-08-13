@@ -73,6 +73,11 @@ function Dummy.OnClear(button)
 	button.secButton.Name = nil
 	button.secButton.Description = nil
 	button.secButton.Extra = nil
+
+	if button.ExtraFrameShown then
+		AtlasLoot.Button:ExtraItemFrame_ClearFrame()
+		button.ExtraFrameShown = false
+	end
 end
 
 function Dummy.Refresh(button)
