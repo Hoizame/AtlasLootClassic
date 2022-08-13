@@ -54,7 +54,7 @@ local LOOT_BORDER_BY_QUALITY_AL = {}
 local BUTTON_COUNT = 0
 local SEC_BUTTON_COUNT = 0
 local button_types, extra_button_types, button_types_index, extra_button_types_index = {}, {}, {}, {}
-local STANDART_TABLE = { "Name", "Description" }
+local STANDART_TABLE = { "Name", "Description", "Extra" }
 local STANDART_FORMAT_TABLE = { "Item", "Item" }
 for i = 1,#STANDART_TABLE do STANDART_FORMAT_TABLE[#STANDART_FORMAT_TABLE+1] = STANDART_TABLE[i] end
 
@@ -624,7 +624,7 @@ function Proto:SetContentTable(tab, formatTab, setOnlySec)
 
 		if formatType == "Name" and curContent then	-- force namechange
 			self.name:SetText(curContent, true)
-		elseif formatType == "Description" and curContent then -- force description change
+		elseif formatType == "Description" and curContent and (not buttonType or not buttonType.descReplaceForceDisabled) then -- force description change .descReplaceForceDisabled
 			self.extra:SetText(curContent, true)
 		elseif type(curContent) == "string" and not button_types[curContent] then
 			local found = false
@@ -955,6 +955,11 @@ end
 function Button:FormatItemTableType(tab)
 	assert(tab and type(tab) == "table", "tab must be a table.")
 
+end
+
+function Button:DisableDescriptionReplaceForce(typ, state)
+	assert(button_types[typ], typ.." type not found")
+	button_types[typ].descReplaceForceDisabled = state
 end
 
 --################################

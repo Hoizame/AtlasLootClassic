@@ -94,6 +94,9 @@ ALPrivate.CLASS_ICON_PATH = {
 	DRUID 		= 	ICONS_PATH.."classicon_druid",
 	DEATHKNIGHT	= 	ICONS_PATH.."classicon_deathknight",
 }
+-- CLASS_WARRIOR
+ALPrivate.CLASS_ICON_PATH_ITEM_DB = {}
+for k,v in pairs(ALPrivate.CLASS_ICON_PATH) do ALPrivate.CLASS_ICON_PATH_ITEM_DB[k] = "CLASS_"..k end
 
 ALPrivate.PRICE_ICON_REPLACE = {
 	["honor"] = UnitFactionGroup("player") == "Horde" and 136782 or 136781,
