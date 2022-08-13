@@ -6,13 +6,14 @@ local AL, ALIL = AtlasLoot.Locales, AtlasLoot.IngameLocales
 local ClickHandler = AtlasLoot.ClickHandler
 local Token = AtlasLoot.Data.Token
 
-local TYPE, ID_INV, ID_ICON, ID_ABILITY, ID_ADDON, ID_CLASS = "Dummy", "INV_", "ICON_", "ABILITY_", "ADDON_", "CLASS_"
+local TYPE, ID_INV, ID_ICON, ID_ABILITY, ID_ADDON, ID_CLASS, ID_SLOT = "Dummy", "INV_", "ICON_", "ABILITY_", "ADDON_", "CLASS_", "SLOT_"
 local Dummy = AtlasLoot.Button:AddType(TYPE, ID_INV)
 AtlasLoot.Button:DisableDescriptionReplaceForce(TYPE, true)
 local Dummy_ID_ICON = AtlasLoot.Button:AddIdentifier(TYPE, ID_ICON)
 local Ability_ID_ICON = AtlasLoot.Button:AddIdentifier(TYPE, ID_ABILITY)
 local Dummy_ID_ADDON = AtlasLoot.Button:AddIdentifier(TYPE, ID_ADDON)
 local Dummy_ID_CLASS = AtlasLoot.Button:AddIdentifier(TYPE, ID_CLASS)
+local Dummy_ID_SLOT = AtlasLoot.Button:AddIdentifier(TYPE, ID_SLOT)
 
 -- lua
 local format, str_match = string.format, _G.string.match
@@ -23,6 +24,33 @@ local format, str_match = string.format, _G.string.match
 local ITEM_DESC_EXTRA_SEP = "%s | %s"
 local DUMMY_ICON = "Interface\\Icons\\INV_Misc_QuestionMark"
 local INTERFACE_PATH = "Interface\\Icons\\"
+
+local SLOT_ICONS = {
+	CLOTH = 132889,
+	LEATHER = 134251,
+	MAIL = 132624,
+	PLATE = 134518,
+
+	HEAD = 133131,
+	SHOULDERS = 135040,
+	CHEST = 132664,
+	WRIST = 132606,
+	HANDS = 132961,
+	WAIST = 132493,
+	LEGS = 134582,
+	FEET = 132539,
+
+	NECK = 133295,
+	BACK = 133753,
+	FINGER = 133345,
+	TRINKET = 133441,
+
+	WEAPON = 135274,
+	OFFHAND = 134249,
+
+	TABARD = 135026,
+	SHIRT = 135009,
+}
 
 
 local ItemClickHandler = nil
@@ -129,4 +157,8 @@ end
 
 function Dummy_ID_CLASS.GetStringContent(str)
 	return ALPrivate.CLASS_ICON_PATH[str]
+end
+
+function Dummy_ID_SLOT.GetStringContent(str)
+	return SLOT_ICONS[str]
 end
