@@ -20,6 +20,7 @@ local TOKEN_TYPE_TEXT = {
 	[6] = format(TOKEN_FORMAT_STRING, AL["Token for..."]),
 	[7] = format(TOKEN_FORMAT_STRING, AL["Bought with..."]),
 	[8] = format(TOKEN_FORMAT_STRING, AL["Token for..."]), -- same as '6' but with itemDesc added
+	[9] = format(TOKEN_FORMAT_STRING, AL["Show loot."])
 
 	-- classes get set with the init
 	-- "DRUID", "HUNTER", "MAGE", "PALADIN", "PRIEST", "ROGUE", "SHAMAN", "WARLOCK", "WARRIOR", "DEATHKNIGHT"
@@ -27,21 +28,11 @@ local TOKEN_TYPE_TEXT = {
 
 local TOKEN_TYPE_ADD_ITEM_DESCRIPTION = {
 	[7] = true,
-	[8] = true
+	[8] = true,
+	[9] = true,
 }
 
-local ICONS = {
-	WARRIOR 	= 	"ADDON_classicon_warrior",
-	PALADIN 	= 	"ADDON_classicon_paladin",
-	HUNTER 		= 	"ADDON_classicon_hunter",
-	ROGUE 		= 	"ADDON_classicon_rogue",
-	PRIEST 		= 	"ADDON_classicon_priest",
-	SHAMAN 		= 	"ADDON_classicon_shaman",
-	MAGE 		= 	"ADDON_classicon_mage",
-	WARLOCK 	= 	"ADDON_classicon_warlock",
-	DRUID 		= 	"ADDON_classicon_druid",
-	DEATHKNIGHT = 	"ADDON_classicon_deathknight",
-}
+local ICONS = ALPrivate.CLASS_ICON_PATH_ITEM_DB
 
 local TOKEN, TOKEN_DATA = AtlasLoot:GetGameVersionDataTable()
 
@@ -511,8 +502,59 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
 		-- Heart of Magic / Malygos
 		[44650] = {44658, 44657, 44659, 44660, type = 3}, -- 10man
 		[44651] = {44661, 44662, 44664, 44665, type = 3}, -- 25man
+
+		--- VaultofArchavon
+		-- Warlock
+		["VoA_A_WARLOCK_10"] = {39497, 39500, 39498, 0, 42001, 42015, 42003, type = 9},
+		["VoA_A_WARLOCK_25"] = {40423, 40420, 40422, 0, 41997, 42016, 42004, type = 9},
+		-- Priest
+		["VoA_A_PRIEST_10_H"] = {39515, 39519, 39517, 0, 41857, 41872, 41862, type = 9},
+		["VoA_A_PRIEST_10_D"] = {39523, 39530, 39528, 0, 41919, 41938, 41925, type = 9},
+		["VoA_A_PRIEST_25_H"] = {40449, 40445, 40448, 0, 41858, 41873, 41863, type = 9},
+		["VoA_A_PRIEST_25_D"] = {40458, 40454, 40457, 0, 41920, 41939, 41926, type = 9},
+		-- Rogue
+		["VoA_A_ROGUE_10"] = {39558, 39560, 39564, 0, 41648, 41765, 41653, type = 9},
+		["VoA_A_ROGUE_25"] = {40495, 40496, 40500, 0, 41649, 41766, 41654, type = 9},
+		-- Hunter
+		["VoA_A_HUNTER_10"] = {39579, 39582, 39580, 0, 41085, 41141, 41203, type = 9},
+		["VoA_A_HUNTER_25"] = {40503, 40504, 40506, 0, 41086, 41142, 41204, type = 9},
+		-- Warrior
+		["VoA_A_WARRIOR_10_D"] = {39606, 39609, 39607, 0, 40783, 40801, 40840, type = 9},
+		["VoA_A_WARRIOR_10_T"] = {39611, 39622, 39612, type = 9},
+		["VoA_A_WARRIOR_25_D"] = {40525, 40527, 40529, 0, 40786, 40804, 40844, type = 9},
+		["VoA_A_WARRIOR_25_T"] = {40544, 40545, 40547, type = 9},
+		-- Deathknight
+		["VoA_A_DEATHKNIGHT_10_D"] = {39617, 39618, 39620, 0, 40781, 40803, 40841, type = 9},
+		["VoA_A_DEATHKNIGHT_10_T"] = {39623, 39624, 39626, type = 9},
+		["VoA_A_DEATHKNIGHT_25_D"] = {40550, 40552, 40556, 0, 40784, 40806, 40845, type = 9},
+		["VoA_A_DEATHKNIGHT_25_T"] = {40559, 40563, 40567, type = 9},
+		-- Mage
+		["VoA_A_MAGE_10"] = {39492, 39495, 39493, 0, 41950, 41969, 41957, type = 9},
+		["VoA_A_MAGE_25"] = {40418, 40415, 40417, 0, 41951, 41970, 41958, type = 9},
+		-- Druid
+		["VoA_A_DRUID_10_DR"] = {39547, 39544, 39546, 0, 41314, 41291, 41302, type = 9},
+		["VoA_A_DRUID_25_DR"] = {40469, 40466, 40468, 0, 41315, 41292, 41303, type = 9},
+		["VoA_A_DRUID_10_D"] = {39554, 39557, 39555, 0, 41659, 41771, 41665, type = 9},
+		["VoA_A_DRUID_25_D"] = {40471, 40472, 40493, 0, 41660, 41772, 41666, type = 9},
+		["VoA_A_DRUID_10_H"]  = {39538, 39543, 39539, 0, 41308, 41284, 41296, type = 9},
+		["VoA_A_DRUID_25_H"]  = {40463, 40460, 40462, 0, 41309, 41286, 41297, type = 9},
+		-- Shaman
+		["VoA_A_SHAMAN_10_DR"] = {39592, 39593, 39595, 0, 40989, 41005, 41031, type = 9},
+		["VoA_A_SHAMAN_25_DR"] = {40514, 40515, 40517, 0, 40991, 41006, 41032, type = 9},
+		["VoA_A_SHAMAN_10_D"] = {39597, 39601, 39603, 0, 41079, 41135, 41162, type = 9},
+		["VoA_A_SHAMAN_25_D"] = {40523, 40520, 40522, 0, 41080, 41136, 41198, type = 9},
+		["VoA_A_SHAMAN_10_H"]  = {39588, 39591, 39589, 0, 40988, 40999, 41025, type = 9},
+		["VoA_A_SHAMAN_25_H"]  = {40508, 40509, 40512, 0, 40990, 41000, 41026, type = 9},
+		-- Paladin
+		["VoA_A_PALADIN_10_H"] = {39629, 39632, 39630, 0, 40904, 40925, 40937, type = 9},
+		["VoA_A_PALADIN_25_H"] = {40569, 40570, 40572, 0, 40905, 40926, 40938, type = 9},
+		["VoA_A_PALADIN_10_D"] = {39633, 39634, 39636, 0, 40782, 40802, 40842, type = 9},
+		["VoA_A_PALADIN_25_D"] = {40574, 40575, 40577, 0, 40785, 40805, 40846, type = 9},
+		["VoA_A_PALADIN_10_T"] = {39638, 39639, 39641, type = 9},
+		["VoA_A_PALADIN_25_T"] = {40579, 40580, 40583, type = 9},
 	}
 end
+
 
 local function Init()
 	local coloredClassNames = AtlasLoot:GetColoredClassNames()

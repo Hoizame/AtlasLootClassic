@@ -37,6 +37,9 @@ local RAID25_CONTENT = data:AddContentType(AL["25 Raids"], ATLASLOOT_RAID40_COLO
 
 local ATLAS_MODULE_NAME = "Atlas_WrathOfTheLichKing"
 
+-- extra
+local CLASS_NAME = AtlasLoot:GetColoredClassNames()
+
 -- name formats
 local NAME_COLOR, NAME_COLOR_BOSS = "|cffC0C0C0", "|cffC0C0C0"
 local NAME_CAVERNS_OF_TIME = NAME_COLOR..AL["CoT"]..":|r %s" -- Caverns of Time
@@ -2795,7 +2798,83 @@ data["Sartharion"] = {
     }
 }
 
+local ROLE_TANK = AL["Tank"]
+local ROLE_HEAL = AL["Healer"]
+local ROLE_DD = AL["Damage Dealer"]
 
+data["VaultofArchavon"] = {
+	MapID = 4603,
+	--InstanceID = 560,
+    ContentType = RAID_CONTENT,
+	AtlasModule = ATLAS_MODULE_NAME,
+	--AtlasMapID = "CL_CoTOldHillsbrad",
+	--AtlasMapFile = {"CoTOldHillsbrad", "CavernsOfTimeEnt"},
+	--LoadDifficulty = NORMAL_DIFF,
+	LevelRange = {80, 80, 80},
+	items = {
+        { -- CoTHillsbradDrake
+            name = AL["Archavon the Stone Watcher"],
+            npcID = 31125,
+            Level = 999,
+            --DisplayIDs = {{17386}},
+            AtlasMapBossID = 1,
+            [RAID10_DIFF] = {
+                { 1, "CLASS_WARLOCK",       nil, CLASS_NAME["WARLOCK"],     nil,                "VoA_A_WARLOCK_10" },
+                { 3, "CLASS_PRIEST",        nil, CLASS_NAME["PRIEST"],      ROLE_HEAL,          "VoA_A_PRIEST_10_H" },
+                { 4, "CLASS_PRIEST",        nil, CLASS_NAME["PRIEST"],      AL["Shadow"],       "VoA_A_PRIEST_10_D" },
+                { 6, "CLASS_ROGUE",         nil, CLASS_NAME["ROGUE"],       nil,                "VoA_A_ROGUE_10" },
+                { 8, "CLASS_HUNTER",        nil, CLASS_NAME["HUNTER"],      nil,                "VoA_A_HUNTER_10" },
+                { 10, "CLASS_WARRIOR",      nil, CLASS_NAME["WARRIOR"],     AL["Protection"],   "VoA_A_WARRIOR_10_T" },
+                { 11, "CLASS_WARRIOR",      nil, CLASS_NAME["WARRIOR"],     ROLE_DD,            "VoA_A_WARRIOR_10_D" },
+                { 13, "CLASS_DEATHKNIGHT",  nil, CLASS_NAME["DEATHKNIGHT"], AL["Blood"],        "VoA_A_DEATHKNIGHT_10_T" },
+                { 14, "CLASS_DEATHKNIGHT",  nil, CLASS_NAME["DEATHKNIGHT"], ROLE_DD,            "VoA_A_DEATHKNIGHT_10_D" },
+                { 16, "CLASS_MAGE",         nil, CLASS_NAME["MAGE"],        nil,                "VoA_A_MAGE_10" },
+                { 18, "CLASS_DRUID",        nil, CLASS_NAME["DRUID"],       AL["Restoration"],  "VoA_A_DRUID_10_H" },
+                { 19, "CLASS_DRUID",        nil, CLASS_NAME["DRUID"],       AL["Balance"],      "VoA_A_DRUID_10_DR" },
+                { 20, "CLASS_DRUID",        nil, CLASS_NAME["DRUID"],       AL["Feral"],        "VoA_A_DRUID_10_D" },
+                { 22, "CLASS_SHAMAN",       nil, CLASS_NAME["SHAMAN"],      AL["Restoration"],  "VoA_A_SHAMAN_10_H" },
+                { 23, "CLASS_SHAMAN",       nil, CLASS_NAME["SHAMAN"],      AL["Elemental"],    "VoA_A_SHAMAN_10_DR" },
+                { 24, "CLASS_SHAMAN",       nil, CLASS_NAME["SHAMAN"],      AL["Enhancement"],  "VoA_A_SHAMAN_10_D" },
+                { 26, "CLASS_PALADIN",      nil, CLASS_NAME["PALADIN"],     AL["Protection"],   "VoA_A_PALADIN_10_T" },
+                { 27, "CLASS_PALADIN",      nil, CLASS_NAME["PALADIN"],     AL["Holy"],         "VoA_A_PALADIN_10_H" },
+                { 28, "CLASS_PALADIN",      nil, CLASS_NAME["PALADIN"],     AL["Retribution"],  "VoA_A_PALADIN_10_D" },
+            },
+            [RAID25_DIFF] = {
+                { 1, "CLASS_WARLOCK",       nil, CLASS_NAME["WARLOCK"],     nil,                "VoA_A_WARLOCK_25" },
+                { 3, "CLASS_PRIEST",        nil, CLASS_NAME["PRIEST"],      ROLE_HEAL,          "VoA_A_PRIEST_25_H" },
+                { 4, "CLASS_PRIEST",        nil, CLASS_NAME["PRIEST"],      AL["Shadow"],       "VoA_A_PRIEST_25_D" },
+                { 6, "CLASS_ROGUE",         nil, CLASS_NAME["ROGUE"],       nil,                "VoA_A_ROGUE_25" },
+                { 8, "CLASS_HUNTER",        nil, CLASS_NAME["HUNTER"],      nil,                "VoA_A_HUNTER_25" },
+                { 10, "CLASS_WARRIOR",      nil, CLASS_NAME["WARRIOR"],     AL["Protection"],   "VoA_A_WARRIOR_25_T" },
+                { 11, "CLASS_WARRIOR",      nil, CLASS_NAME["WARRIOR"],     ROLE_DD,            "VoA_A_WARRIOR_25_D" },
+                { 13, "CLASS_DEATHKNIGHT",  nil, CLASS_NAME["DEATHKNIGHT"], AL["Blood"],        "VoA_A_DEATHKNIGHT_25_T" },
+                { 14, "CLASS_DEATHKNIGHT",  nil, CLASS_NAME["DEATHKNIGHT"], ROLE_DD,            "VoA_A_DEATHKNIGHT_25_D" },
+                { 16, "CLASS_MAGE",         nil, CLASS_NAME["MAGE"],        nil,                "VoA_A_MAGE_25" },
+                { 18, "CLASS_DRUID",        nil, CLASS_NAME["DRUID"],       AL["Restoration"],  "VoA_A_DRUID_25_H" },
+                { 19, "CLASS_DRUID",        nil, CLASS_NAME["DRUID"],       AL["Balance"],      "VoA_A_DRUID_25_DR" },
+                { 20, "CLASS_DRUID",        nil, CLASS_NAME["DRUID"],       AL["Feral"],        "VoA_A_DRUID_25_D" },
+                { 22, "CLASS_SHAMAN",       nil, CLASS_NAME["SHAMAN"],      AL["Restoration"],  "VoA_A_SHAMAN_25_H" },
+                { 23, "CLASS_SHAMAN",       nil, CLASS_NAME["SHAMAN"],      AL["Elemental"],    "VoA_A_SHAMAN_25_DR" },
+                { 24, "CLASS_SHAMAN",       nil, CLASS_NAME["SHAMAN"],      AL["Enhancement"],  "VoA_A_SHAMAN_25_D" },
+                { 26, "CLASS_PALADIN",      nil, CLASS_NAME["PALADIN"],     AL["Protection"],   "VoA_A_PALADIN_25_T" },
+                { 27, "CLASS_PALADIN",      nil, CLASS_NAME["PALADIN"],     AL["Holy"],         "VoA_A_PALADIN_25_H" },
+                { 28, "CLASS_PALADIN",      nil, CLASS_NAME["PALADIN"],     AL["Retribution"],  "VoA_A_PALADIN_25_D" },
+            }
+        },
+
+        { -- Trash
+            name = AL["Trash"],
+            ExtraList = true,
+            [NORMAL_DIFF] = {
+
+            },
+            [HEROIC_DIFF] = {
+
+            },
+        },
+        KEYS
+    }
+}
 --[[
 data["TStratholmeEpoch222"] = {
     nameFormat = NAME_CAVERNS_OF_TIME,
