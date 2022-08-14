@@ -10,6 +10,8 @@ local Faction = AtlasLoot.Button:AddType("Faction", "f")
 local AL = AtlasLoot.Locales
 local ClickHandler = AtlasLoot.ClickHandler
 
+local RGBToHex = AtlasLoot.RGBToHex
+
 --[[
 	-- rep info ("f1435rep3" = Unfriendly rep @ Shado-Pan Assault)
 	1. Hated
@@ -137,14 +139,6 @@ local function GetLocRepStanding(id)
 	else
 		return PlayerSex==3 and _G["FACTION_STANDING_LABEL"..(id or 4).."_FEMALE"] or _G["FACTION_STANDING_LABEL"..(id or 4)]
 	end
-end
-
-local function RGBToHex(t)
-	local r,g,b = t.r*255,t.g*255,t.b*255
-	r = r <= 255 and r >= 0 and r or 0
-	g = g <= 255 and g >= 0 and g or 0
-	b = b <= 255 and b >= 0 and b or 0
-	return str_format("%02x%02x%02x", r, g, b)
 end
 
 -- TODO: Create faction data module?

@@ -128,6 +128,17 @@ function AtlasLoot:GetColoredClassNames()
 end
 
 -- #############################
+-- ClassColors
+-- #############################
+function AtlasLoot.RGBToHex(t)
+	local r,g,b = t.r*255,t.g*255,t.b*255
+	r = r <= 255 and r >= 0 and r or 0
+	g = g <= 255 and g >= 0 and g or 0
+	b = b <= 255 and b >= 0 and b or 0
+	return format("%02x%02x%02x", r, g, b)
+end
+
+-- #############################
 -- Faction switch
 -- #############################
 function AtlasLoot:GetRetByFaction(horde, alliance)

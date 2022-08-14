@@ -180,8 +180,29 @@ local function Button_Overlay_SetQualityBorder(self, qualityID)
 	else
 		self:SetDesaturated(false)
 	end
+	self:Show()
 end
 Button.Button_Overlay_SetQualityBorder = Button_Overlay_SetQualityBorder
+
+local function Button_Overlay_SetAchievementBorder(self, set, isGuildAc)
+	if not set then
+		self:SetTexCoord(0,1,0,1)
+		self:SetSize(self.icon:GetWidth(), self.icon:GetHeight())
+		return
+	end
+
+	if isGuildAc then
+		self:SetTexture(452110)
+		self:SetTexCoord(0.25976563, 0.40820313, 0.50000000, 0.64453125)
+	else
+		self:SetTexture(130656)
+		self:SetTexCoord(0, 0.5625, 0, 0.5625)
+	end
+	self:SetSize(self.icon:GetWidth()*1.2, self.icon:GetHeight()*1.2)
+	self:Show()
+end
+Button.Button_Overlay_SetAchievementBorder = Button_Overlay_SetAchievementBorder
+
 
 --/run AtlasLoot.Button:Create():SetContentTable({ 1, 104939 })
 function Button:Create()
@@ -234,11 +255,13 @@ function Button:Create()
 
 	-- secButtonTexture <texture>
 	button.overlay = button:CreateTexture(buttonName.."_overlay")
-	button.overlay:SetPoint("TOPLEFT", button.icon, "TOPLEFT")
-	button.overlay:SetPoint("BOTTOMRIGHT", button.icon, "BOTTOMRIGHT")
+	button.overlay:SetSize(button.icon:GetWidth(), button.icon:GetHeight())
+	button.overlay:SetPoint("CENTER", button.icon, "CENTER")
 	button.overlay:Hide()
 	button.overlay:SetDrawLayer(button.icon:GetDrawLayer(), 1)
+	button.overlay.icon = button.icon
 	button.overlay.SetQualityBorder = Button_Overlay_SetQualityBorder
+	button.overlay.SetAchievementBorder = Button_Overlay_SetAchievementBorder
 
 	button.completed = button:CreateTexture(buttonName.."_completed")
 	button.completed:SetPoint("BOTTOMRIGHT", button.icon)
@@ -330,10 +353,12 @@ function Button:Create()
 
 	-- secButtonOverlay <texture>
 	button.secButton.overlay = button.secButton:CreateTexture(buttonName.."_secButtonOverlay", "OVERLAY")
-	button.secButton.overlay:SetPoint("TOPLEFT", button.secButton.icon, "TOPLEFT")
-	button.secButton.overlay:SetPoint("BOTTOMRIGHT", button.secButton.icon, "BOTTOMRIGHT")
+	button.secButton.overlay:SetSize(button.secButton.icon:GetWidth(), button.secButton.icon:GetHeight())
+	button.secButton.overlay:SetPoint("CENTER", button.secButton.icon, "CENTER")
 	button.secButton.overlay:Hide()
+	button.secButton.overlay.icon = button.secButton.icon
 	button.secButton.overlay.SetQualityBorder = Button_Overlay_SetQualityBorder
+	button.secButton.overlay.SetAchievementBorder = Button_Overlay_SetAchievementBorder
 
 	button.secButton.completed = button.secButton:CreateTexture(buttonName.."_secCompleted", "OVERLAY")
 	button.secButton.completed:SetPoint("BOTTOMRIGHT", button.secButton.icon)
@@ -430,10 +455,12 @@ function Button:CreateSecOnly(frame)
 
 	-- secButtonOverlay <texture>
 	button.secButton.overlay = button.secButton:CreateTexture(buttonName.."_secButtonOverlay", "OVERLAY")
-	button.secButton.overlay:SetPoint("TOPLEFT", button.secButton.icon, "TOPLEFT")
-	button.secButton.overlay:SetPoint("BOTTOMRIGHT", button.secButton.icon, "BOTTOMRIGHT")
+	button.secButton.overlay:SetSize(button.secButton.icon:GetWidth(), button.secButton.icon:GetHeight())
+	button.secButton.overlay:SetPoint("CENTER", button.secButton.icon, "CENTER")
 	button.secButton.overlay:Hide()
+	button.secButton.overlay.icon = button.secButton.icon
 	button.secButton.overlay.SetQualityBorder = Button_Overlay_SetQualityBorder
+	button.secButton.overlay.SetAchievementBorder = Button_Overlay_SetAchievementBorder
 
 	button.secButton.count = button.secButton:CreateFontString(buttonName.."_secCount", "ARTWORK", "AtlasLoot_ItemAmountFont")
 	button.secButton.count:SetPoint("BOTTOMRIGHT", button.secButton.icon, "BOTTOMRIGHT", -3, 2)
