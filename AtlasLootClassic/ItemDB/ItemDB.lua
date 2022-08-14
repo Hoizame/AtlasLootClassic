@@ -522,11 +522,9 @@ function ItemDB.ContentProto:GetName(raw)
 	else
 		name = UNKNOWN
 	end
-
 	if self.nameFormat then
 		name = format(self.nameFormat, name)
 	end
-
 	if self.NameColor and not raw then
 		name = format(self.NameColor, name)
 	end
