@@ -514,20 +514,19 @@ function ItemDB.ContentProto:GetName(raw)
 	if self.name then
 		name = self.name..addEnd
 	elseif self.MapID then
-		if self.nameFormat then
-			name = format(self.nameFormat, C_Map.GetAreaInfo(self.MapID)..addEnd or "MapID:"..self.MapID)
-		else
-			name = C_Map.GetAreaInfo(self.MapID)..addEnd or "MapID:"..self.MapID
-		end
+		name = C_Map.GetAreaInfo(self.MapID)..addEnd or "MapID:"..self.MapID
 	elseif self.FactionID then
-		if self.nameFormat then
-			name = format(self.nameFormat, AtlasLoot:Faction_GetFactionName(self.FactionID)..addEnd)
-		else
-			name = AtlasLoot:Faction_GetFactionName(self.FactionID)..addEnd
-		end
+		name = AtlasLoot:Faction_GetFactionName(self.FactionID)..addEnd
+	elseif self.AchievementID then
+		name = select(2, GetAchievementInfo(self.AchievementID))
 	else
 		name = UNKNOWN
 	end
+
+	if self.nameFormat then
+		name = format(self.nameFormat, name)
+	end
+
 	if self.NameColor and not raw then
 		name = format(self.NameColor, name)
 	end
@@ -570,28 +569,21 @@ function ItemDB.ContentProto:GetNameForItemTable(index, raw)
 		end
 	end
 	if index.name then
-		if index.nameFormat then
-			name = format(addStart..index.nameFormat, index.name..addEnd)
-		else
-			name = addStart..index.name..addEnd
-		end
+		name = addStart..index.name..addEnd
 	elseif index.FactionID then
-		if index.nameFormat then
-			name = format(addStart..index.nameFormat, GetFactionInfoByID(index.FactionID)..addEnd)
-		else
-			name = addStart..GetFactionInfoByID(index.FactionID)..addEnd
-		end
+		name = addStart..GetFactionInfoByID(index.FactionID)..addEnd
 	elseif index.MapID then
-		if index.nameFormat then
-			name = format(index.nameFormat, C_Map.GetAreaInfo(index.MapID)..addEnd or "MapID:"..index.MapID)
-		else
-			name = C_Map.GetAreaInfo(index.MapID)..addEnd or "MapID:"..index.MapID
-		end
+		name = C_Map.GetAreaInfo(index.MapID)..addEnd or "MapID:"..index.MapID
+	elseif index.AchievementID then
+		name = select(2, GetAchievementInfo(index.AchievementID))
 	else
 		name = UNKNOWN
 	end
-	if index.NameColor and not raw then
-		name = format(index.NameColor, name)
+	if index.nameFormat then
+		name = format(index.nameFormat, name)
+	end
+	if self.NameColor and not raw then
+		name = format(self.NameColor, name)
 	end
 	return name
 end

@@ -114,8 +114,8 @@ function AC.Refresh(button)
 	end
 
 	if not completed then
-		--button.icon:SetDesaturated(true)
-		--button.overlay:SetDesaturated(true)
+		button.icon:SetDesaturated(true)
+		button.overlay:SetDesaturated(true)
 	end
 
 	button.icon:SetTexture(icon)
