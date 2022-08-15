@@ -505,6 +505,22 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
 		[44650] = {44658, 44657, 44659, 44660, type = 3}, -- 10man
 		[44651] = {44661, 44662, 44664, 44665, type = 3}, -- 25man
 
+		--- ## WrathOnyxiasLair
+		[49644] = {49485, 49486, 49487, type = 3}, -- Head of Onyxia
+		["WrathOnyxiaClassSets10"] = {
+			ICONS.WARLOCK, 49315, 0, ICONS.PRIEST, 49316, 49317, 0, ICONS.MAGE, 49318, 0,
+			ICONS.ROGUE, 49322, 0, ICONS.DRUID, 49327, 49328, 49326, 0,
+			ICONS.HUNTER, 49319, 0, ICONS.SHAMAN, 49331, 49330, 49329, 0,
+			ICONS.WARRIOR, 49320, 49321, 0, ICONS.PALADIN, 49323, 49325, 49324, 0, ICONS.DEATHKNIGHT, 49333, 49332,
+			type = 9
+		},
+		["WrathOnyxiaClassSets25"] = {
+			ICONS.WARLOCK, 49484, 0, ICONS.PRIEST, 49482, 49483, 0, ICONS.MAGE, 49481, 0,
+			ICONS.ROGUE, 49477, 0, ICONS.DRUID, 49472, 49473, 49471, 0,
+			ICONS.HUNTER, 49480, 0, ICONS.SHAMAN, 49469, 49468, 49470, 0,
+			ICONS.WARRIOR, 49479, 49478, 0, ICONS.PALADIN, 49476, 49475, 49474, 0, ICONS.DEATHKNIGHT, 49467, 49466,
+			type = 9
+		},
 		--- ## VaultofArchavon
 		--- Archavon the Stone Watcher
 		-- Warlock
@@ -670,7 +686,7 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
 		["VoA_KA_PALADIN_25_H"] = {48576, 48578, 0, 40928, 40940, type = 9},
 		["VoA_KA_PALADIN_25_D"] = {48608, 48610, 0, 40812, 40852, type = 9},
 		["VoA_KA_PALADIN_25_T"] = {48640, 48638, type = 9},
-
+		-- Koralon the Flame Watcher (Horde)
 		-- Warlock
 		["VoA_KH_WARLOCK_10"] = {47802, 47800, 0, 42017, 42005, type = 9},
 		["VoA_KH_WARLOCK_25"] = {47803, 47805, 0, 42018, 42006, type = 9},
