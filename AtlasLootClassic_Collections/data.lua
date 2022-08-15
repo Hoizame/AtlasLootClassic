@@ -24,8 +24,11 @@ local ALIL = AtlasLoot.IngameLocales
 
 local GetForVersion = AtlasLoot.ReturnForGameVersion
 
-local NORMAL_DIFF = data:AddDifficulty(AL["Normal"], "n", 1, nil, true)
-local HEROIC_DIFF = data:AddDifficulty(AL["Heroic"], "h", 2, nil, true)
+local NORMAL_DIFF = data:AddDifficulty("NORMAL", nil, nil, nil, true)
+local HEROIC_DIFF = data:AddDifficulty("HEROIC", nil, nil, nil, true)
+local RAID10_DIFF = data:AddDifficulty("10RAID")
+local RAID25_DIFF = data:AddDifficulty("25RAID")
+
 local ALLIANCE_DIFF, HORDE_DIFF, LOAD_DIFF
 if UnitFactionGroup("player") == "Horde" then
 	HORDE_DIFF = data:AddDifficulty(FACTION_HORDE, "horde", nil, 1)
@@ -612,6 +615,51 @@ data["TierSets"] = {
 				{ 26,   681 }, -- Paladin / Heal
 				{ 27,   679 }, -- Paladin / Prot
 				{ 28,   680 }, -- Paladin / DD
+			},
+		}),
+		AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM, {
+			name = format(AL["Tier %s Sets"], "7"),
+			[RAID10_DIFF] = {
+				{ 1,    3100802 }, -- Warlock
+				{ 3,    3100804 }, -- Priest / Heal
+				{ 4,    3100805 }, -- Priest / Shadow
+				{ 6,    3100801 }, -- Rogue
+				{ 8,    3100794 }, -- Hunter
+				{ 10,   3100787 }, -- Warrior / Prot
+				{ 11,   3100788 }, -- Warrior / DD
+				{ 13,   3100793 }, -- Deathknight / Prot
+				{ 14,   3100792 }, -- Deathknight / DD
+				{ 16,   3100803 }, -- Mage
+				{ 18,   3100798 }, -- Druid / Heal
+				{ 19,   3100799 }, -- Druid / Owl
+				{ 20,   3100800 }, -- Druid / Feral
+				{ 22,   3100795 }, -- Shaman / Heal
+				{ 23,   3100796 }, -- Shaman / Ele
+				{ 24,   3100797 }, -- Shaman / Enh
+				{ 26,   3100789 }, -- Paladin / Heal
+				{ 27,   3100791 }, -- Paladin / Prot
+				{ 28,   3100790 }, -- Paladin / DD
+			},
+			[RAID25_DIFF] = {
+				{ 1,    3250802 }, -- Warlock
+				{ 3,    3250804 }, -- Priest / Heal
+				{ 4,    3250805 }, -- Priest / Shadow
+				{ 6,    3250801 }, -- Rogue
+				{ 8,    3250794 }, -- Hunter
+				{ 10,   3250787 }, -- Warrior / Prot
+				{ 11,   3250788 }, -- Warrior / DD
+				{ 13,   3250793 }, -- Deathknight / Prot
+				{ 14,   3250792 }, -- Deathknight / DD
+				{ 16,   3250803 }, -- Mage
+				{ 18,   3250798 }, -- Druid / Heal
+				{ 19,   3250799 }, -- Druid / Owl
+				{ 20,   3250800 }, -- Druid / Feral
+				{ 22,   3250795 }, -- Shaman / Heal
+				{ 23,   3250796 }, -- Shaman / Ele
+				{ 24,   3250797 }, -- Shaman / Enh
+				{ 26,   3250789 }, -- Paladin / Heal
+				{ 27,   3250791 }, -- Paladin / Prot
+				{ 28,   3250790 }, -- Paladin / DD
 			},
 		}),
 	},
