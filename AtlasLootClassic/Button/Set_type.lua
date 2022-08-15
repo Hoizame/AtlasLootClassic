@@ -225,6 +225,7 @@ function Set.ShowToolTipFrame(button)
 	frame:ClearAllPoints()
 	frame:SetParent(button:GetParent():GetParent())
 	frame:SetFrameStrata("TOOLTIP")
+	frame:SetFrameLevel(button:GetFrameLevel() + 1)
 	frame:SetPoint("BOTTOMLEFT", button, "TOPLEFT", (button:GetWidth() * 0.5), 5)
 
 	frame = Set.tooltipFrame.modelFrame
@@ -242,6 +243,8 @@ function Set.ShowToolTipFrame(button)
 
 	if button.SetBonusData then
 		Set.tooltipFrame.bonusDataFrame:Show()
+		Set.tooltipFrame.bonusDataFrame:SetFrameStrata("TOOLTIP")
+		Set.tooltipFrame.bonusDataFrame:SetFrameLevel(button:GetFrameLevel() + 1)
 		Set.tooltipFrame.bonusDataFrame.text:SetText(button.SetBonusData)
 		Set.tooltipFrame.bonusDataFrame:SetHeight(Set.tooltipFrame.bonusDataFrame.text:GetStringHeight()+14)
 		Set.tooltipFrame:SetPoint("BOTTOMLEFT", button, "TOPLEFT", (button:GetWidth() * 0.5), 5 + Set.tooltipFrame.bonusDataFrame:GetHeight())

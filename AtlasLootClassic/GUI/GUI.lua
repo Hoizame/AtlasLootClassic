@@ -217,10 +217,10 @@ function GUI.FreeFrameByType(typ, frame)
 end
 
 local BackDropFrame = {"TopLeftCorner", "TopRightCorner", "BottomLeftCorner", "BottomRightCorner", "TopEdge", "BottomEdge", "LeftEdge", "RightEdge", "Center"}
-function GUI.SetBackDropLayer(frame, newLayer)
+function GUI.SetBackDropLayer(frame, newLayer, count)
 	for k, v in ipairs(BackDropFrame) do
 		if frame[v] then
-			frame.Center:SetDrawLayer(newLayer)
+			frame.Center:SetDrawLayer(newLayer, count)
 		end
 	end
 end
@@ -470,12 +470,13 @@ local function GameVersionSelect_OnClick(self, mouseButton)
 	if AtlasLoot:GameVersion_EQ(AtlasLoot.CLASSIC_VERSION_NUM) then return end
 	if not self.selectionFrame then
 		local frame = CreateFrame("FRAME", nil, self, _G.BackdropTemplateMixin and "BackdropTemplate" or nil)
+		frame:SetFrameStrata("TOOLTIP")
+		frame:SetFrameLevel(100)
 		frame:EnableMouse(true)
 		frame:SetBackdrop(ALPrivate.BOX_BORDER_BACKDROP)
 		frame:SetBackdropColor(0,0,0,1)
 		frame:SetPoint("TOP", self, "BOTTOM", 0, -2)
 		frame:SetSize(10,10)
-		GUI.SetBackDropLayer(frame, "OVERLAY")
 		frame.obj = self
 		frame.buttons = {}
 

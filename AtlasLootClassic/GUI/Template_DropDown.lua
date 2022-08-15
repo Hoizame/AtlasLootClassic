@@ -371,6 +371,7 @@ do
 		frame:ClearAllPoints()
 		frame:SetParent(dropdown.frame)
 		frame:SetFrameStrata("TOOLTIP")
+			frame:SetFrameLevel(100)
 		if parent and type(parent) == "number" and parent ~= 1 then
 			frame:SetPoint("TOPLEFT", frameContainer[#frameContainer], "BOTTOMLEFT")
 		elseif parent and type(parent) == "table" and parent.type then
