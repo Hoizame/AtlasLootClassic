@@ -505,6 +505,52 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
 		[44650] = {44658, 44657, 44659, 44660, type = 3}, -- 10man
 		[44651] = {44661, 44662, 44664, 44665, type = 3}, -- 25man
 
+		--- T7 / 10Man
+		-- Head
+		[40616] = { ICONS.PALADIN, 39628, 39635, 39640, 0, ICONS.PRIEST, 39514, 39521, 0, ICONS.WARLOCK, 39496, type = 6}, -- Helm of the Lost Conqueror
+		[40617] = { ICONS.WARRIOR, 39605, 39610, 0, ICONS.HUNTER, 39578, 0, ICONS.SHAMAN, 39583, 39594, 39602, type = 6}, -- Helm of the Lost Protector
+		[40618] = { ICONS.ROGUE, 39561, 0, ICONS.DEATHKNIGHT, 39619, 39625, 0, ICONS.MAGE, 39491, 0, ICONS.DRUID, 39531, 39545, 39553, type = 6}, -- Helm of the Lost Vanquisher
+		-- Shoulders
+		[40622] = { ICONS.PALADIN, 39631, 39637, 39642, 0, ICONS.PRIEST, 39518, 39529, 0, ICONS.WARLOCK, 39499, type = 6}, -- Spaulders of the Lost Conqueror
+		[40623] = { ICONS.WARRIOR, 39608, 39613, 0, ICONS.HUNTER, 39581, 0, ICONS.SHAMAN, 39590, 39596, 39604, type = 6}, -- Spaulders of the Lost Protector
+		[40624] = { ICONS.ROGUE, 39565, 0, ICONS.DEATHKNIGHT, 39621, 39627, 0, ICONS.MAGE, 39494, 0, ICONS.DRUID, 39542, 39548, 39556, type = 6}, -- Spaulders of the Lost Vanquisher
+		-- Chest
+		[40610] = { ICONS.PALADIN, 39629, 39633, 39638, 0, ICONS.PRIEST, 39515, 39523, 0, ICONS.WARLOCK, 39497, type = 6}, -- Chestguard of the Lost Conqueror
+		[40611] = { ICONS.WARRIOR, 39606, 39611, 0, ICONS.HUNTER, 39579, 0, ICONS.SHAMAN, 39588, 39592, 39597, type = 6}, -- Chestguard of the Lost Protector
+		[40612] = { ICONS.ROGUE, 39558, 0, ICONS.DEATHKNIGHT, 39617, 39623, 0, ICONS.MAGE, 39492, 0, ICONS.DRUID, 39538, 39547, 39554, type = 6}, -- Chestguard of the Lost Vanquisher
+		-- Hands
+		[40613] = { ICONS.PALADIN, 39632, 39634, 39639, 0, ICONS.PRIEST, 39519, 39530, 0, ICONS.WARLOCK, 39500, type = 6}, -- Gloves of the Lost Conqueror
+		[40614] = { ICONS.WARRIOR, 39609, 39622, 0, ICONS.HUNTER, 39582, 0, ICONS.SHAMAN, 39591, 39593, 39601, type = 6}, -- Gloves of the Lost Protector
+		[40615] = { ICONS.ROGUE, 39560, 0, ICONS.DEATHKNIGHT, 39618, 39624, 0, ICONS.MAGE, 39495, 0, ICONS.DRUID, 39543, 39544, 39557, type = 6}, -- Gloves of the Lost Vanquisher
+		-- Leggings
+		[40619] = { ICONS.PALADIN, 39630, 39636, 39641, 0, ICONS.PRIEST, 39517, 39528, 0, ICONS.WARLOCK, 39498, type = 6}, -- Leggings of the Lost Conqueror
+		[40620] = { ICONS.WARRIOR, 39607, 39612, 0, ICONS.HUNTER, 39580, 0, ICONS.SHAMAN, 39589, 39595, 39603, type = 6}, -- Leggings of the Lost Protector
+		[40621] = { ICONS.ROGUE, 39564, 0, ICONS.DEATHKNIGHT, 39620, 39626, 0, ICONS.MAGE, 39493, 0, ICONS.DRUID, 39539, 39546, 39555, type = 6}, -- Leggings of the Lost Vanquisher
+
+		--- T7 / 25Man
+		-- Head
+		[40631] = { ICONS.PALADIN, 40571, 40576, 40581, 0, ICONS.PRIEST, 40447, 40456, 0, ICONS.WARLOCK, 40421, type = 6}, -- Crown of the Lost Conqueror
+		[40632] = { ICONS.WARRIOR, 40528, 40546, 0, ICONS.HUNTER, 40505, 0, ICONS.SHAMAN, 40510, 40516, 40521, type = 6}, -- Crown of the Lost Protector
+		[40633] = { ICONS.ROGUE, 40499, 0, ICONS.DEATHKNIGHT, 40554, 40565, 0, ICONS.MAGE, 40416, 0, ICONS.DRUID, 40461, 40467, 40473, type = 6}, -- Crown of the Lost Vanquisher
+		-- Shoulders
+		[40637] = { ICONS.PALADIN, 40573, 40578, 40584, 0, ICONS.PRIEST, 40450, 40459, 0, ICONS.WARLOCK, 40424, type = 6}, -- Mantle of the Lost Conqueror
+		[40638] = { ICONS.WARRIOR, 40530, 40548, 0, ICONS.HUNTER, 40507, 0, ICONS.SHAMAN, 40513, 40518, 40524, type = 6}, -- Mantle of the Lost Protector
+		[40639] = { ICONS.ROGUE, 40502, 0, ICONS.DEATHKNIGHT, 40557, 40568, 0, ICONS.MAGE, 40419, 0, ICONS.DRUID, 40465, 40470, 40494, type = 6}, -- Mantle of the Lost Vanquisher
+		-- Chest
+		[40625] = { ICONS.PALADIN, 40569, 40574, 40579, 0, ICONS.PRIEST, 40449, 40458, 0, ICONS.WARLOCK, 40423, type = 6}, -- Breastplate of the Lost Conqueror
+		[40626] = { ICONS.WARRIOR, 40525, 40544, 0, ICONS.HUNTER, 40503, 0, ICONS.SHAMAN, 40508, 40514, 40523, type = 6}, -- Breastplate of the Lost Protector
+		[40627] = { ICONS.ROGUE, 40495, 0, ICONS.DEATHKNIGHT, 40550, 40559, 0, ICONS.MAGE, 40418, 0, ICONS.DRUID, 40463, 40469, 40471, type = 6}, -- Breastplate of the Lost Vanquisher
+		-- Hands
+		[40628] = { ICONS.PALADIN, 40570, 40575, 40580, 0, ICONS.PRIEST, 40445, 40454, 0, ICONS.WARLOCK, 40420, type = 6}, -- Gauntlets of the Lost Conqueror
+		[40629] = { ICONS.WARRIOR, 40527, 40545, 0, ICONS.HUNTER, 40504, 0, ICONS.SHAMAN, 40509, 40515, 40520, type = 6}, -- Gauntlets of the Lost Protector
+		[40630] = { ICONS.ROGUE, 40496, 0, ICONS.DEATHKNIGHT, 40552, 40563, 0, ICONS.MAGE, 40415, 0, ICONS.DRUID, 40460, 40466, 40472, type = 6}, -- Gauntlets of the Lost Vanquisher
+		-- Leggings
+		[40634] = { ICONS.PALADIN, 40572, 40577, 40583, 0, ICONS.PRIEST, 40448, 40457, 0, ICONS.WARLOCK, 40422, type = 6}, -- Legplates of the Lost Conqueror
+		[40635] = { ICONS.WARRIOR, 40529, 40547, 0, ICONS.HUNTER, 40506, 0, ICONS.SHAMAN, 40512, 40517, 40522, type = 6}, -- Legplates of the Lost Protector
+		[40636] = { ICONS.ROGUE, 40500, 0, ICONS.DEATHKNIGHT, 40556, 40567, 0, ICONS.MAGE, 40417, 0, ICONS.DRUID, 40462, 40468, 40493, type = 6}, -- Legplates of the Lost Vanquisher
+
+
+
 		--- ## WrathOnyxiasLair
 		[49644] = {49485, 49486, 49487, type = 3}, -- Head of Onyxia
 		["WrathOnyxiaClassSets10"] = {
@@ -521,6 +567,13 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
 			ICONS.WARRIOR, 49479, 49478, 0, ICONS.PALADIN, 49476, 49475, 49474, 0, ICONS.DEATHKNIGHT, 49467, 49466,
 			type = 9
 		},
+		--- ## Ulduar
+		[45038] = { { 45038, 30 }, 45039, 45896, 0, 46017 }, -- Fragment of Val'anyr
+		[45039] = 45038, -- Shattered Fragments of Val'anyr
+		[45896] = 45038, -- Unbound Fragments of Val'anyr
+		[46017] = 45038, -- Val'anyr, Hammer of Ancient Kings
+
+
 		--- ## VaultofArchavon
 		--- Archavon the Stone Watcher
 		-- Warlock

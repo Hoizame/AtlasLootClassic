@@ -2990,6 +2990,7 @@ data["WrathOnyxiasLair"] = {
 	MapID = 2159,
 	AtlasMapID = "OnyxiasLair",
 	ContentType = RAID_CONTENT,
+    LevelRange = {80, 80, 80},
 	items = {
 		{	--Onyxia
 			name = AL["Onyxia"],
