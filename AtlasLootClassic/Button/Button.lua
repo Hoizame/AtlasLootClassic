@@ -362,16 +362,16 @@ function Button:Create()
 	button.secButton.mini:Hide()
 
 	-- secButtonOverlay <texture>
-	button.secButton.overlay = button.secButton:CreateTexture(buttonName.."_secButtonOverlay", "OVERLAY")
+	button.secButton.overlay = button.secButton:CreateTexture(buttonName.."_secButtonOverlay")
 	button.secButton.overlay:SetDrawLayer(button.secButton.icon:GetDrawLayer(), 2)
-	button.secButton.overlay:SetPoint("TOPLEFT", button.overlay.icon, "TOPLEFT")
+	button.secButton.overlay:SetPoint("TOPLEFT", button.secButton.icon, "TOPLEFT")
 	button.secButton.overlay:SetPoint("BOTTOMRIGHT", button.secButton.icon, "BOTTOMRIGHT")
 	button.secButton.overlay:Hide()
 	button.secButton.overlay.icon = button.secButton.icon
 	button.secButton.overlay.SetQualityBorder = Button_Overlay_SetQualityBorder
 	button.secButton.overlay.SetAchievementBorder = Button_Overlay_SetAchievementBorder
 
-	button.secButton.completed = button.secButton:CreateTexture(buttonName.."_secCompleted", "OVERLAY")
+	button.secButton.completed = button.secButton:CreateTexture(buttonName.."_secCompleted")
 	button.secButton.completed:SetDrawLayer(button.secButton.icon:GetDrawLayer(), 1)
 	button.secButton.completed:SetPoint("BOTTOMRIGHT", button.secButton.icon)
 	button.secButton.completed:SetHeight(20)
@@ -395,7 +395,7 @@ function Button:Create()
 	button.secButton.pvp:SetDrawLayer(button.secButton.icon:GetDrawLayer(), 1)
 	button.secButton.pvp:Hide()
 
-	button.secButton.phaseIndicator = button.secButton:CreateTexture(buttonName.."_phaseIndicator", "OVERLAY")
+	button.secButton.phaseIndicator = button.secButton:CreateTexture(buttonName.."_phaseIndicator")
 	button.secButton.phaseIndicator:SetDrawLayer(button.secButton.icon:GetDrawLayer(), 3)
 	button.secButton.phaseIndicator:SetPoint("TOPLEFT", button.secButton.icon)
 	button.secButton.phaseIndicator:SetPoint("BOTTOMRIGHT", button.secButton.icon)
@@ -438,7 +438,8 @@ function Button:CreateSecOnly(frame)
 	local button = frame or CreateFrame("FRAME", buttonName.."_container")
 
 	button.secButton = CreateFrame("BUTTON", buttonName, button)
-	button.secButton:SetAllPoints(button)
+	button.secButton:SetPoint("TOPLEFT", button, "TOPLEFT", 1, -1)
+	button.secButton:SetPoint("BOTTOMRIGHT", button, "BOTTOMRIGHT", -1, 1)
 	button.secButton:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
 	button.secButton.OriSetNormalTexture = button.secButton.SetNormalTexture
 	button.secButton.type = "secButton"	-- now we can use button functions ;)
@@ -477,7 +478,7 @@ function Button:CreateSecOnly(frame)
 	button.secButton.overlay:SetPoint("TOPLEFT", button.secButton.icon, "TOPLEFT")
 	button.secButton.overlay:SetPoint("BOTTOMRIGHT", button.secButton.icon, "BOTTOMRIGHT")
 	button.secButton.overlay:Hide()
-	button.secButton.overlay.icon = button.secButton.icon
+	button.secButton.overlay.icon = button
 	button.secButton.overlay.SetQualityBorder = Button_Overlay_SetQualityBorder
 	button.secButton.overlay.SetAchievementBorder = Button_Overlay_SetAchievementBorder
 

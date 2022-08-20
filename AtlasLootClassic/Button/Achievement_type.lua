@@ -83,7 +83,9 @@ end
 
 function AC.OnClear(button)
 	button.AcID = nil
-	button.overlay:SetAchievementBorder(false)
+	if button.overlay then
+		button.overlay:SetAchievementBorder(false)
+	end
 
 	button.secButton.AcID = nil
 	button.secButton.overlay:SetAchievementBorder(false)
@@ -107,7 +109,7 @@ function AC.Refresh(button)
 	local _, name, _, completed, _, _, _, _, _, icon, rewardText, isGuild = GetAchievementInfo(button.AcID)
 
 	if button.type == "secButton" then
-		-- button:SetNormalTexture(AC_IMAGES[button.ACID] or AC_IMAGES[0])
+
 	else
 		button.name:SetText(AC_COLOR..name)
 		button.extra:SetText(rewardText)

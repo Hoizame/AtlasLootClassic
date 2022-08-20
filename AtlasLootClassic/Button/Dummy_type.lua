@@ -6,7 +6,7 @@ local AL, ALIL = AtlasLoot.Locales, AtlasLoot.IngameLocales
 local ClickHandler = AtlasLoot.ClickHandler
 local Token = AtlasLoot.Data.Token
 
-local TYPE, ID_INV, ID_ICON, ID_ABILITY, ID_ADDON, ID_CLASS, ID_SLOT = "Dummy", "INV_", "ICON_", "ABILITY_", "ADDON_", "CLASS_", "SLOT_"
+local TYPE, ID_INV, ID_ICON, ID_ABILITY, ID_ADDON, ID_CLASS, ID_SLOT, ID_SPECIAL = "Dummy", "INV_", "ICON_", "ABILITY_", "ADDON_", "CLASS_", "SLOT_", "SPECIAL_"
 local Dummy = AtlasLoot.Button:AddType(TYPE, ID_INV)
 AtlasLoot.Button:DisableDescriptionReplaceForce(TYPE, true)
 local Dummy_ID_ICON = AtlasLoot.Button:AddIdentifier(TYPE, ID_ICON)
@@ -14,6 +14,7 @@ local Ability_ID_ICON = AtlasLoot.Button:AddIdentifier(TYPE, ID_ABILITY)
 local Dummy_ID_ADDON = AtlasLoot.Button:AddIdentifier(TYPE, ID_ADDON)
 local Dummy_ID_CLASS = AtlasLoot.Button:AddIdentifier(TYPE, ID_CLASS)
 local Dummy_ID_SLOT = AtlasLoot.Button:AddIdentifier(TYPE, ID_SLOT)
+local Dummy_ID_SPECIAL = AtlasLoot.Button:AddIdentifier(TYPE, ID_SPECIAL)
 
 -- lua
 local format, str_match = string.format, _G.string.match
@@ -50,6 +51,17 @@ local SLOT_ICONS = {
 
 	TABARD = 135026,
 	SHIRT = 135009,
+}
+
+local SPECIAL_ICONS = {
+	ACHIEVEMENT = function(icon)	-- gold ac icon
+		icon:SetTexture(235410)
+		icon:SetTexCoord(0,0.5,0,1)
+	end,
+	ACHIEVEMENT_D = function(icon)	-- grey ac icon
+		icon:SetTexture(235410)
+		icon:SetTexCoord(0.5,1,0,1)
+	end,
 }
 
 
@@ -97,10 +109,14 @@ function Dummy.OnClear(button)
 	button.Name = nil
 	button.Description = nil
 	button.Extra = nil
+	if button.icon then
+		button.icon:SetTexCoord(0,1,0,1)
+	end
 	button.secButton.Texture = nil
 	button.secButton.Name = nil
 	button.secButton.Description = nil
 	button.secButton.Extra = nil
+	button.secButton.icon:SetTexCoord(0,1,0,1)
 
 	if button.ExtraFrameShown then
 		AtlasLoot.Button:ExtraItemFrame_ClearFrame()
@@ -127,7 +143,11 @@ function Dummy.Refresh(button)
 		button.extra:SetText(desc)
 	end
 	button.overlay:Hide()
-	button.icon:SetTexture(tonumber(button.Texture) or (button.Texture and button.Texture or DUMMY_ICON))
+	if type(button.Texture) == "function" then
+		button.Texture(button.icon)
+	else
+		button.icon:SetTexture(tonumber(button.Texture) or (button.Texture and button.Texture or DUMMY_ICON))
+	end
 end
 
 function Dummy.OnMouseAction(button, mouseButton)
@@ -161,4 +181,8 @@ end
 
 function Dummy_ID_SLOT.GetStringContent(str)
 	return SLOT_ICONS[str]
+end
+
+function Dummy_ID_SPECIAL.GetStringContent(str)
+	return SPECIAL_ICONS[str]
 end
