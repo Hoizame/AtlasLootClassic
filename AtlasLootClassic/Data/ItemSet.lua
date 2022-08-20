@@ -48,6 +48,13 @@ local function OnInit()
 end
 AtlasLoot:AddInitFunc(OnInit)
 
+
+-- Formatting from special sets as some sets use the same base set
+-- [addon][raidSize][diff][setID]
+-- addon: 1=classic, 2=bc, 3=wrath
+-- raidSize: normal=0,10man=10,25man=25
+-- diff: 0=normal, 1=heroic
+-- example: 3100801 = Wotlk Set with the ID 801, 10man normal version
 local ITEM_SET_DATA, ITEM_SET_DATA_RAW = AtlasLoot:GetGameVersionDataTable()
 ITEM_SET_DATA_RAW.CLASSIC = {
 	-- [setID] { {itemID's}, armorTypeID, qualityID, itemLevelAvg, allowableClasses, {{setNum, setSpellID}} }

@@ -13,16 +13,17 @@ local TOKE_NUMBER_RANGE = 900000
 local TOKEN_FORMAT_STRING = "|cff00ff00"..AL["L-Click"]..":|r %s"
 local TOKEN_TYPE_DEFAULT = 1
 local TOKEN_TYPE_TEXT = {
-	[0] = nil,	-- empty
-	[1] = format(TOKEN_FORMAT_STRING, AL["Show additional items."]), -- default
-	[2] = format(TOKEN_FORMAT_STRING, AL["Show possible items."]),
-	[3] = format(TOKEN_FORMAT_STRING, AL["Show quest rewards."]),
-	[4] = format(TOKEN_FORMAT_STRING, AL["Quest objective."]),
-	[5] = format(TOKEN_FORMAT_STRING, AL["Reagent for..."]),
-	[6] = format(TOKEN_FORMAT_STRING, AL["Token for..."]),
-	[7] = format(TOKEN_FORMAT_STRING, AL["Bought with..."]),
-	[8] = format(TOKEN_FORMAT_STRING, AL["Token for..."]), -- same as '6' but with itemDesc added
-	[9] = format(TOKEN_FORMAT_STRING, AL["Show loot."])
+	[0]  = nil,	-- empty
+	[1]  = format(TOKEN_FORMAT_STRING, AL["Show additional items."]), -- default
+	[2]  = format(TOKEN_FORMAT_STRING, AL["Show possible items."]),
+	[3]  = format(TOKEN_FORMAT_STRING, AL["Show quest rewards."]),
+	[4]  = format(TOKEN_FORMAT_STRING, AL["Quest objective."]),
+	[5]  = format(TOKEN_FORMAT_STRING, AL["Reagent for..."]),
+	[6]  = format(TOKEN_FORMAT_STRING, AL["Token for..."]),
+	[7]  = format(TOKEN_FORMAT_STRING, AL["Bought with..."]),
+	[8]  = format(TOKEN_FORMAT_STRING, AL["Token for..."]), -- same as '6' but with itemDesc added
+	[9]  = format(TOKEN_FORMAT_STRING, AL["Show loot."]),
+	[10] = format(TOKEN_FORMAT_STRING, AL["Show Achievements."])
 
 	-- classes get set with the init
 	-- "DRUID", "HUNTER", "MAGE", "PALADIN", "PRIEST", "ROGUE", "SHAMAN", "WARLOCK", "WARRIOR", "DEATHKNIGHT"
@@ -572,6 +573,36 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
 		[45039] = 45038, -- Shattered Fragments of Val'anyr
 		[45896] = 45038, -- Unbound Fragments of Val'anyr
 		[46017] = 45038, -- Val'anyr, Hammer of Ancient Kings
+
+		[46052] = { 46320, 46321, 46322, 46323, type = 3 }, -- Reply-Code Alpha / 10man
+		[46053] = { 45588, 45618, 45608, 45614, type = 3 }, -- Reply-Code Alpha / 25man
+
+		--- Algalon Key
+		-- 10 man
+		[45796] = { 45788, 45786, 45787, 45784, 0, 45796, type = 3 }, -- Celestial Planetarium Key / 10man
+		[45788] = 45796, [45786] = 45796, [45787] = 45796, [45784] = 45796,
+		-- 25 man
+		[45798] = { 45814, 45815, 45816, 45817, 0, 45798, type = 3 }, -- Celestial Planetarium Key / 25man
+		[45814] = 45798, [45815] = 45798, [45816] = 45798, [45817] = 45798,
+
+		["AC_UlduarFlameLeviathan10"] = {"ac2913", "ac2914", "ac2915", "ac3056", 0, "ac2911", "ac2909", "ac2907", "ac2905", type = 10},
+		["AC_UlduarFlameLeviathan25"] = {"ac2918", "ac2916", "ac2917", "ac3057", 0, "ac2912", "ac2910", "ac2908", "ac2906", type = 10},
+
+		["AC_UlduarXTDeconstructor10"] = {"ac3058", "ac2937", "ac2931", "ac2934", "ac2933", type = 10},
+		["AC_UlduarXTDeconstructor25"] = {"ac3059", "ac2938", "ac2932", "ac2936", "ac2935", type = 10},
+
+		["AC_UlduarCouncil10"] = {"ac2945", "ac2947", "ac2939", "ac2941", "ac2940", type = 10},
+		["AC_UlduarCouncil25"] = {"ac2946", "ac2948", "ac2942", "ac2944", "ac2943", type = 10},
+
+		["AC_UlduarFreya10"] = {"ac2980", "ac2985", "ac2982", "ac2979", 0, "ac3177", "ac3178", "ac3179", type = 10},
+		["AC_UlduarFreya25"] = {"ac2981", "ac2984", "ac2983", "ac3118", 0, "ac3185", "ac3186", "ac3187", type = 10},
+
+		["AC_UlduarHodir10"] = {"ac2961", "ac2967", "ac3182", "ac2963", "ac2969", type = 10},
+		["AC_UlduarHodir25"] = {"ac2962", "ac2968", "ac3184", "ac2965", "ac2970", type = 10},
+
+		["AC_UlduarYoggSaron10"] = {"ac3159", "ac3158", "ac3141", "ac3157", "ac3008", 0, "ac3012", "ac3015", "ac3009", "ac3014", type = 10},
+		["AC_UlduarYoggSaron25"] = {"ac3164", "ac3163", "ac3162", "ac3161", "ac3010", 0, "ac3013", "ac3016", "ac3011", "ac3017", type = 10},
+
 
 
 		--- ## VaultofArchavon

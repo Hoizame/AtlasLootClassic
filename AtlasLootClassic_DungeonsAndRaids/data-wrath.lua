@@ -129,6 +129,56 @@ local T7_SET = {
 	},
 }
 
+local T8_SET = {
+	name = format(AL["Tier %s Sets"], "8"),
+	ExtraList = true,
+	TableType = SET_ITTYPE,
+	--ContentPhaseBC = 6,
+	IgnoreAsSource = true,
+	[RAID10_DIFF] = {
+		{ 1,    3100802 }, -- Warlock
+		{ 3,    3100804 }, -- Priest / Heal
+        { 4,    3100805 }, -- Priest / Shadow
+        { 6,    3100801 }, -- Rogue
+		{ 8,    3100794 }, -- Hunter
+		{ 10,   3100787 }, -- Warrior / Prot
+        { 11,   3100788 }, -- Warrior / DD
+        { 13,   3100793 }, -- Deathknight / Prot
+        { 14,   3100792 }, -- Deathknight / DD
+		{ 16,   3100803 }, -- Mage
+		{ 18,   3100798 }, -- Druid / Heal
+        { 19,   3100799 }, -- Druid / Owl
+        { 20,   3100800 }, -- Druid / Feral
+        { 22,   3100795 }, -- Shaman / Heal
+        { 23,   3100796 }, -- Shaman / Ele
+        { 24,   3100797 }, -- Shaman / Enh
+		{ 26,   3100789 }, -- Paladin / Heal
+        { 27,   3100791 }, -- Paladin / Prot
+        { 28,   3100790 }, -- Paladin / DD
+	},
+    [RAID25_DIFF] = {
+		{ 1,    3250802 }, -- Warlock
+		{ 3,    3250804 }, -- Priest / Heal
+        { 4,    3250805 }, -- Priest / Shadow
+        { 6,    3250801 }, -- Rogue
+		{ 8,    3250794 }, -- Hunter
+		{ 10,   3250787 }, -- Warrior / Prot
+        { 11,   3250788 }, -- Warrior / DD
+        { 13,   3250793 }, -- Deathknight / Prot
+        { 14,   3250792 }, -- Deathknight / DD
+		{ 16,   3250803 }, -- Mage
+		{ 18,   3250798 }, -- Druid / Heal
+        { 19,   3250799 }, -- Druid / Owl
+        { 20,   3250800 }, -- Druid / Feral
+        { 22,   3250795 }, -- Shaman / Heal
+        { 23,   3250796 }, -- Shaman / Ele
+        { 24,   3250797 }, -- Shaman / Enh
+		{ 26,   3250789 }, -- Paladin / Heal
+        { 27,   3250791 }, -- Paladin / Prot
+        { 28,   3250790 }, -- Paladin / DD
+	},
+}
+
 local WOTLK_DUNGEONMASTER_AC_TABLE = {	--[Northrend Dungeonmaster]
     AchievementID = 1288,
 	TableType = AC_ITTYPE,
@@ -190,6 +240,34 @@ local WOTLK_GLORY_OF_THE_HERO_AC_TABLE = {	--[Glory of the Hero]
 		{ 103, 2157 },			{ 118, 1871 },
 		{ 104, 1868 },			{ 119, 2044 },
 		{ 105, 2045 },			{ 120, 2046 },
+	},
+}
+
+local WOTLK_ULDUAR_AC_TABLE = {	--[Glory of the Ulduar Raider]
+	name = AL["Glory of the Ulduar Raider"],
+	TableType = AC_ITTYPE,
+	ExtraList = true,
+    IgnoreAsSource = true,
+	CoinTexture = "Achievement",
+	[RAID10_DIFF] = {
+		{ 1, 2957 },
+		{ 2, 3056 },			{ 17, 2930 },
+		{ 3, 2923 },			{ 18, 3058 },
+		{ 4, 2941 },			{ 19, 2953 },
+		{ 5, 3006 },			{ 20, 3182 },
+		{ 6, 3176 },			{ 21, 3179 },
+		{ 7, 3180 },			{ 22, 3181 },
+		{ 8, 3158 }
+	},
+    [RAID25_DIFF] = {
+		{ 1, 2958 },
+		{ 2, 3057 },			{ 17, 2929 },
+		{ 3, 2924 },			{ 18, 3059 },
+		{ 4, 2944 },			{ 19, 2954 },
+		{ 5, 3007 },			{ 20, 3184 },
+		{ 6, 3183 },			{ 21, 3187 },
+		{ 7, 3189 },			{ 22, 3188 },
+		{ 8, 3163 }
 	},
 }
 
@@ -3146,11 +3224,12 @@ data["Sartharion"] = {
 
 data["Ulduar"] = {
 	MapID = 4273,
+    EncounterJournalID = 759,
 	--InstanceID = 560,
     ContentType = RAID_CONTENT,
 	AtlasModule = ATLAS_MODULE_NAME,
-	--AtlasMapID = "CL_CoTOldHillsbrad",
-	--AtlasMapFile = {"CoTOldHillsbrad", "CavernsOfTimeEnt"},
+	AtlasMapID = "UlduarA",
+	AtlasMapFile = {"UlduarA", "UlduarAEnt"},
 	--LoadDifficulty = NORMAL_DIFF,
 	LevelRange = {80, 80, 80},
 	items = {
@@ -3158,6 +3237,7 @@ data["Ulduar"] = {
             name = AL["Flame Leviathan"],
             NameColor = GREEN,
             npcID = 33113,
+            EncounterJournalID = 1637,
             Level = 999,
             --DisplayIDs = {{17386}},
             AtlasMapBossID = 1,
@@ -3172,7 +3252,8 @@ data["Ulduar"] = {
                 { 8, 45284 }, -- Kinetic Ripper
                 { 9, 45287 }, -- Firesoul
                 { 10, 45282 }, -- Ironsoul
-                { 25, "INV_Box_01", nil, AL["Hard Mode"], nil },
+                { 16, "SPECIAL_ACHIEVEMENT", nil, AL["Achievements"], nil, "AC_UlduarFlameLeviathan10" },
+                { 25, "ac3056", nil, nil, AL["Hard Mode"] },
                 { 26, 45293 }, -- Handguards of Potent Cures
                 { 27, 45300 }, -- Mantle of Fiery Vengeance
                 { 28, 45295 }, -- Gilded Steel Legplates
@@ -3196,7 +3277,8 @@ data["Ulduar"] = {
                 { 14, 45110 }, -- Titanguard
                 { 15, 45086 }, -- Rising Sun
                 { 16, 45038 }, -- Fragment of Val'anyr
-                { 25, "INV_Box_01", nil, AL["Hard Mode"], nil },
+                { 18, "SPECIAL_ACHIEVEMENT", nil, AL["Achievements"], nil, "AC_UlduarFlameLeviathan25" },
+                { 25, "ac3057", nil, nil, AL["Hard Mode"] },
                 { 26, 45135 }, -- Boots of Fiery Resolution
                 { 27, 45136 }, -- Shoulderpads of Dormant Energies
                 { 28, 45134 }, -- Plated Leggings of Ruination
@@ -3204,34 +3286,710 @@ data["Ulduar"] = {
                 { 30, 45132 }, -- Golden Saronite Dragon
             }
         },
-
-
-        { -- UlduarLeviathan
-            name = AL["Flame Leviathan"],
+        { -- UlduarIgnis
+            name = AL["Ignis the Furnace Master"],
             NameColor = GREEN,
-            npcID = 33113,
+            npcID = 33118,
+            EncounterJournalID = 1638,
             Level = 999,
             --DisplayIDs = {{17386}},
-            AtlasMapBossID = 1,
+            AtlasMapBossID = 2,
             [RAID10_DIFF] = {
-
+                { 1, 45317 }, -- Shawl of the Caretaker
+                { 2, 45318 }, -- Drape of Fuming Anger
+                { 3, 45312 }, -- Gloves of Smoldering Touch
+                { 4, 45316 }, -- Armbraces of the Vibrant Flame
+                { 5, 45321 }, -- Pauldrons of Tempered Will
+                { 6, 45310 }, -- Gauntlets of the Iron Furnace
+                { 7, 45313 }, -- Furnace Stone
+                { 8, 45314 }, -- Igniter Rod
+                { 9, 45311 }, -- Relentless Edge
+                { 10, 45309 }, -- Rifle of the Platinum Guard
+                { 16, "ac2927" },
+				{ 17, "ac2925" },
+				{ 18, "ac2930" },
             },
             [RAID25_DIFF] = {
-
+                { 1, 45186 }, -- Soot-Covered Mantle
+                { 2, 45185 }, -- Flamewrought Cinch
+                { 3, 45162 }, -- Flamestalker Boots
+                { 4, 45164 }, -- Helm of the Furnace Master
+                { 5, 45187 }, -- Wristguards of the Firetender
+                { 6, 45167 }, -- Lifeforge Breastplate
+                { 7, 45161 }, -- Girdle of Embers
+                { 8, 45166 }, -- Charred Saronite Greaves
+                { 9, 45157 }, -- Cindershard Ring
+                { 10, 45168 }, -- Pyrelight Circle
+                { 11, 45158 }, -- Heart of Iron
+                { 12, 45169 }, -- Totem of the Dancing Flame
+                { 13, 45165 }, -- Worldcarver
+                { 14, 45171 }, -- Intensity
+                { 15, 45170 }, -- Scepter of Creation
+                { 16, 45038 }, -- Fragment of Val'anyr
+                { 18, "ac2928" },
+				{ 19, "ac2926" },
+				{ 20, "ac2929" },
             }
         },
-
+        { -- UlduarIgnis
+            name = AL["Razorscale"],
+            NameColor = GREEN,
+            npcID = 33186,
+            EncounterJournalID = 1639,
+            Level = 999,
+            --DisplayIDs = {{17386}},
+            AtlasMapBossID = 3,
+            [RAID10_DIFF] = {
+                { 1, 45306 }, -- Binding of the Dragon Matriarch
+                { 2, 45302 }, -- Treads of the Invader
+                { 3, 45301 }, -- Bracers of the Smothering Inferno
+                { 4, 45307 }, -- Ironscale Leggings
+                { 5, 45299 }, -- Dragonsteel Faceplate
+                { 6, 45305 }, -- Breastplate of the Afterlife
+                { 7, 45304 }, -- Stormtempered Girdle
+                { 8, 45303 }, -- Band of Draconic Guile
+                { 9, 45308 }, -- Eye of the Broodmother
+                { 10, 45298 }, -- Razorscale Talon
+                { 16, "ac2919" },
+				{ 17, "ac2923" },
+            },
+            [RAID25_DIFF] = {
+                { 1, 45138 }, -- Drape of the Drakerider
+                { 2, 45150 }, -- Collar of the Wyrmhunter
+                { 3, 45146 }, -- Shackles of the Odalisque
+                { 4, 45149 }, -- Bracers of the Broodmother
+                { 5, 45141 }, -- Proto-hide Leggings
+                { 6, 45151 }, -- Belt of the Fallen Wyrm
+                { 7, 45143 }, -- Saronite Mesh Legguards
+                { 8, 45140 }, -- Razorscale Shoulderguards
+                { 9, 45139 }, -- Dragonslayer's Brace
+                { 10, 45148 }, -- Living Flame
+                { 11, 45510 }, -- Libram of Discord
+                { 12, 45144 }, -- Sigil of Deflection
+                { 13, 45142 }, -- Remorse
+                { 14, 45147 }, -- Guiding Star
+                { 15, 45137 }, -- Veranus' Bane
+                { 16, 45038 }, -- Fragment of Val'anyr
+                { 18, "ac2921" },
+				{ 19, "ac2924" },
+            }
+        },
+        { -- UlduarIgnis
+            name = AL["XT-002 Deconstructor"],
+            NameColor = GREEN,
+            npcID = 33293,
+            EncounterJournalID = 1640,
+            Level = 999,
+            --DisplayIDs = {{17386}},
+            AtlasMapBossID = 4,
+            [RAID10_DIFF] = {
+                { 1, 45694 }, -- Conductive Cord
+                { 2, 45677 }, -- Treacherous Shoulderpads
+                { 3, 45686 }, -- Vest of the Glowing Crescent
+                { 4, 45687 }, -- Helm of Veiled Energies
+                { 5, 45679 }, -- Gloves of Taut Grip
+                { 6, 45676 }, -- Chestplate of Vicious Potency
+                { 7, 45680 }, -- Armbands of the Construct
+                { 8, 45675 }, -- Power Enhancing Loop
+                { 9, 45685 }, -- Plasma Foil
+                { 10, 45682 }, -- Pulsing Spellshield
+                { 16, "SPECIAL_ACHIEVEMENT", nil, AL["Achievements"], nil, "AC_UlduarXTDeconstructor10" },
+                { 25, "ac3058", nil, nil, AL["Hard Mode"] },
+                { 26, 45869 }, -- Fluxing Energy Coils
+                { 27, 45867 }, -- Breastplate of the Stoneshaper
+                { 28, 45871 }, -- Seal of Ulduar
+                { 29, 45868 }, -- Aesir's Edge
+                { 30, 45870 }, -- Magnetized Projectile Emitter
+            },
+            [RAID25_DIFF] = {
+                { 1, 45253 }, -- Mantle of Wavering Calm
+                { 2, 45258 }, -- Sandals of Rash Temperament
+                { 3, 45260 }, -- Boots of Hasty Revival
+                { 4, 45259 }, -- Quartz-studded Harness
+                { 5, 45249 }, -- Brass-lined Boots
+                { 6, 45251 }, -- Shoulderplates of the Deconstructor
+                { 7, 45252 }, -- Horologist's Wristguards
+                { 8, 45248 }, -- Clockwork Legplates
+                { 9, 45250 }, -- Crazed Construct Ring
+                { 10, 45247 }, -- Signet of the Earthshaker
+                { 11, 45254 }, -- Sigil of the Vengeful Heart
+                { 12, 45255 }, -- Thunderfall Totem
+                { 13, 45246 }, -- Golem-Shard Sticker
+                { 14, 45256 }, -- Twisted Visage
+                { 15, 45257 }, -- Quartz Crystal Wand
+                { 16, 45038 }, -- Fragment of Val'anyr
+                { 18, "SPECIAL_ACHIEVEMENT", nil, AL["Achievements"], nil, "AC_UlduarXTDeconstructor25" },
+                { 25, "ac3059", nil, nil, AL["Hard Mode"] },
+                { 26, 45446 }, -- Grasps of Reason
+                { 27, 45444 }, -- Gloves of the Steady Hand
+                { 28, 45445 }, -- Breastplate of the Devoted
+                { 29, 45443 }, -- Charm of Meticulous Timing
+                { 30, 45442 }, -- Sorthalis, Hammer of the Watchers
+            }
+        },
+        { -- UlduarIronCouncil
+            name = AL["The Iron Council"],
+            NameColor = BLUE,
+            npcID = 32857,
+            EncounterJournalID = 1641,
+            Level = 999,
+            --DisplayIDs = {{17386}},
+            AtlasMapBossID = 5,
+            [RAID10_DIFF] = {
+                { 1, 45322 }, -- Cloak of the Iron Council
+                { 2, 45423 }, -- Runetouch Handwraps
+                { 3, 45324 }, -- Leggings of Swift Reflexes
+                { 4, 45378 }, -- Boots of the Petrified Forest
+                { 5, 45329 }, -- Circlet of True Sight
+                { 6, 45333 }, -- Belt of the Iron Servant
+                { 7, 45330 }, -- Greaves of Iron Intensity
+                { 8, 45418 }, -- Lady Maye's Sapphire Ring
+                { 9, 45332 }, -- Stormtip
+                { 10, 45331 }, -- Rune-Etched Nightblade
+                { 16, "SPECIAL_ACHIEVEMENT", nil, AL["Achievements"], nil, "AC_UlduarCouncil10" },
+                { 24, "ac2941", nil, nil, AL["Hard Mode"] },
+                { 25, 45455 }, -- Belt of the Crystal Tree
+                { 26, 45447 }, -- Watchful Eye
+                { 27, 45456 }, -- Loop of the Agile
+                { 28, 45449 }, -- The Masticator
+                { 29, 45448 }, -- Perilous Bite
+                { 30, 45506 }, -- Archivum Data Disc
+            },
+            [RAID25_DIFF] = {
+                { 1, 45224 }, -- Drape of the Lithe
+                { 2, 45240 }, -- Raiments of the Iron Council
+                { 3, 45238 }, -- Overload Legwraps
+                { 4, 45237 }, -- Phaelia's Vestments of the Sprouting Seed
+                { 5, 45232 }, -- Runed Ironhide Boots
+                { 6, 45227 }, -- Iron-studded Mantle
+                { 7, 45239 }, -- Runeshaper's Gloves
+                { 8, 45226 }, -- Ancient Iron Heaume
+                { 9, 45225 }, -- Steelbreaker's Embrace
+                { 10, 45228 }, -- Handguards of the Enclave
+                { 11, 45193 }, -- Insurmountable Fervor
+                { 12, 45236 }, -- Unblinking Eye
+                { 13, 45235 }, -- Radiant Seal
+                { 14, 45233 }, -- Rune Edge
+                { 15, 45234 }, -- Rapture
+                { 16, 45038 }, -- Fragment of Val'anyr
+                { 18, "SPECIAL_ACHIEVEMENT", nil, AL["Achievements"], nil, "AC_UlduarCouncil25" },
+                { 23, "ac2944", nil, nil, AL["Hard Mode"] },
+                { 24, 45242 }, -- Drape of Mortal Downfall
+                { 25, 45245 }, -- Shoulderpads of the Intruder
+                { 26, 45244 }, -- Greaves of Swift Vengeance
+                { 27, 45241 }, -- Belt of Colossal Rage
+                { 28, 45243 }, -- Sapphire Amulet of Renewal
+                { 29, 45607 }, -- Fang of Oblivion
+                { 30, 45857 }, -- Archivum Data Disc
+            }
+        },
+        { -- UlduarIronCouncil
+            name = AL["Kologarn"],
+            NameColor = BLUE,
+            npcID = 32930,
+            EncounterJournalID = 1642,
+            Level = 999,
+            --DisplayIDs = {{17386}},
+            AtlasMapBossID = 6,
+            [RAID10_DIFF] = {
+                { 1, 45704 }, -- Shawl of the Shattered Giant
+                { 2, 45701 }, -- Greaves of the Earthbinder
+                { 3, 45697 }, -- Shoulderguards of the Solemn Watch
+                { 4, 45698 }, -- Sabatons of the Iron Watcher
+                { 5, 45696 }, -- Mark of the Unyielding
+                { 6, 45699 }, -- Pendant of the Piercing Glare
+                { 7, 45702 }, -- Emerald Signet Ring
+                { 8, 45703 }, -- Spark of Hope
+                { 9, 45700 }, -- Stoneguard
+                { 10, 45695 }, -- Spire of Withering Dreams
+                { 16, "ac2953" },
+				{ 17, "ac2955" },
+				{ 18, "ac2959" },
+				{ 19, "ac2951" },
+            },
+            [RAID25_DIFF] = {
+                { 1, 45272 }, -- Robes of the Umbral Brute
+                { 2, 45275 }, -- Bracers of Unleashed Magic
+                { 3, 45273 }, -- Handwraps of Plentiful Recovery
+                { 4, 45265 }, -- Shoulderpads of the Monolith
+                { 5, 45274 }, -- Leggings of the Stoneweaver
+                { 6, 45264 }, -- Decimator's Armguards
+                { 7, 45269 }, -- Unfaltering Armguards
+                { 8, 45268 }, -- Gloves of the Pythonic Guardian
+                { 9, 45267 }, -- Saronite Plated Legguards
+                { 10, 45262 }, -- Necklace of Unerring Mettle
+                { 11, 45263 }, -- Wrathstone
+                { 12, 45271 }, -- Ironmender
+                { 13, 45270 }, -- Idol of the Crying Wind
+                { 14, 45266 }, -- Malice
+                { 15, 45261 }, -- Giant's Bane
+                { 16, 45038 }, -- Fragment of Val'anyr
+                { 18, "ac2954" },
+				{ 19, "ac2956" },
+				{ 20, "ac2960" },
+				{ 21, "ac2952" },
+            }
+        },
+        { -- UlduarIronCouncil
+            name = AL["Auriaya"],
+            NameColor = BLUE,
+            npcID = 33515,
+            EncounterJournalID = 1643,
+            Level = 999,
+            --DisplayIDs = {{17386}},
+            AtlasMapBossID = 6,
+            [RAID10_DIFF] = {
+                { 1, 45832 }, -- Mantle of the Preserver
+                { 2, 45865 }, -- Raiments of the Corrupted
+                { 3, 45864 }, -- Cover of the Keepers
+                { 4, 45709 }, -- Nimble Climber's Belt
+                { 5, 45711 }, -- Ironaya's Discarded Mantle
+                { 6, 45712 }, -- Chestplate of Titanic Fury
+                { 7, 45708 }, -- Archaedas' Lost Legplates
+                { 8, 45866 }, -- Elemental Focus Stone
+                { 9, 45707 }, -- Shieldwall of the Breaker
+                { 10, 45713 }, -- Nurturing Touch
+                { 16, "ac3006" },
+				{ 17, "ac3076" },
+            },
+            [RAID25_DIFF] = {
+                { 1, 45319 }, -- Cloak of the Makers
+                { 2, 45435 }, -- Cowl of the Absolute
+                { 3, 45441 }, -- Sandals of the Ancient Keeper
+                { 4, 45439 }, -- Unwavering Stare
+                { 5, 45325 }, -- Gloves of the Stonereaper
+                { 6, 45440 }, -- Amice of the Stoic Watch
+                { 7, 45320 }, -- Shoulderplates of the Eternal
+                { 8, 45334 }, -- Unbreakable Chestguard
+                { 9, 45434 }, -- Greaves of the Rockmender
+                { 10, 45326 }, -- Platinum Band of the Aesir
+                { 11, 45438 }, -- Ring of the Faithful Servant
+                { 12, 45436 }, -- Libram of the Resolute
+                { 13, 45437 }, -- Runescribed Blade
+                { 14, 45315 }, -- Stonerender
+                { 15, 45327 }, -- Siren's Cry
+                { 16, 45038 }, -- Fragment of Val'anyr
+                { 18, "ac3007" },
+				{ 19, "ac3077" },
+            }
+        },
+        { -- UlduarIronCouncil
+            name = AL["Algalon the Observer"],
+            NameColor = BLUE,
+            npcID = 32871,
+            EncounterJournalID = 1650,
+            Level = 999,
+            --DisplayIDs = {{17386}},
+            AtlasMapBossID = 7,
+            [RAID10_DIFF] = {
+                { 1, 46042 },	-- Drape of the Messenger
+				{ 2, 46045 },	-- Pulsar Gloves
+				{ 3, 46050 },	-- Starlight Treads
+				{ 4, 46043 },	-- Gloves of the Endless Dark
+				{ 5, 46049 },	-- Zodiac Leggings
+				{ 6, 46044 },	-- Observer's Mantle
+				{ 7, 46037 },	-- Shoulderplates of the Celestial Watch
+				{ 8, 46039 },	-- Breastplate of the Timeless
+				{ 9, 46041 },	-- Starfall Girdle
+				{ 10, 46047 },	-- Pendant of the Somber Witness
+				{ 11, 46040 },	-- Strength of the Heavens
+				{ 12, 46048 },	-- Band of Lights
+				{ 13, 46046 },	-- Nebula Band
+				{ 14, 46038 },	-- Dark Matter
+				{ 15, 46051 },	-- Meteorite Crystal
+				{ 16, 46052 },	-- Reply-Code Alpha
+            },
+            [RAID25_DIFF] = {
+				{ 1, 45665 },	-- Pharos Gloves
+				{ 2, 45619 },	-- Starwatcher's Binding
+				{ 3, 45611 },	-- Solar Bindings
+				{ 4, 45616 },	-- Star-beaded Clutch
+				{ 5, 45610 },	-- Boundless Gaze
+				{ 6, 45615 },	-- Planewalker Treads
+				{ 7, 45594 },	-- Legplates of the Endless Void
+				{ 8, 45599 },	-- Sabatons of Lifeless Night
+				{ 9, 45609 },	-- Comet's Trail
+				{ 10, 45620 },	-- Starshard Edge
+				{ 11, 45607 },	-- Fang of Oblivion
+				{ 12, 45612 },	-- Constellus
+				{ 13, 45613 },	-- Dreambinder
+				{ 14, 45587 },	-- Bulwark of Algalon
+				{ 15, 45570 },	-- Skyforge Crossbow
+                { 16, 45617 },	-- Cosmos
+                { 18, 45038 },	-- Fragment of Val'anyr
+				{ 20, 46053 },	-- Reply-Code Alpha
+            }
+        },
+        { -- UlduarFreya
+            name = AL["Freya"],
+            npcID = 32906,
+            EncounterJournalID = 1646,
+            Level = 999,
+            --DisplayIDs = {{17386}},
+            AtlasMapBossID = 8,
+            [RAID10_DIFF] = {
+                { 1, 45940 }, -- Tunic of the Limber Stalker
+                { 2, 45941 }, -- Chestguard of the Lasher
+                { 3, 45935 }, -- Ironbark Faceguard
+                { 4, 45936 }, -- Legplates of Flourishing Resolve
+                { 5, 45934 }, -- Unraveling Reach
+                { 9, "ac3179", nil, nil, AL["Hard Mode"] },
+                { 10, 45943 }, -- Gloves of Whispering Winds
+                { 11, 45945 }, -- Seed of Budding Carnage
+                { 12, 45946 }, -- Fire Orchid Signet
+                { 13, 45947 }, -- Serilas, Blood Blade of Invar One-Arm
+                { 14, 45294 }, -- Petrified Ivy Sprig
+                { 15, 45788 }, -- Freya's Sigil
+                { 16, 45644 }, -- Gloves of the Wayward Conqueror
+                { 17, 45645 }, -- Gloves of the Wayward Protector
+                { 18, 45646 }, -- Gloves of the Wayward Vanquisher
+                { 20, 46110 }, -- Alchemist's Cache
+                { 22, "SPECIAL_ACHIEVEMENT", nil, AL["Achievements"], nil, "AC_UlduarFreya10" },
+            },
+            [RAID25_DIFF] = {
+                { 1, 45483 }, -- Boots of the Servant
+                { 2, 45482 }, -- Leggings of the Lifetender
+                { 3, 45481 }, -- Gauntlets of Ruthless Reprisal
+                { 4, 45480 }, -- Nymph Heart Charm
+                { 5, 45479 }, -- The Lifebinder
+                { 8, "ac3187", nil, nil, AL["Hard Mode"] },
+                { 9, 45486 }, -- Drape of the Sullen Goddess
+                { 10, 45488 }, -- Leggings of the Enslaved Idol
+                { 11, 45487 }, -- Handguards of Revitalization
+                { 12, 45485 }, -- Bronze Pendant of the Vanir
+                { 13, 45484 }, -- Bladetwister
+                { 14, 45613 }, -- Dreambinder
+                { 15, 45814 }, -- Freya's Sigil
+                { 16, 45038 }, -- Fragment of Val'anyr
+                { 18, 45653 }, -- Legplates of the Wayward Conqueror
+                { 19, 45654 }, -- Legplates of the Wayward Protector
+                { 20, 45655 }, -- Legplates of the Wayward Vanquisher
+                { 22, 46110 }, -- Alchemist's Cache
+                { 24, "SPECIAL_ACHIEVEMENT", nil, AL["Achievements"], nil, "AC_UlduarFreya25" },
+            }
+        },
+        { -- UlduarHodir
+            name = AL["Hodir"],
+            npcID = 32845,
+            EncounterJournalID = 1644,
+            Level = 999,
+            --DisplayIDs = {{17386}},
+            AtlasMapBossID = 9,
+            [RAID10_DIFF] = {
+                { 1, 45873 }, -- Winter's Frigid Embrace
+                { 2, 45464 }, -- Cowl of Icy Breaths
+                { 3, 45874 }, -- Signet of Winter
+                { 4, 45458 }, -- Stormedge
+                { 5, 45872 }, -- Avalanche
+                { 9, "ac3182", nil, nil, AL["Hard Mode"] },
+                { 10, 45888 }, -- Bitter Cold Armguards
+                { 11, 45876 }, -- Shiver
+                { 12, 45886 }, -- Icecore Staff
+                { 13, 45887 }, -- Ice Layered Barrier
+                { 14, 45877 }, -- The Boreal Guard
+                { 15, 45786 }, -- Hodir's Sigil
+                { 16, 45650 }, -- Leggings of the Wayward Conqueror
+                { 17, 45651 }, -- Leggings of the Wayward Protector
+                { 18, 45652 }, -- Leggings of the Wayward Vanquisher
+                { 20, "SPECIAL_ACHIEVEMENT", nil, AL["Achievements"], nil, "AC_UlduarHodir10" },
+            },
+            [RAID25_DIFF] = {
+                { 1, 45453 }, -- Winter's Icy Embrace
+                { 2, 45454 }, -- Frost-bound Chain Bracers
+                { 3, 45452 }, -- Frostplate Greaves
+                { 4, 45451 }, -- Frozen Loop
+                { 5, 45450 }, -- Northern Barrier
+                { 8, "ac3184", nil, nil, AL["Hard Mode"] },
+                { 9, 45461 }, -- Drape of Icy Intent
+                { 10, 45462 }, -- Gloves of the Frozen Glade
+                { 11, 45460 }, -- Bindings of Winter Gale
+                { 12, 45459 }, -- Frigid Strength of Hodir
+                { 13, 45612 }, -- Constellus
+                { 14, 45457 }, -- Staff of Endless Winter
+                { 15, 45815 }, -- Hodir's Sigil
+                { 16, 45038 }, -- Fragment of Val'anyr
+                { 18, 45632 }, -- Breastplate of the Wayward Conqueror
+                { 19, 45633 }, -- Breastplate of the Wayward Protector
+                { 20, 45634 }, -- Breastplate of the Wayward Vanquisher
+                { 22, "SPECIAL_ACHIEVEMENT", nil, AL["Achievements"], nil, "AC_UlduarHodir25" },
+            }
+        },
+        { -- UlduarMimiron
+            name = AL["Mimiron"],
+            npcID = 33350,
+            EncounterJournalID = 1647,
+            Level = 999,
+            --DisplayIDs = {{17386}},
+            AtlasMapBossID = 10,
+            [RAID10_DIFF] = {
+                { 1, 45973 }, -- Stylish Power Cape
+                { 2, 45976 }, -- Static Charge Handwraps
+                { 3, 45974 }, -- Shoulderguards of Assimilation
+                { 4, 45975 }, -- Cable of the Metrognome
+                { 5, 45972 }, -- Pulse Baton
+                { 9, "ac3180", nil, nil, AL["Hard Mode"] },
+                { 10, 45993 }, -- Mimiron's Flight Goggles
+                { 11, 45989 }, -- Tempered Mercury Greaves
+                { 12, 45982 }, -- Fused Alloy Legplates
+                { 13, 45988 }, -- Greaves of the Iron Army
+                { 14, 45990 }, -- Fusion Blade
+                { 15, 45787 }, -- Mimiron's Sigil
+                { 16, 45647 }, -- Helm of the Wayward Conqueror
+                { 17, 45648 }, -- Helm of the Wayward Protector
+                { 18, 45649 }, -- Helm of the Wayward Vanquisher
+                { 20, "ac3180" },
+				{ 21, "ac3138" },
+				{ 22, "ac2989" },
+            },
+            [RAID25_DIFF] = {
+                { 1, 45493 }, -- Asimov's Drape
+                { 2, 45492 }, -- Malleable Steelweave Mantle
+                { 3, 45491 }, -- Waistguard of the Creator
+                { 4, 45490 }, -- Pandora's Plea
+                { 5, 45489 }, -- Insanity's Grip
+                { 8, "ac3189", nil, nil, AL["Hard Mode"] },
+                { 9, 45496 }, -- Titanskin Cloak
+                { 10, 45497 }, -- Crown of Luminescence
+                { 11, 45663 }, -- Armbands of Bedlam
+                { 12, 45495 }, -- Conductive Seal
+                { 13, 45494 }, -- Delirium's Touch
+                { 14, 45620 }, -- Starshard Edge
+                { 15, 45816 }, -- Mimiron's Sigil
+                { 16, 45038 }, -- Fragment of Val'anyr
+                { 18, 45641 }, -- Gauntlets of the Wayward Conqueror
+                { 19, 45642 }, -- Gauntlets of the Wayward Protector
+                { 20, 45643 }, -- Gauntlets of the Wayward Vanquisher
+                { 22, "ac3189" },
+				{ 23, "ac2995" },
+				{ 24, "ac3237" },
+            }
+        },
+        { -- UlduarThorim
+            name = AL["Thorim"],
+            npcID = 32865,
+            EncounterJournalID = 1645,
+            Level = 999,
+            --DisplayIDs = {{17386}},
+            AtlasMapBossID = 11,
+            [RAID10_DIFF] = {
+                { 1, 45893 }, -- Guise of the Midgard Serpent
+                { 2, 45927 }, -- Handwraps of Resonance
+                { 3, 45894 }, -- Leggings of Unstable Discharge
+                { 4, 45895 }, -- Belt of the Blood Pit
+                { 5, 45892 }, -- Legacy of Thunder
+                { 9, "ac3176", nil, nil, AL["Hard Mode"] },
+                { 10, 45928 }, -- Gauntlets of the Thunder God
+                { 11, 45933 }, -- Pendant of the Shallow Grave
+                { 12, 45931 }, -- Mjolnir Runestone
+                { 13, 45929 }, -- Sif's Remembrance
+                { 14, 45930 }, -- Combatant's Bootblade
+                { 15, 45784 }, -- Thorim's Sigil
+                { 16, 45659 }, -- Spaulders of the Wayward Conqueror
+                { 17, 45660 }, -- Spaulders of the Wayward Protector
+                { 18, 45661 }, -- Spaulders of the Wayward Vanquisher
+                { 20, "ac2971" },
+                { 21, "ac2973" },
+                { 22, "ac3176" },
+                { 23, "ac2977" },
+                { 24, "ac2975" },
+            },
+            [RAID25_DIFF] = {
+                { 1, 45468 }, -- Leggings of Lost Love
+                { 2, 45467 }, -- Belt of the Betrayed
+                { 3, 45469 }, -- Sif's Promise
+                { 4, 45466 }, -- Scale of Fates
+                { 5, 45463 }, -- Vulmir, the Northern Tempest
+                { 8, "ac3183", nil, nil, AL["Hard Mode"] },
+                { 9, 45473 }, -- Embrace of the Gladiator
+                { 10, 45474 }, -- Pauldrons of the Combatant
+                { 11, 45472 }, -- Warhelm of the Champion
+                { 12, 45471 }, -- Fate's Clutch
+                { 13, 45570 }, -- Skyforge Crossbow
+                { 14, 45470 }, -- Wisdom's Hold
+                { 15, 45817 }, -- Thorim's Sigil
+                { 16, 45038 }, -- Fragment of Val'anyr
+                { 18, 45638 }, -- Crown of the Wayward Conqueror
+                { 19, 45639 }, -- Crown of the Wayward Protector
+                { 20, 45640 }, -- Crown of the Wayward Vanquisher
+                { 22, "ac2972" },
+                { 23, "ac2974" },
+                { 24, "ac3183" },
+                { 25, "ac2978" },
+                { 26, "ac2976" },
+            }
+        },
+        { -- UlduarGeneralVezax
+            name = AL["General Vezax"],
+            NameColor = PURPLE,
+            npcID = 33271,
+            EncounterJournalID = 1648,
+            Level = 999,
+            --DisplayIDs = {{17386}},
+            AtlasMapBossID = 12,
+            [RAID10_DIFF] = {
+                { 1, 46014 }, -- Saronite Animus Cloak
+                { 2, 46013 }, -- Underworld Mantle
+                { 3, 46012 }, -- Vestments of the Piercing Light
+                { 4, 46009 }, -- Bindings of the Depths
+                { 5, 46346 }, -- Boots of Unsettled Prey
+                { 6, 45997 }, -- Gauntlets of the Wretched
+                { 7, 46008 }, -- Choker of the Abyss
+                { 8, 46015 }, -- Pendant of Endless Despair
+                { 9, 46010 }, -- Darkstone Ring
+                { 10, 46011 }, -- Shadowbite
+                { 11, 45996 }, -- Hoperender
+                { 16, "ac3181" },
+				{ 17, "ac2996" },
+                { 25, "ac3181", nil, nil, AL["Hard Mode"] },
+                { 26, 46032 }, -- Drape of the Faceless General
+                { 27, 46034 }, -- Leggings of Profound Darkness
+                { 28, 46036 }, -- Void Sabre
+                { 29, 46035 }, -- Aesuga, Hand of the Ardent Champion
+                { 30, 46033 }, -- Tortured Earth
+            },
+            [RAID25_DIFF] = {
+                { 1, 45514 }, -- Mantle of the Unknowing
+                { 2, 45508 }, -- Belt of the Darkspeaker
+                { 3, 45512 }, -- Grips of the Unbroken
+                { 4, 45504 }, -- Darkcore Leggings
+                { 5, 45513 }, -- Boots of the Forgotten Depths
+                { 6, 45502 }, -- Helm of the Faceless
+                { 7, 45505 }, -- Belt of Clinging Hope
+                { 8, 45501 }, -- Boots of the Underdweller
+                { 9, 45503 }, -- Metallic Loop of the Sufferer
+                { 10, 45515 }, -- Ring of the Vacant Eye
+                { 11, 45507 }, -- The General's Heart
+                { 12, 45509 }, -- Idol of the Corruptor
+                { 13, 45145 }, -- Libram of the Sacred Shield
+                { 14, 45498 }, -- Lotrafen, Spear of the Damned
+                { 15, 45511 }, -- Scepter of Lost Souls
+                { 16, 45038 }, -- Fragment of Val'anyr
+                { 18, "ac3188" },
+				{ 19, "ac2997" },
+                { 25, "ac3188", nil, nil, AL["Hard Mode"] },
+                { 26, 45520 }, -- Handwraps of the Vigilant
+                { 27, 45519 }, -- Vestments of the Blind Denizen
+                { 28, 45517 }, -- Pendulum of Infinity
+                { 29, 45518 }, -- Flare of the Heavens
+                { 30, 45516 }, -- Voldrethar, Dark Blade of Oblivion
+            }
+        },
+        { -- UlduarGeneralVezax
+            name = AL["Yogg-Saron"],
+            NameColor = PURPLE,
+            npcID = 33271,
+            EncounterJournalID = 1648,
+            Level = 999,
+            --DisplayIDs = {{17386}},
+            AtlasMapBossID = 12,
+            [RAID10_DIFF] = {
+                { 1, 46030 }, -- Treads of the Dragon Council
+                { 2, 46019 }, -- Leggings of the Insatiable
+                { 3, 46028 }, -- Faceguard of the Eyeless Horror
+                { 4, 46022 }, -- Pendant of a Thousand Maws
+                { 5, 46021 }, -- Royal Seal of King Llane
+                { 6, 46024 }, -- Kingsbane
+                { 7, 46016 }, -- Abaddon
+                { 8, 46031 }, -- Touch of Madness
+                { 9, 46025 }, -- Devotion
+                { 10, 46018 }, -- Deliverance
+                { 12, "SPECIAL_ACHIEVEMENT", nil, AL["Achievements"], nil, "AC_UlduarYoggSaron10" },
+                { 16, 45635 }, -- Chestguard of the Wayward Conqueror
+                { 17, 45636 }, -- Chestguard of the Wayward Protector
+                { 18, 45637 }, -- Chestguard of the Wayward Vanquisher
+                { 22, "ac3158", nil, nil, AL["Hard Mode"] },
+                { 23, 46068 }, -- Amice of Inconceivable Horror
+                { 24, 46095 }, -- Soul-Devouring Cinch
+                { 25, 46096 }, -- Signet of Soft Lament
+                { 26, 46097 }, -- Caress of Insanity
+                { 27, 46067 }, -- Hammer of Crushing Whispers
+                { 29, "ac3159", nil, nil, AL["Hard Mode"] },
+                { 30, 46312 }, -- Vanquished Clutches of Yogg-Saron
+            },
+            [RAID25_DIFF] = {
+                { 1, 45529 }, -- Shawl of Haunted Memories
+                { 2, 45532 }, -- Cowl of Dark Whispers
+                { 3, 45523 }, -- Garona's Guise
+                { 4, 45524 }, -- Chestguard of Insidious Intent
+                { 5, 45531 }, -- Chestguard of the Fallen God
+                { 6, 45525 }, -- Godbane Signet
+                { 7, 45530 }, -- Sanity's Bond
+                { 8, 45522 }, -- Blood of the Old God
+                { 9, 45527 }, -- Soulscribe
+                { 10, 45521 }, -- Earthshaper
+                { 12, "SPECIAL_ACHIEVEMENT", nil, AL["Achievements"], nil, "AC_UlduarYoggSaron25" },
+                { 16, 45038 }, -- Fragment of Val'anyr
+                { 18, 45656 }, -- Mantle of the Wayward Conqueror
+                { 19, 45657 }, -- Mantle of the Wayward Protector
+                { 20, 45658 }, -- Mantle of the Wayward Vanquisher
+                { 22, "ac3163", nil, nil, AL["Hard Mode"] },
+                { 23, 45537 }, -- Treads of the False Oracle
+                { 24, 45536 }, -- Legguards of Cunning Deception
+                { 25, 45534 }, -- Seal of the Betrayed King
+                { 26, 45535 }, -- Show of Faith
+                { 27, 45533 }, -- Dark Edge of Depravity
+                { 29, "ac3164", nil, nil, AL["Hard Mode"] },
+                { 30, 45693 }, -- Mimiron's Head
+            }
+        },
         { -- Trash
             name = AL["Trash"],
             ExtraList = true,
-            [NORMAL_DIFF] = {
-
+            [RAID10_DIFF] = {
+                { 1, 46341 },	-- Drape of the Spellweaver
+				{ 2, 46347 },	-- Cloak of the Dormant Blaze
+				{ 3, 46344 },	-- Iceshear Mantle
+				{ 4, 46346 },	-- Boots of Unsettled Prey
+				{ 5, 46345 },	-- Bracers of Righteous Reformation
+				{ 6, 46340 },	-- Adamant Handguards
+				{ 8, 46343 },	-- Fervor of the Protectorate
+				{ 16, 46339 },	-- Mimiron's Repeater
+				{ 17, 46351 },	-- Bloodcrush Cudgel
+				{ 18, 46350 },	-- Pillar of Fortitude
+				{ 19, 46342 },	-- Golemheart Longbow
             },
-            [HEROIC_DIFF] = {
-
+            [RAID25_DIFF] = {
+                { 1, 45541 },	-- Shroud of Alteration
+				{ 2, 45549 },	-- Grips of Chaos
+				{ 3, 45547 },	-- Relic Hunter's Cord
+				{ 4, 45548 },	-- Belt of the Sleeper
+				{ 5, 45543 },	-- Shoulders of Misfortune
+				{ 6, 45544 },	-- Leggings of the Tortured Earth
+				{ 7, 45542 },	-- Greaves of the Stonewarder
+				{ 9, 45540 },	-- Bladebearer's Signet
+				{ 10, 45539 },	-- Pendant of Focused Energies
+				{ 11, 45538 },	-- Titanstone Pendant
+				{ 16, 45605 },	-- Daschal's Bite
             },
         },
-        KEYS
+        { -- Trash
+            name = AL["Patterns"],
+            ExtraList = true,
+            [NORMAL_DIFF] = {
+                { 1, 45089 },	-- Plans: Battlelord's Plate Boots
+				{ 2, 45088 },	-- Plans: Belt of the Titans
+				{ 3, 45092 },	-- Plans: Indestructible Plate Girdle
+				{ 4, 45090 },	-- Plans: Plate Girdle of Righteousness
+				{ 5, 45093 },	-- Plans: Spiked Deathdealers
+				{ 6, 45091 },	-- Plans: Treads of Destiny
+				{ 8, 45100 },	-- Pattern: Belt of Arctic Life
+				{ 9, 45094 },	-- Pattern: Belt of Dragons
+				{ 10, 45096 },	-- Pattern: Blue Belt of Chaos
+				{ 11, 45095 },	-- Pattern: Boots of Living Scale
+				{ 12, 45101 },	-- Pattern: Boots of Wintry Endurance
+				{ 13, 45098 },	-- Pattern: Death-warmed Belt
+				{ 14, 45099 },	-- Pattern: Footpads of Silence
+				{ 15, 45097 },	-- Pattern: Lightning Grounded Boots
+				{ 16, 45104 },	-- Pattern: Cord of the White Dawn
+				{ 17, 45102 },	-- Pattern: Sash of Ancient Power
+				{ 18, 45105 },	-- Pattern: Savior's Slippers
+				{ 19, 45103 },	-- Pattern: Spellslinger's Slippers
+				{ 21, 46027 },	-- Formula: Enchant Weapon - Blade Ward
+				{ 22, 46348 },	-- Formula: Enchant Weapon - Blood Draining
+            },
+        },
+        T8_SET,
+        WOTLK_ULDUAR_AC_TABLE,
     }
 }
 
