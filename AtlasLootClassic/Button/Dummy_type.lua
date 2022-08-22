@@ -17,7 +17,8 @@ local Dummy_ID_SLOT = AtlasLoot.Button:AddIdentifier(TYPE, ID_SLOT)
 local Dummy_ID_SPECIAL = AtlasLoot.Button:AddIdentifier(TYPE, ID_SPECIAL)
 
 -- lua
-local format, str_match = string.format, _G.string.match
+local tonumber = tonumber
+local format, str_match, str_find = string.format, _G.string.match, string.find
 
 -- WoW
 
@@ -53,14 +54,31 @@ local SLOT_ICONS = {
 	SHIRT = 135009,
 }
 
+local ACHIEVEMENT_SEARCH_STRING = "ac(%d+)"
 local SPECIAL_ICONS = {
-	ACHIEVEMENT = function(icon)	-- gold ac icon
-		icon:SetTexture(235410)
-		icon:SetTexCoord(0,0.5,0,1)
-	end,
-	ACHIEVEMENT_D = function(icon)	-- grey ac icon
-		icon:SetTexture(235410)
-		icon:SetTexCoord(0.5,1,0,1)
+	ACHIEVEMENT = function(button)	-- gold ac icon
+		button.icon:SetTexture(235410)
+		local isCompleted = true
+		if button.Extra then
+			local tokenData = Token.GetTokenData(button.Extra)
+			if tokenData then
+				-- check if all ac's are completed
+				for i, entry in ipairs(tokenData) do
+					if type(entry) == "string" and str_find(entry, ACHIEVEMENT_SEARCH_STRING) then
+						local _, name, _, completed = GetAchievementInfo(tonumber(str_match(entry, ACHIEVEMENT_SEARCH_STRING)))
+						if not completed then
+							isCompleted = false
+							break
+						end
+					end
+				end
+			end
+		end
+		if isCompleted then
+			button.icon:SetTexCoord(0,0.5,0,1)
+		else
+			button.icon:SetTexCoord(0.5,1,0,1)
+		end
 	end,
 }
 
@@ -144,7 +162,7 @@ function Dummy.Refresh(button)
 	end
 	button.overlay:Hide()
 	if type(button.Texture) == "function" then
-		button.Texture(button.icon)
+		button.Texture(button)
 	else
 		button.icon:SetTexture(tonumber(button.Texture) or (button.Texture and button.Texture or DUMMY_ICON))
 	end
