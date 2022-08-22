@@ -550,7 +550,49 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
 		[40635] = { ICONS.WARRIOR, 40529, 40547, 0, ICONS.HUNTER, 40506, 0, ICONS.SHAMAN, 40512, 40517, 40522, type = 6}, -- Legplates of the Lost Protector
 		[40636] = { ICONS.ROGUE, 40500, 0, ICONS.DEATHKNIGHT, 40556, 40567, 0, ICONS.MAGE, 40417, 0, ICONS.DRUID, 40462, 40468, 40493, type = 6}, -- Legplates of the Lost Vanquisher
 
+		--- T8 / 10Man
+		-- Head
+		[45647] = { ICONS.PALADIN, 45372, 45377, 45382, 0, ICONS.PRIEST, 45386, 45391, 0, ICONS.WARLOCK, 45417, type = 6}, -- Helm of the Wayward Conqueror
+		[45648] = { ICONS.WARRIOR, 45425, 45431, 0, ICONS.HUNTER, 45361, 0, ICONS.SHAMAN, 45402, 45408, 45412, type = 6}, -- Helm of the Wayward Protector
+		[45649] = { ICONS.ROGUE, 45398, 0, ICONS.DEATHKNIGHT, 45336, 45342, 0, ICONS.MAGE, 45365, 0, ICONS.DRUID, 45346, 45356, 46313, type = 6}, -- Helm of the Wayward Vanquisher
+		-- Shoulders
+		[45659] = { ICONS.PALADIN, 45373, 45380, 45385, 0, ICONS.PRIEST, 45390, 45393, 0, ICONS.WARLOCK, 45422, type = 6}, -- Spaulders of the Wayward Conqueror
+		[45660] = { ICONS.WARRIOR, 45428, 45433, 0, ICONS.HUNTER, 45363, 0, ICONS.SHAMAN, 45404, 45410, 45415, type = 6}, -- Spaulders of the Wayward Protector
+		[45661] = { ICONS.ROGUE, 45400, 0, ICONS.DEATHKNIGHT, 45339, 45344, 0, ICONS.MAGE, 45369, 0, ICONS.DRUID, 45349, 45352, 45359, type = 6}, -- Spaulders of the Wayward Vanquisher
+		-- Chest
+		[45635] = { ICONS.PALADIN, 45374, 45375, 45381, 0, ICONS.PRIEST, 45389, 45395, 0, ICONS.WARLOCK, 45421, type = 6}, -- Chestguard of the Wayward Conqueror
+		[45636] = { ICONS.WARRIOR, 45424, 45429, 0, ICONS.HUNTER, 45364, 0, ICONS.SHAMAN, 45405, 45411, 45413, type = 6}, -- Chestguard of the Wayward Protector
+		[45637] = { ICONS.ROGUE, 45396, 0, ICONS.DEATHKNIGHT, 45335, 45340, 0, ICONS.MAGE, 45368, 0, ICONS.DRUID, 45348, 45354, 45358, type = 6}, -- Chestguard of the Wayward Vanquisher
+		-- Hands
+		[45644] = { ICONS.PALADIN, 45370, 45376, 45383, 0, ICONS.PRIEST, 45387, 45392, 0, ICONS.WARLOCK, 45419, type = 6}, -- Gloves of the Wayward Conqueror
+		[45645] = { ICONS.WARRIOR, 45426, 45430, 0, ICONS.HUNTER, 45360, 0, ICONS.SHAMAN, 45401, 45406, 45414, type = 6}, -- Gloves of the Wayward Protector
+		[45646] = { ICONS.ROGUE, 45397, 0, ICONS.DEATHKNIGHT, 45337, 45341, 0, ICONS.MAGE, 46131, 0, ICONS.DRUID, 45345, 45351, 45355, type = 6}, -- Gloves of the Wayward Vanquisher
+		-- Leggings
+		[45650] = { ICONS.PALADIN, 45371, 45379, 45384, 0, ICONS.PRIEST, 45388, 45394, 0, ICONS.WARLOCK, 45420, type = 6}, -- Leggings of the Wayward Conqueror
+		[45651] = { ICONS.WARRIOR, 45427, 45432, 0, ICONS.HUNTER, 45362, 0, ICONS.SHAMAN, 45403, 45409, 45416, type = 6}, -- Leggings of the Wayward Protector
+		[45652] = { ICONS.ROGUE, 45399, 0, ICONS.DEATHKNIGHT, 45338, 45343, 0, ICONS.MAGE, 45367, 0, ICONS.DRUID, 45347, 45353, 45357, type = 6}, -- Leggings of the Wayward Vanquisher
 
+		--- T8 / 25Man
+		-- Head
+		[45638] = { ICONS.PALADIN, 46156, 46175, 46180, 0, ICONS.PRIEST, 46172, 46197, 0, ICONS.WARLOCK, 46140, type = 6}, -- Crown of the Wayward Conqueror
+		[45639] = { ICONS.WARRIOR, 46151, 46166, 0, ICONS.HUNTER, 46143, 0, ICONS.SHAMAN, 46201, 46209, 46212, type = 6}, -- Crown of the Wayward Protector
+		[45640] = { ICONS.ROGUE, 46125, 0, ICONS.DEATHKNIGHT, 46115, 46120, 0, ICONS.MAGE, 46129, 0, ICONS.DRUID, 46161, 46184, 46191, type = 6}, -- Crown of the Wayward Vanquisher
+		-- Shoulders
+		[45656] = { ICONS.PALADIN, 46152, 46177, 46182, 0, ICONS.PRIEST, 46165, 46190, 0, ICONS.WARLOCK, 46136, type = 6}, -- Mantle of the Wayward Conqueror
+		[45657] = { ICONS.WARRIOR, 46149, 46167, 0, ICONS.HUNTER, 46145, 0, ICONS.SHAMAN, 46203, 46204, 46211, type = 6}, -- Mantle of the Wayward Protector
+		[45658] = { ICONS.ROGUE, 46127, 0, ICONS.DEATHKNIGHT, 46117, 46122, 0, ICONS.MAGE, 46134, 0, ICONS.DRUID, 46157, 46187, 46196, type = 6}, -- Mantle of the Wayward Vanquisher
+		-- Chest
+		[45632] = { ICONS.PALADIN, 46154, 46173, 46178, 0, ICONS.PRIEST, 46168, 46193, 0, ICONS.WARLOCK, 46137, type = 6}, -- Breastplate of the Wayward Conqueror
+		[45633] = { ICONS.WARRIOR, 46146, 46162, 0, ICONS.HUNTER, 46141, 0, ICONS.SHAMAN, 46198, 46205, 46206, type = 6}, -- Breastplate of the Wayward Protector
+		[45634] = { ICONS.ROGUE, 46123, 0, ICONS.DEATHKNIGHT, 46111, 46118, 0, ICONS.MAGE, 46130, 0, ICONS.DRUID, 46159, 46186, 46194, type = 6}, -- Breastplate of the Wayward Vanquisher
+		-- Hands
+		[45641] = { ICONS.PALADIN, 46155, 46174, 46179, 0, ICONS.PRIEST, 46163, 46188, 0, ICONS.WARLOCK, 46135, type = 6}, -- Gauntlets of the Wayward Conqueror
+		[45642] = { ICONS.WARRIOR, 46148, 46164, 0, ICONS.HUNTER, 46142, 0, ICONS.SHAMAN, 46199, 46200, 46207, type = 6}, -- Gauntlets of the Wayward Protector
+		[45643] = { ICONS.ROGUE, 46124, 0, ICONS.DEATHKNIGHT, 46113, 46119, 0, ICONS.MAGE, 46132, 0, ICONS.DRUID, 46158, 46183, 46189, type = 6}, -- Gauntlets of the Wayward Vanquisher
+		-- Leggings
+		[45653] = { ICONS.PALADIN, 46153, 46176, 46181, 0, ICONS.PRIEST, 46170, 46195, 0, ICONS.WARLOCK, 46139, type = 6}, -- Legplates of the Wayward Conqueror
+		[45654] = { ICONS.WARRIOR, 46150, 46169, 0, ICONS.HUNTER, 46144, 0, ICONS.SHAMAN, 46202, 46208, 46210, type = 6}, -- Legplates of the Wayward Protector
+		[45655] = { ICONS.ROGUE, 46126, 0, ICONS.DEATHKNIGHT, 46116, 46121, 0, ICONS.MAGE, 46133, 0, ICONS.DRUID, 46160, 46185, 46192, type = 6}, -- Legplates of the Wayward Vanquisher
 
 		--- ## WrathOnyxiasLair
 		[49644] = {49485, 49486, 49487, type = 3}, -- Head of Onyxia
@@ -926,6 +968,29 @@ end
 
 function Token.GetTokenDummyNumberRange()
 	return TOKE_NUMBER_RANGE
+end
+
+-- "DRUID", "HUNTER", "MAGE", "PALADIN", "PRIEST", "ROGUE", "SHAMAN", "WARLOCK", "WARRIOR", "DEATHKNIGHT"
+-- AtlasLoot.Data.Token.GetClassItemsForToken(45654, "WARRIOR")
+function Token.GetClassItemsForToken(tokenItemID, className)
+	if not tokenItemID or not TOKEN[tokenItemID] then return end
+	if not className or not ICONS[className] then return end
+
+	local classTokens = {}
+	local isClassToken = false
+	for i, token in ipairs(TOKEN[tokenItemID]) do
+		if isClassToken then
+			if token == 0 then
+				break
+			else
+				classTokens[#classTokens+1] = token
+			end
+		elseif token == ICONS[className] then
+			isClassToken = true
+		end
+	end
+
+	return #classTokens > 0 and classTokens or nil
 end
 
 -- TOKEN_TYPE_ADD_ITEM_DESCRIPTION

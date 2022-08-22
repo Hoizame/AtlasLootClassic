@@ -96,36 +96,36 @@ local T7_SET = {
         { 13,   3100793 }, -- Deathknight / Prot
         { 14,   3100792 }, -- Deathknight / DD
 		{ 16,   3100803 }, -- Mage
-		{ 18,   3100798 }, -- Druid / Heal
-        { 19,   3100799 }, -- Druid / Owl
-        { 20,   3100800 }, -- Druid / Feral
-        { 22,   3100795 }, -- Shaman / Heal
+        { 18,   3100799 }, -- Druid / Heal
+        { 19,   3100800 }, -- Druid / Owl
+        { 20,   3100798 }, -- Druid / Feral
+        { 22,   3100797 }, -- Shaman / Heal
         { 23,   3100796 }, -- Shaman / Ele
-        { 24,   3100797 }, -- Shaman / Enh
-		{ 26,   3100789 }, -- Paladin / Heal
+        { 24,   3100795 }, -- Shaman / Enh
+        { 26,   3100790 }, -- Paladin / Heal
         { 27,   3100791 }, -- Paladin / Prot
-        { 28,   3100790 }, -- Paladin / DD
+        { 28,   3100789 }, -- Paladin / DD
 	},
     [RAID25_DIFF] = {
-		{ 1,    3250802 }, -- Warlock
-		{ 3,    3250804 }, -- Priest / Heal
+        { 1,    3250802 }, -- Warlock
+        { 3,    3250804 }, -- Priest / Heal
         { 4,    3250805 }, -- Priest / Shadow
         { 6,    3250801 }, -- Rogue
-		{ 8,    3250794 }, -- Hunter
-		{ 10,   3250787 }, -- Warrior / Prot
+        { 8,    3250794 }, -- Hunter
+        { 10,   3250787 }, -- Warrior / Prot
         { 11,   3250788 }, -- Warrior / DD
         { 13,   3250793 }, -- Deathknight / Prot
         { 14,   3250792 }, -- Deathknight / DD
-		{ 16,   3250803 }, -- Mage
-		{ 18,   3250798 }, -- Druid / Heal
-        { 19,   3250799 }, -- Druid / Owl
-        { 20,   3250800 }, -- Druid / Feral
-        { 22,   3250795 }, -- Shaman / Heal
+        { 16,   3250803 }, -- Mage
+        { 18,   3250799 }, -- Druid / Heal
+        { 19,   3250800 }, -- Druid / Owl
+        { 20,   3250798 }, -- Druid / Feral
+        { 22,   3250797 }, -- Shaman / Heal
         { 23,   3250796 }, -- Shaman / Ele
-        { 24,   3250797 }, -- Shaman / Enh
-		{ 26,   3250789 }, -- Paladin / Heal
+        { 24,   3250795 }, -- Shaman / Enh
+        { 26,   3250790 }, -- Paladin / Heal
         { 27,   3250791 }, -- Paladin / Prot
-        { 28,   3250790 }, -- Paladin / DD
+        { 28,   3250789 }, -- Paladin / DD
 	},
 }
 
@@ -136,48 +136,49 @@ local T8_SET = {
 	--ContentPhaseBC = 6,
 	IgnoreAsSource = true,
 	[RAID10_DIFF] = {
-		{ 1,    3100802 }, -- Warlock
-		{ 3,    3100804 }, -- Priest / Heal
-        { 4,    3100805 }, -- Priest / Shadow
-        { 6,    3100801 }, -- Rogue
-		{ 8,    3100794 }, -- Hunter
-		{ 10,   3100787 }, -- Warrior / Prot
-        { 11,   3100788 }, -- Warrior / DD
-        { 13,   3100793 }, -- Deathknight / Prot
-        { 14,   3100792 }, -- Deathknight / DD
-		{ 16,   3100803 }, -- Mage
-		{ 18,   3100798 }, -- Druid / Heal
-        { 19,   3100799 }, -- Druid / Owl
-        { 20,   3100800 }, -- Druid / Feral
-        { 22,   3100795 }, -- Shaman / Heal
-        { 23,   3100796 }, -- Shaman / Ele
-        { 24,   3100797 }, -- Shaman / Enh
-		{ 26,   3100789 }, -- Paladin / Heal
-        { 27,   3100791 }, -- Paladin / Prot
-        { 28,   3100790 }, -- Paladin / DD
+		{ 1,    3100837 }, -- Warlock
+		{ 3,    3100833 }, -- Priest / Heal
+        { 4,    3100832 }, -- Priest / Shadow
+        { 6,    3100826 }, -- Rogue
+		{ 8,    3100838 }, -- Hunter
+		{ 10,   3100831 }, -- Warrior / Prot
+        { 11,   3100830 }, -- Warrior / DD
+        { 13,   3100835 }, -- Deathknight / Prot
+        { 14,   3100834 }, -- Deathknight / DD
+		{ 16,   3100836 }, -- Mage
+		{ 18,   3100829 }, -- Druid / Heal
+        { 19,   3100828 }, -- Druid / Owl
+        { 20,   3100827 }, -- Druid / Feral
+        { 22,   3100825 }, -- Shaman / Heal
+        { 23,   3100824 }, -- Shaman / Ele
+        { 24,   3100823 }, -- Shaman / Enh
+		{ 26,   3100822 }, -- Paladin / Heal
+        { 27,   3100821 }, -- Paladin / Prot
+        { 28,   3100820 }, -- Paladin / DD
 	},
     [RAID25_DIFF] = {
-		{ 1,    3250802 }, -- Warlock
-		{ 3,    3250804 }, -- Priest / Heal
-        { 4,    3250805 }, -- Priest / Shadow
-        { 6,    3250801 }, -- Rogue
-		{ 8,    3250794 }, -- Hunter
-		{ 10,   3250787 }, -- Warrior / Prot
-        { 11,   3250788 }, -- Warrior / DD
-        { 13,   3250793 }, -- Deathknight / Prot
-        { 14,   3250792 }, -- Deathknight / DD
-		{ 16,   3250803 }, -- Mage
-		{ 18,   3250798 }, -- Druid / Heal
-        { 19,   3250799 }, -- Druid / Owl
-        { 20,   3250800 }, -- Druid / Feral
-        { 22,   3250795 }, -- Shaman / Heal
-        { 23,   3250796 }, -- Shaman / Ele
-        { 24,   3250797 }, -- Shaman / Enh
-		{ 26,   3250789 }, -- Paladin / Heal
-        { 27,   3250791 }, -- Paladin / Prot
-        { 28,   3250790 }, -- Paladin / DD
+		{ 1,    3250837 }, -- Warlock
+		{ 3,    3250833 }, -- Priest / Heal
+        { 4,    3250832 }, -- Priest / Shadow
+        { 6,    3250826 }, -- Rogue
+		{ 8,    3250838 }, -- Hunter
+		{ 10,   3250831 }, -- Warrior / Prot
+        { 11,   3250830 }, -- Warrior / DD
+        { 13,   3250835 }, -- Deathknight / Prot
+        { 14,   3250834 }, -- Deathknight / DD
+		{ 16,   3250836 }, -- Mage
+		{ 18,   3250829 }, -- Druid / Heal
+        { 19,   3250828 }, -- Druid / Owl
+        { 20,   3250827 }, -- Druid / Feral
+        { 22,   3250825 }, -- Shaman / Heal
+        { 23,   3250824 }, -- Shaman / Ele
+        { 24,   3250823 }, -- Shaman / Enh
+		{ 26,   3250822 }, -- Paladin / Heal
+        { 27,   3250821 }, -- Paladin / Prot
+        { 28,   3250820 }, -- Paladin / DD
 	},
 }
+
 
 local WOTLK_DUNGEONMASTER_AC_TABLE = {	--[Northrend Dungeonmaster]
     AchievementID = 1288,
