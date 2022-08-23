@@ -244,6 +244,37 @@ local WOTLK_GLORY_OF_THE_HERO_AC_TABLE = {	--[Glory of the Hero]
 	},
 }
 
+local WOTLK_NAXXRAMAS_AC_TABLE = {	--[Glory of the Raider]
+	name = AL["Glory of the Raider"],
+	TableType = AC_ITTYPE,
+	ExtraList = true,
+    IgnoreAsSource = true,
+	CoinTexture = "Achievement",
+	[RAID10_DIFF] = {
+		{ 1, 2137 },
+		{ 2, 578 },			    { 17, 1858 },
+		{ 3, 1856 },			{ 18, 1996 },
+		{ 4, 1997 },			{ 19, 2178 },
+		{ 5, 2180 },			{ 20, 622 },
+		{ 6, 1874 },			{ 21, 1869 },
+		{ 7, 2047 },			{ 22, 2051 },
+		{ 8, 2146 },			{ 23, 2176 },
+		{ 9, 2148 },			{ 24, 2184 },
+	},
+    [RAID25_DIFF] = {
+		{ 1, 2138 },
+		{ 2, 579 },			    { 17, 1859 },
+		{ 3, 1857 },			{ 18, 2139 },
+		{ 4, 2140 },			{ 19, 2179 },
+		{ 5, 2181 },			{ 20, 623  },
+		{ 6, 1875 },			{ 21, 1870 },
+		{ 7, 2048 },			{ 22, 2054 },
+		{ 8, 2147 },			{ 23, 2177 },
+		{ 9, 2149 },			{ 24, 2185 },
+	},
+}
+
+
 local WOTLK_ULDUAR_AC_TABLE = {	--[Glory of the Ulduar Raider]
 	name = AL["Glory of the Ulduar Raider"],
 	TableType = AC_ITTYPE,
@@ -2401,6 +2432,7 @@ data["NaxxramasWrath"] = {
                 { 8, 39197 }, -- Gauntlets of the Master
                 { 9, 39199 }, -- Watchful Eye
                 { 10, 39200 }, -- Grieving Spellblade
+                { 16, "ac1997" },
             },
             [RAID25_DIFF] = {
                 { 1, 39732 }, -- Faerlina's Madness
@@ -2427,6 +2459,7 @@ data["NaxxramasWrath"] = {
                 { 22, 39757 }, -- Idol of Worship
                 { 23, 39728 }, -- Totem of Misery
                 { 24, 39730 }, -- Widow's Fury
+                { 26, "ac2140" },
             },
 		},
 		{ -- NAXMaexxna
@@ -2448,6 +2481,7 @@ data["NaxxramasWrath"] = {
                 { 8, 39226 }, -- Maexxna's Femur
                 { 9, 39221 }, -- Wraith Spear
                 { 10, 39233 }, -- Aegis of Damnation
+                { 16, "ac1858" },
             },
             [RAID25_DIFF] = {
                 { 1, 40250 }, -- Aged Winter Cloak
@@ -2474,6 +2508,7 @@ data["NaxxramasWrath"] = {
                 { 22, 39766 }, -- Matriarch's Spawn
                 { 23, 39763 }, -- Wraith Strike
                 { 24, 39758 }, -- The Jawbone
+                { 26, "ac1859" },
             },
 		},
 		-- The Plague Quarter
@@ -2542,6 +2577,7 @@ data["NaxxramasWrath"] = {
                 { 8, 39250 }, -- Ring of Holy Cleansing
                 { 9, 39245 }, -- Demise
                 { 10, 39255 }, -- Staff of the Plague Beast
+                { 16, "ac1996" },
             },
             [RAID25_DIFF] = {
                 { 1, 40250 }, -- Aged Winter Cloak
@@ -2568,6 +2604,7 @@ data["NaxxramasWrath"] = {
                 { 22, 40207 }, -- Sigil of Awareness
                 { 23, 40208 }, -- Cryptfiend's Bite
                 { 24, 40233 }, -- The Undeath Carrier
+                { 26, "ac2139" },
             },
 		},
 		{ -- NAXLoatheb
@@ -2587,6 +2624,7 @@ data["NaxxramasWrath"] = {
                 { 16, 40622 }, -- Spaulders of the Lost Conqueror
                 { 17, 40623 }, -- Spaulders of the Lost Protector
                 { 18, 40624 }, -- Spaulders of the Lost Vanquisher
+                { 20, "ac2182" },
             },
             [RAID25_DIFF] = {
                 { 1, 40247 }, -- Cowl of Innocent Delight
@@ -2602,6 +2640,7 @@ data["NaxxramasWrath"] = {
                 { 16, 40637 }, -- Mantle of the Lost Conqueror
                 { 17, 40638 }, -- Mantle of the Lost Protector
                 { 18, 40639 }, -- Mantle of the Lost Vanquisher
+                { 20, "ac2183" },
             },
 		},
 		-- The Military Quarter
@@ -2715,6 +2754,7 @@ data["NaxxramasWrath"] = {
                 { 16, 40610 }, -- Chestguard of the Lost Conqueror
                 { 17, 40611 }, -- Chestguard of the Lost Protector
                 { 18, 40612 }, -- Chestguard of the Lost Vanquisher
+                { 20, "ac2176" },
             },
             [RAID25_DIFF] = {
                 { 1, 40349 }, -- Gloves of Peaceful Death
@@ -2729,6 +2769,7 @@ data["NaxxramasWrath"] = {
                 { 16, 40625 }, -- Breastplate of the Lost Conqueror
                 { 17, 40626 }, -- Breastplate of the Lost Protector
                 { 18, 40627 }, -- Breastplate of the Lost Vanquisher
+                { 20, "ac2177" },
             },
 		},
 		-- The Construct Quarter
@@ -2749,6 +2790,7 @@ data["NaxxramasWrath"] = {
                 { 7, 39261 }, -- Tainted Girdle of Mending
                 { 8, 39271 }, -- Blade of Dormant Memories
                 { 9, 39270 }, -- Hatestrike
+                { 16, "ac1856" },
             },
             [RAID25_DIFF] = {
                 { 1, 40271 }, -- Sash of Solitude
@@ -2774,6 +2816,7 @@ data["NaxxramasWrath"] = {
                 { 21, 40264 }, -- Split Greathammer
                 { 22, 40266 }, -- Hero's Surrender
                 { 23, 40265 }, -- Arrowsong
+                { 25, "ac1857" },
             },
 		},
 		{ -- NAXGrobbulus
@@ -2932,6 +2975,8 @@ data["NaxxramasWrath"] = {
                 { 16, 40619 }, -- Leggings of the Lost Conqueror
                 { 17, 40620 }, -- Leggings of the Lost Protector
                 { 18, 40621 }, -- Leggings of the Lost Vanquisher
+                { 20, "ac2178" },
+				{ 21, "ac2180" },
             },
             [RAID25_DIFF] = {
                 { 1, 40303 }, -- Wraps of the Persecuted
@@ -2947,6 +2992,8 @@ data["NaxxramasWrath"] = {
                 { 16, 40634 }, -- Legplates of the Lost Conqueror
                 { 17, 40635 }, -- Legplates of the Lost Protector
                 { 18, 40636 }, -- Legplates of the Lost Vanquisher
+                { 20, "ac2179" },
+				{ 21, "ac2181" },
             },
 		},
 		-- Frostwyrm Lair
@@ -2970,6 +3017,8 @@ data["NaxxramasWrath"] = {
                 { 9, 39401 }, -- Circle of Death
                 { 10, 39407 }, -- Circle of Life
                 { 16, 44569 }, -- Key to the Focusing Iris
+                { 18, "ac572" },
+				{ 19, "ac2146" },
             },
             [RAID25_DIFF] = {
                 { 1, 40381 }, -- Sympathy
@@ -2993,6 +3042,8 @@ data["NaxxramasWrath"] = {
                 { 19, 40382 }, -- Soul of the Dead
                 { 20, 40368 }, -- Murder
                 { 22, 44577 }, -- Heroic Key to the Focusing Iris
+                { 24, "ac573" },
+				{ 25, "ac2147" },
             },
 		},
 		{ -- NAXKelThuzard
@@ -3017,6 +3068,9 @@ data["NaxxramasWrath"] = {
                 { 16, 40616 }, -- Helm of the Lost Conqueror
                 { 17, 40617 }, -- Helm of the Lost Protector
                 { 18, 40618 }, -- Helm of the Lost Vanquisher
+                { 20, "ac574" },
+				{ 21, "ac1658" },
+				{ 22, "ac2184" },
             },
             [RAID25_DIFF] = {
                 { 1, 40405 }, -- Cape of the Unworthy Wizard
@@ -3037,6 +3091,9 @@ data["NaxxramasWrath"] = {
                 { 16, 40631 }, -- Crown of the Lost Conqueror
                 { 17, 40632 }, -- Crown of the Lost Protector
                 { 18, 40633 }, -- Crown of the Lost Vanquisher
+                { 20, "ac575" },
+				{ 21, "ac1658" },
+				{ 22, "ac2185" },
             },
 		},
 		{ -- NAXTrash
@@ -3061,6 +3118,7 @@ data["NaxxramasWrath"] = {
             },
 		},
         T7_SET,
+        WOTLK_NAXXRAMAS_AC_TABLE,
 	},
 }
 
@@ -3077,7 +3135,7 @@ data["WrathOnyxiasLair"] = {
 			EncounterJournalID = 1651,
 			Level = 999,
 			[RAID10_DIFF] = {
-                { 1, "SLOT_HEAD", nil, AL["Class Items"], nil, "WrathOnyxiaClassSets10" },
+                { 1, "SLOT_HEAD", nil, AL["Class Item drops"], nil, "WrathOnyxiaClassItems10" },
 				{ 2, 49307 },	-- Fluttering Sapphiron Drape
                 { 3, 49304 },	-- Sharpened Fang of the Mystics
 				{ 4, 49437 },	-- Rusted Gutgore Ripper
@@ -3104,7 +3162,7 @@ data["WrathOnyxiasLair"] = {
 				{ 30, "ac4404" },
 			},
             [RAID25_DIFF] = {
-                { 1, "SLOT_HEAD", nil, AL["Class Items"], nil, "WrathOnyxiaClassSets25" },
+                { 1, "SLOT_HEAD", nil, AL["Class Item drops"], nil, "WrathOnyxiaClassItems25" },
 				{ 2, 49491 },	-- Fluttering Sapphiron Drape
 				{ 3, 49494 },	-- Honed Fang of the Mystics
 				{ 4, 49465 },	-- Tarnished Gutgore Ripper

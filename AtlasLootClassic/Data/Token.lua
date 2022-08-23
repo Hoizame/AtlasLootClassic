@@ -596,14 +596,15 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
 
 		--- ## WrathOnyxiasLair
 		[49644] = {49485, 49486, 49487, type = 3}, -- Head of Onyxia
-		["WrathOnyxiaClassSets10"] = {
+		[49294] = { {36919, "1-2"}, {36922, "1-3"}, {36931, "1-3"}, {36928, "1-3"}, {36934, "1-3"}, {36925, "1-3"}, type = 2 },	-- Ashen Sack of Gems
+		["WrathOnyxiaClassItems10"] = {
 			ICONS.WARLOCK, 49315, 0, ICONS.PRIEST, 49316, 49317, 0, ICONS.MAGE, 49318, 0,
 			ICONS.ROGUE, 49322, 0, ICONS.DRUID, 49327, 49328, 49326, 0,
 			ICONS.HUNTER, 49319, 0, ICONS.SHAMAN, 49331, 49330, 49329, 0,
 			ICONS.WARRIOR, 49320, 49321, 0, ICONS.PALADIN, 49323, 49325, 49324, 0, ICONS.DEATHKNIGHT, 49333, 49332,
 			type = 9
 		},
-		["WrathOnyxiaClassSets25"] = {
+		["WrathOnyxiaClassItems25"] = {
 			ICONS.WARLOCK, 49484, 0, ICONS.PRIEST, 49482, 49483, 0, ICONS.MAGE, 49481, 0,
 			ICONS.ROGUE, 49477, 0, ICONS.DRUID, 49472, 49473, 49471, 0,
 			ICONS.HUNTER, 49480, 0, ICONS.SHAMAN, 49469, 49468, 49470, 0,
@@ -621,10 +622,10 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
 
 		--- Algalon Key
 		-- 10 man
-		[45796] = { 45788, 45786, 45787, 45784, 0, 45796, type = 3 }, -- Celestial Planetarium Key / 10man
+		[45796] = { 45788, 45786, 45787, 45784, 0, 45796, type = 4 }, -- Celestial Planetarium Key / 10man
 		[45788] = 45796, [45786] = 45796, [45787] = 45796, [45784] = 45796,
 		-- 25 man
-		[45798] = { 45814, 45815, 45816, 45817, 0, 45798, type = 3 }, -- Celestial Planetarium Key / 25man
+		[45798] = { 45814, 45815, 45816, 45817, 0, 45798, type = 4 }, -- Celestial Planetarium Key / 25man
 		[45814] = 45798, [45815] = 45798, [45816] = 45798, [45817] = 45798,
 
 		["AC_UlduarFlameLeviathan10"] = {"ac2913", "ac2914", "ac2915", "ac3056", 0, "ac2911", "ac2909", "ac2907", "ac2905", type = 10},
