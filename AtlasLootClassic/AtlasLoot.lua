@@ -218,16 +218,16 @@ AtlasLoot.DIFFICULTY = {
 	[2] 	= {	id = 2,		short = "h", 	loc = AL["Heroic"],				sourceLoc = AL["H"], 		key = "HEROIC"			},
 	[3] 	= {	id = 3,		short = "r10", 	loc = AL["10 Raid"],			sourceLoc = "10", 			key = "10RAID"			},
 	[4] 	= {	id = 4,		short = "r25", 	loc = AL["25 Raid"],			sourceLoc = "25", 			key = "25RAID"			},
-	[5] 	= {	id = 5,		short = "r10h", loc = AL["10 Raid Heroic"],		sourceLoc = AL["10h"], 		key = "10RAIDH"			},
-	[6] 	= {	id = 6,		short = "r25h",	loc = AL["25 Raid Heroic"],		sourceLoc = AL["25h"], 		key = "25RAIDH"			},
+	[5] 	= {	id = 5,		short = "r10h", loc = AL["10 Raid Heroic"],		sourceLoc = AL["10H"], 		key = "10RAIDH"			},
+	[6] 	= {	id = 6,		short = "r25h",	loc = AL["25 Raid Heroic"],		sourceLoc = AL["25H"], 		key = "25RAIDH"			},
 	[9] 	= {	id = 7,		short = "r40", 	loc = AL["40 Raid"],			sourceLoc = nil, 			key = "40RAID"			},
 	[148] 	= {	id = 148,	short = "r20", 	loc = AL["20 Raid"],			sourceLoc = nil, 			key = "20RAID"			},
 	[173] 	= {	id = 173,	short = "n", 	loc = AL["Normal"],				sourceLoc = nil, 			key = "NORMAL2"			},
 	[174] 	= {	id = 174,	short = "h", 	loc = AL["Heroic"],				sourceLoc = AL["H"], 		key = "HEROIC2"			},
 	[175] 	= {	id = 175,	short = "r10", 	loc = AL["10 Raid"],			sourceLoc = "10", 			key = "10RAID2"			},
 	[176] 	= {	id = 176,	short = "r25", 	loc = AL["25 Raid"],			sourceLoc = "25", 			key = "25RAID2"			},
-	[193] 	= {	id = 193,	short = "r10h", loc = AL["10 Raid Heroic"],		sourceLoc = AL["10h"], 		key = "10RAIDH2"		},
-	[194] 	= {	id = 194,	short = "r25h",	loc = AL["25 Raid Heroic"],		sourceLoc = AL["25h"], 		key = "25RAIDH2"		},
+	[193] 	= {	id = 193,	short = "r10h", loc = AL["10 Raid Heroic"],		sourceLoc = AL["10H"], 		key = "10RAIDH2"		},
+	[194] 	= {	id = 194,	short = "r25h",	loc = AL["25 Raid Heroic"],		sourceLoc = AL["25H"], 		key = "25RAIDH2"		},
 }
 
 for k,v in pairs(AtlasLoot.DIFFICULTY) do

@@ -22,7 +22,9 @@ local ALIL = AtlasLoot.IngameLocales
 local NORMAL_DIFF = data:AddDifficulty("NORMAL", nil, nil, nil, true)
 local HEROIC_DIFF = data:AddDifficulty("HEROIC", nil, nil, nil, true)
 local RAID10_DIFF = data:AddDifficulty("10RAID")
+local RAID10H_DIFF = data:AddDifficulty("10RAIDH")
 local RAID25_DIFF = data:AddDifficulty("25RAID")
+local RAID25H_DIFF = data:AddDifficulty("25RAIDH")
 
 local NORMAL_ITTYPE = data:AddItemTableType("Item", "Item")
 local SET_ITTYPE = data:AddItemTableType("Set", "Item")
@@ -2292,68 +2294,6 @@ data["HallsOfReflection"] = {
 
 -- ## RAIDS
 
-data["TheEyeOfEternity"] = {
-    nameFormat = NAME_NEXUS,
-	MapID = 4500,
-	--InstanceID = 560,
-    ContentType = RAID_CONTENT,
-	AtlasModule = ATLAS_MODULE_NAME,
-	--AtlasMapID = "CL_CoTOldHillsbrad",
-	--AtlasMapFile = {"CoTOldHillsbrad", "CavernsOfTimeEnt"},
-	--LoadDifficulty = NORMAL_DIFF,
-	LevelRange = {80, 80, 80},
-	items = {
-        { -- Malygos / 180
-	        name = AL["Malygos"],
-            npcID = 28859,
-            Level = 999,
-            --DisplayIDs = {{17386}},
-            AtlasMapBossID = 1,
-            [RAID10_DIFF] = {
-                { 1, 40526 }, -- Gown of the Spell-Weaver
-                { 2, 40519 }, -- Footsteps of Malygos
-                { 3, 40511 }, -- Focusing Energy Epaulets
-                { 4, 40486 }, -- Necklace of the Glittering Chamber
-                { 5, 40474 }, -- Surge Needle Ring
-                { 6, 40491 }, -- Hailstorm
-                { 7, 40488 }, -- Ice Spire Scepter
-                { 8, 40489 }, -- Greatstaff of the Nexus
-                { 9, 40497 }, -- Black Ice
-                { 10, 40475 }, -- Barricade of Eternity
-                { 16, 43952 }, -- Reins of the Azure Drake
-                { 18, 44569 }, -- Key to the Focusing Iris
-                { 19, 44650 }, -- Heart of Magic
-            },
-            [RAID25_DIFF] = {
-                { 1, 40562 }, -- Hood of Rationality
-                { 2, 40555 }, -- Mantle of Dissemination
-                { 3, 40194 }, -- Blanketing Robes of Snow
-                { 4, 40561 }, -- Leash of Heedless Magic
-                { 5, 40560 }, -- Leggings of the Wanton Spellcaster
-                { 6, 40558 }, -- Arcanic Tramplers
-                { 7, 40594 }, -- Spaulders of Catatonia
-                { 8, 40539 }, -- Chestguard of the Recluse
-                { 9, 40541 }, -- Frosted Adroit Handguards
-                { 10, 40566 }, -- Unravelling Strands of Sanity
-                { 11, 40543 }, -- Blue Aspect Helm
-                { 12, 40588 }, -- Tunic of the Artifact Guardian
-                { 13, 40564 }, -- Winter Spectacle Gloves
-                { 14, 40549 }, -- Boots of the Renewed Flight
-                { 15, 40590 }, -- Elevated Lair Pauldrons
-                { 16, 40589 }, -- Legplates of Sovereignty
-                { 17, 40592 }, -- Boots of Healing Energies
-                { 18, 40591 }, -- Melancholy Sabatons
-                { 19, 40532 }, -- Living Ice Crystals
-                { 20, 40531 }, -- Mark of Norgannon
-                { 22, 43952 }, -- Reins of the Azure Drake
-                { 24, 44577 }, -- Heroic Key to the Focusing Iris
-                { 25, 44651 }, -- Heart of Magic
-            }
-        },
-        KEYS
-    }
-}
-
 data["NaxxramasWrath"] = {
 	MapID = 3456,
 	InstanceID = 533,
@@ -3122,77 +3062,69 @@ data["NaxxramasWrath"] = {
 	},
 }
 
-data["WrathOnyxiasLair"] = {
-	EncounterJournalID = 760,
-	MapID = 2159,
-	AtlasMapID = "OnyxiasLair",
-	ContentType = RAID_CONTENT,
-    LevelRange = {80, 80, 80},
+data["TheEyeOfEternity"] = {
+    nameFormat = NAME_NEXUS,
+	MapID = 4500,
+	--InstanceID = 560,
+    ContentType = RAID_CONTENT,
+	AtlasModule = ATLAS_MODULE_NAME,
+	--AtlasMapID = "CL_CoTOldHillsbrad",
+	--AtlasMapFile = {"CoTOldHillsbrad", "CavernsOfTimeEnt"},
+	--LoadDifficulty = NORMAL_DIFF,
+	LevelRange = {80, 80, 80},
 	items = {
-		{	--Onyxia
-			name = AL["Onyxia"],
-            npcID = 15956,
-			EncounterJournalID = 1651,
-			Level = 999,
-			[RAID10_DIFF] = {
-                { 1, "SLOT_HEAD", nil, AL["Class Item drops"], nil, "WrathOnyxiaClassItems10" },
-				{ 2, 49307 },	-- Fluttering Sapphiron Drape
-                { 3, 49304 },	-- Sharpened Fang of the Mystics
-				{ 4, 49437 },	-- Rusted Gutgore Ripper
-				{ 5, 49298 },	-- Glinting Azuresong Mageblade
-				{ 6, 49303 },	-- Gleaming Quel'Serrar
-				{ 7, 49296 },	-- Singed Vis'kag the Bloodletter
-				{ 8, 49299 },	-- Keen Obsidian Edged Blade
-				{ 9, 49297 },	-- Empowered Deathbringer
-				{ 10, 49302 },	-- Reclaimed Shadowstrike
-				{ 11, 49301 },	-- Reclaimed Thunderstrike
-				{ 12, 49305 },	-- Snub-Nose Blastershot Launcher
-				{ 13, 49308 },	-- Antique Cornerstone Grimoire
-                { 14, 49306 },	-- Eskhandar's Choker
-				{ 15, 49309 },	-- Runed Ring of Binding
-                { 16, 49636 },	-- Reins of the Onyxian Drake
-				{ 18, 49463 },	-- Purified Shard of the Flame
-				{ 19, 49310 },	-- Purified Shard of the Scale
-                { 21, 49644 },	-- Head of Onyxia
-				{ 22, 49295 },	-- Enlarged Onyxia Hide Backpack
-				{ 23, 49294 },	-- Ashen Sack of Gems
-				{ 27, "ac4396" },
-				{ 28, "ac4403" },
-				{ 29, "ac4402" },
-				{ 30, "ac4404" },
-			},
+        { -- Malygos / 180
+	        name = AL["Malygos"],
+            npcID = 28859,
+            Level = 999,
+            --DisplayIDs = {{17386}},
+            AtlasMapBossID = 1,
+            [RAID10_DIFF] = {
+                { 1, 40526 }, -- Gown of the Spell-Weaver
+                { 2, 40519 }, -- Footsteps of Malygos
+                { 3, 40511 }, -- Focusing Energy Epaulets
+                { 4, 40486 }, -- Necklace of the Glittering Chamber
+                { 5, 40474 }, -- Surge Needle Ring
+                { 6, 40491 }, -- Hailstorm
+                { 7, 40488 }, -- Ice Spire Scepter
+                { 8, 40489 }, -- Greatstaff of the Nexus
+                { 9, 40497 }, -- Black Ice
+                { 10, 40475 }, -- Barricade of Eternity
+                { 16, 43952 }, -- Reins of the Azure Drake
+                { 18, 44569 }, -- Key to the Focusing Iris
+                { 19, 44650 }, -- Heart of Magic
+            },
             [RAID25_DIFF] = {
-                { 1, "SLOT_HEAD", nil, AL["Class Item drops"], nil, "WrathOnyxiaClassItems25" },
-				{ 2, 49491 },	-- Fluttering Sapphiron Drape
-				{ 3, 49494 },	-- Honed Fang of the Mystics
-				{ 4, 49465 },	-- Tarnished Gutgore Ripper
-				{ 5, 49499 },	-- Polished Azuresong Mageblade
-				{ 6, 49495 },	-- Burnished Quel'Serrar
-				{ 7, 49501 },	-- Tempered Vis'kag the Bloodletter
-				{ 8, 49498 },	-- Sharpened Obsidian Edged Blade
-				{ 9, 49500 },	-- Raging Deathbringer
-				{ 10, 49496 },	-- Reinforced Shadowstrike
-				{ 11, 49497 },	-- Reinforced Thunderstrike
-				{ 12, 49493 },	-- Rifled Blastershot Launcher
-				{ 13, 49490 },	-- Antediluvian Cornerstone Grimoire
-                { 14, 49492 },	-- Eskhandar's Links
-				{ 15, 49489 },	-- Signified Ring of Binding
-                { 16, 49636 },	-- Reins of the Onyxian Drake
-				{ 18, 49464 },	-- Purified Shard of the Flame
-				{ 19, 49488 },	-- Purified Shard of the Scale
-                { 21, 49644 },	-- Head of Onyxia
-				{ 22, 49295 },	-- Enlarged Onyxia Hide Backpack
-				{ 23, 49294 },	-- Ashen Sack of Gems
-				{ 27, "ac4397" },
-				{ 28, "ac4406" },
-				{ 29, "ac4405" },
-				{ 30, "ac4407" },
-			},
-		},
-	}
+                { 1, 40562 }, -- Hood of Rationality
+                { 2, 40555 }, -- Mantle of Dissemination
+                { 3, 40194 }, -- Blanketing Robes of Snow
+                { 4, 40561 }, -- Leash of Heedless Magic
+                { 5, 40560 }, -- Leggings of the Wanton Spellcaster
+                { 6, 40558 }, -- Arcanic Tramplers
+                { 7, 40594 }, -- Spaulders of Catatonia
+                { 8, 40539 }, -- Chestguard of the Recluse
+                { 9, 40541 }, -- Frosted Adroit Handguards
+                { 10, 40566 }, -- Unravelling Strands of Sanity
+                { 11, 40543 }, -- Blue Aspect Helm
+                { 12, 40588 }, -- Tunic of the Artifact Guardian
+                { 13, 40564 }, -- Winter Spectacle Gloves
+                { 14, 40549 }, -- Boots of the Renewed Flight
+                { 15, 40590 }, -- Elevated Lair Pauldrons
+                { 16, 40589 }, -- Legplates of Sovereignty
+                { 17, 40592 }, -- Boots of Healing Energies
+                { 18, 40591 }, -- Melancholy Sabatons
+                { 19, 40532 }, -- Living Ice Crystals
+                { 20, 40531 }, -- Mark of Norgannon
+                { 22, 43952 }, -- Reins of the Azure Drake
+                { 24, 44577 }, -- Heroic Key to the Focusing Iris
+                { 25, 44651 }, -- Heart of Magic
+            }
+        },
+        KEYS
+    }
 }
 
-data["Sartharion"] = {
+data["ObsidianSanctum"] = {
 	MapID = 4493,
 	--InstanceID = 560,
     ContentType = RAID_CONTENT,
@@ -3277,7 +3209,7 @@ data["Sartharion"] = {
                 { 17, 43954 }, -- Reins of the Twilight Drake
             }
         },
-        KEYS
+        T7_SET
     }
 }
 
@@ -4052,8 +3984,167 @@ data["Ulduar"] = {
     }
 }
 
-local ROLE_TANK = AL["Tank"]
-local ROLE_HEAL = AL["Healer"]
+-- Trial of the Crusader / T9
+
+
+data["WrathOnyxiasLair"] = {
+	EncounterJournalID = 760,
+	MapID = 2159,
+	AtlasMapID = "OnyxiasLair",
+	ContentType = RAID_CONTENT,
+    LevelRange = {80, 80, 80},
+	items = {
+		{	--Onyxia
+			name = AL["Onyxia"],
+            npcID = 15956,
+			EncounterJournalID = 1651,
+			Level = 999,
+			[RAID10_DIFF] = {
+                { 1, "SLOT_HEAD", nil, AL["Class Item drops"], nil, "WrathOnyxiaClassItems10" },
+				{ 2, 49307 },	-- Fluttering Sapphiron Drape
+                { 3, 49304 },	-- Sharpened Fang of the Mystics
+				{ 4, 49437 },	-- Rusted Gutgore Ripper
+				{ 5, 49298 },	-- Glinting Azuresong Mageblade
+				{ 6, 49303 },	-- Gleaming Quel'Serrar
+				{ 7, 49296 },	-- Singed Vis'kag the Bloodletter
+				{ 8, 49299 },	-- Keen Obsidian Edged Blade
+				{ 9, 49297 },	-- Empowered Deathbringer
+				{ 10, 49302 },	-- Reclaimed Shadowstrike
+				{ 11, 49301 },	-- Reclaimed Thunderstrike
+				{ 12, 49305 },	-- Snub-Nose Blastershot Launcher
+				{ 13, 49308 },	-- Antique Cornerstone Grimoire
+                { 14, 49306 },	-- Eskhandar's Choker
+				{ 15, 49309 },	-- Runed Ring of Binding
+                { 16, 49636 },	-- Reins of the Onyxian Drake
+				{ 18, 49463 },	-- Purified Shard of the Flame
+				{ 19, 49310 },	-- Purified Shard of the Scale
+                { 21, 49644 },	-- Head of Onyxia
+				{ 22, 49295 },	-- Enlarged Onyxia Hide Backpack
+				{ 23, 49294 },	-- Ashen Sack of Gems
+				{ 27, "ac4396" },
+				{ 28, "ac4403" },
+				{ 29, "ac4402" },
+				{ 30, "ac4404" },
+			},
+            [RAID25_DIFF] = {
+                { 1, "SLOT_HEAD", nil, AL["Class Item drops"], nil, "WrathOnyxiaClassItems25" },
+				{ 2, 49491 },	-- Fluttering Sapphiron Drape
+				{ 3, 49494 },	-- Honed Fang of the Mystics
+				{ 4, 49465 },	-- Tarnished Gutgore Ripper
+				{ 5, 49499 },	-- Polished Azuresong Mageblade
+				{ 6, 49495 },	-- Burnished Quel'Serrar
+				{ 7, 49501 },	-- Tempered Vis'kag the Bloodletter
+				{ 8, 49498 },	-- Sharpened Obsidian Edged Blade
+				{ 9, 49500 },	-- Raging Deathbringer
+				{ 10, 49496 },	-- Reinforced Shadowstrike
+				{ 11, 49497 },	-- Reinforced Thunderstrike
+				{ 12, 49493 },	-- Rifled Blastershot Launcher
+				{ 13, 49490 },	-- Antediluvian Cornerstone Grimoire
+                { 14, 49492 },	-- Eskhandar's Links
+				{ 15, 49489 },	-- Signified Ring of Binding
+                { 16, 49636 },	-- Reins of the Onyxian Drake
+				{ 18, 49464 },	-- Purified Shard of the Flame
+				{ 19, 49488 },	-- Purified Shard of the Scale
+                { 21, 49644 },	-- Head of Onyxia
+				{ 22, 49295 },	-- Enlarged Onyxia Hide Backpack
+				{ 23, 49294 },	-- Ashen Sack of Gems
+				{ 27, "ac4397" },
+				{ 28, "ac4406" },
+				{ 29, "ac4405" },
+				{ 30, "ac4407" },
+			},
+		},
+        T9_SET,
+	}
+}
+
+-- Icecrown Citadel / T10
+
+-- The Ruby Sanctum / T10
+data["RubySanctum"] = {
+	EncounterJournalID = 761,
+	MapID = 4987,
+	AtlasMapID = "RubySanctum",
+	ContentType = RAID_CONTENT,
+    LevelRange = {80, 80, 80},
+	items = {
+		{	--Halion
+            name = AL["Halion"],
+			EncounterJournalID = 1652,
+			[RAID10_DIFF] = {
+				{ 1, 53115 },	-- Abduction's Cover
+				{ 2, 53118 },	-- Misbegotten Belt
+				{ 3, 53114 },	-- Gloaming Sark
+				{ 4, 53117 },	-- Changeling Gloves
+				{ 5, 53113 },	-- Twilight Scale Shoulders
+				{ 6, 53119 },	-- Boots of Divided Being
+				{ 7, 53112 },	-- Bracers of the Heir
+				{ 8, 53121 },	-- Surrogate Belt
+				{ 9, 53111 },	-- Scion's Treads
+				{ 16, 53103 },	-- Baltharus' Gift
+				{ 17, 53116 },	-- Saviana's Tribute
+				{ 18, 53110 },	-- Zarithrian's Offering
+				{ 20, "ac4817" },
+			},
+			[RAID10H_DIFF] = {
+				{ 1, 54556 },	-- Abduction's Cover
+				{ 2, 54562 },	-- Misbegotten Belt
+				{ 3, 54561 },	-- Gloaming Sark
+				{ 4, 54560 },	-- Changeling Gloves
+				{ 5, 54566 },	-- Twilight Scale Shoulders
+				{ 6, 54558 },	-- Boots of Divided Being
+				{ 7, 54559 },	-- Bracers of the Heir
+				{ 8, 54565 },	-- Surrogate Belt
+				{ 9, 54564 },	-- Scion's Treads
+				{ 16, 54557 },	-- Baltharus' Gift
+				{ 17, 54563 },	-- Saviana's Tribute
+				{ 18, 54567 },	-- Zarithrian's Offering
+				{ 20, "ac4818" },
+			},
+			[RAID25_DIFF] = {
+				{ 1, 53489 },	-- Cloak of Burning Dusk
+				{ 2, 53486 },	-- Bracers of Fiery Night
+				{ 3, 53134 },	-- Phaseshifter's Bracers
+				{ 4, 53126 },	-- Umbrage Armbands
+				{ 5, 53488 },	-- Split Shape Belt
+				{ 6, 53127 },	-- Returning Footfalls
+				{ 7, 53125 },	-- Apocalypse's Advance
+				{ 8, 53487 },	-- Foreshadow Steps
+				{ 9, 53129 },	-- Treads of Impending Resurrection
+				{ 16, 53132 },	-- Penumbra Pendant
+				{ 17, 53490 },	-- Ring of Phased Regeneration
+				{ 18, 53133 },	-- Signet of Twilight
+				{ 19, 54572 },	-- Charred Twilight Scale
+				{ 20, 54573 },	-- Glowing Twilight Scale
+				{ 21, 54571 },	-- Petrified Twilight Scale
+				{ 22, 54569 },	-- Sharpened Twilight Scale
+				{ 24, "ac4815" },
+			},
+			[RAID25H_DIFF] = {
+				{ 1, 54583 },	-- Cloak of Burning Dusk
+				{ 2, 54582 },	-- Bracers of Fiery Night
+				{ 3, 54584 },	-- Phaseshifter's Bracers
+				{ 4, 54580 },	-- Umbrage Armbands
+				{ 5, 54587 },	-- Split Shape Belt
+				{ 6, 54577 },	-- Returning Footfalls
+				{ 7, 54578 },	-- Apocalypse's Advance
+				{ 8, 54586 },	-- Foreshadow Steps
+				{ 9, 54579 },	-- Treads of Impending Resurrection
+				{ 16, 54581 },	-- Penumbra Pendant
+				{ 17, 54585 },	-- Ring of Phased Regeneration
+				{ 18, 54576 },	-- Signet of Twilight
+				{ 19, 54588 },	-- Charred Twilight Scale
+				{ 20, 54589 },	-- Glowing Twilight Scale
+				{ 21, 54591 },	-- Petrified Twilight Scale
+				{ 22, 54590 },	-- Sharpened Twilight Scale
+				{ 24, "ac4816" },
+			},
+		},
+        T10_SET,
+	}
+}
+
+
 local ROLE_DD = AL["Damage Dealer"]
 data["VaultofArchavon"] = {
 	MapID = 4603,
