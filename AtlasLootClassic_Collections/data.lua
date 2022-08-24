@@ -298,17 +298,18 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM) then
 			{
 				name = ALIL["Relic"],
 				[NORMAL_DIFF] = {
-					{1, "INV_Box_01", nil, AL["Idols"] },
-					{2, 33510 },
-					{3, 33509 },
-					{4, 33508 },
-					{6, "INV_Box_01", nil, AL["Librams"] },
-					{7, 33503 },
-					{8, 33502 },
-					{10, "INV_Box_01", nil, AL["Totems"] },
-					{11, 33506 },
-					{12, 33507 },
-					{13, 33505 },
+					{ 1, "INV_Box_01", nil, AL["Idols"] },
+					{ 2, 33510 },
+					{ 3, 33509 },
+					{ 4, 33508 },
+					{ 6, "INV_Box_01", nil, AL["Librams"] },
+					{ 7, 33503 }, -- Libram of Divine Judgement
+					{ 8, 33502 }, -- Libram of Mending
+					{ 9, 33504 }, -- Libram of Divine Purpose
+					{ 16, "INV_Box_01", nil, AL["Totems"] },
+					{ 17, 33506 },
+					{ 18, 33507 },
+					{ 19, 33505 },
 				},
 			},
 			{
