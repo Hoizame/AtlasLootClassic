@@ -646,6 +646,18 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
 		["AC_UlduarYoggSaron10"] = {"ac3159", "ac3158", "ac3141", "ac3157", "ac3008", 0, "ac3012", "ac3015", "ac3009", "ac3014", type = 10},
 		["AC_UlduarYoggSaron25"] = {"ac3164", "ac3163", "ac3162", "ac3161", "ac3010", 0, "ac3013", "ac3016", "ac3011", "ac3017", type = 10},
 
+		--- ## ICC
+		[50274] = { {50274,"50"}, {49908,"25"}, 49869, 50226, 50231, 0, 49623, 0, 51315, 52200, 52201, 52251, 52252, 52253 }, -- Shadowfrost Shard
+		[49869] = 50274, -- Light's Vengeance
+		[50226] = 50274, -- Festergut's Acidic Blood
+		[50231] = 50274, -- Rotface's Acidic Blood
+		[49623] = 50274, -- Shadowmourne
+		[51315] = 50274, -- Sealed Chest
+		[52200] = 50274, -- Reins of the Crimson Deathcharger
+		[52201] = 50274, -- Muradin's Favor
+		[52251] = 50274, -- Jaina's Locket
+		[52252] = 50274, -- Tabard of the Lightbringer
+		[52253] = 50274, -- Sylvanas' Music Box
 
 
 		--- ## VaultofArchavon
