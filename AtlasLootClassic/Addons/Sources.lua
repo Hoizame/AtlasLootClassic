@@ -80,6 +80,7 @@ local PRICE_STRING_SPLIT_OR = "-"
 local PRICE_STRING_SPLIT_AND = ":"
 local PRICE_DELIMITER = " |cFFffffff&|r  "
 local PRICE_INFO_TT_START = format(TT_F.."  ", ICON_TEXTURE[3], AL["Vendor"]..":")
+local DIFF_SPLIT_STRING = " / "
 
 local TooltipsHooked = false
 local TooltipCache, TooltipTextCache = {}
@@ -150,6 +151,14 @@ local function BuildSource(ini, boss, typ, item, diffID)
             -- diff 0 means just heroic
             if diffID == 0 then
                 bossName = bossName.." <"..DIFFICULTY.HEROIC.sourceLoc..">"
+            elseif type(diffID) == "table" then
+                local diffString
+                for i = 1, #diffID do
+                    diffString = i>1 and (diffString..DIFF_SPLIT_STRING..DIFFICULTY[diffID[i]].sourceLoc) or (DIFFICULTY[diffID[i]].sourceLoc)
+                end
+                if diffString then
+                    bossName = bossName.." <"..diffString..">"
+                end
             else
                 bossName = bossName.." <"..DIFFICULTY[diffID].sourceLoc..">"
             end
@@ -216,6 +225,7 @@ local function GetTokenIcon(token)
 end
 
 local function BuildSourceFromItemData(item, destTable, itemData, sourceData, iconTexture)
+    if not item or not itemData[item] then return end
     if type(itemData[item][1]) == "table" then
         for i, data in ipairs(itemData[item]) do
             if data[3] and Sources.db.Sources[data[3]] then
