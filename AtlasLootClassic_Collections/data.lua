@@ -27,7 +27,9 @@ local GetForVersion = AtlasLoot.ReturnForGameVersion
 local NORMAL_DIFF = data:AddDifficulty("NORMAL", nil, nil, nil, true)
 local HEROIC_DIFF = data:AddDifficulty("HEROIC", nil, nil, nil, true)
 local RAID10_DIFF = data:AddDifficulty("10RAID")
+local RAID10H_DIFF = data:AddDifficulty("10RAIDH")
 local RAID25_DIFF = data:AddDifficulty("25RAID")
+local RAID25H_DIFF = data:AddDifficulty("25RAIDH")
 
 local ALLIANCE_DIFF, HORDE_DIFF, LOAD_DIFF
 if UnitFactionGroup("player") == "Horde" then
@@ -707,6 +709,141 @@ data["TierSets"] = {
 				{ 27,   3250821 }, -- Paladin / Prot
 				{ 28,   3250820 }, -- Paladin / DD
 			},
+		}),
+		AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM, {
+			name = format(AL["Tier %s Sets"], "9"),
+			[NORMAL_DIFF] = AtlasLoot:GetRetByFaction(
+				{ -- horde
+					{ 1,    3000845 }, -- Warlock
+					{ 3,    3000848 }, -- Priest / Heal
+					{ 4,    3000850 }, -- Priest / Shadow
+					{ 6,    3000858 }, -- Rogue
+					{ 8,    3000860 }, -- Hunter
+					{ 10,   3000870 }, -- Warrior / Prot
+					{ 11,   3000868 }, -- Warrior / DD
+					{ 13,   3000874 }, -- Deathknight / Prot
+					{ 14,   3000872 }, -- Deathknight / DD
+					{ 16,   3000844 }, -- Mage
+					{ 18,   3000852 }, -- Druid / Heal
+					{ 19,   3000854 }, -- Druid / Owl
+					{ 20,   3000856 }, -- Druid / Feral
+					{ 22,   3000862 }, -- Shaman / Heal
+					{ 23,   3000863 }, -- Shaman / Ele
+					{ 24,   3000866 }, -- Shaman / Enh
+					{ 26,   3000876 }, -- Paladin / Heal
+					{ 27,   3000880 }, -- Paladin / Prot
+					{ 28,   3000878 }, -- Paladin / DD
+				},
+				{ -- alli
+					{ 1,    3000846 }, -- Warlock
+					{ 3,    3000847 }, -- Priest / Heal
+					{ 4,    3000849 }, -- Priest / Shadow
+					{ 6,    3000857 }, -- Rogue
+					{ 8,    3000859 }, -- Hunter
+					{ 10,   3000869 }, -- Warrior / Prot
+					{ 11,   3000867 }, -- Warrior / DD
+					{ 13,   3000873 }, -- Deathknight / Prot
+					{ 14,   3000871 }, -- Deathknight / DD
+					{ 16,   3000843 }, -- Mage
+					{ 18,   3000851 }, -- Druid / Heal
+					{ 19,   3000853 }, -- Druid / Owl
+					{ 20,   3000855 }, -- Druid / Feral
+					{ 22,   3000861 }, -- Shaman / Heal
+					{ 23,   3000864 }, -- Shaman / Ele
+					{ 24,   3000865 }, -- Shaman / Enh
+					{ 26,   3000875 }, -- Paladin / Heal
+					{ 27,   3000879 }, -- Paladin / Prot
+					{ 28,   3000877 }, -- Paladin / DD
+				}
+			),
+			[RAID25_DIFF] = AtlasLoot:GetRetByFaction(
+				{ -- horde
+					{ 1,    3250845 }, -- Warlock
+					{ 3,    3250848 }, -- Priest / Heal
+					{ 4,    3250850 }, -- Priest / Shadow
+					{ 6,    3250858 }, -- Rogue
+					{ 8,    3250860 }, -- Hunter
+					{ 10,   3250870 }, -- Warrior / Prot
+					{ 11,   3250868 }, -- Warrior / DD
+					{ 13,   3250874 }, -- Deathknight / Prot
+					{ 14,   3250872 }, -- Deathknight / DD
+					{ 16,   3250844 }, -- Mage
+					{ 18,   3250852 }, -- Druid / Heal
+					{ 19,   3250854 }, -- Druid / Owl
+					{ 20,   3250856 }, -- Druid / Feral
+					{ 22,   3250862 }, -- Shaman / Heal
+					{ 23,   3250863 }, -- Shaman / Ele
+					{ 24,   3250866 }, -- Shaman / Enh
+					{ 26,   3250876 }, -- Paladin / Heal
+					{ 27,   3250880 }, -- Paladin / Prot
+					{ 28,   3250878 }, -- Paladin / DD
+				},
+				{ -- alli
+					{ 1,    3250846 }, -- Warlock
+					{ 3,    3250847 }, -- Priest / Heal
+					{ 4,    3250849 }, -- Priest / Shadow
+					{ 6,    3250857 }, -- Rogue
+					{ 8,    3250859 }, -- Hunter
+					{ 10,   3250869 }, -- Warrior / Prot
+					{ 11,   3250867 }, -- Warrior / DD
+					{ 13,   3250873 }, -- Deathknight / Prot
+					{ 14,   3250871 }, -- Deathknight / DD
+					{ 16,   3250843 }, -- Mage
+					{ 18,   3250851 }, -- Druid / Heal
+					{ 19,   3250853 }, -- Druid / Owl
+					{ 20,   3250855 }, -- Druid / Feral
+					{ 22,   3250861 }, -- Shaman / Heal
+					{ 23,   3250864 }, -- Shaman / Ele
+					{ 24,   3250865 }, -- Shaman / Enh
+					{ 26,   3250875 }, -- Paladin / Heal
+					{ 27,   3250879 }, -- Paladin / Prot
+					{ 28,   3250877 }, -- Paladin / DD
+				}
+			),
+			[RAID25H_DIFF] = AtlasLoot:GetRetByFaction(
+				{ -- horde
+					{ 1,    3251845 }, -- Warlock
+					{ 3,    3251848 }, -- Priest / Heal
+					{ 4,    3251850 }, -- Priest / Shadow
+					{ 6,    3251858 }, -- Rogue
+					{ 8,    3251860 }, -- Hunter
+					{ 10,   3251870 }, -- Warrior / Prot
+					{ 11,   3251868 }, -- Warrior / DD
+					{ 13,   3251874 }, -- Deathknight / Prot
+					{ 14,   3251872 }, -- Deathknight / DD
+					{ 16,   3251844 }, -- Mage
+					{ 18,   3251852 }, -- Druid / Heal
+					{ 19,   3251854 }, -- Druid / Owl
+					{ 20,   3251856 }, -- Druid / Feral
+					{ 22,   3251862 }, -- Shaman / Heal
+					{ 23,   3251863 }, -- Shaman / Ele
+					{ 24,   3251866 }, -- Shaman / Enh
+					{ 26,   3251876 }, -- Paladin / Heal
+					{ 27,   3251880 }, -- Paladin / Prot
+					{ 28,   3251878 }, -- Paladin / DD
+				},
+				{ -- alli
+					{ 1,    3251846 }, -- Warlock
+					{ 3,    3251847 }, -- Priest / Heal
+					{ 4,    3251849 }, -- Priest / Shadow
+					{ 6,    3251857 }, -- Rogue
+					{ 8,    3251859 }, -- Hunter
+					{ 10,   3251869 }, -- Warrior / Prot
+					{ 11,   3251867 }, -- Warrior / DD
+					{ 13,   3251873 }, -- Deathknight / Prot
+					{ 14,   3251871 }, -- Deathknight / DD
+					{ 16,   3251843 }, -- Mage
+					{ 18,   3251851 }, -- Druid / Heal
+					{ 19,   3251853 }, -- Druid / Owl
+					{ 20,   3251855 }, -- Druid / Feral
+					{ 22,   3251861 }, -- Shaman / Heal
+					{ 23,   3251864 }, -- Shaman / Ele
+					{ 24,   3251865 }, -- Shaman / Enh
+					{ 26,   3251875 }, -- Paladin / Heal
+					{ 27,   3251879 }, -- Paladin / Prot
+					{ 28,   3251877 }, -- Paladin / DD
+				}
+			),
 		}),
 	},
 }
