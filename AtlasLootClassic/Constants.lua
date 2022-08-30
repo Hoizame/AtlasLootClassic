@@ -62,11 +62,15 @@ ALPrivate.ICONS_PATH = ICONS_PATH
 
 -- Mostly used in selection template
 ALPrivate.COIN_TEXTURE = {
-	GOLD 		= "Interface\\MoneyFrame\\UI-GoldIcon",
-	SILVER 		= "Interface\\MoneyFrame\\UI-SilverIcon",
-	COPPER		= "Interface\\MoneyFrame\\UI-CopperIcon",
-	AC 		= "Interface\\AchievementFrame\\UI-Achievement-TinyShield",
-	REPUTATION 	= "Interface\\Icons\\Achievement_Reputation_08",
+	GOLD 		= {	texture = "Interface\\MoneyFrame\\UI-GoldIcon" },
+	SILVER 		= {	texture = "Interface\\MoneyFrame\\UI-SilverIcon" },
+	COPPER		= {	texture = "Interface\\MoneyFrame\\UI-CopperIcon" },
+	AC 			= {	texture = "Interface\\AchievementFrame\\UI-Achievement-TinyShield", texCoord = {0, 0.625, 0, 0.625} },
+	REPUTATION 	= {	texture = "Interface\\Icons\\Achievement_Reputation_08" },
+
+	CLASSIC 	= {	texture = AtlasLoot.GAME_VERSION_TEXTURES[AtlasLoot.CLASSIC_VERSION_NUM], width = 2.0 },
+	BC		 	= {	texture = AtlasLoot.GAME_VERSION_TEXTURES[AtlasLoot.BC_VERSION_NUM], width = 2.0 },
+	WRATH	 	= {	texture = AtlasLoot.GAME_VERSION_TEXTURES[AtlasLoot.WRATH_VERSION_NUM], width = 2.0 },
 }
 
 -- Simple backdrop for SetBackdrop
