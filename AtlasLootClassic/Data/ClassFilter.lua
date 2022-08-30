@@ -104,7 +104,7 @@ local FILTER_DATA = {
             [10] = true, -- Cooking Bag
         },
         [LE_ITEM_CLASS_WEAPON] = {
-            [LE_ITEM_WEAPON_AXE1H] 		    = C.HUNTER + C.PALADIN + C.SHAMAN + C.WARRIOR + C.DEATHKNIGHT, -- One-Handed Axes
+            [LE_ITEM_WEAPON_AXE1H] 		    = C.HUNTER + C.PALADIN + C.SHAMAN + C.WARRIOR + C.DEATHKNIGHT + AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM, C.ROGUE, 0), -- One-Handed Axes
             [LE_ITEM_WEAPON_AXE2H] 		    = C.HUNTER + C.PALADIN + C.SHAMAN + C.WARRIOR + C.DEATHKNIGHT, -- Two-Handed Axes
             [LE_ITEM_WEAPON_BOWS] 		    = C.HUNTER + C.ROGUE + C.WARRIOR, -- Bows
             [LE_ITEM_WEAPON_GUNS] 		    = C.HUNTER + C.ROGUE + C.WARRIOR, -- Guns

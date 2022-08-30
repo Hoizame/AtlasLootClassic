@@ -97,43 +97,55 @@ function AtlasLoot:GetGameVersion()
 end
 
 -- equal
-function AtlasLoot:GameVersion_EQ(gameVersion, ret)
+function AtlasLoot:GameVersion_EQ(gameVersion, ret, retFalse)
 	if CurrentGameVersion == gameVersion then
 		return ret or true
+	else
+		return retFalse
 	end
 end
 
 -- not equal
-function AtlasLoot:GameVersion_NE(gameVersion, ret)
+function AtlasLoot:GameVersion_NE(gameVersion, ret, retFalse)
 	if CurrentGameVersion ~= gameVersion then
 		return ret or true
+	else
+		return retFalse
 	end
 end
 
 -- not greater then
-function AtlasLoot:GameVersion_GT(gameVersion, ret)
+function AtlasLoot:GameVersion_GT(gameVersion, ret, retFalse)
 	if CurrentGameVersion > gameVersion then
 		return ret or true
+	else
+		return retFalse
 	end
 end
 
 -- not lesser then
-function AtlasLoot:GameVersion_LT(gameVersion, ret)
+function AtlasLoot:GameVersion_LT(gameVersion, ret, retFalse)
 	if CurrentGameVersion < gameVersion then
 		return ret or true
+	else
+		return retFalse
 	end
 end
 
 -- not greater equal
-function AtlasLoot:GameVersion_GE(gameVersion, ret)
+function AtlasLoot:GameVersion_GE(gameVersion, ret, retFalse)
 	if CurrentGameVersion >= gameVersion then
 		return ret or true
+	else
+		return retFalse
 	end
 end
 
 -- not lesser equal
-function AtlasLoot:GameVersion_LE(gameVersion, ret)
+function AtlasLoot:GameVersion_LE(gameVersion, ret, retFalse)
 	if CurrentGameVersion <= gameVersion then
 		return ret or true
+	else
+		return retFalse
 	end
 end
