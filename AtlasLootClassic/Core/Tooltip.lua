@@ -15,7 +15,7 @@ local UnitGUID = _G.UnitGUID
 
 local STANDART_TOOLTIP = "AtlasLootTooltip"
 local COLOR = "|cFF00ccff%s|r"
-local GOLD, SILVER, COPPER = "|T"..ALPrivate.COIN_TEXTURE.GOLD..":0|t "..COLOR, "|T"..ALPrivate.COIN_TEXTURE.SILVER..":0|t "..COLOR, "|T"..ALPrivate.COIN_TEXTURE.COPPER..":0|t "..COLOR
+local GOLD, SILVER, COPPER = "|T"..ALPrivate.COIN_TEXTURE.GOLD.texture..":0|t "..COLOR, "|T"..ALPrivate.COIN_TEXTURE.SILVER.texture..":0|t "..COLOR, "|T"..ALPrivate.COIN_TEXTURE.COPPER.texture..":0|t "..COLOR
 
 local AtlasLootTooltip = CreateFrame("GameTooltip", "AtlasLootTooltip", UIParent, "GameTooltipTemplate")
 AtlasLootTooltip:Hide()

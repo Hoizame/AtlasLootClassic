@@ -230,7 +230,7 @@ TOKEN_DATA.CLASSIC = {
 	[18705] = { 18713, type = 4 }, -- Mature Black Dragon Sinew
 	[18704] = { 18714, type = 4 }, -- Mature Blue Dragon Sinew
 	[12871] = { 12895, 0, 12903, 12945, type = 4 }, -- Chromatic Carapace
-	[18706] = { 19024, 0, {18706, 12}, type = 4 }, -- Arena Master
+	[18706] = { {18706, 12}, 0, 19024, type = 4 }, -- Arena Master
 
 
 	[22523] = { 22523, 22524, 0,
@@ -611,6 +611,7 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
 			ICONS.WARRIOR, 49479, 49478, 0, ICONS.PALADIN, 49476, 49475, 49474, 0, ICONS.DEATHKNIGHT, 49467, 49466,
 			type = 9
 		},
+
 		--- ## Ulduar
 		[45038] = { { 45038, 30 }, 45039, 45896, 0, 46017 }, -- Fragment of Val'anyr
 		[45039] = 45038, -- Shattered Fragments of Val'anyr

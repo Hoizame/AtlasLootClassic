@@ -26,6 +26,11 @@ local RAID10H_DIFF = data:AddDifficulty("10RAIDH")
 local RAID25_DIFF = data:AddDifficulty("25RAID")
 local RAID25H_DIFF = data:AddDifficulty("25RAIDH")
 
+local VENDOR_DIFF = data:AddDifficulty(AL["Vendor"], "vendor", 0)
+local T10_1_DIFF = data:AddDifficulty(AL["10H / 25 / 25H"], "T10_1", 0)
+local T10_2_DIFF = data:AddDifficulty(AL["25 Raid Heroic"], "T10_2", 0)
+
+
 local NORMAL_ITTYPE = data:AddItemTableType("Item", "Item")
 local SET_ITTYPE = data:AddItemTableType("Set", "Item")
 local AC_ITTYPE = data:AddItemTableType("Achievement", "Item")
@@ -327,89 +332,68 @@ local T10_SET = {
 	TableType = SET_ITTYPE,
 	--ContentPhaseBC = 6,
 	IgnoreAsSource = true,
-	[RAID10_DIFF] = {
-		{ 1,    000 }, -- Warlock
-		{ 3,    000 }, -- Priest / Heal
-        { 4,    000 }, -- Priest / Shadow
-        { 6,    000 }, -- Rogue
-		{ 8,    000 }, -- Hunter
-		{ 10,   000 }, -- Warrior / Prot
-        { 11,   000 }, -- Warrior / DD
-        { 13,   000 }, -- Deathknight / Prot
-        { 14,   000 }, -- Deathknight / DD
-		{ 16,   000 }, -- Mage
-		{ 18,   000 }, -- Druid / Heal
-        { 19,   000 }, -- Druid / Owl
-        { 20,   000 }, -- Druid / Feral
-        { 22,   000 }, -- Shaman / Heal
-        { 23,   000 }, -- Shaman / Ele
-        { 24,   000 }, -- Shaman / Enh
-		{ 26,   000 }, -- Paladin / Heal
-        { 27,   000 }, -- Paladin / Prot
-        { 28,   000 }, -- Paladin / DD
+	[VENDOR_DIFF] = {
+		{ 1,    3000884 }, -- Warlock
+		{ 3,    3000885 }, -- Priest / Heal
+        { 4,    3000886 }, -- Priest / Shadow
+        { 6,    3000890 }, -- Rogue
+		{ 8,    3000891 }, -- Hunter
+		{ 10,   3000896 }, -- Warrior / Prot
+        { 11,   3000895 }, -- Warrior / DD
+        { 13,   3000898 }, -- Deathknight / Prot
+        { 14,   3000897 }, -- Deathknight / DD
+		{ 16,   3000883 }, -- Mage
+		{ 18,   3000887 }, -- Druid / Heal
+        { 19,   3000888 }, -- Druid / Owl
+        { 20,   3000889 }, -- Druid / Feral
+        { 22,   3000892 }, -- Shaman / Heal
+        { 23,   3000893 }, -- Shaman / Ele
+        { 24,   3000894 }, -- Shaman / Enh
+		{ 26,   3000899 }, -- Paladin / Heal
+        { 27,   3000901 }, -- Paladin / Prot
+        { 28,   3000900 }, -- Paladin / DD
 	},
-    [RAID10H_DIFF] = {
-		{ 1,    000 }, -- Warlock
-		{ 3,    000 }, -- Priest / Heal
-        { 4,    000 }, -- Priest / Shadow
-        { 6,    000 }, -- Rogue
-		{ 8,    000 }, -- Hunter
-		{ 10,   000 }, -- Warrior / Prot
-        { 11,   000 }, -- Warrior / DD
-        { 13,   000 }, -- Deathknight / Prot
-        { 14,   000 }, -- Deathknight / DD
-		{ 16,   000 }, -- Mage
-		{ 18,   000 }, -- Druid / Heal
-        { 19,   000 }, -- Druid / Owl
-        { 20,   000 }, -- Druid / Feral
-        { 22,   000 }, -- Shaman / Heal
-        { 23,   000 }, -- Shaman / Ele
-        { 24,   000 }, -- Shaman / Enh
-		{ 26,   000 }, -- Paladin / Heal
-        { 27,   000 }, -- Paladin / Prot
-        { 28,   000 }, -- Paladin / DD
+    [T10_1_DIFF] = {
+		{ 1,    3250884 }, -- Warlock
+		{ 3,    3250885 }, -- Priest / Heal
+        { 4,    3250886 }, -- Priest / Shadow
+        { 6,    3250890 }, -- Rogue
+		{ 8,    3250891 }, -- Hunter
+		{ 10,   3250896 }, -- Warrior / Prot
+        { 11,   3250895 }, -- Warrior / DD
+        { 13,   3250898 }, -- Deathknight / Prot
+        { 14,   3250897 }, -- Deathknight / DD
+		{ 16,   3250883 }, -- Mage
+		{ 18,   3250887 }, -- Druid / Heal
+        { 19,   3250888 }, -- Druid / Owl
+        { 20,   3250889 }, -- Druid / Feral
+        { 22,   3250892 }, -- Shaman / Heal
+        { 23,   3250893 }, -- Shaman / Ele
+        { 24,   3250894 }, -- Shaman / Enh
+		{ 26,   3250899 }, -- Paladin / Heal
+        { 27,   3250901 }, -- Paladin / Prot
+        { 28,   3250900 }, -- Paladin / DD
 	},
-    [RAID25_DIFF] = {
-		{ 1,    000 }, -- Warlock
-		{ 3,    000 }, -- Priest / Heal
-        { 4,    000 }, -- Priest / Shadow
-        { 6,    000 }, -- Rogue
-		{ 8,    000 }, -- Hunter
-		{ 10,   000 }, -- Warrior / Prot
-        { 11,   000 }, -- Warrior / DD
-        { 13,   000 }, -- Deathknight / Prot
-        { 14,   000 }, -- Deathknight / DD
-		{ 16,   000 }, -- Mage
-		{ 18,   000 }, -- Druid / Heal
-        { 19,   000 }, -- Druid / Owl
-        { 20,   000 }, -- Druid / Feral
-        { 22,   000 }, -- Shaman / Heal
-        { 23,   000 }, -- Shaman / Ele
-        { 24,   000 }, -- Shaman / Enh
-		{ 26,   000 }, -- Paladin / Heal
-        { 27,   000 }, -- Paladin / Prot
-        { 28,   000 }, -- Paladin / DD
-	},
-    [RAID25H_DIFF] = {
-		{ 1,    000 }, -- Warlock
-		{ 3,    000 }, -- Priest / Heal
-        { 4,    000 }, -- Priest / Shadow
-        { 6,    000 }, -- Rogue
-		{ 8,    000 }, -- Hunter
-		{ 10,   000 }, -- Warrior / Prot
-        { 11,   000 }, -- Warrior / DD
-        { 13,   000 }, -- Deathknight / Prot
-        { 14,   000 }, -- Deathknight / DD
-		{ 16,   000 }, -- Mage
-		{ 18,   000 }, -- Druid / Heal
-        { 19,   000 }, -- Druid / Owl
-        { 20,   000 }, -- Druid / Feral
-        { 22,   000 }, -- Shaman / Heal
-        { 23,   000 }, -- Shaman / Ele
-        { 24,   000 }, -- Shaman / Enh
-		{ 26,   000 }, -- Paladin / Heal
-        { 27,   000 }, -- Paladin / Prot
-        { 28,   000 }, -- Paladin / DD
+    [T10_2_DIFF] = {
+		{ 1,    3251884 }, -- Warlock
+		{ 3,    3251885 }, -- Priest / Heal
+        { 4,    3251886 }, -- Priest / Shadow
+        { 6,    3251890 }, -- Rogue
+		{ 8,    3251891 }, -- Hunter
+		{ 10,   3251896 }, -- Warrior / Prot
+        { 11,   3251895 }, -- Warrior / DD
+        { 13,   3251898 }, -- Deathknight / Prot
+        { 14,   3251897 }, -- Deathknight / DD
+		{ 16,   3251883 }, -- Mage
+		{ 18,   3251887 }, -- Druid / Heal
+        { 19,   3251888 }, -- Druid / Owl
+        { 20,   3251889 }, -- Druid / Feral
+        { 22,   3251892 }, -- Shaman / Heal
+        { 23,   3251893 }, -- Shaman / Ele
+        { 24,   3251894 }, -- Shaman / Enh
+		{ 26,   3251899 }, -- Paladin / Heal
+        { 27,   3251901 }, -- Paladin / Prot
+        { 28,   3251900 }, -- Paladin / DD
 	},
 }
 
@@ -535,7 +519,7 @@ local WOTLK_ULDUAR_AC_TABLE = {	--[Glory of the Ulduar Raider]
 	},
 }
 
-local WOTLK_ICC_AC_TABLE = {	--[Glory of the Icecrown Raider (10 player)]
+local WOTLK_ICC_AC_TABLE = {	--[Glory of the Icecrown Raider]
 	name = AL["Glory of the Icecrown Raider"],
 	TableType = AC_ITTYPE,
 	ExtraList = true,

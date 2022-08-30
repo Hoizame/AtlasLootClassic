@@ -31,6 +31,10 @@ local RAID10H_DIFF = data:AddDifficulty("10RAIDH")
 local RAID25_DIFF = data:AddDifficulty("25RAID")
 local RAID25H_DIFF = data:AddDifficulty("25RAIDH")
 
+local VENDOR_DIFF = data:AddDifficulty(AL["Vendor"], "vendor", 0)
+local T10_1_DIFF = data:AddDifficulty(AL["10H / 25 / 25H"], "T10_1", 0)
+local T10_2_DIFF = data:AddDifficulty(AL["25 Raid Heroic"], "T10_2", 0)
+
 local ALLIANCE_DIFF, HORDE_DIFF, LOAD_DIFF
 if UnitFactionGroup("player") == "Horde" then
 	HORDE_DIFF = data:AddDifficulty(FACTION_HORDE, "horde", nil, 1)
@@ -54,6 +58,14 @@ local SET_CONTENT = data:AddContentType(AL["Sets"], ATLASLOOT_PVP_COLOR)
 --local WORLD_BOSS_CONTENT = data:AddContentType(AL["World Bosses"], ATLASLOOT_WORLD_BOSS_COLOR)
 local COLLECTIONS_CONTENT = data:AddContentType(AL["Collections"], ATLASLOOT_COLLECTIONS_COLOR)
 local WORLD_EVENT_CONTENT = data:AddContentType(AL["World Events"], ATLASLOOT_SEASONALEVENTS_COLOR)
+
+-- colors
+local BLUE = "|cff6666ff%s|r"
+--local GREY = "|cff999999%s|r"
+local GREEN = "|cff66cc33%s|r"
+local _RED = "|cffcc6666%s|r"
+local PURPLE = "|cff9900ff%s|r"
+--local WHIT = "|cffffffff%s|r"
 
 if AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM) then
 	data["BadgeofJustice"] = {
@@ -500,6 +512,7 @@ data["TierSets"] = {
 	items = {
 		{ -- T1
 			name = format(AL["Tier %s Sets"], "1"),
+			CoinTexture = "CLASSIC",
 			[NORMAL_DIFF] = {
 				{ 1, 203 }, -- Warlock
 				{ 3, 202 }, -- Priest
@@ -514,6 +527,7 @@ data["TierSets"] = {
 		},
 		{ -- T2
 			name = format(AL["Tier %s Sets"], "2"),
+			CoinTexture = "CLASSIC",
 			[NORMAL_DIFF] = {
 				{ 1, 212 }, -- Warlock
 				{ 3, 211 }, -- Priest
@@ -528,6 +542,7 @@ data["TierSets"] = {
 		},
 		{ -- T2.5
 			name = format(AL["Tier %s Sets"], "2.5"),
+			CoinTexture = "CLASSIC",
 			[NORMAL_DIFF] = {
 				{ 1, 499 }, -- Warlock
 				{ 3, 507 }, -- Priest
@@ -542,6 +557,7 @@ data["TierSets"] = {
 		},
 		{ -- T3
 			name = format(AL["Tier %s Sets"], "3"),
+			CoinTexture = "CLASSIC",
 			[NORMAL_DIFF] = {
 				{ 1, 529 }, -- Warlock
 				{ 3, 525 }, -- Priest
@@ -556,6 +572,7 @@ data["TierSets"] = {
 		},
 		AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM, { -- T4
 			name = format(AL["Tier %s Sets"], "4"),
+			CoinTexture = "BC",
 			[NORMAL_DIFF] = {
 				{ 1,    645 }, -- Warlock
 				{ 3,    663 }, -- Priest / Heal
@@ -578,6 +595,7 @@ data["TierSets"] = {
 		}),
 		AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM, { -- T5
 			name = format(AL["Tier %s Sets"], "5"),
+			CoinTexture = "BC",
 			[NORMAL_DIFF] = {
 				{ 1,    646 }, -- Warlock
 				{ 3,    665 }, -- Priest / Heal
@@ -600,6 +618,7 @@ data["TierSets"] = {
 		}),
 		AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM, {
 			name = format(AL["Tier %s Sets"], "6"),
+			CoinTexture = "BC",
 			[NORMAL_DIFF] = {
 				{ 1,    670 }, -- Warlock
 				{ 3,    675 }, -- Priest / Heal
@@ -622,6 +641,7 @@ data["TierSets"] = {
 		}),
 		AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM, {
 			name = format(AL["Tier %s Sets"], "7"),
+			CoinTexture = "WRATH",
 			[RAID10_DIFF] = {
 				{ 1,    3100802 }, -- Warlock
 				{ 3,    3100804 }, -- Priest / Heal
@@ -667,6 +687,7 @@ data["TierSets"] = {
 		}),
 		AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM, {
 			name = format(AL["Tier %s Sets"], "8"),
+			CoinTexture = "WRATH",
 			[RAID10_DIFF] = {
 				{ 1,    3100837 }, -- Warlock
 				{ 3,    3100833 }, -- Priest / Heal
@@ -712,6 +733,7 @@ data["TierSets"] = {
 		}),
 		AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM, {
 			name = format(AL["Tier %s Sets"], "9"),
+			CoinTexture = "WRATH",
 			[NORMAL_DIFF] = AtlasLoot:GetRetByFaction(
 				{ -- horde
 					{ 1,    3000845 }, -- Warlock
@@ -845,6 +867,73 @@ data["TierSets"] = {
 				}
 			),
 		}),
+		AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM, {
+			name = format(AL["Tier %s Sets"], "10"),
+			CoinTexture = "WRATH",
+			[VENDOR_DIFF] = {
+				{ 1,    3000884 }, -- Warlock
+				{ 3,    3000885 }, -- Priest / Heal
+				{ 4,    3000886 }, -- Priest / Shadow
+				{ 6,    3000890 }, -- Rogue
+				{ 8,    3000891 }, -- Hunter
+				{ 10,   3000896 }, -- Warrior / Prot
+				{ 11,   3000895 }, -- Warrior / DD
+				{ 13,   3000898 }, -- Deathknight / Prot
+				{ 14,   3000897 }, -- Deathknight / DD
+				{ 16,   3000883 }, -- Mage
+				{ 18,   3000887 }, -- Druid / Heal
+				{ 19,   3000888 }, -- Druid / Owl
+				{ 20,   3000889 }, -- Druid / Feral
+				{ 22,   3000892 }, -- Shaman / Heal
+				{ 23,   3000893 }, -- Shaman / Ele
+				{ 24,   3000894 }, -- Shaman / Enh
+				{ 26,   3000899 }, -- Paladin / Heal
+				{ 27,   3000901 }, -- Paladin / Prot
+				{ 28,   3000900 }, -- Paladin / DD
+			},
+			[T10_1_DIFF] = {
+				{ 1,    3250884 }, -- Warlock
+				{ 3,    3250885 }, -- Priest / Heal
+				{ 4,    3250886 }, -- Priest / Shadow
+				{ 6,    3250890 }, -- Rogue
+				{ 8,    3250891 }, -- Hunter
+				{ 10,   3250896 }, -- Warrior / Prot
+				{ 11,   3250895 }, -- Warrior / DD
+				{ 13,   3250898 }, -- Deathknight / Prot
+				{ 14,   3250897 }, -- Deathknight / DD
+				{ 16,   3250883 }, -- Mage
+				{ 18,   3250887 }, -- Druid / Heal
+				{ 19,   3250888 }, -- Druid / Owl
+				{ 20,   3250889 }, -- Druid / Feral
+				{ 22,   3250892 }, -- Shaman / Heal
+				{ 23,   3250893 }, -- Shaman / Ele
+				{ 24,   3250894 }, -- Shaman / Enh
+				{ 26,   3250899 }, -- Paladin / Heal
+				{ 27,   3250901 }, -- Paladin / Prot
+				{ 28,   3250900 }, -- Paladin / DD
+			},
+			[T10_2_DIFF] = {
+				{ 1,    3251884 }, -- Warlock
+				{ 3,    3251885 }, -- Priest / Heal
+				{ 4,    3251886 }, -- Priest / Shadow
+				{ 6,    3251890 }, -- Rogue
+				{ 8,    3251891 }, -- Hunter
+				{ 10,   3251896 }, -- Warrior / Prot
+				{ 11,   3251895 }, -- Warrior / DD
+				{ 13,   3251898 }, -- Deathknight / Prot
+				{ 14,   3251897 }, -- Deathknight / DD
+				{ 16,   3251883 }, -- Mage
+				{ 18,   3251887 }, -- Druid / Heal
+				{ 19,   3251888 }, -- Druid / Owl
+				{ 20,   3251889 }, -- Druid / Feral
+				{ 22,   3251892 }, -- Shaman / Heal
+				{ 23,   3251893 }, -- Shaman / Ele
+				{ 24,   3251894 }, -- Shaman / Enh
+				{ 26,   3251899 }, -- Paladin / Heal
+				{ 27,   3251901 }, -- Paladin / Prot
+				{ 28,   3251900 }, -- Paladin / DD
+			},
+		}),
 	},
 }
 
@@ -907,6 +996,7 @@ data["ZGSets"] = {
 	ContentType = SET_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
 	TableType = SET_ITTYPE,
+	gameVersion = AtlasLoot.CLASSIC_VERSION_NUM,
 	ContentPhase = 4,
 	items = {
 		{
@@ -948,6 +1038,7 @@ data["AQSets"] = {
 	ContentType = SET_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
 	TableType = SET_ITTYPE,
+	gameVersion = AtlasLoot.CLASSIC_VERSION_NUM,
 	ContentPhase = 5,
 	items = {
 		{ -- AQ20
@@ -1295,6 +1386,7 @@ data["Mounts"] = {
 		},
 		AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM, {
 			name = format("%s - %s", AL["Faction Mounts"], AL["Burning Crusade"]),
+			NameColor = GREEN,
 			[ALLIANCE_DIFF] = {
 				{ 5, 29745 }, -- Great Blue Elekk
 				{ 6, 29746 }, -- Great Green Elekk
@@ -1346,23 +1438,24 @@ data["Mounts"] = {
 		},
 		AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM, {
 			name = format("%s - %s", AL["PvP"], AL["Burning Crusade"]),
+			NameColor = GREEN,
 			[ALLIANCE_DIFF] = {
 				{ 1,  35906 }, -- Reins of the Black War Elekk
 				{ 2,  29228 }, -- Reins of the Dark War Talbuk
 				{ 3,  28915 }, -- Reins of the Dark Riding Talbuk
-				{ 5,  30609 }, -- Swift Nether Drake
-				{ 16,  34092 }, -- Merciless Nether Drake
-				{ 17,  37676 }, -- Vengeful Nether Drake
-				{ 18,  43516 }, -- Brutal Nether Drake
+				{ 16,  30609 }, -- Swift Nether Drake
+				{ 17,  34092 }, -- Merciless Nether Drake
+				{ 18,  37676 }, -- Vengeful Nether Drake
+				{ 19,  43516 }, -- Brutal Nether Drake
 			},
 			[HORDE_DIFF] = {
 				{ 1, 34129 }, -- Swift Warstrider
 				{ 2, 29228 }, -- Reins of the Dark War Talbuk
 				{ 3,  28915 }, -- Reins of the Dark Riding Talbuk
-				{ 5,  30609 }, -- Swift Nether Drake
-				{ 16,  34092 }, -- Merciless Nether Drake
-				{ 17,  37676 }, -- Vengeful Nether Drake
-				{ 18,  43516 }, -- Brutal Nether Drake
+				{ 16,  30609 }, -- Swift Nether Drake
+				{ 17,  34092 }, -- Merciless Nether Drake
+				{ 18,  37676 }, -- Vengeful Nether Drake
+				{ 19,  43516 }, -- Brutal Nether Drake
 			},
 		}),
 		{ -- Drops
@@ -1375,6 +1468,7 @@ data["Mounts"] = {
 		},
 		AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM, {
 			name = format("%s - %s", AL["Drops"], AL["Burning Crusade"]),
+			NameColor = GREEN,
 			[NORMAL_DIFF] = {
 				{ 1, 32768 }, -- Reins of the Raven Lord
 				{ 3, 33809 }, -- Amani War Bear
@@ -1390,6 +1484,7 @@ data["Mounts"] = {
 		},
 		AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM, {
 			name = format("%s - %s", AL["Drops"], AL["Burning Crusade"]),
+			NameColor = GREEN,
 			[ALLIANCE_DIFF] = {
 				{ 1, 29227 }, -- Reins of the Cobalt War Talbuk
 				{ 2, 29229 }, -- Reins of the Silver War Talbuk
@@ -1467,6 +1562,7 @@ data["Mounts"] = {
 		},
 		AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM, {
 			name = format("%s - %s", AL["Special"], AL["Burning Crusade"]),
+			NameColor = GREEN,
 			[NORMAL_DIFF] = {
 				{ 1, 33225 }, -- Reins of the Swift Spectral Tiger
 				{ 2, 33224 }, -- Reins of the Spectral Tiger
