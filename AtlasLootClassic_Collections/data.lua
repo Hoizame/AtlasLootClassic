@@ -1085,6 +1085,7 @@ data["MiscSets"] = {
 	ContentType = SET_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
 	TableType = SET_ITTYPE,
+	gameVersion = AtlasLoot.CLASSIC_VERSION_NUM,
 	items = {
 		{ -- Cloth
 			name = ALIL["Cloth"],
@@ -2297,6 +2298,15 @@ data["Darkmoon"] = {
 				{ 2,  31890 }, -- Darkmoon Card: Crusade
 				{ 3,  31891 }, -- Darkmoon Card: Wrath
 				{ 4,  31914 }, -- Darkmoon Card: Madness
+			},
+		}),
+		AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM, {
+			name = AL["Wrath"],
+			[NORMAL_DIFF] = {
+				{ 1, 44276 },	-- Chaos Deck
+				{ 2, 44259 },	-- Prisms Deck
+				{ 3, 44294 },	-- Undeath Deck
+				{ 4, 44326 },	-- Nobles Deck
 			},
 		}),
 	},
