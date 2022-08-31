@@ -10,3 +10,4 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 - Wrath support Version
 - add all Wrath dungeons and raids
 - add Wrath T Sets
+- add Wrath factions

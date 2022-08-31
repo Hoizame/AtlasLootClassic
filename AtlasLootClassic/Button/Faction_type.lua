@@ -87,6 +87,10 @@ local FACTION_IMAGES = {
 	[1031] = "Interface\\Icons\\INV_Misc_Ribbon_01",					-- Sha'tari Skyguard
 	[1038] = "Interface\\Icons\\INV_DataCrystal01", 					-- Ogri'la
 	[1077] = "Interface\\Icons\\INV_Misc_Statue_04",					-- Shattered Sun Offensive
+
+	-- Wrath
+	[1037] = 134981, -- Alliance Vanguard
+	[1106] = 236315, -- Argent Crusade
 }
 
 -- Name fallbacks
@@ -105,7 +109,7 @@ local FACTION_KEY = {
 	[529] = "Argent Dawn",
 	[530] = "Darkspear Trolls",
 	[576] = "Timbermaw Hold",
-	[589] = AL["Wintersaber Trainers"], -- Alliance only, Horde gets no info :/
+	[589] = AL["Wintersaber Trainers"], -- Alli only
 	[609] = "Cenarion Circle",
 	[749] = "Hydraxian Waterlords",
 	[910] = "Brood of Nozdormu",
@@ -115,6 +119,11 @@ local FACTION_KEY = {
 	[946] = AL["Honor Hold"], -- Alli only
 	[947] = AL["Thrallmar"], -- Horde only
 	[978] = AL["Kurenai"], -- Alli only
+	--Wrath
+	[1037] = AL["Alliance Vanguard"], -- Alli only
+	[1052] = AL["Horde Expedition"], -- Horde only
+	[1094] = AL["The Silver Covenant"], -- Alli only
+	[1124] = AL["The Sunreavers"], -- Horde only
 }
 
 ClickHandler:Add(

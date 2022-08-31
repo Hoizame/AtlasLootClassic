@@ -37,6 +37,9 @@ local PRICE_INFO_LIST = {
 	["pvpWarsong"] = { itemID = 20558 }, -- Warsong Gulch Mark of Honor
 	["pvpArathi"] = { itemID = 20559 }, -- Arathi Basin Mark of Honor
 	["pvpEye"] = { itemID = 29024 }, -- Eye of the Storm Mark of Honor
+
+    --- Wrath
+    ["championsSeal"] = { currencyID = 241 }, -- Champion's Seal
 }
 
 local VENDOR_PRICE_FORMAT = {}
@@ -76,6 +79,9 @@ local VENDOR_LIST_I = {
     27668, 12777,
     --Brewfest
     24495, 23710,
+    -- ## Wrath
+    34772, -- The Sunreavers
+    34881, -- The Silver Covenant
 }
 local VENDOR_LIST = {}
 for i = 1, #VENDOR_LIST_I do
