@@ -4,11 +4,13 @@
 
 AtlasLootClassic is an UI mod allowing for loot tables of bosses to be browsed whenever needed within the game.
 
-## Download (Classic)
+## Download
 
 [Curseforge](https://www.curseforge.com/wow/addons/atlaslootclassic)
 
 [WoWInterface](https://www.wowinterface.com/downloads/info25185-AtlasLootClassic.html)
+
+[WagoAddons](https://addons.wago.io/addons/atlaslootclassic)
 
 ## Features
 
