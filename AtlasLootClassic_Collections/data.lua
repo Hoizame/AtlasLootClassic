@@ -1151,6 +1151,39 @@ data["MiscSets"] = {
 	},
 }
 
+-- World Epcis Wrath
+if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
+	data["WorldEpicsWrath"] = {
+		name = AL["World Epics"],
+		ContentType = COLLECTIONS_CONTENT,
+		LoadDifficulty = LOAD_DIFF,
+		TableType = NORMAL_ITTYPE,
+		gameVersion = AtlasLoot.WRATH_VERSION_NUM,
+		CorrespondingFields = {
+			[AtlasLoot.CLASSIC_VERSION_NUM] = "WorldEpics",
+			[AtlasLoot.BC_VERSION_NUM] = "WorldEpicsBCC"
+		},
+		items = {
+			{
+				name = AL["World Epics"],
+				[NORMAL_ITTYPE] = {
+				{ 1, 44309 },	-- Sash of Jordan
+				{ 2, 44312 },	-- Wapach's Spaulders of Solidarity
+				{ 4, 44308 },	-- Signet of Edward the Odd
+				{ 5, 37835 },	-- Je'Tze's Bell
+				{ 16, 44310 },	-- Namlak's Supernumerary Sticker
+				{ 17, 44311 },	-- Avool's Sword of Jin
+				{ 18, 44313 },	-- Zom's Crackling Bulwark
+				{ 20, 43575, nil, nil, GetSpellInfo(921) },	-- Reinforced Junkbox
+				{ 21, 43613 },	-- The Dusk Blade
+				{ 22, 43611 },	-- Krol Cleaver
+				},
+			},
+		},
+	}
+end
+
+-- World Epics BC
 if AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM) then
 	data["WorldEpicsBCC"] = {
 		name = AL["World Epics"],
@@ -1159,7 +1192,8 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM) then
 		TableType = NORMAL_ITTYPE,
 		gameVersion = AtlasLoot.BC_VERSION_NUM,
 		CorrespondingFields = {
-			[1] = "WorldEpics",
+			[AtlasLoot.CLASSIC_VERSION_NUM] = "WorldEpics",
+			[AtlasLoot.WRATH_VERSION_NUM] = "WorldEpicsWrath"
 		},
 		items = {
 			{
@@ -1220,7 +1254,8 @@ data["WorldEpics"] = {
 	TableType = NORMAL_ITTYPE,
 	gameVersion = AtlasLoot.CLASSIC_VERSION_NUM,
 	CorrespondingFields = {
-		[2] = "WorldEpicsBCC",
+		[AtlasLoot.BC_VERSION_NUM] = "WorldEpicsBCC",
+		[AtlasLoot.WRATH_VERSION_NUM] = "WorldEpicsWrath"
 	},
 	items = {
 		{
@@ -1385,7 +1420,7 @@ data["Mounts"] = {
 			},
 		},
 		AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM, {
-			name = format("%s - %s", AL["Faction Mounts"], AL["Burning Crusade"]),
+			name = format("%s - %s", AL["Faction Mounts"], AL["BC"]),
 			NameColor = GREEN,
 			[ALLIANCE_DIFF] = {
 				{ 5, 29745 }, -- Great Blue Elekk
@@ -1437,7 +1472,7 @@ data["Mounts"] = {
 			},
 		},
 		AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM, {
-			name = format("%s - %s", AL["PvP"], AL["Burning Crusade"]),
+			name = format("%s - %s", AL["PvP"], AL["BC"]),
 			NameColor = GREEN,
 			[ALLIANCE_DIFF] = {
 				{ 1,  35906 }, -- Reins of the Black War Elekk
@@ -1467,7 +1502,7 @@ data["Mounts"] = {
 			},
 		},
 		AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM, {
-			name = format("%s - %s", AL["Drops"], AL["Burning Crusade"]),
+			name = format("%s - %s", AL["Drops"], AL["BC"]),
 			NameColor = GREEN,
 			[NORMAL_DIFF] = {
 				{ 1, 32768 }, -- Reins of the Raven Lord
@@ -1483,7 +1518,7 @@ data["Mounts"] = {
 			}
 		},
 		AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM, {
-			name = format("%s - %s", AL["Drops"], AL["Burning Crusade"]),
+			name = format("%s - %s", AL["Drops"], AL["BC"]),
 			NameColor = GREEN,
 			[ALLIANCE_DIFF] = {
 				{ 1, 29227 }, -- Reins of the Cobalt War Talbuk
@@ -1561,7 +1596,7 @@ data["Mounts"] = {
 			},
 		},
 		AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM, {
-			name = format("%s - %s", AL["Special"], AL["Burning Crusade"]),
+			name = format("%s - %s", AL["Special"], AL["BC"]),
 			NameColor = GREEN,
 			[NORMAL_DIFF] = {
 				{ 1, 33225 }, -- Reins of the Swift Spectral Tiger
@@ -1591,30 +1626,140 @@ data["Tabards"] = {
 	items = {
 		{
 			name = ALIL["Tabard"],
+			[NORMAL_DIFF] = {
+				{ 1, 23192 }, -- Tabard of the Scarlet Crusade
+			},
+		},
+		{ -- Faction
+			name = AL["Capitals"],
+			CoinTexture = "Reputation",
 			[ALLIANCE_DIFF] = {
-				{ 1,  15196 }, -- Private's Tabard
-				{ 2,  15198 }, -- Knight's Colors
-				{ 3,  19506 }, -- Silverwing Battle Tabard
-				{ 4,  20132 }, -- Arathor Battle Tabard
-				{ 5,  19032 }, -- Stormpike Battle Tabard
-				{ 16,  19160 }, -- Contest Winner's Tabard
-				{ 17,  22999 }, -- Tabard of the Agent Dawn
-				{ 18, 23192 }, -- Tabard of the Scarlet Crusade
-				{ 19, 23705 }, -- Tabard of Flame
-				{ 20, 23709 }, -- Tabard of Frost
-				AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM, { 22, 28788 }), -- Tabard of the Protector
+				{ 1, 45579 },	-- Darnassus Tabard
+				{ 2, 45577 },	-- Ironforge Tabard
+				{ 3, 45578 },	-- Gnomeregan Tabard
+				{ 4, 45574 },	-- Stormwind Tabard
+				{ 16, 45580 },	-- Exodar Tabard
+				AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM, { 17, 64882 }),	-- Gilneas Tabard
+			},
+			[HORDE_DIFF] = {
+				{ 1, 45582 },	-- Darkspear Tabard
+				{ 2, 45581 },	-- Orgrimmar Tabard
+				{ 3, 45584 },	-- Thunder Bluff Tabard
+				{ 4, 45583 },	-- Undercity Tabard
+				AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM, { 16, 45585 }),	-- Silvermoon City Tabard
+			},
+		},
+		{
+			name = format("%s - %s", AL["Factions"], AL["Classic"]),
+			CoinTexture = "Reputation",
+			[NORMAL_DIFF] = {
+				{ 1, 43154 }, -- Tabard of the Argent Crusade
+			},
+		},
+		AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM, {
+			name = format("%s - %s", AL["Factions"], AL["BC"]),
+			CoinTexture = "Reputation",
+			NameColor = GREEN,
+			[ALLIANCE_DIFF] = {
+				{ 1, 31779 },	-- Aldor Tabard
+				{ 2, 31780 },	-- Scryers Tabard
+				{ 4, 31804 },	-- Cenarion Expedition Tabard
+				{ 5, 31776 },	-- Consortium Tabard
+				{ 6, 31777 },	-- Keepers of Time Tabard
+				{ 7, 31778 },	-- Lower City Tabard
+				{ 8, 32828 },	-- Ogri'la Tabard
+				{ 9, 31781 },	-- Sha'tar Tabard
+				{ 10, 32445 },	-- Skyguard Tabard
+				{ 11, 31775 },	-- Sporeggar Tabard
+				{ 12, 35221 },	-- Tabard of the Shattered Sun
+				{ 16, 23999 },	-- Honor Hold Tabard
+				{ 17, 31774 },	-- Honor Hold Tabard
 			},
 			[HORDE_DIFF] = {
 				GetItemsFromDiff = ALLIANCE_DIFF,
-				{ 1, 15197 }, -- Scout's Tabard
-				{ 2, 15199 }, -- Stone Guard's Herald
-				{ 3, 19505 }, -- Warsong Battle Tabard
-				{ 4, 20131 }, -- Battle Tabard of the Defilers
-				{ 5, 19031 }, -- Frostwolf Battle Tabard
+				{ 16, 24004 },	-- Thrallmar Tabard
+				{ 17, 31773 },	-- Mag'har Tabard
+			},
+		}),
+		AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM, {
+			name = format("%s - %s", AL["Factions"], AL["Wrath"]),
+			CoinTexture = "Reputation",
+			NameColor = BLUE,
+			[ALLIANCE_DIFF] = {
+				{ 1, 43155 },	-- Tabard of the Ebon Blade
+				{ 2, 43157 },	-- Tabard of the Kirin Tor
+				{ 3, 43156 },	-- Tabard of the Wyrmrest Accord
+			},
+		}),
+		{ -- PvP
+			name = AL["PvP"],
+			[ALLIANCE_DIFF] = {
+				{ 1, 15196 },	-- Private's Tabard
+				{ 2, 15198 },	-- Knight's Colors
+				{ 16, 19506 },	-- Silverwing Battle Tabard
+				{ 17, 19032 },	-- Stormpike Battle Tabard
+				{ 18, 20132 },	-- Arathor Battle Tabard
+			},
+			[HORDE_DIFF] = {
+				{ 1, 15197 },	-- Scout's Tabard
+				{ 2, 15199 },	-- Stone Guard's Herald
+				{ 16, 19505 },	-- Warsong Battle Tabard
+				{ 17, 19031 },	-- Frostwolf Battle Tabard
+				{ 18, 20131 },	-- Battle Tabard of the Defilers
+			},
+		},
+		{ -- PvP
+			name = AL["Arena"],
+			[NORMAL_DIFF] = {
+				{ 1, 45983 },	-- Furious Gladiator's Tabard
+				{ 2, 49086, },	-- Relentless Gladiator's Tabard
+				{ 3, 51534 },	-- Wrathful Gladiator's Tabard
+			},
+		},
+		{ -- Unobtainable Tabards
+			name = AL["Unobtainable Tabards"],
+			[NORMAL_DIFF] = {
+				{ 1, 19160 },	-- Contest Winner's Tabard
+				AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM, { 3, 36941 }), -- Competitor's Tabard
+				AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM, { 5, 28788 }), -- Tabard of the Protector
+				{ 16, "INV_Box_01", nil, AL["Card Game Tabards"], nil },
+				{ 17, 38312 },	-- Tabard of Brilliance
+				{ 18, 23705 },	-- Tabard of Flame
+				{ 19, 23709 },	-- Tabard of Frost
+				{ 20, 38313 },	-- Tabard of Fury
+				{ 21, 38309 },	-- Tabard of Nature
+				{ 22, 38310 },	-- Tabard of the Arcane
+				{ 23, 38314 },	-- Tabard of the Defender
+				{ 24, 38311 },	-- Tabard of the Void
 			},
 		},
 	},
 }
+
+local COR_FIELD_LEGENDARYS = {
+	[AtlasLoot.CLASSIC_VERSION_NUM] = "Legendarys",
+	[AtlasLoot.BC_VERSION_NUM] = "LegendarysBCC",
+	[AtlasLoot.WRATH_VERSION_NUM] = "LegendarysWrath",
+}
+if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
+	data["LegendarysWrath"] = {
+		name = AL["Legendarys"],
+		ContentType = COLLECTIONS_CONTENT,
+		LoadDifficulty = LOAD_DIFF,
+		TableType = NORMAL_ITTYPE,
+		gameVersion = AtlasLoot.WRATH_VERSION_NUM,
+		CorrespondingFields = COR_FIELD_LEGENDARYS,
+		items = {
+			{
+				name = AL["Legendarys"],
+				[NORMAL_ITTYPE] = {
+				{ 1, 49623, "ac4623" },	-- Shadowmourne
+				{ 16, 46017, "ac3142" },	-- Val'anyr, Hammer of Ancient Kings
+				},
+			},
+		},
+	}
+end
 
 if AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM) then
 	data["LegendarysBCC"] = {
@@ -1623,9 +1768,7 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM) then
 		LoadDifficulty = LOAD_DIFF,
 		TableType = NORMAL_ITTYPE,
 		gameVersion = AtlasLoot.BC_VERSION_NUM,
-		CorrespondingFields = {
-			[1] = "Legendarys",
-		},
+		CorrespondingFields = COR_FIELD_LEGENDARYS,
 		items = {
 			{
 				name = AL["Legendarys"],
@@ -1659,9 +1802,7 @@ data["Legendarys"] = {
 	LoadDifficulty = LOAD_DIFF,
 	TableType = NORMAL_ITTYPE,
 	gameVersion = AtlasLoot.CLASSIC_VERSION_NUM,
-	CorrespondingFields = {
-		[2] = "LegendarysBCC",
-	},
+	CorrespondingFields = COR_FIELD_LEGENDARYS,
 	items = {
 		{
 			name = AL["Legendarys"],
@@ -2150,7 +2291,7 @@ data["Darkmoon"] = {
 			},
 		},
 		AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM, {
-			name = AL["Burning Crusade"],
+			name = AL["BC"],
 			[NORMAL_DIFF] = {
 				{ 1,  31907 }, -- Darkmoon Card: Vengeance
 				{ 2,  31890 }, -- Darkmoon Card: Crusade
