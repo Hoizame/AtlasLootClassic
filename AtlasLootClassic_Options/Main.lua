@@ -102,13 +102,19 @@ Options.config.args.atlasloot = {
 			name = AL["Enable Atlas map integration if available."],
 			set = function(info, value) AtlasLoot.db.enableAtlasMapIntegration = value AtlasLoot.GUI.OnLevelRangeRefresh() end,
 		},
-		headerSetting = {
+		enableColorsInNames = {
 			order = 10,
+			type = "toggle",
+			width = "full",
+			name = AL["Enable colored loot table names."],
+		},
+		headerSetting = {
+			order = 20,
 			type = "header",
 			name = AL["Content phase settings"],
 		},
 		showContentPhaseInTT = {
-			order = 11,
+			order = 21,
 			type = "toggle",
 			width = "full",
 			name = AL["Show content phase in tooltip."],
@@ -116,7 +122,7 @@ Options.config.args.atlasloot = {
 			set = function(info, value) AtlasLoot.db.ContentPhase.enableTT = value end,
 		},
 		enableContentPhaseOnLootTable = {
-			order = 12,
+			order = 22,
 			type = "toggle",
 			width = "full",
 			name = AL["Show content phase indicator for loottables."],
@@ -124,7 +130,7 @@ Options.config.args.atlasloot = {
 			set = function(info, value) AtlasLoot.db.ContentPhase.enableOnLootTable = value AtlasLoot.GUI.OnLevelRangeRefresh() end,
 		},
 		enableContentPhaseOnItems = {
-			order = 13,
+			order = 23,
 			type = "toggle",
 			width = "full",
 			name = AL["Show content phase indicator for items."],
@@ -132,7 +138,7 @@ Options.config.args.atlasloot = {
 			set = function(info, value) AtlasLoot.db.ContentPhase.enableOnItems = value UpdateItemFrame() end,
 		},
 		enableContentPhaseOnCrafting = {
-			order = 14,
+			order = 24,
 			type = "toggle",
 			width = "full",
 			name = AL["Show content phase indicator for crafting."],
@@ -140,7 +146,7 @@ Options.config.args.atlasloot = {
 			set = function(info, value) AtlasLoot.db.ContentPhase.enableOnCrafting = value UpdateItemFrame() end,
 		},
 		enableContentPhaseOnSets = {
-			order = 15,
+			order = 25,
 			type = "toggle",
 			width = "full",
 			name = AL["Show content phase indicator for sets."],

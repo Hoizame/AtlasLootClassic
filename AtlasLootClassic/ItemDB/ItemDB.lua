@@ -523,7 +523,7 @@ function ItemDB.ContentProto:GetName(raw)
 	if self.nameFormat then
 		name = format(self.nameFormat, name)
 	end
-	if self.NameColor and not raw then
+	if self.NameColor and not raw and AtlasLoot.db.enableColorsInNames then
 		name = format(self.NameColor, name)
 	end
 	return name
@@ -578,7 +578,7 @@ function ItemDB.ContentProto:GetNameForItemTable(index, raw)
 	if index.nameFormat then
 		name = format(index.nameFormat, name)
 	end
-	if index.NameColor and not raw then
+	if index.NameColor and not raw and AtlasLoot.db.enableColorsInNames then
 		name = format(index.NameColor, name)
 	end
 	return name
