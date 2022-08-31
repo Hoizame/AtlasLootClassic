@@ -694,11 +694,17 @@ LoadAtlasLootModule = function(abc)
 	local first
 	local foundDbValue
 	local content
+	local linkedContent = AtlasLoot.ItemDB:GetCorrespondingField(db.selected[1], db.selected[2], db.selectedGameVersion)
+	if linkedContent then
+		db.selected[2] = linkedContent
+		foundDbValue = true
+	end
 	for i = 1, #moduleList do
 		content = moduleList[i]
 		if moduleData[content].gameVersion == gameVersion or moduleData[content].gameVersion == 0 then
 			if not first then first = content end
 			if content == db.selected[2] then foundDbValue = true end
+
 			-- contentName, contentIndex, contentColor
 			_, contentIndex = moduleData[content]:GetContentType()
 			-- add cat
