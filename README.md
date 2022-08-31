@@ -10,12 +10,6 @@ AtlasLootClassic is an UI mod allowing for loot tables of bosses to be browsed w
 
 [WoWInterface](https://www.wowinterface.com/downloads/info25185-AtlasLootClassic.html)
 
-## Download (TBC)
-
-[Curseforge](https://www.curseforge.com/wow/addons/atlaslootclassic)
-
-[WoWInterface](https://www.wowinterface.com/downloads/info25953-AtlasLootClassic-TBC.html)
-
 ## Features
 
 * Loottables for Dungeons and Raids
@@ -51,3 +45,5 @@ This currently only supports items
 [Atlas Classic WoW](https://www.curseforge.com/wow/addons/atlas-classicwow)
 
 [Atlas Burning Crusade](https://www.curseforge.com/wow/addons/atlas-burningcrusade)
+
+[Atlas Wrath of the Lich King](https://www.curseforge.com/wow/addons/atlas-wrathofthelichking)
