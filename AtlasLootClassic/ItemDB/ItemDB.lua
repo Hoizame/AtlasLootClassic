@@ -288,8 +288,9 @@ function ItemDB:GetNpcID_UNSAFE(addonName, contentName, boss)
 end
 
 function ItemDB:GetCorrespondingField(addonName, contentName, newGameVersion)
+	if not addonName or not contentName or not newGameVersion then return end
 	if ItemDB.Storage[addonName] and ItemDB.Storage[addonName][contentName] and ItemDB.Storage[addonName][contentName].CorrespondingFields then
-		return ItemDB.Storage[addonName][contentName].CorrespondingFields[newGameVersion] or contentName
+		return ItemDB.Storage[addonName][contentName].CorrespondingFields[newGameVersion]
 	end
 end
 
