@@ -6,8 +6,9 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 
 ## v3.0.0 (Aug, XX, 2022)
 
-- Move to a multiple game version build
-- Wrath support Version
-- add all Wrath dungeons and raids
-- add Wrath T Sets
-- add Wrath factions
+- Move to a multiple game version build (beta1)
+- Wrath support Version (beta1)
+- add all Wrath dungeons and raids (beta1)
+- add Wrath T Sets (beta1)
+- add Wrath factions (beta2)
+- add Wrath Collection items (beta2)
