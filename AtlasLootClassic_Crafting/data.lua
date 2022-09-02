@@ -1034,6 +1034,46 @@ data["Tailoring"] = {
 			}
 		},
 		{
+			name = AL["Armor"].." - "..ALIL["Head"],
+			[NORMAL_DIFF] = {
+				{ 1, 28481 }, --Sylvan Crown / 70
+				{ 2, 18452 }, --Mooncloth Circlet / 62
+				{ 3, 18450 }, --Wizardweave Turban / 61
+				{ 4, 18444 }, --Runecloth Headband / 59
+				{ 5, 18442 }, --Felcloth Hood / 58
+				{ 6, 12092 }, --Dreamweave Circlet / 50
+				{ 7, 12086 }, --Shadoweave Mask / 49
+				{ 8, 12084 }, --Red Mageweave Headband / 48
+				{ 9, 12081 }, --Admiral's Hat / 48
+				{ 10, 12072 }, --Black Mageweave Headband / 46
+				{ 11, 12059 }, --White Bandit Mask / 43
+				{ 12, 3858 }, --Shadow Hood / 34
+				{ 13, 3857 }, --Enchanter's Cowl / 33
+				{ 14, 8762 }, --Silk Headband / 32
+				{ 15, 8760 }, --Azure Silk Hood / 29
+			}
+		},
+		{
+			name = AL["Armor"].." - "..ALIL["Shoulder"],
+			[NORMAL_DIFF] = {
+				{ 1, 28482 }, --Sylvan Shoulders / 70 / 315
+				{ 2, 23663 }, --Mantle of the Timbermaw / 64 / 315
+				{ 3, 23665 }, --Argent Shoulders / 64 / 315
+				{ 4, 18453 }, --Felcloth Shoulders / 62 / 315
+				{ 5, 20848 }, --Flarecore Mantle / 61 / 315
+				{ 6, 18449 }, --Runecloth Shoulders / 61 / 315
+				{ 7, 18448 }, --Mooncloth Shoulders / 61 / 315
+				{ 8, 12078 }, --Red Mageweave Shoulders / 47 / 250
+				{ 9, 12076 }, --Shadoweave Shoulders / 47 / 250
+				{ 10, 12074 }, --Black Mageweave Shoulders / 46 / 245
+				{ 11, 8793 }, --Crimson Silk Shoulders / 38 / 210
+				{ 12, 8795 }, --Azure Shoulders / 38 / 210
+				{ 13, 8774 }, --Green Silken Shoulders / 36 / 200
+				{ 14, 3849 }, --Reinforced Woolen Shoulders / 24 / 145
+				{ 15, 3848 }, --Double-stitched Woolen Shoulders / 22 / 135
+			}
+		},
+		{
 			name = AL["Armor"].." - "..ALIL["Chest"],
 			[NORMAL_DIFF] = {
 				{ 1, 28207 }, --Glacial Vest / 80
@@ -1141,26 +1181,6 @@ data["Tailoring"] = {
 			}
 		},
 		{
-			name = AL["Armor"].." - "..ALIL["Head"],
-			[NORMAL_DIFF] = {
-				{ 1, 28481 }, --Sylvan Crown / 70
-				{ 2, 18452 }, --Mooncloth Circlet / 62
-				{ 3, 18450 }, --Wizardweave Turban / 61
-				{ 4, 18444 }, --Runecloth Headband / 59
-				{ 5, 18442 }, --Felcloth Hood / 58
-				{ 6, 12092 }, --Dreamweave Circlet / 50
-				{ 7, 12086 }, --Shadoweave Mask / 49
-				{ 8, 12084 }, --Red Mageweave Headband / 48
-				{ 9, 12081 }, --Admiral's Hat / 48
-				{ 10, 12072 }, --Black Mageweave Headband / 46
-				{ 11, 12059 }, --White Bandit Mask / 43
-				{ 12, 3858 }, --Shadow Hood / 34
-				{ 13, 3857 }, --Enchanter's Cowl / 33
-				{ 14, 8762 }, --Silk Headband / 32
-				{ 15, 8760 }, --Azure Silk Hood / 29
-			}
-		},
-		{
 			name = AL["Armor"].." - "..ALIL["Legs"],
 			[NORMAL_DIFF] = {
 				{ 1, 23667 }, --Flarecore Leggings / 70
@@ -1217,26 +1237,6 @@ data["Tailoring"] = {
 			}
 		},
 		{
-			name = AL["Armor"].." - "..ALIL["Shoulder"],
-			[NORMAL_DIFF] = {
-				{ 1, 28482 }, --Sylvan Shoulders / 70 / 315
-				{ 2, 23663 }, --Mantle of the Timbermaw / 64 / 315
-				{ 3, 23665 }, --Argent Shoulders / 64 / 315
-				{ 4, 18453 }, --Felcloth Shoulders / 62 / 315
-				{ 5, 20848 }, --Flarecore Mantle / 61 / 315
-				{ 6, 18449 }, --Runecloth Shoulders / 61 / 315
-				{ 7, 18448 }, --Mooncloth Shoulders / 61 / 315
-				{ 8, 12078 }, --Red Mageweave Shoulders / 47 / 250
-				{ 9, 12076 }, --Shadoweave Shoulders / 47 / 250
-				{ 10, 12074 }, --Black Mageweave Shoulders / 46 / 245
-				{ 11, 8793 }, --Crimson Silk Shoulders / 38 / 210
-				{ 12, 8795 }, --Azure Shoulders / 38 / 210
-				{ 13, 8774 }, --Green Silken Shoulders / 36 / 200
-				{ 14, 3849 }, --Reinforced Woolen Shoulders / 24 / 145
-				{ 15, 3848 }, --Double-stitched Woolen Shoulders / 22 / 135
-			}
-		},
-		{
 			name = AL["Armor"].." - "..ALIL["Waist"],
 			[NORMAL_DIFF] = {
 				{ 1, 24902 }, --Runed Stygian Belt / 63 / 315
@@ -1290,11 +1290,11 @@ data["Tailoring"] = {
 			name = AL["Misc"],
 			[NORMAL_DIFF] = {
 				{ 1, 18560 }, --Mooncloth / 55 / 290
-				{ 2, 18401 }, --Bolt of Runecloth / 55 / 255
-				{ 3, 3865 }, --Bolt of Mageweave / 45 / 180
-				{ 4, 3839 }, --Bolt of Silk Cloth / 35 / 135
-				{ 5, 2964 }, --Bolt of Woolen Cloth / 25 / 90
-				{ 6, 2963 }, --Bolt of Linen Cloth / 10 / 25
+				{ 3, 18401 }, --Bolt of Runecloth / 55 / 255
+				{ 4, 3865 }, --Bolt of Mageweave / 45 / 180
+				{ 5, 3839 }, --Bolt of Silk Cloth / 35 / 135
+				{ 6, 2964 }, --Bolt of Woolen Cloth / 25 / 90
+				{ 7, 2963 }, --Bolt of Linen Cloth / 10 / 25
 			}
 		},
 	}

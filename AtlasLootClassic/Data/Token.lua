@@ -23,7 +23,8 @@ local TOKEN_TYPE_TEXT = {
 	[7]  = format(TOKEN_FORMAT_STRING, AL["Bought with..."]),
 	[8]  = format(TOKEN_FORMAT_STRING, AL["Token for..."]), -- same as '6' but with itemDesc added
 	[9]  = format(TOKEN_FORMAT_STRING, AL["Show loot."]),
-	[10] = format(TOKEN_FORMAT_STRING, AL["Show Achievements."])
+	[10] = format(TOKEN_FORMAT_STRING, AL["Show Achievements."]),
+	[11] = format(TOKEN_FORMAT_STRING, AL["Contains."])
 
 	-- classes get set with the init
 	-- "DRUID", "HUNTER", "MAGE", "PALADIN", "PRIEST", "ROGUE", "SHAMAN", "WARLOCK", "WARRIOR", "DEATHKNIGHT"
@@ -958,6 +959,10 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
 		-- Lunacy Deck / Darkmoon Card: Greatness
 		[44326] = { 44326, 44253, 42987, 44254, 44255, 0, 44268, 44269, 44270, 44271, 44272, 44273, 44274, 44275 },
 		[44268] = 44326, [44269] = 44326, [44270] = 44326, [44271] = 44326, [44272] = 44326, [44273] = 44326, [44274] = 44326, [44275] = 44326,
+
+
+		--- Misc
+		[44951] = { { 41119, "24-40" }, type = 11 }
 	}
 end
 
