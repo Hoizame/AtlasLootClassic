@@ -14,8 +14,8 @@ local RAID_CLASS_COLORS = _G["RAID_CLASS_COLORS"]
 -- ----------------------------------------------------------------------------
 local addonname, private = ...
 local AtlasLoot = _G.AtlasLoot
-if AtlasLoot:GameVersion_LT(AtlasLoot.BC_VERSION_NUM) then return end
-local data = AtlasLoot.ItemDB:Add(addonname, 1, AtlasLoot.BC_VERSION_NUM)
+if AtlasLoot:GameVersion_LT(AtlasLoot.WRATH_VERSION_NUM) then return end
+local data = AtlasLoot.ItemDB:Add(addonname, 1, AtlasLoot.WRATH_VERSION_NUM)
 
 local GetColorSkill = AtlasLoot.Data.Profession.GetColorSkillRankNoSpell
 
@@ -29,6 +29,7 @@ local PLATE_DIFF = data:AddDifficulty(ALIL["Plate"], "plate", 0)
 
 local NORMAL_ITTYPE = data:AddItemTableType("Item", "Item")
 local PROF_ITTYPE = data:AddItemTableType("Profession", "Item")
+local SET_ITTYPE = data:AddItemTableType("Set", "Item")
 
 local QUEST_EXTRA_ITTYPE = data:AddExtraItemTableType("Quest")
 local PRICE_EXTRA_ITTYPE = data:AddExtraItemTableType("Price")
@@ -41,7 +42,7 @@ local PROF_CLASS_CONTENT = data:AddContentType(AL["Class Professions"], ATLASLOO
 local GEM_FORMAT1 = ALIL["Gems"].." - %s"
 local GEM_FORMAT2 = ALIL["Gems"].." - %s & %s"
 
-data["AlchemyBC"] = {
+data["AlchemyWrath"] = {
 	name = ALIL["Alchemy"],
 	ContentType = PROF_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
@@ -51,420 +52,315 @@ data["AlchemyBC"] = {
 		{
 			name = AL["Flasks"],
 			[NORMAL_DIFF] = {
-				{ 1, 28591 }, -- Flask of Pure Death (390)
-				{ 2, 28589 }, -- Flask of Relentless Assault (390)
-				{ 3, 28588 }, -- Flask of Mighty Restoration (390)
-				{ 4, 28587 }, -- Flask of Fortification (390)
-				{ 5, 28590 }, -- Flask of Blinding Light (390)
-				{ 6, 42736 }, -- Flask of Chromatic Wonder (375)
+				{ 1, 53903 },	-- Flask of Endless Rage
+				{ 2, 54213 },	-- Flask of Pure Mojo
+				{ 3, 53902 },	-- Flask of Stoneblood
+				{ 4, 53901 },	-- Flask of the Frost Wyrm
+				{ 5, 53899 },	-- Lesser Flask of Toughness
 			},
 		},
 		{
 			name = AL["Transmutes"],
 			[NORMAL_DIFF] = {
-				{ 1, 28581 }, -- Transmute: Primal Water to Shadow (385)
-				{ 2, 28580 }, -- Transmute: Primal Shadow to Water (385)
-				{ 3, 28582 }, -- Transmute: Primal Mana to Fire (385)
-				{ 4, 28584 }, -- Transmute: Primal Life to Earth (385)
-				{ 5, 28583 }, -- Transmute: Primal Fire to Mana (385)
-				{ 6, 28585 }, -- Transmute: Primal Earth to Life (385)
-				{ 7, 32766 }, -- Transmute: Skyfire Diamond (350)
-				{ 8, 32765 }, -- Transmute: Earthstorm Diamond (350)
-				{ 9, 29688 }, -- Transmute: Primal Might (350)
-				{ 10, 28569 }, -- Transmute: Primal Water to Air (350)
-				{ 11, 28568 }, -- Transmute: Primal Fire to Earth (350)
-				{ 12, 28567 }, -- Transmute: Primal Earth to Water (350)
-				{ 13, 28566 }, -- Transmute: Primal Air to Fire (350)
+				{ 1, 66658 },	-- Transmute: Ametrine
+				{ 2, 66662 },	-- Transmute: Dreadstone
+				{ 3, 66664 },	-- Transmute: Eye of Zul
+				{ 4, 66660 },	-- Transmute: King's Amber
+				{ 5, 66663 },	-- Transmute: Majestic Zircon
+				{ 6, 66659 },	-- Transmute: Cardinal Ruby
+				{ 8, 57425 },	-- Transmute: Skyflare Diamond
+				{ 9, 57427 },	-- Transmute: Earthsiege Diamond
+				{ 11, 60350 },	-- Transmute: Titanium
+				{ 16, 53777 },	-- Transmute: Eternal Air to Earth
+				{ 17, 53776 },	-- Transmute: Eternal Air to Water
+				{ 18, 53781 },	-- Transmute: Eternal Earth to Air
+				{ 19, 53782 },	-- Transmute: Eternal Earth to Shadow
+				{ 20, 53775 },	-- Transmute: Eternal Fire to Life
+				{ 21, 53774 },	-- Transmute: Eternal Fire to Water
+				{ 22, 53773 },	-- Transmute: Eternal Life to Fire
+				{ 23, 53771 },	-- Transmute: Eternal Life to Shadow
+				{ 24, 53779 },	-- Transmute: Eternal Shadow to Earth
+				{ 25, 53780 },	-- Transmute: Eternal Shadow to Life
+				{ 26, 53783 },	-- Transmute: Eternal Water to Air
+				{ 27, 53784 },	-- Transmute: Eternal Water to Fire
 			},
 		},
 		{
 			name = AL["Healing/Mana Potions"],
 			[NORMAL_DIFF] = {
-				{ 1, 28586 }, -- Super Rejuvenation Potion (390)
-				{ 3, 28551 }, -- Super Healing Potion (340)
-				{ 4, 33732 }, -- Volatile Healing Potion (315)
+			{ 1, 53904 },	-- Powerful Rejuvenation Potion
+			{ 2, 53895 },	-- Crazy Alchemist's Potion
 
+			{ 4, 58871 },	-- Endless Healing Potion
+			{ 5, 53836 },	-- Runic Healing Potion
+			{ 6, 53838 },	-- Resurgent Healing Potion
 
-				{ 16, 38961 }, -- Fel Mana Potion (360)
-				{ 17, 28555 }, -- Super Mana Potion (340)
-				{ 18, 33733 }, -- Unstable Mana Potion (325)
+			{ 16, 53900 },	-- Potion of Nightmares
+
+			{ 19, 58868 },	-- Endless Mana Potion
+			{ 20, 53837 },	-- Runic Mana Potion
+			{ 21, 53839 },	-- Icy Mana Potion
 			},
 		},
 		{
 			name = AL["Protection Potions"],
 			[NORMAL_DIFF] = {
-				{ 1, 28576 }, -- Major Shadow Protection Potion (360)
-				{ 2, 28573 }, -- Major Nature Protection Potion (360)
-				{ 3, 28577 }, -- Major Holy Protection Potion (360)
-				{ 4, 28572 }, -- Major Frost Protection Potion (360)
-				{ 5, 28571 }, -- Major Fire Protection Potion (360)
-				{ 6, 28575 }, -- Major Arcane Protection Potion (360)
+				{ 1, 53936 },	-- Mighty Arcane Protection Potion
+				{ 2, 53939 },	-- Mighty Fire Protection Potion
+				{ 3, 53937 },	-- Mighty Frost Protection Potion
+				{ 4, 53942 },	-- Mighty Nature Protection Potion
+				{ 5, 53938 },	-- Mighty Shadow Protection Potion
 			},
 		},
 		{
 			name = AL["Util Potions"],
 			[NORMAL_DIFF] = {
-				{ 1, 28579 }, -- Ironshield Potion (365)
-				{ 2, 28565 }, -- Destruction Potion (350)
-				{ 3, 28564 }, -- Haste Potion (350)
-				{ 4, 28563 }, -- Heroic Potion (350)
-				{ 5, 28562 }, -- Major Dreamless Sleep Potion (350)
-				{ 6, 38962 }, -- Fel Regeneration Potion (345)
-				{ 7, 45061 }, -- Mad Alchemist's Potion (335)
-				{ 8, 28554 }, -- Shrouding Potion (335)
-				{ 9, 28550 }, -- Insane Strength Potion (320)
-				{ 10, 28546 }, -- Sneaking Potion (315)
+				{ 1, 54221 },	-- Potion of Speed
+				{ 2, 54222 },	-- Potion of Wild Magic
+				{ 3, 53905 },	-- Indestructible Potion
 			},
 		},
 		{
 			name = AL["Elixirs"],
 			[NORMAL_DIFF] = {
-				--{ 1, 11478 }, --Elixir of Detect Demon
-				{ 1, 28578 }, -- Elixir of Empowerment (365)
-				{ 2, 28570 }, -- Elixir of Major Mageblood (355)
-				{ 3, 28558 }, -- Elixir of Major Shadow Power (350)
-				{ 4, 28557 }, -- Elixir of Major Defense (345)
-				{ 5, 28556 }, -- Elixir of Major Firepower (345)
-				{ 6, 39638 }, -- Elixir of Draenic Wisdom (335)
-				{ 7, 38960 }, -- Fel Strength Elixir (335)
-				{ 8, 39639 }, -- Elixir of Ironskin (330)
-				{ 9, 33741 }, -- Elixir of Mastery (330)
-				{ 10, 28553 }, -- Elixir of Major Agility (330)
-				{ 11, 39636 }, -- Elixir of Major Fortitude (325)
-				{ 12, 28552 }, -- Elixir of the Searching Eye (325)
-				{ 13, 28545 }, -- Elixir of Healing Power (325)
-				{ 14, 39637 }, -- Earthen Elixir (320)
-				{ 15, 28549 }, -- Elixir of Major Frost Power (320)
-				{ 16, 28544 }, -- Elixir of Major Strength (320)
-				{ 17, 33740 }, -- Adept's Elixir (315)
-				{ 18, 33738 }, -- Onslaught Elixir (315)
-				{ 19, 28543 }, -- Elixir of Camouflage (305)
-			},
-		},
-		{
-			name = AL["Cauldrons"],
-			[NORMAL_DIFF] = {
-				{ 1, 41503 }, -- Cauldron of Major Shadow Protection (360)
-				{ 2, 41502 }, -- Cauldron of Major Nature Protection (360)
-				{ 3, 41501 }, -- Cauldron of Major Frost Protection (360)
-				{ 4, 41500 }, -- Cauldron of Major Fire Protection (360)
-				{ 5, 41458 }, -- Cauldron of Major Arcane Protection (360)
+				{ 1, 60354 },	-- Elixir of Accuracy
+				{ 2, 60365 },	-- Elixir of Armor Piercing
+				{ 3, 60355 },	-- Elixir of Deadly Strikes
+				{ 4, 60357 },	-- Elixir of Expertise
+				{ 5, 60366 },	-- Elixir of Lightning Speed
+				{ 6, 56519 },	-- Elixir of Mighty Mageblood
+				{ 7, 53840 },	-- Elixir of Mighty Agility
+				{ 8, 54218 },	-- Elixir of Mighty Strength
+				{ 9, 53847 },	-- Elixir of Spirit
+				{ 10, 53848 },	-- Guru's Elixir
+				{ 11, 53842 },	-- Spellpower Elixir
+				{ 12, 53841 },	-- Wrath Elixir
+				{ 16, 60356 },	-- Elixir of Mighty Defense
+				{ 17, 54220 },	-- Elixir of Protection
+				{ 18, 62410 },	-- Elixir of Water Walking
+				{ 19, 60367 },	-- Elixir of Mighty Thoughts
+				{ 20, 53898 },	-- Elixir of Mighty Fortitude
 			},
 		},
 		{
 			name = AL["Stones"],
 			[NORMAL_DIFF] = {
-				{ 1, 47048 }, -- Sorcerer's Alchemist Stone (375)
-				{ 2, 47049 }, -- Redeemer's Alchemist Stone (375)
-				{ 3, 47046 }, -- Guardian's Alchemist Stone (375)
-				{ 4, 47050 }, -- Assassin's Alchemist Stone (375)
-				{ 16, 38070 }, -- Mercurial Stone (340)
+				{ 1, 60403 },	-- Indestructible Alchemist Stone
+				{ 2, 60396 },	-- Mercurial Alchemist Stone
+				{ 3, 60405 },	-- Mighty Alchemist Stone
 			},
 		},
+		{
+			name = AL["Misc"],
+			[NORMAL_DIFF] = {
+				{ 1, 62409 },	-- Ethereal Oil
+				{ 2, 53812 },	-- Pygmy Oil
+			},
+		}
 	},
 }
 
-data["BlacksmithingBC"] = {
+data["BlacksmithingWrath"] = {
 	name = ALIL["Blacksmithing"],
 	ContentType = PROF_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = PROF_ITTYPE,
 	CorrespondingFields = private.BLACKSMITHING_LINK,
 	items = {
-		{
+		{ -- Daggers
 			name = AL["Weapons"].." - "..ALIL["Daggers"],
 			[NORMAL_DIFF] = {
-				{ 1, 29698 }, -- Eternium Runed Blade (365)
-				{ 2, 29699 }, -- Dirge (365)
-				{ 3, 29569 }, -- Adamantite Dagger (330)
+				{ 1, 56234 },	-- Titansteel Shanker
+				{ 2, 55181 },	-- Saronite Shiv
+				{ 3, 55179 },	-- Saronite Ambusher
+				{ 16, 63182 },	-- Titansteel Spellblade
 			}
 		},
-		{
+		{ -- Axes
 			name = AL["Weapons"].." - "..AL["Axes"],
 			[NORMAL_DIFF] = {
 				{ 1, "INV_sword_04", nil, ALIL["One-Handed Axes"] },
-				{ 2, 36260 }, -- Wicked Edge of the Planes (385)
-				{ 3, 34542 }, -- Black Planar Edge (385)
-				{ 4, 34541 }, -- The Planar Edge (360)
-				{ 6, 29694 }, -- Fel Edged Battleaxe (365)
-				{ 7, 36134 }, -- Stormforged Axe (340)
-				{ 8, 29557 }, -- Fel Iron Hatchet (320)
-				{ 10, 36126 }, -- Light Skyforged Axe (280)
+				{ 2, 55204 },	-- Notched Cobalt War Axe
 				{ 16, "INV_sword_04", nil, ALIL["Two-Handed Axes"] },
-				{ 17, 36261 }, -- Bloodmoon (385)
-				{ 18, 34544 }, -- Mooncleaver (385)
-				{ 19, 34543 }, -- Lunar Crescent (360)
-				{ 21, 29695 }, -- Felsteel Reaper (365)
-				{ 22, 29568 }, -- Adamantite Cleaver (330)
-				{ 23, 36135 }, -- Skyforged Great Axe (340)
+				{ 17, 55174 },	-- Honed Cobalt Cleaver
 			}
 		},
-		{
+		{ -- Maces
 			name = AL["Weapons"].." - "..AL["Maces"],
 			[NORMAL_DIFF] = {
 				{ 1, "INV_sword_04", nil, ALIL["One-Handed Maces"] },
-				{ 2, 36262 }, -- Dragonstrike (385)
-				{ 3, 34546 }, -- Dragonmaw (385)
-				{ 4, 34545 }, -- Drakefist Hammer (360)
-				{ 6, 29700 }, -- Hand of Eternity (365)
-				{ 7, 29696 }, -- Runic Hammer (365)
-				{ 8, 36136 }, -- Lavaforged Warhammer (340)
-				{ 9, 29558 }, -- Fel Iron Hammer (325)
-				{ 11, 36128 }, -- Light Emberforged Hammer (280)
+				{ 2, 55370 },	-- Titansteel Bonecrusher
+				{ 3, 55371 },	-- Titansteel Guardian
+				{ 4, 56280 },	-- Cudgel of Saronite Justice
+				{ 5, 55182 },	-- Furious Saronite Beatstick
+				{ 6, 55201 },	-- Cobalt Tenderizer
 				{ 16, "INV_sword_04", nil, ALIL["Two-Handed Maces"] },
-				{ 17, 36263 }, -- Stormherald (385)
-				{ 18, 34548 }, -- Deep Thunder (385)
-				{ 19, 34547 }, -- Thunder (360)
-				{ 21, 43846 }, -- Hammer of Righteous Might (365)
-				{ 22, 29697 }, -- Fel Hardened Maul (365)
-				{ 23, 36137 }, -- Great Earthforged Hammer (340)
-				{ 24, 29566 }, -- Adamantite Maul (325)
+				{ 17, 55369 },	-- Titansteel Destroyer
+				{ 18, 55185 },	-- Saronite Mindcrusher
 			}
 		},
-		{
+		{ -- Swords
 			name = AL["Weapons"].." - "..AL["Swords"],
 			[NORMAL_DIFF] = {
 				{ 1, "INV_sword_04", nil, ALIL["One-Handed Swords"] },
-				{ 2, 36258 }, -- Blazefury (385)
-				{ 3, 34537 }, -- Blazeguard (385)
-				{ 4, 34535 }, -- Fireguard (360)
-				{ 6, 29692 }, -- Felsteel Longblade (365)
-				{ 7, 29571 }, -- Adamantite Rapier (335)
-				{ 8, 36131 }, -- Windforged Rapier (340)
-				{ 10, 36125 }, -- Light Earthforged Blade (280)
+				{ 2, 55183 },	-- Corroded Saronite Edge
+				{ 3, 55184 },	-- Corroded Saronite Woundbringer
+				{ 4, 59442 },	-- Saronite Spellblade
+				{ 5, 55177 },	-- Savage Cobalt Slicer
+				{ 6, 55200 },	-- Sturdy Cobalt Quickblade
 				{ 16, "INV_sword_06", nil, ALIL["Two-Handed Swords"] },
-				{ 17, 36259 }, -- Lionheart Executioner (385)
-				{ 18, 34540 }, -- Lionheart Champion (385)
-				{ 19, 34538 }, -- Lionheart Blade (360)
-				{ 21, 29693 }, -- Khorium Champion (365)
-				{ 22, 36133 }, -- Stoneforged Claymore (340)
-				{ 23, 29565 }, -- Fel Iron Greatsword (330)
-				{ 25, 43549 }, -- Heavy Copper Longsword (35)
+				{ 17, 55203 },	-- Forged Cobalt Claymore
 			}
 		},
-		{
-			name = AL["Weapons"].." - "..ALIL["Thrown"],
+		{ -- Shield
+			name = AL["Weapons"].." - "..ALIL["Shield"],
 			[NORMAL_DIFF] = {
-				{ 1, 34983 }, -- Felsteel Whisper Knives (360)
-				{ 2, 34982 }, -- Enchanted Thorium Blades (320)
-				{ 4, 34981 }, -- Whirling Steel Axes (220)
-				{ 5, 34979 }, -- Thick Bronze Darts (130)
+				{ 1, 56400 },	-- Titansteel Shield Wall
+				{ 2, 55014 },	-- Saronite Bulwark
+				{ 3, 54557 },	-- Saronite Defender
+				{ 4, 54550 },	-- Cobalt Triangle Shield
+				{ 16, 55013 },	-- Saronite Protector
 			}
 		},
-		{
+		{ -- Head
 			name = AL["Armor"].." - "..ALIL["Head"],
-			[MAIL_DIFF] = {
-				{ 1, 29663 }, -- Storm Helm (365)
-				{ 2, 29551 }, -- Fel Iron Chain Coif (310)
-			},
 			[PLATE_DIFF] = {
-				{ 1, 38479 }, -- Iceguard Helm (375)
-				{ 2, 38476 }, -- Wildguard Helm (375)
-				{ 3, 29668 }, -- Oathkeeper's Helm (365)
-				{ 4, 29664 }, -- Helm of the Stalwart Defender (365)
-				{ 5, 29643 }, -- Ragesteel Helm (365)
-				{ 6, 29621 }, -- Felsteel Helm (365)
-				{ 7, 29615 }, -- Flamebane Helm (355)
+				{ 1, 55374 },	-- Brilliant Titansteel Helm
+				{ 2, 55372 },	-- Spiked Titansteel Helm
+				{ 3, 55373 },	-- Tempered Titansteel Helm
+				{ 4,55302 },	-- Helm of Command
+				{ 5, 56556 },	-- Ornate Saronite Skullshield
+				{ 6, 55312 },	-- Savage Saronite Skullshield
+				{ 7, 59441 },	-- Brilliant Saronite Helm
+				{ 8, 54555 },	-- Tempered Saronite Helm
+				{ 9, 54949 },	-- Horned Cobalt Helm
+				{ 10, 54979 },	-- Reinforced Cobalt Helm
+				{ 11, 54917 },	-- Spiked Cobalt Helm
+				{ 12, 52571 },	-- Cobalt Helm
 			},
 		},
-		{
+		{ -- Shoulder
 			name = AL["Armor"].." - "..ALIL["Shoulder"],
 			[PLATE_DIFF] = {
-				{ 1, 41135 }, -- Dawnsteel Shoulders (375)
-				{ 2, 41133 }, -- Swiftsteel Shoulders (375)
-				{ 3, 42662 }, -- Ragesteel Shoulders (365)
+				{ 1, 56550 },	-- Ornate Saronite Pauldrons
+				{ 2, 55306 },	-- Savage Saronite Pauldrons
+				{ 3, 59440 },	-- Brilliant Saronite Pauldrons
+				{ 4, 54556 },	-- Tempered Saronite Shoulders
+				{ 5, 54941 },	-- Spiked Cobalt Shoulders
+				{ 6, 54978 },	-- Reinforced Cobalt Shoulders
+				{ 7, 52572 },	-- Cobalt Shoulders
 			},
 		},
-		{
+		{ -- Chest
 			name = AL["Armor"].." - "..ALIL["Chest"],
-			[MAIL_DIFF] = {
-				{ 1, 36256 }, -- Embrace of the Twisting Nether (385)
-				{ 2, 34530 }, -- Twisting Nether Chain Shirt (385)
-				{ 3, 34529 }, -- Nether Chain Shirt (360)
-
-				{ 16, 29649 }, -- Earthpeace Breastplate (370)
-				{ 17, 36130 }, -- Stormforged Hauberk (340)
-				{ 18, 29556 }, -- Fel Iron Chain Tunic (330)
-			},
 			[PLATE_DIFF] = {
-				{ 1, 36257 }, -- Bulwark of the Ancient Kings (385)
-				{ 2, 34534 }, -- Bulwark of Kings (385)
-				{ 3, 34533 }, -- Breastplate of Kings (360)
-
-				{ 16, 38477 }, -- Iceguard Breastplate (375)
-				{ 17, 38473 }, -- Wildguard Breastplate (375)
-				{ 18, 29645 }, -- Ragesteel Breastplate (370)
-				{ 19, 46144 }, -- Hard Khorium Battleplate (365)
-				{ 20, 46142 }, -- Sunblessed Breastplate (365)
-				{ 21, 29617 }, -- Flamebane Breastplate (365)
-				{ 22, 29610 }, -- Enchanted Adamantite Breastplate (360)
-				{ 23, 29606 }, -- Adamantite Breastplate (340)
-				{ 24, 36129 }, -- Heavy Earthforged Breastplate (340)
-				{ 25, 29550 }, -- Fel Iron Breastplate (335)
+				{ 1, [ATLASLOOT_IT_ALLIANCE] = { 67091 }, [ATLASLOOT_IT_HORDE] = { 67130 } },	-- Breastplate of the White Knight
+				{ 2, [ATLASLOOT_IT_ALLIANCE] = { 67095 }, [ATLASLOOT_IT_HORDE] = { 67134 } },	-- Sunforged Breastplate
+				{ 3, [ATLASLOOT_IT_ALLIANCE] = { 67094 }, [ATLASLOOT_IT_HORDE] = { 67133 } },	-- Titanium Spikeguards
+				{ 4, 55311 },	-- Savage Saronite Hauberk
+				{ 5, 55058 },	-- Brilliant Saronite Breastplate
+				{ 6, 55186 },	-- Chestplate of Conquest
+				{ 7, 54553 },	-- Tempered Saronite Breastplate
+				{ 8, 54944 },	-- Spiked Cobalt Chestpiece
+				{ 9, 54981 },	-- Reinforced Cobalt Chestpiece
+				{ 10, 52570 },	-- Cobalt Chestpiece
 			},
 		},
-		{
+		{ -- Feet
 			name = AL["Armor"].." - "..ALIL["Feet"],
 			[PLATE_DIFF] = {
-				{ 1, 40033 }, -- Shadesteel Sabots (375)
-				{ 2, 36392 }, -- Red Havoc Boots (375)
-				{ 3, 36391 }, -- Boots of the Protector (375)
-				{ 4, 29630 }, -- Khorium Boots (365)
-				{ 5, 29611 }, -- Enchanted Adamantite Boots (355)
-				{ 6, 29548 }, -- Fel Iron Plate Boots (325)
+				{ 1, 70568 },	-- Boots of Kingly Upheaval
+				{ 2, 70566 },	-- Hellfrozen Bonegrinders
+				{ 3, 70563 },	-- Protectors of Life
+				{ 4, 63188 },	-- Battlelord's Plate Boots
+				{ 5, 63192 },	-- Spiked Deathdealers
+				{ 6, 63190 },	-- Treads of Destiny
+				{ 7, 55377 },	-- Brilliant Titansteel Treads
+				{ 8, 55375 },	-- Spiked Titansteel Treads
+				{ 9, 55376 },	-- Tempered Titansteel Treads
+				{ 10, 61010 },	-- Icebane Treads
+				{ 11, 56552 },	-- Ornate Saronite Walkers
+				{ 12, 55308 },	-- Savage Saronite Walkers
+				{ 13, 55057 },	-- Brilliant Saronite Boots
+				{ 14, 54552 },	-- Tempered Saronite Boots
+				{ 15, 54918 },	-- Spiked Cobalt Boots
+				{ 16, 52569 },	-- Cobalt Boots
 			},
 		},
-		{
+		{ -- Hand
 			name = AL["Armor"].." - "..ALIL["Hand"],
-			[MAIL_DIFF] = {
-				{ 1, 29648 }, -- Swiftsteel Gloves (370)
-				{ 2, 29658 }, -- Felfury Gauntlets (365)
-				{ 3, 29552 }, -- Fel Iron Chain Gloves (320)
-			},
 			[PLATE_DIFF] = {
-				{ 1, 46141 }, -- Hard Khorium Battlefists (365)
-				{ 2, 46140 }, -- Sunblessed Gauntlets (365)
-				{ 3, 29642 }, -- Ragesteel Gloves (365)
-				{ 4, 29662 }, -- Steelgrip Gauntlets (365)
-				{ 5, 29622 }, -- Gauntlets of the Iron Tower (365)
-				{ 6, 29616 }, -- Flamebane Gloves (360)
-				{ 7, 29619 }, -- Felsteel Gloves (360)
-				{ 8, 29605 }, -- Adamantite Plate Gloves (335)
-				{ 9, 29545 }, -- Fel Iron Plate Gloves (310)
+				{ 1, 55301 },	-- Daunting Handguards
+				{ 2, 56553 },	-- Ornate Saronite Gauntlets
+				{ 3, 55300 },	-- Righteous Gauntlets
+				{ 4, 55309 },	-- Savage Saronite Gauntlets
+				{ 5, 55015 },	-- Tempered Saronite Gauntlets
+				{ 6, 55056 },	-- Brilliant Saronite Gauntlets
+				{ 7, 54945 },	-- Spiked Cobalt Gauntlets
+				{ 8, 55835 },	-- Cobalt Gauntlets
 			},
 		},
-		{
+		{ -- Legs
 			name = AL["Armor"].." - "..ALIL["Legs"],
-			[MAIL_DIFF] = {
-				{ 1, 36124 }, -- Windforged Leggings (280)
-			},
 			[PLATE_DIFF] = {
-				{ 1, 40035 }, -- Shadesteel Greaves (375)
-				{ 2, 38478 }, -- Iceguard Leggings (375)
-				{ 3, 38475 }, -- Wildguard Leggings (375)
-				{ 4, 29613 }, -- Enchanted Adamantite Leggings (365)
-				{ 5, 29620 }, -- Felsteel Leggings (360)
-				{ 6, 29629 }, -- Khorium Pants (360)
-				{ 7, 29549 }, -- Fel Iron Plate Pants (325)
-				{ 9, 36122 }, -- Earthforged Leggings (280)
+				{ 1, 70565 },	-- Legplates of Painful Death
+				{ 2, 70567 },	-- Pillars of Might
+				{ 3, 70562 },	-- Puresteel Legplates
+				{ 4,55303 },	-- Daunting Legplates
+				{ 5, 56554 },	-- Ornate Saronite Legplates
+				{ 6, 55304 },	-- Righteous Greaves
+				{ 7, 55310 },	-- Savage Saronite Legplates
+				{ 8, 55187 },	-- Legplates of Conquest
+				{ 9, 55055 },	-- Brilliant Saronite Legplates
+				{ 10, 54554 },	-- Tempered Saronite Legplates
+				{ 11, 54947 },	-- Spiked Cobalt Legplates
+				{ 12, 54980 },	-- Reinforced Cobalt Legplates
+				{ 13, 52567 },	-- Cobalt Legplates
 			},
 		},
-		{
+		{ -- Waist
 			name = AL["Armor"].." - "..ALIL["Waist"],
 			[PLATE_DIFF] = {
-				{ 1, 40036 }, -- Shadesteel Girdle (375)
-				{ 2, 36390 }, -- Red Belt of Battle (375)
-				{ 3, 36389 }, -- Belt of the Guardian (375)
-				{ 4, 29628 }, -- Khorium Belt (360)
-				{ 5, 29608 }, -- Enchanted Adamantite Belt (355)
-				{ 6, 29547 }, -- Fel Iron Plate Belt (315)
+				{ 1, 63187 },	-- Belt of the Titans
+				{ 2, 63191 },	-- Indestructible Plate Girdle
+				{ 3, 63189 },	-- Plate Girdle of Righteousness
+				{ 4, 61009 },	-- Icebane Girdle
+				{ 5, 56551 },	-- Ornate Saronite Waistguard
+				{ 6, 55307 },	-- Savage Saronite Waistguard
+				{ 7, 59436 },	-- Brilliant Saronite Belt
+				{ 8, 54551 },	-- Tempered Saronite Belt
+				{ 9, 54946 },	-- Spiked Cobalt Belt
+				{ 10, 52568 },	-- Cobalt Belt
 			},
 		},
-		{
+		{ -- Wrist
 			name = AL["Armor"].." - "..ALIL["Wrist"],
 			[PLATE_DIFF] = {
-				{ 1, 41134 }, -- Dawnsteel Bracers (375)
-				{ 2, 41132 }, -- Swiftsteel Bracers (375)
-				{ 3, 40034 }, -- Shadesteel Bracers (375)
-				{ 4, 29672 }, -- Blessed Bracers (365)
-				{ 5, 29671 }, -- Bracers of the Green Fortress (365)
-				{ 6, 29669 }, -- Black Felsteel Bracers (365)
-				{ 7, 29614 }, -- Flamebane Bracers (350)
-				{ 8, 29603 }, -- Adamantite Plate Bracers (335)
-				{ 9, 29553 }, -- Fel Iron Chain Bracers (325)
+				{ 1, [ATLASLOOT_IT_ALLIANCE] = { 67092 }, [ATLASLOOT_IT_HORDE] = { 67131 } },	-- Saronite Swordbreakers
+				{ 2, [ATLASLOOT_IT_ALLIANCE] = { 67096 }, [ATLASLOOT_IT_HORDE] = { 67135 } },	-- Sunforged Bracers
+				{ 3, [ATLASLOOT_IT_ALLIANCE] = { 67094 }, [ATLASLOOT_IT_HORDE] = { 67133 } },	-- Titanium Spikeguard
+				{ 4, 56549 },	-- Ornate Saronite Bracers
+				{ 5, 55305 },	-- Savage Saronite Bracers
+				{ 6, 55298 },	-- Vengeance Bindings
+				{ 7, 55017 },	-- Tempered Saronite Bracers
+				{ 8, 59438 },	-- Brilliant Saronite Bracers
+				{ 9, 54948 },	-- Spiked Cobalt Bracers
+				{ 10, 55834 },	-- Cobalt Bracers
 			},
 		},
-		{
-			name = ALIL["Armorsmith"],
-			[MAIL_DIFF] = {
-				{ 1, 36256 },	-- Embrace of the Twisting Nether
-				{ 2, 34530 },	-- Twisting Nether Chain Shirt
-				{ 3, 34529 },	-- Nether Chain Shirt
-				{ 4, 36130 },	-- Stormforged Hauberk
-				{ 5, 36124 },	-- Windforged Leggings
-			},
-			[PLATE_DIFF] = {
-				{ 1, 55186 },	-- Chestplate of Conquest
-				{ 2, 55187 },	-- Legplates of Conquest
-				{ 3, 36257 },	-- Bulwark of the Ancient Kings
-				{ 4, 34534 },	-- Bulwark of Kings
-				{ 5, 34533 },	-- Breastplate of Kings
-				{ 6, 36129 },	-- Heavy Earthforged Breastplate
-				{ 7, 36122 },	-- Earthforged Leggings
-			},
-		},
-		{
-			name = ALIL["Weaponsmith"],
+		{ -- Sets
+			name = AL["Sets"],
+			ExtraList = true,
+			TableType = SET_ITTYPE,
 			[NORMAL_DIFF] = {
-				{ 1, 55185 },	-- Saronite Mindcrusher
-				{ 2, 55184 },	-- Corroded Saronite Woundbringer
-				{ 3, 55183 },	-- Corroded Saronite Edge
-				{ 4, 36126 },	-- Light Skyforged Axe
-				{ 5, 36128 },	-- Light Emberforged Hammer
-				{ 6, 36125 },	-- Light Earthforged Blade
-			},
-		},
-		{
-			name = ALIL["Axesmith"],
-			[NORMAL_DIFF] = {
-				{ 1, 36260 },	-- Wicked Edge of the Planes
-				{ 2, 36261 },	-- Bloodmoon
-				{ 3, 34542 },	-- Black Planar Edge
-				{ 4, 34544 },	-- Mooncleaver
-				{ 5, 34541 },	-- The Planar Edge
-				{ 6, 34543 },	-- Lunar Crescent
-				{ 7, 36134 },	-- Stormforged Axe
-				{ 8, 36135 },	-- Skyforged Great Axe
-			},
-		},
-		{
-			name = ALIL["Hammersmith"],
-			[NORMAL_DIFF] = {
-				{ 1, 36262 },	-- Dragonstrike
-				{ 2, 36263 },	-- Stormherald
-				{ 3, 34546 },	-- Dragonmaw
-				{ 4, 34548 },	-- Deep Thunder
-				{ 5, 34545 },	-- Drakefist Hammer
-				{ 6, 34547 },	-- Thunder
-				{ 7, 36136 },	-- Lavaforged Warhammer
-				{ 8, 36137 },	-- Great Earthforged Hammer
-			},
-		},
-		{
-			name = ALIL["Swordsmith"],
-			[NORMAL_DIFF] = {
-				{ 1, 36258 },	-- Blazefury
-				{ 2, 36259 },	-- Lionheart Executioner
-				{ 3, 34537 },	-- Blazeguard
-				{ 4, 34540 },	-- Lionheart Champion
-				{ 5, 34535 },	-- Fireguard
-				{ 6, 34538 },	-- Lionheart Blade
-				{ 7, 36131 },	-- Windforged Rapier
-				{ 8, 36133 },	-- Stoneforged Claymore
-			},
-		},
-		{
-			name = AL["Misc"],
-			[NORMAL_DIFF] = {
-				{ 1, 32657 }, -- Eternium Rod (375)
-				{ 2, 32656 }, -- Adamantite Rod (350)
-				{ 3, 32655 }, -- Fel Iron Rod (300)
-				{ 5, 34608 }, -- Adamantite Weightstone (350)
-				{ 6, 34607 }, -- Fel Weightstone (300)
-				{ 8, 29729 }, -- Greater Ward of Shielding (375)
-				{ 9, 29728 }, -- Lesser Ward of Shielding (340)
-				{ 16, 42688 }, -- Adamantite Weapon Chain (335)
-				{ 18, 29657 }, -- Felsteel Shield Spike (360)
-				{ 20, 29656 }, -- Adamantite Sharpening Stone (350)
-				{ 21, 29654 }, -- Fel Sharpening Stone (300)
-				{ 23, 32285 }, -- Greater Rune of Warding (350)
-				{ 24, 32284 }, -- Lesser Rune of Warding (325)
+				{ 1, 814 }, -- Ornate Saronite Battlegear
+				{ 2, 816 }, -- Savage Saronite Battlegear
 			},
 		},
 	}
 }
 
-data["EnchantingBC"] = {
+data["EnchantingWrath"] = {
 	name = ALIL["Enchanting"],
 	ContentType = PROF_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
@@ -474,136 +370,125 @@ data["EnchantingBC"] = {
 		{
 			name = ALIL["Weapon"].." - "..AL["Enhancements"],
 			[NORMAL_DIFF] = {
-				{ 1, 42974 }, -- Enchant Weapon - Executioner (375)
-				{ 2, 27982 }, -- Enchant Weapon - Soulfrost (375)
-				{ 3, 27981 }, -- Enchant Weapon - Sunfire (375)
-				{ 4, 27984 }, -- Enchant Weapon - Mongoose (375)
-				{ 5, 28003 }, -- Enchant Weapon - Spellsurge (360)
-				{ 6, 28004 }, -- Enchant Weapon - Battlemaster (360)
-				{ 7, 46578 }, -- Enchant Weapon - Deathfrost (350)
-				{ 8, 42620 }, -- Enchant Weapon - Greater Agility (350)
-				{ 9, 34010 }, -- Enchant Weapon - Major Healing (350)
-				{ 10, 27975 }, -- Enchant Weapon - Major Spellpower (350)
-				{ 11, 27972 }, -- Enchant Weapon - Potency (350)
-				{ 12, 27968 }, -- Enchant Weapon - Major Intellect (340)
-				{ 13, 27967 }, -- Enchant Weapon - Major Striking (340)
+				{ 1, 64441 },	-- Enchant Weapon - Blade Ward
+				{ 2, 64579 },	-- Enchant Weapon - Blood Draining
+				{ 3, 59619 },	-- Enchant Weapon - Accuracy
+				{ 4, 59625 },	-- Enchant Weapon - Black Magic
+				{ 5, 59621 },	-- Enchant Weapon - Berserking
+				{ 6, 60714 },	-- Enchant Weapon - Mighty Spellpower
+				{ 7, 60707 },	-- Enchant Weapon - Superior Potency
+				{ 8, 44621 },	-- Enchant Weapon - Giant Slayer
+				{ 9, 44524 },	-- Enchant Weapon - Icebreaker
+				{ 10, 44576 },	-- Enchant Weapon - Lifeward
+				{ 11, 44633 },	-- Enchant Weapon - Exceptional Agility
+				{ 12, 44510 },	-- Enchant Weapon - Exceptional Spirit
+				{ 13, 44629 },	-- Enchant Weapon - Exceptional Spellpower
+				{ 14, 60621 },	-- Enchant Weapon - Greater Potency
 			}
 		},
 		{
 			name = ALIL["2H Weapon"].." - "..AL["Enhancements"],
 			[NORMAL_DIFF] = {
-				{ 1, 27977 }, -- Enchant 2H Weapon - Major Agility (360)
-				{ 2, 27971 }, -- Enchant 2H Weapon - Savagery (350)
+				{ 1, 60691 },	-- Enchant 2H Weapon - Massacre
+				{ 2, 44595 },	-- Enchant 2H Weapon - Scourgebane
+				{ 3, 44630 },	-- Enchant 2H Weapon - Greater Savagery
+				{ 16, 62948 },	-- Enchant Staff - Greater Spellpower
+				{ 17, 62959 },	-- Enchant Staff - Spellpower
 			}
 		},
 		{
 			name = ALIL["Cloak"].." - "..AL["Enhancements"],
 			[NORMAL_DIFF] = {
-				{ 1, 47051 }, -- Enchant Cloak - Steelweave (375)
-				{ 2, 34006 }, -- Enchant Cloak - Greater Shadow Resistance (350)
-				{ 3, 34005 }, -- Enchant Cloak - Greater Arcane Resistance (350)
-				{ 4, 27962 }, -- Enchant Cloak - Major Resistance (330)
-				{ 5, 34003 }, -- Enchant Cloak - Spell Penetration (325)
-				{ 6, 34004 }, -- Enchant Cloak - Greater Agility (320)
-				{ 7, 27961 }, -- Enchant Cloak - Major Armor (320)
-				{ 8, 25086 }, -- Enchant Cloak - Dodge (320)
-				{ 9, 25081 }, -- Enchant Cloak - Greater Fire Resistance (320)
-				{ 10, 25082 }, --Enchant Cloak - Greater Nature Resistance (320)
-				{ 11, 25084 }, --Enchant Cloak - Subtlety (320)
-				{ 12, 25083 }, --Enchant Cloak - Stealth (320)
+				{ 1, 44631 },	-- Enchant Cloak - Shadow Armor
+				{ 2, 47899 },	-- Enchant Cloak - Wisdom
+				{ 3, 44591 },	-- Enchant Cloak - Superior Dodge
+				{ 4, 47898 },	-- Enchant Cloak - Greater Speed
+				{ 5, 47672 },	-- Enchant Cloak - Mighty Stamina
+				{ 6, 60663 },	-- Enchant Cloak - Major Agility
+				{ 7, 44500 },	-- Enchant Cloak - Superior Agility
+				{ 8, 44582 },	-- Enchant Cloak - Minor Power
+				{ 9, 60609 },	-- Enchant Cloak - Speed
 			}
 		},
 		{
 			name = ALIL["Chest"].." - "..AL["Enhancements"],
 			[NORMAL_DIFF] = {
-				{ 1, 46594 }, -- Enchant Chest - Defense (360)
-				{ 2, 33992 }, -- Enchant Chest - Major Resilience (345)
-				{ 3, 27960 }, -- Enchant Chest - Exceptional Stats (345)
-				{ 4, 33990 }, -- Enchant Chest - Major Spirit (330)
-				--{ 5, 27958 }, -- Enchant Chest - Exceptional Mana (325) (Never added to the retail game)
-				{ 5, 27957 }, -- Enchant Chest - Exceptional Health (325)
-				{ 6, 33991 }, -- Enchant Chest - Restore Mana Prime (310)
+				{ 1, 60692 },	-- Enchant Chest - Powerful Stats
+				{ 2, 47900 },	-- Enchant Chest - Super Health
+				{ 3, 44509 },	-- Enchant Chest - Greater Mana Restoration
+				{ 4, 44588 },	-- Enchant Chest - Exceptional Resilience
+				{ 5, 47766 },	-- Enchant Chest - Greater Dodge
+				{ 6, 44492 },	-- Enchant Chest - Mighty Health
+				{ 7, 44623 },	-- Enchant Chest - Super Stats
+				{ 8, 27958 },	-- Enchant Chest - Exceptional Mana
 			}
 		},
 		{
 			name = ALIL["Feet"].." - "..AL["Enhancements"],
 			[NORMAL_DIFF] = {
-				{ 1, 27954 }, -- Enchant Boots - Surefooted (370)
-				{ 2, 34008 }, -- Enchant Boots - Boar's Speed (360)
-				{ 3, 34007 }, -- Enchant Boots - Cat's Swiftness (360)
-				{ 4, 27951 }, -- Enchant Boots - Dexterity (340)
-				{ 5, 27950 }, -- Enchant Boots - Fortitude (320)
-				{ 6, 27948 }, -- Enchant Boots - Vitality (305)
+				{ 1, 60763 },	-- Enchant Boots - Greater Assault
+				{ 2, 47901 },	-- Enchant Boots - Tuskarr's Vitality
+				{ 3, 44508 },	-- Enchant Boots - Greater Spirit
+				{ 4, 44589 },	-- Enchant Boots - Superior Agility
+				{ 5, 44584 },	-- Enchant Boots - Greater Vitality
+				{ 6, 44528 },	-- Enchant Boots - Greater Fortitude
+				{ 7, 60623 },	-- Enchant Boots - Icewalker
+				{ 8, 60606 },	-- Enchant Boots - Assault
 			}
 		},
 		{
 			name = ALIL["Hand"].." - "..AL["Enhancements"],
 			[NORMAL_DIFF] = {
-				{ 1, 33997 }, -- Enchant Gloves - Major Spellpower (360)
-				{ 2, 33994 }, -- Enchant Gloves - Spell Strike (360)
-				{ 3, 33999 }, -- Enchant Gloves - Major Healing (350)
-				{ 4, 33995 }, -- Enchant Gloves - Major Strength (350)
-				{ 5, 33996 }, -- Enchant Gloves - Assault (320)
-				{ 6, 33993 }, -- Enchant Gloves - Blasting (315)
-        		{ 7, 25080 }, -- Enchant Gloves - Superior Agility (320)
-				{ 8, 25072 }, -- Enchant Gloves - Threat (320)
+				{ 1, 44625 },	-- Enchant Gloves - Armsman
+				{ 2, 60668 },	-- Enchant Gloves - Crusher
+				{ 3, 44513 },	-- Enchant Gloves - Greater Assault
+				{ 4, 44529 },	-- Enchant Gloves - Major Agility
+				{ 5, 44488 },	-- Enchant Gloves - Precision
+				{ 6, 44484 },	-- Enchant Gloves - Haste
+				{ 7, 71692 },	-- Enchant Gloves - Angler
+				{ 8, 44506 },	-- Enchant Gloves - Gatherer
+				{ 9, 44592 },	-- Enchant Gloves - Exceptional Spellpower
 			}
 		},
 		{
 			name = ALIL["Shield"].." - "..AL["Enhancements"],
 			[NORMAL_DIFF] = {
-				{ 1, 27947 }, -- Enchant Shield - Resistance (360)
-				{ 2, 44383 }, -- Enchant Shield - Resilience (340)
-				{ 3, 27946 }, -- Enchant Shield - Shield Block (340)
-				{ 4, 34009 }, -- Enchant Shield - Major Stamina (325)
-				{ 5, 27945 }, -- Enchant Shield - Intellect (325)
-				{ 6, 27944 }, -- Enchant Shield - Tough Shield (320)
+				{ 1, 44489 },	-- Enchant Shield - Dodge
+				{ 2, 60653 },	-- Enchant Shield - Greater Intellect
 			}
 		},
 		{
 			name = ALIL["Wrist"].." - "..AL["Enhancements"],
 			[NORMAL_DIFF] = {
-				{ 1, 27917 }, -- Enchant Bracer - Spellpower (360)
-				{ 2, 27914 }, -- Enchant Bracer - Fortitude (350)
-				{ 3, 27913 }, -- Enchant Bracer - Restore Mana Prime (335)
-				{ 4, 27911 }, -- Enchant Bracer - Superior Healing (325)
-				{ 5, 27905 }, -- Enchant Bracer - Stats (325)
-				{ 6, 27906 }, -- Enchant Bracer - Major Defense (320)
-				{ 7, 34001 }, -- Enchant Bracer - Major Intellect (315)
-				{ 8, 27899 }, -- Enchant Bracer - Brawn (315)
-				{ 9, 34002 }, -- Enchant Bracer - Assault (310)
+				{ 1, 62256 },	-- Enchant Bracer - Major Stamina
+				{ 2, 60767 },	-- Enchant Bracer - Superior Spellpower
+				{ 3, 44575 },	-- Enchant Bracer - Greater Assault
+				{ 4, 44598 },	-- Enchant Bracer - Haste
+				{ 5, 44616 },	-- Enchant Bracer - Greater Stats
+				{ 6, 44593 },	-- Enchant Bracer - Major Spirit
+				{ 7, 44635 },	-- Enchant Bracer - Greater Spellpower
+				{ 8, 44555 },	-- Enchant Bracer - Exceptional Intellect
+				{ 9, 60616 },	-- Enchant Bracer - Assault
 			}
 		},
 		{
 			name = AL["Ring"].." - "..AL["Enhancements"],
 			[NORMAL_DIFF] = {
-				{ 1, 27927 }, -- Enchant Ring - Stats (375)
-				{ 2, 27926 }, -- Enchant Ring - Healing Power (370)
-				{ 3, 27924 }, -- Enchant Ring - Spellpower (360)
-				{ 4, 27920 }, -- Enchant Ring - Striking (360)
+				{ 1, 44636 },	-- Enchant Ring - Greater Spellpower
+				{ 2, 44645 },	-- Enchant Ring - Assault
+				{ 3, 59636 },	-- Enchant Ring - Stamina
 			}
 		},
 		{
 			name = AL["Misc"],
 			[NORMAL_DIFF] = {
-				{ 1, 28019 }, -- Superior Wizard Oil (340)
-				{ 2, 28016 }, -- Superior Mana Oil (310)
-				{ 5, 45765 }, -- Void Shatter (375)
-				{ 6, 28022 }, -- Large Prismatic Shard (335)
-				{ 7, 42615 }, -- Small Prismatic Shard (315)
-				{ 8, 42613 }, -- Nexus Transformation (295)
-				--{ 10, 28021 }, -- Arcane Dust (undefined) (Never added to the retail game)
-				{ 16, 32667 }, -- Runed Eternium Rod (375)
-				{ 17, 32665 }, -- Runed Adamantite Rod (350)
-				{ 18, 32664 }, -- Runed Fel Iron Rod (310)
-				{ 20, 28028 }, -- Void Sphere (360)
-				{ 21, 28027 }, -- Prismatic Sphere (325)
+				{ 1, 69412 },	-- Abyssal Shatter
 			}
 		},
 	}
 }
 
-data["EngineeringBC"] = {
+data["EngineeringWrath"] = {
 	name = ALIL["Engineering"],
 	ContentType = PROF_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
@@ -767,7 +652,7 @@ data["EngineeringBC"] = {
 	}
 }
 
-data["TailoringBC"] = {
+data["TailoringWrath"] = {
 	name = ALIL["Tailoring"],
 	ContentType = PROF_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
@@ -927,7 +812,7 @@ data["TailoringBC"] = {
 	}
 }
 
-data["LeatherworkingBC"] = {
+data["LeatherworkingWrath"] = {
 	name = ALIL["Leatherworking"],
 	ContentType = PROF_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
@@ -1163,7 +1048,7 @@ data["LeatherworkingBC"] = {
 	}
 }
 
-data["JewelcraftingBC"] = {
+data["JewelcraftingWrath"] = {
 	name = ALIL["Jewelcrafting"],
 	ContentType = PROF_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
@@ -1499,7 +1384,7 @@ data["JewelcraftingBC"] = {
 	}
 }
 
-data["MiningBC"] = {
+data["MiningWrath"] = {
 	name = ALIL["Mining"],
 	ContentType = PROF_GATH_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
@@ -1523,7 +1408,7 @@ data["MiningBC"] = {
 	}
 }
 
-data["HerbalismBC"] = {
+data["HerbalismWrath"] = {
 	name = ALIL["Herbalism"],
 	ContentType = PROF_GATH_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
@@ -1600,7 +1485,7 @@ data["HerbalismBC"] = {
 	}
 }
 
-data["CookingBC"] = {
+data["CookingWrath"] = {
 	name = ALIL["Cooking"],
 	ContentType = PROF_SEC_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
@@ -1714,7 +1599,7 @@ data["CookingBC"] = {
 	}
 }
 
-data["FirstAidBC"] = {
+data["FirstAidWrath"] = {
 	name = ALIL["First Aid"],
 	ContentType = PROF_SEC_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
@@ -1731,7 +1616,7 @@ data["FirstAidBC"] = {
 	}
 }
 
-data["RoguePoisonsBC"] = {
+data["RoguePoisonsWrath"] = {
 	name = format("|c%s%s|r", RAID_CLASS_COLORS["ROGUE"].colorStr, ALIL["ROGUE"]),
 	ContentType = PROF_CLASS_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,

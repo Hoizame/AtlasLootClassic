@@ -12,9 +12,9 @@ local RAID_CLASS_COLORS = _G["RAID_CLASS_COLORS"]
 -- ----------------------------------------------------------------------------
 -- AddOn namespace.
 -- ----------------------------------------------------------------------------
-local addonname = ...
+local addonname, private = ...
 local AtlasLoot = _G.AtlasLoot
-local data = AtlasLoot.ItemDB:Add(addonname, 1, 1)
+local data = AtlasLoot.ItemDB:Add(addonname, 1, AtlasLoot.CLASSIC_VERSION_NUM)
 
 local GetColorSkill = AtlasLoot.Data.Profession.GetColorSkillRankNoSpell
 
@@ -33,6 +33,7 @@ local QUEST_EXTRA_ITTYPE = data:AddExtraItemTableType("Quest")
 local PRICE_EXTRA_ITTYPE = data:AddExtraItemTableType("Price")
 
 local PROF_CONTENT = data:AddContentType(ALIL["Professions"], ATLASLOOT_PRIMPROFESSION_COLOR)
+local PROF_GATH_CONTENT = data:AddContentType(ALIL["Gathering Professions"], ATLASLOOT_PRIMPROFESSION_COLOR)
 local PROF_SEC_CONTENT = data:AddContentType(AL["Secondary Professions"], ATLASLOOT_SECPROFESSION_COLOR)
 local PROF_CLASS_CONTENT = data:AddContentType(AL["Class Professions"], ATLASLOOT_CLASSPROFESSION_COLOR)
 --local RAID20_CONTENT = data:AddContentType(AL["20 Raids"], ATLASLOOT_RAID20_COLOR)
@@ -43,9 +44,7 @@ data["Alchemy"] = {
 	ContentType = PROF_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = PROF_ITTYPE,
-	CorrespondingFields = {
-		[2] = "AlchemyBC",
-	},
+	CorrespondingFields = private.ALCHEMY_LINK,
 	items = {
 		{
 			name = AL["Flasks"],
@@ -213,9 +212,7 @@ data["Blacksmithing"] = {
 	ContentType = PROF_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = PROF_ITTYPE,
-	CorrespondingFields = {
-		[2] = "BlacksmithingBC",
-	},
+	CorrespondingFields = private.BLACKSMITHING_LINK,
 	items = {
 		{
 			name = AL["Weapons"].." - "..ALIL["Daggers"],
@@ -319,6 +316,52 @@ data["Blacksmithing"] = {
 			}
 		},
 		{
+			name = AL["Armor"].." - "..ALIL["Head"],
+			[MAIL_DIFF] = {
+				{ 1, 16728 }, --Helm of the Great Chief / 61
+				{ 2, 16659 }, --Radiant Circlet / 59
+				{ 3, 9961 }, --Mithril Coif / 46
+				{ 4, 3503 }, --Golden Scale Coif / 38
+				{ 5, 9814 }, --Barbaric Iron Helm / 35
+				{ 6, 3502 }, --Green Iron Helm / 34
+			},
+			[PLATE_DIFF] = {
+				{ 1, 23636 }, --Dark Iron Helm / 66
+				{ 2, 24913 }, --Darkrune Helm / 63
+				{ 3, 16742 }, --Enchanted Thorium Helm / 62
+				{ 4, 16729 }, --Lionheart Helm / 61
+				{ 5, 16726 }, --Runic Plate Helm / 61
+				{ 6, 16724 }, --Whitesoul Helm / 60
+				{ 7, 16658 }, --Imperial Plate Helm / 59
+				{ 8, 16653 }, --Thorium Helm / 56
+				{ 9, 9980 }, --Ornate Mithril Helm / 49
+				{ 10, 9970 }, --Heavy Mithril Helm / 47
+				{ 11, 9935 }, --Steel Plate Helm / 43
+			},
+		},
+		{
+			name = AL["Armor"].." - "..ALIL["Shoulder"],
+			[MAIL_DIFF] = {
+				{ 1, 24137 }, --Bloodsoul Shoulders / 65
+				{ 2, 20873 }, --Fiery Chain Shoulders / 62
+				{ 3, 9966 }, --Mithril Scale Shoulders / 47
+				{ 4, 3505 }, --Golden Scale Shoulders / 35
+				{ 5, 9811 }, --Barbaric Iron Shoulders / 32
+				{ 6, 3504 }, --Green Iron Shoulders / 32
+				{ 7, 3330 }, --Silvered Bronze Shoulders / 25
+				{ 8, 3328 }, --Rough Bronze Shoulders / 22
+			},
+			[PLATE_DIFF] = {
+				{ 1, 24141 }, --Darksoul Shoulders / 65
+				{ 2, 16664 }, --Runic Plate Shoulders / 60
+				{ 3, 15295 }, --Dark Iron Shoulders / 58
+				{ 4, 16660 }, --Dawnbringer Shoulders / 58
+				{ 5, 16646 }, --Imperial Plate Shoulders / 53
+				{ 6, 9952 }, --Ornate Mithril Shoulder / 45
+				{ 7, 9926 }, --Heavy Mithril Shoulder / 41
+			},
+		},
+		{
 			name = AL["Armor"].." - "..ALIL["Chest"],
 			[MAIL_DIFF] = {
 				{ 1, 27590 }, --Obsidian Mail Tunic / 72
@@ -405,30 +448,6 @@ data["Blacksmithing"] = {
 			},
 		},
 		{
-			name = AL["Armor"].." - "..ALIL["Head"],
-			[MAIL_DIFF] = {
-				{ 1, 16728 }, --Helm of the Great Chief / 61
-				{ 2, 16659 }, --Radiant Circlet / 59
-				{ 3, 9961 }, --Mithril Coif / 46
-				{ 4, 3503 }, --Golden Scale Coif / 38
-				{ 5, 9814 }, --Barbaric Iron Helm / 35
-				{ 6, 3502 }, --Green Iron Helm / 34
-			},
-			[PLATE_DIFF] = {
-				{ 1, 23636 }, --Dark Iron Helm / 66
-				{ 2, 24913 }, --Darkrune Helm / 63
-				{ 3, 16742 }, --Enchanted Thorium Helm / 62
-				{ 4, 16729 }, --Lionheart Helm / 61
-				{ 5, 16726 }, --Runic Plate Helm / 61
-				{ 6, 16724 }, --Whitesoul Helm / 60
-				{ 7, 16658 }, --Imperial Plate Helm / 59
-				{ 8, 16653 }, --Thorium Helm / 56
-				{ 9, 9980 }, --Ornate Mithril Helm / 49
-				{ 10, 9970 }, --Heavy Mithril Helm / 47
-				{ 11, 9935 }, --Steel Plate Helm / 43
-			},
-		},
-		{
 			name = AL["Armor"].." - "..ALIL["Legs"],
 			[MAIL_DIFF] = {
 				{ 1, 16725 }, --Radiant Leggings / 61
@@ -451,28 +470,6 @@ data["Blacksmithing"] = {
 				{ 7, 27829 }, --Titanic Leggings / 60
 				{ 8, 9945 }, --Ornate Mithril Pants / 44
 				{ 9, 9933 }, --Heavy Mithril Pants / 42
-			},
-		},
-		{
-			name = AL["Armor"].." - "..ALIL["Shoulder"],
-			[MAIL_DIFF] = {
-				{ 1, 24137 }, --Bloodsoul Shoulders / 65
-				{ 2, 20873 }, --Fiery Chain Shoulders / 62
-				{ 3, 9966 }, --Mithril Scale Shoulders / 47
-				{ 4, 3505 }, --Golden Scale Shoulders / 35
-				{ 5, 9811 }, --Barbaric Iron Shoulders / 32
-				{ 6, 3504 }, --Green Iron Shoulders / 32
-				{ 7, 3330 }, --Silvered Bronze Shoulders / 25
-				{ 8, 3328 }, --Rough Bronze Shoulders / 22
-			},
-			[PLATE_DIFF] = {
-				{ 1, 24141 }, --Darksoul Shoulders / 65
-				{ 2, 16664 }, --Runic Plate Shoulders / 60
-				{ 3, 15295 }, --Dark Iron Shoulders / 58
-				{ 4, 16660 }, --Dawnbringer Shoulders / 58
-				{ 5, 16646 }, --Imperial Plate Shoulders / 53
-				{ 6, 9952 }, --Ornate Mithril Shoulder / 45
-				{ 7, 9926 }, --Heavy Mithril Shoulder / 41
 			},
 		},
 		{
@@ -571,9 +568,7 @@ data["Enchanting"] = {
 	ContentType = PROF_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = PROF_ITTYPE,
-	CorrespondingFields = {
-		[2] = "EnchantingBC",
-	},
+	CorrespondingFields = private.ENCHANTING_LINK,
 	items = {
 		{
 			name = AL["Oil"],
@@ -789,9 +784,7 @@ data["Engineering"] = {
 	ContentType = PROF_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = PROF_ITTYPE,
-	CorrespondingFields = {
-		[2] = "EngineeringBC",
-	},
+	CorrespondingFields = private.ENGINEERING_LINK,
 	items = {
 		{
 			name = AL["Armor"],
@@ -1017,9 +1010,7 @@ data["Tailoring"] = {
 	ContentType = PROF_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = PROF_ITTYPE,
-	CorrespondingFields = {
-		[2] = "TailoringBC",
-	},
+	CorrespondingFields = private.TAILORING_LINK,
 	items = {
 		{
 			name = AL["Armor"].." - "..ALIL["Cloak"],
@@ -1314,9 +1305,7 @@ data["Leatherworking"] = {
 	ContentType = PROF_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = PROF_ITTYPE,
-	CorrespondingFields = {
-		[2] = "LeatherworkingBC",
-	},
+	CorrespondingFields = private.LEATHERWORKING_LINK,
 	items = {
 		{
 			name = AL["Armor"].." - "..ALIL["Cloak"],
@@ -1626,12 +1615,10 @@ data["Leatherworking"] = {
 
 data["Mining"] = {
 	name = ALIL["Mining"],
-	ContentType = PROF_CONTENT,
+	ContentType = PROF_GATH_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = PROF_ITTYPE,
-	CorrespondingFields = {
-		[2] = "MiningBC",
-	},
+	CorrespondingFields = private.MINING_LINK,
 	items = {
 		{
 			name = AL["Smelting"],
@@ -1655,12 +1642,10 @@ data["Mining"] = {
 
 data["Herbalism"] = {
 	name = ALIL["Herbalism"],
-	ContentType = PROF_CONTENT,
+	ContentType = PROF_GATH_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = NORMAL_ITTYPE,
-	CorrespondingFields = {
-		[2] = "HerbalismBC",
-	},
+	CorrespondingFields = private.HERBALISM_LINK,
 	items = {
 		{
 			name = AL["Artisan"],
@@ -1722,9 +1707,7 @@ data["Cooking"] = {
 	ContentType = PROF_SEC_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = PROF_ITTYPE,
-	CorrespondingFields = {
-		[2] = "CookingBC",
-	},
+	CorrespondingFields = private.COOKING_LINK,
 	items = {
 		{
 			name = ALIL["Stamina"],
@@ -1865,9 +1848,7 @@ data["FirstAid"] = {
 	ContentType = PROF_SEC_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = PROF_ITTYPE,
-	CorrespondingFields = {
-		[2] = "FirstAidBC",
-	},
+	CorrespondingFields = private.FIRSTAID_LINK,
 	items = {
 		{
 			name = ALIL["First Aid"],
@@ -1895,9 +1876,7 @@ data["RoguePoisons"] = {
 	ContentType = PROF_CLASS_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = PROF_ITTYPE,
-	CorrespondingFields = {
-		[2] = "RoguePoisonsBC",
-	},
+	CorrespondingFields = private.ROGUE_POISONS_LINK,
 	items = {
 		{
 			name = ALIL["Poisons"],

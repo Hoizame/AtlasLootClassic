@@ -88,6 +88,14 @@ local IngameLocales = {
 	["Poisons"] = GetSpellInfo(2842),
 	["Jewelcrafting"] = GetSpellInfo(353970) or UNKNOWN,
 
+	-- sub Professions
+	["Armorsmith"] = GetSpellInfo(9788),
+	["Weaponsmith"] = GetSpellInfo(9787),
+	["Hammersmith"] = GetSpellInfo(17041),
+	["Axesmith"] = GetSpellInfo(17041),
+	["Swordsmith"] = GetSpellInfo(17039),
+
+
 	-- ######################################################################
 	-- Months
 	-- ######################################################################
