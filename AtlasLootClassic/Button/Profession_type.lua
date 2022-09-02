@@ -67,9 +67,11 @@ function Prof.OnClear(button)
 	button.Profession = nil
 	button.SpellID = nil
 	button.ItemID = nil
+	button.filterItemID = nil
 	button.secButton.Profession = nil
 	button.secButton.SpellID = nil
 	button.secButton.ItemID = nil
+	button.secButton.filterItemID = nil
 
 	if button.ExtraFrameShown then
 		AtlasLoot.Button:ExtraItemFrame_ClearFrame()
@@ -96,11 +98,11 @@ function Prof.OnMouseAction(button, mouseButton)
 	if not mouseButton then return end
 	mouseButton = ProfClickHandler:Get(mouseButton)
 	if mouseButton == "ChatLink" then
-		if button.ItemID and button.type ~= "secButton" then
+		if button.SpellID then
+			AtlasLoot.Button:AddChatLink(Profession.GetChatLink(button.SpellID))
+		elseif button.ItemID and button.type ~= "secButton" then
 			local itemInfo, itemLink = GetItemInfo(button.ItemID)
 			AtlasLoot.Button:AddChatLink(itemLink)
-		elseif button.SpellID then
-			AtlasLoot.Button:AddChatLink(Profession.GetChatLink(button.SpellID))
 		end
 	elseif mouseButton == "WoWHeadLink" then
 		AtlasLoot.Button:OpenWoWHeadLink(button, "spell", button.SpellID)
@@ -126,6 +128,7 @@ function Prof.Refresh(button)
 	if Profession.IsProfessionSpell(button.SpellID) then
 		local _, itemName, itemQuality, itemTexture, itemCount
 		button.ItemID = Profession.GetCreatedItemID(button.SpellID)
+		button.filterItemID = button.ItemID
 		if button.ItemID then
 			itemName, _, itemQuality, _, _, _, _, _, _, itemTexture = GetItemInfo(button.ItemID)
 			if not itemName then

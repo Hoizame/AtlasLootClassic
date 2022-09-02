@@ -12,3 +12,7 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 - add Wrath T Sets (beta1)
 - add Wrath factions (beta2)
 - add Wrath Collection items (beta2)
+- move Mining and Herbalism into Gathering Professions (beta3)
+- add support for switching game version and stay at the same entry if exist (beta3)
+- add Wrath professions
+- fix filter button for crafting items

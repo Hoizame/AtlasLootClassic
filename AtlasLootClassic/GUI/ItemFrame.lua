@@ -79,8 +79,8 @@ function ItemFrame.UpdateFilterItem(buttonID, reset)
 	local button = ItemFrame.frame.ItemButtons[buttonID] or buttonID
 	if not button then return end
 	if AtlasLoot.db.GUI.classFilter then
-		if button and button.__atlaslootinfo and not button.__atlaslootinfo.filterIgnore and button.__atlaslootinfo.type and button.__atlaslootinfo.type[1] == "Item" then
-			if button.ItemID and ClassFilter.ClassCanUseItem(GUI.frame.contentFrame.clasFilterButton.selectedClassName, button.ItemID) then
+		if button and button.__atlaslootinfo and not button.__atlaslootinfo.filterIgnore and button.__atlaslootinfo.type and (button.__atlaslootinfo.type[1] == "Item" or button.filterItemID) then
+			if (button.filterItemID or button.ItemID) and ClassFilter.ClassCanUseItem(GUI.frame.contentFrame.clasFilterButton.selectedClassName, button.filterItemID or button.ItemID) then
 				button:SetAlpha(1)
 			else
 				button:SetAlpha(0.33)
