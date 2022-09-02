@@ -14,5 +14,6 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 - add Wrath Collection items (beta2)
 - move Mining and Herbalism into Gathering Professions (beta3)
 - add support for switching game version and stay at the same entry if exist (beta3)
-- add Wrath professions
-- fix filter button for crafting items
+- update professions with Wrath data (beta3)
+- add Inscription (beta3)
+- fix filter button for crafting items (beta3)

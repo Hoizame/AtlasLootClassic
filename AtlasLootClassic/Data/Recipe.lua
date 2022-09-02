@@ -2138,6 +2138,7 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
 		[45105] = {8,450,63206}, -- Pattern: Savior's Slippers
 		[45774] = {8,435,63924}, -- Pattern: Emerald Bag
 		[46027] = {10,450,64441}, -- Formula: Enchant Weapon - Blade Ward
+		[46108] = {15,350,64051}, -- Technique: Rituals of the New Moon
 		[46348] = {10,450,64579}, -- Formula: Enchant Weapon - Blood Draining
 		[46710] = {6,1,65454}, -- Recipe: Bread of the Dead
 		[46803] = {6,1,66038}, -- Recipe: Spice Bread Stuffing
@@ -2274,6 +2275,9 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
 		[49972] = {2,450,70566}, -- Plans: Hellfrozen Bonegrinders
 		[49973] = {2,450,70567}, -- Plans: Pillars of Might
 		[49974] = {2,450,70568}, -- Plans: Boots of Kingly Upheaval
+		[50166] = {15,250,71101}, -- Technique: Glyph of Eternal Water
+		[50167] = {15,375,71015}, -- Technique: Glyph of Rapid Rejuvenation
+		[50168] = {15,375,71102}, -- Technique: Glyph of Quick Decay
 		[50406] = {10,375,71692}, -- Formula: Enchant Gloves - Angler
 		[52022] = {9,450,72952}, -- Plans: Shatter Rounds
 		[52023] = {9,450,72953}, -- Plans: Iceblade Arrow

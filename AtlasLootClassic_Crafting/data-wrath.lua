@@ -1302,6 +1302,199 @@ data["JewelcraftingWrath"] = {
 	}
 }
 
+data["InscriptionWrath"] = {
+	name = ALIL["Inscription"],
+	ContentType = PROF_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = PROF_ITTYPE,
+	CorrespondingFields = private.INSCRIPTION_LINK,
+	items = {
+		{
+			name = AL["Scrolls"],
+			[NORMAL_DIFF] = {
+				{ 1, 69385 },	-- Runescroll of Fortitude
+				{ 3, 60337 },	-- Scroll of Recall III
+				{ 4, 60336 },	-- Scroll of Recall II
+				{ 5, 48248 },	-- Scroll of Recall
+
+				{ 16, 58483 },	-- Scroll of Agility VIII
+				{ 17, 58482 },	-- Scroll of Agility VII
+				{ 18, 58481 },	-- Scroll of Agility VI
+				{ 19, 58480 },	-- Scroll of Agility V
+				{ 20, 58478 },	-- Scroll of Agility IV
+				{ 21, 58476 },	-- Scroll of Agility III
+				{ 22, 58473 },	-- Scroll of Agility II
+				{ 23, 58472 },	-- Scroll of Agility
+
+				{ 101, 50604 },	-- Scroll of Intellect VIII
+				{ 102, 50603 },	-- Scroll of Intellect VII
+				{ 103, 50602 },	-- Scroll of Intellect VI
+				{ 104, 50601 },	-- Scroll of Intellect V
+				{ 105, 50600 },	-- Scroll of Intellect IV
+				{ 106, 50599 },	-- Scroll of Intellect III
+				{ 107, 50598 },	-- Scroll of Intellect II
+				{ 108, 48114 },	-- Scroll of Intellect
+
+				{ 116, 50611 },	-- Scroll of Spirit VIII
+				{ 117, 50610 },	-- Scroll of Spirit VII
+				{ 118, 50609 },	-- Scroll of Spirit VI
+				{ 119, 50608 },	-- Scroll of Spirit V
+				{ 120, 50607 },	-- Scroll of Spirit IV
+				{ 121, 50606 },	-- Scroll of Spirit III
+				{ 122, 50605 },	-- Scroll of Spirit II
+				{ 123, 48116 },	-- Scroll of Spirit
+
+				{ 201, 50620 },	-- Scroll of Stamina VIII
+				{ 202, 50619 },	-- Scroll of Stamina VII
+				{ 203, 50618 },	-- Scroll of Stamina VI
+				{ 204, 50617 },	-- Scroll of Stamina V
+				{ 205, 50616 },	-- Scroll of Stamina IV
+				{ 206, 50614 },	-- Scroll of Stamina III
+				{ 207, 50612 },	-- Scroll of Stamina II
+				{ 208, 45382 },	-- Scroll of Stamina
+
+				{ 216, 58491 },	-- Scroll of Strength VIII
+				{ 217, 58490 },	-- Scroll of Strength VII
+				{ 218, 58489 },	-- Scroll of Strength VI
+				{ 219, 58488 },	-- Scroll of Strength V
+				{ 220, 58487 },	-- Scroll of Strength IV
+				{ 221, 58486 },	-- Scroll of Strength III
+				{ 222, 58485 },	-- Scroll of Strength II
+				{ 223, 58484 },	-- Scroll of Strength
+			}
+		},
+		{
+			name = ALIL["Off Hand"],
+			[NORMAL_DIFF] = {
+				{ 1, 59498 },	-- Faces of Doom
+				{ 2, 59497 },	-- Iron-bound Tome
+				{ 3, 64051 },	-- Rituals of the New Moon
+				{ 4, 64053 },	-- Twilight Tome
+				{ 5, 59496 },	-- Book of Clever Tricks
+				{ 6, 59495 },	-- Hellfire Tome
+				{ 7, 59494 },	-- Manual of Clouds
+				{ 8, 59493 },	-- Stormbound Tome
+				{ 9, 59490 },	-- Book of Stars
+				{ 10, 59489 },	-- Fire Eater's Guide
+				{ 11, 59486 },	-- Royal Guide of Escape Routes
+				{ 12, 59484 },	-- Tome of Kings
+				{ 13, 59478 },	-- Book of Survival
+				{ 14, 59475 },	-- Tome of the Dawn
+				{ 15, 58565 },	-- Mystic Tome
+			}
+		},
+		{
+			name = AL["Cards"],
+			[NORMAL_DIFF] = {
+				{ 1, 59504 },	-- Darkmoon Card of the North
+				{ 2, 59503 },	-- Greater Darkmoon Card
+				{ 3, 59502 },	-- Darkmoon Card
+				{ 16, 59491 },	-- Shadowy Tarot
+				{ 17, 59487 },	-- Arcane Tarot
+				{ 18, 48247 },	-- Mysterious Tarot
+				{ 19, 59480 },	-- Strange Tarot
+			}
+		},
+		{
+			name = ALIL["WARRIOR"],
+			[NORMAL_DIFF] = {
+				{ 1, 58347 }, -- Glyph of Mighty Victory
+				{ 2, 58345 }, -- Glyph of Gushing Wound
+				{ 3, 68166 }, -- Glyph of Thunder Strike
+			}
+		},
+		{
+			name = ALIL["PALADIN"],
+			[NORMAL_DIFF] = {
+				{ 1, 57032 }, -- Glyph of the Luminous Charger
+				{ 2, 58316 }, -- Glyph of Fire From the Heavens
+				{ 3, 58312 }, -- Glyph of Winged Vengeance
+			}
+		},
+		{
+			name = ALIL["HUNTER"],
+			[NORMAL_DIFF] = {
+				{ 1, 56948 }, -- Glyph of the Orca
+				{ 2, 58287 }, -- Glyph of the Ursol Chameleon
+			}
+		},
+		{
+			name = ALIL["ROGUE"],
+			[NORMAL_DIFF] = {
+				{ 1, 64260 }, -- Glyph of Disguise
+			}
+		},
+		{
+			name = ALIL["PRIEST"],
+			[NORMAL_DIFF] = {
+				{ 1, 58320 }, -- Glyph of Shackle Undead
+			}
+		},
+		{
+			name = ALIL["DEATHKNIGHT"],
+			[NORMAL_DIFF] = {
+				{ 1, 57224 }, -- Glyph of Foul Menagerie
+				{ 2, 57209 }, -- Glyph of the Geist
+			}
+		},
+		{
+			name = ALIL["SHAMAN"],
+			[NORMAL_DIFF] = {
+				{ 1, 64261 }, -- Glyph of Deluge
+				{ 2, 58332 }, -- Glyph of the Spectral Wolf
+			}
+		},
+		{
+			name = ALIL["MAGE"],
+			[NORMAL_DIFF] = {
+				{ 1, 56986 }, -- Glyph of Crittermorph
+			}
+		},
+		{
+			name = ALIL["WARLOCK"],
+			[NORMAL_DIFF] = {
+				{ 1, 57263 }, -- Glyph of Felguard
+				{ 2, 64250 }, -- Glyph of Crimson Banish
+				{ 3, 58341 }, -- Glyph of Soulwell
+			}
+		},
+		{
+			name = ALIL["DRUID"],
+			[NORMAL_DIFF] = {
+				{ 1, 56948 }, -- Glyph of the Orca
+				{ 2, 58287 }, -- Glyph of the Ursol Chameleon
+			}
+		},
+		{
+			name = AL["Ink"],
+			[NORMAL_DIFF] = {
+				{ 1, 57716 },	-- Snowfall Ink
+				{ 2, 57715 },	-- Ink of the Sea
+				{ 3, 57714 },	-- Darkflame Ink
+				{ 4, 57713 },	-- Ethereal Ink
+				{ 5, 57712 },	-- Ink of the Sky
+				{ 6, 57711 },	-- Shimmering Ink
+				{ 7, 57710 },	-- Fiery Ink
+				{ 8, 57709 },	-- Celestial Ink
+				{ 9, 57708 },	-- Royal Ink
+				{ 10, 57707 },	-- Jadefire Ink
+				{ 11, 57706 },	-- Dawnstar Ink
+				{ 12, 57704 },	-- Lion's Ink
+				{ 13, 57703 },	-- Hunter's Ink
+				{ 14, 53462 },	-- Midnight Ink
+				{ 15, 52843 },	-- Moonglow Ink
+			}
+		},
+		{
+			name = AL["Misc"],
+			[NORMAL_DIFF] = {
+				{ 1, 59387 },	-- Certificate of Ownership
+				{ 16, 52739 },	-- Armor Vellum
+			}
+		},
+	}
+}
+
 data["MiningWrath"] = {
 	name = ALIL["Mining"],
 	ContentType = PROF_GATH_CONTENT,

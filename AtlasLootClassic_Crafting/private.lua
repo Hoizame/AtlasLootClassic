@@ -71,3 +71,7 @@ private.ROGUE_POISONS_LINK = {
     [AtlasLoot.BC_VERSION_NUM]          = "RoguePoisonsBC",
     [AtlasLoot.WRATH_VERSION_NUM]       = "RoguePoisonsWrath",
 }
+
+private.INSCRIPTION_LINK = {
+    [AtlasLoot.WRATH_VERSION_NUM]       = "InscriptionWrath",
+}
