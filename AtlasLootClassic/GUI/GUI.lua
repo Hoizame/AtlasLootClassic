@@ -683,6 +683,7 @@ end
 -- DropDowns/Select
 -- ################################
 -- Called when the module is loaded
+local linkedContentLastBoss = nil
 LoadAtlasLootModule = function(abc)
 	local moduleList = AtlasLoot.ItemDB:GetModuleList(db.selected[1])
 	local moduleData = AtlasLoot.ItemDB:Get(db.selected[1])
@@ -698,6 +699,9 @@ LoadAtlasLootModule = function(abc)
 	if linkedContent then
 		db.selected[2] = linkedContent
 		foundDbValue = true
+		if GUI.frame.boss then
+			linkedContentLastBoss = GUI.frame.boss:GetSelected()
+		end
 	end
 	for i = 1, #moduleList do
 		content = moduleList[i]
@@ -812,6 +816,7 @@ local function SubCatSelectFunction(self, id, arg)
 	local moduleData = AtlasLoot.ItemDB:Get(db.selected[1])
 	local data = {}
 	local dataExtra
+	local selectedBoss
 
 	local tabVal
 	for i = 1, #moduleData[id].items do
@@ -837,6 +842,10 @@ local function SubCatSelectFunction(self, id, arg)
 					tt_text = tabVal.info-- or AtlasLoot.EncounterJournal:GetBossInfo(tabVal.EncounterJournalID)
 				}
 				if not data[#data].name then data[#data] = nil end
+				if linkedContentLastBoss and data[#data] and data[#data].name  == linkedContentLastBoss.name then
+					selectedBoss = i
+					linkedContentLastBoss = nil
+				end
 			end
 		end
 	end
@@ -846,9 +855,10 @@ local function SubCatSelectFunction(self, id, arg)
 	--if dataExtra then
 		GUI.frame.extra:SetData(dataExtra)
 	--end
-	db.selected[3] = data[1] and data[1].id or 1
-	GUI.frame.boss:SetData(data, db.selected[3])
+	linkedContentLastBoss = nil
 
+	db.selected[3] = selectedBoss or (data[1] and data[1].id or 1)
+	GUI.frame.boss:SetData(data, db.selected[3])
 end
 
 local function BossSelectFunction(self, id, arg)

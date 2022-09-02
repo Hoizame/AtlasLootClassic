@@ -98,6 +98,12 @@ local function SetSelected(self, id, dataNum, startSelect)
 	end
 end
 
+local function GetSelected(self)
+	if self.selected and self.data then
+		return self.data[self.selected[1]]
+	end
+end
+
 local function SetNext(self)
 	if self.selected and self.data[ self.selected[1] + 1 ] then
 		self:SetSelected(nil, self.selected[1]+1)
@@ -410,6 +416,7 @@ function GUI.CreateSelect()
 	self.SetBgColor = SetBgColor
 	-- set the selected entry (id, dataNum, startSelect)
 	self.SetSelected = SetSelected
+	self.GetSelected = GetSelected
 	-- goto next entry ()
 	self.SetNext = SetNext
 	self.CheckIfNext = CheckIfNext
