@@ -46,6 +46,14 @@ local PRICE_INFO_LIST = {
     ["EmblemOfTriumph"] = { currencyID = 301 }, -- Emblem of Triumph
     ["EmblemOfConquest"] = { currencyID = 221 }, -- Emblem of Conquest
     ["EmblemOfFrost"] = { currencyID = 341 }, -- Emblem of Frost
+
+    ["cpvpAlterac"] = { currencyID = 121 }, -- Alterac Valley Mark of Honor
+	["cpvpWarsong"] = { currencyID = 125 }, -- Warsong Gulch Mark of Honor
+	["cpvpArathi"] = { currencyID = 122 }, -- Arathi Basin Mark of Honor
+	["cpvpEye"] = { currencyID = 123 }, -- Eye of the Storm Mark of Honor
+	["cpvpWintergrasp"] = { currencyID = 126 }, -- Wintergrasp Mark of Honor
+	["cpvpIsle"] = { currencyID = 321 }, -- Isle of Conquest Mark of Honor
+	["cpvpStrand"] = { currencyID = 124 }, -- Strand of the Ancients Mark of Honor
 }
 
 local VENDOR_PRICE_FORMAT = {}
