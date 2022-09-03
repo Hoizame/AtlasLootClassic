@@ -16,5 +16,5 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 - add support for switching game version and stay at the same entry if exist (beta3)
 - update professions with Wrath data (beta3)
 - add Inscription (beta3/beta4)
-- fix filter button for crafting items (beta3)
-- add PvP Arena Season 5 (beta5)
+- fix filter button for crafting items (beta4)
+- add PvP Arena Season 5 (beta4)
