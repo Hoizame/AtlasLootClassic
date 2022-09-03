@@ -1494,6 +1494,16 @@ data["Mounts"] = {
 				{ 19,  43516 }, -- Brutal Nether Drake
 			},
 		}),
+		AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM, {
+			name = format("%s - %s", AL["PvP"], AL["Wrath"]),
+			NameColor = BLUE,
+			[NORMAL_DIFF] = {
+				{ 1,  46708 }, -- Deadly Gladiator's Frost Wyrm
+				{ 2,  46171 }, -- Furious  Gladiator's Frost Wyrm
+				{ 3,  47840 }, -- Relentless Gladiator's Frost Wyrm
+				{ 4,  50435 }, -- Wrathful Gladiator's Frost Wyrm
+			},
+		}),
 		{ -- Drops
 			name = AL["Drops"],
 			[NORMAL_DIFF] = {

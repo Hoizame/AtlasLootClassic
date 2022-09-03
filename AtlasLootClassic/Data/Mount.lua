@@ -229,6 +229,11 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
         [43952] = 27785, -- Reins of the Azure Drake
         [43953] = 25832, -- Reins of the Blue Drake
         [44160] = 28044, -- Reins of the Red Proto-Drake
+
+        [46708] = 25511, -- Deadly Gladiator's Frost Wyrm
+        [46171] = 25593, -- Furious  Gladiator's Frost Wyrm
+        [47840] = 29794, -- Relentless Gladiator's Frost Wyrm
+        [50435] = 31047, -- Wrathful Gladiator's Frost Wyrm
     }
 end
 
