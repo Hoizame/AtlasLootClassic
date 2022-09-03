@@ -18,3 +18,4 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 - add Inscription (beta3/beta4)
 - fix filter button for crafting items (beta4)
 - add PvP Arena Season 5 (beta4)
+- add Atlas_WrathoftheLichKing support (beta5)
