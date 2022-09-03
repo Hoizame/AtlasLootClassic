@@ -32,7 +32,7 @@ local TT_INFO_ENTRY = "|cFFCFCFCF%s:|r %s"
 
 local RIGHT_SELECTION_ENTRYS = {
 	DIFF_MAX = 4,
-	DIFF_MIN = 2,
+	DIFF_MIN = AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM, 3, 2),
 	DIFF_DEFAULT = 2,
 	BOSS_MAX = 24,
 }
@@ -874,8 +874,8 @@ local function BossSelectFunction(self, id, arg)
 		if moduleData[db.selected[2]].items[id][count] then
 			data[ #data+1 ] = {
 				id = count,
-				name = difficultys[count].name,
-				tt_title = difficultys[count].name
+				name = moduleData[db.selected[2]].items[id][count].diffName or difficultys[count].name,
+				tt_title = moduleData[db.selected[2]].items[id][count].diffName or difficultys[count].name
 			}
 			diffCount = diffCount + 1
 		end
@@ -899,8 +899,8 @@ local function ExtraSelectFunction(self, id, arg)
 		if moduleData[db.selected[2]].items[id][count] then
 			data[ #data+1 ] = {
 				id = count,
-				name = difficultys[count].name,
-				tt_title = difficultys[count].name
+				name = moduleData[db.selected[2]].items[id][count].diffName or difficultys[count].name,
+				tt_title = moduleData[db.selected[2]].items[id][count].diffName or difficultys[count].name
 			}
 			diffCount = diffCount + 1
 		end

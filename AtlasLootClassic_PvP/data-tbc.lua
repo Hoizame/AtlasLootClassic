@@ -11,10 +11,10 @@ local format = string.format
 -- ----------------------------------------------------------------------------
 -- AddOn namespace.
 -- ----------------------------------------------------------------------------
-local addonname = ...
+local addonname, private = ...
 local AtlasLoot = _G.AtlasLoot
 if AtlasLoot:GameVersion_LT(AtlasLoot.BC_VERSION_NUM) then return end
-local data = AtlasLoot.ItemDB:Add(addonname, 1, 2)
+local data = AtlasLoot.ItemDB:Add(addonname, 1, AtlasLoot.BC_VERSION_NUM)
 
 local AL = AtlasLoot.Locales
 local ALIL = AtlasLoot.IngameLocales
@@ -97,7 +97,7 @@ local PVP_GEMS = {	-- Gems
 	},
 }
 
-data["BCCHonorSet"] = {
+data["HonorSetBCC"] = {
 	name = AL["Honor"],
 	ContentType = GENERAL_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
@@ -244,7 +244,7 @@ data["BCCHonorSet"] = {
 	},
 }
 
-data["BCCReputationSet"] = {
+data["ReputationSetBCC"] = {
 	name = AL["Reputation"],
 	ContentType = GENERAL_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
@@ -279,9 +279,7 @@ data["PvPMountsBCC"] = {
 	name = ALIL["Mounts"],
 	ContentType = GENERAL_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
-	CorrespondingFields = {
-		[1] = "Mounts",
-	},
+	CorrespondingFields = private.MOUNTS_LINK,
 	items = {
 		{ -- PvPMountsPvP
 			name = ALIL["Mounts"],
