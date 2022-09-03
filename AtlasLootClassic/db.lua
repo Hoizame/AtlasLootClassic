@@ -1,6 +1,7 @@
 AtlasLoot.AtlasLootDBDefaults = {
 	profile = {
 		showIDsInTT = false,
+		showIDsInTT_Global = false,
 		showLvlRange = true,
 		enableBossLevel = false,
 		showMinEnterLvl = false,
@@ -11,6 +12,8 @@ AtlasLoot.AtlasLootDBDefaults = {
 		showDropRate = true,
 		enableAtlasMapIntegration = true,
 		enableColorsInNames = true,
+		showItemLvlInTT = false,
+		showItemLvlInTT_Global = false,
 		ContentPhase = {
 			enableOnLootTable = true,
 			enableOnItems = true,

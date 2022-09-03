@@ -227,7 +227,10 @@ function Item.OnEnter(button, owner)
 		tooltip:AddDoubleLine(AL["Droprate:"], format(WHITE_TEXT, button.Droprate.."%"))
 	end
 	if AtlasLoot.db.showIDsInTT then
-		tooltip:AddDoubleLine("ItemID:", format(WHITE_TEXT, button.ItemID or 0))
+		tooltip:AddDoubleLine(AL["ItemID:"], format(WHITE_TEXT, button.ItemID or 0))
+	end
+	if AtlasLoot.db.showItemLvlInTT and button.ItemLvl then
+		tooltip:AddDoubleLine(AL["Item level:"], format(WHITE_TEXT, button.ItemLvl or 0))
 	end
 	if AtlasLoot.db.ContentPhase.enableTT and ContentPhase:GetForItemID(button.ItemID) then
 		tooltip:AddDoubleLine(AL["Content phase:"], format(WHITE_TEXT, ContentPhase:GetForItemID(button.ItemID)))
@@ -262,11 +265,13 @@ function Item.OnClear(button)
 	button.ItemString = nil
 	button.SetData = nil
 	button.RawName = nil
+	button.ItemLvl = nil
 	button.secButton.ItemID = nil
 	button.secButton.Droprate = nil
 	button.secButton.ItemString = nil
 	button.secButton.SetData = nil
 	button.secButton.RawName = nil
+	button.secButton.ItemLvl = nil
 	button.secButton.pvp:Hide()
 
 	itemIsOnEnter = nil
@@ -316,6 +321,10 @@ function Item.Refresh(button)
 		return false
 	end
 	button.RawName = itemName
+
+	if itemLevel and itemLevel > 0 then
+		button.ItemLvl = itemLevel
+	end
 
 	button.overlay:Show()
 	button.overlay:SetQualityBorder(itemQuality)

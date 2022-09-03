@@ -29,6 +29,7 @@ local TOKEN_NUMBER_DUMMY = AtlasLoot.Data.Token.GetTokenDummyNumberRange()
 
 -- locals
 local TT_F = "%s |cFF00ccff%s|r"
+local WHITE_TEXT = "|cffffffff%s|r"
 local DUMMY_ICON = "Interface\\Icons\\INV_Misc_QuestionMark"
 local TEXTURE_ICON_F, TEXTURE_ICON_FN, ATLAS_ICON_F = "|T%s:0|t ", "|T%d:0|t ", "|A:%s:0:0|a "
 local TT_F_PRICE_T, TT_F_PRICE_TN = "|T%s:0|t|cFFffffff%s|r", "|T%d:0|t|cFFffffff%s|r"
@@ -305,6 +306,15 @@ local function OnTooltipSetItem_Hook(self)
             end
         end
 
+        if AtlasLoot.db.showIDsInTT and AtlasLoot.db.showIDsInTT_Global or AtlasLoot.db.showItemLvlInTT and AtlasLoot.db.showItemLvlInTT_Global then
+            local itemName, itemLink, itemQuality, itemLevel = GetItemInfo(item)
+            if AtlasLoot.db.showIDsInTT and AtlasLoot.db.showIDsInTT_Global then
+                self:AddDoubleLine(AL["ItemID:"], format(WHITE_TEXT, item))
+            end
+            if itemLevel and itemLevel > 0 and AtlasLoot.db.showItemLvlInTT and AtlasLoot.db.showItemLvlInTT_Global then
+                self:AddDoubleLine(AL["Item level:"], format(WHITE_TEXT, itemLevel))
+            end
+        end
         if TooltipTextCache[item] then
             if Sources.db.showLineBreak then
                 self:AddLine(" ")
