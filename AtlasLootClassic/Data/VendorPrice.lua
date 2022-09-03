@@ -2201,6 +2201,7 @@ end
 -- Vendor scan
 --################################
 local VendorLockList = {}
+local SourcesAddon
 local UnitGUID, GetMerchantNumItems, GetMerchantItemID, GetMerchantItemCostInfo, GetMerchantItemCostItem, GetItemInfoInstant =
       UnitGUID, GetMerchantNumItems, GetMerchantItemID, GetMerchantItemCostInfo, GetMerchantItemCostItem, GetItemInfoInstant
 
@@ -2211,13 +2212,12 @@ local function GetNpcIDFromGuid(guid)
 	end
 end
 
-
-
 function VendorPrice.ScanShownVendor()
     local targetGUID = UnitGUID("target")
     if not targetGUID then return end
     local npcID = GetNpcIDFromGuid(targetGUID)
     if not npcID or VendorLockList[npcID] then return end
+    if not SourcesAddon then SourcesAddon = AtlasLoot.Addons:GetAddon("Sources") end
 
     for itemNum = 1, GetMerchantNumItems() do
         local vItemID = GetMerchantItemID(itemNum)
@@ -2247,7 +2247,9 @@ function VendorPrice.ScanShownVendor()
         if itemCost ~= "" then
             AtlasLoot.dbGlobal.VendorPrice[vItemID] = itemCost
         end
-
+        if SourcesAddon then
+            SourcesAddon:ItemSourcesUpdated(vItemID)
+        end
     end
 
     VendorLockList[npcID] = true

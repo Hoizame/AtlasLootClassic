@@ -366,4 +366,9 @@ function Sources:GetSourceTypes()
     return SOURCE_TYPES
 end
 
+function Sources:ItemSourcesUpdated(itemID)
+    if not itemID then return end
+    TooltipTextCache[itemID] = nil
+end
+
 Sources:Finalize()
