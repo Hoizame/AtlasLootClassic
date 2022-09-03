@@ -31,8 +31,8 @@ local PRICE_INFO_LIST = {
 	-- pvp
 	["honor"] = { currencyID = 1901 }, -- Honor
 	["arena"] = { currencyID = 1900 },  -- Arena
-	["honorH"] = { currencyID = 1901 }, -- Honor / Horde
-	["honorA"] = { currencyID = 1901 }, -- Honor / Alli
+	--["honorH"] = { currencyID = 1901 }, -- Honor / Horde
+	--["honorA"] = { currencyID = 1901 }, -- Honor / Alli
 	["pvpAlterac"] = { itemID = 20560 }, -- Alterac Valley Mark of Honor
 	["pvpWarsong"] = { itemID = 20558 }, -- Warsong Gulch Mark of Honor
 	["pvpArathi"] = { itemID = 20559 }, -- Arathi Basin Mark of Honor
@@ -40,6 +40,12 @@ local PRICE_INFO_LIST = {
 
     --- Wrath
     ["championsSeal"] = { currencyID = 241 }, -- Champion's Seal
+
+    ["EmblemOfHeroism"] = { currencyID = 101 }, -- Emblem of Heroism
+    ["EmblemOfValor"] = { currencyID = 102 }, -- Emblem of Valor
+    ["EmblemOfTriumph"] = { currencyID = 301 }, -- Emblem of Triumph
+    ["EmblemOfConquest"] = { currencyID = 221 }, -- Emblem of Conquest
+    ["EmblemOfFrost"] = { currencyID = 341 }, -- Emblem of Frost
 }
 
 local VENDOR_PRICE_FORMAT = {}
@@ -82,6 +88,7 @@ local VENDOR_LIST_I = {
     -- ## Wrath
     34772, -- The Sunreavers
     34881, -- The Silver Covenant
+    12778, -- Lieutenant Rachel Vaccar
 }
 local VENDOR_LIST = {}
 for i = 1, #VENDOR_LIST_I do
@@ -2228,6 +2235,7 @@ end
 --################################
 -- Vendor scan
 --################################
+local VendorLockList = {}
 local UnitGUID, GetMerchantNumItems, GetMerchantItemID, GetMerchantItemCostInfo, GetMerchantItemCostItem, GetItemInfoInstant =
       UnitGUID, GetMerchantNumItems, GetMerchantItemID, GetMerchantItemCostInfo, GetMerchantItemCostItem, GetItemInfoInstant
 
@@ -2238,31 +2246,34 @@ local function GetNpcIDFromGuid(guid)
 	end
 end
 
+
+
 function VendorPrice.ScanShownVendor()
     local targetGUID = UnitGUID("target")
     if not targetGUID then return end
     local npcID = GetNpcIDFromGuid(targetGUID)
-    if not npcID or not VENDOR_LIST[npcID] then return end
-    -- print("Vendor Scanned", npcID)
+    if not npcID or VendorLockList[npcID] then return end
 
-    for i = 1, GetMerchantNumItems() do
-        local vItemID = GetMerchantItemID(i)
+    for itemNum = 1, GetMerchantNumItems() do
+        local vItemID = GetMerchantItemID(itemNum)
         local itemCost = ""
-        for j = 1, GetMerchantItemCostInfo(i) do
-            local itemTexture, itemValue, itemLink, currencyName = GetMerchantItemCostItem(i, j)
+        for costNum = 1, GetMerchantItemCostInfo(itemNum) do
+            local itemTexture, itemValue, itemLink, currencyName = GetMerchantItemCostItem(itemNum, costNum)
             if itemLink then
-                local bItemID = GetItemInfoInstant(itemLink)
-                local fString
-                if VENDOR_PRICE_FORMAT[bItemID] then
-                    fString = VENDOR_PRICE_FORMAT[bItemID]
+                local costItemID = GetItemInfoInstant(itemLink)
+                local formatString
+                if VENDOR_PRICE_FORMAT[costItemID] then
+                    formatString = VENDOR_PRICE_FORMAT[costItemID]
                 elseif VENDOR_PRICE_FORMAT[itemTexture] then
-                    fString = VENDOR_PRICE_FORMAT[itemTexture]
+                    formatString = VENDOR_PRICE_FORMAT[itemTexture]
+                else
+                    break -- end here as there is a unknown currency
                 end
-                if fString then
+                if formatString then
                     if itemCost == "" then
-                        itemCost = format(fString, itemValue or 0)
+                        itemCost = format(formatString, itemValue or 0)
                     else
-                        itemCost = itemCost..":"..format(fString, itemValue or 0)
+                        itemCost = itemCost..":"..format(formatString, itemValue or 0)
                     end
                 end
             end
@@ -2271,7 +2282,10 @@ function VendorPrice.ScanShownVendor()
         if itemCost ~= "" then
             AtlasLoot.dbGlobal.VendorPrice[vItemID] = itemCost
         end
+
     end
+
+    VendorLockList[npcID] = true
 end
 
 VendorPrice.EventFrame = CreateFrame("FRAME")

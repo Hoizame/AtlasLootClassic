@@ -20,3 +20,4 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 - add PvP Arena Season 5 (beta4)
 - add Atlas_WrathoftheLichKing support (beta5)
 - add option to show ItemID and ItemLevel in tooltips
+- add Vendor scan for every currency registered by AtlasLoot
