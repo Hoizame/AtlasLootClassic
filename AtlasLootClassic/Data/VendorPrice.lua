@@ -60,41 +60,6 @@ for k, v in pairs(PRICE_INFO_LIST) do
     end
 end
 
-local VENDOR_LIST_I = {
-    -- # Badge of Justice
-    18525,
-    -- # PvP
-    -- Alliance
-    12784, 12785, 12783, 12781, 12782, 13217,
-    -- Horde
-    12794, 12795, 12793, 12796, 12792, 13219, 14581,
-    --- Arena
-    -- 20278, 27668>
-    23367, -- Grella <Skyguard Quartermaster>
-    18382, -- Mycah <Sporeggar Quartermaster> - glowcap
-    23428, -- Jho'nass <Ogri'la Quartermaster> - Apexis
-    19773, -- Spirit Sage Zran - spirit shards
-    20240, -- Trader Narasu <Kurenai Quartermaster> / Alli
-    17904, -- Fedryen Swiftspear <Cenarion Expedition Quartermaster>
-    20241, -- Horde
-    -- Warsong
-    14753, 14754, -- Illiyana Moonblaze <Silverwing Supply Officer> & Kelm Hargunth <Warsong Supply Officer>
-    -- Arathi
-    15127, 15126,
-    -- Arena
-    27668, 12777,
-    --Brewfest
-    24495, 23710,
-    -- ## Wrath
-    34772, -- The Sunreavers
-    34881, -- The Silver Covenant
-    12778, -- Lieutenant Rachel Vaccar
-}
-local VENDOR_LIST = {}
-for i = 1, #VENDOR_LIST_I do
-    VENDOR_LIST[ VENDOR_LIST_I[i] ] = true
-end
-
 -- updated with script
 local VENDOR_PRICES_AUTO, VENDOR_PRICES_AUTO_RAW = AtlasLoot:GetGameVersionDataTable()
 VENDOR_PRICES_AUTO_RAW.CLASSIC = {

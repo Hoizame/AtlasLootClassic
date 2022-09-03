@@ -4,7 +4,7 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 
 [Changelog history](https://github.com/Hoizame/AtlasLootClassic/blob/master/AtlasLootClassic/Documentation/Release_Notes.md)
 
-## v3.0.0 (Aug, XX, 2022)
+## v3.0.0 (Sep, XX, 2022)
 
 - Move to a multiple game version build (beta1)
 - Wrath support Version (beta1)
@@ -19,5 +19,6 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 - fix filter button for crafting items (beta4)
 - add PvP Arena Season 5 (beta4)
 - add Atlas_WrathoftheLichKing support (beta5)
-- add option to show ItemID and ItemLevel in tooltips
-- add Vendor scan for every currency registered by AtlasLoot
+- add option to show ItemID and ItemLevel in tooltips (beta5)
+- add Vendor scan for every currency registered by AtlasLoot (beta5)
+- fix game version detection for wrath (beta5)
