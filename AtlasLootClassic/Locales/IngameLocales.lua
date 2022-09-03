@@ -97,6 +97,12 @@ local IngameLocales = {
 	["Swordsmith"] = GetSpellInfo(17039),
 	["Gnomish Engineer"] = GetSpellInfo(20220),
 
+	-- glyphs
+	["Minor Glyph"] = GLOBAL["MINOR_GLYPH"],
+	["Minor Glyphs"] = GLOBAL["MINOR_GLYPHS"],
+	["Major Glyph"] = GLOBAL["MAJOR_GLYPH"],
+	["Major Glyphs"] = GLOBAL["MAJOR_GLYPHS"],
+
 
 	-- ######################################################################
 	-- Months
