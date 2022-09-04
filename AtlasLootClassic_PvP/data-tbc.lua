@@ -1031,6 +1031,7 @@ data["ArenaS4PvP"] = {
 				{ 7,    2000577 }, -- Rogue
 				{ 9,    2000586 }, -- Hunter
 				{ 11,   2000567 }, -- Warrior
+				AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM, { 13,   760 }), -- Deathknight
 				{ 16,   2000579 }, -- Mage
 				{ 18,   2000685 }, -- Druid / Heal
 				{ 19,   2000585 }, -- Druid / Owl
