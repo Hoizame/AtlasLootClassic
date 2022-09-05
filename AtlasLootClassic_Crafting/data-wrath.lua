@@ -539,7 +539,7 @@ data["EngineeringWrath"] = {
 			[NORMAL_DIFF] = {
 				{ 1, 54999 },	-- Hyperspeed Accelerators
 				{ 2, 54998 },	-- Hand-Mounted Pyro Rocket
-				{ 3, 55016 },	-- Reticulated Armor Webbing
+				{ 3, 63770 },	-- Reticulated Armor Webbing
 				{ 5, 55016 },	-- Nitro Boosts
 				{ 16, 54736 },	-- Personal Electromagnetic Pulse Generator
 				{ 17, 54793 },	-- Frag Belt
