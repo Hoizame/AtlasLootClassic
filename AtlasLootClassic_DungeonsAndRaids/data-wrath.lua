@@ -2263,7 +2263,7 @@ data["ForgeOfSouls"] = {
 	AtlasModule = ATLAS_MODULE_NAME,
 	AtlasMapID = "FHTheForgeOfSouls",
 	AtlasMapFile = {"FHTheForgeOfSouls", "IcecrownEnt"},
-	LevelRange = {80, 80, 80},
+	LevelRange = {75, 79, 80},
 	items = {
         { -- FoSBronjahm / 268
             name = AL["Bronjahm"],
@@ -2346,7 +2346,7 @@ data["PitOfSaron"] = {
 	AtlasModule = ATLAS_MODULE_NAME,
 	AtlasMapID = "FHPitOfSaron",
 	AtlasMapFile = {"FHPitOfSaron", "IcecrownEnt"},
-	LevelRange = {80, 80, 80},
+	LevelRange = {75, 79, 80},
 	items = {
         { -- PoSGarfrost / 271
             name = AL["Forgemaster Garfrost"],
@@ -2449,7 +2449,7 @@ data["HallsOfReflection"] = {
 	AtlasModule = ATLAS_MODULE_NAME,
 	AtlasMapID = "FHHallsOfReflection",
 	AtlasMapFile = {"FHHallsOfReflection", "IcecrownEnt"},
-	LevelRange = {80, 80, 80},
+	LevelRange = {75, 79, 80},
 	items = {
         { -- HoRFalric / 275
             name = AL["Falric"],
