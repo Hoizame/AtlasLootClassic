@@ -545,7 +545,7 @@ data["EngineeringWrath"] = {
 				{ 17, 54793 },	-- Frag Belt
 				{ 19, 55002 },	-- Flexweave Underlay
 				{ 20, 63765 },	-- Springy Arachnoweave
-				{ 21, 67839 },	-- Mind Amplification Dish
+				{ 22, 67839 },	-- Mind Amplification Dish
 			}
 		},
 		{
