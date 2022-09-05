@@ -2081,7 +2081,7 @@ data["TrialoftheChampion"] = {
 	AtlasModule = ATLAS_MODULE_NAME,
 	AtlasMapID = "TrialOfTheChampion",
 	AtlasMapFile = {"TrialOfTheChampion"},
-	LevelRange = {80, 80, 80},
+	LevelRange = {75, 79, 80},
 	items = {
         { -- TrialoftheChampionChampions / 213
             name = AL["Grand Champions"],
