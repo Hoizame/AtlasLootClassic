@@ -535,6 +535,20 @@ data["EngineeringWrath"] = {
 			}
 		},
 		{
+			name = ALIL["Armor"].." - "..AL["Enhancements"],
+			[NORMAL_DIFF] = {
+				{ 1, 54999 },	-- Hyperspeed Accelerators
+				{ 2, 54998 },	-- Hand-Mounted Pyro Rocket
+				{ 3, 63770 },	-- Reticulated Armor Webbing
+				{ 5, 55016 },	-- Nitro Boosts
+				{ 16, 54736 },	-- Personal Electromagnetic Pulse Generator
+				{ 17, 54793 },	-- Frag Belt
+				{ 19, 55002 },	-- Flexweave Underlay
+				{ 20, 63765 },	-- Springy Arachnoweave
+				{ 22, 67839 },	-- Mind Amplification Dish
+			}
+		},
+		{
 			name = ALIL["Weapon"].." - "..AL["Enhancements"],
 			[NORMAL_DIFF] = {
 				{ 1, 56478 },	-- Heartseeker Scope
