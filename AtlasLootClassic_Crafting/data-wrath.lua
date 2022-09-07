@@ -1307,6 +1307,35 @@ data["JewelcraftingWrath"] = {
 			}
 		},
 		{
+			name = AL["Raw Gems"],
+			TableType = NORMAL_ITTYPE,
+			[NORMAL_DIFF] = {
+				{ 1, 41334 }, --  Earthsiege Diamond
+				{ 2, 41266 }, --  Skyflare Diamond
+				{ 3, 36783 }, --  Northsea Pearl
+				{ 5, 36925 }, --  Majestic Zircon
+				{ 6, 36924 }, -- Sky Sapphire
+				{ 7, 36923 }, --  Chalcedony
+				{ 9, 36934 }, --  Eye of Zul
+				{ 10, 36933 }, --  Forest Emerald
+				{ 11, 36932 }, --  Dark Jade
+				{ 13, 36931 }, --  Ametrine
+				{ 14, 36930 }, --  Monarch Topaz
+				{ 15, 36929 }, --  Huge Citrine
+				{ 16, 42225 }, --  Dragon's Eye
+				{ 17, 36784 }, --  Siren's Tear
+				{ 20, 36928 }, --  Dreadstone
+				{ 21, 36927 }, --  Twilight Opal
+				{ 22, 36926 }, --  Shadow Crystal
+				{ 24, 36919 }, --  Cardinal Ruby
+				{ 25, 36918 }, --  Scarlet Ruby
+				{ 26, 36917 }, --  Bloodstone
+				{ 28, 36922 }, --  King's Amber
+				{ 29, 36921 }, --  Autumn's Glow
+				{ 30, 36920 }, --  Sun Crystal
+			}
+		},
+		{
 			name = AL["Misc"],
 			[NORMAL_DIFF] = {
 				{ 1, 62242 },	-- Icy Prism

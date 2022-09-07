@@ -38,6 +38,8 @@ local PROF_GATH_CONTENT = data:AddContentType(ALIL["Gathering Professions"], ATL
 local PROF_SEC_CONTENT = data:AddContentType(AL["Secondary Professions"], ATLASLOOT_SECPROFESSION_COLOR)
 local PROF_CLASS_CONTENT = data:AddContentType(AL["Class Professions"], ATLASLOOT_CLASSPROFESSION_COLOR)
 
+local SPLIT_FORMAT = "%s - %s"
+
 local GEM_FORMAT1 = ALIL["Gems"].." - %s"
 local GEM_FORMAT2 = ALIL["Gems"].." - %s & %s"
 
@@ -1482,6 +1484,62 @@ data["JewelcraftingBC"] = {
 				{ 25, 41429 }, -- Purified Shadow Pearl (350)
 				{ 26, 41420 }, -- Purified Jaggal Pearl (325)
 				{ 28, 46803 }, -- Regal Nightseye (350)
+			}
+		},
+		{
+			name = format(SPLIT_FORMAT, AL["Raw Gems"], AL["Classic"]),
+			TableType = NORMAL_ITTYPE,
+			[NORMAL_DIFF] = {
+				{ 1, 12363 }, -- Arcane Crystal
+				{ 2, 12800 }, --  Azerothian Diamond
+				{ 3, 12364 }, --  Huge Emerald
+				{ 4, 12361 }, --  Blue Sapphire
+				{ 5, 12799 }, --  Large Opal
+				{ 6, 7910 }, --  Star Ruby
+				{ 7, 11382 }, --  Blood of the Mountain
+				{ 8, 19774 }, --  Souldarite
+				{ 9, 7909 }, --  Aquamarine
+				{ 10, 23158 }, --  Solid Aquamarine
+				{ 11, 23159 }, --  Sparkling Aquamarine
+				{ 12, 13926 }, --  Golden Pearl
+				{ 13, 3864 }, --  Citrine
+				{ 14, 7971 }, --  Black Pearl
+				{ 15, 1529 }, --  Jade
+				{ 16, 1705 }, --  Lesser Moonstone
+				{ 17, 1206 }, --  Moss Agate
+				{ 18, 5500 }, --  Iridescent Pearl
+				{ 19, 1210 }, --  Shadowgem
+				{ 20, 5498 }, --  Small Lustrous Pearl
+				{ 21, 818 }, --  Tigerseye
+				{ 22, 774 }, --  Malachite
+			}
+		},
+		{
+			name = AL["Raw Gems"],
+			TableType = NORMAL_ITTYPE,
+			[NORMAL_DIFF] = {
+				{ 1, 25867 }, --  Earthstorm Diamond
+				{ 2, 25868 }, --  Skyfire Diamond
+				{ 5, 32228 }, -- Empyrean Sapphire
+				{ 6, 23438 }, --  Star of Elune
+				{ 7, 23117 }, --  Azure Moonstone
+				{ 9, 32249 }, --  Seaspray Emerald
+				{ 10, 23437 }, --  Talasite
+				{ 11, 23079 }, --  Deep Peridot
+				{ 13, 32231 }, --  Pyrestone
+				{ 14, 23439 }, --  Noble Topaz
+				{ 15, 21929 }, --  Flame Spessarite
+				{ 16, 24479 }, --  Shadow Pearl
+				{ 17, 24478 }, --  Jaggal Pearl
+				{ 20, 32230 }, --  Shadowsong Amethyst
+				{ 21, 23441 }, --  Nightseye
+				{ 22, 23107 }, --  Shadow Draenite
+				{ 24, 32227 }, --  Crimson Spinel
+				{ 25, 23436 }, --  Living Ruby
+				{ 26, 23077 }, --  Blood Garnet
+				{ 28, 32229 }, --  Lionseye
+				{ 29, 23440 }, --  Dawnstone
+				{ 30, 23112 }, --  Golden Draenite
 			}
 		},
 		{
