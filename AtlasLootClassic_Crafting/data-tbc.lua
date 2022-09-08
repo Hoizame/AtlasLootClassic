@@ -1742,6 +1742,61 @@ data["FirstAidBC"] = {
 	}
 }
 
+data["FishingBC"] = {
+	name = ALIL["Fishing"],
+	ContentType = PROF_SEC_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = NORMAL_ITTYPE,
+	CorrespondingFields = private.FISHING_LINK,
+	items = {
+		{
+			name = ALIL["Fishing"],
+			[NORMAL_DIFF] = {
+				{ 1, 6533 }, --  Aquadynamic Fish Attractor
+				{ 2, 34861 }, -- Sharpened Fish Hook
+				{ 3, 6532 }, --  Bright Baubles
+				{ 4, 7307 }, --  Flesh Eating Worm
+				{ 5, 6811 }, --  Aquadynamic Fish Lens
+				{ 6, 6530 }, --  Nightcrawlers
+				{ 16, 34109 }, -- Weather-Beaten Journal
+				{ 18, 19971 }, -- High Test Eternium Fishing Line
+				{ 19, 34836 }, -- Spun Truesilver Fishing Line
+				{ 27, 27532 }, -- Master Fishing - The Art of Angling
+				{ 28, 16082 }, -- Artisan Fishing - The Way of the Lure
+				{ 29, 16083 }, -- Expert Fishing - The Bass and You
+				{ 30, 46054 }, -- Journeyman Fishing - Fishing for Dummies
+			}
+		},
+		{
+			name = ALIL["Fishing Pole"],
+			[NORMAL_DIFF] = {
+				{ 1, 19970 }, -- Arcanite Fishing Pole
+				{ 2, 19022 }, -- Nat Pagle's Extreme Angler FC-5000
+				{ 3, 25978 }, -- Seth's Graphite Fishing Pole
+				{ 4, 6367 }, -- Big Iron Fishing Pole
+				{ 5, 6366 }, -- Darkwood Fishing Pole
+				{ 6, 6365 }, -- Strong Fishing Pole
+				{ 7, 12225 }, -- Blump Family Fishing Pole
+				{ 8, 6256 }, -- Fishing Pole
+			}
+		},
+		{
+			name = AL["Fishes"],
+			[NORMAL_DIFF] = {
+				{ 1, 33823 }, -- Bloodfin Catfish
+				{ 2, 33824 }, -- Crescent-Tail Skullfish
+				{ 3, 27422 }, -- Barbed Gill Trout
+				{ 4, 27435 }, -- Figluster's Mudfish
+				{ 5, 27439 }, -- Furious Crawdad
+				{ 6, 27438 }, -- Golden Darter
+				{ 7, 27437 }, -- Icefin Bluefish
+				{ 8, 27425 }, -- Spotted Feltail
+				{ 9, 27429 }, -- Zangarian Sporefish
+			}
+		},
+	}
+}
+
 data["RoguePoisonsBC"] = {
 	name = format("|c%s%s|r", RAID_CLASS_COLORS["ROGUE"].colorStr, ALIL["ROGUE"]),
 	ContentType = PROF_CLASS_CONTENT,

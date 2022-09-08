@@ -2058,3 +2058,71 @@ data["FirstAidWrath"] = {
 		},
 	}
 }
+
+data["FishingWrath"] = {
+	name = ALIL["Fishing"],
+	ContentType = PROF_SEC_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = NORMAL_ITTYPE,
+	CorrespondingFields = private.FISHING_LINK,
+	items = {
+		{
+			name = ALIL["Fishing"],
+			[NORMAL_DIFF] = {
+				{ 1, 6533 }, --  Aquadynamic Fish Attractor
+				{ 2, 34861 }, -- Sharpened Fish Hook
+				{ 3, 46006 }, -- Glow Worm
+				{ 4, 6532 }, --  Bright Baubles
+				{ 5, 7307 }, --  Flesh Eating Worm
+				{ 6, 6811 }, --  Aquadynamic Fish Lens
+				{ 7, 6530 }, --  Nightcrawlers
+				{ 16, 34109 }, -- Weather-Beaten Journal
+				{ 18, 19971 }, -- High Test Eternium Fishing Line
+				{ 19, 34836 }, -- Spun Truesilver Fishing Line
+				{ 27, 27532 }, -- Master Fishing - The Art of Angling
+				{ 28, 16082 }, -- Artisan Fishing - The Way of the Lure
+				{ 29, 16083 }, -- Expert Fishing - The Bass and You
+				{ 30, 46054 }, -- Journeyman Fishing - Fishing for Dummies
+			}
+		},
+		{
+			name = ALIL["Fishing Pole"],
+			[NORMAL_DIFF] = {
+				{ 1, 19970 }, -- Arcanite Fishing Pole
+				{ 2, 44050 }, -- Mastercraft Kalu'ak Fishing Pole
+				{ 3, 45992 }, -- Jeweled Fishing Pole
+				{ 4, 45991 }, -- Bone Fishing Pole
+				{ 5, 45858 }, -- Nat's Lucky Fishing Pole
+				{ 6, 19022 }, -- Nat Pagle's Extreme Angler FC-5000
+				{ 7, 25978 }, -- Seth's Graphite Fishing Pole
+				{ 8, 6367 }, -- Big Iron Fishing Pole
+				{ 9, 6366 }, -- Darkwood Fishing Pole
+				{ 10, 6365 }, -- Strong Fishing Pole
+				{ 11, 12225 }, -- Blump Family Fishing Pole
+				{ 12, 6256 }, -- Fishing Pole
+				{ 13, 45120 }, -- Basic Fishing Pole
+			}
+		},
+		{
+			name = AL["Fishes"],
+			[NORMAL_DIFF] = {
+				{ 1, 43572 }, -- Magic Eater
+				{ 2, 43571 }, -- Sewer Carp
+				{ 3, 43647 }, -- Shimmering Minnow
+				{ 4, 43652 }, -- Slippery Eel
+				{ 5, 43646 }, -- Fountain Goldfish
+				{ 6, 41812 }, -- Barrelhead Goby
+				{ 7, 41808 }, -- Bonescale Snapper
+				{ 8, 41805 }, -- Borean Man O' War
+				{ 9, 41807 }, -- Dragonfin Angelfish
+				{ 10, 41810 }, -- Fangtooth Herring
+				{ 11, 41809 }, -- Glacial Salmon
+				{ 12, 41802 }, -- Imperial Manta Ray
+				{ 13, 41806 }, -- Musselback Sculpin
+				{ 14, 41813 }, -- Nettlefish
+				{ 15, 41803 }, -- Rockfin Grouper
+				{ 16, 45907 }, -- Mostly-eaten Bonescale Snapper :D
+			}
+		},
+	}
+}

@@ -1871,6 +1871,69 @@ data["FirstAid"] = {
 	}
 }
 
+data["Fishing"] = {
+	name = ALIL["Fishing"],
+	ContentType = PROF_SEC_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = NORMAL_ITTYPE,
+	CorrespondingFields = private.FISHING_LINK,
+	items = {
+		{
+			name = ALIL["Fishing"],
+			[NORMAL_DIFF] = {
+				{ 1, 6533 }, --  Aquadynamic Fish Attractor
+				{ 2, 6532 }, --  Bright Baubles
+				{ 3, 7307 }, --  Flesh Eating Worm
+				{ 4, 6811 }, --  Aquadynamic Fish Lens
+				{ 5, 6530 }, --  Nightcrawlers
+				{ 16, 34109 }, -- Weather-Beaten Journal
+				{ 18, 19971 }, -- High Test Eternium Fishing Line
+				{ 27, 27532 }, -- Master Fishing - The Art of Angling
+				{ 28, 16082 }, -- Artisan Fishing - The Way of the Lure
+				{ 29, 16083 }, -- Expert Fishing - The Bass and You
+				{ 30, 46054 }, -- Journeyman Fishing - Fishing for Dummies
+			}
+		},
+		{
+			name = ALIL["Fishing Pole"],
+			[NORMAL_DIFF] = {
+				{ 1, 19970 }, -- Arcanite Fishing Pole
+				{ 2, 19022 }, -- Nat Pagle's Extreme Angler FC-5000
+				{ 3, 6367 }, -- Big Iron Fishing Pole
+				{ 4, 6366 }, -- Darkwood Fishing Pole
+				{ 5, 6365 }, -- Strong Fishing Pole
+				{ 6, 12225 }, -- Blump Family Fishing Pole
+				{ 7, 6256 }, -- Fishing Pole
+			}
+		},
+		{
+			name = AL["Fishes"],
+			[NORMAL_DIFF] = {
+				{ 1, 13888 }, -- Darkclaw Lobster
+				{ 2, 13890 }, -- Plated Armorfish
+				{ 3, 13889 }, -- Raw Whitescale Salmon
+				{ 4, 13754 }, -- Raw Glossy Mightfish
+				{ 5, 13759 }, -- Raw Nightfin Snapper
+				{ 6, 13758 }, -- Raw Redgill
+				{ 7, 4603 }, -- Raw Spotted Yellowtail
+				{ 8, 13756 }, -- Raw Summer Bass
+				{ 9, 13760 }, -- Raw Sunscale Salmon
+				{ 10, 7974 }, -- Zesty Clam Meat
+				{ 11, 21153 }, -- Raw Greater Sagefish
+				{ 12, 8365 }, -- Raw Mithril Head Trout
+				{ 13, 6362 }, -- Raw Rockscale Cod
+				{ 14, 6308 }, -- Raw Bristle Whisker Catfish
+				{ 15, 21071 }, -- Raw Sagefish
+				{ 16, 6317 }, -- Raw Loch Frenzy
+				{ 17, 6289 }, -- Raw Longjaw Mud Snapper
+				{ 18, 6361 }, -- Raw Rainbow Fin Albacore
+				{ 19, 6291 }, -- Raw Brilliant Smallfish
+				{ 20, 6303 }, -- Raw Slitherskin Mackerel
+			}
+		},
+	}
+}
+
 data["RoguePoisons"] = {
 	name = format("|c%s%s|r", RAID_CLASS_COLORS["ROGUE"].colorStr, ALIL["ROGUE"]),
 	ContentType = PROF_CLASS_CONTENT,

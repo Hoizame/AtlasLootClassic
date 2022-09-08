@@ -66,6 +66,12 @@ private.FIRSTAID_LINK = {
     [AtlasLoot.WRATH_VERSION_NUM]       = "FirstAidWrath",
 }
 
+private.FISHING_LINK = {
+    [AtlasLoot.CLASSIC_VERSION_NUM]     = "Fishing",
+    [AtlasLoot.BC_VERSION_NUM]          = "FishingBC",
+    [AtlasLoot.WRATH_VERSION_NUM]       = "FishingWrath",
+}
+
 private.ROGUE_POISONS_LINK = {
     [AtlasLoot.CLASSIC_VERSION_NUM]     = "RoguePoisons",
     [AtlasLoot.BC_VERSION_NUM]          = "RoguePoisonsBC",

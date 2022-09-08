@@ -22,4 +22,5 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 - add option to show ItemID and ItemLevel in tooltips (beta5)
 - add Vendor scan for every currency registered by AtlasLoot (beta5)
 - fix game version detection for wrath (beta5)
-- add raw gems into jewelcrafting #222
+- add Fishing profession (beta6)
+- #222 add raw gems into jewelcrafting (beta6)
