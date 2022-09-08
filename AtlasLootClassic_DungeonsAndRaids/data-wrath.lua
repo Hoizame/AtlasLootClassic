@@ -5116,7 +5116,7 @@ data["TrialoftheCrusader"] = {
                     { 9, "INV_Box_01", nil, format(AL["%s Attempts left"], "45-49"), format(AL["Includes the loot from %s"], "1-44") },
                     { 10, 47557 }, -- Regalia of the Grand Conqueror
                     { 11, 47558 }, -- Regalia of the Grand Protector
-                    { 25, 47559 }, -- RRegalia of the Grand Vanquisher
+                    { 25, 47559 }, -- Regalia of the Grand Vanquisher
                     { 12, "INV_Box_01", nil, format(AL["%s Attempts left"], "50"), format(AL["Includes the loot from %s"], "1-49") },
                     { 13, 47548 }, -- Garrosh's Rage
                     { 14, 47546 }, -- Sylvanas' Cunning
@@ -5142,7 +5142,7 @@ data["TrialoftheCrusader"] = {
                     { 9, "INV_Box_01", nil, format(AL["%s Attempts left"], "45-49"), format(AL["Includes the loot from %s"], "1-44") },
                     { 10, 47557 }, -- Regalia of the Grand Conqueror
                     { 11, 47558 }, -- Regalia of the Grand Protector
-                    { 25, 47559 }, -- RRegalia of the Grand Vanquisher
+                    { 25, 47559 }, -- Regalia of the Grand Vanquisher
                     { 12, "INV_Box_01", nil, format(AL["%s Attempts left"], "50"), format(AL["Includes the loot from %s"], "1-49") },
                     { 13, 47547 }, -- Varian's Furor
                     { 14, 47545 }, -- Vereesa's Dexterity

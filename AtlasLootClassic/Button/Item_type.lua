@@ -329,6 +329,11 @@ function Item.Refresh(button)
 	button.overlay:Show()
 	button.overlay:SetQualityBorder(itemQuality)
 
+	-- check if its a heirloom
+	if itemQuality == 7 then
+		button.ItemString = GetItemString(button.ItemID, true)
+	end
+
 	if button.type == "secButton" then
 		button:SetNormalTexture(itemTexture or DUMMY_ITEM_ICON)
 

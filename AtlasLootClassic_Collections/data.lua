@@ -1764,8 +1764,8 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
 			{
 				name = AL["Legendarys"],
 				[NORMAL_ITTYPE] = {
-				{ 1, 49623, "ac4623" },	-- Shadowmourne
-				{ 16, 46017, "ac3142" },	-- Val'anyr, Hammer of Ancient Kings
+					{ 1, 49623, "ac4623" },	-- Shadowmourne
+					{ 16, 46017, "ac3142" },	-- Val'anyr, Hammer of Ancient Kings
 				},
 			},
 		},
@@ -1857,6 +1857,91 @@ data["Legendarys"] = {
 		},
 	},
 }
+
+if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
+	data["HeirloomWrath"] = {
+		name = AL["Heirloom"],
+		ContentType = COLLECTIONS_CONTENT,
+		LoadDifficulty = LOAD_DIFF,
+		TableType = NORMAL_ITTYPE,
+		gameVersion = AtlasLoot.WRATH_VERSION_NUM,
+		items = {
+			{
+				name = ALIL["Armor"],
+				[NORMAL_ITTYPE] = {
+					{ 1, 42985 }, -- Tattered Dreadmist Mantle
+					{ 2, 44107 }, -- Exquisite Sunderseer Mantle
+					{ 16, 48691 }, -- Tattered Dreadmist Robe
+
+					{ 4, 42952 }, -- Stained Shadowcraft Spaulders
+					{ 5, 42984 }, -- Preened Ironfeather Shoulders
+					{ 6, 44103 }, -- Exceptional Stormshroud Shoulders
+					{ 7, 44105 }, -- Lasting Feralheart Spaulders
+					{ 19, 48689 }, -- Stained Shadowcraft Tunic
+					{ 20, 48687 }, -- Preened Ironfeather Breastplate
+
+					{ 9, 42950 }, -- Champion Herod's Shoulder
+					{ 10, 42951 }, -- Mystical Pauldrons of Elements
+					{ 11, 44102 }, -- Aged Pauldrons of The Five Thunders
+					{ 12, 44101 }, -- Prized Beastmaster's Mantle
+					{ 24, 48677 }, -- Champion's Deathdealer Breastplate
+					{ 25, 48683 }, -- Mystical Vest of Elements
+
+					{ 14, 42949 }, -- Polished Spaulders of Valor
+					{ 15, 44100 }, -- Pristine Lightforge Spaulders
+					{ 29, 48685 }, -- Polished Breastplate of Valor
+					{ 30, 44099 }, -- Strengthened Stockade Pauldrons
+				},
+			},
+			{
+				name = ALIL["Weapon"],
+				[NORMAL_ITTYPE] = {
+					{ 1, 44096 }, -- Battleworn Thrash Blade
+					{ 2, 48716 }, -- Venerable Mass of McGowan
+					{ 3, 42944 }, -- Balanced Heartseeker
+					{ 4, 44091 }, -- Sharpened Scarlet Kris
+
+					{ 16, 42945 }, -- Venerable Dal'Rend's Sacred Charge
+					{ 17, 42948 }, -- Devout Aurastone Hammer
+					{ 18, 44094 }, -- The Blessed Hammer of Grace
+
+					{ 6, 42947 }, -- Dignified Headmaster's Charge
+					{ 7, 44095 }, -- Grand Staff of Jordan
+
+					{ 21, 42946 }, -- Charmed Ancient Bone Bow
+					{ 22, 44093 }, -- Upgraded Dwarven Hand Cannon
+
+					{ 9, 42943 }, -- Bloodied Arcanite Reaper
+					{ 11, 48718 }, -- Repurposed Lava Dredger
+
+					{ 24, 44092 }, -- Reforged Truesilver Champion
+					{ 25, 38691 }, -- Ancestral Claymore
+				},
+			},
+			{
+				name = ALIL["Trinket"],
+				[NORMAL_ITTYPE] = {
+					{ 1, 42992 }, -- Discerning Eye of the Beast
+					{ 2, 42991 }, -- Swift Hand of Justice
+				},
+			},
+			{
+				name = ALIL["Finger"],
+				[NORMAL_ITTYPE] = {
+					{ 1, 50255 }, -- Dread Pirate Ring
+				},
+			},
+			{
+				name = AL["Misc"],
+				[NORMAL_ITTYPE] = {
+					{ 1, 49177 }, -- Tome of Cold Weather Flight
+				},
+			},
+		},
+	}
+end
+
+
 
 data["GurubashiArena"] = {
 	name = AL["Gurubashi Arena"],

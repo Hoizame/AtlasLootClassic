@@ -23,4 +23,5 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 - add Vendor scan for every currency registered by AtlasLoot (beta5)
 - fix game version detection for wrath (beta5)
 - add Fishing profession (beta6)
+- add Heirlooms into Collections (beta6)
 - #222 add raw gems into jewelcrafting (beta6)
