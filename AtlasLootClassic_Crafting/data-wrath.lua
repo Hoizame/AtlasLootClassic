@@ -350,6 +350,15 @@ data["BlacksmithingWrath"] = {
 				{ 10, 55834 },	-- Cobalt Bracers
 			},
 		},
+		{
+			name = AL["Enhancements"],
+			[NORMAL_DIFF] = {
+				{ 1, 55656 },	-- Eternal Belt Buckle
+				{ 3, 55641 },	-- Socket Gloves
+				{ 16, 62202 },	-- Titanium Plating
+				{ 18, 55628 },	-- Socket Bracer
+			}
+		},
 		{ -- Sets
 			name = AL["Sets"],
 			ExtraList = true,
@@ -410,6 +419,10 @@ data["EnchantingWrath"] = {
 				{ 7, 44500 },	-- Enchant Cloak - Superior Agility
 				{ 8, 44582 },	-- Enchant Cloak - Minor Power
 				{ 9, 60609 },	-- Enchant Cloak - Speed
+
+				{ 16, 60609 },	-- Enchant Cloak - Speed
+				{ 17, 44582 },	-- Enchant Cloak - Spell Piercing
+				{ 18, 60663 },	-- Enchant Cloak - Major Agility
 			}
 		},
 		{
@@ -535,20 +548,6 @@ data["EngineeringWrath"] = {
 			}
 		},
 		{
-			name = ALIL["Armor"].." - "..AL["Enhancements"],
-			[NORMAL_DIFF] = {
-				{ 1, 54999 },	-- Hyperspeed Accelerators
-				{ 2, 54998 },	-- Hand-Mounted Pyro Rocket
-				{ 3, 63770 },	-- Reticulated Armor Webbing
-				{ 5, 55016 },	-- Nitro Boosts
-				{ 16, 54736 },	-- Personal Electromagnetic Pulse Generator
-				{ 17, 54793 },	-- Frag Belt
-				{ 19, 55002 },	-- Flexweave Underlay
-				{ 20, 63765 },	-- Springy Arachnoweave
-				{ 22, 67839 },	-- Mind Amplification Dish
-			}
-		},
-		{
 			name = ALIL["Weapon"].." - "..AL["Enhancements"],
 			[NORMAL_DIFF] = {
 				{ 1, 56478 },	-- Heartseeker Scope
@@ -590,6 +589,20 @@ data["EngineeringWrath"] = {
 				{ 4, 56460 },	-- Cobalt Frag Bomb
 				{ 16, 56468 },	-- Box of Bombs
 				{ 17, "i44951" }
+			}
+		},
+		{
+			name = ALIL["Engineering"].." - "..AL["Enhancements"],
+			[NORMAL_DIFF] = {
+				{ 1, 54999 },	-- Hyperspeed Accelerators
+				{ 2, 54998 },	-- Hand-Mounted Pyro Rocket
+				{ 3, 63770 },	-- Reticulated Armor Webbing
+				{ 5, 55016 },	-- Nitro Boosts
+				{ 16, 54736 },	-- Personal Electromagnetic Pulse Generator
+				{ 17, 54793 },	-- Frag Belt
+				{ 19, 55002 },	-- Flexweave Underlay
+				{ 20, 63765 },	-- Springy Arachnoweave
+				{ 22, 67839 },	-- Mind Amplification Dish
 			}
 		},
 		{
@@ -743,6 +756,9 @@ data["TailoringWrath"] = {
 			[NORMAL_DIFF] = {
 				{ 1, 56034 },	-- Master's Spellthread
 				{ 2, 56010 },	-- Azure Spellthread
+				{ 4, 55777 },	-- Schwertwallgarn
+				{ 5, 55642 },	-- Hell leuchtendes Garn
+				{ 6, 55769 },	-- Dunkel glühendes Garn
 				{ 16, 56039 },	-- Sanctified Spellthread
 				{ 17, 56008 },	-- Shining Spellthread
 			}
@@ -979,6 +995,12 @@ data["LeatherworkingWrath"] = {
 				{ 5, 50964 },	-- Jormungar Leg Armor
 				{ 6, 50966 },	-- Nerubian Leg Armor
 				{ 8, 50963 },	-- Heavy Borean Armor Kit
+
+				{ 10, 57683 },	-- Fur Lining - Attack Power
+				{ 11, 57691 },	-- Fur Lining - Spell Power
+
+				{ 25, 60584 },	-- Nerubian Leg Reinforcements
+				{ 26, 60583 },	-- Jormungar Leg Reinforcements
 			},
 		},
 		{
@@ -1868,6 +1890,15 @@ data["InscriptionWrath"] = {
 				{ 14, 53462 },	-- Midnight Ink
 				{ 15, 52843 },	-- Moonglow Ink
 			}
+		},
+		{
+			name = AL["Enhancements"],
+			[NORMAL_DIFF] = {
+				{ 1, 61117 },	-- Master's Inscription of the Axe
+				{ 2, 61119 },	-- Master's Inscription of the Pinnacle
+				{ 16, 61120 },	-- Master's Inscription of the Storm
+				{ 17, 61118 },	-- Master's Inscription of the Crag
+			},
 		},
 		{
 			name = AL["Misc"],
