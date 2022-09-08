@@ -106,6 +106,12 @@ function ItemDB:Get(addonName)
 	return ItemDB.Storage[addonName]
 end
 
+function ItemDB:GetBossTable(addonName, contentName, boss)
+	if ItemDB.Storage[addonName] and ItemDB.Storage[addonName][contentName] and ItemDB.Storage[addonName][contentName].items[boss] then
+		return ItemDB.Storage[addonName][contentName].items[boss]
+	end
+end
+
 function ItemDB:GetDifficulty(addonName, contentName, boss, dif)
 	dif = dif or 1
 	local diffs = ItemDB.Storage[addonName]:GetDifficultys()

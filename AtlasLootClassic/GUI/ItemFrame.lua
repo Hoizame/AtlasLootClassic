@@ -19,6 +19,7 @@ local PAGE_NAME_PAGE = "%s [%d/%d]"
 local PAGE_NAME_DIFF = "%s (%s)"
 local PAGE_NAME_DIFF_PAGE = "%s (%s) [%d/%d]"
 local FILTER_ALPHA = 0.33
+local DEFAULT_HEADER_COLOR = {0.82, 0.82, 0.82, 0.5}
 
 function ItemFrame:Create()
 	if self.frame then return self.frame end
@@ -54,6 +55,20 @@ function ItemFrame:Create()
 			frame.ItemButtons[i]:SetPoint("TOPLEFT", frame.ItemButtons[i-1], "BOTTOMLEFT", 0, -2)
 		end
 	end
+	-- headerlines
+	frame.HeaderLines = {}
+	for i = 1, 15 do
+		local line
+		line = frame:CreateTexture(nil, "BACKGROUND")
+		line:SetPoint("TOPLEFT", frame.ItemButtons[i], "TOPLEFT", 0, 0)
+		line:SetPoint("BOTTOMRIGHT", frame.ItemButtons[i+15], "BOTTOMRIGHT", 0, 0)
+		line:SetColorTexture(unpack(DEFAULT_HEADER_COLOR))
+		line:SetDrawLayer(GUI.frame.contentFrame.itemBG:GetDrawLayer(), 1)
+		--GUI.frame.contentFrame.itemBG
+		line:Hide()
+		frame.HeaderLines[i] = line
+	end
+
 	return self.frame
 end
 
@@ -145,6 +160,7 @@ function ItemFrame:Refresh(skipProtect)
 	AtlasLoot.db.GUI.selected[5] = AtlasLoot.db.GUI.selected[5] or 0
 	ItemFrame.nextPage = nil
 	local page = AtlasLoot.db.GUI.selected[5] * 100 -- Page number for first items on a page are <1, 101, 201, 301, 401, ...>
+	local bossData = AtlasLoot.ItemDB:GetBossTable(AtlasLoot.db.GUI.selected[1], AtlasLoot.db.GUI.selected[2], AtlasLoot.db.GUI.selected[3])
 	local items, tableType, diffData = ItemDB:GetItemTable(AtlasLoot.db.GUI.selected[1], AtlasLoot.db.GUI.selected[2], AtlasLoot.db.GUI.selected[3], AtlasLoot.db.GUI.selected[4])
 	if items then
 
@@ -207,6 +223,25 @@ function ItemFrame:Refresh(skipProtect)
 		end
 		]]--
 	end
+	-- check for headers
+	if ItemFrame.headerShown then
+		for i = 1, #ItemFrame.frame.HeaderLines do
+			ItemFrame.frame.HeaderLines[i]:Hide()
+		end
+	end
+	local headerLines = items.headerLines or bossData.headerLines
+	if headerLines then
+		local line
+		for i = 1, #headerLines do
+			line = ItemFrame.frame.HeaderLines[headerLines[i]]
+			if line then
+				line:SetColorTexture(unpack(headerLines.color or DEFAULT_HEADER_COLOR))
+				line:Show()
+			end
+		end
+		ItemFrame.headerShown = true
+	end
+
 	ItemFrame.UpdateFilter()
 end
 

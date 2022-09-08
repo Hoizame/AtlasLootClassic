@@ -32,7 +32,7 @@ local TT_INFO_ENTRY = "|cFFCFCFCF%s:|r %s"
 
 local RIGHT_SELECTION_ENTRYS = {
 	DIFF_MAX = 4,
-	DIFF_MIN = AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM, 3, 2),
+	DIFF_MIN = 2,
 	DIFF_DEFAULT = 2,
 	BOSS_MAX = 24,
 }
@@ -814,6 +814,7 @@ local function SubCatSelectFunction(self, id, arg)
 	db.selected[2] = id
 	db.selected[3] = 0
 	local moduleData = AtlasLoot.ItemDB:Get(db.selected[1])
+	local difficultys = moduleData:GetDifficultys()
 	local data = {}
 	local dataExtra
 	local selectedBoss
@@ -822,6 +823,18 @@ local function SubCatSelectFunction(self, id, arg)
 	for i = 1, #moduleData[id].items do
 		tabVal = moduleData[id].items[i]
 		if tabVal then
+			-- fix scaling jumps of diff list and get max number of user diffs
+			if not tabVal.__numDiffEntrys then
+				local counter = 0
+				for count = 1, #difficultys do
+					if tabVal[count] then
+						counter = counter + 1
+					end
+				end
+
+				moduleData[id].__numDiffEntrys = counter > (moduleData[id].__numDiffEntrys or 0) and counter or moduleData[id].__numDiffEntrys
+				tabVal.__numDiffEntrys = counter
+			end
 			moduleData:CheckForLink(id, i)
 			if tabVal.ExtraList then
 				if not dataExtra then dataExtra = {} end
@@ -870,18 +883,19 @@ local function BossSelectFunction(self, id, arg)
 	local difficultys = moduleData:GetDifficultys()
 	local data = {}
 	local diffCount = 0
+	local bossData = moduleData[db.selected[2]].items[id]
 	for count = 1, #difficultys do
-		if moduleData[db.selected[2]].items[id][count] then
+		if bossData[count] then
 			data[ #data+1 ] = {
 				id = count,
-				name = moduleData[db.selected[2]].items[id][count].diffName or difficultys[count].name,
-				tt_title = moduleData[db.selected[2]].items[id][count].diffName or difficultys[count].name
+				name = bossData[count].diffName or difficultys[count].name,
+				tt_title = bossData[count].diffName or difficultys[count].name
 			}
 			diffCount = diffCount + 1
 		end
 	end
 
-	GUI:UpdateRightSelection(diffCount)
+	GUI:UpdateRightSelection(moduleData[db.selected[2]].__numDiffEntrys or diffCount)
 	GUI.frame.difficulty:SetData(data, moduleData:GetDifficulty(db.selected[2], db.selected[3], db.selected[4]))
 	--UpdateFrames()
 end
