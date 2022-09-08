@@ -37,7 +37,18 @@ local PROFESSION_NAME = {
 local PROFESSION_TEXT = {
 	[0]  = LOC_STRING_DESC2,	                            -- UNKNOWN
 }
-for i = 1, #PROFESSION_NAME do PROFESSION_TEXT[i] = format(LOC_STRING_DESC, PROFESSION_NAME[i]) end
+local PROFESSION_TEXT_SHORT = {
+	[0]  = LOC_STRING_DESC2,
+}
+for i = 1, #PROFESSION_NAME do
+	PROFESSION_TEXT[i] = format(LOC_STRING_DESC, PROFESSION_NAME[i])
+	if PROFESSION_NAME[i]:len() > 13 then
+		PROFESSION_TEXT_SHORT[i] = format(LOC_STRING_DESC, PROFESSION_NAME[i]:sub(1,11).."...")
+	else
+		PROFESSION_TEXT_SHORT[i] = format(LOC_STRING_DESC, PROFESSION_NAME[i])
+	end
+
+end
 Profession.PROFESSION_TEXT = PROFESSION_TEXT
 
 local DUMMY_ICON = "Interface\\Icons\\INV_Misc_QuestionMark";
@@ -4382,6 +4393,10 @@ end
 
 function Profession.GetSpellDescription(spellID)
 	return ( spellID and PROFESSION[spellID] ) and PROFESSION_TEXT[PROFESSION[spellID][2] or PROFESSION_DEFAULT] or nil
+end --PROFESSION_TEXT_SHORT
+
+function Profession.GetSpellDescriptionShort(spellID)
+	return ( spellID and PROFESSION[spellID] ) and PROFESSION_TEXT_SHORT[PROFESSION[spellID][2] or PROFESSION_DEFAULT] or nil
 end
 
 function Profession.GetColorSkillRankNoSpell(min, low, high)
@@ -4394,9 +4409,13 @@ function Profession.GetColorSkillRank(spellID)
     return  Profession.GetColorSkillRankNoSpell(spell[3], spell[4], spell[5]) --format(FORMAT_STRING_SKILL, spell[3], spell[4], ((spell[5] - spell[4]) * 0.5)+spell[4], spell[5])
 end
 
-function Profession.GetSpellDescriptionWithRank(spellID)
+function Profession.GetSpellDescriptionWithRank(spellID, shortName)
     if not spellID or not PROFESSION[spellID] then return end
-    return Profession.GetSpellDescription(spellID).."  "..(Profession.GetColorSkillRank(spellID) or "")
+	if shortName then
+		return Profession.GetSpellDescriptionShort(spellID).."  "..(Profession.GetColorSkillRank(spellID) or "")
+	else
+		return Profession.GetSpellDescription(spellID).."  "..(Profession.GetColorSkillRank(spellID) or "")
+	end
 end
 
 function Profession.GetColorSkillRankItem(itemID)
