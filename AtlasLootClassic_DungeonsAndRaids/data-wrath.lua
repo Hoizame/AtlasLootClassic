@@ -5121,7 +5121,7 @@ data["TrialoftheCrusader"] = {
                     { 13, 47548 }, -- Garrosh's Rage
                     { 14, 47546 }, -- Sylvanas' Cunning
                     { 15, 47550 }, -- Cairne's Endurance
-                    { 28, 49046 }, -- Swift Horde Wolf
+                    { 28, 49098 }, -- Crusader's Black Warhorse
                     { 29, 47551 }, -- Aethas' Intensity
                     { 30, 47554 }, -- Lady Liadrin's Conviction
                 },
@@ -5147,7 +5147,7 @@ data["TrialoftheCrusader"] = {
                     { 13, 47547 }, -- Varian's Furor
                     { 14, 47545 }, -- Vereesa's Dexterity
                     { 15, 47549 }, -- Magni's Resolution
-                    { 28, 49044 }, -- Swift Alliance Steed
+                    { 28, 49096 }, -- Crusader's White Warhorse
                     { 29, 47552 }, -- Jaina's Radiance
                     { 30, 47553 }, -- Bolvar's Devotion
                 }
@@ -5166,7 +5166,7 @@ data["TrialoftheCrusader"] = {
                     { 6,  47645 },	-- Plans: Titanium Spikeguards (p2 450)
                     { 8,  47646 },	-- Pattern: Black Chitin Bracers (p7 450)
                     { 9,  47647 },	-- Pattern: Bracers of Swift Death (p7 450)
-                    { 10,  47648 },	-- Pattern: Crusader's Dragonscale Bracers (p7 450)
+                    { 10, 47648 },	-- Pattern: Crusader's Dragonscale Bracers (p7 450)
                     { 11, 47649 },	-- Pattern: Crusader's Dragonscale Breastplate (p7 450)
                     { 12, 47650 },	-- Pattern: Ensorcelled Nerubian Breastplate (p7 450)
                     { 13, 47651 },	-- Pattern: Knightbane Carapace (p7 450)
