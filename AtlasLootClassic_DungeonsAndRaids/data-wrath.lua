@@ -477,6 +477,7 @@ local WOTLK_NAXXRAMAS_AC_TABLE = {	--[Glory of the Raider]
 		{ 7, 2047 },			{ 22, 2051 },
 		{ 8, 2146 },			{ 23, 2176 },
 		{ 9, 2148 },			{ 24, 2184 },
+        { 10, 2187 },
 	},
     [RAID25_DIFF] = {
 		{ 1, 2138 },
@@ -488,6 +489,7 @@ local WOTLK_NAXXRAMAS_AC_TABLE = {	--[Glory of the Raider]
 		{ 7, 2048 },			{ 22, 2054 },
 		{ 8, 2147 },			{ 23, 2177 },
 		{ 9, 2149 },			{ 24, 2185 },
+        { 10, 2186 },
 	},
 }
 
