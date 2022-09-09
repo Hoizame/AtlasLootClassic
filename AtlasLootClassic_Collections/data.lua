@@ -526,6 +526,51 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
 		}
 	}
 
+	data["CookingVendorWrath"] = {
+		name = format(AL["'%s' Vendor"], ALIL["Cooking"]),
+		ContentType = VENDOR_CONTENT,
+		TableType = NORMAL_ITTYPE,
+		gameVersion = AtlasLoot.WRATH_VERSION_NUM,
+		items = {
+			{
+				name = AL["Misc"],
+				[NORMAL_DIFF] = {
+					{ 1, 46349 }, -- Chef's Hat
+					{ 16, 43007 }, -- Northern Spices
+				},
+			},
+			{
+				name = AL["Recipe"],
+				[NORMAL_DIFF] = {
+					{ 1, 43035 }, -- Recipe: Blackened Dragonfin
+					{ 2, 43032 }, -- Recipe: Blackened Worg Steak
+					{ 3, 43029 }, -- Recipe: Critter Bites
+					{ 4, 43033 }, -- Recipe: Cuttlesteak
+					{ 5, 43036 }, -- Recipe: Dragonfin Filet
+					{ 6, 43024 }, -- Recipe: Firecracker Salmon
+					{ 7, 43017 }, -- Recipe: Fish Feast
+					{ 8, 43505 }, -- Recipe: Gigantic Feast
+					{ 9, 43030 }, -- Recipe: Hearty Rhino
+					{ 10, 43026 }, -- Recipe: Imperial Manta Steak
+					{ 11, 43018 }, -- Recipe: Mega Mammoth Meal
+					{ 12, 43022 }, -- Recipe: Mighty Rhino Dogs
+					{ 13, 43023 }, -- Recipe: Poached Northern Sculpin
+					{ 14, 43028 }, -- Recipe: Rhinolicious Wormsteak
+					{ 15, 43506 }, -- Recipe: Small Feast
+					{ 16, 43031 }, -- Recipe: Snapper Extreme
+					{ 17, 43034 }, -- Recipe: Spiced Mammoth Treats
+					{ 18, 43020 }, -- Recipe: Spiced Worm Burger
+					{ 19, 43025 }, -- Recipe: Spicy Blue Nettlefish
+					{ 20, 43027 }, -- Recipe: Spicy Fried Herring
+					{ 21, 43019 }, -- Recipe: Tender Shoveltusk Steak
+					{ 22, 43037 }, -- Recipe: Tracker Snacks
+					{ 23, 43021 }, -- Recipe: Very Burnt Worg
+					{ 24, 44954 }, -- Recipe: Worg Tartare
+				},
+			},
+		}
+	}
+
 	data["EmblemofHeroism"] = {
 		name = format(AL["'%s' Vendor"], AL["Emblem of Heroism"]),
 		ContentType = VENDOR_CONTENT,

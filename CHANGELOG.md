@@ -6,5 +6,6 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 
 ## v3.0.1 (Sep, XX, 2022)
 
+- add some emblem prices
 - fix item name and description fields are to short
 - #229 fix missing classic dungeon levels for wrath/bcc
