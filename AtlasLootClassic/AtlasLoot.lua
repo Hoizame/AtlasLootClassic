@@ -102,11 +102,14 @@ function AtlasLoot:AddInitFunc(func, module)
 	AtlasLoot.Init[module][#AtlasLoot.Init[module]+1] = func
 end
 
-function AtlasLoot.ReturnForGameVersion(classic, bcc)
+function AtlasLoot.ReturnForGameVersion(classic, bcc, wrath)
 	if ALPrivate.IS_CLASSIC then
 		return classic
 	elseif ALPrivate.IS_BC then
-		return bcc
+		return bcc or classic
+	--elseif ALPrivate.IS_WRATH then
+	else
+		return wrath or bcc or classic
 	end
 end
 -- #############################
