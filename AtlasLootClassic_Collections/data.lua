@@ -1004,7 +1004,7 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
 				},
 			},
 			{
-				name = AL["Weapon"],
+				name = ALIL["Weapon"],
 				[NORMAL_DIFF] = {
 					{ 1, 50474 }, -- Shrapnel Star
 				},
@@ -1026,7 +1026,7 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
 				},
 			},
 			{
-				name = AL["Trinket"],
+				name = ALIL["Trinket"],
 				[NORMAL_DIFF] = {
 					{ 1, 50356 }, -- Corroded Skeleton Key
 					{ 2, 50355 }, -- Herkuml War Token

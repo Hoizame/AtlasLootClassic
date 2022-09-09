@@ -47,7 +47,6 @@ for i = 1, #PROFESSION_NAME do
 	else
 		PROFESSION_TEXT_SHORT[i] = format(LOC_STRING_DESC, PROFESSION_NAME[i])
 	end
-
 end
 Profession.PROFESSION_TEXT = PROFESSION_TEXT
 
@@ -4393,7 +4392,7 @@ end
 
 function Profession.GetSpellDescription(spellID)
 	return ( spellID and PROFESSION[spellID] ) and PROFESSION_TEXT[PROFESSION[spellID][2] or PROFESSION_DEFAULT] or nil
-end --PROFESSION_TEXT_SHORT
+end
 
 function Profession.GetSpellDescriptionShort(spellID)
 	return ( spellID and PROFESSION[spellID] ) and PROFESSION_TEXT_SHORT[PROFESSION[spellID][2] or PROFESSION_DEFAULT] or nil

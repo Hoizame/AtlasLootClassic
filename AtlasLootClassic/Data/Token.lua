@@ -273,6 +273,7 @@ TOKEN_DATA.CLASSIC = {
 	[22726] = 22727, -- Splinter of Atiesh
 	[22734] = 22727, -- Base of Atiesh
 	[22733] = 22727, -- Staff Head of Atiesh
+	[22737] = 22727, -- Atiesh / Use item
 
 	-- UBRS key
 	[12219] = { 12219, 12336, 12335, 12337, 0, 12344 }, -- Unadorned Seal of Ascension

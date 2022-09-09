@@ -1886,12 +1886,9 @@ data["Fishing"] = {
 				{ 3, 7307 }, --  Flesh Eating Worm
 				{ 4, 6811 }, --  Aquadynamic Fish Lens
 				{ 5, 6530 }, --  Nightcrawlers
-				{ 16, 34109 }, -- Weather-Beaten Journal
-				{ 18, 19971 }, -- High Test Eternium Fishing Line
-				{ 27, 27532 }, -- Master Fishing - The Art of Angling
-				{ 28, 16082 }, -- Artisan Fishing - The Way of the Lure
-				{ 29, 16083 }, -- Expert Fishing - The Bass and You
-				{ 30, 46054 }, -- Journeyman Fishing - Fishing for Dummies
+				{ 16, 19971 }, -- High Test Eternium Fishing Line
+				{ 29, 16082 }, -- Artisan Fishing - The Way of the Lure
+				{ 30, 16083 }, -- Expert Fishing - The Bass and You
 			}
 		},
 		{
