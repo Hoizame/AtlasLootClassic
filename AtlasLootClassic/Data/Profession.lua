@@ -34,6 +34,7 @@ local PROFESSION_NAME = {
 	[15] = ALIL["Inscription"],    -- Inscription
 }
 
+local PROFESSION_TEXT_MAX_LENGTH = 15
 local PROFESSION_TEXT = {
 	[0]  = LOC_STRING_DESC2,	                            -- UNKNOWN
 }
@@ -42,8 +43,8 @@ local PROFESSION_TEXT_SHORT = {
 }
 for i = 1, #PROFESSION_NAME do
 	PROFESSION_TEXT[i] = format(LOC_STRING_DESC, PROFESSION_NAME[i])
-	if PROFESSION_NAME[i]:len() > 13 then
-		PROFESSION_TEXT_SHORT[i] = format(LOC_STRING_DESC, PROFESSION_NAME[i]:sub(1,11).."...")
+	if PROFESSION_NAME[i]:len() > PROFESSION_TEXT_MAX_LENGTH then
+		PROFESSION_TEXT_SHORT[i] = format(LOC_STRING_DESC, PROFESSION_NAME[i]:sub(1,PROFESSION_TEXT_MAX_LENGTH-3).."...")
 	else
 		PROFESSION_TEXT_SHORT[i] = format(LOC_STRING_DESC, PROFESSION_NAME[i])
 	end
