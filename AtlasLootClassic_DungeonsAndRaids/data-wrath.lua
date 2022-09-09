@@ -2553,7 +2553,7 @@ data["NaxxramasWrath"] = {
 	AtlasMapID = "Naxxramas",
 	AtlasMapFile = "Naxxramas",
 	ContentType = RAID_CONTENT,
-    LevelRange = {80, 80, 80},
+    -- LevelRange = {80, 80, 80},
 	items = {
 		-- The Arachnid Quarter
 		{ -- NAXAnubRekhan
@@ -3319,7 +3319,7 @@ data["TheEyeOfEternity"] = {
 	AtlasModule = ATLAS_MODULE_NAME,
 	AtlasMapID = "TheEyeOfEternity",
 	AtlasMapFile = {"TheEyeOfEternity"},
-	LevelRange = {80, 80, 80},
+	-- LevelRange = {80, 80, 80},
 	items = {
         { -- Malygos / 180
 	        name = AL["Malygos"],
@@ -3379,7 +3379,7 @@ data["ObsidianSanctum"] = {
 	AtlasModule = ATLAS_MODULE_NAME,
 	AtlasMapID = "ObsidianSanctum",
 	AtlasMapFile = {"ObsidianSanctum"},
-	LevelRange = {80, 80, 80},
+	-- LevelRange = {80, 80, 80},
 	items = {
         { -- CoTHillsbradDrake
             name = AL["Sartharion"],
@@ -3469,7 +3469,7 @@ data["Ulduar"] = {
 	AtlasMapID = "UlduarA",
 	AtlasMapFile = {"UlduarA", "UlduarEnt"},
 	--LoadDifficulty = NORMAL_DIFF,
-	LevelRange = {80, 80, 80},
+	-- LevelRange = {80, 80, 80},
 	items = {
         { -- UlduarLeviathan
             name = AL["Flame Leviathan"],
@@ -4248,7 +4248,7 @@ data["TrialoftheCrusader"] = {
 	AtlasMapID = "TrialOfTheCrusader",
     AtlasMapFile = "TrialOfTheCrusader",
 	ContentType = RAID_CONTENT,
-    LevelRange = {80, 80, 80},
+    -- LevelRange = {80, 80, 80},
 	items = {
 		{	--TrialoftheCrusader NorthrendBeasts
 			name = AL["The Beasts of Northrend"],
@@ -5212,7 +5212,7 @@ data["WrathOnyxiasLair"] = {
 	AtlasMapID = "OnyxiasLair",
     AtlasMapFile = "CL_OnyxiasLair",
 	ContentType = RAID_CONTENT,
-    LevelRange = {80, 80, 80},
+    -- LevelRange = {80, 80, 80},
 	items = {
 		{	--Onyxia
 			name = AL["Onyxia"],
@@ -5288,7 +5288,7 @@ data["IcecrownCitadel"] = {
 	AtlasMapID = "IcecrownCitadelA",
     AtlasMapFile = {"IcecrownCitadelA", "IcecrownEnt"},
 	ContentType = RAID_CONTENT,
-    LevelRange = {80, 80, 80},
+    -- LevelRange = {80, 80, 80},
 	items = {
 		{	--ICC LordMarrowgar
 			name = AL["Lord Marrowgar"],
@@ -6214,7 +6214,7 @@ data["RubySanctum"] = {
 	AtlasMapID = "RubySanctum",
     AtlasMapFile = {"RubySanctum"},
 	ContentType = RAID_CONTENT,
-    LevelRange = {80, 80, 80},
+    -- LevelRange = {80, 80, 80},
 	items = {
 		{	--Halion
             name = AL["Halion"],
@@ -6301,7 +6301,7 @@ data["VaultofArchavon"] = {
 	AtlasModule = ATLAS_MODULE_NAME,
 	AtlasMapID = "VaultOfArchavon",
 	AtlasMapFile = {"VaultOfArchavon"},
-	LevelRange = {80, 80, 80},
+	-- LevelRange = {80, 80, 80},
 	items = {
         { -- VaultofArchavonArchavon
             name = AL["Archavon the Stone Watcher"],
