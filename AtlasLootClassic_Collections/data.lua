@@ -2114,7 +2114,7 @@ data["Mounts"] = {
 			}
 		},
 		AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM, {
-			name = format("%s - %s", AL["Drops"], AL["BC"]),
+			name = format("%s - %s", AL["Reputation"], AL["BC"]),
 			NameColor = GREEN,
 			[ALLIANCE_DIFF] = {
 				{ 1, 29227 }, -- Reins of the Cobalt War Talbuk
