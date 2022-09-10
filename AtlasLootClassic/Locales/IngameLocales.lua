@@ -301,6 +301,8 @@ local IngameLocales = {
 	["Settings"] = GLOBAL["SETTINGS"],
 	["Dressing Room"] = GLOBAL["DRESSUP_FRAME"],
 	["Quest Item"] = GLOBAL["ITEM_BIND_QUEST"],
+	["Collected"] = GLOBAL["COLLECTED"],
+	["Not Collected"] = GLOBAL["NOT_COLLECTED"],
 }
 AtlasLoot.IngameLocales = IngameLocales
 

@@ -305,16 +305,6 @@ local function OnTooltipSetItem_Hook(self)
                 TooltipTextCache[item][ #TooltipTextCache[item] + 1 ] = GetPriceFormatString(priceInfo[priceSumCount])
             end
         end
-
-        if AtlasLoot.db.showIDsInTT and AtlasLoot.db.showIDsInTT_Global or AtlasLoot.db.showItemLvlInTT and AtlasLoot.db.showItemLvlInTT_Global then
-            local itemName, itemLink, itemQuality, itemLevel = GetItemInfo(item)
-            if AtlasLoot.db.showIDsInTT and AtlasLoot.db.showIDsInTT_Global then
-                self:AddDoubleLine(AL["ItemID:"], format(WHITE_TEXT, item))
-            end
-            if itemLevel and itemLevel > 0 and AtlasLoot.db.showItemLvlInTT and AtlasLoot.db.showItemLvlInTT_Global then
-                self:AddDoubleLine(AL["Item level:"], format(WHITE_TEXT, itemLevel))
-            end
-        end
         if TooltipTextCache[item] then
             if Sources.db.showLineBreak then
                 self:AddLine(" ")

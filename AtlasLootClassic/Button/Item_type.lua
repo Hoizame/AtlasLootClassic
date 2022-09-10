@@ -226,11 +226,16 @@ function Item.OnEnter(button, owner)
 	if button.Droprate and AtlasLoot.db.showDropRate then
 		tooltip:AddDoubleLine(AL["Droprate:"], format(WHITE_TEXT, button.Droprate.."%"))
 	end
-	if AtlasLoot.db.showIDsInTT then
-		tooltip:AddDoubleLine(AL["ItemID:"], format(WHITE_TEXT, button.ItemID or 0))
-	end
-	if AtlasLoot.db.showItemLvlInTT and button.ItemLvl then
-		tooltip:AddDoubleLine(AL["Item level:"], format(WHITE_TEXT, button.ItemLvl or 0))
+	if not AtlasLoot.db.showTooltipInfoGlobal then
+		if AtlasLoot.db.showCompanionLearnedInfo and AtlasLoot.Data.Companion.IsCompanion(button.ItemID) then
+			tooltip:AddDoubleLine(AtlasLoot.Data.Companion.GetTypeName(button.ItemID), AtlasLoot.Data.Companion.GetCollectedString(button.ItemID))
+		end
+		if AtlasLoot.db.showIDsInTT then
+			tooltip:AddDoubleLine(AL["ItemID:"], format(WHITE_TEXT, button.ItemID or 0))
+		end
+		if AtlasLoot.db.showItemLvlInTT and button.ItemLvl then
+			tooltip:AddDoubleLine(AL["Item level:"], format(WHITE_TEXT, button.ItemLvl or 0))
+		end
 	end
 	if AtlasLoot.db.ContentPhase.enableTT and ContentPhase:GetForItemID(button.ItemID) then
 		tooltip:AddDoubleLine(AL["Content phase:"], format(WHITE_TEXT, ContentPhase:GetForItemID(button.ItemID)))

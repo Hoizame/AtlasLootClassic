@@ -10,13 +10,23 @@ local format = string.format
 -- WoW
 
 -- local
-local KNOWN_DESCRIPTION_FORMAT = "%s - |cff66cc33"..AL["Learned"].."|r"
+local COLLECTED_DESCRIPTION = "|cff66cc33"..ALIL["Collected"].."|r"
+local NOT_COLLECTED_DESCRIPTION = "|cffcc6666"..ALIL["Not Collected"].."|r"
+
+local COLLECTED_STRINGS = {}
 local COMPANION_TYPE = {
-    [1] = { "CRITTER",  ALIL["Pet"],    "" },
-    [2] = { "MOUNT",    ALIL["Mount"],  "" },
+    [1] = { "CRITTER",  ALIL["Pet"] },
+    [2] = { "MOUNT",    ALIL["Mount"] },
 }
 for i = 1,#COMPANION_TYPE do
-    COMPANION_TYPE[i][3] = format(KNOWN_DESCRIPTION_FORMAT, COMPANION_TYPE[i][2])
+	COLLECTED_STRINGS[i] = {
+		collected = {
+			text = format("%s - "..COLLECTED_DESCRIPTION, COMPANION_TYPE[i][2])
+		},
+		notCollected = {
+			text = format("%s - "..NOT_COLLECTED_DESCRIPTION, COMPANION_TYPE[i][2])
+		}
+	}
 end
 
 local COMPANION_DATA = {
@@ -589,7 +599,7 @@ local COMPANION_DATA = {
 	[198665] = {384796,194870,1},
 }
 
-local LEARNED_COMPANIONS = {}
+local COLLECTED_COMPANIONS = {}
 
 function Companion.IsCompanion(itemID)
     return COMPANION_DATA[itemID] and true or false
@@ -609,12 +619,15 @@ function Companion.GetTypeName(itemID)
     end
 end
 
-function Companion.GetDescription(itemID, addLearned)
+function Companion.GetDescription(itemID, addCollected)
     if COMPANION_DATA[itemID] and COMPANION_DATA[itemID][3] and COMPANION_TYPE[COMPANION_DATA[itemID][3]] then
-        if addLearned and Companion.IsLearnedItem(itemID) then
-            return COMPANION_TYPE[COMPANION_DATA[itemID][3]][3]
+		local typeID = COMPANION_DATA[itemID][3]
+        if addCollected and Companion.IsCollectedItem(itemID) then
+            return COLLECTED_STRINGS[typeID].collected.text
+		elseif addCollected then
+			return COLLECTED_STRINGS[typeID].notCollected.text
         else
-            return COMPANION_TYPE[COMPANION_DATA[itemID][3]][2]
+            return COMPANION_TYPE[typeID][2]
         end
     end
 end
@@ -625,14 +638,25 @@ function Companion.GetBlizzardType(itemID)
     end
 end
 
-function Companion.IsLearnedItem(itemID)
-    if COMPANION_DATA[itemID] then
-        return LEARNED_COMPANIONS[COMPANION_DATA[itemID][2]]
+function Companion.GetCollectedString(itemID)
+    if COMPANION_DATA[itemID] and COMPANION_DATA[itemID][3] and COMPANION_TYPE[COMPANION_DATA[itemID][3]] then
+		local typeID = COMPANION_DATA[itemID][3]
+        if Companion.IsCollectedItem(itemID) then
+            return COLLECTED_DESCRIPTION
+		else
+			return NOT_COLLECTED_DESCRIPTION
+        end
     end
 end
 
-function Companion.IsLearnedCreature(creatureID)
-    return LEARNED_COMPANIONS[creatureID]
+function Companion.IsCollectedItem(itemID)
+    if COMPANION_DATA[itemID] then
+        return COLLECTED_COMPANIONS[COMPANION_DATA[itemID][2]]
+    end
+end
+
+function Companion.IsCollectedCreature(creatureID)
+    return COLLECTED_COMPANIONS[creatureID]
 end
 
 -- companions are learnd since wotlk
@@ -647,12 +671,12 @@ local function UpdateKnownCompanions(typ)
 
     for i = 1, GetNumCompanions(typ) do
         local creatureID = GetCompanionInfo(typ, i) -- creatureID, creatureName, spellID, icon, active
-        LEARNED_COMPANIONS[creatureID] = true
+        COLLECTED_COMPANIONS[creatureID] = true
     end
 end
 local function EventFrame_OnEvent(frame, event, arg1)
     if event == "COMPANION_UNLEARNED" then
-        wipe(LEARNED_COMPANIONS)
+        wipe(COLLECTED_COMPANIONS)
     end
     for i = 1, #COMPANION_TYPE do
         UpdateKnownCompanions(COMPANION_TYPE[i][1])
