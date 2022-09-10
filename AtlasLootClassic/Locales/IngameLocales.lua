@@ -303,6 +303,9 @@ local IngameLocales = {
 	["Quest Item"] = GLOBAL["ITEM_BIND_QUEST"],
 	["Collected"] = GLOBAL["COLLECTED"],
 	["Not Collected"] = GLOBAL["NOT_COLLECTED"],
+	["Achievements"] = GLOBAL["ACHIEVEMENTS"],
+
+	ACHIEVEMENTS
 }
 AtlasLoot.IngameLocales = IngameLocales
 

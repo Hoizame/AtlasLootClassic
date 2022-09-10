@@ -39,4 +39,6 @@
 
 Locales\Locales.xml
 
+private.lua
 data.lua
+data-tbc.lua
