@@ -701,6 +701,90 @@ data["MountsBC"] = {
 	},
 }
 
+data["CompanionsBC"] = {
+	name = ALIL["Companions"],
+	ContentType = COLLECTIONS_CONTENT,
+	LoadDifficulty = LOAD_DIFF,
+	TableType = NORMAL_ITTYPE,
+	gameVersion = AtlasLoot.BC_VERSION_NUM,
+	CorrespondingFields = private.COMPANIONS,
+	items = {
+		{
+			name = AL["Drops"],
+			[NORMAL_DIFF] = {
+				{ 1, 33993 }, -- Mojo
+				{ 3, 35504 }, -- Phoenix Hatchling
+				{ 5, 34955 }, -- Scorched Stone
+				{ 7, 34535 }, -- Azure Whelpling
+				{ 8, 29960 }, -- Captured Firefly
+			},
+		},
+		{
+			name = AL["Quest"],
+			[NORMAL_DIFF] = {
+				{ 1, 31760 }, -- Miniwing
+			},
+		},
+		{
+			name = AL["Vendor"],
+			[NORMAL_DIFF] = {
+				{ 1, 34478 }, -- Tiny Sporebat
+				{ 2, 38628 }, -- Nether Ray Fry
+				{ 3, 29363 }, -- Mana Wyrmling
+				{ 4, 29364 }, -- Brown Rabbit Crate
+				{ 6, 29903 }, -- Yellow Moth Egg
+				{ 7, 29904 }, -- White Moth Egg
+				{ 8, 29902 }, -- Red Moth Egg
+				{ 9, 29901 }, -- Blue Moth Egg
+				{ 16, 29957 }, -- Silver Dragonhawk Hatchling
+				{ 17, 29956 }, -- Red Dragonhawk Hatchling
+				{ 18, 29953 }, -- Golden Dragonhawk Hatchling
+				{ 19, 29958 }, -- Blue Dragonhawk Hatchling
+			},
+		},
+		{
+			name = AL["World Events"],
+			[NORMAL_DIFF] = {
+				{ 1, 34425 }, -- Clockwork Rocket Bot
+				{ 3, 33154 }, -- Sinister Squashling
+				{ 5, 32233 }, -- Wolpertinger's Tankard
+				{ 16, 32617 }, -- Sleepy Willy
+				{ 17, 32622 }, -- Elekk Training Collar
+				{ 18, 32616 }, -- Egbert's Egg
+			},
+		},
+		{
+			name = ALIL["Fishing"],
+			[NORMAL_DIFF] = {
+				{ 1, 35350 }, -- Chuck's Bucket
+				{ 2, 33818 }, -- Muckbreath's Bucket
+				{ 3, 35349 }, -- Snarly's Bucket
+				{ 4, 33816 }, -- Toothy's Bucket
+			},
+		},
+		{ -- Unobtainable
+			name = AL["Unobtainable"],
+			[NORMAL_DIFF] = {
+				{ 1, 34493 }, -- Dragon Kite
+				{ 2, 32588 }, -- Banana Charm
+				{ 3, 38050 }, -- Soul-Trader Beacon
+				{ 4	, 34492 }, -- Rocket Chicken
+				{ 6, 34519 }, -- Silver Pig Coin
+				{ 7, 34518 }, -- Golden Pig Coin
+				{ 8, 32498 }, -- Fortune Coin
+				{ 9, 32465 }, -- Fortune Coin
+				{ 16, 27445 }, -- Magical Crawdad Box
+				{ 17, 31665 }, -- Toy RC Mortar Tank
+				{ 19, 37297 }, -- Gold Medallion
+				{ 20, 37298 }, -- Competitor's Souvenir
+				{ 22, 39656 }, -- Tyrael's Hilt
+				{ 24, 25535 }, -- Netherwhelp's Collar
+				{ 25, 30360 }, -- Lurky's Egg
+			},
+		},
+	},
+}
+
 data["TabardsBC"] = {
 	name = ALIL["Tabard"],
 	ContentType = COLLECTIONS_CONTENT,

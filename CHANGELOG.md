@@ -10,5 +10,6 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 - tooltip extras can now shown in every tooltip
 - add collected indicator for pets/mounts
 - add some emblem prices
+- add companions into collections
 - fix item name and description fields are to short
 - #229 fix missing classic dungeon levels for wrath/bcc

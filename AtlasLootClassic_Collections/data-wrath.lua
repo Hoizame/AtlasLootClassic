@@ -736,6 +736,143 @@ data["MountsWrath"] = {
 	},
 }
 
+data["CompanionsWrath"] = {
+	name = ALIL["Companions"],
+	ContentType = COLLECTIONS_CONTENT,
+	LoadDifficulty = LOAD_DIFF,
+	TableType = NORMAL_ITTYPE,
+	gameVersion = AtlasLoot.WRATH_VERSION_NUM,
+	CorrespondingFields = private.COMPANIONS,
+	items = {
+		{
+			name = AL["Drops"],
+			[NORMAL_DIFF] = {
+				{ 1, 48126 }, --  Razzashi Hatchling
+				{ 2, 48124 }, --  Razormaw Hatchling
+				{ 3, 48122 }, --  Ravasaur Hatchling
+				{ 4, 48120 }, --  Obsidian Hatchling
+				{ 5, 48116 }, --  Gundrak Hatchling
+				{ 6, 48114 }, --  Deviate Hatchling
+				{ 7, 48112 }, --  Darting Hatchling
+			},
+		},
+		{
+			name = AL["Vendor"],
+			[NORMAL_DIFF] = {
+				{ 1, 44723 }, --  Nurtured Penguin Egg
+				{ 2, 39973 }, --  Ghostly Skull
+				{ 3, 54436 }, --  Blue Clockwork Rocket Bot
+				{ 4, 46398 }, --  Calico Cat
+				{ 5, 44822 }, --  Albino Snake
+			},
+		},
+		{
+			name = AL["World Events"],
+			[NORMAL_DIFF] = {
+				{ 1, 44794 }, --  Spring Rabbit's Foot
+				{ 3, 46707 }, --  Pint-Sized Pink Pachyderm
+				{ 16, 46544 }, --  Curious Wolvar Pup
+				{ 17, 46545 }, --  Curious Oracle Hatchling
+			},
+		},
+		{
+			name = ALIL["Achievements"],
+			TableType = AC_ITTYPE,
+			[NORMAL_DIFF] = {
+				{ 1, 44810, AtlasLoot:GetRetByFaction(3656,3478) }, --  Turkey Cage
+				{ 2, 44738, 1956 }, --  Kirin Tor Familiar
+				{ 16, 40653, 1250 }, --  Reeking Pet Carrier
+				{ 17, 44841, 2516 }, --  Little Fawn's Salt Lick
+			},
+		},
+		{
+			name = AL["Argent Tournament"],
+			[HORDE_DIFF] = {
+				{ 1, 44971 }, --  Tirisfal Batling
+				{ 2, 44973 }, --  Durotar Scorpion
+				{ 3, 44980 }, --  Mulgore Hatchling
+				{ 4, 45606 }, --  Sen'jin Fetish
+				{ 5, 44974 }, -- Enchanted Broom -- { 50, 44982 }, --  Enchanted Broom
+				{ 6, 45022 }, --  Argent Gruntling
+				{ 16, 46821 }, --  Shimmering Wyrmling
+			},
+			[ALLIANCE_DIFF] = {
+				{ 1, 44965 }, --  Teldrassil Sproutling
+				{ 2, 44970 }, --  Dun Morogh Cub
+				{ 3, 44974 }, --  Elwynn Lamb
+				{ 4, 45002 }, --  Mechanopeep
+				{ 5, 44984 }, --  Ammen Vale Lashling
+				{ 6, 44998 }, --  Argent Squire
+				{ 16, 46820 }, --  Shimmering Wyrmling
+			},
+		},
+		{
+			name = ALIL["Fishing"],
+			[NORMAL_DIFF] = {
+				{ 1, 43698 }, --  Giant Sewer Rat
+				{ 16, 44983 }, --  Strand Crawler
+			},
+		},
+		{ -- Unobtainable
+			name = AL["Unobtainable"],
+			[NORMAL_DIFF] = {
+				{ 1, 39286 }, --  Frosty's Collar
+				{ 3, 38658 }, -- Vampiric Batling
+				{ 4, 50446 }, -- Toxic Wasteling
+				{ 6, 49663 }, -- Wind Rider Cub / Shop
+				{ 7, 54847 }, -- Lil' XT / Shop
+				{ 8, 49693 }, --  Lil' Phylactery / Shop
+				{ 9, 49665 }, --  Pandaren Monk / Shop
+				{ 10, 49662 }, --  Gryphon Hatchling / Shop
+
+				{ 13, 49362 }, --  Onyxian Whelpling
+				{ 14, 46802 }, --  Heavy Murloc Egg
+				{ 15, 53641 }, --  Ice Chip
+
+				{ 16, 198636 }, -- Hippogryph Hatchling
+				{ 17, 198635 }, -- Dragon Kite
+				{ 18, 46767 }, -- Warbot Ignition Key
+				{ 19, 41133 }, -- Unhatched Mr. Chilly
+
+				{ 20, 46892 }, --  Murkimus' Tiny Spear
+				{ 21, 45180 }, --  Murkimus' Little Spear
+				{ 22, 54857 }, --  Murkimus' Little Spear
+				{ 23, 56806 }, --  Mini Thor
+				{ 24, 198634 }, --  Banana Charm
+				{ 25, 49343 }, --  Spectral Tiger Cub
+				{ 26, 44819 }, --  Baby Blizzard Bear
+				--{ 19, 198639 }, --  Spectral Tiger Cub
+				--{ 20, 198638 }, --  Soul-Trader Beacon
+				--{ 24, 198637 }, -- Rocket Chicken
+				--{ 47, 49664 }, --  Enchanted Purple Jade
+				--{ 48, 48527 }, --  Enchanted Onyx
+				--{ 49, 46894 }, --  Enchanted Jade
+				--{ 57, 54810 }, --  Celestial Dragon
+				--{ 60, 40355 }, --  Azure Whelpling
+				--{ 64, 44972 }, --  Alarming Clockbot (NOT IN USE)
+				--{ 65, 45942 }, --  XS-001 Constructor Bot
+			},
+		},
+		{ -- Unobtainable
+			name = AL["Misc"],
+			[NORMAL_DIFF] = {
+				{ 1, 49287 }, -- Tuskarr Kite
+				{ 2, 198640 }, -- Tuskarr Kite
+				{ 3, 198665 }, -- Pebble's Pebble
+				{ 5, 49912 }, --  Perky Pug
+				{ 6, 49646 }, --  Core Hound Pup
+
+				{ 16, 39878 }, --  Mysterious Egg
+				{ 17, 39899 }, --  White Tickbird Hatchling
+				{ 18, 39896 }, --  Tickbird Hatchling
+				{ 19, 44721 }, --  Proto-Drake Whelp
+				{ 20, 39898 }, --  Cobra Hatchling
+				--{ 5, 198647 }, -- Fishspeaker's Lucky Lure
+			},
+		},
+	},
+}
+
 data["TabardsWrath"] = {
 	name = ALIL["Tabard"],
 	ContentType = COLLECTIONS_CONTENT,

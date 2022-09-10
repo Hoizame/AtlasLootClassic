@@ -935,6 +935,102 @@ data["Mounts"] = {
 	},
 }
 
+data["Companions"] = {
+	name = ALIL["Companions"],
+	ContentType = COLLECTIONS_CONTENT,
+	LoadDifficulty = LOAD_DIFF,
+	TableType = NORMAL_ITTYPE,
+	gameVersion = AtlasLoot.CLASSIC_VERSION_NUM,
+	CorrespondingFields = private.COMPANIONS,
+	items = {
+		{
+			name = AL["Crafting"],
+			[NORMAL_DIFF] = {
+				{ 1, 15996 }, -- Lifelike Mechanical Toad
+				{ 2, 11826 }, -- Lil' Smoky
+				{ 3, 4401 }, -- Mechanical Squirrel Box
+				{ 4, 11825 }, -- Pet Bombling
+				{ 5, 21277 }, -- Tranquil Mechanical Yeti
+			},
+		},
+		{
+			name = AL["Drops"],
+			[NORMAL_DIFF] = {
+				{ 1, 8494 }, -- Parrot Cage (Hyacinth Macaw)
+				{ 2, 8492 }, -- Parrot Cage (Green Wing Macaw)
+				{ 4, 8498 }, -- Tiny Emerald Whelpling
+				{ 5, 8499 }, -- Tiny Crimson Whelpling
+				{ 6, 10822 }, -- Dark Whelpling
+				{ 8, 8490 }, -- Cat Carrier (Siamese)
+				{ 9, 8491 }, -- Cat Carrier (Black Tabby)
+				{ 16, 5332 }, -- Glowing Cat Figurine
+				{ 17, 20769 }, -- Disgusting Oozeling
+				{ 18, 11110 }, -- Chicken Egg
+			},
+		},
+		{
+			name = AL["Quest"],
+			[NORMAL_DIFF] = {
+				{ 1, 12264 }, -- Worg Carrier
+				{ 2, 23002 }, -- Turtle Box
+				{ 3, 11474 }, -- Sprite Darter Egg
+				{ 4, 12529 }, -- Smolderweb Carrier
+				{ 5, 10398 }, -- Mechanical Chicken
+			},
+		},
+		{
+			name = AL["Vendor"],
+			[NORMAL_DIFF] = {
+				{ 1, 11023 }, -- Ancona Chicken
+				{ 2, 10393 }, -- Cockroach
+				{ 3, 10394 }, -- Prairie Dog Whistle
+				{ 4, 10392 }, -- Crimson Snake
+				{ 5, 8497 }, -- Rabbit Crate (Snowshoe)
+				{ 7, 10360 }, -- Black Kingsnake
+				{ 8, 10361 }, -- Brown Snake
+				{ 10, 8500 }, -- Great Horned Owl
+				{ 11, 8501 }, -- Hawk Owl
+				{ 16, 8485 }, -- Cat Carrier (Bombay)
+				{ 17, 8486 }, -- Cat Carrier (Cornish Rex)
+				{ 18, 8487 }, -- Cat Carrier (Orange Tabby)
+				{ 19, 8490 }, -- Cat Carrier (Siamese)
+				{ 20, 8488 }, -- Cat Carrier (Silver Tabby)
+				{ 21, 8489 }, -- Cat Carrier (White Kitten)
+				{ 23, 8496 }, -- Parrot Cage (Cockatiel)
+				{ 24, 8495 }, -- Parrot Cage (Senegal)
+				{ 26, 11026 }, -- Tree Frog Box
+				{ 27, 11027 }, -- Wood Frog Box
+			},
+		},
+		{
+			name = AL["World Events"],
+			[NORMAL_DIFF] = {
+				{ 1, 21305 }, -- Red Helper Box
+				{ 2, 21301 }, -- Green Helper Box
+				{ 3, 21308 }, -- Jingling Bell
+				{ 4, 21309 }, -- Snowman Kit
+				{ 16, 22235 }, -- Truesilver Shafted Arrow
+				{ 18, 23083 }, -- Captured Flame
+				{ 20, 23015 }, -- Rat Cage
+				{ 21, 22781 }, -- Polar Bear Collar
+				{ 22, 23007 }, -- Piglet's Collar
+			},
+		},
+		{ -- Unobtainable
+			name = AL["Unobtainable"],
+			[NORMAL_DIFF] = {
+				{ 1, 13582 }, -- Zergling Leash
+				{ 2, 13584 }, -- Diablo Stone
+				{ 3, 13583 }, -- Panda Collar
+				{ 16, 22780 }, -- White Murloc Egg
+				{ 17, 22114 }, -- Pink Murloc Egg
+				{ 18, 20651 }, -- Orange Murloc Egg
+				{ 19, 20371 }, -- Blue Murloc Egg
+			},
+		},
+	},
+}
+
 data["Tabards"] = {
 	name = ALIL["Tabard"],
 	ContentType = COLLECTIONS_CONTENT,
@@ -1001,7 +1097,7 @@ data["Tabards"] = {
 			},
 		},
 		{ -- Unobtainable Tabards
-			name = AL["Unobtainable Tabards"],
+			name = AL["Unobtainable"],
 			[NORMAL_DIFF] = {
 				{ 1, 19160 },	-- Contest Winner's Tabard
 				AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM, { 3, 36941 }), -- Competitor's Tabard

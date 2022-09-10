@@ -304,8 +304,7 @@ local IngameLocales = {
 	["Collected"] = GLOBAL["COLLECTED"],
 	["Not Collected"] = GLOBAL["NOT_COLLECTED"],
 	["Achievements"] = GLOBAL["ACHIEVEMENTS"],
-
-	ACHIEVEMENTS
+	["Companions"] = GLOBAL["COMPANIONS"],
 }
 AtlasLoot.IngameLocales = IngameLocales
 
