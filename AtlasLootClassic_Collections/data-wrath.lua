@@ -755,18 +755,13 @@ data["TabardsWrath"] = {
 	},
 }
 
-local COR_FIELD_LEGENDARYS = {
-	[AtlasLoot.CLASSIC_VERSION_NUM] = "Legendarys",
-	[AtlasLoot.BC_VERSION_NUM] = "LegendarysBCC",
-	[AtlasLoot.WRATH_VERSION_NUM] = "LegendarysWrath",
-}
 data["LegendarysWrath"] = {
 	name = AL["Legendarys"],
 	ContentType = COLLECTIONS_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
 	TableType = NORMAL_ITTYPE,
 	gameVersion = AtlasLoot.WRATH_VERSION_NUM,
-	CorrespondingFields = COR_FIELD_LEGENDARYS,
+	CorrespondingFields = private.LEGENDARYS,
 	items = {
 		{
 			name = AL["Legendarys"],

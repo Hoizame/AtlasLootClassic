@@ -24,3 +24,9 @@ private.HALLOWEEN = {
     [AtlasLoot.BC_VERSION_NUM]          = "HalloweenBC",
     [AtlasLoot.WRATH_VERSION_NUM]       = "HalloweenWrath",
 }
+
+private.LEGENDARYS = {
+    [AtlasLoot.CLASSIC_VERSION_NUM]     = "Legendarys",
+    [AtlasLoot.BC_VERSION_NUM]          = "LegendarysBC",
+    [AtlasLoot.WRATH_VERSION_NUM]       = "LegendarysWrath",
+}
