@@ -827,6 +827,7 @@ data["Mounts"] = {
 	ContentType = COLLECTIONS_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
 	TableType = NORMAL_ITTYPE,
+	gameVersion = AtlasLoot.CLASSIC_VERSION_NUM,
 	CorrespondingFields = private.MOUNTS,
 	items = {
 		{
@@ -939,6 +940,7 @@ data["Tabards"] = {
 	ContentType = COLLECTIONS_CONTENT,
 	LoadDifficulty = LOAD_DIFF,
 	TableType = NORMAL_ITTYPE,
+	gameVersion = AtlasLoot.CLASSIC_VERSION_NUM,
 	CorrespondingFields = private.TABARDS,
 	items = {
 		{
@@ -1125,6 +1127,7 @@ data["GurubashiArena"] = {
 	ContentType = WORLD_EVENT_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = NORMAL_ITTYPE,
+	gameVersion = AtlasLoot.CLASSIC_VERSION_NUM,
 	items = {
 		{ -- GurubashiArena
 			name = AL["Gurubashi Arena"],
