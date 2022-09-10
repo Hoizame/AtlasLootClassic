@@ -298,7 +298,7 @@ function Item.GetDescription(itemID, itemEquipLoc, itemType, itemSubType)
 			ret = tokenDesc
 		end
 	elseif Companion.IsCompanion(itemID) then
-		ret = Companion.GetTypeName(itemID)
+		ret = Companion.GetDescription(itemID, true)
 	elseif ItemSet.GetSetIDforItemID(itemID) then
 		ret = AL["|cff00ff00Set item:|r "]..GetItemDescInfo(itemEquipLoc, itemType, itemSubType)
 	else

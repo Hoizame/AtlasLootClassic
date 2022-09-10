@@ -8,10 +8,16 @@ local ALIL = AtlasLoot.IngameLocales
 local format = string.format
 
 -- WoW
+
+-- local
+local KNOWN_DESCRIPTION_FORMAT = "%s - |cff66cc33"..AL["Learned"].."|r"
 local COMPANION_TYPE = {
-    [1] = { "CRITTER",  ALIL["Pet"] },
-    [2] = { "MOUNT",    ALIL["Mount"] },
+    [1] = { "CRITTER",  ALIL["Pet"],    "" },
+    [2] = { "MOUNT",    ALIL["Mount"],  "" },
 }
+for i = 1,#COMPANION_TYPE do
+    COMPANION_TYPE[i][3] = format(KNOWN_DESCRIPTION_FORMAT, COMPANION_TYPE[i][2])
+end
 
 local COMPANION_DATA = {
     -- [itemID] = {spellID, creatureID, creatureType}
@@ -583,6 +589,8 @@ local COMPANION_DATA = {
 	[198665] = {384796,194870,1},
 }
 
+local LEARNED_COMPANIONS = {}
+
 function Companion.IsCompanion(itemID)
     return COMPANION_DATA[itemID] and true or false
 end
@@ -601,8 +609,59 @@ function Companion.GetTypeName(itemID)
     end
 end
 
+function Companion.GetDescription(itemID, addLearned)
+    if COMPANION_DATA[itemID] and COMPANION_DATA[itemID][3] and COMPANION_TYPE[COMPANION_DATA[itemID][3]] then
+        if addLearned and Companion.IsLearnedItem(itemID) then
+            return COMPANION_TYPE[COMPANION_DATA[itemID][3]][3]
+        else
+            return COMPANION_TYPE[COMPANION_DATA[itemID][3]][2]
+        end
+    end
+end
+
 function Companion.GetBlizzardType(itemID)
     if COMPANION_DATA[itemID] and COMPANION_DATA[itemID][3] then
         return COMPANION_TYPE[COMPANION_DATA[itemID][3]] and COMPANION_TYPE[COMPANION_DATA[itemID][3]][1] or nil
     end
 end
+
+function Companion.IsLearnedItem(itemID)
+    if COMPANION_DATA[itemID] then
+        return LEARNED_COMPANIONS[COMPANION_DATA[itemID][2]]
+    end
+end
+
+function Companion.IsLearnedCreature(creatureID)
+    return LEARNED_COMPANIONS[creatureID]
+end
+
+-- companions are learnd since wotlk
+if AtlasLoot:GameVersion_LT(AtlasLoot.WRATH_VERSION_NUM) then return end
+
+local EventFrame = CreateFrame("FRAME")
+EventFrame:RegisterEvent("COMPANION_LEARNED")
+EventFrame:RegisterEvent("COMPANION_UNLEARNED")
+EventFrame:RegisterEvent("COMPANION_UPDATE")
+local function UpdateKnownCompanions(typ)
+    if GetNumCompanions(typ) <= 0 then return end
+
+    for i = 1, GetNumCompanions(typ) do
+        local creatureID = GetCompanionInfo(typ, i) -- creatureID, creatureName, spellID, icon, active
+        LEARNED_COMPANIONS[creatureID] = true
+    end
+end
+local function EventFrame_OnEvent(frame, event, arg1)
+    if event == "COMPANION_UNLEARNED" then
+        wipe(LEARNED_COMPANIONS)
+    end
+    for i = 1, #COMPANION_TYPE do
+        UpdateKnownCompanions(COMPANION_TYPE[i][1])
+    end
+end
+EventFrame:SetScript("OnEvent", EventFrame_OnEvent)
+
+-- first companion scan
+local function OnInit()
+    EventFrame_OnEvent()
+end
+AtlasLoot:AddInitFunc(OnInit)

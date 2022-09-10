@@ -131,7 +131,7 @@ function AtlasLoot:GetColoredClassNames()
 end
 
 -- #############################
--- ClassColors
+-- RGBToHex
 -- #############################
 function AtlasLoot.RGBToHex(t)
 	local r,g,b = t.r*255,t.g*255,t.b*255
