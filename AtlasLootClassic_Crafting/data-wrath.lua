@@ -1850,16 +1850,18 @@ data["InscriptionWrath"] = {
 				{ 17, 56952 }, -- Glyph of Rake / 310
 				{ 18, 56957 }, -- Glyph of Shred / 260
 				{ 19, 64258 }, -- Glyph of Monsoon / 250
-				{ 20, 56956 }, -- Glyph of Rip / 200
-				{ 21, 56953 }, -- Glyph of Rebirth / 170
-				{ 22, 56948 }, -- Glyph of Insect Swarm / 150
-				{ 23, 56951 }, -- Glyph of Moonfire / 130
-				{ 24, 56945 }, -- Glyph of Healing Touch / 115
-				{ 25, 48121 }, -- Glyph of Entangling Roots / 100
-				{ 26, 67600 }, -- Glyph of Claw / 100
-				{ 27, 56961 }, -- Glyph of Maul / 90
-				{ 28, 56963 }, -- Glyph of Wrath / 85
-				{ 29, 56955 }, -- Glyph of Rejuvenation / 80
+				{ 20, 56959 }, -- Glyph of Starfire / 220
+				{ 21, 56956 }, -- Glyph of Rip / 200
+				{ 22, 56953 }, -- Glyph of Rebirth / 170
+				{ 23, 56948 }, -- Glyph of Insect Swarm / 150
+				{ 24, 56951 }, -- Glyph of Moonfire / 130
+				{ 25, 56945 }, -- Glyph of Healing Touch / 115
+				{ 26, 48121 }, -- Glyph of Entangling Roots / 100
+				{ 27, 67600 }, -- Glyph of Claw / 100
+				{ 28, 56961 }, -- Glyph of Maul / 90
+				{ 29, 56963 }, -- Glyph of Wrath / 85
+				{ 30, 56955 }, -- Glyph of Rejuvenation / 80
+
 			},
 			[MINOR_GLYPHS_DIFF] = {
 				{ 1, 58288 }, -- Glyph of Unburdened Rebirth / 105
