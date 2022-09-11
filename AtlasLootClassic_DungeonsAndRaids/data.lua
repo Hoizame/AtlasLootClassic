@@ -1275,9 +1275,9 @@ data["ScarletMonasteryGraveyard"] = {
 			specialType = "scourgeInvasion",
 			ExtraList = true,
 			[NORMAL_DIFF] = {
-				{ 1,  23168 }, -- Scorn's Focal Dagger
-				{ 2,  23169 }, -- Scorn's Icy Choker
-				{ 3,  23170 }, -- The Frozen Clutch
+				{ 1, 23169 }, -- Scorn's Icy Choker
+				{ 2, 23170 }, -- The Frozen Clutch
+				{ 3, 23168 }, -- Scorn's Focal Dagger
 			},
 		},
 		AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM, { -- SMHeadlessHorseman
@@ -3740,9 +3740,9 @@ data["DireMaulWest"] = {
 			specialType = "scourgeInvasion",
 			ExtraList = true,
 			[NORMAL_DIFF] = {
-				{ 1,  23127 }, -- Cloak of Revanchion
-				{ 2,  23128 }, -- The Shadow's Grasp
-				{ 3,  23129 }, -- Bracers of Mending
+				{ 1, 23127 }, -- Cloak of Revanchion
+				{ 2, 23129 }, -- Bracers of Mending
+				{ 3, 23128 }, -- The Shadow's Grasp
 			},
 		},
 		{ -- DMWShendralarProvisioner
@@ -4421,8 +4421,8 @@ data["Scholomance"] = {
 			ExtraList = true,
 			[NORMAL_DIFF] = {
 				{ 1,  23132 }, -- Lord Blackwood's Blade
-				{ 2,  23139 }, -- Lord Blackwood's Buckler
-				{ 3,  23156 }, -- Blackwood's Thigh
+				{ 2,  23156 }, -- Blackwood's Thigh
+				{ 3,  23139 }, -- Lord Blackwood's Buckler
 			},
 		},
 		{ -- SCHOLOKormok
@@ -4880,8 +4880,8 @@ data["Stratholme"] = {
 			AtlasMapBossID = 2,
 			ContentPhase = 6,
 			[NORMAL_DIFF] = {
-				{ 1,  23125 }, -- Chains of the Lich
-				{ 2,  23126 }, -- Waistband of Balzaphon
+				{ 1,  23126 }, -- Waistband of Balzaphon
+				{ 2,  23125 }, -- Chains of the Lich
 				{ 3,  23124 }, -- Staff of Balzaphon
 			},
 		},
