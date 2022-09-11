@@ -303,7 +303,7 @@ function Item.GetDescription(itemID, itemEquipLoc, itemType, itemSubType)
 			ret = tokenDesc
 		end
 	elseif Companion.IsCompanion(itemID) then
-		ret = Companion.GetDescription(itemID, true)
+		ret = Companion.GetDescription(itemID, AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM, true, false))
 	elseif ItemSet.GetSetIDforItemID(itemID) then
 		ret = AL["|cff00ff00Set item:|r "]..GetItemDescInfo(itemEquipLoc, itemType, itemSubType)
 	else

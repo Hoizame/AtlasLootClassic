@@ -963,9 +963,8 @@ data["Companions"] = {
 				{ 6, 10822 }, -- Dark Whelpling
 				{ 8, 8490 }, -- Cat Carrier (Siamese)
 				{ 9, 8491 }, -- Cat Carrier (Black Tabby)
-				{ 16, 5332 }, -- Glowing Cat Figurine
-				{ 17, 20769 }, -- Disgusting Oozeling
-				{ 18, 11110 }, -- Chicken Egg
+				{ 16, 20769 }, -- Disgusting Oozeling
+				{ 17, 11110 }, -- Chicken Egg
 			},
 		},
 		{
