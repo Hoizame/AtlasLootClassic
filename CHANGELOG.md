@@ -4,7 +4,7 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 
 [Changelog history](https://github.com/Hoizame/AtlasLootClassic/blob/master/AtlasLootClassic/Documentation/Release_Notes.md)
 
-## v3.0.1 (Sep, XX, 2022)
+## v3.0.1 (Sep, 11, 2022)
 
 - rework pet and mount display
 - tooltip extras can now shown in every tooltip
