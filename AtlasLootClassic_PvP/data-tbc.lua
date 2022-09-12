@@ -1115,6 +1115,15 @@ data["ArenaS4PvP"] = {
 				{ 18, 35016 }, -- Vengeful Gladiator's Grimoire
 			},
 		},
+		AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM, {
+			name = ALIL["Back"],
+			[NORMAL_DIFF] = {
+				{ 1, 44431 }, -- Cloak of Certain Reprieve
+				{ 2, 41591 }, --  Sergeant's Reinforced Cape
+				{ 3, 41592 }, --  The Gladiator's Resolution
+				{ 4, 44429 }, --  Volanthius Shroud
+			},
+		}),
 		{
 			name = ALIL["Relic"],
 			[NORMAL_DIFF] = {
@@ -1149,6 +1158,15 @@ data["ArenaS4PvP"] = {
 				{ 4, 35129 }, -- Guardian's Band of Dominance
 			},
 		},
+		AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM, {
+			name = ALIL["Trinket"],
+			[NORMAL_DIFF] = {
+				{ 1, 41588 }, --  Battlemaster's Aggression
+				{ 2, 41587 }, --  Battlemaster's Celerity
+				{ 3, 41590 }, --  Battlemaster's Courage
+				{ 4, 41589 }, --  Battlemaster's Resolve
+			},
+		}),
 		{
 			name = format(AL["Non Set '%s'"], ALIL["Cloth"]),
 			[NORMAL_DIFF] = {

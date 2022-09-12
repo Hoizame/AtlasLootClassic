@@ -7,4 +7,5 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 ## v3.0.2 (Sep, XX, 2022)
 
 - add Scourge Bosses pr #231
+- add missing S4 backs and trinkets #232
 - fix lua error with russian clients
