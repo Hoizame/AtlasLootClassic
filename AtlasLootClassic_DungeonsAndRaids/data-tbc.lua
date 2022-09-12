@@ -2770,6 +2770,19 @@ data["Karazhan"] = {
                 { 21, 22545 }, -- Formula: Enchant Boots - Surefooted
             }
         },
+        AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM, { -- KaraPrinceT
+			name = AL["Prince Tenris Mirkblood"],
+			npcID = 28194,
+			Level = 999,
+			DisplayIDs = {{25541}},
+			AtlasMapBossID = 5,
+			specialType = "scourgeInvasion",
+			ExtraList = true,
+			[NORMAL_DIFF] = {
+				{ 1,  38658 }, -- Vampiric Batling
+				{ 2,  39769 }, -- Arcanite Ripper
+			},
+		}),
         T4_SET
     }
 }

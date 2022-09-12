@@ -642,17 +642,6 @@ data["ShadowfangKeep"] = {
 				{ 3,  3191 }, -- Arced War Axe
 			},
 		},
-		{ -- SFKSever
-			name = AL["Sever"],
-			npcID = 14682,
-			DisplayIDs = {{1061}},
-			AtlasMapBossID = 7,
-			ContentPhase = 6,
-			[NORMAL_DIFF] = {
-				{ 1,  23173 }, -- Abomination Skin Leggings
-				{ 2,  23171 }, -- The Axe of Severing
-			},
-		},
 		{ -- SFKOdotheBlindwatcher
 			name = AL["Odo the Blindwatcher"],
 			npcID = 4279,
@@ -735,6 +724,19 @@ data["ShadowfangKeep"] = {
 				{ 9,  3194 }, -- Black Malice
 				{ 10, 2205 }, -- Duskbringer
 				{ 11, 1484 }, -- Witching Stave
+			},
+		},
+		{ -- SFKSever
+			name = AL["Sever"],
+			npcID = 14682,
+			DisplayIDs = {{1061}},
+			AtlasMapBossID = 7,
+			ContentPhase = 6,
+			specialType = "scourgeInvasion",
+			ExtraList = true,
+			[NORMAL_DIFF] = {
+				{ 1,  23173 }, -- Abomination Skin Leggings
+				{ 2,  23171 }, -- The Axe of Severing
 			},
 		},
 		{ -- SFKJordansHammer
@@ -1262,6 +1264,20 @@ data["ScarletMonasteryGraveyard"] = {
 				{ 12, 7786 }, -- Headsplitter
 				{ 13, 7753 }, -- Bloodspiller
 				{ 14, 7730 }, -- Cobalt Crusher
+			},
+		},
+		{ -- SMScorn
+			name = AL["Scorn"],
+			npcID = 14693,
+			DisplayIDs = {{16197}},
+			AtlasMapBossID = 1,
+			ContentPhase = 6,
+			specialType = "scourgeInvasion",
+			ExtraList = true,
+			[NORMAL_DIFF] = {
+				{ 1, 23169 }, -- Scorn's Icy Choker
+				{ 2, 23170 }, -- The Frozen Clutch
+				{ 3, 23168 }, -- Scorn's Focal Dagger
 			},
 		},
 		AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM, { -- SMHeadlessHorseman
@@ -3715,6 +3731,20 @@ data["DireMaulWest"] = {
 				{ 7,  18332 }, -- Libram of Rapidity
 			},
 		},
+		{ -- DMWRevanchion
+			name = AL["Revanchion"],
+			npcID = 14690,
+			DisplayIDs = {{14695}},
+			AtlasMapBossID = 2,
+			ContentPhase = 6,
+			specialType = "scourgeInvasion",
+			ExtraList = true,
+			[NORMAL_DIFF] = {
+				{ 1, 23127 }, -- Cloak of Revanchion
+				{ 2, 23129 }, -- Bracers of Mending
+				{ 3, 23128 }, -- The Shadow's Grasp
+			},
+		},
 		{ -- DMWShendralarProvisioner
 			name = AL["Shen'dralar Provisioner"],
 			npcID = 14371,
@@ -4381,6 +4411,20 @@ data["Scholomance"] = {
 				{ 29, 13920 }, -- Healthy Dragon Scale
 			},
 		},
+		{ -- SCHOLOLordB
+			name = AL["Lord Blackwood"],
+			npcID = 14695,
+			DisplayIDs = {{14699}},
+			AtlasMapBossID = 2,
+			ContentPhase = 6,
+			specialType = "scourgeInvasion",
+			ExtraList = true,
+			[NORMAL_DIFF] = {
+				{ 1,  23132 }, -- Lord Blackwood's Blade
+				{ 2,  23156 }, -- Blackwood's Thigh
+				{ 3,  23139 }, -- Lord Blackwood's Buckler
+			},
+		},
 		{ -- SCHOLOKormok
 			name = AL["Kormok"].." - "..format(AL["Tier %s Sets"], "0.5"),
 			npcID = 16118,
@@ -4830,13 +4874,14 @@ data["Stratholme"] = {
 			name = AL["Balzaphon"],
 			NameColor = GREEN,
 			ExtraList = true,
+			specialType = "scourgeInvasion",
 			npcID = 14684,
 			DisplayIDs = {{7919}},
 			AtlasMapBossID = 2,
 			ContentPhase = 6,
 			[NORMAL_DIFF] = {
-				{ 1,  23125 }, -- Chains of the Lich
-				{ 2,  23126 }, -- Waistband of Balzaphon
+				{ 1,  23126 }, -- Waistband of Balzaphon
+				{ 2,  23125 }, -- Chains of the Lich
 				{ 3,  23124 }, -- Staff of Balzaphon
 			},
 		},
