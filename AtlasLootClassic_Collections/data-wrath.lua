@@ -1102,9 +1102,9 @@ data["ScourgeInvasionWrath"] = {
 			TableType = SET_ITTYPE,
 			[NORMAL_DIFF] = {
 				{ 1,  781 }, -- Blessed Regalia of Undead Cleansing
-				{ 2,  782 }, -- Undead Slayer's Blessed Armor
-				{ 3,  783 }, -- Blessed Garb of the Undead Slayer
-				{ 4,  784 }, -- Blessed Battlegear of Undead Slaying
+				{ 3,  782 }, -- Undead Slayer's Blessed Armor
+				{ 16,  783 }, -- Blessed Garb of the Undead Slayer
+				{ 18,  784 }, -- Blessed Battlegear of Undead Slaying
 			},
 		},
 		{
