@@ -1810,6 +1810,7 @@ data["ScourgeInvasion"] = {
 	TableType = NORMAL_ITTYPE,
 	ContentPhase = 6,
 	gameVersion = AtlasLoot.CLASSIC_VERSION_NUM,
+	CorrespondingFields = private.SCOURGE_INVASION,
 	items = {
 		{ -- ScourgeInvasionEvent1
 			name = AL["Scourge Invasion"],

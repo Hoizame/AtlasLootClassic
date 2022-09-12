@@ -10,6 +10,7 @@ local PRICE_INFO_LIST = {
 	-- items
 	["burningblossom"] 	= { itemID = 23247 }, -- Burning Blossom
 	["ancestrycoin"] 	= { itemID = 21100 }, -- Coin of Ancestry
+    ["NecroticRune"] 	= { itemID = 22484 }, -- Necrotic Rune
 
 	-- others
 	["money"] 			= { func = GetCoinTextureString },
@@ -717,6 +718,22 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
         [50469] = "EmblemOfFrost:50",
         [50470] = "EmblemOfFrost:50",
         [54637] = "cpvpWarsong:1",
+        [40492] = "NecroticRune:40",
+        [40593] = "NecroticRune:30",
+        [40601] = "NecroticRune:8",
+        [23122] = "NecroticRune:8",
+        [23123] = "NecroticRune:8",
+        [22999] = "NecroticRune:8",
+        [43530] = "NecroticRune:20",
+        [43531] = "NecroticRune:20",
+        [43074] = "NecroticRune:15",
+        [43073] = "NecroticRune:15",
+        [43077] = "NecroticRune:15",
+        [43078] = "NecroticRune:15",
+        [43081] = "NecroticRune:15",
+        [43082] = "NecroticRune:15",
+        [43070] = "NecroticRune:15",
+        [43068] = "NecroticRune:15",
     }
 end
 

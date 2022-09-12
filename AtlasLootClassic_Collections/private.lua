@@ -36,3 +36,8 @@ private.COMPANIONS = {
     [AtlasLoot.BC_VERSION_NUM]          = "CompanionsBC",
     [AtlasLoot.WRATH_VERSION_NUM]       = "CompanionsWrath",
 }
+
+private.SCOURGE_INVASION = {
+    [AtlasLoot.CLASSIC_VERSION_NUM]     = "ScourgeInvasion",
+    [AtlasLoot.WRATH_VERSION_NUM]       = "ScourgeInvasionWrath",
+}

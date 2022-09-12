@@ -1067,3 +1067,52 @@ data["HalloweenWrath"] = {
 		},
 	},
 }
+
+data["ScourgeInvasionWrath"] = {
+	name = AL["Scourge Invasion"],
+	ContentType = WORLD_EVENT_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = NORMAL_ITTYPE,
+	gameVersion = AtlasLoot.WRATH_VERSION_NUM,
+	CorrespondingFields = private.SCOURGE_INVASION,
+	items = {
+		{ -- ScourgeInvasionEvent1
+			name = AL["Vendor"],
+			[NORMAL_DIFF] = {
+				{ 1, 40492 }, --  Argent War Horn
+				{ 2, 40593 }, --  Argent Tome
+				{ 3, 40601 }, --  Argent Dawn Banner
+				{ 5, 23122 }, --  Consecrated Sharpening Stone
+				{ 6, 23123 }, --  Blessed Wizard Oil
+				{ 8, 22999 }, --  Tabard of the Argent Dawn
+				{ 10, 43530 }, --  Argent Mana Potion
+				{ 11, 43531 }, --  Argent Healing Potion
+				{ 16, 43074 }, --  Blessed Mantle of Undead Cleansing
+				{ 17, 43073 }, --  Blessed Gloves of Undead Cleansing
+				{ 19, 43077 }, --  Blessed Shoulderpads of Undead Slaying
+				{ 20, 43078 }, --  Blessed Grips of Undead Slaying
+				{ 22, 43081 }, --  Blessed Pauldrons of Undead Slaying
+				{ 23, 43082 }, --  Blessed Handguards of Undead Slaying
+				{ 25, 43070 }, --  Blessed Gauntlets of Undead Slaying
+				{ 26, 43068 }, -- Blessed Spaulders of Undead Slaying
+			},
+		},
+		{ -- ScourgeInvasionEvent1
+			name = AL["Sets"],
+			TableType = SET_ITTYPE,
+			[NORMAL_DIFF] = {
+				{ 1,  781 }, -- Blessed Regalia of Undead Cleansing
+				{ 2,  782 }, -- Undead Slayer's Blessed Armor
+				{ 3,  783 }, -- Blessed Garb of the Undead Slayer
+				{ 4,  784 }, -- Blessed Battlegear of Undead Slaying
+			},
+		},
+		{
+			name = C_Map_GetAreaInfo(2017).." - "..AL["Prince Tenris Mirkblood"],
+			[NORMAL_DIFF] = {
+				{ 1,  38658 }, -- Vampiric Batling
+				{ 2,  39769 }, -- Arcanite Ripper
+			}
+		},
+	},
+}
