@@ -295,10 +295,16 @@ local IngameLocales = {
 	["Special"] = GLOBAL["SPECIAL"],
 	["Mounts"] = GLOBAL["MOUNTS"],
 	["Mount"] = GLOBAL["MOUNT"],
+	["Pet"] = GLOBAL["PET"],
+	["Pets"] = GLOBAL["PETS"],
 	["Default"] = GLOBAL["DEFAULT"],
 	["Settings"] = GLOBAL["SETTINGS"],
 	["Dressing Room"] = GLOBAL["DRESSUP_FRAME"],
 	["Quest Item"] = GLOBAL["ITEM_BIND_QUEST"],
+	["Collected"] = GLOBAL["COLLECTED"],
+	["Not Collected"] = GLOBAL["NOT_COLLECTED"],
+	["Achievements"] = GLOBAL["ACHIEVEMENTS"],
+	["Companions"] = GLOBAL["COMPANIONS"],
 }
 AtlasLoot.IngameLocales = IngameLocales
 

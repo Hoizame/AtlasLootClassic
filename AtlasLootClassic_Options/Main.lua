@@ -22,41 +22,6 @@ Options.config.args.atlasloot = {
 	get = function(info) return AtlasLoot.db[info[#info]] end,
     set = function(info, value) AtlasLoot.db[info[#info]] = value end,
 	args = {
-		useGameTooltip = {
-			order = 1,
-			type = "toggle",
-			width = "full",
-			name = AL["Use GameTooltip"],
-			desc = AL["Use the standard GameTooltip instead of the custom AtlasLoot tooltip"],
-			get = function(info) return AtlasLoot.db.Tooltip.useGameTooltip end,
-			set = function(info, value) AtlasLoot.db.Tooltip.useGameTooltip = value end,
-		},
-		showIDsInTT = {
-			order = 2,
-			type = "toggle",
-			width = "double",
-			name = AL["Show ID's in tooltip."],
-		},
-		showIDsInTT_Global = {
-			order = 2.5,
-			type = "toggle",
-			--width = "half",
-			name = AL["Global"],
-			desc = AL["Also add the info into every ToolTip.\nThis only works with the source Addon."],
-		},
-		showItemLvlInTT = {
-			order = 3,
-			type = "toggle",
-			width = "double",
-			name = AL["Show Item level in tooltip."],
-		},
-		showItemLvlInTT_Global = {
-			order = 3.5,
-			type = "toggle",
-			--width = "half",
-			name = AL["Global"],
-			desc = AL["Also add the info into every ToolTip.\nThis only works with the source Addon."],
-		},
 		showDropRate = {
 			order = 4,
 			type = "toggle",
@@ -174,6 +139,56 @@ Options.config.args.atlasloot = {
 			set = function(info, value) AtlasLoot.db.ContentPhase.enableOnSets = value UpdateItemFrame() end,
 		},
 	},
+}
+
+Options.orderNumber = Options.orderNumber + 1
+Options.config.args.tooltip = {
+	type = "group",
+	name = AL["ToolTip"],
+	childGroups = "select",
+	order = Options.orderNumber,
+	get = function(info) return AtlasLoot.db[info[#info]] end,
+    set = function(info, value) AtlasLoot.db[info[#info]] = value end,
+	args = {
+		useGameTooltip = {
+			order = 1,
+			type = "toggle",
+			width = "full",
+			name = AL["Use GameTooltip"],
+			desc = AL["Use the standard GameTooltip instead of the custom AtlasLoot tooltip"],
+			get = function(info) return AtlasLoot.db.Tooltip.useGameTooltip end,
+			set = function(info, value) AtlasLoot.db.Tooltip.useGameTooltip = value end,
+		},
+		showTooltipInfoGlobal = {
+			order = 11,
+			type = "toggle",
+			width = "double",
+			name = AL["Show extra info in every tooltip."],
+		},
+		headerSetting = {
+			order = 10,
+			type = "header",
+			name = AL["Extra tooltip info"],
+		},
+		showCompanionLearnedInfo = {
+			order = 11,
+			type = "toggle",
+			width = "full",
+			name = AL["Show learned info for companions."],
+		},
+		showIDsInTT = {
+			order = 12,
+			type = "toggle",
+			width = "full",
+			name = AL["Show ID's."],
+		},
+		showItemLvlInTT = {
+			order = 13,
+			type = "toggle",
+			width = "full",
+			name = AL["Show Item level."],
+		},
+	}
 }
 
 Options.orderNumber = Options.orderNumber + 1

@@ -304,7 +304,7 @@ function Button:Create()
 	button.name:SetPoint("TOPLEFT", button.icon, "TOPRIGHT", 3, 0)
 	button.name:SetJustifyH("LEFT")
 	button.name:SetText("")
-	button.name:SetWidth(205)
+	button.name:SetWidth(230)
 	button.name:SetHeight(12)
 	button.name.Ori_SetText = button.name.SetText
 	button.name.SetText = Button_ForceSetText
@@ -314,7 +314,7 @@ function Button:Create()
 	button.extra:SetPoint("TOPLEFT", button.name, "BOTTOMLEFT", 0, -1)
 	button.extra:SetJustifyH("LEFT")
 	button.extra:SetText("")
-	button.extra:SetWidth(205)
+	button.extra:SetWidth(230)
 	button.extra:SetHeight(10)
 	button.extra:SetTextColor(1, 1, 1, 1)
 	button.extra.Ori_SetText = button.extra.SetText
