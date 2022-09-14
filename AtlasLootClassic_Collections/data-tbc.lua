@@ -859,6 +859,28 @@ data["LegendarysBC"] = {
 	},
 }
 
+data["ChildrensWeekBC"] = {
+	name = AL["Childrens Week"],
+	ContentType = WORLD_EVENT_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = NORMAL_ITTYPE,
+	gameVersion = AtlasLoot.BC_VERSION_NUM,
+	items = {
+		{ -- ChildrensWeek
+			name = AL["Childrens Week"],
+			[NORMAL_DIFF] = {
+				{ 1,  23007 }, -- Piglet's Collar
+				{ 2,  23015 }, -- Rat Cage
+				{ 3,  23002 }, -- Turtle Box
+				{ 4,  23022 }, -- Curmudgeon's Payoff
+				{ 6,  32616 }, -- Egbert's Egg
+				{ 7,  32617 }, -- Sleepy Willy
+				{ 8,  32622 }, -- Elekk Training Collar
+			},
+		},
+	},
+}
+
 data["MidsummerFestivalBC"] = {
 	name = AL["Midsummer Festival"],
 	ContentType = WORLD_EVENT_CONTENT,
