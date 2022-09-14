@@ -739,6 +739,22 @@ data["ShadowfangKeep"] = {
 				{ 2,  23171 }, -- The Axe of Severing
 			},
 		},
+		AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM, { -- SFKApothecaryH
+			name = AL["Apothecary Hummel"],
+			npcID = 36296,
+			Level = 999,
+			DisplayIDs = {{31167}},
+			AtlasMapBossID = 3,
+			ExtraList = true,
+			[NORMAL_DIFF] = {
+				{ 1,  51804 }, -- Winking Eye of Love
+				{ 2,  51805 }, -- Heartbreak Charm
+				{ 3,  51806 }, -- Shard of Pirouetting Happiness
+				{ 4,  51807 }, -- Sweet Perfume Broach
+				{ 5,  51808 }, -- Choker of the Pure Heart
+				{ 6,  49715 }, -- Forever-Lovely Rose
+			},
+		}),
 		{ -- SFKJordansHammer
 			name = AL["Jordan's Smithing Hammer"],
 			ExtraList = true,
@@ -1015,6 +1031,8 @@ data["Gnomeregan"] = {
 				--{ 23, 4376 }, -- Flame Deflector
 				{ 19, 7742 }, -- Schematic: Gnomish Cloaking Device
 				--{ 26, 4397 }, -- Gnomish Cloaking Device
+				{ 20, 11828 }, -- Schematic: Pet Bombling
+				--{ 29, 11825 }, -- Pet Bombling
 			},
 		},
 		{ -- GnTrash
@@ -1031,6 +1049,8 @@ data["Gnomeregan"] = {
 				{ 8,  9486 }, -- Supercharger Battle Axe
 				{ 9,  9490 }, -- Gizmotron Megachopper
 				{ 11, 9489 }, -- Gyromatic Icemaker
+				{ 12, 11827 }, -- Schematic: Lil' Smoky
+				--{ 15, 11826 }, -- Lil' Smoky
 				{ 16, 9327 }, -- Security DELTA Data Access Card
 				{ 18, 7191 }, -- Fused Wiring
 				{ 19, 9308 }, -- Grime-Encrusted Object
@@ -1280,7 +1300,7 @@ data["ScarletMonasteryGraveyard"] = {
 				{ 3, 23168 }, -- Scorn's Focal Dagger
 			},
 		},
-		AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM, { -- SMHeadlessHorseman
+		{ -- SMHeadlessHorseman
 			name = AL["Headless Horseman"],
 			npcID = 23682,
 			Level = 70,
@@ -1303,7 +1323,7 @@ data["ScarletMonasteryGraveyard"] = {
 				{ 22, 37011 }, -- Magic Broom               60% ground
 				{ 24, 33154 }, -- Sinister Squashling
 			}
-		}),
+		},
 		KEYS,
 	},
 }
