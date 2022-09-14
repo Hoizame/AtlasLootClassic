@@ -1177,7 +1177,7 @@ data["TheSlavePens"] = {
                 { 28, 27741 }, -- Bleeding Hollow Warhammer
             }
         },
-        { -- CFRSlaveAhune
+        AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM, { -- CFRSlaveAhune
             name = AL["Ahune <The Frost Lord>"],
             npcID = 25740,
             Level = 73,
@@ -1211,7 +1211,7 @@ data["TheSlavePens"] = {
                 { 24, 34955 }, -- Scorched Stone
                 { 25, 35557 }, -- Huge Snowball
             }
-        },
+        }),
         KEYS
     }
 }
