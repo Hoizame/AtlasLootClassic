@@ -991,6 +991,75 @@ data["HeirloomWrath"] = {
 	},
 }
 
+data["ChildrensWeekWrath"] = {
+	name = AL["Childrens Week"],
+	ContentType = WORLD_EVENT_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = NORMAL_ITTYPE,
+	gameVersion = AtlasLoot.WRATH_VERSION_NUM,
+	items = {
+		{ -- ChildrensWeek
+			name = AL["Childrens Week"],
+			[NORMAL_DIFF] = {
+				{ 1,  23007 }, -- Piglet's Collar
+				{ 2,  23015 }, -- Rat Cage
+				{ 3,  23002 }, -- Turtle Box
+				{ 4,  23022 }, -- Curmudgeon's Payoff
+				{ 6,  32616 }, -- Egbert's Egg
+				{ 7,  32617 }, -- Sleepy Willy
+				{ 8,  32622 }, -- Elekk Training Collar
+				{ 10,  46544 }, -- Curious Wolvar Pup
+				{ 11,  46545 }, -- Curious Oracle Hatchling
+			},
+		},
+	},
+}
+
+data["ValentinedayWrath"] = {
+	name = AL["Love is in the Air"],
+	ContentType = WORLD_EVENT_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = NORMAL_ITTYPE,
+	gameVersion = AtlasLoot.WRATH_VERSION_NUM,
+	items = {
+		{ -- Valentineday
+			name = AL["Love is in the Air"],
+			[NORMAL_DIFF] = {
+				{ 1,  22206 }, -- Bouquet of Red Roses
+				{ 3, "INV_ValentinesBoxOfChocolates02", nil, AL["Gift of Adoration"] },
+				{ 4,  22279 }, -- Lovely Black Dress
+				{ 5,  22235 }, -- Truesilver Shafted Arrow
+				{ 6,  22200 }, -- Silver Shafted Arrow
+				{ 7,  22261 }, -- Love Fool
+				{ 8,  22218 }, -- Handful of Rose Petals
+				{ 9,  21813 }, -- Bag of Candies
+				{ 11, "INV_Box_02", nil, AL["Box of Chocolates"] },
+				{ 12, 22237 }, -- Dark Desire
+				{ 13, 22238 }, -- Very Berry Cream
+				{ 14, 22236 }, -- Buttermilk Delight
+				{ 15, 22239 }, -- Sweet Surprise
+				{ 16, 22276 }, -- Lovely Red Dress
+				{ 17, 22278 }, -- Lovely Blue Dress
+				{ 18, 22280 }, -- Lovely Purple Dress
+				{ 19, 22277 }, -- Red Dinner Suit
+				{ 20, 22281 }, -- Blue Dinner Suit
+				{ 21, 22282 }, -- Purple Dinner Suit
+			},
+		},
+		{ -- SFKApothecaryH
+			name = AL["Apothecary Hummel"],
+			[NORMAL_DIFF] = {
+				{ 1,  51804 }, -- Winking Eye of Love
+				{ 2,  51805 }, -- Heartbreak Charm
+				{ 3,  51806 }, -- Shard of Pirouetting Happiness
+				{ 4,  51807 }, -- Sweet Perfume Broach
+				{ 5,  51808 }, -- Choker of the Pure Heart
+				{ 6,  49715 }, -- Forever-Lovely Rose
+			},
+		},
+	},
+}
+
 data["HalloweenWrath"] = {
 	name = AL["Hallow's End"],
 	ContentType = WORLD_EVENT_CONTENT,
