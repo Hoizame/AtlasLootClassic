@@ -997,7 +997,7 @@ data["HalloweenBC"] = {
 			},
 		},
 		{ -- SMHeadlessHorseman
-			name = AL["Headless Horseman"],
+			name = C_Map_GetAreaInfo(796).." - "..AL["Headless Horseman"],
 			[NORMAL_DIFF] = {
                 { 1, 34075 }, -- Ring of Ghoulish Delight
                 { 2, 34073 }, -- The Horseman's Signet Ring
