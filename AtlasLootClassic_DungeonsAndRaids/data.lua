@@ -740,9 +740,9 @@ data["ShadowfangKeep"] = {
 			},
 		},
 		AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM, { -- SFKApothecaryH
-			name = AL["Apothecary Hummel"],
+			name = AL["Apothecary Hummel <Crown Chemical Co.>"],
 			npcID = 36296,
-			Level = 999,
+			Level = 83,
 			DisplayIDs = {{31167}},
 			AtlasMapBossID = 3,
 			ExtraList = true,
@@ -1300,7 +1300,7 @@ data["ScarletMonasteryGraveyard"] = {
 				{ 3, 23168 }, -- Scorn's Focal Dagger
 			},
 		},
-		{ -- SMHeadlessHorseman
+		AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM, { -- SMHeadlessHorseman
 			name = AL["Headless Horseman"],
 			npcID = 23682,
 			Level = 70,
@@ -1308,11 +1308,11 @@ data["ScarletMonasteryGraveyard"] = {
 			AtlasMapBossID = nil,
 			ExtraList = true,
 			[NORMAL_DIFF] = {
-				{ 1, 34075 }, -- Ring of Ghoulish Delight
-				{ 2, 34073 }, -- The Horseman's Signet Ring
-				{ 3, 34074 }, -- Witches Band
-				{ 5, 33808 }, -- The Horseman's Helm
-				{ 6, 38175 }, -- The Horseman's Blade
+				{ 1, 49121 }, -- Ring of Ghoulish Glee
+				{ 2, 49123 }, -- The Horseman's Seal
+				{ 3, 49124 }, -- Wicked Witch's Band
+				{ 5, 49126 }, -- The Horseman's Horrific Helm
+				{ 6, 49128 }, -- The Horseman's Baleful Blad
 				{ 8, 33292 }, -- Hallowed Helm
 				{ 10, 34068 }, -- Weighted Jack-o'-Lantern
 				{ 12, 33277 }, -- Tome of Thomas Thomson
@@ -1323,7 +1323,7 @@ data["ScarletMonasteryGraveyard"] = {
 				{ 22, 37011 }, -- Magic Broom               60% ground
 				{ 24, 33154 }, -- Sinister Squashling
 			}
-		},
+		}),
 		KEYS,
 	},
 }
