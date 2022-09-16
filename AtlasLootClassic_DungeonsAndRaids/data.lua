@@ -1303,7 +1303,7 @@ data["ScarletMonasteryGraveyard"] = {
 		AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM, { -- SMHeadlessHorseman
 			name = AL["Headless Horseman"],
 			npcID = 23682,
-			Level = 70,
+			Level = 83,
 			DisplayIDs = {{22351}},
 			AtlasMapBossID = nil,
 			ExtraList = true,
