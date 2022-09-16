@@ -1163,11 +1163,11 @@ data["HalloweenWrath"] = {
 		{ -- SMHeadlessHorseman
 			name = C_Map_GetAreaInfo(796).." - "..AL["Headless Horseman"],
 			[NORMAL_DIFF] = {
-				{ 1, 49121 }, -- Ring of Ghoulish Glee
-				{ 2, 49123 }, -- The Horseman's Seal
-				{ 3, 49124 }, -- Wicked Witch's Band
-				{ 5, 49126 }, -- The Horseman's Horrific Helm
-				{ 6, 49128 }, -- The Horseman's Baleful Blad
+                { 1, 49121 }, -- Ring of Ghoulish Glee
+                { 2, 49123 }, -- The Horseman's Seal
+                { 3, 49124 }, -- Wicked Witch's Band
+                { 5, 49126 }, -- The Horseman's Horrific Helm
+                { 6, 49128 }, -- The Horseman's Baleful Blad
                 { 8, 33292 }, -- Hallowed Helm
                 { 10, 34068 }, -- Weighted Jack-o'-Lantern
                 { 12, 33277 }, -- Tome of Thomas Thomson
