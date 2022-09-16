@@ -1047,7 +1047,7 @@ data["ValentinedayWrath"] = {
 			},
 		},
 		{ -- SFKApothecaryH
-			name = AL["Apothecary Hummel"],
+			name = C_Map_GetAreaInfo(209).." - "..AL["Apothecary Hummel"],
 			[NORMAL_DIFF] = {
 				{ 1,  51804 }, -- Winking Eye of Love
 				{ 2,  51805 }, -- Heartbreak Charm
@@ -1055,6 +1055,51 @@ data["ValentinedayWrath"] = {
 				{ 4,  51807 }, -- Sweet Perfume Broach
 				{ 5,  51808 }, -- Choker of the Pure Heart
 				{ 6,  49715 }, -- Forever-Lovely Rose
+			},
+		},
+	},
+}
+
+data["MidsummerFestivalWrath"] = {
+	name = AL["Midsummer Festival"],
+	ContentType = WORLD_EVENT_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = NORMAL_ITTYPE,
+	gameVersion = AtlasLoot.WRATH_VERSION_NUM,
+	items = {
+		{ -- MidsummerFestivalWrath
+			name = AL["Midsummer Festival"],
+			[NORMAL_DIFF] = {
+				{ 1,  23083 }, -- Captured Flame
+				{ 2,  34686 }, -- Brazier of Dancing Flames
+				{ 4,  23324 }, -- Mantle of the Fire Festival
+				{ 5,  23323 }, -- Crown of the Fire Festival
+				{ 6,  34683 }, -- Sandals of Summer
+				{ 7,  34685 }, -- Vestment of Summer
+				{ 9,  23247 }, -- Burning Blossom
+				{ 10,  34599 }, -- Juggling Torch
+				{ 11,  34684 }, -- Handful of Summer Petals
+				{ 12,  23246 }, -- Fiery Festival Brew
+				{ 16, 23215 }, -- Bag of Smorc Ingredients
+				{ 17, 23211 }, -- Toasted Smorc
+				{ 18,  23435 }, -- Elderberry Pie
+				{ 19, 23327 }, -- Fire-toasted Bun
+				{ 20, 23326 }, -- Midsummer Sausage
+			},
+		},
+		{ -- CFRSlaveAhune
+			name = C_Map_GetAreaInfo(3717).." - "..AL["Ahune"],
+			[NORMAL_DIFF] = {
+                { 1, 54806 }, -- Frostscythe of Lord Ahune
+                { 2, 54804 }, -- Shroud of Winter's Chill
+                { 3, 54802 }, -- The Frost Lord's War Cloak
+                { 4, 54801 }, -- Icebound Cloak
+                { 5, 54805 }, -- Cloak of the Frigid Winds
+                { 6, 54803 }, -- The Frost Lord's Battle Shroud            
+                { 8, 35723 }, -- Shards of Ahune
+                { 16, 35498 }, -- Formula: Enchant Weapon - Deathfrost
+                { 18, 34955 }, -- Scorched Stone
+                { 19, 35557 }, -- Huge Snowball
 			},
 		},
 	},
@@ -1116,13 +1161,13 @@ data["HalloweenWrath"] = {
 			},
 		},
 		{ -- SMHeadlessHorseman
-			name = AL["Headless Horseman"],
+			name = C_Map_GetAreaInfo(796).." - "..AL["Headless Horseman"],
 			[NORMAL_DIFF] = {
-                { 1, 34075 }, -- Ring of Ghoulish Delight
-                { 2, 34073 }, -- The Horseman's Signet Ring
-                { 3, 34074 }, -- Witches Band
-                { 5, 33808 }, -- The Horseman's Helm
-                { 6, 38175 }, -- The Horseman's Blade
+				{ 1, 49121 }, -- Ring of Ghoulish Glee
+				{ 2, 49123 }, -- The Horseman's Seal
+				{ 3, 49124 }, -- Wicked Witch's Band
+				{ 5, 49126 }, -- The Horseman's Horrific Helm
+				{ 6, 49128 }, -- The Horseman's Baleful Blad
                 { 8, 33292 }, -- Hallowed Helm
                 { 10, 34068 }, -- Weighted Jack-o'-Lantern
                 { 12, 33277 }, -- Tome of Thomas Thomson
