@@ -752,7 +752,12 @@ data["ShadowfangKeep"] = {
 				{ 3,  51806 }, -- Shard of Pirouetting Happiness
 				{ 4,  51807 }, -- Sweet Perfume Broach
 				{ 5,  51808 }, -- Choker of the Pure Heart
-				{ 6,  49715 }, -- Forever-Lovely Rose
+				{ 7,  49641 }, -- Faded Lovely Greeting Card
+				{ 8,  49715 }, -- Forever-Lovely Rose
+				{ 9,  50250 }, -- X-45 Heartbreaker
+				{ 10,  50446 }, -- Toxic Wasteling
+				{ 11,  50471 }, -- The Heartbreaker
+				{ 12,  50741 }, -- Vile Fumigator's Mask
 			},
 		}),
 		{ -- SFKJordansHammer
@@ -1312,7 +1317,7 @@ data["ScarletMonasteryGraveyard"] = {
 				{ 2, 49123 }, -- The Horseman's Seal
 				{ 3, 49124 }, -- Wicked Witch's Band
 				{ 5, 49126 }, -- The Horseman's Horrific Helm
-				{ 6, 49128 }, -- The Horseman's Baleful Blade
+				{ 6, 49128 }, -- The Horseman's Baleful Blad
 				{ 8, 33292 }, -- Hallowed Helm
 				{ 10, 34068 }, -- Weighted Jack-o'-Lantern
 				{ 12, 33277 }, -- Tome of Thomas Thomson
