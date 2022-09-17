@@ -1222,7 +1222,7 @@ data["ScourgeInvasionWrath"] = {
 			},
 		},
 		{
-			name = C_Map_GetAreaInfo(2017).." - "..AL["Prince Tenris Mirkblood"],
+			name = C_Map_GetAreaInfo(3457).." - "..AL["Prince Tenris Mirkblood"],
 			[NORMAL_DIFF] = {
 				{ 1,  38658 }, -- Vampiric Batling
 				{ 2,  39769 }, -- Arcanite Ripper
