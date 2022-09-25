@@ -2351,7 +2351,8 @@ data["MagistersTerrace"] = {
                 { 16, 35504 }, -- Phoenix Hatchling
                 { 18, 35311 }, -- Schematic: Mana Potion Injector
                 { 19, 35304 }, -- Design: Solid Star of Elune
-                { 21, 34157 }, -- Head of Kael'thas
+                { 20, 35294 }, -- Recipe: Elixir of Empowerment
+                { 22, 34157 }, -- Head of Kael'thas
             },
             [HEROIC_DIFF] = {
                 { 1, 29434 }, -- Badge of Justice
@@ -2367,6 +2368,7 @@ data["MagistersTerrace"] = {
                 { 18, 35504 }, -- Phoenix Hatchling
                 { 20, 35311 }, -- Schematic: Mana Potion Injector
                 { 21, 35304 }, -- Design: Solid Star of Elune
+                { 22, 35294 }, -- Recipe: Elixir of Empowerment
             }
         },
         { -- SMTTrash
