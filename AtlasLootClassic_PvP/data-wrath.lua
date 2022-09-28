@@ -480,18 +480,18 @@ data["ArenaS5PvP"] = {
 		{
 			name = format(AL["Non Set '%s'"], ALIL["Cloth"]),
 			[NORMAL_DIFF] = {
-				{ 1, 41884 }, -- Deadly Gladiator's Treads of Salvation
-				{ 2, 41880 }, -- Deadly Gladiator's Cord of Salvation
-				{ 3, 41892 }, -- Deadly Gladiator's Cuffs of Salvation
-				{ 5, 41902 }, -- Deadly Gladiator's Treads of Dominance
-				{ 6, 41897 }, -- Deadly Gladiator's Cord of Dominance
-				{ 7, 41908 }, -- Deadly Gladiator's Cuffs of Dominance
-				{ 16, 41879 }, -- Hateful Gladiator's Slippers of Salvation
-				{ 17, 41877 }, -- Hateful Gladiator's Cord of Salvation
-				{ 18, 41878 }, -- Hateful Gladiator's Cuffs of Salvation
-				{ 20, 41901 }, -- Hateful Gladiator's Slippers of Dominance
-				{ 21, 41896 }, -- Hateful Gladiator's Cord of Dominance
-				{ 22, 41907 }, -- Hateful Gladiator's Cuffs of Dominance
+				{ 1, 41879 }, -- Hateful Gladiator's Slippers of Salvation
+				{ 2, 41877 }, -- Hateful Gladiator's Cord of Salvation
+				{ 3, 41878 }, -- Hateful Gladiator's Cuffs of Salvation
+				{ 5, 41901 }, -- Hateful Gladiator's Slippers of Dominance
+				{ 6, 41896 }, -- Hateful Gladiator's Cord of Dominance
+				{ 7, 41907 }, -- Hateful Gladiator's Cuffs of Dominance
+				{ 16, 41884 }, -- Deadly Gladiator's Treads of Salvation
+				{ 17, 41880 }, -- Deadly Gladiator's Cord of Salvation
+				{ 18, 41892 }, -- Deadly Gladiator's Cuffs of Salvation
+				{ 20, 41902 }, -- Deadly Gladiator's Treads of Dominance
+				{ 21, 41897 }, -- Deadly Gladiator's Cord of Dominance
+				{ 22, 41908 }, -- Deadly Gladiator's Cuffs of Dominance
 			},
 		},
 		{
@@ -506,15 +506,15 @@ data["ArenaS5PvP"] = {
 				{ 9, 41828 },  -- Hateful Gladiator's Boots of Triumph
 				{ 10, 41827 },  -- Hateful Gladiator's Belt of Triumph, Waist
 				{ 11, 41830 }, -- Hateful Gladiator's Armwraps of Triumph
-				{ 16, 41620 }, -- Hateful Deadly Gladiator's Boots of Salvation
-				{ 17, 41616 }, -- Hateful Deadly Gladiator's Belt of Salvation, Waist
-				{ 18, 41624 }, -- Hateful Deadly Gladiator's Armwraps of Salvation
-				{ 20, 41634 }, -- Hateful Deadly Gladiator's Boots of Dominance
-				{ 21, 41629 }, -- Hateful Deadly Gladiator's Belt of Dominance, Waist
-				{ 22, 41639 }, -- Hateful Deadly Gladiator's Armwraps of Dominance
-				{ 24, 41835 }, -- Hateful Deadly Gladiator's Boots of Triumph
-				{ 25, 41831 }, -- Hateful Deadly Gladiator's Belt of Triumph, Waist
-				{ 26, 41839 }, -- Hateful Deadly Gladiator's Armwraps of Triumph
+				{ 16, 41620 }, -- Deadly Gladiator's Boots of Salvation
+				{ 17, 41616 }, -- Deadly Gladiator's Belt of Salvation, Waist
+				{ 18, 41624 }, -- Deadly Gladiator's Armwraps of Salvation
+				{ 20, 41634 }, -- Deadly Gladiator's Boots of Dominance
+				{ 21, 41629 }, -- Deadly Gladiator's Belt of Dominance, Waist
+				{ 22, 41639 }, -- Deadly Gladiator's Armwraps of Dominance
+				{ 24, 41835 }, -- Deadly Gladiator's Boots of Triumph
+				{ 25, 41831 }, -- Deadly Gladiator's Belt of Triumph, Waist
+				{ 26, 41839 }, -- Deadly Gladiator's Armwraps of Triumph
 			},
 		},
 		{
