@@ -6,6 +6,7 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 
 ## v3.0.3 (Sep, XX, 2022)
 
+update Profession ranks #236
 update Children's Week for Wrath PR #238
 update Ahune for Wrath PR #238
 update Headless Horseman for Wrath PR #238
