@@ -316,15 +316,6 @@ data["KnightsoftheEbonBlade"] = {
 			name = ALIL["Revered"],
 			[NORMAL_DIFF] = {
 				{ 1, "f1098rep7" },
-				{ 2, 44242 },	-- Dark Soldier Cape
-				{ 3, 44243 },	-- Toxin-Tempered Sabatons
-				{ 4, 44241 },	-- Unholy Persuader
-			},
-		},
-		{ -- Honored 6
-			name = ALIL["Honored"],
-			[NORMAL_DIFF] = {
-				{ 1, "f1098rep6" },
 				{ 2, 44256 },	-- Sterile Flesh-Handling Gloves
 				{ 3, 44258 },	-- Wound-Binder's Wristguards
 				{ 4, 44257 },	-- Spaulders of the Black Arrow
@@ -332,6 +323,15 @@ data["KnightsoftheEbonBlade"] = {
 				{ 6, 44249 },	-- Runeblade of Demonstrable Power
 				{ 17, 41721 },	-- Design: Deadly Monarch Topaz (p12 390)
 				{ 18, 42183 },	-- Pattern: Abyssal Bag (p8 435)
+			},
+		},
+		{ -- Honored 6
+			name = ALIL["Honored"],
+			[NORMAL_DIFF] = {
+				{ 1, "f1098rep6" },
+				{ 2, 44242 },	-- Dark Soldier Cape
+				{ 3, 44243 },	-- Toxin-Tempered Sabatons
+				{ 4, 44241 },	-- Unholy Persuader
 			},
 		},
 		{ -- Friendly 5
