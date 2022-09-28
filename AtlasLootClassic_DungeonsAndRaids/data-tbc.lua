@@ -1177,12 +1177,30 @@ data["TheSlavePens"] = {
                 { 28, 27741 }, -- Bleeding Hollow Warhammer
             }
         },
-        { -- CFRSlaveAhune
+        AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM, { -- CFRSlaveAhune
+            name = AL["Ahune <The Frost Lord>"],
+            npcID = 25740,
+            Level = 83,
+            DisplayIDs = {{23344}},
+            ExtraList = true,
+            [NORMAL_DIFF] = {
+                { 1, 54806 }, -- Frostscythe of Lord Ahune
+                { 2, 54804 }, -- Shroud of Winter's Chill
+                { 3, 54802 }, -- The Frost Lord's War Cloak
+                { 4, 54801 }, -- Icebound Cloak
+                { 5, 54805 }, -- Cloak of the Frigid Winds
+                { 6, 54803 }, -- The Frost Lord's Battle Shroud
+                { 8, 35723 }, -- Shards of Ahune
+                { 16, 35498 }, -- Formula: Enchant Weapon - Deathfrost
+                { 18, 34955 }, -- Scorched Stone
+                { 19, 35557 }, -- Huge Snowball
+            },
+        }),
+        AtlasLoot:GameVersion_EQ(AtlasLoot.WRATH_VERSION_NUM, { -- CFRSlaveAhune
             name = AL["Ahune <The Frost Lord>"],
             npcID = 25740,
             Level = 73,
             DisplayIDs = {{23344}},
-            --AtlasMapBossID = nil,
             ExtraList = true,
             [NORMAL_DIFF] = {
                 { 1, 35514 }, -- Frostscythe of Lord Ahune
@@ -1211,7 +1229,7 @@ data["TheSlavePens"] = {
                 { 24, 34955 }, -- Scorched Stone
                 { 25, 35557 }, -- Huge Snowball
             }
-        },
+        }),
         KEYS
     }
 }
@@ -2366,7 +2384,8 @@ data["MagistersTerrace"] = {
                 { 16, 35504 }, -- Phoenix Hatchling
                 { 18, 35311 }, -- Schematic: Mana Potion Injector
                 { 19, 35304 }, -- Design: Solid Star of Elune
-                { 21, 34157 }, -- Head of Kael'thas
+                { 20, 35294 }, -- Recipe: Elixir of Empowerment
+                { 22, 34157 }, -- Head of Kael'thas
             },
             [HEROIC_DIFF] = {
                 { 1, 29434 }, -- Badge of Justice
@@ -2382,6 +2401,7 @@ data["MagistersTerrace"] = {
                 { 18, 35504 }, -- Phoenix Hatchling
                 { 20, 35311 }, -- Schematic: Mana Potion Injector
                 { 21, 35304 }, -- Design: Solid Star of Elune
+                { 22, 35294 }, -- Recipe: Elixir of Empowerment
             }
         },
         { -- SMTTrash
