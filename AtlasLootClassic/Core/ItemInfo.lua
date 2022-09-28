@@ -258,11 +258,9 @@ local ITEM_DESC_INFO = {
 		["Fishing"] = true, -- 9
 	},
 	--]]
-	--[[
 	["Money(OBSOLETE)"] = {		-- 10
-		["Money(OBSOLETE)"] = true, -- 0
+		["Money(OBSOLETE)"] = IngameLocales["Currency"], -- 0
 	},
-	--]]
 	--[[
 	["Quiver"] = {		-- 11
 		["Quiver(OBSOLETE)"] = true, -- 0
