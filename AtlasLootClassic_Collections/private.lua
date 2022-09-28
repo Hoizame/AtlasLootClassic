@@ -41,3 +41,13 @@ private.SCOURGE_INVASION = {
     [AtlasLoot.CLASSIC_VERSION_NUM]     = "ScourgeInvasion",
     [AtlasLoot.WRATH_VERSION_NUM]       = "ScourgeInvasionWrath",
 }
+
+private.CHILDRENS_WEEK = {
+    [AtlasLoot.BC_VERSION_NUM]          = "ChildrensWeekBC",
+    [AtlasLoot.WRATH_VERSION_NUM]       = "ChildrensWeekWrath",
+}
+
+private.MIDSUMMER_FESTIVAL = {
+    [AtlasLoot.BC_VERSION_NUM]          = "MidsummerFestivalBC",
+    [AtlasLoot.WRATH_VERSION_NUM]       = "MidsummerFestivalWrath",
+}

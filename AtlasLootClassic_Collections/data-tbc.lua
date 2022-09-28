@@ -865,6 +865,7 @@ data["ChildrensWeekBC"] = {
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = NORMAL_ITTYPE,
 	gameVersion = AtlasLoot.BC_VERSION_NUM,
+	CorrespondingFields = private.CHILDRENS_WEEK,
 	items = {
 		{ -- ChildrensWeek
 			name = AL["Childrens Week"],
@@ -887,6 +888,7 @@ data["MidsummerFestivalBC"] = {
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = NORMAL_ITTYPE,
 	gameVersion = AtlasLoot.BC_VERSION_NUM,
+	CorrespondingFields = private.MIDSUMMER_FESTIVAL,
 	items = {
 		{ -- MidsummerFestivalTBC
 			name = AL["Midsummer Festival"],

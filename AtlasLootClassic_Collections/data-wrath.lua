@@ -997,6 +997,7 @@ data["ChildrensWeekWrath"] = {
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = NORMAL_ITTYPE,
 	gameVersion = AtlasLoot.WRATH_VERSION_NUM,
+	CorrespondingFields = private.CHILDRENS_WEEK,
 	items = {
 		{ -- ChildrensWeek
 			name = AL["Childrens Week"],
@@ -1071,6 +1072,7 @@ data["MidsummerFestivalWrath"] = {
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = NORMAL_ITTYPE,
 	gameVersion = AtlasLoot.WRATH_VERSION_NUM,
+	CorrespondingFields = private.MIDSUMMER_FESTIVAL,
 	items = {
 		{ -- MidsummerFestivalWrath
 			name = AL["Midsummer Festival"],
@@ -1100,7 +1102,7 @@ data["MidsummerFestivalWrath"] = {
                 { 3, 54802 }, -- The Frost Lord's War Cloak
                 { 4, 54801 }, -- Icebound Cloak
                 { 5, 54805 }, -- Cloak of the Frigid Winds
-                { 6, 54803 }, -- The Frost Lord's Battle Shroud            
+                { 6, 54803 }, -- The Frost Lord's Battle Shroud
                 { 8, 35723 }, -- Shards of Ahune
                 { 16, 35498 }, -- Formula: Enchant Weapon - Deathfrost
                 { 18, 34955 }, -- Scorched Stone
