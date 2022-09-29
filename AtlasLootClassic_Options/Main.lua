@@ -10,6 +10,7 @@ local format = format
 local function UpdateItemFrame()
     if AtlasLoot.GUI.frame and AtlasLoot.GUI.frame:IsShown() then
         AtlasLoot.GUI.ItemFrame:Refresh(true)
+		AtlasLoot.GUI.RefreshButtons()
     end
 end
 

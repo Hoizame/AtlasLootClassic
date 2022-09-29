@@ -286,3 +286,13 @@ end
 function ContentPhase:IsActive(phase, gameVersion)
     return (phase or 0) <= (gameVersion and ACTIVE_PASE_LIST[gameVersion] or ACTIVE_PHASE)
 end
+
+function ContentPhase:GetActivePhaseTexture()
+    if ACTIVE_PHASE == 1 then
+        return PHASE_TEXTURE_PATH[2]
+    elseif PHASE_TEXTURE_PATH[ACTIVE_PHASE] then
+        return PHASE_TEXTURE_PATH[ACTIVE_PHASE]
+    else
+        return PHASE_TEXTURE_PATH[6]
+    end
+end

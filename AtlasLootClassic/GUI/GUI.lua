@@ -443,6 +443,20 @@ local function ClassFilterButton_OnClick(self, button)
 
 end
 
+local function ContentPhaseButton_Refresh(self)
+	self = self or GUI.frame.contentFrame.contentPhaseButton
+	if AtlasLoot.db.ContentPhase.enableOnItems then
+		self:SetAlpha(1.0)
+	else
+		self:SetAlpha(0.5)
+	end
+end
+
+local function ContentPhaseButton_OnClick(self, button)
+	AtlasLoot.db.ContentPhase.enableOnItems = not AtlasLoot.db.ContentPhase.enableOnItems
+	AtlasLoot.GUI.ItemFrame:Refresh(true)
+end
+
 -- GameVersion select
 local GAME_VERSION_TEXTURES = AtlasLoot.GAME_VERSION_TEXTURES
 
@@ -1351,6 +1365,26 @@ function GUI:Create()
 	frame.contentFrame.clasFilterButton.texture:SetAllPoints(frame.contentFrame.clasFilterButton)
 	--frame.contentFrame.clasFilterButton.texture:SetTexture(CLASS_ICON_PATH[PLAYER_CLASS_FN])
 
+	-- ContentPhase
+	frame.contentFrame.contentPhaseButton = CreateFrame("Button", frameName.."-contentPhaseButton")
+	frame.contentFrame.contentPhaseButton:SetParent(frame.contentFrame)
+	frame.contentFrame.contentPhaseButton:RegisterForClicks("LeftButtonUp", "RightButtonUp");
+	frame.contentFrame.contentPhaseButton:SetWidth(25)
+	frame.contentFrame.contentPhaseButton:SetHeight(25)
+	frame.contentFrame.contentPhaseButton:SetPoint("LEFT", frame.contentFrame.clasFilterButton, "RIGHT", 5, 0)
+	frame.contentFrame.contentPhaseButton:SetScript("OnClick", ContentPhaseButton_OnClick)
+	--frame.contentFrame.contentPhaseButton:SetScript("OnShow", ContentPhaseButton_OnShow)
+	--frame.contentFrame.contentPhaseButton:SetScript("OnEnter", ContentPhaseButton_OnEnter)
+	--frame.contentFrame.contentPhaseButton:SetScript("OnLeave", ContentPhaseButton_OnLeave)
+	frame.contentFrame.contentPhaseButton.mainButton = true
+	--frame.contentFrame.clasFilterButton:Hide()
+
+	frame.contentFrame.contentPhaseButton.texture = frame.contentFrame.contentPhaseButton:CreateTexture(frameName.."-contentPhaseButton-texture","ARTWORK")
+	frame.contentFrame.contentPhaseButton.texture:SetAllPoints(frame.contentFrame.contentPhaseButton)
+	frame.contentFrame.contentPhaseButton.texture:SetTexture(AtlasLoot.Data.ContentPhase:GetActivePhaseTexture())
+
+	ContentPhaseButton_Refresh(frame.contentFrame.contentPhaseButton)
+
 	self.frame = frame
 
 	GUI.RefreshMainFrame()
@@ -1449,6 +1483,10 @@ function GUI.RefreshVersionUpdate()
 	else
 		GUI.frame.titleFrame.newVersion:Hide()
 	end
+end
+
+function GUI.RefreshButtons()
+	ContentPhaseButton_Refresh()
 end
 
 -- ################################
