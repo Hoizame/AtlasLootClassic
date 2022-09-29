@@ -2014,6 +2014,16 @@ data["CookingWrath"] = {
 			},
 		},
 		{
+			name = ALIL["Spell Power"],
+			[NORMAL_DIFF] = {
+				{ 1, 45550 },	-- Shoveltusk Steak
+				{ 2, 45564 },	-- Smoked Salmon
+				{ 16, 45556 },	-- Tender Shoveltusk Steak
+				{ 17, 45568 },	-- Firecracker Salmon
+			},
+		},
+
+		{
 			name = ALIL["Attack Power"].." + "..ALIL["Spell Power"],
 			[NORMAL_DIFF] = {
 				{ 1, 58065 },	-- Dalaran Clam Chowder
