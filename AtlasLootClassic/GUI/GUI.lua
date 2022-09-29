@@ -455,6 +455,7 @@ end
 local function ContentPhaseButton_OnClick(self, button)
 	AtlasLoot.db.ContentPhase.enableOnItems = not AtlasLoot.db.ContentPhase.enableOnItems
 	AtlasLoot.GUI.ItemFrame:Refresh(true)
+	ContentPhaseButton_Refresh(self)
 end
 
 -- GameVersion select

@@ -566,3 +566,219 @@ data["ArenaS5PvP"] = {
 		}
 	}
 }
+
+
+data["Wintergrasp"] = {
+	MapID = 4197,
+	ContentType = OPEN_WORLD_CONTENT,
+	LoadDifficulty = LOAD_DIFF,
+	TableType = NORMAL_ITTYPE,
+	items = {
+		{
+			name = ALIL["Back"],
+			[NORMAL_DIFF] = {
+				{ 1, 51570 }, -- Titan-Forged Cloak of Ascendancy
+				{ 2, 51571 }, -- Titan-Forged Cloak of Victory
+			},
+		},
+		{
+			name = ALIL["Neck"],
+			[NORMAL_DIFF] = {
+				{ 1, 51568 }, -- Titan-Forged Pendant of Ascendancy
+				{ 2, 51569 }, -- Titan-Forged Pendant of Victory
+			},
+		},
+		{
+			name = ALIL["Finger"],
+			[NORMAL_DIFF] = {
+				{ 1, 48999 }, -- Titan-Forged Band of Ascendancy
+				{ 2, 49000 }, -- Titan-Forged Band of Victory
+			},
+		},
+		{
+			name = ALIL["Trinket"],
+			[NORMAL_DIFF] = {
+				{ 1, 44914 }, -- Anvil of Titans
+				{ 2, 44912 }, -- Flow of Knowledge
+				{ 4, 46083 }, -- Titan-Forged Rune of Accuracy
+				{ 5, 46085 }, -- Titan-Forged Rune of Alacrity
+				{ 6, 46081 }, -- Titan-Forged Rune of Audacity
+				{ 7, 46084 }, -- Titan-Forged Rune of Cruelty
+				{ 8, 46082 }, -- Titan-Forged Rune of Determination
+
+				{ 19, 46086 }, -- Platinum Disks of Battle
+				{ 20, 46088 }, -- Platinum Disks of Swiftness
+				{ 21, 46087 }, -- Platinum Disks of Sorcery
+			},
+		},
+		{ -- LakeWintergrasp2 / 1385
+			name = ALIL["Cloth"],
+			[NORMAL_DIFF] = {
+				{ 1, 44910 }, -- Titan-Forged Hood of Dominance
+				{ 2, 46065 }, -- Titan-Forged Raiment of Dominance
+				{ 3, 46079 }, -- Titan-Forged Cord of Dominance
+				{ 4, 44899 }, -- Titan-Forged Slippers of Dominance
+				{ 6, 44909 }, -- Titan-Forged Hood of Salvation
+				{ 7, 46066 }, -- Titan-Forged Raiment of Salvation
+				{ 8, 46080 }, -- Titan-Forged Cord of Salvation
+				{ 9, 44900 }, -- Titan-Forged Slippers of Salvation
+
+				{ 16, 48997 }, -- Titan-Forged Cloth Trousers of Domination
+				{ 18, 48991 }, -- Titan-Forged Cloth Leggings of Salvation
+				{ 19, 48979 }, -- Titan-Forged Cuffs of Salvation
+
+				{ 22, 51573 }, -- Titan-Forged Shoulderpads of Domination
+				{ 23, 51572 }, -- Titan-Forged Shoulderpads of Salvation
+			}
+		},
+		{ -- LakeWintergrasp3 / 1386
+			name = ALIL["Leather"],
+			[NORMAL_DIFF] = {
+				{ 1, 44907 }, -- Titan-Forged Leather Helm of Dominance
+				{ 2, 46064 }, -- Titan-Forged Leather Chestguard of Dominance
+				{ 3, 46076 }, -- Titan-Forged Belt of Dominance
+				{ 4, 44891 }, -- Titan-Forged Boots of Dominance
+				{ 6, 44906 }, -- Titan-Forged Leather Helm of Salvation
+				{ 7, 46063 }, -- Titan-Forged Leather Chestguard of Salvation
+				{ 8, 46077 }, -- Titan-Forged Belt of Salvation
+				{ 9, 44892 }, -- Titan-Forged Boots of Salvation
+				{ 11, 44908 }, -- Titan-Forged Leather Helm of Triumph
+				{ 12, 46062 }, -- Titan-Forged Leather Tunic of Triumph
+				{ 13, 46078 }, -- Titan-Forged Belt of Triumph
+				{ 14, 44893 }, -- Titan-Forged Boots of Triumph
+
+				{ 16, 48974 }, -- Titan-Forged Armwraps of Dominance
+				{ 17, 48998 }, -- Titan-Forged Leather Legguards of Dominance
+				{ 19, 48975 }, -- Titan-Forged Armwraps of Salvation
+				{ 20, 48987 }, -- Titan-Forged Leather Legguards of Salvation
+				{ 22, 48976 }, -- Titan-Forged Armwraps of Triumph
+				{ 23, 48988 }, -- Titan-Forged Leather Legguards of Triumph
+
+				{ 26, 51574 }, -- Titan-Forged Leather Spaulders of Dominance
+				{ 27, 51575 }, -- Titan-Forged Leather Spaulders of Salvation
+				{ 28, 51576 }, -- Titan-Forged Leather Spaulders of Triumph
+			}
+		},
+		{ -- LakeWintergrasp4 / 1387
+			name = ALIL["Mail"],
+			[NORMAL_DIFF] = {
+				{ 1, 44904 }, -- Titan-Forged Mail Helm of Dominance
+				{ 2, 46061 }, -- Titan-Forged Mail Armor of Domination
+				{ 3, 46073 }, -- Titan-Forged Waistguard of Dominance
+				{ 4, 44896 }, -- Titan-Forged Sabatons of Dominance
+				{ 6, 44905 }, -- Titan-Forged Ringmail Helm of Salvation
+				{ 7, 46060 }, -- Titan-Forged Ringmail of Salvation
+				{ 8, 46074 }, -- Titan-Forged Waistguard of Salvation
+				{ 9, 44897 }, -- Titan-Forged Sabatons of Salvation
+				{ 11, 44903 }, -- Titan-Forged Chain Helm of Triumph
+				{ 12, 46059 }, -- Titan-Forged Chain Armor of Triumph
+				{ 13, 46075 }, -- Titan-Forged Waistguard of Triumph
+				{ 14, 44898 }, -- Titan-Forged Sabatons of Triumph
+
+				{ 16, 48980 }, -- Titan-Forged Wristguards of Dominance
+				{ 17, 48990 }, -- Titan-Forged Mail Leggings of Dominance
+				{ 19, 48981 }, -- Titan-Forged Wristguards of Salvation
+				{ 20, 48994 }, -- Titan-Forged Mail Leggings of Salvation
+				{ 22, 48982 }, -- Titan-Forged Wristguards of Triumph
+				{ 23, 48983 }, -- Titan-Forged Mail Leggings of Triumph
+
+				{ 26, 51578 }, -- Titan-Forged Shoulders of Dominance
+				{ 27, 51579 }, -- Titan-Forged Shoulders of Salvation
+				{ 28, 51577 }, -- Titan-Forged Shoulders of Triumph
+			}
+		},
+		{ -- LakeWintergrasp5 / 1388
+			name = ALIL["Plate"],
+			[NORMAL_DIFF] = {
+				{ 1, 44901 }, -- Titan-Forged Plate Headcover of Salvation
+				{ 2, 46057 }, -- Titan-Forged Chestguard of Salvation
+				{ 3, 46071 }, -- Titan-Forged Girdle of Salvation
+				{ 4, 44894 }, -- Titan-Forged Greaves of Salvation
+				{ 6, 44902 }, -- Titan-Forged Plate Helm of Triumph
+				{ 7, 46058 }, -- Titan-Forged Breastplate of Triumph
+				{ 8, 46072 }, -- Titan-Forged Girdle of Triumph
+				{ 9, 44895 }, -- Titan-Forged Greaves of Triumph
+
+
+				{ 16, 48977 }, -- Titan-Forged Bracers of Salvation
+				{ 17, 48992 }, -- Titan-Forged Plate Legplates of Salvation
+				{ 19, 48978 }, -- Titan-Forged Bracers of Triumph
+				{ 20, 48993 }, -- Titan-Forged Plate Legguards of Triumph
+
+				{ 23, 51581 }, -- Titan-Forged Shoulderplates of Salvation
+				{ 24, 51580 }, -- Titan-Forged Plate Shoulderplates of Triumph
+			}
+		},
+		{	-- Gems
+			name = ALIL["Gems"],
+			[NORMAL_DIFF] = {
+				{ 1, 44066 }, -- Kharmaa's Grace
+
+				{ 3, 44081 }, -- Enigmatic Starflare Diamond
+				{ 4, 44084 }, -- Forlorn Starflare Diamond
+				{ 5, 44082 }, -- Impassive Starflare Diamond
+				{ 6, 44076 }, -- Swift Starflare Diamond
+				{ 7, 44078 }, -- Swift Starflare Diamond
+
+				{ 18, 44087 }, -- Persistent Earthshatter Diamond
+				{ 19, 44088 }, -- Powerful Earthshatter Diamond
+				{ 20, 44089 }, -- Trenchant Earthshatter Diamond
+			}
+		},
+		{	-- Gems
+		name = AL["Enhancements"],
+			[NORMAL_DIFF] = {
+				{ 1, 44075 }, -- Arcanum of Dominance
+				{ 2, 44069 }, -- Arcanum of Triumph
+				{ 16, 44068 }, -- Inscription of Dominance
+				{ 17, 44067 }, -- Inscription of Triumph
+			}
+		},
+		{ -- LakeWintergrasp6 / 1389
+			name = AL["Recipe"],
+			[NORMAL_DIFF] = {
+				{ 1, 41730 }, -- Design: Durable Monarch Topaz
+				{ 2, 41732 }, -- Design: Empowered Monarch Topaz
+				{ 3, 41733 }, -- Design: Lucent Monarch Topaz
+				{ 4, 41735 }, -- Design: Shattered Forest Emerald
+				{ 5, 41739 }, -- Design: Opaque Forest Emerald
+				{ 6, 41736 }, -- Design: Tense Forest Emerald
+				{ 7, 41737 }, -- Design: Turbid Forest Emerald
+				{ 8, 41738 }, -- Design: Steady Forest Emerald
+				{ 9, 41734 }, -- Design: Resplendent Monarch Topaz
+				{ 10, 41727 }, -- Design: Mystic Autumn's Glow
+				{ 11, 41740 }, -- Design: Mysterious Twilight Opal
+				{ 12, 41728 }, -- Design: Stormy Sky Sapphire
+				{ 13, 41742 }, -- Design: Enigmatic Skyflare Diamond
+				{ 14, 41743 }, -- Design: Forlorn Skyflare Diamond
+				{ 15, 41744 }, -- Design: Impassive Skyflare Diamond
+			}
+		},
+		{ -- LakeWintergrasp7 / 1390
+			name = AL["Heirloom"],
+			[NORMAL_DIFF] = {
+				{ 1, 44107 }, -- Exquisite Sunderseer Mantle
+				{ 3, 44103 }, -- Exceptional Stormshroud Shoulders
+				{ 4, 44105 }, -- Lasting Feralheart Spaulders
+				{ 6, 44102 }, -- Aged Pauldrons of The Five Thunders
+				{ 7, 44101 }, -- Prized Beastmaster's Mantle
+				{ 9, 44100 }, -- Pristine Lightforge Spaulders
+				{ 10, 44099 }, -- Strengthened Stockade Pauldrons
+				{ 12, AtlasLoot:GetRetByFaction(44097, 44098) }, -- Inherited Insignia of the Horde / Inherited Insignia of the Alliance
+				{ 14, 44115 }, -- Wintergrasp Commendation
+				{ 16, 44091 }, -- Sharpened Scarlet Kris
+				{ 17, 44096 }, -- Battleworn Thrash Blade
+				{ 18, 44092 }, -- Reforged Truesilver Champion
+				{ 19, 44094 }, -- The Blessed Hammer of Grace
+				{ 20, 44095 }, -- Grand Staff of Jordan
+				{ 21, 44093 }, -- Upgraded Dwarven Hand Cannon
+			}
+		},
+		{ -- Mounts
+			name = ALIL["Mounts"],
+			[NORMAL_DIFF] = {
+				{ 1, AtlasLoot:GetRetByFaction(44077, 43956) }, -- Reins of the Black War Mammoth
+			}
+		},
+	},
+}
