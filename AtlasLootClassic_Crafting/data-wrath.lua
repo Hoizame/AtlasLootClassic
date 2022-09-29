@@ -2054,7 +2054,9 @@ data["CookingWrath"] = {
 			name = AL["Feast"],
 			[NORMAL_DIFF] = {
 				{ 1, 45554 },	-- Great Feast
+				{ 3, 58528 },   -- Small Feast
 				{ 16, 57423 },	-- Fish Feast
+				{ 18, 58527 },  -- Gigantic Feast
 			},
 		},
 		{
@@ -2079,7 +2081,11 @@ data["CookingWrath"] = {
 			[NORMAL_DIFF] = {
 				{ 1, 57438 },	-- Blackened Worg Steak
 				{ 2, 57443 },	-- Tracker Snacks
+				{ 4, 58523 },   -- Bad Clams
+				{ 5, 58521 },   -- Last Week's Mammoth
 				{ 16, 57435 },	-- Critter Bites
+				{ 19, 58525 },  -- Haunted Herring
+				{ 20, 58512 },  -- Tasty Cupcake
 			},
 		},
 	}
