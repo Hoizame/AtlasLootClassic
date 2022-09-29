@@ -9,6 +9,7 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 - add content phase data for wrath (must be enabled in options)
 - add missing spell power food into cooking #242
 - add Wintergrasp items
+- add missing Armor/Weapon Velums #243
 - update Profession ranks #236
 - update Children's Week for Wrath PR #238
 - update Ahune for Wrath PR #238

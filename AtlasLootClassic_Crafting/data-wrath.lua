@@ -1906,7 +1906,12 @@ data["InscriptionWrath"] = {
 			name = AL["Misc"],
 			[NORMAL_DIFF] = {
 				{ 1, 59387 },	-- Certificate of Ownership
-				{ 16, 52739 },	-- Armor Vellum
+				{ 3, 52739 },	-- Armor Vellum
+				{ 4, 59499 },	-- Armor Vellum II
+				{ 5, 59500 },	-- Armor Vellum III
+				{ 18, 52840 },	-- Weapon Vellum
+				{ 19, 59488 },	-- Weapon Vellum II
+				{ 20, 59501 },	-- Weapon Vellum III
 			}
 		},
 	}
