@@ -4,7 +4,7 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 
 [Changelog history](https://github.com/Hoizame/AtlasLootClassic/blob/master/AtlasLootClassic/Documentation/Release_Notes.md)
 
-## v3.0.3 (Sep, XX, 2022)
+## v3.0.3 (Sep, 29, 2022)
 
 - add content phase data for wrath (must be enabled in options)
 - add missing spell power food into cooking #242
