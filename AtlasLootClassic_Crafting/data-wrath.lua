@@ -1361,6 +1361,7 @@ data["JewelcraftingWrath"] = {
 			name = AL["Misc"],
 			[NORMAL_DIFF] = {
 				{ 1, 62242 },	-- Icy Prism
+				{ 3, "i43297" },	-- Damaged Necklace
 				{ 16, 56208 },	-- Shadow Jade Focusing Lens
 				{ 17, 56206 },	-- Shadow Crystal Focusing Lens
 				{ 18, 56205 },	-- Dark Jade Focusing Lens
