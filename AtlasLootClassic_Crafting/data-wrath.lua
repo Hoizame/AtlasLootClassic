@@ -1153,16 +1153,19 @@ data["JewelcraftingWrath"] = {
 				{ 3, 66448 },	-- Delicate Cardinal Ruby
 				{ 4, 66453 },	-- Flashing Cardinal Ruby
 				{ 5, 66450 },	-- Precise Cardinal Ruby
-				{ 7, 53830 },	-- Bold Scarlet Ruby
-				{ 8, 53946 },	-- Runed Scarlet Ruby
-				{ 9, 53945 },	-- Delicate Scarlet Ruby
-				{ 10, 53949 },	-- Flashing Scarlet Ruby
-				{ 11, 53951 },	-- Precise Scarlet Ruby
+				{ 6, 66449 },	-- Bright Cardinal Ruby
+				{ 8, 53830 },	-- Bold Scarlet Ruby
+				{ 9, 53946 },	-- Runed Scarlet Ruby
+				{ 10, 53945 },	-- Delicate Scarlet Ruby
+				{ 11, 53949 },	-- Flashing Scarlet Ruby
+				{ 12, 53951 },	-- Precise Scarlet Ruby
+				{ 13, 53947 },	-- Bright Scarlet Ruby
 				{ 16, 53831 },	-- Bold Bloodstone
 				{ 17, 53834 },	-- Runed Bloodstone
 				{ 18, 53832 },	-- Delicate Bloodstone
 				{ 19, 53844 },	-- Flashing Bloodstone
 				{ 20, 54017 },	-- Precise Bloodstone
+				{ 21, 53835 },	-- Bright Bloodstone
 			}
 		},
 		{

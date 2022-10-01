@@ -8,3 +8,4 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 
 - fix lua error with ruRU clients
 - add Revered Helm Enchants from Factions #247
+- add missing red AP gems #249
