@@ -339,7 +339,8 @@ data["KnightsoftheEbonBlade"] = {
 				{ 2, 44242 },	-- Dark Soldier Cape
 				{ 3, 44243 },	-- Toxin-Tempered Sabatons
 				{ 4, 44241 },	-- Unholy Persuader
-				{ 17, 44138 },	-- Arkanum des Giftzauberschutzes
+				{ 17, 44512 },	-- Pattern: Nerubian Reinforced Quiver
+				{ 18, 44138 },	-- Arkanum des Giftzauberschutzes
 			},
 		},
 		{ -- Friendly 5

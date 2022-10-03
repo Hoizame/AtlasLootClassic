@@ -8,4 +8,5 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 
 - add missing prismatic gems #257
 - add missing Pattern: Dragonscale Ammo Pouch #255
+- add Pattern: Nerubian Reinforced Quiver #254
 - Include InstanceIDs in Wrath DungeonsAndRaids #256
