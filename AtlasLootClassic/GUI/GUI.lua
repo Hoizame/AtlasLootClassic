@@ -1283,6 +1283,20 @@ function GUI:Create()
 	frame.contentFrame.modelButton:SetScript("OnClick", ModelButtonOnClick)
 	frame.contentFrame.modelButton:Hide()
 
+	-- ContentPhase
+	frame.contentFrame.contentPhaseButton = CreateFrame("Button", frameName.."-contentPhaseButton")
+	frame.contentFrame.contentPhaseButton:SetParent(frame.contentFrame)
+	frame.contentFrame.contentPhaseButton:RegisterForClicks("LeftButtonUp", "RightButtonUp");
+	frame.contentFrame.contentPhaseButton:SetWidth(25)
+	frame.contentFrame.contentPhaseButton:SetHeight(25)
+	frame.contentFrame.contentPhaseButton:SetPoint("RIGHT", frame.contentFrame.modelButton, "LEFT", -5, 0)
+	frame.contentFrame.contentPhaseButton:SetScript("OnClick", ContentPhaseButton_OnClick)
+	--frame.contentFrame.contentPhaseButton:SetScript("OnShow", ContentPhaseButton_OnShow)
+	--frame.contentFrame.contentPhaseButton:SetScript("OnEnter", ContentPhaseButton_OnEnter)
+	--frame.contentFrame.contentPhaseButton:SetScript("OnLeave", ContentPhaseButton_OnLeave)
+	frame.contentFrame.contentPhaseButton.mainButton = true
+	--frame.contentFrame.clasFilterButton:Hide()
+
 	--[[ AtlasMapButton
 	frame.contentFrame.AtlasMapButton = CreateFrame("Button", frameName.."-AtlasMapButton")
 	frame.contentFrame.AtlasMapButton:SetParent(frame.contentFrame)
@@ -1365,20 +1379,6 @@ function GUI:Create()
 	frame.contentFrame.clasFilterButton.texture = frame.contentFrame.clasFilterButton:CreateTexture(frameName.."-clasFilterButton-texture","ARTWORK")
 	frame.contentFrame.clasFilterButton.texture:SetAllPoints(frame.contentFrame.clasFilterButton)
 	--frame.contentFrame.clasFilterButton.texture:SetTexture(CLASS_ICON_PATH[PLAYER_CLASS_FN])
-
-	-- ContentPhase
-	frame.contentFrame.contentPhaseButton = CreateFrame("Button", frameName.."-contentPhaseButton")
-	frame.contentFrame.contentPhaseButton:SetParent(frame.contentFrame)
-	frame.contentFrame.contentPhaseButton:RegisterForClicks("LeftButtonUp", "RightButtonUp");
-	frame.contentFrame.contentPhaseButton:SetWidth(25)
-	frame.contentFrame.contentPhaseButton:SetHeight(25)
-	frame.contentFrame.contentPhaseButton:SetPoint("LEFT", frame.contentFrame.clasFilterButton, "RIGHT", 5, 0)
-	frame.contentFrame.contentPhaseButton:SetScript("OnClick", ContentPhaseButton_OnClick)
-	--frame.contentFrame.contentPhaseButton:SetScript("OnShow", ContentPhaseButton_OnShow)
-	--frame.contentFrame.contentPhaseButton:SetScript("OnEnter", ContentPhaseButton_OnEnter)
-	--frame.contentFrame.contentPhaseButton:SetScript("OnLeave", ContentPhaseButton_OnLeave)
-	frame.contentFrame.contentPhaseButton.mainButton = true
-	--frame.contentFrame.clasFilterButton:Hide()
 
 	frame.contentFrame.contentPhaseButton.texture = frame.contentFrame.contentPhaseButton:CreateTexture(frameName.."-contentPhaseButton-texture","ARTWORK")
 	frame.contentFrame.contentPhaseButton.texture:SetAllPoints(frame.contentFrame.contentPhaseButton)
