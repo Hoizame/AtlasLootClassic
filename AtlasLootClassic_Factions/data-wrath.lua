@@ -459,7 +459,8 @@ data["TheKaluak"] = {
 				{ 7, 44060 },	-- Cuttlefish Tooth Ringmail
 				{ 8, 44057 },	-- Ivory-Reinforced Chestguard
 				{ 9, 44058 },	-- Whalebone Carapace
-				{ 17, 41574 },	-- Design: Defender's Shadow Crystal (p12 350)
+				{ 17, 44511 },	-- Pattern: Dragonscale Ammo Pouch
+				{ 18, 41574 },	-- Design: Defender's Shadow Crystal (p12 350)
 			},
 		},
 		{ -- Friendly 5
