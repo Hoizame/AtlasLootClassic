@@ -917,7 +917,7 @@ data["Gundrak"] = {
 	AtlasModule = ATLAS_MODULE_NAME,
 	AtlasMapID = "Gundrak",
 	AtlasMapFile = {"Gundrak"},
-	LevelRange = {75, 79, 80},
+	LevelRange = {71, 76, 78},
 	items = {
         { -- GundrakSladran / 34
             name = AL["Slad'ran"],
