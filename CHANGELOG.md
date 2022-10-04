@@ -10,5 +10,6 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 - add missing Pattern: Dragonscale Ammo Pouch #255
 - add Pattern: Nerubian Reinforced Quiver #254
 - add Deadman's Hand for Arcanist Doan (bcc)
+- add Burning Skull Pendant into Gundrak normal trash
 - fix Gundrak level range 71, 76, 78 #252
 - Include InstanceIDs in Wrath DungeonsAndRaids #256
