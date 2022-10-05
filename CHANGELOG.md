@@ -4,8 +4,12 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 
 [Changelog history](https://github.com/Hoizame/AtlasLootClassic/blob/master/AtlasLootClassic/Documentation/Release_Notes.md)
 
-## v3.0.4 (Oct, 01, 2022)
+## v3.0.5 (Oct, 04, 2022)
 
-- fix lua error with ruRU clients
-- add Revered Helm Enchants from Factions #247
-- add missing red AP gems #249
+- add missing prismatic gems #257
+- add missing Pattern: Dragonscale Ammo Pouch #255
+- add Pattern: Nerubian Reinforced Quiver #254
+- add Deadman's Hand for Arcanist Doan (bcc)
+- add Burning Skull Pendant into Gundrak normal trash
+- fix Gundrak level range 71, 76, 78 #252
+- Include InstanceIDs in Wrath DungeonsAndRaids #256

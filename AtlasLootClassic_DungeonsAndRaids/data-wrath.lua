@@ -917,7 +917,7 @@ data["Gundrak"] = {
 	AtlasModule = ATLAS_MODULE_NAME,
 	AtlasMapID = "Gundrak",
 	AtlasMapFile = {"Gundrak"},
-	LevelRange = {75, 79, 80},
+	LevelRange = {71, 76, 78},
 	items = {
         { -- GundrakSladran / 34
             name = AL["Slad'ran"],
@@ -1029,6 +1029,7 @@ data["Gundrak"] = {
             [NORMAL_DIFF] = {
                 { 1, 35594 }, -- Snowmelt Silken Cinch
 		        { 2, 35593 }, -- Steel Bear Trap Bracers
+                { 3, 37646 }, -- Burning Skull Pendant
             },
             [HEROIC_DIFF] = {
                 { 1, 37647 }, -- Cloak of Bloodied Waters

@@ -339,7 +339,8 @@ data["KnightsoftheEbonBlade"] = {
 				{ 2, 44242 },	-- Dark Soldier Cape
 				{ 3, 44243 },	-- Toxin-Tempered Sabatons
 				{ 4, 44241 },	-- Unholy Persuader
-				{ 17, 44138 },	-- Arkanum des Giftzauberschutzes
+				{ 17, 44512 },	-- Pattern: Nerubian Reinforced Quiver
+				{ 18, 44138 },	-- Arkanum des Giftzauberschutzes
 			},
 		},
 		{ -- Friendly 5
@@ -459,7 +460,8 @@ data["TheKaluak"] = {
 				{ 7, 44060 },	-- Cuttlefish Tooth Ringmail
 				{ 8, 44057 },	-- Ivory-Reinforced Chestguard
 				{ 9, 44058 },	-- Whalebone Carapace
-				{ 17, 41574 },	-- Design: Defender's Shadow Crystal (p12 350)
+				{ 17, 44511 },	-- Pattern: Dragonscale Ammo Pouch
+				{ 18, 41574 },	-- Design: Defender's Shadow Crystal (p12 350)
 			},
 		},
 		{ -- Friendly 5
