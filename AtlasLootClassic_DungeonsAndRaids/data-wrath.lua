@@ -468,7 +468,7 @@ local WOTLK_NAXXRAMAS_AC_TABLE = {	--[Glory of the Raider]
     IgnoreAsSource = true,
 	CoinTexture = "Achievement",
 	[RAID10_DIFF] = {
-		{ 1, 2137 },
+		{ 1, 2137, 44175 },
 		{ 2, 578 },			    { 17, 1858 },
 		{ 3, 1856 },			{ 18, 1996 },
 		{ 4, 1997 },			{ 19, 2178 },
@@ -480,7 +480,7 @@ local WOTLK_NAXXRAMAS_AC_TABLE = {	--[Glory of the Raider]
         { 10, 2187 },
 	},
     [RAID25_DIFF] = {
-		{ 1, 2138 },
+		{ 1, 2138, 44164 },
 		{ 2, 579 },			    { 17, 1859 },
 		{ 3, 1857 },			{ 18, 2139 },
 		{ 4, 2140 },			{ 19, 2179 },
@@ -500,7 +500,7 @@ local WOTLK_ULDUAR_AC_TABLE = {	--[Glory of the Ulduar Raider]
     IgnoreAsSource = true,
 	CoinTexture = "Achievement",
 	[RAID10_DIFF] = {
-		{ 1, 2957 },
+		{ 1, 2957, 45802 },
 		{ 2, 3056 },			{ 17, 2930 },
 		{ 3, 2923 },			{ 18, 3058 },
 		{ 4, 2941 },			{ 19, 2953 },
@@ -510,7 +510,7 @@ local WOTLK_ULDUAR_AC_TABLE = {	--[Glory of the Ulduar Raider]
 		{ 8, 3158 }
 	},
     [RAID25_DIFF] = {
-		{ 1, 2958 },
+		{ 1, 2958, 45801 },
 		{ 2, 3057 },			{ 17, 2929 },
 		{ 3, 2924 },			{ 18, 3059 },
 		{ 4, 2944 },			{ 19, 2954 },
@@ -527,7 +527,7 @@ local WOTLK_ICC_AC_TABLE = {	--[Glory of the Icecrown Raider]
 	ExtraList = true,
 	CoinTexture = "Achievement",
 	[RAID10_DIFF] = {
-		{ 1, 4602 },
+		{ 1, 4602, 51954 },
 		{ 2, 4534 },			{ 17, 4535 },
 		{ 3, 4536 },			{ 18, 4537 },
 		{ 4, 4538 },			{ 19, 4577 },
@@ -536,12 +536,12 @@ local WOTLK_ICC_AC_TABLE = {	--[Glory of the Icecrown Raider]
 		{ 7, 4580 },			{ 22, 4601 },
 	},
 	[RAID10H_DIFF] = {
-		{ 1, 4602 },
+		{ 1, 4602, 51954 },
 		{ 2, 4628 },			{ 17, 4629 },
 		{ 3, 4630 },			{ 18, 4631 },
 	},
     [RAID25_DIFF] = {
-		{ 1, 4603 },
+		{ 1, 4603, 51955 },
 		{ 2, 4610 },			{ 17, 4611 },
 		{ 3, 4612 },			{ 18, 4613 },
 		{ 4, 4614 },			{ 19, 4615 },
@@ -551,7 +551,7 @@ local WOTLK_ICC_AC_TABLE = {	--[Glory of the Icecrown Raider]
 		{ 8, 4622 }
 	},
 	[RAID25H_DIFF] = {
-		{ 1, 4603 },
+		{ 1, 4603, 51955 },
 		{ 2, 4632 },			{ 17, 4633 },
 		{ 3, 4634 },			{ 18, 4635 },
 	},

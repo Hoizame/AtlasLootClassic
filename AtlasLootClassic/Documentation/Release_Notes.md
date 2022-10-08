@@ -2,6 +2,11 @@
 
 This mod is distributed under Version 2 of the GPL.  A copy of the GPL is included in this zip file with links to non-english translations.
 
+## v3.0.6 (Oct, 08, 2022)
+
+- fix classic Naxxramas opens when in Wotlk #260
+- add missing orange gems pr #259
+
 ## v3.0.5 (Oct, 04, 2022)
 
 - add missing prismatic gems #257
