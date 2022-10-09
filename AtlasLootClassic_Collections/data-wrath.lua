@@ -718,6 +718,18 @@ data["MountsWrath"] = {
 			},
 		},
 		{
+			name = ALIL["Fishing"],
+			[NORMAL_DIFF] = {
+				{ 1, 46109 }, -- Sea Turtle
+			},
+		},
+		{
+			name = AL["Quest"],
+			[NORMAL_DIFF] = {
+				{ 1, 46102 }, -- Whistle of the Venomhide Ravasaur
+			},
+		},
+		{
 			name = ALIL["Achievements"] ,
 			TableType = AC_ITTYPE,
 			[NORMAL_DIFF] = {

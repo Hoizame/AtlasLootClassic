@@ -7,6 +7,8 @@ assignees: 'Hoizame'
 
 ---
 
+**AtlasLoot version**
+
 **Lua error**
 
 **Describe the bug**
