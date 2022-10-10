@@ -1134,12 +1134,12 @@ data["JewelcraftingWrath"] = {
 				{ 10, 55403 },	-- Trenchant Earthsiege Diamond
 				{ 16, 55389 },	-- Chaotic Skyflare Diamond
 				{ 17, 55390 },	-- Destructive Skyflare Diamond
-				{ 18, 55392 },	-- Ember Skyflare Diamond
-				{ 19, 55393 },	-- Enigmatic Skyflare Diamond
-				{ 20, 55387 },	-- Forlorn Skyflare Diamond
-				{ 21, 55388 },	-- Impassive Skyflare Diamond
-				{ 22, 55407 },	-- Revitalizing Skyflare Diamond
-				{ 23, 55384 },	-- Shielded Skyflare Diamond
+				{ 18, 55384 },  -- Effulgent Skyflare Diamond
+				{ 19, 55392 },	-- Ember Skyflare Diamond
+				{ 20, 55393 },	-- Enigmatic Skyflare Diamond
+				{ 21, 55387 },	-- Forlorn Skyflare Diamond
+				{ 22, 55388 },	-- Impassive Skyflare Diamond
+				{ 23, 55407 },	-- Revitalizing Skyflare Diamond
 				{ 24, 55394 },	-- Swift Skyflare Diamond
 				{ 25, 55395 },	-- Thundering Skyflare Diamond
 				{ 26, 55386 },	-- Tireless Skyflare Diamond
@@ -1154,18 +1154,35 @@ data["JewelcraftingWrath"] = {
 				{ 4, 66453 },	-- Flashing Cardinal Ruby
 				{ 5, 66450 },	-- Precise Cardinal Ruby
 				{ 6, 66449 },	-- Bright Cardinal Ruby
-				{ 8, 53830 },	-- Bold Scarlet Ruby
-				{ 9, 53946 },	-- Runed Scarlet Ruby
-				{ 10, 53945 },	-- Delicate Scarlet Ruby
-				{ 11, 53949 },	-- Flashing Scarlet Ruby
-				{ 12, 53951 },	-- Precise Scarlet Ruby
-				{ 13, 53947 },	-- Bright Scarlet Ruby
-				{ 16, 53831 },	-- Bold Bloodstone
-				{ 17, 53834 },	-- Runed Bloodstone
-				{ 18, 53832 },	-- Delicate Bloodstone
-				{ 19, 53844 },	-- Flashing Bloodstone
-				{ 20, 54017 },	-- Precise Bloodstone
-				{ 21, 53835 },	-- Bright Bloodstone
+				{ 7, 66451 },   -- Fractured Cardinal Ruby
+				{ 8, 66452 },   -- Subtle Cardinal Ruby
+				-- blue
+				{ 16, 53830 },	-- Bold Scarlet Ruby
+				{ 17, 53946 },	-- Runed Scarlet Ruby
+				{ 18, 53945 },	-- Delicate Scarlet Ruby
+				{ 19, 53949 },	-- Flashing Scarlet Ruby
+				{ 20, 53951 },	-- Precise Scarlet Ruby
+				{ 21, 53947 },	-- Bright Scarlet Ruby
+				{ 22, 53950 },  -- Fractured Scarlet Ruby
+				{ 23, 53948 },  -- Subtle Scarlet Ruby
+				-- green
+				{ 101, 53831 },	-- Bold Bloodstone
+				{ 102, 53834 },	-- Runed Bloodstone
+				{ 103, 53832 },	-- Delicate Bloodstone
+				{ 104, 53844 },	-- Flashing Bloodstone
+				{ 105, 54017 },	-- Precise Bloodstone
+				{ 106, 53835 },	-- Bright Bloodstone
+				{ 107, 53845 }, -- Fractured Bloodstone
+				{ 108, 53843 }, -- Subtle Bloodstone
+				-- perfect
+				{ 116, "i41432" }, -- Perfect Bold Bloodstone
+				{ 117, "i41438" }, -- Perfect Runed Bloodstone
+				{ 118, "i41434" }, -- Perfect Delicate Bloodstone
+				{ 119, "i41435" }, -- Perfect Flashing Bloodstone
+				{ 120, "i41437" }, -- Perfect Precise Bloodstone
+				{ 121, "i41433" }, -- Perfect Bright Bloodstone
+				{ 122, "i41436" }, -- Perfect Fractured Bloodstone
+				{ 123, "i41439" }, -- Perfect Subtle Bloodstone
 			}
 		},
 		{
@@ -1189,6 +1206,13 @@ data["JewelcraftingWrath"] = {
 				{ 19, 53854 },	-- Rigid Sun Crystal
 				{ 20, 53853 },	-- Smooth Sun Crystal
 				{ 21, 53855 },	-- Thick Sun Crystal
+				-- perfect
+				{ 23, "i41444" },	-- Perfect Brilliant Sun Crystal
+				{ 24, "i41445" },	-- Perfect Mystic Sun Crystal
+				{ 25, "i41446" },	-- Perfect Quick Sun Crystal
+				{ 26, "i41447" },	-- Perfect Rigid Sun Crystal
+				{ 27, "i41448" },	-- Perfect Smooth Sun Crystal
+				{ 28, "i41449" },	-- Perfect Thick Sun Crystal
 			}
 		},
 		{
@@ -1206,6 +1230,11 @@ data["JewelcraftingWrath"] = {
 				{ 17, 53934 },	-- Solid Chalcedony
 				{ 18, 53941 },	-- Lustrous Chalcedony
 				{ 19, 53943 },	-- Stormy Chalcedony
+				-- perfect
+				{ 21, "i41442" },	-- Perfect Sparkling Chalcedony
+				{ 22, "i41441" },	-- Perfect Solid Chalcedony
+				{ 23, "i41440" },	-- Perfect Lustrous Chalcedony
+				{ 24, "i41443" },	-- Perfect Stormy Chalcedony
 			}
 		},
 		{
@@ -1279,6 +1308,29 @@ data["JewelcraftingWrath"] = {
 				{ 220, 53889 }, -- Stark Huge Citrine
 				{ 221, 53883 },	-- Veiled Huge Citrine
 				{ 222, 53886 }, -- Wicked Huge Citrine
+				-- perfect
+				{ 301, "i41482" }, -- Perfect Accurate Huge Citrine
+				{ 302, "i41483" }, -- Perfect Champion's Huge Citrine
+				{ 303, "i41484" }, -- Perfect Deadly Huge Citrine
+				{ 304, "i41485" }, -- Perfect Deft Huge Citrine
+				{ 305, "i41486" }, -- Perfect Durable Huge Citrine
+				{ 306, "i41487" }, -- Perfect Empowered Huge Citrine
+				{ 307, "i41488" }, -- Perfect Etched Huge Citrine
+				{ 308, "i41489" }, -- Perfect Fierce Huge Citrine
+				{ 309, "i41490" }, -- Perfect Glimmering Huge Citrine
+				{ 310, "i41491" }, -- Perfect Glinting Huge Citrine
+				{ 311, "i41492" }, -- Perfect Inscribed Huge Citrine
+				{ 312, "i41493" }, -- Perfect Lucent Huge Citrine
+				{ 313, "i41494" }, -- Perfect Luminous Huge Citrine
+				{ 314, "i41495" }, -- Perfect Potent Huge Citrine
+				{ 315, "i41496" }, -- Perfect Prisinte Huge Citrine
+				{ 316, "i41497" }, -- Perfect Reckless Huge Citrine
+				{ 317, "i41498" }, -- Perfect Resolute Huge Citrine
+				{ 318, "i41499" }, -- Perfect Resplendent Huge Citrine
+				{ 319, "i41500" }, -- Perfect Stalwart Huge Citrine
+				{ 320, "i41501" }, -- Perfect Stark Huge Citrine
+				{ 321, "i41502" }, -- Perfect Veiled Huge Citrine
+				{ 322, "i41429" }, -- Perfect Wicked Huge Citrine
 			}
 		},
 		{
@@ -1343,6 +1395,26 @@ data["JewelcraftingWrath"] = {
 				{ 217, 53894 }, -- Timeless Dark Jade
 				{ 218, 53924 },	-- Turbid Dark Jade
 				{ 219, 53917 }, -- Vivid Dark Jade
+				-- perfect
+				{ 301, "i41463" }, -- Perfect Dazzling Dark Jade
+				{ 302, "i41464" }, -- Perfect Enduring Dark Jade
+				{ 303, "i41465" }, -- Perfect Energized Dark Jade
+				{ 304, "i41466" }, -- Perfect Forceful Dark Jade
+				{ 305, "i41467" }, -- Perfect Intricate Dark Jade
+				{ 306, "i41468" }, -- Perfect Jagged Dark Jade
+				{ 307, "i41469" }, -- Perfect Lambent Dark Jade
+				{ 308, "i41470" }, -- Perfect Misty Dark Jade
+				{ 309, "i41471" }, -- Perfect Opaque Dark Jade
+				{ 310, "i41472" }, -- Perfect Radiant Dark Jade
+				{ 311, "i41473" }, -- Perfect Seer Dark Jade
+				{ 312, "i41474" }, -- Perfect Shattered Dark Jade
+				{ 313, "i41475" }, -- Perfect Shining Dark Jade
+				{ 314, "i41476" }, -- Perfect Steady Dark Jade
+				{ 315, "i41477" }, -- Perfect Sundered Dark Jade
+				{ 316, "i41478" }, -- Perfect Tense Dark Jade
+				{ 317, "i41479" }, -- Perfect Timeless Dark Jade
+				{ 318, "i41480" }, -- Perfect Turbid Dark Jade
+				{ 319, "i41481" }, -- Perfect Vivid Dark Jade
 			}
 		},
 		{
@@ -1361,6 +1433,7 @@ data["JewelcraftingWrath"] = {
 				{ 11, 66557 },	-- Shifting Dreadstone
 				{ 12, 66554 },	-- Sovereign Dreadstone
 				{ 13, 66565 },	-- Tenuous Dreadstone
+				-- blue
 				{ 16, 53969 },	-- Balanced Twilight Opal
 				{ 17, 53972 },	-- Defender's Twilight Opal
 				{ 18, 53965 },	-- Glowing Twilight Opal
@@ -1374,6 +1447,7 @@ data["JewelcraftingWrath"] = {
 				{ 26, 53963 },	-- Shifting Twilight Opal
 				{ 27, 53962 },	-- Sovereign Twilight Opal
 				{ 28, 53964 },	-- Tenuous Twilight Opal
+				-- green
 				{ 101, 53866 },	-- Balanced Shadow Crystal
 				{ 102, 53869 },	-- Defender's Shadow Crystal
 				{ 103, 53862 },	-- Glowing Shadow Crystal
@@ -1387,6 +1461,20 @@ data["JewelcraftingWrath"] = {
 				{ 111, 53860 },	-- Shifting Shadow Crystal
 				{ 112, 53859 },	-- Sovereign Shadow Crystal
 				{ 113, 53861 },	-- Tenuous Shadow Crystal
+				-- perfect
+				{ 116, "i41450" },	-- Perfect Balanced Shadow Crystal
+				{ 117, "i41451" },	-- Perfect Defender's Shadow Crystal
+				{ 118, "i41452" },	-- Perfect Glowing Shadow Crystal
+				{ 119, "i41453" },	-- Perfect Guardian's Shadow Crystal
+				{ 120, "i41454" },	-- Perfect Infused Shadow Crystal
+				{ 121, "i41455" },	-- Perfect Mysterious Shadow Crystal
+				{ 122, "i41456" },	-- Perfect Puissant Shadow Crystal
+				{ 123, "i41457" },	-- Perfect Purified Shadow Crystal
+				{ 124, "i41458" },	-- Perfect Regal Shadow Crystal
+				{ 125, "i41459" },	-- Perfect Royal Shadow Crystal
+				{ 126, "i41460" },	-- Perfect Shifting Shadow Crystal
+				{ 127, "i41461" },	-- Perfect Sovereign Shadow Crystal
+				{ 128, "i41462" },	-- Perfect Tenuous Shadow Crystal
 			}
 		},
 		{
