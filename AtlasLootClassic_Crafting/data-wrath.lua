@@ -1284,39 +1284,65 @@ data["JewelcraftingWrath"] = {
 		{
 			name = format(GEM_FORMAT1, ALIL["Green"]),
 			[NORMAL_DIFF] = {
-				{ 1, 66442 },	-- Energized Eye of Zul
-				{ 2, 66434 },	-- Forceful Eye of Zul
-				{ 3, 66431 },	-- Jagged Eye of Zul
-				{ 4, 66439 },	-- Lightning Eye of Zul
-				{ 5, 66435 },	-- Misty Eye of Zul
-				{ 6, 66429 },	-- Nimble Eye of Zul
-				{ 7, 66441 },	-- Radiant Eye of Zul
-				{ 8, 66338 },	-- Regal Eye of Zul
-				{ 9, 66443 },	-- Shattered Eye of Zul
-				{ 10, 66428 },	-- Steady Eye of Zul
-				{ 11, 66445 },	-- Turbid Eye of Zul
-				{ 16, 54011 },	-- Energized Forest Emerald
-				{ 17, 54001 },	-- Forceful Forest Emerald
-				{ 18, 53996 },	-- Jagged Forest Emerald
-				{ 19, 54009 },	-- Lightning Forest Emerald
-				{ 20, 54003 },	-- Misty Forest Emerald
-				{ 21, 53997 },	-- Nimble Forest Emerald
-				{ 22, 54012 },	-- Radiant Forest Emerald
-				{ 23, 53998 },	-- Regal Forest Emerald
-				{ 24, 54014 },	-- Shattered Forest Emerald
-				{ 25, 54000 },	-- Steady Forest Emerald
-				{ 26, 54005 },	-- Turbid Forest Emerald
-				{ 101, 53925 },	-- Energized Dark Jade
-				{ 102, 53920 },	-- Forceful Dark Jade
-				{ 103, 53916 },	-- Jagged Dark Jade
-				{ 104, 53923 },	-- Lightning Dark Jade
-				{ 105, 53922 },	-- Misty Dark Jade
-				{ 106, 53917 },	-- Nimble Dark Jade
-				{ 107, 53932 },	-- Radiant Dark Jade
-				{ 108, 53918 },	-- Regal Dark Jade
-				{ 109, 53933 },	-- Shattered Dark Jade
-				{ 110, 53919 },	-- Steady Dark Jade
-				{ 111, 53924 },	-- Turbid Dark Jade
+				{ 1, 66430 },   -- Dazzling Eye of Zul
+				{ 2, 66338 },   -- Enduring Eye of Zul				
+				{ 3, 66442 },	-- Energized Eye of Zul
+				{ 4, 66434 },	-- Forceful Eye of Zul
+				{ 5, 66440 },   -- Intricate Eye of Zul
+				{ 6, 66431 },	-- Jagged Eye of Zul
+				{ 7, 66439 },   -- Lambent Eye of Zul
+				{ 8, 66435 },	-- Misty Eye of Zul
+				{ 9, 66444 },   -- Opaque Eye of Zul
+				{ 10, 66441 },	-- Radiant Eye of Zul
+				{ 11, 66433 },  -- Seer Eye of Zul
+				{ 12, 66443 },	-- Shattered Eye of Zul
+				{ 13, 66437 },  -- Shining Eye of Zul
+				{ 14, 66428 },	-- Steady Eye of Zul
+				{ 15, 66436 },  -- Sundered Eye of Zul
+				{ 16, 66438 },  -- Tense Eye of Zul
+				{ 17, 66432 },  -- Timeless Eye of Zul
+				{ 18, 66445 },	-- Turbid Eye of Zul
+				{ 19, 66429 },  -- Vivid Eye of Zul
+				-- blue
+				{ 101, 54007 }, -- Dazzling Forest Emerald
+				{ 102, 53998 }, -- Enduring Forest Emerald
+				{ 103, 54011 },	-- Energized Forest Emerald
+				{ 104, 54001 },	-- Forceful Forest Emerald
+				{ 105, 54006 }, -- Intricate Forest Emerald
+				{ 106, 53996 },	-- Jagged Forest Emerald
+				{ 107, 54009 }, -- Lambent Forest Emerald
+				{ 108, 54003 },	-- Misty Forest Emerald
+				{ 109, 54010 }, -- Opaque Forest Emerald
+				{ 110, 54012 },	-- Radiant Forest Emerald
+				{ 111, 54002 }, -- Seer Forest Emerald
+				{ 112, 54014 },	-- Shattered Forest Emerald
+				{ 113, 54004 }, -- Shining Forest Emerald
+				{ 114, 54000 },	-- Steady Forest Emerald
+				{ 115, 54008 }, -- Sundered Forest Emerald
+				{ 116, 54013 }, -- Tense Forest Emerald
+				{ 117, 53995 }, -- Timeless Forest Emerald
+				{ 118, 54005 },	-- Turbid Forest Emerald
+				{ 119, 53997 }, -- Vivid Forest Emerald
+				-- green
+				{ 201, 53926 }, -- Dazzling Dark Jade
+				{ 202, 53918 }, -- Enduring Dark Jade
+				{ 203, 53930 },	-- Energized Dark Jade
+				{ 204, 53925 },	-- Forceful Dark Jade
+				{ 205, 53925 }, -- Intricate Dark Jade
+				{ 206, 53916 },	-- Jagged Dark Jade
+				{ 207, 53928 }, -- Lambent Dark Jade
+				{ 208, 53922 },	-- Misty Dark Jade
+				{ 209, 53929 }, -- Opaque Dark Jade
+				{ 210, 53931 },	-- Radiant Dark Jade
+				{ 211, 53921 }, -- Seer Dark Jade
+				{ 212, 53933 },	-- Shattered Dark Jade
+				{ 213, 53919 }, -- Shining Dark Jade
+				{ 214, 53919 },	-- Steady Dark Jade
+				{ 215, 53927 }, -- Sundered Dark Jade
+				{ 216, 53932 }, -- Tense Dark Jade
+				{ 217, 53894 }, -- Timeless Dark Jade
+				{ 218, 53924 },	-- Turbid Dark Jade
+				{ 219, 53917 }, -- Vivid Dark Jade
 			}
 		},
 		{
