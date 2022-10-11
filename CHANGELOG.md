@@ -8,3 +8,4 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 
 - add mounts into raid AC tables
 - add Missing Venomhide Ravasaur and Sea Turtle in Wrath mounts #262
+- fix Naxx now shows wrath version not classic

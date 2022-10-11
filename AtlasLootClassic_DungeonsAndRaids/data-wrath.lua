@@ -2549,7 +2549,7 @@ data["HallsOfReflection"] = {
 
 data["NaxxramasWrath"] = {
 	MapID = 3456,
-	InstanceID = AtlasLoot:GameVersion_LT(AtlasLoot.WRATH_VERSION_NUM,533,nil),
+	InstanceID = 533,
 	AtlasModule = ATLAS_MODULE_NAME,
 	AtlasMapID = "Naxxramas",
 	AtlasMapFile = "Naxxramas",
