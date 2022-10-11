@@ -756,11 +756,13 @@ data["TailoringWrath"] = {
 			[NORMAL_DIFF] = {
 				{ 1, 56034 },	-- Master's Spellthread
 				{ 2, 56010 },	-- Azure Spellthread
-				{ 4, 55777 },	-- Schwertwallgarn
-				{ 5, 55642 },	-- Hell leuchtendes Garn
-				{ 6, 55769 },	-- Dunkel glühendes Garn
+				{ 3, 56011 },   -- Sapphire Spellthread
+				{ 5, 55777 },	-- Schwertwallgarn
+				{ 6, 55642 },	-- Hell leuchtendes Garn
+				{ 7, 55769 },	-- Dunkel glühendes Garn
 				{ 16, 56039 },	-- Sanctified Spellthread
 				{ 17, 56008 },	-- Shining Spellthread
+				{ 18, 56009 },  -- Brilliant Spellthread
 			}
 		},
 		{
