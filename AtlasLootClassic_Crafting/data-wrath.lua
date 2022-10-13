@@ -1339,7 +1339,7 @@ data["JewelcraftingWrath"] = {
 			name = format(GEM_FORMAT1, ALIL["Green"]),
 			[NORMAL_DIFF] = {
 				{ 1, 66430 },   -- Dazzling Eye of Zul
-				{ 2, 66338 },   -- Enduring Eye of Zul				
+				{ 2, 66338 },   -- Enduring Eye of Zul
 				{ 3, 66442 },	-- Energized Eye of Zul
 				{ 4, 66434 },	-- Forceful Eye of Zul
 				{ 5, 66440 },   -- Intricate Eye of Zul
