@@ -559,6 +559,11 @@ function Favourites:ExportItemList(listID, isGlobalList)
             ret[#ret + 1] = format(EXPORT_PATTERN, "i", entry)
         end
     end
+    if list.notes then
+        for item, note in pairs(list.notes) do
+            ret[#ret + 1] = format(EXPORT_PATTERN, "n", item)..":"..gsub(note, IMPORT_EXPORT_DELIMITER, " ")
+        end
+    end
     return tblconcat(ret, IMPORT_EXPORT_DELIMITER)
 end
 
@@ -575,6 +580,13 @@ function Favourites:ImportItemList(listID, isGlobalList, newList, replace)
                 if eType == "i" and not list[entry] and ItemExist(entry) then
                     list[entry] = true
                     numNewEntrys = numNewEntrys + 1
+                end
+                if eType == "n" then
+                    if not list.notes then
+                        list.notes = {}
+                    end
+                    local item, note = strmatch(stList[i], "n:(%d+):(.+)");
+                    list.notes[item] = note
                 end
             end
         end
