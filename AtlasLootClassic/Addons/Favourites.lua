@@ -148,9 +148,21 @@ end
 local function PopulateListNotes(db, dest)
     for k,v in pairs(db) do
         if v.notes then
-          for item, note in pairs(v.notes) do
-              dest[k.."-"..item] = "  "..format(TEXT_WITH_TEXTURE, "Interface/FriendsFrame/UI-FriendsFrame-Note:8:8:0:0:8:8", "|cffB0B0B0"..note.."|r")
-          end
+            local cleanup = false
+            for item, note in pairs(v.notes) do
+                if type(item) == "string" then
+                    cleanup = true
+                end
+                dest[k.."-"..item] = "  "..format(TEXT_WITH_TEXTURE, "Interface/FriendsFrame/UI-FriendsFrame-Note:8:8:0:0:8:8", "|cffB0B0B0"..note.."|r")
+            end
+            if cleanup then
+                -- Fix string item ids in db
+                local notesFixed = {}
+                for item, note in pairs(v.notes) do
+                    notesFixed[tonumber(item)] = note
+                end
+                v.notes = notesFixed
+            end
         end
     end
 end
@@ -333,7 +345,7 @@ function Favourites:GetItemNote(itemID, list)
     if not list.notes then
         return nil
     end
-    return list.notes[itemID]
+    return list.notes[tonumber(itemID)]
 end
 
 function Favourites:SetItemNote(itemID, note, list, listID)
@@ -343,7 +355,7 @@ function Favourites:SetItemNote(itemID, note, list, listID)
     if not list.notes then
         list.notes = {}
     end
-    list.notes[itemID] = note
+    list.notes[tonumber(itemID)] = note
     if ListNoteCache[listID.."-"..itemID] then
         ListNoteCache[listID.."-"..itemID] = nil
     end
@@ -586,7 +598,7 @@ function Favourites:ImportItemList(listID, isGlobalList, newList, replace)
                         list.notes = {}
                     end
                     local item, note = strmatch(stList[i], "n:(%d+):(.+)");
-                    list.notes[item] = note
+                    list.notes[tonumber(item)] = note
                 end
             end
         end
