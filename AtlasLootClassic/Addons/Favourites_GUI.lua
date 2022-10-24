@@ -224,6 +224,7 @@ local function GUI_InfoOnEnter(self)
     tooltip:SetOwner(self, "ANCHOR_LEFT", (self:GetWidth() * 0.5), 5)
     tooltip:AddLine(AL["Favourites"], 0, 1, 0)
     tooltip:AddLine(format(TT_INFO_ENTRY, AL["Alt + Left Click"], AL["Remove item from list"]))
+    tooltip:AddLine(format(TT_INFO_ENTRY, AL["Shift + Left Click"], AL["Change item note"]))
     tooltip:AddLine(ALIL["Dressing Room"]..":", 1, 1, 1)
     tooltip:AddLine(format(TT_INFO_ENTRY, AL["Right Click"], AL["Undress item"]))
     tooltip:Show()
@@ -268,6 +269,8 @@ local function SlotButton_OnClick(self, button, down)
                 self:SetSlotItem()
             end
         end
+    elseif IsShiftKeyDown() then
+        GUI:OnItemNoteChange(self.ItemID)
     elseif self.ItemID then
         local b = ItemButtonType.ItemClickHandler:Get(button)
         ItemButtonType.OnMouseAction(self, button)
@@ -815,6 +818,33 @@ function GUI:Create()
 
         frame:Hide()
     end
+    if not self.popupNote then
+        local gui = self
+        StaticPopupDialogs["ATLASLOOT_FAVOURITE_NOTE_POPUP"] = {
+            text = AL["Enter a note for %s"],
+            button1 = AL["Save"],
+            button2 = AL["Cancel"],
+            whileDead = true,
+            hideOnEscape = true,
+            maxLetters = 100,
+            hasEditBox = true,
+            OnAccept = function(self, data, data2)
+                if gui.popupNoteId then
+                    Favourites:SetItemNote(gui.popupNoteId, self.editBox:GetText())
+                    gui.popupNoteId = nil
+                end
+            end,
+        }
+        self.popupNote = StaticPopupDialogs["ATLASLOOT_FAVOURITE_NOTE_POPUP"]
+    end
+end
+
+function GUI:OnItemNoteChange(itemId, note)
+    self.popupNoteId = itemId
+    local itemName, itemLink = GetItemInfo(itemId)
+    local itemNote = Favourites:GetItemNote(itemId)
+    local popup = StaticPopup_Show("ATLASLOOT_FAVOURITE_NOTE_POPUP", itemLink)
+    popup.editBox:SetText(itemNote or "")
 end
 
 function GUI:UpdateStyle()

@@ -32,6 +32,7 @@ local KEY_WEAK_MT = {__mode="k"}
 local TooltipsHooked = false
 local TooltipCache, TooltipTextCache = {}
 local ListNameCache
+local ListNoteCache
 setmetatable(TooltipCache, KEY_WEAK_MT)
 
 Favourites.BASE_NAME_P, Favourites.BASE_NAME_G = BASE_NAME_P, BASE_NAME_G
@@ -144,6 +145,16 @@ local function PopulateListNames(db, dest)
     end
 end
 
+local function PopulateListNotes(db, dest)
+    for k,v in pairs(db) do
+        if v.notes then
+          for item, note in pairs(v.notes) do
+              dest[k.."-"..item] = "  "..format(TEXT_WITH_TEXTURE, "Interface/FriendsFrame/UI-FriendsFrame-Note:8:8:0:0:8:8", "|cffB0B0B0"..note.."|r")
+          end
+        end
+    end
+end
+
 local function GetActiveList(self)
     local name, isGlobal = self.db.activeList[1], ( self.db.activeList[2] == true )
     local db = isGlobal and self:GetGlobaleLists() or self:GetProfileLists()
@@ -210,13 +221,15 @@ local function OnTooltipSetItem_Hook(self)
         if Favourites.db.showListInTT then
             self:AddLine(" ")
             if Favourites.activeList[item] then
-                self:AddLine(ListNameCache.active)
+                local itemNote = ListNoteCache[Favourites.activeListID.."-"..item] or ""
+                self:AddLine(ListNameCache.active..itemNote)
             end
             if Favourites.subItems[item] then
                 for i = 1, #Favourites.subItems[item] do
                     local entry = Favourites.subItems[item][i]
                     if entry[1] ~= Favourites.activeListID then
-                        self:AddLine(ListNameCache[entry[2] and "global" or "profile"][entry[1]])
+                        local itemNote = ListNoteCache[entry[1].."-"..item] or ""
+                        self:AddLine(ListNameCache[entry[2] and "global" or "profile"][entry[1]]..itemNote)
                     end
                 end
             end
@@ -265,6 +278,10 @@ function Favourites:UpdateDb()
     PopulateListNames(self.db.lists, ListNameCache.profile)
     PopulateListNames(self.globalDb.lists, ListNameCache.global)
 
+    ListNoteCache = {}
+    PopulateListNotes(self.db.lists, ListNoteCache)
+    PopulateListNotes(self.globalDb.lists, ListNoteCache)
+
     -- tooltip hook
     if self:TooltipHookEnabled() and not TooltipsHooked then
         InitTooltips()
@@ -307,6 +324,29 @@ function Favourites:RemoveItemID(itemID)
         return true
     end
     return false
+end
+
+function Favourites:GetItemNote(itemID, list)
+    if not list then
+        return self:GetItemNote(itemID, self.activeList)
+    end
+    if not list.notes then
+        return nil
+    end
+    return list.notes[itemID]
+end
+
+function Favourites:SetItemNote(itemID, note, list, listID)
+    if not list then
+        return self:SetItemNote(itemID, note, self.activeList, self.activeListID)
+    end
+    if not list.notes then
+        list.notes = {}
+    end
+    list.notes[itemID] = note
+    if ListNoteCache[listID.."-"..itemID] then
+        ListNoteCache[listID.."-"..itemID] = nil
+    end
 end
 
 function Favourites:GetActiveList()
