@@ -356,9 +356,10 @@ function Favourites:SetItemNote(itemID, note, list, listID)
         list.notes = {}
     end
     list.notes[tonumber(itemID)] = note
-    if ListNoteCache[listID.."-"..itemID] then
-        ListNoteCache[listID.."-"..itemID] = nil
-    end
+    -- Refresh cache
+    ListNoteCache = {}
+    PopulateListNotes(self.db.lists, ListNoteCache)
+    PopulateListNotes(self.globalDb.lists, ListNoteCache)
 end
 
 function Favourites:GetActiveList()
