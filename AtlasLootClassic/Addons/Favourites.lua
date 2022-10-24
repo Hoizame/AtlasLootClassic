@@ -150,7 +150,7 @@ local function PopulateListNotes(db, dest)
         if v.notes then
             local cleanup = false
             for item, note in pairs(v.notes) do
-                if type(item) == "string" then
+                if (type(item) == "string") or not v[item] then
                     cleanup = true
                 end
                 dest[k.."-"..item] = "  "..format(TEXT_WITH_TEXTURE, "Interface/FriendsFrame/UI-FriendsFrame-Note:8:8:0:0:8:8", "|cffB0B0B0"..note.."|r")
@@ -159,7 +159,9 @@ local function PopulateListNotes(db, dest)
                 -- Fix string item ids in db
                 local notesFixed = {}
                 for item, note in pairs(v.notes) do
-                    notesFixed[tonumber(item)] = note
+                    if v[tonumber(item)] then
+                        notesFixed[tonumber(item)] = note
+                    end
                 end
                 v.notes = notesFixed
             end
