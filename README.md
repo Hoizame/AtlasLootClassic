@@ -27,6 +27,7 @@ AtlasLootClassic is an UI mod allowing for loot tables of bosses to be browsed w
 ## Favourites
 
 * Add items directly from AtlasLoot with `Alt + Left Click`
+* Add notes to favourite items with `Alt + Right Click`
 * Setup global and profile based lists
 * Show on item tooltip if the item is on any active list
 * Import and export your lists
@@ -38,9 +39,9 @@ AtlasLootClassic is an UI mod allowing for loot tables of bosses to be browsed w
 
 `(type):(id)`
 
-This currently only supports items
+This currently only supports items and notes
 
-`"i:16703,i:16704,i:16698,i:16699,i:11287"`
+`"i:16703,i:16704,i:16698,n16698:First item note,i:16699,i:11287,n:11287:Second item note"`
 
 ## Maps
 

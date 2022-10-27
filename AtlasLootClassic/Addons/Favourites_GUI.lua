@@ -269,13 +269,15 @@ local function SlotButton_OnClick(self, button, down)
                 self:SetSlotItem()
             end
         end
-    elseif IsShiftKeyDown() then
-        GUI:OnItemNoteChange(self.ItemID)
     elseif self.ItemID then
-        local b = ItemButtonType.ItemClickHandler:Get(button)
-        ItemButtonType.OnMouseAction(self, button)
-        if b == "SetFavourite" then
-            UpdateItemFrame(true)
+        if button == "LeftButton" then
+            local b = ItemButtonType.ItemClickHandler:Get(button)
+            ItemButtonType.OnMouseAction(self, button)
+            if b == "SetFavourite" then
+                UpdateItemFrame(true)
+            end
+        elseif button == "RightButton" then
+            GUI:OnItemNoteChange(self.ItemID)
         end
     end
 end
