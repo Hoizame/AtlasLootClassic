@@ -760,6 +760,7 @@ data["CompanionsBC"] = {
 				{ 2, 33818 }, -- Muckbreath's Bucket
 				{ 3, 35349 }, -- Snarly's Bucket
 				{ 4, 33816 }, -- Toothy's Bucket
+				{ 6, 27445 }, -- Magical Crawdad Box
 			},
 		},
 		{ -- Unobtainable
@@ -773,13 +774,12 @@ data["CompanionsBC"] = {
 				{ 7, 34518 }, -- Golden Pig Coin
 				{ 8, 32498 }, -- Fortune Coin
 				{ 9, 32465 }, -- Fortune Coin
-				{ 16, 27445 }, -- Magical Crawdad Box
-				{ 17, 31665 }, -- Toy RC Mortar Tank
-				{ 19, 37297 }, -- Gold Medallion
-				{ 20, 37298 }, -- Competitor's Souvenir
-				{ 22, 39656 }, -- Tyrael's Hilt
-				{ 24, 25535 }, -- Netherwhelp's Collar
-				{ 25, 30360 }, -- Lurky's Egg
+				{ 16, 31665 }, -- Toy RC Mortar Tank
+				{ 18, 37297 }, -- Gold Medallion
+				{ 19, 37298 }, -- Competitor's Souvenir
+				{ 21, 39656 }, -- Tyrael's Hilt
+				{ 23, 25535 }, -- Netherwhelp's Collar
+				{ 24, 30360 }, -- Lurky's Egg
 			},
 		},
 	},
