@@ -1202,6 +1202,92 @@ data["HalloweenWrath"] = {
 	},
 }
 
+data["DayoftheDead"] = {
+	name = AL["Day of the Dead"],
+	ContentType = WORLD_EVENT_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = NORMAL_ITTYPE,
+	gameVersion = AtlasLoot.WRATH_VERSION_NUM,
+	CorrespondingFields = private.DAY_OF_THE_DEAD,
+	items = {
+		{ -- DayoftheDead
+			name = AL["Day of the Dead"],
+			[NORMAL_DIFF] = {
+				{ 1,  46690 }, -- Candy Skull
+				{ 2,  46710 }, -- Recipe: Bread of the Dead
+				{ 3,  46711 }, -- Spirit Candle
+				{ 4,  46718 }, -- Orange Marigold
+				{ 5,  46831 }, -- Macabre Marionette
+				{ 6,  46860 }, -- Whimsical Skull Mask
+				{ 7,  46861 }, -- Bouquet of Orange Marigolds
+			},
+		},
+	},
+}
+
+data["DayoftheDead"] = {
+	name = AL["Day of the Dead"],
+	ContentType = WORLD_EVENT_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = NORMAL_ITTYPE,
+	gameVersion = AtlasLoot.WRATH_VERSION_NUM,
+	CorrespondingFields = private.DAY_OF_THE_DEAD,
+	items = {
+		{ -- DayoftheDead
+			name = AL["Day of the Dead"],
+			[NORMAL_DIFF] = {
+				{ 1,  46690 }, -- Candy Skull
+				{ 2,  46710 }, -- Recipe: Bread of the Dead
+				{ 3,  46711 }, -- Spirit Candle
+				{ 4,  46718 }, -- Orange Marigold
+				{ 5,  46831 }, -- Macabre Marionette
+				{ 6,  46860 }, -- Whimsical Skull Mask
+				{ 7,  46861 }, -- Bouquet of Orange Marigolds
+			},
+		},
+	},
+}
+
+data["PilgrimsBounty"] = {
+	name = AL["Pilgrim's Bounty"],
+	ContentType = WORLD_EVENT_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = NORMAL_ITTYPE,
+	gameVersion = AtlasLoot.WRATH_VERSION_NUM,
+	CorrespondingFields = private.PILGRIMS_BOUNTY,
+	items = {
+		{ -- Pilgrim's Bounty
+			name = AL["Pilgrim's Bounty"],
+			[NORMAL_DIFF] = {
+				{ 1,  44860 }, -- Recipe: Spice Bread Stuffing
+				{ 2,  46803 }, -- Recipe: Spice Bread Stuffing
+				{ 3,  44862 }, -- Recipe: Pumpkin Pie
+				{ 4,  46804 }, -- Recipe: Pumpkin Pie
+				{ 5,  44858 }, -- Recipe: Cranberry Chutney
+				{ 6,  46805 }, -- Recipe: Cranberry Chutney
+				{ 7,  44859 }, -- Recipe: Candied Sweet Potato
+				{ 8,  46806 }, -- Recipe: Candied Sweet Potato
+				{ 9,  44861 }, -- Recipe: Slow-Roasted Turkey
+				{ 10,  46807 }, -- Recipe: Slow-Roasted Turkey
+				{ 11,  44835 }, -- Autumnal Herbs
+				{ 12,  44853 }, -- Honey
+				{ 13,  44854 }, -- Tangy Wetland Cranberries
+				{ 14,  46793 }, -- Tangy Southfury Cranberries
+				{ 15,  46800 }, -- Teldrassil Sweet Potato
+				{ 16,  44855 }, -- Teldrassil Sweet Potato
+				{ 17,  46797 }, -- Mulgore Sweet Potato
+				{ 18,  44834 }, -- Wild Turkey
+				{ 20,  44812 }, -- Turkey Shooter
+				{ 21,  44844 }, -- Turkey Caller
+				{ 23,  44785 }, -- Pilgrim's Dress
+				{ 24,  46723 }, -- Pilgrim's Hat
+				{ 25,  46800 }, -- Pilgrim's Attire
+				{ 26,  46824 }, -- Pilgrim's Robe
+			},
+		},
+	},
+}
+
 data["ScourgeInvasionWrath"] = {
 	name = AL["Scourge Invasion"],
 	ContentType = WORLD_EVENT_CONTENT,
