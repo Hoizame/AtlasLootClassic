@@ -1004,31 +1004,6 @@ data["HeirloomWrath"] = {
 	},
 }
 
-data["ChildrensWeekWrath"] = {
-	name = AL["Childrens Week"],
-	ContentType = WORLD_EVENT_CONTENT,
-	LoadDifficulty = NORMAL_DIFF,
-	TableType = NORMAL_ITTYPE,
-	gameVersion = AtlasLoot.WRATH_VERSION_NUM,
-	CorrespondingFields = private.CHILDRENS_WEEK,
-	items = {
-		{ -- ChildrensWeek
-			name = AL["Childrens Week"],
-			[NORMAL_DIFF] = {
-				{ 1,  23007 }, -- Piglet's Collar
-				{ 2,  23015 }, -- Rat Cage
-				{ 3,  23002 }, -- Turtle Box
-				{ 4,  23022 }, -- Curmudgeon's Payoff
-				{ 6,  32616 }, -- Egbert's Egg
-				{ 7,  32617 }, -- Sleepy Willy
-				{ 8,  32622 }, -- Elekk Training Collar
-				{ 10,  46544 }, -- Curious Wolvar Pup
-				{ 11,  46545 }, -- Curious Oracle Hatchling
-			},
-		},
-	},
-}
-
 data["ValentinedayWrath"] = {
 	name = AL["Love is in the Air"],
 	ContentType = WORLD_EVENT_CONTENT,
@@ -1074,6 +1049,31 @@ data["ValentinedayWrath"] = {
 				{ 10,  50446 }, -- Toxic Wasteling
 				{ 11,  50471 }, -- The Heartbreaker
 				{ 12,  50741 }, -- Vile Fumigator's Mask
+			},
+		},
+	},
+}
+
+data["ChildrensWeekWrath"] = {
+	name = AL["Childrens Week"],
+	ContentType = WORLD_EVENT_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = NORMAL_ITTYPE,
+	gameVersion = AtlasLoot.WRATH_VERSION_NUM,
+	CorrespondingFields = private.CHILDRENS_WEEK,
+	items = {
+		{ -- ChildrensWeek
+			name = AL["Childrens Week"],
+			[NORMAL_DIFF] = {
+				{ 1,  23007 }, -- Piglet's Collar
+				{ 2,  23015 }, -- Rat Cage
+				{ 3,  23002 }, -- Turtle Box
+				{ 4,  23022 }, -- Curmudgeon's Payoff
+				{ 6,  32616 }, -- Egbert's Egg
+				{ 7,  32617 }, -- Sleepy Willy
+				{ 8,  32622 }, -- Elekk Training Collar
+				{ 10,  46544 }, -- Curious Wolvar Pup
+				{ 11,  46545 }, -- Curious Oracle Hatchling
 			},
 		},
 	},
