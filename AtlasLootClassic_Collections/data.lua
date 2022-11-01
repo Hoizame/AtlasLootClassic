@@ -971,10 +971,9 @@ data["Companions"] = {
 			name = AL["Quest"],
 			[NORMAL_DIFF] = {
 				{ 1, 12264 }, -- Worg Carrier
-				{ 2, 23002 }, -- Turtle Box
-				{ 3, 11474 }, -- Sprite Darter Egg
-				{ 4, 12529 }, -- Smolderweb Carrier
-				{ 5, 10398 }, -- Mechanical Chicken
+				{ 2, 11474 }, -- Sprite Darter Egg
+				{ 3, 12529 }, -- Smolderweb Carrier
+				{ 4, 10398 }, -- Mechanical Chicken
 			},
 		},
 		{
@@ -1013,6 +1012,7 @@ data["Companions"] = {
 				{ 20, 23015 }, -- Rat Cage
 				{ 21, 22781 }, -- Polar Bear Collar
 				{ 22, 23007 }, -- Piglet's Collar
+				{ 23, 23002 }, -- Turtle Box
 			},
 		},
 		{ -- Unobtainable
