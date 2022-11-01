@@ -1126,7 +1126,7 @@ data["MidsummerFestivalWrath"] = {
 	},
 }
 
-data["Brewfest"] = {
+data["BrewfestWrath"] = {
 	name = AL["Brewfest"],
 	ContentType = WORLD_EVENT_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
@@ -1296,29 +1296,6 @@ data["DayoftheDead"] = {
 	},
 }
 
-data["DayoftheDead"] = {
-	name = AL["Day of the Dead"],
-	ContentType = WORLD_EVENT_CONTENT,
-	LoadDifficulty = NORMAL_DIFF,
-	TableType = NORMAL_ITTYPE,
-	gameVersion = AtlasLoot.WRATH_VERSION_NUM,
-	CorrespondingFields = private.DAY_OF_THE_DEAD,
-	items = {
-		{ -- DayoftheDead
-			name = AL["Day of the Dead"],
-			[NORMAL_DIFF] = {
-				{ 1,  46690 }, -- Candy Skull
-				{ 2,  46710 }, -- Recipe: Bread of the Dead
-				{ 3,  46711 }, -- Spirit Candle
-				{ 4,  46718 }, -- Orange Marigold
-				{ 5,  46831 }, -- Macabre Marionette
-				{ 6,  46860 }, -- Whimsical Skull Mask
-				{ 7,  46861 }, -- Bouquet of Orange Marigolds
-			},
-		},
-	},
-}
-
 data["PilgrimsBounty"] = {
 	name = AL["Pilgrim's Bounty"],
 	ContentType = WORLD_EVENT_CONTENT,
@@ -1344,16 +1321,15 @@ data["PilgrimsBounty"] = {
 				{ 12,  44853 }, -- Honey
 				{ 13,  44854 }, -- Tangy Wetland Cranberries
 				{ 14,  46793 }, -- Tangy Southfury Cranberries
-				{ 15,  46800 }, -- Teldrassil Sweet Potato
-				{ 16,  44855 }, -- Teldrassil Sweet Potato
-				{ 17,  46797 }, -- Mulgore Sweet Potato
-				{ 18,  44834 }, -- Wild Turkey
-				{ 20,  44812 }, -- Turkey Shooter
-				{ 21,  44844 }, -- Turkey Caller
-				{ 23,  44785 }, -- Pilgrim's Dress
-				{ 24,  46723 }, -- Pilgrim's Hat
-				{ 25,  46800 }, -- Pilgrim's Attire
-				{ 26,  46824 }, -- Pilgrim's Robe
+				{ 15,  44855 }, -- Teldrassil Sweet Potato
+				{ 16,  46797 }, -- Mulgore Sweet Potato
+				{ 17,  44834 }, -- Wild Turkey
+				{ 19,  44812 }, -- Turkey Shooter
+				{ 20,  44844 }, -- Turkey Caller
+				{ 22,  44785 }, -- Pilgrim's Dress
+				{ 23,  46723 }, -- Pilgrim's Hat
+				{ 24,  46800 }, -- Pilgrim's Attire
+				{ 25,  46824 }, -- Pilgrim's Robe
 			},
 		},
 	},
