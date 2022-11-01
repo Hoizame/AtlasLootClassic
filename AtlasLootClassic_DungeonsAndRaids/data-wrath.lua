@@ -3392,9 +3392,8 @@ data["ObsidianSanctum"] = {
                 { 1, 40428 }, -- Titan's Outlook
                 { 2, 40427 }, -- Circle of Arcane Streams
                 { 3, 40426 }, -- Signet of the Accord
-                { 4, 40433 }, -- Wyrmrest Band
-                { 5, 40430 }, -- Majestic Dragon Figurine
-                { 6, 40429 }, -- Crimson Steel
+                { 4, 40430 }, -- Majestic Dragon Figurine
+                { 5, 40429 }, -- Crimson Steel
                 { 16, 40613 }, -- Gloves of the Lost Conqueror
                 { 17, 40614 }, -- Gloves of the Lost Protector
                 { 18, 40615 }, -- Gloves of the Lost Vanquisher
