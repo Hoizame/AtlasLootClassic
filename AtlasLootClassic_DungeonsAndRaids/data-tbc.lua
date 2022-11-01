@@ -1193,7 +1193,8 @@ data["TheSlavePens"] = {
                 { 8, 35723 }, -- Shards of Ahune
                 { 16, 35498 }, -- Formula: Enchant Weapon - Deathfrost
                 { 18, 34955 }, -- Scorched Stone
-                { 19, 35557 }, -- Huge Snowball
+                { 19, 53641 }, --  Ice Chip
+                { 21, 35557 }, -- Huge Snowball
             },
         }),
         KEYS
