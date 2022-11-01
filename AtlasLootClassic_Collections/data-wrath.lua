@@ -781,8 +781,11 @@ data["CompanionsWrath"] = {
 		{
 			name = AL["World Events"],
 			[NORMAL_DIFF] = {
-				{ 1, 44794 }, --  Spring Rabbit's Foot
-				{ 3, 46707 }, --  Pint-Sized Pink Pachyderm
+				{ 1, 50446 }, -- Toxic Wasteling
+				{ 3, 44794 }, --  Spring Rabbit's Foot
+				{ 5, 53641 }, --  Ice Chip
+				{ 7, 46707 }, --  Pint-Sized Pink Pachyderm
+				{ 9, 46831 }, --  Macabre Marionette
 				{ 16, 46544 }, --  Curious Wolvar Pup
 				{ 17, 46545 }, --  Curious Oracle Hatchling
 			},
@@ -830,16 +833,14 @@ data["CompanionsWrath"] = {
 			[NORMAL_DIFF] = {
 				{ 1, 39286 }, --  Frosty's Collar
 				{ 3, 38658 }, -- Vampiric Batling
-				{ 4, 50446 }, -- Toxic Wasteling
-				{ 6, 49663 }, -- Wind Rider Cub / Shop
-				{ 7, 54847 }, -- Lil' XT / Shop
-				{ 8, 49693 }, --  Lil' Phylactery / Shop
-				{ 9, 49665 }, --  Pandaren Monk / Shop
-				{ 10, 49662 }, --  Gryphon Hatchling / Shop
+				{ 5, 49663 }, -- Wind Rider Cub / Shop
+				{ 6, 54847 }, -- Lil' XT / Shop
+				{ 7, 49693 }, --  Lil' Phylactery / Shop
+				{ 8, 49665 }, --  Pandaren Monk / Shop
+				{ 9, 49662 }, --  Gryphon Hatchling / Shop
 
-				{ 13, 49362 }, --  Onyxian Whelpling
-				{ 14, 46802 }, --  Heavy Murloc Egg
-				{ 15, 53641 }, --  Ice Chip
+				{ 11, 49362 }, --  Onyxian Whelpling
+				{ 12, 46802 }, --  Heavy Murloc Egg
 
 				{ 16, 198636 }, -- Hippogryph Hatchling
 				{ 17, 198635 }, -- Dragon Kite
