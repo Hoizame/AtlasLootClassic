@@ -714,9 +714,8 @@ data["CompanionsBC"] = {
 			[NORMAL_DIFF] = {
 				{ 1, 33993 }, -- Mojo
 				{ 3, 35504 }, -- Phoenix Hatchling
-				{ 5, 34955 }, -- Scorched Stone
-				{ 7, 34535 }, -- Azure Whelpling
-				{ 8, 29960 }, -- Captured Firefly
+				{ 5, 34535 }, -- Azure Whelpling
+				{ 6, 29960 }, -- Captured Firefly
 			},
 		},
 		{
@@ -746,8 +745,9 @@ data["CompanionsBC"] = {
 			name = AL["World Events"],
 			[NORMAL_DIFF] = {
 				{ 1, 34425 }, -- Clockwork Rocket Bot
-				{ 3, 33154 }, -- Sinister Squashling
+				{ 3, 34955 }, -- Scorched Stone
 				{ 5, 32233 }, -- Wolpertinger's Tankard
+				{ 7, 33154 }, -- Sinister Squashling
 				{ 16, 32617 }, -- Sleepy Willy
 				{ 17, 32622 }, -- Elekk Training Collar
 				{ 18, 32616 }, -- Egbert's Egg
