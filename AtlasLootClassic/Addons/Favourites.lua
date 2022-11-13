@@ -4,6 +4,7 @@ local _G = getfenv(0)
 local AtlasLoot = _G.AtlasLoot
 local Addons = AtlasLoot.Addons
 local AL = AtlasLoot.Locales
+local ItemDB = AtlasLoot.ItemDB
 local Favourites = Addons:RegisterNewAddon("Favourites")
 local Tooltip = AtlasLoot.Tooltip
 
@@ -33,6 +34,9 @@ local TooltipsHooked = false
 local TooltipCache, TooltipTextCache = {}
 local ListNameCache
 local ListNoteCache
+local ListBiSCache
+local ItemCountCache
+local PluginOutfitterLoading
 setmetatable(TooltipCache, KEY_WEAK_MT)
 
 Favourites.BASE_NAME_P, Favourites.BASE_NAME_G = BASE_NAME_P, BASE_NAME_G
@@ -145,6 +149,109 @@ local function PopulateListNames(db, dest)
     end
 end
 
+local function PopulateListBiS(db, dest)
+    local itemsEquipped = {}
+    -- Equipped items
+    for invSlot = 1, 19 do
+        local equipItemId = GetInventoryItemID("player", itemEquipLoc);
+        if equipItemId then
+            itemsEquipped[equipItemId] = true
+        end
+    end
+    -- Items contained within wow equipment sets
+    local itemSetIds = C_EquipmentSet.GetEquipmentSetIDs()
+    for itemSetIndex, itemSetId in ipairs(itemSetIds) do
+        local itemSetItems = C_EquipmentSet.GetItemIDs(itemSetId)
+        for invSlot = 1, 19 do
+            local equipItemId = itemSetItems[invSlot]
+            if equipItemId then
+                itemsEquipped[equipItemId] = true
+            end
+        end
+    end
+    -- Outfitter sets
+    local pluginOutfitter = GetAddOnInfo("Outfitter")
+    if pluginOutfitter then
+        if Outfitter and Outfitter.Settings and Outfitter.Settings.Outfits then
+            -- Check outfitter equip sets
+            local outfits = Outfitter.Settings.Outfits
+            for outfitType, outfitList in pairs(outfits) do
+                for outfitIndex, outfitData in ipairs(outfitList) do
+                    local outfitItems = outfitData:GetItems()
+                    for outfitterSlot, outfitterItem in pairs(outfitItems) do
+                        if outfitterItem.Code then
+                            itemsEquipped[outfitterItem.Code] = true
+                        end
+                    end
+                end
+            end
+        else
+            -- Outfitter not (yet) loaded, add callback to populate database again once Outfitter was loaded
+            -- TODO: Find a better way to access outfitter data when ready
+            if not PluginOutfitterLoading then
+                PluginOutfitterLoading = true
+            end
+        end
+    end
+    for listId, listData in pairs(db) do
+        if not dest[listId] then
+            dest[listId] = {
+                byId = {}, bySlot = {}, bestInSlot = {}, obsolete = {}, equipped = {}
+            }
+        end
+        local destList = dest[listId]
+        for itemId in pairs(listData) do
+            if type(itemId) == "number" then
+                local itemName, itemLink, itemRarity, itemLevel, itemMinLevel, itemType,
+                    itemSubType, itemStackCount, itemEquipLoc = GetItemInfo(itemId)
+                local itemData = { itemId, itemLink, itemLevel, 0, itemType, itemSubType }
+                destList.byId[itemId] = itemData
+                if itemEquipLoc and itemLevel then
+                    if not destList.bySlot[itemEquipLoc] then
+                        destList.bySlot[itemEquipLoc] = {}
+                    end
+                    if not tContains(destList.bySlot[itemEquipLoc], itemId) then
+                        tinsert(destList.bySlot[itemEquipLoc], itemId)
+                    end
+                    if itemsEquipped[itemId] then
+                        destList.equipped[itemId] = true
+                        if destList.bestInSlot[itemEquipLoc] then
+                            local curId, curLink, curLevel, prevLevel, curType, curSubType = unpack(destList.bestInSlot[itemEquipLoc])
+                            if (curLevel < itemLevel) then
+                                itemData[4] = curLevel
+                                destList.bestInSlot[itemEquipLoc] = itemData
+                            elseif (itemId ~= curId) then
+                                destList.bestInSlot[itemEquipLoc][4] = max(prevLevel, itemLevel)
+                            end
+                        else
+                            destList.bestInSlot[itemEquipLoc] = itemData
+                        end
+                    end
+                end
+            end
+        end
+        local mainItems = {}
+        if listData.mainItems then
+            for invSlot, itemId in pairs(listData.mainItems) do
+                mainItems[itemId] = true
+            end
+        end
+        -- Gather obsolete items
+        for itemEquipLoc, itemIds in pairs(destList.bySlot) do
+            for _, itemId in ipairs(itemIds) do
+                if destList.bestInSlot[itemEquipLoc] then
+                    local bestId, bestLink, bestLevel, secondBestLevel, bestType, bestSubType = unpack(destList.bestInSlot[itemEquipLoc])
+                    local itemName, itemLink, itemRarity, itemLevel, itemMinLevel, itemType,
+                        itemSubType, itemStackCount, itemEquipLoc = GetItemInfo(itemId)
+                    if (bestLevel > itemLevel) and not mainItems[itemId] then
+                        destList.obsolete[itemId] = true
+                    end
+                end
+            end
+        end
+    end
+end
+
 local function PopulateListNotes(db, dest)
     for k,v in pairs(db) do
         if v.notes then
@@ -196,6 +303,7 @@ local function ClearActiveList(self)
     else
         db[BASE_NAME_P] = new
     end
+    self:ClearCountCache()
 end
 
 local function CleanUpShownLists(db, globalDb, activeSubLists, isGlobalList)
@@ -235,15 +343,13 @@ local function OnTooltipSetItem_Hook(self)
         if Favourites.db.showListInTT then
             self:AddLine(" ")
             if Favourites.activeList[item] then
-                local itemNote = ListNoteCache[Favourites.activeListID.."-"..item] or ""
-                self:AddLine(ListNameCache.active..itemNote)
+                self:AddLine(Favourites:GetFavouriteItemText(item, Favourites.activeListID))
             end
             if Favourites.subItems[item] then
                 for i = 1, #Favourites.subItems[item] do
                     local entry = Favourites.subItems[item][i]
                     if entry[1] ~= Favourites.activeListID then
-                        local itemNote = ListNoteCache[entry[1].."-"..item] or ""
-                        self:AddLine(ListNameCache[entry[2] and "global" or "profile"][entry[1]]..itemNote)
+                        self:AddLine(Favourites:GetFavouriteItemText(item, entry[1]))
                     end
                 end
             end
@@ -296,11 +402,18 @@ function Favourites:UpdateDb()
     PopulateListNotes(self.db.lists, ListNoteCache)
     PopulateListNotes(self.globalDb.lists, ListNoteCache)
 
+    ListBiSCache = {}
+    PopulateListBiS(self.db.lists, ListBiSCache)
+    PopulateListBiS(self.globalDb.lists, ListBiSCache)
+
     -- tooltip hook
     if self:TooltipHookEnabled() and not TooltipsHooked then
         InitTooltips()
     end
     self.GUI:ItemListUpdate()
+
+    -- number of favourite items by dungeon/boss/...
+    ItemCountCache = {}
 end
 
 function Favourites.OnInitialize()
@@ -318,12 +431,18 @@ function Favourites:OnStatusChanged()
     self.GUI:OnStatusChanged()
 end
 
+function Favourites:OnItemsChanged()
+    self:ClearCountCache()
+    -- TODO Update counts for subcategories/difficulties/bosses/extras
+end
+
 function Favourites:AddItemID(itemID)
     if itemID and ItemExist(itemID) and not self.activeList[itemID] then
         self.numItems = self.numItems + 1
         self.activeList[itemID] = true
         TooltipTextCache[itemID] = nil
-        self.GUI:ItemListUpdate()
+        self:OnStatusChanged()
+        self:OnItemsChanged()
         return true
     end
     return false
@@ -335,6 +454,7 @@ function Favourites:RemoveItemID(itemID)
         self.activeList[itemID] = nil
         TooltipTextCache[itemID] = nil
         self:CleanUpMainItems()
+        self:OnItemsChanged()
         return true
     end
     return false
@@ -379,6 +499,174 @@ end
 
 function Favourites:GetNumItemsInList()
     return self.numItems or 0
+end
+
+function Favourites:CountCacheIdent(addonName, contentName, boss, dif, includeObsolete)
+    local cacheIdent = addonName
+    if includeObsolete then
+        cacheIdent = cacheIdent.."_FULL"
+    end
+    if contentName ~= nil then
+        cacheIdent = cacheIdent.."__"..contentName
+    else
+        cacheIdent = cacheIdent.."__nil"
+    end
+    if boss ~= nil then
+        cacheIdent = cacheIdent.."__"..boss
+    else
+        cacheIdent = cacheIdent.."__nil"
+    end
+    if dif ~= nil then
+        cacheIdent = cacheIdent.."__"..dif
+    else
+        cacheIdent = cacheIdent.."__nil"
+    end
+    return cacheIdent
+end
+
+function Favourites:CountFavouritesOverall(addonName, contentName, boss, dif, includeObsolete)
+    local cacheIdent = self:CountCacheIdent(addonName, contentName, boss, dif, includeObsolete)
+    local result = ItemCountCache[cacheIdent]
+    if result == nil then
+        -- No valid cache, calculate item count!
+        result = 0
+        -- TODO
+    end
+    return result
+end
+
+function Favourites:CountFavouritesByList(addonName, contentName, boss, dif, includeObsolete)
+    local cacheIdent = self:CountCacheIdent(addonName, contentName, boss, dif, includeObsolete)
+    if ItemCountCache[cacheIdent] then
+        return ItemCountCache[cacheIdent]
+    end
+    -- No valid cache, calculate item count!
+    local result = {}
+    -- TODO
+    local moduleItems = {}
+    if contentName == nil then
+        -- Get count per content section (e.g. dungeon/profession)
+        local moduleList = AtlasLoot.ItemDB:GetModuleList(addonName)
+        for i = 1, #moduleList do
+            contentName = moduleList[i]
+            local subResult = self:CountFavouritesByList(addonName, contentName, boss, dif, includeObsolete)
+            for listName, itemCount in pairs(subResult) do
+                result[listName] = (result[listName] or 0) + itemCount
+            end
+        end
+        ItemCountCache[cacheIdent] = result
+        return result
+    end
+    if boss == nil then
+        -- Get count per content sub-section (e.g. boss/...)
+        local moduleData = AtlasLoot.ItemDB:Get(addonName)
+        local contentData = moduleData[contentName]
+        if contentData == nil then
+            return result
+        end
+        for i = 1, #contentData.items do
+            local subResult = self:CountFavouritesByList(addonName, contentName, i, dif, includeObsolete)
+            for listName, itemCount in pairs(subResult) do
+                result[listName] = (result[listName] or 0) + itemCount
+            end
+        end
+        ItemCountCache[cacheIdent] = result
+        return result
+    end
+    if dif == nil then
+        -- Get count per content difficulty (e.g. boss/...)
+        local moduleData = AtlasLoot.ItemDB:Get(addonName)
+        local contentData = moduleData[contentName]
+        if contentData.items[boss] then
+            for i in pairs(contentData.items[boss]) do
+                if type(i) == "number" then
+                    local subResult = self:CountFavouritesByList(addonName, contentName, boss, i, includeObsolete)
+                    for listName, itemCount in pairs(subResult) do
+                        result[listName] = (result[listName] or 0) + itemCount
+                    end
+                end
+            end
+        end
+        ItemCountCache[cacheIdent] = result
+        return result
+    end
+    -- Get count for all matching items
+    local items, tableType, diffData = ItemDB:GetItemTable(addonName, contentName, boss, dif)
+    for l, listData in pairs(self.db.lists) do
+        local listName = listData.__name
+        for i = 1, #items do
+            local item = items[i]
+            if type(item[2]) == "number" then
+                local itemID = item[2]
+                if listData[itemID] and (includeObsolete or not self:IsItemEquippedOrObsolete(itemID, l)) then
+                    result[listName] = (result[listName] or 0) + 1
+                end
+            end
+        end
+    end
+    ItemCountCache[cacheIdent] = result
+    return result
+end
+
+function Favourites:GetFavouriteCountText(itemCount, withoutIcon)
+    if itemCount > 0 then
+        if withoutIcon then
+            return " |cffffff80*"..tostring(itemCount).."|r"
+        else
+            return " |cffffff80"..format(TEXT_WITH_TEXTURE, tostring(STD_ICON), tostring(itemCount)).."|r"
+        end
+    else
+        return ""
+    end
+end
+
+function Favourites:GetFavouriteListText(listName, itemCount)
+    return listName..": "..itemCount
+end
+
+function Favourites:GetFavouriteItemText(itemId, listId)
+    local listData = self.db.lists[listId]
+    local obsolete = self:IsItemEquippedOrObsolete(itemId, listId)
+    local text = ""
+    if obsolete then
+        text = format(TEXT_WITH_TEXTURE, tostring(listData.__icon or STD_ICON), "|cffB0B0B0"..(listData.__name or LIST_BASE_NAME).."|r")
+    else
+        text = format(TEXT_WITH_TEXTURE, tostring(listData.__icon or STD_ICON), (listData.__name or LIST_BASE_NAME))
+    end
+    if ListNoteCache[listId.."-"..itemId] then
+        text = text..ListNoteCache[listId.."-"..itemId]
+        if obsolete == "equipped" then
+            text = text.." |cffB0B0B0"..AL["(owned)"].."|r"
+        elseif obsolete == "obsolete" then
+            text = text.." |cffB0B0B0"..AL["(obsolete)"].."|r"
+        end
+    end
+    return text
+end
+
+function Favourites:IsItemEquippedOrObsolete(itemId, listId)
+    if PluginOutfitterLoading then
+        PluginOutfitterLoading = false
+        self:UpdateDb()
+    end
+    if not listId then
+        for listId, listData in pairs(self.db.lists) do
+            local obsoleteType = self:IsItemEquippedOrObsolete(itemId, listId)
+            if obsoleteType then
+                return obsoleteType
+            end
+        end
+        return false
+    end
+    if ListBiSCache[listId] then
+        if ListBiSCache[listId].equipped[tonumber(itemId)] then
+            return "equipped"
+        end
+        if ListBiSCache[listId].obsolete[tonumber(itemId)] then
+            return "obsolete"
+        end
+    end
+    return false
 end
 
 function Favourites:IsFavouriteItemID(itemID, onlyActiveList)
@@ -493,6 +781,7 @@ end
 function Favourites:CleanUpShownLists()
     self.db.activeSubLists = CleanUpShownLists(self.db, self.globalDb, self.db.activeSubLists)
     self.globalDb.activeSubLists = CleanUpShownLists(self.db, self.globalDb, self.globalDb.activeSubLists, true)
+    self:ClearCountCache()
 end
 
 function Favourites:AddIntoShownList(listID, isGlobalList, globalShown)
@@ -625,6 +914,7 @@ function Favourites:SetAsMainItem(slotID, itemID)
     if not self.activeList then return end
     if not self.activeList.mainItems then self.activeList.mainItems = {} end
     self.activeList.mainItems[slotID] = itemID
+    self:ClearCountCache()
 end
 
 function Favourites:SetMainItemEmpty(slotID)
@@ -648,6 +938,10 @@ function Favourites:CleanUpMainItems()
         end
     end
     self.GUI:ItemListUpdate()
+end
+
+function Favourites:ClearCountCache()
+    ItemCountCache = {}
 end
 
 function Favourites:GetMainListItems()
