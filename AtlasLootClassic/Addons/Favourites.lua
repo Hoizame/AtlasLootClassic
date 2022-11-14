@@ -7,6 +7,7 @@ local AL = AtlasLoot.Locales
 local ItemDB = AtlasLoot.ItemDB
 local Favourites = Addons:RegisterNewAddon("Favourites")
 local Tooltip = AtlasLoot.Tooltip
+local Comm = LibStub:GetLibrary("AceComm-3.0")
 
 -- lua
 local type = _G.type
@@ -30,6 +31,8 @@ local IMPORT_EXPORT_DELIMITER, IMPORT_PATTERN, EXPORT_PATTERN = ",", "(%w+):(%d+
 local STD_ICON, STD_ICON2
 local KEY_WEAK_MT = {__mode="k"}
 
+local ChatLinkPending = false
+local ChatLinkData = false
 local TooltipsHooked = false
 local TooltipCache, TooltipTextCache = {}
 local ListNameCache
@@ -368,6 +371,72 @@ local function SlashCommand()
 end
 AtlasLoot.SlashCommands:Add("fav", SlashCommand, "/al fav - "..AL["Open Favourites"])
 
+local function ChatFilterFunc(_, event, msg, player, l, cs, t, flag, channelId, ...)
+    if flag == "GM" or flag == "DEV" or (event == "CHAT_MSG_CHANNEL" and type(channelId) == "number" and channelId > 0) then
+        return
+    end
+    local newMsg = "";
+    local remaining = msg;
+    local done;
+    repeat
+        local start, finish, characterName, displayName = remaining:find("%[AtlasLootClassic: ([^%s]+) %- (.*)%]");
+        if (characterName and displayName) then
+            characterName = characterName:gsub("|c[Ff][Ff]......", ""):gsub("|r", "");
+            displayName = displayName:gsub("|c[Ff][Ff]......", ""):gsub("|r", "");
+            newMsg = newMsg .. remaining:sub(1, start - 1);
+            newMsg = newMsg .. "|Hgarrmission:atlaslootclassic_fav|h|cFF8800FF[" .. characterName .. " |r|cFF8800FF- " .. displayName .. "]|h|r";
+            remaining = remaining:sub(finish + 1);
+        else
+            done = true;
+        end
+    until (done)
+    if newMsg ~= "" then
+        local trimmedPlayer = Ambiguate(player, "none")
+        if event == "CHAT_MSG_WHISPER" and not UnitInRaid(trimmedPlayer) and not UnitInParty(trimmedPlayer) then -- XXX: Need a guild check
+            local _, num = BNGetNumFriends()
+            for i = 1, num do
+                if C_BattleNet then -- introduced in 8.2.5 PTR
+                    local toon = C_BattleNet.GetFriendNumGameAccounts(i)
+                    for j = 1, toon do
+                        local gameAccountInfo = C_BattleNet.GetFriendGameAccountInfo(i, j);
+                        if gameAccountInfo.characterName == trimmedPlayer and gameAccountInfo.clientProgram == "WoW" then
+                            return false, newMsg, player, l, cs, t, flag, channelId, ...; -- Player is a real id friend, allow it
+                        end
+                    end
+                else -- keep old method for 8.2 and Classic
+                    local toon = BNGetNumFriendGameAccounts(i)
+                    for j = 1, toon do
+                        local _, rName, rGame = BNGetFriendGameAccountInfo(i, j)
+                        if rName == trimmedPlayer and rGame == "WoW" then
+                            return false, newMsg, player, l, cs, t, flag, channelId, ...; -- Player is a real id friend, allow it
+                        end
+                    end
+                end
+            end
+            return true -- Filter strangers
+        else
+            return false, newMsg, player, l, cs, t, flag, channelId, ...;
+        end
+    end
+end
+
+local function ShowTooltip(lines)
+    ItemRefTooltip:Show();
+    if not ItemRefTooltip:IsVisible() then
+        ItemRefTooltip:SetOwner(UIParent, "ANCHOR_PRESERVE");
+    end
+    ItemRefTooltip:ClearLines();
+    for i, line in ipairs(lines) do
+        local sides, a1, a2, a3, a4, a5, a6, a7, a8 = unpack(line);
+        if (sides == 1) then
+            ItemRefTooltip:AddLine(a1, a2, a3, a4, a5);
+        elseif (sides == 2) then
+            ItemRefTooltip:AddDoubleLine(a1, a2, a3, a4, a5, a6, a7, a8);
+        end
+    end
+    ItemRefTooltip:Show()
+end
+  
 function Favourites:UpdateDb()
     self.db = self:GetDb()
     self.globalDb = self:GetGlobalDb()
@@ -419,6 +488,73 @@ end
 function Favourites.OnInitialize()
     Favourites:UpdateDb()
     Favourites.GUI.OnInitialize()
+    -- Import via chat link
+    hooksecurefunc("SetItemRef", function(link, text)
+        if (link == "garrmission:atlaslootclassic_fav") then
+            local _, _, characterName, displayName = text:find("|Hgarrmission:atlaslootclassic_fav|h|cFF8800FF%[([^%s]+) |r|cFF8800FF%- (.*)%]|h");
+            if (characterName and displayName) then
+                characterName = characterName:gsub("|c[Ff][Ff]......", ""):gsub("|r", "");
+                displayName = displayName:gsub("|c[Ff][Ff]......", ""):gsub("|r", "");
+                if (IsShiftKeyDown()) then
+                    local editbox = GetCurrentKeyBoardFocus();
+                    if (editbox) then
+                        editbox:Insert("[AtlasLootClassic: " .. characterName .. " - " .. displayName .. "]");
+                    end
+                else
+                    characterName = characterName:gsub("%.", "")
+                    Favourites:RequestList(characterName, displayName)
+                end
+            else
+                ShowTooltip({
+                    { 1, "AtlasLootClassic", 0.5, 0, 1 },
+                    { 1, AL["Malformed link"], 1, 0, 0 }
+                });
+            end
+        end
+    end)
+    Comm:RegisterComm("AtlasLootClassic", function(prefix, text, channel, sender)
+        -- Comm received
+        local cmd, params = strsplit(":", text, 2)
+        if (cmd == "requestList") then
+            -- Player requested to receive a list
+            local listName = params
+            Favourites:SendList(sender, listName)
+            return
+        end
+        if (cmd == "sendList") and ChatLinkPending then
+            -- List received from a player
+            if not strfind(sender, "-") then
+                sender = sender.."-"..GetRealmName()
+            end
+            local listName, listData = strsplit(":", params, 2)
+            local listIdent = sender..":"..listName
+            if ChatLinkPending ~= listIdent then
+                print(AL["Received unexpected favourite list '%s' (expected '%s')"]:format(listIdent, ChatLinkPending))
+            else
+                ChatLinkData = listData;
+                ShowTooltip({
+                    { 2, "AtlasLootClassic", listName, 0.5, 0, 1, 1, 1, 1 },
+                    { 1, AL["List received. Click link again to import!"], 1, 0.82, 0 }
+                });
+            end
+            return
+        end
+    end)
+    ChatFrame_AddMessageEventFilter("CHAT_MSG_CHANNEL", ChatFilterFunc)
+    ChatFrame_AddMessageEventFilter("CHAT_MSG_YELL", ChatFilterFunc)
+    ChatFrame_AddMessageEventFilter("CHAT_MSG_GUILD", ChatFilterFunc)
+    ChatFrame_AddMessageEventFilter("CHAT_MSG_OFFICER", ChatFilterFunc)
+    ChatFrame_AddMessageEventFilter("CHAT_MSG_PARTY", ChatFilterFunc)
+    ChatFrame_AddMessageEventFilter("CHAT_MSG_PARTY_LEADER", ChatFilterFunc)
+    ChatFrame_AddMessageEventFilter("CHAT_MSG_RAID", ChatFilterFunc)
+    ChatFrame_AddMessageEventFilter("CHAT_MSG_RAID_LEADER", ChatFilterFunc)
+    ChatFrame_AddMessageEventFilter("CHAT_MSG_SAY", ChatFilterFunc)
+    ChatFrame_AddMessageEventFilter("CHAT_MSG_WHISPER", ChatFilterFunc)
+    ChatFrame_AddMessageEventFilter("CHAT_MSG_WHISPER_INFORM", ChatFilterFunc)
+    ChatFrame_AddMessageEventFilter("CHAT_MSG_BN_WHISPER", ChatFilterFunc)
+    ChatFrame_AddMessageEventFilter("CHAT_MSG_BN_WHISPER_INFORM", ChatFilterFunc)
+    ChatFrame_AddMessageEventFilter("CHAT_MSG_INSTANCE_CHAT", ChatFilterFunc)
+    ChatFrame_AddMessageEventFilter("CHAT_MSG_INSTANCE_CHAT_LEADER", ChatFilterFunc)
 end
 
 function Favourites:OnProfileChanged()
@@ -434,6 +570,59 @@ end
 function Favourites:OnItemsChanged()
     self:ClearCountCache()
     -- TODO Update counts for subcategories/difficulties/bosses/extras
+end
+
+function Favourites:InsertChatLink()
+    local editbox = GetCurrentKeyBoardFocus();
+    if editbox and self.activeList then
+        local characterName = UnitName("player").."-"..GetRealmName()
+        local displayName = self.activeList.__name
+        editbox:Insert("[AtlasLootClassic: "..characterName.." - "..displayName.."]");
+    end
+end
+
+function Favourites:RequestList(characterName, listName)
+    local listIdent = characterName..":"..listName
+    if (ChatLinkPending == listIdent) and ChatLinkData then
+        local listId = self:AddNewList()
+        if listId then
+            self.db.lists[listId].__name = listName
+            self:ImportItemList(listId, false, ChatLinkData)
+            self:UpdateDb()
+            ChatLinkPending = false
+            ChatLinkData = false
+            ShowTooltip({
+                { 2, "AtlasLootClassic", listName, 0.5, 0, 1, 1, 1, 1 },
+                { 1, AL["Import done!"], 1, 0.82, 0 }
+            });
+        end
+    else
+        ChatLinkPending = listIdent
+        ChatLinkData = false
+        Comm:SendCommMessage("AtlasLootClassic", "requestList:"..listName, "WHISPER", characterName)
+        ShowTooltip({
+            { 2, "AtlasLootClassic", listName, 0.5, 0, 1, 1, 1, 1 },
+            { 1, AL["Requesting favorite list from %s ..."]:format(characterName), 1, 0.82, 0 }
+        });
+    end
+end
+
+function Favourites:SendListData(characterName, listName, listId, listIsGlobal)
+    local listContent = self:ExportItemList(listId, listIsGlobal)
+    Comm:SendCommMessage("AtlasLootClassic", "sendList:"..listName..":"..listContent, "WHISPER", characterName)
+end
+
+function Favourites:SendList(characterName, listNameTarget)
+    for l, listData in pairs(self.db.lists) do
+        if (listData.__name == listNameTarget) then
+            return self:SendListData(characterName, listNameTarget, l, false);
+        end
+    end
+    for l, listData in pairs(self.globalDb.lists) do
+        if (listData.__name == listNameTarget) then
+            return self:SendListData(characterName, listNameTarget, l, true);
+        end
+    end
 end
 
 function Favourites:AddItemID(itemID)
@@ -604,7 +793,18 @@ function Favourites:CountFavouritesByList(addonName, contentName, boss, dif, inc
             end
         end
     end
+    for l, listData in pairs(self.globalDb.lists) do
+        local listName = listData.__name
+        for i = 1, #items do
+            local item = items[i]
+            if type(item[2]) == "number" then
                 local itemID = item[2]
+                if listData[itemID] and (includeObsolete or not self:IsItemEquippedOrObsolete(itemID, l)) then
+                    result[listName] = (result[listName] or 0) + 1
+                end
+            end
+        end
+    end
     ItemCountCache[cacheIdent] = result
     return result
 end

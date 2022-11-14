@@ -127,6 +127,10 @@ local function ShowOptionsOnClick()
     AtlasLoot.Loader:LoadModule("AtlasLootClassic_Options", ShowFavOptions)
 end
 
+local function ChatLinkOnClick()
+    Favourites:InsertChatLink()
+end
+
 local function ShowAllItemsOnClick()
     GUI:SelectSlot(nil)
 end
@@ -760,6 +764,11 @@ function GUI:Create()
         frame.content.optionsButton:SetPoint("LEFT", frame.content.isGlobal.frame.text, "RIGHT", 5, 0)
         frame.content.optionsButton:SetText(AL["Settings"])
         frame.content.optionsButton:SetScript("OnClick", ShowOptionsOnClick)
+
+        frame.content.chatLinkButton = AtlasLoot.GUI.CreateButton()
+        frame.content.chatLinkButton:SetPoint("LEFT", frame.content.optionsButton, "RIGHT", 5, 0)
+        frame.content.chatLinkButton:SetText(AL["Chat-Link"])
+        frame.content.chatLinkButton:SetScript("OnClick", ChatLinkOnClick)
 
         frame.content.showAllItems = AtlasLoot.GUI.CreateButton()
         frame.content.showAllItems:SetPoint("LEFT", frame.content.bottomBg, "LEFT", 2, 0)
