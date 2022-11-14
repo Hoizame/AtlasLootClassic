@@ -604,6 +604,7 @@ function Favourites:CountFavouritesByList(addonName, contentName, boss, dif, inc
             end
         end
     end
+                local itemID = item[2]
     ItemCountCache[cacheIdent] = result
     return result
 end
