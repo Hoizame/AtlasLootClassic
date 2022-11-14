@@ -173,7 +173,7 @@ local function PopulateListBiS(db, dest)
         end
     end
     -- Outfitter sets
-    local pluginOutfitter = GetAddOnInfo("Outfitter")
+    local _, pluginOutfitter = GetAddOnInfo("Outfitter")
     if pluginOutfitter then
         if Outfitter and Outfitter.Settings and Outfitter.Settings.Outfits then
             -- Check outfitter equip sets
