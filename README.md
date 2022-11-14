@@ -37,11 +37,11 @@ AtlasLootClassic is an UI mod allowing for loot tables of bosses to be browsed w
 
 ## Favourites import/export format
 
-`(type):(id)`
+`(type):(id):(note)` while the `:(note)` part is optional
 
 This currently only supports items and notes
 
-`"i:16703,i:16704,i:16698,n16698:First item note,i:16699,i:11287,n:11287:Second item note"`
+`"i:16703:First item note,i:16704,i:16698:Second item note,i:16699,i:11287"`
 
 ## Maps
 
