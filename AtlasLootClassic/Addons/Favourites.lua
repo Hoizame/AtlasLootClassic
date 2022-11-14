@@ -26,7 +26,7 @@ local BASE_NAME_P, BASE_NAME_G, LIST_BASE_NAME = "ProfileBase", "GlobalBase", "L
 local NEW_LIST_ID_PATTERN = "%s%s"
 local TEXT_WITH_TEXTURE = "|T%s:0|t %s"
 local ATLAS_ICON_IDENTIFIER = "#"
-local IMPORT_EXPORT_DELIMITER, IMPORT_PATTERN, EXPORT_PATTERN = ",", "(%w+):(%d+)", "%s:%d"
+local IMPORT_EXPORT_DELIMITER, IMPORT_PATTERN, EXPORT_PATTERN = ",", "(%w+):(%d+)(:?([^,]+))", "%s:%d:%s"
 local STD_ICON, STD_ICON2
 local KEY_WEAK_MT = {__mode="k"}
 
@@ -860,12 +860,12 @@ function Favourites:ExportItemList(listID, isGlobalList)
     local ret = {}
     for entry in pairs(list) do
         if strsub(entry, 1, 2) ~= "__" then
-            ret[#ret + 1] = format(EXPORT_PATTERN, "i", entry)
-        end
-    end
-    if list.notes then
-        for item, note in pairs(list.notes) do
-            ret[#ret + 1] = format(EXPORT_PATTERN, "n", item)..":"..gsub(note, IMPORT_EXPORT_DELIMITER, " ")
+            local exportString = format(EXPORT_PATTERN, "i", entry, list.notes[entry] or "")
+            if strsub(exportString, -1) == ":" then
+                -- Remove tailing ":" if no note is supplied
+                exportString = strsub(exportString, 1, -2)
+            end
+            ret[#ret + 1] = exportString
         end
     end
     return tblconcat(ret, IMPORT_EXPORT_DELIMITER)
@@ -874,23 +874,22 @@ end
 function Favourites:ImportItemList(listID, isGlobalList, newList, replace)
     local list = replace and self:RemoveEntrysFromList(listID, isGlobalList) or self:GetListByID(listID, isGlobalList)
     if not list then return end
+    if not list.notes then
+        list.notes = {}
+    end
     local numNewEntrys = 0
     if type(newList) == "string" then
         local stList = { strsplit(IMPORT_EXPORT_DELIMITER, newList) }
         for i = 1, #stList do
-            local eType, entry = strmatch(stList[i], IMPORT_PATTERN)
+            local eType, entry, _, note = strmatch(stList[i], IMPORT_PATTERN)
             if entry then
                 entry = tonumber(entry)
                 if eType == "i" and not list[entry] and ItemExist(entry) then
                     list[entry] = true
-                    numNewEntrys = numNewEntrys + 1
-                end
-                if eType == "n" then
-                    if not list.notes then
-                        list.notes = {}
+                    if note then
+                        list.notes[tonumber(entry)] = note
                     end
-                    local item, note = strmatch(stList[i], "n:(%d+):(.+)");
-                    list.notes[tonumber(item)] = note
+                    numNewEntrys = numNewEntrys + 1
                 end
             end
         end
