@@ -1081,6 +1081,7 @@ function Favourites:ImportItemList(listID, isGlobalList, newList, replace)
     local numNewEntrys = 0
     if type(newList) == "string" then
         local stList = { strsplit(IMPORT_EXPORT_DELIMITER, newList) }
+        list.mainItems = {}
         for i = 1, #stList do
             local eType, entry, _, note = strmatch(stList[i], IMPORT_PATTERN)
             if entry then
@@ -1088,7 +1089,62 @@ function Favourites:ImportItemList(listID, isGlobalList, newList, replace)
                 if eType == "i" and not list[entry] and ItemExist(entry) then
                     list[entry] = true
                     if note then
+                        local noteLC = strlower(note)
                         list.notes[tonumber(entry)] = note
+                        if strmatch(noteLC, "bis") or strmatch(noteLC, "best") then
+                            -- Set as main item
+                            local slotId = nil
+                            local _, _, _, _, _, _, _, _, itemEquipLoc = GetItemInfo(entry)
+                            if itemEquipLoc == "INVTYPE_HEAD" then
+                                slotId = 1
+                            elseif itemEquipLoc == "INVTYPE_NECK" then
+                                slotId = 2
+                            elseif itemEquipLoc == "INVTYPE_SHOULDER" then
+                                slotId = 3
+                            elseif itemEquipLoc == "INVTYPE_CHEST" or itemEquipLoc == "INVTYPE_ROBE" then
+                                slotId = 5
+                            elseif itemEquipLoc == "INVTYPE_WAIST" then
+                                slotId = 6
+                            elseif itemEquipLoc == "INVTYPE_LEGS" then
+                                slotId = 7
+                            elseif itemEquipLoc == "INVTYPE_FEET" then
+                                slotId = 8
+                            elseif itemEquipLoc == "INVTYPE_WRIST" then
+                                slotId = 9
+                            elseif itemEquipLoc == "INVTYPE_HAND" then
+                                slotId = 10
+                            elseif itemEquipLoc == "INVTYPE_FINGER" then
+                                if not list.mainItems[11] then
+                                    slotId = 11
+                                else
+                                    slotId = 12
+                                end
+                            elseif itemEquipLoc == "INVTYPE_TRINKET" then
+                                if not list.mainItems[13] then
+                                    slotId = 13
+                                else
+                                    slotId = 14
+                                end
+                            elseif itemEquipLoc == "INVTYPE_CLOAK" then
+                                slotId = 15
+                            elseif itemEquipLoc == "INVTYPE_WEAPON" then
+                                if not list.mainItems[16] then
+                                    slotId = 16
+                                else
+                                    slotId = 17
+                                end
+                            elseif itemEquipLoc == "INVTYPE_2HWEAPON" or itemEquipLoc == "INVTYPE_WEAPONMAINHAND" then
+                                slotId = 16
+                            elseif itemEquipLoc == "INVTYPE_WEAPONOFFHAND" or itemEquipLoc == "INVTYPE_HOLDABLE" or itemEquipLoc == "INVTYPE_SHIELD" then
+                                slotId = 17
+                            elseif itemEquipLoc == "INVTYPE_RANGED" or itemEquipLoc == "INVTYPE_THROWN" or itemEquipLoc == "INVTYPE_RANGEDRIGHT" or itemEquipLoc == "INVTYPE_RELIC" then
+                                slotId = 18
+                            end
+                            print(slotId, itemEquipLoc, noteLC)
+                            if slotId ~= nil and not list.mainItems[slotId] then
+                                list.mainItems[slotId] = entry
+                            end
+                        end
                     end
                     numNewEntrys = numNewEntrys + 1
                 end
