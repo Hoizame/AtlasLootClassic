@@ -481,6 +481,7 @@ function Favourites:AddNewList(isGlobalList)
 
     if not list[id] then    -- should work as spam protect as GetServerTime returns sec
         list[id] = {}
+        self:AddIntoShownList(id, isGlobalList, isGlobalList)
         return id
     end
     return false
