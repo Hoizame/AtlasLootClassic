@@ -1140,7 +1140,6 @@ function Favourites:ImportItemList(listID, isGlobalList, newList, replace)
                             elseif itemEquipLoc == "INVTYPE_RANGED" or itemEquipLoc == "INVTYPE_THROWN" or itemEquipLoc == "INVTYPE_RANGEDRIGHT" or itemEquipLoc == "INVTYPE_RELIC" then
                                 slotId = 18
                             end
-                            print(slotId, itemEquipLoc, noteLC)
                             if slotId ~= nil and not list.mainItems[slotId] then
                                 list.mainItems[slotId] = entry
                             end
