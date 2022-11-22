@@ -1317,19 +1317,19 @@ data["PilgrimsBounty"] = {
 				{ 8,  46806 }, -- Recipe: Candied Sweet Potato
 				{ 9,  44861 }, -- Recipe: Slow-Roasted Turkey
 				{ 10,  46807 }, -- Recipe: Slow-Roasted Turkey
-				{ 11,  44835 }, -- Autumnal Herbs
-				{ 12,  44853 }, -- Honey
-				{ 13,  44854 }, -- Tangy Wetland Cranberries
-				{ 14,  46793 }, -- Tangy Southfury Cranberries
-				{ 15,  44855 }, -- Teldrassil Sweet Potato
-				{ 16,  46797 }, -- Mulgore Sweet Potato
-				{ 17,  44834 }, -- Wild Turkey
+				{ 12,  44837 }, -- Spice Bread Stuffing
+				{ 13,  44836 }, -- Pumpkin Pie
+				{ 14,  44840 }, -- Cranberry Chutney
+				{ 15,  44839 }, -- Candied Sweet Potato
+				{ 16,  44838 }, -- Slow-Roasted Turkey
+				{ 17,  46887 }, -- Bountiful Feast
 				{ 19,  44812 }, -- Turkey Shooter
 				{ 20,  44844 }, -- Turkey Caller
-				{ 22,  44785 }, -- Pilgrim's Dress
-				{ 23,  46723 }, -- Pilgrim's Hat
-				{ 24,  46800 }, -- Pilgrim's Attire
+				{ 22,  46723 }, -- Pilgrim's Hat
+				{ 23,  46800 }, -- Pilgrim's Attire
+				{ 24,  44785 }, -- Pilgrim's Dress
 				{ 25,  46824 }, -- Pilgrim's Robe
+				{ 26,  44788 }, -- Pilgrim's Boots
 			},
 		},
 	},
