@@ -777,34 +777,36 @@ function VendorPrice.ScanShownVendor()
 
     for itemNum = 1, GetMerchantNumItems() do
         local vItemID = GetMerchantItemID(itemNum)
-        local itemCost = ""
-        for costNum = 1, GetMerchantItemCostInfo(itemNum) do
-            local itemTexture, itemValue, itemLink, currencyName = GetMerchantItemCostItem(itemNum, costNum)
-            if itemLink then
-                local costItemID = GetItemInfoInstant(itemLink)
-                local formatString
-                if VENDOR_PRICE_FORMAT[costItemID] then
-                    formatString = VENDOR_PRICE_FORMAT[costItemID]
-                elseif VENDOR_PRICE_FORMAT[itemTexture] then
-                    formatString = VENDOR_PRICE_FORMAT[itemTexture]
-                else
-                    break -- end here as there is a unknown currency
-                end
-                if formatString then
-                    if itemCost == "" then
-                        itemCost = format(formatString, itemValue or 0)
+        if vItemID then
+            local itemCost = ""
+            for costNum = 1, GetMerchantItemCostInfo(itemNum) do
+                local itemTexture, itemValue, itemLink, currencyName = GetMerchantItemCostItem(itemNum, costNum)
+                if itemLink then
+                    local costItemID = GetItemInfoInstant(itemLink)
+                    local formatString
+                    if VENDOR_PRICE_FORMAT[costItemID] then
+                        formatString = VENDOR_PRICE_FORMAT[costItemID]
+                    elseif VENDOR_PRICE_FORMAT[itemTexture] then
+                        formatString = VENDOR_PRICE_FORMAT[itemTexture]
                     else
-                        itemCost = itemCost..":"..format(formatString, itemValue or 0)
+                        break -- end here as there is a unknown currency
+                    end
+                    if formatString then
+                        if itemCost == "" then
+                            itemCost = format(formatString, itemValue or 0)
+                        else
+                            itemCost = itemCost..":"..format(formatString, itemValue or 0)
+                        end
                     end
                 end
             end
-        end
 
-        if itemCost ~= "" then
-            AtlasLoot.dbGlobal.VendorPrice[vItemID] = itemCost
-        end
-        if SourcesAddon then
-            SourcesAddon:ItemSourcesUpdated(vItemID)
+            if itemCost ~= "" then
+                AtlasLoot.dbGlobal.VendorPrice[vItemID] = itemCost
+            end
+            if SourcesAddon then
+                SourcesAddon:ItemSourcesUpdated(vItemID)
+            end
         end
     end
 
