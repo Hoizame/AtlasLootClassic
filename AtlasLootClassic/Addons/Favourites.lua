@@ -156,7 +156,7 @@ local function PopulateListBiS(db, dest)
     local itemsEquipped = {}
     -- Equipped items
     for invSlot = 1, 19 do
-        local equipItemId = GetInventoryItemID("player", itemEquipLoc);
+        local equipItemId = GetInventoryItemID("player", invSlot);
         if equipItemId then
             itemsEquipped[equipItemId] = true
         end
@@ -436,7 +436,7 @@ local function ShowTooltip(lines)
     end
     ItemRefTooltip:Show()
 end
-  
+
 function Favourites:UpdateDb()
     self.db = self:GetDb()
     self.globalDb = self:GetGlobalDb()
