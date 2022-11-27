@@ -94,12 +94,16 @@ globals = {
 	"ATLAS_DROPDOWNS",
 	"ATLAS_SMALLFRAME_SELECTED",
 
+	-- Other
+	"Outfitter",
+
 	-- misc custom
 	"AceGUIWidgetLSMlists",
 	"CUSTOM_CLASS_COLORS",
 	"LibStub",
 
 	-- FrameXML misc
+	"C_BattleNet",
 	"C_CurrencyInfo",
 	"C_ChatInfo",
 	"ChatEdit_InsertLink",
