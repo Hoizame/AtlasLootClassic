@@ -971,10 +971,9 @@ data["Companions"] = {
 			name = AL["Quest"],
 			[NORMAL_DIFF] = {
 				{ 1, 12264 }, -- Worg Carrier
-				{ 2, 23002 }, -- Turtle Box
-				{ 3, 11474 }, -- Sprite Darter Egg
-				{ 4, 12529 }, -- Smolderweb Carrier
-				{ 5, 10398 }, -- Mechanical Chicken
+				{ 2, 11474 }, -- Sprite Darter Egg
+				{ 3, 12529 }, -- Smolderweb Carrier
+				{ 4, 10398 }, -- Mechanical Chicken
 			},
 		},
 		{
@@ -1013,6 +1012,7 @@ data["Companions"] = {
 				{ 20, 23015 }, -- Rat Cage
 				{ 21, 22781 }, -- Polar Bear Collar
 				{ 22, 23007 }, -- Piglet's Collar
+				{ 23, 23002 }, -- Turtle Box
 			},
 		},
 		{ -- Unobtainable
@@ -1263,20 +1263,69 @@ data["FishingExtravaganza"] = {
 	},
 }
 
-data["ChildrensWeek"] = {
-	name = AL["Childrens Week"],
+data["LunarFestival"] = {
+	name = AL["Lunar Festival"],
 	ContentType = WORLD_EVENT_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = NORMAL_ITTYPE,
-	gameVersion = AtlasLoot.CLASSIC_VERSION_NUM,
 	items = {
-		{ -- ChildrensWeek
-			name = AL["Childrens Week"],
+		{ -- LunarFestival1
+			name = AL["Lunar Festival"],
 			[NORMAL_DIFF] = {
-				{ 1,  23007 }, -- Piglet's Collar
-				{ 2,  23015 }, -- Rat Cage
-				{ 3,  23002 }, -- Turtle Box
-				{ 4,  23022 }, -- Curmudgeon's Payoff
+				{ 1,  21100 }, -- Coin of Ancestry
+				{ 3,  21157 }, -- Festive Green Dress
+				{ 4,  21538 }, -- Festive Pink Dress
+				{ 5,  21539 }, -- Festive Purple Dress
+				{ 6,  21541 }, -- Festive Black Pant Suit
+				{ 7,  21544 }, -- Festive Blue Pant Suit
+				{ 8,  21543 }, -- Festive Teal Pant Suit
+			},
+		},
+		{
+			name = AL["Lunar Festival Fireworks Pack"],
+			[NORMAL_DIFF] = {
+				{ 1, 21558 }, -- Small Blue Rocket
+				{ 2, 21559 }, -- Small Green Rocket
+				{ 3, 21557 }, -- Small Red Rocket
+				{ 4, 21561 }, -- Small White Rocket
+				{ 5, 21562 }, -- Small Yellow Rocket
+				{ 7, 21537 }, -- Festival Dumplings
+				{ 8, 21713 }, -- Elune's Candle
+				{ 16, 21589 }, -- Large Blue Rocket
+				{ 17, 21590 }, -- Large Green Rocket
+				{ 18, 21592 }, -- Large Red Rocket
+				{ 19, 21593 }, -- Large White Rocket
+				{ 20, 21595 }, -- Large Yellow Rocket
+			}
+		},
+		{
+			name = AL["Lucky Red Envelope"],
+			[NORMAL_DIFF] = {
+				{ 1, 21540 }, -- Elune's Lantern
+				{ 2, 21536 }, -- Elune Stone
+				{ 16, 21744 }, -- Lucky Rocket Cluster
+				{ 17, 21745 }, -- Elder's Moonstone
+			}
+		},
+		{ -- LunarFestival2
+			name = AL["Plans"],
+			[NORMAL_DIFF] = {
+				{ 1,  21722 }, -- Pattern: Festival Dress
+				{ 3,  21738 }, -- Schematic: Firework Launcher
+				{ 5,  21724 }, -- Schematic: Small Blue Rocket
+				{ 6,  21725 }, -- Schematic: Small Green Rocket
+				{ 7,  21726 }, -- Schematic: Small Red Rocket
+				{ 9, 21727 }, -- Schematic: Large Blue Rocket
+				{ 10, 21728 }, -- Schematic: Large Green Rocket
+				{ 11, 21729 }, -- Schematic: Large Red Rocket
+				{ 16, 21723 }, -- Pattern: Festive Red Pant Suit
+				{ 18, 21737 }, -- Schematic: Cluster Launcher
+				{ 20, 21730 }, -- Schematic: Blue Rocket Cluster
+				{ 21, 21731 }, -- Schematic: Green Rocket Cluster
+				{ 22, 21732 }, -- Schematic: Red Rocket Cluster
+				{ 24, 21733 }, -- Schematic: Large Blue Rocket Cluster
+				{ 25, 21734 }, -- Schematic: Large Green Rocket Cluster
+				{ 26, 21735 }, -- Schematic: Large Red Rocket Cluster
 			},
 		},
 	},
@@ -1311,6 +1360,91 @@ data["Valentineday"] = {
 				{ 19, 22277 }, -- Red Dinner Suit
 				{ 20, 22281 }, -- Blue Dinner Suit
 				{ 21, 22282 }, -- Purple Dinner Suit
+			},
+		},
+	},
+}
+
+data["Noblegarden"] = {
+	name = AL["Noblegarden"],
+	ContentType = WORLD_EVENT_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = NORMAL_ITTYPE,
+	items = {
+		{ -- Noblegarden
+			name = AL["Brightly Colored Egg"],
+			[NORMAL_DIFF] = {
+				{ 1,  19028 }, -- Elegant Dress
+				{ 2,  6833 }, -- White Tuxedo Shirt
+				{ 3,  6835 }, -- Black Tuxedo Pants
+				{ 16,  7807 }, -- Candy Bar
+				{ 17,  7808 }, -- Chocolate Square
+				{ 18,  7806 }, -- Lollipop
+			},
+		},
+	},
+}
+
+data["ChildrensWeek"] = {
+	name = AL["Childrens Week"],
+	ContentType = WORLD_EVENT_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = NORMAL_ITTYPE,
+	gameVersion = AtlasLoot.CLASSIC_VERSION_NUM,
+	items = {
+		{ -- ChildrensWeek
+			name = AL["Childrens Week"],
+			[NORMAL_DIFF] = {
+				{ 1,  23007 }, -- Piglet's Collar
+				{ 2,  23015 }, -- Rat Cage
+				{ 3,  23002 }, -- Turtle Box
+				{ 4,  23022 }, -- Curmudgeon's Payoff
+			},
+		},
+	},
+}
+
+data["MidsummerFestival"] = {
+	name = AL["Midsummer Festival"],
+	ContentType = WORLD_EVENT_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = NORMAL_ITTYPE,
+	gameVersion = AtlasLoot.CLASSIC_VERSION_NUM,
+	items = {
+		{ -- MidsummerFestival
+			name = AL["Midsummer Festival"],
+			[NORMAL_DIFF] = {
+				{ 1,  23379 }, -- Cinder Bracers
+				{ 3,  23323 }, -- Crown of the Fire Festival
+				{ 4,  23324 }, -- Mantle of the Fire Festival
+				{ 6,  23083 }, -- Captured Flame
+				{ 7,  23247 }, -- Burning Blossom
+				{ 8,  23246 }, -- Fiery Festival Brew
+				{ 9,  23435 }, -- Elderberry Pie
+				{ 10, 23327 }, -- Fire-toasted Bun
+				{ 11, 23326 }, -- Midsummer Sausage
+				{ 12, 23211 }, -- Toasted Smorc
+			},
+		},
+	},
+}
+
+data["HarvestFestival"] = {
+	name = AL["Harvest Festival"],
+	ContentType = WORLD_EVENT_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = NORMAL_ITTYPE,
+	items = {
+		{ -- HarvestFestival
+			name = AL["Harvest Festival"],
+			[NORMAL_DIFF] = {
+				{ 1,  19697 }, -- Bounty of the Harvest
+				{ 2,  20009 }, -- For the Light!
+				{ 3,  20010 }, -- The Horde's Hellscream
+				{ 16,  19995 }, -- Harvest Boar
+				{ 17,  19996 }, -- Harvest Fish
+				{ 18,  19994 }, -- Harvest Fruit
+				{ 19,  19997 }, -- Harvest Nectar
 			},
 		},
 	},
@@ -1444,209 +1578,6 @@ data["WinterVeil"] = {
 				{ 16, 17303 }, -- Blue Ribboned Wrapping Paper
 				{ 17, 17304 }, -- Green Ribboned Wrapping Paper
 				{ 18, 17307 }, -- Purple Ribboned Wrapping Paper
-			},
-		},
-	},
-}
-
-data["Noblegarden"] = {
-	name = AL["Noblegarden"],
-	ContentType = WORLD_EVENT_CONTENT,
-	LoadDifficulty = NORMAL_DIFF,
-	TableType = NORMAL_ITTYPE,
-	items = {
-		{ -- Noblegarden
-			name = AL["Brightly Colored Egg"],
-			[NORMAL_DIFF] = {
-				{ 1,  19028 }, -- Elegant Dress
-				{ 2,  6833 }, -- White Tuxedo Shirt
-				{ 3,  6835 }, -- Black Tuxedo Pants
-				{ 16,  7807 }, -- Candy Bar
-				{ 17,  7808 }, -- Chocolate Square
-				{ 18,  7806 }, -- Lollipop
-			},
-		},
-	},
-}
-
-data["HarvestFestival"] = {
-	name = AL["Harvest Festival"],
-	ContentType = WORLD_EVENT_CONTENT,
-	LoadDifficulty = NORMAL_DIFF,
-	TableType = NORMAL_ITTYPE,
-	items = {
-		{ -- HarvestFestival
-			name = AL["Harvest Festival"],
-			[NORMAL_DIFF] = {
-				{ 1,  19697 }, -- Bounty of the Harvest
-				{ 2,  20009 }, -- For the Light!
-				{ 3,  20010 }, -- The Horde's Hellscream
-				{ 16,  19995 }, -- Harvest Boar
-				{ 17,  19996 }, -- Harvest Fish
-				{ 18,  19994 }, -- Harvest Fruit
-				{ 19,  19997 }, -- Harvest Nectar
-			},
-		},
-	},
-}
-
-data["LunarFestival"] = {
-	name = AL["Lunar Festival"],
-	ContentType = WORLD_EVENT_CONTENT,
-	LoadDifficulty = NORMAL_DIFF,
-	TableType = NORMAL_ITTYPE,
-	items = {
-		{ -- LunarFestival1
-			name = AL["Lunar Festival"],
-			[NORMAL_DIFF] = {
-				{ 1,  21100 }, -- Coin of Ancestry
-				{ 3,  21157 }, -- Festive Green Dress
-				{ 4,  21538 }, -- Festive Pink Dress
-				{ 5,  21539 }, -- Festive Purple Dress
-				{ 6,  21541 }, -- Festive Black Pant Suit
-				{ 7,  21544 }, -- Festive Blue Pant Suit
-				{ 8,  21543 }, -- Festive Teal Pant Suit
-			},
-		},
-		{
-			name = AL["Lunar Festival Fireworks Pack"],
-			[NORMAL_DIFF] = {
-				{ 1, 21558 }, -- Small Blue Rocket
-				{ 2, 21559 }, -- Small Green Rocket
-				{ 3, 21557 }, -- Small Red Rocket
-				{ 4, 21561 }, -- Small White Rocket
-				{ 5, 21562 }, -- Small Yellow Rocket
-				{ 7, 21537 }, -- Festival Dumplings
-				{ 8, 21713 }, -- Elune's Candle
-				{ 16, 21589 }, -- Large Blue Rocket
-				{ 17, 21590 }, -- Large Green Rocket
-				{ 18, 21592 }, -- Large Red Rocket
-				{ 19, 21593 }, -- Large White Rocket
-				{ 20, 21595 }, -- Large Yellow Rocket
-			}
-		},
-		{
-			name = AL["Lucky Red Envelope"],
-			[NORMAL_DIFF] = {
-				{ 1, 21540 }, -- Elune's Lantern
-				{ 2, 21536 }, -- Elune Stone
-				{ 16, 21744 }, -- Lucky Rocket Cluster
-				{ 17, 21745 }, -- Elder's Moonstone
-			}
-		},
-		{ -- LunarFestival2
-			name = AL["Plans"],
-			[NORMAL_DIFF] = {
-				{ 1,  21722 }, -- Pattern: Festival Dress
-				{ 3,  21738 }, -- Schematic: Firework Launcher
-				{ 5,  21724 }, -- Schematic: Small Blue Rocket
-				{ 6,  21725 }, -- Schematic: Small Green Rocket
-				{ 7,  21726 }, -- Schematic: Small Red Rocket
-				{ 9, 21727 }, -- Schematic: Large Blue Rocket
-				{ 10, 21728 }, -- Schematic: Large Green Rocket
-				{ 11, 21729 }, -- Schematic: Large Red Rocket
-				{ 16, 21723 }, -- Pattern: Festive Red Pant Suit
-				{ 18, 21737 }, -- Schematic: Cluster Launcher
-				{ 20, 21730 }, -- Schematic: Blue Rocket Cluster
-				{ 21, 21731 }, -- Schematic: Green Rocket Cluster
-				{ 22, 21732 }, -- Schematic: Red Rocket Cluster
-				{ 24, 21733 }, -- Schematic: Large Blue Rocket Cluster
-				{ 25, 21734 }, -- Schematic: Large Green Rocket Cluster
-				{ 26, 21735 }, -- Schematic: Large Red Rocket Cluster
-			},
-		},
-	},
-}
-
-data["MidsummerFestival"] = {
-	name = AL["Midsummer Festival"],
-	ContentType = WORLD_EVENT_CONTENT,
-	LoadDifficulty = NORMAL_DIFF,
-	TableType = NORMAL_ITTYPE,
-	gameVersion = AtlasLoot.CLASSIC_VERSION_NUM,
-	items = {
-		{ -- MidsummerFestival
-			name = AL["Midsummer Festival"],
-			[NORMAL_DIFF] = {
-				{ 1,  23379 }, -- Cinder Bracers
-				{ 3,  23323 }, -- Crown of the Fire Festival
-				{ 4,  23324 }, -- Mantle of the Fire Festival
-				{ 6,  23083 }, -- Captured Flame
-				{ 7,  23247 }, -- Burning Blossom
-				{ 8,  23246 }, -- Fiery Festival Brew
-				{ 9,  23435 }, -- Elderberry Pie
-				{ 10, 23327 }, -- Fire-toasted Bun
-				{ 11, 23326 }, -- Midsummer Sausage
-				{ 12, 23211 }, -- Toasted Smorc
-			},
-		},
-	},
-}
-
-data["Brewfest"] = {
-	name = AL["Brewfest"],
-	ContentType = WORLD_EVENT_CONTENT,
-	LoadDifficulty = NORMAL_DIFF,
-	TableType = NORMAL_ITTYPE,
-	gameVersion = AtlasLoot.BC_VERSION_NUM,
-	items = {
-		{ -- Brewfest
-			name = AL["Brewfest"],
-			[NORMAL_DIFF] = {
-				{ 1,  33968 }, -- Blue Brewfest Hat
-				{ 2,  33864 }, -- Brown Brewfest Hat
-				{ 3,  33967 }, -- Green Brewfest Hat
-				{ 4,  33969 }, -- Purple Brewfest Hat
-				{ 5,  33863 }, -- Brewfest Dress
-				{ 6,  33862 }, -- Brewfest Regalia
-				{ 7,  33966 }, -- Brewfest Slippers
-				{ 8,  33868 }, -- Brewfest Boots
-				{ 10,  33047 }, -- Belbi's Eyesight Enhancing Romance Goggles (Alliance)
-				{ 11,  34008 }, -- Blix's Eyesight Enhancing Romance Goggles (Horde)
-				{ 13,  33016 }, -- Blue Brewfest Stein
-				{ 15,  37829 }, -- Brewfest Prize Token
-				{ 16,  33976 }, -- Brewfest Ram
-				{ 17,  33977 }, -- Swift Brewfest Ram
-				{ 19,  32233 }, -- Wolpertinger's Tankard
-				{ 21,  34028 }, -- "Honorary Brewer" Hand Stamp
-				{ 22,  37599 }, -- "Brew of the Month" Club Membership Form
-				{ 24,  33927 }, -- Brewfest Pony Keg
-				{ 26,  37750 }, -- Fresh Brewfest Hops
-				{ 27,  39477 }, -- Fresh Dwarven Brewfest Hops
-				{ 28,  39476 }, -- Fresh Goblin Brewfest Hops
-				{ 29,  37816 }, -- Preserved Brewfest Hops
-			},
-		},
-		{
-			name = AL["Food"],
-			[NORMAL_DIFF] = {
-				{ 1,  33043 }, -- The Essential Brewfest Pretzel
-				{ 3,  34017 }, -- Small Step Brew
-				{ 4,  34018 }, -- long Stride Brew
-				{ 5,  34019 }, -- Path of Brew
-				{ 6,  34020 }, -- Jungle River Water
-				{ 7,  34021 }, -- Brewdoo Magic
-				{ 8,  34022 }, -- Stout Shrunken Head
-				{ 9,  33034 }, -- Gordok Grog
-				{ 10,  33035 }, -- Ogre Mead
-				{ 11,  33036 }, -- Mudder's Milk
-
-			},
-		},
-		{
-			name = C_Map_GetAreaInfo(1584).." - "..AL["Coren Direbrew"],
-			[NORMAL_DIFF] = {
-				{ 1,  37128 }, -- Balebrew Charm
-				{ 2,  37127 }, -- Brightbrew Charm
-				{ 3,  38287 }, -- Empty Mug of Direbrew
-				{ 4,  38290 }, -- Dark Iron Smoking Pipe
-				{ 5,  38288 }, -- Direbrew Hops
-				{ 6,  38289 }, -- Coren's Lucky Coin
-				{ 8,  37597 }, -- Direbrew's Shanker
-				{ 16,  33977 }, -- Swift Brewfest Ram
-				{ 17,  37828 }, -- Great Brewfest Kodo
-				{ 19,  37863 }, -- Direbrew's Remote
-				{ 21,  38280 }, -- Direbrew's Dire Brew
 			},
 		},
 	},

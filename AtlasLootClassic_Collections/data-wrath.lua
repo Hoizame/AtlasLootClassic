@@ -781,8 +781,11 @@ data["CompanionsWrath"] = {
 		{
 			name = AL["World Events"],
 			[NORMAL_DIFF] = {
-				{ 1, 44794 }, --  Spring Rabbit's Foot
-				{ 3, 46707 }, --  Pint-Sized Pink Pachyderm
+				{ 1, 50446 }, -- Toxic Wasteling
+				{ 3, 44794 }, --  Spring Rabbit's Foot
+				{ 5, 53641 }, --  Ice Chip
+				{ 7, 46707 }, --  Pint-Sized Pink Pachyderm
+				{ 9, 46831 }, --  Macabre Marionette
 				{ 16, 46544 }, --  Curious Wolvar Pup
 				{ 17, 46545 }, --  Curious Oracle Hatchling
 			},
@@ -830,16 +833,14 @@ data["CompanionsWrath"] = {
 			[NORMAL_DIFF] = {
 				{ 1, 39286 }, --  Frosty's Collar
 				{ 3, 38658 }, -- Vampiric Batling
-				{ 4, 50446 }, -- Toxic Wasteling
-				{ 6, 49663 }, -- Wind Rider Cub / Shop
-				{ 7, 54847 }, -- Lil' XT / Shop
-				{ 8, 49693 }, --  Lil' Phylactery / Shop
-				{ 9, 49665 }, --  Pandaren Monk / Shop
-				{ 10, 49662 }, --  Gryphon Hatchling / Shop
+				{ 5, 49663 }, -- Wind Rider Cub / Shop
+				{ 6, 54847 }, -- Lil' XT / Shop
+				{ 7, 49693 }, --  Lil' Phylactery / Shop
+				{ 8, 49665 }, --  Pandaren Monk / Shop
+				{ 9, 49662 }, --  Gryphon Hatchling / Shop
 
-				{ 13, 49362 }, --  Onyxian Whelpling
-				{ 14, 46802 }, --  Heavy Murloc Egg
-				{ 15, 53641 }, --  Ice Chip
+				{ 11, 49362 }, --  Onyxian Whelpling
+				{ 12, 46802 }, --  Heavy Murloc Egg
 
 				{ 16, 198636 }, -- Hippogryph Hatchling
 				{ 17, 198635 }, -- Dragon Kite
@@ -1003,31 +1004,6 @@ data["HeirloomWrath"] = {
 	},
 }
 
-data["ChildrensWeekWrath"] = {
-	name = AL["Childrens Week"],
-	ContentType = WORLD_EVENT_CONTENT,
-	LoadDifficulty = NORMAL_DIFF,
-	TableType = NORMAL_ITTYPE,
-	gameVersion = AtlasLoot.WRATH_VERSION_NUM,
-	CorrespondingFields = private.CHILDRENS_WEEK,
-	items = {
-		{ -- ChildrensWeek
-			name = AL["Childrens Week"],
-			[NORMAL_DIFF] = {
-				{ 1,  23007 }, -- Piglet's Collar
-				{ 2,  23015 }, -- Rat Cage
-				{ 3,  23002 }, -- Turtle Box
-				{ 4,  23022 }, -- Curmudgeon's Payoff
-				{ 6,  32616 }, -- Egbert's Egg
-				{ 7,  32617 }, -- Sleepy Willy
-				{ 8,  32622 }, -- Elekk Training Collar
-				{ 10,  46544 }, -- Curious Wolvar Pup
-				{ 11,  46545 }, -- Curious Oracle Hatchling
-			},
-		},
-	},
-}
-
 data["ValentinedayWrath"] = {
 	name = AL["Love is in the Air"],
 	ContentType = WORLD_EVENT_CONTENT,
@@ -1078,6 +1054,31 @@ data["ValentinedayWrath"] = {
 	},
 }
 
+data["ChildrensWeekWrath"] = {
+	name = AL["Childrens Week"],
+	ContentType = WORLD_EVENT_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = NORMAL_ITTYPE,
+	gameVersion = AtlasLoot.WRATH_VERSION_NUM,
+	CorrespondingFields = private.CHILDRENS_WEEK,
+	items = {
+		{ -- ChildrensWeek
+			name = AL["Childrens Week"],
+			[NORMAL_DIFF] = {
+				{ 1,  23007 }, -- Piglet's Collar
+				{ 2,  23015 }, -- Rat Cage
+				{ 3,  23002 }, -- Turtle Box
+				{ 4,  23022 }, -- Curmudgeon's Payoff
+				{ 6,  32616 }, -- Egbert's Egg
+				{ 7,  32617 }, -- Sleepy Willy
+				{ 8,  32622 }, -- Elekk Training Collar
+				{ 10,  46544 }, -- Curious Wolvar Pup
+				{ 11,  46545 }, -- Curious Oracle Hatchling
+			},
+		},
+	},
+}
+
 data["MidsummerFestivalWrath"] = {
 	name = AL["Midsummer Festival"],
 	ContentType = WORLD_EVENT_CONTENT,
@@ -1118,7 +1119,78 @@ data["MidsummerFestivalWrath"] = {
                 { 8, 35723 }, -- Shards of Ahune
                 { 16, 35498 }, -- Formula: Enchant Weapon - Deathfrost
                 { 18, 34955 }, -- Scorched Stone
-                { 19, 35557 }, -- Huge Snowball
+                { 19, 53641 }, --  Ice Chip
+                { 21, 35557 }, -- Huge Snowball
+			},
+		},
+	},
+}
+
+data["BrewfestWrath"] = {
+	name = AL["Brewfest"],
+	ContentType = WORLD_EVENT_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = NORMAL_ITTYPE,
+	gameVersion = AtlasLoot.WRATH_VERSION_NUM,
+	items = {
+		{ -- Brewfest
+			name = AL["Brewfest"],
+			[NORMAL_DIFF] = {
+				{ 1,  33968 }, -- Blue Brewfest Hat
+				{ 2,  33864 }, -- Brown Brewfest Hat
+				{ 3,  33967 }, -- Green Brewfest Hat
+				{ 4,  33969 }, -- Purple Brewfest Hat
+				{ 5,  33863 }, -- Brewfest Dress
+				{ 6,  33862 }, -- Brewfest Regalia
+				{ 7,  33966 }, -- Brewfest Slippers
+				{ 8,  33868 }, -- Brewfest Boots
+				{ 10,  33047 }, -- Belbi's Eyesight Enhancing Romance Goggles (Alliance)
+				{ 11,  34008 }, -- Blix's Eyesight Enhancing Romance Goggles (Horde)
+				{ 13,  33016 }, -- Blue Brewfest Stein
+				{ 15,  37829 }, -- Brewfest Prize Token
+				{ 16,  33976 }, -- Brewfest Ram
+				{ 17,  33977 }, -- Swift Brewfest Ram
+				{ 19,  32233 }, -- Wolpertinger's Tankard
+				{ 21,  34028 }, -- "Honorary Brewer" Hand Stamp
+				{ 22,  37599 }, -- "Brew of the Month" Club Membership Form
+				{ 24,  33927 }, -- Brewfest Pony Keg
+				{ 26,  37750 }, -- Fresh Brewfest Hops
+				{ 27,  39477 }, -- Fresh Dwarven Brewfest Hops
+				{ 28,  39476 }, -- Fresh Goblin Brewfest Hops
+				{ 29,  37816 }, -- Preserved Brewfest Hops
+			},
+		},
+		{
+			name = AL["Food"],
+			[NORMAL_DIFF] = {
+				{ 1,  33043 }, -- The Essential Brewfest Pretzel
+				{ 3,  34017 }, -- Small Step Brew
+				{ 4,  34018 }, -- long Stride Brew
+				{ 5,  34019 }, -- Path of Brew
+				{ 6,  34020 }, -- Jungle River Water
+				{ 7,  34021 }, -- Brewdoo Magic
+				{ 8,  34022 }, -- Stout Shrunken Head
+				{ 9,  33034 }, -- Gordok Grog
+				{ 10,  33035 }, -- Ogre Mead
+				{ 11,  33036 }, -- Mudder's Milk
+
+			},
+		},
+		{
+			name = C_Map_GetAreaInfo(1584).." - "..AL["Coren Direbrew"],
+			[NORMAL_DIFF] = {
+				{ 1,  49116 }, -- Bitter Balebrew Charm
+				{ 2,  49118 }, -- Bubbling Brightbrew Charm
+				{ 3,  49074 }, -- Coren's Chromium Coaster
+				{ 4,  49076 }, -- Mithril Pocketwatch
+				{ 5,  49078 }, -- Ancient Pickled Egg
+				{ 6,  49080 }, -- Brawler's Souvenir
+				{ 8,  49120 }, -- Direbrew's Bloody Shanker
+				{ 9,  48663 }, -- Tankard O' Terror
+				{ 16,  33977 }, -- Swift Brewfest Ram
+				{ 17,  37828 }, -- Great Brewfest Kodo
+				{ 19,  37863 }, -- Direbrew's Remote
+				{ 21,  38280 }, -- Direbrew's Dire Brew
 			},
 		},
 	},
@@ -1196,6 +1268,68 @@ data["HalloweenWrath"] = {
                 { 21, 33184 }, -- Swift Magic Broom         100% ground
                 { 22, 37011 }, -- Magic Broom               60% ground
                 { 24, 33154 }, -- Sinister Squashling
+			},
+		},
+	},
+}
+
+data["DayoftheDead"] = {
+	name = AL["Day of the Dead"],
+	ContentType = WORLD_EVENT_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = NORMAL_ITTYPE,
+	gameVersion = AtlasLoot.WRATH_VERSION_NUM,
+	CorrespondingFields = private.DAY_OF_THE_DEAD,
+	items = {
+		{ -- DayoftheDead
+			name = AL["Day of the Dead"],
+			[NORMAL_DIFF] = {
+				{ 1,  46690 }, -- Candy Skull
+				{ 2,  46710 }, -- Recipe: Bread of the Dead
+				{ 3,  46711 }, -- Spirit Candle
+				{ 4,  46718 }, -- Orange Marigold
+				{ 5,  46831 }, -- Macabre Marionette
+				{ 6,  46860 }, -- Whimsical Skull Mask
+				{ 7,  46861 }, -- Bouquet of Orange Marigolds
+			},
+		},
+	},
+}
+
+data["PilgrimsBounty"] = {
+	name = AL["Pilgrim's Bounty"],
+	ContentType = WORLD_EVENT_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = NORMAL_ITTYPE,
+	gameVersion = AtlasLoot.WRATH_VERSION_NUM,
+	CorrespondingFields = private.PILGRIMS_BOUNTY,
+	items = {
+		{ -- Pilgrim's Bounty
+			name = AL["Pilgrim's Bounty"],
+			[NORMAL_DIFF] = {
+				{ 1,  44860 }, -- Recipe: Spice Bread Stuffing
+				{ 2,  46803 }, -- Recipe: Spice Bread Stuffing
+				{ 3,  44862 }, -- Recipe: Pumpkin Pie
+				{ 4,  46804 }, -- Recipe: Pumpkin Pie
+				{ 5,  44858 }, -- Recipe: Cranberry Chutney
+				{ 6,  46805 }, -- Recipe: Cranberry Chutney
+				{ 7,  44859 }, -- Recipe: Candied Sweet Potato
+				{ 8,  46806 }, -- Recipe: Candied Sweet Potato
+				{ 9,  44861 }, -- Recipe: Slow-Roasted Turkey
+				{ 10,  46807 }, -- Recipe: Slow-Roasted Turkey
+				{ 12,  44837 }, -- Spice Bread Stuffing
+				{ 13,  44836 }, -- Pumpkin Pie
+				{ 14,  44840 }, -- Cranberry Chutney
+				{ 15,  44839 }, -- Candied Sweet Potato
+				{ 16,  44838 }, -- Slow-Roasted Turkey
+				{ 17,  46887 }, -- Bountiful Feast
+				{ 19,  44812 }, -- Turkey Shooter
+				{ 20,  44844 }, -- Turkey Caller
+				{ 22,  46723 }, -- Pilgrim's Hat
+				{ 23,  46800 }, -- Pilgrim's Attire
+				{ 24,  44785 }, -- Pilgrim's Dress
+				{ 25,  46824 }, -- Pilgrim's Robe
+				{ 26,  44788 }, -- Pilgrim's Boots
 			},
 		},
 	},
