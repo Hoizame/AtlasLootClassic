@@ -127,6 +127,10 @@ local function ShowOptionsOnClick()
     AtlasLoot.Loader:LoadModule("AtlasLootClassic_Options", ShowFavOptions)
 end
 
+local function ChatLinkOnClick()
+    Favourites:InsertChatLink()
+end
+
 local function ShowAllItemsOnClick()
     GUI:SelectSlot(nil)
 end
@@ -224,6 +228,7 @@ local function GUI_InfoOnEnter(self)
     tooltip:SetOwner(self, "ANCHOR_LEFT", (self:GetWidth() * 0.5), 5)
     tooltip:AddLine(AL["Favourites"], 0, 1, 0)
     tooltip:AddLine(format(TT_INFO_ENTRY, AL["Alt + Left Click"], AL["Remove item from list"]))
+    tooltip:AddLine(format(TT_INFO_ENTRY, AL["Alt + Right Click"], AL["Change item note"]))
     tooltip:AddLine(ALIL["Dressing Room"]..":", 1, 1, 1)
     tooltip:AddLine(format(TT_INFO_ENTRY, AL["Right Click"], AL["Undress item"]))
     tooltip:Show()
@@ -269,10 +274,14 @@ local function SlotButton_OnClick(self, button, down)
             end
         end
     elseif self.ItemID then
-        local b = ItemButtonType.ItemClickHandler:Get(button)
-        ItemButtonType.OnMouseAction(self, button)
-        if b == "SetFavourite" then
-            UpdateItemFrame(true)
+        if button == "LeftButton" then
+            local b = ItemButtonType.ItemClickHandler:Get(button)
+            ItemButtonType.OnMouseAction(self, button)
+            if b == "SetFavourite" then
+                UpdateItemFrame(true)
+            end
+        elseif button == "RightButton" then
+            GUI:OnItemNoteChange(self.ItemID)
         end
     end
 end
@@ -314,7 +323,13 @@ local function SlotButton_SetSlotItem(self, itemID)
                 self.modelFrame:TryOn("item:"..itemID)
             end
         end
-        if GetItemCount(itemID, true) > 0 then
+        local obsoleteType = Favourites:IsItemEquippedOrObsolete(itemID)
+        if obsoleteType then
+            if obsoleteType == "obsolete" then
+                self.ownedItem:SetVertexColor(0.6, 0.6, 0.6) -- Darken items that are obsolete but not owned a bit
+            else
+                self.ownedItem:SetVertexColor(1.0, 1.0, 1.0)
+            end
             self.ownedItem:Show()
         else
             self.ownedItem:Hide()
@@ -750,6 +765,11 @@ function GUI:Create()
         frame.content.optionsButton:SetText(AL["Settings"])
         frame.content.optionsButton:SetScript("OnClick", ShowOptionsOnClick)
 
+        frame.content.chatLinkButton = AtlasLoot.GUI.CreateButton()
+        frame.content.chatLinkButton:SetPoint("LEFT", frame.content.optionsButton, "RIGHT", 5, 0)
+        frame.content.chatLinkButton:SetText(AL["Chat-Link"])
+        frame.content.chatLinkButton:SetScript("OnClick", ChatLinkOnClick)
+
         frame.content.showAllItems = AtlasLoot.GUI.CreateButton()
         frame.content.showAllItems:SetPoint("LEFT", frame.content.bottomBg, "LEFT", 2, 0)
         frame.content.showAllItems:SetText(AL["Show all items"])
@@ -815,6 +835,33 @@ function GUI:Create()
 
         frame:Hide()
     end
+    if not self.popupNote then
+        local gui = self
+        StaticPopupDialogs["ATLASLOOT_FAVOURITE_NOTE_POPUP"] = {
+            text = AL["Enter a note for %s"],
+            button1 = AL["Save"],
+            button2 = AL["Cancel"],
+            whileDead = true,
+            hideOnEscape = true,
+            maxLetters = 100,
+            hasEditBox = true,
+            OnAccept = function(self, data, data2)
+                if gui.popupNoteId then
+                    Favourites:SetItemNote(gui.popupNoteId, self.editBox:GetText())
+                    gui.popupNoteId = nil
+                end
+            end,
+        }
+        self.popupNote = StaticPopupDialogs["ATLASLOOT_FAVOURITE_NOTE_POPUP"]
+    end
+end
+
+function GUI:OnItemNoteChange(itemId, note)
+    self.popupNoteId = itemId
+    local itemName, itemLink = GetItemInfo(itemId)
+    local itemNote = Favourites:GetItemNote(itemId)
+    local popup = StaticPopup_Show("ATLASLOOT_FAVOURITE_NOTE_POPUP", itemLink)
+    popup.editBox:SetText(itemNote or "")
 end
 
 function GUI:UpdateStyle()

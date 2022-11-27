@@ -4,6 +4,7 @@ local AtlasLoot = _G.AtlasLoot
 local GUI = {}
 local AL = AtlasLoot.Locales
 local ALIL = AtlasLoot.IngameLocales
+local Favourites
 
 local LibSharedMedia = LibStub("LibSharedMedia-3.0")
 
@@ -39,6 +40,10 @@ local RIGHT_SELECTION_ENTRYS = {
 
 local db
 local LoadAtlasLootModule
+
+local function OnFavouritesAddonLoad(addon, enabled)
+	Favourites = enabled and addon or nil
+end
 
 local function UpdateFrames(noPageUpdate, forceContentUpdate)
 	local moduleData = AtlasLoot.ItemDB:Get(db.selected[1])
@@ -735,12 +740,30 @@ LoadAtlasLootModule = function(abc)
 					}
 				}
 			end
+			-- add favourites
+			local name = moduleData[content]:GetName()
+			local tt_title = moduleData[content]:GetName()
+			local tt_text = moduleData[content]:GetInfo()
+			if Favourites then
+				local favCounts = Favourites:CountFavouritesByList(db.selected[1], content)
+				local favOverall = 0
+				for listName, itemCount in pairs(favCounts) do
+					if tt_text ~= nil then
+						tt_text = tt_text.."\n"
+					end
+					tt_text = (tt_text or "")..Favourites:GetFavouriteListText(listName, itemCount)
+					favOverall = favOverall + itemCount
+				end
+				if favOverall > 0 then
+					name = name..Favourites:GetFavouriteCountText(favOverall)
+				end
+			end
 			-- add ini
 			loadedContent[contentIndex][ #loadedContent[contentIndex]+1 ] = {
 				id			= content,
-				name		= moduleData[content]:GetName(),
-				tt_title	= moduleData[content]:GetName(),
-				tt_text		= moduleData[content]:GetInfo(),
+				name		= name,
+				tt_title	= tt_title,
+				tt_text		= tt_text,
 			}
 		end
 	end
@@ -853,21 +876,42 @@ local function SubCatSelectFunction(self, id, arg)
 			moduleData:CheckForLink(id, i)
 			if tabVal.ExtraList then
 				if not dataExtra then dataExtra = {} end
+				local name = moduleData[id]:GetNameForItemTable(i)
+				local tt_title = moduleData[id]:GetNameForItemTable(i)
+				local tt_text = tabVal.info -- or AtlasLoot.EncounterJournal:GetBossInfo(tabVal.EncounterJournalID)
+				if Favourites then
+					local favouriteCounts = Favourites:CountFavouritesByList(db.selected[1], db.selected[2], i)
+					local favouriteOverall = 0
+					for listName, itemCount in pairs(favouriteCounts) do
+						if tt_text ~= nil then
+							tt_text = tt_text.."\n"
+						end
+						tt_text = (tt_text or "")..Favourites:GetFavouriteListText(listName, itemCount)
+						favouriteOverall = favouriteOverall + itemCount
+					end
+					if (favouriteOverall > 0) then
+						name = name..Favourites:GetFavouriteCountText(favouriteOverall)
+					end
+				end
 				dataExtra[#dataExtra+1] = {
 					id = i,
-					name = moduleData[id]:GetNameForItemTable(i),
+					name = name,
+					name_org = name,
 					coinTexture = tabVal.CoinTexture,
-					tt_title = moduleData[id]:GetNameForItemTable(i),
-					tt_text = tabVal.info-- or AtlasLoot.EncounterJournal:GetBossInfo(tabVal.EncounterJournalID)
+					tt_title = tt_title,
+					tt_text = tt_text, -- or AtlasLoot.EncounterJournal:GetBossInfo(tabVal.EncounterJournalID)
+					tt_text_org = tt_text -- or AtlasLoot.EncounterJournal:GetBossInfo(tabVal.EncounterJournalID)
 				}
 				if not dataExtra[#dataExtra].name then dataExtra[#dataExtra] = nil end
 			else
 				data[#data+1] = {
 					id = i,
 					name = moduleData[id]:GetNameForItemTable(i),
+					name_org = moduleData[id]:GetNameForItemTable(i),
 					coinTexture = tabVal.CoinTexture,
 					tt_title = moduleData[id]:GetNameForItemTable(i),
-					tt_text = tabVal.info-- or AtlasLoot.EncounterJournal:GetBossInfo(tabVal.EncounterJournalID)
+					tt_text = tabVal.info, -- or AtlasLoot.EncounterJournal:GetBossInfo(tabVal.EncounterJournalID)
+					tt_text_org = tabVal.info -- or AtlasLoot.EncounterJournal:GetBossInfo(tabVal.EncounterJournalID)
 				}
 				if not data[#data].name then data[#data] = nil end
 				if linkedContentLastBoss and data[#data] and data[#data].name  == linkedContentLastBoss.name then
@@ -901,10 +945,28 @@ local function BossSelectFunction(self, id, arg)
 	local bossData = moduleData[db.selected[2]].items[id]
 	for count = 1, #difficultys do
 		if bossData[count] then
-			data[ #data+1 ] = {
+			local name = bossData[count].diffName or difficultys[count].name
+			local tt_title = bossData[count].diffName or difficultys[count].name
+			local tt_text = nil
+			if Favourites then
+				local favouriteCounts = Favourites:CountFavouritesByList(db.selected[1], db.selected[2], nil, count)
+				local favouriteOverall = 0
+				for listName, itemCount in pairs(favouriteCounts) do
+					if tt_text ~= nil then
+						tt_text = tt_text.."\n"
+					end
+					tt_text = (tt_text or "")..Favourites:GetFavouriteListText(listName, itemCount)
+					favouriteOverall = favouriteOverall + itemCount
+				end
+				if (favouriteOverall > 0) then
+					name = name..Favourites:GetFavouriteCountText(favouriteOverall)
+				end
+			end
+			data[#data+1] = {
 				id = count,
-				name = bossData[count].diffName or difficultys[count].name,
-				tt_title = bossData[count].diffName or difficultys[count].name
+				name = name,
+				tt_title = tt_title,
+				tt_text = tt_text
 			}
 			diffCount = diffCount + 1
 		end
@@ -926,10 +988,24 @@ local function ExtraSelectFunction(self, id, arg)
 	local diffCount = 0
 	for count = 1, #difficultys do
 		if moduleData[db.selected[2]].items[id][count] then
+			local name = moduleData[db.selected[2]].items[id][count].diffName or difficultys[count].name
+			local tt_title = moduleData[db.selected[2]].items[id][count].diffName or difficultys[count].name
+			local tt_text = ""
+
+			if Favourites then
+				local favCount = Favourites:CountFavouritesByList(db.selected[1], db.selected[2], id, count)
+				local favOverall = 0
+				for favList, favItems in pairs(favCount) do
+					tt_text = tt_text.."\n"..Favourites:GetFavouriteListText(favList, favItems)
+					favOverall = favOverall + favItems
+				end
+				name = name..Favourites:GetFavouriteCountText(favOverall)
+			end
 			data[ #data+1 ] = {
 				id = count,
-				name = moduleData[db.selected[2]].items[id][count].diffName or difficultys[count].name,
-				tt_title = moduleData[db.selected[2]].items[id][count].diffName or difficultys[count].name
+				name = name,
+				tt_title = tt_title,
+				tt_text = tt_text
 			}
 			diffCount = diffCount + 1
 		end
@@ -944,6 +1020,22 @@ local function DifficultySelectFunction(self, id, arg, start)
 	if not start then
 		db.selected[4] = id
 	end
+	if Favourites then
+		-- Update boss tooltips to contain the number of favourite items per list
+		for i, boss in ipairs(GUI.frame.boss.data) do
+			-- count favourite items and add to tooltip
+			local favCount = Favourites:CountFavouritesByList(db.selected[1], db.selected[2], i, id)
+			local favOverall = 0
+			local favText = ""
+			for favList, favItems in pairs(favCount) do
+				favText = favText.."\n"..Favourites:GetFavouriteListText(favList, favItems)
+				favOverall = favOverall + favItems
+			end
+			boss.tt_text = (boss.tt_text_org or "")..favText
+			boss.name = boss.name_org..Favourites:GetFavouriteCountText(favOverall)
+		end
+		GUI.frame.boss:UpdateContent()
+	end
 	UpdateFrames()
 end
 
@@ -954,6 +1046,9 @@ function GUI.Init()
 	db = AtlasLoot.db.GUI
 
 	GUI:Create()
+
+	-- Get favourites addon if loaded
+	AtlasLoot.Addons:GetAddon("Favourites", OnFavouritesAddonLoad)
 
 	-- Class Info
 	PLAYER_CLASS, PLAYER_CLASS_FN = UnitClass("player")
