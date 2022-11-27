@@ -2201,7 +2201,7 @@ data["CookingWrath"] = {
 			},
 		},
 		{
-			name = ALIL["Expertise"],
+			name = AL["Expertise"],
 			[NORMAL_DIFF] = {
 				{ 1, 57434 },	-- Rhinolicious Wormsteak
 			},
