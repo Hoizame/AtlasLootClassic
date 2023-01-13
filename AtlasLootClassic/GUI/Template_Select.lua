@@ -229,7 +229,8 @@ do
 			frame = CreateFrame("CheckButton", frameName)
 			frame:SetHeight(self.buttonHeight)
 			frame:SetHighlightTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
-			frame:SetCheckedTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
+			-- Below will now cover the text and currently not transparent
+			--frame:SetCheckedTexture("Interface\\QuestFrame\\UI-QuestTitleHighlight", "ADD")
 			frame:RegisterForClicks("LeftButtonDown", "RightButtonDown")
 			frame:SetChecked(false)
 			frame:SetScript("OnClick", ButtonOnClick)

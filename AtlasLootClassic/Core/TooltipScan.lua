@@ -69,7 +69,7 @@ local function OnTooltipSetQuest(self)
 	self.questID = nil
 	self.arg1 = nil
 	self.curQuery = nil
-	self:SetScript("OnTooltipSetQuest", nil)
+	--self:SetScript("OnTooltipSetQuest", nil)
 	self:Hide()
 	-- give the query a little bit time and it works perfect for more than 1 query :)
 	C_Timer_After(0.05, SetNextQuery)
@@ -81,7 +81,7 @@ function TooltipScan.GetQuestName(questID, onGetFunc, arg1, preSetQuery)
 	if not questID then return end
 	if queryCache.quest[questID] then
 		onGetFunc( queryCache.quest[questID], arg1 )
-		AtlasLootQueryTooltip:SetScript("OnTooltipSetQuest", nil)
+		--AtlasLootQueryTooltip:SetScript("OnTooltipSetQuest", nil)
 		AtlasLootQueryTooltip.onGetFunc = nil
 		AtlasLootQueryTooltip.questID = nil
 		AtlasLootQueryTooltip.arg1 = nil
@@ -102,7 +102,7 @@ function TooltipScan.GetQuestName(questID, onGetFunc, arg1, preSetQuery)
 	AtlasLootQueryTooltip.questID = questID
 	AtlasLootQueryTooltip.arg1 = arg1
 	AtlasLootQueryTooltip.curQuery = preSetQuery
-	AtlasLootQueryTooltip:SetScript("OnTooltipSetQuest", OnTooltipSetQuest)
+	--AtlasLootQueryTooltip:SetScript("OnTooltipSetQuest", OnTooltipSetQuest)
 	AtlasLootQueryTooltip:Show()
 	AtlasLootQueryTooltip:SetHyperlink("quest:"..questID)
 	return preSetQuery
@@ -114,7 +114,7 @@ function TooltipScan.Remove(listEntry)
 		AtlasLootQueryTooltip.questID = nil
 		AtlasLootQueryTooltip.arg1 = nil
 		AtlasLootQueryTooltip.curQuery = nil
-		AtlasLootQueryTooltip:SetScript("OnTooltipSetQuest", nil)
+		--AtlasLootQueryTooltip:SetScript("OnTooltipSetQuest", nil)
 		AtlasLootQueryTooltip:Hide()
 		SetNextQuery()
 	else
