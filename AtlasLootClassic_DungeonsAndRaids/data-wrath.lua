@@ -1475,6 +1475,10 @@ data["TheNexus"] = {
                 { 6, 37134 }, -- Telestra's Journal
                 { 16, 21524 }, -- Red Winter Hat
                 { 18, "ac2150" },
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39397 }, -- Pauldrons of Havoc
+                { 29, 39393 }, -- Claymore of Ancient Power
+                { 30, 39388 }, -- Spirit-World Glass
             }
         },
         { -- TheNexusAnomalus / 7
