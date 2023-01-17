@@ -303,7 +303,7 @@ function Faction.ShowToolTipFrame(button)
 							insets = { left = 4, right = 4, top = 4, bottom = 4 }})
 		frame:SetBackdropColor(0,0,0,1)
 
-		frame.icon = frame:CreateTexture(name.."-icon", frame)
+		frame.icon = frame:CreateTexture(name.."-icon", "ARTWORK")
 		frame.icon:SetPoint("TOPLEFT", frame, "TOPLEFT", 5, -5)
 		frame.icon:SetHeight(15)
 		frame.icon:SetWidth(15)

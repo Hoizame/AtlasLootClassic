@@ -587,6 +587,10 @@ data["AhnKahet"] = {
                 { 5, 37592 }, -- Brood Plague Helmet
                 { 6, 37591 }, -- Nerubian Shield Ring
                 { 16, "ac2038" },
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39255 }, -- Staff of the Plague Beast
+                { 29, 39249 }, -- Shoulderplates of Bloodshed
+                --{ 30, xxx }, -- xxx
             }
         },
         { -- AhnkahetTaldaram / 16
@@ -607,6 +611,10 @@ data["AhnKahet"] = {
                 { 4, 37614 }, -- Gauntlets of the Plundering Geist
                 { 5, 37612 }, -- Bonegrinder Breastplate
                 { 6, 37595 }, -- Necklace of Taldaram
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39251 }, -- Necrogenic Belt
+                --{ 29, xxx }, -- xxx
+                --{ 30, xxx }, -- xxx
             }
         },
         { -- AhnkahetAmanitarHEROIC / 17
@@ -622,6 +630,10 @@ data["AhnKahet"] = {
                 { 4, 43286 }, -- Legguards of Swarming Attacks
                 { 5, 43285 }, -- Amulet of the Spell Flinger
                 { 6, 43284 }, -- Amanitar Skullbow
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39251 }, -- Necrogenic Belt
+                { 29, 39260 }, -- Helm of the Corrupted Mind
+                --{ 30, xxx }, -- xxx
             }
         },
         { -- AhnkahetJedoga / 18
@@ -645,6 +657,10 @@ data["AhnKahet"] = {
                 { 6, 43281 }, -- Edge of Oblivion
                 { 16, 21524 }, -- Red Winter Hat
                 { 18, "ac2056" },
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39258 }, -- Legplates of Inescapable Death
+                --{ 29, xxx }, -- xxx
+                --{ 30, xxx }, -- xxx
             }
         },
         { -- AhnkahetVolazj / 19
@@ -672,6 +688,10 @@ data["AhnKahet"] = {
                 { 16, 43102 }, -- Frozen Orb
                 { 18, 41790 }, -- Design: Precise Scarlet Ruby
 				{ 20, "ac1862" },
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39417 }, -- Death's Bite
+                { 29, 43998 }, -- Chestguard of Flagrant Prowess
+                --{ 30, xxx }, -- xxx
             }
         },
         { -- Trash
@@ -723,6 +743,10 @@ data["AzjolNerub"] = {
                 { 5, 37217 }, -- Golden Limb Bands
                 { 6, 37216 }, -- Facade Shield of Glyphs
                 { 16, "ac1296" },
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39257 }, -- Loatheb's Shadow
+                { 29, 39259 }, -- Fungi-Stained Coverings
+                --{ 30, xxx }, -- xxx
             }
         },
         { -- AzjolNerubHadronox / 12
@@ -744,6 +768,10 @@ data["AzjolNerub"] = {
                 { 5, 37221 }, -- Hollowed Mandible Legplates
                 { 6, 37220 }, -- Essence of Gossamer
                 { 16, "ac1297" },
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39252 }, -- Preceptor's Bindings
+                { 29, 39261 }, -- Tainted Girdle of Mending
+                --{ 30, xxx }, -- xxx
             }
         },
         { -- AzjolNerubAnubarak / 13
@@ -772,6 +800,10 @@ data["AzjolNerub"] = {
                 { 16, 43102 }, -- Frozen Orb
                 { 18, 41796 }, -- Design: Infused Twilight Opal
                 { 20, "ac1860" },
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39419 }, -- Nerubian Conquerer
+                --{ 29, xxx }, -- xxx
+                --{ 30, xxx }, -- xxx
             }
         },
         { -- Trash
@@ -819,6 +851,10 @@ data["DrakTharonKeep"] = {
                 { 5, 37717 }, -- Legs of Physical Regeneration
                 { 6, 37712 }, -- Terrace Defence Boots
                 { 16, "ac2151" },
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39241 }, -- Dark Shroud of the Scourge
+                { 29, 39242 }, -- Robes of Hoarse Breaths
+                --{ 30, xxx }, -- xxx
             }
         },
         { -- DrakTharonKeepNovos / 22
@@ -838,6 +874,10 @@ data["DrakTharonKeep"] = {
                 { 4, 37718 }, -- Temple Crystal Fragment
                 { 5, 37721 }, -- Cursed Lich Blade
                 { 16, "ac2057" },
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39237 }, -- Spaulders of Resumed Battle
+                { 29, 39244 }, -- Ring of the Fated
+                { 30, 39236 }, -- Trespasser's Boots
             }
         },
         { -- DrakTharonKeepKingDred / 23
@@ -859,6 +899,10 @@ data["DrakTharonKeep"] = {
                 { 5, 37726 }, -- King Dred's Helm
                 { 6, 37723 }, -- Incisor Fragment
                 { 16, "ac2039" },
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39243 }, -- Handgrips of the Foredoomed
+                { 29, 39239 }, -- Chestplate of the Risen Soldier
+                { 30, 39240 }, -- Noth's Curse
             }
         },
         { -- DrakTharonKeepTharonja / 24
@@ -886,6 +930,10 @@ data["DrakTharonKeep"] = {
                 { 16, 43102 }, -- Frozen Orb
                 { 18, 41795 }, -- Design: Timeless Forest Emerald
                 { 20, "ac1658" },
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 43995 }, -- Enamored Cowl
+                { 29, 39416 }, -- Kel'Thuzad's Reach
+                --{ 30, xxx }, -- xxx
             }
         },
         { -- Trash
@@ -938,6 +986,10 @@ data["Gundrak"] = {
                 { 5, 37627 }, -- Snake Den Spaulders
                 { 6, 37626 }, -- Wand of Sseratus
                 { 16, "ac2058" },
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39229 }, -- Embrace of the Spider
+                { 29, 39230 }, -- Spaulders of the Monstrosity
+                { 30, 39234 }, -- Plague-Impervious Boots
             }
         },
         { -- GundrakColossus / 35
@@ -958,6 +1010,10 @@ data["Gundrak"] = {
                 { 4, 37636 }, -- Helm of Cheated Fate
                 { 5, 37634 }, -- Bracers of the Divine Elemental
                 { 6, 37635 }, -- Pauldrons of the Colossus
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39225 }, -- Cloak of Armed Strife
+                { 29, 39224 }, -- Leggings of Discord
+                --{ 30, xxx }, -- xxx
             }
         },
         { -- GundrakMoorabi / 36
@@ -979,6 +1035,10 @@ data["Gundrak"] = {
                 { 5, 37632 }, -- Mojo Frenzy Greaves
                 { 6, 37631 }, -- Fist of the Deity
                 { 16, "ac2040" },
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39221 }, -- Wraith Spear
+                { 29, 39228 }, -- Web Cocoon Grips
+                --{ 30, xxx }, -- xxx
             }
         },
         { -- GundrakEckHEROIC / 37
@@ -994,6 +1054,10 @@ data["Gundrak"] = {
                 { 4, 43312 }, -- Gorloc Muddy Footwraps
                 { 5, 43311 }, -- Helmet of the Shrine
                 { 6, 43310 }, -- Engraved Chestplate of Eck
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39226 }, -- Maexxna's Femur
+                --{ 29, xxx }, -- xxx
+                --{ 30, xxx }, -- xxx
             }
         },
         { -- GundrakGaldarah / 38
@@ -1021,6 +1085,10 @@ data["Gundrak"] = {
                 { 16, 43102 }, -- Frozen Orb
 				{ 18, "ac2152" },
 				{ 19, "ac1864" },
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 44660 }, -- Drakescale Collar
+                --{ 29, xxx }, -- xxx
+                --{ 30, xxx }, -- xxx
             }
         },
         { -- Trash
@@ -1075,6 +1143,10 @@ data["HallsofLightning"] = {
                 { 5, 37814 }, -- Iron Dwarf Smith Pauldrons
                 { 6, 37826 }, -- The General's Steel Girdle
                 { 16, "ac1834" },
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39192 }, -- Gloves of Dark Gestures
+                { 29, 39141 }, -- Deflection Band
+                --{ 30, xxx }, -- xxx
             }
         },
         { -- HallsofLightningVolkhan / 46
@@ -1097,6 +1169,10 @@ data["HallsofLightning"] = {
                 { 5, 37842 }, -- Belt of Vivacity
                 { 6, 37841 }, -- Slag Footguards
                 { 16, "ac2042" },
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39140 }, -- Knife of Incision
+                { 29, 39191 }, -- Splint-Bound Leggings
+                --{ 30, xxx }, -- xxx
             }
         },
         { -- HallsofLightningIonar / 47
@@ -1118,6 +1194,10 @@ data["HallsofLightning"] = {
                 { 4, 37845 }, -- Cord of Swirling Winds
                 { 5, 37826 }, -- The General's Steel Girdle
                 { 6, 37844 }, -- Winged Talisman
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39146 }, -- Collar of Dissolution
+                { 29, 39190 }, -- Agonal Sash
+                --{ 30, xxx }, -- xxx
             }
         },
         { -- HallsofLightningLoken / 48
@@ -1152,6 +1232,10 @@ data["HallsofLightning"] = {
                 { 16, 43102 }, -- Frozen Orb
                 { 18, 41799 }, -- Design: Eternal Earthsiege Diamond
                 { 20, "ac1867" },
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 40488 }, -- Ice Spire Scepter
+                --{ 29, xxx }, -- xxx
+                --{ 30, xxx }, -- xxx
             }
         },
         { -- Trash
@@ -1203,6 +1287,10 @@ data["HallsofStone"] = {
                 { 3, 37652 }, -- Spaulders of Krystallus
                 { 4, 37650 }, -- Shardling Legguards
                 { 5, 37651 }, -- The Prospector's Prize
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39198 }, -- Frostblight Pauldrons
+                --{ 29, xxx }, -- xxx
+                --{ 30, xxx }, -- xxx
             }
         },
         { -- HallsofStoneMaiden / 40
@@ -1224,6 +1312,10 @@ data["HallsofStone"] = {
                 { 5, 38617 }, -- Woeful Band
                 { 6, 38618 }, -- Hammer of Grief
                 { 16, "ac1866" },
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39215 }, -- Boots of the Follower
+                --{ 29, xxx }, -- xxx
+                --{ 30, xxx }, -- xxx
             }
         },
         { -- HallsofStoneTribunal / 42
@@ -1245,6 +1337,10 @@ data["HallsofStone"] = {
                 { 5, 37654 }, -- Sabatons of the Ages
                 { 6, 37653 }, -- Sword of Justice
                 { 16, "ac2154" },
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39200 }, -- Grieving Spellblade
+                --{ 29, xxx }, -- xxx
+                --{ 30, xxx }, -- xxx
             }
         },
         { -- HallsofStoneSjonnir / 43
@@ -1272,6 +1368,10 @@ data["HallsofStone"] = {
                 { 16, 43102 }, -- Frozen Orb
                 { 18, 41792 }, -- Design: Deft Monarch Topaz
                 { 20, "ac2155" },
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 43993 }, -- Greatring of Collision
+                --{ 29, xxx }, -- xxx
+                --{ 30, xxx }, -- xxx
             }
         },
         { -- Trash
@@ -1325,6 +1425,10 @@ data["TheCullingOfStratholme"] = {
                 { 4, 37678 }, -- Bile-Cured Gloves
                 { 5, 37679 }, -- Spaulders of the Abomination
                 { 6, 37675 }, -- Legplates of Steel Implants
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 40429 }, -- Crimson Steel
+                { 29, 43988 }, -- Gale-Proof Cloak
+                { 30, 43992 }, -- Volitant Amulet
             }
         },
         { -- CoTStratholmeSalramm
@@ -1346,6 +1450,10 @@ data["TheCullingOfStratholme"] = {
                 { 4, 37682 }, -- Bindings of Dark Will
                 { 5, 37683 }, -- Necromancer's Amulet
                 { 6, 37681 }, -- Gavel of the Fleshcrafter
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 43989 }, -- Remembrance Girdle
+                { 29, 43991 }, -- Legguards of Composure
+                { 30, 40428 }, -- Titan's Outlook
             }
         },
         { -- CoTStratholmeEpoch
@@ -1367,6 +1475,10 @@ data["TheCullingOfStratholme"] = {
                 { 4, 37686 }, -- Cracked Epoch Grasps
                 { 5, 37688 }, -- Legplates of the Infinite Drakonid
                 { 6, 37685 }, -- Mobius Band
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28,40427 }, -- Circle of Arcane Streams
+                --{ 29, xxx }, -- xxx
+                --{ 30, xxx }, -- xxx
             }
         },
         { -- CoTStratholmeMalGanis
@@ -1398,6 +1510,10 @@ data["TheCullingOfStratholme"] = {
                 { 10, 37689 }, -- Pendant of the Nathrezim
                 { 11, 37692 }, -- Pierce's Pistol
                 { 16, 43102 }, -- Frozen Orb
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39235 }, -- Bone-Framed Bracers
+                { 29, 44658 }, -- Chain of the Ancient Wyrm
+                --{ 30, xxx }, -- xxx
             }
         },
         { -- CoTStratholmeInfiniteCorruptorHEROIC
@@ -1409,6 +1525,10 @@ data["TheCullingOfStratholme"] = {
             [HEROIC_DIFF] = {
                 { 1, 47241 }, -- Emblem of Triumph
 		        { 3, 43951 }, -- Reins of the Bronze Drake
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39468 }, -- The Stray
+                { 29, 39427 }, -- Omen of Ruin
+                { 30, 39473 }, -- Contortion
             }
         },
         { -- CoTHillsbradTrash
@@ -1452,6 +1572,10 @@ data["TheNexus"] = {
                 { 4, 37731 }, -- Opposed Stasis Leggings
                 { 5, 37730 }, -- Cleric's Linen Shoes
                 { 6, 37729 }, -- Grips of Sculptured Icicles
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39390 }, -- Resurgent Phantom Bindings
+                { 29, 39394 }, -- Charmed Cierge
+                { 30, 39398 }, -- Massive Skeletal Ribcage
             }
         },
         { -- TheNexusTelestra / 6
@@ -1475,6 +1599,10 @@ data["TheNexus"] = {
                 { 6, 37134 }, -- Telestra's Journal
                 { 16, 21524 }, -- Red Winter Hat
                 { 18, "ac2150" },
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39397 }, -- Pauldrons of Havoc
+                { 29, 39393 }, -- Claymore of Ancient Power
+                { 30, 39388 }, -- Spirit-World Glass
             }
         },
         { -- TheNexusAnomalus / 7
@@ -1496,6 +1624,10 @@ data["TheNexus"] = {
                 { 4, 37150 }, -- Rift Striders
                 { 5, 37141 }, -- Amulet of Dazzling Light
                 { 16, "ac2037" },
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39386 }, -- Tunic of Dislocation
+                { 29, 39396 }, -- Gown of Blaumeux
+                { 30, 39407 }, -- Circle of Life
             }
         },
         { -- TheNexusOrmorok / 8
@@ -1516,6 +1648,10 @@ data["TheNexus"] = {
                 { 4, 37155 }, -- Frozen Forest Kilt
                 { 5, 37152 }, -- Girdle of Ice
                 { 6, 37151 }, -- Band of Frosted Thorns
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39389 }, -- Signet of the Malevolent
+                { 29, 39395 }, -- Thane's Tainted Greathelm
+                --{ 30, xxx }, -- xxx
             }
         },
         { -- TheNexusKeristrasza / 10
@@ -1543,6 +1679,10 @@ data["TheNexus"] = {
                 { 16, 43102 }, -- Frozen Orb
                 { 18, 41794 }, -- Design: Deadly Monarch Topaz
                 { 20, "ac2036" },
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39422 }, -- Staff of the Plaguehound
+                { 29, 44657 }, -- Torque of the Red Dragonflight
+                --{ 30, xxx }, -- xxx
             }
         },
         KEYS,
@@ -1582,6 +1722,10 @@ data["TheOculus"] = {
                 { 4, 37256 }, -- Scaled Armor of Drakos
                 { 5, 37257 }, -- Band of Torture
                 { 6, 37255 }, -- The Interrogator
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39399 }, -- Helm of the Vast Legions
+                { 29, 39404 }, -- Cloak of Mastery
+                --{ 30, xxx }, -- xxx
             }
         },
         { -- OcuCloudstrider / 63
@@ -1603,6 +1747,10 @@ data["TheOculus"] = {
                 { 4, 37262 }, -- Azure Ringmail Leggings
                 { 5, 37263 }, -- Legplates of the Oculus Guardian
                 { 6, 37260 }, -- Cloudstrider's Waraxe
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39401 }, -- Circle of Death
+                { 29, 39405 }, -- Helmet of the Inner Sanctum
+                --{ 30, xxx }, -- xxx
             }
         },
         { -- OcuUrom / 62
@@ -1626,6 +1774,10 @@ data["TheOculus"] = {
                 { 5, 37195 }, -- Band of Enchanted Growth
                 { 6, 37264 }, -- Pendulum of Telluric Currents
                 { 16, 21525 }, -- Green Winter Hat
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39415 }, -- Shroud of the Citadel
+                --{ 29, xxx }, -- xxx
+                --{ 30, xxx }, -- xxx
             }
         },
         { -- OcuEregos / 64
@@ -1663,6 +1815,10 @@ data["TheOculus"] = {
 				{ 23, "ac2046" },
 				{ 24, "ac2045" },
 				{ 25, "ac2044" },
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39310 }, -- Mantle of the Extensive Mind
+                { 29, 40497 }, -- Black Ice
+                --{ 30, xxx }, -- xxx
             }
         },
         { -- Trash
@@ -1711,6 +1867,10 @@ data["VioletHold"] = {
                 { 3, 43406 }, -- Cloak of the Gushing Wound
                 { 4, 43405 }, -- Sabatons of Erekem
                 { 5, 43407 }, -- Stormstrike Mace
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39275 }, -- Contagion Gloves
+                { 29, 39281 }, -- Infection Repulser
+                --{ 30, xxx }, -- xxx
             }
         },
         { -- VioletHoldZuramat / 27
@@ -1728,6 +1888,10 @@ data["VioletHold"] = {
                 { 3, 43403 }, -- Shroud of Darkness
                 { 4, 43402 }, -- The Obliterator Greaves
                 { 5, 43404 }, -- Zuramat's Necklace
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                --{ 28, xxx }, -- xxx
+                --{ 29, xxx }, -- xxx
+                --{ 30, xxx }, -- xxx
             }
         },
         { -- VioletHoldXevozz / 28
@@ -1745,6 +1909,10 @@ data["VioletHold"] = {
                 { 3, 37867 }, -- Footwraps of Teleportation
                 { 4, 37868 }, -- Girdle of the Ethereal
                 { 5, 37861 }, -- Necklace of Arcane Spheres
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39272 }, -- Drape of Surgery
+                --{ 29, xxx }, -- xxx
+                --{ 30, xxx }, -- xxx
             }
         },
         { -- VioletHoldIchoron / 29
@@ -1762,6 +1930,10 @@ data["VioletHold"] = {
                 { 3, 43401 }, -- Water-Drenched Robe
                 { 4, 37862 }, -- Gauntlets of the Water Revenant
                 { 5, 37869 }, -- Globule Signet
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39273 }, -- Sullen Cloth Boots
+                { 29, 39279 }, -- Blistered Belt of Decay
+                --{ 30, xxx }, -- xxx
             }
         },
         { -- VioletHoldMoragg / 30
@@ -1779,6 +1951,10 @@ data["VioletHold"] = {
                 { 3, 43410 }, -- Moragg's Chestguard
                 { 4, 43408 }, -- Solitare of Reflecting Beams
                 { 5, 43409 }, -- Saliva Corroded Pike
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                --{ 28, xxx }, -- xxx
+                --{ 29, xxx }, -- xxx
+                --{ 30, xxx }, -- xxx
             }
         },
         { -- VioletHoldLavanthor / 31
@@ -1796,6 +1972,10 @@ data["VioletHold"] = {
                 { 3, 37870 }, -- Twin-Headed Boots
                 { 4, 37872 }, -- Lavanthor's Talisman
                 { 5, 37871 }, -- The Key
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                --{ 28, xxx }, -- xxx
+                --{ 29, xxx }, -- xxx
+                --{ 30, xxx }, -- xxx
             }
         },
         { -- VioletHoldCyanigosa / 32
@@ -1821,6 +2001,10 @@ data["VioletHold"] = {
                 { 10, 37873 }, -- Mark of the War Prisoner
                 { 16, 43102 }, -- Frozen Orb
                 { 18, 41791 }, -- Design: Thick Autumn's Glow
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39426 }, -- Wand of the Archlich
+                { 29, 40511 }, -- Focusing Energy Epaulets
+                --{ 30, xxx }, -- xxx
             }
         },
         { -- Trash
@@ -1874,6 +2058,10 @@ data["UtgardeKeep"] = {
                 { 5, 37179 }, -- Infantry Assault Blade
                 { 6, 37177 }, -- Wand of the San'layn
                 { 16, "ac1919" },
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39392 }, -- Veiled Amulet of Life
+                { 29, 39379 }, -- Spectral Rider's Girdle
+                --{ 30, xxx }, -- xxx
             }
         },
         { -- UtgardeKeepSkarvald / 3
@@ -1894,6 +2082,10 @@ data["UtgardeKeep"] = {
                 { 4, 37184 }, -- Dalronn's Jerkin
                 { 5, 37182 }, -- Helmet of the Constructor
                 { 6, 37181 }, -- Dagger of Betrayal
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39309 }, -- Leggings of the Instructor
+                { 29, 39344 }, -- Slayer of the Lifeless
+                --{ 30, xxx }, -- xxx
             }
         },
         { -- UtgardeKeepIngvar / 4
@@ -1922,6 +2114,10 @@ data["UtgardeKeep"] = {
                 { 16, 43102 }, -- Frozen Orb
                 { 18, 41793 }, -- Design: Fierce Monarch Topaz
                 { 20, "ac1658" },
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39424 }, -- The Soulblade
+                { 29, 40519 }, -- Footsteps of Malygos
+                { 30, 40474 }, -- Surge Needle Ring
             }
         },
         { -- Trash
@@ -1974,6 +2170,10 @@ data["UtgardePinnacle"] = {
                 { 5, 37368 }, -- Silent Spectator Shoulderpads
                 { 6, 37367 }, -- Echoing Stompers
                 { 16, "ac2043" },
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39299 }, -- Rapid Attack Gloves
+                { 29, 39296 }, -- Accursed Bow of the Elite
+                { 30, 39308 }, -- Girdle of Lenience
             }
         },
         { -- UPPalehoof / 59
@@ -1995,6 +2195,10 @@ data["UtgardePinnacle"] = {
                 { 4, 37373 }, -- Massive Spaulders of the Jormungar
                 { 5, 37376 }, -- Ferocious Pauldrons of the Rhino
                 { 6, 37371 }, -- Ring of the Frenzied Wolvar
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39298 }, -- Waistguard of the Tutor
+                { 29, 39284 }, -- Miasma Mantle
+                { 30, 39295 }, -- Cowl of Sheet Lightning
             }
         },
         { -- UPSkadi / 56
@@ -2018,6 +2222,10 @@ data["UtgardePinnacle"] = {
                 { 16, 44151 }, -- Reins of the Blue Proto-Drake
                 { 18, "ac1873" },
                 { 19, "ac2156" },
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39297 }, -- Cloak of Darkening
+                { 29, 39294 }, -- Arc-Scorched Helmet
+                { 30, 39472 }, -- Chain of Latent Energies
             }
         },
         { -- UPYmiron / 57
@@ -2052,6 +2260,10 @@ data["UtgardePinnacle"] = {
                 { 18, 41797 }, -- Design: Austere Earthsiege Diamond
                 { 20, "ac1790" },
 				{ 21, "ac2157" },
+                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 28, 39194 }, -- Rusted-Link Spiked Gauntlets
+                { 29, 39423 }, -- Hammer of the Astral Plane
+                --{ 30, xxx }, -- xxx
             }
         },
         { -- Trash
@@ -2565,19 +2777,7 @@ data["NaxxramasWrath"] = {
 			DisplayIDs = {{15931}},
 			AtlasMapBossID = "1",
             NameColor = BLUE,
-			[RAID10_DIFF] = {
-                { 1, 39192 }, -- Gloves of Dark Gestures
-                { 2, 39190 }, -- Agonal Sash
-                { 3, 39191 }, -- Splint-Bound Leggings
-                { 4, 39189 }, -- Boots of Persistence
-                { 5, 39188 }, -- Chivalric Chestguard
-                { 6, 39139 }, -- Ravaging Sabatons
-                { 7, 39146 }, -- Collar of Dissolution
-                { 8, 39193 }, -- Band of Neglected Pleas
-                { 9, 39141 }, -- Deflection Band
-                { 10, 39140 }, -- Knife of Incision
-            },
-            [RAID25_DIFF] = {
+            [NORMAL_DIFF] = {
                 { 1, 39719 }, -- Mantle of the Locusts
                 { 2, 39721 }, -- Sash of the Parlor
                 { 3, 39720 }, -- Leggings of Atrophy
@@ -2611,20 +2811,7 @@ data["NaxxramasWrath"] = {
 			DisplayIDs = {{15940}},
 			AtlasMapBossID = "2",
             NameColor = BLUE,
-			[RAID10_DIFF] = {
-                { 1, 39216 }, -- Sash of Mortal Desire
-                { 2, 39215 }, -- Boots of the Follower
-                { 3, 39196 }, -- Boots of the Worshiper
-                { 4, 39217 }, -- Avenging Combat Leggings
-                { 5, 39194 }, -- Rusted-Link Spiked Gauntlets
-                { 6, 39198 }, -- Frostblight Pauldrons
-                { 7, 39195 }, -- Bracers of Lost Sentiments
-                { 8, 39197 }, -- Gauntlets of the Master
-                { 9, 39199 }, -- Watchful Eye
-                { 10, 39200 }, -- Grieving Spellblade
-                { 16, "ac1997" },
-            },
-            [RAID25_DIFF] = {
+            [NORMAL_DIFF] = {
                 { 1, 39732 }, -- Faerlina's Madness
                 { 2, 39731 }, -- Punctilious Bindings
                 { 3, 39733 }, -- Gloves of Token Respect
@@ -2649,7 +2836,8 @@ data["NaxxramasWrath"] = {
                 { 22, 39757 }, -- Idol of Worship
                 { 23, 39728 }, -- Totem of Misery
                 { 24, 39730 }, -- Widow's Fury
-                { 26, "ac2140" },
+                { 26, "ac1997" },
+                { 28, "ac2140" },
             },
 		},
 		{ -- NAXMaexxna
@@ -2660,20 +2848,7 @@ data["NaxxramasWrath"] = {
 			DisplayIDs = {{15928}},
 			AtlasMapBossID = "3",
             NameColor = BLUE,
-			[RAID10_DIFF] = {
-                { 1, 39225 }, -- Cloak of Armed Strife
-                { 2, 39230 }, -- Spaulders of the Monstrosity
-                { 3, 39224 }, -- Leggings of Discord
-                { 4, 39228 }, -- Web Cocoon Grips
-                { 5, 39232 }, -- Pendant of Lost Vocations
-                { 6, 39231 }, -- Timeworn Silken Band
-                { 7, 39229 }, -- Embrace of the Spider
-                { 8, 39226 }, -- Maexxna's Femur
-                { 9, 39221 }, -- Wraith Spear
-                { 10, 39233 }, -- Aegis of Damnation
-                { 16, "ac1858" },
-            },
-            [RAID25_DIFF] = {
+            [NORMAL_DIFF] = {
                 { 1, 40250 }, -- Aged Winter Cloak
                 { 2, 40254 }, -- Cloak of Averted Crisis
                 { 3, 40252 }, -- Cloak of the Shadowed Sun
@@ -2698,7 +2873,8 @@ data["NaxxramasWrath"] = {
                 { 22, 39766 }, -- Matriarch's Spawn
                 { 23, 39763 }, -- Wraith Strike
                 { 24, 39758 }, -- The Jawbone
-                { 26, "ac1859" },
+                { 26, "ac1858" },
+                { 28, "ac1859" },
             },
 		},
 		-- The Plague Quarter
@@ -2710,19 +2886,7 @@ data["NaxxramasWrath"] = {
 			DisplayIDs = {{16590}},
 			AtlasMapBossID = "1",
             NameColor = PURPLE,
-			[RAID10_DIFF] = {
-                { 1, 39241 }, -- Dark Shroud of the Scourge
-                { 2, 39242 }, -- Robes of Hoarse Breaths
-                { 3, 39240 }, -- Noth's Curse
-                { 4, 39237 }, -- Spaulders of Resumed Battle
-                { 5, 39243 }, -- Handgrips of the Foredoomed
-                { 6, 39236 }, -- Trespasser's Boots
-                { 7, 39239 }, -- Chestplate of the Risen Soldier
-                { 8, 39235 }, -- Bone-Framed Bracers
-                { 9, 39234 }, -- Plague-Impervious Boots
-                { 10, 39244 }, -- Ring of the Fated
-            },
-            [RAID25_DIFF] = {
+            [NORMAL_DIFF] = {
                 { 1, 40602 }, -- Robes of Mutation
                 { 2, 40198 }, -- Bands of Impurity
                 { 3, 40197 }, -- Gloves of the Fallen Wizard
@@ -2756,20 +2920,7 @@ data["NaxxramasWrath"] = {
 			DisplayIDs = {{16309}},
 			AtlasMapBossID = "2",
             NameColor = PURPLE,
-			[RAID10_DIFF] = {
-                { 1, 39252 }, -- Preceptor's Bindings
-                { 2, 39254 }, -- Saltarello Shoes
-                { 3, 39247 }, -- Cuffs of Dark Shadows
-                { 4, 39248 }, -- Tunic of the Lost Pack
-                { 5, 39251 }, -- Necrogenic Belt
-                { 6, 39249 }, -- Shoulderplates of Bloodshed
-                { 7, 39246 }, -- Amulet of Autopsy
-                { 8, 39250 }, -- Ring of Holy Cleansing
-                { 9, 39245 }, -- Demise
-                { 10, 39255 }, -- Staff of the Plague Beast
-                { 16, "ac1996" },
-            },
-            [RAID25_DIFF] = {
+            [NORMAL_DIFF] = {
                 { 1, 40250 }, -- Aged Winter Cloak
                 { 2, 40254 }, -- Cloak of Averted Crisis
                 { 3, 40252 }, -- Cloak of the Shadowed Sun
@@ -2794,7 +2945,8 @@ data["NaxxramasWrath"] = {
                 { 22, 40207 }, -- Sigil of Awareness
                 { 23, 40208 }, -- Cryptfiend's Bite
                 { 24, 40233 }, -- The Undeath Carrier
-                { 26, "ac2139" },
+                { 26, "ac1996" },
+                { 28, "ac2139" },
             },
 		},
 		{ -- NAXLoatheb
@@ -2805,18 +2957,7 @@ data["NaxxramasWrath"] = {
 			DisplayIDs = {{16110}},
 			AtlasMapBossID = "3",
             NameColor = PURPLE,
-			[RAID10_DIFF] = {
-                { 1, 39259 }, -- Fungi-Stained Coverings
-                { 2, 39260 }, -- Helm of the Corrupted Mind
-                { 3, 39258 }, -- Legplates of Inescapable Death
-                { 4, 39257 }, -- Loatheb's Shadow
-                { 5, 39256 }, -- Sulfur Stave
-                { 16, 40622 }, -- Spaulders of the Lost Conqueror
-                { 17, 40623 }, -- Spaulders of the Lost Protector
-                { 18, 40624 }, -- Spaulders of the Lost Vanquisher
-                { 20, "ac2182" },
-            },
-            [RAID25_DIFF] = {
+            [NORMAL_DIFF] = {
                 { 1, 40247 }, -- Cowl of Innocent Delight
                 { 2, 40246 }, -- Boots of Impetuous Ideals
                 { 3, 40249 }, -- Vest of Vitality
@@ -2830,7 +2971,8 @@ data["NaxxramasWrath"] = {
                 { 16, 40637 }, -- Mantle of the Lost Conqueror
                 { 17, 40638 }, -- Mantle of the Lost Protector
                 { 18, 40639 }, -- Mantle of the Lost Vanquisher
-                { 20, "ac2183" },
+                { 20, "ac2182" },
+                { 22, "ac2183" },
             },
 		},
 		-- The Military Quarter
@@ -2842,19 +2984,7 @@ data["NaxxramasWrath"] = {
 			DisplayIDs = {{16582}},
 			AtlasMapBossID = "1",
             NameColor = _RED,
-			[RAID10_DIFF] = {
-                { 1, 39297 }, -- Cloak of Darkening
-                { 2, 39310 }, -- Mantle of the Extensive Mind
-                { 3, 39309 }, -- Leggings of the Instructor
-                { 4, 39299 }, -- Rapid Attack Gloves
-                { 5, 39308 }, -- Girdle of Lenience
-                { 6, 39307 }, -- Iron Rings of Endurance
-                { 7, 39306 }, -- Plated Gloves of Relief
-                { 8, 39298 }, -- Waistguard of the Tutor
-                { 9, 39311 }, -- Scepter of Murmuring Spirits
-                { 10, 39296 }, -- Accursed Bow of the Elite
-            },
-            [RAID25_DIFF] = {
+            [NORMAL_DIFF] = {
                 { 1, 40325 }, -- Bindings of the Expansive Mind
                 { 2, 40326 }, -- Boots of Forlorn Wishes
                 { 3, 40305 }, -- Spaulders of Egotism
@@ -2888,19 +3018,7 @@ data["NaxxramasWrath"] = {
 			DisplayIDs = {{16279}},
 			AtlasMapBossID = "2",
             NameColor = _RED,
-			[RAID10_DIFF] = {
-                { 1, 39390 }, -- Resurgent Phantom Bindings
-                { 2, 39386 }, -- Tunic of Dislocation
-                { 3, 39391 }, -- Heinous Mail Chestguard
-                { 4, 39379 }, -- Spectral Rider's Girdle
-                { 5, 39345 }, -- Girdle of the Ascended Phantom
-                { 6, 39369 }, -- Sabatons of Deathlike Gloom
-                { 7, 39392 }, -- Veiled Amulet of Life
-                { 8, 39389 }, -- Signet of the Malevolent
-                { 9, 39388 }, -- Spirit-World Glass
-                { 10, 39344 }, -- Slayer of the Lifeless
-            },
-            [RAID25_DIFF] = {
+            [NORMAL_DIFF] = {
                 { 1, 40250 }, -- Aged Winter Cloak
                 { 2, 40254 }, -- Cloak of Averted Crisis
                 { 3, 40252 }, -- Cloak of the Shadowed Sun
@@ -2935,18 +3053,7 @@ data["NaxxramasWrath"] = {
 			DisplayIDs = {{16155},{16153},{16139},{16154}},
 			AtlasMapBossID = "3",
             NameColor = _RED,
-			[RAID10_DIFF] = {
-                { 1, 39396 }, -- Gown of Blaumeux
-                { 2, 39397 }, -- Pauldrons of Havoc
-                { 3, 39395 }, -- Thane's Tainted Greathelm
-                { 4, 39393 }, -- Claymore of Ancient Power
-                { 5, 39394 }, -- Charmed Cierge
-                { 16, 40610 }, -- Chestguard of the Lost Conqueror
-                { 17, 40611 }, -- Chestguard of the Lost Protector
-                { 18, 40612 }, -- Chestguard of the Lost Vanquisher
-                { 20, "ac2176" },
-            },
-            [RAID25_DIFF] = {
+            [NORMAL_DIFF] = {
                 { 1, 40349 }, -- Gloves of Peaceful Death
                 { 2, 40344 }, -- Helm of the Grave
                 { 3, 40352 }, -- Leggings of Voracious Shadows
@@ -2959,7 +3066,8 @@ data["NaxxramasWrath"] = {
                 { 16, 40625 }, -- Breastplate of the Lost Conqueror
                 { 17, 40626 }, -- Breastplate of the Lost Protector
                 { 18, 40627 }, -- Breastplate of the Lost Vanquisher
-                { 20, "ac2177" },
+                { 20, "ac2176" },
+                { 22, "ac2177" },
             },
 		},
 		-- The Construct Quarter
@@ -2970,19 +3078,7 @@ data["NaxxramasWrath"] = {
 			Level = 999,
 			DisplayIDs = {{16174}},
 			AtlasMapBossID = 1,
-			[RAID10_DIFF] = {
-                { 1, 39272 }, -- Drape of Surgery
-                { 2, 39273 }, -- Sullen Cloth Boots
-                { 3, 39275 }, -- Contagion Gloves
-                { 4, 39274 }, -- Retcher's Shoulderpads
-                { 5, 39267 }, -- Abomination Shoulderblades
-                { 6, 39262 }, -- Gauntlets of Combined Strength
-                { 7, 39261 }, -- Tainted Girdle of Mending
-                { 8, 39271 }, -- Blade of Dormant Memories
-                { 9, 39270 }, -- Hatestrike
-                { 16, "ac1856" },
-            },
-            [RAID25_DIFF] = {
+            [NORMAL_DIFF] = {
                 { 1, 40271 }, -- Sash of Solitude
                 { 2, 40269 }, -- Boots of Persuasion
                 { 3, 40260 }, -- Belt of the Tortured
@@ -3006,7 +3102,8 @@ data["NaxxramasWrath"] = {
                 { 21, 40264 }, -- Split Greathammer
                 { 22, 40266 }, -- Hero's Surrender
                 { 23, 40265 }, -- Arrowsong
-                { 25, "ac1857" },
+                { 25, "ac1856" },
+                { 27, "ac1857" },
             },
 		},
 		{ -- NAXGrobbulus
@@ -3016,19 +3113,7 @@ data["NaxxramasWrath"] = {
 			Level = 999,
 			DisplayIDs = {{16035}},
 			AtlasMapBossID = 2,
-			[RAID10_DIFF] = {
-                { 1, 39284 }, -- Miasma Mantle
-                { 2, 39285 }, -- Handgrips of Turmoil
-                { 3, 39283 }, -- Putrescent Bands
-                { 4, 39279 }, -- Blistered Belt of Decay
-                { 5, 39278 }, -- Bands of Anxiety
-                { 6, 39280 }, -- Leggings of Innumerable Barbs
-                { 7, 39282 }, -- Bone-Linked Amulet
-                { 8, 39277 }, -- Sealing Ring of Grobbulus
-                { 9, 39281 }, -- Infection Repulser
-                { 10, 39276 }, -- The Skull of Ruin
-            },
-            [RAID25_DIFF] = {
+            [NORMAL_DIFF] = {
                 { 1, 40250 }, -- Aged Winter Cloak
                 { 2, 40254 }, -- Cloak of Averted Crisis
                 { 3, 40252 }, -- Cloak of the Shadowed Sun
@@ -3063,42 +3148,7 @@ data["NaxxramasWrath"] = {
 			Level = 999,
 			DisplayIDs = {{16064}},
 			AtlasMapBossID = 3,
-			[RAID10_DIFF] = {
-                { 1, 39272 }, -- Drape of Surgery
-                { 2, 39284 }, -- Miasma Mantle
-                { 3, 39396 }, -- Gown of Blaumeux
-                { 4, 39309 }, -- Leggings of the Instructor
-                { 5, 39237 }, -- Spaulders of Resumed Battle
-                { 6, 39279 }, -- Blistered Belt of Decay
-                { 7, 39191 }, -- Splint-Bound Leggings
-                { 8, 39215 }, -- Boots of the Follower
-                { 9, 39294 }, -- Arc-Scorched Helmet
-                { 10, 39248 }, -- Tunic of the Lost Pack
-                { 11, 39194 }, -- Rusted-Link Spiked Gauntlets
-                { 12, 39251 }, -- Necrogenic Belt
-                { 13, 39379 }, -- Spectral Rider's Girdle
-                { 14, 39188 }, -- Chivalric Chestguard
-                { 15, 39345 }, -- Girdle of the Ascended Phantom
-                { 16, 39146 }, -- Collar of Dissolution
-                { 17, 39232 }, -- Pendant of Lost Vocations
-                { 18, 39193 }, -- Band of Neglected Pleas
-                { 19, 39388 }, -- Spirit-World Glass
-                { 20, 39200 }, -- Grieving Spellblade
-                { 21, 39344 }, -- Slayer of the Lifeless
-                { 22, 39281 }, -- Infection Repulser
-                { 23, 39394 }, -- Charmed Cierge
-
-                { 101, 40622 }, -- Spaulders of the Lost Conqueror
-                { 102, 40623 }, -- Spaulders of the Lost Protector
-                { 103, 40624 }, -- Spaulders of the Lost Vanquisher
-                { 105, 40610 }, -- Chestguard of the Lost Conqueror
-                { 106, 40611 }, -- Chestguard of the Lost Protector
-                { 107, 40612 }, -- Chestguard of the Lost Vanquisher
-                { 116, 40619 }, -- Leggings of the Lost Conqueror
-                { 117, 40620 }, -- Leggings of the Lost Protector
-                { 118, 40621 }, -- Leggings of the Lost Vanquisher
-            },
-            [RAID25_DIFF] = {
+            [NORMAL_DIFF] = {
                 { 1, 40247 }, -- Cowl of Innocent Delight
                 { 2, 40289 }, -- Sympathetic Amice
                 { 3, 40602 }, -- Robes of Mutation
@@ -3156,19 +3206,7 @@ data["NaxxramasWrath"] = {
 			Level = 999,
 			DisplayIDs = {{16137}},
 			AtlasMapBossID = 4,
-			[RAID10_DIFF] = {
-                { 1, 39295 }, -- Cowl of Sheet Lightning
-                { 2, 39294 }, -- Arc-Scorched Helmet
-                { 3, 39293 }, -- Blackened Legplates of Feugen
-                { 4, 39292 }, -- Repelling Charge
-                { 5, 39291 }, -- Torment of the Banished
-                { 16, 40619 }, -- Leggings of the Lost Conqueror
-                { 17, 40620 }, -- Leggings of the Lost Protector
-                { 18, 40621 }, -- Leggings of the Lost Vanquisher
-                { 20, "ac2178" },
-				{ 21, "ac2180" },
-            },
-            [RAID25_DIFF] = {
+            [NORMAL_DIFF] = {
                 { 1, 40303 }, -- Wraps of the Persecuted
                 { 2, 40301 }, -- Cincture of Polarity
                 { 3, 40296 }, -- Cover of Silence
@@ -3182,8 +3220,10 @@ data["NaxxramasWrath"] = {
                 { 16, 40634 }, -- Legplates of the Lost Conqueror
                 { 17, 40635 }, -- Legplates of the Lost Protector
                 { 18, 40636 }, -- Legplates of the Lost Vanquisher
-                { 20, "ac2179" },
-				{ 21, "ac2181" },
+                { 20, "ac2178" },
+                { 21, "ac2180" },
+                { 23, "ac2179" },
+				{ 24, "ac2181" },
             },
 		},
 		-- Frostwyrm Lair
@@ -3195,22 +3235,7 @@ data["NaxxramasWrath"] = {
 			DisplayIDs = {{16033}},
 			AtlasMapBossID = "1",
             NameColor = GREEN,
-			[RAID10_DIFF] = {
-                { 1, 39415 }, -- Shroud of the Citadel
-                { 2, 39404 }, -- Cloak of Mastery
-                { 3, 39409 }, -- Cowl of Winged Fear
-                { 4, 39408 }, -- Leggings of Sapphiron
-                { 5, 39399 }, -- Helm of the Vast Legions
-                { 6, 39405 }, -- Helmet of the Inner Sanctum
-                { 7, 39403 }, -- Helm of the Unsubmissive
-                { 8, 39398 }, -- Massive Skeletal Ribcage
-                { 9, 39401 }, -- Circle of Death
-                { 10, 39407 }, -- Circle of Life
-                { 16, 44569 }, -- Key to the Focusing Iris
-                { 18, "ac572" },
-				{ 19, "ac2146" },
-            },
-            [RAID25_DIFF] = {
+            [NORMAL_DIFF] = {
                 { 1, 40381 }, -- Sympathy
                 { 2, 40380 }, -- Gloves of Grandeur
                 { 3, 40376 }, -- Legwraps of the Defeated Dragon
@@ -3232,8 +3257,10 @@ data["NaxxramasWrath"] = {
                 { 19, 40382 }, -- Soul of the Dead
                 { 20, 40368 }, -- Murder
                 { 22, 44577 }, -- Heroic Key to the Focusing Iris
-                { 24, "ac573" },
-				{ 25, "ac2147" },
+                { 24, "ac572" },
+                { 25, "ac2146" },
+                { 27, "ac573" },
+				{ 28, "ac2147" },
             },
 		},
 		{ -- NAXKelThuzard
@@ -3244,25 +3271,7 @@ data["NaxxramasWrath"] = {
 			DisplayIDs = {{15945}},
 			AtlasMapBossID = "2",
             NameColor = GREEN,
-			[RAID10_DIFF] = {
-                { 1, 39425 }, -- Cloak of the Dying
-                { 2, 39421 }, -- Gem of Imprisoned Vassals
-                { 3, 39416 }, -- Kel'Thuzad's Reach
-                { 4, 39424 }, -- The Soulblade
-                { 5, 39420 }, -- Anarchy
-                { 6, 39417 }, -- Death's Bite
-                { 7, 39423 }, -- Hammer of the Astral Plane
-                { 8, 39422 }, -- Staff of the Plaguehound
-                { 9, 39426 }, -- Wand of the Archlich
-                { 10, 39419 }, -- Nerubian Conquerer
-                { 16, 40616 }, -- Helm of the Lost Conqueror
-                { 17, 40617 }, -- Helm of the Lost Protector
-                { 18, 40618 }, -- Helm of the Lost Vanquisher
-                { 20, "ac574" },
-				{ 21, "ac1658" },
-				{ 22, "ac2184" },
-            },
-            [RAID25_DIFF] = {
+            [NORMAL_DIFF] = {
                 { 1, 40405 }, -- Cape of the Unworthy Wizard
                 { 2, 40403 }, -- Drape of the Deadly Foe
                 { 3, 40398 }, -- Leggings of Mortal Arrogance
@@ -3281,23 +3290,17 @@ data["NaxxramasWrath"] = {
                 { 16, 40631 }, -- Crown of the Lost Conqueror
                 { 17, 40632 }, -- Crown of the Lost Protector
                 { 18, 40633 }, -- Crown of the Lost Vanquisher
-                { 20, "ac575" },
-				{ 21, "ac1658" },
-				{ 22, "ac2185" },
+                { 20, "ac1658" },
+                { 22, "ac574" },
+                { 23, "ac2184" },
+                { 25, "ac575" },
+				{ 26, "ac2185" },
             },
 		},
 		{ -- NAXTrash
 			name = AL["Trash"],
 			ExtraList = true,
-			[RAID10_DIFF] = {
-                { 1, 39467 }, -- Minion Bracers
-                { 2, 39472 }, -- Chain of Latent Energies
-                { 3, 39470 }, -- Medallion of the Disgraced
-                { 4, 39427 }, -- Omen of Ruin
-                { 5, 39468 }, -- The Stray
-                { 6, 39473 }, -- Contortion
-            },
-            [RAID25_DIFF] = {
+            [NORMAL_DIFF] = {
                 { 1, 40410 }, -- Shadow of the Ghoul
                 { 2, 40409 }, -- Boots of the Escaped Captive
                 { 3, 40414 }, -- Shoulderguards of the Undaunted
@@ -3328,22 +3331,7 @@ data["TheEyeOfEternity"] = {
             Level = 999,
             --DisplayIDs = {{17386}},
             AtlasMapBossID = 1,
-            [RAID10_DIFF] = {
-                { 1, 40526 }, -- Gown of the Spell-Weaver
-                { 2, 40519 }, -- Footsteps of Malygos
-                { 3, 40511 }, -- Focusing Energy Epaulets
-                { 4, 40486 }, -- Necklace of the Glittering Chamber
-                { 5, 40474 }, -- Surge Needle Ring
-                { 6, 40491 }, -- Hailstorm
-                { 7, 40488 }, -- Ice Spire Scepter
-                { 8, 40489 }, -- Greatstaff of the Nexus
-                { 9, 40497 }, -- Black Ice
-                { 10, 40475 }, -- Barricade of Eternity
-                { 16, 43952 }, -- Reins of the Azure Drake
-                { 18, 44569 }, -- Key to the Focusing Iris
-                { 19, 44650 }, -- Heart of Magic
-            },
-            [RAID25_DIFF] = {
+            [NORMAL_DIFF] = {
                 { 1, 40562 }, -- Hood of Rationality
                 { 2, 40555 }, -- Mantle of Dissemination
                 { 3, 40194 }, -- Blanketing Robes of Snow
@@ -3388,20 +3376,7 @@ data["ObsidianSanctum"] = {
             Level = 999,
             --DisplayIDs = {{17386}},
             AtlasMapBossID = 4,
-            [RAID10_DIFF] = {
-                { 1, 40428 }, -- Titan's Outlook
-                { 2, 40427 }, -- Circle of Arcane Streams
-                { 3, 40426 }, -- Signet of the Accord
-                { 4, 40433 }, -- Wyrmrest Band
-                { 5, 40430 }, -- Majestic Dragon Figurine
-                { 6, 40429 }, -- Crimson Steel
-                { 16, 40613 }, -- Gloves of the Lost Conqueror
-                { 17, 40614 }, -- Gloves of the Lost Protector
-                { 18, 40615 }, -- Gloves of the Lost Vanquisher
-                { 20, 43345 }, -- Dragon Hide Bag
-                { 21, 43347 }, -- Satchel of Spoils
-            },
-            [RAID25_DIFF] = {
+            [NORMAL_DIFF] = {
                 { 1, 40437 }, -- Concealment Shoulderpads
                 { 2, 40439 }, -- Mantle of the Eternal Sentinel
                 { 3, 40451 }, -- Hyaline Helm of the Sniper
@@ -3425,23 +3400,7 @@ data["ObsidianSanctum"] = {
             Level = 999,
             --DisplayIDs = {{17386}},
             AtlasMapBossID = 1,
-            [RAID10_DIFF] = {
-                { 1, "INV_Box_01", nil, AL["One Drake Left"] },
-                { 2, 43988 }, -- Gale-Proof Cloak
-                { 3, 43990 }, -- Blade-Scarred Tunic
-                { 4, 43991 }, -- Legguards of Composure
-                { 5, 43989 }, -- Remembrance Girdle
-                { 6, 43992 }, -- Volitant Amulet
-                { 8, "INV_Box_01", nil, AL["Two Drakes Left"] },
-                { 9, 43995 }, -- Enamored Cowl
-                { 10, 43998 }, -- Chestguard of Flagrant Prowess
-                { 11, 43996 }, -- Sabatons of Firmament
-                { 12, 43994 }, -- Belabored Legplates
-                { 13, 43993 }, -- Greatring of Collision
-                { 16, "INV_Box_01", nil, AL["Three Drakes Left"] },
-                { 17, 43986 }, -- Reins of the Black Drake
-            },
-            [RAID25_DIFF] = {
+            [NORMAL_DIFF] = {
                 { 1, "INV_Box_01", nil, AL["One Drake Left"] },
                 { 2, 44002 }, -- The Sanctum's Flowing Vestments
                 { 3, 44003 }, -- Upstanding Spaulders

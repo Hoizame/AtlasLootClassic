@@ -9,6 +9,19 @@
 		mountID			= 123,
 	}
 ]]
+
+-- Functions
+local _G = getfenv(0)
+
+-- Libraries
+local assert, type, tonumber, tostring = assert, type, tonumber, tostring
+local next, pairs = next, pairs
+local str_sub, str_format, str_len, str_match = string.sub, string.format, string.len, string.match
+
+local UnitFactionGroup = UnitFactionGroup
+local CreateFrame = CreateFrame
+local CreateColor = CreateColor
+
 local ALName, ALPrivate = ...
 
 local AtlasLoot = _G.AtlasLoot
@@ -22,14 +35,6 @@ local AL = AtlasLoot.Locales
 
 local GetAlTooltip = AtlasLoot.Tooltip.GetTooltip
 local DEFAULT_BACKGROUND_COLOR = {0.82, 0.82, 0.82, 0.4}
-
--- lua
-local assert, type, tonumber, tostring = assert, type, tonumber, tostring
-local next, pairs = next, pairs
-local str_sub, str_format, str_len, str_match = string.sub, string.format, string.len, string.match
-
--- WoW
-local CreateFrame = CreateFrame
 
 -- UnitFactionGroup("player")		"Alliance", "Horde", "Neutral" or nil.
 -- :SetAtlas()
@@ -235,12 +240,13 @@ function Button:Create()
 	button.background:Hide()
 
 	-- highlight Background
-	button.highlightBg = button:CreateTexture(buttonName.."_highlightBg")
-	button.highlightBg:SetPoint("TOPLEFT", button, "TOPLEFT", 0, 0)
-	button.highlightBg:SetPoint("BOTTOMRIGHT", button, "BOTTOMRIGHT", -(button:GetWidth()/2), 0)
-	button.highlightBg:SetColorTexture(1,0,0)
-	button.highlightBg:SetGradientAlpha("HORIZONTAL", 1, 1, 1, 0.45, 1, 1, 1, 0)
-	button.highlightBg:Hide()
+	local highlightBg = button:CreateTexture(buttonName.."_highlightBg")
+	highlightBg:SetPoint("TOPLEFT", button, "TOPLEFT", 0, 0)
+	highlightBg:SetPoint("BOTTOMRIGHT", button, "BOTTOMRIGHT", -(button:GetWidth()/2), 0)
+	highlightBg:SetColorTexture(1,0,0)
+	highlightBg:SetGradient("HORIZONTAL", CreateColor(1, 1, 1, 0.45), CreateColor(1, 1, 1, 0))
+	highlightBg:Hide()
+	button.highlightBg = highlightBg
 
 	-- Icon <texture>
 	button.icon = button:CreateTexture(buttonName.."_icon")
@@ -347,20 +353,20 @@ function Button:Create()
 	button.secButton:RegisterForClicks("AnyDown")
 
 	-- secButtonTexture <texture>
-	button.secButton.icon = button.secButton:CreateTexture(buttonName.."_secButtonIcon", button.secButton)
+	button.secButton.icon = button.secButton:CreateTexture(buttonName.."_secButtonIcon")
 	button.secButton.icon:SetDrawLayer("ARTWORK", 0)
 	button.secButton.icon:SetAllPoints(button.secButton)
 	button.secButton.icon:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark")
 
 	--[[
-	button.secButton.qualityBorder = button.secButton:CreateTexture(buttonName.."_secButtonQualityBorder")
+	button.secButton.qualityBorder = button.secButton:CreateTexture(buttonName.."_secButtonQualityBorder", "ARTWORK")
 	button.secButton.qualityBorder:SetAllPoints(button.secButton)
 	button.secButton.qualityBorder:SetTexture("Interface\\Common\\WhiteIconFrame")
 	button.secButton.qualityBorder:Hide()
 	]]--
 
 	-- secButtonMini <texture>
-	button.secButton.mini = button.secButton:CreateTexture(buttonName.."_secButtonMini")
+	button.secButton.mini = button.secButton:CreateTexture(buttonName.."_secButtonMini", "ARTWORK")
 	button.secButton.mini:SetDrawLayer(button.secButton.icon:GetDrawLayer(), 1)
 	button.secButton.mini:SetPoint("TOPRIGHT", button.secButton.icon, "TOPRIGHT", 0, 0)
 	button.secButton.mini:SetHeight(13)
@@ -417,7 +423,7 @@ function Button:Create()
 	button.secButton.favourite:Hide()
 
 	-- factionIcon
-	button.factionIcon = button:CreateTexture(buttonName.."_factionIcon", button)
+	button.factionIcon = button:CreateTexture(buttonName.."_factionIcon", "ARTWORK")
 	button.factionIcon:SetPoint("RIGHT", button.secButton, "LEFT", -2, 0)
 	button.factionIcon:SetHeight(28)
 	button.factionIcon:SetWidth(28)
@@ -458,20 +464,20 @@ function Button:CreateSecOnly(frame)
 	button.secButton:RegisterForClicks("AnyDown")
 
 	-- secButtonTexture <texture>
-	button.secButton.icon = button.secButton:CreateTexture(buttonName.."_secButtonIcon", button.secButton)
+	button.secButton.icon = button.secButton:CreateTexture(buttonName.."_secButtonIcon", "ARTWORK")
 	button.secButton.icon:SetDrawLayer("ARTWORK", 0)
 	button.secButton.icon:SetAllPoints(button.secButton)
 	button.secButton.icon:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark")
 
 	--[[
-	button.secButton.qualityBorder = button.secButton:CreateTexture(buttonName.."_secButtonQualityBorder")
+	button.secButton.qualityBorder = button.secButton:CreateTexture(buttonName.."_secButtonQualityBorder", "ARTWORK")
 	button.secButton.qualityBorder:SetAllPoints(button.secButton)
 	button.secButton.qualityBorder:SetTexture("Interface\\Common\\WhiteIconFrame")
 	button.secButton.qualityBorder:Hide()
 	]]--
 
 	-- secButtonMini <texture>
-	button.secButton.mini = button.secButton:CreateTexture(buttonName.."_secButtonMini")
+	button.secButton.mini = button.secButton:CreateTexture(buttonName.."_secButtonMini", "ARTWORK")
 	button.secButton.mini:SetDrawLayer(button.secButton.icon:GetDrawLayer(), 1)
 	button.secButton.mini:SetPoint("TOPRIGHT", button.secButton.icon, "TOPRIGHT", 0, 0)
 	button.secButton.mini:SetHeight(13)
