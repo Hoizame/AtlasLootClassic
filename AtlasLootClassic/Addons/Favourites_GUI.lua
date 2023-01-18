@@ -341,7 +341,7 @@ local function Slot_CreateSlotButton(parFrame, slotID, modelFrame)
     frame:RegisterForClicks("AnyDown")
 
 	-- secButtonTexture <texture>
-	frame.icon = frame:CreateTexture(nil, frame)
+	frame.icon = frame:CreateTexture(nil)
 	frame.icon:SetAllPoints(frame)
 
 	-- secButtonOverlay <texture>
