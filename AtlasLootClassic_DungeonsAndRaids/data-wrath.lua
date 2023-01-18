@@ -854,7 +854,7 @@ data["DrakTharonKeep"] = {
                 { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
                 { 28, 39241 }, -- Dark Shroud of the Scourge
                 { 29, 39242 }, -- Robes of Hoarse Breaths
-                --{ 30, xxx }, -- xxx
+                { 30, 39245 }, -- Demise
             }
         },
         { -- DrakTharonKeepNovos / 22
@@ -1172,7 +1172,7 @@ data["HallsofLightning"] = {
                 { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
                 { 28, 39140 }, -- Knife of Incision
                 { 29, 39191 }, -- Splint-Bound Leggings
-                --{ 30, xxx }, -- xxx
+                { 30, 39188 }, -- Chivalric Chestguard
             }
         },
         { -- HallsofLightningIonar / 47
@@ -1513,7 +1513,7 @@ data["TheCullingOfStratholme"] = {
                 { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
                 { 28, 39235 }, -- Bone-Framed Bracers
                 { 29, 44658 }, -- Chain of the Ancient Wyrm
-                --{ 30, xxx }, -- xxx
+                { 30, 40475 }, -- Barricade of Eternity
             }
         },
         { -- CoTStratholmeInfiniteCorruptorHEROIC
@@ -2086,7 +2086,7 @@ data["UtgardeKeep"] = {
                 { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
                 { 28, 39309 }, -- Leggings of the Instructor
                 { 29, 39344 }, -- Slayer of the Lifeless
-                --{ 30, xxx }, -- xxx
+                { 30, 39369 }, -- Sabatons of Deathlike Gloom
             }
         },
         { -- UtgardeKeepIngvar / 4
