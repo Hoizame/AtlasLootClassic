@@ -58,7 +58,8 @@ data["AlchemyWrath"] = {
 				{ 2, 54213 },	-- Flask of Pure Mojo
 				{ 3, 53902 },	-- Flask of Stoneblood
 				{ 4, 53901 },	-- Flask of the Frost Wyrm
-				{ 5, 53899 },	-- Lesser Flask of Toughness
+				{ 5, 62213 },	-- Lesser Flask of Resistance
+				{ 6, 53899 },	-- Lesser Flask of Toughness
 			},
 		},
 		{
