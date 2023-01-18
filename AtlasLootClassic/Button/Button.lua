@@ -239,7 +239,7 @@ function Button:Create()
 	button.highlightBg:SetPoint("TOPLEFT", button, "TOPLEFT", 0, 0)
 	button.highlightBg:SetPoint("BOTTOMRIGHT", button, "BOTTOMRIGHT", -(button:GetWidth()/2), 0)
 	button.highlightBg:SetColorTexture(1,0,0)
-	button.highlightBg:SetGradientAlpha("HORIZONTAL", 1, 1, 1, 0.45, 1, 1, 1, 0)
+	button.highlightBg:SetGradient("HORIZONTAL", CreateColor(1, 1, 1, 0.45), CreateColor(1, 1, 1, 0))
 	button.highlightBg:Hide()
 
 	-- Icon <texture>
@@ -347,7 +347,7 @@ function Button:Create()
 	button.secButton:RegisterForClicks("AnyDown")
 
 	-- secButtonTexture <texture>
-	button.secButton.icon = button.secButton:CreateTexture(buttonName.."_secButtonIcon", button.secButton)
+	button.secButton.icon = button.secButton:CreateTexture(buttonName.."_secButtonIcon")
 	button.secButton.icon:SetDrawLayer("ARTWORK", 0)
 	button.secButton.icon:SetAllPoints(button.secButton)
 	button.secButton.icon:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark")
@@ -417,7 +417,7 @@ function Button:Create()
 	button.secButton.favourite:Hide()
 
 	-- factionIcon
-	button.factionIcon = button:CreateTexture(buttonName.."_factionIcon", button)
+	button.factionIcon = button:CreateTexture(buttonName.."_factionIcon")
 	button.factionIcon:SetPoint("RIGHT", button.secButton, "LEFT", -2, 0)
 	button.factionIcon:SetHeight(28)
 	button.factionIcon:SetWidth(28)
@@ -458,7 +458,7 @@ function Button:CreateSecOnly(frame)
 	button.secButton:RegisterForClicks("AnyDown")
 
 	-- secButtonTexture <texture>
-	button.secButton.icon = button.secButton:CreateTexture(buttonName.."_secButtonIcon", button.secButton)
+	button.secButton.icon = button.secButton:CreateTexture(buttonName.."_secButtonIcon")
 	button.secButton.icon:SetDrawLayer("ARTWORK", 0)
 	button.secButton.icon:SetAllPoints(button.secButton)
 	button.secButton.icon:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark")
