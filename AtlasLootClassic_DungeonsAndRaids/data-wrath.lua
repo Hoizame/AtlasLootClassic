@@ -694,10 +694,9 @@ data["AhnKahet"] = {
                 { 20, 40619 }, -- Leggings of the Lost Conqueror
                 { 21, 40620 }, -- Leggings of the Lost Protector
                 { 22, 40621 }, -- Leggings of the Lost Vanquisher
-                { 23, 40621 }, -- Leggings of the Lost Vanquisher
-                { 24, 40622 }, -- Spaulders of the Lost Conqueror
-                { 25, 40623 }, -- Spaulders of the Lost Protector
-                { 26, 40624 }, -- Spaulders of the Lost Vanquisher
+                { 23, 40622 }, -- Spaulders of the Lost Conqueror
+                { 24, 40623 }, -- Spaulders of the Lost Protector
+                { 25, 40624 }, -- Spaulders of the Lost Vanquisher
                 { 30, "ac1862" },
                 --{ 30, xxx }, -- xxx
             }
