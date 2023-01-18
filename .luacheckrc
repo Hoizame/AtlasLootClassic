@@ -103,6 +103,7 @@ globals = {
 	"LibStub",
 
 	-- FrameXML misc
+	"CreateColor",
 	"C_BattleNet",
 	"C_CurrencyInfo",
 	"C_ChatInfo",
