@@ -676,7 +676,7 @@ data["AhnKahet"] = {
                 { 3, 35614 }, -- Volazj's Sabatons
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 45624 }, -- Emblem of Conquest
                 { 3, 37622 }, -- Skirt of the Old Kingdom
                 { 4, 37623 }, -- Fiery Obelisk Handguards
                 { 5, 37620 }, -- Bracers of the Herald
@@ -685,12 +685,20 @@ data["AhnKahet"] = {
                 { 8, 37618 }, -- Greaves of Ancient Evil
                 { 9, 37617 }, -- Staff of Sinister Claws
                 { 10, 37615 }, -- Titanium Compound Bow
-                { 16, 43102 }, -- Frozen Orb
-                { 18, 41790 }, -- Design: Precise Scarlet Ruby
-				{ 20, "ac1862" },
-                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
-                { 28, 39417 }, -- Death's Bite
-                { 29, 43998 }, -- Chestguard of Flagrant Prowess
+                { 14, 41790 }, -- Design: Precise Scarlet Ruby
+                { 15, 43102 }, -- Frozen Orb
+                { 16, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 17, 39417 }, -- Death's Bite
+                { 18, 43998 }, -- Chestguard of Flagrant Prowess
+                { 19, 40486 }, -- Necklace of the Glittering Chamber
+                { 20, 40619 }, -- Leggings of the Lost Conqueror
+                { 21, 40620 }, -- Leggings of the Lost Protector
+                { 22, 40621 }, -- Leggings of the Lost Vanquisher
+                { 23, 40621 }, -- Leggings of the Lost Vanquisher
+                { 24, 40622 }, -- Spaulders of the Lost Conqueror
+                { 25, 40623 }, -- Spaulders of the Lost Protector
+                { 26, 40624 }, -- Spaulders of the Lost Vanquisher
+                { 30, "ac1862" },
                 --{ 30, xxx }, -- xxx
             }
         },
