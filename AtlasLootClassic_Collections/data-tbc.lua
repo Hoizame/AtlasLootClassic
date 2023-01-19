@@ -714,9 +714,8 @@ data["CompanionsBC"] = {
 			[NORMAL_DIFF] = {
 				{ 1, 33993 }, -- Mojo
 				{ 3, 35504 }, -- Phoenix Hatchling
-				{ 5, 34955 }, -- Scorched Stone
-				{ 7, 34535 }, -- Azure Whelpling
-				{ 8, 29960 }, -- Captured Firefly
+				{ 5, 34535 }, -- Azure Whelpling
+				{ 6, 29960 }, -- Captured Firefly
 			},
 		},
 		{
@@ -746,8 +745,9 @@ data["CompanionsBC"] = {
 			name = AL["World Events"],
 			[NORMAL_DIFF] = {
 				{ 1, 34425 }, -- Clockwork Rocket Bot
-				{ 3, 33154 }, -- Sinister Squashling
+				{ 3, 34955 }, -- Scorched Stone
 				{ 5, 32233 }, -- Wolpertinger's Tankard
+				{ 7, 33154 }, -- Sinister Squashling
 				{ 16, 32617 }, -- Sleepy Willy
 				{ 17, 32622 }, -- Elekk Training Collar
 				{ 18, 32616 }, -- Egbert's Egg
@@ -760,6 +760,7 @@ data["CompanionsBC"] = {
 				{ 2, 33818 }, -- Muckbreath's Bucket
 				{ 3, 35349 }, -- Snarly's Bucket
 				{ 4, 33816 }, -- Toothy's Bucket
+				{ 6, 27445 }, -- Magical Crawdad Box
 			},
 		},
 		{ -- Unobtainable
@@ -773,13 +774,12 @@ data["CompanionsBC"] = {
 				{ 7, 34518 }, -- Golden Pig Coin
 				{ 8, 32498 }, -- Fortune Coin
 				{ 9, 32465 }, -- Fortune Coin
-				{ 16, 27445 }, -- Magical Crawdad Box
-				{ 17, 31665 }, -- Toy RC Mortar Tank
-				{ 19, 37297 }, -- Gold Medallion
-				{ 20, 37298 }, -- Competitor's Souvenir
-				{ 22, 39656 }, -- Tyrael's Hilt
-				{ 24, 25535 }, -- Netherwhelp's Collar
-				{ 25, 30360 }, -- Lurky's Egg
+			    { 16, 31665 }, -- Toy RC Mortar Tank
+				{ 18, 37297 }, -- Gold Medallion
+				{ 19, 37298 }, -- Competitor's Souvenir
+				{ 21, 39656 }, -- Tyrael's Hilt
+				{ 23, 25535 }, -- Netherwhelp's Collar
+				{ 24, 30360 }, -- Lurky's Egg
 			},
 		},
 	},
@@ -938,6 +938,75 @@ data["MidsummerFestivalBC"] = {
                 { 22, 35498 }, -- Formula: Enchant Weapon - Deathfrost
                 { 24, 34955 }, -- Scorched Stone
                 { 25, 35557 }, -- Huge Snowball
+			},
+		},
+	},
+}
+
+data["Brewfest"] = {
+	name = AL["Brewfest"],
+	ContentType = WORLD_EVENT_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = NORMAL_ITTYPE,
+	gameVersion = AtlasLoot.BC_VERSION_NUM,
+	items = {
+		{ -- Brewfest
+			name = AL["Brewfest"],
+			[NORMAL_DIFF] = {
+				{ 1,  33968 }, -- Blue Brewfest Hat
+				{ 2,  33864 }, -- Brown Brewfest Hat
+				{ 3,  33967 }, -- Green Brewfest Hat
+				{ 4,  33969 }, -- Purple Brewfest Hat
+				{ 5,  33863 }, -- Brewfest Dress
+				{ 6,  33862 }, -- Brewfest Regalia
+				{ 7,  33966 }, -- Brewfest Slippers
+				{ 8,  33868 }, -- Brewfest Boots
+				{ 10,  33047 }, -- Belbi's Eyesight Enhancing Romance Goggles (Alliance)
+				{ 11,  34008 }, -- Blix's Eyesight Enhancing Romance Goggles (Horde)
+				{ 13,  33016 }, -- Blue Brewfest Stein
+				{ 15,  37829 }, -- Brewfest Prize Token
+				{ 16,  33976 }, -- Brewfest Ram
+				{ 17,  33977 }, -- Swift Brewfest Ram
+				{ 19,  32233 }, -- Wolpertinger's Tankard
+				{ 21,  34028 }, -- "Honorary Brewer" Hand Stamp
+				{ 22,  37599 }, -- "Brew of the Month" Club Membership Form
+				{ 24,  33927 }, -- Brewfest Pony Keg
+				{ 26,  37750 }, -- Fresh Brewfest Hops
+				{ 27,  39477 }, -- Fresh Dwarven Brewfest Hops
+				{ 28,  39476 }, -- Fresh Goblin Brewfest Hops
+				{ 29,  37816 }, -- Preserved Brewfest Hops
+			},
+		},
+		{
+			name = AL["Food"],
+			[NORMAL_DIFF] = {
+				{ 1,  33043 }, -- The Essential Brewfest Pretzel
+				{ 3,  34017 }, -- Small Step Brew
+				{ 4,  34018 }, -- long Stride Brew
+				{ 5,  34019 }, -- Path of Brew
+				{ 6,  34020 }, -- Jungle River Water
+				{ 7,  34021 }, -- Brewdoo Magic
+				{ 8,  34022 }, -- Stout Shrunken Head
+				{ 9,  33034 }, -- Gordok Grog
+				{ 10,  33035 }, -- Ogre Mead
+				{ 11,  33036 }, -- Mudder's Milk
+
+			},
+		},
+		{
+			name = C_Map_GetAreaInfo(1584).." - "..AL["Coren Direbrew"],
+			[NORMAL_DIFF] = {
+				{ 1,  37128 }, -- Balebrew Charm
+				{ 2,  37127 }, -- Brightbrew Charm
+				{ 3,  38287 }, -- Empty Mug of Direbrew
+				{ 4,  38290 }, -- Dark Iron Smoking Pipe
+				{ 5,  38288 }, -- Direbrew Hops
+				{ 6,  38289 }, -- Coren's Lucky Coin
+				{ 8,  37597 }, -- Direbrew's Shanker
+				{ 16,  33977 }, -- Swift Brewfest Ram
+				{ 17,  37828 }, -- Great Brewfest Kodo
+				{ 19,  37863 }, -- Direbrew's Remote
+				{ 21,  38280 }, -- Direbrew's Dire Brew
 			},
 		},
 	},
