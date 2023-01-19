@@ -826,7 +826,7 @@ function Favourites:GetFavouriteListText(listName, itemCount)
 end
 
 function Favourites:GetFavouriteItemText(itemId, listId)
-    local listData = self.db.lists[listId]
+    local listData = self.db.lists[listId] or self.globalDb.lists[listId]
     local obsolete = self:IsItemEquippedOrObsolete(itemId, listId)
     local text = ""
     if obsolete then
