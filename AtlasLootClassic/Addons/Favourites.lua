@@ -666,6 +666,12 @@ function Favourites:SetItemNote(itemID, note, list, listID)
     if not list.notes then
         list.notes = {}
     end
+
+    --Remove note if its an empty string
+    if note == "" then
+        note = nil
+    end
+
     list.notes[tonumber(itemID)] = note
     -- Refresh cache
     ListNoteCache = {}
