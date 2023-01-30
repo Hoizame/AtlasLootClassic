@@ -27,7 +27,7 @@ local BASE_NAME_P, BASE_NAME_G, LIST_BASE_NAME = "ProfileBase", "GlobalBase", "L
 local NEW_LIST_ID_PATTERN = "%s%s"
 local TEXT_WITH_TEXTURE = "|T%s:0|t %s"
 local ATLAS_ICON_IDENTIFIER = "#"
-local IMPORT_EXPORT_DELIMITER, IMPORT_PATTERN, EXPORT_PATTERN = ",", "(%w+):(%d+)(:?([^,]+))", "%s:%d:%s"
+local IMPORT_EXPORT_DELIMITER, IMPORT_PATTERN, EXPORT_PATTERN = ",", "(%w+):(%d+)(:?([^,]*))", "%s:%d:%s"
 local STD_ICON, STD_ICON2
 local KEY_WEAK_MT = {__mode="k"}
 
@@ -717,6 +717,12 @@ function Favourites:SetItemNote(itemID, note, list, listID)
     if not list.notes then
         list.notes = {}
     end
+
+    --Remove note if its an empty string
+    if note == "" then
+        note = nil
+    end
+
     list.notes[tonumber(itemID)] = note
     -- Refresh cache
     ListNoteCache = {}
@@ -1113,7 +1119,7 @@ function Favourites:ExportItemList(listID, isGlobalList)
     local ret = {}
     for entry in pairs(list) do
         if strsub(entry, 1, 2) ~= "__" then
-            local exportString = format(EXPORT_PATTERN, "i", entry, list.notes[entry] or "")
+            local exportString = format(EXPORT_PATTERN, "i", entry, list.notes and list.notes[entry] or "")
             if strsub(exportString, -1) == ":" then
                 -- Remove tailing ":" if no note is supplied
                 exportString = strsub(exportString, 1, -2)
@@ -1140,7 +1146,7 @@ function Favourites:ImportItemList(listID, isGlobalList, newList, replace)
                 entry = tonumber(entry)
                 if eType == "i" and not list[entry] and ItemExist(entry) then
                     list[entry] = true
-                    if note then
+                    if note and note ~= "" then
                         local noteLC = strlower(note)
                         list.notes[tonumber(entry)] = note
                         if strmatch(noteLC, "bis") or strmatch(noteLC, "best") then
