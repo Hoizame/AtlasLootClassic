@@ -603,6 +603,7 @@ data["TheSonsofHodir"] = {
 				{ 7, 44132 },	-- Lesser Inscription of the Pinnacle
 				{ 8, 44129 },	-- Lesser Inscription of the Storm
 				{ 17, 44510 },	-- Pattern: Mammoth Mining Bag (p7 415)
+				{ 18, 44137 },	-- Arcanum of the Frosty Soul
 			},
 		},
 	},
