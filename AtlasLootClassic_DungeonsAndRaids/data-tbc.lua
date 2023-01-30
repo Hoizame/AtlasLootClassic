@@ -1180,7 +1180,7 @@ data["TheSlavePens"] = {
         AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM, { -- CFRSlaveAhune
             name = AL["Ahune <The Frost Lord>"],
             npcID = 25740,
-            Level = 83,
+            Level = 82,
             DisplayIDs = {{23344}},
             ExtraList = true,
             [NORMAL_DIFF] = {
@@ -1193,42 +1193,9 @@ data["TheSlavePens"] = {
                 { 8, 35723 }, -- Shards of Ahune
                 { 16, 35498 }, -- Formula: Enchant Weapon - Deathfrost
                 { 18, 34955 }, -- Scorched Stone
-                { 19, 35557 }, -- Huge Snowball
+                { 19, 53641 }, --  Ice Chip
+                { 21, 35557 }, -- Huge Snowball
             },
-        }),
-        AtlasLoot:GameVersion_EQ(AtlasLoot.WRATH_VERSION_NUM, { -- CFRSlaveAhune
-            name = AL["Ahune <The Frost Lord>"],
-            npcID = 25740,
-            Level = 73,
-            DisplayIDs = {{23344}},
-            ExtraList = true,
-            [NORMAL_DIFF] = {
-                { 1, 35514 }, -- Frostscythe of Lord Ahune
-                { 2, 35494 }, -- Shroud of Winter's Chill
-                { 3, 35495 }, -- The Frost Lord's War Cloak
-                { 4, 35496 }, -- Icebound Cloak
-                { 5, 35497 }, -- Cloak of the Frigid Winds
-                { 7, 35723 }, -- Shards of Ahune
-                { 16, 35498 }, -- Formula: Enchant Weapon - Deathfrost
-                { 18, 34955 }, -- Scorched Stone
-                { 19, 35557 }, -- Huge Snowball
-            },
-            [HEROIC_DIFF] = {
-                { 1, 29434 }, -- Badge of Justice
-                { 2, 35507 }, -- Amulet of Bitter Hatred
-                { 3, 35508 }, -- Choker of the Arctic Flow
-                { 4, 35509 }, -- Amulet of Glacial Tranquility
-                { 5, 35511 }, -- Hailstone Pendant
-                { 7, 35514 }, -- Frostscythe of Lord Ahune
-                { 8, 35494 }, -- Shroud of Winter's Chill
-                { 9, 35495 }, -- The Frost Lord's War Cloak
-                { 10, 35496 }, -- Icebound Cloak
-                { 11, 35497 }, -- Cloak of the Frigid Winds
-                { 13, 35723 }, -- Shards of Ahune
-                { 22, 35498 }, -- Formula: Enchant Weapon - Deathfrost
-                { 24, 34955 }, -- Scorched Stone
-                { 25, 35557 }, -- Huge Snowball
-            }
         }),
         KEYS
     }
