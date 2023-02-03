@@ -613,7 +613,7 @@ data["AhnKahet"] = {
                 { 6, 37595 }, -- Necklace of Taldaram
                 { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
                 { 28, 39251 }, -- Necrogenic Belt
-                --{ 29, xxx }, -- xxx
+                { 29, 39247 }, -- Cuffs of Dark Shadows
                 --{ 30, xxx }, -- xxx
             }
         },
@@ -659,7 +659,7 @@ data["AhnKahet"] = {
                 { 18, "ac2056" },
                 { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
                 { 28, 39258 }, -- Legplates of Inescapable Death
-                --{ 29, xxx }, -- xxx
+                { 29, 39246 }, -- Amulet of Autopsy
                 --{ 30, xxx }, -- xxx
             }
         },
@@ -861,7 +861,7 @@ data["DrakTharonKeep"] = {
                 { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
                 { 28, 39241 }, -- Dark Shroud of the Scourge
                 { 29, 39242 }, -- Robes of Hoarse Breaths
-                --{ 30, xxx }, -- xxx
+                { 30, 39245 }, -- Demise
             }
         },
         { -- DrakTharonKeepNovos / 22
@@ -1045,7 +1045,7 @@ data["Gundrak"] = {
                 { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
                 { 28, 39221 }, -- Wraith Spear
                 { 29, 39228 }, -- Web Cocoon Grips
-                --{ 30, xxx }, -- xxx
+                { 30, 39232 }, -- Pendant of Lost Vocations
             }
         },
         { -- GundrakEckHEROIC / 37
@@ -1063,7 +1063,7 @@ data["Gundrak"] = {
                 { 6, 43310 }, -- Engraved Chestplate of Eck
                 { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
                 { 28, 39226 }, -- Maexxna's Femur
-                --{ 29, xxx }, -- xxx
+                { 29, 39217 }, -- Avenging Combat Leggings
                 --{ 30, xxx }, -- xxx
             }
         },
@@ -1094,8 +1094,8 @@ data["Gundrak"] = {
 				{ 19, "ac1864" },
                 { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
                 { 28, 44660 }, -- Drakescale Collar
-                --{ 29, xxx }, -- xxx
-                --{ 30, xxx }, -- xxx
+                { 29, 40491 }, -- Hailstorm
+                { 30, 39283 }, -- Putrescent Bands
             }
         },
         { -- Trash
@@ -1179,7 +1179,7 @@ data["HallsofLightning"] = {
                 { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
                 { 28, 39140 }, -- Knife of Incision
                 { 29, 39191 }, -- Splint-Bound Leggings
-                --{ 30, xxx }, -- xxx
+                { 30, 39188 }, -- Chivalric Chestguard
             }
         },
         { -- HallsofLightningIonar / 47
@@ -1296,8 +1296,8 @@ data["HallsofStone"] = {
                 { 5, 37651 }, -- The Prospector's Prize
                 { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
                 { 28, 39198 }, -- Frostblight Pauldrons
-                --{ 29, xxx }, -- xxx
-                --{ 30, xxx }, -- xxx
+                { 29, 39195 }, -- Bracers of Lost Sentiments
+                { 30, 39199 }, -- Watchful Eye
             }
         },
         { -- HallsofStoneMaiden / 40
@@ -1321,8 +1321,8 @@ data["HallsofStone"] = {
                 { 16, "ac1866" },
                 { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
                 { 28, 39215 }, -- Boots of the Follower
-                --{ 29, xxx }, -- xxx
-                --{ 30, xxx }, -- xxx
+                { 29, 39216 }, -- Sash of Mortal Desire
+                { 30, 39196 }, -- Boots of the Worshiper
             }
         },
         { -- HallsofStoneTribunal / 42
@@ -1346,7 +1346,7 @@ data["HallsofStone"] = {
                 { 16, "ac2154" },
                 { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
                 { 28, 39200 }, -- Grieving Spellblade
-                --{ 29, xxx }, -- xxx
+                { 29, 39197 }, -- Gauntlets of the Master
                 --{ 30, xxx }, -- xxx
             }
         },
@@ -1377,8 +1377,8 @@ data["HallsofStone"] = {
                 { 20, "ac2155" },
                 { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
                 { 28, 43993 }, -- Greatring of Collision
-                --{ 29, xxx }, -- xxx
-                --{ 30, xxx }, -- xxx
+                { 29, 40489 }, -- Greatstaff of the Nexus
+                { 30, 44659 }, -- Pendant of the Dragonsworn
             }
         },
         { -- Trash
@@ -1520,7 +1520,7 @@ data["TheCullingOfStratholme"] = {
                 { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
                 { 28, 39235 }, -- Bone-Framed Bracers
                 { 29, 44658 }, -- Chain of the Ancient Wyrm
-                --{ 30, xxx }, -- xxx
+                { 30, 40475 }, -- Barricade of Eternity
             }
         },
         { -- CoTStratholmeInfiniteCorruptorHEROIC
@@ -1877,7 +1877,7 @@ data["VioletHold"] = {
                 { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
                 { 28, 39275 }, -- Contagion Gloves
                 { 29, 39281 }, -- Infection Repulser
-                --{ 30, xxx }, -- xxx
+                { 30, 39293 }, -- Blackened Legplates of Feugen
             }
         },
         { -- VioletHoldZuramat / 27
@@ -1896,7 +1896,7 @@ data["VioletHold"] = {
                 { 4, 43402 }, -- The Obliterator Greaves
                 { 5, 43404 }, -- Zuramat's Necklace
                 { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
-                --{ 28, xxx }, -- xxx
+                { 28, 39276 }, -- The Skull of Ruin
                 --{ 29, xxx }, -- xxx
                 --{ 30, xxx }, -- xxx
             }
@@ -1959,7 +1959,7 @@ data["VioletHold"] = {
                 { 4, 43408 }, -- Solitare of Reflecting Beams
                 { 5, 43409 }, -- Saliva Corroded Pike
                 { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
-                --{ 28, xxx }, -- xxx
+                { 28, 39280 }, -- Leggings of Innumerable Barbs
                 --{ 29, xxx }, -- xxx
                 --{ 30, xxx }, -- xxx
             }
@@ -1980,7 +1980,7 @@ data["VioletHold"] = {
                 { 4, 37872 }, -- Lavanthor's Talisman
                 { 5, 37871 }, -- The Key
                 { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
-                --{ 28, xxx }, -- xxx
+                { 28, 39271 }, -- Blade of Dormant Memories
                 --{ 29, xxx }, -- xxx
                 --{ 30, xxx }, -- xxx
             }
@@ -2008,10 +2008,11 @@ data["VioletHold"] = {
                 { 10, 37873 }, -- Mark of the War Prisoner
                 { 16, 43102 }, -- Frozen Orb
                 { 18, 41791 }, -- Design: Thick Autumn's Glow
-                { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
-                { 28, 39426 }, -- Wand of the Archlich
+                { 26, "INV_Box_01", nil, AL["Titan Rune"], nil },
+                { 27, 39426 }, -- Wand of the Archlich
+                { 28, 39420 }, -- Anarchy
                 { 29, 40511 }, -- Focusing Energy Epaulets
-                --{ 30, xxx }, -- xxx
+                { 30, 39291 }, -- Torment of the Banished
             }
         },
         { -- Trash
@@ -2092,7 +2093,7 @@ data["UtgardeKeep"] = {
                 { 27, "INV_Box_01", nil, AL["Titan Rune"], nil },
                 { 28, 39309 }, -- Leggings of the Instructor
                 { 29, 39344 }, -- Slayer of the Lifeless
-                --{ 30, xxx }, -- xxx
+                { 30, 39369 }, -- Sabatons of Deathlike Gloom
             }
         },
         { -- UtgardeKeepIngvar / 4

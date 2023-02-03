@@ -58,7 +58,8 @@ data["AlchemyWrath"] = {
 				{ 2, 54213 },	-- Flask of Pure Mojo
 				{ 3, 53902 },	-- Flask of Stoneblood
 				{ 4, 53901 },	-- Flask of the Frost Wyrm
-				{ 5, 53899 },	-- Lesser Flask of Toughness
+				{ 5, 62213 },	-- Lesser Flask of Resistance
+				{ 6, 53899 },	-- Lesser Flask of Toughness
 			},
 		},
 		{
@@ -259,13 +260,14 @@ data["BlacksmithingWrath"] = {
 				{ 1, [ATLASLOOT_IT_ALLIANCE] = { 67091 }, [ATLASLOOT_IT_HORDE] = { 67130 } },	-- Breastplate of the White Knight
 				{ 2, [ATLASLOOT_IT_ALLIANCE] = { 67095 }, [ATLASLOOT_IT_HORDE] = { 67134 } },	-- Sunforged Breastplate
 				{ 3, [ATLASLOOT_IT_ALLIANCE] = { 67094 }, [ATLASLOOT_IT_HORDE] = { 67133 } },	-- Titanium Spikeguards
-				{ 4, 55311 },	-- Savage Saronite Hauberk
-				{ 5, 55058 },	-- Brilliant Saronite Breastplate
-				{ 6, 55186 },	-- Chestplate of Conquest
-				{ 7, 54553 },	-- Tempered Saronite Breastplate
-				{ 8, 54944 },	-- Spiked Cobalt Chestpiece
-				{ 9, 54981 },	-- Reinforced Cobalt Chestpiece
-				{ 10, 52570 },	-- Cobalt Chestpiece
+				{ 4, 61008 },	-- Icebane Chestguard
+				{ 5, 55311 },	-- Savage Saronite Hauberk
+				{ 6, 55058 },	-- Brilliant Saronite Breastplate
+				{ 7, 55186 },	-- Chestplate of Conquest
+				{ 8, 54553 },	-- Tempered Saronite Breastplate
+				{ 9, 54944 },	-- Spiked Cobalt Chestpiece
+				{ 10, 54981 },	-- Reinforced Cobalt Chestpiece
+				{ 11, 52570 },	-- Cobalt Chestpiece
 			},
 		},
 		{ -- Feet
@@ -802,8 +804,9 @@ data["LeatherworkingWrath"] = {
 			name = AL["Armor"].." - "..ALIL["Cloak"],
 			[NORMAL_DIFF] = {
 				{ 1, 60637 },	-- Ice Striker's Cloak
-				{ 2, 55199 },	-- Cloak of Tormented Skies
-				{ 3, 60631 },	-- Cloak of Harsh Winds
+		    	{ 2, 60640 },	-- Durable Nerubhide Cape
+				{ 3, 55199 },	-- Cloak of Tormented Skies
+				{ 4, 60631 },	-- Cloak of Harsh Winds
 			}
 		},
 		{ -- Chest

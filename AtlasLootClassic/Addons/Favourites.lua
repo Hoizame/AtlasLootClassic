@@ -27,7 +27,7 @@ local BASE_NAME_P, BASE_NAME_G, LIST_BASE_NAME = "ProfileBase", "GlobalBase", "L
 local NEW_LIST_ID_PATTERN = "%s%s"
 local TEXT_WITH_TEXTURE = "|T%s:0|t %s"
 local ATLAS_ICON_IDENTIFIER = "#"
-local IMPORT_EXPORT_DELIMITER, IMPORT_PATTERN, EXPORT_PATTERN = ",", "(%w+):(%d+)(:?([^,]+))", "%s:%d:%s"
+local IMPORT_EXPORT_DELIMITER, IMPORT_PATTERN, EXPORT_PATTERN = ",", "(%w+):(%d+)(:?([^,]*))", "%s:%d:%s"
 local STD_ICON, STD_ICON2
 local KEY_WEAK_MT = {__mode="k"}
 
@@ -108,6 +108,57 @@ Favourites.IconList = {
     ICONS_PATH.."worldquest-tracker-questmarker",
 }
 STD_ICON, STD_ICON2 = Favourites.IconList[1], Favourites.IconList[2]
+
+local EXTRA_ICONS = {
+    "Interface\\Icons\\spell_deathknight_classicon", -- Death knight classIcon iconId = 135771;
+    "Interface\\Icons\\spell_deathknight_bloodpresence", -- Death knight Blood tank iconId = 135770;
+    "Interface\\Icons\\spell_deathknight_frostpresence", -- Death knight Frost iconId = 135773;
+    "Interface\\Icons\\spell_deathknight_unholypresence", -- Death knight Unholy iconId = 135775;
+    "Interface\\Icons\\classicon_druid", -- Druid classIcon iconId = 625999;
+    "Interface\\Icons\\spell_nature_starfall", -- Druid Balance iconId = 136096;
+    "Interface\\Icons\\ability_racial_bearform", -- Druid Feral tank iconId = 132276;
+    "Interface\\Icons\\ability_druid_catform", -- Druid Feral dps iconId = 132115;
+    "Interface\\Icons\\spell_nature_healingtouch", -- Druid Restoration iconId = 136041;
+    "Interface\\Icons\\classicon_hunter", -- Hunter classIcon iconId = 626000;
+    "Interface\\Icons\\ability_hunter_beasttaming", -- Hunter Beast mastery iconId = 132164;
+    "Interface\\Icons\\ability_marksmanship", -- Hunter Marksmanship iconId = 132222;
+    "Interface\\Icons\\ability_hunter_swiftstrike", -- Hunter Survival iconId = 132215;
+    "Interface\\Icons\\classicon_mage", -- Mage classIcon iconId = 626001;
+    "Interface\\Icons\\spell_holy_magicalsentry", -- Mage Arcane iconId = 135932;
+    "Interface\\Icons\\spell_fire_firebolt02", -- Mage Fire iconId = 135810;
+    "Interface\\Icons\\ability_mage_frostfirebolt", -- Mage Fire FFB iconId = 236217;
+    "Interface\\Icons\\spell_frost_frostbolt02", -- Mage Frost iconId = 135846;
+    "Interface\\Icons\\classicon_paladin", -- Paladin classIcon iconId = 626003;
+    "Interface\\Icons\\spell_holy_holybolt", -- Paladin Holy iconId = 135920;
+    "Interface\\Icons\\spell_holy_devotionaura", -- Paladin Protection iconId = 135893;
+    "Interface\\Icons\\spell_holy_auraoflight", -- Paladin Retribution iconId = 135873;
+    "Interface\\Icons\\classicon_priest", -- Priest classIcon iconId = 626004;
+    "Interface\\Icons\\spell_holy_wordfortitude", -- Priest Discipline iconId = 135987;
+    "Interface\\Icons\\spell_holy_renew", -- Priest Holy iconId = 135953;
+    "Interface\\Icons\\spell_shadow_shadowwordpain", -- Priest Shadow iconId = 136207;
+    "Interface\\Icons\\classicon_rogue", -- Rogue classIcon iconId = 626005;
+    "Interface\\Icons\\ability_rogue_eviscerate", -- Rogue Assassination iconId = 132292;
+    "Interface\\Icons\\ability_backstab", -- Rogue Combat iconId = 132090;
+    "Interface\\Icons\\ability_stealth", -- Rogue Subtlety iconId = 132320;
+    "Interface\\Icons\\classicon_shaman", -- Shaman classIcon iconId = 626006;
+    "Interface\\Icons\\spell_nature_lightning", -- Shaman Elemental iconId = 136048;
+    "Interface\\Icons\\spell_nature_lightningshield", -- Shaman Enhancement iconId = 136051;
+    "Interface\\Icons\\spell_nature_magicimmunity", -- Shaman Restoration iconId = 136052;
+    "Interface\\Icons\\classicon_warlock", -- Warlock classIcon iconId = 626007;
+    "Interface\\Icons\\spell_shadow_deathcoil", -- Warlock Affliction iconId = 136145;
+    "Interface\\Icons\\spell_shadow_metamorphosis", -- Warlock Demonology iconId = 136172;
+    "Interface\\Icons\\spell_shadow_rainoffire", -- Warlock Destruction iconId = 136186;
+    "Interface\\Icons\\spell_shadow_rainoffire", -- Warlock Destruction fire iconId = 136186;
+    "Interface\\Icons\\classicon_warrior", -- Warrior classIcon iconId = 626008;
+    "Interface\\Icons\\ability_rogue_eviscerate", -- Warrior Arms iconId = 132292;
+    "Interface\\Icons\\ability_warrior_innerrage", -- Warrior Fury iconId = 132347;
+    "Interface\\Icons\\inv_shield_06", -- Warrior Protection iconId = 134952;
+}
+
+-- Add an extra icons to IconList
+for _, path in ipairs(EXTRA_ICONS) do
+    table.insert(Favourites.IconList, path)
+end
 
 local function AddItemsInfoFavouritesSub(items, activeSub, isGlobal)
     if items and activeSub then
@@ -666,6 +717,12 @@ function Favourites:SetItemNote(itemID, note, list, listID)
     if not list.notes then
         list.notes = {}
     end
+
+    --Remove note if its an empty string
+    if note == "" then
+        note = nil
+    end
+
     list.notes[tonumber(itemID)] = note
     -- Refresh cache
     ListNoteCache = {}
@@ -826,7 +883,7 @@ function Favourites:GetFavouriteListText(listName, itemCount)
 end
 
 function Favourites:GetFavouriteItemText(itemId, listId)
-    local listData = self.db.lists[listId]
+    local listData = self.db.lists[listId] or self.globalDb.lists[listId]
     local obsolete = self:IsItemEquippedOrObsolete(itemId, listId)
     local text = ""
     if obsolete then
@@ -1062,7 +1119,7 @@ function Favourites:ExportItemList(listID, isGlobalList)
     local ret = {}
     for entry in pairs(list) do
         if strsub(entry, 1, 2) ~= "__" then
-            local exportString = format(EXPORT_PATTERN, "i", entry, list.notes[entry] or "")
+            local exportString = format(EXPORT_PATTERN, "i", entry, list.notes and list.notes[entry] or "")
             if strsub(exportString, -1) == ":" then
                 -- Remove tailing ":" if no note is supplied
                 exportString = strsub(exportString, 1, -2)
@@ -1089,7 +1146,7 @@ function Favourites:ImportItemList(listID, isGlobalList, newList, replace)
                 entry = tonumber(entry)
                 if eType == "i" and not list[entry] and ItemExist(entry) then
                     list[entry] = true
-                    if note then
+                    if note and note ~= "" then
                         local noteLC = strlower(note)
                         list.notes[tonumber(entry)] = note
                         if strmatch(noteLC, "bis") or strmatch(noteLC, "best") then
