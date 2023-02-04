@@ -971,7 +971,7 @@ data["Companions"] = {
 			name = AL["Quest"],
 			[NORMAL_DIFF] = {
 				{ 1, 12264 }, -- Worg Carrier
-		    	{ 2, 11474 }, -- Sprite Darter Egg
+				{ 2, 11474 }, -- Sprite Darter Egg
 				{ 3, 12529 }, -- Smolderweb Carrier
 				{ 4, 10398 }, -- Mechanical Chicken
 			},

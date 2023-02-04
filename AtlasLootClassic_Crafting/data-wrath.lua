@@ -804,7 +804,7 @@ data["LeatherworkingWrath"] = {
 			name = AL["Armor"].." - "..ALIL["Cloak"],
 			[NORMAL_DIFF] = {
 				{ 1, 60637 },	-- Ice Striker's Cloak
-		    	{ 2, 60640 },	-- Durable Nerubhide Cape
+				{ 2, 60640 },	-- Durable Nerubhide Cape
 				{ 3, 55199 },	-- Cloak of Tormented Skies
 				{ 4, 60631 },	-- Cloak of Harsh Winds
 			}

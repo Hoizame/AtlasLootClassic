@@ -781,7 +781,7 @@ data["CompanionsWrath"] = {
 		{
 			name = AL["World Events"],
 			[NORMAL_DIFF] = {
-		    	{ 1, 50446 }, -- Toxic Wasteling
+				{ 1, 50446 }, -- Toxic Wasteling
 				{ 3, 44794 }, --  Spring Rabbit's Foot
 				{ 5, 53641 }, --  Ice Chip
 				{ 7, 46707 }, --  Pint-Sized Pink Pachyderm
@@ -833,7 +833,7 @@ data["CompanionsWrath"] = {
 			[NORMAL_DIFF] = {
 				{ 1, 39286 }, --  Frosty's Collar
 				{ 3, 38658 }, -- Vampiric Batling
-		    	{ 5, 49663 }, -- Wind Rider Cub / Shop
+				{ 5, 49663 }, -- Wind Rider Cub / Shop
 				{ 6, 54847 }, -- Lil' XT / Shop
 				{ 7, 49693 }, --  Lil' Phylactery / Shop
 				{ 8, 49665 }, --  Pandaren Monk / Shop

@@ -2987,7 +2987,7 @@ data["BlackrockDepths"] = {
 			Level = 82,
 			ExtraList = true,
 			[NORMAL_DIFF] = {
-	    		{ 1,  49116 }, -- Bitter Balebrew Charm
+				{ 1,  49116 }, -- Bitter Balebrew Charm
 				{ 2,  49118 }, -- Bubbling Brightbrew Charm
 				{ 3,  49074 }, -- Coren's Chromium Coaster
 				{ 4,  49076 }, -- Mithril Pocketwatch
