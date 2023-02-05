@@ -1861,7 +1861,7 @@ data["TheOculus"] = {
                 { 16, "INV_Box_01", nil, AL["Titan Rune"], nil },
                 { 17, 39415 }, -- Shroud of the Citadel
                 { 18, 39311 }, -- Scepter of Murmuring Spirits
-                { 18, 39403 }, -- Helm of the Unsubmissive
+                { 19, 39403 }, -- Helm of the Unsubmissive
             }
         },
         { -- OcuEregos / 64
@@ -1884,33 +1884,35 @@ data["TheOculus"] = {
             },
             [HEROIC_DIFF] = {
                 { 1, 47241 }, -- Emblem of Triumph
-                { 3, 37361 }, -- Cuffs of Winged Levitation
-                { 4, 37363 }, -- Gauntlets of Dragon Wrath
-                { 5, 37362 }, -- Leggings of Protective Auras
-                { 6, 37360 }, -- Staff of Draconic Combat
-                { 7, 37291 }, -- Ancient Dragon Spirit Cape
-                { 8, 37294 }, -- Crown of Unbridled Magic
-                { 9, 37293 }, -- Mask of the Watcher
-                { 10, 37292 }, -- Ley-Guardian's Legguards
+                { 2, 37361 }, -- Cuffs of Winged Levitation
+                { 3, 37363 }, -- Gauntlets of Dragon Wrath
+                { 4, 37362 }, -- Leggings of Protective Auras
+                { 5, 37360 }, -- Staff of Draconic Combat
+                { 6, 37291 }, -- Ancient Dragon Spirit Cape
+                { 7, 37294 }, -- Crown of Unbridled Magic
+                { 8, 37293 }, -- Mask of the Watcher
+                { 9, 37292 }, -- Ley-Guardian's Legguards
+                { 10, "ac1868" },
                 { 11, "ac1871" },
                 { 12, "ac2046" },
                 { 13, "ac2045" },
                 { 14, "ac2044" },
                 { 15, 43102 }, -- Frozen Orb
                 { 16, "INV_Box_01", nil, AL["Titan Rune"], nil },
-                { 17, 39310 }, -- Mantle of the Extensive Mind
-                { 18, 40497 }, -- Black Ice
-                { 19, 44657 }, -- Torque of the Red Dragonflight
-                { 20, 40616 }, -- Helm of the Lost Conqueror
-                { 21, 40617 }, -- Helm of the Lost Protector
-                { 22, 40618 }, -- Helm of the Lost Vanquisher
-                { 23, 40622 }, -- Spaulders of the Lost Conqueror
-                { 24, 40623 }, -- Spaulders of the Lost Protector
-                { 25, 40624 }, -- Spaulders of the Lost Vanquisher
-                { 26, 40619 }, -- Leggings of the Lost Conqueror
-                { 27, 40620 }, -- Leggings of the Lost Protector
-                { 28, 40621 }, -- Leggings of the Lost Vanquisher
-                { 30, "ac1868" },
+                { 17, 40497 }, -- Black Ice
+                { 18, 44659 }, -- Pendant of the Dragonsworn
+                { 19, 44658 }, -- Chain of the Ancient Wyrm
+                { 20, 44660 }, -- Drakescale Collar
+                { 21, 44657 }, -- Torque of the Red Dragonflight
+                { 22, 40616 }, -- Helm of the Lost Conqueror
+                { 23, 40617 }, -- Helm of the Lost Protector
+                { 24, 40618 }, -- Helm of the Lost Vanquisher
+                { 25, 40622 }, -- Spaulders of the Lost Conqueror
+                { 26, 40623 }, -- Spaulders of the Lost Protector
+                { 27, 40624 }, -- Spaulders of the Lost Vanquisher
+                { 28, 40619 }, -- Leggings of the Lost Conqueror
+                { 29, 40620 }, -- Leggings of the Lost Protector
+                { 30, 40621 }, -- Leggings of the Lost Vanquisher
             }
         },
         { -- Trash
