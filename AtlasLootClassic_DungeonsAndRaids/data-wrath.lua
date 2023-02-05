@@ -1959,6 +1959,7 @@ data["VioletHold"] = {
                 { 17, 39275 }, -- Contagion Gloves
                 { 18, 39281 }, -- Infection Repulser
                 { 19, 39293 }, -- Blackened Legplates of Feugen
+                { 30, "ac1865" },
             }
         },
         { -- VioletHoldZuramat / 27
@@ -1980,6 +1981,7 @@ data["VioletHold"] = {
                 { 17, 39276 }, -- The Skull of Ruin
                 { 18, 39270 }, -- Hatestrike
                 { 19, 39282 }, -- Bone-Linked Amulet
+                { 30, "ac1865" },
             }
         },
         { -- VioletHoldXevozz / 28
@@ -2001,6 +2003,7 @@ data["VioletHold"] = {
                 { 17, 39272 }, -- Drape of Surgery
                 { 18, 39285 }, -- Handgrips of Turmoil
                 { 19, 39278 }, -- Bands of Anxiety
+                { 30, "ac1865" },
             }
         },
         { -- VioletHoldIchoron / 29
@@ -2022,6 +2025,8 @@ data["VioletHold"] = {
                 { 17, 39273 }, -- Sullen Cloth Boots
                 { 18, 39279 }, -- Blistered Belt of Decay
                 { 19, 39291 }, -- Torment of the Banished
+                { 29, "ac2041" },
+                { 30, "ac1865" },
             }
         },
         { -- VioletHoldMoragg / 30
@@ -2043,6 +2048,7 @@ data["VioletHold"] = {
                 { 17, 39280 }, -- Leggings of Innumerable Barbs
                 { 18, 39292 }, -- Repelling Charge
                 { 19, 39274 }, -- Retcher's Shoulderpads
+                { 30, "ac1865" },
             }
         },
         { -- VioletHoldLavanthor / 31
@@ -2064,6 +2070,7 @@ data["VioletHold"] = {
                 { 17, 39271 }, -- Blade of Dormant Memories
                 { 18, 39307 }, -- Iron Rings of Endurance
                 { 19, 39277 }, -- Sealing Ring of Grobbulus
+                { 30, "ac1865" },
             }
         },
         { -- VioletHoldCyanigosa / 32
@@ -2102,6 +2109,7 @@ data["VioletHold"] = {
                 { 26, 40619 }, -- Leggings of the Lost Conqueror
                 { 27, 40620 }, -- Leggings of the Lost Protector
                 { 28, 40621 }, -- Leggings of the Lost Vanquisher
+                { 30, "ac1816" }
             }
         },
         { -- Trash
