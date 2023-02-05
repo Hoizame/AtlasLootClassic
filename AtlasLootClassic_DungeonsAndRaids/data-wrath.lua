@@ -581,7 +581,7 @@ data["AhnKahet"] = {
                 { 3, 35606 }, -- Blade of Nadox
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 37594 }, -- Elder Headpiece
                 { 4, 37593 }, -- Sprinting Shoulderpads
                 { 5, 37592 }, -- Brood Plague Helmet
@@ -591,7 +591,6 @@ data["AhnKahet"] = {
                 { 18, 39249 }, -- Shoulderplates of Bloodshed
                 { 19, 39263 }, -- Dissevered Leggings
                 { 30, "ac2038" },
-                --{ 30, xxx }, -- xxx
             }
         },
         { -- AhnkahetTaldaram / 16
@@ -607,7 +606,7 @@ data["AhnKahet"] = {
                 { 3, 35609 }, -- Talisman of Scourge Command
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 37613 }, -- Flame Sphere Bindings
                 { 4, 37614 }, -- Gauntlets of the Plundering Geist
                 { 5, 37612 }, -- Bonegrinder Breastplate
@@ -626,7 +625,7 @@ data["AhnKahet"] = {
             -- DisplayIDs = {{0}},
             AtlasMapBossID = 3,
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 43287 }, -- Silken Bridge Handwraps
                 { 4, 43286 }, -- Legguards of Swarming Attacks
                 { 5, 43285 }, -- Amulet of the Spell Flinger
@@ -635,7 +634,6 @@ data["AhnKahet"] = {
                 { 17, 39251 }, -- Necrogenic Belt
                 { 18, 39247 }, -- Cuffs of Dark Shadows
                 { 19, 39260 }, -- Helm of the Corrupted Mind
-                --{ 30, xxx }, -- xxx
             }
         },
         { -- AhnkahetJedoga / 18
@@ -652,7 +650,7 @@ data["AhnKahet"] = {
                 { 16, 21524 }, -- Red Winter Hat
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 43283 }, -- Subterranean Waterfall Shroud
                 { 4, 43280 }, -- Faceguard of the Hammer Clan
                 { 5, 43282 }, -- Shadowseeker's Pendant
@@ -663,7 +661,6 @@ data["AhnKahet"] = {
                 { 18, 39246 }, -- Amulet of Autopsy
                 { 19, 39250 }, -- Ring of Holy Cleansing
                 { 30, "ac2056" },
-                --{ 30, xxx }, -- xxx
             }
         },
         { -- AhnkahetVolazj / 19
@@ -679,7 +676,7 @@ data["AhnKahet"] = {
                 { 3, 35614 }, -- Volazj's Sabatons
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Valor
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 37622 }, -- Skirt of the Old Kingdom
                 { 4, 37623 }, -- Fiery Obelisk Handguards
                 { 5, 37620 }, -- Bracers of the Herald
@@ -704,7 +701,6 @@ data["AhnKahet"] = {
                 { 27, 40620 }, -- Leggings of the Lost Protector
                 { 28, 40621 }, -- Leggings of the Lost Vanquisher
                 { 30, "ac1862" },
-                --{ 30, xxx }, -- xxx
             }
         },
         { -- Trash
@@ -750,7 +746,7 @@ data["AzjolNerub"] = {
                 { 3, 35655 }, -- Cobweb Machete
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 37218 }, -- Stone-Worn Footwraps
                 { 4, 37219 }, -- Custodian's Chestpiece
                 { 5, 37217 }, -- Golden Limb Bands
@@ -760,7 +756,6 @@ data["AzjolNerub"] = {
                 { 18, 39259 }, -- Fungi-Stained Coverings
                 { 19, 39267 }, -- Abomination Shoulderblades
                 { 30, "ac1296" },
-                --{ 30, xxx }, -- xxx
             }
         },
         { -- AzjolNerubHadronox / 12
@@ -776,7 +771,7 @@ data["AzjolNerub"] = {
                 { 3, 35658 }, -- Life-Staff of the Web Lair
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 37222 }, -- Egg Sac Robes
                 { 4, 37230 }, -- Grotto Mist Gloves
                 { 5, 37221 }, -- Hollowed Mandible Legplates
@@ -803,7 +798,7 @@ data["AzjolNerub"] = {
                 { 16, 43411 }, -- Anub'arak's Broken Husk
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 37242 }, -- Sash of the Servant
                 { 4, 37240 }, -- Flamebeard's Bracers
                 { 5, 37241 }, -- Ancient Aligned Girdle
@@ -869,7 +864,7 @@ data["DrakTharonKeep"] = {
                 { 3, 35618 }, -- Troll Butcherer
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 37715 }, -- Cowl of the Dire Troll
                 { 4, 37714 }, -- Batrider's Cord
                 { 5, 37717 }, -- Legs of Physical Regeneration
@@ -893,7 +888,7 @@ data["DrakTharonKeep"] = {
                 { 3, 35630 }, -- Summoner's Stone Gavel
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 37722 }, -- Breastplate of Undeath
                 { 4, 37718 }, -- Temple Crystal Fragment
                 { 5, 37721 }, -- Cursed Lich Blade
@@ -917,7 +912,7 @@ data["DrakTharonKeep"] = {
                 { 3, 35633 }, -- Staff of the Great Reptile
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 37725 }, -- Savage Wound Wrap
                 { 4, 37724 }, -- Handler's Arm Strap
                 { 5, 37726 }, -- King Dred's Helm
@@ -942,7 +937,7 @@ data["DrakTharonKeep"] = {
                 { 3, 35636 }, -- Tharon'ja's Aegis
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 37798 }, -- Overlook Handguards
                 { 4, 37791 }, -- Leggings of the Winged Serpent
                 { 5, 37788 }, -- Limb Regeneration Bracers
@@ -1013,7 +1008,7 @@ data["Gundrak"] = {
                 { 3, 35583 }, -- Witch Doctor's Wildstaff
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 37629 }, -- Slithering Slippers
                 { 4, 37628 }, -- Slad'ran's Coiled Cord
                 { 5, 37627 }, -- Snake Den Spaulders
@@ -1038,7 +1033,7 @@ data["Gundrak"] = {
                 { 3, 35590 }, -- Drakkari Hunting Bow
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 37637 }, -- Living Mojo Belt
                 { 4, 37636 }, -- Helm of Cheated Fate
                 { 5, 37634 }, -- Bracers of the Divine Elemental
@@ -1047,7 +1042,6 @@ data["Gundrak"] = {
                 { 17, 39225 }, -- Cloak of Armed Strife
                 { 18, 39224 }, -- Leggings of Discord
                 { 19, 39233 }, -- Aegis of Damnation
-                --{ 30, xxx }, -- xxx
             }
         },
         { -- GundrakMoorabi / 36
@@ -1063,7 +1057,7 @@ data["Gundrak"] = {
                 { 3, 35587 }, -- Frozen Scepter of Necromancy
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 37630 }, -- Shroud of Moorabi
                 { 4, 37633 }, -- Ground Tremor Helm
                 { 5, 37632 }, -- Mojo Frenzy Greaves
@@ -1083,7 +1077,7 @@ data["Gundrak"] = {
             -- DisplayIDs = {{0}},
             AtlasMapBossID = 4,
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 43313 }, -- Leggings of the Ruins Dweller
                 { 4, 43312 }, -- Gorloc Muddy Footwraps
                 { 5, 43311 }, -- Helmet of the Shrine
@@ -1092,7 +1086,6 @@ data["Gundrak"] = {
                 { 17, 39226 }, -- Maexxna's Femur
                 { 18, 39217 }, -- Avenging Combat Leggings
                 { 19, 39231 }, -- Timeworn Silken Band
-                --{ 30, xxx }, -- xxx
             }
         },
         { -- GundrakGaldarah / 38
@@ -1108,7 +1101,7 @@ data["Gundrak"] = {
                 { 3, 43306 }, -- Gal'darah's Signet
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 37643 }, -- Sash of Blood Removal
                 { 4, 37644 }, -- Gored Hide Legguards
                 { 5, 37645 }, -- Horn-Tipped Gauntlets
@@ -1181,7 +1174,7 @@ data["HallsofLightning"] = {
                 { 4, 36981 }, -- Hardened Vrykul Throwing Axe
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 37825 }, -- Traditionally Dyed Handguards
                 { 4, 37818 }, -- Patroller's War-Kilt
                 { 5, 37814 }, -- Iron Dwarf Smith Pauldrons
@@ -1208,7 +1201,7 @@ data["HallsofLightning"] = {
                 { 4, 36984 }, -- Eternally Folded Blade
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 37840 }, -- Shroud of Reverberation
                 { 4, 37843 }, -- Giant-Hair Woven Gloves
                 { 5, 37842 }, -- Belt of Vivacity
@@ -1234,7 +1227,7 @@ data["HallsofLightning"] = {
                 { 4, 39535 }, -- Ionar's Girdle
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 37846 }, -- Charged-Bolt Grips
                 { 4, 37845 }, -- Cord of Swirling Winds
                 { 5, 37826 }, -- The General's Steel Girdle
@@ -1266,7 +1259,7 @@ data["HallsofLightning"] = {
                 { 18, 43151 }, -- Loken's Tongue
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 37854 }, -- Woven Bracae Leggings
                 { 4, 37853 }, -- Advanced Tooled-Leather Bands
                 { 5, 37855 }, -- Mail Girdle of the Audient Earth
@@ -1338,7 +1331,7 @@ data["HallsofStone"] = {
                 { 3, 35670 }, -- Brann's Lost Mining Helmet
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 37652 }, -- Spaulders of Krystallus
                 { 4, 37650 }, -- Shardling Legguards
                 { 5, 37651 }, -- The Prospector's Prize
@@ -1361,7 +1354,7 @@ data["HallsofStone"] = {
                 { 3, 38611 }, -- Ringlet of Repose
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 38616 }, -- Maiden's Girdle
                 { 4, 38615 }, -- Lightning-Charged Gloves
                 { 5, 38617 }, -- Woeful Band
@@ -1386,7 +1379,7 @@ data["HallsofStone"] = {
                 { 3, 35675 }, -- Linked Armor of the Sphere
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 37655 }, -- Mantle of the Tribunal
                 { 4, 37656 }, -- Raging Construct Bands
                 { 5, 37654 }, -- Sabatons of the Ages
@@ -1411,7 +1404,7 @@ data["HallsofStone"] = {
                 { 3, 35680 }, -- Amulet of Wills
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 37669 }, -- Leggings of the Stone Halls
                 { 4, 37668 }, -- Bands of the Stoneforge
                 { 5, 37670 }, -- Sjonnir's Girdle
@@ -1484,7 +1477,7 @@ data["TheCullingOfStratholme"] = {
                 { 4, 37081 }, -- Meathook's Slicer
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 37680 }, -- Belt of Unified Souls
                 { 4, 37678 }, -- Bile-Cured Gloves
                 { 5, 37679 }, -- Spaulders of the Abomination
@@ -1509,7 +1502,7 @@ data["TheCullingOfStratholme"] = {
                 { 4, 37086 }, -- Tome of Salramm
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 37684 }, -- Forgotten Shadow Hood
                 { 4, 37682 }, -- Bindings of Dark Will
                 { 5, 37683 }, -- Necromancer's Amulet
@@ -1534,7 +1527,7 @@ data["TheCullingOfStratholme"] = {
                 { 4, 37099 }, -- Sempiternal Staff
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 37687 }, -- Gloves of Distorted Time
                 { 4, 37686 }, -- Cracked Epoch Grasps
                 { 5, 37688 }, -- Legplates of the Infinite Drakonid
@@ -1563,7 +1556,7 @@ data["TheCullingOfStratholme"] = {
                 { 8, 37107 }, -- Leeka's Shield
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 37696 }, -- Plague-Infected Bracers
                 { 4, 37695 }, -- Legguards of Nature's Power
                 { 5, 37694 }, -- Band of Guile
@@ -1596,7 +1589,7 @@ data["TheCullingOfStratholme"] = {
             -- DisplayIDs = {{0}},
             -- AtlasMapBossID = 0,
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
 		        { 3, 43951 }, -- Reins of the Bronze Drake
                 { 16, "INV_Box_01", nil, AL["Titan Rune"], nil },
                 { 17, 39468 }, -- The Stray
@@ -1642,7 +1635,7 @@ data["TheNexus"] = {
             -- DisplayIDs = {{0}},
             AtlasMapBossID = 4,
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 37728 }, -- Cloak of the Enemy
                 { 4, 37731 }, -- Opposed Stasis Leggings
                 { 5, 37730 }, -- Cleric's Linen Shoes
@@ -1667,7 +1660,7 @@ data["TheNexus"] = {
                 { 16, 21524 }, -- Red Winter Hat
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 37139 }, -- Spaulders of the Careless Thief
                 { 4, 37138 }, -- Bands of Channeled Energy
                 { 5, 37135 }, -- Arcane-Shielded Helm
@@ -1693,7 +1686,7 @@ data["TheNexus"] = {
                 { 3, 35598 }, -- Tome of the Lore Keepers
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 2, 37149 }, -- Helm of Anomalus
                 { 3, 37144 }, -- Hauberk of the Arcane Wraith
                 { 4, 37150 }, -- Rift Striders
@@ -1718,7 +1711,7 @@ data["TheNexus"] = {
                 { 3, 35601 }, -- Drakonid Arm Blade
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 37153 }, -- Gloves of the Crystal Gardener
                 { 4, 37155 }, -- Frozen Forest Kilt
                 { 5, 37152 }, -- Girdle of Ice
@@ -1742,7 +1735,7 @@ data["TheNexus"] = {
                 { 3, 35597 }, -- Band of Glittering Permafrost
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 37172 }, -- Gloves of Glistening Runes
                 { 4, 37170 }, -- Interwoven Scale Bracers
                 { 5, 37171 }, -- Flame-Bathed Steel Girdle
@@ -1801,7 +1794,7 @@ data["TheOculus"] = {
                 { 4, 36944 }, -- Lifeblade of Belgaristrasz
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 37258 }, -- Drakewing Raiments
                 { 4, 37256 }, -- Scaled Armor of Drakos
                 { 5, 37257 }, -- Band of Torture
@@ -1826,7 +1819,7 @@ data["TheOculus"] = {
                 { 4, 36950 }, -- Wing Commander's Breastplate
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 37261 }, -- Gloves of Radiant Light
                 { 4, 37262 }, -- Azure Ringmail Leggings
                 { 5, 37263 }, -- Legplates of the Oculus Guardian
@@ -1852,7 +1845,7 @@ data["TheOculus"] = {
                 { 16, 21525 }, -- Green Winter Hat
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 37289 }, -- Sash of Phantasmal Images
                 { 4, 37288 }, -- Catalytic Bands
                 { 5, 37195 }, -- Band of Enchanted Growth
@@ -1883,7 +1876,7 @@ data["TheOculus"] = {
                 { 16, 41798 }, -- Design: Bracing Earthsiege Diamond
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 2, 37361 }, -- Cuffs of Winged Levitation
                 { 3, 37363 }, -- Gauntlets of Dragon Wrath
                 { 4, 37362 }, -- Leggings of Protective Auras
@@ -1913,6 +1906,7 @@ data["TheOculus"] = {
                 { 28, 40619 }, -- Leggings of the Lost Conqueror
                 { 29, 40620 }, -- Leggings of the Lost Protector
                 { 30, 40621 }, -- Leggings of the Lost Vanquisher
+                --{ 31,  }, -- Mantle of the Extensive Mind
             }
         },
         { -- Trash
@@ -1957,7 +1951,7 @@ data["VioletHold"] = {
                 { 2, 43375 }, -- Trousers of the Arakkoa
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 43406 }, -- Cloak of the Gushing Wound
                 { 4, 43405 }, -- Sabatons of Erekem
                 { 5, 43407 }, -- Stormstrike Mace
@@ -1978,7 +1972,7 @@ data["VioletHold"] = {
                 { 2, 43358 }, -- Pendant of Shadow Beams
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 43403 }, -- Shroud of Darkness
                 { 4, 43402 }, -- The Obliterator Greaves
                 { 5, 43404 }, -- Zuramat's Necklace
@@ -1999,7 +1993,7 @@ data["VioletHold"] = {
                 { 2, 35642 }, -- Riot Shield
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 37867 }, -- Footwraps of Teleportation
                 { 4, 37868 }, -- Girdle of the Ethereal
                 { 5, 37861 }, -- Necklace of Arcane Spheres
@@ -2020,7 +2014,7 @@ data["VioletHold"] = {
                 { 2, 35643 }, -- Spaulders of Ichoron
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 43401 }, -- Water-Drenched Robe
                 { 4, 37862 }, -- Gauntlets of the Water Revenant
                 { 5, 37869 }, -- Globule Signet
@@ -2041,7 +2035,7 @@ data["VioletHold"] = {
                 { 2, 43382 }, -- Band of Eyes
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 43410 }, -- Moragg's Chestguard
                 { 4, 43408 }, -- Solitare of Reflecting Beams
                 { 5, 43409 }, -- Saliva Corroded Pike
@@ -2062,7 +2056,7 @@ data["VioletHold"] = {
                 { 2, 35645 }, -- Prison Warden's Shotgun
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 37870 }, -- Twin-Headed Boots
                 { 4, 37872 }, -- Lavanthor's Talisman
                 { 5, 37871 }, -- The Key
@@ -2084,7 +2078,7 @@ data["VioletHold"] = {
                 { 3, 35649 }, -- Jailer's Baton
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 37884 }, -- Azure Cloth Bindings
                 { 4, 37886 }, -- Handgrips of the Savage Emissary
                 { 5, 43500 }, -- Bolstered Legplates
@@ -2155,7 +2149,7 @@ data["UtgardeKeep"] = {
                 { 3, 35570 }, -- Keleseth's Blade of Evocation
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 37180 }, -- Battlemap Hide Helm
                 { 4, 37178 }, -- Strategist's Belt
                 { 5, 37179 }, -- Infantry Assault Blade
@@ -2180,7 +2174,7 @@ data["UtgardeKeep"] = {
                 { 3, 35573 }, -- Arm Blade of Augelmir
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 37183 }, -- Bindings of the Tunneler
                 { 4, 37184 }, -- Dalronn's Jerkin
                 { 5, 37182 }, -- Helmet of the Constructor
@@ -2205,7 +2199,7 @@ data["UtgardeKeep"] = {
                 { 16, 33330 }, -- Ingvar's Head
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 37194 }, -- Sharp-Barbed Leather Belt
                 { 4, 37193 }, -- Staggering Legplates
                 { 5, 37192 }, -- Annhylde's Ring
@@ -2276,7 +2270,7 @@ data["UtgardePinnacle"] = {
                 { 4, 37038 }, -- Brazier Igniter
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 37370 }, -- Cuffs of the Trussed Hall
                 { 4, 37369 }, -- Sorrowgrave's Breeches
                 { 5, 37368 }, -- Silent Spectator Shoulderpads
@@ -2302,7 +2296,7 @@ data["UtgardePinnacle"] = {
                 { 4, 37050 }, -- Trophy Gatherer
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 37374 }, -- Ravenous Leggings of the Furbolg
                 { 4, 37373 }, -- Massive Spaulders of the Jormungar
                 { 5, 37376 }, -- Ferocious Pauldrons of the Rhino
@@ -2326,7 +2320,7 @@ data["UtgardePinnacle"] = {
                 { 4, 37053 }, -- Amulet of Deflected Blows
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 37389 }, -- Crenelation Leggings
                 { 4, 37379 }, -- Skadi's Iron Belt
                 { 5, 37377 }, -- Netherbreath Spellblade
@@ -2359,7 +2353,7 @@ data["UtgardePinnacle"] = {
                 { 16, 41797 }, -- Design: Austere Earthsiege Diamond
             },
             [HEROIC_DIFF] = {
-                { 1, 47241 }, -- Emblem of Triumph
+                { 1, 40753 }, -- Emblem of Valor
                 { 3, 37408 }, -- Girdle of Bane
                 { 4, 37409 }, -- Gilt-Edged Leather Gauntlets
                 { 5, 37407 }, -- Sovereign's Belt
