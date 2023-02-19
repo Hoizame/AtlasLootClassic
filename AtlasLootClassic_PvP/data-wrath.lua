@@ -33,7 +33,7 @@ else
 	LOAD_DIFF = ALLIANCE_DIFF
 end
 local SET1_DIFF = data:AddDifficulty(format(AL["Savage %s"], ""), "set1", nil, 1)
-local SET2_DIFF = data:AddDifficulty(format(AL["Furious %s"], ""), "set2", nil, 1)
+local SET2_DIFF = data:AddDifficulty(format(AL["Hateful %s"], ""), "set2", nil, 1)
 local SET3_DIFF = data:AddDifficulty(format(AL["Deadly %s"], ""), "set3", nil, 1)
 
 local NORMAL_ITTYPE = data:AddItemTableType("Item", "Item")
@@ -238,52 +238,52 @@ data["ArenaS5PvP"] = {
 				{ 28, 42219 }, -- Savage Gladiator's Left Render
 			},
 			[SET2_DIFF] = {
-				{ 1, 42241 }, -- Gladiator's Shanker
-				{ 2, 42247 }, -- Gladiator's Shiv
-				{ 3, 42254 }, -- Gladiator's Mutilator
+				{ 1, 42241 }, -- Hateful Gladiator's Shanker
+				{ 2, 42247 }, -- Hateful Gladiator's Shiv
+				{ 3, 42254 }, -- Hateful Gladiator's Mutilator
 
-				{ 5, 42274 }, -- Gladiator's Pummeler
-				{ 6, 42279 }, -- Gladiator's Bonecracker
+				{ 5, 42274 }, -- Hateful Gladiator's Pummeler
+				{ 6, 42279 }, -- Hateful Gladiator's Bonecracker
 
-				{ 8, 42284 }, -- Gladiator's Slicer
-				{ 9, 42289 }, -- Gladiator's Quickblade
+				{ 8, 42284 }, -- Hateful Gladiator's Slicer
+				{ 9, 42289 }, -- Hateful Gladiator's Quickblade
 
-				{ 11, 42207 }, -- Gladiator's Cleaver
-				{ 12, 42226 }, -- Gladiator's Hacker
-				{ 13, 42231 }, -- Gladiator's Chopper
+				{ 11, 42207 }, -- Hateful Gladiator's Cleaver
+				{ 12, 42226 }, -- Hateful Gladiator's Hacker
+				{ 13, 42231 }, -- Hateful Gladiator's Chopper
 
-				{ 15, 42236 }, -- Gladiator's Waraxe
+				{ 15, 42236 }, -- Hateful Gladiator's Waraxe
 
-				{ 16, 42345 }, -- Gladiator's Spellblade
-				{ 20, 42351 }, -- Gladiator's Gavel
+				{ 16, 42345 }, -- Hateful Gladiator's Spellblade
+				{ 20, 42351 }, -- Hateful Gladiator's Gavel
 
-				{ 26, 42259 }, -- Gladiator's Right Ripper
-				{ 27, 42269 }, -- Gladiator's Left Ripper
-				{ 28, 42264 }, -- Gladiator's Left Render
+				{ 26, 42259 }, -- Hateful Gladiator's Right Ripper
+				{ 27, 42269 }, -- Hateful Gladiator's Left Ripper
+				{ 28, 42264 }, -- Hateful Gladiator's Left Render
 			},
 			[SET3_DIFF] = {
-				{ 1, 42242 }, -- Gladiator's Shanker
-				{ 2, 42248 }, -- Gladiator's Shiv
-				{ 3, 42255 }, -- Gladiator's Mutilator
+				{ 1, 42242 }, -- Deadly Gladiator's Shanker
+				{ 2, 42248 }, -- Deadly Gladiator's Shiv
+				{ 3, 42255 }, -- Deadly Gladiator's Mutilator
 
-				{ 5, 42275 }, -- Gladiator's Pummeler
-				{ 6, 42280 }, -- Gladiator's Bonecracker
+				{ 5, 42275 }, -- Deadly Gladiator's Pummeler
+				{ 6, 42280 }, -- Deadly Gladiator's Bonecracker
 
-				{ 8, 42285 }, -- Gladiator's Slicer
-				{ 9, 42290 }, -- Gladiator's Quickblade
+				{ 8, 42285 }, -- Deadly Gladiator's Slicer
+				{ 9, 42290 }, -- Deadly Gladiator's Quickblade
 
-				{ 11, 42208 }, -- Gladiator's Cleaver
-				{ 12, 42227 }, -- Gladiator's Hacker
-				{ 13, 42232 }, -- Gladiator's Chopper
+				{ 11, 42208 }, -- Deadly Gladiator's Cleaver
+				{ 12, 42227 }, -- Deadly Gladiator's Hacker
+				{ 13, 42232 }, -- Deadly Gladiator's Chopper
 
-				{ 15, 42237 }, -- Gladiator's Waraxe
+				{ 15, 42237 }, -- Deadly Gladiator's Waraxe
 
-				{ 16, 42346 }, -- Gladiator's Spellblade
-				{ 20, 42352 }, -- Gladiator's Gavel
+				{ 16, 42346 }, -- Deadly Gladiator's Spellblade
+				{ 20, 42352 }, -- Deadly Gladiator's Gavel
 
-				{ 26, 42260 }, -- Gladiator's Right Ripper
-				{ 27, 42270 }, -- Gladiator's Left Ripper
-				{ 28, 42265 }, -- Gladiator's Left Render
+				{ 26, 42260 }, -- Deadly Gladiator's Right Ripper
+				{ 27, 42270 }, -- Deadly Gladiator's Left Ripper
+				{ 28, 42265 }, -- Deadly Gladiator's Left Render
 			},
 		},
 		{
@@ -311,15 +311,15 @@ data["ArenaS5PvP"] = {
 				{ 22, 42389 }, -- Hateful Gladiator's Staff
 			},
 			[SET3_DIFF] = {
-				{ 1, 42332 }, -- Gladiator's Greatsword
-				{ 3, 42317 }, -- Gladiator's Decapitator
-				{ 7, 42322 }, -- Gladiator's Bonegrinder
-				{ 10, 42327 }, -- Gladiator's Pike
-				{ 16, 44419 }, -- Gladiator's War Staff
-				{ 17, 42362 }, -- Gladiator's Battle Staff
-				{ 18, 44420 }, -- Gladiator's Focus Staff
-				{ 20, 42384 }, -- Gladiator's Energy Staff
-				{ 22, 42390 }, -- Gladiator's Staff
+				{ 1, 42332 }, -- Deadly Gladiator's Greatsword
+				{ 3, 42317 }, -- Deadly Gladiator's Decapitator
+				{ 7, 42322 }, -- Deadly Gladiator's Bonegrinder
+				{ 10, 42327 }, -- Deadly Gladiator's Pike
+				{ 16, 44419 }, -- Deadly Gladiator's War Staff
+				{ 17, 42362 }, -- Deadly Gladiator's Battle Staff
+				{ 18, 44420 }, -- Deadly Gladiator's Focus Staff
+				{ 20, 42384 }, -- Deadly Gladiator's Energy Staff
+				{ 22, 42390 }, -- Deadly Gladiator's Staff
 			},
 		},
 		{
@@ -391,13 +391,13 @@ data["ArenaS5PvP"] = {
 		{
 			name = ALIL["Cloak"],
 			[SET2_DIFF] = {
-				{ 1, 42061 }, -- Gladiator's Cloak of Victory
-				{ 2, 42060 }, -- Gladiator's Cloak of Triumph
-				{ 16, 42057 }, -- Gladiator's Cloak of Ascendancy
-				{ 17, 42056 }, -- Gladiator's Cloak of Subjugation
-				{ 18, 42055 }, -- Gladiator's Cloak of Dominance
-				{ 20, 42059 }, -- Gladiator's Cloak of Deliverance
-				{ 21, 42058 }, -- Gladiator's Cloak of Salvation
+				{ 1, 42061 }, -- Hateful Gladiator's Cloak of Victory
+				{ 2, 42060 }, -- Hateful Gladiator's Cloak of Triumph
+				{ 16, 42057 }, -- Hateful Gladiator's Cloak of Ascendancy
+				{ 17, 42056 }, -- Hateful Gladiator's Cloak of Subjugation
+				{ 18, 42055 }, -- Hateful Gladiator's Cloak of Dominance
+				{ 20, 42059 }, -- Hateful Gladiator's Cloak of Deliverance
+				{ 21, 42058 }, -- Hateful Gladiator's Cloak of Salvation
 			},
 			[SET3_DIFF] = {
 				{ 1, 42068 }, -- Deadly Gladiator's Cloak of Victory
@@ -480,6 +480,12 @@ data["ArenaS5PvP"] = {
 		{
 			name = format(AL["Non Set '%s'"], ALIL["Cloth"]),
 			[NORMAL_DIFF] = {
+				{ 1, 41879 }, -- Hateful Gladiator's Slippers of Salvation
+				{ 2, 41877 }, -- Hateful Gladiator's Cord of Salvation
+				{ 3, 41878 }, -- Hateful Gladiator's Cuffs of Salvation
+				{ 5, 41901 }, -- Hateful Gladiator's Slippers of Dominance
+				{ 6, 41896 }, -- Hateful Gladiator's Cord of Dominance
+				{ 7, 41907 }, -- Hateful Gladiator's Cuffs of Dominance
 				{ 16, 41884 }, -- Deadly Gladiator's Treads of Salvation
 				{ 17, 41880 }, -- Deadly Gladiator's Cord of Salvation
 				{ 18, 41892 }, -- Deadly Gladiator's Cuffs of Salvation
@@ -491,6 +497,15 @@ data["ArenaS5PvP"] = {
 		{
 			name = format(AL["Non Set '%s'"], ALIL["Leather"]),
 			[NORMAL_DIFF] = {
+				{ 1, 41331 },  -- Hateful Gladiator's Boots of Salvation
+				{ 2, 41330 },  -- Hateful Gladiator's Belt of Salvation, Waist
+				{ 3, 41332 },  -- Hateful Gladiator's Armwraps of Salvation
+				{ 5, 41633 },  -- Hateful Gladiator's Boots of Dominance
+				{ 6, 41628 },  -- Hateful Gladiator's Belt of Dominance, Waist
+				{ 7, 41638 }, -- Hateful Gladiator's Armwraps of Dominance
+				{ 9, 41828 },  -- Hateful Gladiator's Boots of Triumph
+				{ 10, 41827 },  -- Hateful Gladiator's Belt of Triumph, Waist
+				{ 11, 41830 }, -- Hateful Gladiator's Armwraps of Triumph
 				{ 16, 41620 }, -- Deadly Gladiator's Boots of Salvation
 				{ 17, 41616 }, -- Deadly Gladiator's Belt of Salvation, Waist
 				{ 18, 41624 }, -- Deadly Gladiator's Armwraps of Salvation
@@ -505,6 +520,15 @@ data["ArenaS5PvP"] = {
 		{
 			name = format(AL["Non Set '%s'"], ALIL["Mail"]),
 			[NORMAL_DIFF] = {
+				{ 1, 41049 }, -- Hateful Gladiator's Sabatons of Salvation
+				{ 2, 41050 }, -- Hateful Gladiator's Waistguard of Salvation
+				{ 3, 41047 }, -- Hateful Gladiator's Wristguards of Salvation
+				{ 5, 41073 }, -- Hateful Gladiator's Sabatons of Dominance
+				{ 6, 41068 }, -- Hateful Gladiator's Waistguard of Dominance
+				{ 7, 41063 }, -- Hateful Gladiator's Wristguards of Dominance
+				{ 9, 41228 }, -- Hateful Gladiator's Sabatons of Triumph
+				{ 10, 41233 }, -- Hateful Gladiator's Waistguard of Triumph
+				{ 11, 41223 }, -- Hateful Gladiator's Wristguards of Triumph
 				{ 16, 41054 }, -- Deadly Gladiator's Sabatons of Salvation
 				{ 17, 41048 }, -- Deadly Gladiator's Waistguard of Salvation
 				{ 18, 41059 }, -- Deadly Gladiator's Wristguards of Salvation
@@ -519,6 +543,12 @@ data["ArenaS5PvP"] = {
 		{
 			name = format(AL["Non Set '%s'"], ALIL["Plate"]),
 			[NORMAL_DIFF] = {
+								{ 1, 40878 }, -- Hateful Gladiator's Greaves of Triumph
+				{ 2, 40877 }, -- Hateful Gladiator's Girdle of Triumph
+				{ 3, 40887 }, -- Hateful Gladiator's Bracers of Triumph
+				{ 5, 40973 }, -- Hateful Gladiator's Greaves of Salvation
+				{ 6, 40966 }, -- Hateful Gladiator's Girdle of Salvation
+				{ 7, 40972 }, -- Hateful Gladiator's Bracers of Salvation
 				{ 16, 40880 }, -- Deadly Gladiator's Greaves of Triumph
 				{ 17, 40879 }, -- Deadly Gladiator's Girdle of Triumph
 				{ 18, 40888 }, -- Deadly Gladiator's Bracers of Triumph
@@ -873,9 +903,8 @@ data["ArenaS7PvP"] = {
 				{ 3, 42319 }, -- Relentless Gladiator's Decapitator
 				{ 7, 42324 }, -- Relentless Gladiator's Bonegrinder
 				{ 10, 42329 }, -- Relentless Gladiator's Pike
-				{ 16, 44422 }, -- Relentless Gladiator's War Staff
-				{ 17, 42365 }, -- Relentless Gladiator's Battle Staff
-				{ 18, 44423 }, -- Relentless Gladiator's Focus Staff
+				{ 16, 44423 }, -- Relentless Gladiator's War Staff
+				{ 17, 42366 }, -- Relentless Gladiator's Battle Staff
 				{ 20, 42386 }, -- Relentless Gladiator's Energy Staff
 				{ 22, 42392 }, -- Relentless Gladiator's Staff
 			},
@@ -1107,17 +1136,17 @@ data["ArenaS8PvP"] = {
 				{ 6, 51446 }, -- Wrathful gladiator's Punisher
 
 				{ 8, 51522 }, -- Wrathful gladiator's Longblade
-				{ 9, 51548 }, -- Wrathful Gladiator's Swiftblade
+				{ 9, 51448 }, -- Wrathful Gladiator's Swiftblade
 
 				{ 11, 51516 }, -- Wrathful Gladiator's Handaxe
-				{ 12, 51540 }, -- Wrathful Gladiator's Dicer
+				{ 12, 51440 }, -- Wrathful Gladiator's Dicer
 				{ 13, 51526 }, -- Wrathful Gladiator's Splitter
 
 				{ 16, 51399 }, -- Wrathful Gladiator's Mageblade
 				{ 20, 51554 }, -- Wrathful Gladiator's Salvation
 
 				{ 26, 51524 }, -- Wrathful Gladiator's Grasp
-				{ 27, 51544 }, -- Wrathful Gladiator's Left Razor
+				{ 27, 51444 }, -- Wrathful Gladiator's Left Razor
 				{ 28, 51529 }, -- Wrathful Gladiator's Left Claw
 			}
 		},
@@ -1293,6 +1322,7 @@ data["ArenaS8PvP"] = {
 			ExtraList = true,
 			[NORMAL_DIFF] = {
 				{ 1,  50435 }, -- Wrathful Gladiator's Frost Wyrm
+			}
 		}	
 	}
 }
