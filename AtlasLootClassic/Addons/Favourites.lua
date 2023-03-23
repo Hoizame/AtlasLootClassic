@@ -796,11 +796,8 @@ function Favourites:CountFavouritesByList(addonName, contentName, boss, dif, inc
         for i = 1, #moduleList do
             contentName = moduleList[i]
             local subResult = self:CountFavouritesByList(addonName, contentName, boss, dif, includeObsolete)
-
-            if type(subResult) == "table" then
-                for listName, itemCount in pairs(subResult) do
-                    result[listName] = (result[listName] or 0) + itemCount
-                end
+            for listName, itemCount in pairs(subResult) do
+                result[listName] = (result[listName] or 0) + itemCount
             end
         end
         ItemCountCache[cacheIdent] = result
@@ -843,24 +840,29 @@ function Favourites:CountFavouritesByList(addonName, contentName, boss, dif, inc
     local items, tableType, diffData = ItemDB:GetItemTable(addonName, contentName, boss, dif)
     for l, listData in pairs(self.db.lists) do
         local listName = listData.__name
-        for i = 1, #items do
-            local item = items[i]
-            if type(item[2]) == "number" then
-                local itemID = item[2]
-                if listData[itemID] and (includeObsolete or not self:IsItemEquippedOrObsolete(itemID, l)) then
-                    result[listName] = (result[listName] or 0) + 1
+
+        if type(items) == "table" then
+            for i = 1, #items do
+                local item = items[i]
+                if type(item[2]) == "number" then
+                    local itemID = item[2]
+                    if listData[itemID] and (includeObsolete or not self:IsItemEquippedOrObsolete(itemID, l)) then
+                        result[listName] = (result[listName] or 0) + 1
+                    end
                 end
             end
         end
     end
     for l, listData in pairs(self.globalDb.lists) do
         local listName = listData.__name
-        for i = 1, #items do
-            local item = items[i]
-            if type(item[2]) == "number" then
-                local itemID = item[2]
-                if listData[itemID] and (includeObsolete or not self:IsItemEquippedOrObsolete(itemID, l)) then
-                    result[listName] = (result[listName] or 0) + 1
+        if type(items) == "table" then
+            for i = 1, #items do
+                local item = items[i]
+                if type(item[2]) == "number" then
+                    local itemID = item[2]
+                    if listData[itemID] and (includeObsolete or not self:IsItemEquippedOrObsolete(itemID, l)) then
+                        result[listName] = (result[listName] or 0) + 1
+                    end
                 end
             end
         end
