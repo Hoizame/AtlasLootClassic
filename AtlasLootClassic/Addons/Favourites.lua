@@ -796,8 +796,11 @@ function Favourites:CountFavouritesByList(addonName, contentName, boss, dif, inc
         for i = 1, #moduleList do
             contentName = moduleList[i]
             local subResult = self:CountFavouritesByList(addonName, contentName, boss, dif, includeObsolete)
-            for listName, itemCount in pairs(subResult) do
-                result[listName] = (result[listName] or 0) + itemCount
+
+            if type(subResult) == "table" then
+                for listName, itemCount in pairs(subResult) do
+                    result[listName] = (result[listName] or 0) + itemCount
+                end
             end
         end
         ItemCountCache[cacheIdent] = result

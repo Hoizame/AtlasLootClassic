@@ -243,7 +243,12 @@ end
 function ItemDB:GetItemTable(addonName, contentName, boss, dif)
 	assert(addonName and ItemDB.Storage[addonName], addonName.." (addonName) not found!")
 	assert(contentName and ItemDB.Storage[addonName][contentName], contentName.." (contentName) not found!")
-	assert(boss and ItemDB.Storage[addonName][contentName].items[boss], boss.." (boss) not found!")
+	-- assert(boss and ItemDB.Storage[addonName][contentName].items[boss], boss.." (boss) not found!")
+
+	if boss == nil or ItemDB.Storage[addonName][contentName].items[boss] == nil then
+		return
+	end
+
 	local addonNameRETVALUE, addon
 	if ItemDB.Storage[addonName][contentName].items[boss].link then
 		return ItemDB:GetItemTable(ItemDB.Storage[addonName][contentName].items[boss].link[1], ItemDB.Storage[addonName][contentName].items[boss].link[2], ItemDB.Storage[addonName][contentName].items[boss].link[3], dif)
