@@ -214,267 +214,267 @@ data["ArenaS5PvP"] = {
 		{
 			name = AL["Weapons"].." - "..AL["One-Handed"],
 			[SET1_DIFF] = {
-				{ 1, 42216 }, -- Gladiator's Shanker
-				{ 2, 42217 }, -- Gladiator's Shiv
-				{ 3, 42215 }, -- Gladiator's Mutilator
+				{ 1, 42216 }, -- Savage Gladiator's Shanker
+				{ 2, 42217 }, -- Savage Gladiator's Shiv
+				{ 3, 42215 }, -- Savage Gladiator's Mutilator
 
-				{ 5, 42222 }, -- Gladiator's Pummeler
-				{ 6, 42221 }, -- Gladiator's Bonecracker
+				{ 5, 42222 }, -- Savage Gladiator's Pummeler
+				{ 6, 42221 }, -- Savage Gladiator's Bonecracker
 
-				{ 8, 42224 }, -- Gladiator's Slicer
-				{ 9, 42223 }, -- Gladiator's Quickblade
+				{ 8, 42224 }, -- Savage Gladiator's Slicer
+				{ 9, 42223 }, -- Savage Gladiator's Quickblade
 
-				{ 11, 42206 }, -- Gladiator's Cleaver
-				{ 12, 42213 }, -- Gladiator's Hacker
-				{ 13, 42212 }, -- Gladiator's Chopper
+				{ 11, 42206 }, -- Savage Gladiator's Cleaver
+				{ 12, 42213 }, -- Savage Gladiator's Hacker
+				{ 13, 42212 }, -- Savage Gladiator's Chopper
 
-				{ 15, 42214 }, -- Gladiator's Waraxe
+				{ 15, 42214 }, -- Savage Gladiator's Waraxe
 
-				{ 16, 42343 }, -- Gladiator's Spellblade
-				{ 20, 42344 }, -- Gladiator's Gavel
+				{ 16, 42343 }, -- Savage Gladiator's Spellblade
+				{ 20, 42344 }, -- Savage Gladiator's Gavel
 
-				{ 26, 42218 }, -- Gladiator's Right Ripper
-				{ 27, 42220 }, -- Gladiator's Left Ripper
-				{ 28, 42219 }, -- Gladiator's Left Render
+				{ 26, 42218 }, -- Savage Gladiator's Right Ripper
+				{ 27, 42220 }, -- Savage Gladiator's Left Ripper
+				{ 28, 42219 }, -- Savage Gladiator's Left Render
 			},
 			[SET2_DIFF] = {
-				{ 1, 42241 }, -- Gladiator's Shanker
-				{ 2, 42247 }, -- Gladiator's Shiv
-				{ 3, 42254 }, -- Gladiator's Mutilator
+				{ 1, 42241 }, -- Hateful Gladiator's Shanker
+				{ 2, 42247 }, -- Hateful Gladiator's Shiv
+				{ 3, 42254 }, -- Hateful Gladiator's Mutilator
 
-				{ 5, 42274 }, -- Gladiator's Pummeler
-				{ 6, 42279 }, -- Gladiator's Bonecracker
+				{ 5, 42274 }, -- Hateful Gladiator's Pummeler
+				{ 6, 42279 }, -- Hateful Gladiator's Bonecracker
 
-				{ 8, 42284 }, -- Gladiator's Slicer
-				{ 9, 42289 }, -- Gladiator's Quickblade
+				{ 8, 42284 }, -- Hateful Gladiator's Slicer
+				{ 9, 42289 }, -- Hateful Gladiator's Quickblade
 
-				{ 11, 42207 }, -- Gladiator's Cleaver
-				{ 12, 42226 }, -- Gladiator's Hacker
-				{ 13, 42231 }, -- Gladiator's Chopper
+				{ 11, 42207 }, -- Hateful Gladiator's Cleaver
+				{ 12, 42226 }, -- Hateful Gladiator's Hacker
+				{ 13, 42231 }, -- Hateful Gladiator's Chopper
 
-				{ 15, 42236 }, -- Gladiator's Waraxe
+				{ 15, 42236 }, -- Hateful Gladiator's Waraxe
 
-				{ 16, 42345 }, -- Gladiator's Spellblade
-				{ 20, 42351 }, -- Gladiator's Gavel
+				{ 16, 42345 }, -- Hateful Gladiator's Spellblade
+				{ 20, 42351 }, -- Hateful Gladiator's Gavel
 
-				{ 26, 42259 }, -- Gladiator's Right Ripper
-				{ 27, 42269 }, -- Gladiator's Left Ripper
-				{ 28, 42264 }, -- Gladiator's Left Render
+				{ 26, 42259 }, -- Hateful Gladiator's Right Ripper
+				{ 27, 42269 }, -- Hateful Gladiator's Left Ripper
+				{ 28, 42264 }, -- Hateful Gladiator's Left Render
 			},
 			[SET3_DIFF] = {
-				{ 1, 42242 }, -- Gladiator's Shanker
-				{ 2, 42248 }, -- Gladiator's Shiv
-				{ 3, 42255 }, -- Gladiator's Mutilator
+				{ 1, 42242 }, -- Deadly Gladiator's Shanker
+				{ 2, 42248 }, -- Deadly Gladiator's Shiv
+				{ 3, 42255 }, -- Deadly Gladiator's Mutilator
 
-				{ 5, 42275 }, -- Gladiator's Pummeler
-				{ 6, 42280 }, -- Gladiator's Bonecracker
+				{ 5, 42275 }, -- Deadly Gladiator's Pummeler
+				{ 6, 42280 }, -- Deadly Gladiator's Bonecracker
 
-				{ 8, 42285 }, -- Gladiator's Slicer
-				{ 9, 42290 }, -- Gladiator's Quickblade
+				{ 8, 42285 }, -- Deadly Gladiator's Slicer
+				{ 9, 42290 }, -- Deadly Gladiator's Quickblade
 
-				{ 11, 42208 }, -- Gladiator's Cleaver
-				{ 12, 42227 }, -- Gladiator's Hacker
-				{ 13, 42232 }, -- Gladiator's Chopper
+				{ 11, 42208 }, -- Deadly Gladiator's Cleaver
+				{ 12, 42227 }, -- Deadly Gladiator's Hacker
+				{ 13, 42232 }, -- Deadly Gladiator's Chopper
 
-				{ 15, 42237 }, -- Gladiator's Waraxe
+				{ 15, 42237 }, -- Deadly Gladiator's Waraxe
 
-				{ 16, 42346 }, -- Gladiator's Spellblade
-				{ 20, 42352 }, -- Gladiator's Gavel
+				{ 16, 42346 }, -- Deadly Gladiator's Spellblade
+				{ 20, 42352 }, -- Deadly Gladiator's Gavel
 
-				{ 26, 42260 }, -- Gladiator's Right Ripper
-				{ 27, 42270 }, -- Gladiator's Left Ripper
-				{ 28, 42265 }, -- Gladiator's Left Render
+				{ 26, 42260 }, -- Deadly Gladiator's Right Ripper
+				{ 27, 42270 }, -- Deadly Gladiator's Left Ripper
+				{ 28, 42265 }, -- Deadly Gladiator's Left Render
 			},
 		},
 		{
 			name = AL["Weapons"].." - "..AL["Two-Handed"],
 			[SET1_DIFF] = {
-				{ 1, 42297 }, -- Gladiator's Greatsword
-				{ 3, 42294 }, -- Gladiator's Decapitator
-				{ 7, 42295 }, -- Gladiator's Bonegrinder
-				{ 10, 42296 }, -- Gladiator's Pike
-				{ 16, 44415 }, -- Gladiator's War Staff
-				{ 17, 42356 }, -- Gladiator's Battle Staff
-				{ 18, 44416 }, -- Gladiator's Focus Staff
-				{ 20, 42382 }, -- Gladiator's Energy Staff
-				{ 22, 42388 }, -- Gladiator's Staff
+				{ 1, 42297 }, -- Savage Gladiator's Greatsword
+				{ 3, 42294 }, -- Savage Gladiator's Decapitator
+				{ 7, 42295 }, -- Savage Gladiator's Bonegrinder
+				{ 10, 42296 }, -- Savage Gladiator's Pike
+				{ 16, 44415 }, -- Savage Gladiator's War Staff
+				{ 17, 42356 }, -- Savage Gladiator's Battle Staff
+				{ 18, 44416 }, -- Savage Gladiator's Focus Staff
+				{ 20, 42382 }, -- Savage Gladiator's Energy Staff
+				{ 22, 42388 }, -- Savage Gladiator's Staff
 			},
 			[SET2_DIFF] = {
-				{ 1, 42331 }, -- Gladiator's Greatsword
-				{ 3, 42316 }, -- Gladiator's Decapitator
-				{ 7, 42321 }, -- Gladiator's Bonegrinder
-				{ 10, 42326 }, -- Gladiator's Pike
-				{ 16, 44417 }, -- Gladiator's War Staff
-				{ 17, 42359 }, -- Gladiator's Battle Staff
-				{ 18, 44418 }, -- Gladiator's Focus Staff
-				{ 20, 42383 }, -- Gladiator's Energy Staff
-				{ 22, 42389 }, -- Gladiator's Staff
+				{ 1, 42331 }, -- Hateful Gladiator's Greatsword
+				{ 3, 42316 }, -- Hateful Gladiator's Decapitator
+				{ 7, 42321 }, -- Hateful Gladiator's Bonegrinder
+				{ 10, 42326 }, -- Hateful Gladiator's Pike
+				{ 16, 44417 }, -- Hateful Gladiator's War Staff
+				{ 17, 42359 }, -- Hateful Gladiator's Battle Staff
+				{ 18, 44418 }, -- Hateful Gladiator's Focus Staff
+				{ 20, 42383 }, -- Hateful Gladiator's Energy Staff
+				{ 22, 42389 }, -- Hateful Gladiator's Staff
 			},
 			[SET3_DIFF] = {
-				{ 1, 42332 }, -- Gladiator's Greatsword
-				{ 3, 42317 }, -- Gladiator's Decapitator
-				{ 7, 42322 }, -- Gladiator's Bonegrinder
-				{ 10, 42327 }, -- Gladiator's Pike
-				{ 16, 44419 }, -- Gladiator's War Staff
-				{ 17, 42362 }, -- Gladiator's Battle Staff
-				{ 18, 44420 }, -- Gladiator's Focus Staff
-				{ 20, 42384 }, -- Gladiator's Energy Staff
-				{ 22, 42390 }, -- Gladiator's Staff
+				{ 1, 42332 }, -- Deadly Gladiator's Greatsword
+				{ 3, 42317 }, -- Deadly Gladiator's Decapitator
+				{ 7, 42322 }, -- Deadly Gladiator's Bonegrinder
+				{ 10, 42327 }, -- Deadly Gladiator's Pike
+				{ 16, 44419 }, -- Deadly Gladiator's War Staff
+				{ 17, 42362 }, -- Deadly Gladiator's Battle Staff
+				{ 18, 44420 }, -- Deadly Gladiator's Focus Staff
+				{ 20, 42384 }, -- Deadly Gladiator's Energy Staff
+				{ 22, 42390 }, -- Deadly Gladiator's Staff
 			},
 		},
 		{
 			name = AL["Weapons"].." - "..AL["Ranged"],
 			[SET1_DIFF] = {
-				{ 1, 42445 }, -- Gladiator's Longbow
-				{ 3, 42446 }, -- Gladiator's Heavy Crossbow
-				{ 5, 42447 }, -- Gladiator's Rifle
-				{ 7, 42444 }, -- Gladiator's War Edge
-				{ 16, 42448 }, -- Gladiator's Touch of Defeat
-				{ 17, 42511 }, -- Gladiator's Baton of Light
-				{ 18, 42517 }, -- Gladiator's Piercing Touch
+				{ 1, 42445 }, -- Savage Gladiator's Longbow
+				{ 3, 42446 }, -- Savage Gladiator's Heavy Crossbow
+				{ 5, 42447 }, -- Savage Gladiator's Rifle
+				{ 7, 42444 }, -- Savage Gladiator's War Edge
+				{ 16, 42448 }, -- Savage Gladiator's Touch of Defeat
+				{ 17, 42511 }, -- Savage Gladiator's Baton of Light
+				{ 18, 42517 }, -- Savage Gladiator's Piercing Touch
 			},
 			[SET2_DIFF] = {
-				{ 1, 42489 }, -- Gladiator's Longbow
-				{ 3, 42494 }, -- Gladiator's Heavy Crossbow
-				{ 5, 42484 }, -- Gladiator's Rifle
-				{ 7, 42449 }, -- Gladiator's War Edge
-				{ 16, 42501 }, -- Gladiator's Touch of Defeat
-				{ 17, 42512 }, -- Gladiator's Baton of Light
-				{ 18, 42518 }, -- Gladiator's Piercing Touch
+				{ 1, 42489 }, -- Hateful Gladiator's Longbow
+				{ 3, 42494 }, -- Hateful Gladiator's Heavy Crossbow
+				{ 5, 42484 }, -- Hateful Gladiator's Rifle
+				{ 7, 42449 }, -- Hateful Gladiator's War Edge
+				{ 16, 42501 }, -- Hateful Gladiator's Touch of Defeat
+				{ 17, 42512 }, -- Hateful Gladiator's Baton of Light
+				{ 18, 42518 }, -- Hateful Gladiator's Piercing Touch
 			},
 			[SET3_DIFF] = {
-				{ 1, 42490 }, -- Gladiator's Longbow
-				{ 3, 42495 }, -- Gladiator's Heavy Crossbow
-				{ 5, 42485 }, -- Gladiator's Rifle
-				{ 7, 42450 }, -- Gladiator's War Edge
-				{ 16, 42502 }, -- Gladiator's Touch of Defeat
-				{ 17, 42513 }, -- Gladiator's Baton of Light
-				{ 18, 42519 }, -- Gladiator's Piercing Touch
+				{ 1, 42490 }, -- Deadly Gladiator's Longbow
+				{ 3, 42495 }, -- Deadly Gladiator's Heavy Crossbow
+				{ 5, 42485 }, -- Deadly Gladiator's Rifle
+				{ 7, 42450 }, -- Deadly Gladiator's War Edge
+				{ 16, 42502 }, -- Deadly Gladiator's Touch of Defeat
+				{ 17, 42513 }, -- Deadly Gladiator's Baton of Light
+				{ 18, 42519 }, -- Deadly Gladiator's Piercing Touch
 			},
 		},
 		{
 			name = AL["Weapons"].." - "..ALIL["Off Hand"],
 			[SET1_DIFF] = {
-				{ 1, 42523 }, -- Gladiator's Endgame
-				{ 2, 42535 }, -- Gladiator's Grimoire
-				{ 16, 42529 }, -- Gladiator's Reprieve
+				{ 1, 42523 }, -- Savage Gladiator's Endgame
+				{ 2, 42535 }, -- Savage Gladiator's Grimoire
+				{ 16, 42529 }, -- Savage Gladiator's Reprieve
 			},
 			[SET2_DIFF] = {
-				{ 1, 42524 }, -- Gladiator's Endgame
-				{ 2, 42536 }, -- Gladiator's Grimoire
-				{ 16, 42530 }, -- Gladiator's Reprieve
+				{ 1, 42524 }, -- Hateful Gladiator's Endgame
+				{ 2, 42536 }, -- Hateful Gladiator's Grimoire
+				{ 16, 42530 }, -- Hateful Gladiator's Reprieve
 			},
 			[SET3_DIFF] = {
-				{ 1, 42525 }, -- Gladiator's Endgame
-				{ 2, 42537 }, -- Gladiator's Grimoire
-				{ 16, 42531 }, -- Gladiator's Reprieve
+				{ 1, 42525 }, -- Deadly Gladiator's Endgame
+				{ 2, 42537 }, -- Deadly Gladiator's Grimoire
+				{ 16, 42531 }, -- Deadly Gladiator's Reprieve
 			},
 		},
 		{
 			name = AL["Weapons"].." - "..ALIL["Shields"],
 			[SET1_DIFF] = {
-				{ 1, 42556 }, -- Gladiator's Shield Wall
-				{ 16, 42568 }, -- Gladiator's Redoubt
-				{ 17, 42557 }, -- Gladiator's Barrier
+				{ 1, 42556 }, -- Savage Gladiator's Shield Wall
+				{ 16, 42568 }, -- Savage Gladiator's Redoubt
+				{ 17, 42557 }, -- Savage Gladiator's Barrier
 			},
 			[SET2_DIFF] = {
-				{ 1, 42558 }, -- Gladiator's Shield Wall
-				{ 16, 42569 }, -- Gladiator's Redoubt
-				{ 17, 42563 }, -- Gladiator's Barrier
+				{ 1, 42558 }, -- Hateful Gladiator's Shield Wall
+				{ 16, 42569 }, -- Hateful Gladiator's Redoubt
+				{ 17, 42563 }, -- Hateful Gladiator's Barrier
 			},
 			[SET3_DIFF] = {
-				{ 1, 42559 }, -- Gladiator's Shield Wall
-				{ 16, 42570 }, -- Gladiator's Redoubt
-				{ 17, 42564 }, -- Gladiator's Barrier
+				{ 1, 42559 }, -- Deadly Gladiator's Shield Wall
+				{ 16, 42570 }, -- Deadly Gladiator's Redoubt
+				{ 17, 42564 }, -- Deadly Gladiator's Barrier
 			},
 		},
 		{
 			name = ALIL["Cloak"],
 			[SET2_DIFF] = {
-				{ 1, 42061 }, -- Gladiator's Cloak of Victory
-				{ 2, 42060 }, -- Gladiator's Cloak of Triumph
-				{ 16, 42057 }, -- Gladiator's Cloak of Ascendancy
-				{ 17, 42056 }, -- Gladiator's Cloak of Subjugation
-				{ 18, 42055 }, -- Gladiator's Cloak of Dominance
-				{ 20, 42059 }, -- Gladiator's Cloak of Deliverance
-				{ 21, 42058 }, -- Gladiator's Cloak of Salvation
+				{ 1, 42061 }, -- Hateful Gladiator's Cloak of Victory
+				{ 2, 42060 }, -- Hateful Gladiator's Cloak of Triumph
+				{ 16, 42057 }, -- Hateful Gladiator's Cloak of Ascendancy
+				{ 17, 42056 }, -- Hateful Gladiator's Cloak of Subjugation
+				{ 18, 42055 }, -- Hateful Gladiator's Cloak of Dominance
+				{ 20, 42059 }, -- Hateful Gladiator's Cloak of Deliverance
+				{ 21, 42058 }, -- Hateful Gladiator's Cloak of Salvation
 			},
 			[SET3_DIFF] = {
-				{ 1, 42068 }, -- Gladiator's Cloak of Victory
-				{ 2, 42067 }, -- Gladiator's Cloak of Triumph
-				{ 16, 42064 }, -- Gladiator's Cloak of Ascendancy
-				{ 17, 42063 }, -- Gladiator's Cloak of Subjugation
-				{ 18, 42062 }, -- Gladiator's Cloak of Dominance
-				{ 20, 42066 }, -- Gladiator's Cloak of Deliverance
-				{ 21, 42065 }, -- Gladiator's Cloak of Salvation
+				{ 1, 42068 }, -- Deadly Gladiator's Cloak of Victory
+				{ 2, 42067 }, -- Deadly Gladiator's Cloak of Triumph
+				{ 16, 42064 }, -- Deadly Gladiator's Cloak of Ascendancy
+				{ 17, 42063 }, -- Deadly Gladiator's Cloak of Subjugation
+				{ 18, 42062 }, -- Deadly Gladiator's Cloak of Dominance
+				{ 20, 42066 }, -- Deadly Gladiator's Cloak of Deliverance
+				{ 21, 42065 }, -- Deadly Gladiator's Cloak of Salvation
 			},
 		},
 		{
 			name = ALIL["Relic"],
 			[SET1_DIFF] = {
-				{ 1, 42575 }, -- Gladiator's Idol of Steadfastness
-				{ 2, 42574 }, -- Gladiator's Idol of Resolve
-				{ 3, 42576 }, -- Gladiator's Idol of Tenacity
-				{ 5, 42612 }, -- Gladiator's Libram of Justice
-				{ 6, 42611 }, -- Gladiator's Libram of Fortitude
-				{ 16, 42595 }, -- Gladiator's Totem of the Third Wind
-				{ 17, 42594 }, -- Gladiator's Totem of Survival
-				{ 18, 42593 }, -- Gladiator's Totem of Indomitability
-				{ 20, 42618 }, -- Gladiator's Sigil of Strife
+				{ 1, 42575 }, -- Savage Gladiator's Idol of Steadfastness
+				{ 2, 42574 }, -- Savage Gladiator's Idol of Resolve
+				{ 3, 42576 }, -- Savage Gladiator's Idol of Tenacity
+				{ 5, 42612 }, -- Savage Gladiator's Libram of Justice
+				{ 6, 42611 }, -- Savage Gladiator's Libram of Fortitude
+				{ 16, 42595 }, -- Savage Gladiator's Totem of the Third Wind
+				{ 17, 42594 }, -- Savage Gladiator's Totem of Survival
+				{ 18, 42593 }, -- Savage Gladiator's Totem of Indomitability
+				{ 20, 42618 }, -- Savage Gladiator's Sigil of Strife
 			},
 			[SET2_DIFF] = {
-				{ 1, 42582 }, -- Gladiator's Idol of Steadfastness
-				{ 2, 42587 }, -- Gladiator's Idol of Resolve
-				{ 3, 42577 }, -- Gladiator's Idol of Tenacity
-				{ 5, 42613 }, -- Gladiator's Libram of Justice
-				{ 6, 42851 }, -- Gladiator's Libram of Fortitude
-				{ 16, 42596 }, -- Gladiator's Totem of the Third Wind
-				{ 17, 42601 }, -- Gladiator's Totem of Survival
-				{ 18, 42606 }, -- Gladiator's Totem of Indomitability
-				{ 20, 42619 }, -- Gladiator's Sigil of Strife
+				{ 1, 42582 }, -- Hateful Gladiator's Idol of Steadfastness
+				{ 2, 42587 }, -- Hateful Gladiator's Idol of Resolve
+				{ 3, 42577 }, -- Hateful Gladiator's Idol of Tenacity
+				{ 5, 42613 }, -- Hateful Gladiator's Libram of Justice
+				{ 6, 42851 }, -- Hateful Gladiator's Libram of Fortitude
+				{ 16, 42596 }, -- Hateful Gladiator's Totem of the Third Wind
+				{ 17, 42601 }, -- Hateful Gladiator's Totem of Survival
+				{ 18, 42606 }, -- Hateful Gladiator's Totem of Indomitability
+				{ 20, 42619 }, -- Hateful Gladiator's Sigil of Strife
 			},
 			[SET3_DIFF] = {
-				{ 1, 42583 }, -- Gladiator's Idol of Steadfastness
-				{ 2, 42588 }, -- Gladiator's Idol of Resolve
-				{ 3, 42578 }, -- Gladiator's Idol of Tenacity
-				{ 5, 42614 }, -- Gladiator's Libram of Justice
-				{ 6, 42852 }, -- Gladiator's Libram of Fortitude
-				{ 16, 42597 }, -- Gladiator's Totem of the Third Wind
-				{ 17, 42602 }, -- Gladiator's Totem of Survival
-				{ 18, 42607 }, -- Gladiator's Totem of Indomitability
-				{ 20, 42620 }, -- Gladiator's Sigil of Strife
+				{ 1, 42583 }, -- Deadly Gladiator's Idol of Steadfastness
+				{ 2, 42588 }, -- Deadly Gladiator's Idol of Resolve
+				{ 3, 42578 }, -- Deadly Gladiator's Idol of Tenacity
+				{ 5, 42614 }, -- Deadly Gladiator's Libram of Justice
+				{ 6, 42852 }, -- Deadly Gladiator's Libram of Fortitude
+				{ 16, 42597 }, -- Deadly Gladiator's Totem of the Third Wind
+				{ 17, 42602 }, -- Deadly Gladiator's Totem of Survival
+				{ 18, 42607 }, -- Deadly Gladiator's Totem of Indomitability
+				{ 20, 42620 }, -- Deadly Gladiator's Sigil of Strife
 			},
 		},
 		{
 			name = ALIL["Neck"],
 			[SET2_DIFF] = {
-				{ 1, 42021 }, -- Gladiator's Pendant of Victory
-				{ 2, 42020 }, -- Gladiator's Pendant of Triumph
-				{ 16, 42024 }, -- Gladiator's Pendant of Ascendancy
-				{ 17, 42023 }, -- Gladiator's Pendant of Subjugation
-				{ 18, 42022 }, -- Gladiator's Pendant of Dominance
-				{ 20, 42025 }, -- Gladiator's Pendant of Deliverance
-				{ 21, 42026 }, -- Gladiator's Pendant of Salvation
+				{ 1, 42021 }, -- Hateful Gladiator's Pendant of Victory
+				{ 2, 42020 }, -- Hateful Gladiator's Pendant of Triumph
+				{ 16, 42024 }, -- Hateful Gladiator's Pendant of Ascendancy
+				{ 17, 42023 }, -- Hateful Gladiator's Pendant of Subjugation
+				{ 18, 42022 }, -- Hateful Gladiator's Pendant of Dominance
+				{ 20, 42025 }, -- Hateful Gladiator's Pendant of Deliverance
+				{ 21, 42026 }, -- Hateful Gladiator's Pendant of Salvation
 			},
 			[SET3_DIFF] = {
-				{ 1, 42028 }, -- Gladiator's Pendant of Victory
-				{ 2, 42027 }, -- Gladiator's Pendant of Triumph
-				{ 16, 42030 }, -- Gladiator's Pendant of Ascendancy
-				{ 17, 42031 }, -- Gladiator's Pendant of Subjugation
-				{ 18, 42029 }, -- Gladiator's Pendant of Dominance
-				{ 20, 42032 }, -- Gladiator's Pendant of Deliverance
-				{ 21, 42033 }, -- Gladiator's Pendant of Salvation
+				{ 1, 42028 }, -- Deadly Gladiator's Pendant of Victory
+				{ 2, 42027 }, -- Deadly Gladiator's Pendant of Triumph
+				{ 16, 42030 }, -- Deadly Gladiator's Pendant of Ascendancy
+				{ 17, 42031 }, -- Deadly Gladiator's Pendant of Subjugation
+				{ 18, 42029 }, -- Deadly Gladiator's Pendant of Dominance
+				{ 20, 42032 }, -- Deadly Gladiator's Pendant of Deliverance
+				{ 21, 42033 }, -- Deadly Gladiator's Pendant of Salvation
 			},
 		},
 		{
 			name = ALIL["Finger"],
 			[SET2_DIFF] = {
-				{ 1, 42112 }, -- Gladiator's Band of Triumph
-				{ 16, 42110 }, -- Gladiator's Band of Dominance
+				{ 1, 42112 }, -- Hateful Gladiator's Band of Triumph
+				{ 16, 42110 }, -- Hateful Gladiator's Band of Dominance
 			},
 			[SET3_DIFF] = {
-				{ 1, 42115 }, -- Gladiator's Band of Victory
-				{ 16, 42114 }, -- Gladiator's Band of Ascendancy
+				{ 1, 42115 }, -- Deadly Gladiator's Band of Victory
+				{ 16, 42114 }, -- Deadly Gladiator's Band of Ascendancy
 			},
 		},
 		{
@@ -567,6 +567,765 @@ data["ArenaS5PvP"] = {
 	}
 }
 
+data["ArenaS6PvP"] = {
+	name = format(AL["Season %s"], "6"),
+	ContentType = ARENA_CONTENT,
+	LoadDifficulty = LOAD_DIFF,
+	TableType = NORMAL_ITTYPE,
+	items = {
+		{
+			name = AL["Sets"],
+			TableType = SET_ITTYPE,
+			[NORMAL_DIFF] = {
+				{ 1,    3003780 }, -- Warlock
+				{ 3,    3003777 }, -- Priest / Heal
+				{ 4,    3003778 }, -- Priest / Shadow
+				{ 6,    3003776 }, -- Rogue
+				{ 8,    3003772 }, -- Hunter
+				{ 10,   3003765 }, -- Warrior / DD
+				{ 13,   3003768 }, -- Deathknight
+				{ 16,   3003779 }, -- Mage
+				{ 18,   3003773 }, -- Druid / Heal
+				{ 19,   3003774 }, -- Druid / Owl
+				{ 20,   3003775 }, -- Druid / Feral
+				{ 22,   3003771 }, -- Shaman / Heal
+				{ 23,   3003769 }, -- Shaman / Ele
+				{ 24,   3003770 }, -- Shaman / Enh
+				{ 26,   3003767 }, -- Paladin / Heal
+				{ 27,   3003766 }, -- Paladin / DD
+			},
+		},
+		{
+			name = AL["Weapons"].." - "..AL["One-Handed"],
+			[NORMAL_DIFF] = {
+				{ 1, 42243 }, -- Furious Gladiator's Shanker
+				{ 2, 42249 }, -- Furious Gladiator's Shiv
+				{ 3, 42256 }, -- Furious Gladiator's Mutilator
+
+				{ 5, 42276 }, -- Furious Gladiator's Pummeler
+				{ 6, 42281 }, -- Furious Gladiator's Bonecracker
+
+				{ 8, 42286 }, -- Furious Gladiator's Slicer
+				{ 9, 42291 }, -- Furious Gladiator's Quickblade
+
+				{ 11, 42209 }, -- Furious Gladiator's Cleaver
+				{ 12, 42228 }, -- Furious Gladiator's Hacker
+				{ 13, 42233 }, -- Furious Gladiator's Chopper
+
+				{ 15, 42238 }, -- Furious Gladiator's Waraxe
+
+				{ 16, 42347 }, -- Furious Gladiator's Spellblade
+				{ 20, 42353 }, -- Furious Gladiator's Gavel
+
+				{ 26, 42261 }, -- Furious Gladiator's Right Ripper
+				{ 27, 42271 }, -- Furious Gladiator's Left Ripper
+				{ 28, 42266 }, -- Furious Gladiator's Left Render
+			},
+		},
+		{
+			name = AL["Weapons"].." - "..AL["One-Handed"].." - R2",
+			[NORMAL_DIFF] = {
+				{ 1, 45958 }, -- Furious Gladiator's Spike
+				{ 2, 45962 }, -- Furious Gladiator's Dirk
+				{ 3, 45967 }, -- Furious Gladiator's Eviscerator
+
+				{ 5, 45959 }, -- Furious gladiator's Truncheon
+				{ 6, 45964 }, -- Furious gladiator's Punisher
+
+				{ 8, 45960 }, -- Furious gladiator's Longblade
+				{ 9, 45965 }, -- Furious Gladiator's Swiftblade
+
+				{ 11, 45957 }, -- Furious Gladiator's Handaxe
+				{ 12, 45961 }, -- Furious Gladiator's Dicer
+				{ 13, 45966 }, -- Furious Gladiator's Splitter
+
+				{ 16, 45970 }, -- Furious Gladiator's Mageblade
+				{ 20, 45971 }, -- Furious Gladiator's Salvation
+
+				{ 26, 45969 }, -- Furious Gladiator's Grasp
+				{ 27, 45963 }, -- Furious Gladiator's Left Razor
+				{ 28, 45968 }, -- Furious Gladiator's Left Claw
+			}
+		},
+		{
+			name = AL["Weapons"].." - "..AL["Two-Handed"],
+			[NORMAL_DIFF] = {
+				{ 1, 42333 }, -- Furious Gladiator's Greatsword
+				{ 3, 42318 }, -- Furious Gladiator's Decapitator
+				{ 7, 42323 }, -- Furious Gladiator's Bonegrinder
+				{ 10, 42328 }, -- Furious Gladiator's Pike
+				{ 16, 44421 }, -- Furious Gladiator's War Staff
+				{ 17, 42364 }, -- Furious Gladiator's Battle Staff
+				{ 18, 44422 }, -- Furious Gladiator's Focus Staff
+				{ 20, 42385 }, -- Furious Gladiator's Energy Staff
+				{ 22, 42391 }, -- Furious Gladiator's Staff
+			},
+		},
+		{
+			name = AL["Weapons"].." - "..AL["Two-Handed"].." - R2",
+			[NORMAL_DIFF] = {
+				{ 1, 45950 }, -- Furious Gladiator's Claymore
+				{ 3, 45948 }, -- Furious Gladiator's Sunderer
+				{ 7, 45949 }, -- Furious Gladiator's Crusher
+				{ 10, 45951 }, -- Furious Gladiator's Halberd
+				{ 16, 45953 }, -- Furious Gladiator's Combat Staff
+				{ 17, 45955 }, -- Furious Gladiator's Skirmish Staff
+				{ 18, 45954 }, -- Furious Gladiator's Acute Staff
+				{ 20, 45956 }, -- Furious Gladiator's Light Staff
+				{ 22, 45952 }, -- Furious Gladiator's Greatstaff
+			},
+		},
+		{
+			name = AL["Weapons"].." - "..AL["Ranged"],
+			[NORMAL_DIFF] = {
+				{ 1, 42491 }, -- Furious Gladiator's Longbow
+				{ 3, 42496 }, -- Furious Gladiator's Heavy Crossbow
+				{ 5, 42486 }, -- Furious Gladiator's Rifle
+				{ 7, 42451 }, -- Furious Gladiator's War Edge
+				{ 16, 42503 }, -- Furious Gladiator's Touch of Defeat
+				{ 17, 42514 }, -- Furious Gladiator's Baton of Light
+				{ 18, 42520 }, -- Furious Gladiator's Piercing Touch
+			},
+		},
+		{
+			name = AL["Weapons"].." - "..AL["Ranged"].." - R2",
+			[NORMAL_DIFF] = {
+				{ 1, 45938 }, -- Furious Gladiator's Recurve
+				{ 3, 45939 }, -- Furious Gladiator's Repeater
+				{ 5, 45937 }, -- Furious Gladiator's Shotgun
+
+			},
+		},
+		{
+			name = AL["Weapons"].." - "..ALIL["Off Hand"],
+			[SET1_DIFF] = {
+				{ 1, 42526 }, -- Furious Gladiator's Endgame
+				{ 2, 42538 }, -- Furious Gladiator's Grimoire
+				{ 16, 42532 }, -- Furious Gladiator's Reprieve
+			},
+		},
+		{
+			name = AL["Weapons"].." - "..ALIL["Shields"],
+			[NORMAL_DIFF] = {
+				{ 1, 42560 }, -- Furious Gladiator's Shield Wall
+				{ 16, 42571 }, -- Furious Gladiator's Redoubt
+				{ 17, 42565 }, -- Furious Gladiator's Barrier
+			},
+		},
+		{
+			name = ALIL["Cloak"],
+			[NORMAL_DIFF] = {
+				{ 1, 42075 }, -- Furious Gladiator's Cloak of Victory
+				{ 2, 42074 }, -- Furious Gladiator's Cloak of Triumph
+				{ 16, 42071 }, -- Furious Gladiator's Cloak of Ascendancy
+				{ 17, 42079 }, -- Furious Gladiator's Cloak of Subjugation
+				{ 18, 42069 }, -- Furious Gladiator's Cloak of Dominance
+				{ 20, 42073 }, -- Furious Gladiator's Cloak of Deliverance
+				{ 21, 42072 }, -- Furious Gladiator's Cloak of Salvation
+			},
+		},
+		{
+			name = ALIL["Relic"],
+			[NORMAL_DIFF] = {
+				{ 1, 42584 }, -- Furious Gladiator's Idol of Steadfastness
+				{ 2, 42589 }, -- Furious Gladiator's Idol of Resolve
+				{ 3, 42579 }, -- Furious Gladiator's Idol of Tenacity
+				{ 5, 42615 }, -- Furious Gladiator's Libram of Justice
+				{ 6, 42853 }, -- Furious Gladiator's Libram of Fortitude
+				{ 16, 42598 }, -- Furious Gladiator's Totem of the Third Wind
+				{ 17, 42603 }, -- Furious Gladiator's Totem of Survival
+				{ 18, 42608 }, -- Furious Gladiator's Totem of Indomitability
+				{ 20, 42621 }, -- Furious Gladiator's Sigil of Strife
+			},
+		},
+		{
+			name = ALIL["Neck"],
+			[NORMAL_DIFF] = {
+				{ 1, 42035 }, -- Furious Gladiator's Pendant of Victory
+				{ 2, 42034 }, -- Furious Gladiator's Pendant of Triumph
+				{ 3, 46373 }, -- Furious Gladiator's Pendant of Sundering
+				{ 16, 42037 }, -- Furious Gladiator's Pendant of Ascendancy
+				{ 17, 42038 }, -- Furious Gladiator's Pendant of Subjugation
+				{ 18, 42036 }, -- Furious Gladiator's Pendant of Dominance
+				{ 20, 42039 }, -- Furious Gladiator's Pendant of Deliverance
+				{ 21, 42040 }, -- Furious Gladiator's Pendant of Salvation
+			},
+		},
+		{
+			name = ALIL["Finger"],
+			[NORMAL_DIFF] = {
+				{ 1, 42117 }, -- Furious Gladiator's Band of Triumph
+				{ 16, 42116 }, -- Furious Gladiator's Band of Dominance
+			},
+		},
+		{
+			name = format(AL["Non Set '%s'"], ALIL["Cloth"]),
+			[NORMAL_DIFF] = {
+				{ 1, 41885 }, -- Furious Gladiator's Slippers of Salvation
+				{ 2, 41881 }, -- Furious Gladiator's Cord of Salvation
+				{ 3, 41893 }, -- Furious Gladiator's Cuffs of Salvation
+				{ 5, 41903 }, -- Furious Gladiator's Slippers of Dominance
+				{ 6, 41898 }, -- Furious Gladiator's Cord of Dominance
+				{ 7, 41909 }, -- Furious Gladiator's Cuffs of Dominance
+			},
+		},
+		{
+			name = format(AL["Non Set '%s'"], ALIL["Leather"]),
+			[NORMAL_DIFF] = {
+				{ 1, 41621 },  -- Furious Gladiator's Boots of Salvation
+				{ 2, 41617 },  -- Furious Gladiator's Belt of Salvation, Waist
+				{ 3, 41625 },  -- Furious Gladiator's Armwraps of Salvation
+				{ 5, 41635 },  -- Furious Gladiator's Boots of Dominance
+				{ 6, 41630 },  -- Furious Gladiator's Belt of Dominance, Waist
+				{ 7, 41640 }, -- Furious Gladiator's Armwraps of Dominance
+				{ 9, 41836 },  -- Furious Gladiator's Boots of Triumph
+				{ 10, 41832 },  -- Furious Gladiator's Belt of Triumph, Waist
+				{ 11, 41840 }, -- Furious Gladiator's Armwraps of Triumph
+			},
+		},
+		{
+			name = format(AL["Non Set '%s'"], ALIL["Mail"]),
+			[NORMAL_DIFF] = {
+				{ 1, 41055 }, -- Furious Gladiator's Sabatons of Salvation
+				{ 2, 41051 }, -- Furious Gladiator's Waistguard of Salvation
+				{ 3, 41060 }, -- Furious Gladiator's Wristguards of Salvation
+				{ 5, 41075 }, -- Furious Gladiator's Sabatons of Dominance
+				{ 6, 41070 }, -- Furious Gladiator's Waistguard of Dominance
+				{ 7, 41065 }, -- Furious Gladiator's Wristguards of Dominance
+				{ 9, 41230 }, -- Furious Gladiator's Sabatons of Triumph
+				{ 10, 41235 }, -- Furious Gladiator's Waistguard of Triumph
+				{ 11, 41225 }, -- Furious Gladiator's Wristguards of Triumph
+			},
+		},
+		{
+			name = format(AL["Non Set '%s'"], ALIL["Plate"]),
+			[NORMAL_DIFF] = {
+				{ 1, 40882 }, -- Furious Gladiator's Greaves of Triumph
+				{ 2, 40881 }, -- Furious Gladiator's Girdle of Triumph
+				{ 3, 40889 }, -- Furious Gladiator's Bracers of Triumph
+				{ 5, 40977 }, -- Furious Gladiator's Greaves of Salvation
+				{ 6, 40976 }, -- Furious Gladiator's Girdle of Salvation
+				{ 7, 40983 }, -- Furious Gladiator's Bracers of Salvation
+			},
+		},
+		{
+			name = AL["Gladiator Mount"],
+			ExtraList = true,
+			[NORMAL_DIFF] = {
+				{ 1,  46171 }, -- Furious Gladiator's Frost Wyrm
+			}
+		}
+	}
+}
+
+data["ArenaS7PvP"] = {
+	name = format(AL["Season %s"], "7"),
+	ContentType = ARENA_CONTENT,
+	LoadDifficulty = LOAD_DIFF,
+	TableType = NORMAL_ITTYPE,
+	items = {
+		{
+			name = AL["Sets"],
+			TableType = SET_ITTYPE,
+			[NORMAL_DIFF] = {
+				{ 1,    3004780 }, -- Warlock
+				{ 3,    3004777 }, -- Priest / Heal
+				{ 4,    3004778 }, -- Priest / Shadow
+				{ 6,    3004776 }, -- Rogue
+				{ 8,    3004772 }, -- Hunter
+				{ 10,   3004765 }, -- Warrior / DD
+				{ 13,   3004768 }, -- Deathknight
+				{ 16,   3004779 }, -- Mage
+				{ 18,   3004773 }, -- Druid / Heal
+				{ 19,   3004774 }, -- Druid / Owl
+				{ 20,   3004775 }, -- Druid / Feral
+				{ 22,   3004771 }, -- Shaman / Heal
+				{ 23,   3004769 }, -- Shaman / Ele
+				{ 24,   3004770 }, -- Shaman / Enh
+				{ 26,   3004767 }, -- Paladin / Heal
+				{ 27,   3004766 }, -- Paladin / DD
+			},
+		},
+		{
+			name = AL["Weapons"].." - "..AL["One-Handed"],
+			[NORMAL_DIFF] = {
+				{ 1, 42244 }, -- Relentless Gladiator's Shanker
+				{ 2, 42250 }, -- Relentless Gladiator's Shiv
+				{ 3, 42257 }, -- Relentless Gladiator's Mutilator
+
+				{ 5, 42277 }, -- Relentless Gladiator's Pummeler
+				{ 6, 42282 }, -- Relentless Gladiator's Bonecracker
+
+				{ 8, 42287 }, -- Relentless Gladiator's Slicer
+				{ 9, 42292 }, -- Relentless Gladiator's Quickblade
+
+				{ 11, 42210 }, -- Relentless Gladiator's Cleaver
+				{ 12, 42229 }, -- Relentless Gladiator's Hacker
+				{ 13, 42234 }, -- Relentless Gladiator's Chopper
+
+				{ 16, 42348 }, -- Relentless Gladiator's Spellblade
+				{ 20, 42354 }, -- Relentless Gladiator's Gavel
+
+				{ 26, 42262 }, -- Relentless Gladiator's Right Ripper
+				{ 27, 42272 }, -- Relentless Gladiator's Left Ripper
+				{ 28, 42267 }, -- Relentless Gladiator's Left Render
+			},
+		},
+		{
+			name = AL["Weapons"].." - "..AL["One-Handed"].." - R2",
+			[NORMAL_DIFF] = {
+				{ 1, 48509 }, -- Relentless Gladiator's Spike
+				{ 2, 48428 }, -- Relentless Gladiator's Dirk
+				{ 3, 48442 }, -- Relentless Gladiator's Eviscerator
+
+				{ 5, 48511 }, -- Relentless gladiator's Truncheon
+				{ 6, 48435 }, -- Relentless gladiator's Punisher
+
+				{ 8, 48513 }, -- Relentless gladiator's Longblade
+				{ 9, 48438 }, -- Relentless Gladiator's Swiftblade
+
+				{ 11, 48507 }, -- Relentless Gladiator's Handaxe
+				{ 12, 48426 }, -- Relentless Gladiator's Dicer
+				{ 13, 48440 }, -- Relentless Gladiator's Splitter
+
+				{ 16, 48408 }, -- Relentless Gladiator's Mageblade
+				{ 20, 48519 }, -- Relentless Gladiator's Salvation
+
+				{ 26, 48515 }, -- Relentless Gladiator's Grasp
+				{ 27, 48432 }, -- Relentless Gladiator's Left Razor
+				{ 28, 48444 }, -- Relentless Gladiator's Left Claw
+			}
+		},
+		{
+			name = AL["Weapons"].." - "..AL["Two-Handed"],
+			[NORMAL_DIFF] = {
+				{ 1, 42334 }, -- Relentless Gladiator's Greatsword
+				{ 3, 42319 }, -- Relentless Gladiator's Decapitator
+				{ 7, 42324 }, -- Relentless Gladiator's Bonegrinder
+				{ 10, 42329 }, -- Relentless Gladiator's Pike
+				{ 16, 44422 }, -- Relentless Gladiator's War Staff
+				{ 17, 42365 }, -- Relentless Gladiator's Battle Staff
+				{ 20, 42386 }, -- Relentless Gladiator's Energy Staff
+				{ 22, 42392 }, -- Relentless Gladiator's Staff
+			},
+		},
+		{
+			name = AL["Weapons"].." - "..AL["Two-Handed"].." - R2",
+			[NORMAL_DIFF] = {
+				{ 1, 48406 }, -- Relentless Gladiator's Claymore
+				{ 3, 48402 }, -- Relentless Gladiator's Sunderer
+				{ 7, 48404 }, -- Relentless Gladiator's Crusher
+				{ 10, 48517 }, -- Relentless Gladiator's Halberd
+				{ 16, 48414 }, -- Relentless Gladiator's Combat Staff
+				{ 17, 48410 }, -- Relentless Gladiator's Skirmish Staff
+				{ 18, 48412 }, -- Relentless Gladiator's Acute Staff
+				{ 20, 48512 }, -- Relentless Gladiator's Light Staff
+				{ 22, 48523 }, -- Relentless Gladiator's Greatstaff
+			},
+		},
+		{
+			name = AL["Weapons"].." - "..AL["Ranged"],
+			[NORMAL_DIFF] = {
+				{ 1, 42492 }, -- Relentless Gladiator's Longbow
+				{ 3, 42498 }, -- Relentless Gladiator's Heavy Crossbow
+				{ 5, 42487 }, -- Relentless Gladiator's Rifle
+				{ 7, 42483 }, -- Relentless Gladiator's War Edge
+				{ 16, 42504 }, -- Relentless Gladiator's Touch of Defeat
+				{ 17, 42515 }, -- Relentless Gladiator's Baton of Light
+				{ 18, 42521 }, -- Relentless Gladiator's Piercing Touch
+				{ 19, 42521 }, -- Relentless Gladiator's Wand of Alacrity
+			},
+		},
+		{
+			name = AL["Weapons"].." - "..AL["Ranged"].." - R2",
+			[NORMAL_DIFF] = {
+				{ 1, 48420 }, -- Relentless Gladiator's Recurve
+				{ 3, 48422 }, -- Relentless Gladiator's Repeater
+				{ 5, 48424 }, -- Relentless Gladiator's Shotgun
+
+			},
+		},
+		{
+			name = AL["Weapons"].." - "..ALIL["Off Hand"],
+			[SET1_DIFF] = {
+				{ 1, 42527 }, -- Relentless Gladiator's Endgame
+				{ 2, 42539 }, -- Relentless Gladiator's Grimoire
+				{ 16, 42533 }, -- Relentless Gladiator's Reprieve
+				{ 17, 49187 }, -- Relentless Gladiator's Compendium
+			},
+		},
+		{
+			name = AL["Weapons"].." - "..ALIL["Shields"],
+			[NORMAL_DIFF] = {
+				{ 1, 42561 }, -- Relentless Gladiator's Shield Wall
+				{ 16, 42572 }, -- Relentless Gladiator's Redoubt
+				{ 17, 42566 }, -- Relentless Gladiator's Barrier
+			},
+		},
+		{
+			name = ALIL["Cloak"],
+			[NORMAL_DIFF] = {
+				{ 1, 42082 }, -- Relentless Gladiator's Cloak of Victory
+				{ 2, 42081 }, -- Relentless Gladiator's Cloak of Triumph
+				{ 16, 42078 }, -- Relentless Gladiator's Cloak of Ascendancy
+				{ 17, 42077 }, -- Relentless Gladiator's Cloak of Subjugation
+				{ 18, 42076 }, -- Relentless Gladiator's Cloak of Dominance
+				{ 20, 42080 }, -- Relentless Gladiator's Cloak of Deliverance
+				{ 21, 42079 }, -- Relentless Gladiator's Cloak of Salvation
+			},
+		},
+		{
+			name = ALIL["Relic"],
+			[NORMAL_DIFF] = {
+				{ 1, 42585 }, -- Relentless Gladiator's Idol of Steadfastness
+				{ 2, 42591 }, -- Relentless Gladiator's Idol of Resolve
+				{ 3, 42580 }, -- Relentless Gladiator's Idol of Tenacity
+				{ 5, 42616 }, -- Relentless Gladiator's Libram of Justice
+				{ 6, 42854 }, -- Relentless Gladiator's Libram of Fortitude
+				{ 16, 42599 }, -- Relentless Gladiator's Totem of the Third Wind
+				{ 17, 42604 }, -- Relentless Gladiator's Totem of Survival
+				{ 18, 42609 }, -- Relentless Gladiator's Totem of Indomitability
+				{ 20, 42622 }, -- Relentless Gladiator's Sigil of Strife
+			},
+		},
+		{
+			name = ALIL["Neck"],
+			[NORMAL_DIFF] = {
+				{ 1, 42042 }, -- Relentless Gladiator's Pendant of Victory
+				{ 2, 42041 }, -- Relentless Gladiator's Pendant of Triumph
+				{ 3, 46374 }, -- Relentless Gladiator's Pendant of Sundering
+				{ 16, 42044 }, -- Relentless Gladiator's Pendant of Ascendancy
+				{ 17, 42045 }, -- Relentless Gladiator's Pendant of Subjugation
+				{ 18, 42043 }, -- Relentless Gladiator's Pendant of Dominance
+				{ 20, 42046 }, -- Relentless Gladiator's Pendant of Deliverance
+				{ 21, 42047 }, -- Relentless Gladiator's Pendant of Salvation
+			},
+		},
+		{
+			name = ALIL["Finger"],
+			[NORMAL_DIFF] = {
+				{ 1, 42118 }, -- Relentless Gladiator's Band of Ascendancy
+				{ 16, 42119 }, -- Relentless Gladiator's Band of Victory
+			},
+		},
+		{
+			name = format(AL["Non Set '%s'"], ALIL["Cloth"]),
+			[NORMAL_DIFF] = {
+				{ 1, 41886 }, -- Relentless Gladiator's Slippers of Salvation
+				{ 2, 41882 }, -- Relentless Gladiator's Cord of Salvation
+				{ 3, 41894 }, -- Relentless Gladiator's Cuffs of Salvation
+				{ 5, 41904 }, -- Relentless Gladiator's Slippers of Dominance
+				{ 6, 41899 }, -- Relentless Gladiator's Cord of Dominance
+				{ 7, 41910 }, -- Relentless Gladiator's Cuffs of Dominance
+				{ 9, 49183 }, -- Relentless Gladiator's Slippers of Alacrity
+				{ 10, 49179 }, -- Relentless Gladiator's Cord of Alacrity
+				{ 11, 49181 }, -- Relentless Gladiator's Cuffs of Alacrity
+
+			},
+		},
+		{
+			name = format(AL["Non Set '%s'"], ALIL["Leather"]),
+			[NORMAL_DIFF] = {
+				{ 1, 41622 },  -- Relentless Gladiator's Boots of Salvation
+				{ 2, 41618 },  -- Relentless Gladiator's Belt of Salvation, Waist
+				{ 3, 41626 },  -- Relentless Gladiator's Armwraps of Salvation
+				{ 5, 41636 },  -- Relentless Gladiator's Boots of Dominance
+				{ 6, 41631 },  -- Relentless Gladiator's Belt of Dominance
+				{ 7, 41641 }, -- Relentless Gladiator's Armwraps of Dominance
+				{ 9, 41837 },  -- Relentless Gladiator's Boots of Triumph
+				{ 10, 41833 },  -- Relentless Gladiator's Belt of Triumph
+				{ 11, 41841 }, -- Relentless Gladiator's Armwraps of Triumph
+			},
+		},
+		{
+			name = format(AL["Non Set '%s'"], ALIL["Mail"]),
+			[NORMAL_DIFF] = {
+				{ 1, 41056 }, -- Relentless Gladiator's Sabatons of Salvation
+				{ 2, 41052 }, -- Relentless Gladiator's Waistguard of Salvation
+				{ 3, 41061 }, -- Relentless Gladiator's Wristguards of Salvation
+				{ 5, 41076 }, -- Relentless Gladiator's Sabatons of Dominance
+				{ 6, 41071 }, -- Relentless Gladiator's Waistguard of Dominance
+				{ 7, 41066 }, -- Relentless Gladiator's Wristguards of Dominance
+				{ 9, 41231 }, -- Relentless Gladiator's Sabatons of Triumph
+				{ 10, 41236 }, -- Relentless Gladiator's Waistguard of Triumph
+				{ 11, 41226 }, -- Relentless Gladiator's Wristguards of Triumph
+			},
+		},
+		{
+			name = format(AL["Non Set '%s'"], ALIL["Plate"]),
+			[NORMAL_DIFF] = {
+				{ 1, 40884 }, -- Relentless Gladiator's Greaves of Triumph
+				{ 2, 40883 }, -- Relentless Gladiator's Girdle of Triumph
+				{ 3, 40890 }, -- Relentless Gladiator's Bracers of Triumph
+				{ 5, 40979 }, -- Relentless Gladiator's Greaves of Salvation
+				{ 6, 40978 }, -- Relentless Gladiator's Girdle of Salvation
+				{ 7, 40984 }, -- Relentless Gladiator's Bracers of Salvation
+			},
+		},
+		{
+			name = AL["Gladiator Mount"],
+			ExtraList = true,
+			[NORMAL_DIFF] = {
+				{ 1,  47840 }, -- Relentless Gladiator's Frost Wyrm
+			}
+		}
+	}
+}
+
+data["ArenaS8PvP"] = {
+	name = format(AL["Season %s"], "8"),
+	ContentType = ARENA_CONTENT,
+	LoadDifficulty = LOAD_DIFF,
+	TableType = NORMAL_ITTYPE,
+	items = {
+		{
+			name = AL["Sets"],
+			TableType = SET_ITTYPE,
+			[NORMAL_DIFF] = {
+				{ 1,    3005780 }, -- Warlock
+				{ 3,    3005777 }, -- Priest / Heal
+				{ 4,    3005778 }, -- Priest / Shadow
+				{ 6,    3005776 }, -- Rogue
+				{ 8,    3005772 }, -- Hunter
+				{ 10,   3005765 }, -- Warrior / DD
+				{ 13,   3005768 }, -- Deathknight
+				{ 16,   3005779 }, -- Mage
+				{ 18,   3005773 }, -- Druid / Heal
+				{ 19,   3005774 }, -- Druid / Owl
+				{ 20,   3005775 }, -- Druid / Feral
+				{ 22,   3005771 }, -- Shaman / Heal
+				{ 23,   3005769 }, -- Shaman / Ele
+				{ 24,   3005770 }, -- Shaman / Enh
+				{ 26,   3005767 }, -- Paladin / Heal
+				{ 27,   3005766 }, -- Paladin / DD
+			},
+		},
+		{
+			name = AL["Weapons"].." - "..AL["One-Handed"],
+			[NORMAL_DIFF] = {
+				{ 1, 51517 }, -- Wrathful Gladiator's Shanker
+				{ 2, 51441 }, -- Wrathful Gladiator's Shiv
+				{ 3, 51527 }, -- Wrathful Gladiator's Mutilator
+
+				{ 5, 51519 }, -- Wrathful Gladiator's Pummeler
+				{ 6, 51445 }, -- Wrathful Gladiator's Bonecracker
+
+				{ 8, 51521 }, -- Wrathful Gladiator's Slicer
+				{ 9, 51447 }, -- Wrathful Gladiator's Quickblade
+
+				{ 11, 51515 }, -- Wrathful Gladiator's Cleaver
+				{ 12, 51439 }, -- Wrathful Gladiator's Hacker
+				{ 13, 51525 }, -- Wrathful Gladiator's Chopper
+
+				{ 16, 51397 }, -- Wrathful Gladiator's Spellblade
+				{ 20, 51453 }, -- Wrathful Gladiator's Gavel
+
+				{ 26, 51523 }, -- Wrathful Gladiator's Right Ripper
+				{ 27, 51443 }, -- Wrathful Gladiator's Left Ripper
+				{ 28, 51530 }, -- Wrathful Gladiator's Left Render
+			},
+		},
+		{
+			name = AL["Weapons"].." - "..AL["One-Handed"].." - R2",
+			[NORMAL_DIFF] = {
+				{ 1, 51518 }, -- Wrathful Gladiator's Spike
+				{ 2, 51442 }, -- Wrathful Gladiator's Dirk
+				{ 3, 51528 }, -- Wrathful Gladiator's Eviscerator
+
+				{ 5, 51520 }, -- Wrathful gladiator's Truncheon
+				{ 6, 51446 }, -- Wrathful gladiator's Punisher
+
+				{ 8, 51522 }, -- Wrathful gladiator's Longblade
+				{ 9, 51548 }, -- Wrathful Gladiator's Swiftblade
+
+				{ 11, 51516 }, -- Wrathful Gladiator's Handaxe
+				{ 12, 51540 }, -- Wrathful Gladiator's Dicer
+				{ 13, 51526 }, -- Wrathful Gladiator's Splitter
+
+				{ 16, 51399 }, -- Wrathful Gladiator's Mageblade
+				{ 20, 51554 }, -- Wrathful Gladiator's Salvation
+
+				{ 26, 51524 }, -- Wrathful Gladiator's Grasp
+				{ 27, 51544 }, -- Wrathful Gladiator's Left Razor
+				{ 28, 51529 }, -- Wrathful Gladiator's Left Claw
+			}
+		},
+		{
+			name = AL["Weapons"].." - "..AL["Two-Handed"],
+			[NORMAL_DIFF] = {
+				{ 1, 51392 }, -- Wrathful Gladiator's Greatsword
+				{ 3, 51388 }, -- Wrathful Gladiator's Decapitator
+				{ 7, 51390 }, -- Wrathful Gladiator's Bonegrinder
+				{ 10, 51480 }, -- Wrathful Gladiator's Pike
+				{ 16, 51400 }, -- Wrathful Gladiator's War Staff
+				{ 17, 51404 }, -- Wrathful Gladiator's Battle Staff
+				{ 18, 51402 }, -- Wrathful Gladiator's Focus Staff
+				{ 20, 51456 }, -- Wrathful Gladiator's Energy Staff
+				{ 22, 51431 }, -- Wrathful Gladiator's Staff
+			},
+		},
+		{
+			name = AL["Weapons"].." - "..AL["Two-Handed"].." - R2",
+			[NORMAL_DIFF] = {
+				{ 1, 51393 }, -- Wrathful Gladiator's Claymore
+				{ 3, 51389 }, -- Wrathful Gladiator's Sunderer
+				{ 7, 51391 }, -- Wrathful Gladiator's Crusher
+				{ 10, 51481 }, -- Wrathful Gladiator's Halberd
+				{ 16, 51401 }, -- Wrathful Gladiator's Combat Staff
+				{ 17, 51405 }, -- Wrathful Gladiator's Skirmish Staff
+				{ 18, 51403 }, -- Wrathful Gladiator's Acute Staff
+				{ 20, 51457 }, -- Wrathful Gladiator's Light Staff
+				{ 22, 51432 }, -- Wrathful Gladiator's Greatstaff
+			},
+		},
+		{
+			name = AL["Weapons"].." - "..AL["Ranged"],
+			[NORMAL_DIFF] = {
+				{ 1, 51394 }, -- Wrathful Gladiator's Longbow
+				{ 3, 51411 }, -- Wrathful Gladiator's Heavy Crossbow
+				{ 5, 51449 }, -- Wrathful Gladiator's Rifle
+				{ 7, 51535 }, -- Wrathful Gladiator's War Edge
+				{ 16, 51410 }, -- Wrathful Gladiator's Touch of Defeat
+				{ 17, 51532 }, -- Wrathful Gladiator's Baton of Light
+				{ 18, 51531 }, -- Wrathful Gladiator's Piercing Touch
+				{ 19, 51451 }, -- Wrathful Gladiator's Wand of Alacrity
+			},
+		},
+		{
+			name = AL["Weapons"].." - "..AL["Ranged"].." - R2",
+			[NORMAL_DIFF] = {
+				{ 1, 51395 }, -- Wrathful Gladiator's Recurve
+				{ 3, 51412 }, -- Wrathful Gladiator's Repeater
+				{ 5, 51450 }, -- Wrathful Gladiator's Shotgun
+
+			},
+		},
+		{
+			name = AL["Weapons"].." - "..ALIL["Off Hand"],
+			[SET1_DIFF] = {
+				{ 1, 51396 }, -- Wrathful Gladiator's Endgame
+				{ 2, 51408 }, -- Wrathful Gladiator's Grimoire
+				{ 16, 51409 }, -- Wrathful Gladiator's Reprieve
+				{ 17, 51407 }, -- Wrathful Gladiator's Compendium
+			},
+		},
+		{
+			name = AL["Weapons"].." - "..ALIL["Shields"],
+			[NORMAL_DIFF] = {
+				{ 1, 51533 }, -- Wrathful Gladiator's Shield Wall
+				{ 16, 51455 }, -- Wrathful Gladiator's Redoubt
+				{ 17, 51452 }, -- Wrathful Gladiator's Barrier
+			},
+		},
+		{
+			name = ALIL["Cloak"],
+			[NORMAL_DIFF] = {
+				{ 1, 51356 }, -- Wrathful Gladiator's Cloak of Victory
+				{ 2, 51354 }, -- Wrathful Gladiator's Cloak of Triumph
+				{ 16, 51334 }, -- Wrathful Gladiator's Cloak of Ascendancy
+				{ 17, 51332 }, -- Wrathful Gladiator's Cloak of Subjugation
+				{ 18, 51330 }, -- Wrathful Gladiator's Cloak of Dominance
+				{ 20, 51348 }, -- Wrathful Gladiator's Cloak of Deliverance
+				{ 21, 51346 }, -- Wrathful Gladiator's Cloak of Salvation
+			},
+		},
+		{
+			name = ALIL["Relic"],
+			[NORMAL_DIFF] = {
+				{ 1, 51437 }, -- Wrathful Gladiator's Idol of Steadfastness
+				{ 2, 51429 }, -- Wrathful Gladiator's Idol of Resolve
+				{ 3, 51423 }, -- Wrathful Gladiator's Idol of Tenacity
+				{ 5, 51472 }, -- Wrathful Gladiator's Libram of Justice
+				{ 6, 51478 }, -- Wrathful Gladiator's Libram of Fortitude
+				{ 16, 51501 }, -- Wrathful Gladiator's Totem of the Third Wind
+				{ 17, 51513 }, -- Wrathful Gladiator's Totem of Survival
+				{ 18, 51507 }, -- Wrathful Gladiator's Totem of Indomitability
+				{ 20, 51417 }, -- Wrathful Gladiator's Sigil of Strife
+			},
+		},
+		{
+			name = ALIL["Neck"],
+			[NORMAL_DIFF] = {
+				{ 1, 51357 }, -- Wrathful Gladiator's Pendant of Victory
+				{ 2, 51355 }, -- Wrathful Gladiator's Pendant of Triumph
+				{ 3, 51353 }, -- Wrathful Gladiator's Pendant of Sundering
+				{ 16, 51335 }, -- Wrathful Gladiator's Pendant of Ascendancy
+				{ 17, 51333 }, -- Wrathful Gladiator's Pendant of Subjugation
+				{ 18, 51331 }, -- Wrathful Gladiator's Pendant of Dominance
+				{ 20, 51349 }, -- Wrathful Gladiator's Pendant of Deliverance
+				{ 21, 51347 }, -- Wrathful Gladiator's Pendant of Salvation
+			},
+		},
+		{
+			name = ALIL["Finger"],
+			[NORMAL_DIFF] = {
+				{ 1, 51358 }, -- Wrathful Gladiator's Band of Triumph
+				{ 16, 51336 }, -- Wrathful Gladiator's Band of Dominance
+			},
+		},
+		{
+			name = format(AL["Non Set '%s'"], ALIL["Cloth"]),
+			[NORMAL_DIFF] = {
+				{ 1, 51366 }, -- Wrathful Gladiator's Slippers of Salvation
+				{ 2, 51365 }, -- Wrathful Gladiator's Cord of Salvation
+				{ 3, 51367 }, -- Wrathful Gladiator's Cuffs of Salvation
+				{ 5, 51328 }, -- Wrathful Gladiator's Slippers of Dominance
+				{ 6, 51327 }, -- Wrathful Gladiator's Cord of Dominance
+				{ 7, 51329 }, -- Wrathful Gladiator's Cuffs of Dominance
+				{ 9, 51338 }, -- Wrathful Gladiator's Slippers of Alacrity
+				{ 10, 51337 }, -- Wrathful Gladiator's Cord of Alacrity
+				{ 11, 51339 }, -- Wrathful Gladiator's Cuffs of Alacrity
+
+			},
+		},
+		{
+			name = format(AL["Non Set '%s'"], ALIL["Leather"]),
+			[NORMAL_DIFF] = {
+				{ 1, 51341 },  -- Wrathful Gladiator's Boots of Salvation
+				{ 2, 51340 },  -- Wrathful Gladiator's Belt of Salvation
+				{ 3, 51342 },  -- Wrathful Gladiator's Armwraps of Salvation
+				{ 5, 51344 },  -- Wrathful Gladiator's Boots of Dominance
+				{ 6, 51343 },  -- Wrathful Gladiator's Belt of Dominance
+				{ 7, 51345 }, -- Wrathful Gladiator's Armwraps of Dominance
+				{ 9, 51369 },  -- Wrathful Gladiator's Boots of Triumph
+				{ 10, 51368 },  -- Wrathful Gladiator's Belt of Triumph
+				{ 11, 51370 }, -- Wrathful Gladiator's Armwraps of Triumph
+			},
+		},
+		{
+			name = format(AL["Non Set '%s'"], ALIL["Mail"]),
+			[NORMAL_DIFF] = {
+				{ 1, 51372 }, -- Wrathful Gladiator's Sabatons of Salvation
+				{ 2, 51373 }, -- Wrathful Gladiator's Waistguard of Salvation
+				{ 3, 51371 }, -- Wrathful Gladiator's Wristguards of Salvation
+				{ 5, 51375 }, -- Wrathful Gladiator's Sabatons of Dominance
+				{ 6, 51374 }, -- Wrathful Gladiator's Waistguard of Dominance
+				{ 7, 51376 }, -- Wrathful Gladiator's Wristguards of Dominance
+				{ 9, 51351 }, -- Wrathful Gladiator's Sabatons of Triumph
+				{ 10, 51350 }, -- Wrathful Gladiator's Waistguard of Triumph
+				{ 11, 51352 }, -- Wrathful Gladiator's Wristguards of Triumph
+			},
+		},
+		{
+			name = format(AL["Non Set '%s'"], ALIL["Plate"]),
+			[NORMAL_DIFF] = {
+				{ 1, 51363 }, -- Wrathful Gladiator's Greaves of Triumph
+				{ 2, 51362 }, -- Wrathful Gladiator's Girdle of Triumph
+				{ 3, 51364 }, -- Wrathful Gladiator's Bracers of Triumph
+				{ 5, 51360 }, -- Wrathful Gladiator's Greaves of Salvation
+				{ 6, 51359 }, -- Wrathful Gladiator's Girdle of Salvation
+				{ 7, 51361 }, -- Wrathful Gladiator's Bracers of Salvation
+			},
+		},
+		{
+			name = AL["Gladiator Mount"],
+			ExtraList = true,
+			[NORMAL_DIFF] = {
+				{ 1,  50435 }, -- Wrathful Gladiator's Frost Wyrm
+			}
+		}	
+	}
+}
 
 data["Wintergrasp"] = {
 	MapID = 4197,

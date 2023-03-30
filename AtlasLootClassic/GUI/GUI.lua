@@ -363,8 +363,8 @@ local function ClassFilterSpecButton_OnClick(self)
 	ClassFilterButton_Refresh(self.obj.obj)
 end
 
-local function ClassFilterButton_OnClick(self, button)
-	if button == "LeftButton" then
+local function ClassFilterButton_OnClick(self, mouseButton)
+	if mouseButton == "LeftButton" then
 		db.classFilter = not db.classFilter
 		ClassFilterButton_Refresh(self)
 	else
@@ -401,7 +401,7 @@ local function ClassFilterButton_OnClick(self, button)
 				button.obj = frame
 				button.className = className
 
-				button.icon = button:CreateTexture(nil, button)
+				button.icon = button:CreateTexture(nil, "ARTWORK")
 				button.icon:SetPoint("LEFT", button, "LEFT", 0, 0)
 				button.icon:SetSize(button_height, button_height)
 				button.icon:SetTexture(CLASS_ICON_PATH[className])
