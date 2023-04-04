@@ -55,7 +55,7 @@ end
 ItemDB.mt = {
 	__newindex = function(t, k, v)
 		t.__atlaslootdata.contentCount = t.__atlaslootdata.contentCount + 1
-		-- v = CleanNilBossEntrys(v)
+		v = CleanNilBossEntrys(v) -- debug, re-added to test clearing invalid bosses in vanilla
 		setmetatable(v, ItemDB.contentMt)
 		contentList[t.__atlaslootdata.addonName][t.__atlaslootdata.contentCount] = k
 		contentList[t.__atlaslootdata.addonName][k] = t.__atlaslootdata.contentCount

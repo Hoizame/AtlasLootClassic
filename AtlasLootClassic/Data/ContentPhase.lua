@@ -9,7 +9,7 @@ local ACTIVE_PASE_LIST = {
     [0] = 99, -- dummy
     [AtlasLoot.CLASSIC_VERSION_NUM] = 6, -- classic
     [AtlasLoot.BC_VERSION_NUM]      = 6, -- bc
-    [AtlasLoot.WRATH_VERSION_NUM]   = 1, -- wrath
+    [AtlasLoot.WRATH_VERSION_NUM]   = 2, -- wrath
 }
 local ACTIVE_PHASE = ACTIVE_PASE_LIST[AtlasLoot:GetGameVersion()] or ACTIVE_PASE_LIST[1]
 
