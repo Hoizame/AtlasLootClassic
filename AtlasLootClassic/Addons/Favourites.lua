@@ -836,7 +836,7 @@ function Favourites:CountFavouritesByList(addonName, contentName, boss, dif, inc
         ItemCountCache[cacheIdent] = result
         return result
     end
-    
+
     -- Get count for all matching items
     local items, tableType, diffData = ItemDB:GetItemTable(addonName, contentName, boss, dif)
     -- Check if items is nil or empty
@@ -854,7 +854,7 @@ function Favourites:CountFavouritesByList(addonName, contentName, boss, dif, inc
             end
         end
     end
-    
+
     for l, listData in pairs(self.globalDb.lists) do
         local listName = listData.__name
         for i, item in ipairs(items) do
@@ -866,7 +866,7 @@ function Favourites:CountFavouritesByList(addonName, contentName, boss, dif, inc
             end
         end
     end
-    
+
     ItemCountCache[cacheIdent] = result
     return result
 end

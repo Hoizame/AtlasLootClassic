@@ -1323,7 +1323,7 @@ data["ArenaS8PvP"] = {
 			[NORMAL_DIFF] = {
 				{ 1,  50435 }, -- Wrathful Gladiator's Frost Wyrm
 			}
-		}	
+		}
 	}
 }
 
