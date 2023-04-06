@@ -1,2 +1,11 @@
 {
+    "Lua.diagnostics.globals": [
+        "ChatFrame_AddMessageEventFilter",
+        "ItemRefTooltip",
+        "MODELFRAME_DEFAULT_ROTATION",
+        "StaticPopupDialogs",
+        "StaticPopup_Show",
+        "UISpecialFrames",
+        "UNKNOWN"
+    ]
 }
