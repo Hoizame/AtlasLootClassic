@@ -7,6 +7,7 @@ local str_find, str_format = string.find, string.format
 local tbl_insert, tbl_remove = table.insert, table.remove
 
 -- WoW
+local GetAddOnMetadata = C_AddOns and C_AddOns.GetAddOnMetadata or GetAddOnMetadata
 local GetNumAddOns, GetAddOnInfo, IsAddOnLoaded, GetAddOnMetadata = GetNumAddOns, GetAddOnInfo, IsAddOnLoaded, GetAddOnMetadata
 local GetTime = GetTime
 -- ----------------------------------------------------------------------------
