@@ -48,6 +48,7 @@ local PRICE_INFO_LIST = {
     ["EmblemOfTriumph"] = { currencyID = 301 }, -- Emblem of Triumph
     ["EmblemOfConquest"] = { currencyID = 221 }, -- Emblem of Conquest
     ["EmblemOfFrost"] = { currencyID = 341 }, -- Emblem of Frost
+    ["SiderealEssence"] = { currencyID = 2589 }, -- Sidereal Essence
 
     ["cpvpAlterac"] = { currencyID = 121 }, -- Alterac Valley Mark of Honor
 	["cpvpWarsong"] = { currencyID = 125 }, -- Warsong Gulch Mark of Honor
