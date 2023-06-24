@@ -541,6 +541,11 @@ data["EmblemofTriumph"] = {
 			name = AL["Misc"],
 			[NORMAL_DIFF] = {
 				{ 1, 47556 }, -- Crusader Orb
+				{ 2, 44713 }, -- Ebon Blade Commendation Badge
+				{ 3, 44711 }, -- Argent Crusade Commendation Badge
+				{ 4, 44710 }, -- Wyrmrest Commendation Badge
+				{ 5, 43950 }, -- Kirin Tor Commendation Badge
+				{ 6, 49702 }, -- Sons of Hodir Commendation Badge
 			},
 		},
 	}
