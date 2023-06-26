@@ -1246,7 +1246,7 @@ data["JewelcraftingWrath"] = {
 			}
 		},
 		{
-			name = format(GEM_FORMAT1, ALIL["Orange"]),
+			name = format(GEM_FORMAT1, AL["Orange"]),
 			[NORMAL_DIFF] = {
 				{ 1, 66576 },   -- Accurate Ametrine
 				{ 2, 66579 },	-- Champion's Ametrine
@@ -1342,7 +1342,7 @@ data["JewelcraftingWrath"] = {
 			}
 		},
 		{
-			name = format(GEM_FORMAT1, ALIL["Green"]),
+			name = format(GEM_FORMAT1, AL["Green"]),
 			[NORMAL_DIFF] = {
 				{ 1, 66430 },   -- Dazzling Eye of Zul
 				{ 2, 66338 },   -- Enduring Eye of Zul
@@ -1426,7 +1426,7 @@ data["JewelcraftingWrath"] = {
 			}
 		},
 		{
-			name = format(GEM_FORMAT1, ALIL["Purple"]),
+			name = format(GEM_FORMAT1, AL["Purple"]),
 			[NORMAL_DIFF] = {
 				{ 1, 66553 },	-- Balanced Dreadstone
 				{ 2, 66560 },	-- Defender's Dreadstone
@@ -1486,7 +1486,7 @@ data["JewelcraftingWrath"] = {
 			}
 		},
 		{
-			name = format(GEM_FORMAT1, ALIL["Prismatic"]),
+			name = format(GEM_FORMAT1, AL["Prismatic"]),
 			[NORMAL_DIFF] = {
 				{ 1, 56530 }, -- Enchanted Pearl
 				{ 2, 56531 }, -- Enchanted Tear

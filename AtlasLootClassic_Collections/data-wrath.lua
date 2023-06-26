@@ -224,7 +224,7 @@ data["EmblemofHeroism"] = {
 			},
 		},
 		{
-			name = ALIL["Misc"],
+			name = AL["Misc"],
 			[NORMAL_DIFF] = {
 				{ 1, AtlasLoot:GetRetByFaction(44231,44230) }, -- Reins of the Wooly Mammoth
 				{ 3, 43102 }, -- Frozen Orb
@@ -597,7 +597,7 @@ data["SiderealEssence"] = {
 			},
 		},
 		{
-			name = ALIL["Back"],
+			name = AL["Back"],
 			[NORMAL_DIFF] = {
 				{ 1, 46032 }, -- Drape of the Faceless General
 				{ 16, 46042 }, -- Drape of the Messenger
@@ -733,7 +733,7 @@ data["EmblemofFrost"] = {
 			},
 		},
 		{
-			name = ALIL["Back"],
+			name = AL["Back"],
 			[NORMAL_DIFF] = {
 				{ 1, 50468 }, -- Drape of the Violet Tower
 				{ 2, 50467 }, -- Might of the Ocean Serpent
