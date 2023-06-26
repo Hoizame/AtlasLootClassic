@@ -21,8 +21,8 @@ local ALIL = AtlasLoot.IngameLocales
 
 local NORMAL_DIFF = data:AddDifficulty("NORMAL", nil, nil, nil, true)
 local HEROIC_DIFF = data:AddDifficulty("HEROIC", nil, nil, nil, true)
-local ALPHA_DIFF = data:AddDifficulty("Titan Rune Alpha", nil, nil, nil, true)
-local BETA_DIFF = data:AddDifficulty("Titan Rune Beta", nil, nil, nil, true)
+local ALPHA_DIFF = data:AddDifficulty(AL["Titan Rune Alpha"], nil, nil, nil, true)
+local BETA_DIFF = data:AddDifficulty(AL["Titan Rune Beta"], nil, nil, nil, true)
 
 local RAID10_DIFF = data:AddDifficulty("10RAID")
 local RAID10H_DIFF = data:AddDifficulty("10RAIDH")
