@@ -551,6 +551,139 @@ data["EmblemofTriumph"] = {
 	}
 }
 
+data["SiderealEssence"] = {
+	name = format(AL["'%s' Vendor"], AL["Sidereal Essence"]),
+	ContentType = VENDOR_CONTENT,
+	TableType = NORMAL_ITTYPE,
+	gameVersion = AtlasLoot.WRATH_VERSION_NUM,
+	items = {
+		{
+			name = ALIL["Armor"].." - "..ALIL["Cloth"],
+			[NORMAL_DIFF] = {
+				{ 1, 46068 }, -- Amice of Inconceivable Horror
+				{ 2, 46045 }, -- Pulsar Gloves
+				{ 3, 46034 }, -- Leggings of Profound Darkness
+				{ 4, 46050 }, -- Starlight Treads
+			},
+		},
+		{
+			name = ALIL["Armor"].." - "..ALIL["Leather"],
+			[NORMAL_DIFF] = {
+				{ 1, 45993 }, -- Mimiron's Flight Goggles
+				{ 2, 45869 }, -- Fluxing Energy Coils
+				{ 3, 46043 }, -- Gloves of the Endless Dark
+				{ 4, 46095 }, -- Soul-Devouring Cinch
+				{ 16, 45293 }, -- Handguards of Potent Cures
+				{ 17, 45455 }, -- Belt of the Crystal Tree
+				{ 18, 46049 }, -- Zodiac Leggings
+			},
+		},
+		{
+			name = ALIL["Armor"].." - "..ALIL["Mail"],
+			[NORMAL_DIFF] = {
+				{ 1, 45300 }, -- Mantle of Fiery Vengaence
+				{ 2, 45989 }, -- Tempered Murcury Greaves
+				{ 16, 46044 }, -- Observer's Mantle
+				{ 17, 45867 }, -- Breastplate of the Stoneshaper
+				{ 18, 45943 }, -- Gloves of Whispering Winds
+			},
+		},
+		{
+			name = ALIL["Armor"].." - "..ALIL["Plate"],
+			[NORMAL_DIFF] = {
+				{ 1, 46037 }, -- Shoulderplates of the Celestial Watch
+				{ 2, 45888 }, -- Bitter Cold Armguards
+				{ 3, 46041 }, -- Starfall Girdle
+				{ 4, 45982 }, -- Fused Alloy Legplates
+				{ 6, 46039 }, -- Breastplate of the Timeless
+				{ 7, 45988 }, -- Greaves of the Iron Army
+				{ 8, 45295 }, -- Gilded Steel Legplates
+				{ 16, 45928 }, -- Gauntlets of the Thunder God
+			},
+		},
+		{
+			name = ALIL["Back"],
+			[NORMAL_DIFF] = {
+				{ 1, 46032 }, -- Drape of the Faceless General
+				{ 16, 46042 }, -- Drape of the Messenger
+			},
+		},
+		{
+			name = ALIL["Neck"],
+			[NORMAL_DIFF] = {
+				{ 1, 46040 }, -- Strength of the Heavens
+				{ 3, 45945 }, -- Seed of Budding Carnage
+				{ 16, 45933 }, -- Pendant of the Shallow Grave
+				{ 17, 45447 }, -- Watchful Eye of Hate
+				{ 18, 46047 }, -- Pendant of the Somber Witness
+			},
+		},
+		{
+			name = ALIL["Finger"],
+			[NORMAL_DIFF] = {
+				{ 1, 46048 }, -- Band of Lights
+				{ 2, 45456 }, -- Loop of the Agile
+				{ 4, 45871 }, -- Seal of Ulduar
+				{ 16, 46046 }, -- Nebula Band
+				{ 17, 45297 }, -- Shimmering Seal
+				{ 18, 46096 }, -- Signet of Soft Lament
+				{ 19, 45946 }, -- Fire Orchid Signet
+			},
+		},
+		{
+			name = ALIL["Trinket"],
+			[NORMAL_DIFF] = {
+				{ 1, 45931 }, -- Mjolnir Runestone
+				{ 2, 46038 }, -- Dark Matter
+				{ 16, 46051 }, -- Meteorite Crystal
+				{ 17, 45929 }, -- Sif's Remembrance
+			},
+		},
+
+
+		{
+			name = ALIL["Weapon"],
+			[NORMAL_DIFF] = {
+				{ 1, 46067 }, -- Hammer of Crushing Whispers
+				{ 16, 45868 }, -- Aesir's Edge
+
+				{ 3, 46033 }, -- Tortured Earth
+
+				{ 5, 45449 }, -- The Masticator
+        { 20, 46097 }, -- Caress of Insanity
+        { 6, 45947 }, -- Serilas, Blood Blade of Invar One-Arm
+        { 21, 46036 }, -- Void Sabre
+        { 7, 45448 }, -- Perilous Bite
+        { 22, 45930 }, -- Combatant's Bootblade
+
+        { 9, 45876 }, -- Shiver
+
+        { 11, 45870 }, -- Magnetized Projectile Emitter
+        { 26, 45296 }, -- Twirling Blades
+
+        { 13, 45990 }, -- Fusion Blade
+        { 28, 46035 }, -- Aesuga, Hand of the Ardent Champion
+        { 14, 45886 }, -- Icecore Staff
+        { 29, 45294 }, -- Petrified Ivy Sprig
+
+			},
+		},
+		{
+			name = ALIL["Shield"],
+			[NORMAL_DIFF] = {
+				{ 1, 45877 }, -- The Boreal Guard
+				{ 16, 45887 }, -- Ice Layered Barrier
+			},
+		},
+		{
+			name = AL["Misc"],
+			[NORMAL_DIFF] = {
+				{ 1, 47556 }, -- Crusader Orb
+			},
+		},
+	}
+}
+
 data["EmblemofFrost"] = {
 	name = format(AL["'%s' Vendor"], AL["Emblem of Frost"]),
 	ContentType = VENDOR_CONTENT,
@@ -649,131 +782,6 @@ data["EmblemofFrost"] = {
 			name = AL["Misc"],
 			[NORMAL_DIFF] = {
 				{ 1, 49908 }, -- Primordial Saronite
-			},
-		},
-	}
-}
-
-data["SiderealEssence"] = {
-	name = format(AL["'%s' Vendor"], AL["Sidereal Essence"]),
-	ContentType = VENDOR_CONTENT,
-	TableType = NORMAL_ITTYPE,
-	gameVersion = AtlasLoot.WRATH_VERSION_NUM,
-	items = {
-		{
-			name = ALIL["Armor"].." - "..ALIL["Cloth"],
-			[NORMAL_DIFF] = {
-				{ 1, 46068 }, -- Amice of Inconceivable Horror
-				{ 3, 46050 }, -- Starlight Treads
-				{16, 46045 }, -- Pulsar Gloves
-				{18, 46034 }, -- Leggings of Profound Darkness
-			},
-		},
-		{
-			name = ALIL["Armor"].." - "..ALIL["Leather"],
-			[NORMAL_DIFF] = {
-				{ 1, 46095 }, -- Soul-Devouring Cinch
-				{ 2, 45455 }, -- Belt of the Crystal Tree
-				{ 4, 45869 }, -- Fluxing Energy Coils
-				{ 6, 45993 }, -- Mimiron's Flight Goggles
-				{16, 46043 }, -- Gloves of the Endless Dark
-				{17, 45293 }, -- Handguards of Potent Cures
-				{19, 46049 }, -- Zodiac Leggings
-			},
-		},
-		{
-			name = ALIL["Armor"].." - "..ALIL["Mail"],
-			[NORMAL_DIFF] = {
-				{ 1, 46044 }, -- Observer's Mantle
-				{ 2, 45300 }, -- Mantle of Fiery Vengeance
-				{ 4, 45867 }, -- Breastplate of the Stoneshaper
-				{16, 45989 }, -- Tempered Mercury Greaves
-				{19, 45943 }, -- Gloves of Whispering Winds
-			},
-		},
-		{
-			name = ALIL["Armor"].." - "..ALIL["Plate"],
-			[NORMAL_DIFF] = {
-				{ 1, 45295 }, -- Gilded Steel Legplates
-				{ 2, 45982 }, -- Fused Alloy Legplates
-				{ 4, 45888 }, -- Bitter Cold Armguards
-				{ 6, 46037 }, -- Shoulderplates of the Celestial Wrath
-				{ 8, 45928 }, -- Gauntlets of the Thunder God
-				{16, 45988 }, -- Greaves of the Iron Army
-				{19, 46039 }, -- Breastplate of the Timeless
-				{21, 46041 }, -- Starfall Girdle
-			},
-		},
-		{
-			name = ALIL["Weapon"],
-			[NORMAL_DIFF] = {
-				{ 1, 46097 }, -- Caress of Insanity
-				{ 2, 45294 }, -- Petrified Ivy Sprig
-				{ 3, 45868 }, -- Aesir's Edge
-				{ 4, 46035 }, -- Aesuga, Hand of the Ardent Champion
-				{ 5, 45886 }, -- Icecore Staff
-				{ 6, 45947 }, -- Serilas, Blood Blade of Invar One-Arm
-				{ 7, 45990 }, -- Fusion Blade
-				{ 8, 46067 }, -- Hammer of Crushing Whispers
-				{ 9, 46036 }, -- Void Sabre
-				{10, 45296 }, -- Twirling Blades
-				{11, 45449 }, -- The Masticator
-				{12, 45930 }, -- Combatant's Bootblade
-				{13, 45876 }, -- Shiver
-				{14, 45870 }, -- Magnetized Projectile Emitter
-				{15, 46033 }, -- Tortured Earth
-				{16, 45448 }, -- Perilous Bite
-			},
-		},
-		{
-			name = ALIL["Shield"],
-			[NORMAL_DIFF] = {
-				{ 1, 45877 }, -- The Boreal Guard
-				{ 2, 45887 }, -- Ice Layered Barrier
-			},
-		},
-		{
-			name = ALIL["Neck"],
-			[NORMAL_DIFF] = {
-				{ 1, 45933 }, -- Pendant of the Shallow Grave
-				{ 2, 45945 }, -- Seed of Budding Carnage
-				{ 3, 45447 }, -- Watchful Eye of Fate
-				{ 4, 46040 }, -- Strength of the Heavens
-				{ 5, 46047 }, -- Pendant of the Somber Witness
-			},
-		},
-		{
-			name = ALIL["Finger"],
-			[NORMAL_DIFF] = {
-				{ 1, 46046 }, -- Nebula Band
-				{ 2, 46096 }, -- Signet of Soft Lament
-				{ 3, 45946 }, -- Fire Orchid Signet
-				{ 4, 45297 }, -- Shimmering Seal
-				{16, 46048 }, -- Band of Lights
-				{17, 45456 }, -- Loop of the Agile
-				{19, 45871 }, -- Seal of Ulduar
-			},
-		},
-		{
-			name = ALIL["Trinket"],
-			[NORMAL_DIFF] = {
-				{ 1, 45931 }, -- Mjolnir Runestone
-				{ 2, 46038 }, -- Dark Matter
-				{ 3, 46051 }, -- Meteorite Crystal
-				{ 4, 45929 }, -- Sif's Remembrance
-			},
-		},
-		{
-			name = ALIL["Back"],
-			[NORMAL_DIFF] = {
-				{ 1, 46032 }, -- Drape of the Faceless General
-				{ 2, 46042 }, -- Drape of the Messenger
-			},
-		},
-		{
-			name = AL["Misc"],
-			[NORMAL_DIFF] = {
-				{ 1, 47556 }, -- Crusader Orb
 			},
 		},
 	}
