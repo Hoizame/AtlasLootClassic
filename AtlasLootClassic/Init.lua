@@ -10,7 +10,7 @@ local ipairs = _G.ipairs
 -- ----------------------------------------------------------------------------
 local addonname = ...
 
-local GetAddOnMetadata = C_AddOns and C_AddOns.GetAddOnMetadata or GetAddOnMetadata
+local GetAddOnMetadata = C_AddOns and C_AddOns.GetAddOnMetadata or _G.GetAddOnMetadata
 local addonVersion = GetAddOnMetadata(addonname, "Version")
 if addonVersion == string.format("@%s@", "project-version") then addonVersion = "v99.99.9999-dev" end
 local versionT = { string.match(addonVersion, "v(%d+)%.(%d+)%.(%d+)%-?(%a*)(%d*)") }
