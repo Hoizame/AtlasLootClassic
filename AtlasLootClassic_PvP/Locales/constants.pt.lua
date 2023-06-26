@@ -3,4 +3,17 @@
 if not AL then return end
 
 -- These localization strings are translated on Curseforge: https://www.curseforge.com/wow/addons/atlaslootclassic/localization
---@localization(locale="ptBR", format="lua_additive_table", table-name="AL", handle-unlocalized="ignore", namespace="PvP")@
+-- PvP
+AL["|cff33ff99Rank:|r %s"] = "|cff33ff99Patente:|r %s"
+AL["Battlegrounds"] = "Campos de Batalha"
+AL["Class Sets"] = "Conjuntos de classe"
+AL["Gladiator Mount"] = "Montaria de Gladiador"
+AL["Honor"] = "Honra"
+AL["Insignia"] = "Insígnia"
+AL["Non Set '%s'"] = "Não Conjunto '%s'"
+AL["One-Handed"] = "Uma Mão"
+AL["Open World"] = "Mundo aberto"
+AL["PvP Ranks"] = "Patentes de JxJ"
+AL["Ranged"] = "Longo Alcance"
+AL["Season %s"] = "Temporada %s"
+AL["Two-Handed"] = "Duas Mãos"

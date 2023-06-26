@@ -259,7 +259,7 @@ data["BlacksmithingWrath"] = {
 			[PLATE_DIFF] = {
 				{ 1, [ATLASLOOT_IT_ALLIANCE] = { 67091 }, [ATLASLOOT_IT_HORDE] = { 67130 } },	-- Breastplate of the White Knight
 				{ 2, [ATLASLOOT_IT_ALLIANCE] = { 67095 }, [ATLASLOOT_IT_HORDE] = { 67134 } },	-- Sunforged Breastplate
-				{ 3, [ATLASLOOT_IT_ALLIANCE] = { 67094 }, [ATLASLOOT_IT_HORDE] = { 67133 } },	-- Titanium Spikeguards
+				{ 3, [ATLASLOOT_IT_ALLIANCE] = { 67093 }, [ATLASLOOT_IT_HORDE] = { 67132} },	-- Titanium Razorplate
 				{ 4, 61008 },	-- Icebane Chestguard
 				{ 5, 55311 },	-- Savage Saronite Hauberk
 				{ 6, 55058 },	-- Brilliant Saronite Breastplate
@@ -1021,6 +1021,8 @@ data["LeatherworkingWrath"] = {
 				{ 1, 50971 },	-- Mammoth Mining Bag
 				{ 2, 60643 },	-- Pack of Endless Pockets
 				{ 3, 50970 },	-- Trapper's Traveling Pack
+				{ 5, 60647 },	-- Nerubian Reinforced Quiver
+				{ 6, 60645 },	-- Dragonscale Ammo Pouch
 			},
 		},
 		{
@@ -1083,11 +1085,12 @@ data["JewelcraftingWrath"] = {
 				{ 1, 56500 },	-- Titanium Earthguard Chain
 				{ 2, 56499 },	-- Titanium Impact Choker
 				{ 3, 56501 },	-- Titanium Spellshock Necklace
-				{ 4, 73496 },	-- Alicite Pendant
 				{ 5, 64725 },	-- Emerald Choker
 				{ 6, 64726 },	-- Sky Sapphire Amulet
 				{ 7, 56196 },	-- Blood Sun Necklace
 				{ 8, 56195 },	-- Jade Dagger Pendant
+				{ 10, 58142 },	-- Crystal Chalcedony Amulet
+				{ 11, 58141 },	-- Crystal Citrine Necklace
 			}
 		},
 		{

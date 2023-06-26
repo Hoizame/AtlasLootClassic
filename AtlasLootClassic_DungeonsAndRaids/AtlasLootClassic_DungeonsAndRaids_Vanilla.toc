@@ -1,37 +1,31 @@
-﻿## Interface: 11403
+## Interface: 11403
 ## Author: Lag
-## Version: @project-version@
+## Version: v3.1.2
 ## Dependencies: AtlasLootClassic
 ## LoadOnDemand: 1
 
-#@non-debug@
-## Title: @localization(locale="enUS", key="Title-DaR", namespace="ToC")@
-## Title-deDE: @localization(locale="deDE", key="Title-DaR", namespace="ToC")@
-## Title-esES: @localization(locale="esES", key="Title-DaR", namespace="ToC")@
-## Title-esMX: @localization(locale="esMX", key="Title-DaR", namespace="ToC")@
-## Title-frFR: @localization(locale="frFR", key="Title-DaR", namespace="ToC")@
-## Title-itIT: @localization(locale="itIT", key="Title-DaR", namespace="ToC")@
-## Title-koKR: @localization(locale="koKR", key="Title-DaR", namespace="ToC")@
-## Title-ptBR: @localization(locale="ptBR", key="Title-DaR", namespace="ToC")@
-## Title-ruRU: @localization(locale="ruRU", key="Title-DaR", namespace="ToC")@
-## Title-zhCN: @localization(locale="zhCN", key="Title-DaR", namespace="ToC")@
-## Title-zhTW: @localization(locale="zhTW", key="Title-DaR", namespace="ToC")@
-## Notes: @localization(locale="enUS", key="Notes-DaR", namespace="ToC")@
-## Notes-deDE: @localization(locale="deDE", key="Notes-DaR", namespace="ToC")@
-## Notes-esES: @localization(locale="esES", key="Notes-DaR", namespace="ToC")@
-## Notes-esMX: @localization(locale="esMX", key="Notes-DaR", namespace="ToC")@
-## Notes-frFR: @localization(locale="frFR", key="Notes-DaR", namespace="ToC")@
-## Notes-itIT: @localization(locale="itIT", key="Notes-DaR", namespace="ToC")@
-## Notes-koKR: @localization(locale="koKR", key="Notes-DaR", namespace="ToC")@
-## Notes-ptBR: @localization(locale="ptBR", key="Notes-DaR", namespace="ToC")@
-## Notes-ruRU: @localization(locale="ruRU", key="Notes-DaR", namespace="ToC")@
-## Notes-zhCN: @localization(locale="zhCN", key="Notes-DaR", namespace="ToC")@
-## Notes-zhTW: @localization(locale="zhTW", key="Notes-DaR", namespace="ToC")@
-#@end-non-debug@
-#@debug@
 ## Title: AtlasLootClassic |cFF0099FF[Dungeons and Raids]|r
+## Title-deDE: AtlasLootClassic |cFF0099FF[Instanzen und Raids]|r
+## Title-esES: AtlasLootClassic |cFF0099FF[Mazmorras y Bandas]|r
+## Title-esMX: AtlasLootClassic |cFF0099FF[Mazmorras y Bandas]|r
+## Title-frFR: AtlasLoot Classic |cFF0099FF[Donjons et Raids]|r
+## Title-itIT: AtlasLootClassic |cFF0099FF[Dungeons and Raids]|r
+## Title-koKR: AtlasLoot 클래식 |cFF0099FF[던전과 공격대]|r
+## Title-ptBR: AtlasLootClassic |cFF0099FF[Masmorras e Raides]|r
+## Title-ruRU: AtlasLootClassic |cFF0099FF[Подземелья и Рейды]|r
+## Title-zhCN: AtlasLoot经典版 |cFF0099FF[地下城和团队]|r
+## Title-zhTW: 副本戰利品查詢經典版 |cFF0099FF[地城和團隊]|r
 ## Notes: AtlasLoot loot tables from Dungeons and Raids
-#@end-debug@
+## Notes-deDE: AtlasLoot Beuteverzeichnis der Instanzen und Raids
+## Notes-esES: AtlasLoot tablas de botín de Mazmorras y Bandas
+## Notes-esMX: AtlasLoot tablas de botín de Calabozos y Bandas
+## Notes-frFR: Tables de butin des donjons et raids
+## Notes-itIT: AtlasLoot loot tables from Dungeons and Raids
+## Notes-koKR: L["Notes-DaR"] = "던전과 공격대의 AtlasLoot 전리품 테이블"
+## Notes-ptBR: Tabelas de saque AtlasLoot de Masmorras e Raides
+## Notes-ruRU: Таблицы добычи AtlasLoot для подземелий и рейдов.
+## Notes-zhCN: AtlasLoot 地下城&团队副本掉落列表
+## Notes-zhTW: 地城和團隊物品資料庫。
 
 ## X-Category: Map
 ## X-License: GPL v2

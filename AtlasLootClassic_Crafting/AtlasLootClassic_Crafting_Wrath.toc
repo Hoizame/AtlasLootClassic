@@ -1,37 +1,31 @@
 ## Interface: 30401
 ## Author: Lag
-## Version: @project-version@
+## Version: v3.1.2
 ## Dependencies: AtlasLootClassic
 ## LoadOnDemand: 1
 
-#@non-debug@
-## Title: @localization(locale="enUS", key="Title-Crafting", namespace="ToC")@
-## Title-deDE: @localization(locale="deDE", key="Title-Crafting", namespace="ToC")@
-## Title-esES: @localization(locale="esES", key="Title-Crafting", namespace="ToC")@
-## Title-esMX: @localization(locale="esMX", key="Title-Crafting", namespace="ToC")@
-## Title-frFR: @localization(locale="frFR", key="Title-Crafting", namespace="ToC")@
-## Title-itIT: @localization(locale="itIT", key="Title-Crafting", namespace="ToC")@
-## Title-koKR: @localization(locale="koKR", key="Title-Crafting", namespace="ToC")@
-## Title-ptBR: @localization(locale="ptBR", key="Title-Crafting", namespace="ToC")@
-## Title-ruRU: @localization(locale="ruRU", key="Title-Crafting", namespace="ToC")@
-## Title-zhCN: @localization(locale="zhCN", key="Title-Crafting", namespace="ToC")@
-## Title-zhTW: @localization(locale="zhTW", key="Title-Crafting", namespace="ToC")@
-## Notes: @localization(locale="enUS", key="Notes-Crafting", namespace="ToC")@
-## Notes-deDE: @localization(locale="deDE", key="Notes-Crafting", namespace="ToC")@
-## Notes-esES: @localization(locale="esES", key="Notes-Crafting", namespace="ToC")@
-## Notes-esMX: @localization(locale="esMX", key="Notes-Crafting", namespace="ToC")@
-## Notes-frFR: @localization(locale="frFR", key="Notes-Crafting", namespace="ToC")@
-## Notes-itIT: @localization(locale="itIT", key="Notes-Crafting", namespace="ToC")@
-## Notes-koKR: @localization(locale="koKR", key="Notes-Crafting", namespace="ToC")@
-## Notes-ptBR: @localization(locale="ptBR", key="Notes-Crafting", namespace="ToC")@
-## Notes-ruRU: @localization(locale="ruRU", key="Notes-Crafting", namespace="ToC")@
-## Notes-zhCN: @localization(locale="zhCN", key="Notes-Crafting", namespace="ToC")@
-## Notes-zhTW: @localization(locale="zhTW", key="Notes-Crafting", namespace="ToC")@
-#@end-non-debug@
-#@debug@
 ## Title: AtlasLootClassic |cFF0099FF[Crafting]|r
+## Title-deDE: AtlasLootClassic |cFF0099FF[Berufe]|r
+## Title-esES: AtlasLootClassic |cFF0099FF[Fabricados]|r
+## Title-esMX: AtlasLootClassic |cFF0099FF[Fabricados]|r
+## Title-frFR: AtlasLoot Classic |cFF0099FF[Artisanat]|r
+## Title-itIT: AtlasLootClassic |cFF0099FF[Crafting]|r
+## Title-koKR: AtlasLoot 클래식 |cFF0099FF[전문 기술]|r
+## Title-ptBR: AtlasLootClassic |cFF0099FF[Fazer]|r
+## Title-ruRU: AtlasLootClassic |cFF0099FF[Профессии]|r
+## Title-zhCN: AtlasLoot经典版 |cFF0099FF[制造品]|r
+## Title-zhTW: 副本戰利品查詢經典版 |cFF0099FF[專業製作]|r
 ## Notes: AtlasLoot loot tables of Crafting Items
-#@end-debug@
+## Notes-deDE: AtlasLoot Beuteverzeichnis der Berufe
+## Notes-esES: AtlasLoot tablas de botín de Fabricados
+## Notes-esMX: AtlasLoot tablas de botín de Fabricados
+## Notes-frFR: Tables de butin des objets d'artisanat
+## Notes-itIT: AtlasLoot loot tables of Crafting Items
+## Notes-koKR: L["Notes-Crafting"] = "전문 기술 아이템의 AtlasLoot 전리품 테이블"
+## Notes-ptBR: Tabelas de saque de manufaturados de AtlasLoot
+## Notes-ruRU: Таблицы добычи AtlasLoot для профессий.
+## Notes-zhCN: AtlasLoot专业制作物品列表
+## Notes-zhTW: 專業技能物品資料庫。
 
 ## X-Category: Map
 ## X-License: GPL v2

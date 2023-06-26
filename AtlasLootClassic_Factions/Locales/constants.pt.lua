@@ -3,4 +3,9 @@
 if not AL then return end
 
 -- These localization strings are translated on Curseforge: https://www.curseforge.com/wow/addons/atlaslootclassic/localization
---@localization(locale="ptBR", format="lua_additive_table", table-name="AL", handle-unlocalized="ignore", namespace="Factions")@
+-- Factions
+AL["Path of the Violet Assassin"] = "A trilha do assassino violeta"
+AL["Path of the Violet Mage"] = "A trilha do assassino violeta"
+AL["Path of the Violet Protector"] = "A trilha do protetor violeta"
+AL["Path of the Violet Restorer"] = "A trilha do restaurador violeta"
+AL["Secondary factions"] = "Facções secundárias"

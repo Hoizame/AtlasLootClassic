@@ -224,6 +224,7 @@ AtlasLoot.DIFFICULTY = {
 	[5] 	= {	id = 5,		short = "r10h", loc = AL["10 Raid Heroic"],		sourceLoc = AL["10H"], 		key = "10RAIDH"			},
 	[6] 	= {	id = 6,		short = "r25h",	loc = AL["25 Raid Heroic"],		sourceLoc = AL["25H"], 		key = "25RAIDH"			},
 	[9] 	= {	id = 7,		short = "r40", 	loc = AL["40 Raid"],			sourceLoc = nil, 			key = "40RAID"			},
+--	[14] 	= {	id = 14,		short = "+1",	loc = AL["Titan Rune Alpha"],		sourceLoc = AL["ALP"], 		key = "ALPHA"			}, --YAYA
 	[148] 	= {	id = 148,	short = "r20", 	loc = AL["20 Raid"],			sourceLoc = nil, 			key = "20RAID"			},
 	[173] 	= {	id = 173,	short = "n", 	loc = AL["Normal"],				sourceLoc = AL["N"], 		key = "NORMAL2"			},
 	[174] 	= {	id = 174,	short = "h", 	loc = AL["Heroic"],				sourceLoc = AL["H"], 		key = "HEROIC2"			},
