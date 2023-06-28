@@ -1062,8 +1062,8 @@ function Token.GetClassItemsForToken(tokenItemID, className)
 end
 
 -- TOKEN_TYPE_ADD_ITEM_DESCRIPTION
---[==[@debug@
+--@debug@
 function Token.GetFullTokenTable()
 	return TOKEN
 end
---@end-debug@]==]
+--@end-debug@
