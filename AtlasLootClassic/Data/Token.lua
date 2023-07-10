@@ -613,6 +613,21 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
 			ICONS.WARRIOR, 49479, 49478, 0, ICONS.PALADIN, 49476, 49475, 49474, 0, ICONS.DEATHKNIGHT, 49467, 49466,
 			type = 9
 		},
+		
+		["Tier7TitanRuneTokens"] = {
+			40616, 40617, 40618, 0,
+			40622, 40623, 40624, 0,
+			40619, 40620, 40621, 0,
+			type = 9
+		},
+		["Tier8TitanRuneTokens"] = {
+			45647, 45648, 45649, 0,
+			45635, 45636, 45637, 0,
+			45659, 45660, 45661, 0,
+			45650, 45651, 45652, 0,
+			45644, 45645, 45646, 0,
+			type = 9
+		},
 
 		--- ## Ulduar
 		[45038] = { { 45038, 30 }, 45039, 45896, 0, 46017 }, -- Fragment of Val'anyr
