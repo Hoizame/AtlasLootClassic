@@ -613,7 +613,7 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
 			ICONS.WARRIOR, 49479, 49478, 0, ICONS.PALADIN, 49476, 49475, 49474, 0, ICONS.DEATHKNIGHT, 49467, 49466,
 			type = 9
 		},
-		
+
 		["Tier7TitanRuneTokens"] = {
 			40616, 40617, 40618, 0,
 			40622, 40623, 40624, 0,
