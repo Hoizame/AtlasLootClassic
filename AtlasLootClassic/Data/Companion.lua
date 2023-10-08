@@ -668,11 +668,23 @@ EventFrame:RegisterEvent("COMPANION_UNLEARNED")
 EventFrame:RegisterEvent("COMPANION_UPDATE")
 local function UpdateKnownCompanions(typ)
     if GetNumCompanions(typ) <= 0 then return end
-
-    for i = 1, GetNumCompanions(typ) do
+    
+	if typ == "MOUNT" then
+	  
+      mountIDs = C_MountJournal.GetMountIDs() --List of all avalible MountIDs
+      mountCounter = 1 --loop counter
+      while mountCounter <= #mountIDs do
+        name, spellID, icon, isActive, isUsable, sourceType, isFavorite, isFactionSpecific, faction, shouldHideOnChar, isCollected, mountID = C_MountJournal.GetMountInfoByID(mountIDs[mountCounter])
+        COLLECTED_COMPANIONS[mountID] = true
+		mountCounter = mountCounter + 1
+	  end
+	else
+      for i = 1, GetNumCompanions(typ) do
         local creatureID = GetCompanionInfo(typ, i) -- creatureID, creatureName, spellID, icon, active
-        COLLECTED_COMPANIONS[creatureID] = true
-    end
+        
+	  	COLLECTED_COMPANIONS[creatureID] = true
+      end
+	end
 end
 local function EventFrame_OnEvent(frame, event, arg1)
     if event == "COMPANION_UNLEARNED" then
