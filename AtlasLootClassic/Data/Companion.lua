@@ -675,7 +675,7 @@ local function UpdateKnownCompanions(typ)
       mountCounter = 1 --loop counter
       while mountCounter <= #mountIDs do
         name, spellID, icon, isActive, isUsable, sourceType, isFavorite, isFactionSpecific, faction, shouldHideOnChar, isCollected, mountID = C_MountJournal.GetMountInfoByID(mountIDs[mountCounter])
-        COLLECTED_COMPANIONS[mountID] = true
+        COLLECTED_COMPANIONS[mountID] = isCollected
 		mountCounter = mountCounter + 1
 	  end
 	else
