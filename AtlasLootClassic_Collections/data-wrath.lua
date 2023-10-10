@@ -76,12 +76,40 @@ data["DalaranVendor"] = {
 	gameVersion = AtlasLoot.WRATH_VERSION_NUM,
 	items = {
 		{
-			name = ALIL["Finger"],
+			name = ALIL["Finger - /w Exalted Gold Discount"],
 			[NORMAL_DIFF] = {
-				{ 1, 40586 }, -- Band of the Kirin Tor
-				{ 2, 44935 }, -- Ring of the Kirin Tor
-				{ 3, 40585 }, -- Signet of the Kirin Tor
-				{ 4, 44934 }, -- Loop of the Kirin Tor
+				{ 1, "f1090rep8" },
+				-- caster
+				{ 2, 40585}, 		  --Signet of the Kirin Tor
+				{ 3, 45691, 40585},   --Inscribed Signet of the Kirin Tor
+				{ 4, 48957, 45691},   --Etched Signet of the Kirin Tor
+				{ 5, 51557, 48954},   --Runed Signet of the Kirin Tor
+				-- healer
+				{ 10, 44934 }, 		  --Loop of the Kirin Tor
+				{ 11, 45689, 44934 }, --Inscribed Loop of the Kirin Tor
+				{ 12, 48955, 45689 }, --Etched Loop of the Kirin Tor
+				{ 13, 51558, 48955 }, --Runed Loop of the Kirin Tor
+				-- agi
+				{ 17, 40586 }, 		  --Band of the Kirin Tor
+				{ 18, 45688, 40586 }, --Inscribed Band of the Kirin Tor
+				{ 19, 48954, 45688 }, --Etched Band of the Kirin Tor
+				{ 20, 51560, 48957 }, --Runed Band of the Kirin Tor
+				-- str
+				{ 25, 44935 }, 		  --Ring of the Kirin Tor
+				{ 26, 45690, 44935 }, --Inscribed Ring of the Kirin Tor
+				{ 27, 48956, 45690 }, --Etched Ring of the Kirin Tor
+				{ 28, 51559, 48956 }, --Runed Ring of the Kirin Tor
+			},
+		},
+		{
+			name = ALIL["Gems"],
+			[NORMAL_DIFF] = {
+				{ 1, 36919 }, -- Cardinal Ruby
+				{ 2, 36922 }, -- King's Amber
+				{ 3, 36925 }, -- Majestic Zircon
+				{ 4, 36931 }, -- Ametrine
+				{ 5, 36928 }, -- Dreadstone
+				{ 6, 36934 }, -- Eye of Zul
 			},
 		},
 	}
@@ -784,6 +812,339 @@ data["SiderealEssence"] = {
 			name = AL["Misc"],
 			[NORMAL_DIFF] = {
 				{ 1, 47556 }, -- Crusader Orb
+			},
+		},
+	}
+}
+
+data["DefilersScourgestone"] = {
+	name = format(AL["'%s' Vendor"], AL["Defiler's Scourgestone"]),
+	ContentType = VENDOR_CONTENT,
+	TableType = NORMAL_ITTYPE,
+	gameVersion = AtlasLoot.WRATH_VERSION_NUM,
+	items = {
+		{
+			name = ALIL["Armor"] .. " - " .. ALIL["Cloth"],
+			[NORMAL_DIFF] = AtlasLoot:GetRetByFaction(
+				{ -- horde
+					-- spirit/haste
+					{ 1, 47321 }, --Boots of the Icy Floe
+					{ 2, 47286 }, --Belt of Biting Cold
+					{ 3, 47306 }, --Dark Essence Bindings
+					-- hit/crit
+					{ 16, 47293 }, --Sandals of the Mourning Widow
+					{ 17, 47258 }, --Belt of the Tenebrous Mist
+					{ 18, 47324 }, --Bindings of the Ashen Saint
+				},
+				{ -- alliance
+					-- spirit/haste
+					{ 1, 47194 }, --Footpads of the Icy Floe
+					{ 2, 47081 }, --Cord of Biting Cold
+					{ 3, 47141 }, --Bindings of Dark Essence
+					-- hit/crit
+					{ 9, 47092 }, --Boots of the Mourning Widow
+					{ 10, 46972 }, --Cord of the Tenebrous Mist
+					{ 11, 47203 }, --Armbands of the Ashen Saint
+				}
+			)
+		},
+		{
+			name = ALIL["Armor"] .. " - " .. ALIL["Leather"],
+			[NORMAL_DIFF] = AtlasLoot:GetRetByFaction(
+				{ -- horde
+					-- caster
+					{ 1, 47262 }, --Boots of the Harsh Winter
+					{ 2, 47308 }, --Belt of Pale Thorns
+					{ 3, 47277 }, --Bindings of the Autumn Willow
+					-- agi
+					{ 16, 47284 }, --Icewalker Treads
+					{ 17, 47299 }, --Belt of the Pitiless Killer
+					{ 18, 47313 }, --Armbands of Dark Determination
+				},
+				{ -- alliance
+					-- caster
+					{ 1, 47262 }, --Boots of the Harsh Winter
+					{ 2, 47308 }, --Belt of Pale Thorns
+					{ 3, 47277 }, --Bindings of the Autumn Willow
+					-- agi
+					{ 16, 47284 }, --Icewalker Treads
+					{ 17, 47299 }, --Belt of the Pitiless Killer
+					{ 18, 47313 }, --Armbands of Dark Determination
+				}
+			)
+		},
+		{
+			name = ALIL["Armor"] .. " - " .. ALIL["Mail"],
+			[NORMAL_DIFF] = AtlasLoot:GetRetByFaction(
+				{ -- horde
+					-- caster
+					{ 1, 47295 }, --Sabatons of Tremoring Earth
+					{ 3, 47265 }, --Binding of the Ice Burrower
+					{ 4, 47280 }, --Wristwraps of Cloudy Omen
+					-- agi
+					{ 16, 47296 }, --Greaves of Ruthless Judgment
+					{ 17, 47311 }, --Waistguard of Deathly Dominion
+					{ 18, 47281 }, --Bracers of the Silent Massacre
+				},
+				{ -- alliance
+					-- caster
+					{ 1, 47090 }, --Boots of Tremoring Earth
+					{ 3, 46990 }, --Belt of the Ice Burrower
+					{ 4, 47056 }, --Bracers of Cloudy Omen
+					-- agi
+					{ 16, 47106 }, --Sabatons of Ruthless Judgment
+					{ 17, 47152 }, --Belt of Deathly Dominion
+					{ 18, 47073 }, --Bracers of the Untold Massacre
+				}
+			)
+		},
+		{
+			name = ALIL["Armor"] .. " - " .. ALIL["Plate"],
+			[NORMAL_DIFF] = AtlasLoot:GetRetByFaction(
+				{ -- horde
+					-- caster
+					{ 1, 47263 }, --Sabatons of the Courageous
+					{ 2, 47323 }, --Girdle of the Forgotten Martyr
+					{ 3, 47294 }, --Bracers of the Broken Bond
+					-- str
+					{ 16, 47312 }, --Greaves of the Saronite Citadel
+					{ 17, 47268 }, --Bloodbath Girdle
+					{ 18, 47253 }, --Boneshatter Vambraces
+					-- tank
+					{ 24, 47269 }, --Dawnbreaker Sabatons
+					{ 25, 47283 }, --Belt of Bloodied Scars
+					{ 26, 47298 }, --Armguards of the Shieldmaiden
+				},
+				{ -- alliance
+					-- caster
+					{ 1, 46985 }, --Boots of the Courageous
+					{ 2, 47195 }, --Belt of the Forgotten Martyr
+					{ 3, 47093 }, --Vambraces of the Broken Bond
+					-- str
+					{ 16, 47150 }, --Greaves of the 7th Legion
+					{ 17, 46999 }, --Bloodbath Belt
+					{ 18, 46961 }, --Boneshatter Armplates
+					-- tank
+					{ 24, 46997 }, --Dawnbreaker Greaves
+					{ 25, 47072 }, --Girdle of Bloodied Scars
+					{ 26, 47108 }, --Bracers of the Shieldmaiden
+				}
+			)
+		},
+		{
+			name = ALIL["Back"],
+			[NORMAL_DIFF] = AtlasLoot:GetRetByFaction(
+				{ -- horde
+					-- caster
+					{ 1, 47291 }, --Shroud of Displacement
+					{ 2, 47256 }, --Drape of the Refreshing Winds
+					{ 3, 45242 }, --Drape of Mortal Downfall
+					-- healer
+					{ 5, 47328 }, --Maiden's Adoration
+					{ 6, 45486 }, --Drape of the Sullen Goddess
+					-- agi
+					{ 16, 47257 }, --Cloak of the Untamed Predator
+					{ 17, 45461 }, --Drape of Icy Intent
+					-- str
+					{ 20, 47320 }, --Might of the Nerub
+					-- tank
+					{ 24, 47275 }, --Pride of the Demon Lord
+					{ 25, 45496 }, --Titanskin Cloak
+				},
+				{ -- alliance
+					-- caster
+					{ 1, 47089 }, --Cloak of Displacement
+					{ 2, 46976 }, --Shawl of the Refreshing Winds
+					{ 3, 45242 }, --Drape of Mortal Downfall
+					-- healer
+					{ 5, 47225 }, --Maiden's Favor
+					{ 6, 45486 }, --Drape of the Sullen Goddess
+					-- agi
+					{ 16, 46970 }, --Drape of the Untamed Predator
+					{ 17, 45461 }, --Drape of Icy Intent
+					-- str
+					{ 20, 47183 }, --Strength of the Nerub
+					-- tank
+					{ 24, 47042 }, --Pride of the Eredar
+					{ 25, 45496 }, --Titanskin Cloak
+				}
+			)
+		},
+		{
+			name = ALIL["Neck"],
+			[NORMAL_DIFF] = AtlasLoot:GetRetByFaction(
+				{ -- horde
+					-- caster
+					{ 1, 47307 }, --Cry of the Val'kyr
+					{ 2, 45133 }, --Pendant of Fiery Havoc
+					{ 3, 45243 }, --Sapphire Amulet of Renewal
+					-- healer
+					{ 5, 45443 }, --Charm of Meticulous Timing
+					-- agi
+					{ 16, 47272 }, --Charge of the Eredar
+					{ 17, 45517 }, --Pendulum of Infinity
+					-- str
+					{ 20, 47297 }, --The Executioner's Vice
+					{ 21, 45459 }, --Frigid Strength of Hodir
+					-- tank
+					{ 24, 47305 }, --Legionnaire's Gorget
+					{ 25, 45485 }, --Bronze Pendant of the Vanir
+				},
+				{ -- alliance
+					-- caster
+					{ 1, 47139 }, --Wail of the Val'kyr
+					{ 2, 45133 }, --Pendant of Fiery Havoc
+					{ 3, 45243 }, --Sapphire Amulet of Renewal
+					-- healer
+					{ 5, 45443 }, --Charm of Meticulous Timing
+					-- agi
+					{ 16, 47043 }, --Charge of the Demon Lord
+					{ 17, 45517 }, --Pendulum of Infinity
+					-- str
+					{ 20, 47105 }, --The Executioner's Malice
+					{ 21, 45459 }, --Frigid Strength of Hodir
+					-- tank
+					{ 24, 47116 }, --The Arbiter's Muse
+					{ 25, 45485 }, --Bronze Pendant of the Vanir
+				}
+			)
+		},
+		{
+			name = ALIL["Finger"],
+			[NORMAL_DIFF] = AtlasLoot:GetRetByFaction(
+				{ -- horde
+					-- caster
+					{ 1, 47327 }, --Lurid Manifestation
+					{ 2, 45495 }, --Conductive Seal
+					-- healer
+					{ 5, 47278 }, --Circle of the Darkmender
+					-- agi
+					{ 16, 47282 }, --Band of Callous Aggression
+					-- str
+					{ 19, 46959 }, --Band of the Violent Temperment
+					{ 20, 45534 }, --Seal of the Betrayed King
+					-- tank
+					{ 24, 47315 }, --Band of the Traitor King
+					{ 25, 45471 }, --Fate's Clutch
+				},
+				{ -- alliance
+					-- caster
+					{ 1, 47054 }, --Band of Deplorable Violence
+					{ 2, 45495 }, --Conductive Seal
+					-- healer
+					{ 9, 47223 }, --Ring of the Darkmender
+					-- agi
+					{ 16, 47070 }, --Ring of Callous Aggression
+					-- str
+					{ 19, 47252 }, --Ring of the Violent Temperament
+					{ 20, 45534 }, --Seal of the Betrayed King
+					-- tank
+					{ 24, 47149 }, --Signet of the Traitor King
+					{ 25, 45471 }, --Fate's Clutch
+				}
+			)
+		},
+		{
+			name = ALIL["Trinket"],
+			[NORMAL_DIFF] = AtlasLoot:GetRetByFaction(
+				{ -- horde
+					-- caster
+					{ 1, 47316 }, --Reign of the Dead
+					{ 2, 45518 }, --Flare of the Heavens
+					-- healer
+					{ 9, 47271 }, --Solace of the Fallen
+					{ 10, 45535 }, --Show of Faith
+					-- melee
+					{ 16, 47303 }, --Death's Choice
+					{ 17, 45609 }, --Comet's Trail
+					-- tank
+					{ 24, 47290 }, --Juggernaut's Vitality
+				},
+				{ -- alliance
+					-- caster
+					{ 1, 47182 }, --Reign of the Unliving
+					{ 2, 45518 }, --Flare of the Heavens
+					-- healer
+					{ 9, 47041 }, --Solace of the Defeated
+					{ 10, 45535 }, --Show of Faith
+					-- melee
+					{ 16, 47115 }, --Death's Verdict
+					{ 17, 45609 }, --Comet's Trail
+					-- tank
+					{ 24, 47080 }, --Satrina's Impeding Scarab
+				}
+			)	
+		},
+		{
+			name = ALIL["Weapon"],
+			[NORMAL_DIFF] = AtlasLoot:GetRetByFaction(
+				{ -- horde
+					-- mainhand
+					{ 1, 47261 }, --Barb of Tarasque
+					{ 3, 47322 }, --Suffering's End
+					-- offhand
+					{ 5, 47276 }, --Talisman of Heedless Sins
+					{ 7, 47309 }, --Mystifying Charm
+					-- dagger
+					{ 16, 47255 }, --Stygian Bladebreaker
+					{ 17, 47300 }, --Gouge of the Frigid Heart
+					-- axe
+					{ 19, 47314 }, --Hellscream Slicer
+					{ 20, 47266 }, --Blood Fury
+					-- 2h-str
+					{ 22, 47285 }, --Dual-blade Butcher
+					-- 2h-agi
+					{ 24, 47302 }, --Twin's Pact
+					{ 26, 47329 }, --Hellion Glaive
+					-- ranged
+					{ 28, 47267 }, --Death's Head Crossbow
+				},
+				{ -- alliance
+					-- mainhand
+					{ 1, 46979 }, --Blade of Tarasque
+					{ 3, 47193 }, --Misery's End
+					-- offhand
+					{ 5, 47053 }, --Symbol of Transgression
+					{ 7, 47138 }, --Chalice of Searing Light
+					-- agi dagger
+					{ 16, 46958 }, --Steel Bladebreaker
+					{ 17, 47104 }, --Twin Spike
+					-- axe
+					{ 19, 47148 }, --Stormpike Cleaver
+					{ 20, 46996 }, --Lionhead Slasher
+					-- 2h-str
+					{ 22, 47069 }, --Justicebringer
+					-- 2h-agi
+					{ 24, 47114 }, --Lupine Longstaff
+					{ 26, 47233 }, --Archon Glaive
+					-- ranged
+					{ 28, 46994 }, --Talonstrike
+				}
+			)
+		},
+		{
+			name = ALIL["Shield"],
+			[NORMAL_DIFF] = AtlasLoot:GetRetByFaction(
+				{ -- horde
+					-- caster
+					{ 1, 47287 }, --Bastion of Resolve
+					-- tank
+					{ 16, 47260 }, --Forlorn Barrier
+				},
+				{ -- alliance
+					-- caster
+					{ 1, 47079 }, --Bastion of Purity
+					-- tank
+					{ 16, 46963 }, --Crystal Plated Vanguard
+				}
+			)	
+		},
+		{
+			name = AL["Misc"],
+			[NORMAL_DIFF] = {
+				{ 1, "INV_Box_01", nil, AL["Sidereal Essence: 1 for 1"], nil },
+				{ 2, 49908 }, -- Primordial Saronite
+				{ 3, 47242 }, -- Trophy of the Crusade
 			},
 		},
 	}

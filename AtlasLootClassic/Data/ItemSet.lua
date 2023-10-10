@@ -734,7 +734,7 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
 		[3004765] = {{40829,40870,40790,40810,40850},4,4,213,1,{{2,56449},{2,71850},{4,71858},{4,22738}},AL["Relentless %s"],765}, -- Relentless Gladiator's Battlegear
 		[3004766] = {{40831,40872,40772,40812,40852},4,4,213,2,{{2,56449},{2,71850},{4,71858},{4,61776}},AL["Relentless %s"],766}, -- Relentless Gladiator's Vindication
 		[3004767] = {{40934,40964,40910,40928,40940},4,4,213,2,{{2,56450},{2,71851},{4,71853},{4,58000}},AL["Relentless %s"],767}, -- Relentless Gladiator's Redemption
-		[3004768] = {{40830,40863,40784,40806,40845},4,4,213,32,{{2,56449},{2,71850},{4,71858},{4,61257}},AL["Relentless %s"],768}, -- Relentless Gladiator's Desecration
+		[3004768] = {{40830,40871,40791,40811,40851},4,4,213,32,{{2,56449},{2,71850},{4,71858},{4,61257}},AL["Relentless %s"],768}, -- Relentless Gladiator's Desecration
 		[3004769] = {{41020,41045,40995,41008,41034},3,4,213,64,{{2,56509},{2,71852},{4,71860},{4,44299}},AL["Relentless %s"],769}, -- Relentless Gladiator's Thunderfist
 		[3004770] = {{41152,41212,41082,41138,41200},3,4,213,64,{{2,56449},{2,71850},{4,71858},{4,33018}},AL["Relentless %s"],770}, -- Relentless Gladiator's Earthshaker
 		[3004771] = {{41014,41039,40994,41002,41028},3,4,213,64,{{2,71851},{2,56450},{4,44299},{4,71853}},AL["Relentless %s"],771}, -- Relentless Gladiator's Wartide
