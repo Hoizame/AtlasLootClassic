@@ -671,7 +671,9 @@ local function UpdateKnownCompanions(typ)
 
     for i = 1, GetNumCompanions(typ) do
         local creatureID = GetCompanionInfo(typ, i) -- creatureID, creatureName, spellID, icon, active
-        COLLECTED_COMPANIONS[creatureID] = true
+        if creatureID ~= nil then
+		COLLECTED_COMPANIONS[creatureID] = true
+	end
     end
 end
 local function EventFrame_OnEvent(frame, event, arg1)
