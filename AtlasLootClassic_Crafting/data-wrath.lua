@@ -1228,7 +1228,7 @@ data["JewelcraftingWrath"] = {
 			[NORMAL_DIFF] = {
 				{ 1, 66498 },	-- Sparkling Majestic Zircon
 				{ 2, 66497 },	-- Solid Majestic Zircon
-				{ 3, 66498 },	-- Lustrous Majestic Zircon
+				{ 3, 66500 },	-- Lustrous Majestic Zircon
 				{ 4, 66499 },	-- Stormy Majestic Zircon
 				{ 6, 53953 },	-- Sparkling Sky Sapphire
 				{ 7, 53952 },	-- Solid Sky Sapphire
