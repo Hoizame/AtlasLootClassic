@@ -1234,8 +1234,10 @@ data["DrakTharonKeep"] = {
 				{ 9, 43996 }, -- Sabatons of Firmament
 				{ 16, "INV_Box_01", nil, AL["Tier Token iLvl200"], nil, "Tier7TitanRuneTokens" },
 				{ 17, "INV_Box_01", nil, AL["Tier Token iLvl225"], nil, "Tier8TitanRuneTokens" },
-				{ 19, 43102 }, -- Frozen Orb { 21, 41796 }, -- Design: Infused Twilight Opal
-				{ 23, "ac1860" }, { 101, 40616 }, -- Helm of the Lost Conqueror
+				{ 19, 43102 }, -- Frozen Orb
+				{ 21, 41795 }, -- Design: Timeless Forest Emerald
+				{ 23, "ac1860" },
+				{ 101, 40616 }, -- Helm of the Lost Conqueror
 				{ 102, 40617 }, -- Helm of the Lost Protector
 				{ 103, 40618 }, -- Helm of the Lost Vanquisher
 				{ 104, 40622 }, -- Spaulders of the Lost Conqueror
