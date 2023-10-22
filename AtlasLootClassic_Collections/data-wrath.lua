@@ -1073,7 +1073,7 @@ data["DefilersScourgestone"] = {
 					-- tank
 					{ 24, 47080 }, --Satrina's Impeding Scarab
 				}
-			)	
+			)
 		},
 		{
 			name = ALIL["Weapon"],
@@ -1137,7 +1137,7 @@ data["DefilersScourgestone"] = {
 					-- tank
 					{ 16, 46963 }, --Crystal Plated Vanguard
 				}
-			)	
+			)
 		},
 		{
 			name = AL["Misc"],
