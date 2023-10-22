@@ -7,5 +7,6 @@ This mod is distributed under Version 2 of the GPL.  A copy of the GPL is includ
 ## v3.2.0 (Oct. 22, 2023)
 
 - update .toc version
+- fix lua error with companions
 - Hallow's End update PR #416
 - Fix epic blue gem id, add Ashen Verdict engineering PR #413
