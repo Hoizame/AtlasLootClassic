@@ -919,6 +919,12 @@ function Favourites:IsItemEquippedOrObsolete(itemId, listId)
                 return obsoleteType
             end
         end
+        for listId, listData in pairs(self.globalDb.lists) do
+            local obsoleteType = self:IsItemEquippedOrObsolete(itemId, listId)
+            if obsoleteType then
+                return obsoleteType
+            end
+        end
         return false
     end
     if ListBiSCache[listId] then
