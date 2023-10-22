@@ -666,11 +666,12 @@ local EventFrame = CreateFrame("FRAME")
 EventFrame:RegisterEvent("COMPANION_LEARNED")
 EventFrame:RegisterEvent("COMPANION_UNLEARNED")
 EventFrame:RegisterEvent("COMPANION_UPDATE")
+
 local function UpdateKnownCompanions(typ)
     if GetNumCompanions(typ) <= 0 then return end
-    
+
 	if typ == "MOUNT" then
-	  
+
       mountIDs = C_MountJournal.GetMountIDs() --List of all avalible MountIDs
       mountCounter = 1 --loop counter
       while mountCounter <= #mountIDs do
@@ -681,7 +682,7 @@ local function UpdateKnownCompanions(typ)
 	else
       for i = 1, GetNumCompanions(typ) do
         local creatureID = GetCompanionInfo(typ, i) -- creatureID, creatureName, spellID, icon, active
-        
+
 	  	COLLECTED_COMPANIONS[creatureID] = true
       end
 	end
@@ -695,6 +696,12 @@ local function EventFrame_OnEvent(frame, event, arg1)
     end
 end
 EventFrame:SetScript("OnEvent", EventFrame_OnEvent)
+
+if C_MountJournal then
+
+else
+
+end
 
 -- first companion scan
 local function OnInit()
