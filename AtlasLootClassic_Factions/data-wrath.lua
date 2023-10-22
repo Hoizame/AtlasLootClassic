@@ -405,9 +405,11 @@ data["TheAshenVerdict"] = {
 				{ 21, 49958 },	-- Pattern: Blessed Cenarion Boots (p7 450)
 				{ 22, 49963 },	-- Pattern: Earthsoul Boots (p7 450)
 				{ 23, 49961 },	-- Pattern: Footpads of Impending Death (p7 450)
-				{ 25, 49966 },	-- Pattern: Rock-Steady Treads (p7 450)
+				{ 24, 49966 },	-- Pattern: Rock-Steady Treads (p7 450)
 				{ 26, 49954 },	-- Pattern: Deathfrost Boots (p8 450)
 				{ 27, 49956 },	-- Pattern: Sandals of Consecration (p8 450)
+				{ 29, 52022 },	-- Plans: Shatter Rounds (p4 450)
+				{ 30, 52023 },	-- Plans: Iceblade Arrow (p4 450)
 			},
 		},
 		{ -- Friendly 5
