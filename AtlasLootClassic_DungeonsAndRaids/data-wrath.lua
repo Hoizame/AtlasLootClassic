@@ -1165,7 +1165,7 @@ data["DrakTharonKeep"] = {
             [BETA_DIFF] = {
                 { 1, 45624 }, -- Emblem of Conquest
                 { 3, 45975 }, -- Cable of the Metrognome
-                { 4, 45687 }, -- Helm of Veiled Energies
+                { 4, 45700 }, -- Stoneguard
                 { 6, 39243 }, -- Handgrips of the Foredoomed
                 { 7, 39239 }, -- Chestplate of the Risen Soldier
                 { 8, 39240 }, -- Noth's Curse
@@ -1225,42 +1225,40 @@ data["DrakTharonKeep"] = {
                 { 30, "ac1658" },
             },
             [BETA_DIFF] = {
-                { 1, 45624 }, -- Emblem of Conquest
-                { 3, 45312 }, -- Gloves of Smoldering Touch
-                { 4, 45318 }, -- Drape of Fuming Anger
-                { 5, 45313 }, -- Furnace Stone
-                { 7, 39419 }, -- Nerubian Conquerer
-                { 8, 43994 }, -- Belabored Legplates
-                { 9, 39425 }, -- Cloak of the Dying
-                { 16, "INV_Box_01", nil, AL["Tier Token iLvl200"], nil, "Tier7TitanRuneTokens" },
-				{ 17, "INV_Box_01", nil, AL["Tier Token iLvl225"], nil, "Tier8TitanRuneTokens" },
-                { 19, 43102 }, -- Frozen Orb
-                { 21, 41796 }, -- Design: Infused Twilight Opal
-                { 23, "ac1860" },
-                { 101, 40616 }, -- Helm of the Lost Conqueror
-                { 102, 40617 }, -- Helm of the Lost Protector
-                { 103, 40618 }, -- Helm of the Lost Vanquisher
-                { 104, 40622 }, -- Spaulders of the Lost Conqueror
-                { 105, 40623 }, -- Spaulders of the Lost Protector
-                { 106, 40624 }, -- Spaulders of the Lost Vanquisher
-                { 107, 40619 }, -- Leggings of the Lost Conqueror
-                { 108, 40620 }, -- Leggings of the Lost Protector
-                { 109, 40621 }, -- Leggings of the Lost Vanquisher
-                { 116, 45647 }, -- Helm of the Wayward Conqueror
-                { 117, 45648 }, -- Helm of the Warward Protector
-                { 118, 45649 }, -- Helm of the Wayward Vanquisher
-                { 119, 45659 }, -- Spaulders of the Wayward Conqueror
-                { 120, 45660 }, -- Spaulders of the Wayward Protector
-                { 121, 45661 }, -- Spaulders of the Wayward Vanquisher
-                { 122, 45635 }, -- Chestguard of the Wayward Conqueror
-                { 123, 45636 }, -- Chestguard of the Wayward Protector
-                { 124, 45637 }, -- Chestguard of the Wayward Vanquisher
-                { 125, 45644 }, -- Gloves of the Wayward Conqueror
-                { 126, 45645 }, -- Gloves of the Wayward Protector
-                { 127, 45646 }, -- Gloves of the Wayward Vanquisher
-                { 128, 45650 }, -- Leggings of the Wayward Conqueror
-                { 129, 45651 }, -- Leggings of the Wayward Protector
-                { 130, 45652 }, -- Leggings of the Wayward Vanquisher
+                { 1, 45624 }, -- Emblem of Conquest 
+				{ 3, 45303 }, -- Band of Draconic Guile 
+				{ 4, 45972 }, -- Pulse Baton 
+				{ 5, 45974 }, -- Shoulderguards of Assimilation 
+				{ 7, 43995 }, -- Enamored Cowl 
+				{ 8, 39416 }, -- Kel'Thuzad's Reach 
+				{ 9, 43996 }, -- Sabatons of Firmament 
+				{ 16, "INV_Box_01", nil, AL["Tier Token iLvl200"], nil, "Tier7TitanRuneTokens" }, 
+				{ 17, "INV_Box_01", nil, AL["Tier Token iLvl225"], nil, "Tier8TitanRuneTokens" }, 
+				{ 19, 43102 }, -- Frozen Orb { 21, 41796 }, -- Design: Infused Twilight Opal 
+				{ 23, "ac1860" }, { 101, 40616 }, -- Helm of the Lost Conqueror 
+				{ 102, 40617 }, -- Helm of the Lost Protector 
+				{ 103, 40618 }, -- Helm of the Lost Vanquisher 
+				{ 104, 40622 }, -- Spaulders of the Lost Conqueror 
+				{ 105, 40623 }, -- Spaulders of the Lost Protector 
+				{ 106, 40624 }, -- Spaulders of the Lost Vanquisher 
+				{ 107, 40619 }, -- Leggings of the Lost Conqueror 
+				{ 108, 40620 }, -- Leggings of the Lost Protector 
+				{ 109, 40621 }, -- Leggings of the Lost Vanquisher 
+				{ 116, 45647 }, -- Helm of the Wayward Conqueror 
+				{ 117, 45648 }, -- Helm of the Warward Protector 
+				{ 118, 45649 }, -- Helm of the Wayward Vanquisher 
+				{ 119, 45659 }, -- Spaulders of the Wayward Conqueror 
+				{ 120, 45660 }, -- Spaulders of the Wayward Protector 
+				{ 121, 45661 }, -- Spaulders of the Wayward Vanquisher 
+				{ 122, 45635 }, -- Chestguard of the Wayward Conqueror 
+				{ 123, 45636 }, -- Chestguard of the Wayward Protector 
+				{ 124, 45637 }, -- Chestguard of the Wayward Vanquisher 
+				{ 125, 45644 }, -- Gloves of the Wayward Conqueror 
+				{ 126, 45645 }, -- Gloves of the Wayward Protector 
+				{ 127, 45646 }, -- Gloves of the Wayward Vanquisher 
+				{ 128, 45650 }, -- Leggings of the Wayward Conqueror 
+				{ 129, 45651 }, -- Leggings of the Wayward Protector 
+				{ 130, 45652 }, -- Leggings of the Wayward Vanquisher
             }
         },
         { -- Trash
@@ -1897,7 +1895,7 @@ data["HallsofStone"] = {
             [BETA_DIFF] = {
                 { 1, 45624 }, -- Emblem of Conquest
                 { 3, 45302 }, -- Treads of the Inader
-                { 4, "INV_Box_01", nil, AL["2nd drop is unknown!"], nil },
+                { 4, 45895 }, -- Belt of the Blood Pit
                 { 6, 39215 }, -- Boots of the Follower
                 { 7, 39216 }, -- Sash of Mortal Desire
                 { 8, 39196 }, -- Boots of the Worshiper
@@ -2901,13 +2899,17 @@ data["VioletHold"] = {
             },
             [BETA_DIFF] = {
                 { 1, 45624 }, -- Emblem of Conquest
-                { 3, 45284 }, -- Kinetic Ripper
-                { 4, 45289 }, -- Lifespark Visage
-                { 5, 45285 }, -- Might of the Leviathon
-                { 7, 39275 }, -- Contagion Gloves
-                { 8, 39281 }, -- Infection Repulser
-                { 9, 39293 }, -- Blackened Legplates of Feugen
-                { 11, "ac1865" },
+				
+                { 3, 45935 }, -- Ironbark Faceguard
+                { 4, 45940 }, -- Tunic of the Limber Stalker
+                { 5, 45289 }, -- Lifespark Visage
+                { 6, 45285 }, -- Might of the Leviathon
+	            { 7, 45284 }, -- Kinetic Ripper
+				
+                { 9, 39275 }, -- Contagion Gloves
+                { 10, 39281 }, -- Infection Repulser
+                { 11, 39293 }, -- Blackened Legplates of Feugen
+                { 13, "ac1865" },
             }
         },
         { -- VioletHoldZuramat / 27
@@ -2939,13 +2941,17 @@ data["VioletHold"] = {
             },
             [BETA_DIFF] = {
                 { 1, 45624 }, -- Emblem of Conquest
-                { 3, 45284 }, -- Kinetic Ripper
-                { 4, 45289 }, -- Lifespark Visage
-                { 5, 45285 }, -- Might of the Leviathon
-                { 7, 39276 }, -- The Skull of Ruin
-                { 8, 39270 }, -- Hatestrike
-                { 9, 39282 }, -- Bone-Linked Amulet
-                { 11, "ac1865" },
+				
+                { 3, 45935 }, -- Ironbark Faceguard
+                { 4, 45940 }, -- Tunic of the Limber Stalker
+                { 5, 45289 }, -- Lifespark Visage
+                { 6, 45285 }, -- Might of the Leviathon
+	            { 7, 45284 }, -- Kinetic Ripper
+				
+                { 9, 39276 }, -- The Skull of Ruin
+                { 10, 39270 }, -- Hatestrike
+                { 11, 39282 }, -- Bone-Linked Amulet
+                { 13, "ac1865" },
             }
         },
         { -- VioletHoldXevozz / 28
@@ -2977,13 +2983,17 @@ data["VioletHold"] = {
             },
             [BETA_DIFF] = {
                 { 1, 45624 }, -- Emblem of Conquest
-                { 3, 45284 }, -- Kinetic Ripper
-                { 4, 45289 }, -- Lifespark Visage
-                { 5, 45285 }, -- Might of the Leviathon
-                { 7, 39272 }, -- Drape of Surgery
-                { 8, 39285 }, -- Handgrips of Turmoil
-                { 9, 39278 }, -- Bands of Anxiety
-                { 11, "ac1865" },
+				
+                { 3, 45935 }, -- Ironbark Faceguard
+                { 4, 45940 }, -- Tunic of the Limber Stalker
+                { 5, 45289 }, -- Lifespark Visage
+                { 6, 45285 }, -- Might of the Leviathon
+	            { 7, 45284 }, -- Kinetic Ripper
+				
+                { 9, 39272 }, -- Drape of Surgery
+                { 10, 39285 }, -- Handgrips of Turmoil
+                { 11, 39278 }, -- Bands of Anxiety
+                { 13, "ac1865" },
             }
         },
         { -- VioletHoldIchoron / 29
@@ -3017,14 +3027,18 @@ data["VioletHold"] = {
             },
             [BETA_DIFF] = {
                 { 1, 45624 }, -- Emblem of Conquest
-                { 3, 45284 }, -- Kinetic Ripper
-                { 4, 45289 }, -- Lifespark Visage
-                { 5, 45285 }, -- Might of the Leviathon
-                { 7, 39273 }, -- Sullen Cloth Boots
-                { 8, 39279 }, -- Blistered Belt of Decay
-                { 9, 39291 }, -- Torment of the Banished
-                { 11, "ac2041" },
-                { 12, "ac1865" },
+				
+                { 3, 45935 }, -- Ironbark Faceguard
+                { 4, 45940 }, -- Tunic of the Limber Stalker
+                { 5, 45289 }, -- Lifespark Visage
+                { 6, 45285 }, -- Might of the Leviathon
+	            { 7, 45284 }, -- Kinetic Ripper
+				
+                { 9, 39273 }, -- Sullen Cloth Boots
+                { 10, 39279 }, -- Blistered Belt of Decay
+                { 11, 39291 }, -- Torment of the Banished
+                { 13, "ac2041" },
+                { 14, "ac1865" },
             }
         },
         { -- VioletHoldMoragg / 30
@@ -3056,13 +3070,17 @@ data["VioletHold"] = {
             },
             [BETA_DIFF] = {
                 { 1, 45624 }, -- Emblem of Conquest
-                { 3, 45284 }, -- Kinetic Ripper
-                { 4, 45289 }, -- Lifespark Visage
-                { 5, 45285 }, -- Might of the Leviathon
-                { 7, 39280 }, -- Leggings of Innumerable Barbs
-                { 8, 39292 }, -- Repelling Charge
-                { 9, 39274 }, -- Retcher's Shoulderpads
-                { 11, "ac1865" },
+				
+                { 3, 45935 }, -- Ironbark Faceguard
+                { 4, 45940 }, -- Tunic of the Limber Stalker
+                { 5, 45289 }, -- Lifespark Visage
+                { 6, 45285 }, -- Might of the Leviathon
+	            { 7, 45284 }, -- Kinetic Ripper
+				
+                { 9, 39280 }, -- Leggings of Innumerable Barbs
+                { 10, 39292 }, -- Repelling Charge
+                { 11, 39274 }, -- Retcher's Shoulderpads
+                { 13, "ac1865" },
             }
         },
         { -- VioletHoldLavanthor / 31
@@ -3094,13 +3112,17 @@ data["VioletHold"] = {
             },
             [BETA_DIFF] = {
                 { 1, 45624 }, -- Emblem of Conquest
-                { 3, 45284 }, -- Kinetic Ripper
-                { 4, 45289 }, -- Lifespark Visage
-                { 5, 45285 }, -- Might of the Leviathon
-                { 7, 39271 }, -- Blade of Dormant Memories
-                { 8, 39307 }, -- Iron Rings of Endurance
-                { 9, 39277 }, -- Sealing Ring of Grobbulus
-                { 11, "ac1865" },
+				
+                { 3, 45935 }, -- Ironbark Faceguard
+                { 4, 45940 }, -- Tunic of the Limber Stalker
+                { 5, 45289 }, -- Lifespark Visage
+                { 6, 45285 }, -- Might of the Leviathon
+	            { 7, 45284 }, -- Kinetic Ripper
+				
+                { 9, 39271 }, -- Blade of Dormant Memories
+                { 10, 39307 }, -- Iron Rings of Endurance
+                { 11, 39277 }, -- Sealing Ring of Grobbulus
+                { 13, "ac1865" },
             }
         },
         { -- VioletHoldCyanigosa / 32

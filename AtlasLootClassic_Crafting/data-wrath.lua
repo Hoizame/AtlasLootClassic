@@ -421,10 +421,15 @@ data["EnchantingWrath"] = {
 				{ 7, 44500 },	-- Enchant Cloak - Superior Agility
 				{ 8, 44582 },	-- Enchant Cloak - Minor Power
 				{ 9, 60609 },	-- Enchant Cloak - Speed
+				
+				{ 20, 44596 },	-- Enchant Cloak - Superior Arcane Resistance
+				{ 19, 44556 },	-- Enchant Cloak - Superior Fire Resistance
+				{ 16, 44483 },	-- Enchant Cloak - Superior Frost Resistance
+				{ 17, 44494 },	-- Enchant Cloak - Superior Nature Resistance
+				{ 18, 44590 },	-- Enchant Cloak - Superior Shadow Resistance
+				
 
-				{ 16, 60609 },	-- Enchant Cloak - Speed
-				{ 17, 44582 },	-- Enchant Cloak - Spell Piercing
-				{ 18, 60663 },	-- Enchant Cloak - Major Agility
+				
 			}
 		},
 		{
@@ -1000,12 +1005,20 @@ data["LeatherworkingWrath"] = {
 				{ 5, 50964 },	-- Jormungar Leg Armor
 				{ 6, 50966 },	-- Nerubian Leg Armor
 				{ 8, 50963 },	-- Heavy Borean Armor Kit
+				
+				{ 10, 60584 },	-- Nerubian Leg Reinforcements
+				{ 11, 60583 },	-- Jormungar Leg Reinforcements
+				
+				{ 16, 57691 },	-- Fur Lining - Spell Power
+				{ 17, 57690 },	-- Fur Lining - Stamina	
+				{ 18, 57683 },	-- Fur Lining - Attack Power
+				
+				{ 20, 57701 },	-- Fur Lining - Arcane Resist
+				{ 21, 57692 },	-- Fur Lining - Fire Resist
+				{ 22, 57694 },	-- Fur Lining - Frost Resist
+				{ 23, 57699 },	-- Fur Lining - Nature Resist			
+				{ 24, 57696 },	-- Fur Lining - Shadow Resist
 
-				{ 10, 57683 },	-- Fur Lining - Attack Power
-				{ 11, 57691 },	-- Fur Lining - Spell Power
-
-				{ 25, 60584 },	-- Nerubian Leg Reinforcements
-				{ 26, 60583 },	-- Jormungar Leg Reinforcements
 			},
 		},
 		{
