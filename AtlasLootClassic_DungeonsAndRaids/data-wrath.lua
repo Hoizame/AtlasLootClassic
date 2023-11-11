@@ -2335,8 +2335,8 @@ data["TheNexus"] = {
 	LevelRange = {66, 71, 73},
 	items = {
         { -- TheNexusKolurgStoutbeardHEROIC / 9
-            name = AtlasLoot:GetRetByFaction(AL["Commander Kolurg"], AL["Commander Stoutbeard"]),
-            npcID = AtlasLoot:GetRetByFaction(26798, 26796),
+            name = AtlasLoot:GetRetByFaction(AL["Commander Stoutbeard"], AL["Commander Kolurg"]),
+            npcID = AtlasLoot:GetRetByFaction(26796, 26798),
             EncounterJournalID = 833,
             Level = 72,
             -- DisplayIDs = {{0}},
