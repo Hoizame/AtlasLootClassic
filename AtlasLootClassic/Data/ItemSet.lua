@@ -230,6 +230,10 @@ ITEM_SET_DATA_RAW.CLASSIC = {
 	[549] = {{23316,23317,23303,23288,23302,23289},1,3,68,16,{{2,14047},{4,23044},{6,14467}}}, -- Lieutenant Commander's Investiture
 	[550] = {{23306,23307,23292,23279,23293,23278},3,3,68,4,{{2,14384},{4,23158},{6,14467}}}, -- Lieutenant Commander's Pursuance
 	[551] = {{23308,23309,23294,23280,23295,23281},2,3,68,1024,{{2,14049},{4,23218},{6,14467}}}, -- Lieutenant Commander's Refuge
+	[1570] = {{209683,209671,209669},1,3,30,0,{{2,9415},{3,432639}}}, -- Twilight Invoker's Vestments
+	[1577] = {{211506,211504,211505},3,3,30,0,{{2,9141},{3,432639}}}, -- Blackfathom Avenger's Mail
+	[1578] = {{211510,211511,211512},2,3,30,0,{{2,9141},{3,432639}}}, -- Blackfathom Slayer's Leather
+	[1579] = {{211507,211508,211509},2,3,30,0,{{2,9417},{3,432639}}}, -- Blackfathom Elementalist's Hide
 }
 
 if AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM) then
