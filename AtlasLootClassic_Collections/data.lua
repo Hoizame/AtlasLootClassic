@@ -499,8 +499,8 @@ data["TierSets"] = {
 	},
 }
 
-data["Levelling Raid Sets"] = {
-	name = AL["Levelling Raid Sets"],
+data["Leveling Raid Sets"] = {
+	name = AL["Leveling Raid Sets"],
 	ContentType = SET_CONTENT,
 	TableType = SET_ITTYPE,
 	items = {
