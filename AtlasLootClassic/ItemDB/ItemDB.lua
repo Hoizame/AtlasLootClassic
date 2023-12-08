@@ -509,6 +509,8 @@ function ItemDB.ContentProto:GetName(raw)
 		if AtlasLoot.db.showLvlRange and self.LevelRange then
 			if AtlasLoot.db.showMinEnterLvl then
 				addEnd = format(LEVEL_RANGE_FORMAT, self.LevelRange[1] or 0, self.LevelRange[2] or 0, self.LevelRange[3] or 0 )
+			elseif not self.LevelRange[3] then
+    				addEnd = format(LEVEL_RANGE_FORMAT3, self.LevelRange[2] or 0) 
 			else
 				addEnd = format(LEVEL_RANGE_FORMAT2, self.LevelRange[2] or 0, self.LevelRange[3] or 0 )
 			end
