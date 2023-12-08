@@ -918,7 +918,7 @@ data["BlackfathomDeepsRaid"] = {
 	AtlasMapFile_AL = {"BlackfathomDeeps", "BlackfathomDeepsEnt"},
 	ContentType = RAID10_CONTENT,
 	LoadDifficulty = RAID10_DIFF,
-	LevelRange = GetForVersion({15, 24, 32}, {19, 22, 24}),
+	LevelRange = GetForVersion({15, 25}, {19, 22, 24}),
 	items = {
 		{ -- BFDBaronAquanis
 			name = AL["Baron Aquanis"],
@@ -1002,15 +1002,16 @@ data["BlackfathomDeepsRaid"] = {
 				{ 16,  209670 }, -- Skinwalkers
 				{ 17,  209569 }, -- Murloc Hide Kneeboots
 				{ 18,  209568 }, -- Algae Gauntlets
+				{ 19,  209572 }, -- Black Boiled Leathers
 				{ 20,  209820 }, -- Black Shroud Choker
 				{ 21,  209821 }, -- Ring of Shadowsight
 				{ 22,  209681 }, -- Black Murloc Egg
-				{ 24,  209559 }, -- Twilight Sage's Walking Stick
-				{ 25,  209573 }, -- Wrathful Spire
-				{ 26,  209567 }, -- Coral Reef Axe
-				{ 27,  209571 }, -- Deadlight
-				{ 28,  209570 }, -- Tome of Cavern Lore
-				{ 31,  211491 }, -- Bottomless Murloc Skin Bag
+				{ 23,  209559 }, -- Twilight Sage's Walking Stick
+				{ 24,  209573 }, -- Wrathful Spire
+				{ 25,  209567 }, -- Coral Reef Axe
+				{ 26,  209571 }, -- Deadlight
+				{ 27,  209570 }, -- Tome of Cavern Lore
+				{ 28,  211491 }, -- Bottomless Murloc Skin Bag
 			},
 		},
 		{ -- BFDLorgusJett
@@ -1019,7 +1020,7 @@ data["BlackfathomDeepsRaid"] = {
 			Level = GetForVersion(27,24),
 			AtlasMapFile = {"CL_BlackfathomDeepsB", "CL_BlackfathomDeepsEnt"},
 			AtlasMapBossID = 5,
-			[RAID10_DIFF] = {
+			[NORMAL_DIFF] = {
 				{ 1,   209683 }, -- Twilight Invoker's Shawl
 				{ 2,   209671 }, -- Twilight Invoker's Robes
 				{ 3,   209669 }, -- Twilight Invoker's Shoes
@@ -1079,20 +1080,13 @@ data["BlackfathomDeepsRaid"] = {
 				{ 4,  209692 }, -- Sentinel Pauldrons
 				{ 5,  209685 }, -- Ancient Moss Cinch
 				{ 6,  209690 }, -- Shadowscale Coif
+				{ 7, 209689 }, -- Crabshell Waders
 				{ 16, 209691 }, -- Vampiric Boot Knife
 				{ 17, 211456 }, -- Dagger of Willing Sacrifice
 				{ 18, 209688 }, -- Bael Modan Blunderbuss
 				{ 20, 209534 }, -- Azshari Arbalest
 				{ 21, 209562 }, -- Deadly Strike of the Hydra
 				{ 22, 209580 }, -- Gusting Wind
-			},
-		},
-		{ -- BFDUnknown
-			name = AL["Unknown Source"],
-			ExtraList = true,
-			[RAID10_DIFF] = {
-				{ 1, 209572 }, -- Black Boiled Leathers
-				{ 2, 209689 }, -- Crabshell Waders
 			},
 		},
 		BFD_SET,
