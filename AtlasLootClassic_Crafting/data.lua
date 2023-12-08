@@ -374,13 +374,14 @@ data["Blacksmithing"] = {
 				{ 8, 9916 }, --Steel Breastplate / 40
 				{ 9, 3508 }, --Green Iron Hauberk / 36
 				{ 10, 9813 }, --Barbaric Iron Breastplate / 32
-				{ 11, 2675 }, --Shining Silver Breastplate / 29
-				{ 12, 2673 }, --Silvered Bronze Breastplate / 26
-				{ 13, 2670 }, --Rough Bronze Cuirass / 23
-				{ 14, 8367 }, --Ironforge Breastplate / 20
-				{ 15, 2667 }, --Runed Copper Breastplate / 18
-				{ 16, 3321 }, --Copper Chain Vest / 10
-				{ 17, 12260 }, --Rough Copper Vest / 7
+				{ 11, 2673 }, --Silvered Bronze Breastplate / 26
+				{ 12, 2670 }, --Rough Bronze Cuirass / 23
+				{ 13, 8367 }, --Ironforge Breastplate / 20
+				{ 14, 2667 }, --Runed Copper Breastplate / 18
+				{ 15, 3321 }, --Copper Chain Vest / 10
+				{ 16, 12260 }, --Rough Copper Vest / 7
+				{ 18, 2675 }, --Shining Silver Breastplate / 29
+				{ 19, 429348 }, --Shifting Silver Breastplate / 29 / 175
 			},
 			[PLATE_DIFF] = {
 				{ 1, 28242 }, --Icebane Breastplate / 80
@@ -1144,12 +1145,13 @@ data["Tailoring"] = {
 				{ 9, 12073 }, --Black Mageweave Boots / 46
 				{ 10, 3860 }, --Boots of the Enchanter / 35
 				{ 11, 3856 }, --Spider Silk Slippers / 28
-				{ 12, 3855 }, --Spidersilk Boots / 25
-				{ 13, 3847 }, --Red Woolen Boots / 20
-				{ 14, 2401 }, --Woolen Boots / 19
-				{ 15, 3845 }, --Soft-soled Linen Boots / 16
-				{ 16, 2386 }, --Linen Boots / 13
-				{ 17, 12045 }, --Simple Linen Boots / 9
+				{ 12, 3847 }, --Red Woolen Boots / 20
+				{ 13, 2401 }, --Woolen Boots / 19
+				{ 14, 3845 }, --Soft-soled Linen Boots / 16
+				{ 15, 2386 }, --Linen Boots / 13
+				{ 16, 12045 }, --Simple Linen Boots / 9
+				{ 18, 3855 }, --Spidersilk Boots / 25
+				{ 19, 429351 } --Extraplanar Spidersilk Boots / 30
 			}
 		},
 		{
@@ -1422,15 +1424,17 @@ data["Leatherworking"] = {
 				{ 15, 9149 }, --Heavy Earthen Gloves / 29 / 170
 				{ 16, 3764 }, --Hillman's Leather Gloves / 29 / 170
 				{ 17, 9148 }, --Pilferer's Gloves / 28 / 165
-				{ 18, 3770 }, --Toughened Leather Gloves / 27 / 160
-				{ 19, 9146 }, --Herbalist's Gloves / 27 / 160
-				{ 20, 3765 }, --Dark Leather Gloves / 26 / 155
-				{ 21, 9145 }, --Fletcher's Gloves / 25 / 150
-				{ 22, 9074 }, --Nimble Leather Gloves / 24 / 145
-				{ 23, 9072 }, --Red Whelp Gloves / 24 / 145
-				{ 24, 7954 }, --Deviate Scale Gloves / 21 / 130
-				{ 25, 2164 }, --Fine Leather Gloves / 15 / 105
-				{ 26, 3756 }, --Embossed Leather Gloves / 13 / 85
+				{ 18, 9146 }, --Herbalist's Gloves / 27 / 160
+				{ 19, 3765 }, --Dark Leather Gloves / 26 / 155
+				{ 20, 9145 }, --Fletcher's Gloves / 25 / 150
+				{ 21, 9074 }, --Nimble Leather Gloves / 24 / 145
+				{ 22, 9072 }, --Red Whelp Gloves / 24 / 145
+				{ 23, 7954 }, --Deviate Scale Gloves / 21 / 130
+				{ 24, 2164 }, --Fine Leather Gloves / 15 / 105
+				{ 25, 3756 }, --Embossed Leather Gloves / 13 / 85
+				{ 27, 3770 }, --Toughened Leather Gloves / 27 / 160
+				{ 28, 429869 }, --Void-Touched Leather Gauntlets / 30 / 160
+				{ 29, 429354 }, --Void-Touched Leather Gloves / 30 / 160
 			},
 			[MAIL_DIFF] = {
 				{ 1, 28223 }, --Icy Scale Gauntlets / 80 / 320
