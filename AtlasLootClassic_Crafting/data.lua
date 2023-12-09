@@ -584,7 +584,7 @@ data["Enchanting"] = {
 				{ 5, 25126 }, --Lesser Wizard Oil / 210
 				{ 6, 25125 }, --Minor Mana Oil / 160
 				{ 7, 25124 }, --Minor Wizard Oil / 55
-				{ 8, 211848 }, --Blackfathom Mana Oil
+				{ 8, 430409 }, --Blackfathom Mana Oil
 			}
 		},
 		{
