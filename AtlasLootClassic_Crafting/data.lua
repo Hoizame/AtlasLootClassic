@@ -185,6 +185,7 @@ data["Alchemy"] = {
 				{ 16, 11460 }, --Elixir of Detect Undead
 				{ 17, 3453 }, --Elixir of Detect Lesser Invisibility
 				{ 19, 7179 }, --Elixir of Water Breathing
+				{ 21, 210708}, --Elixir of Coalesced Regret (SoD)
 			},
 		},
 		{
@@ -350,6 +351,7 @@ data["Blacksmithing"] = {
 				{ 6, 3504 }, --Green Iron Shoulders / 32
 				{ 7, 3330 }, --Silvered Bronze Shoulders / 25
 				{ 8, 3328 }, --Rough Bronze Shoulders / 22
+				{ 10, 427063}, --Mantle of the Second War / 30
 			},
 			[PLATE_DIFF] = {
 				{ 1, 24141 }, --Darksoul Shoulders / 65
@@ -520,8 +522,9 @@ data["Blacksmithing"] = {
 				{ 1, 9964 }, --Mithril Spurs / 43
 
 				{ 3, 7224 }, --Steel Weapon Chain / 38
+				{ 16, 211845}, --Blackfathom Sharpening Stone / 25
 				{ 18, 7222 }, --Iron Counterweight / 33
-
+	
 				{ 5, 16651 }, --Thorium Shield Spike / 55
 				{ 6, 9939 }, --Mithril Shield Spike / 43
 				{ 20, 7221 }, --Iron Shield Spike / 30
@@ -581,6 +584,7 @@ data["Enchanting"] = {
 				{ 5, 25126 }, --Lesser Wizard Oil / 210
 				{ 6, 25125 }, --Minor Mana Oil / 160
 				{ 7, 25124 }, --Minor Wizard Oil / 55
+				{ 8, 211848 }, --Blackfathom Mana Oil
 			}
 		},
 		{
@@ -1003,6 +1007,12 @@ data["Engineering"] = {
 				{ 30, 12895 }, --Plans: Inlaid Mithril Cylinder / 40
 			}
 		},
+		{
+			name = AL["Misc SoD"],
+			[NORMAL_DIFF] = {
+				{1, 210147}, --Shredder Autosalvage Unit / 1
+			}
+		},
 	}
 }
 
@@ -1260,6 +1270,7 @@ data["Tailoring"] = {
 				{ 1, 28209 }, --Glacial Wrists / 80 / 315
 				{ 2, 22759 }, --Flarecore Wraps / 64 / 320
 				{ 3, 3841 }, --Green Linen Bracers / 12 / 85
+				{ 5, 428425}, --Phoenix Bindings / 30 / 125
 			}
 		},
 		{
