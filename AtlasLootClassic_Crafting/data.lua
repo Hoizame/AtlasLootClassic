@@ -522,7 +522,7 @@ data["Blacksmithing"] = {
 				{ 1, 9964 }, --Mithril Spurs / 43
 
 				{ 3, 7224 }, --Steel Weapon Chain / 38
-				{ 16, 211845}, --Blackfathom Sharpening Stone / 25
+				{ 16, 430397}, --Blackfathom Sharpening Stone / 25
 				{ 18, 7222 }, --Iron Counterweight / 33
 	
 				{ 5, 16651 }, --Thorium Shield Spike / 55
