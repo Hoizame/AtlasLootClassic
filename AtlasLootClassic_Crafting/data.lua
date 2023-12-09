@@ -1008,9 +1008,9 @@ data["Engineering"] = {
 			}
 		},
 		{
-			name = AL["Misc SoD"],
+			name = AL["Season of Discovery"],
 			[NORMAL_DIFF] = {
-				{1, 210147}, --Shredder Autosalvage Unit / 1
+				{1, 424641}, --Shredder Autosalvage Unit / 1
 			}
 		},
 	}
