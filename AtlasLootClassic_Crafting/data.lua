@@ -185,7 +185,7 @@ data["Alchemy"] = {
 				{ 16, 11460 }, --Elixir of Detect Undead
 				{ 17, 3453 }, --Elixir of Detect Lesser Invisibility
 				{ 19, 7179 }, --Elixir of Water Breathing
-				{ 21, 210708}, --Elixir of Coalesced Regret (SoD)
+				{ 21, 426607}, --Elixir of Coalesced Regret (SoD)
 			},
 		},
 		{
