@@ -2726,6 +2726,10 @@ local DropRateData = {
 		[22332] = 4.55,
 		[22333] = 42.05
 	}
+	--Season of Discovery BFD (10 man) Aku'mai
+	[213334] = {
+		[211452] = 100
+	}
 }
 --##END-DATA##
 Droprate:AddData(DropRateData)
