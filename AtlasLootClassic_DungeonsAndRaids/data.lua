@@ -918,12 +918,12 @@ data["BlackfathomDeepsRaid"] = {
 	AtlasMapFile_AL = {"BlackfathomDeeps", "BlackfathomDeepsEnt"},
 	ContentType = RAID10_CONTENT,
 	LoadDifficulty = RAID10_DIFF,
-	LevelRange = GetForVersion({15, 25}, {19, 22, 24}),
+	LevelRange = GetForVersion({25, 39}, {19, 22, 24}),
 	items = {
 		{ -- BFDBaronAquanis
 			name = AL["Baron Aquanis"],
-			npcID = 12876,
-			Level = GetForVersion(28,24),
+			npcID = 202699,
+			Level = 999,
 			DisplayIDs = {{110}},
 			AtlasMapFile = {"CL_BlackfathomDeepsB", "CL_BlackfathomDeepsEnt"},
 			AtlasMapBossID = 1,
@@ -942,9 +942,9 @@ data["BlackfathomDeepsRaid"] = {
 		},
 		{ -- BFDGhamoora
 			name = AL["Ghamoo-ra"],
-			npcID = 4887,
-			Level = GetForVersion(25,23),
-			DisplayIDs = {{5027}},
+			npcID = 201722,
+			Level = 999,
+			DisplayIDs = {{111481}},
 			AtlasMapBossID = 2,
 			[NORMAL_DIFF] = {
 				{ 1, 209523 }, -- Shimmering Thresher Cape
@@ -961,9 +961,9 @@ data["BlackfathomDeepsRaid"] = {
 		},
 		{ -- BFDLadySarevess
 			name = AL["Lady Sarevess"],
-			npcID = 4831,
-			Level = GetForVersion(25,23),
-			DisplayIDs = {{4979}},
+			npcID = 204068,
+			Level = 999,
+			DisplayIDs = {{112103}},
 			AtlasMapBossID = 3,
 			[NORMAL_DIFF] = {
 				{ 1, 209680 }, -- Waterproof Scarf
@@ -983,9 +983,9 @@ data["BlackfathomDeepsRaid"] = {
 		},
 		{ -- BFDGelihast
 			name = AL["Gelihast"],
-			npcID = 6243,
-			Level = GetForVersion(26,24),
-			DisplayIDs = {{1773}},
+			npcID = 204921,
+			Level = 999,
+			DisplayIDs = {{5243}},
 			AtlasMapBossID = 4,
 			[NORMAL_DIFF] = {
 				{ 1,   209683 }, -- Twilight Invoker's Shawl
@@ -1017,7 +1017,8 @@ data["BlackfathomDeepsRaid"] = {
 		{ -- BFDLorgusJett
 			name = AL["Lorgus Jett"],
 			npcID = 207356,
-			Level = GetForVersion(27,24),
+			Level = 999,
+			DisplayIDs = {{12822}},
 			AtlasMapFile = {"CL_BlackfathomDeepsB", "CL_BlackfathomDeepsEnt"},
 			AtlasMapBossID = 5,
 			[NORMAL_DIFF] = {
@@ -1045,8 +1046,8 @@ data["BlackfathomDeepsRaid"] = {
 		},
 		{ -- BFDTwilightLordKelris
 			name = AL["Twilight Lord Kelris"],
-			npcID = 4832,
-			Level = GetForVersion(27,24),
+			npcID = 209678,
+			Level = 999,
 			DisplayIDs = {{4939}},
 			AtlasMapFile = {"CL_BlackfathomDeepsB", "CL_BlackfathomDeepsEnt"},
 			AtlasMapBossID = 6,
@@ -1069,7 +1070,7 @@ data["BlackfathomDeepsRaid"] = {
 		{ -- BFDAkumai
 			name = AL["Aku'mai"],
 			npcID = 213334,
-			Level = GetForVersion(28,24),
+			Level = 999,
 			DisplayIDs = {{2837}},
 			AtlasMapBossID = 7,
 			AtlasMapFile = {"CL_BlackfathomDeepsB", "CL_BlackfathomDeepsEnt"},
