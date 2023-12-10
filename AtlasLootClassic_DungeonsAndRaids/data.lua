@@ -1068,7 +1068,7 @@ data["BlackfathomDeepsRaid"] = {
 		},
 		{ -- BFDAkumai
 			name = AL["Aku'mai"],
-			npcID = 4829,
+			npcID = 213334,
 			Level = GetForVersion(28,24),
 			DisplayIDs = {{2837}},
 			AtlasMapBossID = 7,
