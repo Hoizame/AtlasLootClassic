@@ -1087,6 +1087,7 @@ data["BlackfathomDeepsRaid"] = {
 				{ 20, 209534 }, -- Azshari Arbalest
 				{ 21, 209562 }, -- Deadly Strike of the Hydra
 				{ 22, 209580 }, -- Gusting Wind
+				{ 24, 211452}, --Perfect Blackfathom Pearl
 			},
 		},
 		BFD_SET,
