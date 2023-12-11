@@ -45,8 +45,10 @@ TOKEN_DATA.CLASSIC = {
 	-- optional: type=0 		-	select the desc from the TOKEN_TYPE_TEXT table
 	-- optional: itemID == 0 	-	creates a new line
 	
-	-- Season of Discovery
-	[211452] = { 211451, 211450, 211449, type = 3 }, -- Perfect Blackfathom Pearl (BFD)
+	-- Season of Discovery - BFD
+	[211452] = { 211451, 211450, 211449, type = 3 }, -- Perfect Blackfathom Pearl
+	[211454] = { 16886, 16887, type = 3 }, --Strange Water Globe (Horde)
+	--[211818] = {type = 4 }, --Strange Water Globe (Alliance)
 	
 	-- Dire Maul books
 	[18401] = { 18348 },	-- Foror's Compendium of Dragon Slaying
