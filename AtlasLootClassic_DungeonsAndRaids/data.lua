@@ -936,8 +936,11 @@ data["BlackfathomDeepsRaid"] = {
 				{ 7,  211852 }, -- Handwraps of Befouled Water
 				{ 8,  209421 }, -- Cord of Aquanis
 				{ 9,  209676 }, -- Shoulderguards of Crushing Depths
-				{ 11, 204807 }, -- Fathomblade
-				{ 12, 209590 }, -- Cracked Water Globe
+				{ 10, 204804 }, -- Hydraxian Bangles
+				{ 16, 204807 }, -- Fathomblade
+				{ 17, 209590 }, -- Cracked Water Globe
+				{ 19, 211454 }, -- Strange Water Globe (Horde)
+				{ 20, 211818 }, -- Strange Water Globe (Alliance)
 			},
 		},
 		{ -- BFDGhamoora
@@ -990,15 +993,16 @@ data["BlackfathomDeepsRaid"] = {
 			[NORMAL_DIFF] = {
 				{ 1,   209683 }, -- Twilight Invoker's Shawl
 				{ 2,   209671 }, -- Twilight Invoker's Robes
-				{ 4,   211510 }, -- Twilight Slayer's Cowl
-				{ 5,   211512 }, -- Twilight Slayer's Tunic
-				{ 6,   211511 }, -- Twilight Slayer's Footpads
-				{ 8,   211507 }, -- Twilight Elementalist's Cowl
-				{ 9,   211509 }, -- Twilight Elementalist's Robe
-				{ 10,  211508 }, -- Twilight Elementalist's Footpads
-				{ 12,  211505 }, -- Twilight Avenger's Helm
-				{ 13,  211504 }, -- Twilight Avenger's Chain
-				{ 14,  211506 }, -- Twilight Avenger's Boots
+				{ 3,   209669 }, -- Twilight Invoker's Shoes
+				{ 5,   211510 }, -- Twilight Slayer's Cowl
+				{ 6,   211512 }, -- Twilight Slayer's Tunic
+				{ 7,   211511 }, -- Twilight Slayer's Footpads
+				{ 9,   211507 }, -- Twilight Elementalist's Cowl
+				{ 10,  211509 }, -- Twilight Elementalist's Robe
+				{ 11,  211508 }, -- Twilight Elementalist's Footpads
+				{ 13,  211505 }, -- Twilight Avenger's Helm
+				{ 14,  211504 }, -- Twilight Avenger's Chain
+				{ 15,  211506 }, -- Twilight Avenger's Boots
 				{ 16,  209670 }, -- Skinwalkers
 				{ 17,  209569 }, -- Murloc Hide Kneeboots
 				{ 18,  209568 }, -- Algae Gauntlets
@@ -1028,20 +1032,22 @@ data["BlackfathomDeepsRaid"] = {
 				{ 5,   211510 }, -- Twilight Slayer's Cowl
 				{ 6,   211512 }, -- Twilight Slayer's Tunic
 				{ 7,   211511 }, -- Twilight Slayer's Footpads
-				{ 9,   211509 }, -- Twilight Elementalist's Robe
-				{ 10,  211508 }, -- Twilight Elementalist's Footpads
-				{ 12,  211505 }, -- Twilight Avenger's Helm
-				{ 13,  211504 }, -- Twilight Avenger's Chain
-				{ 14,  211506 }, -- Twilight Avenger's Boots
-				{ 15,  209578 }, -- Glowing Leather Bands
-				{ 16,  209581 }, -- Silver Hand Sabatons
-				{ 18,  209574 }, -- Discarded Tenets of the Silver Hand
-				{ 19,  209576 }, -- Mind-Expanding Mushroom
-				{ 21,  209818 }, -- Sun-Touched Crescent
-				{ 22,  209577 }, -- Fist of the Wild
-				{ 23,  209560 }, -- Hammer of Righteous Judgement
-				{ 24,  209579 }, -- Crashing Thunder
-				{ 25,  209575 }, -- Carved Driftwood Icon
+				{ 9,   211507 }, -- Twilight Elementalist's Cowl
+				{ 10,  211509 }, -- Twilight Elementalist's Robe
+				{ 11,  211508 }, -- Twilight Elementalist's Footpads
+				{ 13,  211505 }, -- Twilight Avenger's Helm
+				{ 14,  211504 }, -- Twilight Avenger's Chain
+				{ 15,  211506 }, -- Twilight Avenger's Boots
+				{ 16,  209682 }, -- Sturdy Hood 
+				{ 17,  209578 }, -- Glowing Leather Bands
+				{ 18,  209581 }, -- Silver Hand Sabatons
+				{ 20,  209574 }, -- Discarded Tenets of the Silver Hand
+				{ 21,  209576 }, -- Mind-Expanding Mushroom
+				{ 23,  209818 }, -- Sun-Touched Crescent
+				{ 24,  209577 }, -- Fist of the Wild
+				{ 25,  209560 }, -- Hammer of Righteous Judgement
+				{ 26,  209579 }, -- Crashing Thunder
+				{ 27,  209575 }, -- Carved Driftwood Icon
 			},
 		},
 		{ -- BFDTwilightLordKelris
@@ -1052,19 +1058,32 @@ data["BlackfathomDeepsRaid"] = {
 			AtlasMapFile = {"CL_BlackfathomDeepsB", "CL_BlackfathomDeepsEnt"},
 			AtlasMapBossID = 6,
 			[NORMAL_DIFF] = {
-				{ 1,  209673 }, -- Glowing Fetish Amulet
-				{ 2,  209686 }, -- Jagged Bone Necklace
-				{ 3,  209817 }, -- Voidwalker Brooch
-				{ 4,  209668 }, -- Signet of the Twilight Lord
-				{ 5,  209816 }, -- Fetish of Mischief
-				{ 6,  209694 }, -- Blackfathom Ritual Dagger
-				{ 7,  209674 }, -- Phoenix Ignition
-				{ 8,  211458 }, -- Tome of Shadow Warding
-				{ 16, 209672 }, -- Black Fingerless Gloves
-				{ 17, 209667 }, -- Gaze Dreamer Leggings
-				{ 18, 211455 }, -- Slick Fingerless Gloves
-				{ 19, 211457 }, -- Twilight Defender's Girdle
-				{ 22, 209561 }, -- Rod of the Ancient Sleepwalker
+				{ 1,   209683 }, -- Twilight Invoker's Shawl
+				{ 2,   209671 }, -- Twilight Invoker's Robes
+				{ 3,   209669 }, -- Twilight Invoker's Shoes
+				{ 5,   211510 }, -- Twilight Slayer's Cowl
+				{ 6,   211512 }, -- Twilight Slayer's Tunic
+				{ 7,   211511 }, -- Twilight Slayer's Footpads
+				{ 9,   211507 }, -- Twilight Elementalist's Cowl
+				{ 10,  211509 }, -- Twilight Elementalist's Robe
+				{ 11,  211508 }, -- Twilight Elementalist's Footpads
+				{ 13,  211505 }, -- Twilight Avenger's Helm
+				{ 14,  211504 }, -- Twilight Avenger's Chain
+				{ 15,  211506 }, -- Twilight Avenger's Boots
+				{ 16,  209673 }, -- Glowing Fetish Amulet
+				{ 17,  209686 }, -- Jagged Bone Necklace
+				{ 18,  209817 }, -- Voidwalker Brooch
+				{ 19,  209668 }, -- Signet of the Twilight Lord
+				{ 20,  209816 }, -- Fetish of Mischief
+				{ 21,  209694 }, -- Blackfathom Ritual Dagger
+				{ 22,  209674 }, -- Phoenix Ignition
+				{ 23,  211458 }, -- Tome of Shadow Warding
+				{ 25,  209672 }, -- Black Fingerless Gloves
+				{ 26,  209667 }, -- Gaze Dreamer Leggings
+				{ 27,  211455 }, -- Slick Fingerless Gloves
+				{ 28,  211457 }, -- Twilight Defender's Girdle
+				{ 29,  209561 }, -- Rod of the Ancient Sleepwalker
+				{ 30,  211492 }, -- Kelris's Satchel
 			},
 		},
 		{ -- BFDAkumai
@@ -1075,20 +1094,31 @@ data["BlackfathomDeepsRaid"] = {
 			AtlasMapBossID = 7,
 			AtlasMapFile = {"CL_BlackfathomDeepsB", "CL_BlackfathomDeepsEnt"},
 			[NORMAL_DIFF] = {
-				{ 1,  211510 }, -- Twilight Slayer's Cowl
-				{ 2,  209684 }, -- Soul Leech Pants
-				{ 3,  209687 }, -- Hydra Hide Cuirass
-				{ 4,  209692 }, -- Sentinel Pauldrons
-				{ 5,  209685 }, -- Ancient Moss Cinch
-				{ 6,  209690 }, -- Shadowscale Coif
-				{ 7, 209689 }, -- Crabshell Waders
-				{ 16, 209691 }, -- Vampiric Boot Knife
-				{ 17, 211456 }, -- Dagger of Willing Sacrifice
-				{ 18, 209688 }, -- Bael Modan Blunderbuss
-				{ 20, 209534 }, -- Azshari Arbalest
-				{ 21, 209562 }, -- Deadly Strike of the Hydra
-				{ 22, 209580 }, -- Gusting Wind
-				{ 24, 211452}, --Perfect Blackfathom Pearl
+				{ 1,   209683 }, -- Twilight Invoker's Shawl
+				{ 2,   209671 }, -- Twilight Invoker's Robes
+				{ 3,   209669 }, -- Twilight Invoker's Shoes
+				{ 5,   211510 }, -- Twilight Slayer's Cowl
+				{ 6,   211512 }, -- Twilight Slayer's Tunic
+				{ 7,   211511 }, -- Twilight Slayer's Footpads
+				{ 9,   211507 }, -- Twilight Elementalist's Cowl
+				{ 10,  211509 }, -- Twilight Elementalist's Robe
+				{ 11,  211508 }, -- Twilight Elementalist's Footpads
+				{ 13,  211505 }, -- Twilight Avenger's Helm
+				{ 14,  211504 }, -- Twilight Avenger's Chain
+				{ 15,  211506 }, -- Twilight Avenger's Boots
+				{ 16,  209691 }, -- Vampiric Boot Knife
+				{ 17,  211456 }, -- Dagger of Willing Sacrifice
+				{ 18,  209688 }, -- Bael Modan Blunderbuss
+				{ 19,  209580 }, -- Gusting Wind
+				{ 21,  209534 }, -- Azshari Arbalest
+				{ 22,  209562 }, -- Deadly Strike of the Hydra
+				{ 23,  211452 }, --Perfect Blackfathom Pearl
+				{ 25,  209684 }, -- Soul Leech Pants
+				{ 26,  209687 }, -- Hydra Hide Cuirass
+				{ 27,  209692 }, -- Sentinel Pauldrons
+				{ 28,  209685 }, -- Ancient Moss Cinch
+				{ 29,  209690 }, -- Shadowscale Coif
+				{ 30,  209689 }, -- Crabshell Waders
 			},
 		},
 		BFD_SET,
