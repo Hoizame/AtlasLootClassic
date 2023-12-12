@@ -155,7 +155,6 @@ data["AlteracValley"] = {
 				{ 10, 19321 }, -- The Immovable Object
 				{ 11, 19324 }, -- The Lobotomizer
 				{ 12, 19323 }, -- The Unstoppable Force
-
 				{ 17,  19030 }, -- Stormpike Battle Charger
 			},
 			[HORDE_DIFF] = {
@@ -325,10 +324,10 @@ data["WarsongGulch"] = {
 				{ 5, 20440 }, -- Protector's Sword
 				{ 6, 20434 }, -- Lorekeeper's Staff
 				{ 8, "INV_Box_01", nil, "25", nil }, -- WSGRepRevered1019
-		        { 9, 212581 }, -- Outrunner's Bow
+		        	{ 9, 212581 }, -- Outrunner's Bow
 				{ 10, 212583 }, -- Sentinel's Blade
 				{ 11, 212582 }, -- Protector's Sword
-                { 12, 212580 }, -- Lorekeeper's Staff
+                		{ 12, 212580 }, -- Lorekeeper's Staff
 				{ 14, "INV_Box_01", nil, "20 - 29", nil }, -- WSGRepRevered2029
 				{ 15, 19565 }, -- Outrunner's Bow
 				{ 16, 19549 }, -- Sentinel's Blade
