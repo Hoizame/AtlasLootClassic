@@ -499,23 +499,6 @@ data["TierSets"] = {
 	},
 }
 
-data["Leveling Raid Sets"] = {
-	name = AL["Leveling Raid Sets"],
-	ContentType = SET_CONTENT,
-	TableType = SET_ITTYPE,
-	items = {
-		{ -- BFD Tier Sets
-			name = AL["Blackfathom Deeps Sets"],
-			[NORMAL_DIFF] = {
-				{ 1, 1570 }, -- Twilight Invoker's Vestments
-				{ 3, 1578 }, -- Blackfathom Slayer's Leather
-				{ 5, 1579 }, -- Blackfathom Elementalist's Hide
-				{ 7, 1577 }, -- Blackfathom Avenger's Mail
-			}
-		},
-	}
-}
-
 data["DungeonSets"] = {
 	name = AL["Dungeon Sets"],
 	ContentType = SET_CONTENT,
