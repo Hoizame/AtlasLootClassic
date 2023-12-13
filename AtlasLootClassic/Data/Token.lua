@@ -224,6 +224,9 @@ TOKEN_DATA.CLASSIC = {
 	[10441] = { 10657, 10658, type = 3 }, -- Glowing Shard
 	[6283] = { 6335, 4534, type = 3 }, -- The Book of Ur
 	[16782] = { 16886, 16887, type = 3 }, -- Strange Water Globe
+	[211454] = { 16886, 16887, type = 3 }, -- Strange Water Globe
+	[209693] = { 211451, 211450, 211449, type = 3 }, -- Perfect Blackfathom Pearl
+	[211452] = { 211451, 211450, 211449, type = 3 }, -- Perfect Blackfathom Pearl
 	[9326] = { 9588, type = 3 }, -- Grime-Encrusted Ring
 	[17008] = { 17043, 17042, 17039, type = 3 }, -- Small Scroll
 	[10454] = { 10455, type = 3 }, -- Essence of Eranikus
@@ -984,7 +987,7 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
 
 
 		--- Misc
-		[44951] = { { 41119, "24-40" }, type = 11 }
+		[44951] = { { 41119, "24-40" }, type = 11 },
 	}
 end
 
