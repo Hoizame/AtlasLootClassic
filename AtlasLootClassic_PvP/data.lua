@@ -323,26 +323,21 @@ data["WarsongGulch"] = {
 				{ 4, 20443 }, -- Sentinel's Blade
 				{ 5, 20440 }, -- Protector's Sword
 				{ 6, 20434 }, -- Lorekeeper's Staff
-				{ 8, "INV_Box_01", nil, "25", nil }, -- WSGRepRevered1019
-		        	{ 9, 212581 }, -- Outrunner's Bow
-				{ 10, 212583 }, -- Sentinel's Blade
-				{ 11, 212582 }, -- Protector's Sword
-                		{ 12, 212580 }, -- Lorekeeper's Staff
-				{ 14, "INV_Box_01", nil, "20 - 29", nil }, -- WSGRepRevered2029
-				{ 15, 19565 }, -- Outrunner's Bow
-				{ 16, 19549 }, -- Sentinel's Blade
-				{ 17, 19557 }, -- Protector's Sword
-				{ 18, 19573 }, -- Lorekeeper's Staff
-				{ 19, "INV_Box_01", nil, "30 - 39", nil }, -- WSGRepRevered3039
-				{ 20, 19564 }, -- Outrunner's Bow
-				{ 21, 19548 }, -- Sentinel's Blade
-				{ 22, 19556 }, -- Protector's Sword
-				{ 23, 19572 }, -- Lorekeeper's Staff
-				{ 25, "INV_Box_01", nil, "40 - 49", nil }, -- WSGRepRevered4049
-				{ 26, 19563 }, -- Outrunner's Bow
-				{ 27, 19547 }, -- Sentinel's Blade
-				{ 28, 19555 }, -- Protector's Sword
-				{ 29, 19571 }, -- Lorekeeper's Staff
+				{ 8, "INV_Box_01", nil, "20 - 29", nil }, -- WSGRepRevered2029
+				{ 9, 19565 }, -- Outrunner's Bow
+				{ 10, 19549 }, -- Sentinel's Blade
+				{ 11, 19557 }, -- Protector's Sword
+				{ 12, 19573 }, -- Lorekeeper's Staff
+				{ 17, "INV_Box_01", nil, "30 - 39", nil }, -- WSGRepRevered3039
+				{ 18, 19564 }, -- Outrunner's Bow
+				{ 19, 19548 }, -- Sentinel's Blade
+				{ 20, 19556 }, -- Protector's Sword
+				{ 21, 19572 }, -- Lorekeeper's Staff
+				{ 23, "INV_Box_01", nil, "40 - 49", nil }, -- WSGRepRevered4049
+				{ 24, 19563 }, -- Outrunner's Bow
+				{ 25, 19547 }, -- Sentinel's Blade
+				{ 26, 19555 }, -- Protector's Sword
+				{ 27, 19571 }, -- Lorekeeper's Staff
 				{ 101, "f890rep7" },
 				{ 102, "INV_Box_01", nil, "50 - 59", nil }, -- WSGRepRevered5059
 				{ 103, 19562 }, -- Outrunner's Bow
@@ -357,26 +352,21 @@ data["WarsongGulch"] = {
 				{ 4, 20441 }, -- Scout's Blade
 				{ 5, 20430 }, -- Legionnaire's Sword
 				{ 6, 20425 }, -- Advisor's Gnarled Staff
-				{ 8, "INV_Box_01", nil, "25", nil }, -- WSGRepRevered1019
-				{ 9, 212585 }, -- Outrider's Bow
-				{ 10, 212587 }, -- Scout's Blade
-				{ 11, 212586 }, -- Legionnaire's Sword
-				{ 12, 212584 }, -- Advisor's Gnarled Staff
-				{ 14, "INV_Box_01", nil, "20 - 29", nil }, -- WSGRepRevered2029
-				{ 15, 19561 }, -- Outrider's Bow
-				{ 16, 19545 }, -- Scout's Blade
-				{ 17, 19553 }, -- Legionnaire's Sword
-				{ 18, 19569 }, -- Advisor's Gnarled Staff
-				{ 20, "INV_Box_01", nil, "30 - 39", nil }, -- WSGRepRevered3039
-				{ 21, 19560 }, -- Outrider's Bow
-				{ 22, 19544 }, -- Scout's Blade
-				{ 23, 19552 }, -- Legionnaire's Sword
-				{ 24, 19568 }, -- Advisor's Gnarled Staff
-				{ 26, "INV_Box_01", nil, "40 - 49", nil }, -- WSGRepRevered4049
-				{ 27, 19559 }, -- Outrider's Bow
-				{ 28, 19543 }, -- Scout's Blade
-				{ 29, 19551 }, -- Legionnaire's Sword
-				{ 30, 19567 }, -- Advisor's Gnarled Staff
+				{ 8, "INV_Box_01", nil, "20 - 29", nil }, -- WSGRepRevered2029
+				{ 9, 19561 }, -- Outrider's Bow
+				{ 10, 19545 }, -- Scout's Blade
+				{ 11, 19553 }, -- Legionnaire's Sword
+				{ 12, 19569 }, -- Advisor's Gnarled Staff
+				{ 17, "INV_Box_01", nil, "30 - 39", nil }, -- WSGRepRevered3039
+				{ 18, 19560 }, -- Outrider's Bow
+				{ 19, 19544 }, -- Scout's Blade
+				{ 20, 19552 }, -- Legionnaire's Sword
+				{ 21, 19568 }, -- Advisor's Gnarled Staff
+				{ 23, "INV_Box_01", nil, "40 - 49", nil }, -- WSGRepRevered4049
+				{ 24, 19559 }, -- Outrider's Bow
+				{ 25, 19543 }, -- Scout's Blade
+				{ 26, 19551 }, -- Legionnaire's Sword
+				{ 27, 19567 }, -- Advisor's Gnarled Staff
 				{ 101, "f889rep7" },
 				{ 102, "INV_Box_01", nil, "50 - 59", nil }, -- WSGRepRevered5059
 				{ 103, 19558 }, -- Outrider's Bow
@@ -399,18 +389,18 @@ data["WarsongGulch"] = {
 				{ 10, 19533 }, -- Caretaker's Cape
 				{ 11, 19525 }, -- Lorekeeper's Ring
 				{ 12, 19517 }, -- Protector's Band
-				{ 13, "INV_Box_01", nil, "30 - 39", nil }, -- WSGRepHonored3039
-				{ 14, 19540 }, -- Sentinel's Medallion
-				{ 15, 19532 }, -- Caretaker's Cape
-				{ 16, 19524 }, -- Lorekeeper's Ring
-				{ 17, 19515 }, -- Protector's Band
-				{ 19, "INV_Box_01", nil, "40 - 49", nil }, -- WSGRepHonored4049
-				{ 20, 19539 }, -- Sentinel's Medallion
-				{ 21, 19531 }, -- Caretaker's Cape
-				{ 22, 19523 }, -- Lorekeeper's Ring
-				{ 23, 19516 }, -- Protector's Band
-				{ 24, 17348 }, -- Major Healing Draught
-				{ 25, 17351 }, -- Major Mana Draught
+				{ 17, "INV_Box_01", nil, "30 - 39", nil }, -- WSGRepHonored3039
+				{ 18, 19540 }, -- Sentinel's Medallion
+				{ 19, 19532 }, -- Caretaker's Cape
+				{ 20, 19524 }, -- Lorekeeper's Ring
+				{ 21, 19515 }, -- Protector's Band
+				{ 23, "INV_Box_01", nil, "40 - 49", nil }, -- WSGRepHonored4049
+				{ 24, 19539 }, -- Sentinel's Medallion
+				{ 25, 19531 }, -- Caretaker's Cape
+				{ 26, 19523 }, -- Lorekeeper's Ring
+				{ 27, 19516 }, -- Protector's Band
+				{ 28, 17348 }, -- Major Healing Draught
+				{ 29, 17351 }, -- Major Mana Draught
 				{ 101, "f890rep6" },
 				{ 102, "INV_Box_01", nil, "50 - 59", nil }, -- WSGRepHonored5059
 				{ 103, 19538 }, -- Sentinel's Medallion
@@ -457,9 +447,8 @@ data["WarsongGulch"] = {
 				{ 2, "INV_Box_01", nil, "20 - 29", nil }, -- WSGRepFriendly2029
 				{ 3,  21568 }, -- Rune of Duty
 				{ 4,  21566 }, -- Rune of Perfection
-				{ 5,  211498}, -- Trainee's Sentinel Nightsaber
-				{ 6,  19062 }, -- Warsong Gulch Field Ration
-				{ 7,  19068 }, -- Warsong Gulch Silk Bandage
+				{ 5,  19062 }, -- Warsong Gulch Field Ration
+				{ 6,  19068 }, -- Warsong Gulch Silk Bandage
 				{ 8, "INV_Box_01", nil, "30 - 39", nil }, -- WSGRepFriendly3039
 				{ 9,  19061 }, -- Warsong Gulch Iron Ration
 				{ 10,  19067 }, -- Warsong Gulch Mageweave Bandage
@@ -476,9 +465,8 @@ data["WarsongGulch"] = {
 				{ 2, "INV_Box_01", nil, "20 - 29", nil }, -- WSGRepFriendly2029
 				{ 3, 21568 }, -- Rune of Duty
 				{ 4, 21566 }, -- Rune of Perfection
-				{ 5, 211499}, -- Trainee's Outrider Wolf
-				{ 6, 19062 }, -- Warsong Gulch Field Ration
-				{ 7, 19068 }, -- Warsong Gulch Silk Bandage
+				{ 5, 19062 }, -- Warsong Gulch Field Ration
+				{ 6, 19068 }, -- Warsong Gulch Silk Bandage
 				{ 8, "INV_Box_01", nil, "30 - 39", nil }, -- WSGRepFriendly3039
 				{ 9, 19061 }, -- Warsong Gulch Iron Ration
 				{ 10, 19067 }, -- Warsong Gulch Mageweave Bandage
@@ -957,6 +945,44 @@ data["Insignia"] = {
 				{ 6,  18853 }, -- Druid
 				{ 7,  18845 }, -- Shaman
 				{ 8,  18850 }, -- Mage
+			},
+		},
+		PVP_RANKS,
+	},
+}
+data["SoD Exclusives"] = {
+	name = AL["SoD Exclusives"],
+	ContentType = GENERAL_CONTENT,
+	LoadDifficulty = LOAD_DIFF,
+	ContentPhase = 1,
+	items = {
+		{
+			name = AL["SoD Exclusive: Phase 1"],
+			[HORDE_DIFF] = {
+				{ 1, "f889rep5" },
+				{ 2,  211500 }, --Resilient Cloth Headband
+				{ 3,  211857 }, --Resilient Leather Mask
+				{ 4,  211856 }, --Resilient Mail Coif
+				{ 5,  211499 }, --Trainee's Outrider Wolf
+				{ 7, "f889rep7" },
+				{ 8,  212584 }, --Advisor's Gnarled Staff
+				{ 9,  212585 }, --Outrider's Bow
+				{ 10,  212586 }, --Legionnaire's Sword
+				{ 11,  212587 }, --Scout's Blade
+				{ 16,  213088 }, --Sergeant's Cloak
+			},
+			[ALLIANCE_DIFF] = {
+				{ 1, "f890rep5" },
+				{ 2,  211500 }, --Resilient Cloth Headband
+				{ 3,  211857 }, --Resilient Leather Mask
+				{ 4,  211856 }, --Resilient Mail Coif
+				{ 5,  211498 }, --Trainee's Sentinel Nightsaber
+				{ 7, "f890rep7" },
+				{ 8,  212580 }, --Lorekeeper's Staff
+				{ 9,  212581 }, --Outrunner's Bow
+				{ 10,  212582 }, --Protector's Sword
+				{ 11,  212583 }, --Sentinel's Blade
+				{ 16,  213087 }, --Sergeant's Cloak
 			},
 		},
 		PVP_RANKS,

@@ -796,7 +796,7 @@ data["ShadowfangKeep"] = {
 
 data["BlackfathomDeeps"] = {
 	MapID = 719,
-	InstanceID = 48,
+	InstanceID = 198,
 	AtlasModule = ATLAS_MODULE_NAME,
 	AtlasMapID = "BlackfathomDeeps",
 	AtlasMapFile = {"CL_BlackfathomDeepsA", "CL_BlackfathomDeepsEnt"},
@@ -1112,13 +1112,31 @@ data["BlackfathomDeepsRaid"] = {
 				{ 19,  209580 }, -- Gusting Wind
 				{ 21,  209534 }, -- Azshari Arbalest
 				{ 22,  209562 }, -- Deadly Strike of the Hydra
-				{ 23,  211452 }, --Perfect Blackfathom Pearl
+				{ 23,  211452 }, -- Perfect Blackfathom Pearl
+				{ 24,  209693 }, -- Perfect Blackfathom Pearl
 				{ 25,  209684 }, -- Soul Leech Pants
 				{ 26,  209687 }, -- Hydra Hide Cuirass
 				{ 27,  209692 }, -- Sentinel Pauldrons
 				{ 28,  209685 }, -- Ancient Moss Cinch
 				{ 29,  209690 }, -- Shadowscale Coif
 				{ 30,  209689 }, -- Crabshell Waders
+			},
+		},
+		{ -- BFDTrash
+			name = AL["Trash"],
+			ExtraList = true,
+			[NORMAL_DIFF] = {
+				{ 1,  1486 }, -- Tree Bark Jacket
+				{ 2,  3416 }, -- Martyr's Chain
+				{ 3,  1491 }, -- Ring of Precision
+				{ 4,  3414 }, -- Crested Scepter
+				{ 5,  1454 }, -- Axe of the Enforcer
+				{ 6,  1481 }, -- Grimclaw
+				{ 7,  2567 }, -- Evocator's Blade
+				{ 8,  3413 }, -- Doomspike
+				{ 9,  3417 }, -- Onyx Claymore
+				{ 10, 3415 }, -- Staff of the Friar
+				{ 11, 2271 }, -- Staff of the Blessed Seer
 			},
 		},
 		BFD_SET,
