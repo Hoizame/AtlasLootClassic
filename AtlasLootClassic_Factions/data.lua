@@ -495,10 +495,8 @@ data["AzerothCommerceAuthority"] = {
 			[ALLIANCE_DIFF] = {
 				{ 1, "f2586rep6" },
 				{ 2, 211384 }, -- Sturdy Courier Bag
-				{ 3, 211386 }, -- Spell Notes: Arcane Surge
-				{ 4, 205950 }, -- Tenebrous Epiphany
-				{ 5, 210779 }, -- Plans: Mantle of the Second War
-				{ 6, 211247 }, -- Pattern: Phoenix Bindings
+				{ 3, 210779 }, -- Plans: Mantle of the Second War
+				{ 4, 211247 }, -- Pattern: Phoenix Bindings
 			},
 		},
 		{ -- Friendly
@@ -516,6 +514,8 @@ data["AzerothCommerceAuthority"] = {
 				{ 21, 211393 }, -- Rune of Single-Minded Fury
 				{ 22, 206992 }, -- Rune of Skull Bash
 				{ 23, 211390 }, -- Rune of Teasing
+				{ 24, 211386 }, -- Spell Notes: Arcane Surge
+				{ 25, 205950 }, -- Tenebrous Epiphany
 
 			},
 		},
@@ -546,10 +546,8 @@ data["DurotarSupplyAndLogistics"] = {
 			[HORDE_DIFF] = {
 				{ 1, "f2587rep6" },
 				{ 2, 211384 }, -- Sturdy Courier Bag
-				{ 3, 211386 }, -- Spell Notes: Arcane Surge
-				{ 4, 205950 }, -- Tenebrous Epiphany
-				{ 5, 210779 }, -- Plans: Mantle of the Second War
-				{ 6, 211247 }, -- Pattern: Phoenix Bindings
+				{ 3, 210779 }, -- Plans: Mantle of the Second War
+				{ 4, 211247 }, -- Pattern: Phoenix Bindings
 			},
 		},
 		{ -- Friendly
@@ -567,6 +565,8 @@ data["DurotarSupplyAndLogistics"] = {
 				{ 21, 211393 }, -- Rune of Single-Minded Fury
 				{ 22, 206992 }, -- Rune of Skull Bash
 				{ 23, 211390 }, -- Rune of Teasing
+				{ 24, 211386 }, -- Spell Notes: Arcane Surge
+				{ 25, 205950 }, -- Tenebrous Epiphany
 			},
 		},
 	},
