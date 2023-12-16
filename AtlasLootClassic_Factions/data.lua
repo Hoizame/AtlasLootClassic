@@ -497,6 +497,8 @@ data["AzerothCommerceAuthority"] = {
 				{ 2, 211384 }, -- Sturdy Courier Bag
 				{ 3, 210779 }, -- Plans: Mantle of the Second War
 				{ 4, 211247 }, -- Pattern: Phoenix Bindings
+				{ 5, 210779 }, -- Plans: Mantle of the Second War
+				{ 6, 211247 }, -- Pattern: Phoenix Bindings
 			},
 		},
 		{ -- Friendly
@@ -516,7 +518,6 @@ data["AzerothCommerceAuthority"] = {
 				{ 23, 211390 }, -- Rune of Teasing
 				{ 24, 211386 }, -- Spell Notes: Arcane Surge
 				{ 25, 205950 }, -- Tenebrous Epiphany
-
 			},
 		},
 	},
@@ -548,6 +549,8 @@ data["DurotarSupplyAndLogistics"] = {
 				{ 2, 211384 }, -- Sturdy Courier Bag
 				{ 3, 210779 }, -- Plans: Mantle of the Second War
 				{ 4, 211247 }, -- Pattern: Phoenix Bindings
+				{ 5, 210779 }, -- Plans: Mantle of the Second War
+				{ 6, 211247 }, -- Pattern: Phoenix Bindings
 			},
 		},
 		{ -- Friendly
