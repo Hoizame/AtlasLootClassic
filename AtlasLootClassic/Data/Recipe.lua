@@ -966,6 +966,8 @@ RECIPE_DATA.CLASSIC = {
 	[211849] = {10,100,430409}, -- Formula: Blackfathom Mana Oil
 	[210178] = {9,135,424641}, -- Schematic: Shredder Autosalvage Unit
 	[211247] = {8,125,428425}, -- Pattern: Phoenix Bindings
+	[215370] = {8,150,435848}, -- Pattern: Invoker's Mantle
+	[215369] = {8,150,435841}, -- Pattern: Invoker's Cord
 }
 
 if AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM) then
