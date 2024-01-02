@@ -902,6 +902,15 @@ data["Mounts"] = {
 				{ 6, GetForVersion(18248,29470) }, -- Red Skeletal Warhorse
 			},
 		},
+		{ -- Ashenvale Season of Discovery
+			name = AL["Ashenvale"],
+			[ALLIANCE_DIFF] = {
+				{ 1, 211498 }, --Trainee's Sentinel Nightsaber
+			},
+			[HORDE_DIFF] = {
+				{ 1, 211499 }, --Trainee's Outrider Wolf
+			},
+		},
 		{ -- Drops
 			name = AL["Drops"],
 			[NORMAL_DIFF] = {

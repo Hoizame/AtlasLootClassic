@@ -47,6 +47,12 @@ data["Alchemy"] = {
 	CorrespondingFields = private.ALCHEMY_LINK,
 	items = {
 		{
+			name = AL["SoD Exclusives"],
+			[NORMAL_DIFF] = {
+				{ 1, 426607 }, --Elixir of Coalesced Regret
+			},
+		},
+		{
 			name = AL["Flasks"],
 			[NORMAL_DIFF] = {
 				{ 1, 17635 }, --Flask of the Titans
@@ -214,6 +220,14 @@ data["Blacksmithing"] = {
 	TableType = PROF_ITTYPE,
 	CorrespondingFields = private.BLACKSMITHING_LINK,
 	items = {
+			{
+			name = AL["SoD Exclusives"],
+			[NORMAL_DIFF] = {
+				{ 1, 429348 }, --Shifting Silver Breastplate
+				{ 2, 430397 }, --Blackfathom Sharpening Stone
+				{ 3, 427063 }, --Mantle of the Second War
+			},
+		},
 		{
 			name = AL["Weapons"].." - "..ALIL["Daggers"],
 			[NORMAL_DIFF] = {
@@ -571,6 +585,12 @@ data["Enchanting"] = {
 	CorrespondingFields = private.ENCHANTING_LINK,
 	items = {
 		{
+			name = AL["SoD Exclusives"],
+			[NORMAL_DIFF] = {
+				{ 1, 430409 }, --Brilliant Mana Oil / 310
+			}
+		},
+		{
 			name = AL["Oil"],
 			[NORMAL_DIFF] = {
 				{ 1, 25130 }, --Brilliant Mana Oil / 310
@@ -786,6 +806,12 @@ data["Engineering"] = {
 	TableType = PROF_ITTYPE,
 	CorrespondingFields = private.ENGINEERING_LINK,
 	items = {
+			{
+			name = AL["SoD Exclusives"],
+			[NORMAL_DIFF] = {
+				{ 1, 424641 }, --Shredder Autosalvage Unit
+			}
+		},
 		{
 			name = AL["Armor"],
 			[NORMAL_DIFF] = {
@@ -1012,6 +1038,15 @@ data["Tailoring"] = {
 	TableType = PROF_ITTYPE,
 	CorrespondingFields = private.TAILORING_LINK,
 	items = {
+		{
+			name = AL["SoD Exclusives"],
+			[NORMAL_DIFF] = {
+			{ 1, 429351 }, --Extraplanar Spidersilk Boots
+			{ 2, 428425 }, --Phoenix Bindings
+			{ 3, 435841 }, --Invoker's Cord
+			{ 4, 435848 }, --Invoker's Mantle
+			}
+		},
 		{
 			name = AL["Armor"].." - "..ALIL["Cloak"],
 			[NORMAL_DIFF] = {
@@ -1307,6 +1342,13 @@ data["Leatherworking"] = {
 	TableType = PROF_ITTYPE,
 	CorrespondingFields = private.LEATHERWORKING_LINK,
 	items = {
+			{
+			name = AL["SoD Exclusives"],
+			[NORMAL_DIFF] = {
+			{ 1, 429869 }, --Void-Touched Leather Gauntlets
+			{ 2, 429354 }, --Void-Touched Leather Gloves
+			}
+		},
 		{
 			name = AL["Armor"].." - "..ALIL["Cloak"],
 			[NORMAL_DIFF] = {

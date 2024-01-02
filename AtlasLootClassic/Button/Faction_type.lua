@@ -113,6 +113,11 @@ local FACTION_KEY = {
 	[609] = "Cenarion Circle",
 	[749] = "Hydraxian Waterlords",
 	[910] = "Brood of Nozdormu",
+	-- SoD
+	[889] = "Warsong Outriders",
+	[890] = "Silverwing Sentinels",
+	[2586] = "Azeroth Commerce Authority",
+	[2587] = "Durotar Supply and Logistics",
 	-- BC
 	[922] = AL["Tranquillien"], -- Horde only
 	[941] = AL["The Mag'har"], -- Horde only

@@ -41,6 +41,15 @@ local SET_EXTRA_ITTYPE = data:AddExtraItemTableType("Set")
 local FACTIONS_CONTENT = data:AddContentType(AL["Factions"], ATLASLOOT_FACTION_COLOR)
 local FACTIONS2_CONTENT = data:AddContentType(AL["Secondary factions"], {0.1, 0.3, 0.1, 1})
 
+local FACTIONS_HORDE_CONTENT, FACTIONS_ALLI_CONTENT
+if UnitFactionGroup("player") == "Horde" then
+    FACTIONS_HORDE_CONTENT = data:AddContentType(FACTION_HORDE, ATLASLOOT_HORDE_COLOR)
+    FACTIONS_ALLI_CONTENT = data:AddContentType(FACTION_ALLIANCE, ATLASLOOT_ALLIANCE_COLOR)
+else
+    FACTIONS_ALLI_CONTENT = data:AddContentType(FACTION_ALLIANCE, ATLASLOOT_ALLIANCE_COLOR)
+    FACTIONS_HORDE_CONTENT = data:AddContentType(FACTION_HORDE, ATLASLOOT_HORDE_COLOR)
+end
+
 --[[
 0 - Unknown
 1 - Hated
@@ -429,6 +438,7 @@ data["HydraxianWaterlords"] = {
 	},
 }
 
+
 data["BloodsailBuccaneers"] = {
 	FactionID = 87,
 	ContentType = FACTIONS2_CONTENT,
@@ -457,6 +467,109 @@ data["WintersaberTrainers"] = {
 			[ALLIANCE_DIFF] = {
 				{ 1, "f589rep8", [ATLASLOOT_IT_ALLIANCE] = true },
 				{ 2, 13086, [ATLASLOOT_IT_ALLIANCE] = true }, -- Reins of the Winterspring Frostsaber
+			},
+		},
+	},
+}
+data["AzerothCommerceAuthority"] = {
+	FactionID = 2586,
+	ContentType = FACTIONS_ALLI_CONTENT,
+	LoadDifficulty = LOAD_DIFF,
+	items = {
+		{ -- Exalted
+			name = ALIL["Exalted"],
+			[ALLIANCE_DIFF] = {
+				{ 1, "f2586rep8" },
+
+			},
+		},
+		{ -- Revered
+			name = ALIL["Revered"],
+			[ALLIANCE_DIFF] = {
+				{ 1, "f2586rep7" },
+
+			},
+		},
+		{ -- Honored
+			name = ALIL["Honored"],
+			[ALLIANCE_DIFF] = {
+				{ 1, "f2586rep6" },
+				{ 2, 211384 }, -- Sturdy Courier Bag
+				{ 3, 210779 }, -- Plans: Mantle of the Second War
+				{ 4, 211247 }, -- Pattern: Phoenix Bindings
+				{ 5, 210779 }, -- Plans: Mantle of the Second War
+				{ 6, 211247 }, -- Pattern: Phoenix Bindings
+			},
+		},
+		{ -- Friendly
+			name = ALIL["Friendly"],
+			[ALLIANCE_DIFF] = {
+				{ 1, "f2586rep5" },
+				{ 2, 211382 }, -- Small Courier Satchel
+				{ 3, 212588 }, -- Provisioner's Gloves
+				{ 4, 212589 }, -- Courier Treads
+				{ 5, 212590 }, -- Hoist Strap
+				{ 17, 211387 }, -- Rune of Beckoning Light
+				{ 18, 211392 }, -- Rune of Everlasting Affliction
+				{ 19, 211391 }, -- Rune of Healing Rain
+				{ 20, 211385 }, -- Rune of Serpent Spread
+				{ 21, 211393 }, -- Rune of Single-Minded Fury
+				{ 22, 206992 }, -- Rune of Skull Bash
+				{ 23, 211390 }, -- Rune of Teasing
+				{ 24, 211386 }, -- Spell Notes: Arcane Surge
+				{ 25, 205950 }, -- Tenebrous Epiphany
+			},
+		},
+	},
+}
+
+data["DurotarSupplyAndLogistics"] = {
+	FactionID = 2587,
+	ContentType = FACTIONS_HORDE_CONTENT,
+	LoadDifficulty = LOAD_DIFF,
+	items = {
+		{ -- Exalted
+			name = ALIL["Exalted"],
+			[HORDE_DIFF] = {
+				{ 1, "f2587rep8" },
+
+			},
+		},
+		{ -- Revered
+			name = ALIL["Revered"],
+			[HORDE_DIFF] = {
+				{ 1, "f2587rep7" },
+
+			},
+		},
+		{ -- Honored
+			name = ALIL["Honored"],
+			[HORDE_DIFF] = {
+				{ 1, "f2587rep6" },
+				{ 2, 211384 }, -- Sturdy Courier Bag
+				{ 3, 210779 }, -- Plans: Mantle of the Second War
+				{ 4, 211247 }, -- Pattern: Phoenix Bindings
+				{ 5, 210779 }, -- Plans: Mantle of the Second War
+				{ 6, 211247 }, -- Pattern: Phoenix Bindings
+			},
+		},
+		{ -- Friendly
+			name = ALIL["Friendly"],
+			[HORDE_DIFF] = {
+				{ 1, "f2587rep5" },
+				{ 2, 211382 }, -- Small Courier Satchel
+				{ 3, 212588 }, -- Provisioner's Gloves
+				{ 4, 212589 }, -- Courier Treads
+				{ 5, 212590 }, -- Hoist Strap
+				{ 17, 211387 }, -- Rune of Beckoning Light
+				{ 18, 211392 }, -- Rune of Everlasting Affliction
+				{ 19, 211391 }, -- Rune of Healing Rain
+				{ 20, 211385 }, -- Rune of Serpent Spread
+				{ 21, 211393 }, -- Rune of Single-Minded Fury
+				{ 22, 206992 }, -- Rune of Skull Bash
+				{ 23, 211390 }, -- Rune of Teasing
+				{ 24, 211386 }, -- Spell Notes: Arcane Surge
+				{ 25, 205950 }, -- Tenebrous Epiphany
 			},
 		},
 	},

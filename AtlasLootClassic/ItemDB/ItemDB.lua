@@ -18,6 +18,7 @@ local STRING_TYPE = "string"
 local BOSS_LINK_FORMAT = "%s:%s:%s"
 local LEVEL_RANGE_FORMAT = "  (|cffff0000%d|r: |cffff8040%d|r - |cff40bf40%d|r)"--"  <|cffff0000%d|r |cffff8040%d|r |cffffff00%d|r |cff40bf40%d|r>"
 local LEVEL_RANGE_FORMAT2 = "  (|cffff8040%d|r - |cff40bf40%d|r)"
+local LEVEL_RANGE_FORMAT3 = " (|cffff8040%d|r)"
 local CONTENT_PHASE_FORMAT = "|cff00FF96".."<P: %g>".."|r"
 
 local IsMapsModuleAviable = AtlasLoot.Loader.IsMapsModuleAviable
@@ -507,7 +508,16 @@ function ItemDB.ContentProto:GetName(raw)
 	if not raw then
 		if AtlasLoot.db.showLvlRange and self.LevelRange then
 			if AtlasLoot.db.showMinEnterLvl then
-				addEnd = format(LEVEL_RANGE_FORMAT, self.LevelRange[1] or 0, self.LevelRange[2] or 0, self.LevelRange[3] or 0 )
+				if not self.LevelRange[3] then
+					--Show range?
+					--addEnd = format(LEVEL_RANGE_FORMAT2, self.LevelRange[1] or 0, self.LevelRange[2] or 0 )
+					--Keep leveling raid format (SoD)
+					addEnd = format(LEVEL_RANGE_FORMAT3, self.LevelRange[1] or 0) 
+				else
+					addEnd = format(LEVEL_RANGE_FORMAT, self.LevelRange[1] or 0, self.LevelRange[2] or 0, self.LevelRange[3] or 0 )
+				end
+			elseif not self.LevelRange[3] then
+    				addEnd = format(LEVEL_RANGE_FORMAT3, self.LevelRange[1] or 0) 
 			else
 				addEnd = format(LEVEL_RANGE_FORMAT2, self.LevelRange[2] or 0, self.LevelRange[3] or 0 )
 			end

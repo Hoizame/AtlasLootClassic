@@ -155,7 +155,6 @@ data["AlteracValley"] = {
 				{ 10, 19321 }, -- The Immovable Object
 				{ 11, 19324 }, -- The Lobotomizer
 				{ 12, 19323 }, -- The Unstoppable Force
-
 				{ 17,  19030 }, -- Stormpike Battle Charger
 			},
 			[HORDE_DIFF] = {
@@ -946,6 +945,44 @@ data["Insignia"] = {
 				{ 6,  18853 }, -- Druid
 				{ 7,  18845 }, -- Shaman
 				{ 8,  18850 }, -- Mage
+			},
+		},
+		PVP_RANKS,
+	},
+}
+data["SoD Exclusives"] = {
+	name = AL["SoD Exclusives"],
+	ContentType = GENERAL_CONTENT,
+	LoadDifficulty = LOAD_DIFF,
+	ContentPhase = 1,
+	items = {
+		{
+			name = AL["SoD Exclusive: Phase 1"],
+			[HORDE_DIFF] = {
+				{ 1, "f889rep5" },
+				{ 2,  211500 }, --Resilient Cloth Headband
+				{ 3,  211857 }, --Resilient Leather Mask
+				{ 4,  211856 }, --Resilient Mail Coif
+				{ 5,  211499 }, --Trainee's Outrider Wolf
+				{ 7, "f889rep7" },
+				{ 8,  212584 }, --Advisor's Gnarled Staff
+				{ 9,  212585 }, --Outrider's Bow
+				{ 10,  212586 }, --Legionnaire's Sword
+				{ 11,  212587 }, --Scout's Blade
+				{ 16,  213088 }, --Sergeant's Cloak
+			},
+			[ALLIANCE_DIFF] = {
+				{ 1, "f890rep5" },
+				{ 2,  211500 }, --Resilient Cloth Headband
+				{ 3,  211857 }, --Resilient Leather Mask
+				{ 4,  211856 }, --Resilient Mail Coif
+				{ 5,  211498 }, --Trainee's Sentinel Nightsaber
+				{ 7, "f890rep7" },
+				{ 8,  212580 }, --Lorekeeper's Staff
+				{ 9,  212581 }, --Outrunner's Bow
+				{ 10,  212582 }, --Protector's Sword
+				{ 11,  212583 }, --Sentinel's Blade
+				{ 16,  213087 }, --Sergeant's Cloak
 			},
 		},
 		PVP_RANKS,
