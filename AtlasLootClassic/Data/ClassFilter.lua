@@ -55,7 +55,7 @@ local FILTER_DATA = {
         ["INVTYPE_THROWN"] = true,			-- Thrown
         ["INVTYPE_RANGEDRIGHT"] = true,		-- Ranged
         ["INVTYPE_QUIVER"] = C.HUNTER,			-- Quiver
-        ["INVTYPE_RELIC"] = C.SHAMAN + C.PALADIN + C.DRUID,			-- Relic
+        ["INVTYPE_RELIC"] = C.SHAMAN + C.PALADIN + C.DRUID + C.DEATHKNIGHT,			-- Relic
     },
     itemClass = {
         [10] 			                    = true, -- Moneys
@@ -144,6 +144,7 @@ local FILTER_DATA = {
             [LE_ITEM_ARMOR_PLATE] 	    = C.WARRIOR + C.PALADIN + C.DEATHKNIGHT, -- Plate
             [LE_ITEM_ARMOR_COSMETIC]    = true, -- Cosmetic
             [LE_ITEM_ARMOR_SHIELD] 	    = C.WARRIOR + C.PALADIN + C.SHAMAN, -- Shields
+            -- #TODO: fix
             [LE_ITEM_ARMOR_LIBRAM] 	    = C.PALADIN, -- Librams
             [LE_ITEM_ARMOR_IDOL] 	    = C.DRUID, -- Idols
             [LE_ITEM_ARMOR_TOTEM] 	    = C.SHAMAN, -- Totems
@@ -271,12 +272,12 @@ local LINKED_STATS = {
     ["ITEM_MOD_SPELL_DAMAGE_DONE"] = "ITEM_MOD_SPELL_DAMAGE_DONE_SHORT",
     ["ITEM_MOD_SPELL_HEALING_DONE"] = "ITEM_MOD_SPELL_HEALING_DONE_SHORT",
 
-    ["ITEM_MOD_DEFENSE_SKILL_RATING"] = "ITEM_MOD_DEFENSE_SKILL_RATING_SHORT",
+    --["ITEM_MOD_DEFENSE_SKILL_RATING"] = "ITEM_MOD_DEFENSE_SKILL_RATING_SHORT",
     ["ITEM_MOD_DODGE_RATING"] = "ITEM_MOD_DODGE_RATING_SHORT",
     ["ITEM_MOD_PARRY_RATING"] = "ITEM_MOD_PARRY_RATING_SHORT",
     ["ITEM_MOD_EXTRA_ARMOR"] = "ITEM_MOD_EXTRA_ARMOR_SHORT",
 
-    ["ITEM_MOD_ARMOR_PENETRATION_RATING"] = "ITEM_MOD_ARMOR_PENETRATION_RATING_SHORT",
+    --["ITEM_MOD_ARMOR_PENETRATION_RATING"] = "ITEM_MOD_ARMOR_PENETRATION_RATING_SHORT",
     ["ITEM_MOD_SPELL_PENETRATION"] = "ITEM_MOD_SPELL_PENETRATION_SHORT",
 
     ["ITEM_MOD_MANA_REGENERATION"] = "ITEM_MOD_MANA_REGENERATION_SHORT",
@@ -331,12 +332,12 @@ local STAT_LIST = {
     },
     {
         name = AL["Special"],
-        "ITEM_MOD_DEFENSE_SKILL_RATING_SHORT", -- Defense
+        --"ITEM_MOD_DEFENSE_SKILL_RATING_SHORT", -- Defense
         "ITEM_MOD_DODGE_RATING_SHORT", -- Dodge
         "ITEM_MOD_PARRY_RATING_SHORT", -- Parry
         "ITEM_MOD_EXTRA_ARMOR_SHORT", -- Bonus Armor
         "",
-        "ITEM_MOD_ARMOR_PENETRATION_RATING_SHORT", -- Armor Penetration
+        --"ITEM_MOD_ARMOR_PENETRATION_RATING_SHORT", -- Armor Penetration
         "ITEM_MOD_SPELL_PENETRATION_SHORT", -- Spell Penetration
         "",
         "ITEM_MOD_MANA_REGENERATION_SHORT", -- Mana Regeneration
@@ -376,7 +377,7 @@ AtlasLoot.AtlasLootDBDefaults.profile.ClassFilter = {
         ["ITEM_MOD_HIT_RANGED_RATING_SHORT"] = false,
         ["ITEM_MOD_CRIT_MELEE_RATING_SHORT"] = false,
         ["ITEM_MOD_CRIT_RANGED_RATING_SHORT"] = false,
-        ["ITEM_MOD_DEFENSE_SKILL_RATING_SHORT"] = false,
+        --["ITEM_MOD_DEFENSE_SKILL_RATING_SHORT"] = false,
         ["ITEM_MOD_PARRY_RATING_SHORT"] = false,
         ["ITEM_MOD_DODGE_RATING_SHORT"] = false,
     },
@@ -395,7 +396,7 @@ AtlasLoot.AtlasLootDBDefaults.profile.ClassFilter = {
         ["ITEM_MOD_HIT_RANGED_RATING_SHORT"] = false,
         ["ITEM_MOD_CRIT_MELEE_RATING_SHORT"] = false,
         ["ITEM_MOD_CRIT_RANGED_RATING_SHORT"] = false,
-        ["ITEM_MOD_DEFENSE_SKILL_RATING_SHORT"] = false,
+        --["ITEM_MOD_DEFENSE_SKILL_RATING_SHORT"] = false,
         ["ITEM_MOD_PARRY_RATING_SHORT"] = false,
         ["ITEM_MOD_DODGE_RATING_SHORT"] = false,
     },
@@ -411,7 +412,7 @@ AtlasLoot.AtlasLootDBDefaults.profile.ClassFilter = {
         ["ITEM_MOD_HIT_RANGED_RATING_SHORT"] = false,
         ["ITEM_MOD_CRIT_MELEE_RATING_SHORT"] = false,
         ["ITEM_MOD_CRIT_RANGED_RATING_SHORT"] = false,
-        ["ITEM_MOD_DEFENSE_SKILL_RATING_SHORT"] = false,
+        --["ITEM_MOD_DEFENSE_SKILL_RATING_SHORT"] = false,
         ["ITEM_MOD_PARRY_RATING_SHORT"] = false,
         ["ITEM_MOD_DODGE_RATING_SHORT"] = false,
     },

@@ -32,6 +32,7 @@ local PROFESSION_NAME = {
     [13] = ALIL["Poisons"],        -- Poisons
     [14] = ALIL["Jewelcrafting"],  -- Jewelcrafting
 	[15] = ALIL["Inscription"],    -- Inscription
+	[16] = ALIL["Archaeology"]     -- Archaeology
 }
 
 local PROFESSION_TEXT_MAX_LENGTH = 15
@@ -69,6 +70,7 @@ local PROFESSION_ICON = {
     [13] = GetSpellTexture(2842), -- Rogue: Poisons
     [14] = 134071,                -- Jewelcrafting
 	[15] = 237171,     			  -- Inscription
+	[16] = 441139				  -- Archaeology
 }
 
 local PROFESSION, PROFESSION_DATA = AtlasLoot:GetGameVersionDataTable()

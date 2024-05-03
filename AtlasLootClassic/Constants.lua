@@ -50,6 +50,7 @@ ATLASLOOT_ITEM_BACKGROUND_ALPHA = 0.9
 ALPrivate.IS_CLASSIC 	= AtlasLoot:GetGameVersion() == AtlasLoot.CLASSIC_VERSION_NUM
 ALPrivate.IS_BC 		= AtlasLoot:GetGameVersion() == AtlasLoot.BC_VERSION_NUM
 ALPrivate.IS_WOTLK 		= AtlasLoot:GetGameVersion() == AtlasLoot.WRATH_VERSION_NUM
+ALPrivate.IS_CATA	    = AtlasLoot:GetGameVersion() == AtlasLoot.CATA_VERSION_NUM
 
 -- Account specific
 ALPrivate.ACCOUNT_LOCALE = GetLocale()
@@ -71,6 +72,7 @@ ALPrivate.COIN_TEXTURE = {
 	CLASSIC 	= {	texture = AtlasLoot.GAME_VERSION_TEXTURES[AtlasLoot.CLASSIC_VERSION_NUM], width = 2.0 },
 	BC		 	= {	texture = AtlasLoot.GAME_VERSION_TEXTURES[AtlasLoot.BC_VERSION_NUM], width = 2.0 },
 	WRATH	 	= {	texture = AtlasLoot.GAME_VERSION_TEXTURES[AtlasLoot.WRATH_VERSION_NUM], width = 2.0 },
+	CATA	 	= {	texture = AtlasLoot.GAME_VERSION_TEXTURES[AtlasLoot.CATA_VERSION_NUM], width = 2.0 },
 }
 
 -- Simple backdrop for SetBackdrop

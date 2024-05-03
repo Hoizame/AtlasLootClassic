@@ -2,6 +2,7 @@
 
 This mod is distributed under Version 2 of the GPL.  A copy of the GPL is included in this zip file with links to non-english translations.
 
+
 ## v3.1.4 (Oct. 10, 2023)
 
 - Add Defiler Scourgestone Vendor

@@ -9,7 +9,12 @@ Factions.lua
 rawdata.lua
 data.lua
 .release
+data/
+test/
 
 # from @Blackwidow-sudo
 make.sh
 DevBuild
+
+# from snowflame0
+.DS_Store
