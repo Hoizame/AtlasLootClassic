@@ -1,4 +1,4 @@
-﻿## Interface: 30403
+﻿## Interface: 40400
 ## Author: Lag
 ## Version: @project-version@
 ## Dependencies: AtlasLootClassic
@@ -43,3 +43,4 @@ items.lua
 source.lua
 source-tbc.lua
 source-wrath.lua
+source-cata.lua

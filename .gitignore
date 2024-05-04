@@ -9,6 +9,8 @@ Factions.lua
 rawdata.lua
 data.lua
 .release
+.vscode/
+actions-runner/
 data/
 test/
 
@@ -16,5 +18,5 @@ test/
 make.sh
 DevBuild
 
-# from snowflame0
+# MacOS files
 .DS_Store

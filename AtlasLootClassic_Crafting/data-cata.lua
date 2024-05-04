@@ -46,7 +46,7 @@ local PROF_CLASS_CONTENT = data:AddContentType(AL["Class Professions"], ATLASLOO
 local GEM_FORMAT1 = ALIL["Gems"].." - %s"
 local GEM_FORMAT2 = ALIL["Gems"].." - %s & %s"
 
-data["AlchemyWrath"] = {
+data["AlchemyCata"] = {
 	name = ALIL["Alchemy"],
 	ContentType = PROF_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
@@ -56,109 +56,88 @@ data["AlchemyWrath"] = {
 		{
 			name = AL["Flasks"],
 			[NORMAL_DIFF] = {
-				{ 1, 80719 },	-- Flask of Steelskin
-				{ 2, 80720 },	-- Flask of the Draconic Mind
-				{ 3, 80721 },	-- Flask of the Winds
-				{ 4, 80723 },	-- Flask of the Frost Wyrm
-				{ 5, 94162 },	-- Flask of Flowing Water
+				{1, 80719},	-- Flask of Steelskin
+				{2, 80720},	-- Flask of the Draconic Mind
+				{3, 80721},	-- Flask of the Winds
+				{4, 80723},	-- Flask of the Frost Wyrm
+				{5, 94162},	-- Flask of Flowing Water
+                {6, 92643}, -- Cauldron of Battle
+                {7, 92688}, -- Big Cauldron of Battle
 			},
 		},
 		{
 			name = AL["Transmutes"],
 			[NORMAL_DIFF] = {
-				{ 1, 66658 },	-- Transmute: Ametrine
-				{ 2, 66662 },	-- Transmute: Dreadstone
-				{ 3, 66664 },	-- Transmute: Eye of Zul
-				{ 4, 66660 },	-- Transmute: King's Amber
-				{ 5, 66663 },	-- Transmute: Majestic Zircon
-				{ 6, 66659 },	-- Transmute: Cardinal Ruby
-				{ 8, 57425 },	-- Transmute: Skyflare Diamond
-				{ 9, 57427 },	-- Transmute: Earthsiege Diamond
-				{ 11, 60350 },	-- Transmute: Titanium
-				{ 16, 53777 },	-- Transmute: Eternal Air to Earth
-				{ 17, 53776 },	-- Transmute: Eternal Air to Water
-				{ 18, 53781 },	-- Transmute: Eternal Earth to Air
-				{ 19, 53782 },	-- Transmute: Eternal Earth to Shadow
-				{ 20, 53775 },	-- Transmute: Eternal Fire to Life
-				{ 21, 53774 },	-- Transmute: Eternal Fire to Water
-				{ 22, 53773 },	-- Transmute: Eternal Life to Fire
-				{ 23, 53771 },	-- Transmute: Eternal Life to Shadow
-				{ 24, 53779 },	-- Transmute: Eternal Shadow to Earth
-				{ 25, 53780 },	-- Transmute: Eternal Shadow to Life
-				{ 26, 53783 },	-- Transmute: Eternal Water to Air
-				{ 27, 53784 },	-- Transmute: Eternal Water to Fire
+                {1, 78866}, -- Transmute: Living Elements
+                {2, 80237}, -- Transmute: Shadowspirit Diamond
+                {3, 80243}, -- Transmute: Truegold
+                {4, 80244}, -- Transmute: Pyrium Bar
+                {5, 80245}, -- Transmute: Inferno Ruby
+                {6, 80246}, -- Transmute: Ocean Sapphire
+                {7, 80247}, -- Transmute: Amberjewel
+                {8, 80248}, -- Transmute: Demonseye
+                {9, 80250}, -- Transmute: Ember Topaz
+                {10, 80251}, -- Transmute: Dream Emerald
 			},
 		},
 		{
 			name = AL["Healing/Mana Potions"],
 			[NORMAL_DIFF] = {
-			{ 1, 53904 },	-- Powerful Rejuvenation Potion
-			{ 2, 53895 },	-- Crazy Alchemist's Potion
+            	{1, 80498}, -- Mythical Healing Potion
+            	{2, 80494}, -- Mythical Mana Potion
+            	{3, 80490}, -- Mighty Rejuvenation Potion
+            	{4, 93935}, -- Draught of War
 
-			{ 4, 58871 },	-- Endless Healing Potion
-			{ 5, 53836 },	-- Runic Healing Potion
-			{ 6, 53838 },	-- Resurgent Healing Potion
-
-			{ 16, 53900 },	-- Potion of Nightmares
-
-			{ 19, 58868 },	-- Endless Mana Potion
-			{ 20, 53837 },	-- Runic Mana Potion
-			{ 21, 53839 },	-- Icy Mana Potion
 			},
 		},
 		{
 			name = AL["Protection Potions"],
 			[NORMAL_DIFF] = {
-				{ 1, 53936 },	-- Mighty Arcane Protection Potion
-				{ 2, 53939 },	-- Mighty Fire Protection Potion
-				{ 3, 53937 },	-- Mighty Frost Protection Potion
-				{ 4, 53942 },	-- Mighty Nature Protection Potion
-				{ 5, 53938 },	-- Mighty Shadow Protection Potion
+                {1, 80492}, -- Prismatic Elixir
 			},
 		},
 		{
 			name = AL["Util Potions"],
 			[NORMAL_DIFF] = {
-				{ 1, 54221 },	-- Potion of Speed
-				{ 2, 54222 },	-- Potion of Wild Magic
-				{ 3, 53905 },	-- Indestructible Potion
+                {2, 80478}, -- Earthen Potion
+                {3, 80481}, -- Volcanic Potion
+                {4, 80482}, -- Potion of Concentration
+                {5, 80487}, -- Mysterious Potion
+                {6, 80495}, -- Potion of the Tol'vir
+                {7, 80496}, -- Golemblood Potion
 			},
 		},
 		{
 			name = AL["Elixirs"],
 			[NORMAL_DIFF] = {
-				{ 1, 60354 },	-- Elixir of Accuracy
-				{ 2, 60365 },	-- Elixir of Armor Piercing
-				{ 3, 60355 },	-- Elixir of Deadly Strikes
-				{ 4, 60357 },	-- Elixir of Expertise
-				{ 5, 60366 },	-- Elixir of Lightning Speed
-				{ 6, 56519 },	-- Elixir of Mighty Mageblood
-				{ 7, 53840 },	-- Elixir of Mighty Agility
-				{ 8, 54218 },	-- Elixir of Mighty Strength
-				{ 9, 53847 },	-- Elixir of Spirit
-				{ 10, 53848 },	-- Guru's Elixir
-				{ 11, 53842 },	-- Spellpower Elixir
-				{ 12, 53841 },	-- Wrath Elixir
-				{ 16, 60356 },	-- Elixir of Mighty Defense
-				{ 17, 54220 },	-- Elixir of Protection
-				{ 18, 62410 },	-- Elixir of Water Walking
-				{ 19, 60367 },	-- Elixir of Mighty Thoughts
-				{ 20, 53898 },	-- Elixir of Mighty Fortitude
+                {1, 80477}, -- Ghost Elixir
+                {2, 80479}, -- Deathblood Venom
+                {3, 80480}, -- Elixir of the Naga
+                {4, 80484}, -- Elixir of the Cobra     
+                {5, 80488}, -- Elixir of Deep Earth
+                {6, 80491}, -- Elixir of Impossible Accuracy
+                {7, 80493}, -- Elixir of Mighty Speed             
+                {8, 80497}, -- Elixir of the Master
 			},
 		},
 		{
 			name = AL["Stones"],
 			[NORMAL_DIFF] = {
-				{ 1, 60403 },	-- Indestructible Alchemist Stone
-				{ 2, 60396 },	-- Mercurial Alchemist Stone
-				{ 3, 60405 },	-- Mighty Alchemist Stone
+                {1, 80508}, -- Lifebound Alchemist Stone
+                {2, 96252}, -- Volatile Alchemist Stone
+                {3, 96253}, -- Quicksilver Alchemist Stone
+                {4, 96254}, -- Vibrant Alchemist Stone
 			},
 		},
 		{
 			name = AL["Misc"],
 			[NORMAL_DIFF] = {
-				{ 1, 62409 },	-- Ethereal Oil
-				{ 2, 53812 },	-- Pygmy Oil
+				{1, 93328}, -- Vial of the Sands
+                {2, 80486}, -- Deepstone Oil
+                {3, 80269}, -- Potion of Illusion
+                {4, 80725}, -- Potion of Deepholm
+                {5, 80726}, -- Potion of Treasure Finding
+                {6, 80724}, -- Flask of Enhancement
 			},
 		}
 	},
@@ -1642,8 +1621,8 @@ data["InscriptionWrath"] = {
 				{ 19, 59480 },	-- Strange Tarot
 			}
 		},
+		--[[
 		{
-			--[[
 			name = ALIL["WARRIOR"],
 			[MAJOR_GLYPHS_DIFF] = {
 				{ 1, 57159 }, -- Glyph of Intervene / 375
