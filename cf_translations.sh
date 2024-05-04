@@ -1,6 +1,8 @@
 #!/bin/bash
 # Source from: https://github.com/WeakAuras/WeakAuras2
 
+cf_token=$CF_API_KEY
+
 declare -A LOC_FILES=(
   ["Base Namespace"]="Global.lua"
   ["Collections"]="Collections.lua"
