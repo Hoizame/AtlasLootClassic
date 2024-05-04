@@ -36,7 +36,6 @@ end
     -- TODO: cata phase items
 if AtlasLoot:GameVersion_EQ(AtlasLoot.CATA_VERSION_NUM) then
     PHASE_ITEMS = {
-        
     }
 end
 

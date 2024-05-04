@@ -108,7 +108,7 @@ function AtlasLoot.ReturnForGameVersion(classic, bcc, wrath, cata)
 	elseif ALPrivate.IS_BC then
 		return bcc or classic
 	elseif ALPrivate.IS_WRATH then
-		return wrath or bbc or classic
+		return wrath or bcc or classic
 	else
 		return cata or wrath or bcc or classic
 	end
