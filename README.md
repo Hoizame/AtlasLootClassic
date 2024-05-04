@@ -1,4 +1,4 @@
-# AtlasLootClassic
+# AtlasLootClassic Cata
 
 [![Build Status](https://github.com/Hoizame/AtlasLootClassic/workflows/CI/badge.svg)](https://github.com/Hoizame/AtlasLootClassic/actions?workflow=CI)
 
