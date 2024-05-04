@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: [self-hosted, ubuntu-latest, macos]
+    runs-on: self-hosted
 
     env:
       CF_API_KEY: ${{ secrets.CF_API_KEY }}
