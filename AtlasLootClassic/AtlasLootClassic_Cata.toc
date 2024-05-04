@@ -34,9 +34,6 @@
 ## X-Category: Map
 ## X-License: GPL v2
 ## X-Localizations: enUS, deDE, frFR, esES, koKR, zhCN, zhTW, esMX, ptBR, ruRU, itIT
-## X-Curse-Project-ID: 326516
-## X-WoWI-ID: 25185
-## X-Wago-ID: RXKqzoGy
 
 embeds.xml
 
