@@ -1,8 +1,6 @@
 #!/bin/bash
 # Source from: https://github.com/WeakAuras/WeakAuras2
 
-cf_token=$CF_API_KEY
-
 declare -A LOC_FILES=(
   ["Base Namespace"]="Global.lua"
   ["Collections"]="Collections.lua"
@@ -29,7 +27,7 @@ do_import() {
     -H "X-Api-Token: $CF_API_KEY" \
     -F "metadata={ language: \"enUS\", namespace: \"$namespace\", \"missing-phrase-handling\": \"DeletePhrase\" }" \
     -F "localizations=<$file" \
-    "https://wow.curseforge.com/api/projects/326516/localization/import"
+    "https://legacy.curseforge.com/api/projects/65387/localization/import"
   ) || exit 1
   case $result in
     200) echo "done." ;;
