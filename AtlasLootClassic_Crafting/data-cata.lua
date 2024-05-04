@@ -83,7 +83,7 @@ data["AlchemyCata"] = {
 		{
 			name = AL["Healing/Mana Potions"],
 			[NORMAL_DIFF] = {
-            	{1, 80498}, -- Mythical Healing Potion
+				{1, 80498}, -- Mythical Healing Potion
             	{2, 80494}, -- Mythical Mana Potion
             	{3, 80490}, -- Mighty Rejuvenation Potion
             	{4, 93935}, -- Draught of War
@@ -113,10 +113,10 @@ data["AlchemyCata"] = {
                 {1, 80477}, -- Ghost Elixir
                 {2, 80479}, -- Deathblood Venom
                 {3, 80480}, -- Elixir of the Naga
-                {4, 80484}, -- Elixir of the Cobra     
+                {4, 80484}, -- Elixir of the Cobra
                 {5, 80488}, -- Elixir of Deep Earth
                 {6, 80491}, -- Elixir of Impossible Accuracy
-                {7, 80493}, -- Elixir of Mighty Speed             
+                {7, 80493}, -- Elixir of Mighty Speed  
                 {8, 80497}, -- Elixir of the Master
 			},
 		},
