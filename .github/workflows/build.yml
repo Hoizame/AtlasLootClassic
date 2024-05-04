@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     env:
       CF_API_KEY: ${{ secrets.CF_API_KEY }}
@@ -21,13 +21,12 @@ jobs:
         with:
           fetch-depth: 0
 
-      #- name: Install and run Luacheck
-      #  uses: nebularg/actions-luacheck@v1
-      #  with:
-      #    args: "--no-color -q"
+      - name: Install and run Luacheck
+        uses: nebularg/actions-luacheck@v1
+        with:
+          args: "--no-color -q"
 
       - name: Update Curseforge Translations
-        #workaround until figure out why it can't find file
         run: ./cf_translations.sh
 
       - name: Package and release
