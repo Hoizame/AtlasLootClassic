@@ -27,7 +27,7 @@ jobs:
       #    args: "--no-color -q"
 
       - name: Update Curseforge Translations
-        run: ./cf_translations.sh
+        run: ../cf_translations.sh
 
       - name: Package and release
         uses: BigWigsMods/packager@v2
