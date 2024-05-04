@@ -27,7 +27,8 @@ jobs:
       #    args: "--no-color -q"
 
       - name: Update Curseforge Translations
-        run: ../cf_translations.sh
+        #workaround until figure out why it can't find file
+        run: /Users/hector/Desktop/AtlasLootClassic_Cata/cf_translations.sh
 
       - name: Package and release
         uses: BigWigsMods/packager@v2
