@@ -25,9 +25,10 @@ jobs:
         uses: nebularg/actions-luacheck@v1
         with:
           args: "--no-color -q"
-
-      - name: Update Curseforge Translations
-        run: ./cf_translations.sh
+          
+      #Fix this later with Curseforge project
+      #- name: Update Curseforge Translations
+      #  run: ./cf_translations.sh
 
       - name: Package and release
         uses: BigWigsMods/packager@v2
