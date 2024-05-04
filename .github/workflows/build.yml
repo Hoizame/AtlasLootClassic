@@ -4,12 +4,10 @@ on:
   push:
     tags:
       - '*'
-      - '!**-bcc**'
-      - '!**-classic**'
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosed, macos-11]
 
     steps:
     - uses: actions/checkout@v1
