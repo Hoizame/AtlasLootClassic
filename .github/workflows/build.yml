@@ -17,7 +17,7 @@ jobs:
 
     steps:
       - name: Clone project
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
@@ -28,7 +28,7 @@ jobs:
 
       - name: Update Curseforge Translations
         #workaround until figure out why it can't find file
-        run: /Users/hector/Desktop/AtlasLootClassic_Cata/cf_translations.sh
+        run: ./cf_translations.sh
 
       - name: Package and release
         uses: BigWigsMods/packager@v2
