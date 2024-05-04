@@ -1,12 +1,10 @@
 # AtlasLootClassic Cata
 
-[![Build Status](https://github.com/Hoizame/AtlasLootClassic/workflows/CI/badge.svg)](https://github.com/Hoizame/AtlasLootClassic/actions?workflow=CI)
+[![Package](https://github.com/snowflame0/AtlasLootClassic_Cata/actions/workflows/build.yml/badge.svg)](https://github.com/snowflame0/AtlasLootClassic_Cata/actions/workflows/build.yml)
 
-AtlasLootClassic is an UI mod allowing for loot tables of bosses to be browsed whenever needed within the game.
+AtlasLootClassic Fork for Cata
 
-## Download
-
-[Curseforge](https://www.curseforge.com/wow/addons/atlaslootclassic)
+## NEEDS LOTS OF WORK
 
 ## Features
 
