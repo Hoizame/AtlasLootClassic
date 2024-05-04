@@ -8,6 +8,7 @@ declare -A LOC_FILES=(
   ["DungeonsAndRaids"]="DungeonsAndRaids.lua"
   ["DungeonsAndRaidsTBC"]="DungeonsAndRaidsTBC.lua"
   ["DungeonsAndRaidsWrath"]="DungeonsAndRaidsWrath.lua"
+  ["DungeonsAndRaidsCata"]="DungeonsAndRaidsCata.lua"
   ["PvP"]="PvP.lua"
   ["Options"]="Options.lua"
   ["Factions"]="Factions.lua"
