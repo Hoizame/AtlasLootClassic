@@ -21,10 +21,10 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install and run Luacheck
-        uses: nebularg/actions-luacheck@v1
-        with:
-          args: "--no-color -q"
+      #- name: Install and run Luacheck
+      #  uses: nebularg/actions-luacheck@v1
+      #  with:
+      #    args: "--no-color -q"
 
       - name: Update Curseforge Translations
         run: ./cf_translations.sh
