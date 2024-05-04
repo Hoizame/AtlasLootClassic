@@ -1,15 +1,6 @@
 #!/bin/bash
 # Source from: https://github.com/WeakAuras/WeakAuras2
 
-cf_token=
-
-# Load secrets
-if [ -f ".env" ]; then
-	. ".env"
-fi
-
-[ -z "$cf_token" ] && cf_token=$CF_API_KEY
-
 declare -A locale_files=(
   ["Base Namespace"]="Global.lua"
   ["Collections"]="Collections.lua"
