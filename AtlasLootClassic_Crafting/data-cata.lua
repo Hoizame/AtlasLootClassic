@@ -61,23 +61,23 @@ data["AlchemyCata"] = {
 				{3, 80721},	-- Flask of the Winds
 				{4, 80723},	-- Flask of the Frost Wyrm
 				{5, 94162},	-- Flask of Flowing Water
-                {6, 92643}, -- Cauldron of Battle
-                {7, 92688}, -- Big Cauldron of Battle
+                {7, 92643}, -- Cauldron of Battle
+                {8, 92688}, -- Big Cauldron of Battle
 			},
 		},
 		{
 			name = AL["Transmutes"],
 			[NORMAL_DIFF] = {
-                {1, 78866}, -- Transmute: Living Elements
-                {2, 80237}, -- Transmute: Shadowspirit Diamond
-                {3, 80243}, -- Transmute: Truegold
-                {4, 80244}, -- Transmute: Pyrium Bar
-                {5, 80245}, -- Transmute: Inferno Ruby
-                {6, 80246}, -- Transmute: Ocean Sapphire
-                {7, 80247}, -- Transmute: Amberjewel
-                {8, 80248}, -- Transmute: Demonseye
-                {9, 80250}, -- Transmute: Ember Topaz
-                {10, 80251}, -- Transmute: Dream Emerald
+				{1, 80245}, -- Transmute: Inferno Ruby
+                {2, 80246}, -- Transmute: Ocean Sapphire
+                {3, 80247}, -- Transmute: Amberjewel
+                {4, 80248}, -- Transmute: Demonseye
+                {5, 80250}, -- Transmute: Ember Topaz
+                {6, 80251}, -- Transmute: Dream Emerald
+				{8, 80237}, -- Transmute: Shadowspirit Diamond
+                {10, 80243}, -- Transmute: Truegold
+                {11, 80244}, -- Transmute: Pyrium Bar
+				{16, 78866}, -- Transmute: Living Elements
 			},
 		},
 		{
@@ -98,12 +98,12 @@ data["AlchemyCata"] = {
 		{
 			name = AL["Util Potions"],
 			[NORMAL_DIFF] = {
-                {2, 80478}, -- Earthen Potion
-                {3, 80481}, -- Volcanic Potion
-                {4, 80482}, -- Potion of Concentration
-                {5, 80487}, -- Mysterious Potion
-                {6, 80495}, -- Potion of the Tol'vir
-                {7, 80496}, -- Golemblood Potion
+                {1, 80478}, -- Earthen Potion
+                {2, 80481}, -- Volcanic Potion
+                {3, 80482}, -- Potion of Concentration
+                {4, 80487}, -- Mysterious Potion
+                {5, 80495}, -- Potion of the Tol'vir
+                {6, 80496}, -- Golemblood Potion
 			},
 		},
 		{
@@ -129,20 +129,27 @@ data["AlchemyCata"] = {
 			},
 		},
 		{
+			name = AL["Enhancements"],
+			[NORMAL_DIFF] = {
+				{1, 80724}, -- Flask of Enhancement
+			}
+		},
+		{
 			name = AL["Misc"],
 			[NORMAL_DIFF] = {
 				{1, 93328}, -- Vial of the Sands
-                {2, 80486}, -- Deepstone Oil
+
                 {3, 80269}, -- Potion of Illusion
                 {4, 80725}, -- Potion of Deepholm
                 {5, 80726}, -- Potion of Treasure Finding
-                {6, 80724}, -- Flask of Enhancement
+				{7, 80486}, -- Deepstone Oil
 			},
 		}
 	},
 }
 
-data["BlacksmithingWrath"] = {
+--[[
+data["BlacksmithingCata"] = {
 	name = ALIL["Blacksmithing"],
 	ContentType = PROF_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
@@ -152,19 +159,13 @@ data["BlacksmithingWrath"] = {
 		{ -- Daggers
 			name = AL["Weapons"].." - "..ALIL["Daggers"],
 			[NORMAL_DIFF] = {
-				{ 1, 56234 },	-- Titansteel Shanker
-				{ 2, 55181 },	-- Saronite Shiv
-				{ 3, 55179 },	-- Saronite Ambusher
-				{ 16, 63182 },	-- Titansteel Spellblade
+
 			}
 		},
 		{ -- Axes
 			name = AL["Weapons"].." - "..AL["Axes"],
 			[NORMAL_DIFF] = {
-				{ 1, "INV_sword_04", nil, ALIL["One-Handed Axes"] },
-				{ 2, 55204 },	-- Notched Cobalt War Axe
-				{ 16, "INV_sword_04", nil, ALIL["Two-Handed Axes"] },
-				{ 17, 55174 },	-- Honed Cobalt Cleaver
+
 			}
 		},
 		{ -- Maces
@@ -351,8 +352,9 @@ data["BlacksmithingWrath"] = {
 		},
 	}
 }
+--]]
 
-data["EnchantingWrath"] = {
+data["EnchantingCata"] = {
 	name = ALIL["Enchanting"],
 	ContentType = PROF_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
@@ -362,133 +364,114 @@ data["EnchantingWrath"] = {
 		{
 			name = ALIL["Weapon"].." - "..AL["Enhancements"],
 			[NORMAL_DIFF] = {
-				{ 1, 64441 },	-- Enchant Weapon - Blade Ward
-				{ 2, 64579 },	-- Enchant Weapon - Blood Draining
-				{ 3, 59619 },	-- Enchant Weapon - Accuracy
-				{ 4, 59625 },	-- Enchant Weapon - Black Magic
-				{ 5, 59621 },	-- Enchant Weapon - Berserking
-				{ 6, 60714 },	-- Enchant Weapon - Mighty Spellpower
-				{ 7, 60707 },	-- Enchant Weapon - Superior Potency
-				{ 8, 44621 },	-- Enchant Weapon - Giant Slayer
-				{ 9, 44524 },	-- Enchant Weapon - Icebreaker
-				{ 10, 44576 },	-- Enchant Weapon - Lifeward
-				{ 11, 44633 },	-- Enchant Weapon - Exceptional Agility
-				{ 12, 44510 },	-- Enchant Weapon - Exceptional Spirit
-				{ 13, 44629 },	-- Enchant Weapon - Exceptional Spellpower
-				{ 14, 60621 },	-- Enchant Weapon - Greater Potency
+				{1, 74197}, -- Enchant Weapon - Avalanche
+				{2, 74211}, -- Enchant Weapon - Elemental Slayer
+				{3, 74225}, -- Enchant Weapon - Heartsong
+				{4, 74223}, -- Enchant Weapon - Hurricane
+				{5, 74246}, -- Enchant Weapon - Landslide
+				{6, 74195}, -- Enchant Weapon - Mending
+				{7, 74242}, -- Enchant Weapon - Power Torrent
+				{8, 74244}, -- Enchant Weapon - Windwalk
 			}
 		},
 		{
 			name = ALIL["2H Weapon"].." - "..AL["Enhancements"],
 			[NORMAL_DIFF] = {
-				{ 1, 60691 },	-- Enchant 2H Weapon - Massacre
-				{ 2, 44595 },	-- Enchant 2H Weapon - Scourgebane
-				{ 3, 44630 },	-- Enchant 2H Weapon - Greater Savagery
-				{ 16, 62948 },	-- Enchant Staff - Greater Spellpower
-				{ 17, 62959 },	-- Enchant Staff - Spellpower
+				{1, 95471}, -- Enchant 2H Weapon - Mighty Agility
 			}
 		},
 		{
 			name = ALIL["Cloak"].." - "..AL["Enhancements"],
 			[NORMAL_DIFF] = {
-				{ 1, 44631 },	-- Enchant Cloak - Shadow Armor
-				{ 2, 47899 },	-- Enchant Cloak - Wisdom
-				{ 3, 44591 },	-- Enchant Cloak - Superior Dodge
-				{ 4, 47898 },	-- Enchant Cloak - Greater Speed
-				{ 5, 47672 },	-- Enchant Cloak - Mighty Stamina
-				{ 6, 60663 },	-- Enchant Cloak - Major Agility
-				{ 7, 44500 },	-- Enchant Cloak - Superior Agility
-				{ 8, 44582 },	-- Enchant Cloak - Minor Power
-				{ 9, 60609 },	-- Enchant Cloak - Speed
-
-				{ 20, 44596 },	-- Enchant Cloak - Superior Arcane Resistance
-				{ 19, 44556 },	-- Enchant Cloak - Superior Fire Resistance
-				{ 16, 44483 },	-- Enchant Cloak - Superior Frost Resistance
-				{ 17, 44494 },	-- Enchant Cloak - Superior Nature Resistance
-				{ 18, 44590 },	-- Enchant Cloak - Superior Shadow Resistance
-
-
-
+				{1, 74230}, -- Enchant Cloak - Critical Strike
+				{2, 74247}, -- Enchant Cloak - Greater Critical Strike
+				{3, 74240}, -- Enchant Cloak - Greater Intellect
+				{4, 74192}, -- Enchant Cloak - Greater Spell Piercing
+				{5, 74202}, -- Enchant Cloak - Intellect
+				{6, 74234}, -- Enchant Cloak - Protection
 			}
 		},
 		{
 			name = ALIL["Chest"].." - "..AL["Enhancements"],
 			[NORMAL_DIFF] = {
-				{ 1, 60692 },	-- Enchant Chest - Powerful Stats
-				{ 2, 47900 },	-- Enchant Chest - Super Health
-				{ 3, 44509 },	-- Enchant Chest - Greater Mana Restoration
-				{ 4, 44588 },	-- Enchant Chest - Exceptional Resilience
-				{ 5, 47766 },	-- Enchant Chest - Greater Dodge
-				{ 6, 44492 },	-- Enchant Chest - Mighty Health
-				{ 7, 44623 },	-- Enchant Chest - Super Stats
-				{ 8, 27958 },	-- Enchant Chest - Exceptional Mana
+				{1, 74231}, -- Enchant Chest - Exceptional Spirit
+				{2, 74251}, -- Enchant Chest - Greater Stamina
+				{3, 74214}, -- Enchant Chest - Mighty Resilience
+				{4, 74191}, -- Enchant Chest - Mighty Stats
+				{5, 74250}, -- Enchant Chest - Peerless Stats
+				{6, 74200}, -- Enchant Chest - Stamina
 			}
 		},
 		{
 			name = ALIL["Feet"].." - "..AL["Enhancements"],
 			[NORMAL_DIFF] = {
-				{ 1, 60763 },	-- Enchant Boots - Greater Assault
-				{ 2, 47901 },	-- Enchant Boots - Tuskarr's Vitality
-				{ 3, 44508 },	-- Enchant Boots - Greater Spirit
-				{ 4, 44589 },	-- Enchant Boots - Superior Agility
-				{ 5, 44584 },	-- Enchant Boots - Greater Vitality
-				{ 6, 44528 },	-- Enchant Boots - Greater Fortitude
-				{ 7, 60623 },	-- Enchant Boots - Icewalker
-				{ 8, 60606 },	-- Enchant Boots - Assault
+				{1, 74252}, -- Enchant Boots - Assassin's Step
+				{2, 74189}, -- Enchant Boots - Earthen Vitality
+				{3, 74199}, -- Enchant Boots - Haste
+				{4, 74253}, -- Enchant Boots - Lavawalker
+				{5, 74213}, -- Enchant Boots - Major Agility
+				{6, 74238}, -- Enchant Boots - Mastery
+				{7, 74236}, -- Enchant Boots - Precision
 			}
 		},
 		{
 			name = ALIL["Hand"].." - "..AL["Enhancements"],
 			[NORMAL_DIFF] = {
-				{ 1, 44625 },	-- Enchant Gloves - Armsman
-				{ 2, 60668 },	-- Enchant Gloves - Crusher
-				{ 3, 44513 },	-- Enchant Gloves - Greater Assault
-				{ 4, 44529 },	-- Enchant Gloves - Major Agility
-				{ 5, 44488 },	-- Enchant Gloves - Precision
-				{ 6, 44484 },	-- Enchant Gloves - Haste
-				{ 7, 71692 },	-- Enchant Gloves - Angler
-				{ 8, 44506 },	-- Enchant Gloves - Gatherer
-				{ 9, 44592 },	-- Enchant Gloves - Exceptional Spellpower
+				{1, 74212}, -- Enchant Gloves - Exceptional Strength
+				{2, 74220}, -- Enchant Gloves - Greater Expertise
+				{3, 74255}, -- Enchant Gloves - Greater Mastery
+				{4, 74198}, -- Enchant Gloves - Haste
+				{5, 74132}, -- Enchant Gloves - Mastery
+				{6, 74254}, -- Enchant Gloves - Mighty Strength
 			}
 		},
 		{
-			name = ALIL["Shield"].." - "..AL["Enhancements"],
+			name = ALIL["Off-Hand/Shield"].." - "..AL["Enhancements"],
 			[NORMAL_DIFF] = {
-				{ 1, 44489 },	-- Enchant Shield - Dodge
-				{ 2, 60653 },	-- Enchant Shield - Greater Intellect
+				{1, 74235}, -- Enchant Off-Hand - Superior Intellect
+				{3, 74226}, -- Enchant Shield - Mastery
+				{4, 74207}, -- Enchant Shield - Protection
 			}
 		},
 		{
 			name = ALIL["Wrist"].." - "..AL["Enhancements"],
 			[NORMAL_DIFF] = {
-				{ 1, 62256 },	-- Enchant Bracer - Major Stamina
-				{ 2, 60767 },	-- Enchant Bracer - Superior Spellpower
-				{ 3, 44575 },	-- Enchant Bracer - Greater Assault
-				{ 4, 44598 },	-- Enchant Bracer - Haste
-				{ 5, 44616 },	-- Enchant Bracer - Greater Stats
-				{ 6, 44593 },	-- Enchant Bracer - Major Spirit
-				{ 7, 44635 },	-- Enchant Bracer - Greater Spellpower
-				{ 8, 44555 },	-- Enchant Bracer - Exceptional Intellect
-				{ 9, 60616 },	-- Enchant Bracer - Assault
+				{1, 96264}, -- Enchant Bracer - Agility
+				{2, 74201}, -- Enchant Bracer - Critical Strike
+				{3, 74237}, -- Enchant Bracer - Exceptional Spirit
+				{4, 74248}, -- Enchant Bracer - Greater Critical Strike
+				{5, 74239}, -- Enchant Bracer - Greater Expertise
+				{6, 74256}, -- Enchant Bracer - Greater Speed
+				{7, 96261}, -- Enchant Bracer - Major Strength
+				{8, 96262}, -- Enchant Bracer - Mighty Intellect
+				{9, 74232}, -- Enchant Bracer - Precision
+				{10, 74193}, -- Enchant Bracer - Speed
+				{11, 74229}, -- Enchant Bracer - Superior Dodge
 			}
 		},
 		{
 			name = AL["Ring"].." - "..AL["Enhancements"],
 			[NORMAL_DIFF] = {
-				{ 1, 44636 },	-- Enchant Ring - Greater Spellpower
-				{ 2, 44645 },	-- Enchant Ring - Assault
-				{ 3, 59636 },	-- Enchant Ring - Stamina
+				{1, 74216}, -- Enchant Ring - Agility
+				{2, 74218}, -- Enchant Ring - Greater Stamina
+				{3, 74217}, -- Enchant Ring - Intellect
+				{4, 74215}, -- Enchant Ring - Strength
 			}
 		},
 		{
 			name = AL["Misc"],
 			[NORMAL_DIFF] = {
-				{ 1, 69412 },	-- Abyssal Shatter
+				{1, 92370}, -- Runed Elementium Rod
+				{3, 104698}, -- Maelstrom Shatter
+				{5, 93841}, -- Enchanted Lantern
+				{6, 93843}, -- Magic Lamp
+
 			}
 		},
 	}
 }
 
+--[[
 data["EngineeringWrath"] = {
 	name = ALIL["Engineering"],
 	ContentType = PROF_CONTENT,
@@ -1620,7 +1603,6 @@ data["InscriptionWrath"] = {
 				{ 19, 59480 },	-- Strange Tarot
 			}
 		},
-		--[[
 		{
 			name = ALIL["WARRIOR"],
 			[MAJOR_GLYPHS_DIFF] = {
@@ -2032,7 +2014,7 @@ data["InscriptionWrath"] = {
 				{ 7, 58286 }, -- Glyph of Aquatic Form / 75
 			},
 		},
-		--]]
+		
 		{
 			name = AL["Ink"],
 			[NORMAL_DIFF] = {
@@ -2066,20 +2048,21 @@ data["InscriptionWrath"] = {
 			name = AL["Misc"],
 			[NORMAL_DIFF] = {
 				{ 1, 59387 },	-- Certificate of Ownership
-				--[[
+				
 				{ 3, 52739 },	-- Armor Vellum
 				{ 4, 59499 },	-- Armor Vellum II
 				{ 5, 59500 },	-- Armor Vellum III
 				{ 18, 52840 },	-- Weapon Vellum
 				{ 19, 59488 },	-- Weapon Vellum II
 				{ 20, 59501 },	-- Weapon Vellum III
-				--]]
+				
 			}
 		},
 	}
 }
+--]]
 
-data["MiningWrath"] = {
+data["MiningCata"] = {
 	name = ALIL["Mining"],
 	ContentType = PROF_GATH_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
@@ -2089,16 +2072,16 @@ data["MiningWrath"] = {
 		{
 			name = AL["Smelting"],
 			[NORMAL_DIFF] = {
-				{ 1, 49258 }, -- Smelt Saronite
-				{ 3, 49252 }, -- Smelt Cobalt
-				{ 16, 55211 }, -- Smelt Titanium
-				{ 18, 55208 }, -- Smelt Titansteel
+				{ 1, 84038 }, -- Smelt Obsidium
+				{ 2, 74530 }, -- Smelt Elementium
+				{ 3, 74537 }, -- Smelt Hardened Elementium
+				{ 4, 74529 }, -- Smelt Pyrite
 			}
 		},
 	}
 }
 
-data["HerbalismWrath"] = {
+data["HerbalismCata"] = {
 	name = ALIL["Herbalism"],
 	ContentType = PROF_GATH_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
@@ -2106,22 +2089,42 @@ data["HerbalismWrath"] = {
 	CorrespondingFields = private.HERBALISM_LINK,
 	items = {
 		{
-			name = AL["Grand Master"],
+			name = AL["Illustrious Grand Master"],
 			[NORMAL_DIFF] = {
-				{ 1,  36906 }, -- Icethorn
-				{ 2,  36905 }, -- Lichbloom
-				{ 3,  36903 }, -- Adder's Tongue
-				{ 4,  36907 }, -- Talandra's Rose
-				{ 5,  36904 }, -- Tiger Lily
-				{ 6,  36901 }, -- Goldclover
-				{ 16,  36908 }, -- Frost Lotus
-				{ 18,  37921 }, -- Deadnettle
+				{ 1,  52983 }, -- Cinderbloom
+				{ 2,  52985 }, -- Azshara's Veil
+				{ 3,  52984 }, -- Stormvine
+				{ 4,  52987 }, -- Twilight Jasmine
+				{ 5,  52986 }, -- Heartblossom
+				{ 6,  52988 }, -- Whiptail
+				{ 16,  52989 }, -- Deathspore Pod
 			}
 		},
 	}
 }
 
-data["CookingWrath"] = {
+data["SkinningCata"] = {
+	name = ALIL["Skinning"],
+	ContentType = PROF_GATH_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = NORMAL_ITTYPE,
+	CorrespondingFields = private.MINING_LINK,
+	items = {
+		{
+			name = AL["Illustrious Grand Master"],
+			[NORMAL_DIFF] = {
+				{ 1, 52977 }, -- Savage Leather Scraps
+				{ 2, 52976 }, -- Savage Leather
+				{ 3, 56516 }, -- Heavy Savage Leather
+				{ 4, 52980 }, -- Pristine Hide
+				{ 6, 52982 }, -- Deepsea Scale
+				{ 7, 52979 }, -- Blackened Dragonscale
+			}
+		},
+	}
+}
+
+data["CookingCata"] = {
 	name = ALIL["Cooking"],
 	ContentType = PROF_SEC_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
@@ -2268,14 +2271,16 @@ data["FirstAidWrath"] = {
 		{
 			name = ALIL["First Aid"],
 			[NORMAL_DIFF] = {
-				{ 1, 45546 },	-- Heavy Frostweave Bandage
-				{ 2, 45545 },	-- Frostweave Bandage
+				{ 1, 74556 },	-- Embersilk Bandage
+				{ 2, 74557 },	-- Heavy Embersilk Bandage
+				{ 3, 74558 },	-- Field Bandage: Dense Embersilk
+				{ 4, 88893 },	-- Dense Embersilk Bandage
 			}
 		},
 	}
 }
 
-data["FishingWrath"] = {
+data["FishingCata"] = {
 	name = ALIL["Fishing"],
 	ContentType = PROF_SEC_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
@@ -2283,62 +2288,30 @@ data["FishingWrath"] = {
 	CorrespondingFields = private.FISHING_LINK,
 	items = {
 		{
-			name = ALIL["Fishing"],
+			name = AL["Fish"],
 			[NORMAL_DIFF] = {
-				{ 1, 6533 }, --  Aquadynamic Fish Attractor
-				{ 2, 34861 }, -- Sharpened Fish Hook
-				{ 3, 46006 }, -- Glow Worm
-				{ 4, 6532 }, --  Bright Baubles
-				{ 5, 7307 }, --  Flesh Eating Worm
-				{ 6, 6811 }, --  Aquadynamic Fish Lens
-				{ 7, 6530 }, --  Nightcrawlers
-				{ 16, 34109 }, -- Weather-Beaten Journal
-				{ 18, 19971 }, -- High Test Eternium Fishing Line
-				{ 19, 34836 }, -- Spun Truesilver Fishing Line
-				{ 27, 27532 }, -- Master Fishing - The Art of Angling
-				{ 28, 16082 }, -- Artisan Fishing - The Way of the Lure
-				{ 29, 16083 }, -- Expert Fishing - The Bass and You
-				{ 30, 46054 }, -- Journeyman Fishing - Fishing for Dummies
-			}
-		},
-		{
-			name = ALIL["Fishing Pole"],
-			[NORMAL_DIFF] = {
-				{ 1, 19970 }, -- Arcanite Fishing Pole
-				{ 2, 44050 }, -- Mastercraft Kalu'ak Fishing Pole
-				{ 3, 45992 }, -- Jeweled Fishing Pole
-				{ 4, 45991 }, -- Bone Fishing Pole
-				{ 5, 45858 }, -- Nat's Lucky Fishing Pole
-				{ 6, 19022 }, -- Nat Pagle's Extreme Angler FC-5000
-				{ 7, 25978 }, -- Seth's Graphite Fishing Pole
-				{ 8, 6367 }, -- Big Iron Fishing Pole
-				{ 9, 6366 }, -- Darkwood Fishing Pole
-				{ 10, 6365 }, -- Strong Fishing Pole
-				{ 11, 12225 }, -- Blump Family Fishing Pole
-				{ 12, 6256 }, -- Fishing Pole
-				{ 13, 45120 }, -- Basic Fishing Pole
-			}
-		},
-		{
-			name = AL["Fishes"],
-			[NORMAL_DIFF] = {
-				{ 1, 43572 }, -- Magic Eater
-				{ 2, 43571 }, -- Sewer Carp
-				{ 3, 43647 }, -- Shimmering Minnow
-				{ 4, 43652 }, -- Slippery Eel
-				{ 5, 43646 }, -- Fountain Goldfish
-				{ 6, 41812 }, -- Barrelhead Goby
-				{ 7, 41808 }, -- Bonescale Snapper
-				{ 8, 41805 }, -- Borean Man O' War
-				{ 9, 41807 }, -- Dragonfin Angelfish
-				{ 10, 41810 }, -- Fangtooth Herring
-				{ 11, 41809 }, -- Glacial Salmon
-				{ 12, 41802 }, -- Imperial Manta Ray
-				{ 13, 41806 }, -- Musselback Sculpin
-				{ 14, 41813 }, -- Nettlefish
-				{ 15, 41803 }, -- Rockfin Grouper
-				{ 16, 45907 }, -- Mostly-eaten Bonescale Snapper :D
+				{ 1, 53071 }, -- Algaefin Rockfish
+				{ 2, 53066 }, -- Blackbelly Mudfish
+				{ 3, 53072 }, -- Deepsea Sagefish
+				{ 4, 53070 }, -- Fathom Eel
+				{ 5, 53064 }, -- Highland Guppy
+				{ 6, 53068 }, -- Lavascale Catfish
+				{ 7, 53063 }, -- Mountain Trout
+				{ 8, 53067 }, -- Striped Lurker
+				{ 9, 53065 }, -- Albino Cavefish
 			}
 		},
 	}
 }
+
+--[[
+data["ArchaeologyCata"] = {
+	name = ALIL["Archaeology"],
+	ContentType = PROF_SEC_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = NORMAL_ITTYPE,
+	CorrespondingFields = private.FISHING_LINK,
+	items = {
+	}
+}
+--]]
