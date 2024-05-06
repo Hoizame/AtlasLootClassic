@@ -62,7 +62,7 @@ local BONUS_LOOT_SPLIT = "%s - %s"
 
 data["Deadmines"] = {
 	MapID = 36,
-	ncounterJournalID = 63,
+	EncounterJournalID = 63,
 	ContentType = DUNGEON_CONTENT,
 	items = {
 		{ -- Glubtok
@@ -162,10 +162,10 @@ data["Deadmines"] = {
 		},
 	}
 }
-
+--[[
 data["Shadowfang Keep"] = {
 	MapID = 33,
-	ncounterJournalID = 64,
+	EncounterJournalID = 64,
 	ContentType = DUNGEON_CONTENT,
 	items = {
 		{ -- Baron Ashbury
@@ -260,7 +260,7 @@ data["Shadowfang Keep"] = {
 
 data["Throne of the Tides"] = {
 	MapID = 643,
-	ncounterJournalID = 65,
+	EncounterJournalID = 65,
 	ContentType = DUNGEON_CONTENT,
 	items = {
 		{ -- Lady Naz'jar
@@ -350,7 +350,7 @@ data["Throne of the Tides"] = {
 
 data["Blackrock Caverns"] = {
 	MapID = 645,
-	ncounterJournalID = 66,
+	EncounterJournalID = 66,
 	ContentType = DUNGEON_CONTENT,
 	items = {
 		{ -- Rom'ogg Bonecrusher
@@ -458,7 +458,7 @@ data["Blackrock Caverns"] = {
 
 data["The Stonecore"] = {
 	MapID = 725,
-	ncounterJournalID = 67,
+	EncounterJournalID = 67,
 	ContentType = DUNGEON_CONTENT,
 	items = {
 		{ -- Corborus
@@ -549,7 +549,7 @@ data["The Stonecore"] = {
 
 data["The Vortex Pinnacle"] = {
 	MapID = 657,
-	ncounterJournalID = 68,
+	EncounterJournalID = 68,
 	ContentType = DUNGEON_CONTENT,
 	items = {
 		{ -- Grand Vizier Ertan
@@ -624,7 +624,7 @@ data["The Vortex Pinnacle"] = {
 
 data["Lost City of the Tol'vir"] = {
 	MapID = 755,
-	ncounterJournalID = 69,
+	EncounterJournalID = 69,
 	ContentType = DUNGEON_CONTENT,
 	items = {
 		{ -- General Husam
@@ -714,7 +714,7 @@ data["Lost City of the Tol'vir"] = {
 
 data["Halls of Origination"] = {
 	MapID = 644,
-	ncounterJournalID = 70,
+	EncounterJournalID = 70,
 	ContentType = DUNGEON_CONTENT,
 	items = {
 		{ -- Temple Guardian Anhuur
@@ -858,7 +858,7 @@ data["Halls of Origination"] = {
 
 data["Grim Batol"] = {
 	MapID = 670,
-	ncounterJournalID = 71,
+	EncounterJournalID = 71,
 	ContentType = DUNGEON_CONTENT,
 	items = {
 		{ -- General Umbriss
@@ -948,7 +948,7 @@ data["Grim Batol"] = {
 
 data["The Bastion of Twilight"] = {
 	MapID = 671,
-	ncounterJournalID = 72,
+	EncounterJournalID = 72,
 	ContentType = DUNGEON_CONTENT,
 	items = {
 		{ -- Halfus Wyrmbreaker
@@ -1114,7 +1114,7 @@ data["The Bastion of Twilight"] = {
 
 data["Blackwing Descent"] = {
 	MapID = 669,
-	ncounterJournalID = 73,
+	EncounterJournalID = 73,
 	ContentType = DUNGEON_CONTENT,
 	items = {
 		{ -- Omnotron Defense System
@@ -1328,7 +1328,7 @@ data["Blackwing Descent"] = {
 
 data["Throne of the Four Winds"] = {
 	MapID = 754,
-	ncounterJournalID = 74,
+	EncounterJournalID = 74,
 	ContentType = DUNGEON_CONTENT,
 	items = {
 		{ -- The Conclave of Wind
@@ -1428,7 +1428,7 @@ data["Throne of the Four Winds"] = {
 
 data["Baradin Hold"] = {
 	MapID = 757,
-	ncounterJournalID = 75,
+	EncounterJournalID = 75,
 	ContentType = DUNGEON_CONTENT,
 	items = {
 		{ -- Argaloth
@@ -1890,7 +1890,7 @@ data["Baradin Hold"] = {
 
 data["Zul'Gurub"] = {
 	MapID = 859,
-	ncounterJournalID = 76,
+	EncounterJournalID = 76,
 	ContentType = DUNGEON_CONTENT,
 	items = {
 		{ -- High Priest Venoxis
@@ -2006,7 +2006,7 @@ data["Zul'Gurub"] = {
 
 data["Zul'Aman"] = {
 	MapID = 568,
-	ncounterJournalID = 77,
+	EncounterJournalID = 77,
 	ContentType = DUNGEON_CONTENT,
 	items = {
 		{ -- Akil'zon
@@ -2086,7 +2086,7 @@ data["Zul'Aman"] = {
 
 data["Firelands"] = {
 	MapID = 720,
-	ncounterJournalID = 78,
+	EncounterJournalID = 78,
 	ContentType = DUNGEON_CONTENT,
 	items = {
 		{ -- Beth'tilac
@@ -2468,7 +2468,7 @@ data["Firelands"] = {
 
 data["End Time"] = {
 	MapID = 938,
-	ncounterJournalID = 184,
+	EncounterJournalID = 184,
 	ContentType = DUNGEON_CONTENT,
 	items = {
 		{ -- Echo of Tyrande
@@ -2566,7 +2566,7 @@ data["End Time"] = {
 
 data["Well of Eternity"] = {
 	MapID = 939,
-	ncounterJournalID = 185,
+	EncounterJournalID = 185,
 	ContentType = DUNGEON_CONTENT,
 	items = {
 		{ -- Peroth'arn
@@ -2616,7 +2616,7 @@ data["Well of Eternity"] = {
 
 data["Hour of Twilight"] = {
 	MapID = 940,
-	ncounterJournalID = 186,
+	EncounterJournalID = 186,
 	ContentType = DUNGEON_CONTENT,
 	items = {
 		{ -- Arcurion
@@ -2666,7 +2666,7 @@ data["Hour of Twilight"] = {
 
 data["Dragon Soul"] = {
 	MapID = 967,
-	ncounterJournalID = 187,
+	EncounterJournalID = 187,
 	ContentType = DUNGEON_CONTENT,
 	items = {
 		{ -- Morchok
@@ -3258,3 +3258,4 @@ data["Dragon Soul"] = {
 		},
 	}
 }
+--]]
