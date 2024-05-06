@@ -10,8 +10,7 @@ rawdata.lua
 data.lua
 .release
 .vscode/
-actions-runner/
-data/
+cata-data/
 test/
 
 # from @Blackwidow-sudo
