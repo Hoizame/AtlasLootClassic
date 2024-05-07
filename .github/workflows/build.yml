@@ -3,10 +3,7 @@ name: Package
 on:
   push:
     tags:
-      - '*'
-      - "!**-pre-alpha**"
-      - "!**-alpha**"
-      - "!**-beta**"
+      - '**'
 
 jobs:
   build:
