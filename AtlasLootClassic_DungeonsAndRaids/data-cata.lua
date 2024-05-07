@@ -261,7 +261,6 @@ data["Shadowfang Keep"] = {
 	}
 }
 
--- TODO: Currently broken, may be blizz problem
 data["Zul'Gurub"] = {
 	nameFormat = NAME_CATACLYSM,
 	MapID = 1977,
