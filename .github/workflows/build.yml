@@ -26,9 +26,10 @@ jobs:
         with:
           args: "--no-color -q"
           
-      #Fix this later with Curseforge project
-      #- name: Update Curseforge Translations
-      #  run: ./cf_translations.sh
+      Fix this later with Curseforge project
+      - name: Update Curseforge Translations
+        CF_API_KEY: ${{ secrets.CF_API_KEY }}
+        run: ./cf_translations.sh
 
       - name: Package and release
         uses: BigWigsMods/packager@v2

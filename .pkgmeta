@@ -17,7 +17,7 @@ externals:
 # Ignore takes place before folder's moving takes place
 ignore:
  - babelfish.lua
- - cf_translations.sh
+ - cf_localizations.sh
  - AtlasLootClassic/Images/PSD
  - AtlasLootClassic/Addons/tmpl.lua
  - AtlasLootClassic_DungeonsAndRaids/droprate_override.lua

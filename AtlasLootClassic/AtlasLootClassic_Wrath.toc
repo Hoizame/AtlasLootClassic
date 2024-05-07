@@ -34,7 +34,7 @@
 ## X-Category: Map
 ## X-License: GPL v2
 ## X-Localizations: enUS, deDE, frFR, esES, koKR, zhCN, zhTW, esMX, ptBR, ruRU, itIT
-## X-Curse-Project-ID: 1013320
+## X-Curse-Project-ID: 1014843
 
 embeds.xml
 
