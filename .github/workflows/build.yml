@@ -6,6 +6,7 @@ on:
       - main
     tags:
       - '*'
+      - "!**-pre-alpha**"
       - "!**-alpha**"
       - "!**-beta**"
 
