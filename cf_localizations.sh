@@ -2,16 +2,16 @@
 # Source from: https://github.com/WeakAuras/WeakAuras2
 
 declare -A locale_files=(
-  ["Base Namespace"]="Global.lua"
-  ["Collections"]="Collections.lua"
-  ["Crafting"]="Crafting.lua"
-  ["DungeonsAndRaids"]="DungeonsAndRaids.lua"
-  ["DungeonsAndRaidsTBC"]="DungeonsAndRaidsTBC.lua"
-  ["DungeonsAndRaidsWrath"]="DungeonsAndRaidsWrath.lua"
-  ["DungeonsAndRaidsCata"]="DungeonsAndRaidsCata.lua"
-  ["PvP"]="PvP.lua"
-  ["Options"]="Options.lua"
-  ["Factions"]="Factions.lua"
+  ["Base Namespace"]="CF_Locales/Global.lua"
+  ["Collections"]="CF_Locales/Collections.lua"
+  ["Crafting"]="CF_Locales/Crafting.lua"
+  ["DungeonsAndRaids"]="CF_Locales/DungeonsAndRaids.lua"
+  ["DungeonsAndRaidsTBC"]="CF_Locales/DungeonsAndRaidsTBC.lua"
+  ["DungeonsAndRaidsWrath"]="CF_Locales/DungeonsAndRaidsWrath.lua"
+  ["DungeonsAndRaidsCata"]="CF_Locales/DungeonsAndRaidsCata.lua"
+  ["PvP"]="CF_Locales/PvP.lua"
+  ["Options"]="CF_Locales/Options.lua"
+  ["Factions"]="CF_Locales/Factions.lua"
 )
 
 tempfile=$( mktemp )
@@ -27,7 +27,7 @@ do_import() {
     -H "X-Api-Token: $CF_API_KEY" \
     -F "metadata={ language: \"enUS\", namespace: \"$namespace\", \"missing-phrase-handling\": \"DeletePhrase\" }" \
     -F "localizations=<$file" \
-    "https://legacy.curseforge.com/api/projects/1014843/localization/import"
+    "https://wow.curseforge.com/api/projects/326516/localization/import"
   ) || exit 1
   case $result in
     200) echo "done." ;;

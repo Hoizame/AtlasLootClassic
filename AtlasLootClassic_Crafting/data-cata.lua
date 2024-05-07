@@ -472,7 +472,7 @@ data["EnchantingCata"] = {
 }
 
 --[[
-data["EngineeringWrath"] = {
+data["EngineeringCata"] = {
 	name = ALIL["Engineering"],
 	ContentType = PROF_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
@@ -2129,136 +2129,117 @@ data["CookingCata"] = {
 	CorrespondingFields = private.COOKING_LINK,
 	items = {
 		{
-			name = ALIL["Agility"],
+			name = ALIL["Feast"],
 			[NORMAL_DIFF] = {
-				{ 1, 57441 },	-- Blackened Dragonfin
+				{ 1, 88036 }, -- Seafood Magnifique Feast
+				{ 2, 88011 }, -- Broiled Dragon Feast
+			},
+		},
+		{
+			name = ALIL["Useful Stat"],
+			[NORMAL_DIFF] = {
+				{ 1, 88019 }, -- Fortune Cookie
 			},
 		},
 		{
 			name = ALIL["Strength"],
 			[NORMAL_DIFF] = {
-				{ 1, 57442 },	-- Dragonfin Filet
+				{ 1, 88005 }, -- Beer-Basted Crocolisk
+				{ 2, 88021 }, -- Hearty Seafood Soup
 			},
 		},
 		{
-			name = ALIL["Hit"],
+			name = ALIL["Agility"],
 			[NORMAL_DIFF] = {
-				{ 1, 57437 },	-- Snapper Extreme
-				{ 2, 62350 },	-- Worg Tartare
+				{ 1, 88042 }, -- Skewered Eel
+				{ 2, 88046 }, -- Tender Baked Turtle
 			},
 		},
 		{
-			name = ALIL["Haste"],
+			name = ALIL["Intellect"],
 			[NORMAL_DIFF] = {
-				{ 1, 45570 },	-- Imperial Manta Steak
-				{ 2, 45558 },	-- Very Burnt Worg
-				{ 3, 45569 },	-- Baked Manta Ray
-				{ 4, 45552 },	-- Roasted Worg
-			},
-		},
-		{
-			name = ALIL["Critical Strike"],
-			[NORMAL_DIFF] = {
-				{ 1, 45557 },	-- Spiced Worm Burger
-				{ 2, 45571 },	-- Spicy Blue Nettlefish
-				{ 3, 45565 },	-- Poached Nettlefish
-				{ 4, 45551 },	-- Worm Delight
+				{ 1, 88039 }, -- Severed Sagefish Head
+				{ 2, 88033 }, -- Pickled Guppy
 			},
 		},
 		{
 			name = ALIL["Spirit"],
 			[NORMAL_DIFF] = {
-				{ 1, 57439 },	-- Cuttlesteak
+				{ 1, 88016 }, -- Delicious Sagefish Tail
+				{ 2, 88047 }, -- Whitecrest Gumbo
 			},
 		},
 		{
-			name = ALIL["Attack Power"],
+			name = ALIL["Mastery"],
 			[NORMAL_DIFF] = {
-				{ 1, 45555 },	-- Mega Mammoth Meal
-				{ 2, 45567 },	-- Poached Northern Sculpin
-				{ 3, 45563 },	-- Grilled Sculpin
-				{ 4, 45549 },	-- Mammoth Meal
+				{ 1, 88025 }, -- Lavascale Minestrone
+				{ 2, 88035 }, -- Salted Eye
 			},
 		},
 		{
-			name = ALIL["Spell Power"],
+			name = ALIL["Critical Strike"],
 			[NORMAL_DIFF] = {
-				{ 1, 45550 },	-- Shoveltusk Steak
-				{ 2, 45564 },	-- Smoked Salmon
-				{ 16, 45556 },	-- Tender Shoveltusk Steak
-				{ 17, 45568 },	-- Firecracker Salmon
-			},
-		},
-
-		{
-			name = ALIL["Attack Power"].." + "..ALIL["Spell Power"],
-			[NORMAL_DIFF] = {
-				{ 1, 58065 },	-- Dalaran Clam Chowder
+				{ 1, 88003 }, -- Baked Rockfish
+				{ 2, 88028 }, -- Lightly Fried Lurker
 			},
 		},
 		{
-			name = ALIL["Armor Penetration Rating"],
+			name = ALIL["Haste"],
 			[NORMAL_DIFF] = {
-				{ 1, 57436 },	-- Hearty Rhino
+				{ 1, 88004 }, -- Basilisk Liverdog
+				{ 2, 88012 }, -- Broiled Mountain Trout
+			},
+		},
+		{
+			name = ALIL["Hit"],
+			[NORMAL_DIFF] = {
+				{ 1, 88020 }, -- Grilled Dragon
+				{ 2, 88037 }, -- Seasoned Crab
 			},
 		},
 		{
 			name = ALIL["Expertise"],
 			[NORMAL_DIFF] = {
-				{ 1, 57434 },	-- Rhinolicious Wormsteak
+				{ 1, 88014 }, -- Crocolisk Au Gratin
+				{ 2, 88024 }, -- Lavascale Fillet
 			},
 		},
 		{
-			name = ALIL["Mana Per 5 Sec."],
+			name = ALIL["Dodge"],
 			[NORMAL_DIFF] = {
-				{ 1, 45559 },	-- Mighty Rhino Dogs
-				{ 2, 57433 },	-- Spicy Fried Herring
-				{ 3, 45566 },	-- Pickled Fangtooth
-				{ 4, 45553 },	-- Rhino Dogs
+				{ 1, 88031 }, -- Mushroom Sauce Mudfish
+				{ 2, 88030 }, -- Lurker Lunch
 			},
 		},
 		{
-			name = AL["Feast"],
+			name = ALIL["Parry"],
 			[NORMAL_DIFF] = {
-				{ 1, 45554 },	-- Great Feast
-				{ 3, 58528 },   -- Small Feast
-				{ 16, 57423 },	-- Fish Feast
-				{ 18, 58527 },  -- Gigantic Feast
+				{ 1, 88034 }, -- Blackbelly Sushi
 			},
 		},
 		{
 			name = ALIL["Food"],
 			[NORMAL_DIFF] = {
-				{ 1, 57421 },	-- Northern Stew
-				{ 3, 64358 },	-- Black Jelly
-				{ 4, 45561 },	-- Grilled Bonescale
-				{ 5, 45562 },	-- Sauteed Goby
-				{ 6, 45560 },	-- Smoked Rockfin
-				{ 8, 53056 },	-- Kungaloosh
-			},
-		},
-		{
-			name = AL["Pet"],
-			[NORMAL_DIFF] = {
-				{ 1, 57440 },	-- Spiced Mammoth Treats
+				{ 1, 96133 }, -- Scalding Murglesnout
+				{ 2, 88018 }, -- Fish Fry
+				{ 3, 88006 }, -- Blackened Surprise
 			},
 		},
 		{
 			name = AL["Special"],
 			[NORMAL_DIFF] = {
-				{ 1, 57438 },	-- Blackened Worg Steak
-				{ 2, 57443 },	-- Tracker Snacks
-				{ 4, 58523 },   -- Bad Clams
-				{ 5, 58521 },   -- Last Week's Mammoth
-				{ 16, 57435 },	-- Critter Bites
-				{ 19, 58525 },  -- Haunted Herring
-				{ 20, 58512 },  -- Tasty Cupcake
+				{ 1, 88017 }, -- Feathered Lure
+				{ 3, 88013 }, -- Chocolate Cookie
+				{ 4, 88045 }, -- Starfire Espresso
+				{ 16, 88044 }, -- South Island Iced Tea
+				{ 17, 88022 }, -- Highland Spirits
+				{ 18, 88015 }, -- Darkbrew Lager
 			},
 		},
 	}
 }
 
-data["FirstAidWrath"] = {
+data["FirstAidCata"] = {
 	name = ALIL["First Aid"],
 	ContentType = PROF_SEC_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
@@ -2301,14 +2282,75 @@ data["FishingCata"] = {
 	}
 }
 
---[[
 data["ArchaeologyCata"] = {
 	name = ALIL["Archaeology"],
 	ContentType = PROF_SEC_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
-	TableType = NORMAL_ITTYPE,
-	CorrespondingFields = private.FISHING_LINK,
+	TableType = PROF_ITTYPE,
+	CorrespondingFields = private.ARCHAEOLOGY_LINK,
 	items = {
+		{
+			name = AL["Endgame Gear"],
+			[NORMAL_DIFF] = {
+				{1, 90608}, -- Zin'rokh, Destroyer of Worlds
+				{2, 91227}, -- Staff of Sorcerer-Thane Thaurissan
+				{3, 92163}, -- Scimitar of the Sirocco
+				{4, 98533}, -- Extinct Turtle Shell
+				{5, 92139}, -- Staff of Ammunae
+				{16, 92168}, -- Ring of the Boy Emperor
+				{18, 91757}, -- Tyrande's Favorite Doll
+			},
+		},
+		{
+			name = AL["Leveling Gear"],
+			[NORMAL_DIFF] = {
+				{1, 90997}, -- Nifflevar Bearded Axe
+				{16, 90843}, -- Headdress of the First Shaman
+				{17, 90616}, -- Queen Azshara's Dressing Gown
+			},
+		},
+		{
+			name = AL["Toys"],
+			[NORMAL_DIFF] = {
+				{1, 91214}, -- Blessing of the Old God
+				{2, 91761}, -- Bones of Transformation
+				{3, 91215}, -- Puzzle Box of Yogg-Saron
+				{4, 91773}, -- Wisp Amulet
+				{5, 92145}, -- Pendant of the Scarab Storm
+				{16, 90984}, -- The Last Relic of Argus
+				{17, 91226}, -- The Innkeeper's Daughter
+				{18, 98493}, -- Druid and Priest Statue Set
+				{19, 90553}, -- Chalice of the Mountain Kings
+				{20, 90464}, -- Highborne Soul Mirror
+				{21, 90983}, -- Arrival of the Naaru
+				{22, 90614}, -- Kaldorei Wind Chimes
+				{23, 98560}, -- Ancient Amber
+				{24, 98556}, -- Haunted War Drum
+				{25, 98569}, -- Vrykul Drinking Horn
+			},
+		},
+		{
+			name = AL["Mounts"],
+			[NORMAL_DIFF] = {
+				{1, 92148}, -- Scepter of Azj'Aqir
+				{2, 90619}, -- Fossilized Raptor
+			},
+		},
+		{
+			name = AL["Pets"],
+			[NORMAL_DIFF] = {
+				{1, 92137}, -- Crawling Claw
+				{3, 98588}, -- Voodoo Figurine
+				{4, 98582}, -- Pterrordax Hatchling
+				{5, 90521}, -- Clockwork Gnome
+				{6, 89693}, -- Fossilized Hatchling
+			},
+		},
+		{
+			name = AL["Misc"],
+			[NORMAL_DIFF] = {
+				{1, 91790}, -- Canopic Jar
+			}
+		},
 	}
 }
---]]

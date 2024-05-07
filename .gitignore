@@ -10,9 +10,8 @@ rawdata.lua
 data.lua
 .release
 .vscode/
-cata-data/
+cata_data/
 cf_localizations/
-test/
 
 # from @Blackwidow-sudo
 make.sh
