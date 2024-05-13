@@ -323,7 +323,9 @@ local function SlotButton_SetSlotItem(self, itemID)
                 self.modelFrame:TryOn("item:"..itemID)
             end
         end
-        local obsoleteType = Favourites:IsItemEquippedOrObsolete(itemID)
+        local db = Favourites:GetDb()
+        local listId = db.activeList[1]
+        local obsoleteType = Favourites:IsItemEquippedOrObsolete(itemID, listId)
         if obsoleteType then
             if obsoleteType == "obsolete" then
                 self.ownedItem:SetVertexColor(0.6, 0.6, 0.6) -- Darken items that are obsolete but not owned a bit
