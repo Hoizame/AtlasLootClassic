@@ -203,7 +203,7 @@ data["BlacksmithingCata"] = {
 				{ 3, 76451 }, -- Elementium Poleaxe
 				{ 4, 99660 }, -- Witch Hunter's Harvester
 			}
-		},		
+		},
 		{ -- Shield
 			name = AL["Weapons"].." - "..ALIL["Shield"],
 			[NORMAL_DIFF] = {
@@ -281,8 +281,8 @@ data["BlacksmithingCata"] = {
 				{ 4,76462 }, -- Vicious Pyrium Legguards
 				{ 5, 76470 }, -- Vicious Ornate Pyrium Legguards
 				{ 6, 101928 }, -- Foundations of Courage
-				{ 7, 101925 }, -- Unstoppable Destroyer's Legplates	
-				{ 8, 101924 }, -- Pyrium Legplates of Purified Evil	
+				{ 7, 101925 }, -- Unstoppable Destroyer's Legplates
+				{ 8, 101924 }, -- Pyrium Legplates of Purified Evil
 			},
 		},
 		{ -- Waist
