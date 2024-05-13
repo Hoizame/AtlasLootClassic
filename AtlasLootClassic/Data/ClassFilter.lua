@@ -112,7 +112,7 @@ local FILTER_DATA = {
             [LE_ITEM_WEAPON_MACE2H] 		= C.DRUID + C.PALADIN + C.SHAMAN + C.WARRIOR + C.DEATHKNIGHT, -- Two-Handed Maces
             [LE_ITEM_WEAPON_POLEARM] 		= C.DRUID + C.HUNTER + C.PALADIN + C.WARRIOR + C.DEATHKNIGHT, -- Polearms
             [LE_ITEM_WEAPON_SWORD1H] 		= C.HUNTER + C.MAGE + C.PALADIN + C.ROGUE + C.WARLOCK + C.WARRIOR + C.DEATHKNIGHT, -- One-Handed Swords
-            [LE_ITEM_WEAPON_SWORD2H] 		= C.HUNTER + C.PALADIN + C.WARRIOR, -- Two-Handed Swords
+            [LE_ITEM_WEAPON_SWORD2H] 		= C.HUNTER + C.PALADIN + C.WARRIOR + C.DEATHKNIGHT, -- Two-Handed Swords
             [LE_ITEM_WEAPON_WARGLAIVE] 	    = true, -- Warglaives
             [LE_ITEM_WEAPON_STAFF] 		    = C.DRUID + C.MAGE + C.PRIEST + C.SHAMAN + C.WARLOCK, -- Staves
             --[LE_ITEM_WEAPON_BEARCLAW] 	= true, -- Bear Claws
@@ -149,7 +149,7 @@ local FILTER_DATA = {
             [LE_ITEM_ARMOR_IDOL] 	    = C.DRUID, -- Idols
             [LE_ITEM_ARMOR_TOTEM] 	    = C.SHAMAN, -- Totems
             --[LE_ITEM_ARMOR_SIGIL] 	    = true, -- Sigils (DK)
-            [LE_ITEM_ARMOR_RELIC] 	    = C.SHAMAN + C.PALADIN + C.DRUID, -- Relic
+            [LE_ITEM_ARMOR_RELIC] 	    = C.SHAMAN + C.PALADIN + C.DRUID + C.DEATHKNIGHT, -- Relic
         },
         [LE_ITEM_CLASS_REAGENT] = {
             [0] = true, -- Reagent
