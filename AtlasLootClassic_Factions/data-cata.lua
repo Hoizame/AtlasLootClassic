@@ -179,7 +179,7 @@ data["Avengers of Hyjal"] = {
     items = {
         { -- Exalted 8
             name = ALIL["Exalted"],
-            [NORMAL_DIFF] = {
+            [ALLIANCE_DIFF] = {
                 {1, "f1177rep8"},
                 {2, 63039}, -- Reins of the Drake of the West Wind
                 {3, 62471}, -- Mirror of Broken Images
@@ -192,7 +192,7 @@ data["Avengers of Hyjal"] = {
         },
         { -- Revered 7
             name = ALIL["Revered"],
-            [NORMAL_DIFF] = {
+            [ALLIANCE_DIFF] = {
                 {1, "f1177rep7"},
                 {2, 62473}, -- Blade of the Fearless
                 {3, 62474}, -- Spear of Trailing Shadows
@@ -207,7 +207,7 @@ data["Avengers of Hyjal"] = {
         },
         { -- Honored 6
             name = ALIL["Honored"],
-            [NORMAL_DIFF] = {
+            [ALLIANCE_DIFF] = {
                 {1, "f1177rep6"},
                 {2, 63379}, -- Baradin's Wardens Tabard
                 {3, 63141}, -- Tol Barad Searchlight
@@ -217,7 +217,7 @@ data["Avengers of Hyjal"] = {
         },
         { -- Friendly 5
             name = ALIL["Friendly"],
-            [NORMAL_DIFF] = {
+            [ALLIANCE_DIFF] = {
                 {1, "f1177rep5"},
                 {2, 63517}, -- Baradin's Wardens Commendation
                 {3, 63145}, -- Baradin's Wardens Mana Potion
@@ -233,7 +233,7 @@ data["Avengers of Hyjal"] = {
     items = {
         { -- Exalted 8
             name = ALIL["Exalted"],
-            [NORMAL_DIFF] = {
+            [HORDE_DIFF] = {
                 {1, "f1172rep8"},
                 {2, 62416}, -- Yellow Smoke Pendant
                 {3, 62418}, -- Boots of Sullen Rock
@@ -243,7 +243,7 @@ data["Avengers of Hyjal"] = {
         },
         { -- Revered 7
             name = ALIL["Revered"],
-            [NORMAL_DIFF] = {
+            [HORDE_DIFF] = {
                 {1, "f1172rep7"},
                 {2, 62368}, -- Arcanum of the Dragonmaw
                 {3, 62415}, -- Band of Lamentation
@@ -254,7 +254,7 @@ data["Avengers of Hyjal"] = {
         },
         { -- Honored 6
             name = ALIL["Honored"],
-            [NORMAL_DIFF] = {
+            [HORDE_DIFF] = {
                 {1, "f1172rep6"},
                 {2, 62404}, -- Spaulders of the Endless Plains
                 {3, 62405}, -- Leggings of the Impenitent
@@ -264,7 +264,7 @@ data["Avengers of Hyjal"] = {
         },
         { -- Friendly 5
             name = ALIL["Friendly"],
-            [NORMAL_DIFF] = {
+            [HORDE_DIFF] = {
                 {1, "f1172rep5"},
                 {2, 65909}, -- Tabard of the Dragonmaw Clan
             },
@@ -321,7 +321,7 @@ data["Avengers of Hyjal"] = {
     items = {
         { -- Exalted 8
             name = ALIL["Exalted"],
-            [NORMAL_DIFF] = {
+            [HORDE_DIFF] = {
                 {1, "f1178rep8"},
                 {2, 62464}, -- Impatience of Youth
                 {3, 64999}, -- Reins of the Spectral Wolf
@@ -334,7 +334,7 @@ data["Avengers of Hyjal"] = {
         },
         { -- Revered 7
             name = ALIL["Revered"],
-            [NORMAL_DIFF] = {
+            [HORDE_DIFF] = {
                 {1, "f1178rep7"},
                 {2, 62460}, -- Sky Piercer
                 {3, 62454}, -- Blade of the Fearless
@@ -349,7 +349,7 @@ data["Avengers of Hyjal"] = {
         },
         { -- Honored 6
             name = ALIL["Honored"],
-            [NORMAL_DIFF] = {
+            [HORDE_DIFF] = {
                 {1, "f1178rep6"},
                 {2, 63378}, -- Hellscream's Reach Tabard
                 {3, 64996}, -- Rustberg Gull
@@ -359,7 +359,7 @@ data["Avengers of Hyjal"] = {
         },
         { -- Friendly 5
             name = ALIL["Friendly"],
-            [NORMAL_DIFF] = {
+            [HORDE_DIFF] = {
                 {1, "f1178rep5"},
                 {2, 63518}, -- Hellscream's Reach Commendation
                 {3, 64994}, -- Hellscream's Reach Healing Potion
@@ -508,7 +508,7 @@ data["Avengers of Hyjal"] = {
     items = {
         { -- Exalted 8
             name = ALIL["Exalted"],
-            [NORMAL_DIFF] = {
+            [ALLIANCE_DIFF] = {
                 {1, "f1174rep8"},
                 {2, 62434}, -- Lightning Flash Pendant
                 {3, 62433}, -- Stormbolt Gloves
@@ -518,7 +518,7 @@ data["Avengers of Hyjal"] = {
         },
         { -- Revered 7
             name = ALIL["Revered"],
-            [NORMAL_DIFF] = {
+            [ALLIANCE_DIFF] = {
                 {1, "f1174rep7"},
                 {2, 62429}, -- Windhome Helm
                 {3, 62422}, -- Arcanum of the Wildhammer
@@ -529,7 +529,7 @@ data["Avengers of Hyjal"] = {
         },
         { -- Honored 6
             name = ALIL["Honored"],
-            [NORMAL_DIFF] = {
+            [ALLIANCE_DIFF] = {
                 {1, "f1174rep6"},
                 {2, 62425}, -- Swiftflight Leggings
                 {3, 62423}, -- Helm of the Skyborne
@@ -539,7 +539,7 @@ data["Avengers of Hyjal"] = {
         },
         { -- Friendly 5
             name = ALIL["Friendly"],
-            [NORMAL_DIFF] = {
+            [ALLIANCE_DIFF] = {
                 {1, "f1174rep5"},
                 {2, 65908}, -- Tabard of the Wildhammer Clan
             },

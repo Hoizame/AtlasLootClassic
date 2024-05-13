@@ -1399,6 +1399,7 @@ data["TabardsWrath"] = {
 				{ 1, 43155 },	-- Tabard of the Ebon Blade
 				{ 2, 43157 },	-- Tabard of the Kirin Tor
 				{ 3, 43156 },	-- Tabard of the Wyrmrest Accord
+				-- TODO: Add missing
 			},
 		},
 	},

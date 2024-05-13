@@ -51,6 +51,12 @@ local PRICE_INFO_LIST = {
     ["SiderealEssence"] = { currencyID = 2589 }, -- Sidereal Essence
     ["DefilersScourgestone"] = {currencyID = 2711}, -- Defiler's Scourgestone
 
+    -- Cata
+    ["chefs"] = { currencyID = 402 }, -- Chef's Award
+
+    ["JusticePoints"] = { currencyID = 395 }, -- Justice Points
+    ["ValorPoints"] = { currencyID = 396 }, -- Valor Points
+
     --- PvP
     ["cpvpAlterac"] = { currencyID = 121 }, -- Alterac Valley Mark of Honor
 	["cpvpWarsong"] = { currencyID = 125 }, -- Warsong Gulch Mark of Honor
@@ -952,6 +958,12 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
         [51558] = "money:10000000",
         [51559] = "money:10000000",
         [51560] = "money:10000000",
+    }
+end
+
+if AtlasLoot:GameVersion_GE(AtlasLoot.CATA_VERSION_NUM) then
+    VENDOR_PRICES_RAW.CATA = {
+        -- TODO: Add vendor prices
     }
 end
 

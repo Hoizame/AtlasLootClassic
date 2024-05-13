@@ -43,4 +43,4 @@ items.lua
 source.lua
 source-tbc.lua
 source-wrath.lua
-#source-cata.lua
+source-cata.lua
