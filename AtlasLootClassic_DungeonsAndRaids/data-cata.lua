@@ -22,9 +22,6 @@ local ALIL = AtlasLoot.IngameLocales
 local NORMAL_DIFF = data:AddDifficulty("NORMAL", nil, nil, nil, true)
 local HEROIC_DIFF = data:AddDifficulty("HEROIC", nil, nil, nil, true)
 
---local RAID_N= data:AddDifficulty("Normal")
---local RAID_H = data:AddDifficulty("Heroic")
-
 local VENDOR_DIFF = data:AddDifficulty(AL["Vendor"], "vendor", 0)
 
 local NORMAL_ITTYPE = data:AddItemTableType("Item", "Item")
@@ -61,190 +58,410 @@ local PURPLE = "|cff9900ff%s|r"
 -- format
 local BONUS_LOOT_SPLIT = "%s - %s"
 
+--Achievements
+local CATA_DUNGEON_HERO_AC_TABLE = {	--[Cataclysm Dungeon Hero]
+	name = select(2, GetAchievementInfo(4844)),
+	TableType = AC_ITTYPE,
+	ExtraList = true,
+	IgnoreAsSource = true,
+	CoinTexture = "Achievement",
+	[HEROIC_DIFF] = {
+		{ 1, 4844 },
+		{ 2, 5060 },			{ 17, 5061 },
+		{ 3, 5063 },			{ 18, 5064 },
+		{ 4, 5062 },			{ 19, 5065 },
+		{ 5, 5066 },			{ 20, 5083 },
+		{ 6, 5093 }
+	},
+}
+
+local CATA_GLORY_OF_THE_HERO_AC_TABLE = {	--[Glory of the Cataclysm Hero]
+	AchievementID = 4845,
+	TableType = AC_ITTYPE,
+	ExtraList = true,
+	IgnoreAsSource = true,
+	CoinTexture = "Achievement",
+	[HEROIC_DIFF] = {
+		{ 1, 4845 },
+		{ 2, 4844 },			{ 17, 5281 },
+		{ 3, 5282 },			{ 18, 5283 },
+		{ 4, 5284 },			{ 19, 5285 },
+		{ 5, 5286 },			{ 20, 5287 },
+		{ 6, 5288 },			{ 21, 5289 },
+		{ 7, 5290 },			{ 22, 5291 },
+		{ 8, 5292 },			{ 23, 5293 },
+		{ 9, 5294 },			{ 24, 5295 },
+		{ 10, 5296 },			{ 25, 5297 },
+		{ 11, 5366 },			{ 26, 5367 },
+		{ 12, 5368 },			{ 27, 5369 },
+		{ 13, 5370 },			{ 28, 5371 },
+		{ 14, 5503 },			{ 29, 5504 },
+		{ 15, 5505 },			{ 30, 5298 },
+	},
+}
+
+local CATA_DEFENDER_AC_TABLE = {	--[Defender of a Shattered World]
+	AchievementID = 5506,
+	TableType = AC_ITTYPE,
+	ExtraList = true,
+	IgnoreAsSource = true,
+	CoinTexture = "Achievement",
+	[NORMAL_DIFF] = {
+		{ 1, 5506 },
+		{ 2, 4842 },			{ 17, 4851 },
+		{ 3, 4850 },
+	},
+	[HEROIC_DIFF] = {
+		{ 1, 5506 },
+		{ 2, 5060 },			{ 17, 5061 },
+		{ 3, 5063 },			{ 18, 5064 },
+		{ 4, 5062 },			{ 19, 5065 },
+		{ 5, 5066 },			{ 20, 5083 },
+		{ 6, 5093 }
+	}
+}
+
+local CATA_RAID1_AC_TABLE = {	--[Glory of the Cataclysm Raider]
+	AchievementID = 4853,
+	TableType = AC_ITTYPE,
+	ExtraList = true,
+	IgnoreAsSource = true,
+	CoinTexture = "Achievement",
+	[NORMAL_DIFF] = {
+		{ 1, 4853 },
+		{ 2, 5306 },			{ 17, 5307 },
+		{ 3, 5308 },			{ 18, 5309 },
+		{ 4, 5310 },			{ 19, 4849 },
+		{ 5, 5300 },			{ 20, 4852 },
+		{ 6, 5311 },			{ 21, 5312 },
+		{ 7, 5304 },			{ 22, 5305 },
+	},
+	[HEROIC_DIFF] = {
+		{ 1, 4853 },
+		{ 2, 5094 },			{ 17, 5107 },
+		{ 3, 5108 },			{ 18, 5109 },
+		{ 4, 5115 },			{ 19, 5116 },
+		{ 5, 5118 },			{ 20, 5117 },
+		{ 6, 5119 },			{ 21, 5120 },
+		{ 7, 5112 },			{ 22, 5123 },
+	},
+}
+
+local CATA_RAID2_AC_TABLE = {	--[Glory of the Firelands Raider]
+	AchievementID = 5828,
+	TableType = AC_ITTYPE,
+	ExtraList = true,
+	IgnoreAsSource = true,
+	CoinTexture = "Achievement",
+	[NORMAL_DIFF] = {
+		{ 1, 5828 },
+		{ 2, 5821 },			{ 17, 5810 },
+		{ 3, 5813 },			{ 18, 5829 },
+		{ 4, 5830 },			{ 19, 5799 },
+	},
+	[HEROIC_DIFF] = {
+		{ 1, 5828, "mount97560" },
+		{ 2, 5807 },			{ 17, 5808 },
+		{ 3, 5806 },			{ 18, 5809 },
+		{ 4, 5805 },			{ 19, 5804 },
+	},
+}
+
+local CATA_RAID3_AC_TABLE = {	--[Glory of the Dragon Soul Raider]
+	AchievementID = 6169,
+	TableType = AC_ITTYPE,
+	ExtraList = true,
+	IgnoreAsSource = true,
+	CoinTexture = "Achievement",
+	[NORMAL_DIFF] = {
+		{ 1, 6169 },
+		{ 2, 6174 },			{ 17, 6129 },
+		{ 3, 6128 },			{ 18, 6175 },
+		{ 4, 6084 },			{ 19, 6105 },
+		{ 5, 6133 },			{ 20, 6180 },
+	},
+	[HEROIC_DIFF] = {
+		{ 1, 6169 },
+		{ 2, 6109 },			{ 17, 6110 },
+		{ 3, 6111 },			{ 18, 6112 },
+		{ 4, 6113 },			{ 19, 6114 },
+	},
+}
+
+data["Blackrock Caverns"] = {
+	nameFormat = NAME_BLACKROCK,
+	MapID = 4926,
+	EncounterJournalID = 66,
+	ContentType = DUNGEON_CONTENT,
+	items = {
+		{ -- Rom'ogg Bonecrusher
+			name = AL["Rom'ogg Bonecrusher"],
+			EncounterJournalID = 1040,
+			[NORMAL_DIFF] = {
+				{ 1, 55278 },	-- Inquisition Robes
+				{ 2, 55279 },	-- Manacles of Pain
+				{ 3, 55776 },	-- Skullcracker Ring
+				{ 4, 55777 },	-- Torturer's Mercy
+				{ 5, 55778 },	-- Shield of the Iron Maiden
+			},
+			[HEROIC_DIFF] = {
+				{ 1, 56311 },	-- Inquisition Robes
+				{ 2, 56313 },	-- Manacles of Pain
+				{ 3, 56310 },	-- Skullcracker Ring
+				{ 4, 56312 },	-- Torturer's Mercy
+				{ 5, 56314 },	-- Shield of the Iron Maiden
+				{ 16, "ac5281" },
+			},
+		},
+		{ -- Corla, Herald of Twilight
+			name = AL["Corla, Herald of Twilight"],
+			EncounterJournalID = 1038,
+			[NORMAL_DIFF] = {
+				{ 1, 55264 },	-- Armbands of Change
+				{ 2, 55263 },	-- Renouncer's Cowl
+				{ 3, 55265 },	-- Signet of Transformation
+				{ 4, 55266 },	-- Grace of the Herald
+				{ 5, 55267 },	-- Corla's Baton
+			},
+			[HEROIC_DIFF] = {
+				{ 1, 56297 },	-- Armbands of Change
+				{ 2, 56298 },	-- Renouncer's Cowl
+				{ 3, 56299 },	-- Signet of Transformation
+				{ 4, 56295 },	-- Grace of the Herald
+				{ 5, 56296 },	-- Corla's Baton
+				{ 16, "ac5282" },
+			},
+		},
+		{ -- Karsh Steelbender
+			name = AL["Karsh Steelbender"],
+			EncounterJournalID = 1039,
+			[NORMAL_DIFF] = {
+				{ 1, 55270 },	-- Burned Gatherings
+				{ 2, 55269 },	-- Heat Wave Leggings
+				{ 3, 55268 },	-- Bracers of Cooled Anger
+				{ 4, 55271 },	-- Quicksilver Amulet
+				{ 5, 55272 },	-- Steelbender's Masterpiece
+			},
+			[HEROIC_DIFF] = {
+				{ 1, 56304 },	-- Burned Gatherings
+				{ 2, 56303 },	-- Heat Wave Leggings
+				{ 3, 56301 },	-- Bracers of Cooled Anger
+				{ 4, 56300 },	-- Quicksilver Amulet
+				{ 5, 56302 },	-- Steelbender's Masterpiece
+				{ 16, "ac5283" },
+			},
+		},
+		{ -- Beauty
+			name = AL["Beauty"],
+			EncounterJournalID = 1037,
+			[NORMAL_DIFF] = {
+				{ 1, 55275 },	-- Beauty's Silken Ribbon
+				{ 2, 55273 },	-- Beauty's Chew Toy
+				{ 3, 55274 },	-- Beauty's Plate
+				{ 4, 55276 },	-- Kibble
+				{ 5, 55277 },	-- Beauty's Favorite Bone
+			},
+			[HEROIC_DIFF] = {
+				{ 1, 56305 },	-- Beauty's Silken Ribbon
+				{ 2, 56309 },	-- Beauty's Chew Toy
+				{ 3, 56308 },	-- Beauty's Plate
+				{ 4, 56307 },	-- Kibble
+				{ 5, 56306 },	-- Beauty's Favorite Bone
+			},
+		},
+		{ -- Ascendant Lord Obsidius
+			name = AL["Ascendant Lord Obsidius"],
+			EncounterJournalID = 1036,
+			[NORMAL_DIFF] = {
+				{ 1, 55780 },	-- Twitching Shadows
+				{ 2, 55786 },	-- Kyrstel Mantle
+				{ 3, 55785 },	-- Willowy Crown
+				{ 4, 55779 },	-- Raz's Pauldrons
+				{ 5, 55784 },	-- Clutches of Dying Light
+				{ 6, 55781 },	-- Carrier Wave Pendant
+				{ 7, 55787 },	-- Witching Hourglass
+				{ 8, 55782 },	-- Amber Messenger
+				{ 9, 55788 },	-- Crepuscular Shield
+				{ 16, "ac4833" },
+			},
+			[HEROIC_DIFF] = {
+				{ 1, 56315 },	-- Twitching Shadows
+				{ 2, 56324 },	-- Kyrstel Mantle
+				{ 3, 56321 },	-- Willowy Crown
+				{ 4, 56318 },	-- Raz's Pauldrons
+				{ 5, 56323 },	-- Clutches of Dying Light
+				{ 6, 56319 },	-- Carrier Wave Pendant
+				{ 7, 56320 },	-- Witching Hourglass
+				{ 8, 56317 },	-- Amber Messenger
+				{ 9, 56322 },	-- Crepuscular Shield
+				{ 11, 52078, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Chaos Orb
+				{ 16, "ac5060" },
+				{ 17, "ac5284" },
+			},
+		},
+		{	--BlackrockCavernsTrash
+			name = AL["Trash Mobs"],
+			ExtraList = true,
+			[NORMAL_DIFF] = {
+				{ 1, 55791 },	-- Acanthia's Lost Pendant
+				{ 16, 55790 },	-- Toxidunk Dagger
+				{ 17, 55789 },	-- Berto's Staff
+			},
+		},
+		CATA_DUNGEON_HERO_AC_TABLE,
+		CATA_DEFENDER_AC_TABLE,
+		CATA_GLORY_OF_THE_HERO_AC_TABLE,
+	}
+}
+
 data["Deadmines"] = {
 	nameFormat = NAME_CATACLYSM,
 	MapID = 1581,
-	--EncounterJournalID = 1581,
+	EncounterJournalID = 1581,
 	ContentType = DUNGEON_CONTENT,
 	items = {
 		{ -- Glubtok
 			name = AL["Glubtok"],
-			--EncounterJournalID = 1064,
-			[NORMAL_DIFF] = {
-				{1, 2169},
-				{2, 5195},
-				{3, 5444},
-			},
+			EncounterJournalID = 1064,
 			[HEROIC_DIFF] = {
-				{1, 63467},
-				{2, 63468},
-				{3, 63470},
-				{4, 63471},
-				{5, 65163},
+				{ 1, 63467 },	-- Shadow of the Past
+				{ 2, 63468 },	-- Defias Brotherhood Vest
+				{ 3, 63471 },	-- Vest of the Curious Visitor
+				{ 4, 63470 },	-- Missing Diplomat's Pauldrons
+				{ 5, 65163 },	-- Buzzer Blade
+				{ 16, "ac5366" },
 			},
 		},
 		{ -- Helix Gearbreaker
 			name = AL["Helix Gearbreaker"],
-			--EncounterJournalID = 1065,
-			[NORMAL_DIFF] = {
-				{1, 5191},
-				{2, 5199},
-				{3, 5200},
-				{4, 5443},
-			},
+			EncounterJournalID = 1065,
 			[HEROIC_DIFF] = {
-				{1, 63473},
-				{2, 63474},
-				{3, 63475},
-				{4, 63476},
-				{5, 65164},
+				{ 1, 63473 },	-- Cloak of Thredd
+				{ 2, 63475 },	-- Old Friend's Gloves
+				{ 3, 63476 },	-- Gearbreaker's Bindings
+				{ 4, 63474 },	-- Gear-Marked Gauntlets
+				{ 5, 65164 },	-- Cruel Barb
+				{ 16, "ac5367" },
 			},
 		},
 		{ -- Foe Reaper 5000
 			name = AL["Foe Reaper 5000"],
-			--EncounterJournalID = 1063,
-			[NORMAL_DIFF] = {
-				{1, 1937},
-				{2, 5187},
-				{3, 5201},
-			},
+			EncounterJournalID = 1063,
 			[HEROIC_DIFF] = {
-				{1, 65165},
-				{2, 65166},
-				{3, 65167},
+				{ 1, 65166 },	-- Buzz Saw
+				{ 2, 65165 },	-- Foe Reaper
+				{ 3, 65167 },	-- Emberstone Staff
+				{ 16, "ac5368" },
 			},
 		},
 		{ -- Admiral Ripsnarl
 			name = AL["Admiral Ripsnarl"],
-			--EncounterJournalID = 1062,
-			[NORMAL_DIFF] = {
-				{1, 872},
-				{2, 1156},
-				{3, 5196},
-			},
+			EncounterJournalID = 1062,
 			[HEROIC_DIFF] = {
-				{1, 65168},
-				{2, 65169},
-				{3, 65170},
+				{ 1, 65169 },	-- Lavishly Jeweled Ring
+				{ 2, 65170 },	-- Smite's Reaver
+				{ 3, 65168 },	-- Rockslicer
+				{ 16, "ac5369" },
 			},
 		},
 		{ -- "Captain" Cookie
 			name = AL["\"Captain\" Cookie"],
-			--EncounterJournalID = 1060,
-			[NORMAL_DIFF] = {
-				{1, 5192},
-				{2, 5193},
-				{3, 5197},
-				{4, 5198},
-				{5, 5202},
-			},
+			EncounterJournalID = 1060,
 			[HEROIC_DIFF] = {
-				{1, 65171},
-				{2, 65172},
-				{3, 65173},
-				{4, 65174},
-				{5, 65177},
+				{ 1, 65177 },	-- Cape of the Brotherhood
+				{ 2, 65174 },	-- Corsair's Overshirt
+				{ 3, 65173 },	-- Thief's Blade
+				{ 4, 65171 },	-- Cookie's Tenderizer
+				{ 5, 65172 },	-- Cookie's Stirring Rod
+				{ 16, "ac5370" },
 			},
 		},
 		{ -- Vanessa VanCleef
 			name = AL["Vanessa VanCleef"],
-			--EncounterJournalID = 1081,
+			EncounterJournalID = 95,
 			[HEROIC_DIFF] = {
-				{1, 63478},
-				{2, 63479},
-				{3, 63480},
-				{4, 63482},
-				{5, 63483},
-				{6, 63484},
-				{7, 63485},
-				{8, 63486},
-				{9, 63487},
-				{10, 65178},
+				{ 1, 63484 },	-- Armbands of Exiled Architects
+				{ 2, 63482 },	-- Daughter's Hands
+				{ 3, 63485 },	-- Cowl of Rebellion
+				{ 4, 65178 },	-- VanCleef's Boots
+				{ 5, 63479 },	-- Bracers of Some Consequence
+				{ 6, 63486 },	-- Shackles of the Betrayed
+				{ 7, 63478 },	-- Stonemason's Helm
+				{ 8, 63483 },	-- Guildmaster's Greaves
+				{ 10, 52078, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Chaos Orb
+				{ 16, "ac5083" },
+				{ 17, "ac5371" },
 			},
 		},
+		CATA_DUNGEON_HERO_AC_TABLE,
+		CATA_DEFENDER_AC_TABLE,
+		CATA_GLORY_OF_THE_HERO_AC_TABLE,
 	}
 }
 
 data["Shadowfang Keep"] = {
 	nameFormat = NAME_CATACLYSM,
 	MapID = 209,
-	--EncounterJournalID = 209,
+	EncounterJournalID = 209,
 	ContentType = DUNGEON_CONTENT,
 	items = {
 		{ -- Baron Ashbury
 			name = AL["Baron Ashbury"],
-			--EncounterJournalID = 1069,
-			[NORMAL_DIFF] = {
-				{1, 6314},
-				{2, 6323},
-				{3, 6324},
-			},
+			EncounterJournalID = 1069,
 			[HEROIC_DIFF] = {
-				{1, 63433},
-				{2, 63434},
-				{3, 63435},
-				{4, 63436},
-				{5, 63437},
+				{ 1, 63433 },	-- Robes of Arugal
+				{ 2, 63437 },	-- Baron Ashbury's Cuffs
+				{ 3, 63435 },	-- Boots of the Predator
+				{ 4, 63436 },	-- Traitor's Grips
+				{ 5, 63434 },	-- Gloves of the Greymane Wall
+				{ 16, "ac5503" },
 			},
 		},
 		{ -- Baron Silverlaine
 			name = AL["Baron Silverlaine"],
-			--EncounterJournalID = 1070,
-			[NORMAL_DIFF] = {
-				{1, 5254},
-				{2, 5943},
-				{3, 6319},
-				{4, 6321},
-			},
+			EncounterJournalID = 1070,
 			[HEROIC_DIFF] = {
-				{1, 63438},
-				{2, 63439},
-				{3, 63440},
-				{4, 63441},
-				{5, 63444},
+				{ 1, 63440 },	-- Boots of Lingering Sorrow
+				{ 2, 63439 },	-- Gloves of the Uplifted Cup
+				{ 3, 63444 },	-- Baron Silverlaine's Greaves
+				{ 4, 63438 },	-- Baroness Silverlaine's Locket
+				{ 5, 63441 },	-- Pendant of the Keep
+				{ 6, 132567 }, -- Blindwatcher's Chain
 			},
 		},
 		{ -- Commander Springvale
 			name = AL["Commander Springvale"],
-			--EncounterJournalID = 1071,
-			[NORMAL_DIFF] = {
-				{1, 3191},
-				{2, 6320},
-			},
+			EncounterJournalID = 1071,
 			[HEROIC_DIFF] = {
-				{1, 63445},
-				{2, 63446},
-				{3, 63447},
-				{4, 63448},
-				{5, 63449},
+				{ 1, 63448 },	-- Springvale's Cloak
+				{ 2, 63449 },	-- Thieving Spaulders
+				{ 3, 63447 },	-- Breastplate of the Stilled Heart
+				{ 4, 63446 },	-- Haunting Footfalls
+				{ 5, 63445 },	-- Arced War Axe
+				{ 16, "ac5504" },
 			},
 		},
 		{ -- Lord Walden
 			name = AL["Lord Walden"],
-			--EncounterJournalID = 1073,
-			[NORMAL_DIFF] = {
-				{1, 1292},
-				{2, 3230},
-				{3, 6341},
-				{4, 6642},
-			},
+			EncounterJournalID = 1073,
 			[HEROIC_DIFF] = {
-				{1, 63450},
-				{2, 63452},
-				{3, 63453},
-				{4, 63454},
-				{5, 63455},
+				{ 1, 63465 },	-- Mantle of Loss
+				{ 2, 63463 },	-- Mantle of the Eastern Lords
+				{ 3, 63459 },	-- Worgen Hunter's Helm
+				{ 4, 63462 },	-- Helm of Untold Stories
+				{ 5, 63458 },	-- Lord Walden's Breastplate
+				{ 6, 63457 },	-- Shackles of Undeath
+				{ 7, 63464 },	-- Greaves of the Misguided
+				{ 8, 63456 },	-- Meteor Shard
+				{ 9, 63461 },	-- Staff of Isolation
+				{ 11, 52078, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Chaos Orb
+				{ 16, "ac5093" },
+				{ 17, "ac5505" },
 			},
 		},
 		{ -- Lord Godfrey
 			name = AL["Lord Godfrey"],
-			--EncounterJournalID = 1072,
-			[NORMAL_DIFF] = {
-				{1, 3748},
-				{2, 6220},
-				{3, 6318},
-				{4, 6641},
-			},
+			EncounterJournalID = 1072,
 			[HEROIC_DIFF] = {
 				{1, 63456},
 				{2, 63457},
@@ -258,204 +475,254 @@ data["Shadowfang Keep"] = {
 				{10, 63465},
 			},
 		},
+		CATA_DUNGEON_HERO_AC_TABLE,
+		CATA_DEFENDER_AC_TABLE,
+		CATA_GLORY_OF_THE_HERO_AC_TABLE,
 	}
 }
 
+local ZUL_GURUB_MADNESS_LOOT = {
+	{ 1, "INV_Box_01", nil, AL["Gri'lek"], nil },	-- Gri'lek
+	{ 2, 69634 },	-- Fasc's Preserved Boots
+	{ 3, 69635 },	-- Amulet of Protection
+	{ 5, "INV_Box_01", nil, AL["Hazza'rah"], nil },	-- Hazza'rah
+	{ 6, 69636 },	-- Thekal's Claws
+	{ 7, 69637 },	-- Gurubashi Destroyer
+	{ 9, "INV_Box_01", nil, AL["Renataki"], nil },	-- Renataki
+	{ 10, 69638 },	-- Arlokk's Claws
+	{ 11, 69639 },	-- Renataki's Soul Slicer
+	{ 13, "INV_Box_01", nil, AL["Wushoolay"], nil },	-- Wushoolay
+	{ 14, 69640 },	-- Kilt of Forgotten Rites
+	{ 15, 69641 },	-- Troll Skull Chestplate
+	{ 16, "INV_Box_01", nil, AL["Shared"], nil },	-- Shared
+	{ 17, 69630 },	-- Handguards of the Tormented
+	{ 18, 69633 },	-- Plunderer's Gauntlets
+	{ 19, 69632 },	-- Lost Bag of Whammies
+	{ 20, 69631 },	-- Zulian Voodoo Stick
+	{ 21, 69647, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Mysterious Gurubashi Bijou
+}
 data["Zul'Gurub"] = {
 	nameFormat = NAME_CATACLYSM,
 	MapID = 1977,
-	--EncounterJournalID = 76,
+	EncounterJournalID = 76,
 	ContentType = DUNGEON_CONTENT,
 	items = {
 		{ -- High Priest Venoxis
 			name = AL["High Priest Venoxis"],
-			--EncounterJournalID = 1178,
+			EncounterJournalID = 1178,
 			[HEROIC_DIFF] = {
-				{1, 69600},
-				{2, 69601},
-				{3, 69602},
-				{4, 69603},
-				{5, 69604},
+				{ 1, 69601 },	-- Serpentine Leggings
+				{ 2, 69600 },	-- Belt of Slithering Serpents
+				{ 3, 69603 },	-- Breastplate of Serenity
+				{ 4, 69604 },	-- Coils of Hate
+				{ 5, 69602 },	-- Signet of Venoxis
+				{ 16, "ac5743" },
 			},
 		},
 		{ -- Bloodlord Mandokir
 			name = AL["Bloodlord Mandokir"],
-			--EncounterJournalID = 1179,
+			EncounterJournalID = 1179,
 			[HEROIC_DIFF] = {
-				{1, 69605},
-				{2, 69606},
-				{3, 69607},
-				{4, 69608},
-				{5, 69609},
+				{ 1, 69606 },	-- Hakkari Loa Drape
+				{ 2, 69608 },	-- Deathcharged Wristguards
+				{ 3, 69605 },	-- Amulet of the Watcher
+				{ 4, 69609 },	-- Bloodlord's Protector
+				{ 5, 69607 },	-- Touch of Discord
+				{ 7, 68823, "mount" },	-- Armored Razzashi Raptor
+				{ 16, "ac5762" },
 			},
 		},
 		{ -- Cache of Madness - Gri'lek
 			name = AL["Gri'lek"],
-			--EncounterJournalID = 788,
-			[HEROIC_DIFF] = {
-				{1, 69630},
-				{2, 69631},
-				{3, 69632},
-				{4, 69633},
-				{5, 69634},
-				{6, 69635},
-			},
+			EncounterJournalID = 788,
+			[HEROIC_DIFF] = ZUL_GURUB_MADNESS_LOOT,
 		},
 		{ -- Cache of Madness - Hazza'rah
 			name = AL["Hazza'rah"],
-			--EncounterJournalID = 788,
-			[HEROIC_DIFF] = {
-				{1, 69630},
-				{2, 69631},
-				{3, 69632},
-				{4, 69633},
-				{5, 69636},
-				{6, 69637},
-			},
+			EncounterJournalID = 788,
+			[HEROIC_DIFF] = ZUL_GURUB_MADNESS_LOOT,
 		},
 		{ -- Cache of Madness - Renataki
 			name = AL["Renataki"],
-			--EncounterJournalID = 788,
-			[HEROIC_DIFF] = {
-				{1, 69630},
-				{2, 69631},
-				{3, 69632},
-				{4, 69633},
-				{5, 69638},
-				{6, 69639},
-			},
+			EncounterJournalID = 788,
+			[HEROIC_DIFF] = ZUL_GURUB_MADNESS_LOOT,
 		},
 		{ -- Cache of Madness - Wushoolay
 			name = AL["Wushoolay"],
-			--EncounterJournalID = 788,
-			[HEROIC_DIFF] = {
-				{1, 69630},
-				{2, 69631},
-				{3, 69632},
-				{4, 69633},
-				{5, 69640},
-				{6, 69641},
-			},
+			EncounterJournalID = 788,
+			[HEROIC_DIFF] = ZUL_GURUB_MADNESS_LOOT,
 		},
 		{ -- High Priestess Kilnara
 			name = AL["High Priestess Kilnara"],
-			--EncounterJournalID = 1180,
+			EncounterJournalID = 1180,
 			[HEROIC_DIFF] = {
-				{1, 69610},
-				{2, 69611},
-				{3, 69612},
-				{4, 69613},
-				{5, 69614},
+				{ 1, 69612 },	-- Claw-Fringe Mantle
+				{ 2, 69611 },	-- Sash of Anguish
+				{ 3, 69613 },	-- Leggings of the Pride
+				{ 4, 69614 },	-- Roaring Mask of Bethekk
+				{ 5, 69610 },	-- Arlokk's Signet
+				{ 7, 68824, "mount" },	-- Swift Zulian Panther
 			},
 		},
 		{ -- Zanzil
 			name = AL["Zanzil"],
-			--EncounterJournalID = 1181,
+			EncounterJournalID = 1181,
 			[HEROIC_DIFF] = {
-				{1, 69615},
-				{2, 69616},
-				{3, 69617},
-				{4, 69618},
-				{5, 69619},
+				{ 1, 69616 },	-- Spiritbinder Spaulders
+				{ 2, 69615 },	-- Zombie Walker Legguards
+				{ 3, 69617 },	-- Plumed Medicine Helm
+				{ 4, 69619 },	-- Bone Plate Handguards
+				{ 5, 69618 },	-- Zulian Slasher
 			},
 		},
 		{ -- Jin'do the Godbreaker
 			name = AL["Jin'do the Godbreaker"],
-			--EncounterJournalID = 1182,
+			EncounterJournalID = 1182,
 			[HEROIC_DIFF] = {
-				{1, 69620},
-				{2, 69621},
-				{3, 69622},
-				{4, 69623},
-				{5, 69624},
-				{6, 69625},
-				{7, 69626},
-				{8, 69627},
-				{9, 69628},
-				{10, 69629},
+				{ 1, 69622 },	-- The Hexxer's Mask
+				{ 2, 69623 },	-- Vestments of the Soulflayer
+				{ 4, 69621 },	-- Twinblade of the Hakkari
+				{ 5, 69620 },	-- Twinblade of the Hakkari
+				{ 6, 69628 },	-- Jeklik's Smasher
+				{ 7, 69626 },	-- Jin'do's Verdict
+				{ 8, 69624 },	-- Legacy of Arlokk
+				{ 16, 69629 },	-- Shield of the Blood God
+				{ 17, 69627 },	-- Zulian Ward
+				{ 18, 69625 },	-- Mandokir's Tribute
+				{ 20, 69774, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Zul'Gurub Stone
+				{ 22, 52078, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Chaos Orb
+				{ 24, "ac5768" },
+				{ 25, "ac5759" },
 			},
 		},
+		{	-- Trash
+		name = AL["Trash Mobs"],
+		ExtraList = true,
+		[HEROIC_DIFF] = {
+			{ 1, 69800 },	-- Spiritguard Drape
+			{ 2, 69796 },	-- Spiritcaller Cloak
+			{ 3, 69798 },	-- Knotted Handwraps
+			{ 5, 69803 },	-- Gurubashi Punisher
+			{ 16, "ac5744" },
+		},
+	},
 	}
 }
 
 data["Zul'Aman"] = {
 	nameFormat = NAME_CATACLYSM,
 	MapID = 3805,
-	--EncounterJournalID = 77,
+	EncounterJournalID = 77,
 	ContentType = DUNGEON_CONTENT,
 	items = {
 		{ -- Akil'zon
 			name = AL["Akil'zon"],
-			--EncounterJournalID = 1189,
+			EncounterJournalID = 1189,
 			[HEROIC_DIFF] = {
-				{1, 69549},
-				{2, 69550},
-				{3, 69551},
-				{4, 69552},
-				{5, 69553},
+				{ 1, 69550 },	-- Leggings of Ancient Magics
+				{ 2, 69551 },	-- Feathers of Akil'zon
+				{ 3, 69549 },	-- Wristguards of the Predator
+				{ 4, 69552 },	-- Bracers of Hidden Purpose
+				{ 5, 69553 },	-- Talonguard Band
 			},
 		},
 		{ -- Nalorakk
 			name = AL["Nalorakk"],
-			--EncounterJournalID = 1190,
+			EncounterJournalID = 1190,
 			[HEROIC_DIFF] = {
-				{1, 69554},
-				{2, 69555},
-				{3, 69556},
-				{4, 69557},
-				{5, 69558},
+				{ 1, 69555 },	-- Boots of the Ursine
+				{ 2, 69556 },	-- Armbands of the Bear Spirit
+				{ 3, 69554 },	-- Pauldrons of Nalorakk
+				{ 4, 69558 },	-- Spiritshield Mask
+				{ 5, 69557 },	-- Jungle Striders
 			},
 		},
 		{ -- Jan'alai
 			name = AL["Jan'alai"],
-			--EncounterJournalID = 1191,
+			EncounterJournalID = 1191,
 			[HEROIC_DIFF] = {
-				{1, 69559},
-				{2, 69560},
-				{3, 69561},
-				{4, 69562},
-				{5, 69563},
+				{ 1, 69560 },	-- Jan'alai's Spaulders
+				{ 2, 69559 },	-- Amani'shi Bracers
+				{ 3, 69561 },	-- Hawkscale Waistguard
+				{ 4, 69562 },	-- Boots of Bad Mojo
+				{ 5, 69563 },	-- Ring of the Numberless Brood
 			},
 		},
 		{ -- Halazzi
 			name = AL["Halazzi"],
-			--EncounterJournalID = 1192,
+			EncounterJournalID = 1192,
 			[HEROIC_DIFF] = {
-				{1, 69564},
-				{2, 69565},
-				{3, 69566},
-				{4, 69567},
-				{5, 69568},
+				{ 1, 69567 },	-- Wristwraps of Departed Spirits
+				{ 2, 69564 },	-- The Savager's Mask
+				{ 3, 69565 },	-- Breastplate of Primal Fury
+				{ 4, 69568 },	-- Shadowmender Wristguards
+				{ 5, 69566 },	-- Shimmerclaw Band
+				{ 16, "ac5750" },
 			},
 		},
 		{ -- Hex Lord Malacrass
 			name = AL["Hex Lord Malacrass"],
-			--EncounterJournalID = 1193,
+			EncounterJournalID = 1193,
 			[HEROIC_DIFF] = {
-				{1, 69569},
-				{2, 69570},
-				{3, 69571},
-				{4, 69572},
-				{5, 69573},
-				{6, 70080},
+				{ 1, 69572 },	-- Hex Lord's Bloody Cloak
+				{ 2, 69569 },	-- Shadowtooth Trollskin Breastplate
+				{ 3, 69570 },	-- Waistband of Hexes
+				{ 4, 69573 },	-- Pauldrons of Sacrifice
+				{ 5, 69571 },	-- Soul Drain Signet
+				{ 6, 69762 },	-- Miniature Voodoo Mask
+				{ 8, 69264, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- The Hex Lord's Fetish
+				{ 16, 70080 },	-- Reforged Heartless
 			},
 		},
 		{ -- Daakara
 			name = AL["Daakara"],
-			--EncounterJournalID = 1194,
+			EncounterJournalID = 1194,
 			[HEROIC_DIFF] = {
-				{1, 69574},
-				{2, 69575},
-				{3, 69576},
-				{4, 69577},
-				{5, 69578},
-				{6, 69579},
-				{7, 69580},
-				{8, 69581},
-				{9, 69582},
-				{10, 69583},
+				{ 1, 69577 },	-- Collar of Bones
+				{ 2, 69578 },	-- Hexing Robes
+				{ 3, 69579 },	-- Amani Headdress
+				{ 4, 69574 },	-- Tusked Shoulderpads
+				{ 5, 69576 },	-- Headdress of Sharpened Vision
+				{ 6, 69580 },	-- Mask of Restless Spirits
+				{ 7, 69582 },	-- Skullpiercer Pauldrons
+				{ 8, 69583 },	-- Legguards of the Unforgiving
+				{ 16, 69581 },	-- Amani Scepter of Rites
+				{ 17, 69575 },	-- Mace of the Sacrificed
+				{ 19, 52078, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Chaos Orb
+				{ 21, "ac5769" },
+				{ 22, "ac5760" },
 			},
 		},
+		{	-- Timed Chest
+		name = AL["Timed Reward Chest"],
+		ExtraList = true,
+		[HEROIC_DIFF] = {
+			{ 1, 69584 },	-- Recovered Cloak of Frostheim
+			{ 2, 69585 },	-- Wristwraps of Madness
+			{ 3, 69589 },	-- Leggings of Dancing Blades
+			{ 4, 69586 },	-- Two-Toed Boots
+			{ 5, 69590 },	-- Mojo-Mender's Gloves
+			{ 6, 69593 },	-- Battleplate of the Amani Empire
+			{ 7, 69587 },	-- Chestplate of Hubris
+			{ 8, 69588 },	-- Skullcrusher Warboots
+			{ 16, 69591 },	-- Voodoo Hexblade
+			{ 17, 69592 },	-- Reforged Trollbane
+			{ 19, "INV_Box_01", "ac5858", AL["Bonus Loot"], nil },
+			{ 20, 69747, "mount" },	-- Amani Battle Bear
+		},
+	},
+	{	-- Trash
+		name = AL["Trash Mobs"],
+		ExtraList = true,
+		[HEROIC_DIFF] = {
+			{ 1, 69797 },	-- Charmbinder Grips
+			{ 2, 69801 },	-- Amani Armguards
+			{ 4, 69802 },	-- Band of the Gurubashi Berserker
+			{ 5, 69799 },	-- Quickfinger Ring
+			{ 16, 33993, "pet165" },	-- Mojo
+			{ 18, "ac5761" },
+		},
+	},
 	}
 }
 
@@ -544,115 +811,6 @@ data["Throne of the Tides"] = {
 				{8, 56289},
 				{9, 56290},
 				{10, 56291},
-			},
-		},
-	}
-}
-
-data["Blackrock Caverns"] = {
-	nameFormat = NAME_BLACKROCK,
-	MapID = 4926,
-	--EncounterJournalID = 66,
-	ContentType = DUNGEON_CONTENT,
-	items = {
-		{ -- Rom'ogg Bonecrusher
-			name = AL["Rom'ogg Bonecrusher"],
-			--EncounterJournalID = 1040,
-			[NORMAL_DIFF] = {
-				{1, 55278},
-				{2, 55279},
-				{3, 55776},
-				{4, 55777},
-				{5, 55778},
-			},
-			[HEROIC_DIFF] = {
-				{1, 56310},
-				{2, 56311},
-				{3, 56312},
-				{4, 56313},
-				{5, 56314},
-			},
-		},
-		{ -- Corla, Herald of Twilight
-			name = AL["Corla, Herald of Twilight"],
-			--EncounterJournalID = 1038,
-			[NORMAL_DIFF] = {
-				{1, 55263},
-				{2, 55264},
-				{3, 55265},
-				{4, 55266},
-				{5, 55267},
-			},
-			[HEROIC_DIFF] = {
-				{1, 56295},
-				{2, 56296},
-				{3, 56297},
-				{4, 56298},
-				{5, 56299},
-			},
-		},
-		{ -- Karsh Steelbender
-			name = AL["Karsh Steelbender"],
-			--EncounterJournalID = 1039,
-			[NORMAL_DIFF] = {
-				{1, 55268},
-				{2, 55269},
-				{3, 55270},
-				{4, 55271},
-				{5, 55272},
-			},
-			[HEROIC_DIFF] = {
-				{1, 56300},
-				{2, 56301},
-				{3, 56302},
-				{4, 56303},
-				{5, 56304},
-			},
-		},
-		{ -- Beauty
-			name = AL["Beauty"],
-			--EncounterJournalID = 1037,
-			[NORMAL_DIFF] = {
-				{1, 55273},
-				{2, 55274},
-				{3, 55275},
-				{4, 55276},
-				{5, 55277},
-			},
-			[HEROIC_DIFF] = {
-				{1, 56305},
-				{2, 56306},
-				{3, 56307},
-				{4, 56308},
-				{5, 56309},
-			},
-		},
-		{ -- Ascendant Lord Obsidius
-			name = AL["Ascendant Lord Obsidius"],
-			--EncounterJournalID = 1036,
-			[NORMAL_DIFF] = {
-				{1, 55779},
-				{2, 55780},
-				{3, 55781},
-				{4, 55782},
-				{5, 55783},
-				{6, 55784},
-				{7, 55785},
-				{8, 55786},
-				{9, 55787},
-				{10, 55788},
-			},
-			[HEROIC_DIFF] = {
-				{1, 56315},
-				{2, 56316},
-				{3, 56317},
-				{4, 56318},
-				{5, 56319},
-				{6, 56320},
-				{7, 56321},
-				{8, 56322},
-				{9, 56323},
-				{10, 56324},
 			},
 		},
 	}
