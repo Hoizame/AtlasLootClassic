@@ -101,7 +101,7 @@ data["DUMMY"] = {
 }
 ]]
 
-data["Avengers of Hyjal"] = {
+data["AvengersOfHyjal"] = {
     FactionID = 1204,
     ContentType = FACTIONS_CONTENT,
     LoadDifficulty = LOAD_DIFF,
@@ -172,7 +172,7 @@ data["Avengers of Hyjal"] = {
             },
         },
     },
-}data["Baradin's Wardens"] = {
+}data["BaradinsWardens"] = {
     FactionID = 1177,
     ContentType = FACTIONS_ALLI_CONTENT,
     LoadDifficulty = LOAD_DIFF,
@@ -226,7 +226,7 @@ data["Avengers of Hyjal"] = {
             },
         },
     },
-}data["Dragonmaw Clan"] = {
+}data["DragonmawClan"] = {
     FactionID = 1172,
     ContentType = FACTIONS_HORDE_CONTENT,
     LoadDifficulty = LOAD_DIFF,
@@ -270,7 +270,7 @@ data["Avengers of Hyjal"] = {
             },
         },
     },
-}data["Guardians of Hyjal"] = {
+}data["GuardiansOfHyjal"] = {
     FactionID = 1158,
     ContentType = FACTIONS_CONTENT,
     LoadDifficulty = LOAD_DIFF,
@@ -314,7 +314,7 @@ data["Avengers of Hyjal"] = {
             },
         },
     },
-}data["Hellscream's Reach"] = {
+}data["HellscreamsReach"] = {
     FactionID = 1178,
     ContentType = FACTIONS_HORDE_CONTENT,
     LoadDifficulty = LOAD_DIFF,
@@ -414,7 +414,7 @@ data["Avengers of Hyjal"] = {
             },
         },
     },
-}data["The Earthen Ring"] = {
+}data["TheEarthenRing"] = {
     FactionID = 1135,
     ContentType = FACTIONS_CONTENT,
     LoadDifficulty = LOAD_DIFF,
@@ -501,7 +501,7 @@ data["Avengers of Hyjal"] = {
             },
         },
     },
-}data["Wildhammer Clan"] = {
+}data["WildhammerClan"] = {
     FactionID = 1174,
     ContentType = FACTIONS_ALLI_CONTENT,
     LoadDifficulty = LOAD_DIFF,

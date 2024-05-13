@@ -138,7 +138,6 @@ data["AlchemyCata"] = {
 			name = AL["Misc"],
 			[NORMAL_DIFF] = {
 				{1, 93328}, -- Vial of the Sands
-
                 {3, 80269}, -- Potion of Illusion
                 {4, 80725}, -- Potion of Deepholm
                 {5, 80726}, -- Potion of Treasure Finding
@@ -321,6 +320,7 @@ data["BlacksmithingCata"] = {
 		},
 	}
 }
+
 data["EnchantingCata"] = {
 	name = ALIL["Enchanting"],
 	ContentType = PROF_CONTENT,
@@ -438,7 +438,6 @@ data["EnchantingCata"] = {
 	}
 }
 
---[[
 data["EngineeringCata"] = {
 	name = ALIL["Engineering"],
 	ContentType = PROF_CONTENT,
@@ -449,7 +448,7 @@ data["EngineeringCata"] = {
 		{
 			name = AL["Armor"].." - "..ALIL["Head"].." - "..ALIL["Cloth"],
 			[NORMAL_DIFF] = {
-				{ 1, 56484 },	-- Visage Liquification Goggles
+				{ 1, 1725 }, -- Lightweight Bio-Optic Killshades
 			}
 		},
 		{
@@ -561,7 +560,7 @@ data["EngineeringCata"] = {
 		},
 	}
 }
-
+--[[
 data["TailoringWrath"] = {
 	name = ALIL["Tailoring"],
 	ContentType = PROF_CONTENT,
