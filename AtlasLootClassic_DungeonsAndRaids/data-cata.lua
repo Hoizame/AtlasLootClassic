@@ -1089,7 +1089,7 @@ data["Deadmines"] = {
 
 data["ShadowfangKeep"] = {
 	MapID = 209,
-	EncounterJournalID = 209,
+	--EncounterJournalID = 209,
 	InstanceID = 33,
 	ContentType = DUNGEON_CONTENT,
 	LevelRange = {85, 85, 85},
@@ -1172,7 +1172,8 @@ data["ShadowfangKeep"] = {
 
 data["ZulAman"] = {
 	MapID = 3805,
-	EncounterJournalID = 77,
+	InstanceID = 568,
+	--EncounterJournalID = 77,
 	ContentType = DUNGEON_CONTENT,
 	LevelRange = {85, 85, 85},
 	items = {

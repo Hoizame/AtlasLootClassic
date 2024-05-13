@@ -2774,6 +2774,7 @@ data["Karazhan"] = {
     }
 }
 
+--[[
 data["ZulAman"] = {
 	MapID = 3805,
 	InstanceID = 568,
@@ -2948,6 +2949,7 @@ data["ZulAman"] = {
         },
     }
 }
+--]]
 
 
 data["WorldBossesBC"] = {

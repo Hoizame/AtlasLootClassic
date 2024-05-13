@@ -435,6 +435,7 @@ data["WailingCaverns"] = {
 	},
 }
 
+--[[
 data["TheDeadmines"] = {
 	MapID = 1581,
 	InstanceID = 36,
@@ -778,6 +779,7 @@ data["ShadowfangKeep"] = {
 		},
 	},
 }
+--]]
 
 data["BlackfathomDeeps"] = {
 	MapID = 719,
@@ -5526,6 +5528,7 @@ data["Onyxia"] = {
 	},
 }
 
+--[[
 data["Zul'Gurub"] = {
 	MapID = 1977,
 	InstanceID = 309,
@@ -5906,6 +5909,7 @@ data["Zul'Gurub"] = {
 		},
 	},
 }
+--]]
 
 data["BlackwingLair"] = {
 	MapID = 2677,
