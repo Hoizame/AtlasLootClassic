@@ -1588,7 +1588,7 @@ data["BlackwingDescent"] = {
 				{ 7, 59450 },	-- Belt of the Blackhand
 				{ 9, 59442 },	-- Rage of Ages
 				{ 10, 59441 },	-- Prestor's Talisman of Machination
-				{ 12, 152968, "pet2080" }, -- Shadowy Pile of Bones -> Rattlejaw 
+				{ 12, 152968, "pet2080" }, -- Shadowy Pile of Bones -> Rattlejaw
 				{ 16, 63683 },	-- Helm of the Forlorn Conqueror
 				{ 17, 63684 },	-- Helm of the Forlorn Protector
 				{ 18, 63682 },	-- Helm of the Forlorn Vanquisher
@@ -1608,7 +1608,7 @@ data["BlackwingDescent"] = {
 				{ 7, 65022 },	-- Belt of the Blackhand
 				{ 9, 65025 },	-- Rage of Ages
 				{ 10, 65026 },	-- Prestor's Talisman of Machination
-				{ 12, 152968, "pet2080" }, -- Shadowy Pile of Bones -> Rattlejaw 
+				{ 12, 152968, "pet2080" }, -- Shadowy Pile of Bones -> Rattlejaw
 				{ 16, 65001 },	-- Crown of the Forlorn Conqueror
 				{ 17, 65000 },	-- Crown of the Forlorn Protector
 				{ 18, 65002 },	-- Crown of the Forlorn Vanquisher
@@ -2698,7 +2698,7 @@ data["DragonSoul"] = {
 				{ 20, 77201 },	-- Resolve of Undying
 				{ 22, "ac6133" },
 			},
-			[HEROIC_RAID_DIFF] = {
+			[HEROIC_DIFF] = {
 				{ 1, 78461 },	-- Gloves of Liquid Smoke
 				{ 2, 78462 },	-- Molten Blood Footpads
 				{ 3, 78463 },	-- Belt of Shattered Elementium
