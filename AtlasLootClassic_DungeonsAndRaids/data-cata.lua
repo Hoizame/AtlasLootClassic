@@ -41,11 +41,7 @@ local CLASS_NAME = AtlasLoot:GetColoredClassNames()
 
 -- name formats
 local NAME_COLOR, NAME_COLOR_BOSS = "|cffC0C0C0", "|cffC0C0C0"
-local NAME_CATACLYSM = NAME_COLOR..AL["Cataclysm"]..":|r %s" -- Blackrock Mountain
-local NAME_BLACKROCK = NAME_COLOR..AL["Blackrock"]..":|r %s" -- Blackrock Mountain
 local NAME_CAVERNS_OF_TIME = NAME_COLOR..AL["CoT"]..":|r %s" -- Caverns of Time
-local NAME_SKYWALL = NAME_COLOR..AL["Skywall"]..":|r %s" -- Skywall
-local NAME_ULDUM = NAME_COLOR..AL["Uldum"]..":|r %s" -- Uldum
 
 -- colors
 local BLUE = "|cff6666ff%s|r"
@@ -189,7 +185,6 @@ local CATA_RAID3_AC_TABLE = {	--[Glory of the Dragon Soul Raider]
 }
 
 data["BlackrockCaverns"] = {
-	nameFormat = NAME_BLACKROCK,
 	MapID = 4926,
 	--EncounterJournalID = 66,
 	InstanceID = 66,
@@ -530,7 +525,6 @@ data["TheStonecore"] = {
 }
 
 data["TheVortexPinnacle"] = {
-	nameFormat = NAME_SKYWALL,
 	MapID = 5035,
 	InstanceID = 657,
 	EncounterJournalID = 68,
@@ -624,7 +618,6 @@ data["TheVortexPinnacle"] = {
 }
 
 data["LostCityOfTolvir"] = {
-	nameFormat = NAME_ULDUM,
 	MapID = 5396,
 	InstanceID = 755,
 	EncounterJournalID = 69,
@@ -735,7 +728,6 @@ data["LostCityOfTolvir"] = {
 }
 
 data["HallsOfOrigination"] = {
-	nameFormat = NAME_ULDUM,
 	MapID = 4945,
 	InstanceID = 644,
 	EncounterJournalID = 70,
@@ -1010,7 +1002,6 @@ data["GrimBatol"] = {
 }
 
 data["Deadmines"] = {
-	nameFormat = NAME_CATACLYSM,
 	MapID = 1581,
 	--EncounterJournalID = 36,
 	InstanceID = 36,
@@ -1097,7 +1088,6 @@ data["Deadmines"] = {
 }
 
 data["ShadowfangKeep"] = {
-	nameFormat = NAME_CATACLYSM,
 	MapID = 209,
 	EncounterJournalID = 209,
 	InstanceID = 33,
@@ -1177,6 +1167,251 @@ data["ShadowfangKeep"] = {
 		CATA_DUNGEON_HERO_AC_TABLE,
 		CATA_DEFENDER_AC_TABLE,
 		CATA_GLORY_OF_THE_HERO_AC_TABLE,
+	}
+}
+
+data["ZulAman"] = {
+	MapID = 3805,
+	EncounterJournalID = 77,
+	ContentType = DUNGEON_CONTENT,
+	LevelRange = {85, 85, 85},
+	items = {
+		{ -- Akil'zon
+			name = AL["Akil'zon"],
+			EncounterJournalID = 1189,
+			[HEROIC_DIFF] = {
+				{ 1, 69550 },	-- Leggings of Ancient Magics
+				{ 2, 69551 },	-- Feathers of Akil'zon
+				{ 3, 69549 },	-- Wristguards of the Predator
+				{ 4, 69552 },	-- Bracers of Hidden Purpose
+				{ 5, 69553 },	-- Talonguard Band
+			},
+		},
+		{ -- Nalorakk
+			name = AL["Nalorakk"],
+			EncounterJournalID = 1190,
+			[HEROIC_DIFF] = {
+				{ 1, 69555 },	-- Boots of the Ursine
+				{ 2, 69556 },	-- Armbands of the Bear Spirit
+				{ 3, 69554 },	-- Pauldrons of Nalorakk
+				{ 4, 69558 },	-- Spiritshield Mask
+				{ 5, 69557 },	-- Jungle Striders
+			},
+		},
+		{ -- Jan'alai
+			name = AL["Jan'alai"],
+			EncounterJournalID = 1191,
+			[HEROIC_DIFF] = {
+				{ 1, 69560 },	-- Jan'alai's Spaulders
+				{ 2, 69559 },	-- Amani'shi Bracers
+				{ 3, 69561 },	-- Hawkscale Waistguard
+				{ 4, 69562 },	-- Boots of Bad Mojo
+				{ 5, 69563 },	-- Ring of the Numberless Brood
+			},
+		},
+		{ -- Halazzi
+			name = AL["Halazzi"],
+			EncounterJournalID = 1192,
+			[HEROIC_DIFF] = {
+				{ 1, 69567 },	-- Wristwraps of Departed Spirits
+				{ 2, 69564 },	-- The Savager's Mask
+				{ 3, 69565 },	-- Breastplate of Primal Fury
+				{ 4, 69568 },	-- Shadowmender Wristguards
+				{ 5, 69566 },	-- Shimmerclaw Band
+				{ 16, "ac5750" },
+			},
+		},
+		{ -- Hex Lord Malacrass
+			name = AL["Hex Lord Malacrass"],
+			EncounterJournalID = 1193,
+			[HEROIC_DIFF] = {
+				{ 1, 69572 },	-- Hex Lord's Bloody Cloak
+				{ 2, 69569 },	-- Shadowtooth Trollskin Breastplate
+				{ 3, 69570 },	-- Waistband of Hexes
+				{ 4, 69573 },	-- Pauldrons of Sacrifice
+				{ 5, 69571 },	-- Soul Drain Signet
+				{ 6, 69762 },	-- Miniature Voodoo Mask
+				{ 8, 69264, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- The Hex Lord's Fetish
+				{ 16, 70080 },	-- Reforged Heartless
+			},
+		},
+		{ -- Daakara
+			name = AL["Daakara"],
+			EncounterJournalID = 1194,
+			[HEROIC_DIFF] = {
+				{ 1, 69577 },	-- Collar of Bones
+				{ 2, 69578 },	-- Hexing Robes
+				{ 3, 69579 },	-- Amani Headdress
+				{ 4, 69574 },	-- Tusked Shoulderpads
+				{ 5, 69576 },	-- Headdress of Sharpened Vision
+				{ 6, 69580 },	-- Mask of Restless Spirits
+				{ 7, 69582 },	-- Skullpiercer Pauldrons
+				{ 8, 69583 },	-- Legguards of the Unforgiving
+				{ 16, 69581 },	-- Amani Scepter of Rites
+				{ 17, 69575 },	-- Mace of the Sacrificed
+				{ 19, 52078, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Chaos Orb
+				{ 21, "ac5769" },
+				{ 22, "ac5760" },
+			},
+		},
+		{	-- Timed Chest
+		name = AL["Timed Reward Chest"],
+		ExtraList = true,
+		[HEROIC_DIFF] = {
+			{ 1, 69584 },	-- Recovered Cloak of Frostheim
+			{ 2, 69585 },	-- Wristwraps of Madness
+			{ 3, 69589 },	-- Leggings of Dancing Blades
+			{ 4, 69586 },	-- Two-Toed Boots
+			{ 5, 69590 },	-- Mojo-Mender's Gloves
+			{ 6, 69593 },	-- Battleplate of the Amani Empire
+			{ 7, 69587 },	-- Chestplate of Hubris
+			{ 8, 69588 },	-- Skullcrusher Warboots
+			{ 16, 69591 },	-- Voodoo Hexblade
+			{ 17, 69592 },	-- Reforged Trollbane
+			{ 19, "INV_Box_01", "ac5858", AL["Bonus Loot"], nil },
+			{ 20, 69747, "mount" },	-- Amani Battle Bear
+		},
+	},
+	{	-- Trash
+		name = AL["Trash Mobs"],
+		ExtraList = true,
+		[HEROIC_DIFF] = {
+			{ 1, 69797 },	-- Charmbinder Grips
+			{ 2, 69801 },	-- Amani Armguards
+			{ 4, 69802 },	-- Band of the Gurubashi Berserker
+			{ 5, 69799 },	-- Quickfinger Ring
+			{ 16, 33993, "pet165" },	-- Mojo
+			{ 18, "ac5761" },
+		},
+	},
+	}
+}
+
+local ZUL_GURUB_MADNESS_LOOT = {
+	{ 1, "INV_Box_01", nil, AL["Gri'lek"], nil },	-- Gri'lek
+	{ 2, 69634 },	-- Fasc's Preserved Boots
+	{ 3, 69635 },	-- Amulet of Protection
+	{ 5, "INV_Box_01", nil, AL["Hazza'rah"], nil },	-- Hazza'rah
+	{ 6, 69636 },	-- Thekal's Claws
+	{ 7, 69637 },	-- Gurubashi Destroyer
+	{ 9, "INV_Box_01", nil, AL["Renataki"], nil },	-- Renataki
+	{ 10, 69638 },	-- Arlokk's Claws
+	{ 11, 69639 },	-- Renataki's Soul Slicer
+	{ 13, "INV_Box_01", nil, AL["Wushoolay"], nil },	-- Wushoolay
+	{ 14, 69640 },	-- Kilt of Forgotten Rites
+	{ 15, 69641 },	-- Troll Skull Chestplate
+	{ 16, "INV_Box_01", nil, AL["Shared"], nil },	-- Shared
+	{ 17, 69630 },	-- Handguards of the Tormented
+	{ 18, 69633 },	-- Plunderer's Gauntlets
+	{ 19, 69632 },	-- Lost Bag of Whammies
+	{ 20, 69631 },	-- Zulian Voodoo Stick
+	{ 21, 69647, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Mysterious Gurubashi Bijou
+}
+data["ZulGurub"] = {
+	MapID = 1977,
+	EncounterJournalID = 76,
+	ContentType = DUNGEON_CONTENT,
+	LevelRange = {85, 85, 85},
+	items = {
+		{ -- High Priest Venoxis
+			name = AL["High Priest Venoxis"],
+			EncounterJournalID = 1178,
+			[HEROIC_DIFF] = {
+				{ 1, 69601 },	-- Serpentine Leggings
+				{ 2, 69600 },	-- Belt of Slithering Serpents
+				{ 3, 69603 },	-- Breastplate of Serenity
+				{ 4, 69604 },	-- Coils of Hate
+				{ 5, 69602 },	-- Signet of Venoxis
+				{ 16, "ac5743" },
+			},
+		},
+		{ -- Bloodlord Mandokir
+			name = AL["Bloodlord Mandokir"],
+			EncounterJournalID = 1179,
+			[HEROIC_DIFF] = {
+				{ 1, 69606 },	-- Hakkari Loa Drape
+				{ 2, 69608 },	-- Deathcharged Wristguards
+				{ 3, 69605 },	-- Amulet of the Watcher
+				{ 4, 69609 },	-- Bloodlord's Protector
+				{ 5, 69607 },	-- Touch of Discord
+				{ 7, 68823, "mount" },	-- Armored Razzashi Raptor
+				{ 16, "ac5762" },
+			},
+		},
+		{ -- Cache of Madness - Gri'lek
+			name = AL["Gri'lek"],
+			EncounterJournalID = 788,
+			[HEROIC_DIFF] = ZUL_GURUB_MADNESS_LOOT,
+		},
+		{ -- Cache of Madness - Hazza'rah
+			name = AL["Hazza'rah"],
+			EncounterJournalID = 788,
+			[HEROIC_DIFF] = ZUL_GURUB_MADNESS_LOOT,
+		},
+		{ -- Cache of Madness - Renataki
+			name = AL["Renataki"],
+			EncounterJournalID = 788,
+			[HEROIC_DIFF] = ZUL_GURUB_MADNESS_LOOT,
+		},
+		{ -- Cache of Madness - Wushoolay
+			name = AL["Wushoolay"],
+			EncounterJournalID = 788,
+			[HEROIC_DIFF] = ZUL_GURUB_MADNESS_LOOT,
+		},
+		{ -- High Priestess Kilnara
+			name = AL["High Priestess Kilnara"],
+			EncounterJournalID = 1180,
+			[HEROIC_DIFF] = {
+				{ 1, 69612 },	-- Claw-Fringe Mantle
+				{ 2, 69611 },	-- Sash of Anguish
+				{ 3, 69613 },	-- Leggings of the Pride
+				{ 4, 69614 },	-- Roaring Mask of Bethekk
+				{ 5, 69610 },	-- Arlokk's Signet
+				{ 7, 68824, "mount" },	-- Swift Zulian Panther
+			},
+		},
+		{ -- Zanzil
+			name = AL["Zanzil"],
+			EncounterJournalID = 1181,
+			[HEROIC_DIFF] = {
+				{ 1, 69616 },	-- Spiritbinder Spaulders
+				{ 2, 69615 },	-- Zombie Walker Legguards
+				{ 3, 69617 },	-- Plumed Medicine Helm
+				{ 4, 69619 },	-- Bone Plate Handguards
+				{ 5, 69618 },	-- Zulian Slasher
+			},
+		},
+		{ -- Jin'do the Godbreaker
+			name = AL["Jin'do the Godbreaker"],
+			EncounterJournalID = 1182,
+			[HEROIC_DIFF] = {
+				{ 1, 69622 },	-- The Hexxer's Mask
+				{ 2, 69623 },	-- Vestments of the Soulflayer
+				{ 4, 69621 },	-- Twinblade of the Hakkari
+				{ 5, 69620 },	-- Twinblade of the Hakkari
+				{ 6, 69628 },	-- Jeklik's Smasher
+				{ 7, 69626 },	-- Jin'do's Verdict
+				{ 8, 69624 },	-- Legacy of Arlokk
+				{ 16, 69629 },	-- Shield of the Blood God
+				{ 17, 69627 },	-- Zulian Ward
+				{ 18, 69625 },	-- Mandokir's Tribute
+				{ 20, 69774, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Zul'Gurub Stone
+				{ 22, 52078, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Chaos Orb
+				{ 24, "ac5768" },
+				{ 25, "ac5759" },
+			},
+		},
+		{	-- Trash
+		name = AL["Trash Mobs"],
+		ExtraList = true,
+		[HEROIC_DIFF] = {
+			{ 1, 69800 },	-- Spiritguard Drape
+			{ 2, 69796 },	-- Spiritcaller Cloak
+			{ 3, 69798 },	-- Knotted Handwraps
+			{ 5, 69803 },	-- Gurubashi Punisher
+			{ 16, "ac5744" },
+		},
+	},
 	}
 }
 
@@ -1384,7 +1619,6 @@ data["TheBastionOfTwilight"] = {
 }
 
 data["BlackwingDescent"] = {
-	nameFormat = NAME_BLACKROCK,
 	MapID = 5094,
 	InstanceID = 669,
 	EncounterJournalID = 73,
@@ -2368,7 +2602,6 @@ data["HourOfTwilight"] = {
 }
 
 data["DragonSoul"] = {
-	nameFormat = NAME_CAVERNS_OF_TIME,
 	MapID = 5892,
 	InstanceID = 967,
 	EncounterJournalID = 187,
@@ -2851,253 +3084,6 @@ data["DragonSoul"] = {
 		},
 		-- T13_SET
 		CATA_RAID3_AC_TABLE,
-	}
-}
-
-data["ZulAman"] = {
-	nameFormat = NAME_CATACLYSM,
-	MapID = 3805,
-	EncounterJournalID = 77,
-	ContentType = DUNGEON_CONTENT,
-	LevelRange = {85, 85, 85},
-	items = {
-		{ -- Akil'zon
-			name = AL["Akil'zon"],
-			EncounterJournalID = 1189,
-			[HEROIC_DIFF] = {
-				{ 1, 69550 },	-- Leggings of Ancient Magics
-				{ 2, 69551 },	-- Feathers of Akil'zon
-				{ 3, 69549 },	-- Wristguards of the Predator
-				{ 4, 69552 },	-- Bracers of Hidden Purpose
-				{ 5, 69553 },	-- Talonguard Band
-			},
-		},
-		{ -- Nalorakk
-			name = AL["Nalorakk"],
-			EncounterJournalID = 1190,
-			[HEROIC_DIFF] = {
-				{ 1, 69555 },	-- Boots of the Ursine
-				{ 2, 69556 },	-- Armbands of the Bear Spirit
-				{ 3, 69554 },	-- Pauldrons of Nalorakk
-				{ 4, 69558 },	-- Spiritshield Mask
-				{ 5, 69557 },	-- Jungle Striders
-			},
-		},
-		{ -- Jan'alai
-			name = AL["Jan'alai"],
-			EncounterJournalID = 1191,
-			[HEROIC_DIFF] = {
-				{ 1, 69560 },	-- Jan'alai's Spaulders
-				{ 2, 69559 },	-- Amani'shi Bracers
-				{ 3, 69561 },	-- Hawkscale Waistguard
-				{ 4, 69562 },	-- Boots of Bad Mojo
-				{ 5, 69563 },	-- Ring of the Numberless Brood
-			},
-		},
-		{ -- Halazzi
-			name = AL["Halazzi"],
-			EncounterJournalID = 1192,
-			[HEROIC_DIFF] = {
-				{ 1, 69567 },	-- Wristwraps of Departed Spirits
-				{ 2, 69564 },	-- The Savager's Mask
-				{ 3, 69565 },	-- Breastplate of Primal Fury
-				{ 4, 69568 },	-- Shadowmender Wristguards
-				{ 5, 69566 },	-- Shimmerclaw Band
-				{ 16, "ac5750" },
-			},
-		},
-		{ -- Hex Lord Malacrass
-			name = AL["Hex Lord Malacrass"],
-			EncounterJournalID = 1193,
-			[HEROIC_DIFF] = {
-				{ 1, 69572 },	-- Hex Lord's Bloody Cloak
-				{ 2, 69569 },	-- Shadowtooth Trollskin Breastplate
-				{ 3, 69570 },	-- Waistband of Hexes
-				{ 4, 69573 },	-- Pauldrons of Sacrifice
-				{ 5, 69571 },	-- Soul Drain Signet
-				{ 6, 69762 },	-- Miniature Voodoo Mask
-				{ 8, 69264, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- The Hex Lord's Fetish
-				{ 16, 70080 },	-- Reforged Heartless
-			},
-		},
-		{ -- Daakara
-			name = AL["Daakara"],
-			EncounterJournalID = 1194,
-			[HEROIC_DIFF] = {
-				{ 1, 69577 },	-- Collar of Bones
-				{ 2, 69578 },	-- Hexing Robes
-				{ 3, 69579 },	-- Amani Headdress
-				{ 4, 69574 },	-- Tusked Shoulderpads
-				{ 5, 69576 },	-- Headdress of Sharpened Vision
-				{ 6, 69580 },	-- Mask of Restless Spirits
-				{ 7, 69582 },	-- Skullpiercer Pauldrons
-				{ 8, 69583 },	-- Legguards of the Unforgiving
-				{ 16, 69581 },	-- Amani Scepter of Rites
-				{ 17, 69575 },	-- Mace of the Sacrificed
-				{ 19, 52078, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Chaos Orb
-				{ 21, "ac5769" },
-				{ 22, "ac5760" },
-			},
-		},
-		{	-- Timed Chest
-		name = AL["Timed Reward Chest"],
-		ExtraList = true,
-		[HEROIC_DIFF] = {
-			{ 1, 69584 },	-- Recovered Cloak of Frostheim
-			{ 2, 69585 },	-- Wristwraps of Madness
-			{ 3, 69589 },	-- Leggings of Dancing Blades
-			{ 4, 69586 },	-- Two-Toed Boots
-			{ 5, 69590 },	-- Mojo-Mender's Gloves
-			{ 6, 69593 },	-- Battleplate of the Amani Empire
-			{ 7, 69587 },	-- Chestplate of Hubris
-			{ 8, 69588 },	-- Skullcrusher Warboots
-			{ 16, 69591 },	-- Voodoo Hexblade
-			{ 17, 69592 },	-- Reforged Trollbane
-			{ 19, "INV_Box_01", "ac5858", AL["Bonus Loot"], nil },
-			{ 20, 69747, "mount" },	-- Amani Battle Bear
-		},
-	},
-	{	-- Trash
-		name = AL["Trash Mobs"],
-		ExtraList = true,
-		[HEROIC_DIFF] = {
-			{ 1, 69797 },	-- Charmbinder Grips
-			{ 2, 69801 },	-- Amani Armguards
-			{ 4, 69802 },	-- Band of the Gurubashi Berserker
-			{ 5, 69799 },	-- Quickfinger Ring
-			{ 16, 33993, "pet165" },	-- Mojo
-			{ 18, "ac5761" },
-		},
-	},
-	}
-}
-
-local ZUL_GURUB_MADNESS_LOOT = {
-	{ 1, "INV_Box_01", nil, AL["Gri'lek"], nil },	-- Gri'lek
-	{ 2, 69634 },	-- Fasc's Preserved Boots
-	{ 3, 69635 },	-- Amulet of Protection
-	{ 5, "INV_Box_01", nil, AL["Hazza'rah"], nil },	-- Hazza'rah
-	{ 6, 69636 },	-- Thekal's Claws
-	{ 7, 69637 },	-- Gurubashi Destroyer
-	{ 9, "INV_Box_01", nil, AL["Renataki"], nil },	-- Renataki
-	{ 10, 69638 },	-- Arlokk's Claws
-	{ 11, 69639 },	-- Renataki's Soul Slicer
-	{ 13, "INV_Box_01", nil, AL["Wushoolay"], nil },	-- Wushoolay
-	{ 14, 69640 },	-- Kilt of Forgotten Rites
-	{ 15, 69641 },	-- Troll Skull Chestplate
-	{ 16, "INV_Box_01", nil, AL["Shared"], nil },	-- Shared
-	{ 17, 69630 },	-- Handguards of the Tormented
-	{ 18, 69633 },	-- Plunderer's Gauntlets
-	{ 19, 69632 },	-- Lost Bag of Whammies
-	{ 20, 69631 },	-- Zulian Voodoo Stick
-	{ 21, 69647, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Mysterious Gurubashi Bijou
-}
-data["ZulGurub"] = {
-	nameFormat = NAME_CATACLYSM,
-	MapID = 1977,
-	EncounterJournalID = 76,
-	ContentType = DUNGEON_CONTENT,
-	LevelRange = {85, 85, 85},
-	items = {
-		{ -- High Priest Venoxis
-			name = AL["High Priest Venoxis"],
-			EncounterJournalID = 1178,
-			[HEROIC_DIFF] = {
-				{ 1, 69601 },	-- Serpentine Leggings
-				{ 2, 69600 },	-- Belt of Slithering Serpents
-				{ 3, 69603 },	-- Breastplate of Serenity
-				{ 4, 69604 },	-- Coils of Hate
-				{ 5, 69602 },	-- Signet of Venoxis
-				{ 16, "ac5743" },
-			},
-		},
-		{ -- Bloodlord Mandokir
-			name = AL["Bloodlord Mandokir"],
-			EncounterJournalID = 1179,
-			[HEROIC_DIFF] = {
-				{ 1, 69606 },	-- Hakkari Loa Drape
-				{ 2, 69608 },	-- Deathcharged Wristguards
-				{ 3, 69605 },	-- Amulet of the Watcher
-				{ 4, 69609 },	-- Bloodlord's Protector
-				{ 5, 69607 },	-- Touch of Discord
-				{ 7, 68823, "mount" },	-- Armored Razzashi Raptor
-				{ 16, "ac5762" },
-			},
-		},
-		{ -- Cache of Madness - Gri'lek
-			name = AL["Gri'lek"],
-			EncounterJournalID = 788,
-			[HEROIC_DIFF] = ZUL_GURUB_MADNESS_LOOT,
-		},
-		{ -- Cache of Madness - Hazza'rah
-			name = AL["Hazza'rah"],
-			EncounterJournalID = 788,
-			[HEROIC_DIFF] = ZUL_GURUB_MADNESS_LOOT,
-		},
-		{ -- Cache of Madness - Renataki
-			name = AL["Renataki"],
-			EncounterJournalID = 788,
-			[HEROIC_DIFF] = ZUL_GURUB_MADNESS_LOOT,
-		},
-		{ -- Cache of Madness - Wushoolay
-			name = AL["Wushoolay"],
-			EncounterJournalID = 788,
-			[HEROIC_DIFF] = ZUL_GURUB_MADNESS_LOOT,
-		},
-		{ -- High Priestess Kilnara
-			name = AL["High Priestess Kilnara"],
-			EncounterJournalID = 1180,
-			[HEROIC_DIFF] = {
-				{ 1, 69612 },	-- Claw-Fringe Mantle
-				{ 2, 69611 },	-- Sash of Anguish
-				{ 3, 69613 },	-- Leggings of the Pride
-				{ 4, 69614 },	-- Roaring Mask of Bethekk
-				{ 5, 69610 },	-- Arlokk's Signet
-				{ 7, 68824, "mount" },	-- Swift Zulian Panther
-			},
-		},
-		{ -- Zanzil
-			name = AL["Zanzil"],
-			EncounterJournalID = 1181,
-			[HEROIC_DIFF] = {
-				{ 1, 69616 },	-- Spiritbinder Spaulders
-				{ 2, 69615 },	-- Zombie Walker Legguards
-				{ 3, 69617 },	-- Plumed Medicine Helm
-				{ 4, 69619 },	-- Bone Plate Handguards
-				{ 5, 69618 },	-- Zulian Slasher
-			},
-		},
-		{ -- Jin'do the Godbreaker
-			name = AL["Jin'do the Godbreaker"],
-			EncounterJournalID = 1182,
-			[HEROIC_DIFF] = {
-				{ 1, 69622 },	-- The Hexxer's Mask
-				{ 2, 69623 },	-- Vestments of the Soulflayer
-				{ 4, 69621 },	-- Twinblade of the Hakkari
-				{ 5, 69620 },	-- Twinblade of the Hakkari
-				{ 6, 69628 },	-- Jeklik's Smasher
-				{ 7, 69626 },	-- Jin'do's Verdict
-				{ 8, 69624 },	-- Legacy of Arlokk
-				{ 16, 69629 },	-- Shield of the Blood God
-				{ 17, 69627 },	-- Zulian Ward
-				{ 18, 69625 },	-- Mandokir's Tribute
-				{ 20, 69774, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Zul'Gurub Stone
-				{ 22, 52078, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Chaos Orb
-				{ 24, "ac5768" },
-				{ 25, "ac5759" },
-			},
-		},
-		{	-- Trash
-		name = AL["Trash Mobs"],
-		ExtraList = true,
-		[HEROIC_DIFF] = {
-			{ 1, 69800 },	-- Spiritguard Drape
-			{ 2, 69796 },	-- Spiritcaller Cloak
-			{ 3, 69798 },	-- Knotted Handwraps
-			{ 5, 69803 },	-- Gurubashi Punisher
-			{ 16, "ac5744" },
-		},
-	},
 	}
 }
 
