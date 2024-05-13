@@ -148,7 +148,6 @@ data["AlchemyCata"] = {
 	},
 }
 
---[[
 data["BlacksmithingCata"] = {
 	name = ALIL["Blacksmithing"],
 	ContentType = PROF_CONTENT,
@@ -159,201 +158,170 @@ data["BlacksmithingCata"] = {
 		{ -- Daggers
 			name = AL["Weapons"].." - "..ALIL["Daggers"],
 			[NORMAL_DIFF] = {
-
+				{ 1, 76434 }, -- Cold Forged Shank
+				{ 2, 76453 }, -- Elementium Shank	
+				{ 3, 99652 }, -- Brainsplinter	
 			}
 		},
 		{ -- Axes
 			name = AL["Weapons"].." - "..AL["Axes"],
 			[NORMAL_DIFF] = {
-
+				{ 1, "INV_sword_04", nil, ALIL["One-Handed Axes"] },
+				{ 2, 76433 },	-- Decapitator's Razor
+				{ 3, 94718 },	-- Elementium Gutslicer
+				{ 4, 76452 },	-- Elementium Bonesplitter 
+				{ 5, 99655 },   -- Elementium-Edged Scalper
 			}
 		},
 		{ -- Maces
 			name = AL["Weapons"].." - "..AL["Maces"],
 			[NORMAL_DIFF] = {
 				{ 1, "INV_sword_04", nil, ALIL["One-Handed Maces"] },
-				{ 2, 55370 },	-- Titansteel Bonecrusher
-				{ 3, 55371 },	-- Titansteel Guardian
-				{ 4, 56280 },	-- Cudgel of Saronite Justice
-				{ 5, 55182 },	-- Furious Saronite Beatstick
-				{ 6, 55201 },	-- Cobalt Tenderizer
+				{ 2, 76436 }, -- Lifeforce Hammer	
+				{ 3, 76450 }, -- Elementium Hammer
+				{ 4, 99654 }, -- Lightforged Elementium Hammer
 				{ 16, "INV_sword_04", nil, ALIL["Two-Handed Maces"] },
-				{ 17, 55369 },	-- Titansteel Destroyer
-				{ 18, 55185 },	-- Saronite Mindcrusher
+				{ 17, 94732 }, -- Forged Elementium Mindcrusher	
 			}
 		},
 		{ -- Swords
 			name = AL["Weapons"].." - "..AL["Swords"],
 			[NORMAL_DIFF] = {
 				{ 1, "INV_sword_04", nil, ALIL["One-Handed Swords"] },
-				{ 2, 55183 },	-- Corroded Saronite Edge
-				{ 3, 55184 },	-- Corroded Saronite Woundbringer
-				{ 4, 59442 },	-- Saronite Spellblade
-				{ 5, 55177 },	-- Savage Cobalt Slicer
-				{ 6, 55200 },	-- Sturdy Cobalt Quickblade
+				{ 2, 99657 }, -- Unbreakable Guardian
+				{ 3, 99656 }, -- Pyrium Spellward	
 				{ 16, "INV_sword_06", nil, ALIL["Two-Handed Swords"] },
-				{ 17, 55203 },	-- Forged Cobalt Claymore
+				{ 17, 76437 }, -- Obsidian Executioner 
+				{ 18, 99658 }, -- Masterwork Elementium Deathblade
 			}
 		},
+		{ -- Polearms
+			name = AL["Weapons"].." - "..AL["Polearms"],
+			[NORMAL_DIFF] = {
+				{ 1, "INV_sword_06", nil, ALIL["Polearms"] },
+				{ 2, 76474 }, -- Obsidium Bladespear
+				{ 3, 76451 }, -- Elementium Poleaxe
+				{ 4, 99660 }, -- Witch Hunter's Harvester
+				
+			}
+		},		
 		{ -- Shield
 			name = AL["Weapons"].." - "..ALIL["Shield"],
 			[NORMAL_DIFF] = {
-				{ 1, 56400 },	-- Titansteel Shield Wall
-				{ 2, 55014 },	-- Saronite Bulwark
-				{ 3, 54557 },	-- Saronite Defender
-				{ 4, 54550 },	-- Cobalt Triangle Shield
-				{ 16, 55013 },	-- Saronite Protector
+				{ 1, 76291 }, -- Hardened Obsidium Shield	
+				{ 2, 76293 }, -- Stormforged Shield 	
+				{ 3, 76455 }, -- Elementium Stormshield	 
+				{ 4, 76454 }, -- Elementium Earthguard	
 			}
 		},
 		{ -- Head
 			name = AL["Armor"].." - "..ALIL["Head"],
 			[PLATE_DIFF] = {
-				{ 1, 55374 },	-- Brilliant Titansteel Helm
-				{ 2, 55372 },	-- Spiked Titansteel Helm
-				{ 3, 55373 },	-- Tempered Titansteel Helm
-				{ 4,55302 },	-- Helm of Command
-				{ 5, 56556 },	-- Ornate Saronite Skullshield
-				{ 6, 55312 },	-- Savage Saronite Skullshield
-				{ 7, 59441 },	-- Brilliant Saronite Helm
-				{ 8, 54555 },	-- Tempered Saronite Helm
-				{ 9, 54949 },	-- Horned Cobalt Helm
-				{ 10, 54979 },	-- Reinforced Cobalt Helm
-				{ 11, 54917 },	-- Spiked Cobalt Helm
-				{ 12, 52571 },	-- Cobalt Helm
+				{ 1, 76260 },	-- Hardened Obsidium Helm
+				{ 2, 76288 },	-- Stormforged Helm
+				{ 3, 76269 },	-- Redsteel Helm
+				{ 4,76471 },	-- Vicious Ornate Pyrium Helm
+				{ 5, 76463 },	-- Vicious Pyrium Helm
 			},
 		},
 		{ -- Shoulder
 			name = AL["Armor"].." - "..ALIL["Shoulder"],
 			[PLATE_DIFF] = {
-				{ 1, 56550 },	-- Ornate Saronite Pauldrons
-				{ 2, 55306 },	-- Savage Saronite Pauldrons
-				{ 3, 59440 },	-- Brilliant Saronite Pauldrons
-				{ 4, 54556 },	-- Tempered Saronite Shoulders
-				{ 5, 54941 },	-- Spiked Cobalt Shoulders
-				{ 6, 54978 },	-- Reinforced Cobalt Shoulders
-				{ 7, 52572 },	-- Cobalt Shoulders
+				{ 1, 76266 },	-- Redsteel Shoulders
+				{ 2, 76258 },	-- Hardened Obsidium Shoulders
+				{ 3, 76286 },	-- Stormforged Shoulders
+				{ 4, 76469 },	-- Vicious Ornate Pyrium Shoulders
+				{ 5, 76461 },	-- Vicious Pyrium Shoulders
 			},
 		},
 		{ -- Chest
 			name = AL["Armor"].." - "..ALIL["Chest"],
 			[PLATE_DIFF] = {
-				{ 1, [ATLASLOOT_IT_ALLIANCE] = { 67091 }, [ATLASLOOT_IT_HORDE] = { 67130 } },	-- Breastplate of the White Knight
-				{ 2, [ATLASLOOT_IT_ALLIANCE] = { 67095 }, [ATLASLOOT_IT_HORDE] = { 67134 } },	-- Sunforged Breastplate
-				{ 3, [ATLASLOOT_IT_ALLIANCE] = { 67093 }, [ATLASLOOT_IT_HORDE] = { 67132} },	-- Titanium Razorplate
-				{ 4, 61008 },	-- Icebane Chestguard
-				{ 5, 55311 },	-- Savage Saronite Hauberk
-				{ 6, 55058 },	-- Brilliant Saronite Breastplate
-				{ 7, 55186 },	-- Chestplate of Conquest
-				{ 8, 54553 },	-- Tempered Saronite Breastplate
-				{ 9, 54944 },	-- Spiked Cobalt Chestpiece
-				{ 10, 54981 },	-- Reinforced Cobalt Chestpiece
-				{ 11, 52570 },	-- Cobalt Chestpiece
+				{ 1, 76261 },	-- Hardened Obsidium Breastplate
+				{ 2, 76289 },	-- Stormforged Breastplate
+				{ 3, 76270 },	-- Redsteel Breastplate
+				{ 4, 76447 },	-- Light Elementium Chestguard
+				{ 5, 76445 },	-- Elementium Deathplate
+				{ 6, 76443 },	-- Hardened Elementium Hauberk
+				{ 7, 76464 },	-- Vicious Pyrium Breastplate
+				{ 8, 76472 },	-- Vicious Ornate Pyrium Breastplate
 			},
 		},
 		{ -- Feet
 			name = AL["Armor"].." - "..ALIL["Feet"],
 			[PLATE_DIFF] = {
-				{ 1, 70568 },	-- Boots of Kingly Upheaval
-				{ 2, 70566 },	-- Hellfrozen Bonegrinders
-				{ 3, 70563 },	-- Protectors of Life
-				{ 4, 63188 },	-- Battlelord's Plate Boots
-				{ 5, 63192 },	-- Spiked Deathdealers
-				{ 6, 63190 },	-- Treads of Destiny
-				{ 7, 55377 },	-- Brilliant Titansteel Treads
-				{ 8, 55375 },	-- Spiked Titansteel Treads
-				{ 9, 55376 },	-- Tempered Titansteel Treads
-				{ 10, 61010 },	-- Icebane Treads
-				{ 11, 56552 },	-- Ornate Saronite Walkers
-				{ 12, 55308 },	-- Savage Saronite Walkers
-				{ 13, 55057 },	-- Brilliant Saronite Boots
-				{ 14, 54552 },	-- Tempered Saronite Boots
-				{ 15, 54918 },	-- Spiked Cobalt Boots
-				{ 16, 52569 },	-- Cobalt Boots
+				{ 1, 76182 }, -- Hardened Obsidium Boots 	 
+				{ 2, 76285 }, -- Stormforged Boots
+				{ 3, 76265 }, -- Redsteel Boots	
+				{ 4, 76468 }, -- Vicious Ornate Pyrium Boots	
+				{ 5, 76459 }, -- Vicious Pyrium Boots
+				{ 6, 99454 }, -- Emberforged Elementium Boots
+				{ 7, 99453 }, -- Mirrored Boots	
+				{ 8, 99452 }, -- Warboots of Mighty Lords	
 			},
 		},
 		{ -- Hand
 			name = AL["Armor"].." - "..ALIL["Hand"],
 			[PLATE_DIFF] = {
-				{ 1, 55301 },	-- Daunting Handguards
-				{ 2, 56553 },	-- Ornate Saronite Gauntlets
-				{ 3, 55300 },	-- Righteous Gauntlets
-				{ 4, 55309 },	-- Savage Saronite Gauntlets
-				{ 5, 55015 },	-- Tempered Saronite Gauntlets
-				{ 6, 55056 },	-- Brilliant Saronite Gauntlets
-				{ 7, 54945 },	-- Spiked Cobalt Gauntlets
-				{ 8, 55835 },	-- Cobalt Gauntlets
+				{ 1, 76263 }, -- Redsteel Gauntlets
+				{ 2, 76180 }, -- Hardened Obsidium Gauntlets 	
+				{ 3, 76281 }, -- Stormforged Gauntlets 	
+				{ 4, 76457 }, -- Vicious Pyrium Gauntlets 	
+				{ 5, 76466 }, -- Vicious Ornate Pyrium Gauntlets 	
+				{ 6, 99441 }, -- Holy Flame Gauntlets 
+				{ 7, 99440 }, -- Eternal Elementium Handguards	
+				{ 8, 99439 }, -- Fists of Fury	
 			},
 		},
 		{ -- Legs
 			name = AL["Armor"].." - "..ALIL["Legs"],
 			[PLATE_DIFF] = {
-				{ 1, 70565 },	-- Legplates of Painful Death
-				{ 2, 70567 },	-- Pillars of Might
-				{ 3, 70562 },	-- Puresteel Legplates
-				{ 4,55303 },	-- Daunting Legplates
-				{ 5, 56554 },	-- Ornate Saronite Legplates
-				{ 6, 55304 },	-- Righteous Greaves
-				{ 7, 55310 },	-- Savage Saronite Legplates
-				{ 8, 55187 },	-- Legplates of Conquest
-				{ 9, 55055 },	-- Brilliant Saronite Legplates
-				{ 10, 54554 },	-- Tempered Saronite Legplates
-				{ 11, 54947 },	-- Spiked Cobalt Legplates
-				{ 12, 54980 },	-- Reinforced Cobalt Legplates
-				{ 13, 52567 },	-- Cobalt Legplates
+				{ 1, 76259 }, -- Hardened Obsidium Legguards	
+				{ 2, 76287 }, -- Stormforged Legguards	
+				{ 3, 76267 }, -- Redsteel Legguards	
+				{ 4,76462 }, -- Vicious Pyrium Legguards	
+				{ 5, 76470 }, -- Vicious Ornate Pyrium Legguards	
+				{ 6, 101928 }, -- Foundations of Courage
+				{ 7, 101925 }, -- Unstoppable Destroyer's Legplates				
+				{ 8, 101924 }, -- Pyrium Legplates of Purified Evil				
 			},
 		},
 		{ -- Waist
 			name = AL["Armor"].." - "..ALIL["Waist"],
 			[PLATE_DIFF] = {
-				{ 1, 63187 },	-- Belt of the Titans
-				{ 2, 63191 },	-- Indestructible Plate Girdle
-				{ 3, 63189 },	-- Plate Girdle of Righteousness
-				{ 4, 61009 },	-- Icebane Girdle
-				{ 5, 56551 },	-- Ornate Saronite Waistguard
-				{ 6, 55307 },	-- Savage Saronite Waistguard
-				{ 7, 59436 },	-- Brilliant Saronite Belt
-				{ 8, 54551 },	-- Tempered Saronite Belt
-				{ 9, 54946 },	-- Spiked Cobalt Belt
-				{ 10, 52568 },	-- Cobalt Belt
+				{ 1, 76181 }, -- Hardened Obsidium Belt				
+				{ 2, 76283 }, -- Stormforged Belt				
+				{ 3, 76264 }, -- Redsteel Belt				
+				{ 4, 76448 }, -- Light Elementium Belt				
+				{ 5, 76446 }, -- Elementium Girdle of Pain	 			
+				{ 6, 76444 }, -- Hardened Elementium Girdle				
+				{ 7, 76458 }, -- Vicious Pyrium Belt
+				{ 8, 76467 }, -- Vicious Ornate Pyrium Belt
 			},
 		},
 		{ -- Wrist
 			name = AL["Armor"].." - "..ALIL["Wrist"],
 			[PLATE_DIFF] = {
-				{ 1, [ATLASLOOT_IT_ALLIANCE] = { 67092 }, [ATLASLOOT_IT_HORDE] = { 67131 } },	-- Saronite Swordbreakers
-				{ 2, [ATLASLOOT_IT_ALLIANCE] = { 67096 }, [ATLASLOOT_IT_HORDE] = { 67135 } },	-- Sunforged Bracers
-				{ 3, [ATLASLOOT_IT_ALLIANCE] = { 67094 }, [ATLASLOOT_IT_HORDE] = { 67133 } },	-- Titanium Spikeguard
-				{ 4, 56549 },	-- Ornate Saronite Bracers
-				{ 5, 55305 },	-- Savage Saronite Bracers
-				{ 6, 55298 },	-- Vengeance Bindings
-				{ 7, 55017 },	-- Tempered Saronite Bracers
-				{ 8, 59438 },	-- Brilliant Saronite Bracers
-				{ 9, 54948 },	-- Spiked Cobalt Bracers
-				{ 10, 55834 },	-- Cobalt Bracers
+				{ 1, 76280 }, -- Stormforged Bracers
+				{ 2, 76262 }, -- Redsteel Bracers
+				{ 3, 76179 }, -- Hardened Obsidium Bracers
+				{ 4, 76465 }, -- Vicious Ornate Pyrium Bracers
+				{ 5, 76456 }, -- Vicious Pyrium Bracers 
+				{ 6, 101932 }, -- Titanguard Wristplates	
+				{ 7, 101931 }, -- Bracers off DEstructive Strength	 
+				{ 8, 101929 }, -- Soul Redeemer Bracers	 
 			},
 		},
-		{
+		{ -- Enhancements
 			name = AL["Enhancements"],
 			[NORMAL_DIFF] = {
-				{ 1, 55656 },	-- Eternal Belt Buckle
-				{ 3, 55641 },	-- Socket Gloves
-				{ 16, 62202 },	-- Titanium Plating
-				{ 18, 55628 },	-- Socket Bracer
+				{ 1, 76439 }, -- Ebonsteel Belt Buckle
+				{ 16, 76440 }, -- Pyrium Shield Spike
+				{ 18, 76442 }, -- Pyrium Weapon Chain	
 			}
-		},
-		{ -- Sets
-			name = AL["Sets"],
-			ExtraList = true,
-			TableType = SET_ITTYPE,
-			[NORMAL_DIFF] = {
-				{ 1, 814 }, -- Ornate Saronite Battlegear
-				{ 2, 816 }, -- Savage Saronite Battlegear
-			},
 		},
 	}
 }
---]]
-
 data["EnchantingCata"] = {
 	name = ALIL["Enchanting"],
 	ContentType = PROF_CONTENT,
