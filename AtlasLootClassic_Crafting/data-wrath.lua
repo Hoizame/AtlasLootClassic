@@ -749,6 +749,15 @@ data["TailoringWrath"] = {
 			}
 		},
 		{
+            name = AL["Shirts"],
+            [NORMAL_DIFF] = {
+                { 1, 55993 },    -- Red Lumberjack Shirt
+                { 2, 55994 },    -- Blue Lumberjack Shirt
+                { 3, 55995 },    -- Yellow Lumberjack Shirt
+                { 4, 55996 },    -- Green Lumberjack Shirt
+            }
+        },
+		{
 			name = ALIL["Bag"],
 			[NORMAL_DIFF] = {
 				{ 1, 56005 },	-- Glacial Bag
