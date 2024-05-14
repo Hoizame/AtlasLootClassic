@@ -560,6 +560,7 @@ data["EngineeringCata"] = {
 		},
 	}
 }
+
 data["LeatherworkingCata"] = {
 	name = ALIL["Leatherworking"],
 	ContentType = PROF_CONTENT,
@@ -714,18 +715,13 @@ data["LeatherworkingCata"] = {
 				{ 1, 78477 },	-- Dragonscale Leg Armor
 				{ 2, 78478 },	-- Charscale Leg Armor
 				{ 3, 101599 },	-- Drakehide Leg Armor
-
 				{ 5, 78419 },	-- Scorched Leg Armor
 				{ 6, 78420 },	-- Twilight Leg Armor
-
-
 				{ 8, 78379 },	-- Savage Armor Kit
-
 				{ 16, 85007 },	-- Draconic Embossment - Stamina
 				{ 17, 85008 },	-- Draconic Embossment - Agility
 				{ 18, 85009 },	-- Draconic Embossment - Strength
 				{ 19, 85010 },	-- Draconic Embossment - Intellect
-
 				{ 21, 85067 },	-- Dragonbone Leg Reinforcements
 				{ 22, 85068 },	-- Charscale Leg Reinforcements
 				{ 23, 101600 },	-- Drakehide Leg Reinforcements
@@ -756,6 +752,7 @@ data["LeatherworkingCata"] = {
 		}
 	}
 }
+
 data["MiningCata"] = {
 	name = ALIL["Mining"],
 	ContentType = PROF_GATH_CONTENT,
