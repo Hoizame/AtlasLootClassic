@@ -779,10 +779,10 @@ data["TailoringCata"] = {
 		{ -- Shoulder
 			name = AL["Armor"].." - "..ALIL["Shoulder"],
 			[NORMAL_DIFF] = {
-				{ 1, 75291 },	-- Vicious Wyrmhide Shoulders
-				{ 2, 75292 },	-- Vicious Leather Shoulders
-				{ 3, 75260 },	-- Darkbrand Shoulders
-				{ 4, 75251 },	-- Darkbrand Shoulders
+				{ 1, 75292 },	-- Vicious Fireweave Shoulders
+				{ 2, 75291 },	-- Vicious Embersilk Shoulders
+				{ 3, 75260 },	-- Spiritmend Shoulders
+				{ 4, 75251 },	-- Deathsilk Shoulders
 			}
 		},
 		{ -- Chest
@@ -812,8 +812,8 @@ data["TailoringCata"] = {
 			[NORMAL_DIFF] = {
 				{ 1, 99448 },	-- Grips of Altered Reality
 				{ 2, 99449 },	-- Don Tayo's Inferno Mittens
-				{ 3, 75295 },	-- Vicious Embersilk Gloves
-				{ 4, 75296 },	-- Vicious Fireweave Gloves
+				{ 3, 75296 },	-- Vicious Fireweave Gloves
+				{ 4, 75295 },	-- Vicious Embersilk Gloves
 				{ 5, 75253 },	-- Deathsilk Gloves
 				{ 6, 75262 },	-- Spiritmend Gloves
 			},
@@ -847,8 +847,8 @@ data["TailoringCata"] = {
 			[NORMAL_DIFF] = {
 				{ 1, 99459 },	-- Endless Dream Walkers
 				{ 2, 99460 },	-- Boots of the Black Flame
-				{ 3, 75294 },	-- Vicious Fireweave Boots
-				{ 4, 75297 },	-- Vicious Embersilk Boots
+				{ 3, 75297 },	-- Vicious Embersilk Boots
+				{ 4, 75294 },	-- Vicious Fireweave Boots
 				{ 5, 75261 },	-- Spiritmend Boots
 				{ 6, 75252 },	-- Deathsilk Boots
 			},
