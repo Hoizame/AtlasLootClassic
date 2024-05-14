@@ -448,114 +448,95 @@ data["EngineeringCata"] = {
 		{
 			name = AL["Armor"].." - "..ALIL["Head"].." - "..ALIL["Cloth"],
 			[NORMAL_DIFF] = {
-				{ 1, 1725 }, -- Lightweight Bio-Optic Killshades
+				{ 1, 81725 }, -- Lightweight Bio-Optic Killshades
+				{ 3, 84406 }, -- Authentic Jr. Engineer Goggles
 			}
 		},
 		{
 			name = AL["Armor"].." - "..ALIL["Head"].." - "..ALIL["Leather"],
 			[NORMAL_DIFF] = {
-				{ 1, 56486 },	-- Greensight Gogs
-				{ 2, 56481 },	-- Weakness Spectralizers
+				{ 1, 81724 },	-- Camouflage Bio-Optic Killshades
+				{ 2, 81722 },	-- Agile Bio-Optic Killshades
 			}
 		},
 		{
 			name = AL["Armor"].." - "..ALIL["Head"].." - "..ALIL["Mail"],
 			[NORMAL_DIFF] = {
-				{ 1, 56487 },	-- Electroflux Sight Enhancers
-				{ 2, 56574 },	-- Truesight Ice Blinders
+				{ 1, 81720 },	-- Energized Bio-Optic Killshades
+				{ 2, 81716 },	-- Deadly Bio-Optic Killshades
 			}
 		},
 		{
 			name = AL["Armor"].." - "..ALIL["Head"].." - "..ALIL["Plate"],
 			[NORMAL_DIFF] = {
-				{ 1, 56480 },	-- Armored Titanium Goggles
-				{ 2, 56483 },	-- Charged Titanium Specs
-				{ 3, 62271 },	-- Unbreakable Healing Amplifiers
-				{ 16, 61483 },	-- Mechanized Snow Goggles
+				{ 1, 81715 },	-- Specialized Bio-Optic Killshades
+				{ 2, 81714 },	-- Reinforced Bio-Optic Killshades
 			}
 		},
 		{
 			name = AL["Armor"].." - "..ALIL["Trinket"],
 			[NORMAL_DIFF] = {
-				{ 1, 56469 },	-- Gnomish Lightning Generator
-				{ 2, 56467 },	-- Noise Machine
-				{ 3, 56466 },	-- Sonic Booster
+				{ 1, 84418 },	-- Elementium Dragonling
 			}
 		},
 		{
 			name = ALIL["Weapon"].." - "..AL["Enhancements"],
 			[NORMAL_DIFF] = {
-				{ 1, 56478 },	-- Heartseeker Scope
-				{ 2, 56470 },	-- Sun Scope
-				{ 3, 61471 },	-- Diamond-Cut Refractor Scope
+				{ 1, 84428 },	-- Gnomish X-Ray Scope
+				{ 2, 100587 },	-- Flintlocke's Woodchucker
+				{ 3, 84408 },	-- R19 Threatfinder
+				{ 4, 84410 },	-- Safety Catch Removal Kit
 			}
 		},
 		{
-			name = AL["Weapons"].." - "..ALIL["Guns"],
+			name = AL["Weapons"],
 			[NORMAL_DIFF] = {
-				{ 1, 56479 },	-- Armor Plated Combat Shotgun
-				{ 2, 60874 },	-- Nesingwary 4000
-				{ 3, 54353 },	-- Mark "S" Boomstick
-			}
-		},
-		{
-			name = ALIL["Projectile"],
-			[NORMAL_DIFF] = {
-				{ 1, 72953 },	-- Iceblade Arrow
-				{ 2, 56475 },	-- Saronite Razorheads
-				{ 16, 72952 },	-- Shatter Rounds
-				{ 17, 56474 },	-- Mammoth Cutters
+				{ 1, 100687 },	-- Extreme-Impact Hole Puncher
+				{ 2, 84432 },	-- Kickback 5000
+				{ 3, 84431 },	-- Overpowered Chicken Splitter
+				{ 4, 84420 },	-- Finely-Tuned Throat Needler
+				{ 16, 84411 },	-- High-Powered Bolt Gun
 			}
 		},
 		{
 			name = ALIL["Parts"],
 			[NORMAL_DIFF] = {
-				{ 1, 56471 },	-- Froststeel Tube
-				{ 2, 56464 },	-- Overcharged Capacitor
-				{ 3, 56349 },	-- Handful of Cobalt Bolts
-				{ 4, 53281 },	-- Volatile Blasting Trigger
+				{ 1, 94748 },	-- Electrified Ether
+				{ 2, 84403 },	-- Handful of Obsidium Bolts
 			}
 		},
 		{
 			name = ALIL["Explosives"],
 			[NORMAL_DIFF] = {
-				{ 1, 56514 },	-- Global Thermal Sapper Charge
-				{ 3, 56463 },	-- Explosive Decoy
-				{ 4, 56460 },	-- Cobalt Frag Bomb
-				{ 16, 56468 },	-- Box of Bombs
-				{ 17, "i44951" }
+				{ 1, 95707 },	-- Big Daddy
+				{ 2, 84409 },	-- Volatile Seaforium Blastpack
 			}
 		},
 		{
-			name = ALIL["Engineering"].." - "..AL["Enhancements"],
+			name = AL["Enhancements"],
 			[NORMAL_DIFF] = {
-				{ 1, 54999 },	-- Hyperspeed Accelerators
-				{ 2, 54998 },	-- Hand-Mounted Pyro Rocket
-				{ 3, 63770 },	-- Reticulated Armor Webbing
-				{ 5, 55016 },	-- Nitro Boosts
-				{ 16, 54736 },	-- Personal Electromagnetic Pulse Generator
-				{ 17, 54793 },	-- Frag Belt
-				{ 19, 55002 },	-- Flexweave Underlay
-				{ 20, 63765 },	-- Springy Arachnoweave
-				{ 22, 67839 },	-- Mind Amplification Dish
+				{ 1, 82175 },	-- Synapse Springs
+				{ 2, 82177 },	-- Quickflip Deflection Plates
+				{ 3, 82180 },	-- Tazik Shocker
+				{ 4, 82200 },	-- Spinal Healing Injector
+				{ 5, 82201 },	-- Z50 Mana Gulper
+				{ 6, 84424 },	-- Invisibility Field
+				{ 7, 84425 },	-- Cardboard Assassin
+				{ 8, 84427 },	-- Grounded Plasma Shield
+				{ 16, 84430 },	-- Heat-Treated Spinning Lure
 			}
 		},
 		{
 			name = AL["Misc"],
 			[NORMAL_DIFF] = {
-				{ 1,   [ATLASLOOT_IT_ALLIANCE] = { 60867 }, [ATLASLOOT_IT_HORDE] = { 60866 } }, -- Mekgineer's Chopper / Mechano-Hog
-				{ 3, 56476 },	-- Healing Injector Kit
-				{ 4, 56477 },	-- Mana Injector Kit
-				{ 6, 56461 },	-- Bladed Pickaxe
-				{ 7, 56459 },	-- Hammer Pick
-				{ 9, 55252 },	-- Scrapbot Construction Kit
-				{ 11, 56462 },	-- Gnomish Army Knife
-				{ 13, 67326 },	-- Goblin Beam Welder
-				{ 16, 68067 },	-- Jeeves
-				{ 18, 56472 },	-- MOLL-E
-				{ 20, 67920 },	-- Wormhole Generator: Northrend
-				{ 22, 30349 },	-- Titanium Toolbox
-				{ 24, 56473 },	-- Gnomish X-Ray Specs
+				{ 1, 84412 },   -- Personal World Destroyer
+				{ 2, 84413 },	-- De-Weaponized Mechanical Companion
+				{ 4, 84421 },	-- Loot-a-Rang
+				{ 5, 95705 },	-- Gnomish Gravity Well
+				{ 7, 95703 },	-- Electrostatic Condenser
+				{ 9, 84429 },	-- Goblin Barbecue
+				{ 11, 84416 },	-- Elementium Toolbox
+				{ 12, 84415 },	-- Lure Master Tackle Box
 			}
 		},
 	}
