@@ -95,7 +95,6 @@ function TooltipScan.GetQuestName(questID, onGetFunc, arg1, preSetQuery)
 		queryList[preSetQuery] = true
 		return preSetQuery
 	end
-	--AtlasLootQueryTooltip:SetOwner(UIParent, "ANCHOR_NONE")
 	AtlasLootQueryTooltip:SetOwner(UIParent, "ANCHOR_NONE")
 	AtlasLootQueryTooltip:ClearLines()
 	AtlasLootQueryTooltip.onGetFunc = onGetFunc

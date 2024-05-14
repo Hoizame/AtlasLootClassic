@@ -70,8 +70,7 @@ AtlasLoot.GAME_VERSION_TEXTURES = {
 	[AtlasLoot.CLASSIC_VERSION_NUM] = 538639,
 	[AtlasLoot.BC_VERSION_NUM] = 131194,
 	[AtlasLoot.WRATH_VERSION_NUM] = 235509,
-	[AtlasLoot.CATA_VERSION_NUM] = 5778218,
-	-- GLUES/COMMON/gamelogo-cataclysm.blp
+	[AtlasLoot.CATA_VERSION_NUM] = 5778218, -- GLUES/COMMON/gamelogo-cataclysm.blp
 }
 
 AtlasLoot.IS_CLASSIC = false

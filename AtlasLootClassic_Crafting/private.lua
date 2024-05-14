@@ -93,6 +93,7 @@ private.ROGUE_POISONS_LINK = {
 
 private.INSCRIPTION_LINK = {
     [AtlasLoot.WRATH_VERSION_NUM]       = "InscriptionWrath",
+    [AtlasLoot.CATA_VERSION_NUM]        = "InscriptionCata",
 }
 
 private.ARCHAEOLOGY_LINK = {
