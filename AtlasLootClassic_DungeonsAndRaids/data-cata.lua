@@ -1880,7 +1880,6 @@ data["BlackwingDescent"] = {
 }
 
 data["ThroneOfTheFourWinds"] = {
-	nameFormat = NAME_SKYWALL,
 	MapID = 5638,
 	InstanceID = 754,
 	EncounterJournalID = 74,
