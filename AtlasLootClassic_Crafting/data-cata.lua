@@ -753,6 +753,150 @@ data["LeatherworkingCata"] = {
 	}
 }
 
+data["TailoringCata"] = {
+	name = ALIL["Tailoring"],
+	ContentType = PROF_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = PROF_ITTYPE,
+	CorrespondingFields = private.TAILORING_LINK,
+	items = {
+		{ -- Cloak
+			name = AL["Armor"].." - "..ALIL["Cloak"],
+			[NORMAL_DIFF] = {
+				{ 1, 99537 },	-- Vicious Embersilk Cape
+			}
+		},
+		{ -- Head
+			name = AL["Armor"].." - "..ALIL["Head"],
+			[NORMAL_DIFF] = {
+				{ 1, 75304 },	-- Vicious Fireweave Cowl
+				{ 2, 75306 },	-- Vicious Embersilk Cowl
+				{ 3, 75266 },	-- Spiritmend Cowl
+				{ 4, 75256 },	-- Deathsilk Cowl
+				{ 6, 75289 },	-- High Society Top Hat
+			}
+		},
+		{ -- Shoulder
+			name = AL["Armor"].." - "..ALIL["Shoulder"],
+			[NORMAL_DIFF] = {
+				{ 1, 75291 },	-- Vicious Wyrmhide Shoulders
+				{ 2, 75292 },	-- Vicious Leather Shoulders
+				{ 3, 75260 },	-- Darkbrand Shoulders
+				{ 4, 75251 },	-- Darkbrand Shoulders
+			}
+		},
+		{ -- Chest
+			name = AL["Armor"].." - "..ALIL["Chest"],
+			[NORMAL_DIFF] = {
+				{ 1, 75305 },	-- Vicious Embersilk Robe
+				{ 2, 75303 },	-- Vicious Fireweave Robe
+				{ 3, 75257 },	-- Deathsilk Robe
+				{ 4, 75267 },	-- Spiritmend Robe
+				{ 5, 102171 },	-- Black Silk Vest
+				{ 7, 75288 },	-- Black Embersilk Gown
+			}
+		},
+		{ -- Wrist
+			name = AL["Armor"].." - "..ALIL["Wrist"],
+			[NORMAL_DIFF] = {
+				{ 1, 101922 },	-- Dreamwraps of the Light
+				{ 2, 101923 },	-- Bracers of Unconquered Power
+				{ 3, 75270 },	-- Vicious Embersilk Bracers
+				{ 4, 75290 },	-- Vicious Fireweave Bracers
+				{ 5, 75259 },	-- Spiritmend Bracers
+				{ 6, 75249 },	-- Deathsilk Bracers
+			}
+		},
+		{ -- Hand
+			name = AL["Armor"].." - "..ALIL["Hand"],
+			[NORMAL_DIFF] = {
+				{ 1, 99448 },	-- Grips of Altered Reality
+				{ 2, 99449 },	-- Don Tayo's Inferno Mittens
+				{ 3, 75295 },	-- Vicious Embersilk Gloves
+				{ 4, 75296 },	-- Vicious Fireweave Gloves
+				{ 5, 75253 },	-- Deathsilk Gloves
+				{ 6, 75262 },	-- Spiritmend Gloves
+			},
+		},
+		{ -- Waist
+			name = AL["Armor"].." - "..ALIL["Waist"],
+			[NORMAL_DIFF] = {
+				{ 1, 75298 },	-- Belt of the Depths
+				{ 2, 75299 },	-- Dreamless Belt
+				{ 3, 75269 },	-- Vicious Fireweave Belt
+				{ 4, 75293 },	-- Vicious Embersilk Belt
+				{ 5, 75258 },	-- Spiritmend Belt
+				{ 6, 75248 },	-- Deathsilk Belt
+			},
+		},
+		{ -- Legs
+			name = AL["Armor"].." - "..ALIL["Legs"],
+			[NORMAL_DIFF] = {
+				{ 1, 101920 },	-- World Mender's Pants
+				{ 2, 101921 },	-- Lavaquake Legwraps
+				{ 3, 75301 },	-- Flame-Ascended Pantaloons
+				{ 4, 75300 },	-- Breeches of Mended Nightmares
+				{ 5, 75302 },	-- Vicious Fireweave Pants
+				{ 6, 75307 },	-- Vicious Embersilk Pants
+				{ 7, 75263 },	-- Spiritmend Leggings
+				{ 8, 75254 },	-- Deathsilk Leggings
+			},
+		},
+		{ -- Feet
+			name = AL["Armor"].." - "..ALIL["Feet"],
+			[NORMAL_DIFF] = {
+				{ 1, 99459 },	-- Endless Dream Walkers
+				{ 2, 99460 },	-- Boots of the Black Flame
+				{ 3, 75294 },	-- Vicious Fireweave Boots
+				{ 4, 75297 },	-- Vicious Embersilk Boots
+				{ 5, 75261 },	-- Spiritmend Boots
+				{ 6, 75252 },	-- Deathsilk Boots
+			},
+		},
+		{
+			name = AL["Enhancements"],
+			[NORMAL_DIFF] = {
+				{ 1, 75310 },	-- Powerful Ghostly Spellthread
+				{ 2, 75309 },	-- Powerful Enchanted Spellthread
+				{ 3, 75255 },	-- Ghostly Spellthread
+				{ 4, 75250 },	-- Enchanted Spellthread
+			},
+		},
+		{
+			name = ALIL["Bag"],
+			[NORMAL_DIFF] = {
+				{ 1, 75308 },	-- Illusionary Bag
+				{ 2, 75264 },	-- Embersilk Bag
+				{ 4, 75268 },	-- Hyjal Expedition Bag
+				{ 6, 100585 },	-- Luxurious Silk Gem Bag
+				{ 8, 75268 },	-- Otherworldly Bag
+			},
+		},
+		{
+			name = AL["Misc"],
+			[NORMAL_DIFF] = {
+				{ 1, 75247 },	-- Embersilk Net
+				{ 3, 74964 },	-- Bolt of Embersilk Cloth
+				{ 16, 75146 },	-- Dream of Azshara
+				{ 17, 94743 },	-- Dream of Destruction
+				{ 18, 75141 },	-- Dream of Skywall
+				{ 19, 75145 },	-- Dream of Ragnaros
+				{ 20, 75144 },	-- Dream of Hyjal
+				{ 21, 75142 },	-- Dream of Deepholm
+			},
+		},
+		{ -- Sets
+			name = AL["Sets"],
+			ExtraList = true,
+			TableType = SET_ITTYPE,
+			[NORMAL_DIFF] = {
+				{ 1, 944 }, -- Spiritmender
+				{ 2, 945 }, -- Deathspeaker
+			},
+		}
+	}
+}
+
 data["MiningCata"] = {
 	name = ALIL["Mining"],
 	ContentType = PROF_GATH_CONTENT,
