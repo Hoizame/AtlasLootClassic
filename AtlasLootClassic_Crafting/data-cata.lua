@@ -157,28 +157,28 @@ data["BlacksmithingCata"] = {
 		{ -- Daggers
 			name = AL["Weapons"].." - "..ALIL["Daggers"],
 			[NORMAL_DIFF] = {
-				{ 1, 76434 }, -- Cold Forged Shank
+				{ 1, 99652 }, -- Brainsplinter
 				{ 2, 76453 }, -- Elementium Shank
-				{ 3, 99652 }, -- Brainsplinter
+				{ 3, 76434 }, -- Cold Forged Shank
 			}
 		},
 		{ -- Axes
 			name = AL["Weapons"].." - "..AL["Axes"],
 			[NORMAL_DIFF] = {
 				{ 1, "INV_sword_04", nil, ALIL["One-Handed Axes"] },
-				{ 2, 76433 },	-- Decapitator's Razor
-				{ 3, 94718 },	-- Elementium Gutslicer
-				{ 4, 76452 },	-- Elementium Bonesplitter
-				{ 5, 99655 },   -- Elementium-Edged Scalper
+				{ 2, 99655 },   -- Elementium-Edged Scalper
+				{ 3, 76452 },	-- Elementium Bonesplitter
+				{ 4, 94718 },	-- Elementium Gutslicer
+				{ 5, 76433 },	-- Decapitator's Razor
 			}
 		},
 		{ -- Maces
 			name = AL["Weapons"].." - "..AL["Maces"],
 			[NORMAL_DIFF] = {
 				{ 1, "INV_sword_04", nil, ALIL["One-Handed Maces"] },
-				{ 2, 76436 }, -- Lifeforce Hammer
+				{ 2, 99654 }, -- Lightforged Elementium Hammer
 				{ 3, 76450 }, -- Elementium Hammer
-				{ 4, 99654 }, -- Lightforged Elementium Hammer
+				{ 4, 76436 }, -- Lifeforce Hammer
 				{ 16, "INV_sword_04", nil, ALIL["Two-Handed Maces"] },
 				{ 17, 94732 }, -- Forged Elementium Mindcrusher
 			}
@@ -190,124 +190,124 @@ data["BlacksmithingCata"] = {
 				{ 2, 99657 }, -- Unbreakable Guardian
 				{ 3, 99656 }, -- Pyrium Spellward
 				{ 16, "INV_sword_06", nil, ALIL["Two-Handed Swords"] },
-				{ 17, 76437 }, -- Obsidian Executioner
-				{ 18, 99658 }, -- Masterwork Elementium Deathblade
+				{ 17, 99658 }, -- Masterwork Elementium Deathblade
+				{ 18, 76437 }, -- Obsidian Executioner
 			}
 		},
 		{ -- Polearms
 			name = AL["Weapons"].." - "..AL["Polearms"],
 			[NORMAL_DIFF] = {
 				{ 1, "INV_sword_06", nil, ALIL["Polearms"] },
-				{ 2, 76474 }, -- Obsidium Bladespear
+				{ 2, 99660 }, -- Witch Hunter's Harvester
 				{ 3, 76451 }, -- Elementium Poleaxe
-				{ 4, 99660 }, -- Witch Hunter's Harvester
+				{ 4, 76474 }, -- Obsidium Bladespear
 			}
 		},
 		{ -- Shield
 			name = AL["Weapons"].." - "..ALIL["Shield"],
 			[NORMAL_DIFF] = {
-				{ 1, 76291 }, -- Hardened Obsidium Shield
-				{ 2, 76293 }, -- Stormforged Shield
-				{ 3, 76455 }, -- Elementium Stormshield
-				{ 4, 76454 }, -- Elementium Earthguard
+				{ 1, 76454 }, -- Elementium Earthguard
+				{ 2, 76455 }, -- Elementium Stormshield
+				{ 3, 76293 }, -- Stormforged Shield
+				{ 4, 76291 }, -- Hardened Obsidium Shield
 			}
 		},
 		{ -- Head
 			name = AL["Armor"].." - "..ALIL["Head"],
 			[PLATE_DIFF] = {
-				{ 1, 76260 },	-- Hardened Obsidium Helm
-				{ 2, 76288 },	-- Stormforged Helm
-				{ 3, 76269 },	-- Redsteel Helm
-				{ 4,76471 },	-- Vicious Ornate Pyrium Helm
-				{ 5, 76463 },	-- Vicious Pyrium Helm
+				{ 1, 76463 },	-- Vicious Pyrium Helm
+				{ 2, 76471 },	-- Vicious Ornate Pyrium Helm
+				{ 3, 76288 },	-- Stormforged Helm
+				{ 4, 76260 },	-- Hardened Obsidium Helm
+				{ 5, 76269 },	-- Redsteel Helm
 			},
 		},
 		{ -- Shoulder
 			name = AL["Armor"].." - "..ALIL["Shoulder"],
 			[PLATE_DIFF] = {
-				{ 1, 76266 },	-- Redsteel Shoulders
-				{ 2, 76258 },	-- Hardened Obsidium Shoulders
+				{ 1, 76461 },	-- Vicious Pyrium Shoulders
+				{ 2, 76469 },	-- Vicious Ornate Pyrium Shoulders
 				{ 3, 76286 },	-- Stormforged Shoulders
-				{ 4, 76469 },	-- Vicious Ornate Pyrium Shoulders
-				{ 5, 76461 },	-- Vicious Pyrium Shoulders
+				{ 4, 76258 },	-- Hardened Obsidium Shoulders
+				{ 5, 76266 },	-- Redsteel Shoulders
 			},
 		},
 		{ -- Chest
 			name = AL["Armor"].." - "..ALIL["Chest"],
 			[PLATE_DIFF] = {
-				{ 1, 76261 },	-- Hardened Obsidium Breastplate
-				{ 2, 76289 },	-- Stormforged Breastplate
-				{ 3, 76270 },	-- Redsteel Breastplate
-				{ 4, 76447 },	-- Light Elementium Chestguard
-				{ 5, 76445 },	-- Elementium Deathplate
-				{ 6, 76443 },	-- Hardened Elementium Hauberk
-				{ 7, 76464 },	-- Vicious Pyrium Breastplate
-				{ 8, 76472 },	-- Vicious Ornate Pyrium Breastplate
+				{ 1, 76443 },	-- Hardened Elementium Hauberk
+				{ 2, 76445 },	-- Elementium Deathplate
+				{ 3, 76447 },	-- Light Elementium Chestguard
+				{ 4, 76472 },	-- Vicious Ornate Pyrium Breastplate
+				{ 5, 76464 },	-- Vicious Pyrium Breastplate
+				{ 6, 76270 },	-- Redsteel Breastplate
+				{ 7, 76289 },	-- Stormforged Breastplate
+				{ 8, 76261 },	-- Hardened Obsidium Breastplate
 			},
 		},
 		{ -- Feet
 			name = AL["Armor"].." - "..ALIL["Feet"],
 			[PLATE_DIFF] = {
-				{ 1, 76182 }, -- Hardened Obsidium Boots
-				{ 2, 76285 }, -- Stormforged Boots
-				{ 3, 76265 }, -- Redsteel Boots
-				{ 4, 76468 }, -- Vicious Ornate Pyrium Boots
-				{ 5, 76459 }, -- Vicious Pyrium Boots
-				{ 6, 99454 }, -- Emberforged Elementium Boots
-				{ 7, 99453 }, -- Mirrored Boots
-				{ 8, 99452 }, -- Warboots of Mighty Lords
+				{ 1, 99452 }, -- Warboots of Mighty Lords
+				{ 2, 99453 }, -- Mirrored Boots
+				{ 3, 99454 }, -- Emberforged Elementium Boots
+				{ 4, 76459 }, -- Vicious Pyrium Boots
+				{ 5, 76468 }, -- Vicious Ornate Pyrium Boots
+				{ 6, 76265 }, -- Redsteel Boots
+				{ 7, 76285 }, -- Stormforged Boots
+				{ 8, 76182 }, -- Hardened Obsidium Boots
 			},
 		},
 		{ -- Hand
 			name = AL["Armor"].." - "..ALIL["Hand"],
 			[PLATE_DIFF] = {
-				{ 1, 76263 }, -- Redsteel Gauntlets
-				{ 2, 76180 }, -- Hardened Obsidium Gauntlets
-				{ 3, 76281 }, -- Stormforged Gauntlets
-				{ 4, 76457 }, -- Vicious Pyrium Gauntlets
-				{ 5, 76466 }, -- Vicious Ornate Pyrium Gauntlets
-				{ 6, 99441 }, -- Holy Flame Gauntlets
-				{ 7, 99440 }, -- Eternal Elementium Handguards
-				{ 8, 99439 }, -- Fists of Fury
+				{ 1, 99439 }, -- Fists of Fury
+				{ 2, 99440 }, -- Eternal Elementium Handguards
+				{ 3, 99441 }, -- Holy Flame Gauntlets
+				{ 4, 76466 }, -- Vicious Ornate Pyrium Gauntlets
+				{ 5, 76457 }, -- Vicious Pyrium Gauntlets
+				{ 6, 76281 }, -- Stormforged Gauntlets
+				{ 7, 76180 }, -- Hardened Obsidium Gauntlets
+				{ 8, 76263 }, -- Redsteel Gauntlets
 			},
 		},
 		{ -- Legs
 			name = AL["Armor"].." - "..ALIL["Legs"],
 			[PLATE_DIFF] = {
-				{ 1, 76259 }, -- Hardened Obsidium Legguards
-				{ 2, 76287 }, -- Stormforged Legguards
-				{ 3, 76267 }, -- Redsteel Legguards
-				{ 4,76462 }, -- Vicious Pyrium Legguards
-				{ 5, 76470 }, -- Vicious Ornate Pyrium Legguards
-				{ 6, 101928 }, -- Foundations of Courage
-				{ 7, 101925 }, -- Unstoppable Destroyer's Legplates
-				{ 8, 101924 }, -- Pyrium Legplates of Purified Evil
+				{ 1, 101924 }, -- Pyrium Legplates of Purified Evil
+				{ 2, 101925 }, -- Unstoppable Destroyer's Legplates
+				{ 3, 101928 }, -- Foundations of Courage
+				{ 4, 76470 },  -- Vicious Ornate Pyrium Legguards
+				{ 5,76462 },   -- Vicious Pyrium Legguards
+				{ 6, 76287 },  -- Stormforged Legguards
+				{ 7, 76267 },  -- Redsteel Legguards
+				{ 8, 76259 },  -- Hardened Obsidium Legguards
 			},
 		},
 		{ -- Waist
 			name = AL["Armor"].." - "..ALIL["Waist"],
 			[PLATE_DIFF] = {
-				{ 1, 76181 }, -- Hardened Obsidium Belt
-				{ 2, 76283 }, -- Stormforged Belt
-				{ 3, 76264 }, -- Redsteel Belt
-				{ 4, 76448 }, -- Light Elementium Belt
-				{ 5, 76446 }, -- Elementium Girdle of Pain
-				{ 6, 76444 }, -- Hardened Elementium Girdle
-				{ 7, 76458 }, -- Vicious Pyrium Belt
-				{ 8, 76467 }, -- Vicious Ornate Pyrium Belt
+				{ 1, 76444 }, -- Hardened Elementium Girdle
+				{ 2, 76446 }, -- Elementium Girdle of Pain
+				{ 3, 76448 }, -- Light Elementium Belt
+				{ 4, 76467 }, -- Vicious Ornate Pyrium Belt
+				{ 5, 76458 }, -- Vicious Pyrium Belt
+				{ 6, 76264 }, -- Redsteel Belt
+				{ 7, 76283 }, -- Stormforged Belt
+				{ 8, 76181 }, -- Hardened Obsidium Belt
 			},
 		},
 		{ -- Wrist
 			name = AL["Armor"].." - "..ALIL["Wrist"],
 			[PLATE_DIFF] = {
-				{ 1, 76280 }, -- Stormforged Bracers
-				{ 2, 76262 }, -- Redsteel Bracers
-				{ 3, 76179 }, -- Hardened Obsidium Bracers
-				{ 4, 76465 }, -- Vicious Ornate Pyrium Bracers
-				{ 5, 76456 }, -- Vicious Pyrium Bracers
-				{ 6, 101932 }, -- Titanguard Wristplates
-				{ 7, 101931 }, -- Bracers off DEstructive Strength
-				{ 8, 101929 }, -- Soul Redeemer Bracers
+				{ 1, 101929 }, -- Soul Redeemer Bracers
+				{ 2, 101931 }, -- Bracers off DEstructive Strength
+				{ 3, 101932 }, -- Titanguard Wristplates
+				{ 4, 76456 }, -- Vicious Pyrium Bracers
+				{ 5, 76465 }, -- Vicious Ornate Pyrium Bracers
+				{ 6, 76179 }, -- Hardened Obsidium Bracers
+				{ 7, 76262 }, -- Redsteel Bracers
+				{ 8, 76280 }, -- Stormforged Bracers
 			},
 		},
 		{ -- Enhancements
@@ -448,114 +448,95 @@ data["EngineeringCata"] = {
 		{
 			name = AL["Armor"].." - "..ALIL["Head"].." - "..ALIL["Cloth"],
 			[NORMAL_DIFF] = {
-				{ 1, 1725 }, -- Lightweight Bio-Optic Killshades
+				{ 1, 81725 }, -- Lightweight Bio-Optic Killshades
+				{ 3, 84406 }, -- Authentic Jr. Engineer Goggles
 			}
 		},
 		{
 			name = AL["Armor"].." - "..ALIL["Head"].." - "..ALIL["Leather"],
 			[NORMAL_DIFF] = {
-				{ 1, 56486 },	-- Greensight Gogs
-				{ 2, 56481 },	-- Weakness Spectralizers
+				{ 1, 81724 },	-- Camouflage Bio-Optic Killshades
+				{ 2, 81722 },	-- Agile Bio-Optic Killshades
 			}
 		},
 		{
 			name = AL["Armor"].." - "..ALIL["Head"].." - "..ALIL["Mail"],
 			[NORMAL_DIFF] = {
-				{ 1, 56487 },	-- Electroflux Sight Enhancers
-				{ 2, 56574 },	-- Truesight Ice Blinders
+				{ 1, 81720 },	-- Energized Bio-Optic Killshades
+				{ 2, 81716 },	-- Deadly Bio-Optic Killshades
 			}
 		},
 		{
 			name = AL["Armor"].." - "..ALIL["Head"].." - "..ALIL["Plate"],
 			[NORMAL_DIFF] = {
-				{ 1, 56480 },	-- Armored Titanium Goggles
-				{ 2, 56483 },	-- Charged Titanium Specs
-				{ 3, 62271 },	-- Unbreakable Healing Amplifiers
-				{ 16, 61483 },	-- Mechanized Snow Goggles
+				{ 1, 81715 },	-- Specialized Bio-Optic Killshades
+				{ 2, 81714 },	-- Reinforced Bio-Optic Killshades
 			}
 		},
 		{
 			name = AL["Armor"].." - "..ALIL["Trinket"],
 			[NORMAL_DIFF] = {
-				{ 1, 56469 },	-- Gnomish Lightning Generator
-				{ 2, 56467 },	-- Noise Machine
-				{ 3, 56466 },	-- Sonic Booster
+				{ 1, 84418 },	-- Elementium Dragonling
 			}
 		},
 		{
 			name = ALIL["Weapon"].." - "..AL["Enhancements"],
 			[NORMAL_DIFF] = {
-				{ 1, 56478 },	-- Heartseeker Scope
-				{ 2, 56470 },	-- Sun Scope
-				{ 3, 61471 },	-- Diamond-Cut Refractor Scope
+				{ 1, 84428 },	-- Gnomish X-Ray Scope
+				{ 2, 100587 },	-- Flintlocke's Woodchucker
+				{ 3, 84408 },	-- R19 Threatfinder
+				{ 4, 84410 },	-- Safety Catch Removal Kit
 			}
 		},
 		{
-			name = AL["Weapons"].." - "..ALIL["Guns"],
+			name = AL["Weapons"],
 			[NORMAL_DIFF] = {
-				{ 1, 56479 },	-- Armor Plated Combat Shotgun
-				{ 2, 60874 },	-- Nesingwary 4000
-				{ 3, 54353 },	-- Mark "S" Boomstick
-			}
-		},
-		{
-			name = ALIL["Projectile"],
-			[NORMAL_DIFF] = {
-				{ 1, 72953 },	-- Iceblade Arrow
-				{ 2, 56475 },	-- Saronite Razorheads
-				{ 16, 72952 },	-- Shatter Rounds
-				{ 17, 56474 },	-- Mammoth Cutters
+				{ 1, 100687 },	-- Extreme-Impact Hole Puncher
+				{ 2, 84432 },	-- Kickback 5000
+				{ 3, 84431 },	-- Overpowered Chicken Splitter
+				{ 4, 84420 },	-- Finely-Tuned Throat Needler
+				{ 16, 84411 },	-- High-Powered Bolt Gun
 			}
 		},
 		{
 			name = ALIL["Parts"],
 			[NORMAL_DIFF] = {
-				{ 1, 56471 },	-- Froststeel Tube
-				{ 2, 56464 },	-- Overcharged Capacitor
-				{ 3, 56349 },	-- Handful of Cobalt Bolts
-				{ 4, 53281 },	-- Volatile Blasting Trigger
+				{ 1, 94748 },	-- Electrified Ether
+				{ 2, 84403 },	-- Handful of Obsidium Bolts
 			}
 		},
 		{
 			name = ALIL["Explosives"],
 			[NORMAL_DIFF] = {
-				{ 1, 56514 },	-- Global Thermal Sapper Charge
-				{ 3, 56463 },	-- Explosive Decoy
-				{ 4, 56460 },	-- Cobalt Frag Bomb
-				{ 16, 56468 },	-- Box of Bombs
-				{ 17, "i44951" }
+				{ 1, 95707 },	-- Big Daddy
+				{ 2, 84409 },	-- Volatile Seaforium Blastpack
 			}
 		},
 		{
-			name = ALIL["Engineering"].." - "..AL["Enhancements"],
+			name = AL["Enhancements"],
 			[NORMAL_DIFF] = {
-				{ 1, 54999 },	-- Hyperspeed Accelerators
-				{ 2, 54998 },	-- Hand-Mounted Pyro Rocket
-				{ 3, 63770 },	-- Reticulated Armor Webbing
-				{ 5, 55016 },	-- Nitro Boosts
-				{ 16, 54736 },	-- Personal Electromagnetic Pulse Generator
-				{ 17, 54793 },	-- Frag Belt
-				{ 19, 55002 },	-- Flexweave Underlay
-				{ 20, 63765 },	-- Springy Arachnoweave
-				{ 22, 67839 },	-- Mind Amplification Dish
+				{ 1, 82175 },	-- Synapse Springs
+				{ 2, 82177 },	-- Quickflip Deflection Plates
+				{ 3, 82180 },	-- Tazik Shocker
+				{ 4, 82200 },	-- Spinal Healing Injector
+				{ 5, 82201 },	-- Z50 Mana Gulper
+				{ 6, 84424 },	-- Invisibility Field
+				{ 7, 84425 },	-- Cardboard Assassin
+				{ 8, 84427 },	-- Grounded Plasma Shield
+				{ 16, 84430 },	-- Heat-Treated Spinning Lure
 			}
 		},
 		{
 			name = AL["Misc"],
 			[NORMAL_DIFF] = {
-				{ 1,   [ATLASLOOT_IT_ALLIANCE] = { 60867 }, [ATLASLOOT_IT_HORDE] = { 60866 } }, -- Mekgineer's Chopper / Mechano-Hog
-				{ 3, 56476 },	-- Healing Injector Kit
-				{ 4, 56477 },	-- Mana Injector Kit
-				{ 6, 56461 },	-- Bladed Pickaxe
-				{ 7, 56459 },	-- Hammer Pick
-				{ 9, 55252 },	-- Scrapbot Construction Kit
-				{ 11, 56462 },	-- Gnomish Army Knife
-				{ 13, 67326 },	-- Goblin Beam Welder
-				{ 16, 68067 },	-- Jeeves
-				{ 18, 56472 },	-- MOLL-E
-				{ 20, 67920 },	-- Wormhole Generator: Northrend
-				{ 22, 30349 },	-- Titanium Toolbox
-				{ 24, 56473 },	-- Gnomish X-Ray Specs
+				{ 1, 84412 },   -- Personal World Destroyer
+				{ 2, 84413 },	-- De-Weaponized Mechanical Companion
+				{ 4, 84421 },	-- Loot-a-Rang
+				{ 5, 95705 },	-- Gnomish Gravity Well
+				{ 7, 95703 },	-- Electrostatic Condenser
+				{ 9, 84429 },	-- Goblin Barbecue
+				{ 11, 84416 },	-- Elementium Toolbox
+				{ 12, 84415 },	-- Lure Master Tackle Box
 			}
 		},
 	}
@@ -748,6 +729,150 @@ data["LeatherworkingCata"] = {
 			[NORMAL_DIFF] = {
 				{ 1, 949 }, -- The Dark Brand
 				{ 2, 950 }, -- The Big Wave
+			},
+		}
+	}
+}
+
+data["TailoringCata"] = {
+	name = ALIL["Tailoring"],
+	ContentType = PROF_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = PROF_ITTYPE,
+	CorrespondingFields = private.TAILORING_LINK,
+	items = {
+		{ -- Cloak
+			name = AL["Armor"].." - "..ALIL["Cloak"],
+			[NORMAL_DIFF] = {
+				{ 1, 99537 },	-- Vicious Embersilk Cape
+			}
+		},
+		{ -- Head
+			name = AL["Armor"].." - "..ALIL["Head"],
+			[NORMAL_DIFF] = {
+				{ 1, 75304 },	-- Vicious Fireweave Cowl
+				{ 2, 75306 },	-- Vicious Embersilk Cowl
+				{ 3, 75266 },	-- Spiritmend Cowl
+				{ 4, 75256 },	-- Deathsilk Cowl
+				{ 6, 75289 },	-- High Society Top Hat
+			}
+		},
+		{ -- Shoulder
+			name = AL["Armor"].." - "..ALIL["Shoulder"],
+			[NORMAL_DIFF] = {
+				{ 1, 75292 },	-- Vicious Fireweave Shoulders
+				{ 2, 75291 },	-- Vicious Embersilk Shoulders
+				{ 3, 75260 },	-- Spiritmend Shoulders
+				{ 4, 75251 },	-- Deathsilk Shoulders
+			}
+		},
+		{ -- Chest
+			name = AL["Armor"].." - "..ALIL["Chest"],
+			[NORMAL_DIFF] = {
+				{ 1, 75305 },	-- Vicious Embersilk Robe
+				{ 2, 75303 },	-- Vicious Fireweave Robe
+				{ 3, 75257 },	-- Deathsilk Robe
+				{ 4, 75267 },	-- Spiritmend Robe
+				{ 5, 102171 },	-- Black Silk Vest
+				{ 7, 75288 },	-- Black Embersilk Gown
+			}
+		},
+		{ -- Wrist
+			name = AL["Armor"].." - "..ALIL["Wrist"],
+			[NORMAL_DIFF] = {
+				{ 1, 101922 },	-- Dreamwraps of the Light
+				{ 2, 101923 },	-- Bracers of Unconquered Power
+				{ 3, 75270 },	-- Vicious Embersilk Bracers
+				{ 4, 75290 },	-- Vicious Fireweave Bracers
+				{ 5, 75259 },	-- Spiritmend Bracers
+				{ 6, 75249 },	-- Deathsilk Bracers
+			}
+		},
+		{ -- Hand
+			name = AL["Armor"].." - "..ALIL["Hand"],
+			[NORMAL_DIFF] = {
+				{ 1, 99448 },	-- Grips of Altered Reality
+				{ 2, 99449 },	-- Don Tayo's Inferno Mittens
+				{ 3, 75296 },	-- Vicious Fireweave Gloves
+				{ 4, 75295 },	-- Vicious Embersilk Gloves
+				{ 5, 75253 },	-- Deathsilk Gloves
+				{ 6, 75262 },	-- Spiritmend Gloves
+			},
+		},
+		{ -- Waist
+			name = AL["Armor"].." - "..ALIL["Waist"],
+			[NORMAL_DIFF] = {
+				{ 1, 75298 },	-- Belt of the Depths
+				{ 2, 75299 },	-- Dreamless Belt
+				{ 3, 75269 },	-- Vicious Fireweave Belt
+				{ 4, 75293 },	-- Vicious Embersilk Belt
+				{ 5, 75258 },	-- Spiritmend Belt
+				{ 6, 75248 },	-- Deathsilk Belt
+			},
+		},
+		{ -- Legs
+			name = AL["Armor"].." - "..ALIL["Legs"],
+			[NORMAL_DIFF] = {
+				{ 1, 101920 },	-- World Mender's Pants
+				{ 2, 101921 },	-- Lavaquake Legwraps
+				{ 3, 75301 },	-- Flame-Ascended Pantaloons
+				{ 4, 75300 },	-- Breeches of Mended Nightmares
+				{ 5, 75302 },	-- Vicious Fireweave Pants
+				{ 6, 75307 },	-- Vicious Embersilk Pants
+				{ 7, 75263 },	-- Spiritmend Leggings
+				{ 8, 75254 },	-- Deathsilk Leggings
+			},
+		},
+		{ -- Feet
+			name = AL["Armor"].." - "..ALIL["Feet"],
+			[NORMAL_DIFF] = {
+				{ 1, 99459 },	-- Endless Dream Walkers
+				{ 2, 99460 },	-- Boots of the Black Flame
+				{ 3, 75297 },	-- Vicious Embersilk Boots
+				{ 4, 75294 },	-- Vicious Fireweave Boots
+				{ 5, 75261 },	-- Spiritmend Boots
+				{ 6, 75252 },	-- Deathsilk Boots
+			},
+		},
+		{
+			name = AL["Enhancements"],
+			[NORMAL_DIFF] = {
+				{ 1, 75310 },	-- Powerful Ghostly Spellthread
+				{ 2, 75309 },	-- Powerful Enchanted Spellthread
+				{ 3, 75255 },	-- Ghostly Spellthread
+				{ 4, 75250 },	-- Enchanted Spellthread
+			},
+		},
+		{
+			name = ALIL["Bag"],
+			[NORMAL_DIFF] = {
+				{ 1, 75308 },	-- Illusionary Bag
+				{ 2, 75264 },	-- Embersilk Bag
+				{ 4, 75268 },	-- Hyjal Expedition Bag
+				{ 6, 100585 },	-- Luxurious Silk Gem Bag
+				{ 8, 75268 },	-- Otherworldly Bag
+			},
+		},
+		{
+			name = AL["Misc"],
+			[NORMAL_DIFF] = {
+				{ 1, 75247 },	-- Embersilk Net
+				{ 3, 74964 },	-- Bolt of Embersilk Cloth
+				{ 16, 75146 },	-- Dream of Azshara
+				{ 17, 94743 },	-- Dream of Destruction
+				{ 18, 75141 },	-- Dream of Skywall
+				{ 19, 75145 },	-- Dream of Ragnaros
+				{ 20, 75144 },	-- Dream of Hyjal
+				{ 21, 75142 },	-- Dream of Deepholm
+			},
+		},
+		{ -- Sets
+			name = AL["Sets"],
+			ExtraList = true,
+			TableType = SET_ITTYPE,
+			[NORMAL_DIFF] = {
+				{ 1, 944 }, -- Spiritmender
+				{ 2, 945 }, -- Deathspeaker
 			},
 		}
 	}
