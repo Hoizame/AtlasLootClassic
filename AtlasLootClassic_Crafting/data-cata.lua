@@ -940,6 +940,79 @@ data["SkinningCata"] = {
 	}
 }
 
+data["ArchaeologyCata"] = {
+	name = ALIL["Archaeology"],
+	ContentType = PROF_SEC_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = PROF_ITTYPE,
+	CorrespondingFields = private.ARCHAEOLOGY_LINK,
+	items = {
+		{
+			name = AL["Endgame Gear"],
+			[NORMAL_DIFF] = {
+				{1, 90608}, -- Zin'rokh, Destroyer of Worlds
+				{2, 91227}, -- Staff of Sorcerer-Thane Thaurissan
+				{3, 92163}, -- Scimitar of the Sirocco
+				{4, 98533}, -- Extinct Turtle Shell
+				{5, 92139}, -- Staff of Ammunae
+				{16, 92168}, -- Ring of the Boy Emperor
+				{18, 91757}, -- Tyrande's Favorite Doll
+			},
+		},
+		{
+			name = AL["Leveling Gear"],
+			[NORMAL_DIFF] = {
+				{1, 90997}, -- Nifflevar Bearded Axe
+				{16, 90843}, -- Headdress of the First Shaman
+				{17, 90616}, -- Queen Azshara's Dressing Gown
+			},
+		},
+		{
+			name = AL["Toys"],
+			[NORMAL_DIFF] = {
+				{1, 91214}, -- Blessing of the Old God
+				{2, 91761}, -- Bones of Transformation
+				{3, 91215}, -- Puzzle Box of Yogg-Saron
+				{4, 91773}, -- Wisp Amulet
+				{5, 92145}, -- Pendant of the Scarab Storm
+				{16, 90984}, -- The Last Relic of Argus
+				{17, 91226}, -- The Innkeeper's Daughter
+				{18, 98493}, -- Druid and Priest Statue Set
+				{19, 90553}, -- Chalice of the Mountain Kings
+				{20, 90464}, -- Highborne Soul Mirror
+				{21, 90983}, -- Arrival of the Naaru
+				{22, 90614}, -- Kaldorei Wind Chimes
+				{23, 98560}, -- Ancient Amber
+				{24, 98556}, -- Haunted War Drum
+				{25, 98569}, -- Vrykul Drinking Horn
+			},
+		},
+		{
+			name = AL["Mounts"],
+			[NORMAL_DIFF] = {
+				{1, 92148}, -- Scepter of Azj'Aqir
+				{2, 90619}, -- Fossilized Raptor
+			},
+		},
+		{
+			name = AL["Pets"],
+			[NORMAL_DIFF] = {
+				{1, 92137}, -- Crawling Claw
+				{3, 98588}, -- Voodoo Figurine
+				{4, 98582}, -- Pterrordax Hatchling
+				{5, 90521}, -- Clockwork Gnome
+				{6, 89693}, -- Fossilized Hatchling
+			},
+		},
+		{
+			name = AL["Misc"],
+			[NORMAL_DIFF] = {
+				{1, 91790}, -- Canopic Jar
+			}
+		},
+	}
+}
+
 data["CookingCata"] = {
 	name = ALIL["Cooking"],
 	ContentType = PROF_SEC_CONTENT,
@@ -1096,79 +1169,6 @@ data["FishingCata"] = {
 				{ 7, 53063 }, -- Mountain Trout
 				{ 8, 53067 }, -- Striped Lurker
 				{ 9, 53065 }, -- Albino Cavefish
-			}
-		},
-	}
-}
-
-data["ArchaeologyCata"] = {
-	name = ALIL["Archaeology"],
-	ContentType = PROF_SEC_CONTENT,
-	LoadDifficulty = NORMAL_DIFF,
-	TableType = PROF_ITTYPE,
-	CorrespondingFields = private.ARCHAEOLOGY_LINK,
-	items = {
-		{
-			name = AL["Endgame Gear"],
-			[NORMAL_DIFF] = {
-				{1, 90608}, -- Zin'rokh, Destroyer of Worlds
-				{2, 91227}, -- Staff of Sorcerer-Thane Thaurissan
-				{3, 92163}, -- Scimitar of the Sirocco
-				{4, 98533}, -- Extinct Turtle Shell
-				{5, 92139}, -- Staff of Ammunae
-				{16, 92168}, -- Ring of the Boy Emperor
-				{18, 91757}, -- Tyrande's Favorite Doll
-			},
-		},
-		{
-			name = AL["Leveling Gear"],
-			[NORMAL_DIFF] = {
-				{1, 90997}, -- Nifflevar Bearded Axe
-				{16, 90843}, -- Headdress of the First Shaman
-				{17, 90616}, -- Queen Azshara's Dressing Gown
-			},
-		},
-		{
-			name = AL["Toys"],
-			[NORMAL_DIFF] = {
-				{1, 91214}, -- Blessing of the Old God
-				{2, 91761}, -- Bones of Transformation
-				{3, 91215}, -- Puzzle Box of Yogg-Saron
-				{4, 91773}, -- Wisp Amulet
-				{5, 92145}, -- Pendant of the Scarab Storm
-				{16, 90984}, -- The Last Relic of Argus
-				{17, 91226}, -- The Innkeeper's Daughter
-				{18, 98493}, -- Druid and Priest Statue Set
-				{19, 90553}, -- Chalice of the Mountain Kings
-				{20, 90464}, -- Highborne Soul Mirror
-				{21, 90983}, -- Arrival of the Naaru
-				{22, 90614}, -- Kaldorei Wind Chimes
-				{23, 98560}, -- Ancient Amber
-				{24, 98556}, -- Haunted War Drum
-				{25, 98569}, -- Vrykul Drinking Horn
-			},
-		},
-		{
-			name = AL["Mounts"],
-			[NORMAL_DIFF] = {
-				{1, 92148}, -- Scepter of Azj'Aqir
-				{2, 90619}, -- Fossilized Raptor
-			},
-		},
-		{
-			name = AL["Pets"],
-			[NORMAL_DIFF] = {
-				{1, 92137}, -- Crawling Claw
-				{3, 98588}, -- Voodoo Figurine
-				{4, 98582}, -- Pterrordax Hatchling
-				{5, 90521}, -- Clockwork Gnome
-				{6, 89693}, -- Fossilized Hatchling
-			},
-		},
-		{
-			name = AL["Misc"],
-			[NORMAL_DIFF] = {
-				{1, 91790}, -- Canopic Jar
 			}
 		},
 	}
