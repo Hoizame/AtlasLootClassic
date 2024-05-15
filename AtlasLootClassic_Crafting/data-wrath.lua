@@ -26,8 +26,8 @@ local NORMAL_DIFF = data:AddDifficulty(AL["Normal"], "n", 1, nil, true)
 local LEATHER_DIFF = data:AddDifficulty(ALIL["Leather"], "leather", 0)
 local MAIL_DIFF = data:AddDifficulty(ALIL["Mail"], "mail", 0)
 local PLATE_DIFF = data:AddDifficulty(ALIL["Plate"], "plate", 0)
-local MAJOR_GLYPHS_DIFF = data:AddDifficulty(ALIL["Major Glyphs"], "majorglyphs", 0)
-local MINOR_GLYPHS_DIFF = data:AddDifficulty(ALIL["Minor Glyphs"], "minorglyphs", 0)
+--local MAJOR_GLYPHS_DIFF = data:AddDifficulty(ALIL["Major Glyphs"], "majorglyphs", 0)
+--local MINOR_GLYPHS_DIFF = data:AddDifficulty(ALIL["Minor Glyphs"], "minorglyphs", 0)
 
 local NORMAL_ITTYPE = data:AddItemTableType("Item", "Item")
 local PROF_ITTYPE = data:AddItemTableType("Profession", "Item")
@@ -1650,6 +1650,7 @@ data["InscriptionWrath"] = {
 				{ 19, 59480 },	-- Strange Tarot
 			}
 		},
+		--[[
 		{
 			name = ALIL["WARRIOR"],
 			[MAJOR_GLYPHS_DIFF] = {
@@ -2061,6 +2062,7 @@ data["InscriptionWrath"] = {
 				{ 7, 58286 }, -- Glyph of Aquatic Form / 75
 			},
 		},
+		--]]
 		{
 			name = AL["Ink"],
 			[NORMAL_DIFF] = {
@@ -2094,12 +2096,7 @@ data["InscriptionWrath"] = {
 			name = AL["Misc"],
 			[NORMAL_DIFF] = {
 				{ 1, 59387 },	-- Certificate of Ownership
-				{ 3, 52739 },	-- Armor Vellum
-				{ 4, 59499 },	-- Armor Vellum II
-				{ 5, 59500 },	-- Armor Vellum III
-				{ 18, 52840 },	-- Weapon Vellum
-				{ 19, 59488 },	-- Weapon Vellum II
-				{ 20, 59501 },	-- Weapon Vellum III
+				{ 3, 52739 },	-- Enchanting Vellum
 			}
 		},
 	}
