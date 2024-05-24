@@ -841,7 +841,7 @@ function Favourites:CountFavouritesByList(addonName, contentName, boss, dif, inc
     local items, tableType, diffData = ItemDB:GetItemTable(addonName, contentName, boss, dif)
     -- Check if items is nil or empty
     if not items or next(items) == nil then
-        return
+        return result
     end
     for l, listData in pairs(self.db.lists) do
         local listName = listData.__name

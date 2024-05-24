@@ -6,84 +6,166 @@ AtlasLoot.Data.VendorPrice = VendorPrice
 local AL = AtlasLoot.Locales
 
 local PRICE_INFO_LIST = {
-	--- Classic
-	-- items
-	["burningblossom"] 	= { itemID = 23247 }, -- Burning Blossom
-	["ancestrycoin"] 	= { itemID = 21100 }, -- Coin of Ancestry
-    ["NecroticRune"] 	= { itemID = 22484 }, -- Necrotic Rune
+    --- Classic
+    -- items
+    ["burningblossom"] = {
+        itemID = 23247
+    }, -- Burning Blossom
+    ["ancestrycoin"] = {
+        itemID = 21100
+    }, -- Coin of Ancestry
+    ["NecroticRune"] = {
+        itemID = 22484
+    }, -- Necrotic Rune
 
-	-- others
-	["money"] 			= { func = GetCoinTextureString },
+    -- others
+    ["money"] = {
+        func = GetCoinTextureString
+    },
 
-	--- BC
-	["holydust"] = { itemID = 29735 }, -- Holy Dust (Aldor)
-	["arcanerune"] = { itemID = 29736 }, -- Holy Dust (Scryers)
-	["SpiritShard"] = { itemID = 28558 }, -- Spirit Shard
-	["HalaaRT"] = { itemID = 26044 }, -- Halaa Research Token
-	["HalaaBT"] = { itemID = 26045 }, -- Halaa Battle Token
-	["MarkOfThrallmar"] = { itemID = 24581 }, -- Mark of Thrallmar
-	["MarkOfHonorHold"] = { itemID = 24579 }, -- Mark of Honor Hold
-	["BoJ"] = { itemID = 29434 }, -- Badge of Justice
-	["glowcap"] = { itemID = 24245 }, -- Glowcap
-	["ApexisC"] = { itemID = 32572 }, -- Apexis Crystal
-	["ApexisS"] = { itemID = 32569 }, -- Apexis Shard
-	["Brewfest"] = { itemID = 37829 }, -- Brewfest Prize Token
-        ["sunmote"] = { itemID = 34664 }, -- Sunmote
-	-- pvp
-	["honor"] = { currencyID = 1901 }, -- Honor
-	["arena"] = { currencyID = 1900 },  -- Arena
-	--["honorH"] = { currencyID = 1901 }, -- Honor / Horde
-	--["honorA"] = { currencyID = 1901 }, -- Honor / Alli
-	["pvpAlterac"] = { itemID = 20560 }, -- Alterac Valley Mark of Honor
-	["pvpWarsong"] = { itemID = 20558 }, -- Warsong Gulch Mark of Honor
-	["pvpArathi"] = { itemID = 20559 }, -- Arathi Basin Mark of Honor
-	["pvpEye"] = { itemID = 29024 }, -- Eye of the Storm Mark of Honor
+    --- BC
+    ["holydust"] = {
+        itemID = 29735
+    }, -- Holy Dust (Aldor)
+    ["arcanerune"] = {
+        itemID = 29736
+    }, -- Holy Dust (Scryers)
+    ["SpiritShard"] = {
+        itemID = 28558
+    }, -- Spirit Shard
+    ["HalaaRT"] = {
+        itemID = 26044
+    }, -- Halaa Research Token
+    ["HalaaBT"] = {
+        itemID = 26045
+    }, -- Halaa Battle Token
+    ["MarkOfThrallmar"] = {
+        itemID = 24581
+    }, -- Mark of Thrallmar
+    ["MarkOfHonorHold"] = {
+        itemID = 24579
+    }, -- Mark of Honor Hold
+    ["BoJ"] = {
+        itemID = 29434
+    }, -- Badge of Justice
+    ["glowcap"] = {
+        itemID = 24245
+    }, -- Glowcap
+    ["ApexisC"] = {
+        itemID = 32572
+    }, -- Apexis Crystal
+    ["ApexisS"] = {
+        itemID = 32569
+    }, -- Apexis Shard
+    ["Brewfest"] = {
+        itemID = 37829
+    }, -- Brewfest Prize Token
+    ["sunmote"] = {
+        itemID = 34664
+    }, -- Sunmote
+    -- pvp
+    ["honor"] = {
+        currencyID = 1901
+    }, -- Honor
+    ["arena"] = {
+        currencyID = 1900
+    }, -- Arena
+    -- ["honorH"] = { currencyID = 1901 }, -- Honor / Horde
+    -- ["honorA"] = { currencyID = 1901 }, -- Honor / Alli
+    ["pvpAlterac"] = {
+        itemID = 20560
+    }, -- Alterac Valley Mark of Honor
+    ["pvpWarsong"] = {
+        itemID = 20558
+    }, -- Warsong Gulch Mark of Honor
+    ["pvpArathi"] = {
+        itemID = 20559
+    }, -- Arathi Basin Mark of Honor
+    ["pvpEye"] = {
+        itemID = 29024
+    }, -- Eye of the Storm Mark of Honor
 
     --- Wrath
-    ["epicurean"] = { currencyID = 81 }, -- Epicurean's Award
+    ["epicurean"] = {
+        currencyID = 81
+    }, -- Epicurean's Award
 
-    ["championsSeal"] = { currencyID = 241 }, -- Champion's Seal
-    ["EmblemOfHeroism"] = { currencyID = 101 }, -- Emblem of Heroism
-    ["EmblemOfValor"] = { currencyID = 102 }, -- Emblem of Valor
-    ["EmblemOfTriumph"] = { currencyID = 301 }, -- Emblem of Triumph
-    ["EmblemOfConquest"] = { currencyID = 221 }, -- Emblem of Conquest
-    ["EmblemOfFrost"] = { currencyID = 341 }, -- Emblem of Frost
-    ["SiderealEssence"] = { currencyID = 2589 }, -- Sidereal Essence
-    ["DefilersScourgestone"] = {currencyID = 2711}, -- Defiler's Scourgestone
+    ["championsSeal"] = {
+        currencyID = 241
+    }, -- Champion's Seal
+    ["EmblemOfHeroism"] = {
+        currencyID = 395
+    }, -- Emblem of Heroism
+    ["EmblemOfValor"] = {
+        currencyID = 395
+    }, -- Emblem of Valor
+    ["EmblemOfTriumph"] = {
+        currencyID = 395
+    }, -- Emblem of Triumph
+    ["EmblemOfConquest"] = {
+        currencyID = 395
+    }, -- Emblem of Conquest
+    ["EmblemOfFrost"] = {
+        currencyID = 395
+    }, -- Emblem of Frost
+    ["SiderealEssence"] = {
+        currencyID = 2589
+    }, -- Sidereal Essence
+    ["DefilersScourgestone"] = {
+        currencyID = 2711
+    }, -- Defiler's Scourgestone
 
     -- Cata
-    ["chefs"] = { currencyID = 402 }, -- Chef's Award
+    ["chefs"] = {
+        currencyID = 402
+    }, -- Chef's Award
 
-    ["JusticePoints"] = { currencyID = 395 }, -- Justice Points
-    ["ValorPoints"] = { currencyID = 396 }, -- Valor Points
+    ["JusticePoints"] = {
+        currencyID = 395
+    }, -- Justice Points
+    ["ValorPoints"] = {
+        currencyID = 396
+    }, -- Valor Points
 
     --- PvP
-    ["cpvpAlterac"] = { currencyID = 121 }, -- Alterac Valley Mark of Honor
-	["cpvpWarsong"] = { currencyID = 125 }, -- Warsong Gulch Mark of Honor
-	["cpvpArathi"] = { currencyID = 122 }, -- Arathi Basin Mark of Honor
-	["cpvpEye"] = { currencyID = 123 }, -- Eye of the Storm Mark of Honor
-	["cpvpWintergrasp"] = { currencyID = 126 }, -- Wintergrasp Mark of Honor
-	["cpvpIsle"] = { currencyID = 321 }, -- Isle of Conquest Mark of Honor
-	["cpvpStrand"] = { currencyID = 124 }, -- Strand of the Ancients Mark of Honor
+    ["cpvpAlterac"] = {
+        currencyID = 121
+    }, -- Alterac Valley Mark of Honor
+    ["cpvpWarsong"] = {
+        currencyID = 125
+    }, -- Warsong Gulch Mark of Honor
+    ["cpvpArathi"] = {
+        currencyID = 122
+    }, -- Arathi Basin Mark of Honor
+    ["cpvpEye"] = {
+        currencyID = 123
+    }, -- Eye of the Storm Mark of Honor
+    ["cpvpWintergrasp"] = {
+        currencyID = 126
+    }, -- Wintergrasp Mark of Honor
+    ["cpvpIsle"] = {
+        currencyID = 321
+    }, -- Isle of Conquest Mark of Honor
+    ["cpvpStrand"] = {
+        currencyID = 124
+    } -- Strand of the Ancients Mark of Honor
 }
 
 local VENDOR_PRICE_FORMAT = {}
 for k, v in pairs(PRICE_INFO_LIST) do
     if v.itemID then
-        VENDOR_PRICE_FORMAT[v.itemID] = k..":%d"
+        VENDOR_PRICE_FORMAT[v.itemID] = k .. ":%d"
     elseif v.currencyID and C_CurrencyInfo and C_CurrencyInfo.GetCurrencyInfo then
         local currencyInfo = C_CurrencyInfo.GetCurrencyInfo(v.currencyID)
         if currencyInfo and currencyInfo.iconFileID then
-            VENDOR_PRICE_FORMAT[currencyInfo.iconFileID] = k..":%d"
+            VENDOR_PRICE_FORMAT[currencyInfo.iconFileID] = k .. ":%d"
         end
     end
 end
 
 -- updated with script
 local VENDOR_PRICES, VENDOR_PRICES_RAW = AtlasLoot:GetGameVersionDataTable()
-VENDOR_PRICES_RAW.CLASSIC = {
-
-}
+VENDOR_PRICES_RAW.CLASSIC = {}
 
 if AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM) then
     VENDOR_PRICES_RAW.BCC = {
@@ -527,7 +609,7 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM) then
         [185923] = "money:144000",
         [185924] = "money:144000",
         [187048] = "money:152000",
-        [187049] = "money:152000",
+        [187049] = "money:152000"
     }
 end
 
@@ -683,67 +765,66 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
         [44231] = "EmblemOfHeroism:200",
         [44954] = "epicurean:3",
         [46349] = "epicurean:100",
-		[45294] = "SiderealEssence:15",
-		[46032] = "SiderealEssence:15",
-		[45933] = "SiderealEssence:15",
-		[45869] = "SiderealEssence:15",
-		[45869] = "SiderealEssence:15",
-		[46096] = "SiderealEssence:15",
-		[45297] = "SiderealEssence:15",
-		[45888] = "SiderealEssence:15",
-		[45296] = "SiderealEssence:15",
-		[45456] = "SiderealEssence:15",
-		[45945] = "SiderealEssence:15",
-		[45946] = "SiderealEssence:15",
-		[45447] = "SiderealEssence:15",
-		[45871] = "SiderealEssence:15",
-		[45931] = "SiderealEssence:19",
-		[46046] = "SiderealEssence:19",
-		[46095] = "SiderealEssence:19",
-		[46068] = "SiderealEssence:19",
-		[45929] = "SiderealEssence:19",
-		[46042] = "SiderealEssence:19",
-		[46048] = "SiderealEssence:19",
-		[45988] = "SiderealEssence:19",
-		[46040] = "SiderealEssence:19",
-		[46047] = "SiderealEssence:19",
-		[45989] = "SiderealEssence:19",
-		[45293] = "SiderealEssence:19",
-		[45928] = "SiderealEssence:19",
-		[45943] = "SiderealEssence:19",
-		[45455] = "SiderealEssence:19",
-		[45300] = "SiderealEssence:19",
-		[46038] = "SiderealEssence:24",
-		[46051] = "SiderealEssence:24",
-		[46050] = "SiderealEssence:24",
-		[46041] = "SiderealEssence:24",
-		[46037] = "SiderealEssence:24",
-		[46045] = "SiderealEssence:24",
-		[46043] = "SiderealEssence:24",
-		[46044] = "SiderealEssence:24",
-		[46097] = "SiderealEssence:25",
-		[45947] = "SiderealEssence:25",
-		[45877] = "SiderealEssence:25",
-		[46036] = "SiderealEssence:25",
-		[45993] = "SiderealEssence:25",
-		[45887] = "SiderealEssence:25",
-		[45930] = "SiderealEssence:25",
-		[45876] = "SiderealEssence:25",
-		[45449] = "SiderealEssence:25",
-		[45295] = "SiderealEssence:25",
-		[45982] = "SiderealEssence:25",
-		[45448] = "SiderealEssence:25",
-		[45867] = "SiderealEssence:25",
-		[46034] = "SiderealEssence:25",
-		[46039] = "SiderealEssence:32",
-		[46049] = "SiderealEssence:32",
-		[45868] = "SiderealEssence:38",
-		[46035] = "SiderealEssence:38",
-		[45886] = "SiderealEssence:38",
-		[46067] = "SiderealEssence:38",
-		[45990] = "SiderealEssence:38",
-		[46033] = "SiderealEssence:38",
-		[45870] = "SiderealEssence:38",
+        [45294] = "SiderealEssence:15",
+        [46032] = "SiderealEssence:15",
+        [45933] = "SiderealEssence:15",
+        [45869] = "SiderealEssence:15",
+        [46096] = "SiderealEssence:15",
+        [45297] = "SiderealEssence:15",
+        [45888] = "SiderealEssence:15",
+        [45296] = "SiderealEssence:15",
+        [45456] = "SiderealEssence:15",
+        [45945] = "SiderealEssence:15",
+        [45946] = "SiderealEssence:15",
+        [45447] = "SiderealEssence:15",
+        [45871] = "SiderealEssence:15",
+        [45931] = "SiderealEssence:19",
+        [46046] = "SiderealEssence:19",
+        [46095] = "SiderealEssence:19",
+        [46068] = "SiderealEssence:19",
+        [45929] = "SiderealEssence:19",
+        [46042] = "SiderealEssence:19",
+        [46048] = "SiderealEssence:19",
+        [45988] = "SiderealEssence:19",
+        [46040] = "SiderealEssence:19",
+        [46047] = "SiderealEssence:19",
+        [45989] = "SiderealEssence:19",
+        [45293] = "SiderealEssence:19",
+        [45928] = "SiderealEssence:19",
+        [45943] = "SiderealEssence:19",
+        [45455] = "SiderealEssence:19",
+        [45300] = "SiderealEssence:19",
+        [46038] = "SiderealEssence:24",
+        [46051] = "SiderealEssence:24",
+        [46050] = "SiderealEssence:24",
+        [46041] = "SiderealEssence:24",
+        [46037] = "SiderealEssence:24",
+        [46045] = "SiderealEssence:24",
+        [46043] = "SiderealEssence:24",
+        [46044] = "SiderealEssence:24",
+        [46097] = "SiderealEssence:25",
+        [45947] = "SiderealEssence:25",
+        [45877] = "SiderealEssence:25",
+        [46036] = "SiderealEssence:25",
+        [45993] = "SiderealEssence:25",
+        [45887] = "SiderealEssence:25",
+        [45930] = "SiderealEssence:25",
+        [45876] = "SiderealEssence:25",
+        [45449] = "SiderealEssence:25",
+        [45295] = "SiderealEssence:25",
+        [45982] = "SiderealEssence:25",
+        [45448] = "SiderealEssence:25",
+        [45867] = "SiderealEssence:25",
+        [46034] = "SiderealEssence:25",
+        [46039] = "SiderealEssence:32",
+        [46049] = "SiderealEssence:32",
+        [45868] = "SiderealEssence:38",
+        [46035] = "SiderealEssence:38",
+        [45886] = "SiderealEssence:38",
+        [46067] = "SiderealEssence:38",
+        [45990] = "SiderealEssence:38",
+        [46033] = "SiderealEssence:38",
+        [45870] = "SiderealEssence:38",
         [47661] = "EmblemOfTriumph:25",
         [47662] = "EmblemOfTriumph:25",
         [47664] = "EmblemOfTriumph:25",
@@ -777,7 +858,7 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
         [50457] = "EmblemOfFrost:30",
         [50458] = "EmblemOfFrost:30",
         [50459] = "EmblemOfFrost:30",
-        [50460] = "EmblemOfFrost:30",
+        -- [50460] = "EmblemOfFrost:30",
         [50461] = "EmblemOfFrost:30",
         [50462] = "EmblemOfFrost:30",
         [50463] = "EmblemOfFrost:30",
@@ -957,13 +1038,81 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
         [51557] = "money:10000000",
         [51558] = "money:10000000",
         [51559] = "money:10000000",
-        [51560] = "money:10000000",
+        [51560] = "money:10000000"
     }
 end
 
 if AtlasLoot:GameVersion_GE(AtlasLoot.CATA_VERSION_NUM) then
     VENDOR_PRICES_RAW.CATA = {
-        -- TODO: Add vendor prices
+
+        [50460] = "JusticePoints:347",
+
+        [57930] = "JusticePoints:1250", -- Pendant of Quiet Breath
+        [57931] = "JusticePoints:1250", -- Amulet of Dull Dreaming
+        [57932] = "JusticePoints:1250", -- The Lustrous Eye
+        [57933] = "JusticePoints:1250", -- String of Beaded Bubbles
+        [57934] = "JusticePoints:1250", -- Celadon Pendant
+        [57921] = "JusticePoints:1650", -- Incense Infused Cummerbund
+        [57922] = "JusticePoints:1650", -- Belt of the Falling Rain
+        [58153] = "JusticePoints:2200", -- Robes of Embalmed Darkness
+        [58154] = "JusticePoints:2200", -- Pensive Legwraps
+        [58155] = "JusticePoints:2200", -- Cowl of Pleasant Gloom
+        [58157] = "JusticePoints:1650", -- Meadow Mantle
+        [58158] = "JusticePoints:1650", -- Gloves of the Painless Midnight
+        [58159] = "JusticePoints:2200", -- Musk Rose Robes
+        [58160] = "JusticePoints:2200", -- Leggings of Charity
+        [58161] = "JusticePoints:2200", -- Mask of New Snow
+        [58162] = "JusticePoints:1650", -- Summer Song Shoulderwraps
+        [58163] = "JusticePoints:1650", -- Gloves of Purification
+        [57927] = "JusticePoints:950", -- Throat Slasher
+        [57918] = "JusticePoints:1650", -- Sash of Musing
+        [57919] = "JusticePoints:1650", -- Thatch Eave Vines
+        [58131] = "JusticePoints:2200", -- Tunic of Sinking Envy
+        [58132] = "JusticePoints:2200", -- Leggings of the Burrowing Mole
+        [58133] = "JusticePoints:2200", -- Mask of Vines
+        [58134] = "JusticePoints:1650", -- Embrace of the Night
+        [58138] = "JusticePoints:1650", -- Sticky Fingers
+        [58139] = "JusticePoints:2200", -- Chestguard of Forgetfulness
+        [58140] = "JusticePoints:2200", -- Leggings of Late Blooms
+        [58150] = "JusticePoints:2200", -- Cluster of Stars
+        [58151] = "JusticePoints:1650", -- Somber Shawl
+        [58152] = "JusticePoints:1650", -- Blessed Hands of Elune
+        [57916] = "JusticePoints:1650", -- Belt of the Dim Forest
+        [57917] = "JusticePoints:1650", -- Belt of the Still Stream
+        [58121] = "JusticePoints:2200", -- Vest of the True Companion
+        [58122] = "JusticePoints:2200", -- Hillside Striders
+        [58123] = "JusticePoints:2200", -- Willow Mask
+        [58124] = "JusticePoints:1650", -- Wrap of the Valley Glades
+        [58125] = "JusticePoints:1650", -- Gloves of the Passing Night
+        [58126] = "JusticePoints:2200", -- Vest of the Waking Dream
+        [58127] = "JusticePoints:2200", -- Leggings of Soothing Silence
+        [58128] = "JusticePoints:2200", -- Helm of the Inward Eye
+        [58129] = "JusticePoints:1650", -- Seafoam Mantle
+        [58130] = "JusticePoints:1650", -- Gleaning Gloves
+        [57923] = "JusticePoints:950", -- Hermit's Lamp
+        [57924] = "JusticePoints:950", -- Apple-Bent Bough
+        [57928] = "JusticePoints:950", -- Windslicer
+        [57929] = "JusticePoints:950", -- Dawnblaze Blade
+        [57913] = "JusticePoints:1650", -- Beech Green Belt
+        [57914] = "JusticePoints:1650", -- Girdle of the Mountains
+        [57915] = "JusticePoints:1650", -- Belt of Barred Clouds
+        [58096] = "JusticePoints:2200", -- Breastplate of Raging Fury
+        [58097] = "JusticePoints:2200", -- Greaves of Gallantry
+        [58098] = "JusticePoints:2200", -- Helm of Easeful Death
+        [58099] = "JusticePoints:1650", -- Reaping Gauntlets
+        [58100] = "JusticePoints:1650", -- Pauldrons of the High Requiem
+        [58101] = "JusticePoints:2200", -- Chestplate of the Steadfast
+        [58102] = "JusticePoints:2200", -- Greaves of Splendor
+        [58103] = "JusticePoints:2200", -- Helm of the Proud
+        [58104] = "JusticePoints:1650", -- Sunburnt Pauldrons
+        [58105] = "JusticePoints:1650", -- Numbing Handguards
+        [58106] = "JusticePoints:2200", -- Chestguard of Dancing Waves
+        [58107] = "JusticePoints:2200", -- Legguards of the Gentle
+        [58108] = "JusticePoints:2200", -- Crown of the Blazing Sun
+        [58109] = "JusticePoints:1650", -- Pauldrons of the Forlorn
+        [58110] = "JusticePoints:1650", -- Gloves of Curious Conscience
+        [57925] = "JusticePoints:950", -- Shield of the Mists
+        [57926] = "JusticePoints:950" -- Shield of the Four Grey Towers
     }
 end
 
@@ -983,27 +1132,34 @@ function VendorPrice.GetPriceInfoList()
     return PRICE_INFO_LIST
 end
 
---################################
+-- ################################
 -- Vendor scan
---################################
+-- ################################
 local VendorLockList = {}
 local SourcesAddon
-local UnitGUID, GetMerchantNumItems, GetMerchantItemID, GetMerchantItemCostInfo, GetMerchantItemCostItem, GetItemInfoInstant =
-      UnitGUID, GetMerchantNumItems, GetMerchantItemID, GetMerchantItemCostInfo, GetMerchantItemCostItem, GetItemInfoInstant
+local UnitGUID, GetMerchantNumItems, GetMerchantItemID, GetMerchantItemCostInfo, GetMerchantItemCostItem,
+    GetItemInfoInstant = UnitGUID, GetMerchantNumItems, GetMerchantItemID, GetMerchantItemCostInfo,
+    GetMerchantItemCostItem, GetItemInfoInstant
 
 local function GetNpcIDFromGuid(guid)
-	local npcID = select(6,strsplit("-",guid))
-	if npcID then
-		return tonumber(npcID)
-	end
+    local npcID = select(6, strsplit("-", guid))
+    if npcID then
+        return tonumber(npcID)
+    end
 end
 
 function VendorPrice.ScanShownVendor()
     local targetGUID = UnitGUID("target")
-    if not targetGUID then return end
+    if not targetGUID then
+        return
+    end
     local npcID = GetNpcIDFromGuid(targetGUID)
-    if not npcID or VendorLockList[npcID] then return end
-    if not SourcesAddon then SourcesAddon = AtlasLoot.Addons:GetAddon("Sources") end
+    if not npcID or VendorLockList[npcID] then
+        return
+    end
+    if not SourcesAddon then
+        SourcesAddon = AtlasLoot.Addons:GetAddon("Sources")
+    end
 
     for itemNum = 1, GetMerchantNumItems() do
         local vItemID = GetMerchantItemID(itemNum)
@@ -1025,7 +1181,7 @@ function VendorPrice.ScanShownVendor()
                         if itemCost == "" then
                             itemCost = format(formatString, itemValue or 0)
                         else
-                            itemCost = itemCost..":"..format(formatString, itemValue or 0)
+                            itemCost = itemCost .. ":" .. format(formatString, itemValue or 0)
                         end
                     end
                 end
@@ -1045,10 +1201,9 @@ end
 
 VendorPrice.EventFrame = CreateFrame("FRAME")
 local function EventFrame_OnEvent(frame, event, arg1, arg2)
-	if event == "MERCHANT_SHOW" then
-		VendorPrice.ScanShownVendor()
-	end
+    if event == "MERCHANT_SHOW" then
+        VendorPrice.ScanShownVendor()
+    end
 end
 VendorPrice.EventFrame:SetScript("OnEvent", EventFrame_OnEvent)
 VendorPrice.EventFrame:RegisterEvent("MERCHANT_SHOW")
-
