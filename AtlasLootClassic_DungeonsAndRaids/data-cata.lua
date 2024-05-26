@@ -19,6 +19,7 @@ local data = AtlasLoot.ItemDB:Add(addonname, 4, AtlasLoot.CATA_VERSION_NUM)
 local AL = AtlasLoot.Locales
 local ALIL = AtlasLoot.IngameLocales
 
+local LFR_DIFF = data:AddDifficulty("LFR", nil, nil, nil, true)
 local NORMAL_DIFF = data:AddDifficulty("NORMAL", nil, nil, nil, true)
 local HEROIC_DIFF = data:AddDifficulty("HEROIC", nil, nil, nil, true)
 
@@ -181,6 +182,177 @@ local CATA_RAID3_AC_TABLE = {	--[Glory of the Dragon Soul Raider]
 		{ 2, 6109 },			{ 17, 6110 },
 		{ 3, 6111 },			{ 18, 6112 },
 		{ 4, 6113 },			{ 19, 6114 },
+	},
+}
+
+local T11_SET = {
+	name = format(AL["Tier %s Sets"], "11"),
+	ExtraList = true,
+	TableType = SET_ITTYPE,
+	--ContentPhaseBC = 6,
+	IgnoreAsSource = true,
+	[NORMAL_DIFF] = {
+		{1, 4000925}, -- Death Knight Normal DPS Set
+		{2, 4000926}, -- Death Knight Normal Tank Set
+		{4, 4000927}, -- Druid Normal Melee Set
+		{5, 4000928}, -- Druid Normal Resto Set
+		{6, 4000929}, -- Druid Normal Balance Set
+		{8, 4000930}, -- Hunter Normal
+		{10, 4000931}, -- Mage Normal
+		{12, 4000932}, -- Paladin DPS
+		{13, 4000933}, -- Paladin Holy
+		{14, 4000934}, -- Paladin Prot
+		{16, 4000935}, -- Priest Holy
+		{17, 4000936}, -- Priest Shadow
+		{19, 4000937}, -- Rogue
+		{21, 4000938}, -- Shaman Resto
+		{22, 4000939}, -- Shaman Enhance
+		{23, 4000940}, -- Shaman Elemental
+		{25, 4000941}, -- Warlock
+		{27, 4000942}, -- Warrior
+		{28, 4000943}, -- Warrior
+	},
+	[HEROIC_DIFF] = {
+		{1, 4001925}, -- Death Knight Heroic DPS Set
+		{2, 4001926}, -- Death Knight Heroic Tank Set
+		{4, 4001927}, -- Druid Normal Melee Set
+		{5, 4001928}, -- Druid Normal Resto Set
+		{6, 4001929}, -- Druid Normal Balance Set
+		{8, 4001930}, -- Hunter Heroic
+		{10, 4001931}, -- Mage Heroic
+		{12, 4001932}, -- Paladin DPS
+		{13, 4001933}, -- Paladin Holy
+		{14, 4001934}, -- Paladin Prot
+		{16, 4001935}, -- Priest Holy
+		{17, 4001936}, -- Priest Shadow
+		{19, 4001937}, -- Rogue
+		{21, 4001938}, -- Shaman Resto
+		{22, 4001939}, -- Shaman Enhance
+		{23, 4001940}, -- Shaman Elemental
+		{25, 4001941}, -- Warlock
+		{27, 4001942}, -- Warrior
+		{28, 4001943}, -- Warrior
+	},
+}
+
+local T12_SET = {
+	name = format(AL["Tier %s Sets"], "12"),
+	ExtraList = true,
+	TableType = SET_ITTYPE,
+	--ContentPhaseBC = 6,
+	IgnoreAsSource = true,
+	[NORMAL_DIFF] = {
+		{1, 4000944}, -- Death Knight Normal DPS Set
+		{2, 4000945}, -- Death Knight Normal Tank Set
+		{4, 4000946}, -- Druid Normal Melee Set
+		{5, 4000947}, -- Druid Normal Resto Set
+		{6, 4000948}, -- Druid Normal Balance Set
+		{8, 4000949}, -- Hunter Normal
+		{10, 4000950}, -- Mage Normal
+		{12, 4000951}, -- Paladin DPS
+		{13, 4000952}, -- Paladin Holy
+		{14, 4000953}, -- Paladin Prot
+		{16, 4000954}, -- Priest
+		{17, 4000955}, -- Priest
+		{19, 4000956}, -- Rogue
+		{21, 4000957}, -- Shaman
+		{22, 4000958}, -- Shaman
+		{23, 4000959}, -- Shaman
+		{25, 4000960}, -- Warlock
+		{27, 4000961}, -- Warrior
+		{28, 4000962}, -- Warrior
+	},
+	[HEROIC_DIFF] = {
+		{1, 4001944}, -- Death Knight Normal DPS Set
+		{2, 4001945}, -- Death Knight Normal Tank Set
+		{4, 4001946}, -- Druid Normal Melee Set
+		{5, 4001947}, -- Druid Normal Resto Set
+		{6, 4001948}, -- Druid Normal Balance Set
+		{8, 4001949}, -- Hunter Normal
+		{10, 4001950}, -- Mage Normal
+		{12, 4001951}, -- Paladin DPS
+		{13, 4001952}, -- Paladin Holy
+		{14, 4001953}, -- Paladin Prot
+		{16, 4001954}, -- Priest
+		{17, 4001955}, -- Priest
+		{19, 4001956}, -- Rogue
+		{21, 4001957}, -- Shaman
+		{22, 4001958}, -- Shaman
+		{23, 4001959}, -- Shaman
+		{25, 4001960}, -- Warlock
+		{27, 4001961}, -- Warrior
+		{28, 4001962}, -- Warrior
+	},
+}
+
+local T13_SET = {
+	name = format(AL["Tier %s Sets"], "13"),
+	ExtraList = true,
+	TableType = SET_ITTYPE,
+	--ContentPhaseBC = 6,
+	IgnoreAsSource = true,
+	[LFR_DIFF] = {
+		{1, 0}, -- Death Knight Normal DPS Set
+		{2, 0}, -- Death Knight Normal Tank Set
+		{4, 0}, -- Druid Normal Melee Set
+		{5, 0}, -- Druid Normal Resto Set
+		{6, 0}, -- Druid Normal Balance Set
+		{8, 0}, -- Hunter Normal
+		{10, 0}, -- Mage Normal
+		{12, 0}, -- Paladin DPS
+		{13, 0}, -- Paladin Holy
+		{14, 0}, -- Paladin Prot
+		{16, 0}, -- Priest
+		{17, 0}, -- Priest
+		{19, 0}, -- Rogue
+		{21, 0}, -- Shaman
+		{22, 0}, -- Shaman
+		{23, 0}, -- Shaman
+		{25, 0}, -- Warlock
+		{27, 0}, -- Warrior
+		{28, 0}, -- Warrior
+	},
+	[NORMAL_DIFF] = {
+		{1, 0}, -- Death Knight Normal DPS Set
+		{2, 0}, -- Death Knight Normal Tank Set
+		{4, 0}, -- Druid Normal Melee Set
+		{5, 0}, -- Druid Normal Resto Set
+		{6, 0}, -- Druid Normal Balance Set
+		{8, 0}, -- Hunter Normal
+		{10, 0}, -- Mage Normal
+		{12, 0}, -- Paladin DPS
+		{13, 0}, -- Paladin Holy
+		{14, 0}, -- Paladin Prot
+		{16, 0}, -- Priest
+		{17, 0}, -- Priest
+		{19, 0}, -- Rogue
+		{21, 0}, -- Shaman
+		{22, 0}, -- Shaman
+		{23, 0}, -- Shaman
+		{25, 0}, -- Warlock
+		{27, 0}, -- Warrior
+		{28, 0}, -- Warrior
+	},
+	[HEROIC_DIFF] = {
+		{1, 0}, -- Death Knight Heroic DPS Set
+		{2, 0}, -- Death Knight Heroic Tank Set
+		{4, 0}, -- Druid Normal Melee Set
+		{5, 0}, -- Druid Normal Resto Set
+		{6, 0}, -- Druid Normal Balance Set
+		{8, 0}, -- Hunter Heroic
+		{10, 0}, -- Mage Heroic
+		{12, 0}, -- Paladin DPS
+		{13, 0}, -- Paladin Holy
+		{14, 0}, -- Paladin Prot
+		{16, 0}, -- Priest
+		{17, 0}, -- Priest
+		{19, 0}, -- Rogue
+		{21, 0}, -- Shaman
+		{22, 0}, -- Shaman
+		{23, 0}, -- Shaman
+		{25, 0}, -- Warlock
+		{27, 0}, -- Warrior
+		{28, 0}, -- Warrior
 	},
 }
 
@@ -1613,7 +1785,7 @@ data["TheBastionOfTwilight"] = {
 				{ 18, 60210 },	-- Crossfire Carbine
 			},
 		},
-		-- T11_SET,
+		T11_SET,
 		CATA_DEFENDER_AC_TABLE,
 		CATA_RAID1_AC_TABLE,
 	}
@@ -1873,13 +2045,14 @@ data["BlackwingDescent"] = {
 				{ 21, 59460 },	-- Theresa's Booklight
 			},
 		},
-		-- T11_SET,
+		T11_SET,
 		CATA_DEFENDER_AC_TABLE,
 		CATA_RAID1_AC_TABLE,
 	}
 }
 
 data["ThroneOfTheFourWinds"] = {
+	nameFormat = NAME_SKYWALL,
 	MapID = 5638,
 	InstanceID = 754,
 	EncounterJournalID = 74,
@@ -1988,7 +2161,7 @@ data["ThroneOfTheFourWinds"] = {
 				{ 117, "ac5305" },
 			},
 		},
-		-- T11_SET,
+		T11_SET,
 		CATA_DEFENDER_AC_TABLE,
 		CATA_RAID1_AC_TABLE,
 	}
@@ -2377,7 +2550,7 @@ data["Firelands"] = {
 				{ 19, 71617 },	-- Crystallized Firestone
 			},
 		},
-		--T12_SET,
+		T12_SET,
 		CATA_RAID2_AC_TABLE,
 	}
 }
