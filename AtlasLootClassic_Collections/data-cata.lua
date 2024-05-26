@@ -216,20 +216,133 @@ data["ValorPoints"] = {
     TableType = NORMAL_ITTYPE,
     gameVersion = AtlasLoot.CATA_VERSION_NUM,
     items = {{
-        name = ALIL["Armor"],
-        [NORMAL_DIFF] = {}
+        name = ALIL["Armor"] .. " - " .. ALIL["Cloth"],
+        [NORMAL_DIFF] = { -- Mage
+        {1, 60244}, -- Firelord's Robes
+        {2, 60247}, -- Firelord's Gloves
+        {3, 60245}, -- Firelord's Leggings
+        -- Warlock
+        {5, 60251}, -- Shadowflame Robes
+        {6, 60248}, -- Shadowflame Handwraps
+        {7, 60250}, -- Shadowflame Leggings
+        -- Priest
+        {16, 60259}, -- Mercurial Robes
+        {17, 60275}, -- Mercurial Handwraps
+        {18, 60261}, -- Mercurial Legwraps
+        {20, 60254}, -- Mercurial Vestment
+        {21, 60257}, -- Mercurial Gloves
+        {22, 60255}, -- Mercurial Leggings
+        -- Misc
+        {9, 58485}, -- Melodious Slippers
+        {10, 58486} -- Slippers of Moving Waters
+        }
     }, {
-        name = ALIL["Cloak"],
-        [NORMAL_DIFF] = {}
+        name = ALIL["Armor"] .. " - " .. ALIL["Leather"],
+        [NORMAL_DIFF] = { -- Druid
+        {1, 60276}, -- Stormrider's Robes
+        {2, 60280}, -- Stormrider's Handwraps
+        {3, 60278}, -- Stormrider's Legwraps
+        {5, 60287}, -- Stormrider's Raiment
+        {6, 60290}, -- Stormrider's Grips
+        {7, 60288}, -- Stormrider's Legguards
+        {9, 60281}, -- Stormrider's Vestment
+        {10, 60285}, -- Stormrider's Gloves
+        {11, 60283}, -- Stormrider's Leggings
+        -- Rouge
+        {16, 60301}, -- Wind Dancer's Tunic
+        {17, 60298}, -- Wind Dancer's Gloves
+        {18, 60300}, -- Wind Dancer's Legguards
+        -- Misc
+        {13, 58482}, -- Treads of Fleeting Joy
+        {14, 58484} -- Fading Violet Sandals
+        }
     }, {
-        name = ALIL["Finger"],
-        [NORMAL_DIFF] = {}
+        name = ALIL["Armor"] .. " - " .. ALIL["Mail"],
+        [NORMAL_DIFF] = { -- Shaman
+        {1, 60313}, -- Hauberk of the Raging Elements
+        {2, 60314}, -- Gloves of the Raging Elements
+        {3, 60316}, -- Kilt of the Raging Elements
+        {5, 60309}, -- Tunic of the Raging Elements
+        {6, 60312}, -- Handwraps of the Raging Elements
+        {7, 60310}, -- Legwraps of the Raging Elements
+        {9, 60318}, -- Cuirass of the Raging Elements
+        {10, 60319}, -- Grips of the Raging Elements
+        {11, 60321}, -- Legguards of the Raging Elements
+        -- Rouge
+        {16, 60304}, -- Lightning-Charged Tunic
+        {17, 60307}, -- Lightning-Charged Gloves
+        {18, 60305}, -- Lightning-Charged Legguards
+        -- Misc
+        {13, 58199}, -- Moccasins of Verdurous Glooms
+        {14, 58481} -- Boots of the Perilous Seas
+        }
+    }, {
+        name = ALIL["Armor"] .. " - " .. ALIL["Plate"],
+        [NORMAL_DIFF] = { -- Paladin
+        {1, 60360}, -- Reinforced Sapphirium Breastplate
+        {2, 60363}, -- Reinforced Sapphirium Gloves
+        {3, 60361}, -- Reinforced Sapphirium Greaves
+        {4, 60344}, -- Reinforced Sapphirium Battleplate
+        {5, 60345}, -- Reinforced Sapphirium Gauntlets
+        {6, 60347}, -- Reinforced Sapphirium Legplates
+        {7, 60354}, -- Reinforced Sapphirium Chestguard
+        {8, 60355}, -- Reinforced Sapphirium Handguards
+        {9, 60357}, -- Reinforced Sapphirium Legguards
+        -- Warrior
+        {11, 60323}, -- Earthen Battleplate
+        {12, 60326}, -- Earthen Gauntlets
+        {13, 60324}, -- Earthen Legplates
+        {16, 60329}, -- Earthen Chestguard
+        {17, 60332}, -- Earthen Handguards
+        {18, 60330}, -- Earthen Legguards
+        -- DK
+        {20, 60339}, -- Magma Plated Battleplate
+        {21, 60340}, -- Magma Plated Gauntlets
+        {22, 60342}, -- Magma Plated Legplates
+        {24, 60349}, -- Magma Plated Chestguard
+        {25, 60350}, -- Magma Plated Handguards
+        {26, 60352}, -- Magma Plated Legguards
+        -- Misc
+        {28, 58197}, -- Rock Furrow Boots
+        {29, 58198}, -- Eternal Pathfinders
+        {30, 58195} -- Woe Breeder's Boots
+        }
+    }, {
+        name = ALIL["Armor"] .. " - " .. ALIL["Back"],
+        [NORMAL_DIFF] = { -- Head
+        {1, 58191}, -- Viewless Wings
+        {2, 58194}, -- Heavenly Breeze
+        {3, 58193}, -- Haunt of Flies
+        {4, 58190}, -- Floating Web
+        {5, 58192} -- Gray Hair Cloak
+        }
+    }, {
+        name = ALIL["Armor"] .. " - " .. ALIL["Ring"],
+        [NORMAL_DIFF] = { -- Head
+        {1, 58189}, -- Twined Band of Flowers
+        {2, 58188}, -- Band of Secret Names
+        {3, 58185}, -- Band of Bees
+        {4, 68812}, -- Hornet-Sting Band
+        {5, 58187} -- Ring of the Battle Anthem
+        }
     }, {
         name = ALIL["Relic"],
-        [NORMAL_DIFF] = {}
+        [NORMAL_DIFF] = { -- Head
+        {1, 64673}, -- Throat Slasher
+        {2, 64674}, -- Windslicer
+        {3, 64671}, -- Dawnblaze Blade
+        {4, 64676}, -- Shield of the Four Grey Towers
+        {5, 64672} -- Shield of the Mists
+        }
     }, {
-        name = AL["Token"],
-        [NORMAL_DIFF] = {}
+        name = ALIL["Trinket"],
+        [NORMAL_DIFF] = { -- Head
+        {1, 58180}, -- License to Slay
+        {2, 58181}, -- Fluid Death
+        {3, 58183}, -- Soul Casket
+        {4, 58184}, -- Core of Ripeness
+        {5, 58182} -- Bedrock Talisman
+        }
     }}
 }
 
