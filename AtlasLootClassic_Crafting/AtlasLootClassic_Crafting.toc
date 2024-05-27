@@ -4,8 +4,9 @@
 ## Dependencies: AtlasLootClassic
 ## LoadOnDemand: 1
 
-#@non-debug@
-## Title: @localization(locale="enUS", key="Title-Crafting", namespace="ToC")@
+## Title: AtlasLootClassic |cFFFF0000Cata|r |cFF0099FF[Crafting]|r
+## Notes: AtlasLoot Crafting loot tables
+
 ## Title-deDE: @localization(locale="deDE", key="Title-Crafting", namespace="ToC")@
 ## Title-esES: @localization(locale="esES", key="Title-Crafting", namespace="ToC")@
 ## Title-esMX: @localization(locale="esMX", key="Title-Crafting", namespace="ToC")@
@@ -16,7 +17,6 @@
 ## Title-ruRU: @localization(locale="ruRU", key="Title-Crafting", namespace="ToC")@
 ## Title-zhCN: @localization(locale="zhCN", key="Title-Crafting", namespace="ToC")@
 ## Title-zhTW: @localization(locale="zhTW", key="Title-Crafting", namespace="ToC")@
-## Notes: @localization(locale="enUS", key="Notes-Crafting", namespace="ToC")@
 ## Notes-deDE: @localization(locale="deDE", key="Notes-Crafting", namespace="ToC")@
 ## Notes-esES: @localization(locale="esES", key="Notes-Crafting", namespace="ToC")@
 ## Notes-esMX: @localization(locale="esMX", key="Notes-Crafting", namespace="ToC")@
@@ -27,11 +27,6 @@
 ## Notes-ruRU: @localization(locale="ruRU", key="Notes-Crafting", namespace="ToC")@
 ## Notes-zhCN: @localization(locale="zhCN", key="Notes-Crafting", namespace="ToC")@
 ## Notes-zhTW: @localization(locale="zhTW", key="Notes-Crafting", namespace="ToC")@
-#@end-non-debug@
-#@debug@
-## Title: AtlasLootClassic |cFFFF0000Cata|r |cFF0099FF[Crafting]|r
-## Notes: AtlasLoot Crafting loot tables
-#@end-debug@
 
 ## X-Category: Map
 ## X-License: GPL v2

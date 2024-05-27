@@ -4,8 +4,9 @@
 ## Dependencies: AtlasLootClassic
 ## LoadOnDemand: 1
 
-#@non-debug@
-## Title: @localization(locale="enUS", key="Title-Factions", namespace="ToC")@
+## Title: AtlasLootClassic |cFFFF0000Cata|r |cFF0099FF[Factions]|r
+## Notes: AtlasLoot Faction loot tables
+
 ## Title-deDE: @localization(locale="deDE", key="Title-Factions", namespace="ToC")@
 ## Title-esES: @localization(locale="esES", key="Title-Factions", namespace="ToC")@
 ## Title-esMX: @localization(locale="esMX", key="Title-Factions", namespace="ToC")@
@@ -16,7 +17,6 @@
 ## Title-ruRU: @localization(locale="ruRU", key="Title-Factions", namespace="ToC")@
 ## Title-zhCN: @localization(locale="zhCN", key="Title-Factions", namespace="ToC")@
 ## Title-zhTW: @localization(locale="zhTW", key="Title-Factions", namespace="ToC")@
-## Notes: @localization(locale="enUS", key="Notes-Factions", namespace="ToC")@
 ## Notes-deDE: @localization(locale="deDE", key="Notes-Factions", namespace="ToC")@
 ## Notes-esES: @localization(locale="esES", key="Notes-Factions", namespace="ToC")@
 ## Notes-esMX: @localization(locale="esMX", key="Notes-Factions", namespace="ToC")@
@@ -27,11 +27,6 @@
 ## Notes-ruRU: @localization(locale="ruRU", key="Notes-Factions", namespace="ToC")@
 ## Notes-zhCN: @localization(locale="zhCN", key="Notes-Factions", namespace="ToC")@
 ## Notes-zhTW: @localization(locale="zhTW", key="Notes-Factions", namespace="ToC")@
-#@end-non-debug@
-#@debug@
-## Title: AtlasLootClassic |cFFFF0000Cata|r |cFF0099FF[Factions]|r
-## Notes: AtlasLoot Faction loot tables
-#@end-debug@
 
 ## X-Category: Map
 ## X-License: GPL v2
