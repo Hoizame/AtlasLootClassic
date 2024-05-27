@@ -27,7 +27,7 @@ do_import() {
     -H "X-Api-Token: $CF_API_KEY" \
     -F "metadata={ language: \"enUS\", namespace: \"$namespace\", \"missing-phrase-handling\": \"DeletePhrase\" }" \
     -F "localizations=<$file" \
-    "https://wow.curseforge.com/api/projects/326516/localization/import"
+    "https://wow.curseforge.com/api/projects/1014843/localization/import"
   ) || exit 1
   case $result in
     200) echo "done." ;;
