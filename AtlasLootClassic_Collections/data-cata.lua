@@ -243,9 +243,35 @@ data["WorldEpicsCata"] = {
     CorrespondingFields = private.WORLD_EPICS,
     items = {{
         name = AL["World Epics"],
-        [NORMAL_ITTYPE] = {}
+        [NORMAL_ITTYPE] = {
+            {1, 67131}, -- Ritssyn's Ruminous Drape
+            {2, 67141}, -- Corefire Legplates
+            {3, 67130}, -- Dorian's Lost Necklace
+            {4, 67140}, -- Drape of Inimitable Fate
+            {5, 67134}, -- Dory's Finery
+            {6, 67137}, -- Don Rodrigo's Fabulous Necklace
+            {7, 67139}, -- Blauvelt's Family Crest
+            {8, 67136}, -- Gilnean Ring of Ruination
+            {9, 67144}, -- Pauldrons of Edward the Odd
+            {10, 67148}, -- Kilt of Trollish Dreams
+            {11, 67129}, -- Signet of High Arcanist Savor
+            {12, 67135}, -- Morrie's Waywalker Wrap
+            {13, 67133}, -- Dizze's Whirling Robe
+            {14, 67138}, -- Buc-Zakai Choker
+            {15, 67150}, -- Arrowsinger Legguards
+            {16, 67149}, -- Heartbound Tome
+            {17, 67145}, -- Blockade's Lost Shield
+            {18, 67143}, -- Icebone Hauberk
+            {19, 67147}, -- Je'Tze's Sparkling Tiara
+            {20, 67146}, -- Woundsplicer Handwraps
+            {21, 67132}, -- Grips of the Failed Immortal
+            {22, 67142}, -- Zom's Electrostatic Cloak
+        }
     }}
 }
+
+
+
 
 data["MountsCata"] = {
     name = ALIL["Mounts"],
@@ -255,25 +281,56 @@ data["MountsCata"] = {
     CorrespondingFields = private.MOUNTS,
     items = {{
         name = AL["PvP"],
-        [NORMAL_DIFF] = {}
+        [NORMAL_DIFF] = {{1, 72140}, -- Vicious War Wolf
+                        {2, 71339}, -- Vicious Gladiator's Twilight Drake
+                        {3, 70910}, -- Ruthless Gladiator's Twilight Drake
+        }
     }, { -- Drops
         name = AL["Drops"],
-        [NORMAL_DIFF] = {}
+        [NORMAL_DIFF] = {{1, 63043}, -- Reins of the Vitreous Stone Drake
+                        {2, 63039}, -- Reins of the Drake of the West Wind
+                        {3, 63040}, -- Reins of the Drake of the North Wind
+                        {4, 44168}, -- Reins of the Time-Lost Proto-Drake
+                        {5, 45693}, -- Mimiron's Head
+                        {6, 50818}, -- Invincible's Reins
+                        {7, 77069}, -- Smoldering Egg of Millagazor
+                        {8, 78924}, -- Flametalon of Alysrazor
+                        {9, 77068}, -- Life-Binder's Handmaiden
+                        {10, 69747}, -- Amani Battle Bear
+        }
     }, {
         name = AL["Crafting"],
-        [NORMAL_DIFF] = {}
+        [NORMAL_DIFF] = {{1, 65891}, -- Vial of the Sands
+                        {2, 41508}, -- Mechano-Hog
+                        {3, 34061}, -- Turbo-Charged Flying Machine
+                        {4, 44558}, -- Magnificent Flying Carpet
+                        {5, 54797}, -- Frosty Flying Carpet
+        }
     }, {
         name = ALIL["Fishing"],
-        [NORMAL_DIFF] = {}
+        [NORMAL_DIFF] = {{1, 46109}, -- Sea Turtle
+        }
     }, {
         name = AL["Quest"],
-        [NORMAL_DIFF] = {}
+        [NORMAL_DIFF] = {{1, 63041}, -- Reins of the Drake of the South Wind
+                        {2, 44151}, -- Reins of the Blue Proto-Drake
+                        {3, 44178}, -- Reins of the Albino Drake
+        }
     }, {
         name = ALIL["Achievements"],
         TableType = AC_ITTYPE,
-        [NORMAL_DIFF] = {}
+        [NORMAL_DIFF] = {{1, 44177}, -- Reins of the Violet Proto-Drake
+                        {2, 44160}, -- Reins of the Red Proto-Drake
+                        {3, 45801}, -- Reins of the Ironbound Proto-Drake
+                        {4, 45802}, -- Reins of the Rusted Proto-Drake
+                        {5, 51954}, -- Reins of the Bloodbathed Frostbrood Vanquisher
+                        {6, 51955}, -- Reins of the Icebound Frostbrood Vanquisher
+        }
     }}
 }
+
+
+
 
 data["CompanionsCata"] = {
     name = ALIL["Companions"],
@@ -304,6 +361,7 @@ data["CompanionsCata"] = {
     }}
 }
 
+
 data["TabardsCata"] = {
     name = ALIL["Tabard"],
     ContentType = COLLECTIONS_CONTENT,
@@ -313,12 +371,46 @@ data["TabardsCata"] = {
     items = {{
         name = AL["Factions"],
         CoinTexture = "Reputation",
-        [ALLIANCE_DIFF] = {{1, 43155}, -- Tabard of the Ebon Blade
-        {2, 43157}, -- Tabard of the Kirin Tor
-        {3, 43156} -- Tabard of the Wyrmrest Accord
+        [ALLIANCE_DIFF] = {
+            {1, 65904}, -- Tabard of the Ramkahen
+            {2, 65905}, -- Tabard of the Earthen Ring
+            {3, 65906}, -- Tabard of the Guardians of Hyjal
+            {4, 65907}, -- Tabard of Therazane
+            {5, 65908}, -- Tabard of the Wildhammer Clan
+        },
+        [HORDE_DIFF] = {
+            {1, 65909}, -- Tabard of the Dragonmaw Clan
+            {2, 65910}, -- Tabard of the Earthen Ring
+            {3, 65911}, -- Tabard of the Guardians of Hyjal
+            {4, 65912}, -- Tabard of Therazane
+            {5, 65913}, -- Tabard of the Ramkahen
+        }
+    }, {
+        name = AL["PvP"],
+        CoinTexture = "PvP",
+        [NORMAL_DIFF] = {
+            {1, 63379}, -- Baradin's Wardens Tabard (Alliance)
+            {2, 63378}, -- Hellscream's Reach Tabard (Horde)
+        }
+    }, {
+        name = AL["Achievements"],
+        CoinTexture = "Achievement",
+        [NORMAL_DIFF] = {
+            {1, 43349}, -- Tabard of Brute Force
+            {2, 43348}, -- Tabard of the Achiever
+            {3, 40643}, -- Tabard of the Explorer
+        }
+    }, {
+        name = AL["Misc"],
+        CoinTexture = "Misc",
+        [NORMAL_DIFF] = {
+            {1, 35280}, -- Tabard of Summer Flames
+            {2, 35279}, -- Tabard of Summer Skies
+            {3, 89196}, -- Theramore Tabard
         }
     }}
 }
+
 
 data["LegendariesCata"] = {
     name = AL["Legendaries"],

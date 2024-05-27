@@ -1214,6 +1214,15 @@ data["Darkmoon"] = {
 				{ 4, 44326 },	-- Nobles Deck
 			},
 		}),
+		AtlasLoot:GameVersion_GE(AtlasLoot.CATA_VERSION_NUM, {
+			name = AL["Cataclysm"],
+			[NORMAL_DIFF] = {
+				{ 1, 62021 },	-- Volcanic Deck
+				{ 2, 62044 },	-- Tsunami Deck
+				{ 3, 62045 },	-- Hurricane Deck
+				{ 4, 62046 },	-- Earthquake Deck
+			},
+		}),
 	},
 }
 
