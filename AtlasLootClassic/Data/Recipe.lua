@@ -2286,6 +2286,42 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
     }
 end
 
+if AtlasLoot:GameVersion_GE(AtlasLoot.CATA_VERSION_NUM) then
+    RECIPE_DATA.CATA = {
+		[65426] = {6,500,88003}, -- Recipe: Baked Rockfish
+		[62799] = {6,500,88011}, -- Recipe: Broiled Dragon Feast
+		[65431] = {6,505,88013}, -- Recipe: Chocolate Cookie
+		[65432] = {6,525,88019}, -- Recipe: Fortune Cookie
+		[62800] = {6,525,88036}, -- Recipe: Seafood Magnifique Feast
+		[65433] = {6,525,88044}, -- Recipe: South Island Iced Tea
+		[65427] = {6,500,88004}, -- Recipe: Basilisk Liverdog
+		[65429] = {6,500,88005}, -- Recipe: Beer-Basted Crocolisk
+		[65424] = {6,500,88034}, -- Recipe: Blackbelly Sushi
+		[65430] = {6,500,88014}, -- Recipe: Crocolisk Au Gratin
+		[65422] = {6,500,88016}, -- Recipe: Delicious Sagefish Tail
+		[65428] = {6,500,88020}, -- Recipe: Grilled Dragon
+		[65409] = {6,500,88025}, -- Recipe: Lavascale Minestrone
+		[65420] = {6,500,88031}, -- Recipe: Mushroom Sauce Mudfish
+		[65421] = {6,500,88039}, -- Recipe: Severed Sagefish Head
+		[65425] = {6,500,88042}, -- Recipe: Skewered Eel
+		[68688] = {6,500,96133}, -- Recipe: Scalding Murglesnout
+		[65423] = {6,475,88018}, -- Recipe: Fish Fry
+		[65418] = {6,475,88021}, -- Recipe: Hearty Seafood Soup
+		[65417] = {6,475,88033}, -- Recipe: Pickled Guppy
+		[65419] = {6,475,88046}, -- Recipe: Tender Baked Turtle
+		[65411] = {6,450,88012}, -- Recipe: Broiled Mountain Trout
+		[65407] = {6,450,88024}, -- Recipe: Lavascale Fillet
+		[65412] = {6,450,88028}, -- Recipe: Lightly Fried Lurker
+		[65416] = {6,450,88030}, -- Recipe: Lurker Lunch
+		[65410] = {6,450,88035}, -- Recipe: Salted Eye
+		[65413] = {6,450,88037}, -- Recipe: Seasoned Crab
+		[65406] = {6,450,88047}, -- Recipe: Whitecrest Gumbo
+		[65415] = {6,450,88022}, -- Recipe: Highland Spirits
+		[65414] = {6,450,88045}, -- Recipe: Starfire Espresso
+		[65408] = {6,450,88017}, -- Recipe: Feathered Lure
+    }
+end
+
 RECIPE[21302] = { 13, 300, 25347 } -- Handbook of Deadly Poison V
 local RECIPE_TO_SPELL = {}
 for k,v in pairs(RECIPE) do
