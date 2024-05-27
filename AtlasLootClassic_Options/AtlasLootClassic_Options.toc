@@ -1,5 +1,5 @@
 ﻿## Interface: 40400
-## Author: Lag
+## Author: Snowflame0
 ## Version: @project-version@
 ## Dependencies: AtlasLootClassic
 ## LoadOnDemand: 1
@@ -29,8 +29,8 @@
 ## Notes-zhTW: @localization(locale="zhTW", key="Notes-Options", namespace="ToC")@
 #@end-non-debug@
 #@debug@
-## Title: AtlasLootClassic |cFF0099FF[Options]|r
-## Notes: AtlasLootClassic options module
+## Title: AtlasLootClassic |cFFFF0000Cata|r |cFF0099FF[Options]|r
+## Notes: AtlasLootClassic Options module
 #@end-debug@
 
 ## X-Category: Map

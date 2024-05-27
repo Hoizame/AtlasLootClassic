@@ -1,5 +1,5 @@
 ﻿## Interface: 40400
-## Author: Lag
+## Author: Snowflame0
 ## Version: @project-version@
 ## Dependencies: AtlasLootClassic
 ## LoadOnDemand: 1
@@ -28,8 +28,8 @@
 ## Notes-zhTW: @localization(locale="zhTW", key="Notes-Collections", namespace="ToC")@
 #@end-non-debug@
 #@debug@
-## Title: AtlasLootClassic |cFF0099FF[Collections]|r
-## Notes: AtlasLoot loot tables from Collections
+## Title: AtlasLootClassic |cFFFF0000Cata|r |cFF0099FF[Collections]|r
+## Notes: AtlasLoot Collections loot tables
 #@end-debug@
 
 ## X-Category: Map

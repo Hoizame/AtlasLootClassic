@@ -1,5 +1,5 @@
 ﻿## Interface: 40400
-## Author: Lag
+## Author: Snowflame0
 ## Version: @project-version@
 ## Dependencies: AtlasLootClassic
 ## LoadOnDemand: 1
@@ -29,8 +29,8 @@
 ## Notes-zhTW: @localization(locale="zhTW", key="Notes-Factions", namespace="ToC")@
 #@end-non-debug@
 #@debug@
-## Title: AtlasLootClassic |cFF0099FF[Factions]|r
-## Notes: AtlasLoot loot tables from Factions
+## Title: AtlasLootClassic |cFFFF0000Cata|r |cFF0099FF[Factions]|r
+## Notes: AtlasLoot Faction loot tables
 #@end-debug@
 
 ## X-Category: Map
