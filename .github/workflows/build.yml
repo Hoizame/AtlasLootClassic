@@ -8,6 +8,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: Build
+
+    env:
+      CF_API_KEY: ${{ secrets.CF_API_KEY }}
+      GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
+      WOWI_API_TOKEN: ${{ secrets.WOWI_API_TOKEN }}
+      WAGO_API_TOKEN: ${{ secrets.WAGO_API_TOKEN }}
 
     steps:
       - name: Clone project
@@ -25,9 +32,6 @@ jobs:
       #    CF_API_KEY: ${{ secrets.CF_API_KEY }}
 
       - name: Package and release
-        uses: BigWigsMods/packager@v2
-        env:
-          CF_API_KEY: ${{ secrets.CF_API_KEY }}
-          GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
-          #WOWI_API_TOKEN: ${{ secrets.WOWI_API_TOKEN }}
-          #WAGO_API_TOKEN: ${{ secrets.WAGO_API_TOKEN }}
+        uses: BigWigsMods/packager@master
+        with:
+          args: -g cata -n "{package-name}-{project-version}"
