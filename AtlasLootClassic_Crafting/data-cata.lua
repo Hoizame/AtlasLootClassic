@@ -1717,12 +1717,12 @@ data["HerbalismCata"] = {
 		{
 			name = AL["Illustrious Grand Master"],
 			[NORMAL_DIFF] = {
-				{ 1,  52983 }, -- Cinderbloom
-				{ 2,  52985 }, -- Azshara's Veil
-				{ 3,  52984 }, -- Stormvine
-				{ 4,  52987 }, -- Twilight Jasmine
-				{ 5,  52986 }, -- Heartblossom
-				{ 6,  52988 }, -- Whiptail
+				{ 1,  52987 }, -- Twilight Jasmine
+				{ 2,  52988 }, -- Whiptail
+				{ 3,  52986 }, -- Heartblossom
+				{ 4,  52984 }, -- Stormvine
+				{ 5,  52985 }, -- Azshara's Veil
+				{ 6,  52983 }, -- Cinderbloom
 				{ 16,  52989 }, -- Deathspore Pod
 			}
 		},
