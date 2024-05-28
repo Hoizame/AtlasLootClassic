@@ -1,6 +1,4 @@
-package-as: AtlasLootClassic
-
-enable-nolib-creation: no
+package-as: AtlasLootClassic_Cata
 
 externals:
  AtlasLootClassic/Libs/CallbackHandler-1.0: https://repos.wowace.com/wow/callbackhandler/trunk/CallbackHandler-1.0
@@ -14,10 +12,16 @@ externals:
  AtlasLootClassic_Options/Libs/AceDBOptions-3.0: https://repos.wowace.com/wow/ace3/trunk/AceDBOptions-3.0
  AtlasLootClassic_Options/Libs/AceGUI-3.0-SharedMediaWidgets: https://repos.wowace.com/wow/ace-gui-3-0-shared-media-widgets/trunk/AceGUI-3.0-SharedMediaWidgets
 
+enable-nolib-creation: no
+
+manual-changelog:
+  filename: CHANGELOG.md
+  markup-type: markdown
+
 # Ignore takes place before folder's moving takes place
 ignore:
  - babelfish.lua
- - CF_Locales/
+ - CF_Locales
  - cf_localizations.sh
  - AtlasLootClassic/Images/PSD
  - AtlasLootClassic/Addons/tmpl.lua
