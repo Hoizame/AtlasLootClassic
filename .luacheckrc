@@ -3,6 +3,13 @@ max_line_length = false
 exclude_files = {
 	"README.md",
 	".luacheckrc",
+	"AL_locales.lua",
+	"Global.lua",
+	"Collections.lua",
+	"Crafting.lua",
+	"DungeonsAndRaids.lua",
+	"PvP.lua",
+	"Options.lua",
 	"AtlasLootClassic/Libs/",
 	"AtlasLootClassic_Options/Libs/",
 	"babelfish.lua",
