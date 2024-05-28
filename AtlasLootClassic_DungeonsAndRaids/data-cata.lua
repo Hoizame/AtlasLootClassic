@@ -452,6 +452,7 @@ data["BlackrockCaverns"] = {
 				{ 7, 55787 },	-- Witching Hourglass
 				{ 8, 55782 },	-- Amber Messenger
 				{ 9, 55788 },	-- Crepuscular Shield
+				{ 10, 55783 },  -- Sandshift Relic
 				{ 16, "ac4833" },
 			},
 			[HEROIC_DIFF] = {
