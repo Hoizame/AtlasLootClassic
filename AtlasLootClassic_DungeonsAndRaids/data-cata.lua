@@ -464,7 +464,8 @@ data["BlackrockCaverns"] = {
 				{ 7, 56320 },	-- Witching Hourglass
 				{ 8, 56317 },	-- Amber Messenger
 				{ 9, 56322 },	-- Crepuscular Shield
-				{ 11, 52078, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Chaos Orb
+				{ 10,56316 },   -- Sandshift Relic
+				{ 12, 52078, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Chaos Orb
 				{ 16, "ac5060" },
 				{ 17, "ac5284" },
 			},
@@ -1298,7 +1299,6 @@ data["ShadowfangKeep"] = {
 				{ 3, 63444 },	-- Baron Silverlaine's Greaves
 				{ 4, 63438 },	-- Baroness Silverlaine's Locket
 				{ 5, 63441 },	-- Pendant of the Keep
-				{ 6, 132567 }, -- Blindwatcher's Chain
 			},
 		},
 		{ -- Commander Springvale
