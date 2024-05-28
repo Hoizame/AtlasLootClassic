@@ -2,15 +2,17 @@ name: Package and release
 
 on:
   push:
+    branches:
+      - main
     tags:
       - '**'
+      - "!**-alpha**"
+      - "!**-beta**"
 
 jobs:
   build:
     runs-on: ubuntu-latest
     environment: Build
-
-
 
     steps:
       - name: Clone project
