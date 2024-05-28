@@ -28,10 +28,8 @@ jobs:
           
       - name: Update Curseforge Translations
         run: ./cf_localizations.sh
-        #env:
-        #  CF_API_KEY: ${{ secrets.CF_API_KEY }}
 
       - name: Package and release
         uses: BigWigsMods/packager@master
         with:
-          args: -d -z
+          args: -d
