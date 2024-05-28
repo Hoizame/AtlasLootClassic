@@ -31,8 +31,6 @@ local NORMAL_DIFF = data:AddDifficulty("NORMAL", nil, nil, nil, true)
 local HEROIC_DIFF = data:AddDifficulty("HEROIC", nil, nil, nil, true)
 
 local VENDOR_DIFF = data:AddDifficulty(AL["Vendor"], "vendor", 0)
--- local T10_1_DIFF = data:AddDifficulty(AL["10H / 25 / 25H"], "T10_1", 0)
--- local T10_2_DIFF = data:AddDifficulty(AL["25 Raid Heroic"], "T10_2", 0)
 
 local ALLIANCE_DIFF, HORDE_DIFF, LOAD_DIFF
 if UnitFactionGroup("player") == "Horde" then
@@ -383,9 +381,6 @@ data["WorldEpicsCata"] = {
     }}
 }
 
-
-
-
 data["MountsCata"] = {
     name = ALIL["Mounts"],
     ContentType = COLLECTIONS_CONTENT,
@@ -441,9 +436,6 @@ data["MountsCata"] = {
         }
     }}
 }
-
-
-
 
 data["CompanionsCata"] = {
     name = ALIL["Companions"],
@@ -525,7 +517,7 @@ data["TabardsCata"] = {
 }
 
 
-data["LegendariesCata"] = {
+data["LegendarysCata"] = {
     name = AL["Legendaries"],
     ContentType = COLLECTIONS_CONTENT,
     LoadDifficulty = LOAD_DIFF,
