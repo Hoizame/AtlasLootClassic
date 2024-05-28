@@ -16,6 +16,12 @@ jobs:
     steps:
       - name: Clone project
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Hack around https://github.com/actions/checkout/issues/290
+        run: |
+          git fetch --tags --force
 
       - name: Install and run Luacheck
         uses: nebularg/actions-luacheck@v1
@@ -30,5 +36,8 @@ jobs:
 
       - name: Package and release
         uses: BigWigsMods/packager@master
+        env:
+          CF_API_KEY: ${{ secrets.CF_API_KEY }}
+          GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
         with:
-          args: -d -z
+          args: -d -z # No upload or file creation

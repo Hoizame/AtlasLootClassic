@@ -23,6 +23,7 @@ ignore:
  - babelfish.lua
  - CF_Locales
  - cf_localizations.sh
+ - generate_changelog.sh
  - AtlasLootClassic/Images/PSD
  - AtlasLootClassic/Addons/tmpl.lua
  - AtlasLootClassic_DungeonsAndRaids/droprate_override.lua
