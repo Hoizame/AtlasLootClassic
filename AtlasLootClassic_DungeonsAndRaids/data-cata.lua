@@ -535,12 +535,14 @@ data["ThroneOfTheTides"] = {
 				{ 2, 55235 },	-- Decapod Slippers
 				{ 3, 55229 },	-- Anomuran Helm
 				{ 4, 55237 },	-- Porcelain Crab
+				{ 5, 55248 },   -- Conch of Thundering Waves
 			},
 			[HEROIC_DIFF] = {
 				{ 1, 56276 },	-- Anthia's Ring
 				{ 2, 56277 },	-- Decapod Slippers
 				{ 3, 56278 },	-- Anomuran Helm
 				{ 4, 56280 },	-- Porcelain Crab
+				{ 5, 56279 },   -- Conch of Thundering Waves
 			},
 		},
 		{ -- Ozumat
@@ -623,6 +625,7 @@ data["TheStonecore"] = {
 				{ 2, 55797 },	-- Hematite Plate Gloves
 				{ 3, 55799 },	-- Rose Quartz Band
 				{ 4, 55801 },	-- Quicksilver Blade
+				{ 5, 55800 },   -- Stalagmite Dragon
 				{ 16, 63043, "mount" },	-- Reins of the Vitreous Stone Drake
 			},
 			[HEROIC_DIFF] = {
@@ -630,6 +633,7 @@ data["TheStonecore"] = {
 				{ 2, 56336 },	-- Hematite Plate Gloves
 				{ 3, 56333 },	-- Rose Quartz Band
 				{ 4, 56335 },	-- Quicksilver Blade
+				{ 5, 56337 },   -- Stalagmite Dragon
 				{ 16, 63043, "mount" },	-- Reins of the Vitreous Stone Drake
 			},
 		},
@@ -664,6 +668,7 @@ data["TheStonecore"] = {
 				{ 7, 55820 },	-- Prophet's Scepter
 				{ 8, 55813 },	-- Elementium Fang
 				{ 9, 55815 },	-- Darkling Staff
+				{ 10, 55821},   -- Book of Dark Prophecies
 				{ 16, "ac4846" },
 			},
 			[HEROIC_DIFF] = {
@@ -676,7 +681,8 @@ data["TheStonecore"] = {
 				{ 7, 56349 },	-- Prophet's Scepter
 				{ 8, 56346 },	-- Elementium Fang
 				{ 9, 56343 },	-- Darkling Staff
-				{ 11, 52078, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Chaos Orb
+				{ 10, 56350},   -- Book of Dark Prophecies
+				{ 12, 52078, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Chaos Orb
 				{ 16, "ac5063" },
 				{ 17, "ac5287" },
 			},
@@ -989,12 +995,14 @@ data["HallsOfOrigination"] = {
 				{ 2, 55997 },	-- Bloodpetal Mantle
 				{ 3, 55999 },	-- Seedling Pod
 				{ 4, 56000 },	-- Band of Life Energy
+				{ 5, 56001 },   -- Slashing Thorns
 			},
 			[HEROIC_DIFF] = {
 				{ 1, 56417 },	-- Robes of Rampant Growth
 				{ 2, 56419 },	-- Bloodpetal Mantle
 				{ 3, 56421 },	-- Seedling Pod
 				{ 4, 56418 },	-- Band of Life Energy
+				{ 5, 56420 },   -- Slashing Thorns
 			},
 		},
 		{ -- Setesh, Construct of Destruction
@@ -1248,7 +1256,9 @@ data["Deadmines"] = {
 				{ 6, 63486 },	-- Shackles of the Betrayed
 				{ 7, 63478 },	-- Stonemason's Helm
 				{ 8, 63483 },	-- Guildmaster's Greaves
-				{ 10, 52078, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Chaos Orb
+				{ 9, 63480 },   -- Record of the Brotherhood's End
+				{ 10, 63487 },  -- Book of the Well Sung Song
+				{ 12, 52078, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Chaos Orb
 				{ 16, "ac5083" },
 				{ 17, "ac5371" },
 			},
@@ -1306,6 +1316,17 @@ data["ShadowfangKeep"] = {
 			name = AL["Lord Walden"],
 			EncounterJournalID = 99,
 			[HEROIC_DIFF] = {
+				{ 1, 63455 },	-- Blinders of the Follower
+				{ 2, 63454 },	-- Double Dealing Bracers
+				{ 3, 63452 },	-- Burden of Lost Humanity
+				{ 4, 63450 },	-- Phantom Armor
+				{ 5, 63453 },	-- Iron Will Girdle
+			},
+		},
+		{ -- Lord Godfrey
+			name = AL["Lord Godfrey"],
+			EncounterJournalID = 100,
+			[HEROIC_DIFF] = {
 				{ 1, 63465 },	-- Mantle of Loss
 				{ 2, 63463 },	-- Mantle of the Eastern Lords
 				{ 3, 63459 },	-- Worgen Hunter's Helm
@@ -1315,25 +1336,10 @@ data["ShadowfangKeep"] = {
 				{ 7, 63464 },	-- Greaves of the Misguided
 				{ 8, 63456 },	-- Meteor Shard
 				{ 9, 63461 },	-- Staff of Isolation
-				{ 11, 52078, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Chaos Orb
+				{ 10, 63460} ,  -- Relic of Arathor
+				{ 12, 52078, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Chaos Orb
 				{ 16, "ac5093" },
 				{ 17, "ac5505" },
-			},
-		},
-		{ -- Lord Godfrey
-			name = AL["Lord Godfrey"],
-			EncounterJournalID = 100,
-			[HEROIC_DIFF] = {
-				{1, 63456},
-				{2, 63457},
-				{3, 63458},
-				{4, 63459},
-				{5, 63460},
-				{6, 63461},
-				{7, 63462},
-				{8, 63463},
-				{9, 63464},
-				{10, 63465},
 			},
 		},
 		CATA_DUNGEON_HERO_AC_TABLE,
