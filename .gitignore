@@ -1,17 +1,6 @@
-Global.lua
-Collections.lua
-Crafting.lua
-DungeonsAndRaids.lua
-DungeonsAndRaidsTBC.lua
-PvP.lua
-Options.lua
-Factions.lua
-rawdata.lua
-data.lua
 .release
 .vscode/
 cata_data/
-cf_localizations/
 
 # from @Blackwidow-sudo
 make.sh
