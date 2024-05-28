@@ -9,9 +9,9 @@ declare -A locale_files=(
   ["DungeonsAndRaidsTBC"]="CF_Locales/DungeonsAndRaidsTBC.lua"
   ["DungeonsAndRaidsWrath"]="CF_Locales/DungeonsAndRaidsWrath.lua"
   ["DungeonsAndRaidsCata"]="CF_Locales/DungeonsAndRaidsCata.lua"
+  ["Factions"]="CF_Locales/Factions.lua"
   ["PvP"]="CF_Locales/PvP.lua"
   ["Options"]="CF_Locales/Options.lua"
-  ["Factions"]="CF_Locales/Factions.lua"
 )
 
 tempfile=$( mktemp )
@@ -27,7 +27,7 @@ do_import() {
     -H "X-Api-Token: $CF_API_KEY" \
     -F "metadata={ language: \"enUS\", namespace: \"$namespace\", \"missing-phrase-handling\": \"DeletePhrase\" }" \
     -F "localizations=<$file" \
-    "https://wow.curseforge.com/api/projects/1024670/localization/import"
+    "https://legacy.curseforge.com/api/projects/1024670/localization/import"
   ) || exit 1
   case $result in
     200) echo "done." ;;
