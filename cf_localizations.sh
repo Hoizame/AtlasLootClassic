@@ -12,6 +12,7 @@ declare -A locale_files=(
   ["Factions"]="CF_Locales/Factions.lua"
   ["PvP"]="CF_Locales/PvP.lua"
   ["Options"]="CF_Locales/Options.lua"
+  ["ToC"]="CF_Locales/ToC.lua"
 )
 
 tempfile=$( mktemp )
