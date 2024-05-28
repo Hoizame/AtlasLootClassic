@@ -35,6 +35,12 @@ local VENDOR_DIFF = data:AddDifficulty(AL["Vendor"], "vendor", 0)
 local T10_1_DIFF = data:AddDifficulty(AL["10H / 25 / 25H"], "T10_1", 0)
 local T10_2_DIFF = data:AddDifficulty(AL["25 Raid Heroic"], "T10_2", 0)
 
+local T11_1_DIFF = data:AddDifficulty(AL["Normal"], "T11_1", 0)
+local T11_2_DIFF = data:AddDifficulty(AL["Heroic"], "T11_2", 0)
+
+local T12_1_DIFF = data:AddDifficulty(AL["Normal"], "T12_1", 0)
+local T12_2_DIFF = data:AddDifficulty(AL["Heroic"], "T12_2", 0)
+
 local ALLIANCE_DIFF, HORDE_DIFF, LOAD_DIFF
 if UnitFactionGroup("player") == "Horde" then
 	HORDE_DIFF = data:AddDifficulty(FACTION_HORDE, "horde", nil, 1)
@@ -494,6 +500,98 @@ data["TierSets"] = {
 				{ 26,   3251899 }, -- Paladin / Heal
 				{ 27,   3251901 }, -- Paladin / Prot
 				{ 28,   3251900 }, -- Paladin / DD
+			},
+		}),
+		AtlasLoot:GameVersion_GE(AtlasLoot.CATA_VERSION_NUM, {
+			name = format(AL["Tier %s Sets"], "11"),
+			CoinTexture = "CATA",
+			[T11_1_DIFF] = {
+				{1,    4000941 }, -- Warlock
+				{3,    4000935 }, -- Priest Holy
+				{4,    4000936 }, -- Priest Shadow
+				{6,    4000937 }, -- Rogue
+				{8,    4000930 }, -- Hunter
+				{10,   4000943 }, -- Warrior Tank
+				{11,   4000942 }, -- Warrior DPS
+				{13,   4000926 }, -- Death Knight Tank
+				{14,   4000925 }, -- Death Knight DPS
+				{16,   4000931 }, -- Mage
+				{18,   4000928 }, -- Druid Resto
+				{19,   4000929 }, -- Druid Balance
+				{20,   4000927 }, -- Druid Feral
+				{22,   4000938 }, -- Shaman Resto
+				{23,   4000940 }, -- Shaman Elemental
+				{24,   4000939 }, -- Shaman Enhance
+				{26,   4000933 }, -- Paladin Holy
+				{27,   4000934 }, -- Paladin Prot
+				{28,   4000932 }, -- Paladin DPS
+			},
+			[T11_2_DIFF] = {
+				{1,    4001941 }, -- Warlock
+				{3,    4001935 }, -- Priest Holy
+				{4,    4001936 }, -- Priest Shadow
+				{6,    4001937 }, -- Rogue
+				{8,    4001930 }, -- Hunter
+				{10,   4001943 }, -- Warrior Tank
+				{11,   4001942 }, -- Warrior DPS
+				{13,   4001926 }, -- Death Knight Tank
+				{14,   4001925 }, -- Death Knight DPS
+				{16,   4001931 }, -- Mage
+				{18,   4001928 }, -- Druid Resto
+				{19,   4001929 }, -- Druid Balance
+				{20,   4001927 }, -- Druid Feral
+				{22,   4001938 }, -- Shaman Resto
+				{23,   4001940 }, -- Shaman Elemental
+				{24,   4001939 }, -- Shaman Enhance
+				{26,   4001933 }, -- Paladin Holy
+				{27,   4001934 }, -- Paladin Prot
+				{28,   4001932 }, -- Paladin DPS
+			},
+		}),
+		AtlasLoot:GameVersion_GE(AtlasLoot.CATA_VERSION_NUM, {
+			name = format(AL["Tier %s Sets"], "12"),
+			CoinTexture = "CATA",
+			[T12_1_DIFF] = {
+				{1,    4000960 }, -- Warlock
+				{3,    4000954 }, -- Priest Holy
+				{4,    4000955 }, -- Priest Shadow
+				{6,    4000956 }, -- Rogue
+				{8,    4000949 }, -- Hunter
+				{10,   4000962 }, -- Warrior Tank
+				{11,   4000961 }, -- Warrior DPS
+				{13,   4000945 }, -- Death Knight Tank
+				{14,   4000944 }, -- Death Knight DPS
+				{16,   4000950 }, -- Mage
+				{18,   4000947 }, -- Druid Resto
+				{19,   4000948 }, -- Druid Balance
+				{20,   4000946 }, -- Druid Feral
+				{22,   4000957 }, -- Shaman Resto
+				{23,   4000959 }, -- Shaman Elemental
+				{24,   4000958 }, -- Shaman Enhance
+				{26,   4000952 }, -- Paladin Holy
+				{27,   4000953 }, -- Paladin Prot
+				{28,   4000951 }, -- Paladin DPS
+			},
+			[T12_2_DIFF] = {
+				{1,    4001960 }, -- Warlock
+				{3,    4001954 }, -- Priest Holy
+				{4,    4001955 }, -- Priest Shadow
+				{6,    4001956 }, -- Rogue
+				{8,    4001949 }, -- Hunter
+				{10,   4001962 }, -- Warrior Tank
+				{11,   4001961 }, -- Warrior DPS
+				{13,   4001945 }, -- Death Knight Tank
+				{14,   4001944 }, -- Death Knight DPS
+				{16,   4001950 }, -- Mage
+				{18,   4001947 }, -- Druid Resto
+				{19,   4001948 }, -- Druid Balance
+				{20,   4001946 }, -- Druid Feral
+				{22,   4001957 }, -- Shaman Resto
+				{23,   4001959 }, -- Shaman Elemental
+				{24,   4001958 }, -- Shaman Enhance
+				{26,   4001952 }, -- Paladin Holy
+				{27,   4001953 }, -- Paladin Prot
+				{28,   4001951 }, -- Paladin DPS
 			},
 		}),
 	},
