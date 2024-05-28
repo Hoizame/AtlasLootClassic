@@ -3,18 +3,12 @@ max_line_length = false
 exclude_files = {
 	"README.md",
 	".luacheckrc",
-	"AL_locales.lua",
-	"Global.lua",
-	"Collections.lua",
-	"Crafting.lua",
-	"DungeonsAndRaids.lua",
-	"PvP.lua",
-	"Options.lua",
 	"AtlasLootClassic/Libs/",
 	"AtlasLootClassic_Options/Libs/",
 	"babelfish.lua",
 	"AtlasLootClassic_DungeonsAndRaids/droprate_override.lua",
-	"cata_data/",
+	"CF_Locales/",
+	"cata_data/"
 }
 ignore = {
 	"11./SLASH_.*", -- Setting an undefined (Slash handler) global variable
