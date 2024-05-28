@@ -4,7 +4,7 @@
 ## Dependencies: AtlasLootClassic
 ## LoadOnDemand: 1
 
-## Title: AtlasLootClassic |cFFFF0000Cata|r |cFF0099FF[Collections]|r
+## Title: AtlasLootClassic |cFFFF5733Cata|r |cFF0099FF[Collections]|r
 ## Notes: AtlasLoot Collections loot tables
 
 ## Title-deDE: @localization(locale="deDE", key="Title-Collections", namespace="ToC")@

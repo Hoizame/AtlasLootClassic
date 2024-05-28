@@ -542,7 +542,7 @@ data["LegendariesCata"] = {
 }
 
 data["HeirloomCata"] = {
-    name = AL["Heirloom"],
+    name = ALIL["Heirloom"],
     ContentType = COLLECTIONS_CONTENT,
     LoadDifficulty = LOAD_DIFF,
     TableType = NORMAL_ITTYPE,

@@ -116,7 +116,7 @@ data["AlchemyCata"] = {
 			},
 		},
 		{
-			name = AL["Stones"],
+			name = AL["Trinkets"],
 			[NORMAL_DIFF] = {
                 {1, 80508}, -- Lifebound Alchemist Stone
                 {2, 96253}, -- Quicksilver Alchemist Stone
@@ -1838,7 +1838,7 @@ data["CookingCata"] = {
 			},
 		},
 		{
-			name = ALIL["Useful Stat"],
+			name = AL["Useful Stat"],
 			[NORMAL_DIFF] = {
 				{ 1, 88019 }, -- Fortune Cookie
 			},

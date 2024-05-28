@@ -4,7 +4,7 @@
 ## Dependencies: AtlasLootClassic
 ## LoadOnDemand: 1
 
-## Title: AtlasLootClassic |cFFFF0000Cata|r |cFF0099FF[Dungeons and Raids]|r
+## Title: AtlasLootClassic |cFFFF5733Cata|r |cFF0099FF[Dungeons and Raids]|r
 ## Notes: AtlasLoot Dungeons and Raids loot tables
 
 ## Title-deDE: @localization(locale="deDE", key="Title-DaR", namespace="ToC")@

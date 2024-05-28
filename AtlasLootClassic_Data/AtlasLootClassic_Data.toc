@@ -4,7 +4,7 @@
 ## Dependencies: AtlasLootClassic
 ## LoadOnDemand: 1
 
-## Title: AtlasLootClassic |cFFFF0000Cata|r |cFFFF0000[Data]|r
+## Title: AtlasLootClassic |cFFFF5733Cata|r |cFFFF0000[Data]|r
 ## Notes: AtlasLoot Data module
 
 ## Title-deDE: @localization(locale="deDE", key="Title-Data", namespace="ToC")@

@@ -103,6 +103,8 @@ local IngameLocales = {
 	["Minor Glyphs"] = GLOBAL["MINOR_GLYPHS"],
 	["Major Glyph"] = GLOBAL["MAJOR_GLYPH"],
 	["Major Glyphs"] = GLOBAL["MAJOR_GLYPHS"],
+	["Prime Glyph"] = GLOBAL["PRIME_GLYPH"],
+	["Prime Glyphs"] = GLOBAL["PRIME_GLYPHS"],
 
 
 	-- ######################################################################
@@ -188,6 +190,7 @@ local IngameLocales = {
 	["Dodge"] = GLOBAL["ITEM_MOD_DODGE_RATING_SHORT"],
 	["Attack Power"] = GLOBAL["ITEM_MOD_ATTACK_POWER_SHORT"],
 	["Armor Penetration Rating"] = GLOBAL["ITEM_MOD_ARMOR_PENETRATION_RATING_SHORT"],
+	["Mastery"] = GLOBAL["ITEM_MOD_MASTERY_RATING_SHORT"],
 
 	-- ######################################################################
 	-- Slots
