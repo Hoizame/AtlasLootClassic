@@ -1044,7 +1044,7 @@ end
 
 if AtlasLoot:GameVersion_GE(AtlasLoot.CATA_VERSION_NUM) then
     VENDOR_PRICES_RAW.CATA = {
-
+        -- JP vendor
         [57930] = "JusticePoints:1250", -- Pendant of Quiet Breath
         [57931] = "JusticePoints:1250", -- Amulet of Dull Dreaming
         [57932] = "JusticePoints:1250", -- The Lustrous Eye
@@ -1111,7 +1111,7 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.CATA_VERSION_NUM) then
         [58110] = "JusticePoints:1650", -- Gloves of Curious Conscience
         [57925] = "JusticePoints:950", -- Shield of the Mists
         [57926] = "JusticePoints:950", -- Shield of the Four Grey Towers
-
+        -- VP vendor
         [58180] = "ValorPoints:1650", -- License to Slay
         [58181] = "ValorPoints:1650", -- Fluid Death
         [58183] = "ValorPoints:1650", -- Soul Casket

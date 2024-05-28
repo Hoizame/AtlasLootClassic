@@ -82,7 +82,7 @@ data["CookingCata"] = {
 }
 
 data["JusticePoints"] = {
-    name = format(AL["'%s' Vendor"], AL["Justice Points"]),
+    name = format(AL["%s Vendor"], AL["Justice Points"]),
     ContentType = VENDOR_CONTENT,
     TableType = NORMAL_ITTYPE,
     gameVersion = AtlasLoot.CATA_VERSION_NUM,
@@ -211,7 +211,7 @@ data["JusticePoints"] = {
 }
 
 data["ValorPoints"] = {
-    name = format(AL["'%s' Vendor"], AL["ValorPoints"]),
+    name = format(AL["%s Vendor"], AL["Valor Points"]),
     ContentType = VENDOR_CONTENT,
     TableType = NORMAL_ITTYPE,
     gameVersion = AtlasLoot.CATA_VERSION_NUM,
