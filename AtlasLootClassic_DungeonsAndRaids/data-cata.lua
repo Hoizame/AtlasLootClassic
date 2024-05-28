@@ -360,7 +360,7 @@ local CATA_RAID3_AC_TABLE = {	--[Glory of the Dragon Soul Raider]
 data["BlackrockCaverns"] = {
 	MapID = 4926,
 	--EncounterJournalID = 66,
-	InstanceID = 66,
+	InstanceID = 645,
 	ContentType = DUNGEON_CONTENT,
 	LevelRange = {77, 80, 83},
 	items = {
@@ -452,6 +452,7 @@ data["BlackrockCaverns"] = {
 				{ 7, 55787 },	-- Witching Hourglass
 				{ 8, 55782 },	-- Amber Messenger
 				{ 9, 55788 },	-- Crepuscular Shield
+				{ 10, 55783 },  -- Sandshift Relic
 				{ 16, "ac4833" },
 			},
 			[HEROIC_DIFF] = {
@@ -464,7 +465,8 @@ data["BlackrockCaverns"] = {
 				{ 7, 56320 },	-- Witching Hourglass
 				{ 8, 56317 },	-- Amber Messenger
 				{ 9, 56322 },	-- Crepuscular Shield
-				{ 11, 52078, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Chaos Orb
+				{ 10,56316 },   -- Sandshift Relic
+				{ 12, 52078, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Chaos Orb
 				{ 16, "ac5060" },
 				{ 17, "ac5284" },
 			},
@@ -1298,7 +1300,6 @@ data["ShadowfangKeep"] = {
 				{ 3, 63444 },	-- Baron Silverlaine's Greaves
 				{ 4, 63438 },	-- Baroness Silverlaine's Locket
 				{ 5, 63441 },	-- Pendant of the Keep
-				{ 6, 132567 }, -- Blindwatcher's Chain
 			},
 		},
 		{ -- Commander Springvale
@@ -1351,8 +1352,8 @@ data["ShadowfangKeep"] = {
 
 data["ZulAman"] = {
 	MapID = 3805,
-	InstanceID = 568,
 	--EncounterJournalID = 77,
+	InstanceID = 568,
 	ContentType = DUNGEON_CONTENT,
 	LevelRange = {85, 85, 85},
 	items = {
@@ -1489,7 +1490,8 @@ local ZUL_GURUB_MADNESS_LOOT = {
 }
 data["ZulGurub"] = {
 	MapID = 1977,
-	EncounterJournalID = 76,
+	-- EncounterJournalID = 76,
+	InstanceID = 859,
 	ContentType = DUNGEON_CONTENT,
 	LevelRange = {85, 85, 85},
 	items = {
