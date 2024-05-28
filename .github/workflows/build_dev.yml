@@ -10,9 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     environment: Build
 
-    env:
-      GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
-
     steps:
       - name: Clone project
         uses: actions/checkout@v4
@@ -33,6 +30,9 @@ jobs:
         run: ./cf_localizations.sh
         env:
           CF_API_KEY: ${{ secrets.CF_API_KEY }}
+
+      - name: Generate Changelog
+        run: ./generate_changelog.sh
 
       - name: Package (don't release)
         uses: BigWigsMods/packager@master
