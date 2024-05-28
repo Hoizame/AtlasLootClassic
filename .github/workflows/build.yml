@@ -33,6 +33,9 @@ jobs:
         env:
           CF_API_KEY: ${{ secrets.CF_API_KEY }}
 
+      - name: Generate Changelog
+        run: ./generate_changelog.sh
+
       - name: Package and release
         uses: BigWigsMods/packager@master
         env:
