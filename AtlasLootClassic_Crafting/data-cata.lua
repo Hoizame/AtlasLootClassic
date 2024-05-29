@@ -310,8 +310,10 @@ data["BlacksmithingCata"] = {
 			name = AL["Enhancements"],
 			[NORMAL_DIFF] = {
 				{ 1, 76439 }, -- Ebonsteel Belt Buckle
+				{ 5, 55641 }, -- Socket Gloves
 				{ 16, 76440 }, -- Pyrium Shield Spike
 				{ 18, 76442 }, -- Pyrium Weapon Chain
+				{ 20, 55628 }, -- Socket Bracer
 			}
 		},
 	}
