@@ -509,17 +509,17 @@ data["EngineeringCata"] = {
 			}
 		},
 		{
-			name = AL["Enhancements"],
+			name = ALIL["Engineering"].." - "..AL["Enhancements"],
 			[NORMAL_DIFF] = {
 				{ 1, 82175 },	-- Synapse Springs
 				{ 2, 82177 },	-- Quickflip Deflection Plates
 				{ 3, 82180 },	-- Tazik Shocker
 				{ 4, 82200 },	-- Spinal Healing Injector
 				{ 5, 82201 },	-- Z50 Mana Gulper
-				{ 6, 84424 },	-- Invisibility Field
-				{ 7, 84425 },	-- Cardboard Assassin
-				{ 8, 84427 },	-- Grounded Plasma Shield
-				{ 16, 84430 },	-- Heat-Treated Spinning Lure
+				{ 16, 84424 },	-- Invisibility Field
+				{ 17, 84425 },	-- Cardboard Assassin
+				{ 18, 84427 },	-- Grounded Plasma Shield
+				{ 20, 84430 },	-- Heat-Treated Spinning Lure
 			}
 		},
 		{
@@ -1647,10 +1647,15 @@ data["TailoringCata"] = {
 		{
 			name = AL["Enhancements"],
 			[NORMAL_DIFF] = {
-				{ 1, 75310 },	-- Powerful Ghostly Spellthread
-				{ 2, 75309 },	-- Powerful Enchanted Spellthread
-				{ 3, 75255 },	-- Ghostly Spellthread
-				{ 4, 75250 },	-- Enchanted Spellthread
+				{ 1, 75154 },	-- Master's Spellthread
+				{ 2, 75250 },	-- Enchanted Spellthread
+				{ 3, 75309 },	-- Powerful Enchanted Spellthread
+				{ 5, 75178 },	-- Swordguard Embroidery
+				{ 6, 75172 },	-- Lightweave Embroidery
+				{ 7, 75175 },	-- Darkglow Embroidery
+				{ 16, 75155 },	-- Sanctified Spellthread
+				{ 17, 75255 },	-- Ghostly Spellthread
+				{ 18, 75310 },	-- Powerful Ghostly Spellthread
 			},
 		},
 		{
@@ -1724,6 +1729,7 @@ data["HerbalismCata"] = {
 				{ 5,  52985 }, -- Azshara's Veil
 				{ 6,  52983 }, -- Cinderbloom
 				{ 16,  52989 }, -- Deathspore Pod
+				{ 18,  52329 }, -- Volatile Life
 			}
 		},
 	}

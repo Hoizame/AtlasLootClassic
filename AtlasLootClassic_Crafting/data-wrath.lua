@@ -604,12 +604,12 @@ data["EngineeringWrath"] = {
 				{ 1, 54999 },	-- Hyperspeed Accelerators
 				{ 2, 54998 },	-- Hand-Mounted Pyro Rocket
 				{ 3, 63770 },	-- Reticulated Armor Webbing
-				{ 5, 55016 },	-- Nitro Boosts
-				{ 16, 54736 },	-- Personal Electromagnetic Pulse Generator
-				{ 17, 54793 },	-- Frag Belt
-				{ 19, 55002 },	-- Flexweave Underlay
-				{ 20, 63765 },	-- Springy Arachnoweave
-				{ 22, 67839 },	-- Mind Amplification Dish
+				{ 5, 55002 },	-- Flexweave Underlay
+				{ 6, 63765 },	-- Springy Arachnoweave
+				{ 16, 55016 },	-- Nitro Boosts
+				{ 17, 54736 },	-- Personal Electromagnetic Pulse Generator
+				{ 18, 54793 },	-- Frag Belt
+				{ 19, 67839 },	-- Mind Amplification Dish
 			}
 		},
 		{
@@ -773,9 +773,9 @@ data["TailoringWrath"] = {
 				{ 1, 56034 },	-- Master's Spellthread
 				{ 2, 56010 },	-- Azure Spellthread
 				{ 3, 56011 },   -- Sapphire Spellthread
-				{ 5, 55777 },	-- Schwertwallgarn
-				{ 6, 55642 },	-- Hell leuchtendes Garn
-				{ 7, 55769 },	-- Dunkel glühendes Garn
+				{ 5, 55777 },	-- Swordguard Embroidery
+				{ 6, 55642 },	-- Lightweave Embroidery
+				{ 7, 55769 },	-- Darkglow Embroidery
 				{ 16, 56039 },	-- Sanctified Spellthread
 				{ 17, 56008 },	-- Shining Spellthread
 				{ 18, 56009 },  -- Brilliant Spellthread
@@ -2136,9 +2136,11 @@ data["HerbalismWrath"] = {
 				{ 3,  36903 }, -- Adder's Tongue
 				{ 4,  36907 }, -- Talandra's Rose
 				{ 5,  36904 }, -- Tiger Lily
-				{ 6,  36901 }, -- Goldclover
+				{ 6,  39970 }, -- Fire Leaf
+				{ 7,  36901 }, -- Goldclover
 				{ 16,  36908 }, -- Frost Lotus
-				{ 18,  37921 }, -- Deadnettle
+				{ 17,  37921 }, -- Deadnettle
+				{ 19,  37704 }, -- Crystallized Life	
 			}
 		},
 	}
