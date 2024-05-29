@@ -1654,7 +1654,6 @@ data["TheBastionOfTwilight"] = {
 				{ 8, 59518 },	-- Ring of Rivalry
 				{ 9, 59519 },	-- Theralion's Mirror
 				{ 10, 59515 },	-- Vial of Stolen Memories
-				{ 12, 152969, "pet2081" }, -- Odd Twilight Egg -> Twilight Clutch-Sister
 				{ 16, 63533 },	-- Fang of Twilight
 				{ 17, 63536 },	-- Blade of the Witching Hour
 				{ 18, 63532 },	-- Dragonheart Piercer
@@ -1670,7 +1669,6 @@ data["TheBastionOfTwilight"] = {
 				{ 8, 65106 },	-- Ring of Rivalry
 				{ 9, 65105 },	-- Theralion's Mirror
 				{ 10, 65109 },	-- Vial of Stolen Memories
-				{ 12, 152969, "pet2081" }, -- Odd Twilight Egg -> Twilight Clutch-Sister
 				{ 16, 65094 },	-- Fang of Twilight
 				{ 17, 65091 },	-- Blade of the Witching Hour
 				{ 18, 65095 },	-- Dragonheart Piercer
@@ -1691,7 +1689,6 @@ data["TheBastionOfTwilight"] = {
 				{ 7, 59509 },	-- Glaciated Helm
 				{ 8, 59505 },	-- Gravitational Pull
 				{ 9, 59503 },	-- Terrastra's Legguards
-				{ 11, 152970, "pet2082" }, -- Lesser Circle of Binding -> Bound Stream
 				{ 16, 59506 },	-- Crushing Weight
 				{ 17, 59514 },	-- Heart of Ignacious
 				{ 18, 59513 },	-- Scepter of Ice
@@ -1707,7 +1704,6 @@ data["TheBastionOfTwilight"] = {
 				{ 7, 65115 },	-- Glaciated Helm
 				{ 8, 65119 },	-- Gravitational Pull
 				{ 9, 65121 },	-- Terrastra's Legguards
-				{ 11, 152970, "pet2082" }, -- Lesser Circle of Binding -> Bound Stream
 				{ 16, 65118 },	-- Crushing Weight
 				{ 17, 65110 },	-- Heart of Ignacious
 				{ 18, 65111 },	-- Scepter of Ice
@@ -1729,7 +1725,6 @@ data["TheBastionOfTwilight"] = {
 				{ 8, 59497 },	-- Shackles of the End of Days
 				{ 10, 59501 },	-- Signet of the Fifth Circle
 				{ 11, 59500 },	-- Fall of Mortality
-				{ 13, 152972, "pet2083" }, -- Twilight Summoning Portal -> Faceless Minion
 				{ 16, 64315 },	-- Mantle of the Forlorn Conqueror
 				{ 17, 64316 },	-- Mantle of the Forlorn Protector
 				{ 18, 64314 },	-- Mantle of the Forlorn Vanquisher
@@ -1749,7 +1744,6 @@ data["TheBastionOfTwilight"] = {
 				{ 8, 65127 },	-- Shackles of the End of Days
 				{ 10, 65123 },	-- Signet of the Fifth Circle
 				{ 11, 65124 },	-- Fall of Mortality
-				{ 13, 152972, "pet2083" }, -- Twilight Summoning Portal -> Faceless Minion
 				{ 16, 65088 },	-- Shoulders of the Forlorn Conqueror
 				{ 17, 65087 },	-- Shoulders of the Forlorn Protector
 				{ 18, 65089 },	-- Shoulders of the Forlorn Vanquisher
@@ -1819,7 +1813,6 @@ data["BlackwingDescent"] = {
 				{ 7, 59118 },	-- Electron Inductor Coils
 				{ 8, 59117 },	-- Jumbotron Power Belt
 				{ 9, 59216 },	-- Life Force Chargers
-				{ 11, 152966, "pet2078" }, -- Rough-Hewn Remote -> Tinytron
 				{ 16, 59220 },	-- Security Measure Alpha
 				{ 17, 59121 },	-- Lightning Conductor Band
 				{ 19, 59122 },	-- Organic Lifeform Inverter
@@ -1835,7 +1828,6 @@ data["BlackwingDescent"] = {
 				{ 7, 65085 },	-- Electron Inductor Coils
 				{ 8, 65086 },	-- Jumbotron Power Belt
 				{ 9, 65080 },	-- Life Force Chargers
-				{ 11, 152966, "pet2078" }, -- Rough-Hewn Remote -> Tinytron
 				{ 16, 65076 },	-- Security Measure Alpha
 				{ 17, 65082 },	-- Lightning Conductor Band
 				{ 19, 65081 },	-- Organic Lifeform Inverter
@@ -1965,7 +1957,6 @@ data["BlackwingDescent"] = {
 				{ 8, 59344 },	-- Dragon Bone Warhelm
 				{ 9, 59352 },	-- Flash Freeze Gauntlets
 				{ 10, 59342 },	-- Belt of Absolute Zero
-				{ 12, 152967, "pet2079" }, -- Experiment-In-A-Jar -> Discarded Experiment
 				{ 16, 59354 },	-- Jar of Ancient Remedies
 				{ 18, 59347 },	-- Mace of Acrid Death
 				{ 20, "ac5310" },
@@ -1981,7 +1972,6 @@ data["BlackwingDescent"] = {
 				{ 8, 65038 },	-- Dragon Bone Warhelm
 				{ 9, 65031 },	-- Flash Freeze Gauntlets
 				{ 10, 65040 },	-- Belt of Absolute Zero
-				{ 12, 152967, "pet2079" }, -- Experiment-In-A-Jar -> Discarded Experiment
 				{ 16, 67428 },	-- Leggings of the Forlorn Conqueror
 				{ 17, 67427 },	-- Leggings of the Forlorn Protector
 				{ 18, 67426 },	-- Leggings of the Forlorn Vanquisher
@@ -2004,7 +1994,6 @@ data["BlackwingDescent"] = {
 				{ 7, 59450 },	-- Belt of the Blackhand
 				{ 9, 59442 },	-- Rage of Ages
 				{ 10, 59441 },	-- Prestor's Talisman of Machination
-				{ 12, 152968, "pet2080" }, -- Shadowy Pile of Bones -> Rattlejaw
 				{ 16, 63683 },	-- Helm of the Forlorn Conqueror
 				{ 17, 63684 },	-- Helm of the Forlorn Protector
 				{ 18, 63682 },	-- Helm of the Forlorn Vanquisher
@@ -2024,7 +2013,6 @@ data["BlackwingDescent"] = {
 				{ 7, 65022 },	-- Belt of the Blackhand
 				{ 9, 65025 },	-- Rage of Ages
 				{ 10, 65026 },	-- Prestor's Talisman of Machination
-				{ 12, 152968, "pet2080" }, -- Shadowy Pile of Bones -> Rattlejaw
 				{ 16, 65001 },	-- Crown of the Forlorn Conqueror
 				{ 17, 65000 },	-- Crown of the Forlorn Protector
 				{ 18, 65002 },	-- Crown of the Forlorn Vanquisher
@@ -2078,7 +2066,6 @@ data["ThroneOfTheFourWinds"] = {
 				{ 6, 63490 },	-- Sky Strider Belt
 				{ 7, 63495 },	-- Tempest Keeper Belt
 				{ 8, 63491 },	-- Thunder Wall Belt
-				{ 10, 152974, "pet2085" }, -- Breezy Essence -> Drafty
 				{ 16, 63488 },	-- Mistral Circle
 				{ 17, 63489 },	-- Permafrost Signet
 				{ 18, 63494 },	-- Planetary Band
@@ -2093,7 +2080,6 @@ data["ThroneOfTheFourWinds"] = {
 				{ 6, 65369 },	-- Sky Strider Belt
 				{ 7, 65375 },	-- Tempest Keeper Belt
 				{ 8, 65370 },	-- Thunder Wall Belt
-				{ 10, 152974, "pet2085" }, -- Breezy Essence -> Drafty
 				{ 16, 65367 },	-- Mistral Circle
 				{ 17, 65372 },	-- Permafrost Signet
 				{ 18, 65373 },	-- Planetary Band
@@ -2132,7 +2118,6 @@ data["ThroneOfTheFourWinds"] = {
 				{ 26, 69830 },	-- Planetary Amulet
 				{ 27, 63499 },	-- Cloudburst Ring
 				{ 29, 63041, "mount" },	-- Reins of the Drake of the South Wind
-				{ 101, 152973, "pet2084" }, -- Zephyr's Call -> Zephyrian Prince
 				{ 116, "ac5305" },
 			},
 			[HEROIC_DIFF] = {
@@ -2164,7 +2149,6 @@ data["ThroneOfTheFourWinds"] = {
 				{ 27, 69882 },	-- Planetary Amulet
 				{ 28, 65382 },	-- Cloudburst Ring
 				{ 30, 63041, "mount" },	-- Reins of the Drake of the South Wind
-				{ 101, 152973, "pet2084" }, -- Zephyr's Call -> Zephyrian Prince
 				{ 116, "ac5123" },
 				{ 117, "ac5305" },
 			},
