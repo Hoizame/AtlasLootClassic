@@ -2319,6 +2319,24 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.CATA_VERSION_NUM) then
 		[65415] = {6,450,88022}, -- Recipe: Highland Spirits
 		[65414] = {6,450,88045}, -- Recipe: Starfire Espresso
 		[65408] = {6,450,88017}, -- Recipe: Feathered Lure
+		[65359] = {10,515,92370}, -- Formula: Runed Elementium Rod
+                [68789] = {10,515,96262}, -- Formula: Enchant Bracer - Mighty Intellect
+                [68788] = {10,515,96261}, -- Formula: Enchant Bracer - Major Strength
+                [68787] = {10,515,96264}, -- Formula: Enchant Bracer - Agility
+                [67312] = {10,525,93843}, -- Formula: Magic Lamp
+                [67308] = {10,525,93841}, -- Formula: Enchanted Lantern
+                [52735] = {10,525,74244}, -- Formula: Enchant Weapon - Windwalk
+                [52733] = {10,525,74242}, -- Formula: Enchant Weapon - Power Torrent
+                [52736] = {10,525,74246}, -- Formula: Enchant Weapon - Landslide
+                [64415] = {10,525,74254}, -- Formula: Enchant Gloves - Mighty Strength
+                [64414] = {10,525,74255}, -- Formula: Enchant Gloves - Greater Mastery
+                [52737] = {10,525,74247}, -- Formula: Enchant Cloak - Greater Critical Strike
+                [52739] = {10,525,74250}, -- Formula: Enchant Chest - Peerless Stats
+                [52740] = {10,525,74251}, -- Formula: Enchant Chest - Greater Stamina
+                [64413] = {10,525,74256}, -- Formula: Enchant Bracer - Greater Speed
+                [52738] = {10,525,74248}, -- Formula: Enchant Bracer - Greater Critical Strike
+                [64412] = {10,525,74253}, -- Formula: Enchant Boots - Lavawalker
+                [64411] = {10,525,74252}, -- Formula: Enchant Boots - Assassin's Step
     }
 end
 
