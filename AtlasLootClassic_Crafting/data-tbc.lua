@@ -1598,14 +1598,16 @@ data["HerbalismBC"] = {
 			[NORMAL_DIFF] = {
 				{ 1,  22793 }, -- Mana Thistle
 				{ 2,  22792 }, -- Nightmare Vine
-				{ 3,  22791, 22576 }, -- Netherbloom
+				{ 3,  22791 }, -- Netherbloom
 				{ 4,  22790 }, -- Ancient Lichen
 				{ 5,  22789 }, -- Terocone
 				{ 6,  22787 }, -- Ragveil
 				{ 7,  22786 }, -- Dreaming Glory
-				{ 8,  22785, 22795 }, -- Felweed
+				{ 8,  22785 }, -- Felweed
 				{ 16,  22794 }, -- Fel Lotus
-				{ 17,  22575 }, -- Mote of Life
+				{ 18,  22576 }, -- Mote of Mana
+				{ 19,  22575 }, -- Mote of Life
+				{ 23,  22795 }, -- Fel Blossom	
 			}
 		},
 	}

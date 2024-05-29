@@ -61,8 +61,9 @@ data["AlchemyCata"] = {
 				{3, 80721},	-- Flask of the Winds
 				{4, 80723},	-- Flask of the Frost Wyrm
 				{5, 94162},	-- Flask of Flowing Water
-				{16, 92688}, -- Big Cauldron of Battle
-                {17, 92643}, -- Cauldron of Battle
+				{16, 80724}, -- Flask of Enhancement
+				{18, 92688}, -- Big Cauldron of Battle
+                {19, 92643}, -- Cauldron of Battle
 
 			},
 		},
@@ -116,7 +117,7 @@ data["AlchemyCata"] = {
 			},
 		},
 		{
-			name = AL["Trinkets"],
+			name = AL["Stones"],
 			[NORMAL_DIFF] = {
                 {1, 80508}, -- Lifebound Alchemist Stone
                 {2, 96253}, -- Quicksilver Alchemist Stone
@@ -124,12 +125,12 @@ data["AlchemyCata"] = {
 				{4, 96252}, -- Volatile Alchemist Stone
 			},
 		},
-		{
-			name = AL["Enhancements"],
-			[NORMAL_DIFF] = {
-				{1, 80724}, -- Flask of Enhancement
-			}
-		},
+--		{
+--			name = AL["Enhancements"],
+--			[NORMAL_DIFF] = {
+--				{1, 80724}, -- Flask of Enhancement
+--			}
+--		},
 		{
 			name = AL["Misc"],
 			[NORMAL_DIFF] = {
@@ -310,8 +311,10 @@ data["BlacksmithingCata"] = {
 			name = AL["Enhancements"],
 			[NORMAL_DIFF] = {
 				{ 1, 76439 }, -- Ebonsteel Belt Buckle
+				{ 5, 55641 }, -- Socket Gloves
 				{ 16, 76440 }, -- Pyrium Shield Spike
 				{ 18, 76442 }, -- Pyrium Weapon Chain
+				{ 20, 55628 }, -- Socket Bracer
 			}
 		},
 	}
@@ -509,17 +512,17 @@ data["EngineeringCata"] = {
 			}
 		},
 		{
-			name = AL["Enhancements"],
+			name = ALIL["Engineering"].." - "..AL["Enhancements"],
 			[NORMAL_DIFF] = {
 				{ 1, 82175 },	-- Synapse Springs
 				{ 2, 82177 },	-- Quickflip Deflection Plates
 				{ 3, 82180 },	-- Tazik Shocker
 				{ 4, 82200 },	-- Spinal Healing Injector
 				{ 5, 82201 },	-- Z50 Mana Gulper
-				{ 6, 84424 },	-- Invisibility Field
-				{ 7, 84425 },	-- Cardboard Assassin
-				{ 8, 84427 },	-- Grounded Plasma Shield
-				{ 16, 84430 },	-- Heat-Treated Spinning Lure
+				{ 16, 84424 },	-- Invisibility Field
+				{ 17, 84425 },	-- Cardboard Assassin
+				{ 18, 84427 },	-- Grounded Plasma Shield
+				{ 20, 84430 },	-- Heat-Treated Spinning Lure
 			}
 		},
 		{
@@ -1647,10 +1650,15 @@ data["TailoringCata"] = {
 		{
 			name = AL["Enhancements"],
 			[NORMAL_DIFF] = {
-				{ 1, 75310 },	-- Powerful Ghostly Spellthread
-				{ 2, 75309 },	-- Powerful Enchanted Spellthread
-				{ 3, 75255 },	-- Ghostly Spellthread
-				{ 4, 75250 },	-- Enchanted Spellthread
+				{ 1, 75154 },	-- Master's Spellthread
+				{ 2, 75250 },	-- Enchanted Spellthread
+				{ 3, 75309 },	-- Powerful Enchanted Spellthread
+				{ 5, 75178 },	-- Swordguard Embroidery
+				{ 6, 75172 },	-- Lightweave Embroidery
+				{ 7, 75175 },	-- Darkglow Embroidery
+				{ 16, 75155 },	-- Sanctified Spellthread
+				{ 17, 75255 },	-- Ghostly Spellthread
+				{ 18, 75310 },	-- Powerful Ghostly Spellthread
 			},
 		},
 		{
@@ -1724,6 +1732,7 @@ data["HerbalismCata"] = {
 				{ 5,  52985 }, -- Azshara's Veil
 				{ 6,  52983 }, -- Cinderbloom
 				{ 16,  52989 }, -- Deathspore Pod
+				{ 18,  52329 }, -- Volatile Life
 			}
 		},
 	}
