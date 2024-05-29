@@ -60,6 +60,7 @@ data["AlchemyWrath"] = {
 				{ 4, 53901 },	-- Flask of the Frost Wyrm
 				{ 5, 62213 },	-- Lesser Flask of Resistance
 				{ 6, 53899 },	-- Lesser Flask of Toughness
+				{ 16, 67025 },	-- Flask of the North
 			},
 		},
 		{

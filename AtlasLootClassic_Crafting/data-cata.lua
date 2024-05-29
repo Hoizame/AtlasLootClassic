@@ -61,8 +61,9 @@ data["AlchemyCata"] = {
 				{3, 80721},	-- Flask of the Winds
 				{4, 80723},	-- Flask of the Frost Wyrm
 				{5, 94162},	-- Flask of Flowing Water
-				{16, 92688}, -- Big Cauldron of Battle
-                {17, 92643}, -- Cauldron of Battle
+				{16, 80724}, -- Flask of Enhancement
+				{18, 92688}, -- Big Cauldron of Battle
+                {19, 92643}, -- Cauldron of Battle
 
 			},
 		},
@@ -116,7 +117,7 @@ data["AlchemyCata"] = {
 			},
 		},
 		{
-			name = AL["Trinkets"],
+			name = AL["Stones"],
 			[NORMAL_DIFF] = {
                 {1, 80508}, -- Lifebound Alchemist Stone
                 {2, 96253}, -- Quicksilver Alchemist Stone
@@ -124,12 +125,12 @@ data["AlchemyCata"] = {
 				{4, 96252}, -- Volatile Alchemist Stone
 			},
 		},
-		{
-			name = AL["Enhancements"],
-			[NORMAL_DIFF] = {
-				{1, 80724}, -- Flask of Enhancement
-			}
-		},
+--		{
+--			name = AL["Enhancements"],
+--			[NORMAL_DIFF] = {
+--				{1, 80724}, -- Flask of Enhancement
+--			}
+--		},
 		{
 			name = AL["Misc"],
 			[NORMAL_DIFF] = {
