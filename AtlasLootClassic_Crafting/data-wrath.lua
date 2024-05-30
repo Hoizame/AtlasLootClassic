@@ -357,9 +357,18 @@ data["BlacksmithingWrath"] = {
 			name = AL["Enhancements"],
 			[NORMAL_DIFF] = {
 				{ 1, 55656 },	-- Eternal Belt Buckle
-				{ 3, 55641 },	-- Socket Gloves
-				{ 16, 62202 },	-- Titanium Plating
-				{ 18, 55628 },	-- Socket Bracer
+				{ 6, 55641 },	-- Socket Gloves
+				{ 16, 56357 },	-- Titanium Shield Spike
+				{ 17, 62202 },	-- Titanium Plating
+				{ 19, 55839 },	-- Titanium Weapon Chain
+				{ 21, 55628 },	-- Socket Bracer
+			}
+		},
+		{
+			name = AL["Misc"],
+			[NORMAL_DIFF] = {
+				{ 1, 59406 },	-- Titanium Skeleton Key
+				{ 3, 55732 },	-- Titanium Rod
 			}
 		},
 		{ -- Sets
