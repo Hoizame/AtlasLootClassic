@@ -451,7 +451,7 @@ data["EngineeringCata"] = {
 			name = AL["Armor"].." - "..ALIL["Head"].." - "..ALIL["Cloth"],
 			[NORMAL_DIFF] = {
 				{ 1, 81725 }, -- Lightweight Bio-Optic Killshades
-				{ 3, 84406 }, -- Authentic Jr. Engineer Goggles
+				{ 16, 84406 }, -- Authentic Jr. Engineer Goggles
 			}
 		},
 		{
@@ -533,12 +533,12 @@ data["EngineeringCata"] = {
 			[NORMAL_DIFF] = {
 				{ 1, 84412 },   -- Personal World Destroyer
 				{ 2, 84413 },	-- De-Weaponized Mechanical Companion
-				{ 4, 84421 },	-- Loot-a-Rang
-				{ 5, 95705 },	-- Gnomish Gravity Well
-				{ 7, 95703 },	-- Electrostatic Condenser
-				{ 9, 84429 },	-- Goblin Barbecue
-				{ 11, 84416 },	-- Elementium Toolbox
-				{ 12, 84415 },	-- Lure Master Tackle Box
+				{ 4, 95705 },	-- Gnomish Gravity Well
+				{ 5, 84421 },	-- Loot-a-Rang
+				{ 16, 84416 },	-- Elementium Toolbox
+				{ 17, 84415 },	-- Lure Master Tackle Box\
+				{ 19, 84429 },	-- Goblin Barbecue
+				{ 21, 95703 },	-- Electrostatic Condenser
 			}
 		},
 	}
@@ -1570,7 +1570,7 @@ data["TailoringCata"] = {
 				{ 2, 75306 },	-- Vicious Embersilk Cowl
 				{ 3, 75266 },	-- Spiritmend Cowl
 				{ 4, 75256 },	-- Deathsilk Cowl
-				{ 6, 75289 },	-- High Society Top Hat
+				{ 16, 75289 },	-- High Society Top Hat
 			}
 		},
 		{ -- Shoulder
@@ -1589,8 +1589,8 @@ data["TailoringCata"] = {
 				{ 2, 75303 },	-- Vicious Fireweave Robe
 				{ 3, 75257 },	-- Deathsilk Robe
 				{ 4, 75267 },	-- Spiritmend Robe
-				{ 5, 102171 },	-- Black Silk Vest
-				{ 7, 75288 },	-- Black Embersilk Gown
+				{ 16, 75288 },	-- Black Embersilk Gown
+				{ 18, 102171 },	-- Black Silk Vest
 			}
 		},
 		{ -- Wrist
@@ -1654,14 +1654,14 @@ data["TailoringCata"] = {
 			name = AL["Enhancements"],
 			[NORMAL_DIFF] = {
 				{ 1, 75154 },	-- Master's Spellthread
-				{ 2, 75250 },	-- Enchanted Spellthread
-				{ 3, 75309 },	-- Powerful Enchanted Spellthread
+				{ 2, 75309 },	-- Powerful Enchanted Spellthread
+				{ 3, 75250 },	-- Enchanted Spellthread
 				{ 5, 75178 },	-- Swordguard Embroidery
 				{ 6, 75172 },	-- Lightweave Embroidery
 				{ 7, 75175 },	-- Darkglow Embroidery
 				{ 16, 75155 },	-- Sanctified Spellthread
-				{ 17, 75255 },	-- Ghostly Spellthread
-				{ 18, 75310 },	-- Powerful Ghostly Spellthread
+				{ 17, 75310 },	-- Powerful Ghostly Spellthread
+				{ 18, 75255 },	-- Ghostly Spellthread
 			},
 		},
 		{
@@ -1669,9 +1669,9 @@ data["TailoringCata"] = {
 			[NORMAL_DIFF] = {
 				{ 1, 75308 },	-- Illusionary Bag
 				{ 2, 75264 },	-- Embersilk Bag
-				{ 4, 75268 },	-- Hyjal Expedition Bag
-				{ 6, 100585 },	-- Luxurious Silk Gem Bag
-				{ 8, 75268 },	-- Otherworldly Bag
+				{ 16, 100585 },	-- Luxurious Silk Gem Bag
+				{ 18, 75268 },	-- Hyjal Expedition Bag
+				{ 20, 75265 },	-- Otherworldly Bag
 			},
 		},
 		{
@@ -1679,12 +1679,12 @@ data["TailoringCata"] = {
 			[NORMAL_DIFF] = {
 				{ 1, 75247 },	-- Embersilk Net
 				{ 3, 74964 },	-- Bolt of Embersilk Cloth
-				{ 16, 75146 },	-- Dream of Azshara
-				{ 17, 94743 },	-- Dream of Destruction
-				{ 18, 75141 },	-- Dream of Skywall
-				{ 19, 75145 },	-- Dream of Ragnaros
+				{ 16, 94743 },	-- Dream of Destruction
+				{ 17, 75141 },	-- Dream of Skywall
+				{ 18, 75145 },	-- Dream of Ragnaros
+				{ 19, 75142 },	-- Dream of Deepholm
 				{ 20, 75144 },	-- Dream of Hyjal
-				{ 21, 75142 },	-- Dream of Deepholm
+				{ 21, 75146 },	-- Dream of Azshara
 			},
 		},
 		{ -- Sets
@@ -1709,10 +1709,10 @@ data["MiningCata"] = {
 		{
 			name = AL["Smelting"],
 			[NORMAL_DIFF] = {
-				{ 1, 84038 }, -- Smelt Obsidium
-				{ 2, 74530 }, -- Smelt Elementium
-				{ 3, 74537 }, -- Smelt Hardened Elementium
-				{ 4, 74529 }, -- Smelt Pyrite
+				{ 1, 74529 }, -- Smelt Pyrite
+				{ 2, 74537 }, -- Smelt Hardened Elementium
+				{ 3, 74530 }, -- Smelt Elementium
+				{ 4, 84038 }, -- Smelt Obsidium
 			}
 		},
 	}
@@ -1937,17 +1937,18 @@ data["CookingCata"] = {
 				{ 1, 96133 }, -- Scalding Murglesnout
 				{ 2, 88018 }, -- Fish Fry
 				{ 3, 88006 }, -- Blackened Surprise
+				{ 5, 93741 }, -- Venison Jerky
+				{ 16, 88044 }, -- South Island Iced Tea
+				{ 17, 88045 }, -- Starfire Espresso
 			},
 		},
 		{
 			name = AL["Special"],
 			[NORMAL_DIFF] = {
-				{ 1, 88017 }, -- Feathered Lure
-				{ 3, 88013 }, -- Chocolate Cookie
-				{ 4, 88045 }, -- Starfire Espresso
-				{ 16, 88044 }, -- South Island Iced Tea
-				{ 17, 88022 }, -- Highland Spirits
-				{ 18, 88015 }, -- Darkbrew Lager
+				{ 1, 88013 }, -- Chocolate Cookie
+				{ 3, 88017 }, -- Feathered Lure
+				{ 16, 88022 }, -- Highland Spirits
+				{ 17, 88015 }, -- Darkbrew Lager
 			},
 		},
 	}
@@ -1963,10 +1964,10 @@ data["FirstAidCata"] = {
 		{
 			name = ALIL["First Aid"],
 			[NORMAL_DIFF] = {
-				{ 1, 74556 },	-- Embersilk Bandage
-				{ 2, 74557 },	-- Heavy Embersilk Bandage
-				{ 3, 74558 },	-- Field Bandage: Dense Embersilk
-				{ 4, 88893 },	-- Dense Embersilk Bandage
+				{ 1, 74558 },	-- Field Bandage: Dense Embersilk
+				{ 2, 88893 },	-- Dense Embersilk Bandage
+				{ 3, 74557 },	-- Heavy Embersilk Bandage
+				{ 4, 74556 },	-- Embersilk Bandage
 			}
 		},
 	}

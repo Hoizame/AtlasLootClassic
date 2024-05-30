@@ -781,14 +781,14 @@ data["TailoringWrath"] = {
 			name = AL["Enhancements"],
 			[NORMAL_DIFF] = {
 				{ 1, 56034 },	-- Master's Spellthread
-				{ 2, 56010 },	-- Azure Spellthread
-				{ 3, 56011 },   -- Sapphire Spellthread
+				{ 2, 56011 },   -- Sapphire Spellthrea
+				{ 3, 56010 },	-- Azure Spellthread
 				{ 5, 55777 },	-- Swordguard Embroidery
 				{ 6, 55642 },	-- Lightweave Embroidery
 				{ 7, 55769 },	-- Darkglow Embroidery
 				{ 16, 56039 },	-- Sanctified Spellthread
-				{ 17, 56008 },	-- Shining Spellthread
-				{ 18, 56009 },  -- Brilliant Spellthread
+				{ 17, 56009 },  -- Brilliant Spellthread
+				{ 18, 56008 },	-- Shining Spellthread
 			}
 		},
 		{
