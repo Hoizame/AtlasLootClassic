@@ -399,7 +399,6 @@ data["EnchantingCata"] = {
 				{1, 74235}, -- Enchant Off-Hand - Superior Intellect
 				{16, 74226}, -- Enchant Shield - Mastery
 				{17, 74207}, -- Enchant Shield - Protection
-				
 			}
 		},
 		{
@@ -1022,7 +1021,6 @@ data["InscriptionCata"] = {
 			[NORMAL_DIFF] = {
 				{ 1, 86005 }, -- Inferno Ink
 				{ 2, 86004 }, -- Blackfallow Ink
-				
 			}
 		},
 		{

@@ -1607,7 +1607,7 @@ data["HerbalismBC"] = {
 				{ 16,  22794 }, -- Fel Lotus
 				{ 18,  22576 }, -- Mote of Mana
 				{ 19,  22575 }, -- Mote of Life
-				{ 23,  22795 }, -- Fel Blossom	
+				{ 23,  22795 }, -- Fel Blossom
 			}
 		},
 	}
