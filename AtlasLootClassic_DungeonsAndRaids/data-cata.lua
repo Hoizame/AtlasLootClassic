@@ -55,6 +55,178 @@ local PURPLE = "|cff9900ff%s|r"
 -- format
 local BONUS_LOOT_SPLIT = "%s - %s"
 
+-- tier sets
+local T11_SET = {
+	name = format(AL["Tier %s Sets"], "11"),
+	ExtraList = true,
+	TableType = SET_ITTYPE,
+	--ContentPhaseBC = 6,
+	IgnoreAsSource = true,
+	[NORMAL_DIFF] = {
+		{1,    4000941 }, -- Warlock
+        {3,    4000935 }, -- Priest Holy
+        {4,    4000936 }, -- Priest Shadow
+        {6,    4000937 }, -- Rogue
+        {8,    4000930 }, -- Hunter
+        {10,   4000943 }, -- Warrior Tank
+        {11,   4000942 }, -- Warrior DPS
+        {13,   4000926 }, -- Death Knight Tank
+        {14,   4000925 }, -- Death Knight DPS
+        {16,   4000931 }, -- Mage
+        {18,   4000928 }, -- Druid Resto
+        {19,   4000929 }, -- Druid Balance
+        {20,   4000927 }, -- Druid Feral
+        {22,   4000938 }, -- Shaman Resto
+        {23,   4000940 }, -- Shaman Elemental
+        {24,   4000939 }, -- Shaman Enhance
+        {26,   4000933 }, -- Paladin Holy
+        {27,   4000934 }, -- Paladin Prot
+        {28,   4000932 }, -- Paladin DPS
+	},
+	[HEROIC_DIFF] = {
+        {1,    4001941 }, -- Warlock
+        {3,    4001935 }, -- Priest Holy
+        {4,    4001936 }, -- Priest Shadow
+        {6,    4001937 }, -- Rogue
+        {8,    4001930 }, -- Hunter
+        {10,   4001943 }, -- Warrior Tank
+        {11,   4001942 }, -- Warrior DPS
+        {13,   4001926 }, -- Death Knight Tank
+        {14,   4001925 }, -- Death Knight DPS
+        {16,   4001931 }, -- Mage
+        {18,   4001928 }, -- Druid Resto
+        {19,   4001929 }, -- Druid Balance
+        {20,   4001927 }, -- Druid Feral
+        {22,   4001938 }, -- Shaman Resto
+        {23,   4001940 }, -- Shaman Elemental
+        {24,   4001939 }, -- Shaman Enhance
+        {26,   4001933 }, -- Paladin Holy
+        {27,   4001934 }, -- Paladin Prot
+        {28,   4001932 }, -- Paladin DPS
+	},
+}
+
+local T12_SET = {
+	name = format(AL["Tier %s Sets"], "12"),
+	ExtraList = true,
+	TableType = SET_ITTYPE,
+	--ContentPhaseBC = 6,
+	IgnoreAsSource = true,
+	[NORMAL_DIFF] = {
+        {1,    4000960 }, -- Warlock
+        {3,    4000954 }, -- Priest Holy
+        {4,    4000955 }, -- Priest Shadow
+        {6,    4000956 }, -- Rogue
+        {8,    4000949 }, -- Hunter
+        {10,   4000962 }, -- Warrior Tank
+        {11,   4000961 }, -- Warrior DPS
+        {13,   4000945 }, -- Death Knight Tank
+        {14,   4000944 }, -- Death Knight DPS
+        {16,   4000950 }, -- Mage
+        {18,   4000947 }, -- Druid Resto
+        {19,   4000948 }, -- Druid Balance
+        {20,   4000946 }, -- Druid Feral
+        {22,   4000957 }, -- Shaman Resto
+        {23,   4000959 }, -- Shaman Elemental
+        {24,   4000958 }, -- Shaman Enhance
+        {26,   4000952 }, -- Paladin Holy
+        {27,   4000953 }, -- Paladin Prot
+        {28,   4000951 }, -- Paladin DPS
+	},
+	[HEROIC_DIFF] = {
+        {1,    4001960 }, -- Warlock
+        {3,    4001954 }, -- Priest Holy
+        {4,    4001955 }, -- Priest Shadow
+        {6,    4001956 }, -- Rogue
+        {8,    4001949 }, -- Hunter
+        {10,   4001962 }, -- Warrior Tank
+        {11,   4001961 }, -- Warrior DPS
+        {13,   4001945 }, -- Death Knight Tank
+        {14,   4001944 }, -- Death Knight DPS
+        {16,   4001950 }, -- Mage
+        {18,   4001947 }, -- Druid Resto
+        {19,   4001948 }, -- Druid Balance
+        {20,   4001946 }, -- Druid Feral
+        {22,   4001957 }, -- Shaman Resto
+        {23,   4001959 }, -- Shaman Elemental
+        {24,   4001958 }, -- Shaman Enhance
+        {26,   4001952 }, -- Paladin Holy
+        {27,   4001953 }, -- Paladin Prot
+        {28,   4001951 }, -- Paladin DPS
+	},
+}
+
+local T13_SET = {
+	name = format(AL["Tier %s Sets"], "13"),
+	ExtraList = true,
+	TableType = SET_ITTYPE,
+	--ContentPhaseBC = 6,
+	IgnoreAsSource = true,
+	[LFR_DIFF] = {
+		{1, 0}, -- Death Knight Normal DPS Set
+		{2, 0}, -- Death Knight Normal Tank Set
+		{4, 0}, -- Druid Normal Melee Set
+		{5, 0}, -- Druid Normal Resto Set
+		{6, 0}, -- Druid Normal Balance Set
+		{8, 0}, -- Hunter Normal
+		{10, 0}, -- Mage Normal
+		{12, 0}, -- Paladin DPS
+		{13, 0}, -- Paladin Holy
+		{14, 0}, -- Paladin Prot
+		{16, 0}, -- Priest
+		{17, 0}, -- Priest
+		{19, 0}, -- Rogue
+		{21, 0}, -- Shaman
+		{22, 0}, -- Shaman
+		{23, 0}, -- Shaman
+		{25, 0}, -- Warlock
+		{27, 0}, -- Warrior
+		{28, 0}, -- Warrior
+	},
+	[NORMAL_DIFF] = {
+		{1, 0}, -- Death Knight Normal DPS Set
+		{2, 0}, -- Death Knight Normal Tank Set
+		{4, 0}, -- Druid Normal Melee Set
+		{5, 0}, -- Druid Normal Resto Set
+		{6, 0}, -- Druid Normal Balance Set
+		{8, 0}, -- Hunter Normal
+		{10, 0}, -- Mage Normal
+		{12, 0}, -- Paladin DPS
+		{13, 0}, -- Paladin Holy
+		{14, 0}, -- Paladin Prot
+		{16, 0}, -- Priest
+		{17, 0}, -- Priest
+		{19, 0}, -- Rogue
+		{21, 0}, -- Shaman
+		{22, 0}, -- Shaman
+		{23, 0}, -- Shaman
+		{25, 0}, -- Warlock
+		{27, 0}, -- Warrior
+		{28, 0}, -- Warrior
+	},
+	[HEROIC_DIFF] = {
+		{1, 0}, -- Death Knight Heroic DPS Set
+		{2, 0}, -- Death Knight Heroic Tank Set
+		{4, 0}, -- Druid Normal Melee Set
+		{5, 0}, -- Druid Normal Resto Set
+		{6, 0}, -- Druid Normal Balance Set
+		{8, 0}, -- Hunter Heroic
+		{10, 0}, -- Mage Heroic
+		{12, 0}, -- Paladin DPS
+		{13, 0}, -- Paladin Holy
+		{14, 0}, -- Paladin Prot
+		{16, 0}, -- Priest
+		{17, 0}, -- Priest
+		{19, 0}, -- Rogue
+		{21, 0}, -- Shaman
+		{22, 0}, -- Shaman
+		{23, 0}, -- Shaman
+		{25, 0}, -- Warlock
+		{27, 0}, -- Warrior
+		{28, 0}, -- Warrior
+	},
+}
+
 --Achievements
 local CATA_DUNGEON_HERO_AC_TABLE = {	--[Cataclysm Dungeon Hero]
 	name = select(2, GetAchievementInfo(4844)),
@@ -359,7 +531,7 @@ local T13_SET = {
 data["BlackrockCaverns"] = {
 	MapID = 4926,
 	--EncounterJournalID = 66,
-	InstanceID = 66,
+	InstanceID = 645,
 	ContentType = DUNGEON_CONTENT,
 	LevelRange = {77, 80, 83},
 	items = {
@@ -451,6 +623,7 @@ data["BlackrockCaverns"] = {
 				{ 7, 55787 },	-- Witching Hourglass
 				{ 8, 55782 },	-- Amber Messenger
 				{ 9, 55788 },	-- Crepuscular Shield
+				{ 10, 55783 },  -- Sandshift Relic
 				{ 16, "ac4833" },
 			},
 			[HEROIC_DIFF] = {
@@ -463,7 +636,8 @@ data["BlackrockCaverns"] = {
 				{ 7, 56320 },	-- Witching Hourglass
 				{ 8, 56317 },	-- Amber Messenger
 				{ 9, 56322 },	-- Crepuscular Shield
-				{ 11, 52078, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Chaos Orb
+				{ 10,56316 },   -- Sandshift Relic
+				{ 12, 52078, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Chaos Orb
 				{ 16, "ac5060" },
 				{ 17, "ac5284" },
 			},
@@ -535,12 +709,14 @@ data["ThroneOfTheTides"] = {
 				{ 2, 55235 },	-- Decapod Slippers
 				{ 3, 55229 },	-- Anomuran Helm
 				{ 4, 55237 },	-- Porcelain Crab
+				{ 5, 55248 },   -- Conch of Thundering Waves
 			},
 			[HEROIC_DIFF] = {
 				{ 1, 56276 },	-- Anthia's Ring
 				{ 2, 56277 },	-- Decapod Slippers
 				{ 3, 56278 },	-- Anomuran Helm
 				{ 4, 56280 },	-- Porcelain Crab
+				{ 5, 56279 },   -- Conch of Thundering Waves
 			},
 		},
 		{ -- Ozumat
@@ -623,14 +799,16 @@ data["TheStonecore"] = {
 				{ 2, 55797 },	-- Hematite Plate Gloves
 				{ 3, 55799 },	-- Rose Quartz Band
 				{ 4, 55801 },	-- Quicksilver Blade
-				{ 16, 63043, "mount" },	-- Reins of the Vitreous Stone Drake
+				{ 5, 55800 },   -- Stalagmite Dragon
+				{ 16, 63043 },	-- Reins of the Vitreous Stone Drake
 			},
 			[HEROIC_DIFF] = {
 				{ 1, 56334 },	-- Deep Delving Gloves
 				{ 2, 56336 },	-- Hematite Plate Gloves
 				{ 3, 56333 },	-- Rose Quartz Band
 				{ 4, 56335 },	-- Quicksilver Blade
-				{ 16, 63043, "mount" },	-- Reins of the Vitreous Stone Drake
+				{ 5, 56337 },   -- Stalagmite Dragon
+				{ 16, 63043 },	-- Reins of the Vitreous Stone Drake
 			},
 		},
 		{ -- Ozruk
@@ -664,6 +842,7 @@ data["TheStonecore"] = {
 				{ 7, 55820 },	-- Prophet's Scepter
 				{ 8, 55813 },	-- Elementium Fang
 				{ 9, 55815 },	-- Darkling Staff
+				{ 10, 55821},   -- Book of Dark Prophecies
 				{ 16, "ac4846" },
 			},
 			[HEROIC_DIFF] = {
@@ -676,7 +855,8 @@ data["TheStonecore"] = {
 				{ 7, 56349 },	-- Prophet's Scepter
 				{ 8, 56346 },	-- Elementium Fang
 				{ 9, 56343 },	-- Darkling Staff
-				{ 11, 52078, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Chaos Orb
+				{ 10, 56350},   -- Book of Dark Prophecies
+				{ 12, 52078, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Chaos Orb
 				{ 16, "ac5063" },
 				{ 17, "ac5287" },
 			},
@@ -732,7 +912,7 @@ data["TheVortexPinnacle"] = {
 				{ 3, 55840 },	-- Amulet of Tender Breath
 				{ 4, 55839 },	-- Skyshard Ring
 				{ 5, 55841 },	-- Axe of the Eclipse
-				{ 16, 63040, "mount" },	-- Reins of the Drake of the North Wind
+				{ 16, 63040 },	-- Reins of the Drake of the North Wind
 			},
 			[HEROIC_DIFF] = {
 				{ 1, 56361 },	-- Mantle of Bestilled Winds
@@ -740,7 +920,7 @@ data["TheVortexPinnacle"] = {
 				{ 3, 56362 },	-- Amulet of Tender Breath
 				{ 4, 56365 },	-- Skyshard Ring
 				{ 5, 56364 },	-- Axe of the Eclipse
-				{ 16, 63040, "mount" },	-- Reins of the Drake of the North Wind
+				{ 16, 63040 },	-- Reins of the Drake of the North Wind
 			},
 		},
 		{ -- Asaad, Caliph of Zephyrs
@@ -989,12 +1169,14 @@ data["HallsOfOrigination"] = {
 				{ 2, 55997 },	-- Bloodpetal Mantle
 				{ 3, 55999 },	-- Seedling Pod
 				{ 4, 56000 },	-- Band of Life Energy
+				{ 5, 56001 },   -- Slashing Thorns
 			},
 			[HEROIC_DIFF] = {
 				{ 1, 56417 },	-- Robes of Rampant Growth
 				{ 2, 56419 },	-- Bloodpetal Mantle
 				{ 3, 56421 },	-- Seedling Pod
 				{ 4, 56418 },	-- Band of Life Energy
+				{ 5, 56420 },   -- Slashing Thorns
 			},
 		},
 		{ -- Setesh, Construct of Destruction
@@ -1248,7 +1430,9 @@ data["Deadmines"] = {
 				{ 6, 63486 },	-- Shackles of the Betrayed
 				{ 7, 63478 },	-- Stonemason's Helm
 				{ 8, 63483 },	-- Guildmaster's Greaves
-				{ 10, 52078, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Chaos Orb
+				{ 9, 63480 },   -- Record of the Brotherhood's End
+				{ 10, 63487 },  -- Book of the Well Sung Song
+				{ 12, 52078, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Chaos Orb
 				{ 16, "ac5083" },
 				{ 17, "ac5371" },
 			},
@@ -1287,7 +1471,6 @@ data["ShadowfangKeep"] = {
 				{ 3, 63444 },	-- Baron Silverlaine's Greaves
 				{ 4, 63438 },	-- Baroness Silverlaine's Locket
 				{ 5, 63441 },	-- Pendant of the Keep
-				{ 6, 132567 }, -- Blindwatcher's Chain
 			},
 		},
 		{ -- Commander Springvale
@@ -1306,6 +1489,17 @@ data["ShadowfangKeep"] = {
 			name = AL["Lord Walden"],
 			EncounterJournalID = 99,
 			[HEROIC_DIFF] = {
+				{ 1, 63455 },	-- Blinders of the Follower
+				{ 2, 63454 },	-- Double Dealing Bracers
+				{ 3, 63452 },	-- Burden of Lost Humanity
+				{ 4, 63450 },	-- Phantom Armor
+				{ 5, 63453 },	-- Iron Will Girdle
+			},
+		},
+		{ -- Lord Godfrey
+			name = AL["Lord Godfrey"],
+			EncounterJournalID = 100,
+			[HEROIC_DIFF] = {
 				{ 1, 63465 },	-- Mantle of Loss
 				{ 2, 63463 },	-- Mantle of the Eastern Lords
 				{ 3, 63459 },	-- Worgen Hunter's Helm
@@ -1315,25 +1509,10 @@ data["ShadowfangKeep"] = {
 				{ 7, 63464 },	-- Greaves of the Misguided
 				{ 8, 63456 },	-- Meteor Shard
 				{ 9, 63461 },	-- Staff of Isolation
-				{ 11, 52078, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Chaos Orb
+				{ 10, 63460} ,  -- Relic of Arathor
+				{ 12, 52078, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Chaos Orb
 				{ 16, "ac5093" },
 				{ 17, "ac5505" },
-			},
-		},
-		{ -- Lord Godfrey
-			name = AL["Lord Godfrey"],
-			EncounterJournalID = 100,
-			[HEROIC_DIFF] = {
-				{1, 63456},
-				{2, 63457},
-				{3, 63458},
-				{4, 63459},
-				{5, 63460},
-				{6, 63461},
-				{7, 63462},
-				{8, 63463},
-				{9, 63464},
-				{10, 63465},
 			},
 		},
 		CATA_DUNGEON_HERO_AC_TABLE,
@@ -1344,8 +1523,8 @@ data["ShadowfangKeep"] = {
 
 data["ZulAman"] = {
 	MapID = 3805,
-	InstanceID = 568,
 	--EncounterJournalID = 77,
+	InstanceID = 568,
 	ContentType = DUNGEON_CONTENT,
 	LevelRange = {85, 85, 85},
 	items = {
@@ -1442,7 +1621,7 @@ data["ZulAman"] = {
 			{ 16, 69591 },	-- Voodoo Hexblade
 			{ 17, 69592 },	-- Reforged Trollbane
 			{ 19, "INV_Box_01", "ac5858", AL["Bonus Loot"], nil },
-			{ 20, 69747, "mount" },	-- Amani Battle Bear
+			{ 20, 69747 },	-- Amani Battle Bear
 		},
 	},
 	{	-- Trash
@@ -1482,7 +1661,8 @@ local ZUL_GURUB_MADNESS_LOOT = {
 }
 data["ZulGurub"] = {
 	MapID = 1977,
-	EncounterJournalID = 76,
+	-- EncounterJournalID = 76,
+	InstanceID = 859,
 	ContentType = DUNGEON_CONTENT,
 	LevelRange = {85, 85, 85},
 	items = {
@@ -1507,7 +1687,7 @@ data["ZulGurub"] = {
 				{ 3, 69605 },	-- Amulet of the Watcher
 				{ 4, 69609 },	-- Bloodlord's Protector
 				{ 5, 69607 },	-- Touch of Discord
-				{ 7, 68823, "mount" },	-- Armored Razzashi Raptor
+				{ 7, 68823 },	-- Armored Razzashi Raptor
 				{ 16, "ac5762" },
 			},
 		},
@@ -1540,7 +1720,7 @@ data["ZulGurub"] = {
 				{ 3, 69613 },	-- Leggings of the Pride
 				{ 4, 69614 },	-- Roaring Mask of Bethekk
 				{ 5, 69610 },	-- Arlokk's Signet
-				{ 7, 68824, "mount" },	-- Swift Zulian Panther
+				{ 7, 68824 },	-- Swift Zulian Panther
 			},
 		},
 		{ -- Zanzil
@@ -1645,7 +1825,6 @@ data["TheBastionOfTwilight"] = {
 				{ 8, 59518 },	-- Ring of Rivalry
 				{ 9, 59519 },	-- Theralion's Mirror
 				{ 10, 59515 },	-- Vial of Stolen Memories
-				{ 12, 152969, "pet2081" }, -- Odd Twilight Egg -> Twilight Clutch-Sister
 				{ 16, 63533 },	-- Fang of Twilight
 				{ 17, 63536 },	-- Blade of the Witching Hour
 				{ 18, 63532 },	-- Dragonheart Piercer
@@ -1661,7 +1840,6 @@ data["TheBastionOfTwilight"] = {
 				{ 8, 65106 },	-- Ring of Rivalry
 				{ 9, 65105 },	-- Theralion's Mirror
 				{ 10, 65109 },	-- Vial of Stolen Memories
-				{ 12, 152969, "pet2081" }, -- Odd Twilight Egg -> Twilight Clutch-Sister
 				{ 16, 65094 },	-- Fang of Twilight
 				{ 17, 65091 },	-- Blade of the Witching Hour
 				{ 18, 65095 },	-- Dragonheart Piercer
@@ -1682,7 +1860,6 @@ data["TheBastionOfTwilight"] = {
 				{ 7, 59509 },	-- Glaciated Helm
 				{ 8, 59505 },	-- Gravitational Pull
 				{ 9, 59503 },	-- Terrastra's Legguards
-				{ 11, 152970, "pet2082" }, -- Lesser Circle of Binding -> Bound Stream
 				{ 16, 59506 },	-- Crushing Weight
 				{ 17, 59514 },	-- Heart of Ignacious
 				{ 18, 59513 },	-- Scepter of Ice
@@ -1698,7 +1875,6 @@ data["TheBastionOfTwilight"] = {
 				{ 7, 65115 },	-- Glaciated Helm
 				{ 8, 65119 },	-- Gravitational Pull
 				{ 9, 65121 },	-- Terrastra's Legguards
-				{ 11, 152970, "pet2082" }, -- Lesser Circle of Binding -> Bound Stream
 				{ 16, 65118 },	-- Crushing Weight
 				{ 17, 65110 },	-- Heart of Ignacious
 				{ 18, 65111 },	-- Scepter of Ice
@@ -1720,7 +1896,6 @@ data["TheBastionOfTwilight"] = {
 				{ 8, 59497 },	-- Shackles of the End of Days
 				{ 10, 59501 },	-- Signet of the Fifth Circle
 				{ 11, 59500 },	-- Fall of Mortality
-				{ 13, 152972, "pet2083" }, -- Twilight Summoning Portal -> Faceless Minion
 				{ 16, 64315 },	-- Mantle of the Forlorn Conqueror
 				{ 17, 64316 },	-- Mantle of the Forlorn Protector
 				{ 18, 64314 },	-- Mantle of the Forlorn Vanquisher
@@ -1740,7 +1915,6 @@ data["TheBastionOfTwilight"] = {
 				{ 8, 65127 },	-- Shackles of the End of Days
 				{ 10, 65123 },	-- Signet of the Fifth Circle
 				{ 11, 65124 },	-- Fall of Mortality
-				{ 13, 152972, "pet2083" }, -- Twilight Summoning Portal -> Faceless Minion
 				{ 16, 65088 },	-- Shoulders of the Forlorn Conqueror
 				{ 17, 65087 },	-- Shoulders of the Forlorn Protector
 				{ 18, 65089 },	-- Shoulders of the Forlorn Vanquisher
@@ -1810,7 +1984,6 @@ data["BlackwingDescent"] = {
 				{ 7, 59118 },	-- Electron Inductor Coils
 				{ 8, 59117 },	-- Jumbotron Power Belt
 				{ 9, 59216 },	-- Life Force Chargers
-				{ 11, 152966, "pet2078" }, -- Rough-Hewn Remote -> Tinytron
 				{ 16, 59220 },	-- Security Measure Alpha
 				{ 17, 59121 },	-- Lightning Conductor Band
 				{ 19, 59122 },	-- Organic Lifeform Inverter
@@ -1826,7 +1999,6 @@ data["BlackwingDescent"] = {
 				{ 7, 65085 },	-- Electron Inductor Coils
 				{ 8, 65086 },	-- Jumbotron Power Belt
 				{ 9, 65080 },	-- Life Force Chargers
-				{ 11, 152966, "pet2078" }, -- Rough-Hewn Remote -> Tinytron
 				{ 16, 65076 },	-- Security Measure Alpha
 				{ 17, 65082 },	-- Lightning Conductor Band
 				{ 19, 65081 },	-- Organic Lifeform Inverter
@@ -1956,7 +2128,6 @@ data["BlackwingDescent"] = {
 				{ 8, 59344 },	-- Dragon Bone Warhelm
 				{ 9, 59352 },	-- Flash Freeze Gauntlets
 				{ 10, 59342 },	-- Belt of Absolute Zero
-				{ 12, 152967, "pet2079" }, -- Experiment-In-A-Jar -> Discarded Experiment
 				{ 16, 59354 },	-- Jar of Ancient Remedies
 				{ 18, 59347 },	-- Mace of Acrid Death
 				{ 20, "ac5310" },
@@ -1972,7 +2143,6 @@ data["BlackwingDescent"] = {
 				{ 8, 65038 },	-- Dragon Bone Warhelm
 				{ 9, 65031 },	-- Flash Freeze Gauntlets
 				{ 10, 65040 },	-- Belt of Absolute Zero
-				{ 12, 152967, "pet2079" }, -- Experiment-In-A-Jar -> Discarded Experiment
 				{ 16, 67428 },	-- Leggings of the Forlorn Conqueror
 				{ 17, 67427 },	-- Leggings of the Forlorn Protector
 				{ 18, 67426 },	-- Leggings of the Forlorn Vanquisher
@@ -1995,7 +2165,6 @@ data["BlackwingDescent"] = {
 				{ 7, 59450 },	-- Belt of the Blackhand
 				{ 9, 59442 },	-- Rage of Ages
 				{ 10, 59441 },	-- Prestor's Talisman of Machination
-				{ 12, 152968, "pet2080" }, -- Shadowy Pile of Bones -> Rattlejaw
 				{ 16, 63683 },	-- Helm of the Forlorn Conqueror
 				{ 17, 63684 },	-- Helm of the Forlorn Protector
 				{ 18, 63682 },	-- Helm of the Forlorn Vanquisher
@@ -2015,7 +2184,6 @@ data["BlackwingDescent"] = {
 				{ 7, 65022 },	-- Belt of the Blackhand
 				{ 9, 65025 },	-- Rage of Ages
 				{ 10, 65026 },	-- Prestor's Talisman of Machination
-				{ 12, 152968, "pet2080" }, -- Shadowy Pile of Bones -> Rattlejaw
 				{ 16, 65001 },	-- Crown of the Forlorn Conqueror
 				{ 17, 65000 },	-- Crown of the Forlorn Protector
 				{ 18, 65002 },	-- Crown of the Forlorn Vanquisher
@@ -2052,7 +2220,6 @@ data["BlackwingDescent"] = {
 }
 
 data["ThroneOfTheFourWinds"] = {
-	nameFormat = NAME_SKYWALL,
 	MapID = 5638,
 	InstanceID = 754,
 	EncounterJournalID = 74,
@@ -2070,7 +2237,6 @@ data["ThroneOfTheFourWinds"] = {
 				{ 6, 63490 },	-- Sky Strider Belt
 				{ 7, 63495 },	-- Tempest Keeper Belt
 				{ 8, 63491 },	-- Thunder Wall Belt
-				{ 10, 152974, "pet2085" }, -- Breezy Essence -> Drafty
 				{ 16, 63488 },	-- Mistral Circle
 				{ 17, 63489 },	-- Permafrost Signet
 				{ 18, 63494 },	-- Planetary Band
@@ -2085,7 +2251,6 @@ data["ThroneOfTheFourWinds"] = {
 				{ 6, 65369 },	-- Sky Strider Belt
 				{ 7, 65375 },	-- Tempest Keeper Belt
 				{ 8, 65370 },	-- Thunder Wall Belt
-				{ 10, 152974, "pet2085" }, -- Breezy Essence -> Drafty
 				{ 16, 65367 },	-- Mistral Circle
 				{ 17, 65372 },	-- Permafrost Signet
 				{ 18, 65373 },	-- Planetary Band
@@ -2123,8 +2288,7 @@ data["ThroneOfTheFourWinds"] = {
 				{ 25, 69828 },	-- Permafrost Choker
 				{ 26, 69830 },	-- Planetary Amulet
 				{ 27, 63499 },	-- Cloudburst Ring
-				{ 29, 63041, "mount" },	-- Reins of the Drake of the South Wind
-				{ 101, 152973, "pet2084" }, -- Zephyr's Call -> Zephyrian Prince
+				{ 29, 63041 },	-- Reins of the Drake of the South Wind
 				{ 116, "ac5305" },
 			},
 			[HEROIC_DIFF] = {
@@ -2155,8 +2319,7 @@ data["ThroneOfTheFourWinds"] = {
 				{ 26, 69883 },	-- Permafrost Choker
 				{ 27, 69882 },	-- Planetary Amulet
 				{ 28, 65382 },	-- Cloudburst Ring
-				{ 30, 63041, "mount" },	-- Reins of the Drake of the South Wind
-				{ 101, 152973, "pet2084" }, -- Zephyr's Call -> Zephyrian Prince
+				{ 30, 63041 },	-- Reins of the Drake of the South Wind
 				{ 116, "ac5123" },
 				{ 117, "ac5305" },
 			},
@@ -2188,7 +2351,6 @@ data["Firelands"] = {
 				{ 9, 71029 },	-- Arachnaflame Treads
 				{ 11, 71032 },	-- Widow's Kiss
 				{ 12, 68981 },	-- Spidersilk Spindle
-				{ 14, 152976, "pet2087" }, -- Cinderweb Egg -> Cinderweb Recluse
 				{ 16, 70922 },	-- Mandible of Beth'tilac
 				{ 17, 71039 },	-- Funeral Pyre
 				{ 18, 71038 },	-- Ward of the Red Widow
@@ -2206,7 +2368,6 @@ data["Firelands"] = {
 				{ 9, 71404 },	-- Arachnaflame Treads
 				{ 11, 71401 },	-- Widow's Kiss
 				{ 12, 69138 },	-- Spidersilk Spindle
-				{ 14, 152976, "pet2087" }, -- Cinderweb Egg -> Cinderweb Recluse
 				{ 16, 71406 },	-- Mandible of Beth'tilac
 				{ 17, 71409 },	-- Funeral Pyre
 				{ 18, 71408 },	-- Ward of the Red Widow
@@ -2266,7 +2427,7 @@ data["Firelands"] = {
 				{ 9, 70737 },	-- Spaulders of Recurring Flame
 				{ 10, 70988 },	-- Clutch of the Firemother
 				{ 11, 70739 },	-- Lavaworm Legplates
-				{ 13, 71665, "mount", [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Flametalon of Alysrazor
+				{ 13, 71665, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Flametalon of Alysrazor
 				{ 16, 70738 },	-- Alysrazor's Band
 				{ 17, 68983 },	-- Eye of Blazing Power
 				{ 19, 70733 },	-- Alysra's Razor
@@ -2284,7 +2445,7 @@ data["Firelands"] = {
 				{ 9, 71432 },	-- Spaulders of Recurring Flame
 				{ 10, 71439 },	-- Clutch of the Firemother
 				{ 11, 71431 },	-- Lavaworm Legplates
-				{ 13, 71665, "mount", [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Flametalon of Alysrazor
+				{ 13, 71665, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Flametalon of Alysrazor
 				{ 16, 71679 },	-- Chest of the Fiery Conqueror
 				{ 17, 71686 },	-- Chest of the Fiery Protector
 				{ 18, 71672 },	-- Chest of the Fiery Vanquisher
@@ -2311,7 +2472,6 @@ data["Firelands"] = {
 				{ 11, 71019 },	-- Necklace of Fetishes
 				{ 12, 71024 },	-- Crystal Prison Band
 				{ 13, 71022 },	-- Goblet of Anger
-				{ 15, 152975, "pet2086" }, -- Smoldering Treat -> Blazehound
 				{ 16, 71014 },	-- Skullstealer Greataxe
 				{ 17, 71013 },	-- Feeding Frenzy
 				{ 19, "ac5829" },
@@ -2329,7 +2489,6 @@ data["Firelands"] = {
 				{ 11, 71446 },	-- Necklace of Fetishes
 				{ 12, 71449 },	-- Crystal Prison Band
 				{ 13, 71448 },	-- Goblet of Anger
-				{ 15, 152975, "pet2086" }, -- Smoldering Treat -> Blazehound
 				{ 16, 71678 },	-- Leggings of the Fiery Conqueror
 				{ 17, 71685 },	-- Leggings of the Fiery Protector
 				{ 18, 71671 },	-- Leggings of the Fiery Vanquisher
@@ -2354,7 +2513,6 @@ data["Firelands"] = {
 				{ 9, 70917 },	-- Flickering Handguards
 				{ 11, 68982 },	-- Necromantic Focus
 				{ 12, 71323 },	-- Molten Scream
-				{ 14, 152977, "pet2088" }, -- Vibrating Stone -> Surger
 				{ 16, 71312 },	-- Gatecrasher
 				{ 17, 70915 },	-- Shard of Torment
 				{ 19, "ac5830" },
@@ -2371,7 +2529,6 @@ data["Firelands"] = {
 				{ 9, 71458 },	-- Flickering Handguards
 				{ 11, 69139 },	-- Necromantic Focus
 				{ 12, 71462 },	-- Molten Scream
-				{ 14, 152977, "pet2088" }, -- Vibrating Stone -> Surger
 				{ 16, 71676 },	-- Gauntlets of the Fiery Conqueror
 				{ 17, 71683 },	-- Gauntlets of the Fiery Protector
 				{ 18, 71669 },	-- Gauntlets of the Fiery Vanquisher
@@ -2395,7 +2552,6 @@ data["Firelands"] = {
 				{ 9, 71348 },	-- Flowform Choker
 				{ 10, 68927 },	-- The Hungerer
 				{ 11, 68926 },	-- Jaws of Defeat
-				{ 13, 152978, "pet2089" }, -- Fandral's Pet Carrier -> Infernal Pyreclaw
 				{ 16, 71681 },	-- Mantle of the Fiery Conqueror
 				{ 17, 71688 },	-- Mantle of the Fiery Protector
 				{ 18, 71674 },	-- Mantle of the Fiery Vanquisher
@@ -2414,7 +2570,6 @@ data["Firelands"] = {
 				{ 9, 71472 },	-- Flowform Choker
 				{ 10, 69112 },	-- The Hungerer
 				{ 11, 69111 },	-- Jaws of Defeat
-				{ 13, 152978, "pet2089" }, -- Fandral's Pet Carrier -> Infernal Pyreclaw
 				{ 16, 71680 },	-- Shoulders of the Fiery Conqueror
 				{ 17, 71687 },	-- Shoulders of the Fiery Protector
 				{ 18, 71673 },	-- Shoulders of the Fiery Vanquisher
@@ -2436,7 +2591,7 @@ data["Firelands"] = {
 				{ 7, 68994 },	-- Matrix Restabilizer
 				{ 8, 68925 },	-- Variable Pulse Lightning Capacitor
 				{ 9, 68995 },	-- Vessel of Acceleration
-				{ 11, 69224, "mount" },	-- Smoldering Egg of Millagazor
+				{ 11, 69224 },	-- Smoldering Egg of Millagazor
 				{ 16, 71675 },	-- Helm of the Fiery Conqueror
 				{ 17, 71682 },	-- Helm of the Fiery Protector
 				{ 18, 71668 },	-- Helm of the Fiery Vanquisher
@@ -2455,7 +2610,7 @@ data["Firelands"] = {
 				{ 7, 69150 },	-- Matrix Restabilizer
 				{ 8, 69110 },	-- Variable Pulse Lightning Capacitor
 				{ 9, 69167 },	-- Vessel of Acceleration
-				{ 11, 69224, "mount" },	-- Smoldering Egg of Millagazor
+				{ 11, 69224 },	-- Smoldering Egg of Millagazor
 				{ 16, 71677 },	-- Crown of the Fiery Conqueror
 				{ 17, 71684 },	-- Crown of the Fiery Protector
 				{ 18, 71670 },	-- Crown of the Fiery Vanquisher
@@ -2886,7 +3041,6 @@ data["DragonSoul"] = {
 				{ 3, 78412 },	-- Heartblood Wristplates
 				{ 5, 77971 },	-- Insignia of the Corrupted Mind
 				{ 6, 77970 },	-- Soulshifter Vortex
-				{ 8, 152979, "pet2090" }, -- Puddle of Black Liquid -> Faceless Mindlasher
 				{ 16, 78872 },	-- Leggings of the Corrupted Conqueror
 				{ 17, 78873 },	-- Leggings of the Corrupted Protector
 				{ 18, 78871 },	-- Leggings of the Corrupted Vanquisher
@@ -2899,7 +3053,6 @@ data["DragonSoul"] = {
 				{ 5, 77217 },	-- Experimental Specimen Slicer
 				{ 6, 77218 },	-- Spire of Coagulated Globules
 				{ 7, 77219 },	-- Scalpel of Unrelenting Agony
-				{ 9, 152979, "pet2090" }, -- Puddle of Black Liquid -> Faceless Mindlasher
 				{ 16, 78181 },	-- Leggings of the Corrupted Conqueror
 				{ 17, 78176 },	-- Leggings of the Corrupted Protector
 				{ 18, 78171 },	-- Leggings of the Corrupted Vanquisher
@@ -2914,7 +3067,6 @@ data["DragonSoul"] = {
 				{ 5, 78403 },	-- Experimental Specimen Slicer
 				{ 6, 78401 },	-- Spire of Coagulated Globules
 				{ 7, 78404 },	-- Scalpel of Unrelenting Agony
-				{ 9, 152979, "pet2090" }, -- Puddle of Black Liquid -> Faceless Mindlasher
 				{ 16, 78856 },	-- Leggings of the Corrupted Conqueror
 				{ 17, 78857 },	-- Leggings of the Corrupted Protector
 				{ 18, 78858 },	-- Leggings of the Corrupted Vanquisher
@@ -3002,7 +3154,7 @@ data["DragonSoul"] = {
 				{ 17, 78179 },	-- Chest of the Corrupted Protector
 				{ 18, 78174 },	-- Chest of the Corrupted Vanquisher
 				{ 20, 77223 },	-- Morningstar of Heroic Will
-				{ 22, 78919, "mount", [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Experiment 12-B
+				{ 22, 78919, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Experiment 12-B
 				{ 24, "ac6084" },
 			},
 			[HEROIC_DIFF] = {
@@ -3018,7 +3170,7 @@ data["DragonSoul"] = {
 				{ 17, 78848 },	-- Chest of the Corrupted Protector
 				{ 18, 78849 },	-- Chest of the Corrupted Vanquisher
 				{ 20, 78429 },	-- Morningstar of Heroic Will
-				{ 22, 78919, "mount", [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Experiment 12-B
+				{ 22, 78919, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Experiment 12-B
 				{ 24, "ac6113" },
 				{ 25, "ac6084" },
 			},
@@ -3082,7 +3234,6 @@ data["DragonSoul"] = {
 				{ 3, 78468 },	-- Belt of Shattered Elementium
 				{ 4, 78470 },	-- Backbreaker Spaulders
 				{ 5, 78469 },	-- Gauntlets of the Golden Thorn
-				{ 7, 152980, "pet2091" }, -- Elementium Back Plate -> Corrupted Blood
 				{ 16, 77977 },	-- Eye of Unmaking
 				{ 17, 77976 },	-- Heart of Unliving
 				{ 18, 77975 },	-- Will of Unbinding
@@ -3096,7 +3247,6 @@ data["DragonSoul"] = {
 				{ 3, 77237 },	-- Belt of Shattered Elementium
 				{ 4, 77236 },	-- Backbreaker Spaulders
 				{ 5, 77235 },	-- Gauntlets of the Golden Thorn
-				{ 7, 152980, "pet2091" }, -- Elementium Back Plate -> Corrupted Blood
 				{ 16, 77200 },	-- Eye of Unmaking
 				{ 17, 77199 },	-- Heart of Unliving
 				{ 18, 77198 },	-- Will of Unbinding
@@ -3110,7 +3260,6 @@ data["DragonSoul"] = {
 				{ 3, 78463 },	-- Belt of Shattered Elementium
 				{ 4, 78465 },	-- Backbreaker Spaulders
 				{ 5, 78464 },	-- Gauntlets of the Golden Thorn
-				{ 7, 152980, "pet2091" }, -- Elementium Back Plate -> Corrupted Blood
 				{ 16, 77997 },	-- Eye of Unmaking
 				{ 17, 77996 },	-- Heart of Unliving
 				{ 18, 77995 },	-- Will of Unbinding
@@ -3131,7 +3280,6 @@ data["DragonSoul"] = {
 				{ 4, 78487 },	-- Gurthalak, Voice of the Deeps
 				{ 5, 78481 },	-- No'Kaled, the Elements of Death
 				{ 6, 78485 },	-- Maw of the Dragonlord
-				{ 8, 152981, "pet2092" }, -- Severed Tentacle -> Unstable Tendril
 				{ 16, 78482 },	-- Kiril, Fury of Beasts
 				{ 17, 78486 },	-- Ti'tahk, the Steps of Time
 				{ 18, 78480 },	-- Vishanka, Jaws of the Earth
@@ -3144,11 +3292,10 @@ data["DragonSoul"] = {
 				{ 4, 77191 },	-- Gurthalak, Voice of the Deeps
 				{ 5, 77188 },	-- No'Kaled, the Elements of Death
 				{ 6, 77196 },	-- Maw of the Dragonlord
-				{ 8, 152981, "pet2092" }, -- Severed Tentacle -> Unstable Tendril
 				{ 16, 77194 },	-- Kiril, Fury of Beasts
 				{ 17, 77190 },	-- Ti'tahk, the Steps of Time
 				{ 18, 78359 },	-- Vishanka, Jaws of the Earth
-				{ 20, 77067, "mount" },	-- Reins of the Blazing Drake
+				{ 20, 77067},	-- Reins of the Blazing Drake
 				{ 22, "ac6177" },
 				{ 23, "ac6180" },
 			},
@@ -3159,11 +3306,10 @@ data["DragonSoul"] = {
 				{ 4, 78478 },	-- Gurthalak, Voice of the Deeps
 				{ 5, 78472 },	-- No'Kaled, the Elements of Death
 				{ 6, 78476 },	-- Maw of the Dragonlord
-				{ 8, 152981, "pet2092" }, -- Severed Tentacle -> Unstable Tendril
 				{ 16, 78473 },	-- Kiril, Fury of Beasts
 				{ 17, 78477 },	-- Ti'tahk, the Steps of Time
 				{ 18, 78471 },	-- Vishanka, Jaws of the Earth
-				{ 20, 77069, "mount" },	-- Life-Binder's Handmaiden
+				{ 20, 77069 },	-- Life-Binder's Handmaiden
 				{ 22, "ac6177" },
 				{ 23, "ac6116" },
 				{ 24, "ac6180" },

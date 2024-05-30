@@ -858,7 +858,7 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
         [50457] = "EmblemOfFrost:30",
         [50458] = "EmblemOfFrost:30",
         [50459] = "EmblemOfFrost:30",
-        -- [50460] = "EmblemOfFrost:30",
+        [50460] = "EmblemOfFrost:30",
         [50461] = "EmblemOfFrost:30",
         [50462] = "EmblemOfFrost:30",
         [50463] = "EmblemOfFrost:30",
@@ -1044,9 +1044,7 @@ end
 
 if AtlasLoot:GameVersion_GE(AtlasLoot.CATA_VERSION_NUM) then
     VENDOR_PRICES_RAW.CATA = {
-
-        [50460] = "JusticePoints:347",
-
+        -- JP vendor
         [57930] = "JusticePoints:1250", -- Pendant of Quiet Breath
         [57931] = "JusticePoints:1250", -- Amulet of Dull Dreaming
         [57932] = "JusticePoints:1250", -- The Lustrous Eye
@@ -1112,7 +1110,94 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.CATA_VERSION_NUM) then
         [58109] = "JusticePoints:1650", -- Pauldrons of the Forlorn
         [58110] = "JusticePoints:1650", -- Gloves of Curious Conscience
         [57925] = "JusticePoints:950", -- Shield of the Mists
-        [57926] = "JusticePoints:950" -- Shield of the Four Grey Towers
+        [57926] = "JusticePoints:950", -- Shield of the Four Grey Towers
+        -- VP vendor
+        [58180] = "ValorPoints:1650", -- License to Slay
+        [58181] = "ValorPoints:1650", -- Fluid Death
+        [58183] = "ValorPoints:1650", -- Soul Casket
+        [58184] = "ValorPoints:1650", -- Core of Ripeness
+        [58182] = "ValorPoints:1650", -- Bedrock Talisman
+        [64673] = "ValorPoints:700", -- Throat Slasher
+        [64674] = "ValorPoints:700", -- Windslicer
+        [64671] = "ValorPoints:700", -- Dawnblaze Blade
+        [64676] = "ValorPoints:700", -- Shield of the Four Grey Towers
+        [64672] = "ValorPoints:700", -- Shield of the Mists
+        [58189] = "ValorPoints:1250", -- Twined Band of Flowers
+        [58188] = "ValorPoints:1250", -- Band of Secret Names
+        [58185] = "ValorPoints:1250", -- Band of Bees
+        [68812] = "ValorPoints:1250", -- Hornet-Sting Band
+        [58187] = "ValorPoints:1250", -- Ring of the Battle Anthem
+        [58191] = "ValorPoints:1250", -- Viewless Wings
+        [58194] = "ValorPoints:1250", -- Heavenly Breeze
+        [58193] = "ValorPoints:1250", -- Haunt of Flies
+        [58190] = "ValorPoints:1250", -- Floating Web
+        [58192] = "ValorPoints:1250", -- Gray Hair Cloak
+        [60360] = "ValorPoints:2200", -- Reinforced Sapphirium Breastplate
+        [60363] = "ValorPoints:1650", -- Reinforced Sapphirium Gloves
+        [60361] = "ValorPoints:2200", -- Reinforced Sapphirium Greaves
+        [60344] = "ValorPoints:2200", -- Reinforced Sapphirium Battleplate
+        [60345] = "ValorPoints:1650", -- Reinforced Sapphirium Gauntlets
+        [60347] = "ValorPoints:2200", -- Reinforced Sapphirium Legplates
+        [60354] = "ValorPoints:2200", -- Reinforced Sapphirium Chestguard
+        [60355] = "ValorPoints:1650", -- Reinforced Sapphirium Handguards
+        [60357] = "ValorPoints:2200", -- Reinforced Sapphirium Legguards
+        [60323] = "ValorPoints:2200", -- Earthen Battleplate
+        [60326] = "ValorPoints:1650", -- Earthen Gauntlets
+        [60324] = "ValorPoints:2200", -- Earthen Legplates
+        [60329] = "ValorPoints:2200", -- Earthen Chestguard
+        [60332] = "ValorPoints:1650", -- Earthen Handguards
+        [60330] = "ValorPoints:2200", -- Earthen Legguards
+        [60339] = "ValorPoints:2200", -- Magma Plated Battleplate
+        [60340] = "ValorPoints:1650", -- Magma Plated Gauntlets
+        [60342] = "ValorPoints:2200", -- Magma Plated Legplates
+        [60349] = "ValorPoints:2200", -- Magma Plated Chestguard
+        [60350] = "ValorPoints:1650", -- Magma Plated Handguards
+        [60352] = "ValorPoints:2200", -- Magma Plated Legguards
+        [58197] = "ValorPoints:1650", -- Rock Furrow Boots
+        [58198] = "ValorPoints:1650", -- Eternal Pathfinders
+        [58195] = "ValorPoints:1650", -- Woe Breeder's Boots
+        [60313] = "ValorPoints:2200", -- Hauberk of the Raging Elements
+        [60314] = "ValorPoints:1650", -- Gloves of the Raging Elements
+        [60316] = "ValorPoints:2200", -- Kilt of the Raging Elements
+        [60309] = "ValorPoints:2200", -- Tunic of the Raging Elements
+        [60312] = "ValorPoints:1650", -- Handwraps of the Raging Elements
+        [60310] = "ValorPoints:2200", -- Legwraps of the Raging Elements
+        [60318] = "ValorPoints:2200", -- Cuirass of the Raging Elements
+        [60319] = "ValorPoints:1650", -- Grips of the Raging Elements
+        [60321] = "ValorPoints:2200", -- Legguards of the Raging Elements
+        [60304] = "ValorPoints:2200", -- Lightning-Charged Tunic
+        [60307] = "ValorPoints:1650", -- Lightning-Charged Gloves
+        [60305] = "ValorPoints:2200", -- Lightning-Charged Legguards
+        [58199] = "ValorPoints:1650", -- Moccasins of Verdurous Glooms
+        [58481] = "ValorPoints:1650", -- Boots of the Perilous Seas
+        [60276] = "ValorPoints:2200", -- Stormrider's Robes
+        [60280] = "ValorPoints:1650", -- Stormrider's Handwraps
+        [60278] = "ValorPoints:2200", -- Stormrider's Legwraps
+        [60287] = "ValorPoints:2200", -- Stormrider's Raiment
+        [60290] = "ValorPoints:1650", -- Stormrider's Grips
+        [60288] = "ValorPoints:2200", -- Stormrider's Legguards
+        [60281] = "ValorPoints:2200", -- Stormrider's Vestment
+        [60285] = "ValorPoints:1650", -- Stormrider's Gloves
+        [60283] = "ValorPoints:2200", -- Stormrider's Leggings
+        [60301] = "ValorPoints:2200", -- Wind Dancer's Tunic
+        [60298] = "ValorPoints:1650", -- Wind Dancer's Gloves
+        [60300] = "ValorPoints:2200", -- Wind Dancer's Legguards
+        [58482] = "ValorPoints:1650", -- Treads of Fleeting Joy
+        [58484] = "ValorPoints:1650", -- Fading Violet Sandals
+        [60244] = "ValorPoints:2200", -- Firelord's Robes
+        [60247] = "ValorPoints:1650", -- Firelord's Gloves
+        [60245] = "ValorPoints:2200", -- Firelord's Leggings
+        [60251] = "ValorPoints:2200", -- Shadowflame Robes
+        [60248] = "ValorPoints:1650", -- Shadowflame Handwraps
+        [60250] = "ValorPoints:2200", -- Shadowflame Leggings
+        [60259] = "ValorPoints:2200", -- Mercurial Robes
+        [60275] = "ValorPoints:1650", -- Mercurial Handwraps
+        [60261] = "ValorPoints:2200", -- Mercurial Legwraps
+        [60254] = "ValorPoints:2200", -- Mercurial Vestment
+        [60257] = "ValorPoints:1650", -- Mercurial Gloves
+        [60255] = "ValorPoints:2200", -- Mercurial Leggings
+        [58485] = "ValorPoints:1650", -- Melodious Slippers
+        [58486] = "ValorPoints:1650" -- Slippers of Moving Waters
     }
 end
 

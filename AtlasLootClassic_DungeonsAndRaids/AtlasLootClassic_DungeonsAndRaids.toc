@@ -1,11 +1,12 @@
 ﻿## Interface: 40400
-## Author: Lag
+## Author: Snowflame0
 ## Version: @project-version@
 ## Dependencies: AtlasLootClassic
 ## LoadOnDemand: 1
 
-#@non-debug@
-## Title: @localization(locale="enUS", key="Title-DaR", namespace="ToC")@
+## Title: AtlasLootClassic |cFFFF5733Cata|r |cFF0099FF[Dungeons and Raids]|r
+## Notes: AtlasLoot Dungeons and Raids loot tables
+
 ## Title-deDE: @localization(locale="deDE", key="Title-DaR", namespace="ToC")@
 ## Title-esES: @localization(locale="esES", key="Title-DaR", namespace="ToC")@
 ## Title-esMX: @localization(locale="esMX", key="Title-DaR", namespace="ToC")@
@@ -16,7 +17,6 @@
 ## Title-ruRU: @localization(locale="ruRU", key="Title-DaR", namespace="ToC")@
 ## Title-zhCN: @localization(locale="zhCN", key="Title-DaR", namespace="ToC")@
 ## Title-zhTW: @localization(locale="zhTW", key="Title-DaR", namespace="ToC")@
-## Notes: @localization(locale="enUS", key="Notes-DaR", namespace="ToC")@
 ## Notes-deDE: @localization(locale="deDE", key="Notes-DaR", namespace="ToC")@
 ## Notes-esES: @localization(locale="esES", key="Notes-DaR", namespace="ToC")@
 ## Notes-esMX: @localization(locale="esMX", key="Notes-DaR", namespace="ToC")@
@@ -27,11 +27,6 @@
 ## Notes-ruRU: @localization(locale="ruRU", key="Notes-DaR", namespace="ToC")@
 ## Notes-zhCN: @localization(locale="zhCN", key="Notes-DaR", namespace="ToC")@
 ## Notes-zhTW: @localization(locale="zhTW", key="Notes-DaR", namespace="ToC")@
-#@end-non-debug@
-#@debug@
-## Title: AtlasLootClassic |cFF0099FF[Dungeons and Raids]|r
-## Notes: AtlasLoot loot tables from Dungeons and Raids
-#@end-debug@
 
 ## X-Category: Map
 ## X-License: GPL v2

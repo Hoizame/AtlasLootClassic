@@ -1,11 +1,12 @@
 ﻿## Interface: 40400
-## Author: Lag
+## Author: Snowflame0
 ## Version: @project-version@
 ## Dependencies: AtlasLootClassic
 ## LoadOnDemand: 1
 
-#@non-debug@
-## Title: @localization(locale="enUS", key="Title-Data", namespace="ToC")@
+## Title: AtlasLootClassic |cFFFF5733Cata|r |cFFFF0000[Data]|r
+## Notes: AtlasLoot Data module
+
 ## Title-deDE: @localization(locale="deDE", key="Title-Data", namespace="ToC")@
 ## Title-esES: @localization(locale="esES", key="Title-Data", namespace="ToC")@
 ## Title-esMX: @localization(locale="esMX", key="Title-Data", namespace="ToC")@
@@ -16,7 +17,6 @@
 ## Title-ruRU: @localization(locale="ruRU", key="Title-Data", namespace="ToC")@
 ## Title-zhCN: @localization(locale="zhCN", key="Title-Data", namespace="ToC")@
 ## Title-zhTW: @localization(locale="zhTW", key="Title-Data", namespace="ToC")@
-## Notes: @localization(locale="enUS", key="Notes-Data", namespace="ToC")@
 ## Notes-deDE: @localization(locale="deDE", key="Notes-Data", namespace="ToC")@
 ## Notes-esES: @localization(locale="esES", key="Notes-Data", namespace="ToC")@
 ## Notes-esMX: @localization(locale="esMX", key="Notes-Data", namespace="ToC")@
@@ -27,11 +27,6 @@
 ## Notes-ruRU: @localization(locale="ruRU", key="Notes-Data", namespace="ToC")@
 ## Notes-zhCN: @localization(locale="zhCN", key="Notes-Data", namespace="ToC")@
 ## Notes-zhTW: @localization(locale="zhTW", key="Notes-Data", namespace="ToC")@
-#@end-non-debug@
-#@debug@
-## Title: AtlasLootClassic |cFFFF0000[Data]|r
-## Notes: AtlasLoot data module
-#@end-debug@
 
 ## X-Category: Map
 ## X-License: GPL v2

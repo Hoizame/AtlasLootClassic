@@ -6480,7 +6480,6 @@ data["IcecrownCitadel"] = {
         {6, 51782}, -- Etched Dragonbone Girdle
         {7, 51786}, -- Legplates of Aetheric Strife
         {8, 51787}, -- Scourge Fanged Stompers
-        {10, 142097, "pet1966"}, -- Skull of a Frozen Whelp -> Soulbroken Whelpling
         {16, 51779}, -- Rimetooth Pendant
         {18, 51784}, -- Splintershard
         {19, 51788}, -- Bleak Coldarra Carver

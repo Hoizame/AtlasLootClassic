@@ -14,7 +14,8 @@ exclude_files = {
 	"AtlasLootClassic_Options/Libs/",
 	"babelfish.lua",
 	"AtlasLootClassic_DungeonsAndRaids/droprate_override.lua",
-	"cata_data/",
+	"CF_Locales/",
+	"cata_data/"
 }
 ignore = {
 	"11./SLASH_.*", -- Setting an undefined (Slash handler) global variable

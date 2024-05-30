@@ -36,6 +36,12 @@ local VENDOR_DIFF = data:AddDifficulty(AL["Vendor"], "vendor", 0)
 local T10_1_DIFF = data:AddDifficulty(AL["10H / 25 / 25H"], "T10_1", 0)
 local T10_2_DIFF = data:AddDifficulty(AL["25 Raid Heroic"], "T10_2", 0)
 
+local T11_1_DIFF = data:AddDifficulty(AL["Normal"], "T11_1", 0)
+local T11_2_DIFF = data:AddDifficulty(AL["Heroic"], "T11_2", 0)
+
+local T12_1_DIFF = data:AddDifficulty(AL["Normal"], "T12_1", 0)
+local T12_2_DIFF = data:AddDifficulty(AL["Heroic"], "T12_2", 0)
+
 local ALLIANCE_DIFF, HORDE_DIFF, LOAD_DIFF
 if UnitFactionGroup("player") == "Horde" then
 	HORDE_DIFF = data:AddDifficulty(FACTION_HORDE, "horde", nil, 1)
@@ -1372,6 +1378,15 @@ data["Darkmoon"] = {
 				{ 2, 44259 },	-- Prisms Deck
 				{ 3, 44294 },	-- Undeath Deck
 				{ 4, 44326 },	-- Nobles Deck
+			},
+		}),
+		AtlasLoot:GameVersion_GE(AtlasLoot.CATA_VERSION_NUM, {
+			name = AL["Cataclysm"],
+			[NORMAL_DIFF] = {
+				{ 1, 62021 },	-- Volcanic Deck
+				{ 2, 62044 },	-- Tsunami Deck
+				{ 3, 62045 },	-- Hurricane Deck
+				{ 4, 62046 },	-- Earthquake Deck
 			},
 		}),
 	},

@@ -995,65 +995,54 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.CATA_VERSION_NUM) then
 	-- Warrior
 	[942] = {{60325,60327,60323,60326,60324},4,4,359,1,{{2,90293},{4,90295}}},
 	[943] = {{60328,60331,60329,60332,60330},4,4,359,1,{{2,90296},{4,90297}}},
-
 	-- Death Knight
 	[4000925] = {{60341,60343,60339,60340,60342},4,4,359,32,{{2,90457},{4,90459}},AL["Magma Plated Battlegear"],925}, -- Normal Death Knight DPS
-	[4001925] = {{65181,65183,65179,65180,65182},4,4,372,32,{{2,90457},{4,90459}},AL["Magma Plated Battlegear"],925}, -- Heroic Death Knight DPS
-
+	[4001925] = {{65181,65183,65179,65180,65182},4,4,372,32,{{2,90457},{4,90459}},AL["Heroic Magma Plated Battlegear"],925}, -- Heroic Death Knight DPS
 	[4000926] = {{60351,60353,60349,60350,60352},4,4,359,32,{{2,90454},{4,90456}},AL["Magma Plated Battlearmor"],926},	-- Normal Death Knight Tanking
-	[4001926] = {{65186,65188,65184,65185,65187},4,4,372,32,{{2,90454},{4,90456}},AL["Magma Plated Battlearmor"],926},	-- Heroic Death Knight Tanking
+	[4001926] = {{65186,65188,65184,65185,65187},4,4,372,32,{{2,90454},{4,90456}},AL["Heroic Magma Plated Battlearmor"],926},	-- Heroic Death Knight Tanking
 	-- Druid
 	[4000927] = {{60286,60289,60287,60290,60288},4,4,359,1024,{{2,90162},{4,90165}},AL["Stormrider's Battlegarb"],927}, -- Normal Druid Melee DPS
-	[4001927] = {{65190,65193,65192,65189,65191},4,4,372,1024,{{2,90162},{4,90165}},AL["Stormrider's Battlegarb"],927}, -- Heroic Druid Melee DPS
-
+	[4001927] = {{65190,65193,65192,65189,65191},4,4,372,1024,{{2,90162},{4,90165}},AL["Heroic Stormrider's Battlegarb"],927}, -- Heroic Druid Melee DPS
 	[4000928] = {{60277,60279,60276,60280,60278},4,4,359,1024,{{2,90157},{4,90158}},AL["Stormrider's Vestments"],928}, -- Normal Druid Restoration
-	[4001928] = {{65195,65198,65197,65194,65196},4,4,372,1024,{{2,90157},{4,90158}},AL["Stormrider's Vestments"],928}, -- Heroic Druid Restoration
-
+	[4001928] = {{65195,65198,65197,65194,65196},4,4,372,1024,{{2,90157},{4,90158}},AL["Heroic Stormrider's Vestments"],928}, -- Heroic Druid Restoration
 	[4000929] = {{60282,60284,60281,60285,60283},4,4,359,1024,{{2,90160},{4,90163}},AL["Stormrider's Regalia"],928}, -- Normal Druid Balance
-	[4001929] = {{65200,65203,65202,65199,65201},4,4,372,1024,{{2,90160},{4,90163}},AL["Stormrider's Regalia"],928}, -- Heroic Druid Balance
+	[4001929] = {{65200,65203,65202,65199,65201},4,4,372,1024,{{2,90160},{4,90163}},AL["Heroic Stormrider's Regalia"],928}, -- Heroic Druid Balance
 	-- Hunter
 	[4000930] = {{60303,60306,60304,60307,60305},4,4,359,4,{{2,89923},{4,96411}},AL["Lightning-Charged Battlegear"],930}, -- Normal Hunter
-	[4001930] = {{65206,65208,65204,65205,65207},4,4,372,4,{{2,89923},{4,96411}},AL["Lightning-Charged Battlegear"],930}, -- Heroic Hunter
+	[4001930] = {{65206,65208,65204,65205,65207},4,4,372,4,{{2,89923},{4,96411}},AL["Heroic Lightning-Charged Battlegear"],930}, -- Heroic Hunter
 	-- Mage
 	[4000931] = {{60243,60246,60244,60247,60245},4,4,359,128,{{2,90290},{4,90291}},AL["Firelord's Vestments"],931}, -- Normal Mage
-	[4001931] = {{65210,65213,65212,65209,65211},4,4,372,128,{{2,90290},{4,90291}},AL["Firelord's Vestments"],931}, -- Heroic Mage
+	[4001931] = {{65210,65213,65212,65209,65211},4,4,372,128,{{2,90290},{4,90291}},AL["Heroic Firelord's Vestments"],931}, -- Heroic Mage
 	-- Paladin
 	[4000932] = {{60346,60348,60344,60345,60347},4,4,359,2,{{2,90298},{4,90299}},AL["Reinforced Sapphirium Battleplate"],932}, -- Normal Paladin Retribution
-	[4001932] = {{65216,65218,65214,65215,65217},4,4,372,2,{{2,90298},{4,90299}},AL["Reinforced Sapphirium Battleplate"],932}, -- Heroic Paladin Retribution
-	
+	[4001932] = {{65216,65218,65214,65215,65217},4,4,372,2,{{2,90298},{4,90299}},AL["Heroic Reinforced Sapphirium Battleplate"],932}, -- Heroic Paladin Retribution
 	[4000933] = {{60359,60362,60360,60363,60361},4,4,359,2,{{2,90310},{4,90313}},AL["Reinforced Sapphirium Regalia"],933}, -- Normal Paladin Holy
-	[4001933] = {{65221,65223,65219,65220,65222},4,4,372,2,{{2,90310},{4,90313}},AL["Reinforced Sapphirium Regalia"],933}, -- Heroic Paladin Holy
-	
+	[4001933] = {{65221,65223,65219,65220,65222},4,4,372,2,{{2,90310},{4,90313}},AL["Heroic Reinforced Sapphirium Regalia"],933}, -- Heroic Paladin Holy
 	[4000934] = {{60356,60358,60354,60355,60357},4,4,359,2,{{2,90301},{4,90306}},AL["Reinforced Sapphirium Battlearmor"],934}, -- Normal Paladin Prot
-	[4001934] = {{65226,65228,65224,65225,65227},4,4,372,2,{{2,90301},{4,90306}},AL["Reinforced Sapphirium Battlearmor"],934}, -- Heroic Paladin Prot
+	[4001934] = {{65226,65228,65224,65225,65227},4,4,372,2,{{2,90301},{4,90306}},AL["Heroic Reinforced Sapphirium Battlearmor"],934}, -- Heroic Paladin Prot
 	-- Priest
 	[4000935] = {{60258,60262,60259,60275,60261},4,4,359,16,{{2,89910},{4,89911}},AL["Mercurial Vestments"],935}, -- Normal Priest Holy
-	[4001935] = {{65230,65233,65232,65229,65231},4,4,372,16,{{2,89910},{4,89911}},AL["Mercurial Vestments"],935}, -- Heroic Priest Holy
-	
+	[4001935] = {{65230,65233,65232,65229,65231},4,4,372,16,{{2,89910},{4,89911}},AL["Heroic Mercurial Vestments"],935}, -- Heroic Priest Holy
 	[4000936] = {{60256,60253,60254,60257,60255},4,4,359,16,{{2,89915},{4,89922}},AL["Mercurial Regalia"],936}, -- Normal Priest Shadow
-	[4001936] = {{65235,65238,65237,65234,65236},4,4,372,16,{{2,89915},{4,89922}},AL["Mercurial Regalia"],936}, -- Heroic Priest Shadow
+	[4001936] = {{65235,65238,65237,65234,65236},4,4,372,16,{{2,89915},{4,89922}},AL["Heroic Mercurial Regalia"],936}, -- Heroic Priest Shadow
 	-- Rogue
 	[4000937] = {{60299,60302,60301,60298,60300},4,4,359,8,{{2,90460},{4,90473}},AL["Wind Dancer's Regalia"],937}, -- Normal Rogue
-	[4001937] = {{65241,65243,65239,65240,65242},4,4,372,8,{{2,90460},{4,90473}},AL["Wind Dancer's Regalia"],937}, -- Heroic Rogue
+	[4001937] = {{65241,65243,65239,65240,65242},4,4,372,8,{{2,90460},{4,90473}},AL["Heroic Wind Dancer's Regalia"],937}, -- Heroic Rogue
 	-- Shaman
 	[4000938] = {{60308,60311,60309,60312,60310},4,4,359,64,{{2,90494},{4,90499}},AL["Vestments of the Raging Elements"],938}, -- Normal Shaman Resto
-	[4001938] = {{65246,65248,65244,65245,65247},4,4,372,64,{{2,90494},{4,90499}},AL["Vestments of the Raging Elements"],938}, -- Heroic Shaman Resto
-	
+	[4001938] = {{65246,65248,65244,65245,65247},4,4,372,64,{{2,90494},{4,90499}},AL["Heroic Vestments of the Raging Elements"],938}, -- Heroic Shaman Resto
 	[4000939] = {{60320,60322,60318,60319,60321},4,4,359,64,{{2,90501},{4,90502}},AL["Battlegear of the Raging Elements"],939}, -- Normal Shaman Enhance
-	[4001939] = {{65251,65253,65249,65250,65252},4,4,372,64,{{2,90501},{4,90502}},AL["Battlegear of the Raging Elements"],939}, -- Heroic Shaman Enhance
-	
+	[4001939] = {{65251,65253,65249,65250,65252},4,4,372,64,{{2,90501},{4,90502}},AL["Heroic Battlegear of the Raging Elements"],939}, -- Heroic Shaman Enhance
 	[4000940] = {{60315,60317,60313,60314,60316},4,4,359,64,{{2,90503},{4,90505}},AL["Regalia of the Raging Elements"],940}, -- Normal Shaman Elemental
-	[4001940] = {{65256,65258,65254,65255,65257},4,4,372,64,{{2,90503},{4,90505}},AL["Regalia of the Raging Elements"],940}, -- Heroic Shaman Elemental
+	[4001940] = {{65256,65258,65254,65255,65257},4,4,372,64,{{2,90503},{4,90505}},AL["Heroic Regalia of the Raging Elements"],940}, -- Heroic Shaman Elemental
 	-- Warlock
 	[4000941] = {{60249,60252,60251,60248,60250},4,4,359,256,{{2,89934},{4,89935}},AL["Shadowflame Regalia"],941}, -- Normal Warlock
-	[4001941] = {{65260,65263,65262,65259,65261},4,4,372,256,{{2,89934},{4,89935}},AL["Shadowflame Regalia"],941}, -- Heroic Warlock
+	[4001941] = {{65260,65263,65262,65259,65261},4,4,372,256,{{2,89934},{4,89935}},AL["Heroic Shadowflame Regalia"],941}, -- Heroic Warlock
 	-- Warrior
 	[4000942] = {{60325,60327,60323,60326,60324},4,4,359,1,{{2,90293},{4,90295}},AL["Earthen Warplate"],942}, -- Normal Warrior DPS
-	[4001942] = {{65266,65268,65264,65265,65267},4,4,372,1,{{2,90293},{4,90295}},AL["Earthen Warplate"],942}, -- Heroic Warrior DPS
-
+	[4001942] = {{65266,65268,65264,65265,65267},4,4,372,1,{{2,90293},{4,90295}},AL["Heroic Earthen Warplate"],942}, -- Heroic Warrior DPS
 	[4000943] = {{60328,60331,60329,60332,60330},4,4,359,1,{{2,90296},{4,90297}},AL["Earthen Battleplate"],943}, -- Normal Warrior Prot
-	[4001943] = {{65271,65273,65269,65270,65272},4,4,372,1,{{2,90296},{4,90297}},AL["Earthen Battleplate"],943}, -- Heroic Warrior Prot
-
+	[4001943] = {{65271,65273,65269,65270,65272},4,4,372,1,{{2,90296},{4,90297}},AL["Heroic Earthen Battleplate"],943}, -- Heroic Warrior Prot
 	-- T12
 	-- Death Knight
 	[944] = {{71060,71062,71058,71059,71061},4,4,378,32,{{2,98970},{4,98996}}}, -- DPS
@@ -1084,62 +1073,52 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.CATA_VERSION_NUM) then
 	-- Warrior
 	[961] = {{71070,71072,71068,71069,71071},4,4,378,1,{{2,99234},{4,99238}}}, -- DPS
 	[962] = {{70944,70941,70945,70943,70942},4,4,378,1,{{2,99239},{4,99242}}}, -- Prot
-
 	-- Death Knight
 	[4000944] = {{71060,71062,71058,71059,71061},4,4,378,32,{{2,98970},{4,98996}},AL["Elementium Deathplate Battlegear"],944}, -- Normal Death Knight DPS
-	[4001944] = {{71478,71480,71476,71477,71479},4,4,391,32,{{2,98970},{4,98996}},AL["Elementium Deathplate Battlegear"],944}, -- Heroic Death Knight DPS
-
+	[4001944] = {{71478,71480,71476,71477,71479},4,4,391,32,{{2,98970},{4,98996}},AL["Heroic Elementium Deathplate Battlegear"],944}, -- Heroic Death Knight DPS
 	[4000945] = {{70954,70951,70955,70953,70952},4,4,378,32,{{2,98956},{4,98966}},AL["Elementium Deathplate Battlearmor"],945},	-- Normal Death Knight Tanking
-	[4001945] = {{71483,71485,71481,71482,71484},4,4,391,32,{{2,98956},{4,98966}},AL["Elementium Deathplate Battlearmor"],945},	-- Heroic Death Knight Tanking
+	[4001945] = {{71483,71485,71481,71482,71484},4,4,391,32,{{2,98956},{4,98966}},AL["Heroic Elementium Deathplate Battlearmor"],945},	-- Heroic Death Knight Tanking
 	-- Druid
 	[4000946] = {{71098,71101,71100,71097,71099},4,4,378,1024,{{2,99001},{4,99009}},AL["Obsidian Arborweave Battlegarb"],946}, -- Normal Druid Melee DPS
-	[4001946] = {{71488,71490,71486,71487,71489},4,4,391,1024,{{2,99001},{4,99009}},AL["Obsidian Arborweave Battlegarb"],946}, -- Heroic Druid Melee DPS
-
+	[4001946] = {{71488,71490,71486,71487,71489},4,4,391,1024,{{2,99001},{4,99009}},AL["Heroic Obsidian Arborweave Battlegarb"],946}, -- Heroic Druid Melee DPS
 	[4000947] = {{71103,71106,71105,71102,71104},4,4,378,1024,{{2,99013},{4,99015}},AL["Obsidian Arborweave Vestments"],947}, -- Normal Druid Restoration
-	[4001947] = {{71492,71495,71494,71491,71493},4,4,391,1024,{{2,99013},{4,99015}},AL["Obsidian Arborweave Vestments"],947}, -- Heroic Druid Restoration
-
+	[4001947] = {{71492,71495,71494,71491,71493},4,4,391,1024,{{2,99013},{4,99015}},AL["Heroic Obsidian Arborweave Vestments"],947}, -- Heroic Druid Restoration
 	[4000948] = {{71108,71111,71110,71107,71109},4,4,378,1024,{{2,99019},{4,99049}},AL["Obsidian Arborweave Regalia"],948}, -- Normal Druid Balance
-	[4001948] = {{71497,71500,71499,71496,71498},4,4,391,1024,{{2,99019},{4,99049}},AL["Obsidian Arborweave Regalia"],948}, -- Heroic Druid Balance
+	[4001948] = {{71497,71500,71499,71496,71498},4,4,391,1024,{{2,99019},{4,99049}},AL["Heroic Obsidian Arborweave Regalia"],948}, -- Heroic Druid Balance
 	-- Hunter
 	[4000949] = {{71051,71053,71054,71050,71052},4,4,378,4,{{2,99057},{4,99059}},AL["Flamewaker's Battlegear"],949}, -- Normal Hunter
-	[4001949] = {{71503,71505,71501,71502,71504},4,4,391,4,{{2,99057},{4,99059}},AL["Flamewaker's Battlegear"],949}, -- Heroic Hunter
+	[4001949] = {{71503,71505,71501,71502,71504},4,4,391,4,{{2,99057},{4,99059}},AL["Heroic Flamewaker's Battlegear"],949}, -- Heroic Hunter
 	-- Mage
 	[4000950] = {{71287,71290,71289,71286,71288},4,4,378,128,{{2,99061},{4,99064}},AL["Firehawk Robes of Conflagration"],950}, -- Normal Mage
-	[4001950] = {{71508,71511,71510,71507,71509},4,4,391,128,{{2,99061},{4,99064}},AL["Firehawk Robes of Conflagration"],950}, -- Heroic Mage
+	[4001950] = {{71508,71511,71510,71507,71509},4,4,391,128,{{2,99061},{4,99064}},AL["Heroic Firehawk Robes of Conflagration"],950}, -- Heroic Mage
 	-- Paladin
 	[4000951] = {{71065,71067,71063,71064,71066},4,4,378,2,{{2,99093},{4,99116}},AL["Battleplate of Immolation"],951}, -- Normal Paladin Retribution
-	[4001951] = {{71514,71516,71512,71513,71515},4,4,391,2,{{2,99093},{4,99116}},AL["Battleplate of Immolation"],951}, -- Heroic Paladin Retribution
-	
+	[4001951] = {{71514,71516,71512,71513,71515},4,4,391,2,{{2,99093},{4,99116}},AL["Heroic Battleplate of Immolation"],951}, -- Heroic Paladin Retribution
 	[4000952] = {{71093,71095,71091,71092,71094},4,4,378,2,{{2,99067},{4,99070}},AL["Regalia of Immolation"],952}, -- Normal Paladin Holy
-	[4001952] = {{71519,71521,71517,71518,71520},4,4,391,2,{{2,99067},{4,99070}},AL["Regalia of Immolation"],952}, -- Heroic Paladin Holy
-	
+	[4001952] = {{71519,71521,71517,71518,71520},4,4,391,2,{{2,99067},{4,99070}},AL["Heroic Regalia of Immolation"],952}, -- Heroic Paladin Holy
 	[4000953] = {{70948,70946,70950,70949,70947},4,4,378,2,{{2,99074},{4,99091}},AL["Battlearmor of Immolation"],953}, -- Normal Paladin Prot
-	[4001953] = {{71524,71526,71522,71523,71525},4,4,391,2,{{2,99074},{4,99091}},AL["Battlearmor of Immolation"],953}, -- Heroic Paladin Prot
+	[4001953] = {{71524,71526,71522,71523,71525},4,4,391,2,{{2,99074},{4,99091}},AL["Heroic Battlearmor of Immolation"],953}, -- Heroic Paladin Prot
 	-- Priest
 	[4000954] = {{71272,71275,71274,71271,71273},4,4,378,16,{{2,99134},{4,99135}},AL["Vestments of the Cleansing Flame"],954}, -- Normal Priest Holy
-	[4001954] = {{71528,71531,71530,71527,71529},4,4,391,16,{{2,99134},{4,99135}},AL["Vestments of the Cleansing Flame"],954}, -- Heroic Priest Holy
-	
+	[4001954] = {{71528,71531,71530,71527,71529},4,4,391,16,{{2,99134},{4,99135}},AL["Heroic Vestments of the Cleansing Flame"],954}, -- Heroic Priest Holy
 	[4000955] = {{71277,71280,71279,71276,71278},4,4,378,16,{{2,99154},{4,99157}},AL["Regalia of the Cleansing Flame"],955}, -- Normal Priest Shadow
-	[4001955] = {{71533,71536,71535,71532,71534},4,4,391,16,{{2,99154},{4,99157}},AL["Regalia of the Cleansing Flame"],955}, -- Heroic Priest Shadow
+	[4001955] = {{71533,71536,71535,71532,71534},4,4,391,16,{{2,99154},{4,99157}},AL["Heroic Regalia of the Cleansing Flame"],955}, -- Heroic Priest Shadow
 	-- Rogue
 	[4000956] = {{71047,71049,71045,71046,71048},4,4,378,8,{{2,99174},{4,99175}},AL["Vestments of the Dark Phoenix"],956}, -- Normal Rogue
-	[4001956] = {{71539,71541,71537,71538,71540},4,4,391,8,{{2,99174},{4,99175}},AL["Vestments of the Dark Phoenix"],956}, -- Heroic Rogue
+	[4001956] = {{71539,71541,71537,71538,71540},4,4,391,8,{{2,99174},{4,99175}},AL["Heroic Vestments of the Dark Phoenix"],956}, -- Heroic Rogue
 	-- Shaman
 	[4000957] = {{71298,71300,71296,71297,71299},4,4,378,64,{{2,99190},{4,99195}},AL["Volcanic Vestments"],957}, -- Normal Shaman Resto
-	[4001957] = {{71544,71543,71546,71542,71545},4,4,391,64,{{2,99190},{4,99195}},AL["Volcanic Vestments"],957}, -- Heroic Shaman Resto
-	
+	[4001957] = {{71544,71543,71546,71542,71545},4,4,391,64,{{2,99190},{4,99195}},AL["Heroic Volcanic Vestments"],957}, -- Heroic Shaman Resto
 	[4000958] = {{71303,71305,71301,71302,71304},4,4,378,64,{{2,99209},{4,99213}},AL["Volcanic Battlegear"],958}, -- Normal Shaman Enhance
-	[4001958] = {{71549,71551,71547,71548,71550},4,4,391,64,{{2,99209},{4,99213}},AL["Volcanic Battlegear"],958}, -- Heroic Shaman Enhance
-	
+	[4001958] = {{71549,71551,71547,71548,71550},4,4,391,64,{{2,99209},{4,99213}},AL["Heroic Volcanic Battlegear"],958}, -- Heroic Shaman Enhance
 	[4000959] = {{71293,71295,71294,71292,71291},4,4,378,64,{{2,99204},{4,99206}},AL["Volcanic Regalia"],959}, -- Normal Shaman Elemental
-	[4001959] = {{71554,71556,71552,71553,71555},4,4,391,64,{{2,99204},{4,99206}},AL["Volcanic Regalia"],959}, -- Heroic Shaman Elemental
+	[4001959] = {{71554,71556,71552,71553,71555},4,4,391,64,{{2,99204},{4,99206}},AL["Heroic Volcanic Regalia"],959}, -- Heroic Shaman Elemental
 	-- Warlock
 	[4000960] = {{71282,71285,71284,71281,71283},4,4,378,256,{{2,99220},{4,99229}},AL["Balespider's Burning Vestments"],960}, -- Normal Warlock
-	[4001960] = {{71595,71598,71597,71594,71596},4,4,391,256,{{2,99220},{4,99229}},AL["Balespider's Burning Vestments"],960}, -- Heroic Warlock
+	[4001960] = {{71595,71598,71597,71594,71596},4,4,391,256,{{2,99220},{4,99229}},AL["Heroic Balespider's Burning Vestments"],960}, -- Heroic Warlock
 	-- Warrior
 	[4000961] = {{71070,71072,71068,71069,71071},4,4,378,1,{{2,99234},{4,99238}},AL["Molten Giant Warplate"],961}, -- Normal Warrior DPS
-	[4001961] = {{71599,71603,71600,71601,71602},4,4,391,1,{{2,99234},{4,99238}},AL["Molten Giant Warplate"],961}, -- Heroic Warrior DPS
-
+	[4001961] = {{71599,71603,71600,71601,71602},4,4,391,1,{{2,99234},{4,99238}},AL["Heroic Molten Giant Warplate"],961}, -- Heroic Warrior DPS
 	[4000962] = {{70944,70941,70945,70943,70942},4,4,378,1,{{2,99239},{4,99242}},AL["Molten Giant Battleplate"],962}, -- Normal Warrior Prot
 	[4001962] = {{71606,71608,71604,71605,71607},4,4,391,1,{{2,99239},{4,99242}},AL["Molten Giant Battleplate"],962}, -- Heroic Warrior Prot
 	

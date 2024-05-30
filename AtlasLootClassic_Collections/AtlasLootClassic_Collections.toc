@@ -1,10 +1,12 @@
 ﻿## Interface: 40400
-## Author: Lag
+## Author: Snowflame0
 ## Version: @project-version@
 ## Dependencies: AtlasLootClassic
 ## LoadOnDemand: 1
 
-## Title: @localization(locale="enUS", key="Title-Collections", namespace="ToC")@
+## Title: AtlasLootClassic |cFFFF5733Cata|r |cFF0099FF[Collections]|r
+## Notes: AtlasLoot Collections loot tables
+
 ## Title-deDE: @localization(locale="deDE", key="Title-Collections", namespace="ToC")@
 ## Title-esES: @localization(locale="esES", key="Title-Collections", namespace="ToC")@
 ## Title-esMX: @localization(locale="esMX", key="Title-Collections", namespace="ToC")@
@@ -15,7 +17,6 @@
 ## Title-ruRU: @localization(locale="ruRU", key="Title-Collections", namespace="ToC")@
 ## Title-zhCN: @localization(locale="zhCN", key="Title-Collections", namespace="ToC")@
 ## Title-zhTW: @localization(locale="zhTW", key="Title-Collections", namespace="ToC")@
-## Notes: @localization(locale="enUS", key="Notes-Collections", namespace="ToC")@
 ## Notes-deDE: @localization(locale="deDE", key="Notes-Collections", namespace="ToC")@
 ## Notes-esES: @localization(locale="esES", key="Notes-Collections", namespace="ToC")@
 ## Notes-esMX: @localization(locale="esMX", key="Notes-Collections", namespace="ToC")@
@@ -26,11 +27,6 @@
 ## Notes-ruRU: @localization(locale="ruRU", key="Notes-Collections", namespace="ToC")@
 ## Notes-zhCN: @localization(locale="zhCN", key="Notes-Collections", namespace="ToC")@
 ## Notes-zhTW: @localization(locale="zhTW", key="Notes-Collections", namespace="ToC")@
-#@end-non-debug@
-#@debug@
-## Title: AtlasLootClassic |cFF0099FF[Collections]|r
-## Notes: AtlasLoot loot tables from Collections
-#@end-debug@
 
 ## X-Category: Map
 ## X-License: GPL v2

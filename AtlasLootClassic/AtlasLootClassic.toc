@@ -1,13 +1,13 @@
 ﻿## Interface: 40400
-## Author: Lag
+## Author: Snowflame0
 ## Version: @project-version@
 ## SavedVariables: AtlasLootClassicDB
 ## OptionalDeps: Ace3, LibSharedMedia-3.0, AceGUI-3.0-SharedMediaWidgets, LibDBIcon-1.0, LibDataBroker-1.1
 ## DefaultState: Enabled
 ## LoadOnDemand: 0
 
-## Title: AtlasLootClassic |cFF22B14C[Core]|r
-## Notes: Shows the possible loot from the bosses
+## Title: AtlasLootClassic |cFFFF5733Cata|r |cFF22B14C[Core]|r
+## Notes: Displays loot tables from various aspects of the game
 
 ## Title-deDE: @localization(locale="deDE", key="Title-AtlasLoot", namespace="ToC")@
 ## Title-esES: @localization(locale="esES", key="Title-AtlasLoot", namespace="ToC")@
@@ -30,13 +30,13 @@
 ## Notes-zhCN: @localization(locale="zhCN", key="Notes-AtlasLoot", namespace="ToC")@
 ## Notes-zhTW: @localization(locale="zhTW", key="Notes-AtlasLoot", namespace="ToC")@
 
-## X-Credits: Daviesh, Lag, Arith, Cellelach, Asurn, Pernicus, Dynaletik and many others
+## X-Credits: Daviesh, Lag, Arith, Cellelach, Asurn, Pernicus, Dynaletik, Snowflame0 and many others
 ## X-Category: Map
 ## X-License: GPL v2
 ## X-Localizations: enUS, deDE, frFR, esES, koKR, zhCN, zhTW, esMX, ptBR, ruRU, itIT
-## X-Curse-Project-ID: 326516
-## X-WoWI-ID: 25185
-## X-Wago-ID: RXKqzoGy
+## X-Curse-Project-ID: 1024670
+## X-WoWI-ID: 26745
+## X-Wago-ID: ANz0LwK4
 
 embeds.xml
 
@@ -58,8 +58,6 @@ Core\TooltipScan.lua
 Core\ItemQuery.lua
 Core\ItemString.lua
 Core\TargetScan.lua
-#Core\AtlasIntegration.lua
-#Core\WorldMapIntegration.xml
 
 MiniMapButton.lua
 
