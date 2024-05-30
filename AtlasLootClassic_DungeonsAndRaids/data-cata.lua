@@ -135,12 +135,12 @@ local CATA_RAID1_AC_TABLE = {	--[Glory of the Cataclysm Raider]
 	},
 	[HEROIC_DIFF] = {
 		{ 1, 4853 },
-		{ 2, 5094 },			{ 17, 5107 },
-		{ 3, 5108 },			{ 18, 5109 },
-		{ 4, 5115 },			{ 19, 5116 },
-		{ 5, 5118 },			{ 20, 5117 },
-		{ 6, 5119 },			{ 21, 5120 },
-		{ 7, 5112 },			{ 22, 5123 },
+		{ 2, 5094 },			{ 17, 5109 },
+		{ 3, 5108 },			{ 18, 5116 },
+		{ 4, 5115 },			{ 19, 5117 },
+		{ 5, 5118 },			{ 20, 5120 },
+		{ 6, 5119 },			{ 21, 5123 },
+		{ 7, 5107 },   			
 	},
 }
 
@@ -292,67 +292,67 @@ local T13_SET = {
 	--ContentPhaseBC = 6,
 	IgnoreAsSource = true,
 	[LFR_DIFF] = {
-		{1, 0}, -- Death Knight Normal DPS Set
-		{2, 0}, -- Death Knight Normal Tank Set
-		{4, 0}, -- Druid Normal Melee Set
-		{5, 0}, -- Druid Normal Resto Set
-		{6, 0}, -- Druid Normal Balance Set
-		{8, 0}, -- Hunter Normal
-		{10, 0}, -- Mage Normal
-		{12, 0}, -- Paladin DPS
-		{13, 0}, -- Paladin Holy
-		{14, 0}, -- Paladin Prot
-		{16, 0}, -- Priest
-		{17, 0}, -- Priest
-		{19, 0}, -- Rogue
-		{21, 0}, -- Shaman
-		{22, 0}, -- Shaman
-		{23, 0}, -- Shaman
-		{25, 0}, -- Warlock
-		{27, 0}, -- Warrior
-		{28, 0}, -- Warrior
+		{1, 4000963}, -- Death Knight Normal DPS Set
+		{2, 4000964}, -- Death Knight Normal Tank Set
+		{4, 4000965}, -- Druid Normal Melee Set
+		{5, 4000966}, -- Druid Normal Resto Set
+		{6, 4000967}, -- Druid Normal Balance Set
+		{8, 4000968}, -- Hunter Normal
+		{10, 4000969}, -- Mage Normal
+		{12, 4000970}, -- Paladin DPS
+		{13, 4000971}, -- Paladin Holy
+		{14, 4000972}, -- Paladin Prot
+		{16, 4000973}, -- Priest
+		{17, 4000974}, -- Priest
+		{19, 4000975}, -- Rogue
+		{21, 4000976}, -- Shaman
+		{22, 4000977}, -- Shaman
+		{23, 4000978}, -- Shaman
+		{25, 4000979}, -- Warlock
+		{27, 4000980}, -- Warrior
+		{28, 4000981}, -- Warrior
 	},
 	[NORMAL_DIFF] = {
-		{1, 0}, -- Death Knight Normal DPS Set
-		{2, 0}, -- Death Knight Normal Tank Set
-		{4, 0}, -- Druid Normal Melee Set
-		{5, 0}, -- Druid Normal Resto Set
-		{6, 0}, -- Druid Normal Balance Set
-		{8, 0}, -- Hunter Normal
-		{10, 0}, -- Mage Normal
-		{12, 0}, -- Paladin DPS
-		{13, 0}, -- Paladin Holy
-		{14, 0}, -- Paladin Prot
-		{16, 0}, -- Priest
-		{17, 0}, -- Priest
-		{19, 0}, -- Rogue
-		{21, 0}, -- Shaman
-		{22, 0}, -- Shaman
-		{23, 0}, -- Shaman
-		{25, 0}, -- Warlock
-		{27, 0}, -- Warrior
-		{28, 0}, -- Warrior
+		{1, 4001963}, -- Death Knight Normal DPS Set
+        {2, 4001964}, -- Death Knight Normal Tank Set
+        {4, 4001965}, -- Druid Normal Melee Set
+        {5, 4001966}, -- Druid Normal Resto Set
+        {6, 4001967}, -- Druid Normal Balance Set
+        {8, 4001968}, -- Hunter Normal
+        {10, 4001969}, -- Mage Normal
+        {12, 4001970}, -- Paladin DPS
+        {13, 4001971}, -- Paladin Holy
+        {14, 4001972}, -- Paladin Prot
+        {16, 4001973}, -- Priest
+        {17, 4001974}, -- Priest
+        {19, 4001975}, -- Rogue
+        {21, 4001976}, -- Shaman
+        {22, 4001977}, -- Shaman
+        {23, 4001978}, -- Shaman
+        {25, 4001979}, -- Warlock
+        {27, 4001980}, -- Warrior
+        {28, 4001981}, -- Warrior
 	},
 	[HEROIC_DIFF] = {
-		{1, 0}, -- Death Knight Heroic DPS Set
-		{2, 0}, -- Death Knight Heroic Tank Set
-		{4, 0}, -- Druid Normal Melee Set
-		{5, 0}, -- Druid Normal Resto Set
-		{6, 0}, -- Druid Normal Balance Set
-		{8, 0}, -- Hunter Heroic
-		{10, 0}, -- Mage Heroic
-		{12, 0}, -- Paladin DPS
-		{13, 0}, -- Paladin Holy
-		{14, 0}, -- Paladin Prot
-		{16, 0}, -- Priest
-		{17, 0}, -- Priest
-		{19, 0}, -- Rogue
-		{21, 0}, -- Shaman
-		{22, 0}, -- Shaman
-		{23, 0}, -- Shaman
-		{25, 0}, -- Warlock
-		{27, 0}, -- Warrior
-		{28, 0}, -- Warrior
+		{1, 4002963}, -- Death Knight Normal DPS Set
+        {2, 4002964}, -- Death Knight Normal Tank Set
+        {4, 4002965}, -- Druid Normal Melee Set
+        {5, 4002966}, -- Druid Normal Resto Set
+        {6, 4002967}, -- Druid Normal Balance Set
+        {8, 4002968}, -- Hunter Normal
+        {10, 4002969}, -- Mage Normal
+        {12, 4002970}, -- Paladin DPS
+        {13, 4002971}, -- Paladin Holy
+        {14, 4002972}, -- Paladin Prot
+        {16, 4002973}, -- Priest
+        {17, 4002974}, -- Priest
+        {19, 4002975}, -- Rogue
+        {21, 4002976}, -- Shaman
+        {22, 4002977}, -- Shaman
+        {23, 4002978}, -- Shaman
+        {25, 4002979}, -- Warlock
+        {27, 4002980}, -- Warrior
+        {28, 4002981}, -- Warrior
 	},
 }
 
@@ -3255,7 +3255,7 @@ data["DragonSoul"] = {
 				{ 21, 72012 },	-- Plans: Unstoppable Destroyer's Legplates
 			},
 		},
-		-- T13_SET
+		T13_SET,
 		CATA_RAID3_AC_TABLE,
 	}
 }
@@ -3836,8 +3836,8 @@ data["BaradinHold"] = {
 				{ 924, "ac6108" },
 			},
 		},
-	}
-	-- T11_SET
-	-- T12_SET
-	-- T13_SET
+	},
+	T11_SET,
+	T12_SET,
+	T13_SET,
 }
