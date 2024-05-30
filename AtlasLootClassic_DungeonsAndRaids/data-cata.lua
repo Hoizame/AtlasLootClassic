@@ -55,136 +55,7 @@ local PURPLE = "|cff9900ff%s|r"
 -- format
 local BONUS_LOOT_SPLIT = "%s - %s"
 
---Achievements
-local CATA_DUNGEON_HERO_AC_TABLE = {	--[Cataclysm Dungeon Hero]
-	name = select(2, GetAchievementInfo(4844)),
-	TableType = AC_ITTYPE,
-	ExtraList = true,
-	IgnoreAsSource = true,
-	CoinTexture = "Achievement",
-	[HEROIC_DIFF] = {
-		{ 1, 4844 },
-		{ 2, 5060 },			{ 17, 5061 },
-		{ 3, 5063 },			{ 18, 5064 },
-		{ 4, 5062 },			{ 19, 5065 },
-		{ 5, 5066 },			{ 20, 5083 },
-		{ 6, 5093 }
-	},
-}
-
-local CATA_GLORY_OF_THE_HERO_AC_TABLE = {	--[Glory of the Cataclysm Hero]
-	AchievementID = 4845,
-	TableType = AC_ITTYPE,
-	ExtraList = true,
-	IgnoreAsSource = true,
-	CoinTexture = "Achievement",
-	[HEROIC_DIFF] = {
-		{ 1, 4845 },
-		{ 2, 4844 },			{ 17, 5281 },
-		{ 3, 5282 },			{ 18, 5283 },
-		{ 4, 5284 },			{ 19, 5285 },
-		{ 5, 5286 },			{ 20, 5287 },
-		{ 6, 5288 },			{ 21, 5289 },
-		{ 7, 5290 },			{ 22, 5291 },
-		{ 8, 5292 },			{ 23, 5293 },
-		{ 9, 5294 },			{ 24, 5295 },
-		{ 10, 5296 },			{ 25, 5297 },
-		{ 11, 5366 },			{ 26, 5367 },
-		{ 12, 5368 },			{ 27, 5369 },
-		{ 13, 5370 },			{ 28, 5371 },
-		{ 14, 5503 },			{ 29, 5504 },
-		{ 15, 5505 },			{ 30, 5298 },
-	},
-}
-
-local CATA_DEFENDER_AC_TABLE = {	--[Defender of a Shattered World]
-	AchievementID = 5506,
-	TableType = AC_ITTYPE,
-	ExtraList = true,
-	IgnoreAsSource = true,
-	CoinTexture = "Achievement",
-	[NORMAL_DIFF] = {
-		{ 1, 5506 },
-		{ 2, 4842 },			{ 17, 4851 },
-		{ 3, 4850 },
-	},
-	[HEROIC_DIFF] = {
-		{ 1, 5506 },
-		{ 2, 5060 },			{ 17, 5061 },
-		{ 3, 5063 },			{ 18, 5064 },
-		{ 4, 5062 },			{ 19, 5065 },
-		{ 5, 5066 },			{ 20, 5083 },
-		{ 6, 5093 }
-	}
-}
-
-local CATA_RAID1_AC_TABLE = {	--[Glory of the Cataclysm Raider]
-	AchievementID = 4853,
-	TableType = AC_ITTYPE,
-	ExtraList = true,
-	IgnoreAsSource = true,
-	CoinTexture = "Achievement",
-	[NORMAL_DIFF] = {
-		{ 1, 4853 },
-		{ 2, 5306 },			{ 17, 5307 },
-		{ 3, 5308 },			{ 18, 5309 },
-		{ 4, 5310 },			{ 19, 4849 },
-		{ 5, 5300 },			{ 20, 4852 },
-		{ 6, 5311 },			{ 21, 5312 },
-		{ 7, 5304 },			{ 22, 5305 },
-	},
-	[HEROIC_DIFF] = {
-		{ 1, 4853 },
-		{ 2, 5094 },			{ 17, 5107 },
-		{ 3, 5108 },			{ 18, 5109 },
-		{ 4, 5115 },			{ 19, 5116 },
-		{ 5, 5118 },			{ 20, 5117 },
-		{ 6, 5119 },			{ 21, 5120 },
-		{ 7, 5112 },			{ 22, 5123 },
-	},
-}
-
-local CATA_RAID2_AC_TABLE = {	--[Glory of the Firelands Raider]
-	AchievementID = 5828,
-	TableType = AC_ITTYPE,
-	ExtraList = true,
-	IgnoreAsSource = true,
-	CoinTexture = "Achievement",
-	[NORMAL_DIFF] = {
-		{ 1, 5828 },
-		{ 2, 5821 },			{ 17, 5810 },
-		{ 3, 5813 },			{ 18, 5829 },
-		{ 4, 5830 },			{ 19, 5799 },
-	},
-	[HEROIC_DIFF] = {
-		{ 1, 5828, "mount97560" },
-		{ 2, 5807 },			{ 17, 5808 },
-		{ 3, 5806 },			{ 18, 5809 },
-		{ 4, 5805 },			{ 19, 5804 },
-	},
-}
-
-local CATA_RAID3_AC_TABLE = {	--[Glory of the Dragon Soul Raider]
-	AchievementID = 6169,
-	TableType = AC_ITTYPE,
-	ExtraList = true,
-	IgnoreAsSource = true,
-	CoinTexture = "Achievement",
-	[NORMAL_DIFF] = {
-		{ 1, 6169 },
-		{ 2, 6174 },			{ 17, 6129 },
-		{ 3, 6128 },			{ 18, 6175 },
-		{ 4, 6084 },			{ 19, 6105 },
-		{ 5, 6133 },			{ 20, 6180 },
-	},
-	[HEROIC_DIFF] = {
-		{ 1, 6169 },
-		{ 2, 6109 },			{ 17, 6110 },
-		{ 3, 6111 },			{ 18, 6112 },
-		{ 4, 6113 },			{ 19, 6114 },
-	},
-}
-
+-- tier sets
 local T11_SET = {
 	name = format(AL["Tier %s Sets"], "11"),
 	ExtraList = true,
@@ -356,10 +227,140 @@ local T13_SET = {
 	},
 }
 
+--Achievements
+local CATA_DUNGEON_HERO_AC_TABLE = {	--[Cataclysm Dungeon Hero]
+	name = select(2, GetAchievementInfo(4844)),
+	TableType = AC_ITTYPE,
+	ExtraList = true,
+	IgnoreAsSource = true,
+	CoinTexture = "Achievement",
+	[HEROIC_DIFF] = {
+		{ 1, 4844 },
+		{ 2, 5060 },			{ 17, 5061 },
+		{ 3, 5063 },			{ 18, 5064 },
+		{ 4, 5062 },			{ 19, 5065 },
+		{ 5, 5066 },			{ 20, 5083 },
+		{ 6, 5093 }
+	},
+}
+
+local CATA_GLORY_OF_THE_HERO_AC_TABLE = {	--[Glory of the Cataclysm Hero]
+	AchievementID = 4845,
+	TableType = AC_ITTYPE,
+	ExtraList = true,
+	IgnoreAsSource = true,
+	CoinTexture = "Achievement",
+	[HEROIC_DIFF] = {
+		{ 1, 4845 },
+		{ 2, 4844 },			{ 17, 5281 },
+		{ 3, 5282 },			{ 18, 5283 },
+		{ 4, 5284 },			{ 19, 5285 },
+		{ 5, 5286 },			{ 20, 5287 },
+		{ 6, 5288 },			{ 21, 5289 },
+		{ 7, 5290 },			{ 22, 5291 },
+		{ 8, 5292 },			{ 23, 5293 },
+		{ 9, 5294 },			{ 24, 5295 },
+		{ 10, 5296 },			{ 25, 5297 },
+		{ 11, 5366 },			{ 26, 5367 },
+		{ 12, 5368 },			{ 27, 5369 },
+		{ 13, 5370 },			{ 28, 5371 },
+		{ 14, 5503 },			{ 29, 5504 },
+		{ 15, 5505 },			{ 30, 5298 },
+	},
+}
+
+local CATA_DEFENDER_AC_TABLE = {	--[Defender of a Shattered World]
+	AchievementID = 5506,
+	TableType = AC_ITTYPE,
+	ExtraList = true,
+	IgnoreAsSource = true,
+	CoinTexture = "Achievement",
+	[NORMAL_DIFF] = {
+		{ 1, 5506 },
+		{ 2, 4842 },			{ 17, 4851 },
+		{ 3, 4850 },
+	},
+	[HEROIC_DIFF] = {
+		{ 1, 5506 },
+		{ 2, 5060 },			{ 17, 5061 },
+		{ 3, 5063 },			{ 18, 5064 },
+		{ 4, 5062 },			{ 19, 5065 },
+		{ 5, 5066 },			{ 20, 5083 },
+		{ 6, 5093 }
+	}
+}
+
+local CATA_RAID1_AC_TABLE = {	--[Glory of the Cataclysm Raider]
+	AchievementID = 4853,
+	TableType = AC_ITTYPE,
+	ExtraList = true,
+	IgnoreAsSource = true,
+	CoinTexture = "Achievement",
+	[NORMAL_DIFF] = {
+		{ 1, 4853 },
+		{ 2, 5306 },			{ 17, 5307 },
+		{ 3, 5308 },			{ 18, 5309 },
+		{ 4, 5310 },			{ 19, 4849 },
+		{ 5, 5300 },			{ 20, 4852 },
+		{ 6, 5311 },			{ 21, 5312 },
+		{ 7, 5304 },			{ 22, 5305 },
+	},
+	[HEROIC_DIFF] = {
+		{ 1, 4853 },
+		{ 2, 5094 },			{ 17, 5107 },
+		{ 3, 5108 },			{ 18, 5109 },
+		{ 4, 5115 },			{ 19, 5116 },
+		{ 5, 5118 },			{ 20, 5117 },
+		{ 6, 5119 },			{ 21, 5120 },
+		{ 7, 5112 },			{ 22, 5123 },
+	},
+}
+
+local CATA_RAID2_AC_TABLE = {	--[Glory of the Firelands Raider]
+	AchievementID = 5828,
+	TableType = AC_ITTYPE,
+	ExtraList = true,
+	IgnoreAsSource = true,
+	CoinTexture = "Achievement",
+	[NORMAL_DIFF] = {
+		{ 1, 5828 },
+		{ 2, 5821 },			{ 17, 5810 },
+		{ 3, 5813 },			{ 18, 5829 },
+		{ 4, 5830 },			{ 19, 5799 },
+	},
+	[HEROIC_DIFF] = {
+		{ 1, 5828, "mount97560" },
+		{ 2, 5807 },			{ 17, 5808 },
+		{ 3, 5806 },			{ 18, 5809 },
+		{ 4, 5805 },			{ 19, 5804 },
+	},
+}
+
+local CATA_RAID3_AC_TABLE = {	--[Glory of the Dragon Soul Raider]
+	AchievementID = 6169,
+	TableType = AC_ITTYPE,
+	ExtraList = true,
+	IgnoreAsSource = true,
+	CoinTexture = "Achievement",
+	[NORMAL_DIFF] = {
+		{ 1, 6169 },
+		{ 2, 6174 },			{ 17, 6129 },
+		{ 3, 6128 },			{ 18, 6175 },
+		{ 4, 6084 },			{ 19, 6105 },
+		{ 5, 6133 },			{ 20, 6180 },
+	},
+	[HEROIC_DIFF] = {
+		{ 1, 6169 },
+		{ 2, 6109 },			{ 17, 6110 },
+		{ 3, 6111 },			{ 18, 6112 },
+		{ 4, 6113 },			{ 19, 6114 },
+	},
+}
+
 data["BlackrockCaverns"] = {
 	MapID = 4926,
 	--EncounterJournalID = 66,
-	InstanceID = 66,
+	InstanceID = 645,
 	ContentType = DUNGEON_CONTENT,
 	LevelRange = {77, 80, 83},
 	items = {
@@ -451,6 +452,7 @@ data["BlackrockCaverns"] = {
 				{ 7, 55787 },	-- Witching Hourglass
 				{ 8, 55782 },	-- Amber Messenger
 				{ 9, 55788 },	-- Crepuscular Shield
+				{ 10, 55783 },  -- Sandshift Relic
 				{ 16, "ac4833" },
 			},
 			[HEROIC_DIFF] = {
@@ -463,7 +465,8 @@ data["BlackrockCaverns"] = {
 				{ 7, 56320 },	-- Witching Hourglass
 				{ 8, 56317 },	-- Amber Messenger
 				{ 9, 56322 },	-- Crepuscular Shield
-				{ 11, 52078, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Chaos Orb
+				{ 10,56316 },   -- Sandshift Relic
+				{ 12, 52078, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Chaos Orb
 				{ 16, "ac5060" },
 				{ 17, "ac5284" },
 			},
@@ -1297,7 +1300,6 @@ data["ShadowfangKeep"] = {
 				{ 3, 63444 },	-- Baron Silverlaine's Greaves
 				{ 4, 63438 },	-- Baroness Silverlaine's Locket
 				{ 5, 63441 },	-- Pendant of the Keep
-				{ 6, 132567 }, -- Blindwatcher's Chain
 			},
 		},
 		{ -- Commander Springvale
@@ -1350,8 +1352,8 @@ data["ShadowfangKeep"] = {
 
 data["ZulAman"] = {
 	MapID = 3805,
-	InstanceID = 568,
 	--EncounterJournalID = 77,
+	InstanceID = 568,
 	ContentType = DUNGEON_CONTENT,
 	LevelRange = {85, 85, 85},
 	items = {
@@ -1488,7 +1490,8 @@ local ZUL_GURUB_MADNESS_LOOT = {
 }
 data["ZulGurub"] = {
 	MapID = 1977,
-	EncounterJournalID = 76,
+	-- EncounterJournalID = 76,
+	InstanceID = 859,
 	ContentType = DUNGEON_CONTENT,
 	LevelRange = {85, 85, 85},
 	items = {

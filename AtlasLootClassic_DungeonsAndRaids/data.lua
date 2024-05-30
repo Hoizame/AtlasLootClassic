@@ -905,29 +905,42 @@ data["TheStockade"] = {
 	AtlasMapFile_AL = "TheStockade",
 	ContentType = DUNGEON_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
-	LevelRange = GetForVersion({15, 24, 32}, {15, 23, 29}),
+	LevelRange = {15, 22, 30},
 	items = {
-		{ -- SWStKamDeepfury
-			name = AL["Kam Deepfury"],
-			npcID = 1666,
-			Level = GetForVersion(27, 25),
-			DisplayIDs = {{825}},
-			AtlasMapBossID = 2,
+		{ -- SWStRandolphMoloch
+			name = AL["Randolph Moloch"],
+			npcID = 46383,
+			Level = 25,
+			DisplayIDs = {{35068}},
+			AtlasMapBossID = 1,
 			[NORMAL_DIFF] = {
-				{ 1,  2280 }, -- Kam's Walking Stick
+				{ 1,  63345 }, -- Noble's Robe
+				{ 2,  63344 }, -- Standard Issue Prisoner Shoes
+				{ 3,  63346 }, -- Wicked Dagger
 			},
 		},
-		{ -- SWStBruegalIronknuckle
-			name = AL["Bruegal Ironknuckle"],
-			npcID = 1720,
-			Level = GetForVersion(26, 25),
-			DisplayIDs = {{2142}},
-			AtlasMapBossID = 6,
-			specialType = "rare",
+		{ -- SWStLordOverheat
+			name = AL["Lord Overheat"],
+			npcID = 46264,
+			Level = 25,
+			DisplayIDs = {{1204}},
+			AtlasMapBossID = 3,
 			[NORMAL_DIFF] = {
-				{ 1,  3228 }, -- Jimmied Handcuffs
-				{ 2,  2941 }, -- Prison Shank
-				{ 3,  2942 }, -- Iron Knuckles
+				{ 1,  1929 }, -- Silk-Threaded Trousers
+				{ 2,  5967 }, -- Girdle of Nobility
+				{ 3,  4676 }, -- skeletal-gauntlets
+			},
+		},
+		{ -- SWStHogger
+			name = AL["Hogger"],
+			npcID = 46254,
+			Level = 25,
+			DisplayIDs = {{501}},
+			AtlasMapBossID = 2,
+			[NORMAL_DIFF] = {
+				{ 1,  2168 }, -- Corpse Rompers
+				{ 2,  1934 }, -- Hogger's Trousers
+				{ 3,  1959 }, -- Cold Iron Pick
 			},
 		},
 		{ -- SWStTrash
@@ -2290,63 +2303,6 @@ data["TheTempleOfAtal'Hakkar"] = {
 	LoadDifficulty = NORMAL_DIFF,
 	LevelRange = GetForVersion({45, 50, 60},{35, 47, 50}),
 	items = {
-		{ -- STBalconyMinibosses
-			name = AL["Balcony Minibosses"],
-			npcID = {5716, 5712, 5717, 5714, 5715, 5713},
-			Level = GetForVersion({51, 52}, {459,50}),
-			DisplayIDs = {{6701},{6699},{6707},{6700},{6702},{6698}},
-			AtlasMapBossID = "C",
-			[NORMAL_DIFF] = {
-				{ 1,  10783 }, -- Atal'ai Spaulders
-				{ 2,  10784 }, -- Atal'ai Breastplate
-				{ 3,  10787 }, -- Atal'ai Gloves
-				{ 5,  10788 }, -- Atal'ai Girdle
-				{ 6,  10785 }, -- Atal'ai Leggings
-				{ 7,  10786 }, -- Atal'ai Boots
-				{ 9,  20606 }, -- Amber Voodoo Feather
-				{ 10, 20607 }, -- Blue Voodoo Feather
-				{ 11, 20608 }, -- Green Voodoo Feather
-			},
-		},
-		{ -- STAtalalarion
-			name = AL["Atal'alarion"],
-			npcID = 8580,
-			Level = GetForVersion(50,49),
-			DisplayIDs = {{7873}},
-			AtlasMapBossID = 1,
-			[NORMAL_DIFF] = {
-				{ 1,  10800 }, -- Darkwater Bracers
-				{ 2,  10798 }, -- Atal'alarion's Tusk Ring
-				{ 3,  10799 }, -- Headspike
-			},
-		},
-		{ -- STSpawnOfHakkar
-			name = AL["Spawn of Hakkar"],
-			npcID = 5708,
-			Level = GetForVersion(51,49),
-			DisplayIDs = {{4065}},
-			AtlasMapBossID = 2,
-			[NORMAL_DIFF] = {
-				{ 1,  10801 }, -- Slitherscale Boots
-				{ 3,  10802 }, -- Wingveil Cloak
-			},
-		},
-		{ -- STAvatarofHakkar
-			name = AL["Avatar of Hakkar"],
-			npcID = 8443,
-			DisplayIDs = {{8053}},
-			AtlasMapBossID = 3,
-			Level = 48,
-			[NORMAL_DIFF] = {
-				{ 1,  12462 }, -- Embrace of the Wind Serpent
-				{ 3,  10843 }, -- Featherskin Cape
-				{ 4,  10845 }, -- Warrior's Embrace
-				{ 5,  10842 }, -- Windscale Sarong
-				{ 6,  10846 }, -- Bloodshot Greaves
-				{ 7,  10838 }, -- Might of Hakkar
-				{ 8,  10844 }, -- Spire of Hakkar
-			},
-		},
 		{ -- STJammalan
 			name = AL["Jammal'an the Prophet"],
 			npcID = 5710,

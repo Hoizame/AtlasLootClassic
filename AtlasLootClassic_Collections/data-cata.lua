@@ -65,20 +65,6 @@ local _RED = "|cffcc6666%s|r"
 local PURPLE = "|cff9900ff%s|r"
 -- local WHIT = "|cffffffff%s|r"
 
-data["CookingCata"] = {
-    name = format(AL["'%s' Recipes"], ALIL["Cooking"]),
-    ContentType = VENDOR_CONTENT,
-    TableType = NORMAL_ITTYPE,
-    gameVersion = AtlasLoot.CATA_VERSION_NUM,
-    items = {{
-        name = AL["Misc"],
-        [NORMAL_DIFF] = {}
-    }, {
-        name = AL["Recipe"],
-        [NORMAL_DIFF] = {}
-    }}
-}
-
 data["JusticePoints"] = {
     name = format(AL["%s Vendor"], AL["Justice Points"]),
     ContentType = VENDOR_CONTENT,

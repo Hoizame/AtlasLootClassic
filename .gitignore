@@ -1,6 +1,7 @@
 .release
 .vscode/
 cata_data/
+CHANGELOG.MD
 
 # from @Blackwidow-sudo
 make.sh
