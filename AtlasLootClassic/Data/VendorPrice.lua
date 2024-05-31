@@ -1197,7 +1197,7 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.CATA_VERSION_NUM) then
         [60257] = "ValorPoints:1650", -- Mercurial Gloves
         [60255] = "ValorPoints:2200", -- Mercurial Leggings
         [58485] = "ValorPoints:1650", -- Melodious Slippers
-        [58486] = "ValorPoints:1650" -- Slippers of Moving Waters
+        [58486] = "ValorPoints:1650", -- Slippers of Moving Waters
         -- CA vendor
 	[65433] = "chefsaward:5", -- Recipe: South Island Iced Tea
 	[65432] = "chefsaward:5", -- Recipe: Fortune Cookie
@@ -1231,7 +1231,7 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.CATA_VERSION_NUM) then
 	[65414] = "chefsaward:3", -- Recipe: Starfire Espresso
 	[65408] = "chefsaward:3", -- Recipe: Feathered Lure
 	[65513] = "chefsaward:2", -- Crate of Tasty Meat
-	[68689] = "chefsaward:1", -- Imported Supplies
+	[68689] = "chefsaward:1" -- Imported Supplies
     }
 end
 
