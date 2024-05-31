@@ -60,7 +60,7 @@ local T11_SET = {
 	name = format(AL["Tier %s Sets"], "11"),
 	ExtraList = true,
 	TableType = SET_ITTYPE,
-	--ContentPhaseBC = 6,
+	ContentPhaseCata = 1,
 	IgnoreAsSource = true,
 	[NORMAL_DIFF] = {
 		{1,    4000941 }, -- Warlock
@@ -110,7 +110,7 @@ local T12_SET = {
 	name = format(AL["Tier %s Sets"], "12"),
 	ExtraList = true,
 	TableType = SET_ITTYPE,
-	--ContentPhaseBC = 6,
+	ContentPhaseCata = 2,
 	IgnoreAsSource = true,
 	[NORMAL_DIFF] = {
         {1,    4000960 }, -- Warlock
@@ -160,7 +160,7 @@ local T13_SET = {
 	name = format(AL["Tier %s Sets"], "13"),
 	ExtraList = true,
 	TableType = SET_ITTYPE,
-	--ContentPhaseBC = 6,
+	ContentPhaseCata = 3,
 	IgnoreAsSource = true,
 	[LFR_DIFF] = {
 		{1, 0}, -- Death Knight Normal DPS Set
