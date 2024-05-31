@@ -56,88 +56,88 @@ data["AlchemyCata"] = {
 		{
 			name = AL["Flasks"],
 			[NORMAL_DIFF] = {
-				{1, 80721},	-- Flask of the Winds
-				{2, 80723},	-- Flask of the Frost Wyrm
-				{3, 80720},	-- Flask of the Draconic Mind
-				{4, 94162},	-- Flask of Flowing Water
-				{5, 80719},	-- Flask of Steelskin
-				{16, 80724}, -- Flask of Enhancement
-				{18, 92688}, -- Big Cauldron of Battle
-                {19, 92643}, -- Cauldron of Battle
+				{ 1, 80721 },	-- Flask of the Winds
+				{ 2, 80723 },	-- Flask of the Frost Wyrm
+				{ 3, 80720 },	-- Flask of the Draconic Mind
+				{ 4, 94162 },	-- Flask of Flowing Water
+				{ 5, 80719 },	-- Flask of Steelskin
+				{ 16, 80724 }, -- Flask of Enhancement
+				{ 18, 92688 }, -- Big Cauldron of Battle
+                { 19, 92643 }, -- Cauldron of Battle
 
 			},
 		},
 		{
 			name = AL["Transmutes"],
 			[NORMAL_DIFF] = {
-				{1, 80245}, -- Transmute: Inferno Ruby
-                {2, 80247}, -- Transmute: Amberjewel
-				{3, 80246}, -- Transmute: Ocean Sapphire
-                {4, 80248}, -- Transmute: Demonseye
-                {5, 80250}, -- Transmute: Ember Topaz
-                {6, 80251}, -- Transmute: Dream Emerald
-				{8, 80237}, -- Transmute: Shadowspirit Diamond
-                {16, 80243}, -- Transmute: Truegold
-                {17, 80244}, -- Transmute: Pyrium Bar
-				{19, 78866}, -- Transmute: Living Elements
+				{ 1, 80245 }, -- Transmute: Inferno Ruby
+                { 2, 80247 }, -- Transmute: Amberjewel
+				{ 3, 80246 }, -- Transmute: Ocean Sapphire
+                { 4, 80248 }, -- Transmute: Demonseye
+                { 5, 80250 }, -- Transmute: Ember Topaz
+                { 6, 80251 }, -- Transmute: Dream Emerald
+				{ 8, 80237 }, -- Transmute: Shadowspirit Diamond
+                { 16, 80243 }, -- Transmute: Truegold
+                { 17, 80244 }, -- Transmute: Pyrium Bar
+				{ 19, 78866 }, -- Transmute: Living Elements
 			},
 		},
 		{
 			name = AL["Healing/Mana Potions"],
 			[NORMAL_DIFF] = {
-		        {1, 80498}, -- Mythical Healing Potion
-                {2, 80494}, -- Mythical Mana Potion
-                {4, 80490}, -- Mighty Rejuvenation Potion
-				{16, 80487}, -- Mysterious Potion
-				{18, 80482}, -- Potion of Concentration
-                {20, 93935}, -- Draught of War
+		        { 1, 80498 }, -- Mythical Healing Potion
+                { 2, 80494 }, -- Mythical Mana Potion
+                { 4, 80490 }, -- Mighty Rejuvenation Potion
+				{ 16, 80487 }, -- Mysterious Potion
+				{ 18, 80482 }, -- Potion of Concentration
+                { 20, 93935 }, -- Draught of War
 			},
 		},
 		{
 			name = AL["Util Potions"],
 			[NORMAL_DIFF] = {
-                {1, 80496}, -- Golemblood Potion
-                {2, 80495}, -- Potion of the Tol'vir
-				{3, 80481}, -- Volcanic Potion
-				{4, 80478}, -- Earthen Potion
+                { 1, 80496 }, -- Golemblood Potion
+                { 2, 80495 }, -- Potion of the Tol'vir
+				{ 3, 80481 }, -- Volcanic Potion
+				{ 4, 80478 }, -- Earthen Potion
 			},
 		},
 		{
 			name = AL["Elixirs"],
 			[NORMAL_DIFF] = {
-				{1, 80497}, -- Elixir of the Master
-				{2, 80493}, -- Elixir of Mighty Speed
-				{3, 80491}, -- Elixir of Impossible Accuracy
-				{4, 80484}, -- Elixir of the Cobra
-				{5, 80480}, -- Elixir of the Naga
-				{6, 80477}, -- Ghost Elixir
-				{16, 80492}, -- Prismatic Elixir
-				{17, 80488}, -- Elixir of Deep Earth
-				{19, 80479}, -- Deathblood Venom
+				{ 1, 80497 }, -- Elixir of the Master
+				{ 2, 80493 }, -- Elixir of Mighty Speed
+				{ 3, 80491 }, -- Elixir of Impossible Accuracy
+				{ 4, 80484 }, -- Elixir of the Cobra
+				{ 5, 80480 }, -- Elixir of the Naga
+				{ 6, 80477 }, -- Ghost Elixir
+				{ 16, 80492 }, -- Prismatic Elixir
+				{ 17, 80488 }, -- Elixir of Deep Earth
+				{ 19, 80479 }, -- Deathblood Venom
 			},
 		},
 		{
 			name = AL["Stones"],
 			[NORMAL_DIFF] = {
-                {1, 80508}, -- Lifebound Alchemist Stone
-                {2, 96253}, -- Quicksilver Alchemist Stone
-                {3, 96254}, -- Vibrant Alchemist Stone
-				{4, 96252}, -- Volatile Alchemist Stone
+                { 1, 80508 }, -- Lifebound Alchemist Stone
+                { 2, 96253 }, -- Quicksilver Alchemist Stone
+                { 3, 96254 }, -- Vibrant Alchemist Stone
+				{ 4, 96252 }, -- Volatile Alchemist Stone
 			},
 		},
 		{
 			name = AL["Mount"],
 			[NORMAL_DIFF] = {
-				{1, 93328}, -- Vial of the Sands
+				{ 1, 93328 }, -- Vial of the Sands
 			},
-		}
+		},
 		{
 			name = AL["Misc"],
 			[NORMAL_DIFF] = {
-				{1, 80725}, -- Potion of Deepholm
-                {2, 80726}, -- Potion of Treasure Finding
-				{3, 80269}, -- Potion of Illusion
-				{16, 80486}, -- Deepstone Oil
+				{ 1, 80725 }, -- Potion of Deepholm
+                { 2, 80726 }, -- Potion of Treasure Finding
+				{ 3, 80269 }, -- Potion of Illusion
+				{ 16, 80486 }, -- Deepstone Oil
 			},
 		}
 	},
@@ -337,106 +337,106 @@ data["EnchantingCata"] = {
 		{
 			name = ALIL["Weapon"].." - "..AL["Enhancements"],
 			[NORMAL_DIFF] = {
-				{1, 74246}, -- Enchant Weapon - Landslide
-				{2, 74242}, -- Enchant Weapon - Power Torrent
-				{3, 74244}, -- Enchant Weapon - Windwalk
-				{4, 74225}, -- Enchant Weapon - Heartsong
-				{5, 74223}, -- Enchant Weapon - Hurricane
-				{6, 74211}, -- Enchant Weapon - Elemental Slayer
-				{7, 74195}, -- Enchant Weapon - Mending
-				{8, 74197}, -- Enchant Weapon - Avalanche
+				{ 1, 74246 }, -- Enchant Weapon - Landslide
+				{ 2, 74242 }, -- Enchant Weapon - Power Torrent
+				{ 3, 74244 }, -- Enchant Weapon - Windwalk
+				{ 4, 74225 }, -- Enchant Weapon - Heartsong
+				{ 5, 74223 }, -- Enchant Weapon - Hurricane
+				{ 6, 74211 }, -- Enchant Weapon - Elemental Slayer
+				{ 7, 74195 }, -- Enchant Weapon - Mending
+				{ 8, 74197 }, -- Enchant Weapon - Avalanche
 			}
 		},
 		{
 			name = ALIL["2H Weapon"].." - "..AL["Enhancements"],
 			[NORMAL_DIFF] = {
-				{1, 95471}, -- Enchant 2H Weapon - Mighty Agility
+				{ 1, 95471 }, -- Enchant 2H Weapon - Mighty Agility
 			}
 		},
 		{
 			name = ALIL["Cloak"].." - "..AL["Enhancements"],
 			[NORMAL_DIFF] = {
-				{1, 74247}, -- Enchant Cloak - Greater Critical Strike
-				{2, 74240}, -- Enchant Cloak - Greater Intellect
-				{3, 74234}, -- Enchant Cloak - Protection
-				{4, 74230}, -- Enchant Cloak - Critical Strike
-				{5, 74202}, -- Enchant Cloak - Intellect
-				{6, 74192}, -- Enchant Cloak - Greater Spell Piercing
+				{ 1, 74247 }, -- Enchant Cloak - Greater Critical Strike
+				{ 2, 74240 }, -- Enchant Cloak - Greater Intellect
+				{ 3, 74234 }, -- Enchant Cloak - Protection
+				{ 4, 74230 }, -- Enchant Cloak - Critical Strike
+				{ 5, 74202 }, -- Enchant Cloak - Intellect
+				{ 6, 74192 }, -- Enchant Cloak - Greater Spell Piercing
 			}
 		},
 		{
 			name = ALIL["Chest"].." - "..AL["Enhancements"],
 			[NORMAL_DIFF] = {
-				{1, 74251}, -- Enchant Chest - Greater Stamina
-				{2, 74250}, -- Enchant Chest - Peerless Stats
-				{3, 74231}, -- Enchant Chest - Exceptional Spirit
-				{4, 74214}, -- Enchant Chest - Mighty Resilience
-				{5, 74200}, -- Enchant Chest - Stamina
-				{6, 74191}, -- Enchant Chest - Mighty Stats
+				{ 1, 74251 }, -- Enchant Chest - Greater Stamina
+				{ 2, 74250 }, -- Enchant Chest - Peerless Stats
+				{ 3, 74231 }, -- Enchant Chest - Exceptional Spirit
+				{ 4, 74214 }, -- Enchant Chest - Mighty Resilience
+				{ 5, 74200 }, -- Enchant Chest - Stamina
+				{ 6, 74191 }, -- Enchant Chest - Mighty Stats
 			}
 		},
 		{
 			name = ALIL["Feet"].." - "..AL["Enhancements"],
 			[NORMAL_DIFF] = {
-				{1, 74252}, -- Enchant Boots - Assassin's Step
-				{2, 74253}, -- Enchant Boots - Lavawalker
-				{3, 74238}, -- Enchant Boots - Mastery
-				{4, 74236}, -- Enchant Boots - Precision
-				{5, 74213}, -- Enchant Boots - Major Agility
-				{6, 74199}, -- Enchant Boots - Haste
-				{7, 74189}, -- Enchant Boots - Earthen Vitality
+				{ 1, 74252 }, -- Enchant Boots - Assassin's Step
+				{ 2, 74253 }, -- Enchant Boots - Lavawalker
+				{ 3, 74238 }, -- Enchant Boots - Mastery
+				{ 4, 74236 }, -- Enchant Boots - Precision
+				{ 5, 74213 }, -- Enchant Boots - Major Agility
+				{ 6, 74199 }, -- Enchant Boots - Haste
+				{ 7, 74189 }, -- Enchant Boots - Earthen Vitality
 			}
 		},
 		{
 			name = ALIL["Hand"].." - "..AL["Enhancements"],
 			[NORMAL_DIFF] = {
-				{1, 74255}, -- Enchant Gloves - Greater Mastery
-				{2, 74254}, -- Enchant Gloves - Mighty Strength
-				{3, 74220}, -- Enchant Gloves - Greater Expertise
-				{4, 74212}, -- Enchant Gloves - Exceptional Strength
-				{5, 74198}, -- Enchant Gloves - Haste
-				{6, 74132}, -- Enchant Gloves - Mastery
+				{ 1, 74255 }, -- Enchant Gloves - Greater Mastery
+				{ 2, 74254 }, -- Enchant Gloves - Mighty Strength
+				{ 3, 74220 }, -- Enchant Gloves - Greater Expertise
+				{ 4, 74212 }, -- Enchant Gloves - Exceptional Strength
+				{ 5, 74198 }, -- Enchant Gloves - Haste
+				{ 6, 74132 }, -- Enchant Gloves - Mastery
 			}
 		},
 		{
 			name = ALIL["Off-Hand/Shield"].." - "..AL["Enhancements"],
 			[NORMAL_DIFF] = {
-				{1, 74235}, -- Enchant Off-Hand - Superior Intellect
-				{16, 74226}, -- Enchant Shield - Mastery
-				{17, 74207}, -- Enchant Shield - Protection
+				{ 1, 74235 }, -- Enchant Off-Hand - Superior Intellect
+				{ 16, 74226 }, -- Enchant Shield - Mastery
+				{ 17, 74207 }, -- Enchant Shield - Protection
 			}
 		},
 		{
 			name = ALIL["Wrist"].." - "..AL["Enhancements"],
 			[NORMAL_DIFF] = {
-				{1, 74248}, -- Enchant Bracer - Greater Critical Strike
-				{2, 74256}, -- Enchant Bracer - Greater Speed
-				{3, 96264}, -- Enchant Bracer - Agility
-				{4, 96261}, -- Enchant Bracer - Major Strength
-				{5, 96262}, -- Enchant Bracer - Mighty Intellect
-				{6, 74239}, -- Enchant Bracer - Greater Expertise
-				{7, 74237}, -- Enchant Bracer - Exceptional Spirit
-				{8, 74232}, -- Enchant Bracer - Precision
-				{9, 74229}, -- Enchant Bracer - Superior Dodge
-				{10, 74201}, -- Enchant Bracer - Critical Strike
-				{11, 74193}, -- Enchant Bracer - Speed
+				{ 1, 74248 }, -- Enchant Bracer - Greater Critical Strike
+				{ 2, 74256 }, -- Enchant Bracer - Greater Speed
+				{ 3, 96264 }, -- Enchant Bracer - Agility
+				{ 4, 96261 }, -- Enchant Bracer - Major Strength
+				{ 5, 96262 }, -- Enchant Bracer - Mighty Intellect
+				{ 6, 74239 }, -- Enchant Bracer - Greater Expertise
+				{ 7, 74237 }, -- Enchant Bracer - Exceptional Spirit
+				{ 8, 74232 }, -- Enchant Bracer - Precision
+				{ 9, 74229 }, -- Enchant Bracer - Superior Dodge
+				{ 10, 74201 }, -- Enchant Bracer - Critical Strike
+				{ 11, 74193 }, -- Enchant Bracer - Speed
 			}
 		},
 		{
 			name = AL["Ring"].." - "..AL["Enhancements"],
 			[NORMAL_DIFF] = {
-				{1, 74216}, -- Enchant Ring - Agility
-				{2, 74218}, -- Enchant Ring - Greater Stamina
-				{3, 74217}, -- Enchant Ring - Intellect
-				{4, 74215}, -- Enchant Ring - Strength
+				{ 1, 74216 }, -- Enchant Ring - Agility
+				{ 2, 74218 }, -- Enchant Ring - Greater Stamina
+				{ 3, 74217 }, -- Enchant Ring - Intellect
+				{ 4, 74215 }, -- Enchant Ring - Strength
 			}
 		},
 		{
 			name = AL["Misc"],
 			[NORMAL_DIFF] = {
-				{1, 92370}, -- Runed Elementium Rod
-				{3, 104698}, -- Maelstrom Shatter
-				{16, [ATLASLOOT_IT_ALLIANCE] = 93843, [ATLASLOOT_IT_HORDE] = 93841}, -- Magic Lamp/Enchanted Lantern
+				{ 1, 92370 }, -- Runed Elementium Rod
+				{ 3, 104698 }, -- Maelstrom Shatter
+				{ 16, [ATLASLOOT_IT_ALLIANCE] = 93843, [ATLASLOOT_IT_HORDE] = 93841 }, -- Magic Lamp/Enchanted Lantern
 			}
 		},
 	}
@@ -580,436 +580,436 @@ data["InscriptionCata"] = {
 		{
 			name = AL["Glyphs"].." - "..ALIL["DEATHKNIGHT"],
 			[PRIME_GLYPHS_DIFF] = {
-				{1, 57214}, -- Glyph of Death and Decay
-				{2, 64266}, -- Glyph of Death Coil
-				{3, 59340}, -- Glyph of Death Strike
-				{4, 57216}, -- Glyph of Frost Strike
-				{5, 57219}, -- Glyph of Icy Touch
-				{6, 57208}, -- Glyph of Heart Strike
-				{16, 64300}, -- Glyph of Howling Blast
-				{17, 57220}, -- Glyph of Obliterate
-				{18, 57222}, -- Glyph of Raise Dead
-				{19, 57223}, -- Glyph of Rune Strike
-				{20, 57224}, -- Glyph of Scourge Strike
+				{ 1, 57214 }, -- Glyph of Death and Decay
+				{ 2, 64266 }, -- Glyph of Death Coil
+				{ 3, 59340 }, -- Glyph of Death Strike
+				{ 4, 57216 }, -- Glyph of Frost Strike
+				{ 5, 57219 }, -- Glyph of Icy Touch
+				{ 6, 57208 }, -- Glyph of Heart Strike
+				{ 16, 64300 }, -- Glyph of Howling Blast
+				{ 17, 57220 }, -- Glyph of Obliterate
+				{ 18, 57222 }, -- Glyph of Raise Dead
+				{ 19, 57223 }, -- Glyph of Rune Strike
+				{ 20, 57224 }, -- Glyph of Scourge Strike
 			},
 			[MAJOR_GLYPHS_DIFF] = {
-				{1, 57207}, -- Glyph of Anti-Magic Shell
-				{2, 59339}, -- Glyph of Blood Boil
-				{3, 57210}, -- Glyph of Bone Shield
-				{4, 57211}, -- Glyph of Chains of Ice
-				{5, 64297}, -- Glyph of Dancing Rune Weapon
-				{6, 96284}, -- Glyph of Dark Succor
-				{7, 57213}, -- Glyph of Death Grip
-				{16, 64298}, -- Glyph of Hungering Cold
-				{17, 57221}, -- Glyph of Pestilence
-				{18, 57226}, -- Glyph of Pillar of Frost
-				{19, 59338}, -- Glyph of Rune Tap
-				{20, 57225}, -- Glyph of Strangulate
-				{21, 57227}, -- Glyph of Vampiric Blood
+				{ 1, 57207 }, -- Glyph of Anti-Magic Shell
+				{ 2, 59339 }, -- Glyph of Blood Boil
+				{ 3, 57210 }, -- Glyph of Bone Shield
+				{ 4, 57211 }, -- Glyph of Chains of Ice
+				{ 5, 64297 }, -- Glyph of Dancing Rune Weapon
+				{ 6, 96284 }, -- Glyph of Dark Succor
+				{ 7, 57213 }, -- Glyph of Death Grip
+				{ 16, 64298 }, -- Glyph of Hungering Cold
+				{ 17, 57221 }, -- Glyph of Pestilence
+				{ 18, 57226 }, -- Glyph of Pillar of Frost
+				{ 19, 59338 }, -- Glyph of Rune Tap
+				{ 20, 57225 }, -- Glyph of Strangulate
+				{ 21, 57227 }, -- Glyph of Vampiric Blood
 			},
 			[MINOR_GLYPHS_DIFF] = {
-				{1, 57209}, -- Glyph of Blood Tap
-				{2, 57228}, -- Glyph of Death Gate
-				{3, 57215}, -- Glyph of Death's Embrace
-				{4, 57217}, -- Glyph of Horn of Winter
-				{5, 57229}, -- Glyph of Path of Frost
-				{6, 57230}, -- Glyph of Resilient Grip
+				{ 1, 57209 }, -- Glyph of Blood Tap
+				{ 2, 57228 }, -- Glyph of Death Gate
+				{ 3, 57215 }, -- Glyph of Death's Embrace
+				{ 4, 57217 }, -- Glyph of Horn of Winter
+				{ 5, 57229 }, -- Glyph of Path of Frost
+				{ 6, 57230 }, -- Glyph of Resilient Grip
 			},
 		},
 		{
 			name = AL["Glyphs"].." - "..ALIL["DRUID"],
 			[PRIME_GLYPHS_DIFF] = {
-				{1, 64268}, -- Glyph of Berserk
-				{2, 56957}, -- Glyph of Bloodletting
-				{3, 56948}, -- Glyph of Insect Swarm
-				{4, 94402}, -- Glyph of Lacerate
-				{5, 56949}, -- Glyph of Lifebloom
-				{6, 56950}, -- Glyph of Mangle
-				{7, 56951}, -- Glyph of Moonfire
-				{8, 56954}, -- Glyph of Regrowth
-				{16, 56955}, -- Glyph of Rejuvenation
-				{17, 56956}, -- Glyph of Rip
-				{18, 64307}, -- Glyph of Savage Roar
-				{19, 64313}, -- Glyph of Starsurge
-				{20, 56959}, -- Glyph of Starfire
-				{21, 56960}, -- Glyph of Swiftmend
-				{22, 94401}, -- Glyph of Tiger's Fury
-				{23, 56963}, -- Glyph of Wrath
+				{ 1, 64268 }, -- Glyph of Berserk
+				{ 2, 56957 }, -- Glyph of Bloodletting
+				{ 3, 56948 }, -- Glyph of Insect Swarm
+				{ 4, 94402 }, -- Glyph of Lacerate
+				{ 5, 56949 }, -- Glyph of Lifebloom
+				{ 6, 56950 }, -- Glyph of Mangle
+				{ 7, 56951 }, -- Glyph of Moonfire
+				{ 8, 56954 }, -- Glyph of Regrowth
+				{ 16, 56955 }, -- Glyph of Rejuvenation
+				{ 17, 56956 }, -- Glyph of Rip
+				{ 18, 64307 }, -- Glyph of Savage Roar
+				{ 19, 64313 }, -- Glyph of Starsurge
+				{ 20, 56959 }, -- Glyph of Starfire
+				{ 21, 56960 }, -- Glyph of Swiftmend
+				{ 22, 94401 }, -- Glyph of Tiger's Fury
+				{ 23, 56963 }, -- Glyph of Wrath
 			},
 			[MAJOR_GLYPHS_DIFF] = {
-				{1, 64256}, -- Glyph of Barkskin
-				{2, 48121}, -- Glyph of Entangling Roots
-				{3, 94403}, -- Glyph of Faerie Fire
-				{4, 94404}, -- Glyph of Feral Charge
-				{5, 67600}, -- Glyph of Ferocious Bite
-				{6, 62162}, -- Glyph of Focus
-				{7, 56943}, -- Glyph of Frenzied Regeneration
-				{8, 56945}, -- Glyph of Healing Touch
-				{9, 56946}, -- Glyph of Hurricane
-				{16, 56947}, -- Glyph of Innervate
-				{17, 56961}, -- Glyph of Maul
-				{18, 64258}, -- Glyph of Monsoon
-				{19, 56952}, -- Glyph of Pounce
-				{20, 56953}, -- Glyph of Rebirth
-				{21, 56944}, -- Glyph of Solar Beam
-				{22, 56958}, -- Glyph of Starfall
-				{23, 58289}, -- Glyph of Thorns
-				{24, 64270}, -- Glyph of Wild Growth
+				{ 1, 64256 }, -- Glyph of Barkskin
+				{ 2, 48121 }, -- Glyph of Entangling Roots
+				{ 3, 94403 }, -- Glyph of Faerie Fire
+				{ 4, 94404 }, -- Glyph of Feral Charge
+				{ 5, 67600 }, -- Glyph of Ferocious Bite
+				{ 6, 62162 }, -- Glyph of Focus
+				{ 7, 56943 }, -- Glyph of Frenzied Regeneration
+				{ 8, 56945 }, -- Glyph of Healing Touch
+				{ 9, 56946 }, -- Glyph of Hurricane
+				{ 16, 56947 }, -- Glyph of Innervate
+				{ 17, 56961 }, -- Glyph of Maul
+				{ 18, 64258 }, -- Glyph of Monsoon
+				{ 19, 56952 }, -- Glyph of Pounce
+				{ 20, 56953 }, -- Glyph of Rebirth
+				{ 21, 56944 }, -- Glyph of Solar Beam
+				{ 22, 56958 }, -- Glyph of Starfall
+				{ 23, 58289 }, -- Glyph of Thorns
+				{ 24, 64270 }, -- Glyph of Wild Growth
 			},
 			[MINOR_GLYPHS_DIFF] = {
-				{1, 58286}, -- Glyph of Aquatic Form
-				{2, 58287}, -- Glyph of Challenging Roar
-				{3, 59315}, -- Glyph of Dash
-				{4, 58296}, -- Glyph of Mark of the Wild
-				{5, 95215}, -- Glyph of the Treant
-				{6, 56965}, -- Glyph of Typhoon
-				{7, 58288}, -- Glyph of Unburdened Rebirth
+				{ 1, 58286 }, -- Glyph of Aquatic Form
+				{ 2, 58287 }, -- Glyph of Challenging Roar
+				{ 3, 59315 }, -- Glyph of Dash
+				{ 4, 58296 }, -- Glyph of Mark of the Wild
+				{ 5, 95215 }, -- Glyph of the Treant
+				{ 6, 56965 }, -- Glyph of Typhoon
+				{ 7, 58288 }, -- Glyph of Unburdened Rebirth
 			},
 		},
 		{
 			name = AL["Glyphs"].." - "..ALIL["HUNTER"],
 			[PRIME_GLYPHS_DIFF] = {
-				{1, 56994}, -- Glyph of Aimed Shot
-				{2, 56995}, -- Glyph of Arcane Shot
-				{3, 64271}, -- Glyph of Chimera Shot
-				{4, 64273}, -- Glyph of Explosive Shot
-				{5, 57012}, -- Glyph of Kill Command
-				{16, 64304}, -- Glyph of Kill Shot
-				{17, 57008}, -- Glyph of Rapid Fire
-				{18, 57009}, -- Glyph of Serpent Sting
-				{19, 57011}, -- Glyph of Steady Shot
-				{20, 57006}, -- Glyph of the Dazzled Prey
+				{ 1, 56994 }, -- Glyph of Aimed Shot
+				{ 2, 56995 }, -- Glyph of Arcane Shot
+				{ 3, 64271 }, -- Glyph of Chimera Shot
+				{ 4, 64273 }, -- Glyph of Explosive Shot
+				{ 5, 57012 }, -- Glyph of Kill Command
+				{ 16, 64304 }, -- Glyph of Kill Shot
+				{ 17, 57008 }, -- Glyph of Rapid Fire
+				{ 18, 57009 }, -- Glyph of Serpent Sting
+				{ 19, 57011 }, -- Glyph of Steady Shot
+				{ 20, 57006 }, -- Glyph of the Dazzled Prey
 			},
 			[MAJOR_GLYPHS_DIFF] = {
-				{1, 56999}, -- Glyph of Bestial Wrath
-				{2, 56998}, -- Glyph of Concussive Shot
-				{3, 57000}, -- Glyph of Deterrence
-				{4, 57001}, -- Glyph of Disengage
-				{5, 57002}, -- Glyph of Freezing Trap
-				{6, 57003}, -- Glyph of Ice Trap
-				{7, 57005}, -- Glyph of Immolation Trap
-				{8, 64253}, -- Glyph of Master's Call
-				{16, 56997}, -- Glyph of Mending
-				{17, 57004}, -- Glyph of Misdirection
-				{18, 64246}, -- Glyph of Raptor Strike
-				{19, 64249}, -- Glyph of Scatter Shot
-				{20, 57007}, -- Glyph of Silencing Shot
-				{21, 57010}, -- Glyph of Snake Trap
-				{22, 56996}, -- Glyph of Trap Launcher
-				{22, 57014}, -- Glyph of Wyvern Sting
+				{ 1, 56999 }, -- Glyph of Bestial Wrath
+				{ 2, 56998 }, -- Glyph of Concussive Shot
+				{ 3, 57000 }, -- Glyph of Deterrence
+				{ 4, 57001 }, -- Glyph of Disengage
+				{ 5, 57002 }, -- Glyph of Freezing Trap
+				{ 6, 57003 }, -- Glyph of Ice Trap
+				{ 7, 57005 }, -- Glyph of Immolation Trap
+				{ 8, 64253 }, -- Glyph of Master's Call
+				{ 16, 56997 }, -- Glyph of Mending
+				{ 17, 57004 }, -- Glyph of Misdirection
+				{ 18, 64246 }, -- Glyph of Raptor Strike
+				{ 19, 64249 }, -- Glyph of Scatter Shot
+				{ 20, 57007 }, -- Glyph of Silencing Shot
+				{ 21, 57010 }, -- Glyph of Snake Trap
+				{ 22, 56996 }, -- Glyph of Trap Launcher
+				{ 22, 57014 }, -- Glyph of Wyvern Sting
 			},
 			[MINOR_GLYPHS_DIFF] = {
-				{1, 58297}, -- Glyph of Aspect of the Pack
-				{2, 58302}, -- Glyph of Feign Death
-				{3, 58301}, -- Glyph of Lesser Proportion
-				{4, 58299}, -- Glyph of Revive Pet
-				{5, 58298}, -- Glyph of Scare Beast
+				{ 1, 58297 }, -- Glyph of Aspect of the Pack
+				{ 2, 58302 }, -- Glyph of Feign Death
+				{ 3, 58301 }, -- Glyph of Lesser Proportion
+				{ 4, 58299 }, -- Glyph of Revive Pet
+				{ 5, 58298 }, -- Glyph of Scare Beast
 			},
 		},
 		{
 			name = AL["Glyphs"].." - "..ALIL["MAGE"],
 			[PRIME_GLYPHS_DIFF] = {
-				{1, 64276}, -- Glyph of Arcane Barrage
-				{2, 56991}, -- Glyph of Arcane Blast
-				{3, 56971}, -- Glyph of Arcane Missiles
-				{4, 56988}, -- Glyph of Cone of Cold
-				{5, 64274}, -- Glyph of Deep Freeze
-				{6, 56975}, -- Glyph of Fireball
-				{7, 56977}, -- Glyph of Frostbolt
-				{16, 61677}, -- Glyph of Frostfire
-				{17, 56980}, -- Glyph of Ice Lance
-				{18, 94000}, -- Glyph of Living Bomb
-				{19, 56984}, -- Glyph of Mage Armor
-				{20, 56986}, -- Glyph of Molten Armor
-				{21, 56978}, -- Glyph of Pyroblast
+				{ 1, 64276 }, -- Glyph of Arcane Barrage
+				{ 2, 56991 }, -- Glyph of Arcane Blast
+				{ 3, 56971 }, -- Glyph of Arcane Missiles
+				{ 4, 56988 }, -- Glyph of Cone of Cold
+				{ 5, 64274 }, -- Glyph of Deep Freeze
+				{ 6, 56975 }, -- Glyph of Fireball
+				{ 7, 56977 }, -- Glyph of Frostbolt
+				{ 16, 61677 }, -- Glyph of Frostfire
+				{ 17, 56980 }, -- Glyph of Ice Lance
+				{ 18, 94000 }, -- Glyph of Living Bomb
+				{ 19, 56984 }, -- Glyph of Mage Armor
+				{ 20, 56986 }, -- Glyph of Molten Armor
+				{ 21, 56978 }, -- Glyph of Pyroblast
 			},
 			[MAJOR_GLYPHS_DIFF] = {
-				{1, 56972}, -- Glyph of Arcane Power
-				{2, 56990}, -- Glyph of Blast Wave
-				{3, 56973}, -- Glyph of Blink
-				{4, 56989}, -- Glyph of Dragon's Breath
-				{5, 56974}, -- Glyph of Evocation
-				{6, 56976}, -- Glyph of Frost Nova
-				{7, 98398}, -- Glyph of Frost Armor
-				{16, 64257}, -- Glyph of Ice Barrier
-				{17, 56979}, -- Glyph of Ice Block
-				{18, 56981}, -- Glyph of Icy Veins
-				{19, 56983}, -- Glyph of Invisibility
-				{20, 71101}, -- Glyph of Mana Shield
-				{21, 56987}, -- Glyph of Polymorph
-				{22, 64275}, -- Glyph of Slow
+				{ 1, 56972 }, -- Glyph of Arcane Power
+				{ 2, 56990 }, -- Glyph of Blast Wave
+				{ 3, 56973 }, -- Glyph of Blink
+				{ 4, 56989 }, -- Glyph of Dragon's Breath
+				{ 5, 56974 }, -- Glyph of Evocation
+				{ 6, 56976 }, -- Glyph of Frost Nova
+				{ 7, 98398 }, -- Glyph of Frost Armor
+				{ 16, 64257 }, -- Glyph of Ice Barrier
+				{ 17, 56979 }, -- Glyph of Ice Block
+				{ 18, 56981 }, -- Glyph of Icy Veins
+				{ 19, 56983 }, -- Glyph of Invisibility
+				{ 20, 71101 }, -- Glyph of Mana Shield
+				{ 21, 56987 }, -- Glyph of Polymorph
+				{ 22, 64275 }, -- Glyph of Slow
 			},
 			[MINOR_GLYPHS_DIFF] = {
-				{1, 58303}, -- Glyph of Arcane Brilliance
-				{2, 95710}, -- Glyph of Armors
-				{3, 58306}, -- Glyph of Conjuring
-				{4, 64314}, -- Glyph of Mirror Image
-				{5, 58308}, -- Glyph of Slow Fall
-				{6, 58307}, -- Glyph of the Monkey
-				{7, 58310}, -- Glyph of the Penguin
+				{ 1, 58303 }, -- Glyph of Arcane Brilliance
+				{ 2, 95710 }, -- Glyph of Armors
+				{ 3, 58306 }, -- Glyph of Conjuring
+				{ 4, 64314 }, -- Glyph of Mirror Image
+				{ 5, 58308 }, -- Glyph of Slow Fall
+				{ 6, 58307 }, -- Glyph of the Monkey
+				{ 7, 58310 }, -- Glyph of the Penguin
 			},
 		},
 		{
 			name = AL["Glyphs"].." - "..ALIL["PALADIN"],
 			[PRIME_GLYPHS_DIFF] = {
-				{1, 57024}, -- Glyph of Crusader Strike
-				{2, 57029}, -- Glyph of Divine Favor
-				{3, 57025}, -- Glyph of Exorcism
-				{4, 64278}, -- Glyph of Hammer of the Righteous
-				{5, 64254}, -- Glyph of Holy Shock
-				{6, 57030}, -- Glyph of Judgement
-				{16, 57034}, -- Glyph of Seal of Insight
-				{17, 59561}, -- Glyph of Seal of Truth
-				{18, 64308}, -- Glyph of Shield of the Righteous
-				{19, 64279}, -- Glyph of Templar's Verdict
-				{20, 57026}, -- Glyph of Word of Glory
+				{ 1, 57024 }, -- Glyph of Crusader Strike
+				{ 2, 57029 }, -- Glyph of Divine Favor
+				{ 3, 57025 }, -- Glyph of Exorcism
+				{ 4, 64278 }, -- Glyph of Hammer of the Righteous
+				{ 5, 64254 }, -- Glyph of Holy Shock
+				{ 6, 57030 }, -- Glyph of Judgement
+				{ 16, 57034 }, -- Glyph of Seal of Insight
+				{ 17, 59561 }, -- Glyph of Seal of Truth
+				{ 18, 64308 }, -- Glyph of Shield of the Righteous
+				{ 19, 64279 }, -- Glyph of Templar's Verdict
+				{ 20, 57026 }, -- Glyph of Word of Glory
 			},
 			[MAJOR_GLYPHS_DIFF] = {
-				{1, 64277}, -- Glyph of Beacon of Light
-				{2, 57020}, -- Glyph of Cleansing
-				{3, 57023}, -- Glyph of Consecration
-				{4, 59560}, -- Glyph of Dazing Shield
-				{5, 64305}, -- Glyph of Divine Plea
-				{6, 57022}, -- Glyph of Divine Protection
-				{7, 57031}, -- Glyph of Divinity
-				{8, 57019}, -- Glyph of Focused Shield
-				{9, 57027}, -- Glyph of Hammer of Justice
-				{16, 57028}, -- Glyph of Hammer of Wrath
-				{17, 59559}, -- Glyph of Holy Wrath
-				{18, 57035}, -- Glyph of Light of Dawn
-				{19, 57033}, -- Glyph of Rebuke
-				{20, 57032}, -- Glyph of Righteousness
-				{21, 64251}, -- Glyph of Salvation
-				{22, 57021}, -- Glyph of the Ascetic Crusader
-				{23, 95825}, -- Glyph of the Long Word
-				{24, 57036}, -- Glyph of Turn Evil
+				{ 1, 64277 }, -- Glyph of Beacon of Light
+				{ 2, 57020 }, -- Glyph of Cleansing
+				{ 3, 57023 }, -- Glyph of Consecration
+				{ 4, 59560 }, -- Glyph of Dazing Shield
+				{ 5, 64305 }, -- Glyph of Divine Plea
+				{ 6, 57022 }, -- Glyph of Divine Protection
+				{ 7, 57031 }, -- Glyph of Divinity
+				{ 8, 57019 }, -- Glyph of Focused Shield
+				{ 9, 57027 }, -- Glyph of Hammer of Justice
+				{ 16, 57028 }, -- Glyph of Hammer of Wrath
+				{ 17, 59559 }, -- Glyph of Holy Wrath
+				{ 18, 57035 }, -- Glyph of Light of Dawn
+				{ 19, 57033 }, -- Glyph of Rebuke
+				{ 20, 57032 }, -- Glyph of Righteousness
+				{ 21, 64251 }, -- Glyph of Salvation
+				{ 22, 57021 }, -- Glyph of the Ascetic Crusader
+				{ 23, 95825 }, -- Glyph of the Long Word
+				{ 24, 57036 }, -- Glyph of Turn Evil
 			},
 			[MINOR_GLYPHS_DIFF] = {
-				{1, 58311}, -- Glyph of Blessing of Kings
-				{2, 58314}, -- Glyph of Blessing of Might
-				{3, 58312}, -- Glyph of Insight
-				{4, 58316}, -- Glyph of Justice
-				{5, 58313}, -- Glyph of Lay on Hands
-				{6, 58315}, -- Glyph of Truth
+				{ 1, 58311 }, -- Glyph of Blessing of Kings
+				{ 2, 58314 }, -- Glyph of Blessing of Might
+				{ 3, 58312 }, -- Glyph of Insight
+				{ 4, 58316 }, -- Glyph of Justice
+				{ 5, 58313 }, -- Glyph of Lay on Hands
+				{ 6, 58315 }, -- Glyph of Truth
 			},
 		},
 		{
 			name = AL["Glyphs"].." - "..ALIL["PRIEST"],
 			[PRIME_GLYPHS_DIFF] = {
-				{1, 64280}, -- Glyph of Dispersion
-				{2, 57186}, -- Glyph of Flash Heal
-				{3, 64281}, -- Glyph of Guardian Spirit
-				{4, 57189}, -- Glyph of Lightwell
-				{5, 57200}, -- Glyph of Mind Flay
-				{6, 64282}, -- Glyph of Penance
-				{16, 57193}, -- Glyph of Power Word: Barrier
-				{17, 57194}, -- Glyph of Power Word: Shield
-				{18, 57195}, -- Glyph of Prayer of Healing
-				{19, 57197}, -- Glyph of Renew
-				{20, 57199}, -- Glyph of Shadow Word: Death
-				{21, 57192}, -- Glyph of Shadow Word: Pain
+				{ 1, 64280 }, -- Glyph of Dispersion
+				{ 2, 57186 }, -- Glyph of Flash Heal
+				{ 3, 64281 }, -- Glyph of Guardian Spirit
+				{ 4, 57189 }, -- Glyph of Lightwell
+				{ 5, 57200 }, -- Glyph of Mind Flay
+				{ 6, 64282 }, -- Glyph of Penance
+				{ 16, 57193 }, -- Glyph of Power Word: Barrier
+				{ 17, 57194 }, -- Glyph of Power Word: Shield
+				{ 18, 57195 }, -- Glyph of Prayer of Healing
+				{ 19, 57197 }, -- Glyph of Renew
+				{ 20, 57199 }, -- Glyph of Shadow Word: Death
+				{ 21, 57192 }, -- Glyph of Shadow Word: Pain
 			},
 			[MAJOR_GLYPHS_DIFF] = {
-				{1, 57181}, -- Glyph of Circle of Healing
-				{2, 64259}, -- Glyph of Desperation
-				{3, 57183}, -- Glyph of Dispel Magic
-				{4, 64283}, -- Glyph of Divine Accuracy
-				{5, 57184}, -- Glyph of Fade
-				{6, 57185}, -- Glyph of Fear Ward
-				{7, 57187}, -- Glyph of Holy Nova
-				{8, 57188}, -- Glyph of Inner Fire
-				{16, 57190}, -- Glyph of Mass Dispel
-				{17, 57202}, -- Glyph of Prayer of Mending
-				{18, 57191}, -- Glyph of Psychic Horror
-				{19, 57196}, -- Glyph of Psychic Scream
-				{20, 57198}, -- Glyph of Scourge Imprisonment
-				{21, 57201}, -- Glyph of Smite
-				{22, 64309}, -- Glyph of Spirit Tap
+				{ 1, 57181 }, -- Glyph of Circle of Healing
+				{ 2, 64259 }, -- Glyph of Desperation
+				{ 3, 57183 }, -- Glyph of Dispel Magic
+				{ 4, 64283 }, -- Glyph of Divine Accuracy
+				{ 5, 57184 }, -- Glyph of Fade
+				{ 6, 57185 }, -- Glyph of Fear Ward
+				{ 7, 57187 }, -- Glyph of Holy Nova
+				{ 8, 57188 }, -- Glyph of Inner Fire
+				{ 16, 57190 }, -- Glyph of Mass Dispel
+				{ 17, 57202 }, -- Glyph of Prayer of Mending
+				{ 18, 57191 }, -- Glyph of Psychic Horror
+				{ 19, 57196 }, -- Glyph of Psychic Scream
+				{ 20, 57198 }, -- Glyph of Scourge Imprisonment
+				{ 21, 57201 }, -- Glyph of Smite
+				{ 22, 64309 }, -- Glyph of Spirit Tap
 			},
 			[MINOR_GLYPHS_DIFF] = {
-				{1, 58317}, -- Glyph of Fading
-				{2, 58318}, -- Glyph of Fortitude
-				{3, 58319}, -- Glyph of Levitate
-				{4, 107907}, -- Glyph of Shadow
-				{5, 58320}, -- Glyph of Shackle Undead
-				{6, 58321}, -- Glyph of Shadow Protection
-				{7, 58322}, -- Glyph of Shadowfiend
+				{ 1, 58317 }, -- Glyph of Fading
+				{ 2, 58318 }, -- Glyph of Fortitude
+				{ 3, 58319 }, -- Glyph of Levitate
+				{ 4, 107907 }, -- Glyph of Shadow
+				{ 5, 58320 }, -- Glyph of Shackle Undead
+				{ 6, 58321 }, -- Glyph of Shadow Protection
+				{ 7, 58322 }, -- Glyph of Shadowfiend
 			},
 		},
 		{
 			name = AL["Glyphs"].." - "..ALIL["ROGUE"],
 			[PRIME_GLYPHS_DIFF] = {
-				{1, 57112}, -- Glyph of Adrenaline Rush
-				{2, 57114}, -- Glyph of Backstab
-				{3, 57120}, -- Glyph of Eviscerate
-				{4, 57126}, -- Glyph of Hemorrhage
-				{5, 64285}, -- Glyph of Killing Spree
-				{6, 64260}, -- Glyph of Mutilate
-				{16, 57124}, -- Glyph of Revealing Strike
-				{17, 57128}, -- Glyph of Rupture
-				{18, 64286}, -- Glyph of Shadow Dance
-				{19, 57131}, -- Glyph of Sinister Strike
-				{20, 57132}, -- Glyph of Slice and Dice
-				{21, 64284}, -- Glyph of Vendetta
+				{ 1, 57112 }, -- Glyph of Adrenaline Rush
+				{ 2, 57114 }, -- Glyph of Backstab
+				{ 3, 57120 }, -- Glyph of Eviscerate
+				{ 4, 57126 }, -- Glyph of Hemorrhage
+				{ 5, 64285 }, -- Glyph of Killing Spree
+				{ 6, 64260 }, -- Glyph of Mutilate
+				{ 16, 57124 }, -- Glyph of Revealing Strike
+				{ 17, 57128 }, -- Glyph of Rupture
+				{ 18, 64286 }, -- Glyph of Shadow Dance
+				{ 19, 57131 }, -- Glyph of Sinister Strike
+				{ 20, 57132 }, -- Glyph of Slice and Dice
+				{ 21, 64284 }, -- Glyph of Vendetta
 			},
 			[MAJOR_GLYPHS_DIFF] = {
-				{1, 57113}, -- Glyph of Ambush
-				{2, 57115}, -- Glyph of Blade Flurry
-				{3, 92579}, -- Glyph of Blind
-				{4, 64303}, -- Glyph of Cloak of Shadows
-				{5, 57116}, -- Glyph of Crippling Poison
-				{6, 57117}, -- Glyph of Deadly Throw
-				{7, 57119}, -- Glyph of Evasion
-				{8, 57121}, -- Glyph of Expose Armor
-				{9, 64315}, -- Glyph of Fan of Knives
-				{16, 57122}, -- Glyph of Feint
-				{17, 57123}, -- Glyph of Garrote
-				{18, 57125}, -- Glyph of Gouge
-				{19, 57130}, -- Glyph of Kick
-				{20, 57127}, -- Glyph of Preparation
-				{21, 57129}, -- Glyph of Sap
-				{22, 57133}, -- Glyph of Sprint
-				{23, 64310}, -- Glyph of Tricks of the Trade
-				{24, 94711}, -- Glyph of Vanish
+				{ 1, 57113 }, -- Glyph of Ambush
+				{ 2, 57115 }, -- Glyph of Blade Flurry
+				{ 3, 92579 }, -- Glyph of Blind
+				{ 4, 64303 }, -- Glyph of Cloak of Shadows
+				{ 5, 57116 }, -- Glyph of Crippling Poison
+				{ 6, 57117 }, -- Glyph of Deadly Throw
+				{ 7, 57119 }, -- Glyph of Evasion
+				{ 8, 57121 }, -- Glyph of Expose Armor
+				{ 9, 64315 }, -- Glyph of Fan of Knives
+				{ 16, 57122 }, -- Glyph of Feint
+				{ 17, 57123 }, -- Glyph of Garrote
+				{ 18, 57125 }, -- Glyph of Gouge
+				{ 19, 57130 }, -- Glyph of Kick
+				{ 20, 57127 }, -- Glyph of Preparation
+				{ 21, 57129 }, -- Glyph of Sap
+				{ 22, 57133 }, -- Glyph of Sprint
+				{ 23, 64310 }, -- Glyph of Tricks of the Trade
+				{ 24, 94711 }, -- Glyph of Vanish
 			},
 			[MINOR_GLYPHS_DIFF] = {
-				{1, 58323}, -- Glyph of Blurred Speed
-				{2, 58324}, -- Glyph of Distract
-				{3, 58325}, -- Glyph of Pick Lock
-				{4, 58326}, -- Glyph of Pick Pocket
-				{5, 58328}, -- Glyph of Poisons
-				{6, 58327}, -- Glyph of Safe Fall
+				{ 1, 58323 }, -- Glyph of Blurred Speed
+				{ 2, 58324 }, -- Glyph of Distract
+				{ 3, 58325 }, -- Glyph of Pick Lock
+				{ 4, 58326 }, -- Glyph of Pick Pocket
+				{ 5, 58328 }, -- Glyph of Poisons
+				{ 6, 58327 }, -- Glyph of Safe Fall
 			},
 		},
 		{
 			name = AL["Glyphs"].." - "..ALIL["SHAMAN"],
 			[PRIME_GLYPHS_DIFF] = {
-				{1, 64261}, -- Glyph of Earth Shield
-				{2, 57236}, -- Glyph of Earthliving Weapon
-				{3, 64288}, -- Glyph of Feral Spirit
-				{4, 57237}, -- Glyph of Fire Elemental Totem
-				{5, 57239}, -- Glyph of Flame Shock
-				{6, 57240}, -- Glyph of Flametongue Weapon
-				{7, 57234}, -- Glyph of Lava Burst
-				{8, 57249}, -- Glyph of Lava Lash
-				{16, 57245}, -- Glyph of Lightning Bolt
-				{17, 64289}, -- Glyph of Riptide
-				{18, 57235}, -- Glyph of Shocking
-				{19, 57248}, -- Glyph of Stormstrike
-				{20, 101057}, -- Glyph of Unleashed Lightning
-				{21, 57251}, -- Glyph of Water Shield
-				{22, 57252}, -- Glyph of Windfury Weapon
+				{ 1, 64261 }, -- Glyph of Earth Shield
+				{ 2, 57236 }, -- Glyph of Earthliving Weapon
+				{ 3, 64288 }, -- Glyph of Feral Spirit
+				{ 4, 57237 }, -- Glyph of Fire Elemental Totem
+				{ 5, 57239 }, -- Glyph of Flame Shock
+				{ 6, 57240 }, -- Glyph of Flametongue Weapon
+				{ 7, 57234 }, -- Glyph of Lava Burst
+				{ 8, 57249 }, -- Glyph of Lava Lash
+				{ 16, 57245 }, -- Glyph of Lightning Bolt
+				{ 17, 64289 }, -- Glyph of Riptide
+				{ 18, 57235 }, -- Glyph of Shocking
+				{ 19, 57248 }, -- Glyph of Stormstrike
+				{ 20, 101057 }, -- Glyph of Unleashed Lightning
+				{ 21, 57251 }, -- Glyph of Water Shield
+				{ 22, 57252 }, -- Glyph of Windfury Weapon
 			},
 			[MAJOR_GLYPHS_DIFF] = {
-				{1, 57232}, -- Glyph of Chain Heal
-				{2, 57233}, -- Glyph of Chain Lightning
-				{3, 57250}, -- Glyph of Elemental Mastery
-				{4, 57238}, -- Glyph of Fire Nova
-				{5, 57241}, -- Glyph of Frost Shock
-				{6, 59326}, -- Glyph of Ghost Wolf
-				{7, 57247}, -- Glyph of Grounding Totem
-				{8, 57242}, -- Glyph of Healing Stream Totem
-				{16, 57243}, -- Glyph of Healing Wave
-				{17, 64316}, -- Glyph of Hex
-				{18, 57246}, -- Glyph of Lightning Shield
-				{19, 64262}, -- Glyph of Shamanistic Rage
-				{20, 64247}, -- Glyph of Stoneclaw Totem
-				{21, 64287}, -- Glyph of Thunder
-				{22, 57244}, -- Glyph of Totemic Recall
+				{ 1, 57232 }, -- Glyph of Chain Heal
+				{ 2, 57233 }, -- Glyph of Chain Lightning
+				{ 3, 57250 }, -- Glyph of Elemental Mastery
+				{ 4, 57238 }, -- Glyph of Fire Nova
+				{ 5, 57241 }, -- Glyph of Frost Shock
+				{ 6, 59326 }, -- Glyph of Ghost Wolf
+				{ 7, 57247 }, -- Glyph of Grounding Totem
+				{ 8, 57242 }, -- Glyph of Healing Stream Totem
+				{ 16, 57243 }, -- Glyph of Healing Wave
+				{ 17, 64316 }, -- Glyph of Hex
+				{ 18, 57246 }, -- Glyph of Lightning Shield
+				{ 19, 64262 }, -- Glyph of Shamanistic Rage
+				{ 20, 64247 }, -- Glyph of Stoneclaw Totem
+				{ 21, 64287 }, -- Glyph of Thunder
+				{ 22, 57244 }, -- Glyph of Totemic Recall
 			},
 			[MINOR_GLYPHS_DIFF] = {
-				{1, 58329}, -- Glyph of Astral Recall
-				{2, 58330}, -- Glyph of Renewed Life
-				{3, 58332}, -- Glyph of the Arctic Wolf
-				{4, 57253}, -- Glyph of Thunderstorm
-				{5, 58331}, -- Glyph of Water Breathing
-				{6, 58333}, -- Glyph of Water Walking
+				{ 1, 58329 }, -- Glyph of Astral Recall
+				{ 2, 58330 }, -- Glyph of Renewed Life
+				{ 3, 58332 }, -- Glyph of the Arctic Wolf
+				{ 4, 57253 }, -- Glyph of Thunderstorm
+				{ 5, 58331 }, -- Glyph of Water Breathing
+				{ 6, 58333 }, -- Glyph of Water Walking
 			},
 		},
 		{
 			name = AL["Glyphs"].." - "..ALIL["WARLOCK"],
 			[PRIME_GLYPHS_DIFF] = {
-				{1, 57260}, -- Glyph of Bane of Agony
-				{2, 64294}, -- Glyph of Chaos Bolt
-				{3, 57258}, -- Glyph of Conflagrate
-				{4, 57259}, -- Glyph of Corruption
-				{5, 57263}, -- Glyph of Felguard
-				{6, 64291}, -- Glyph of Haunt
-				{7, 57268}, -- Glyph of Immolate
-				{16, 57269}, -- Glyph of Imp
-				{17, 57257}, -- Glyph of Incinerate
-				{18, 71102}, -- Glyph of Lash of Pain
-				{19, 64318}, -- Glyph of Metamorphosis
-				{20, 57272}, -- Glyph of Shadowburn
-				{21, 57276}, -- Glyph of Unstable Affliction
+				{ 1, 57260 }, -- Glyph of Bane of Agony
+				{ 2, 64294 }, -- Glyph of Chaos Bolt
+				{ 3, 57258 }, -- Glyph of Conflagrate
+				{ 4, 57259 }, -- Glyph of Corruption
+				{ 5, 57263 }, -- Glyph of Felguard
+				{ 6, 64291 }, -- Glyph of Haunt
+				{ 7, 57268 }, -- Glyph of Immolate
+				{ 16, 57269 }, -- Glyph of Imp
+				{ 17, 57257 }, -- Glyph of Incinerate
+				{ 18, 71102 }, -- Glyph of Lash of Pain
+				{ 19, 64318 }, -- Glyph of Metamorphosis
+				{ 20, 57272 }, -- Glyph of Shadowburn
+				{ 21, 57276 }, -- Glyph of Unstable Affliction
 			},
 			[MAJOR_GLYPHS_DIFF] = {
-				{1, 57261}, -- Glyph of Death Coil
-				{2, 64317}, -- Glyph of Demonic Circle
-				{3, 57262}, -- Glyph of Fear
-				{4, 57264}, -- Glyph of Felhunter
-				{5, 57266}, -- Glyph of Healthstone
-				{6, 57267}, -- Glyph of Howl of Terror
-				{7, 64248}, -- Glyph of Life Tap
-				{16, 57275}, -- Glyph of Seduction
-				{17, 57271}, -- Glyph of Shadow Bolt
-				{18, 64311}, -- Glyph of Shadowflame
-				{19, 64250}, -- Glyph of Soul Link
-				{20, 57270}, -- Glyph of Soul Swap
-				{21, 57274}, -- Glyph of Soulstone
-				{22, 57277}, -- Glyph of Voidwalker
+				{ 1, 57261 }, -- Glyph of Death Coil
+				{ 2, 64317 }, -- Glyph of Demonic Circle
+				{ 3, 57262 }, -- Glyph of Fear
+				{ 4, 57264 }, -- Glyph of Felhunter
+				{ 5, 57266 }, -- Glyph of Healthstone
+				{ 6, 57267 }, -- Glyph of Howl of Terror
+				{ 7, 64248 }, -- Glyph of Life Tap
+				{ 16, 57275 }, -- Glyph of Seduction
+				{ 17, 57271 }, -- Glyph of Shadow Bolt
+				{ 18, 64311 }, -- Glyph of Shadowflame
+				{ 19, 64250 }, -- Glyph of Soul Link
+				{ 20, 57270 }, -- Glyph of Soul Swap
+				{ 21, 57274 }, -- Glyph of Soulstone
+				{ 22, 57277 }, -- Glyph of Voidwalker
 			},
 			[MINOR_GLYPHS_DIFF] = {
-				{1, 58338}, -- Glyph of Curse of Exhaustion
-				{2, 58337}, -- Glyph of Drain Soul
-				{3, 58340}, -- Glyph of Eye of Kilrogg
-				{4, 57265}, -- Glyph of Health Funnel
-				{5, 58341}, -- Glyph of Ritual of Souls
-				{6, 58339}, -- Glyph of Subjugate Demon
-				{7, 58336}, -- Glyph of Unending Breath
+				{ 1, 58338 }, -- Glyph of Curse of Exhaustion
+				{ 2, 58337 }, -- Glyph of Drain Soul
+				{ 3, 58340 }, -- Glyph of Eye of Kilrogg
+				{ 4, 57265 }, -- Glyph of Health Funnel
+				{ 5, 58341 }, -- Glyph of Ritual of Souls
+				{ 6, 58339 }, -- Glyph of Subjugate Demon
+				{ 7, 58336 }, -- Glyph of Unending Breath
 			},
 		},
 		{
 			name = AL["Glyphs"].." - "..ALIL["WARRIOR"],
 			[PRIME_GLYPHS_DIFF] = {
-				{1, 64295}, -- Glyph of Bladestorm
-				{2, 57156}, -- Glyph of Bloodthirst
-				{3, 57155}, -- Glyph of Devastate
-				{4, 57160}, -- Glyph of Mortal Strike
-				{5, 57161}, -- Glyph of Overpower
-				{16, 57172}, -- Glyph of Raging Blow
-				{17, 57165}, -- Glyph of Revenge
-				{18, 57152}, -- Glyph of Shield Slam
-				{19, 57163}, -- Glyph of Slam
+				{ 1, 64295 }, -- Glyph of Bladestorm
+				{ 2, 57156 }, -- Glyph of Bloodthirst
+				{ 3, 57155 }, -- Glyph of Devastate
+				{ 4, 57160 }, -- Glyph of Mortal Strike
+				{ 5, 57161 }, -- Glyph of Overpower
+				{ 16, 57172 }, -- Glyph of Raging Blow
+				{ 17, 57165 }, -- Glyph of Revenge
+				{ 18, 57152 }, -- Glyph of Shield Slam
+				{ 19, 57163 }, -- Glyph of Slam
 			},
 			[MAJOR_GLYPHS_DIFF] = {
-				{1, 57154}, -- Glyph of Cleaving
-				{2, 89815}, -- Glyph of Colossus Smash
-				{3, 94405}, -- Glyph of Death Wish
-				{4, 57158}, -- Glyph of Heroic Throw
-				{5, 94406}, -- Glyph of Intercept
-				{6, 57159}, -- Glyph of Intervene
-				{7, 57157}, -- Glyph of Piercing Howl
-				{8, 57162}, -- Glyph of Rapid Charge
-				{16, 57164}, -- Glyph of Resonating Power
-				{17, 64252}, -- Glyph of Shield Wall
-				{18, 64296}, -- Glyph of Shockwave
-				{19, 64302}, -- Glyph of Spell Reflection
-				{20, 57167}, -- Glyph of Sunder Armor
-				{21, 57168}, -- Glyph of Sweeping Strikes
-				{22, 57170}, -- Glyph of Victory Rush
+				{ 1, 57154 }, -- Glyph of Cleaving
+				{ 2, 89815 }, -- Glyph of Colossus Smash
+				{ 3, 94405 }, -- Glyph of Death Wish
+				{ 4, 57158 }, -- Glyph of Heroic Throw
+				{ 5, 94406 }, -- Glyph of Intercept
+				{ 6, 57159 }, -- Glyph of Intervene
+				{ 7, 57157 }, -- Glyph of Piercing Howl
+				{ 8, 57162 }, -- Glyph of Rapid Charge
+				{ 16, 57164 }, -- Glyph of Resonating Power
+				{ 17, 64252 }, -- Glyph of Shield Wall
+				{ 18, 64296 }, -- Glyph of Shockwave
+				{ 19, 64302 }, -- Glyph of Spell Reflection
+				{ 20, 57167 }, -- Glyph of Sunder Armor
+				{ 21, 57168 }, -- Glyph of Sweeping Strikes
+				{ 22, 57170 }, -- Glyph of Victory Rush
 			},
 			[MINOR_GLYPHS_DIFF] = {
-				{1, 58342}, -- Glyph of Battle
-				{2, 58343}, -- Glyph of Berserker Rage
-				{3, 57153}, -- Glyph of Bloody Healing
-				{4, 68166}, -- Glyph of Command
-				{5, 58345}, -- Glyph of Demoralizing Shout
-				{6, 58347}, -- Glyph of Enduring Victory
-				{7, 64255}, -- Glyph of Furious Sundering
-				{8, 64312}, -- Glyph of Intimidating Shout
-				{9, 58344}, -- Glyph of Long Charge
-				{10, 58346}, -- Glyph of Thunder Clap
+				{ 1, 58342 }, -- Glyph of Battle
+				{ 2, 58343 }, -- Glyph of Berserker Rage
+				{ 3, 57153 }, -- Glyph of Bloody Healing
+				{ 4, 68166 }, -- Glyph of Command
+				{ 5, 58345 }, -- Glyph of Demoralizing Shout
+				{ 6, 58347 }, -- Glyph of Enduring Victory
+				{ 7, 64255 }, -- Glyph of Furious Sundering
+				{ 8, 64312 }, -- Glyph of Intimidating Shout
+				{ 9, 58344 }, -- Glyph of Long Charge
+				{ 10, 58346 }, -- Glyph of Thunder Clap
 			},
 		},
 		{
@@ -1775,86 +1775,86 @@ data["ArchaeologyCata"] = {
 			name = AL["Endgame Gear"],
 			[NORMAL_DIFF] = {
 				{ 1, "INV_sword_04", nil, ALIL["Troll"] },
-				{ 2, 90608}, -- Zin'rokh, Destroyer of Worlds
+				{ 2, 90608 }, -- Zin'rokh, Destroyer of Worlds
 				{ 4, "INV_sword_04", nil, ALIL["Night Elf"] },
-				{ 5, 91757}, -- Tyrande's Favorite Doll
+				{ 5, 91757 }, -- Tyrande's Favorite Doll
 				{ 7, "INV_sword_04", nil, ALIL["Tol'vir"] },
-				{ 8, 92163}, -- Scimitar of the Sirocco
-				{ 9, 92139}, -- Staff of Ammunae
-				{ 10, 92168}, -- Ring of the Boy Emperor
+				{ 8, 92163 }, -- Scimitar of the Sirocco
+				{ 9, 92139 }, -- Staff of Ammunae
+				{ 10, 92168 }, -- Ring of the Boy Emperor
 				{ 16, "INV_sword_04", nil, ALIL["Dwarf"] },
-				{ 17, 91227}, -- Staff of Sorcerer-Thane Thaurissan
+				{ 17, 91227 }, -- Staff of Sorcerer-Thane Thaurissan
 				{ 19, "INV_sword_04", nil, ALIL["Fossil"] },
-				{ 20, 98533}, -- Extinct Turtle Shell
+				{ 20, 98533 }, -- Extinct Turtle Shell
 			},
 		},
 		{
 			name = AL["Leveling Gear"],
 			[NORMAL_DIFF] = {
 				{ 1, "INV_sword_04", nil, ALIL["Vrykul"] },
-				{ 2, 90997}, -- Nifflevar Bearded Axe
+				{ 2, 90997 }, -- Nifflevar Bearded Axe
 				{ 4, "INV_sword_04", nil, ALIL["Orc"] },
-				{ 5, 90843}, -- Headdress of the First Shaman
+				{ 5, 90843 }, -- Headdress of the First Shaman
 				{ 16, "INV_sword_04", nil, ALIL["Night Elf"] },
-				{ 17, 90616}, -- Queen Azshara's Dressing Gown
+				{ 17, 90616 }, -- Queen Azshara's Dressing Gown
 			},
 		},
 		{
 			name = AL["Toys"],
 			[NORMAL_DIFF] = {
 				{ 1, "INV_sword_04", nil, ALIL["Night Elf"] },
-				{ 2, 91761}, -- Bones of Transformation
-				{ 3, 91773}, -- Wisp Amulet
-				{ 4, 90464}, -- Highborne Soul Mirror
-				{ 5, 90614}, -- Kaldorei Wind Chimes
-				{ 6, 90493}, -- Druid and Priest Statue Set
+				{ 2, 91761 }, -- Bones of Transformation
+				{ 3, 91773 }, -- Wisp Amulet
+				{ 4, 90464 }, -- Highborne Soul Mirror
+				{ 5, 90614 }, -- Kaldorei Wind Chimes
+				{ 6, 90493 }, -- Druid and Priest Statue Set
 				{ 8, "INV_sword_04", nil, ALIL["Troll"] },
-				{ 9, 98556}, -- Haunted War Drum
+				{ 9, 98556 }, -- Haunted War Drum
 				{ 11, "INV_sword_04", nil, ALIL["Vrykul"] },
-				{ 12, 98569}, -- Vrykul Drinking Horn
+				{ 12, 98569 }, -- Vrykul Drinking Horn
 				{ 14, "INV_sword_04", nil, ALIL["Fossil"] },
-				{ 15, 98560}, -- Ancient Amber
+				{ 15, 98560 }, -- Ancient Amber
 				{ 16, "INV_sword_04", nil, ALIL["Tol'vir"] },
-				{ 17, 92145}, -- Pendant of the Scarab Storm
+				{ 17, 92145 }, -- Pendant of the Scarab Storm
 				{ 19, "INV_sword_04", nil, ALIL["Nerubian"] },
-				{ 20, 91214}, -- Blessing of the Old God
-				{ 21, 91215}, -- Puzzle Box of Yogg-Saron
+				{ 20, 91214 }, -- Blessing of the Old God
+				{ 21, 91215 }, -- Puzzle Box of Yogg-Saron
 				{ 23, "INV_sword_04", nil, ALIL["Draenei"] },
-				{ 24, 90984}, -- The Last Relic of Argus
-				{ 25, 90983}, -- Arrival of the Naaru
+				{ 24, 90984 }, -- The Last Relic of Argus
+				{ 25, 90983 }, -- Arrival of the Naaru
 				{ 27, "INV_sword_04", nil, ALIL["Dwarf"] },
-				{ 28, 91226}, -- The Innkeeper's Daughter
-				{ 29, 90553}, -- Chalice of the Mountain Kings
+				{ 28, 91226 }, -- The Innkeeper's Daughter
+				{ 29, 90553 }, -- Chalice of the Mountain Kings
 			},
 		},
 		{
 			name = AL["Mounts"],
 			[NORMAL_DIFF] = {
 				{ 1, "INV_sword_04", nil, ALIL["Tol'vir"] },
-				{ 2, 92148}, -- Scepter of Azj'Aqir
+				{ 2, 92148 }, -- Scepter of Azj'Aqir
 				{ 16, "INV_sword_04", nil, ALIL["Fossil"] },
-				{ 17, 90619}, -- Fossilized Raptor
+				{ 17, 90619 }, -- Fossilized Raptor
 			}, 
 		},
 		{
 			name = AL["Pets"],
 			[NORMAL_DIFF] = {
 				{ 1, "INV_sword_04", nil, ALIL["Tol'vir"] },
-				{ 2, 92137}, -- Crawling Claw
+				{ 2, 92137 }, -- Crawling Claw
 				{ 4, "INV_sword_04", nil, ALIL["Troll"] },
-				{ 5, 98588}, -- Voodoo Figurine
+				{ 5, 98588 }, -- Voodoo Figurine
 				{ 16, "INV_sword_04", nil, ALIL["Dwarf"] },
-				{ 17, 90521}, -- Clockwork Gnome
+				{ 17, 90521 }, -- Clockwork Gnome
 				{ 19, "INV_sword_04", nil, ALIL["Fossil"] },
-				{ 20, 98582}, -- Pterrordax Hatchling
-				{ 21, 89693}, -- Fossilized Hatchling
+				{ 20, 98582 }, -- Pterrordax Hatchling
+				{ 21, 89693 }, -- Fossilized Hatchling
 			},
 		},
 		{
 			name = AL["Misc"],
 			[NORMAL_DIFF] = {
 				{ 1, "INV_sword_04", nil, ALIL["Tol'vir"] },
-				{ 2, 91790}, -- Canopic Jar
+				{ 2, 91790 }, -- Canopic Jar
 			}
 		},
 	}
