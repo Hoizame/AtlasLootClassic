@@ -126,13 +126,18 @@ data["AlchemyCata"] = {
 			},
 		},
 		{
+			name = AL["Mount"],
+			[NORMAL_DIFF] = {
+				{1, 93328}, -- Vial of the Sands
+			},
+		}
+		{
 			name = AL["Misc"],
 			[NORMAL_DIFF] = {
 				{1, 80725}, -- Potion of Deepholm
                 {2, 80726}, -- Potion of Treasure Finding
 				{3, 80269}, -- Potion of Illusion
-				{16, 93328}, -- Vial of the Sands
-				{18, 80486}, -- Deepstone Oil
+				{16, 80486}, -- Deepstone Oil
 			},
 		}
 	},
@@ -206,8 +211,8 @@ data["BlacksmithingCata"] = {
 		{ -- Head
 			name = AL["Armor"].." - "..ALIL["Head"],
 			[PLATE_DIFF] = {
-				{ 1, 76463 },	-- Vicious Pyrium Helm
-				{ 2, 76471 },	-- Vicious Ornate Pyrium Helm
+				{ 1, 76463 },	-- Bloodied Pyrium Helm
+				{ 2, 76471 },	-- Ornate Pyrium Helm
 				{ 3, 76288 },	-- Stormforged Helm
 				{ 4, 76260 },	-- Hardened Obsidium Helm
 				{ 5, 76269 },	-- Redsteel Helm
@@ -216,8 +221,8 @@ data["BlacksmithingCata"] = {
 		{ -- Shoulder
 			name = AL["Armor"].." - "..ALIL["Shoulder"],
 			[PLATE_DIFF] = {
-				{ 1, 76461 },	-- Vicious Pyrium Shoulders
-				{ 2, 76469 },	-- Vicious Ornate Pyrium Shoulders
+				{ 1, 76461 },	-- Bloodied Pyrium Shoulders
+				{ 2, 76469 },	-- Ornate Pyrium Shoulders
 				{ 3, 76286 },	-- Stormforged Shoulders
 				{ 4, 76258 },	-- Hardened Obsidium Shoulders
 				{ 5, 76266 },	-- Redsteel Shoulders
@@ -229,8 +234,8 @@ data["BlacksmithingCata"] = {
 				{ 1, 76443 },	-- Hardened Elementium Hauberk
 				{ 2, 76445 },	-- Elementium Deathplate
 				{ 3, 76447 },	-- Light Elementium Chestguard
-				{ 4, 76472 },	-- Vicious Ornate Pyrium Breastplate
-				{ 5, 76464 },	-- Vicious Pyrium Breastplate
+				{ 4, 76472 },	-- Ornate Pyrium Breastplate
+				{ 5, 76464 },	-- Bloodied Pyrium Breastplate
 				{ 6, 76270 },	-- Redsteel Breastplate
 				{ 7, 76289 },	-- Stormforged Breastplate
 				{ 8, 76261 },	-- Hardened Obsidium Breastplate
@@ -242,8 +247,8 @@ data["BlacksmithingCata"] = {
 				{ 1, 99452 }, -- Warboots of Mighty Lords
 				{ 2, 99453 }, -- Mirrored Boots
 				{ 3, 99454 }, -- Emberforged Elementium Boots
-				{ 4, 76459 }, -- Vicious Pyrium Boots
-				{ 5, 76468 }, -- Vicious Ornate Pyrium Boots
+				{ 4, 76459 }, -- Bloodied Pyrium Boots
+				{ 5, 76468 }, -- Ornate Pyrium Boots
 				{ 6, 76265 }, -- Redsteel Boots
 				{ 7, 76285 }, -- Stormforged Boots
 				{ 8, 76182 }, -- Hardened Obsidium Boots
@@ -255,8 +260,8 @@ data["BlacksmithingCata"] = {
 				{ 1, 99439 }, -- Fists of Fury
 				{ 2, 99440 }, -- Eternal Elementium Handguards
 				{ 3, 99441 }, -- Holy Flame Gauntlets
-				{ 4, 76466 }, -- Vicious Ornate Pyrium Gauntlets
-				{ 5, 76457 }, -- Vicious Pyrium Gauntlets
+				{ 4, 76466 }, -- Ornate Pyrium Gauntlets
+				{ 5, 76457 }, -- Bloodied Pyrium Gauntlets
 				{ 6, 76281 }, -- Stormforged Gauntlets
 				{ 7, 76180 }, -- Hardened Obsidium Gauntlets
 				{ 8, 76263 }, -- Redsteel Gauntlets
@@ -268,8 +273,8 @@ data["BlacksmithingCata"] = {
 				{ 1, 101924 }, -- Pyrium Legplates of Purified Evil
 				{ 2, 101925 }, -- Unstoppable Destroyer's Legplates
 				{ 3, 101928 }, -- Foundations of Courage
-				{ 4, 76470 },  -- Vicious Ornate Pyrium Legguards
-				{ 5,76462 },   -- Vicious Pyrium Legguards
+				{ 4, 76470 },  -- Ornate Pyrium Legguards
+				{ 5,76462 },   -- Bloodied Pyrium Legguards
 				{ 6, 76287 },  -- Stormforged Legguards
 				{ 7, 76267 },  -- Redsteel Legguards
 				{ 8, 76259 },  -- Hardened Obsidium Legguards
@@ -281,8 +286,8 @@ data["BlacksmithingCata"] = {
 				{ 1, 76444 }, -- Hardened Elementium Girdle
 				{ 2, 76446 }, -- Elementium Girdle of Pain
 				{ 3, 76448 }, -- Light Elementium Belt
-				{ 4, 76467 }, -- Vicious Ornate Pyrium Belt
-				{ 5, 76458 }, -- Vicious Pyrium Belt
+				{ 4, 76467 }, -- Ornate Pyrium Belt
+				{ 5, 76458 }, -- Bloodied Pyrium Belt
 				{ 6, 76264 }, -- Redsteel Belt
 				{ 7, 76283 }, -- Stormforged Belt
 				{ 8, 76181 }, -- Hardened Obsidium Belt
@@ -294,8 +299,8 @@ data["BlacksmithingCata"] = {
 				{ 1, 101929 }, -- Soul Redeemer Bracers
 				{ 2, 101931 }, -- Bracers off DEstructive Strength
 				{ 3, 101932 }, -- Titanguard Wristplates
-				{ 4, 76456 }, -- Vicious Pyrium Bracers
-				{ 5, 76465 }, -- Vicious Ornate Pyrium Bracers
+				{ 4, 76456 }, -- Bloodied Pyrium Bracers
+				{ 5, 76465 }, -- Ornate Pyrium Bracers
 				{ 6, 76179 }, -- Hardened Obsidium Bracers
 				{ 7, 76262 }, -- Redsteel Bracers
 				{ 8, 76280 }, -- Stormforged Bracers
@@ -431,9 +436,7 @@ data["EnchantingCata"] = {
 			[NORMAL_DIFF] = {
 				{1, 92370}, -- Runed Elementium Rod
 				{3, 104698}, -- Maelstrom Shatter
-				{16, 93841}, -- Enchanted Lantern
-				{17, 93843}, -- Magic Lamp
-
+				{16, [ATLASLOOT_IT_ALLIANCE] = 93843, [ATLASLOOT_IT_HORDE] = 93841}, -- Magic Lamp/Enchanted Lantern
 			}
 		},
 	}
@@ -1021,6 +1024,7 @@ data["InscriptionCata"] = {
 			[NORMAL_DIFF] = {
 				{ 1, 86005 }, -- Inferno Ink
 				{ 2, 86004 }, -- Blackfallow Ink
+				
 			}
 		},
 		{
@@ -1379,26 +1383,26 @@ data["LeatherworkingCata"] = {
 		{ -- Head
 			name = AL["Armor"].." - "..ALIL["Head"],
 			[LEATHER_DIFF] = {
-				{ 1, 78480 },	-- Vicious Wyrmhide Helm
-				{ 2, 78469 },	-- Vicious Leather Helm
+				{ 1, 78480 },	-- Bloodied Wyrmhide Helm
+				{ 2, 78469 },	-- Bloodied Leather Helm
 				{ 3, 78424 },	-- Darkbrand Helm
 			},
 			[MAIL_DIFF] = {
-				{ 1, 78484 },	-- Vicious Charscale Helm
-				{ 2, 78474 },	-- Vicious Dragonscale Helm
+				{ 1, 78484 },	-- Bloodied Scale Helm
+				{ 2, 78474 },	-- Bloodied Dragonscale Helm
 				{ 3, 78432 },	-- Tsunami Helm
 			},
 		},
 		{ -- Shoulder
 			name = AL["Armor"].." - "..ALIL["Shoulder"],
 			[LEATHER_DIFF] = {
-				{ 1, 78464 },	-- Vicious Wyrmhide Shoulders
-				{ 2, 78455 },	-- Vicious Leather Shoulders
+				{ 1, 78464 },	-- Bloodied Wyrmhide Shoulders
+				{ 2, 78455 },	-- Bloodied Leather Shoulders
 				{ 3, 78411 },	-- Darkbrand Shoulders
 			},
 			[MAIL_DIFF] = {
-				{ 1, 78470 },	-- Vicious Charscale Shoulders
-				{ 2, 78451 },	-- Vicious Dragonscale Shoulders
+				{ 1, 78470 },	-- Bloodied Scale Shoulders
+				{ 2, 78451 },	-- Bloodied Dragonscale Shoulders
 				{ 3, 78415 },	-- Tsunami Shoulders
 			},
 		},
@@ -1407,15 +1411,15 @@ data["LeatherworkingCata"] = {
 			[LEATHER_DIFF] = {
 				{ 1, 78487 },	-- Chestguard of Nature's Fury
 				{ 2, 78488 },	-- Assassin's Chestplate
-				{ 3, 78481 },	-- Vicious Leather Chest
-				{ 4, 78467 },	-- Vicious Wyrmhide Chest
+				{ 3, 78481 },	-- Bloodied Leather Chest
+				{ 4, 78467 },	-- Bloodied Wyrmhide Chest
 				{ 5, 78428 },	-- Darkbrand Chestguard
 			},
 			[MAIL_DIFF] = {
 				{ 1, 78489 },	-- Twilight Scale Chestguard
 				{ 2, 78490 },	-- Dragonkiller Tunic
-				{ 3, 78486 },	-- Vicious Dragonscale Chest
-				{ 4, 78483 },	-- Vicious Charscale Chest
+				{ 3, 78486 },	-- Bloodied Dragonscale Chest
+				{ 4, 78483 },	-- Bloodied Scale Chest
 				{ 5, 78423 },	-- Tsunami Chestguard
 			},
 		},
@@ -1424,15 +1428,15 @@ data["LeatherworkingCata"] = {
 			[LEATHER_DIFF] = {
 				{ 1, 101940 },	-- Bladeshadow Wristguards
 				{ 2, 101937 },	-- Bracers of Flowing Serenity
-				{ 3, 78444 },	-- Vicious Wyrmhide Bracers
-				{ 4, 78446 },	-- Vicious Leather Bracers
+				{ 3, 78444 },	-- Bloodied Wyrmhide Bracers
+				{ 4, 78446 },	-- Bloodied Leather Bracers
 				{ 5, 78398 },	-- Darkbrand Bracers
 			},
 			[MAIL_DIFF] = {
 				{ 1, 101939 },	-- Thundering Deathscale Wristguards
 				{ 2, 101941 },	-- Bracers of the Hunter-Killer
-				{ 3, 78448 },	-- Vicious Charscale Bracers
-				{ 4, 78450 },	-- Vicious Dragonscale Bracers
+				{ 3, 78448 },	-- Bloodied Scale Bracers
+				{ 4, 78450 },	-- Bloodied Dragonscale Bracers
 				{ 5, 78388 },	-- Tsunami Bracers
 			},
 		},
@@ -1441,15 +1445,15 @@ data["LeatherworkingCata"] = {
 			[LEATHER_DIFF] = {
 				{ 1, 99446 },	-- Clutches of Evil
 				{ 2, 99447 },	-- Heavenly Gloves of the Moon
-				{ 3, 78452 },	-- Vicious Wyrmhide Gloves
-				{ 4, 78447 },	-- Vicious Leather Gloves
+				{ 3, 78452 },	-- Bloodied Wyrmhide Gloves
+				{ 4, 78447 },	-- Bloodied Leather Gloves
 				{ 5, 78399 },	-- Darkbrand Gloves
 			},
 			[MAIL_DIFF] = {
 				{ 1, 99445 },	-- Gloves of Unforgiving Flame
 				{ 2, 99443 },	-- Dragonfire Gloves
-				{ 3, 78459 },	-- Vicious Dragonscale Gloves
-				{ 4, 78449 },	-- Vicious Charscale Gloves
+				{ 3, 78459 },	-- Bloodied Dragonscale Gloves
+				{ 4, 78449 },	-- Bloodied Scale Gloves
 				{ 5, 78406 },	-- Tsunami Gloves
 			},
 		},
@@ -1458,15 +1462,15 @@ data["LeatherworkingCata"] = {
 			[LEATHER_DIFF] = {
 				{ 1, 78460 },	-- Lightning Lash
 				{ 2, 78461 },	-- Belt of Nefarious Whispers
-				{ 3, 78468 },	-- Vicious Leather Belt
-				{ 4, 78445 },	-- Vicious Wyrmhide Belt
+				{ 3, 78468 },	-- Bloodied Leather Belt
+				{ 4, 78445 },	-- Bloodied Wyrmhide Belt
 				{ 5, 78416 },	-- Darkbrand Belt
 			},
 			[MAIL_DIFF] = {
 				{ 1, 78462 },	-- Stormleather Sash
 				{ 2, 78463 },	-- Corded Viper Belt
-				{ 3, 78473 },	-- Vicious Dragonscale Belt
-				{ 4, 78457 },	-- Vicious Charscale Belt
+				{ 3, 78473 },	-- Bloodied Dragonscale Belt
+				{ 4, 78457 },	-- Bloodied Scale Belt
 				{ 5, 78396 },	-- Tsunami Belt
 			},
 		},
@@ -1475,15 +1479,15 @@ data["LeatherworkingCata"] = {
 			[LEATHER_DIFF] = {
 				{ 1, 101933 },	-- Leggings of Nature's Champion
 				{ 2, 101935 },	-- Bladeshadow Leggings
-				{ 3, 78482 },	-- Vicious Leather Legs
-				{ 4, 78479 },	-- Vicious Wyrmhide Legs
+				{ 3, 78482 },	-- Bloodied Leather Legs
+				{ 4, 78479 },	-- Bloodied Wyrmhide Legs
 				{ 5, 78433 },	-- Darkbrand Leggings
 			},
 			[MAIL_DIFF] = {
 				{ 1, 101936 },	-- Rended Earth Leggings
 				{ 2, 101934 },	-- Deathscale Leggings
-				{ 3, 78485 },	-- Vicious Dragonscale Legs
-				{ 4, 78471 },	-- Vicious Charscale Legs
+				{ 3, 78485 },	-- Bloodied Dragonscale Legs
+				{ 4, 78471 },	-- Bloodied Scale Legs
 				{ 5, 78427 },	-- Tsunami Leggings
 			},
 		},
@@ -1492,34 +1496,34 @@ data["LeatherworkingCata"] = {
 			[LEATHER_DIFF] = {
 				{ 1, 99457 },	-- Treads of the Craft
 				{ 2, 99458 },	-- Ethereal Footfalls
-				{ 3, 78454 },	-- Vicious Leather Boots
-				{ 4, 78453 },	-- Vicious Wyrmhide Boots
+				{ 3, 78454 },	-- Bloodied Leather Boots
+				{ 4, 78453 },	-- Bloodied Wyrmhide Boots
 				{ 5, 78407 },	-- Darkbrand Boots
 			},
 			[MAIL_DIFF] = {
 				{ 1, 99455 },	-- Earthen Scale Sabatons
 				{ 2, 99456 },	-- Footwraps of Quenched Fire
-				{ 3, 78456 },	-- Vicious Charscale Boots
-				{ 4, 78458 },	-- Vicious Dragonscale Boots
+				{ 3, 78456 },	-- Bloodied Scale Boots
+				{ 4, 78458 },	-- Bloodied Dragonscale Boots
 				{ 5, 78410 },	-- Tsunami Boots
 			},
 		},
 		{
 			name = AL["Enhancements"],
 			[NORMAL_DIFF] = {
-				{ 1, 78477 },	-- Dragonscale Leg Armor
+				{ 1, 85068 },	-- Charscale Leg Reinforcements
 				{ 2, 78478 },	-- Charscale Leg Armor
-				{ 3, 101599 },	-- Drakehide Leg Armor
-				{ 5, 78419 },	-- Scorched Leg Armor
-				{ 6, 78420 },	-- Twilight Leg Armor
-				{ 8, 78379 },	-- Savage Armor Kit
+				{ 3, 78420 },	-- Twilight Leg Armor
+				{ 5, 85067 },	-- Dragonbone Leg Reinforcements
+				{ 6, 78477 },	-- Dragonscale Leg Armor
+				{ 7, 78419 },	-- Scorched Leg Armor
+				{ 9, 101600 },	-- Drakehide Leg Reinforcements
+				{ 10, 101599 },	-- Drakehide Leg Armor
 				{ 16, 85007 },	-- Draconic Embossment - Stamina
 				{ 17, 85008 },	-- Draconic Embossment - Agility
 				{ 18, 85009 },	-- Draconic Embossment - Strength
 				{ 19, 85010 },	-- Draconic Embossment - Intellect
-				{ 21, 85067 },	-- Dragonbone Leg Reinforcements
-				{ 22, 85068 },	-- Charscale Leg Reinforcements
-				{ 23, 101600 },	-- Drakehide Leg Reinforcements
+				{ 21, 78379 },	-- Savage Armor Kit
 			},
 		},
 		{
@@ -1564,8 +1568,8 @@ data["TailoringCata"] = {
 		{ -- Head
 			name = AL["Armor"].." - "..ALIL["Head"],
 			[NORMAL_DIFF] = {
-				{ 1, 75304 },	-- Vicious Fireweave Cowl
-				{ 2, 75306 },	-- Vicious Embersilk Cowl
+				{ 1, 75304 },	-- Fireweave Cowl
+				{ 2, 75306 },	-- Embersilk Cowl
 				{ 3, 75266 },	-- Spiritmend Cowl
 				{ 4, 75256 },	-- Deathsilk Cowl
 				{ 16, 75289 },	-- High Society Top Hat
@@ -1574,8 +1578,8 @@ data["TailoringCata"] = {
 		{ -- Shoulder
 			name = AL["Armor"].." - "..ALIL["Shoulder"],
 			[NORMAL_DIFF] = {
-				{ 1, 75292 },	-- Vicious Fireweave Shoulders
-				{ 2, 75291 },	-- Vicious Embersilk Shoulders
+				{ 1, 75292 },	-- Fireweave Shoulders
+				{ 2, 75291 },	-- Embersilk Shoulders
 				{ 3, 75260 },	-- Spiritmend Shoulders
 				{ 4, 75251 },	-- Deathsilk Shoulders
 			}
@@ -1583,8 +1587,8 @@ data["TailoringCata"] = {
 		{ -- Chest
 			name = AL["Armor"].." - "..ALIL["Chest"],
 			[NORMAL_DIFF] = {
-				{ 1, 75305 },	-- Vicious Embersilk Robe
-				{ 2, 75303 },	-- Vicious Fireweave Robe
+				{ 1, 75305 },	-- Embersilk Robe
+				{ 2, 75303 },	-- Fireweave Robe
 				{ 3, 75257 },	-- Deathsilk Robe
 				{ 4, 75267 },	-- Spiritmend Robe
 				{ 16, 75288 },	-- Black Embersilk Gown
@@ -1596,8 +1600,8 @@ data["TailoringCata"] = {
 			[NORMAL_DIFF] = {
 				{ 1, 101922 },	-- Dreamwraps of the Light
 				{ 2, 101923 },	-- Bracers of Unconquered Power
-				{ 3, 75270 },	-- Vicious Embersilk Bracers
-				{ 4, 75290 },	-- Vicious Fireweave Bracers
+				{ 3, 75270 },	-- Embersilk Bracers
+				{ 4, 75290 },	-- Fireweave Bracers
 				{ 5, 75259 },	-- Spiritmend Bracers
 				{ 6, 75249 },	-- Deathsilk Bracers
 			}
@@ -1607,8 +1611,8 @@ data["TailoringCata"] = {
 			[NORMAL_DIFF] = {
 				{ 1, 99448 },	-- Grips of Altered Reality
 				{ 2, 99449 },	-- Don Tayo's Inferno Mittens
-				{ 3, 75296 },	-- Vicious Fireweave Gloves
-				{ 4, 75295 },	-- Vicious Embersilk Gloves
+				{ 3, 75296 },	-- Fireweave Gloves
+				{ 4, 75295 },	-- Embersilk Gloves
 				{ 5, 75253 },	-- Deathsilk Gloves
 				{ 6, 75262 },	-- Spiritmend Gloves
 			},
@@ -1618,8 +1622,8 @@ data["TailoringCata"] = {
 			[NORMAL_DIFF] = {
 				{ 1, 75298 },	-- Belt of the Depths
 				{ 2, 75299 },	-- Dreamless Belt
-				{ 3, 75269 },	-- Vicious Fireweave Belt
-				{ 4, 75293 },	-- Vicious Embersilk Belt
+				{ 3, 75269 },	-- Fireweave Belt
+				{ 4, 75293 },	-- Embersilk Belt
 				{ 5, 75258 },	-- Spiritmend Belt
 				{ 6, 75248 },	-- Deathsilk Belt
 			},
@@ -1631,8 +1635,8 @@ data["TailoringCata"] = {
 				{ 2, 101921 },	-- Lavaquake Legwraps
 				{ 3, 75301 },	-- Flame-Ascended Pantaloons
 				{ 4, 75300 },	-- Breeches of Mended Nightmares
-				{ 5, 75302 },	-- Vicious Fireweave Pants
-				{ 6, 75307 },	-- Vicious Embersilk Pants
+				{ 5, 75302 },	-- Fireweave Pants
+				{ 6, 75307 },	-- Embersilk Pants
 				{ 7, 75263 },	-- Spiritmend Leggings
 				{ 8, 75254 },	-- Deathsilk Leggings
 			},
@@ -1642,8 +1646,8 @@ data["TailoringCata"] = {
 			[NORMAL_DIFF] = {
 				{ 1, 99459 },	-- Endless Dream Walkers
 				{ 2, 99460 },	-- Boots of the Black Flame
-				{ 3, 75297 },	-- Vicious Embersilk Boots
-				{ 4, 75294 },	-- Vicious Fireweave Boots
+				{ 3, 75297 },	-- Embersilk Boots
+				{ 4, 75294 },	-- Fireweave Boots
 				{ 5, 75261 },	-- Spiritmend Boots
 				{ 6, 75252 },	-- Deathsilk Boots
 			},
@@ -1749,12 +1753,12 @@ data["SkinningCata"] = {
 		{
 			name = AL["Illustrious Grand Master"],
 			[NORMAL_DIFF] = {
-				{ 1, 52977 }, -- Savage Leather Scraps
+				{ 1, 56516 }, -- Heavy Savage Leather
 				{ 2, 52976 }, -- Savage Leather
-				{ 3, 56516 }, -- Heavy Savage Leather
-				{ 4, 52980 }, -- Pristine Hide
-				{ 6, 52982 }, -- Deepsea Scale
-				{ 7, 52979 }, -- Blackened Dragonscale
+				{ 3, 52977 }, -- Savage Leather Scraps
+				{ 16, 52982 }, -- Deepsea Scale
+				{ 17, 52979 }, -- Blackened Dragonscale
+				{ 19, 52980 }, -- Pristine Hide
 			}
 		},
 	}
@@ -1770,64 +1774,87 @@ data["ArchaeologyCata"] = {
 		{
 			name = AL["Endgame Gear"],
 			[NORMAL_DIFF] = {
-				{1, 90608}, -- Zin'rokh, Destroyer of Worlds
-				{2, 91227}, -- Staff of Sorcerer-Thane Thaurissan
-				{3, 92163}, -- Scimitar of the Sirocco
-				{4, 98533}, -- Extinct Turtle Shell
-				{5, 92139}, -- Staff of Ammunae
-				{16, 92168}, -- Ring of the Boy Emperor
-				{18, 91757}, -- Tyrande's Favorite Doll
+				{ 1, "INV_sword_04", nil, ALIL["Troll"] },
+				{ 2, 90608}, -- Zin'rokh, Destroyer of Worlds
+				{ 4, "INV_sword_04", nil, ALIL["Night Elf"] },
+				{ 5, 91757}, -- Tyrande's Favorite Doll
+				{ 7, "INV_sword_04", nil, ALIL["Tol'vir"] },
+				{ 8, 92163}, -- Scimitar of the Sirocco
+				{ 9, 92139}, -- Staff of Ammunae
+				{ 10, 92168}, -- Ring of the Boy Emperor
+				{ 16, "INV_sword_04", nil, ALIL["Dwarf"] },
+				{ 17, 91227}, -- Staff of Sorcerer-Thane Thaurissan
+				{ 19, "INV_sword_04", nil, ALIL["Fossil"] },
+				{ 20, 98533}, -- Extinct Turtle Shell
 			},
 		},
 		{
 			name = AL["Leveling Gear"],
 			[NORMAL_DIFF] = {
-				{1, 90997}, -- Nifflevar Bearded Axe
-				{16, 90843}, -- Headdress of the First Shaman
-				{17, 90616}, -- Queen Azshara's Dressing Gown
+				{ 1, "INV_sword_04", nil, ALIL["Vrykul"] },
+				{ 2, 90997}, -- Nifflevar Bearded Axe
+				{ 4, "INV_sword_04", nil, ALIL["Orc"] },
+				{ 5, 90843}, -- Headdress of the First Shaman
+				{ 16, "INV_sword_04", nil, ALIL["Night Elf"] },
+				{ 17, 90616}, -- Queen Azshara's Dressing Gown
 			},
 		},
 		{
 			name = AL["Toys"],
 			[NORMAL_DIFF] = {
-				{1, 91214}, -- Blessing of the Old God
-				{2, 91761}, -- Bones of Transformation
-				{3, 91215}, -- Puzzle Box of Yogg-Saron
-				{4, 91773}, -- Wisp Amulet
-				{5, 92145}, -- Pendant of the Scarab Storm
-				{16, 90984}, -- The Last Relic of Argus
-				{17, 91226}, -- The Innkeeper's Daughter
-				{18, 98493}, -- Druid and Priest Statue Set
-				{19, 90553}, -- Chalice of the Mountain Kings
-				{20, 90464}, -- Highborne Soul Mirror
-				{21, 90983}, -- Arrival of the Naaru
-				{22, 90614}, -- Kaldorei Wind Chimes
-				{23, 98560}, -- Ancient Amber
-				{24, 98556}, -- Haunted War Drum
-				{25, 98569}, -- Vrykul Drinking Horn
+				{ 1, "INV_sword_04", nil, ALIL["Night Elf"] },
+				{ 2, 91761}, -- Bones of Transformation
+				{ 3, 91773}, -- Wisp Amulet
+				{ 4, 90464}, -- Highborne Soul Mirror
+				{ 5, 90614}, -- Kaldorei Wind Chimes
+				{ 6, 90493}, -- Druid and Priest Statue Set
+				{ 8, "INV_sword_04", nil, ALIL["Troll"] },
+				{ 9, 98556}, -- Haunted War Drum
+				{ 11, "INV_sword_04", nil, ALIL["Vrykul"] },
+				{ 12, 98569}, -- Vrykul Drinking Horn
+				{ 14, "INV_sword_04", nil, ALIL["Fossil"] },
+				{ 15, 98560}, -- Ancient Amber
+				{ 16, "INV_sword_04", nil, ALIL["Tol'vir"] },
+				{ 17, 92145}, -- Pendant of the Scarab Storm
+				{ 19, "INV_sword_04", nil, ALIL["Nerubian"] },
+				{ 20, 91214}, -- Blessing of the Old God
+				{ 21, 91215}, -- Puzzle Box of Yogg-Saron
+				{ 23, "INV_sword_04", nil, ALIL["Draenei"] },
+				{ 24, 90984}, -- The Last Relic of Argus
+				{ 25, 90983}, -- Arrival of the Naaru
+				{ 27, "INV_sword_04", nil, ALIL["Dwarf"] },
+				{ 28, 91226}, -- The Innkeeper's Daughter
+				{ 29, 90553}, -- Chalice of the Mountain Kings
 			},
 		},
 		{
 			name = AL["Mounts"],
 			[NORMAL_DIFF] = {
-				{1, 92148}, -- Scepter of Azj'Aqir
-				{2, 90619}, -- Fossilized Raptor
-			},
+				{ 1, "INV_sword_04", nil, ALIL["Tol'vir"] },
+				{ 2, 92148}, -- Scepter of Azj'Aqir
+				{ 16, "INV_sword_04", nil, ALIL["Fossil"] },
+				{ 17, 90619}, -- Fossilized Raptor
+			}, 
 		},
 		{
 			name = AL["Pets"],
 			[NORMAL_DIFF] = {
-				{1, 92137}, -- Crawling Claw
-				{3, 98588}, -- Voodoo Figurine
-				{4, 98582}, -- Pterrordax Hatchling
-				{5, 90521}, -- Clockwork Gnome
-				{6, 89693}, -- Fossilized Hatchling
+				{ 1, "INV_sword_04", nil, ALIL["Tol'vir"] },
+				{ 2, 92137}, -- Crawling Claw
+				{ 4, "INV_sword_04", nil, ALIL["Troll"] },
+				{ 5, 98588}, -- Voodoo Figurine
+				{ 16, "INV_sword_04", nil, ALIL["Dwarf"] },
+				{ 17, 90521}, -- Clockwork Gnome
+				{ 19, "INV_sword_04", nil, ALIL["Fossil"] },
+				{ 20, 98582}, -- Pterrordax Hatchling
+				{ 21, 89693}, -- Fossilized Hatchling
 			},
 		},
 		{
 			name = AL["Misc"],
 			[NORMAL_DIFF] = {
-				{1, 91790}, -- Canopic Jar
+				{ 1, "INV_sword_04", nil, ALIL["Tol'vir"] },
+				{ 2, 91790}, -- Canopic Jar
 			}
 		},
 	}
