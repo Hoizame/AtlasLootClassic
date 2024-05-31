@@ -1121,7 +1121,7 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.CATA_VERSION_NUM) then
 	[4001961] = {{71599,71603,71600,71601,71602},4,4,391,1,{{2,99234},{4,99238}},AL["Heroic Molten Giant Warplate"],961}, -- Heroic Warrior DPS
 	[4000962] = {{70944,70941,70945,70943,70942},4,4,378,1,{{2,99239},{4,99242}},AL["Molten Giant Battleplate"],962}, -- Normal Warrior Prot
 	[4001962] = {{71606,71608,71604,71605,71607},4,4,391,1,{{2,99239},{4,99242}},AL["Molten Giant Battleplate"],962}, -- Heroic Warrior Prot
-	
+
 	-- T13
     -- Death Knight
     [963] = {{78782,78831,78754,78765,78802},4,4,384,32,{{2,105609},{4,105646}}}, -- DPS
@@ -1152,7 +1152,7 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.CATA_VERSION_NUM) then
     -- Warrior
     [980] = {{78783,78830,78752,78763,78801},4,4,384,1,{{2,105797},{4,105907}}}, -- DPS
     [981] = {{78784,78829,78753,78764,78800},4,4,384,1,{{2,105908},{4,105911}}}, -- Prot
-    
+
     -- Death Knight
     [4000963] = {{78782,78831,78754,78765,78802},4,4,384,32,{{2,105609},{4,105646}},AL["Necrotic Boneplate Battlegear"],963}, -- LFR Death Knight DPS
     [4001963] = {{76976,76978,76974,76975,76977},4,4,397,32,{{2,105609},{4,105646}},AL["Necrotic Boneplate Battlegear"],963}, -- Normal Death Knight DPS
@@ -1185,11 +1185,11 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.CATA_VERSION_NUM) then
     [4000970] = {{78788,78837,78822,78770,78807},4,4,384,2,{{2,105765},{4,105820}},AL["Battleplate of Radiant Glory"],970}, -- LFR Paladin Retribution
     [4001970] = {{76876,76878,76874,76875,76877},4,4,397,2,{{2,105765},{4,105820}},AL["Battleplate of Radiant Glory"],970}, -- Normal Paladin Retribution
     [4002970] = {{78693,78742,78727,78675,78712},4,4,410,2,{{2,105765},{4,105820}},AL["Battleplate of Radiant Glory"],970}, -- Heroic Paladin Retribution
-    
+
     [4000971] = {{78787,78841,78821,78768,78812},4,4,384,2,{{2,105743},{4,105798}},AL["Regalia of Radiant Glory"],971}, -- LFR Paladin Holy
     [4001971] = {{76767,76769,76765,76766,76768},4,4,397,2,{{2,105743},{4,105798}},AL["Regalia of Radiant Glory"],971}, -- Normal Paladin Holy
     [4002971] = {{78692,78746,78726,78673,78717},4,4,410,2,{{2,105743},{4,105798}},AL["Regalia of Radiant Glory"],971}, -- Heroic Paladin Holy
-    
+
     [4000972] = {{78790,78840,78827,78772,78810},4,4,384,2,{{2,105800},{4,105744}},AL["Armor of Radiant Glory"],972}, -- LFR Paladin Prot
     [4001972] = {{77005,77007,77003,77004,77006},4,4,397,2,{{2,105800},{4,105744}},AL["Armor of Radiant Glory"],972}, -- Normal Paladin Prot
     [4002972] = {{78695,78745,78732,78677,78715},4,4,410,2,{{2,105800},{4,105744}},AL["Armor of Radiant Glory"],972}, -- Heroic Paladin Prot
@@ -1197,7 +1197,7 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.CATA_VERSION_NUM) then
     [4000973] = {{78795,78842,78823,78778,78814},4,4,384,16,{{2,105827},{4,105832}},AL["Vestments of Dying Light"],973}, -- LFR Priest Holy
     [4001973] = {{76358,76361,76360,76357,76359},4,4,397,16,{{2,105827},{4,105832}},AL["Vestments of Dying Light"],973}, -- Normal Priest Holy
     [4002973] = {{78700,78747,78728,78683,78719},4,4,410,16,{{2,105827},{4,105832}},AL["Vestments of Dying Light"],973}, -- Heroic Priest Holy
-    
+
     [4000974] = {{78798,78845,78826,78777,78817},4,4,384,16,{{2,105843},{4,105844}},AL["Regalia of Dying Light"],974}, -- LFR Priest Shadow
     [4001974] = {{76347,76344,76345,76348,76346},4,4,397,16,{{2,105843},{4,105844}},AL["Regalia of Dying Light"],974}, -- Normal Priest Shadow
     [4002974] = {{78703,78750,78731,78682,78722},4,4,410,16,{{2,105843},{4,105844}},AL["Regalia of Dying Light"],974}, -- Heroic Priest Shadow
@@ -1209,11 +1209,11 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.CATA_VERSION_NUM) then
     [4000976] = {{78786,78834,78820,78767,78813},4,4,384,64,{{2,105764},{4,105876}},AL["Spiritwalker's Vestments"],976}, -- LFR Shaman Resto
     [4001976] = {{76758,76760,76756,76757,76759},4,4,397,64,{{2,105764},{4,105876}},AL["Spiritwalker's Vestments"],976}, -- Normal Shaman Resto
     [4002976] = {{78691,78739,78725,78672,78718},4,4,410,64,{{2,105764},{4,105876}},AL["Spiritwalker's Vestments"],976}, -- Heroic Shaman Resto
-    
+
     [4000977] = {{78781,78828,78819,78762,78799},4,4,384,64,{{2,105866},{4,105872}},AL["Spiritwalker's Battlegear"],977}, -- LFR Shaman Enhance
     [4001977] = {{77042,77044,77040,77041,77043},4,4,397,64,{{2,105866},{4,105872}},AL["Spiritwalker's Battlegear"],977}, -- Normal Shaman Enhance
     [4002977] = {{78686,78733,78724,78667,78704},4,4,410,64,{{2,105866},{4,105872}},AL["Spiritwalker's Battlegear"],977}, -- Heroic Shaman Enhance
-    
+
     [4000978] = {{78780,78836,78818,78761,78806},4,4,384,64,{{2,105780},{4,105816}},AL["Spiritwalker's Regalia"],978}, -- LFR Shaman Elemental
     [4001978] = {{77037,77035,77039,77038,77036},4,4,397,64,{{2,105780},{4,105816}},AL["Spiritwalker's Regalia"],978}, -- Normal Shaman Elemental
     [4002978] = {{78685,78741,78723,78666,78711},4,4,410,64,{{2,105780},{4,105816}},AL["Spiritwalker's Regalia"],978}, -- Heroic Shaman Elemental

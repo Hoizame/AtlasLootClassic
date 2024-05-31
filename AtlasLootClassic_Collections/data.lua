@@ -506,7 +506,7 @@ data["TierSets"] = {
 		AtlasLoot:GameVersion_GE(AtlasLoot.CATA_VERSION_NUM, {
             name = format(AL["Tier %s Sets"], "11"),
             CoinTexture = "CATA",
-        	[NORMAL_DIFF] = {
+			[NORMAL_DIFF] = {
                 {1, 4000925}, -- Death Knight Normal DPS Set
                 {2, 4000926}, -- Death Knight Normal Tank Set
                 {4, 4000927}, -- Druid Normal Melee Set

@@ -347,7 +347,7 @@ data["ArenaS11PvP"] = {
         }
     }, {
         name = AL["Weapons"] .. " - " .. ALIL["Off Hand"],
-        [NORMAL_QUEST_DISPLAY_DIFF] = {
+        [NORMAL_DIFF] = {
         }
     }, {
         name = AL["Weapons"] .. " - " .. ALIL["Shields"],
