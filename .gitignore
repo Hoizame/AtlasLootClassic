@@ -1,4 +1,5 @@
 .release
+.idea
 .vscode/
 cata_data/
 CHANGELOG.MD
