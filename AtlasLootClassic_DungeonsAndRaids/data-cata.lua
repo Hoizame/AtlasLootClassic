@@ -1786,6 +1786,7 @@ data["TheBastionOfTwilight"] = {
 				{ 16, 59521 },	-- Soul Blade
 				{ 17, 59525 },	-- Chelley's Staff of Dark Mending
 				{ 18, 60210 },	-- Crossfire Carbine
+				{ 19, 68608 },  -- Dragonwreck Throwing Axe
 			},
 		},
 		T11_SET,
@@ -2611,7 +2612,15 @@ data["Firelands"] = {
 				{ 13, 71558 },	-- Lava Bolt Crossbow
 				{ 16, 71579 },	-- Scorchvine Wand
 				{ 17, 71575 },	-- Trail of Embers
-				{ 19, 71617 },	-- Crystallized Firestone
+				{ 19, 71590 },  -- Deathclutch Figurine
+				{ 20, 71587 },  -- Relic of the Elemental Lords
+				{ 21, 71577 },  -- Singed Plume of Aviana
+				{ 22, 71567 },  -- Covenant of the Flame
+				{ 23, 71580 },  -- Soulflame Vial
+				{ 25, 71568 },  -- Morningstar Shard
+				{ 26, 71593 },  -- Giantslicer
+				{ 27, 71592 },  -- Deflecting Star
+				{ 29, 71617 },	-- Crystallized Firestone
 			},
 		},
 		{ -- Patterns
@@ -2898,7 +2907,8 @@ data["DragonSoul"] = {
 				{ 16, 77262 },	-- Petrified Fungal Heart
 				{ 18, 77214 },	-- Vagaries of Time
 				{ 19, 77212 },	-- Hand of Morchok
-				{ 21, "ac6174" },
+				{ 20, 77213 },  -- Razor Saronite Chip
+				{ 22, "ac6174" },
 			},
 			[HEROIC_DIFF] = {
 				{ 1, 78366 },	-- Mosswrought Shoulderguards
@@ -2913,56 +2923,57 @@ data["DragonSoul"] = {
 				{ 16, 78364 },	-- Petrified Fungal Heart
 				{ 18, 78363 },	-- Vagaries of Time
 				{ 19, 78371 },	-- Hand of Morchok
-				{ 21, "ac6109" },
-				{ 22, "ac6174" },
+				{ 20, 78369 },  -- Razor Saronite Chip
+				{ 22, "ac6109" },
+				{ 23, "ac6174" },
 			},
 		},
 		{ -- Warlord Zon'ozz
-		name = AL["Warlord Zon'ozz"],
-		EncounterJournalID = 324,
-		--[[
-		[RF_DIFF] = {
-			{ 1, 78398 },	-- Cord of the Slain Champion
-			{ 2, 78395 },	-- Belt of Flayed Skin
-			{ 3, 78400 },	-- Grotesquely Writhing Bracers
-			{ 4, 78397 },	-- Graveheart Bracers
-			{ 5, 78396 },	-- Treads of Crushed Flesh
-			{ 7, 77969 },	-- Seal of the Seven Signs
-			{ 16, 78866 },	-- Gauntlets of the Corrupted Conqueror
-			{ 17, 78867 },	-- Gauntlets of the Corrupted Protector
-			{ 18, 78865 },	-- Gauntlets of the Corrupted Vanquisher
-			{ 20, 78399 },	-- Finger of Zon'ozz
-		},
-		--]]
-		[NORMAL_DIFF] = {
-			{ 1, 77255 },	-- Cord of the Slain Champion
-			{ 2, 77260 },	-- Belt of Flayed Skin
-			{ 3, 77257 },	-- Grotesquely Writhing Bracers
-			{ 4, 77258 },	-- Graveheart Bracers
-			{ 5, 77259 },	-- Treads of Crushed Flesh
-			{ 7, 77204 },	-- Seal of the Seven Signs
-			{ 16, 78183 },	-- Gauntlets of the Corrupted Conqueror
-			{ 17, 78178 },	-- Gauntlets of the Corrupted Protector
-			{ 18, 78173 },	-- Gauntlets of the Corrupted Vanquisher
-			{ 20, 77215 },	-- Horrifying Horn Arbalest
-			{ 21, 77216 },	-- Finger of Zon'ozz
-			{ 23, "ac6128" },
-		},
-		[HEROIC_DIFF] = {
-			{ 1, 78391 },	-- Cord of the Slain Champion
-			{ 2, 78388 },	-- Belt of Flayed Skin
-			{ 3, 78393 },	-- Grotesquely Writhing Bracers
-			{ 4, 78390 },	-- Graveheart Bracers
-			{ 5, 78389 },	-- Treads of Crushed Flesh
-			{ 7, 77989 },	-- Seal of the Seven Signs
-			{ 16, 78853 },	-- Gauntlets of the Corrupted Conqueror
-			{ 17, 78854 },	-- Gauntlets of the Corrupted Protector
-			{ 18, 78855 },	-- Gauntlets of the Corrupted Vanquisher
-			{ 20, 78387 },	-- Horrifying Horn Arbalest
-			{ 21, 78392 },	-- Finger of Zon'ozz
-			{ 23, "ac6110" },
-			{ 24, "ac6128" },
-		},
+			name = AL["Warlord Zon'ozz"],
+			EncounterJournalID = 324,
+			--[[
+			[RF_DIFF] = {
+				{ 1, 78398 },	-- Cord of the Slain Champion
+				{ 2, 78395 },	-- Belt of Flayed Skin
+				{ 3, 78400 },	-- Grotesquely Writhing Bracers
+				{ 4, 78397 },	-- Graveheart Bracers
+				{ 5, 78396 },	-- Treads of Crushed Flesh
+				{ 7, 77969 },	-- Seal of the Seven Signs
+				{ 16, 78866 },	-- Gauntlets of the Corrupted Conqueror
+				{ 17, 78867 },	-- Gauntlets of the Corrupted Protector
+				{ 18, 78865 },	-- Gauntlets of the Corrupted Vanquisher
+				{ 20, 78399 },	-- Finger of Zon'ozz
+			},
+			--]]
+			[NORMAL_DIFF] = {
+				{ 1, 77255 },	-- Cord of the Slain Champion
+				{ 2, 77260 },	-- Belt of Flayed Skin
+				{ 3, 77257 },	-- Grotesquely Writhing Bracers
+				{ 4, 77258 },	-- Graveheart Bracers
+				{ 5, 77259 },	-- Treads of Crushed Flesh
+				{ 7, 77204 },	-- Seal of the Seven Signs
+				{ 16, 78183 },	-- Gauntlets of the Corrupted Conqueror
+				{ 17, 78178 },	-- Gauntlets of the Corrupted Protector
+				{ 18, 78173 },	-- Gauntlets of the Corrupted Vanquisher
+				{ 20, 77215 },	-- Horrifying Horn Arbalest
+				{ 21, 77216 },	-- Finger of Zon'ozz
+				{ 23, "ac6128" },
+			},
+			[HEROIC_DIFF] = {
+				{ 1, 78391 },	-- Cord of the Slain Champion
+				{ 2, 78388 },	-- Belt of Flayed Skin
+				{ 3, 78393 },	-- Grotesquely Writhing Bracers
+				{ 4, 78390 },	-- Graveheart Bracers
+				{ 5, 78389 },	-- Treads of Crushed Flesh
+				{ 7, 77989 },	-- Seal of the Seven Signs
+				{ 16, 78853 },	-- Gauntlets of the Corrupted Conqueror
+				{ 17, 78854 },	-- Gauntlets of the Corrupted Protector
+				{ 18, 78855 },	-- Gauntlets of the Corrupted Vanquisher
+				{ 20, 78387 },	-- Horrifying Horn Arbalest
+				{ 21, 78392 },	-- Finger of Zon'ozz
+				{ 23, "ac6110" },
+				{ 24, "ac6128" },
+			},
 		},
 		{ -- Yor'sahj the Unsleeping
 			name = AL["Yor'sahj the Unsleeping"],
