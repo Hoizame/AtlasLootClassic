@@ -162,27 +162,27 @@ local T13_SET = {
 	TableType = SET_ITTYPE,
 	ContentPhaseCata = 3,
 	IgnoreAsSource = true,
-	[LFR_DIFF] = {
-		{1, 4000979 }, -- Warlock
-		{3, 4000973 }, -- Priest Holy
-		{4, 4000974 }, -- Priest Shadow
-		{6, 4000975 }, -- Rogue
-		{8, 4000968 }, -- Hunter
-		{10, 4000981 }, -- Warrior Tank
-		{11, 4000980 }, -- Warrior Dps
-		{13, 4000964 }, -- Death Knight Tank
-		{14, 4000963 }, -- Death Knight DPS
-		{16, 4000969 }, -- Mage
-		{18, 4000966 }, -- Druid Resto
-		{19, 4000967 }, -- Druid Balance
-		{20, 4000965 }, -- Druid Melee
-		{22, 4000976 }, -- Shaman Resto
-		{23, 4000978 }, -- Shaman Elemental
-		{24, 4000977 }, -- Shaman Enhance
-		{26, 4000971 }, -- Paladin Holy
-		{27, 4000972 }, -- Paladin Prot
-		{28, 4000970 }, -- Paladin DPS
-	},
+	--[LFR_DIFF] = {
+	--	{1, 4000979 }, -- Warlock
+	--	{3, 4000973 }, -- Priest Holy
+	--	{4, 4000974 }, -- Priest Shadow
+	--	{6, 4000975 }, -- Rogue
+	--	{8, 4000968 }, -- Hunter
+	--	{10, 4000981 }, -- Warrior Tank
+	--	{11, 4000980 }, -- Warrior Dps
+	--	{13, 4000964 }, -- Death Knight Tank
+	--	{14, 4000963 }, -- Death Knight DPS
+	--	{16, 4000969 }, -- Mage
+	--	{18, 4000966 }, -- Druid Resto
+	--	{19, 4000967 }, -- Druid Balance
+	--	{20, 4000965 }, -- Druid Melee
+	--	{22, 4000976 }, -- Shaman Resto
+	--	{23, 4000978 }, -- Shaman Elemental
+	--	{24, 4000977 }, -- Shaman Enhance
+	--	{26, 4000971 }, -- Paladin Holy
+	--	{27, 4000972 }, -- Paladin Prot
+	--	{28, 4000970 }, -- Paladin DPS
+	--},
 	[NORMAL_DIFF] = {
 		{1, 4001979 }, -- Warlock
 		{3, 4001973 }, -- Priest Holy
