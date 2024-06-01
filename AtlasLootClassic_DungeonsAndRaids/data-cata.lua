@@ -3360,570 +3360,105 @@ data["BaradinHold"] = {
 			name = AL["Argaloth"],
 			EncounterJournalID = 139,
 			[NORMAL_DIFF] = {
-				{ 1, "ICON_spell_nature_starfall", nil, ALIL["DRUID"], ALIL["Balance"] },
-				{ 2, 60285 },	-- Stormrider's Gloves
-				{ 3, 60283 },	-- Stormrider's Leggings
-				{ 5, "ICON_ability_druid_catform", nil, ALIL["DRUID"], ALIL["Feral"] },
-				{ 6, 60290 },	-- Stormrider's Grips
-				{ 7, 60288 },	-- Stormrider's Legguards
-				{ 9, "ICON_spell_nature_healingtouch", nil, ALIL["DRUID"], ALIL["Restoration"] },
-				{ 10, 60280 },	-- Stormrider's Handwraps
-				{ 11, 60278 },	-- Stormrider's Legwraps
-				{ 16, "ICON_spell_nature_starfall", nil, ALIL["DRUID"], ALIL["Balance"] },
-				{ 17, 60453 },	-- Vicious Gladiator's Wyrmhide Gloves
-				{ 18, 60455 },	-- Vicious Gladiator's Wyrmhide Legguards
-				{ 20, "ICON_ability_druid_catform", nil, ALIL["DRUID"], ALIL["Feral"] },
-				{ 21, 60443 },	-- Vicious Gladiator's Dragonhide Gloves
-				{ 22, 60445 },	-- Vicious Gladiator's Dragonhide Legguards
-				{ 24, "ICON_spell_nature_healingtouch", nil, ALIL["DRUID"], ALIL["Restoration"] },
-				{ 25, 60448 },	-- Vicious Gladiator's Kodohide Gloves
-				{ 26, 60450 },	-- Vicious Gladiator's Kodohide Legguards
-				{ 101, "ICON_inv_weapon_bow_07", nil, ALIL["HUNTER"], nil },
-				{ 102, 60307 },	-- Lightning-Charged Gloves
-				{ 103, 60305 },	-- Lightning-Charged Legguards
-				{ 105, "ICON_inv_staff_13", nil, ALIL["MAGE"], nil },
-				{ 106, 60247 },	-- Firelord's Gloves
-				{ 107, 60245 },	-- Firelord's Leggings
-				{ 109, "ICON_inv_throwingknife_04", nil, ALIL["ROGUE"], nil },
-				{ 110, 60298 },	-- Wind Dancer's Gloves
-				{ 111, 60300 },	-- Wind Dancer's Legguards
-				{ 113, "ICON_spell_nature_drowsy", nil, ALIL["WARLOCK"], nil },
-				{ 114, 60248 },	-- Shadowflame Handwraps
-				{ 115, 60250 },	-- Shadowflame Leggings
-				{ 116, "ICON_inv_weapon_bow_07", nil, ALIL["HUNTER"], nil },
-				{ 117, 60424 },	-- Vicious Gladiator's Chain Gauntlets
-				{ 118, 60426 },	-- Vicious Gladiator's Chain Leggings
-				{ 120, "ICON_inv_staff_13", nil, ALIL["MAGE"], nil },
-				{ 121, 60463 },	-- Vicious Gladiator's Silk Handguards
-				{ 122, 60465 },	-- Vicious Gladiator's Silk Trousers
-				{ 124, "ICON_inv_throwingknife_04", nil, ALIL["ROGUE"], nil },
-				{ 125, 60459 },	-- Vicious Gladiator's Leather Gloves
-				{ 126, 60461 },	-- Vicious Gladiator's Leather Legguards
-				{ 128, "ICON_spell_nature_drowsy", nil, ALIL["WARLOCK"], nil },
-				{ 129, 60478 },	-- Vicious Gladiator's Felweave Handguards
-				{ 130, 60480 },	-- Vicious Gladiator's Felweave Trousers
-				{ 201, "ICON_Spell_Holy_HolyBolt", nil, ALIL["PALADIN"], ALIL["Holy"] },
-				{ 202, 60363 },	-- Reinforced Sapphirium Gloves
-				{ 203, 60361 },	-- Reinforced Sapphirium Greaves
-				{ 205, "ICON_Spell_Holy_AuraOfLight", nil, ALIL["PALADIN"], ALIL["Retribution"] },
-				{ 206, 60345 },	-- Reinforced Sapphirium Gauntlets
-				{ 207, 60347 },	-- Reinforced Sapphirium Legplates
-				{ 209, "ICON_spell_holy_devotionaura", nil, ALIL["PALADIN"], ALIL["Protection"] },
-				{ 210, 60355 },	-- Reinforced Sapphirium Handguards
-				{ 211, 60357 },	-- Reinforced Sapphirium Legguards
-				{ 216, "ICON_Spell_Holy_HolyBolt", nil, ALIL["PALADIN"], ALIL["Holy"] },
-				{ 217, 60602 },	-- Vicious Gladiator's Ornamented Gloves
-				{ 218, 60604 },	-- Vicious Gladiator's Ornamented Legplates
-				{ 220, "ICON_Spell_Holy_AuraOfLight", nil, ALIL["PALADIN"], ALIL["Retribution"] },
-				{ 221, 60414 },	-- Vicious Gladiator's Scaled Gauntlets
-				{ 222, 60416 },	-- Vicious Gladiator's Scaled Legguards
-				{ 301, "ICON_spell_holy_guardianspirit", nil, ALIL["PRIEST"], ALIL["Discipline"].." / "..ALIL["Holy"] },
-				{ 302, 60275 },	-- Mercurial Handwraps
-				{ 303, 60261 },	-- Mercurial Legwraps
-				{ 305, "ICON_spell_shadow_shadowwordpain", nil, ALIL["PRIEST"], ALIL["Shadow"] },
-				{ 306, 60257 },	-- Mercurial Gloves
-				{ 307, 60255 },	-- Mercurial Leggings
-				{ 316, "ICON_spell_holy_guardianspirit", nil, ALIL["PRIEST"], ALIL["Discipline"].." / "..ALIL["Holy"] },
-				{ 317, 60468 },	-- Vicious Gladiator's Mooncloth Gloves
-				{ 318, 60470 },	-- Vicious Gladiator's Mooncloth Leggings
-				{ 320, "ICON_spell_shadow_shadowwordpain", nil, ALIL["PRIEST"], ALIL["Shadow"] },
-				{ 321, 60476 },	-- Vicious Gladiator's Satin Gloves
-				{ 322, 60475 },	-- Vicious Gladiator's Satin Leggings
-				{ 401, "ICON_Spell_Nature_Lightning", nil, ALIL["SHAMAN"], ALIL["Elemental"] },
-				{ 402, 60314 },	-- Gloves of the Raging Elements
-				{ 403, 60316 },	-- Kilt of the Raging Elements
-				{ 405, "ICON_spell_nature_lightningshield", nil, ALIL["SHAMAN"], ALIL["Enhancement"] },
-				{ 406, 60319 },	-- Grips of the Raging Elements
-				{ 407, 60321 },	-- Legguards of the Raging Elements
-				{ 409, "ICON_spell_nature_magicimmunity", nil, ALIL["SHAMAN"], ALIL["Restoration"] },
-				{ 410, 60312 },	-- Handwraps of the Raging Elements
-				{ 411, 60310 },	-- Legwraps of the Raging Elements
-				{ 416, "ICON_Spell_Nature_Lightning", nil, ALIL["SHAMAN"], ALIL["Elemental"] },
-				{ 417, 60439 },	-- Vicious Gladiator's Mail Gauntlets
-				{ 418, 60441 },	-- Vicious Gladiator's Mail Leggings
-				{ 420, "ICON_spell_nature_lightningshield", nil, ALIL["SHAMAN"], ALIL["Enhancement"] },
-				{ 421, 60434 },	-- Vicious Gladiator's Linked Gauntlets
-				{ 422, 60436 },	-- Vicious Gladiator's Linked Leggings
-				{ 424, "ICON_spell_nature_magicimmunity", nil, ALIL["SHAMAN"], ALIL["Restoration"] },
-				{ 425, 60429 },	-- Vicious Gladiator's Ringmail Gauntlets
-				{ 426, 60431 },	-- Vicious Gladiator's Ringmail Leggings
-				{ 501, "ICON_spell_deathknight_frostpresence", nil, ALIL["DEATHKNIGHT"], ALIL["Frost"].." / "..ALIL["Unholy"] },
-				{ 502, 60340 },	-- Magma Plated Gauntlets
-				{ 503, 60342 },	-- Magma Plated Legplates
-				{ 505, "ICON_spell_deathknight_bloodpresence", nil, ALIL["DEATHKNIGHT"], ALIL["Blood"] },
-				{ 506, 60350 },	-- Magma Plated Handguards
-				{ 507, 60352 },	-- Magma Plated Legguards
-				{ 509, "ICON_ability_warrior_innerrage", nil, ALIL["WARRIOR"], ALIL["Arms"].." / "..ALIL["Fury"] },
-				{ 510, 60326 },	-- Earthen Gauntlets
-				{ 511, 60324 },	-- Earthen Legplates
-				{ 513, "ICON_ability_warrior_defensivestance", nil, ALIL["WARRIOR"], ALIL["Protection"] },
-				{ 514, 60332 },	-- Earthen Handguards
-				{ 515, 60330 },	-- Earthen Legguards
-				{ 516, "ICON_Spell_deathknight_classicon", nil, ALIL["DEATHKNIGHT"], nil },
-				{ 517, 60409 },	-- Vicious Gladiator's Dreadplate Gauntlets
-				{ 518, 60411 },	-- Vicious Gladiator's Dreadplate Legguards
-				{ 524, "ICON_inv_sword_27", nil, ALIL["WARRIOR"], nil },
-				{ 525, 60419 },	-- Vicious Gladiator's Plate Gauntlets
-				{ 526, 60421 },	-- Vicious Gladiator's Plate Legguards
-				{ 601, 60628 },	-- Vicious Gladiator's Cuffs of Accuracy
-				{ 602, 60626 },	-- Vicious Gladiator's Cord of Accuracy
-				{ 603, 60630 },	-- Vicious Gladiator's Treads of Alacrity
-				{ 605, 60635 },	-- Vicious Gladiator's Cuffs of Meditation
-				{ 606, 60637 },	-- Vicious Gladiator's Cord of Meditation
-				{ 607, 60636 },	-- Vicious Gladiator's Treads of Meditation
-				{ 609, 60634 },	-- Vicious Gladiator's Cuffs of Prowess
-				{ 610, 60612 },	-- Vicious Gladiator's Cord of Cruelty
-				{ 611, 60613 },	-- Vicious Gladiator's Treads of Cruelty
-				{ 616, 60591 },	-- Vicious Gladiator's Armwraps of Accuracy
-				{ 617, 60589 },	-- Vicious Gladiator's Waistband of Accuracy
-				{ 618, 60587 },	-- Vicious Gladiator's Boots of Cruelty
-				{ 620, 60594 },	-- Vicious Gladiator's Armwraps of Alacrity
-				{ 621, 60586 },	-- Vicious Gladiator's Waistband of Cruelty
-				{ 622, 60593 },	-- Vicious Gladiator's Boots of Alacrity
-				{ 624, 60611 },	-- Vicious Gladiator's Bindings of Prowess
-				{ 625, 60583 },	-- Vicious Gladiator's Belt of Cruelty
-				{ 626, 60607 },	-- Vicious Gladiator's Footguards of Alacrity
-				{ 628, 60582 },	-- Vicious Gladiator's Bindings of Meditation
-				{ 629, 60580 },	-- Vicious Gladiator's Belt of Meditation
-				{ 630, 60581 },	-- Vicious Gladiator's Footguards of Meditation
-				{ 701, 60535 },	-- Vicious Gladiator's Armbands of Meditation
-				{ 702, 60533 },	-- Vicious Gladiator's Waistguard of Meditation
-				{ 703, 60534 },	-- Vicious Gladiator's Footguards of Meditation
-				{ 705, 60569 },	-- Vicious Gladiator's Armbands of Prowess
-				{ 706, 60536 },	-- Vicious Gladiator's Waistguard of Cruelty
-				{ 707, 60567 },	-- Vicious Gladiator's Sabatons of Alacrity
-				{ 709, 60559 },	-- Vicious Gladiator's Wristguards of Alacrity
-				{ 710, 60555 },	-- Vicious Gladiator's Links of Cruelty
-				{ 711, 60557 },	-- Vicious Gladiator's Sabatons of Alacrity
-				{ 713, 60565 },	-- Vicious Gladiator's Wristguards of Accuracy
-				{ 714, 60564 },	-- Vicious Gladiator's Links of Accuracy
-				{ 715, 60554 },	-- Vicious Gladiator's Sabatons of Cruelty
-				{ 716, 60541 },	-- Vicious Gladiator's Bracers of Meditation
-				{ 717, 60539 },	-- Vicious Gladiator's Clasp of Meditation
-				{ 718, 60540 },	-- Vicious Gladiator's Greaves of Meditation
-				{ 720, 60523 },	-- Vicious Gladiator's Armplates of Proficiency
-				{ 721, 60521 },	-- Vicious Gladiator's Girdle of Prowess
-				{ 722, 60513 },	-- Vicious Gladiator's Warboots of Alacrity
-				{ 724, 60520 },	-- Vicious Gladiator's Bracers of Prowess
-				{ 725, 60505 },	-- Vicious Gladiator's Clasp of Cruelty
-				{ 726, 60516 },	-- Vicious Gladiator's Greaves of Alacrity
-				{ 728, 60512 },	-- Vicious Gladiator's Armplates of Alacrity
-				{ 729, 60508 },	-- Vicious Gladiator's Girdle of Cruelty
-				{ 730, 60509 },	-- Vicious Gladiator's Warboots of Cruelty
-				{ 801, 60783 },	-- Vicious Gladiator's Cape of Cruelty
-				{ 802, 60779 },	-- Vicious Gladiator's Cape of Prowess
-				{ 803, 60776 },	-- Vicious Gladiator's Cloak of Alacrity
-				{ 804, 60778 },	-- Vicious Gladiator's Cloak of Prowess
-				{ 805, 60786 },	-- Vicious Gladiator's Drape of Diffusion
-				{ 806, 60788 },	-- Vicious Gladiator's Drape of Meditation
-				{ 807, 60787 },	-- Vicious Gladiator's Drape of Prowess
-				{ 809, 60673 },	-- Vicious Gladiator's Choker of Accuracy
-				{ 810, 60670 },	-- Vicious Gladiator's Choker of Proficiency
-				{ 811, 60669 },	-- Vicious Gladiator's Necklace of Proficiency
-				{ 812, 60668 },	-- Vicious Gladiator's Necklace of Prowess
-				{ 813, 60662 },	-- Vicious Gladiator's Pendant of Alacrity
-				{ 814, 60661 },	-- Vicious Gladiator's Pendant of Diffusion
-				{ 815, 60664 },	-- Vicious Gladiator's Pendant of Meditation
-				{ 816, 60647 },	-- Vicious Gladiator's Band of Accuracy
-				{ 817, 60645 },	-- Vicious Gladiator's Band of Cruelty
-				{ 818, 60649 },	-- Vicious Gladiator's Band of Meditation
-				{ 819, 60658 },	-- Vicious Gladiator's Ring of Accuracy
-				{ 820, 60659 },	-- Vicious Gladiator's Ring of Cruelty
-				{ 821, 60651 },	-- Vicious Gladiator's Signet of Accuracy
-				{ 822, 60650 },	-- Vicious Gladiator's Signet of Cruelty
-				{ 901, 61033 },	-- Vicious Gladiator's Badge of Conquest
-				{ 902, 61035 },	-- Vicious Gladiator's Badge of Dominance
-				{ 903, 61034 },	-- Vicious Gladiator's Badge of Victory
-				{ 905, 61026 },	-- Vicious Gladiator's Emblem of Cruelty
-				{ 906, 61031 },	-- Vicious Gladiator's Emblem of Meditation
-				{ 907, 61032 },	-- Vicious Gladiator's Emblem of Tenacity
-				{ 916, [ATLASLOOT_IT_ALLIANCE] = 60794, [ATLASLOOT_IT_HORDE] = 60801 },	-- Vicious Gladiator's Medallion of Cruelty
-				{ 917, [ATLASLOOT_IT_ALLIANCE] = 60799, [ATLASLOOT_IT_HORDE] = 60806 },	-- Vicious Gladiator's Medallion of Meditation
-				{ 918, [ATLASLOOT_IT_ALLIANCE] = 60800, [ATLASLOOT_IT_HORDE] = 60807 },	-- Vicious Gladiator's Medallion of Tenacity
-				{ 920, 61047 },	-- Vicious Gladiator's Insignia of Conquest
-				{ 921, 61045 },	-- Vicious Gladiator's Insignia of Dominance
-				{ 922, 61046 },	-- Vicious Gladiator's Insignia of Victory
-				{ 924, "ac5416" },
+				{ 1, "CLASS_WARLOCK", nil, CLASS_NAME["WARLOCK"], nil, "BH_A_WARLOCK"},
+				{ 3, "CLASS_PRIEST", nil, CLASS_NAME["PRIEST"], AL["Holy"], "BH_A_PRIEST_H"},
+				{ 4, "CLASS_PRIEST", nil, CLASS_NAME["PRIEST"], AL["Shadow"], "BH_A_PRIEST_D"},
+				{ 6, "CLASS_ROGUE", nil, CLASS_NAME["ROGUE"], nil, "BH_A_ROGUE"},
+				{ 8, "CLASS_HUNTER", nil, CLASS_NAME["HUNTER"], nil, "BH_A_HUNTER"},
+				{ 10, "CLASS_WARRIOR", nil, CLASS_NAME["WARRIOR"], AL["Protection"], "BH_A_WARRIOR_T"},
+				{ 11, "CLASS_WARRIOR", nil, CLASS_NAME["WARRIOR"], ROLE_DD, "BH_A_WARRIOR_D"},
+				{ 13, "CLASS_DEATHKNIGHT", nil, CLASS_NAME["DEATHKNIGHT"], AL["Blood"], "BH_A_DEATHKNIGHT_T"},
+				{ 14, "CLASS_DEATHKNIGHT", nil, CLASS_NAME["DEATHKNIGHT"], ROLE_DD, "BH_A_DEATHKNIGHT_D"},
+				{ 16, "CLASS_MAGE", nil, CLASS_NAME["MAGE"], nil, "BH_A_MAGE"},
+				{ 18, "CLASS_DRUID", nil, CLASS_NAME["DRUID"], AL["Restoration"], "BH_A_DRUID_H"},
+				{ 19, "CLASS_DRUID", nil, CLASS_NAME["DRUID"], AL["Balance"], "BH_A_DRUID_DR"},
+				{ 20, "CLASS_DRUID", nil, CLASS_NAME["DRUID"], AL["Feral"], "BH_A_DRUID_D"},
+				{ 22, "CLASS_SHAMAN", nil, CLASS_NAME["SHAMAN"], AL["Restoration"], "BH_A_SHAMAN_H"},
+				{ 23, "CLASS_SHAMAN", nil, CLASS_NAME["SHAMAN"], AL["Elemental"], "BH_A_SHAMAN_DR"},
+				{ 24, "CLASS_SHAMAN", nil, CLASS_NAME["SHAMAN"], AL["Enhancement"], "BH_A_SHAMAN_D"},
+				{ 26, "CLASS_PALADIN", nil, CLASS_NAME["PALADIN"], AL["Protection"], "BH_A_PALADIN_T"},
+				{ 27, "CLASS_PALADIN", nil, CLASS_NAME["PALADIN"], AL["Holy"], "BH_A_PALADIN_H"},
+				{ 28, "CLASS_PALADIN", nil, CLASS_NAME["PALADIN"], AL["Retribution"], "BH_A_PALADIN_D"},
+				{ 30, "ac5416" },
+				{ 101, "SLOT_CLOTH", nil, ALIL["Cloth"], nil, "BH_A_CLOTH"},
+				{ 102, "SLOT_LEATHER", nil, ALIL["Leather"], nil, "BH_A_LEATHER"},
+				{ 103, "SLOT_MAIL", nil, ALIL["Mail"], nil, "BH_A_MAIL"},
+				{ 104, "SLOT_PLATE", nil, ALIL["Plate"], nil, "BH_A_PLATE"},
+				{ 106, "SLOT_BACK", nil, ALIL["Cloak"], nil, "BH_A_BACK"},
+				{ 107, "SLOT_NECK", nil, ALIL["Neck"], nil, "BH_A_NECK"},
+				{ 108, "SLOT_FINGER", nil, ALIL["Finger"], nil, "BH_A_FINGER"},
+				{ 109, "SLOT_TRINKET", nil, ALIL["Trinket"], nil,
+				 AtlasLoot:GetRetByFaction("BH_AH_TRINKET", "BH_AA_TRINKET")},
 			},
 		},
 		{ -- Occu'thar
 			name = AL["Occu'thar"],
 			EncounterJournalID = 140,
 			[NORMAL_DIFF] = {
-				{ 1, "ICON_spell_nature_starfall", nil, ALIL["DRUID"], ALIL["Balance"] },
-				{ 2, 71107 },	-- Obsidian Arborweave Gloves
-				{ 3, 71109 },	-- Obsidian Arborweave Leggings
-				{ 5, "ICON_ability_druid_catform", nil, ALIL["DRUID"], ALIL["Feral"] },
-				{ 6, 71097 },	-- Obsidian Arborweave Grips
-				{ 7, 71099 },	-- Obsidian Arborweave Legguards
-				{ 9, "ICON_spell_nature_healingtouch", nil, ALIL["DRUID"], ALIL["Restoration"] },
-				{ 10, 71102 },	-- Obsidian Arborweave Handwraps
-				{ 11, 71104 },	-- Obsidian Arborweave Legwraps
-				{ 16, "ICON_spell_nature_starfall", nil, ALIL["DRUID"], ALIL["Balance"] },
-				{ 17, 70289 },	-- Ruthless Gladiator's Wyrmhide Gloves
-				{ 18, 70291 },	-- Ruthless Gladiator's Wyrmhide Legguards
-				{ 20, "ICON_ability_druid_catform", nil, ALIL["DRUID"], ALIL["Feral"] },
-				{ 21, 70279 },	-- Ruthless Gladiator's Dragonhide Gloves
-				{ 22, 70281 },	-- Ruthless Gladiator's Dragonhide Legguards
-				{ 24, "ICON_spell_nature_healingtouch", nil, ALIL["DRUID"], ALIL["Restoration"] },
-				{ 25, 70284 },	-- Ruthless Gladiator's Kodohide Gloves
-				{ 26, 70286 },	-- Ruthless Gladiator's Kodohide Legguards
-				{ 101, "ICON_inv_weapon_bow_07", nil, ALIL["HUNTER"], nil },
-				{ 102, 71050 },	-- Flamewaker's Gloves
-				{ 103, 71052 },	-- Flamewaker's Legguards
-				{ 105, "ICON_inv_staff_13", nil, ALIL["MAGE"], nil },
-				{ 106, 71286 },	-- Firehawk Gloves
-				{ 107, 71288 },	-- Firehawk Leggings
-				{ 109, "ICON_inv_throwingknife_04", nil, ALIL["ROGUE"], nil },
-				{ 110, 71046 },	-- Dark Phoenix Gloves
-				{ 111, 71048 },	-- Dark Phoenix Legguards
-				{ 113, "ICON_spell_nature_drowsy", nil, ALIL["WARLOCK"], nil },
-				{ 114, 71281 },	-- Balespider's Handwraps
-				{ 115, 71283 },	-- Balespider's Leggings
-				{ 116, "ICON_inv_weapon_bow_07", nil, ALIL["HUNTER"], nil },
-				{ 117, 70260 },	-- Ruthless Gladiator's Chain Gauntlets
-				{ 118, 70262 },	-- Ruthless Gladiator's Chain Leggings
-				{ 120, "ICON_inv_staff_13", nil, ALIL["MAGE"], nil },
-				{ 121, 70299 },	-- Ruthless Gladiator's Silk Handguards
-				{ 122, 70301 },	-- Ruthless Gladiator's Silk Trousers
-				{ 124, "ICON_inv_throwingknife_04", nil, ALIL["ROGUE"], nil },
-				{ 125, 70301 },	-- Ruthless Gladiator's Leather Gloves
-				{ 126, 70297 },	-- Ruthless Gladiator's Leather Legguards
-				{ 128, "ICON_spell_nature_drowsy", nil, ALIL["WARLOCK"], nil },
-				{ 129, 70314 },	-- Ruthless Gladiator's Felweave Handguards
-				{ 130, 70316 },	-- Ruthless Gladiator's Felweave Trousers
-				{ 201, "ICON_Spell_Holy_HolyBolt", nil, ALIL["PALADIN"], ALIL["Holy"] },
-				{ 202, 71092 },	-- Immolation Gloves
-				{ 203, 71094 },	-- Immolation Greaves
-				{ 205, "ICON_Spell_Holy_AuraOfLight", nil, ALIL["PALADIN"], ALIL["Retribution"] },
-				{ 206, 71064 },	-- Immolation Gauntlets
-				{ 207, 71066 },	-- Immolation Legplates
-				{ 209, "ICON_spell_holy_devotionaura", nil, ALIL["PALADIN"], ALIL["Protection"] },
-				{ 210, 70949 },	-- Immolation Handguards
-				{ 211, 70947 },	-- Immolation Legguards
-				{ 216, "ICON_Spell_Holy_HolyBolt", nil, ALIL["PALADIN"], ALIL["Holy"] },
-				{ 217, 70354 },	-- Ruthless Gladiator's Ornamented Gloves
-				{ 218, 70356 },	-- Ruthless Gladiator's Ornamented Legplates
-				{ 220, "ICON_Spell_Holy_AuraOfLight", nil, ALIL["PALADIN"], ALIL["Retribution"] },
-				{ 221, 70250 },	-- Ruthless Gladiator's Scaled Gauntlets
-				{ 222, 70252 },	-- Ruthless Gladiator's Scaled Legguards
-				{ 301, "ICON_spell_holy_guardianspirit", nil, ALIL["PRIEST"], ALIL["Discipline"].." / "..ALIL["Holy"] },
-				{ 302, 71271 },	-- Handwraps of the Cleansing Flame
-				{ 303, 71273 },	-- Legwraps of the Cleansing Flame
-				{ 305, "ICON_spell_shadow_shadowwordpain", nil, ALIL["PRIEST"], ALIL["Shadow"] },
-				{ 306, 71276 },	-- Gloves of the Cleansing Flame
-				{ 307, 71278 },	-- Leggings of the Cleansing Flame
-				{ 316, "ICON_spell_holy_guardianspirit", nil, ALIL["PRIEST"], ALIL["Discipline"].." / "..ALIL["Holy"] },
-				{ 317, 70304 },	-- Ruthless Gladiator's Mooncloth Gloves
-				{ 318, 70306 },	-- Ruthless Gladiator's Mooncloth Leggings
-				{ 320, "ICON_spell_shadow_shadowwordpain", nil, ALIL["PRIEST"], ALIL["Shadow"] },
-				{ 321, 70309 },	-- Ruthless Gladiator's Satin Gloves
-				{ 322, 70311 },	-- Ruthless Gladiator's Satin Leggings
-				{ 401, "ICON_Spell_Nature_Lightning", nil, ALIL["SHAMAN"], ALIL["Elemental"] },
-				{ 402, 71292 },	-- Erupting Volcanic Gloves
-				{ 403, 71294 },	-- Erupting Volcanic Kilt
-				{ 405, "ICON_spell_nature_lightningshield", nil, ALIL["SHAMAN"], ALIL["Enhancement"] },
-				{ 406, 71302 },	-- Erupting Volcanic Grips
-				{ 407, 71304 },	-- Erupting Volcanic Legguards
-				{ 409, "ICON_spell_nature_magicimmunity", nil, ALIL["SHAMAN"], ALIL["Restoration"] },
-				{ 410, 71297 },	-- Erupting Volcanic Handwraps
-				{ 411, 71299 },	-- Erupting Volcanic Legwraps
-				{ 416, "ICON_Spell_Nature_Lightning", nil, ALIL["SHAMAN"], ALIL["Elemental"] },
-				{ 417, 70275 },	-- Ruthless Gladiator's Mail Gauntlets
-				{ 418, 70277 },	-- Ruthless Gladiator's Mail Leggings
-				{ 420, "ICON_spell_nature_lightningshield", nil, ALIL["SHAMAN"], ALIL["Enhancement"] },
-				{ 421, 70270 },	-- Ruthless Gladiator's Linked Gauntlets
-				{ 422, 70272 },	-- Ruthless Gladiator's Linked Leggings
-				{ 424, "ICON_spell_nature_magicimmunity", nil, ALIL["SHAMAN"], ALIL["Restoration"] },
-				{ 425, 70265 },	-- Ruthless Gladiator's Ringmail Gauntlets
-				{ 426, 70267 },	-- Ruthless Gladiator's Ringmail Leggings
-				{ 501, "ICON_spell_deathknight_frostpresence", nil, ALIL["DEATHKNIGHT"], ALIL["Frost"].." / "..ALIL["Unholy"] },
-				{ 502, 71059 },	-- Elementium Deathplate Gauntlets
-				{ 503, 71061 },	-- Elementium Deathplate Greaves
-				{ 505, "ICON_spell_deathknight_bloodpresence", nil, ALIL["DEATHKNIGHT"], ALIL["Blood"] },
-				{ 506, 70953 },	-- Elementium Deathplate Handguards
-				{ 507, 70952 },	-- Elementium Deathplate Legguards
-				{ 509, "ICON_ability_warrior_innerrage", nil, ALIL["WARRIOR"], ALIL["Arms"].." / "..ALIL["Fury"] },
-				{ 510, 71069 },	-- Gauntlets of the Molten Giant
-				{ 511, 71071 },	-- Legplates of the Molten Giant
-				{ 513, "ICON_ability_warrior_defensivestance", nil, ALIL["WARRIOR"], ALIL["Protection"] },
-				{ 514, 70943 },	-- Handguards of the Molten Giant
-				{ 515, 70942 },	-- Legguards of the Molten Giant
-				{ 516, "ICON_Spell_deathknight_classicon", nil, ALIL["DEATHKNIGHT"], nil },
-				{ 517, 70245 },	-- Ruthless Gladiator's Dreadplate Gauntlets
-				{ 518, 70247 },	-- Ruthless Gladiator's Dreadplate Legguards
-				{ 524, "ICON_inv_sword_27", nil, ALIL["WARRIOR"], nil },
-				{ 525, 70255 },	-- Ruthless Gladiator's Plate Gauntlets
-				{ 526, 70257 },	-- Ruthless Gladiator's Plate Legguards
-				{ 601, 70363 },	-- Ruthless Gladiator's Cuffs of Accuracy
-				{ 602, 70362 },	-- Ruthless Gladiator's Cord of Accuracy
-				{ 603, 70364 },	-- Ruthless Gladiator's Treads of Alacrity
-				{ 605, 70366 },	-- Ruthless Gladiator's Cuffs of Meditation
-				{ 606, 70368 },	-- Ruthless Gladiator's Cord of Meditation
-				{ 607, 70367 },	-- Ruthless Gladiator's Treads of Meditation
-				{ 609, 70365 },	-- Ruthless Gladiator's Cuffs of Prowess
-				{ 610, 70360 },	-- Ruthless Gladiator's Cord of Cruelty
-				{ 611, 70361 },	-- Ruthless Gladiator's Treads of Cruelty
-				{ 616, 70350 },	-- Ruthless Gladiator's Armwraps of Accuracy
-				{ 617, 70349 },	-- Ruthless Gladiator's Waistband of Accuracy
-				{ 618, 70348 },	-- Ruthless Gladiator's Boots of Cruelty
-				{ 620, 70352 },	-- Ruthless Gladiator's Armwraps of Alacrity
-				{ 621, 70347 },	-- Ruthless Gladiator's Waistband of Cruelty
-				{ 622, 70351 },	-- Ruthless Gladiator's Boots of Alacrity
-				{ 624, 70359 },	-- Ruthless Gladiator's Bindings of Prowess
-				{ 625, 70346 },	-- Ruthless Gladiator's Belt of Cruelty
-				{ 626, 70358 },	-- Ruthless Gladiator's Footguards of Alacrity
-				{ 628, 70345 },	-- Ruthless Gladiator's Bindings of Meditation
-				{ 629, 70343 },	-- Ruthless Gladiator's Belt of Meditation
-				{ 630, 70344 },	-- Ruthless Gladiator's Footguards of Meditation
-				{ 701, 70330 },	-- Ruthless Gladiator's Armbands of Meditation
-				{ 702, 70328 },	-- Ruthless Gladiator's Waistguard of Meditation
-				{ 703, 70329 },	-- Ruthless Gladiator's Sabatons of Meditation
-				{ 705, 70342 },	-- Ruthless Gladiator's Armbands of Prowess
-				{ 706, 70331 },	-- Ruthless Gladiator's Waistguard of Cruelty
-				{ 707, 70341 },	-- Ruthless Gladiator's Sabatons of Alacrity
-				{ 709, 70338 },	-- Ruthless Gladiator's Wristguards of Alacrity
-				{ 710, 70336 },	-- Ruthless Gladiator's Links of Cruelty
-				{ 711, 70337 },	-- Ruthless Gladiator's Sabatons of Alacrity
-				{ 713, 70340 },	-- Ruthless Gladiator's Wristguards of Accuracy
-				{ 714, 70339 },	-- Ruthless Gladiator's Links of Accuracy
-				{ 715, 70335 },	-- Ruthless Gladiator's Sabatons of Cruelty
-				{ 716, 70334 },	-- Ruthless Gladiator's Bracers of Meditation
-				{ 717, 70332 },	-- Ruthless Gladiator's Clasp of Meditation
-				{ 718, 70333 },	-- Ruthless Gladiator's Greaves of Meditation
-				{ 720, 70327 },	-- Ruthless Gladiator's Armplates of Proficiency
-				{ 721, 70326 },	-- Ruthless Gladiator's Girdle of Prowess
-				{ 722, 70323 },	-- Ruthless Gladiator's Warboots of Alacrity
-				{ 724, 70325 },	-- Ruthless Gladiator's Bracers of Prowess
-				{ 725, 70319 },	-- Ruthless Gladiator's Clasp of Cruelty
-				{ 726, 70324 },	-- Ruthless Gladiator's Greaves of Alacrity
-				{ 728, 70322 },	-- Ruthless Gladiator's Armplates of Alacrity
-				{ 729, 70320 },	-- Ruthless Gladiator's Girdle of Cruelty
-				{ 730, 70321 },	-- Ruthless Gladiator's Warboots of Cruelty
-				{ 801, 70386 },	-- Ruthless Gladiator's Cape of Cruelty
-				{ 802, 70385 },	-- Ruthless Gladiator's Cape of Prowess
-				{ 803, 70383 },	-- Ruthless Gladiator's Cloak of Alacrity
-				{ 804, 70384 },	-- Ruthless Gladiator's Cloak of Prowess
-				{ 805, 70387 },	-- Ruthless Gladiator's Drape of Diffusion
-				{ 806, 70389 },	-- Ruthless Gladiator's Drape of Meditation
-				{ 807, 70388 },	-- Ruthless Gladiator's Drape of Prowess
-				{ 809, 70382 },	-- Ruthless Gladiator's Choker of Accuracy
-				{ 810, 70381 },	-- Ruthless Gladiator's Choker of Proficiency
-				{ 811, 70380 },	-- Ruthless Gladiator's Necklace of Proficiency
-				{ 812, 70379 },	-- Ruthless Gladiator's Necklace of Prowess
-				{ 813, 70377 },	-- Ruthless Gladiator's Pendant of Alacrity
-				{ 814, 70376 },	-- Ruthless Gladiator's Pendant of Diffusion
-				{ 815, 70378 },	-- Ruthless Gladiator's Pendant of Meditation
-				{ 816, 70370 },	-- Ruthless Gladiator's Band of Accuracy
-				{ 817, 70369 },	-- Ruthless Gladiator's Band of Cruelty
-				{ 818, 70371 },	-- Ruthless Gladiator's Band of Meditation
-				{ 819, 70374 },	-- Ruthless Gladiator's Ring of Accuracy
-				{ 820, 70375 },	-- Ruthless Gladiator's Ring of Cruelty
-				{ 821, 70373 },	-- Ruthless Gladiator's Signet of Accuracy
-				{ 822, 70372 },	-- Ruthless Gladiator's Signet of Cruelty
-				{ 901, 70399 },	-- Ruthless Gladiator's Badge of Conquest
-				{ 902, 70401 },	-- Ruthless Gladiator's Badge of Dominance
-				{ 903, 70400 },	-- Ruthless Gladiator's Badge of Victory
-				{ 905, 70396 },	-- Ruthless Gladiator's Emblem of Cruelty
-				{ 906, 70397 },	-- Ruthless Gladiator's Emblem of Meditation
-				{ 907, 70398 },	-- Ruthless Gladiator's Emblem of Tenacity
-				{ 916, [ATLASLOOT_IT_ALLIANCE] = 70390, [ATLASLOOT_IT_HORDE] = 70393 },	-- Ruthless Gladiator's Medallion of Cruelty
-				{ 917, [ATLASLOOT_IT_ALLIANCE] = 70391, [ATLASLOOT_IT_HORDE] = 70394 },	-- Ruthless Gladiator's Medallion of Meditation
-				{ 918, [ATLASLOOT_IT_ALLIANCE] = 70392, [ATLASLOOT_IT_HORDE] = 70395 },	-- Ruthless Gladiator's Medallion of Tenacity
-				{ 920, 70404 },	-- Ruthless Gladiator's Insignia of Conquest
-				{ 921, 70402 },	-- Ruthless Gladiator's Insignia of Dominance
-				{ 922, 70403 },	-- Ruthless Gladiator's Insignia of Victory
-				{ 924, "ac6045" },
+				{ 1, "CLASS_WARLOCK", nil, CLASS_NAME["WARLOCK"], nil, "BH_O_WARLOCK"},
+				{ 3, "CLASS_PRIEST", nil, CLASS_NAME["PRIEST"], AL["Holy"], "BH_O_PRIEST_H"},
+				{ 4, "CLASS_PRIEST", nil, CLASS_NAME["PRIEST"], AL["Shadow"], "BH_O_PRIEST_D"},
+				{ 6, "CLASS_ROGUE", nil, CLASS_NAME["ROGUE"], nil, "BH_O_ROGUE"},
+				{ 8, "CLASS_HUNTER", nil, CLASS_NAME["HUNTER"], nil, "BH_O_HUNTER"},
+				{ 10, "CLASS_WARRIOR", nil, CLASS_NAME["WARRIOR"], AL["Protection"], "BH_O_WARRIOR_T"},
+				{ 11, "CLASS_WARRIOR", nil, CLASS_NAME["WARRIOR"], ROLE_DD, "BH_O_WARRIOR_D"},
+				{ 13, "CLASS_DEATHKNIGHT", nil, CLASS_NAME["DEATHKNIGHT"], AL["Blood"], "BH_O_DEATHKNIGHT_T"},
+				{ 14, "CLASS_DEATHKNIGHT", nil, CLASS_NAME["DEATHKNIGHT"], ROLE_DD, "BH_O_DEATHKNIGHT_D"},
+				{ 16, "CLASS_MAGE", nil, CLASS_NAME["MAGE"], nil, "BH_O_MAGE"},
+				{ 18, "CLASS_DRUID", nil, CLASS_NAME["DRUID"], AL["Restoration"], "BH_O_DRUID_H"},
+				{ 19, "CLASS_DRUID", nil, CLASS_NAME["DRUID"], AL["Balance"], "BH_O_DRUID_DR"},
+				{ 20, "CLASS_DRUID", nil, CLASS_NAME["DRUID"], AL["Feral"], "BH_O_DRUID_D"},
+				{ 22, "CLASS_SHAMAN", nil, CLASS_NAME["SHAMAN"], AL["Restoration"], "BH_O_SHAMAN_H"},
+				{ 23, "CLASS_SHAMAN", nil, CLASS_NAME["SHAMAN"], AL["Elemental"], "BH_O_SHAMAN_DR"},
+				{ 24, "CLASS_SHAMAN", nil, CLASS_NAME["SHAMAN"], AL["Enhancement"], "BH_O_SHAMAN_D"},
+				{ 26, "CLASS_PALADIN", nil, CLASS_NAME["PALADIN"], AL["Protection"], "BH_O_PALADIN_T"},
+				{ 27, "CLASS_PALADIN", nil, CLASS_NAME["PALADIN"], AL["Holy"], "BH_O_PALADIN_H"},
+				{ 28, "CLASS_PALADIN", nil, CLASS_NAME["PALADIN"], AL["Retribution"], "BH_O_PALADIN_D"},
+				{ 30, "ac6045" },
+				{ 101, "SLOT_CLOTH", nil, ALIL["Cloth"], nil, "BH_O_CLOTH"},
+				{ 102, "SLOT_LEATHER", nil, ALIL["Leather"], nil, "BH_O_LEATHER"},
+				{ 103, "SLOT_MAIL", nil, ALIL["Mail"], nil, "BH_O_MAIL"},
+				{ 104, "SLOT_PLATE", nil, ALIL["Plate"], nil, "BH_O_PLATE"},
+				{ 106, "SLOT_BACK", nil, ALIL["Cloak"], nil, "BH_O_BACK"},
+				{ 107, "SLOT_NECK", nil, ALIL["Neck"], nil, "BH_O_NECK"},
+				{ 108, "SLOT_FINGER", nil, ALIL["Finger"], nil, "BH_O_FINGER"},
+				{ 109, "SLOT_TRINKET", nil, ALIL["Trinket"], nil,
+				 AtlasLoot:GetRetByFaction("BH_OH_TRINKET", "BH_OA_TRINKET")},
 			},
 		},
 		{ -- Alizabal, Mistress of Hate
 			name = AL["Alizabal, Mistress of Hate"],
 			EncounterJournalID = 339,
 			[NORMAL_DIFF] = {
-				{ 1, "ICON_spell_nature_starfall", nil, ALIL["DRUID"], ALIL["Balance"] },
-				{ 2, 77018 },	-- Deep Earth Gloves
-				{ 3, 77020 },	-- Deep Earth Leggings
-				{ 5, "ICON_ability_druid_catform", nil, ALIL["DRUID"], ALIL["Feral"] },
-				{ 6, 77014 },	-- Deep Earth Grips
-				{ 7, 77016 },	-- Deep Earth Legguards
-				{ 9, "ICON_spell_nature_healingtouch", nil, ALIL["DRUID"], ALIL["Restoration"] },
-				{ 10, 76749 },	-- Deep Earth Handwraps
-				{ 11, 76751 },	-- Deep Earth Legwraps
-				{ 16, "ICON_spell_nature_starfall", nil, ALIL["DRUID"], ALIL["Balance"] },
-				{ 17, 73599 },	-- Cataclysmic Gladiator's Wyrmhide Gloves
-				{ 18, 73597 },	-- Cataclysmic Gladiator's Wyrmhide Legguards
-				{ 20, "ICON_ability_druid_catform", nil, ALIL["DRUID"], ALIL["Feral"] },
-				{ 21, 73615 },	-- Cataclysmic Gladiator's Dragonhide Gloves
-				{ 22, 73613 },	-- Cataclysmic Gladiator's Dragonhide Legguards
-				{ 24, "ICON_spell_nature_healingtouch", nil, ALIL["DRUID"], ALIL["Restoration"] },
-				{ 25, 73607 },	-- Cataclysmic Gladiator's Kodohide Gloves
-				{ 26, 73605 },	-- Cataclysmic Gladiator's Kodohide Legguards
-				{ 101, "ICON_inv_weapon_bow_07", nil, ALIL["HUNTER"], nil },
-				{ 102, 77029 },	-- Wyrmstalker's Gloves
-				{ 103, 77031 },	-- Wyrmstalker's Legguards
-				{ 105, "ICON_inv_staff_13", nil, ALIL["MAGE"], nil },
-				{ 106, 76212 },	-- Time Lord's Gloves
-				{ 107, 76214 },	-- Time Lord's Leggings
-				{ 109, "ICON_inv_throwingknife_04", nil, ALIL["ROGUE"], nil },
-				{ 110, 77024 },	-- Blackfang Battleweave Gloves
-				{ 111, 77026 },	-- Blackfang Battleweave Legguards
-				{ 113, "ICON_spell_nature_drowsy", nil, ALIL["WARLOCK"], nil },
-				{ 114, 76343 },	-- Gloves of the Faceless Shroud
-				{ 115, 76341 },	-- Leggings of the Faceless Shroud
-				{ 116, "ICON_inv_weapon_bow_07", nil, ALIL["HUNTER"], nil },
-				{ 117, 73583 },	-- Cataclysmic Gladiator's Chain Gauntlets
-				{ 118, 73581 },	-- Cataclysmic Gladiator's Chain Leggings
-				{ 120, "ICON_inv_staff_13", nil, ALIL["MAGE"], nil },
-				{ 121, 73576 },	-- Cataclysmic Gladiator's Silk Handguards
-				{ 122, 73574 },	-- Cataclysmic Gladiator's Silk Trousers
-				{ 124, "ICON_inv_throwingknife_04", nil, ALIL["ROGUE"], nil },
-				{ 125, 73526 },	-- Cataclysmic Gladiator's Leather Gloves
-				{ 126, 73524 },	-- Cataclysmic Gladiator's Leather Legguards
-				{ 128, "ICON_spell_nature_drowsy", nil, ALIL["WARLOCK"], nil },
-				{ 129, 73487 },	-- Cataclysmic Gladiator's Felweave Handguards
-				{ 130, 73485 },	-- Cataclysmic Gladiator's Felweave Trousers
-				{ 201, "ICON_Spell_Holy_HolyBolt", nil, ALIL["PALADIN"], ALIL["Holy"] },
-				{ 202, 76766 },	-- Gloves of Radiant Glory
-				{ 203, 76768 },	-- Greaves of Radiant Glory
-				{ 205, "ICON_Spell_Holy_AuraOfLight", nil, ALIL["PALADIN"], ALIL["Retribution"] },
-				{ 206, 76875 },	-- Gauntlets of Radiant Glory
-				{ 207, 76877 },	-- Legplates of Radiant Glory
-				{ 209, "ICON_spell_holy_devotionaura", nil, ALIL["PALADIN"], ALIL["Protection"] },
-				{ 210, 77004 },	-- Handguards of Radiant Glory
-				{ 211, 77006 },	-- Legguards of Radiant Glory
-				{ 216, "ICON_Spell_Holy_HolyBolt", nil, ALIL["PALADIN"], ALIL["Holy"] },
-				{ 217, 73559 },	-- Cataclysmic Gladiator's Ornamented Gloves
-				{ 218, 73557 },	-- Cataclysmic Gladiator's Ornamented Legplates
-				{ 220, "ICON_Spell_Holy_AuraOfLight", nil, ALIL["PALADIN"], ALIL["Retribution"] },
-				{ 221, 73570 },	-- Cataclysmic Gladiator's Scaled Gauntlets
-				{ 222, 73568 },	-- Cataclysmic Gladiator's Scaled Legguards
-				{ 301, "ICON_spell_holy_guardianspirit", nil, ALIL["PRIEST"], ALIL["Discipline"].." / "..ALIL["Holy"] },
-				{ 302, 76357 },	-- Handwraps of Dying Light
-				{ 303, 76359 },	-- Legwraps of Dying Light
-				{ 305, "ICON_spell_shadow_shadowwordpain", nil, ALIL["PRIEST"], ALIL["Shadow"] },
-				{ 306, 76348 },	-- Gloves of Dying Light
-				{ 307, 76346 },	-- Leggings of Dying Light
-				{ 316, "ICON_spell_holy_guardianspirit", nil, ALIL["PRIEST"], ALIL["Discipline"].." / "..ALIL["Holy"] },
-				{ 317, 73549 },	-- Cataclysmic Gladiator's Mooncloth Gloves
-				{ 318, 73547 },	-- Cataclysmic Gladiator's Mooncloth Leggings
-				{ 320, "ICON_spell_shadow_shadowwordpain", nil, ALIL["PRIEST"], ALIL["Shadow"] },
-				{ 321, 73544 },	-- Cataclysmic Gladiator's Satin Gloves
-				{ 322, 73542 },	-- Cataclysmic Gladiator's Satin Leggings
-				{ 401, "ICON_Spell_Nature_Lightning", nil, ALIL["SHAMAN"], ALIL["Elemental"] },
-				{ 402, 77038 },	-- Spiritwalker's Gloves
-				{ 403, 77036 },	-- Spiritwalker's Kilt
-				{ 405, "ICON_spell_nature_lightningshield", nil, ALIL["SHAMAN"], ALIL["Enhancement"] },
-				{ 406, 77041 },	-- Spiritwalker's Grips
-				{ 407, 77043 },	-- Spiritwalker's Legguards
-				{ 409, "ICON_spell_nature_magicimmunity", nil, ALIL["SHAMAN"], ALIL["Restoration"] },
-				{ 410, 76757 },	-- Spiritwalker's Handwraps
-				{ 411, 76759 },	--Spiritwalker's Legwraps
-				{ 416, "ICON_Spell_Nature_Lightning", nil, ALIL["SHAMAN"], ALIL["Elemental"] },
-				{ 417, 73505 },	-- Cataclysmic Gladiator's Mail Gauntlets
-				{ 418, 73503 },	-- Cataclysmic Gladiator's Mail Leggings
-				{ 420, "ICON_spell_nature_lightningshield", nil, ALIL["SHAMAN"], ALIL["Enhancement"] },
-				{ 421, 73511 },	-- Cataclysmic Gladiator's Linked Gauntlets
-				{ 422, 73509 },	-- Cataclysmic Gladiator's Linked Leggings
-				{ 424, "ICON_spell_nature_magicimmunity", nil, ALIL["SHAMAN"], ALIL["Restoration"] },
-				{ 425, 73516 },	-- Cataclysmic Gladiator's Ringmail Gauntlets
-				{ 426, 73514 },	-- Cataclysmic Gladiator's Ringmail Leggings
-				{ 501, "ICON_spell_deathknight_frostpresence", nil, ALIL["DEATHKNIGHT"], ALIL["Frost"].." / "..ALIL["Unholy"] },
-				{ 502, 76975 },	-- Necrotic Boneplate Gauntlets
-				{ 503, 76977 },	-- Necrotic Boneplate Greaves
-				{ 505, "ICON_spell_deathknight_bloodpresence", nil, ALIL["DEATHKNIGHT"], ALIL["Blood"] },
-				{ 506, 77009 },	-- Necrotic Boneplate Handguards
-				{ 507, 77011 },	-- Necrotic Boneplate Legguards
-				{ 509, "ICON_ability_warrior_innerrage", nil, ALIL["WARRIOR"], ALIL["Arms"].." / "..ALIL["Fury"] },
-				{ 510, 76985 },	-- Colossal Dragonplate Gauntlets
-				{ 511, 76986 },	-- Colossal Dragonplate Legplates
-				{ 513, "ICON_ability_warrior_defensivestance", nil, ALIL["WARRIOR"], ALIL["Protection"] },
-				{ 514, 76989 },	-- Colossal Dragonplate Handguards
-				{ 515, 76991 },	-- Colossal Dragonplate Legguards
-				{ 516, "ICON_Spell_deathknight_classicon", nil, ALIL["DEATHKNIGHT"], nil },
-				{ 517, 73619 },	-- Cataclysmic Gladiator's Dreadplate Gauntlets
-				{ 518, 73617 },	-- Cataclysmic Gladiator's Dreadplate Legguards
-				{ 524, "ICON_inv_sword_27", nil, ALIL["WARRIOR"], nil },
-				{ 525, 73481 },	-- Cataclysmic Gladiator's Plate Gauntlets
-				{ 526, 73479 },	-- Cataclysmic Gladiator's Plate Legguards
-				{ 601, 73633 },	-- Cataclysmic Gladiator's Cuffs of Accuracy
-				{ 602, 73638 },	-- Cataclysmic Gladiator's Cord of Accuracy
-				{ 603, 73635 },	-- Cataclysmic Gladiator's Treads of Alacrity
-				{ 605, 73631 },	-- Cataclysmic Gladiator's Cuffs of Meditation
-				{ 606, 73637 },	-- Cataclysmic Gladiator's Cord of Meditation
-				{ 607, 73634 },	-- Cataclysmic Gladiator's Treads of Meditation
-				{ 609, 73632 },	-- Cataclysmic Gladiator's Cuffs of Prowess
-				{ 610, 73639 },	-- Cataclysmic Gladiator's Cord of Cruelty
-				{ 611, 73636 },	-- Cataclysmic Gladiator's Treads of Cruelty
-				{ 616, 73528 },	-- Cataclysmic Gladiator's Armwraps of Accuracy
-				{ 617, 73532 },	-- Cataclysmic Gladiator's Waistband of Accuracy
-				{ 618, 73531 },	-- Cataclysmic Gladiator's Boots of Cruelty
-				{ 620, 73529 },	-- Cataclysmic Gladiator's Armwraps of Alacrity
-				{ 621, 73533 },	-- Cataclysmic Gladiator's Waistband of Cruelty
-				{ 622, 73530 },	-- Cataclysmic Gladiator's Boots of Alacrity
-				{ 624, 73600 },	-- Cataclysmic Gladiator's Bindings of Prowess
-				{ 625, 73602 },	-- Cataclysmic Gladiator's Belt of Cruelty
-				{ 626, 73601 },	-- Cataclysmic Gladiator's Footguards of Alacrity
-				{ 628, 73608 },	-- Cataclysmic Gladiator's Bindings of Meditation
-				{ 629, 73610 },	-- Cataclysmic Gladiator's Belt of Meditation
-				{ 630, 73609 },	-- Cataclysmic Gladiator's Footguards of Meditation
-				{ 701, 73518 },	-- Cataclysmic Gladiator's Armbands of Meditation
-				{ 702, 73522 },	-- Cataclysmic Gladiator's Waistguard of Meditation
-				{ 703, 73520 },	-- Cataclysmic Gladiator's Sabatons of Meditation
-				{ 705, 73519 },	-- Cataclysmic Gladiator's Armbands of Prowess
-				{ 706, 73507 },	-- Cataclysmic Gladiator's Waistguard of Cruelty
-				{ 707, 73677 },	-- Cataclysmic Gladiator's Sabatons of Alacrity
-				{ 709, 73586 },	-- Cataclysmic Gladiator's Wristguards of Alacrity
-				{ 710, 73590 },	-- Cataclysmic Gladiator's Links of Cruelty
-				{ 711, 73587 },	-- Cataclysmic Gladiator's Sabatons of Alacrity
-				{ 713, 73585 },	-- Cataclysmic Gladiator's Wristguards of Accuracy
-				{ 714, 73589 },	-- Cataclysmic Gladiator's Links of Accuracy
-				{ 715, 73588 },	-- Cataclysmic Gladiator's Sabatons of Cruelty
-				{ 716, 73561 },	-- Cataclysmic Gladiator's Bracers of Meditation
-				{ 717, 73565 },	-- Cataclysmic Gladiator's Clasp of Meditation
-				{ 718, 73563 },	-- Cataclysmic Gladiator's Greaves of Meditation
-				{ 720, 73551 },	-- Cataclysmic Gladiator's Armplates of Proficiency
-				{ 721, 73554 },	-- Cataclysmic Gladiator's Girdle of Prowess
-				{ 722, 73552 },	-- Cataclysmic Gladiator's Warboots of Alacrity
-				{ 724, 73562 },	-- Cataclysmic Gladiator's Bracers of Prowess
-				{ 725, 73566 },	-- Cataclysmic Gladiator's Clasp of Cruelty
-				{ 726, 73564 },	-- Cataclysmic Gladiator's Greaves of Alacrity
-				{ 728, 73550 },	-- Cataclysmic Gladiator's Armplates of Alacrity
-				{ 729, 73555 },	-- Cataclysmic Gladiator's Girdle of Cruelty
-				{ 730, 73553 },	-- Cataclysmic Gladiator's Warboots of Cruelty
-				{ 801, 73647 },	-- Cataclysmic Gladiator's Cape of Cruelty
-				{ 802, 73646 },	-- Cataclysmic Gladiator's Cape of Prowess
-				{ 803, 73495 },	-- Cataclysmic Gladiator's Cloak of Alacrity
-				{ 804, 73494 },	-- Cataclysmic Gladiator's Cloak of Prowess
-				{ 805, 73629 },	-- Cataclysmic Gladiator's Drape of Diffusion
-				{ 806, 73628 },	-- Cataclysmic Gladiator's Drape of Meditation
-				{ 807, 73630 },	-- Cataclysmic Gladiator's Drape of Prowess
-				{ 809, 73492 },	-- Cataclysmic Gladiator's Choker of Accuracy
-				{ 810, 73493 },	-- Cataclysmic Gladiator's Choker of Proficiency
-				{ 811, 73645 },	-- Cataclysmic Gladiator's Necklace of Proficiency
-				{ 812, 73644 },	-- Cataclysmic Gladiator's Necklace of Prowess
-				{ 813, 73627 },	-- Cataclysmic Gladiator's Pendant of Alacrity
-				{ 814, 73626 },	-- Cataclysmic Gladiator's Pendant of Diffusion
-				{ 815, 73625 },	-- Cataclysmic Gladiator's Pendant of Meditation
-				{ 816, 73622 },	-- Cataclysmic Gladiator's Band of Accuracy
-				{ 817, 73623 },	-- Cataclysmic Gladiator's Band of Cruelty
-				{ 818, 73621 },	-- Cataclysmic Gladiator's Band of Meditation
-				{ 819, 73640 },	-- Cataclysmic Gladiator's Ring of Accuracy
-				{ 820, 73641 },	-- Cataclysmic Gladiator's Ring of Cruelty
-				{ 821, 73488 },	-- Cataclysmic Gladiator's Signet of Accuracy
-				{ 822, 73489 },	-- Cataclysmic Gladiator's Signet of Cruelty
-				{ 901, 73648 },	-- Cataclysmic Gladiator's Badge of Conquest
-				{ 902, 73498 },	-- Cataclysmic Gladiator's Badge of Dominance
-				{ 903, 73496 },	-- Cataclysmic Gladiator's Badge of Victory
-				{ 905, 73593 },	-- Cataclysmic Gladiator's Emblem of Cruelty
-				{ 906, 73591 },	-- Cataclysmic Gladiator's Emblem of Meditation
-				{ 907, 73592 },	-- Cataclysmic Gladiator's Emblem of Tenacity
-				{ 916, [ATLASLOOT_IT_ALLIANCE] = 73539, [ATLASLOOT_IT_HORDE] = 73538 },	-- Cataclysmic Gladiator's Medallion of Cruelty
-				{ 917, [ATLASLOOT_IT_ALLIANCE] = 73535, [ATLASLOOT_IT_HORDE] = 73534 },	-- Cataclysmic Gladiator's Medallion of Meditation
-				{ 918, [ATLASLOOT_IT_ALLIANCE] = 73536, [ATLASLOOT_IT_HORDE] = 73537 },	-- Cataclysmic Gladiator's Medallion of Tenacity
-				{ 920, 73643 },	-- Cataclysmic Gladiator's Insignia of Conquest
-				{ 921, 73497 },	-- Cataclysmic Gladiator's Insignia of Dominance
-				{ 922, 73491 },	-- Cataclysmic Gladiator's Insignia of Victory
-				{ 924, "ac6108" },
+				{ 1, "CLASS_WARLOCK", nil, CLASS_NAME["WARLOCK"], nil, "BH_AL_WARLOCK"},
+				{ 3, "CLASS_PRIEST", nil, CLASS_NAME["PRIEST"], AL["Holy"], "BH_AL_PRIEST_H"},
+				{ 4, "CLASS_PRIEST", nil, CLASS_NAME["PRIEST"], AL["Shadow"], "BH_AL_PRIEST_D"},
+				{ 6, "CLASS_ROGUE", nil, CLASS_NAME["ROGUE"], nil, "BH_AL_ROGUE"},
+				{ 8, "CLASS_HUNTER", nil, CLASS_NAME["HUNTER"], nil, "BH_AL_HUNTER"},
+				{ 10, "CLASS_WARRIOR", nil, CLASS_NAME["WARRIOR"], AL["Protection"], "BH_AL_WARRIOR_T"},
+				{ 11, "CLASS_WARRIOR", nil, CLASS_NAME["WARRIOR"], ROLE_DD, "BH_AL_WARRIOR_D"},
+				{ 13, "CLASS_DEATHKNIGHT", nil, CLASS_NAME["DEATHKNIGHT"], AL["Blood"], "BH_AL_DEATHKNIGHT_T"},
+				{ 14, "CLASS_DEATHKNIGHT", nil, CLASS_NAME["DEATHKNIGHT"], ROLE_DD, "BH_AL_DEATHKNIGHT_D"},
+				{ 16, "CLASS_MAGE", nil, CLASS_NAME["MAGE"], nil, "BH_AL_MAGE"},
+				{ 18, "CLASS_DRUID", nil, CLASS_NAME["DRUID"], AL["Restoration"], "BH_AL_DRUID_H"},
+				{ 19, "CLASS_DRUID", nil, CLASS_NAME["DRUID"], AL["Balance"], "BH_AL_DRUID_DR"},
+				{ 20, "CLASS_DRUID", nil, CLASS_NAME["DRUID"], AL["Feral"], "BH_AL_DRUID_D"},
+				{ 22, "CLASS_SHAMAN", nil, CLASS_NAME["SHAMAN"], AL["Restoration"], "BH_AL_SHAMAN_H"},
+				{ 23, "CLASS_SHAMAN", nil, CLASS_NAME["SHAMAN"], AL["Elemental"], "BH_AL_SHAMAN_DR"},
+				{ 24, "CLASS_SHAMAN", nil, CLASS_NAME["SHAMAN"], AL["Enhancement"], "BH_AL_SHAMAN_D"},
+				{ 26, "CLASS_PALADIN", nil, CLASS_NAME["PALADIN"], AL["Protection"], "BH_AL_PALADIN_T"},
+				{ 27, "CLASS_PALADIN", nil, CLASS_NAME["PALADIN"], AL["Holy"], "BH_AL_PALADIN_H"},
+				{ 28, "CLASS_PALADIN", nil, CLASS_NAME["PALADIN"], AL["Retribution"], "BH_AL_PALADIN_D"},
+				{ 30, "ac6108" },
+				{ 101, "SLOT_CLOTH", nil, ALIL["Cloth"], nil, "BH_AL_CLOTH"},
+				{ 102, "SLOT_LEATHER", nil, ALIL["Leather"], nil, "BH_AL_LEATHER"},
+				{ 103, "SLOT_MAIL", nil, ALIL["Mail"], nil, "BH_AL_MAIL"},
+				{ 104, "SLOT_PLATE", nil, ALIL["Plate"], nil, "BH_AL_PLATE"},
+				{ 106, "SLOT_BACK", nil, ALIL["Cloak"], nil, "BH_AL_BACK"},
+				{ 107, "SLOT_NECK", nil, ALIL["Neck"], nil, "BH_AL_NECK"},
+				{ 108, "SLOT_FINGER", nil, ALIL["Finger"], nil, "BH_AL_FINGER"},
+				{ 109, "SLOT_TRINKET", nil, ALIL["Trinket"], nil,
+				 AtlasLoot:GetRetByFaction("BH_ALH_TRINKET", "BH_ALA_TRINKET")},
 			},
 		},
 	},
