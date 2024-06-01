@@ -63,46 +63,46 @@ local T11_SET = {
 	ContentPhaseCata = 1,
 	IgnoreAsSource = true,
 	[NORMAL_DIFF] = {
-		{1, 4000925}, -- Death Knight Normal DPS Set
-		{2, 4000926}, -- Death Knight Normal Tank Set
-		{4, 4000927}, -- Druid Normal Melee Set
-		{5, 4000928}, -- Druid Normal Resto Set
-		{6, 4000929}, -- Druid Normal Balance Set
-		{8, 4000930}, -- Hunter Normal
-		{10, 4000931}, -- Mage Normal
-		{12, 4000932}, -- Paladin DPS
-		{13, 4000933}, -- Paladin Holy
-		{14, 4000934}, -- Paladin Prot
-		{16, 4000935}, -- Priest Holy
-		{17, 4000936}, -- Priest Shadow
-		{19, 4000937}, -- Rogue
-		{21, 4000938}, -- Shaman Resto
-		{22, 4000939}, -- Shaman Enhance
-		{23, 4000940}, -- Shaman Elemental
-		{25, 4000941}, -- Warlock
-		{27, 4000942}, -- Warrior
-		{28, 4000943}, -- Warrior
+		{1, 4000941 }, -- Warlock
+		{3, 4000935 }, -- Priest Holy
+		{4, 4000936 }, -- Priest Shadow
+		{6, 4000937 }, -- Rogue
+		{8, 4000930 }, -- Hunter
+		{10, 4000943 }, -- Warrior Tank
+		{11, 4000942 }, -- Warrior DPS
+		{13, 4000926 }, -- Death Knight Tank
+		{14, 4000925 }, -- Death Knight DPS
+		{16, 4000931 }, -- Mage
+		{18, 4000928 }, -- Druid Resto
+		{19, 4000929 }, -- Druid Balance
+		{20, 4000927 }, -- Druid Feral
+		{22, 4000938 }, -- Shaman Resto
+		{23, 4000940 }, -- Shaman Elemental
+		{24, 4000939 }, -- Shaman Enhance
+		{26, 4000933 }, -- Paladin Holy
+		{27, 4000934 }, -- Paladin Prot
+		{28, 4000932 }, -- Paladin DPS
 	},
 	[HEROIC_DIFF] = {
-		{1, 4001925}, -- Death Knight Heroic DPS Set
-		{2, 4001926}, -- Death Knight Heroic Tank Set
-		{4, 4001927}, -- Druid Normal Melee Set
-		{5, 4001928}, -- Druid Normal Resto Set
-		{6, 4001929}, -- Druid Normal Balance Set
-		{8, 4001930}, -- Hunter Heroic
-		{10, 4001931}, -- Mage Heroic
-		{12, 4001932}, -- Paladin DPS
-		{13, 4001933}, -- Paladin Holy
-		{14, 4001934}, -- Paladin Prot
-		{16, 4001935}, -- Priest Holy
-		{17, 4001936}, -- Priest Shadow
-		{19, 4001937}, -- Rogue
-		{21, 4001938}, -- Shaman Resto
-		{22, 4001939}, -- Shaman Enhance
-		{23, 4001940}, -- Shaman Elemental
-		{25, 4001941}, -- Warlock
-		{27, 4001942}, -- Warrior
-		{28, 4001943}, -- Warrior
+		{1, 4001941 }, -- Warlock
+		{3, 4001935 }, -- Priest Holy
+		{4, 4001936 }, -- Priest Shadow
+		{6, 4001937 }, -- Rogue
+		{8, 4001930 }, -- Hunter
+		{10, 4001943 }, -- Warrior Tank
+		{11, 4001942 }, -- Warrior DPS
+		{13, 4001926 }, -- Death Knight Tank
+		{14, 4001925 }, -- Death Knight DPS
+		{16, 4001931 }, -- Mage
+		{18, 4001928 }, -- Druid Resto
+		{19, 4001929 }, -- Druid Balance
+		{20, 4001927 }, -- Druid Feral
+		{22, 4001938 }, -- Shaman Resto
+		{23, 4001940 }, -- Shaman Elemental
+		{24, 4001939 }, -- Shaman Enhance
+		{26, 4001933 }, -- Paladin Holy
+		{27, 4001934 }, -- Paladin Prot
+		{28, 4001932 }, -- Paladin DPS
 	},
 }
 
@@ -113,46 +113,46 @@ local T12_SET = {
 	ContentPhaseCata = 2,
 	IgnoreAsSource = true,
 	[NORMAL_DIFF] = {
-		{1, 4000944}, -- Death Knight Normal DPS Set
-		{2, 4000945}, -- Death Knight Normal Tank Set
-		{4, 4000946}, -- Druid Normal Melee Set
-		{5, 4000947}, -- Druid Normal Resto Set
-		{6, 4000948}, -- Druid Normal Balance Set
-		{8, 4000949}, -- Hunter Normal
-		{10, 4000950}, -- Mage Normal
-		{12, 4000951}, -- Paladin DPS
-		{13, 4000952}, -- Paladin Holy
-		{14, 4000953}, -- Paladin Prot
-		{16, 4000954}, -- Priest
-		{17, 4000955}, -- Priest
-		{19, 4000956}, -- Rogue
-		{21, 4000957}, -- Shaman
-		{22, 4000958}, -- Shaman
-		{23, 4000959}, -- Shaman
-		{25, 4000960}, -- Warlock
-		{27, 4000961}, -- Warrior
-		{28, 4000962}, -- Warrior
+		{1, 4000960 }, -- Warlock
+		{3, 4000954 }, -- Priest Holy
+		{4, 4000955 }, -- Priest Shadow
+		{6, 4000956 }, -- Rogue
+		{8, 4000949 }, -- Hunter
+		{10, 4000962 }, -- Warrior Tank
+		{11, 4000961 }, -- Warrior DPS
+		{13, 4000945 }, -- Death Knight Tank
+		{14, 4000944 }, -- Death Knight DPS
+		{16, 4000950 }, -- Mage
+		{18, 4000947 }, -- Druid Resto
+		{19, 4000948 }, -- Druid Balance
+		{20, 4000946 }, -- Druid Feral
+		{22, 4000957 }, -- Shaman Resto
+		{23, 4000959 }, -- Shaman Elemental
+		{24, 4000958 }, -- Shaman Enhance
+		{26, 4000952 }, -- Paladin Holy
+		{27, 4000953 }, -- Paladin Prot
+		{28, 4000951 }, -- Paladin DPS
 	},
 	[HEROIC_DIFF] = {
-		{1, 4001944}, -- Death Knight Normal DPS Set
-		{2, 4001945}, -- Death Knight Normal Tank Set
-		{4, 4001946}, -- Druid Normal Melee Set
-		{5, 4001947}, -- Druid Normal Resto Set
-		{6, 4001948}, -- Druid Normal Balance Set
-		{8, 4001949}, -- Hunter Normal
-		{10, 4001950}, -- Mage Normal
-		{12, 4001951}, -- Paladin DPS
-		{13, 4001952}, -- Paladin Holy
-		{14, 4001953}, -- Paladin Prot
-		{16, 4001954}, -- Priest
-		{17, 4001955}, -- Priest
-		{19, 4001956}, -- Rogue
-		{21, 4001957}, -- Shaman
-		{22, 4001958}, -- Shaman
-		{23, 4001959}, -- Shaman
-		{25, 4001960}, -- Warlock
-		{27, 4001961}, -- Warrior
-		{28, 4001962}, -- Warrior
+		{1, 4001960 }, -- Warlock
+		{3, 4001954 }, -- Priest Holy
+		{4, 4001955 }, -- Priest Shadow
+		{6, 4001956 }, -- Rogue
+		{8, 4001949 }, -- Hunter
+		{10, 4001962 }, -- Warrior Tank
+		{11, 4001961 }, -- Warrior DPS
+		{13, 4001945 }, -- Death Knight Tank
+		{14, 4001944 }, -- Death Knight DPS
+		{16, 4001950 }, -- Mage
+		{18, 4001947 }, -- Druid Resto
+		{19, 4001948 }, -- Druid Balance
+		{20, 4001946 }, -- Druid Feral
+		{22, 4001957 }, -- Shaman Resto
+		{23, 4001959 }, -- Shaman Elemental
+		{24, 4001958 }, -- Shaman Enhance
+		{26, 4001952 }, -- Paladin Holy
+		{27, 4001953 }, -- Paladin Prot
+		{28, 4001951 }, -- Paladin DPS
 	},
 }
 
@@ -162,68 +162,68 @@ local T13_SET = {
 	TableType = SET_ITTYPE,
 	ContentPhaseCata = 3,
 	IgnoreAsSource = true,
-	[LFR_DIFF] = {
-		{1, 4000963}, -- Death Knight Normal DPS Set
-		{2, 4000964}, -- Death Knight Normal Tank Set
-		{4, 4000965}, -- Druid Normal Melee Set
-		{5, 4000966}, -- Druid Normal Resto Set
-		{6, 4000967}, -- Druid Normal Balance Set
-		{8, 4000968}, -- Hunter Normal
-		{10, 4000969}, -- Mage Normal
-		{12, 4000970}, -- Paladin DPS
-		{13, 4000971}, -- Paladin Holy
-		{14, 4000972}, -- Paladin Prot
-		{16, 4000973}, -- Priest
-		{17, 4000974}, -- Priest
-		{19, 4000975}, -- Rogue
-		{21, 4000976}, -- Shaman
-		{22, 4000977}, -- Shaman
-		{23, 4000978}, -- Shaman
-		{25, 4000979}, -- Warlock
-		{27, 4000980}, -- Warrior
-		{28, 4000981}, -- Warrior
-	},
+	--[LFR_DIFF] = {
+	--	{1, 4000979 }, -- Warlock
+	--	{3, 4000973 }, -- Priest Holy
+	--	{4, 4000974 }, -- Priest Shadow
+	--	{6, 4000975 }, -- Rogue
+	--	{8, 4000968 }, -- Hunter
+	--	{10, 4000981 }, -- Warrior Tank
+	--	{11, 4000980 }, -- Warrior Dps
+	--	{13, 4000964 }, -- Death Knight Tank
+	--	{14, 4000963 }, -- Death Knight DPS
+	--	{16, 4000969 }, -- Mage
+	--	{18, 4000966 }, -- Druid Resto
+	--	{19, 4000967 }, -- Druid Balance
+	--	{20, 4000965 }, -- Druid Melee
+	--	{22, 4000976 }, -- Shaman Resto
+	--	{23, 4000978 }, -- Shaman Elemental
+	--	{24, 4000977 }, -- Shaman Enhance
+	--	{26, 4000971 }, -- Paladin Holy
+	--	{27, 4000972 }, -- Paladin Prot
+	--	{28, 4000970 }, -- Paladin DPS
+	--},
 	[NORMAL_DIFF] = {
-		{1, 4001963}, -- Death Knight Normal DPS Set
-        {2, 4001964}, -- Death Knight Normal Tank Set
-        {4, 4001965}, -- Druid Normal Melee Set
-        {5, 4001966}, -- Druid Normal Resto Set
-        {6, 4001967}, -- Druid Normal Balance Set
-        {8, 4001968}, -- Hunter Normal
-        {10, 4001969}, -- Mage Normal
-        {12, 4001970}, -- Paladin DPS
-        {13, 4001971}, -- Paladin Holy
-        {14, 4001972}, -- Paladin Prot
-        {16, 4001973}, -- Priest
-        {17, 4001974}, -- Priest
-        {19, 4001975}, -- Rogue
-        {21, 4001976}, -- Shaman
-        {22, 4001977}, -- Shaman
-        {23, 4001978}, -- Shaman
-        {25, 4001979}, -- Warlock
-        {27, 4001980}, -- Warrior
-        {28, 4001981}, -- Warrior
+		{1, 4001979 }, -- Warlock
+		{3, 4001973 }, -- Priest Holy
+		{4, 4001974 }, -- Priest Shadow
+		{6, 4001975 }, -- Rogue
+		{8, 4001968 }, -- Hunter
+		{10, 4001981 }, -- Warrior Tank
+		{11, 4001980 }, -- Warrior Dps
+		{13, 4001964 }, -- Death Knight Tank
+		{14, 4001963 }, -- Death Knight DPS
+		{16, 4001969 }, -- Mage
+		{18, 4001966 }, -- Druid Resto
+		{19, 4001967 }, -- Druid Balance
+		{20, 4001965 }, -- Druid Melee
+		{22, 4001976 }, -- Shaman Resto
+		{23, 4001978 }, -- Shaman Elemental
+		{24, 4001977 }, -- Shaman Enhance
+		{26, 4001971 }, -- Paladin Holy
+		{27, 4001972 }, -- Paladin Prot
+		{28, 4001970 }, -- Paladin DPS
 	},
 	[HEROIC_DIFF] = {
-		{1, 4002963}, -- Death Knight Normal DPS Set
-        {2, 4002964}, -- Death Knight Normal Tank Set
-        {4, 4002965}, -- Druid Normal Melee Set
-        {5, 4002966}, -- Druid Normal Resto Set
-        {6, 4002967}, -- Druid Normal Balance Set
-        {8, 4002968}, -- Hunter Normal
-        {10, 4002969}, -- Mage Normal
-        {12, 4002970}, -- Paladin DPS
-        {13, 4002971}, -- Paladin Holy
-        {14, 4002972}, -- Paladin Prot
-        {16, 4002973}, -- Priest
-        {17, 4002974}, -- Priest
-        {19, 4002975}, -- Rogue
-        {21, 4002976}, -- Shaman
-        {22, 4002977}, -- Shaman
-        {23, 4002978}, -- Shaman
-        {25, 4002979}, -- Warlock
-        {27, 4002980}, -- Warrior
-        {28, 4002981}, -- Warrior
+		{1, 4002979 }, -- Warlock
+		{3, 4002973 }, -- Priest Holy
+		{4, 4002974 }, -- Priest Shadow
+		{6, 4002975 }, -- Rogue
+		{8, 4002968 }, -- Hunter
+		{10, 4002981 }, -- Warrior Tank
+		{11, 4002980 }, -- Warrior Dps
+		{13, 4002964 }, -- Death Knight Tank
+		{14, 4002963 }, -- Death Knight DPS
+		{16, 4002969 }, -- Mage
+		{18, 4002966 }, -- Druid Resto
+		{19, 4002967 }, -- Druid Balance
+		{20, 4002965 }, -- Druid Melee
+		{22, 4002976 }, -- Shaman Resto
+		{23, 4002978 }, -- Shaman Elemental
+		{24, 4002977 }, -- Shaman Enhance
+		{26, 4002971 }, -- Paladin Holy
+		{27, 4002972 }, -- Paladin Prot
+		{28, 4002970 }, -- Paladin DPS
 	},
 }
 
