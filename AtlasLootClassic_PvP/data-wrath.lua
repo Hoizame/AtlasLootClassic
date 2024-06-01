@@ -54,6 +54,7 @@ local GENERAL_CONTENT = data:AddContentType(GENERAL, ATLASLOOT_RAID40_COLOR)
 local HORDE, ALLIANCE, RANK_FORMAT = "Horde", "Alliance", AL["|cff33ff99Rank:|r %s"]
 local BLIZZARD_NYI = " |cff00ccff<NYI |T130946:12:20:0:0:32:16:4:28:0:16|t>|r"
 
+--[[
 local _DUMMY_SET = {
     name = AL["Sets"],
     TableType = SET_ITTYPE,
@@ -109,6 +110,7 @@ local _DUMMY_SET = {
     {27, 3002766} -- Paladin / DD
     }
 }
+--]]
 
 data["PvPMountsWrath"] = {
     name = ALIL["Mounts"],

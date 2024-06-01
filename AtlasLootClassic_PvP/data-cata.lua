@@ -13,10 +13,10 @@ local format = string.format
 -- ----------------------------------------------------------------------------
 local addonname, private = ...
 local AtlasLoot = _G.AtlasLoot
-if AtlasLoot:GameVersion_LT(AtlasLoot.WRATH_VERSION_NUM) then
+if AtlasLoot:GameVersion_LT(AtlasLoot.CATA_VERSION_NUM) then
     return
 end
-local data = AtlasLoot.ItemDB:Add(addonname, 1, AtlasLoot.WRATH_VERSION_NUM)
+local data = AtlasLoot.ItemDB:Add(addonname, 1, AtlasLoot.CATA_VERSION_NUM)
 
 local AL = AtlasLoot.Locales
 local ALIL = AtlasLoot.IngameLocales
@@ -54,68 +54,12 @@ local GENERAL_CONTENT = data:AddContentType(GENERAL, ATLASLOOT_RAID40_COLOR)
 local HORDE, ALLIANCE, RANK_FORMAT = "Horde", "Alliance", AL["|cff33ff99Rank:|r %s"]
 local BLIZZARD_NYI = " |cff00ccff<NYI |T130946:12:20:0:0:32:16:4:28:0:16|t>|r"
 
-local _DUMMY_SET = {
-    name = AL["Sets"],
-    TableType = SET_ITTYPE,
-    [SET1_DIFF] = {{1, 3000780}, -- Warlock
-    {3, 3000777}, -- Priest / Heal
-    {4, 3000778}, -- Priest / Shadow
-    {6, 3000776}, -- Rogue
-    {8, 3000772}, -- Hunter
-    {10, 3000780}, -- Warrior / DD
-    {13, 3000768}, -- Deathknight
-    {16, 3000779}, -- Mage
-    {18, 3000773}, -- Druid / Heal
-    {19, 3000774}, -- Druid / Owl
-    {20, 3000775}, -- Druid / Feral
-    {22, 3000771}, -- Shaman / Heal
-    {23, 3000769}, -- Shaman / Ele
-    {24, 3000770}, -- Shaman / Enh
-    {26, 3000767}, -- Paladin / Heal
-    {27, 3000766} -- Paladin / DD
-    },
-    [SET2_DIFF] = {{1, 3001780}, -- Warlock
-    {3, 3001777}, -- Priest / Heal
-    {4, 3001778}, -- Priest / Shadow
-    {6, 3001776}, -- Rogue
-    {8, 3001772}, -- Hunter
-    {10, 3001780}, -- Warrior / DD
-    {13, 3001768}, -- Deathknight
-    {16, 3001779}, -- Mage
-    {18, 3001773}, -- Druid / Heal
-    {19, 3001774}, -- Druid / Owl
-    {20, 3001775}, -- Druid / Feral
-    {22, 3001771}, -- Shaman / Heal
-    {23, 3001769}, -- Shaman / Ele
-    {24, 3001770}, -- Shaman / Enh
-    {26, 3001767}, -- Paladin / Heal
-    {27, 3001766} -- Paladin / DD
-    },
-    [SET3_DIFF] = {{1, 3002780}, -- Warlock
-    {3, 3002777}, -- Priest / Heal
-    {4, 3002778}, -- Priest / Shadow
-    {6, 3002776}, -- Rogue
-    {8, 3002772}, -- Hunter
-    {10, 3002780}, -- Warrior / DD
-    {13, 3002768}, -- Deathknight
-    {16, 3002779}, -- Mage
-    {18, 3002773}, -- Druid / Heal
-    {19, 3002774}, -- Druid / Owl
-    {20, 3002775}, -- Druid / Feral
-    {22, 3002771}, -- Shaman / Heal
-    {23, 3002769}, -- Shaman / Ele
-    {24, 3002770}, -- Shaman / Enh
-    {26, 3002767}, -- Paladin / Heal
-    {27, 3002766} -- Paladin / DD
-    }
-}
-
 data["PvPMountsCata"] = {
     name = ALIL["Mounts"],
     ContentType = GENERAL_CONTENT,
     LoadDifficulty = LOAD_DIFF,
     CorrespondingFields = private.MOUNTS_LINK,
-    items = {{ -- PvPMountsPvP
+    items = {{ -- PvPMountsCata
         name = ALIL["Mounts"],
         [NORMAL_DIFF] = {
             {1, 72140}, -- Vicious War Wolf

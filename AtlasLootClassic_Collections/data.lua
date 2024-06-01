@@ -506,6 +506,7 @@ data["TierSets"] = {
 		AtlasLoot:GameVersion_GE(AtlasLoot.CATA_VERSION_NUM, {
             name = format(AL["Tier %s Sets"], "11"),
             CoinTexture = "CATA",
+			contentPhaseCata = 1,
 			[NORMAL_DIFF] = {
                 {1, 4000925}, -- Death Knight Normal DPS Set
                 {2, 4000926}, -- Death Knight Normal Tank Set
@@ -552,6 +553,7 @@ data["TierSets"] = {
         AtlasLoot:GameVersion_GE(AtlasLoot.CATA_VERSION_NUM, {
             name = format(AL["Tier %s Sets"], "12"),
             CoinTexture = "CATA",
+			contentPhaseCata = 2,
             [NORMAL_DIFF] = {
                 {1, 4000944}, -- Death Knight Normal DPS Set
                 {2, 4000945}, -- Death Knight Normal Tank Set
@@ -598,6 +600,7 @@ data["TierSets"] = {
         AtlasLoot:GameVersion_GE(AtlasLoot.CATA_VERSION_NUM, {
             name = format(AL["Tier %s Sets"], "13"),
             CoinTexture = "CATA",
+			contentPhaseCata = 3,
             [LFR_DIFF] = {
                 {1, 4000963}, -- Death Knight Normal DPS Set
                 {2, 4000964}, -- Death Knight Normal Tank Set
@@ -669,6 +672,7 @@ data["DungeonSets"] = {
 	name = AL["Dungeon Sets"],
 	ContentType = SET_CONTENT,
 	TableType = SET_ITTYPE,
+	gameVersion = AtlasLoot.BC_VERSION_NUM,
 	items = {
 		{ -- T0 / D1
 			name = format(AL["Dungeon Set %s"], "1"),
@@ -1417,6 +1421,7 @@ data["FishingExtravaganza"] = {
 	ContentType = WORLD_EVENT_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = NORMAL_ITTYPE,
+	gameVersion = AtlasLoot.CLASSIC_VERSION_NUM,
 	items = {
 		{ -- FishingExtravaganza
 			name = AL["Stranglethorn Fishing Extravaganza"],
@@ -1443,6 +1448,7 @@ data["LunarFestival"] = {
 	ContentType = WORLD_EVENT_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = NORMAL_ITTYPE,
+	gameVersion = AtlasLoot.CLASSIC_VERSION_NUM,
 	items = {
 		{ -- LunarFestival1
 			name = AL["Lunar Festival"],
@@ -1544,6 +1550,7 @@ data["Noblegarden"] = {
 	ContentType = WORLD_EVENT_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = NORMAL_ITTYPE,
+	gameVersion = AtlasLoot.CLASSIC_VERSION_NUM,
 	items = {
 		{ -- Noblegarden
 			name = AL["Brightly Colored Egg"],
@@ -1608,6 +1615,7 @@ data["HarvestFestival"] = {
 	ContentType = WORLD_EVENT_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = NORMAL_ITTYPE,
+	gameVersion = AtlasLoot.BC_VERSION_NUM,
 	items = {
 		{ -- HarvestFestival
 			name = AL["Harvest Festival"],
@@ -1687,6 +1695,7 @@ data["WinterVeil"] = {
 	ContentType = WORLD_EVENT_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = NORMAL_ITTYPE,
+	gameVersion = AtlasLoot.CLASSIC_VERSION_NUM,
 	items = {
 		{ -- Winterviel1
 			name = AL["Misc"],
