@@ -1522,7 +1522,8 @@ data["LeatherworkingCata"] = {
 				{ 17, 85008 },	-- Draconic Embossment - Agility
 				{ 18, 85009 },	-- Draconic Embossment - Strength
 				{ 19, 85010 },	-- Draconic Embossment - Intellect
-				{ 21, 78379 },	-- Savage Armor Kit
+				{ 21, 78437 },	-- Heavy Savage Armor Kit
+				{ 22, 78379 },	-- Savage Armor Kit
 			},
 		},
 		{
