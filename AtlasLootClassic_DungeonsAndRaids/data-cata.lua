@@ -3350,6 +3350,7 @@ data["DragonSoul"] = {
 	}
 }
 
+local ROLE_DD = AL["Damage Dealer"]
 data["BaradinHold"] = {
 	MapID = 5600,
 	InstanceID = 757,
