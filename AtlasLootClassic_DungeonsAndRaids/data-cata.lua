@@ -1436,35 +1436,35 @@ data["ZulAman"] = {
 			},
 		},
 		{	-- Timed Chest
-		name = AL["Timed Reward Chest"],
-		ExtraList = true,
-		[HEROIC_DIFF] = {
-			{ 1, 69584 },	-- Recovered Cloak of Frostheim
-			{ 2, 69585 },	-- Wristwraps of Madness
-			{ 3, 69589 },	-- Leggings of Dancing Blades
-			{ 4, 69586 },	-- Two-Toed Boots
-			{ 5, 69590 },	-- Mojo-Mender's Gloves
-			{ 6, 69593 },	-- Battleplate of the Amani Empire
-			{ 7, 69587 },	-- Chestplate of Hubris
-			{ 8, 69588 },	-- Skullcrusher Warboots
-			{ 16, 69591 },	-- Voodoo Hexblade
-			{ 17, 69592 },	-- Reforged Trollbane
-			{ 19, "INV_Box_01", "ac5858", AL["Bonus Loot"], nil },
-			{ 20, 69747 },	-- Amani Battle Bear
+			name = AL["Timed Reward Chest"],
+			ExtraList = true,
+			[HEROIC_DIFF] = {
+				{ 1, 69584 },	-- Recovered Cloak of Frostheim
+				{ 2, 69585 },	-- Wristwraps of Madness
+				{ 3, 69589 },	-- Leggings of Dancing Blades
+				{ 4, 69586 },	-- Two-Toed Boots
+				{ 5, 69590 },	-- Mojo-Mender's Gloves
+				{ 6, 69593 },	-- Battleplate of the Amani Empire
+				{ 7, 69587 },	-- Chestplate of Hubris
+				{ 8, 69588 },	-- Skullcrusher Warboots
+				{ 16, 69591 },	-- Voodoo Hexblade
+				{ 17, 69592 },	-- Reforged Trollbane
+				{ 19, "INV_Box_01", "ac5858", AL["Bonus Loot"], nil },
+				{ 20, 69747 },	-- Amani Battle Bear
 		},
 	},
 	{	-- Trash
-		name = AL["Trash Mobs"],
-		ExtraList = true,
-		[HEROIC_DIFF] = {
-			{ 1, 69797 },	-- Charmbinder Grips
-			{ 2, 69801 },	-- Amani Armguards
-			{ 4, 69802 },	-- Band of the Gurubashi Berserker
-			{ 5, 69799 },	-- Quickfinger Ring
-			{ 16, 33993, "pet165" },	-- Mojo
-			{ 18, "ac5761" },
+			name = AL["Trash Mobs"],
+			ExtraList = true,
+			[HEROIC_DIFF] = {
+				{ 1, 69797 },	-- Charmbinder Grips
+				{ 2, 69801 },	-- Amani Armguards
+				{ 4, 69802 },	-- Band of the Gurubashi Berserker
+				{ 5, 69799 },	-- Quickfinger Ring
+				{ 16, 33993, "pet165" },	-- Mojo
+				{ 18, "ac5761" },
+			},
 		},
-	},
 	}
 }
 
@@ -1584,16 +1584,16 @@ data["ZulGurub"] = {
 			},
 		},
 		{	-- Trash
-		name = AL["Trash Mobs"],
-		ExtraList = true,
-		[HEROIC_DIFF] = {
-			{ 1, 69800 },	-- Spiritguard Drape
-			{ 2, 69796 },	-- Spiritcaller Cloak
-			{ 3, 69798 },	-- Knotted Handwraps
-			{ 5, 69803 },	-- Gurubashi Punisher
-			{ 16, "ac5744" },
+			name = AL["Trash Mobs"],
+			ExtraList = true,
+			[HEROIC_DIFF] = {
+				{ 1, 69800 },	-- Spiritguard Drape
+				{ 2, 69796 },	-- Spiritcaller Cloak
+				{ 3, 69798 },	-- Knotted Handwraps
+				{ 5, 69803 },	-- Gurubashi Punisher
+				{ 16, "ac5744" },
+			},
 		},
-	},
 	}
 }
 
@@ -2183,7 +2183,16 @@ data["Firelands"] = {
 				{ 16, 70922 },	-- Mandible of Beth'tilac
 				{ 17, 71039 },	-- Funeral Pyre
 				{ 18, 71038 },	-- Ward of the Red Widow
-				{ 20, "ac5821" },
+				-- shared --
+				{ 20, 71779 },	-- Avool's Incendiary Shanker
+				{ 21, 71787 },	-- Entrail Disgorger
+				{ 22, 71785 },	-- Firethorn Mindslicer
+				{ 23, 71780 },	-- Zoid's Firelit Greatsword
+				{ 24, 71776 },	-- Eye of Purification
+				{ 25, 71782 },	-- Shatterskull Bonecrusher
+				{ 26, 71775 },	-- Smoldering Censer of Purity
+				-- end of shared --
+				{ 28, "ac5821" },
 			},
 			[HEROIC_DIFF] = {
 				{ 1, 71407 },	-- Robes of Smoldering Devastation
@@ -2200,8 +2209,17 @@ data["Firelands"] = {
 				{ 16, 71406 },	-- Mandible of Beth'tilac
 				{ 17, 71409 },	-- Funeral Pyre
 				{ 18, 71408 },	-- Ward of the Red Widow
-				{ 20, "ac5807" },
-				{ 21, "ac5821" },
+				-- shared --
+				{ 20, 71778 },	-- Avool's Incendiary Shanker
+				{ 21, 71786 },	-- Entrail Disgorger
+				{ 22, 71784 },	-- Firethorn Mindslicer
+				{ 23, 71781 },	-- Zoid's Firelit Greatsword
+				{ 24, 71777 },	-- Eye of Purification
+				{ 25, 71783 },	-- Shatterskull Bonecrusher
+				{ 26, 71774 },	-- Smoldering Censer of Purity
+				-- end of shared --
+				{ 28, "ac5807" },
+				{ 29, "ac5821" },
 			},
 		},
 		{ -- Lord Rhyolith
@@ -2218,10 +2236,19 @@ data["Firelands"] = {
 				{ 8, 70993 },	-- Fireskin Gauntlets
 				{ 9, 71007 },	-- Grips of the Raging Giant
 				{ 10, 70912 },	-- Cracked Obsidian Stompers
-				{ 16, 71012 },	-- Heartstone of Rhyolith
-				{ 18, 71006 },	-- Volcanospike
-				{ 19, 70991 },	-- Arbalest of Erupting Fury
-				{ 21, "ac5810" },
+				{ 12, 71012 },	-- Heartstone of Rhyolith
+				{ 16, 71006 },	-- Volcanospike
+				{ 17, 70991 },	-- Arbalest of Erupting Fury
+				-- shared --
+				{ 19, 71779 },	-- Avool's Incendiary Shanker
+				{ 20, 71787 },	-- Entrail Disgorger
+				{ 21, 71785 },	-- Firethorn Mindslicer
+				{ 22, 71780 },	-- Zoid's Firelit Greatsword
+				{ 23, 71776 },	-- Eye of Purification
+				{ 24, 71782 },	-- Shatterskull Bonecrusher
+				{ 25, 71775 },	-- Smoldering Censer of Purity
+				-- end of shared --
+				{ 27, "ac5810" },
 			},
 			[HEROIC_DIFF] = {
 				{ 1, 71415 },	-- Dreadfire Drape
@@ -2234,11 +2261,20 @@ data["Firelands"] = {
 				{ 8, 71419 },	-- Fireskin Gauntlets
 				{ 9, 71426 },	-- Grips of the Raging Giant
 				{ 10, 71420 },	-- Cracked Obsidian Stompers
-				{ 16, 71423 },	-- Heartstone of Rhyolith
-				{ 18, 71422 },	-- Volcanospike
-				{ 19, 71414 },	-- Arbalest of Erupting Fury
-				{ 21, "ac5808" },
-				{ 22, "ac5810" },
+				{ 12, 71423 },	-- Heartstone of Rhyolith
+				{ 16, 71422 },	-- Volcanospike
+				{ 17, 71414 },	-- Arbalest of Erupting Fury
+				-- shared --
+				{ 19, 71778 },	-- Avool's Incendiary Shanker
+				{ 20, 71786 },	-- Entrail Disgorger
+				{ 21, 71784 },	-- Firethorn Mindslicer
+				{ 22, 71781 },	-- Zoid's Firelit Greatsword
+				{ 23, 71777 },	-- Eye of Purification
+				{ 24, 71783 },	-- Shatterskull Bonecrusher
+				{ 25, 71774 },	-- Smoldering Censer of Purity
+				-- end of shared --
+				{ 27, "ac5808" },
+				{ 28, "ac5810" },
 			},
 		},
 		{ -- Alysrazor
@@ -2256,11 +2292,20 @@ data["Firelands"] = {
 				{ 9, 70737 },	-- Spaulders of Recurring Flame
 				{ 10, 70988 },	-- Clutch of the Firemother
 				{ 11, 70739 },	-- Lavaworm Legplates
-				{ 13, 71665, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Flametalon of Alysrazor
-				{ 16, 70738 },	-- Alysrazor's Band
-				{ 17, 68983 },	-- Eye of Blazing Power
-				{ 19, 70733 },	-- Alysra's Razor
-				{ 21, "ac5813" },
+				{ 13, 70738 },	-- Alysrazor's Band
+				{ 14, 68983 },	-- Eye of Blazing Power
+				{ 16, 70733 },	-- Alysra's Razor
+				{ 18, 71665, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Flametalon of Alysrazor
+				-- shared --
+				{ 20, 71779 },	-- Avool's Incendiary Shanker
+				{ 21, 71787 },	-- Entrail Disgorger
+				{ 22, 71785 },	-- Firethorn Mindslicer
+				{ 23, 71780 },	-- Zoid's Firelit Greatsword
+				{ 24, 71776 },	-- Eye of Purification
+				{ 25, 71782 },	-- Shatterskull Bonecrusher
+				{ 26, 71775 },	-- Smoldering Censer of Purity
+				-- end of shared --
+				{ 28, "ac5813" },
 			},
 			[HEROIC_DIFF] = {
 				{ 1, 71434 },	-- Wings of Flame
@@ -2274,15 +2319,24 @@ data["Firelands"] = {
 				{ 9, 71432 },	-- Spaulders of Recurring Flame
 				{ 10, 71439 },	-- Clutch of the Firemother
 				{ 11, 71431 },	-- Lavaworm Legplates
-				{ 13, 71665, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Flametalon of Alysrazor
+				{ 12, 71433 },	-- Alysrazor's Band
+				{ 13, 69149 },	-- Eye of Blazing Power
+				{ 15, 71427 },	-- Alysra's Razor
 				{ 16, 71679 },	-- Chest of the Fiery Conqueror
 				{ 17, 71686 },	-- Chest of the Fiery Protector
 				{ 18, 71672 },	-- Chest of the Fiery Vanquisher
-				{ 20, 71433 },	-- Alysrazor's Band
-				{ 21, 69149 },	-- Eye of Blazing Power
-				{ 23, 71427 },	-- Alysra's Razor
-				{ 25, "ac5809" },
-				{ 26, "ac5813" },
+				{ 19, 71665, [ATLASLOOT_IT_FILTERIGNORE] = true },	-- Flametalon of Alysrazor
+				-- shared --
+				{ 21, 71778 },	-- Avool's Incendiary Shanker
+				{ 22, 71786 },	-- Entrail Disgorger
+				{ 23, 71784 },	-- Firethorn Mindslicer
+				{ 24, 71781 },	-- Zoid's Firelit Greatsword
+				{ 25, 71777 },	-- Eye of Purification
+				{ 26, 71783 },	-- Shatterskull Bonecrusher
+				{ 27, 71774 },	-- Smoldering Censer of Purity
+				-- end of shared --
+				{ 29, "ac5809" },
+				{ 30, "ac5813" },
 			},
 		},
 		{ -- Shannox
@@ -2303,7 +2357,16 @@ data["Firelands"] = {
 				{ 13, 71022 },	-- Goblet of Anger
 				{ 16, 71014 },	-- Skullstealer Greataxe
 				{ 17, 71013 },	-- Feeding Frenzy
-				{ 19, "ac5829" },
+				-- shared --
+				{ 19, 71779 },	-- Avool's Incendiary Shanker
+				{ 20, 71787 },	-- Entrail Disgorger
+				{ 21, 71785 },	-- Firethorn Mindslicer
+				{ 22, 71780 },	-- Zoid's Firelit Greatsword
+				{ 23, 71776 },	-- Eye of Purification
+				{ 24, 71782 },	-- Shatterskull Bonecrusher
+				{ 25, 71775 },	-- Smoldering Censer of Purity
+				-- end of shared --
+				{ 27, "ac5829" },
 			},
 			[HEROIC_DIFF] = {
 				{ 1, 71447 },	-- Coalwalker Sandals
@@ -2315,16 +2378,25 @@ data["Firelands"] = {
 				{ 7, 71443 },	-- Uncrushable Belt of Fury
 				{ 8, 71453 },	-- Legplates of Absolute Control
 				{ 9, 71444 },	-- Legplates of Frenzied Devotion
-				{ 11, 71446 },	-- Necklace of Fetishes
-				{ 12, 71449 },	-- Crystal Prison Band
-				{ 13, 71448 },	-- Goblet of Anger
+				{ 10, 71446 },	-- Necklace of Fetishes
+				{ 11, 71449 },	-- Crystal Prison Band
+				{ 12, 71448 },	-- Goblet of Anger
+				{ 13, 71445 },	-- Skullstealer Greataxe
+				{ 14, 71441 },	-- Feeding Frenzy
 				{ 16, 71678 },	-- Leggings of the Fiery Conqueror
 				{ 17, 71685 },	-- Leggings of the Fiery Protector
 				{ 18, 71671 },	-- Leggings of the Fiery Vanquisher
-				{ 20, 71445 },	-- Skullstealer Greataxe
-				{ 21, 71441 },	-- Feeding Frenzy
-				{ 23, "ac5806" },
-				{ 24, "ac5829" },
+				-- shared --
+				{ 20, 71778 },	-- Avool's Incendiary Shanker
+				{ 21, 71786 },	-- Entrail Disgorger
+				{ 22, 71784 },	-- Firethorn Mindslicer
+				{ 23, 71781 },	-- Zoid's Firelit Greatsword
+				{ 24, 71777 },	-- Eye of Purification
+				{ 25, 71783 },	-- Shatterskull Bonecrusher
+				{ 26, 71774 },	-- Smoldering Censer of Purity
+				-- end of shared --
+				{ 28, "ac5806" },
+				{ 29, "ac5829" },
 			},
 		},
 		{ -- Baleroc, the Gatekeeper
@@ -2344,7 +2416,16 @@ data["Firelands"] = {
 				{ 12, 71323 },	-- Molten Scream
 				{ 16, 71312 },	-- Gatecrasher
 				{ 17, 70915 },	-- Shard of Torment
-				{ 19, "ac5830" },
+				-- shared --
+				{ 19, 71779 },	-- Avool's Incendiary Shanker
+				{ 20, 71787 },	-- Entrail Disgorger
+				{ 21, 71785 },	-- Firethorn Mindslicer
+				{ 22, 71780 },	-- Zoid's Firelit Greatsword
+				{ 23, 71776 },	-- Eye of Purification
+				{ 24, 71782 },	-- Shatterskull Bonecrusher
+				{ 25, 71775 },	-- Smoldering Censer of Purity
+				-- end of shared --
+				{ 27, "ac5830" },
 			},
 			[HEROIC_DIFF] = {
 				{ 1, 71461 },	-- Mantle of Closed Doors
@@ -2356,15 +2437,24 @@ data["Firelands"] = {
 				{ 7, 71465 },	-- Casque of Flame
 				{ 8, 71459 },	-- Helm of Blazing Glory
 				{ 9, 71458 },	-- Flickering Handguards
-				{ 11, 69139 },	-- Necromantic Focus
-				{ 12, 71462 },	-- Molten Scream
+				{ 10, 69139 },	-- Necromantic Focus
+				{ 11, 71462 },	-- Molten Scream
+				{ 13, 71454 },	-- Gatecrasher
+				{ 14, 71460 },	-- Shard of Torment
 				{ 16, 71676 },	-- Gauntlets of the Fiery Conqueror
 				{ 17, 71683 },	-- Gauntlets of the Fiery Protector
 				{ 18, 71669 },	-- Gauntlets of the Fiery Vanquisher
-				{ 20, 71454 },	-- Gatecrasher
-				{ 21, 71460 },	-- Shard of Torment
-				{ 23, "ac5805" },
-				{ 24, "ac5830" },
+				-- shared --
+				{ 20, 71778 },	-- Avool's Incendiary Shanker
+				{ 21, 71786 },	-- Entrail Disgorger
+				{ 22, 71784 },	-- Firethorn Mindslicer
+				{ 23, 71781 },	-- Zoid's Firelit Greatsword
+				{ 24, 71777 },	-- Eye of Purification
+				{ 25, 71783 },	-- Shatterskull Bonecrusher
+				{ 26, 71774 },	-- Smoldering Censer of Purity
+				-- end of shared --
+				{ 28, "ac5805" },
+				{ 29, "ac5830" },
 			},
 		},
 		{ -- Majordomo Staghelm
@@ -2381,12 +2471,21 @@ data["Firelands"] = {
 				{ 9, 71348 },	-- Flowform Choker
 				{ 10, 68927 },	-- The Hungerer
 				{ 11, 68926 },	-- Jaws of Defeat
+				{ 13, 69897 },	-- Fandral's Flamescythe
+				{ 14, 71347 },	-- Stinger of the Flaming Scorpion
 				{ 16, 71681 },	-- Mantle of the Fiery Conqueror
 				{ 17, 71688 },	-- Mantle of the Fiery Protector
 				{ 18, 71674 },	-- Mantle of the Fiery Vanquisher
-				{ 20, 69897 },	-- Fandral's Flamescythe
-				{ 21, 71347 },	-- Stinger of the Flaming Scorpion
-				{ 23, "ac5799" },
+				-- shared --
+				{ 20, 71779 },	-- Avool's Incendiary Shanker
+				{ 21, 71787 },	-- Entrail Disgorger
+				{ 22, 71785 },	-- Firethorn Mindslicer
+				{ 23, 71780 },	-- Zoid's Firelit Greatsword
+				{ 24, 71776 },	-- Eye of Purification
+				{ 25, 71782 },	-- Shatterskull Bonecrusher
+				{ 26, 71775 },	-- Smoldering Censer of Purity
+				-- end of shared --
+				{ 28, "ac5799" },
 			},
 			[HEROIC_DIFF] = {
 				{ 1, 71471 },	-- Wristwraps of Arrogant Doom
@@ -2399,13 +2498,22 @@ data["Firelands"] = {
 				{ 9, 71472 },	-- Flowform Choker
 				{ 10, 69112 },	-- The Hungerer
 				{ 11, 69111 },	-- Jaws of Defeat
+				{ 13, 71466 },	-- Fandral's Flamescythe
+				{ 14, 71473 },	-- Stinger of the Flaming Scorpion
 				{ 16, 71680 },	-- Shoulders of the Fiery Conqueror
 				{ 17, 71687 },	-- Shoulders of the Fiery Protector
 				{ 18, 71673 },	-- Shoulders of the Fiery Vanquisher
-				{ 20, 71466 },	-- Fandral's Flamescythe
-				{ 21, 71473 },	-- Stinger of the Flaming Scorpion
-				{ 23, "ac5804" },
-				{ 24, "ac5799" },
+				-- shared --
+				{ 20, 71778 },	-- Avool's Incendiary Shanker
+				{ 21, 71786 },	-- Entrail Disgorger
+				{ 22, 71784 },	-- Firethorn Mindslicer
+				{ 23, 71781 },	-- Zoid's Firelit Greatsword
+				{ 24, 71777 },	-- Eye of Purification
+				{ 25, 71783 },	-- Shatterskull Bonecrusher
+				{ 26, 71774 },	-- Smoldering Censer of Purity
+				-- end of shared --
+				{ 28, "ac5804" },
+				{ 29, "ac5799" },
 			},
 		},
 		{ -- Ragnaros
@@ -2420,15 +2528,24 @@ data["Firelands"] = {
 				{ 7, 68994 },	-- Matrix Restabilizer
 				{ 8, 68925 },	-- Variable Pulse Lightning Capacitor
 				{ 9, 68995 },	-- Vessel of Acceleration
-				{ 11, 69224 },	-- Smoldering Egg of Millagazor
+				{ 11, 71355 },	-- Ko'gun, Hammer of the Firelord
+				{ 12, 71352 },	-- Sulfuras, the Extinguished Hand
+				{ 13, 71798 },	-- Sho'ravon, Greatstaff of Annihilation
+				{ 14, 71353 },	-- Arathar, the Eye of Flame
 				{ 16, 71675 },	-- Helm of the Fiery Conqueror
 				{ 17, 71682 },	-- Helm of the Fiery Protector
 				{ 18, 71668 },	-- Helm of the Fiery Vanquisher
-				{ 20, 71355 },	-- Ko'gun, Hammer of the Firelord
-				{ 21, 71352 },	-- Sulfuras, the Extinguished Hand
-				{ 22, 71798 },	-- Sho'ravon, Greatstaff of Annihilation
-				{ 23, 71353 },	-- Arathar, the Eye of Flame
-				{ 25, "ac5855" },
+				{ 19, 69224 },	-- Smoldering Egg of Millagazor
+				-- shared --
+				{ 21, 71779 },	-- Avool's Incendiary Shanker
+				{ 22, 71787 },	-- Entrail Disgorger
+				{ 23, 71785 },	-- Firethorn Mindslicer
+				{ 24, 71780 },	-- Zoid's Firelit Greatsword
+				{ 25, 71776 },	-- Eye of Purification
+				{ 26, 71782 },	-- Shatterskull Bonecrusher
+				{ 27, 71775 },	-- Smoldering Censer of Purity
+				-- end of shared --
+				{ 29, "ac5855" },
 			},
 			[HEROIC_DIFF] = {
 				{ 1, 71614 },	-- Fingers of Incineration
@@ -2439,38 +2556,25 @@ data["Firelands"] = {
 				{ 7, 69150 },	-- Matrix Restabilizer
 				{ 8, 69110 },	-- Variable Pulse Lightning Capacitor
 				{ 9, 69167 },	-- Vessel of Acceleration
-				{ 11, 69224 },	-- Smoldering Egg of Millagazor
+				{ 11, 71615 },	-- Ko'gun, Hammer of the Firelord
+				{ 12, 70723 },	-- Sulfuras, the Extinguished Hand
+				{ 13, 71797 },	-- Sho'ravon, Greatstaff of Annihilation
+				{ 14, 71611 },	-- Arathar, the Eye of Flame
 				{ 16, 71677 },	-- Crown of the Fiery Conqueror
 				{ 17, 71684 },	-- Crown of the Fiery Protector
 				{ 18, 71670 },	-- Crown of the Fiery Vanquisher
-				{ 20, 71615 },	-- Ko'gun, Hammer of the Firelord
-				{ 21, 70723 },	-- Sulfuras, the Extinguished Hand
-				{ 22, 71797 },	-- Sho'ravon, Greatstaff of Annihilation
-				{ 23, 71611 },	-- Arathar, the Eye of Flame
-				{ 25, "ac5803" },
-				{ 26, "ac5855" },
-			},
-		},
-		{ -- Shared Loot
-			name = AL["Shared Boss Loot"],
-			ExtraList = true,
-			[NORMAL_DIFF] = {
-				{ 1, 71779 },	-- Avool's Incendiary Shanker
-				{ 2, 71787 },	-- Entrail Disgorger
-				{ 3, 71785 },	-- Firethorn Mindslicer
-				{ 4, 71780 },	-- Zoid's Firelit Greatsword
-				{ 5, 71776 },	-- Eye of Purification
-				{ 6, 71782 },	-- Shatterskull Bonecrusher
-				{ 7, 71775 },	-- Smoldering Censer of Purity
-			},
-			[HEROIC_DIFF] = {
-				{ 1, 71778 },	-- Avool's Incendiary Shanker
-				{ 2, 71786 },	-- Entrail Disgorger
-				{ 3, 71784 },	-- Firethorn Mindslicer
-				{ 4, 71781 },	-- Zoid's Firelit Greatsword
-				{ 5, 71777 },	-- Eye of Purification
-				{ 6, 71783 },	-- Shatterskull Bonecrusher
-				{ 7, 71774 },	-- Smoldering Censer of Purity
+				{ 19, 69224 },	-- Smoldering Egg of Millagazor
+				-- shared --
+				{ 21, 71778 },	-- Avool's Incendiary Shanker
+				{ 22, 71786 },	-- Entrail Disgorger
+				{ 23, 71784 },	-- Firethorn Mindslicer
+				{ 24, 71781 },	-- Zoid's Firelit Greatsword
+				{ 25, 71777 },	-- Eye of Purification
+				{ 26, 71783 },	-- Shatterskull Bonecrusher
+				{ 27, 71774 },	-- Smoldering Censer of Purity
+				-- end of shared --
+				{ 29, "ac5803" },
+				{ 30, "ac5855" },
 			},
 		},
 		{	--Firelands Trash
@@ -2488,6 +2592,26 @@ data["Firelands"] = {
 				{ 18, 71361 },	-- Ranseur of Hatred
 				{ 19, 71360 },	-- Spire of Scarlet Pain
 				{ 20, 71366 },	-- Lava Bolt Crossbow
+			},
+		},
+		{ -- Firestones
+			name = AL["Firestone Vendor"],
+			ExtraList = true,
+			[HEROIC_DIFF] = {
+				{ 1, 71641 },	-- Riplimb's Lost Collar
+				{ 2, 71561 },	-- Hide-Bound Chains
+				{ 4, 71563 },	-- Firebound Gorget
+				{ 5, 71564 },	-- Theck's Emberseal
+				{ 6, 69113 },	-- Apparatus of Khaz'goroth
+				{ 7, 69109 },	-- Scales of Life
+				{ 9, 71560 },	-- Chelley's Sterilized Scalpel
+				{ 10, 71562 },	-- Obsidium Cleaver
+				{ 11, 71557 },	-- Ranseur of Hatred
+				{ 12, 71559 },	-- Spire of Scarlet Pain
+				{ 13, 71558 },	-- Lava Bolt Crossbow
+				{ 16, 71579 },	-- Scorchvine Wand
+				{ 17, 71575 },	-- Trail of Embers
+				{ 19, 71617 },	-- Crystallized Firestone
 			},
 		},
 		{ -- Patterns
@@ -2512,26 +2636,6 @@ data["Firelands"] = {
 				{ 19, 69958 },	-- Plans: Eternal Elementium Handguards
 				{ 20, 69957 },	-- Plans: Fists of Fury
 				{ 21, 69959 },	-- Plans: Holy Flame Gauntlets
-			},
-		},
-		{ -- Firestones
-			name = AL["Firestone Vendor"],
-			ExtraList = true,
-			[HEROIC_DIFF] = {
-				{ 1, 71641 },	-- Riplimb's Lost Collar
-				{ 2, 71561 },	-- Hide-Bound Chains
-				{ 4, 71563 },	-- Firebound Gorget
-				{ 5, 71564 },	-- Theck's Emberseal
-				{ 6, 69113 },	-- Apparatus of Khaz'goroth
-				{ 7, 69109 },	-- Scales of Life
-				{ 9, 71560 },	-- Chelley's Sterilized Scalpel
-				{ 10, 71562 },	-- Obsidium Cleaver
-				{ 11, 71557 },	-- Ranseur of Hatred
-				{ 12, 71559 },	-- Spire of Scarlet Pain
-				{ 13, 71558 },	-- Lava Bolt Crossbow
-				{ 16, 71579 },	-- Scorchvine Wand
-				{ 17, 71575 },	-- Trail of Embers
-				{ 19, 71617 },	-- Crystallized Firestone
 			},
 		},
 		T12_SET,
@@ -2680,8 +2784,8 @@ data["WellOfEternity"] = {
 			},
 		},
 		{ -- Trash
-		name = AL["Trash Mobs"],
-		ExtraList = true,
+			name = AL["Trash Mobs"],
+			ExtraList = true,
 			[HEROIC_DIFF] = {
 				{ 1, 76158 },	-- Courtier's Slippers
 				{ 2, 76157 },	-- Waterworn Handguards
