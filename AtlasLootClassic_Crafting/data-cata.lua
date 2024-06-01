@@ -1720,6 +1720,26 @@ data["MiningCata"] = {
 	}
 }
 
+data["SkinningCata"] = {
+	name = ALIL["Skinning"],
+	ContentType = PROF_GATH_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = NORMAL_ITTYPE,
+	CorrespondingFields = private.MINING_LINK,
+	items = {
+		{
+			name = AL["Illustrious Grand Master"],
+			[NORMAL_DIFF] = {
+				{ 1, 52976 }, -- Savage Leather
+				{ 2, 52977 }, -- Savage Leather Scraps
+				{ 16, 52982 }, -- Deepsea Scale
+				{ 17, 52979 }, -- Blackened Dragonscale
+				{ 19, 52980 }, -- Pristine Hide
+			}
+		},
+	}
+}
+
 data["HerbalismCata"] = {
 	name = ALIL["Herbalism"],
 	ContentType = PROF_GATH_CONTENT,
@@ -1738,27 +1758,6 @@ data["HerbalismCata"] = {
 				{ 6,  52983 }, -- Cinderbloom
 				{ 16,  52989 }, -- Deathspore Pod
 				{ 18,  52329 }, -- Volatile Life
-			}
-		},
-	}
-}
-
-data["SkinningCata"] = {
-	name = ALIL["Skinning"],
-	ContentType = PROF_GATH_CONTENT,
-	LoadDifficulty = NORMAL_DIFF,
-	TableType = NORMAL_ITTYPE,
-	CorrespondingFields = private.MINING_LINK,
-	items = {
-		{
-			name = AL["Illustrious Grand Master"],
-			[NORMAL_DIFF] = {
-				{ 1, 56516 }, -- Heavy Savage Leather
-				{ 2, 52976 }, -- Savage Leather
-				{ 3, 52977 }, -- Savage Leather Scraps
-				{ 16, 52982 }, -- Deepsea Scale
-				{ 17, 52979 }, -- Blackened Dragonscale
-				{ 19, 52980 }, -- Pristine Hide
 			}
 		},
 	}

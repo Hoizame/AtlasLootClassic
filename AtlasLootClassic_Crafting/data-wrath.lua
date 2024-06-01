@@ -1716,6 +1716,26 @@ data["MiningWrath"] = {
 	}
 }
 
+data["SkinningWrath"] = {
+	name = ALIL["Skinning"],
+	ContentType = PROF_GATH_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = NORMAL_ITTYPE,
+	CorrespondingFields = private.MINING_LINK,
+	items = {
+		{
+			name = AL["Grand Master"],
+			[NORMAL_DIFF] = {
+				{ 1, 33568 }, -- Borean Leather
+				{ 2, 33567 }, -- Borean Leather Scraps
+				{ 16, 38558 }, -- Nerubian Chitin
+				{ 17, 38557 }, -- Icy Dragonscale
+				{ 19, 44128 }, -- Arctic Fur
+			}
+		},
+	}
+}
+
 data["HerbalismWrath"] = {
 	name = ALIL["Herbalism"],
 	ContentType = PROF_GATH_CONTENT,
