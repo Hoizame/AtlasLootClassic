@@ -36,7 +36,7 @@ else
 end
 local SET1_DIFF = data:AddDifficulty(format(AL["Bloodthirsty %s"], ""), "set1", nil, 1)
 local SET2_DIFF = data:AddDifficulty(format(AL["Vicious %s"], ""), "set2", nil, 1)
-local SET3_DIFF = data:AddDifficulty(format(AL["Vicious %s"], ""), "set3", nil, 1)
+--local SET3_DIFF = data:AddDifficulty(format(AL["Vicious %s"], ""), "set3", nil, 1)
 
 local NORMAL_ITTYPE = data:AddItemTableType("Item", "Item")
 local SET_ITTYPE = data:AddItemTableType("Set", "Item")
@@ -48,7 +48,7 @@ local SET_EXTRA_ITTYPE = data:AddExtraItemTableType("Set")
 
 local PVP_CONTENT = data:AddContentType(AL["Battlegrounds"], ATLASLOOT_PVP_COLOR)
 local ARENA_CONTENT = data:AddContentType(AL["Arena"], ATLASLOOT_PVP_COLOR)
-local OPEN_WORLD_CONTENT = data:AddContentType(AL["Open World"], ATLASLOOT_PVP_COLOR)
+--local OPEN_WORLD_CONTENT = data:AddContentType(AL["Open World"], ATLASLOOT_PVP_COLOR)
 local GENERAL_CONTENT = data:AddContentType(GENERAL, ATLASLOOT_RAID40_COLOR)
 
 local HORDE, ALLIANCE, RANK_FORMAT = "Horde", "Alliance", AL["|cff33ff99Rank:|r %s"]
@@ -81,74 +81,60 @@ data["ArenaS9PvP"] = {
         },
         [SET2_DIFF] = {
         },
-        [SET3_DIFF] = {
-        }
     }, {
         name = AL["Weapons"] .. " - " .. AL["One-Handed"],
         [SET1_DIFF] = {
         },
         [SET2_DIFF] = {
         },
-        [SET3_DIFF] = {
-        }
     }, {
         name = AL["Weapons"] .. " - " .. AL["Two-Handed"],
         [SET1_DIFF] = {
         },
         [SET2_DIFF] = {
         },
-        [SET3_DIFF] = {
-        }
     }, {
         name = AL["Weapons"] .. " - " .. AL["Ranged"],
         [SET1_DIFF] = {
         },
         [SET2_DIFF] = {
         },
-        [SET3_DIFF] = {
-        }
     }, {
         name = AL["Weapons"] .. " - " .. ALIL["Off Hand"],
         [SET1_DIFF] = {
         },
         [SET2_DIFF] = {
         },
-        [SET3_DIFF] = {
-        }
     }, {
         name = AL["Weapons"] .. " - " .. ALIL["Shields"],
         [SET1_DIFF] = {
         },
         [SET2_DIFF] = {
         },
-        [SET3_DIFF] = {
-        }
     }, {
         name = ALIL["Cloak"],
+        [SET1_DIFF] = {
+        },
         [SET2_DIFF] = {
         },
-        [SET3_DIFF] = {
-        }
     }, {
         name = ALIL["Relic"],
         [SET1_DIFF] = {
         },
         [SET2_DIFF] = {
         },
-        [SET3_DIFF] = {
-        }
     }, {
         name = ALIL["Neck"],
+        [SET1_DIFF] = {
+        },
         [SET2_DIFF] = {
         },
-        [SET3_DIFF] = {
-        }
     }, {
         name = ALIL["Finger"],
+        [SET1_DIFF] = {
+        },
         [SET2_DIFF] = {
         },
-        [SET3_DIFF] = {
-        }
     }, {
         name = format(AL["Non Set '%s'"], ALIL["Cloth"]),
         [NORMAL_DIFF] = {
