@@ -230,7 +230,7 @@ data["BlacksmithingWrath"] = {
 				{ 1, 55374 },	-- Brilliant Titansteel Helm
 				{ 2, 55372 },	-- Spiked Titansteel Helm
 				{ 3, 55373 },	-- Tempered Titansteel Helm
-				{ 4,55302 },	-- Helm of Command
+				{ 4, 55302 },	-- Helm of Command
 				{ 5, 56556 },	-- Ornate Saronite Skullshield
 				{ 6, 55312 },	-- Savage Saronite Skullshield
 				{ 7, 59441 },	-- Brilliant Saronite Helm
@@ -309,7 +309,7 @@ data["BlacksmithingWrath"] = {
 				{ 1, 70565 },	-- Legplates of Painful Death
 				{ 2, 70567 },	-- Pillars of Might
 				{ 3, 70562 },	-- Puresteel Legplates
-				{ 4,55303 },	-- Daunting Legplates
+				{ 4, 55303 },	-- Daunting Legplates
 				{ 5, 56554 },	-- Ornate Saronite Legplates
 				{ 6, 55304 },	-- Righteous Greaves
 				{ 7, 55310 },	-- Savage Saronite Legplates
@@ -623,7 +623,7 @@ data["EngineeringWrath"] = {
 		{
 			name = AL["Misc"],
 			[NORMAL_DIFF] = {
-				{ 1,   [ATLASLOOT_IT_ALLIANCE] = { 60867 }, [ATLASLOOT_IT_HORDE] = { 60866 } }, -- Mekgineer's Chopper / Mechano-Hog
+				{ 1, [ATLASLOOT_IT_ALLIANCE] = { 60867 }, [ATLASLOOT_IT_HORDE] = { 60866 } }, -- Mekgineer's Chopper / Mechano-Hog
 				{ 3, 56476 },	-- Healing Injector Kit
 				{ 4, 56477 },	-- Mana Injector Kit
 				{ 6, 56461 },	-- Bladed Pickaxe
@@ -1726,16 +1726,16 @@ data["HerbalismWrath"] = {
 		{
 			name = AL["Grand Master"],
 			[NORMAL_DIFF] = {
-				{ 1,  36906 }, -- Icethorn
-				{ 2,  36905 }, -- Lichbloom
-				{ 3,  36903 }, -- Adder's Tongue
-				{ 4,  36907 }, -- Talandra's Rose
-				{ 5,  36904 }, -- Tiger Lily
-				{ 6,  39970 }, -- Fire Leaf
-				{ 7,  36901 }, -- Goldclover
-				{ 16,  36908 }, -- Frost Lotus
-				{ 17,  37921 }, -- Deadnettle
-				{ 19,  37704 }, -- Crystallized Life
+				{ 1, 36906 }, -- Icethorn
+				{ 2, 36905 }, -- Lichbloom
+				{ 3, 36903 }, -- Adder's Tongue
+				{ 4, 36907 }, -- Talandra's Rose
+				{ 5, 36904 }, -- Tiger Lily
+				{ 6, 39970 }, -- Fire Leaf
+				{ 7, 36901 }, -- Goldclover
+				{ 16, 36908 }, -- Frost Lotus
+				{ 17, 37921 }, -- Deadnettle
+				{ 19, 37704 }, -- Crystallized Life
 			}
 		},
 	}
