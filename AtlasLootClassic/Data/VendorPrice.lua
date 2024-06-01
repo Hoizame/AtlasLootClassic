@@ -119,7 +119,30 @@ local PRICE_INFO_LIST = {
     ["chefs"] = {
         currencyID = 402
     }, -- Chef's Award
-
+    ["Dreamc"] = {
+        itemID = 54440
+    }, -- Dreamcloth
+    ["BEC"] = {
+        itemID = 53643
+    }, -- Bolt of Embersilk Cloth
+    ["ElementiumB"] = {
+        itemID = 52186
+    }, -- Elementium Bar
+    ["HElementiumB"] = {
+        itemID = 53039
+    }, -- Hardened Elementium Bar
+    ["PyriumB"] = {
+        itemID = 51950
+    }, -- Pyrium Bar
+    ["HypnoticD"] = {
+        itemID = 52555
+    }, -- Hypnotic Dust
+    ["HeavenlyS"] = {
+        itemID = 52721
+    }, -- Heavenly Shard
+    ["MaelstromC"] = {
+        itemID = 52722
+    }, -- Maelstrom Crystal
     ["JusticePoints"] = {
         currencyID = 395
     }, -- Justice Points
@@ -1200,38 +1223,104 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.CATA_VERSION_NUM) then
         [58486] = "ValorPoints:1650", -- Slippers of Moving Waters
         -- CA vendor
         [65433] = "chefs:5", -- Recipe: South Island Iced Tea
-	[65432] = "chefs:5", -- Recipe: Fortune Cookie
-	[65426] = "chefs:3", -- Recipe: Baked Rockfish
-	[62799] = "chefs:3", -- Recipe: Broiled Dragon Feast
-	[65431] = "chefs:3", -- Recipe: Chocolate Cookie
-	[62800] = "chefs:3", -- Recipe: Seafood Magnifique Feast
-	[65427] = "chefs:3", -- Recipe: Basilisk Liverdog
-	[65429] = "chefs:3", -- Recipe: Beer-Basted Crocolisk
-	[65424] = "chefs:3", -- Recipe: Blackbelly Sushi
-	[65430] = "chefs:3", -- Recipe: Crocolisk Au Gratin
-	[65422] = "chefs:3", -- Recipe: Delicious Sagefish Tail
+	    [65432] = "chefs:5", -- Recipe: Fortune Cookie
+	    [65426] = "chefs:3", -- Recipe: Baked Rockfish
+	    [62799] = "chefs:3", -- Recipe: Broiled Dragon Feast
+	    [65431] = "chefs:3", -- Recipe: Chocolate Cookie
+	    [62800] = "chefs:3", -- Recipe: Seafood Magnifique Feast
+	    [65427] = "chefs:3", -- Recipe: Basilisk Liverdog
+	    [65429] = "chefs:3", -- Recipe: Beer-Basted Crocolisk
+	    [65424] = "chefs:3", -- Recipe: Blackbelly Sushi
+	    [65430] = "chefs:3", -- Recipe: Crocolisk Au Gratin
+	    [65422] = "chefs:3", -- Recipe: Delicious Sagefish Tail
         [65428] = "chefs:3", -- Recipe: Grilled Dragon
         [65409] = "chefs:3", -- Recipe: Lavascale Minestrone
         [65420] = "chefs:3", -- Recipe: Mushroom Sauce Mudfish
-	[65421] = "chefs:3", -- Recipe: Severed Sagefish Head
-	[65425] = "chefs:3", -- Recipe: Skewered Eel
-	[68688] = "chefs:3", -- Recipe: Scalding Murglesnout
-	[65423] = "chefs:3", -- Recipe: Fish Fry
-	[65418] = "chefs:3", -- Recipe: Hearty Seafood Soup
-	[65417] = "chefs:3", -- Recipe: Pickled Guppy
-	[65419] = "chefs:3", -- Recipe: Tender Baked Turtle
-	[65411] = "chefs:3", -- Recipe: Broiled Mountain Trout
-	[65407] = "chefs:3", -- Recipe: Lavascale Fillet
-	[65412] = "chefs:3", -- Recipe: Lightly Fried Lurker
-	[65416] = "chefs:3", -- Recipe: Lurker Lunch
-	[65410] = "chefs:3", -- Recipe: Salted Eye
-	[65413] = "chefs:3", -- Recipe: Seasoned Crab
-	[65406] = "chefs:3", -- Recipe: Whitecrest Gumbo
-	[65415] = "chefs:3", -- Recipe: Highland Spirits
-	[65414] = "chefs:3", -- Recipe: Starfire Espresso
-	[65408] = "chefs:3", -- Recipe: Feathered Lure
-	[65513] = "chefs:2", -- Crate of Tasty Meat
-	[68689] = "chefs:1" -- Imported Supplies
+	    [65421] = "chefs:3", -- Recipe: Severed Sagefish Head
+	    [65425] = "chefs:3", -- Recipe: Skewered Eel
+	    [68688] = "chefs:3", -- Recipe: Scalding Murglesnout
+	    [65423] = "chefs:3", -- Recipe: Fish Fry
+	    [65418] = "chefs:3", -- Recipe: Hearty Seafood Soup
+	    [65417] = "chefs:3", -- Recipe: Pickled Guppy
+	    [65419] = "chefs:3", -- Recipe: Tender Baked Turtle
+	    [65411] = "chefs:3", -- Recipe: Broiled Mountain Trout
+	    [65407] = "chefs:3", -- Recipe: Lavascale Fillet
+	    [65412] = "chefs:3", -- Recipe: Lightly Fried Lurker
+	    [65416] = "chefs:3", -- Recipe: Lurker Lunch
+	    [65410] = "chefs:3", -- Recipe: Salted Eye
+	    [65413] = "chefs:3", -- Recipe: Seasoned Crab
+	    [65406] = "chefs:3", -- Recipe: Whitecrest Gumbo
+	    [65415] = "chefs:3", -- Recipe: Highland Spirits
+	    [65414] = "chefs:3", -- Recipe: Starfire Espresso
+	    [65408] = "chefs:3", -- Recipe: Feathered Lure
+	    [65513] = "chefs:2", -- Crate of Tasty Meat
+	    [68689] = "chefs:1", -- Imported Supplies
+        -- tailoring recipes
+        [54601] = "Dreamc:1", -- Pattern: Belt of the Depths
+        [54602] = "Dreamc:1", -- Pattern: Dreamless Belt
+        [54603] = "Dreamc:1", -- Pattern: Breeches of Mended Nightmares
+        [54604] = "Dreamc:1", -- Pattern: Flame-Ascended Pantaloons
+        [54605] = "Dreamc:1", -- Pattern: Illusionary Bag
+        [54593] = "BEC:8",
+        [54594] = "BEC:8",
+        [54595] = "BEC:8",
+        [54596] = "BEC:8",
+        [54597] = "BEC:8",
+        [54598] = "BEC:8",
+        [54599] = "BEC:8",
+        [54600] = "BEC:8",
+        [68199] = "BEC:8",
+        -- blacksmithing recipes
+        [66103] = "ElementiumB:20",
+        [66105] = "ElementiumB:20",
+        [66107] = "ElementiumB:20",
+        [66117] = "ElementiumB:20",
+        [66118] = "ElementiumB:20",
+        [66119] = "ElementiumB:20",
+        [66125] = "ElementiumB:20",
+        [66126] = "ElementiumB:20",
+        [66127] = "ElementiumB:20",
+        [66103] = "HElementiumB:2",
+        [66104] = "HElementiumB:2",
+        [66106] = "HElementiumB:2",
+        [66108] = "HElementiumB:2",
+        [66110] = "HElementiumB:2",
+        [66111] = "HElementiumB:2",
+        [66112] = "HElementiumB:2",
+        [66113] = "HElementiumB:2",
+        [66114] = "HElementiumB:2",
+        [66115] = "HElementiumB:2",
+        [66116] = "HElementiumB:2",
+        [66120] = "HElementiumB:2",
+        [66121] = "HElementiumB:2",
+        [66128] = "HElementiumB:2",
+        [66129] = "HElementiumB:2",
+        [67603] = "HElementiumB:2",
+        [66100] = "PyriumB:5",
+        [66101] = "PyriumB:5",
+        [66122] = "PyriumB:5",
+        [66123] = "PyriumB:5",
+        [66124] = "PyriumB:5",
+        [66130] = "PyriumB:5",
+        [66131] = "PyriumB:5",
+        [66132] = "PyriumB:5",
+        [67606] = "PyriumB:5",
+        -- enchanting recipes
+        [67308] = "HypnoticD:20",
+        [67312] = "HypnoticD:20",
+        [65359] = "HeavenlyS:1",
+        [52737] = "HeavenlyS:5",
+        [52738] = "HeavenlyS:5",
+        [52739] = "HeavenlyS:5",
+        [52740] = "HeavenlyS:5",
+        [64411] = "HeavenlyS:5",
+        [64412] = "HeavenlyS:5",
+        [64413] = "HeavenlyS:5",
+        [64414] = "HeavenlyS:5",
+        [64415] = "HeavenlyS:5",
+        [52733] = "MaelstromC:5",
+        [52735] = "MaelstromC:5",
+        [52736] = "MaelstromC:5",
     }
 end
 
