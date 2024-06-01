@@ -1024,7 +1024,6 @@ data["InscriptionCata"] = {
 			[NORMAL_DIFF] = {
 				{ 1, 86005 }, -- Inferno Ink
 				{ 2, 86004 }, -- Blackfallow Ink
-				
 			}
 		},
 		{
@@ -1834,7 +1833,7 @@ data["ArchaeologyCata"] = {
 				{ 2, 92148 }, -- Scepter of Azj'Aqir
 				{ 16, "INV_sword_04", nil, ALIL["Fossil"] },
 				{ 17, 90619 }, -- Fossilized Raptor
-			}, 
+			},
 		},
 		{
 			name = AL["Pets"],
