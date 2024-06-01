@@ -1571,9 +1571,9 @@ data["ZulGurub"] = {
 				{ 2, 69623 },	-- Vestments of the Soulflayer
 				{ 4, 69621 },	-- Twinblade of the Hakkari
 				{ 5, 69620 },	-- Twinblade of the Hakkari
-				{ 6, 69628 },	-- Jeklik's Smasher
-				{ 7, 69626 },	-- Jin'do's Verdict
-				{ 8, 69624 },	-- Legacy of Arlokk
+				-- gives lua error probably not yet in game files { 6, 69628 },	-- Jeklik's Smasher
+				{ 6, 69626 },	-- Jin'do's Verdict
+				{ 7, 69624 },	-- Legacy of Arlokk
 				{ 16, 69629 },	-- Shield of the Blood God
 				{ 17, 69627 },	-- Zulian Ward
 				{ 18, 69625 },	-- Mandokir's Tribute
