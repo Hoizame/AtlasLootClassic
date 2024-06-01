@@ -63,46 +63,46 @@ local T11_SET = {
 	ContentPhaseCata = 1,
 	IgnoreAsSource = true,
 	[NORMAL_DIFF] = {
-		{1, 4000925}, -- Death Knight Normal DPS Set
-		{2, 4000926}, -- Death Knight Normal Tank Set
-		{4, 4000927}, -- Druid Normal Melee Set
-		{5, 4000928}, -- Druid Normal Resto Set
-		{6, 4000929}, -- Druid Normal Balance Set
-		{8, 4000930}, -- Hunter Normal
-		{10, 4000931}, -- Mage Normal
-		{12, 4000932}, -- Paladin DPS
-		{13, 4000933}, -- Paladin Holy
-		{14, 4000934}, -- Paladin Prot
-		{16, 4000935}, -- Priest Holy
-		{17, 4000936}, -- Priest Shadow
-		{19, 4000937}, -- Rogue
-		{21, 4000938}, -- Shaman Resto
-		{22, 4000939}, -- Shaman Enhance
-		{23, 4000940}, -- Shaman Elemental
-		{25, 4000941}, -- Warlock
-		{27, 4000942}, -- Warrior
-		{28, 4000943}, -- Warrior
+		{1, 4000941 }, -- Warlock
+		{3, 4000935 }, -- Priest Holy
+		{4, 4000936 }, -- Priest Shadow
+		{6, 4000937 }, -- Rogue
+		{8, 4000930 }, -- Hunter
+		{10, 4000943 }, -- Warrior Tank
+		{11, 4000942 }, -- Warrior DPS
+		{13, 4000926 }, -- Death Knight Tank
+		{14, 4000925 }, -- Death Knight DPS
+		{16, 4000931 }, -- Mage
+		{18, 4000928 }, -- Druid Resto
+		{19, 4000929 }, -- Druid Balance
+		{20, 4000927 }, -- Druid Feral
+		{22, 4000938 }, -- Shaman Resto
+		{23, 4000940 }, -- Shaman Elemental
+		{24, 4000939 }, -- Shaman Enhance
+		{26, 4000933 }, -- Paladin Holy
+		{27, 4000934 }, -- Paladin Prot
+		{28, 4000932 }, -- Paladin DPS
 	},
 	[HEROIC_DIFF] = {
-		{1, 4001925}, -- Death Knight Heroic DPS Set
-		{2, 4001926}, -- Death Knight Heroic Tank Set
-		{4, 4001927}, -- Druid Normal Melee Set
-		{5, 4001928}, -- Druid Normal Resto Set
-		{6, 4001929}, -- Druid Normal Balance Set
-		{8, 4001930}, -- Hunter Heroic
-		{10, 4001931}, -- Mage Heroic
-		{12, 4001932}, -- Paladin DPS
-		{13, 4001933}, -- Paladin Holy
-		{14, 4001934}, -- Paladin Prot
-		{16, 4001935}, -- Priest Holy
-		{17, 4001936}, -- Priest Shadow
-		{19, 4001937}, -- Rogue
-		{21, 4001938}, -- Shaman Resto
-		{22, 4001939}, -- Shaman Enhance
-		{23, 4001940}, -- Shaman Elemental
-		{25, 4001941}, -- Warlock
-		{27, 4001942}, -- Warrior
-		{28, 4001943}, -- Warrior
+		{1, 4001941 }, -- Warlock
+		{3, 4001935 }, -- Priest Holy
+		{4, 4001936 }, -- Priest Shadow
+		{6, 4001937 }, -- Rogue
+		{8, 4001930 }, -- Hunter
+		{10, 4001943 }, -- Warrior Tank
+		{11, 4001942 }, -- Warrior DPS
+		{13, 4001926 }, -- Death Knight Tank
+		{14, 4001925 }, -- Death Knight DPS
+		{16, 4001931 }, -- Mage
+		{18, 4001928 }, -- Druid Resto
+		{19, 4001929 }, -- Druid Balance
+		{20, 4001927 }, -- Druid Feral
+		{22, 4001938 }, -- Shaman Resto
+		{23, 4001940 }, -- Shaman Elemental
+		{24, 4001939 }, -- Shaman Enhance
+		{26, 4001933 }, -- Paladin Holy
+		{27, 4001934 }, -- Paladin Prot
+		{28, 4001932 }, -- Paladin DPS
 	},
 }
 
@@ -113,46 +113,46 @@ local T12_SET = {
 	ContentPhaseCata = 2,
 	IgnoreAsSource = true,
 	[NORMAL_DIFF] = {
-		{1, 4000944}, -- Death Knight Normal DPS Set
-		{2, 4000945}, -- Death Knight Normal Tank Set
-		{4, 4000946}, -- Druid Normal Melee Set
-		{5, 4000947}, -- Druid Normal Resto Set
-		{6, 4000948}, -- Druid Normal Balance Set
-		{8, 4000949}, -- Hunter Normal
-		{10, 4000950}, -- Mage Normal
-		{12, 4000951}, -- Paladin DPS
-		{13, 4000952}, -- Paladin Holy
-		{14, 4000953}, -- Paladin Prot
-		{16, 4000954}, -- Priest
-		{17, 4000955}, -- Priest
-		{19, 4000956}, -- Rogue
-		{21, 4000957}, -- Shaman
-		{22, 4000958}, -- Shaman
-		{23, 4000959}, -- Shaman
-		{25, 4000960}, -- Warlock
-		{27, 4000961}, -- Warrior
-		{28, 4000962}, -- Warrior
+		{1, 4000960 }, -- Warlock
+		{3, 4000954 }, -- Priest Holy
+		{4, 4000955 }, -- Priest Shadow
+		{6, 4000956 }, -- Rogue
+		{8, 4000949 }, -- Hunter
+		{10, 4000962 }, -- Warrior Tank
+		{11, 4000961 }, -- Warrior DPS
+		{13, 4000945 }, -- Death Knight Tank
+		{14, 4000944 }, -- Death Knight DPS
+		{16, 4000950 }, -- Mage
+		{18, 4000947 }, -- Druid Resto
+		{19, 4000948 }, -- Druid Balance
+		{20, 4000946 }, -- Druid Feral
+		{22, 4000957 }, -- Shaman Resto
+		{23, 4000959 }, -- Shaman Elemental
+		{24, 4000958 }, -- Shaman Enhance
+		{26, 4000952 }, -- Paladin Holy
+		{27, 4000953 }, -- Paladin Prot
+		{28, 4000951 }, -- Paladin DPS
 	},
 	[HEROIC_DIFF] = {
-		{1, 4001944}, -- Death Knight Normal DPS Set
-		{2, 4001945}, -- Death Knight Normal Tank Set
-		{4, 4001946}, -- Druid Normal Melee Set
-		{5, 4001947}, -- Druid Normal Resto Set
-		{6, 4001948}, -- Druid Normal Balance Set
-		{8, 4001949}, -- Hunter Normal
-		{10, 4001950}, -- Mage Normal
-		{12, 4001951}, -- Paladin DPS
-		{13, 4001952}, -- Paladin Holy
-		{14, 4001953}, -- Paladin Prot
-		{16, 4001954}, -- Priest
-		{17, 4001955}, -- Priest
-		{19, 4001956}, -- Rogue
-		{21, 4001957}, -- Shaman
-		{22, 4001958}, -- Shaman
-		{23, 4001959}, -- Shaman
-		{25, 4001960}, -- Warlock
-		{27, 4001961}, -- Warrior
-		{28, 4001962}, -- Warrior
+		{1, 4001960 }, -- Warlock
+		{3, 4001954 }, -- Priest Holy
+		{4, 4001955 }, -- Priest Shadow
+		{6, 4001956 }, -- Rogue
+		{8, 4001949 }, -- Hunter
+		{10, 4001962 }, -- Warrior Tank
+		{11, 4001961 }, -- Warrior DPS
+		{13, 4001945 }, -- Death Knight Tank
+		{14, 4001944 }, -- Death Knight DPS
+		{16, 4001950 }, -- Mage
+		{18, 4001947 }, -- Druid Resto
+		{19, 4001948 }, -- Druid Balance
+		{20, 4001946 }, -- Druid Feral
+		{22, 4001957 }, -- Shaman Resto
+		{23, 4001959 }, -- Shaman Elemental
+		{24, 4001958 }, -- Shaman Enhance
+		{26, 4001952 }, -- Paladin Holy
+		{27, 4001953 }, -- Paladin Prot
+		{28, 4001951 }, -- Paladin DPS
 	},
 }
 
@@ -162,68 +162,68 @@ local T13_SET = {
 	TableType = SET_ITTYPE,
 	ContentPhaseCata = 3,
 	IgnoreAsSource = true,
-	[LFR_DIFF] = {
-		{1, 4000963}, -- Death Knight Normal DPS Set
-		{2, 4000964}, -- Death Knight Normal Tank Set
-		{4, 4000965}, -- Druid Normal Melee Set
-		{5, 4000966}, -- Druid Normal Resto Set
-		{6, 4000967}, -- Druid Normal Balance Set
-		{8, 4000968}, -- Hunter Normal
-		{10, 4000969}, -- Mage Normal
-		{12, 4000970}, -- Paladin DPS
-		{13, 4000971}, -- Paladin Holy
-		{14, 4000972}, -- Paladin Prot
-		{16, 4000973}, -- Priest
-		{17, 4000974}, -- Priest
-		{19, 4000975}, -- Rogue
-		{21, 4000976}, -- Shaman
-		{22, 4000977}, -- Shaman
-		{23, 4000978}, -- Shaman
-		{25, 4000979}, -- Warlock
-		{27, 4000980}, -- Warrior
-		{28, 4000981}, -- Warrior
-	},
+	--[LFR_DIFF] = {
+	--	{1, 4000979 }, -- Warlock
+	--	{3, 4000973 }, -- Priest Holy
+	--	{4, 4000974 }, -- Priest Shadow
+	--	{6, 4000975 }, -- Rogue
+	--	{8, 4000968 }, -- Hunter
+	--	{10, 4000981 }, -- Warrior Tank
+	--	{11, 4000980 }, -- Warrior Dps
+	--	{13, 4000964 }, -- Death Knight Tank
+	--	{14, 4000963 }, -- Death Knight DPS
+	--	{16, 4000969 }, -- Mage
+	--	{18, 4000966 }, -- Druid Resto
+	--	{19, 4000967 }, -- Druid Balance
+	--	{20, 4000965 }, -- Druid Melee
+	--	{22, 4000976 }, -- Shaman Resto
+	--	{23, 4000978 }, -- Shaman Elemental
+	--	{24, 4000977 }, -- Shaman Enhance
+	--	{26, 4000971 }, -- Paladin Holy
+	--	{27, 4000972 }, -- Paladin Prot
+	--	{28, 4000970 }, -- Paladin DPS
+	--},
 	[NORMAL_DIFF] = {
-		{1, 4001963}, -- Death Knight Normal DPS Set
-        {2, 4001964}, -- Death Knight Normal Tank Set
-        {4, 4001965}, -- Druid Normal Melee Set
-        {5, 4001966}, -- Druid Normal Resto Set
-        {6, 4001967}, -- Druid Normal Balance Set
-        {8, 4001968}, -- Hunter Normal
-        {10, 4001969}, -- Mage Normal
-        {12, 4001970}, -- Paladin DPS
-        {13, 4001971}, -- Paladin Holy
-        {14, 4001972}, -- Paladin Prot
-        {16, 4001973}, -- Priest
-        {17, 4001974}, -- Priest
-        {19, 4001975}, -- Rogue
-        {21, 4001976}, -- Shaman
-        {22, 4001977}, -- Shaman
-        {23, 4001978}, -- Shaman
-        {25, 4001979}, -- Warlock
-        {27, 4001980}, -- Warrior
-        {28, 4001981}, -- Warrior
+		{1, 4001979 }, -- Warlock
+		{3, 4001973 }, -- Priest Holy
+		{4, 4001974 }, -- Priest Shadow
+		{6, 4001975 }, -- Rogue
+		{8, 4001968 }, -- Hunter
+		{10, 4001981 }, -- Warrior Tank
+		{11, 4001980 }, -- Warrior Dps
+		{13, 4001964 }, -- Death Knight Tank
+		{14, 4001963 }, -- Death Knight DPS
+		{16, 4001969 }, -- Mage
+		{18, 4001966 }, -- Druid Resto
+		{19, 4001967 }, -- Druid Balance
+		{20, 4001965 }, -- Druid Melee
+		{22, 4001976 }, -- Shaman Resto
+		{23, 4001978 }, -- Shaman Elemental
+		{24, 4001977 }, -- Shaman Enhance
+		{26, 4001971 }, -- Paladin Holy
+		{27, 4001972 }, -- Paladin Prot
+		{28, 4001970 }, -- Paladin DPS
 	},
 	[HEROIC_DIFF] = {
-		{1, 4002963}, -- Death Knight Normal DPS Set
-        {2, 4002964}, -- Death Knight Normal Tank Set
-        {4, 4002965}, -- Druid Normal Melee Set
-        {5, 4002966}, -- Druid Normal Resto Set
-        {6, 4002967}, -- Druid Normal Balance Set
-        {8, 4002968}, -- Hunter Normal
-        {10, 4002969}, -- Mage Normal
-        {12, 4002970}, -- Paladin DPS
-        {13, 4002971}, -- Paladin Holy
-        {14, 4002972}, -- Paladin Prot
-        {16, 4002973}, -- Priest
-        {17, 4002974}, -- Priest
-        {19, 4002975}, -- Rogue
-        {21, 4002976}, -- Shaman
-        {22, 4002977}, -- Shaman
-        {23, 4002978}, -- Shaman
-        {25, 4002979}, -- Warlock
-        {27, 4002980}, -- Warrior
-        {28, 4002981}, -- Warrior
+		{1, 4002979 }, -- Warlock
+		{3, 4002973 }, -- Priest Holy
+		{4, 4002974 }, -- Priest Shadow
+		{6, 4002975 }, -- Rogue
+		{8, 4002968 }, -- Hunter
+		{10, 4002981 }, -- Warrior Tank
+		{11, 4002980 }, -- Warrior Dps
+		{13, 4002964 }, -- Death Knight Tank
+		{14, 4002963 }, -- Death Knight DPS
+		{16, 4002969 }, -- Mage
+		{18, 4002966 }, -- Druid Resto
+		{19, 4002967 }, -- Druid Balance
+		{20, 4002965 }, -- Druid Melee
+		{22, 4002976 }, -- Shaman Resto
+		{23, 4002978 }, -- Shaman Elemental
+		{24, 4002977 }, -- Shaman Enhance
+		{26, 4002971 }, -- Paladin Holy
+		{27, 4002972 }, -- Paladin Prot
+		{28, 4002970 }, -- Paladin DPS
 	},
 }
 
@@ -1786,6 +1786,7 @@ data["TheBastionOfTwilight"] = {
 				{ 16, 59521 },	-- Soul Blade
 				{ 17, 59525 },	-- Chelley's Staff of Dark Mending
 				{ 18, 60210 },	-- Crossfire Carbine
+				{ 19, 68608 },  -- Dragonwreck Throwing Axe
 			},
 		},
 		T11_SET,
@@ -2611,7 +2612,15 @@ data["Firelands"] = {
 				{ 13, 71558 },	-- Lava Bolt Crossbow
 				{ 16, 71579 },	-- Scorchvine Wand
 				{ 17, 71575 },	-- Trail of Embers
-				{ 19, 71617 },	-- Crystallized Firestone
+				{ 19, 71590 },  -- Deathclutch Figurine
+				{ 20, 71587 },  -- Relic of the Elemental Lords
+				{ 21, 71577 },  -- Singed Plume of Aviana
+				{ 22, 71567 },  -- Covenant of the Flame
+				{ 23, 71580 },  -- Soulflame Vial
+				{ 25, 71568 },  -- Morningstar Shard
+				{ 26, 71593 },  -- Giantslicer
+				{ 27, 71592 },  -- Deflecting Star
+				{ 29, 71617 },	-- Crystallized Firestone
 			},
 		},
 		{ -- Patterns
@@ -2898,7 +2907,8 @@ data["DragonSoul"] = {
 				{ 16, 77262 },	-- Petrified Fungal Heart
 				{ 18, 77214 },	-- Vagaries of Time
 				{ 19, 77212 },	-- Hand of Morchok
-				{ 21, "ac6174" },
+				{ 20, 77213 },  -- Razor Saronite Chip
+				{ 22, "ac6174" },
 			},
 			[HEROIC_DIFF] = {
 				{ 1, 78366 },	-- Mosswrought Shoulderguards
@@ -2913,56 +2923,57 @@ data["DragonSoul"] = {
 				{ 16, 78364 },	-- Petrified Fungal Heart
 				{ 18, 78363 },	-- Vagaries of Time
 				{ 19, 78371 },	-- Hand of Morchok
-				{ 21, "ac6109" },
-				{ 22, "ac6174" },
+				{ 20, 78369 },  -- Razor Saronite Chip
+				{ 22, "ac6109" },
+				{ 23, "ac6174" },
 			},
 		},
 		{ -- Warlord Zon'ozz
-		name = AL["Warlord Zon'ozz"],
-		EncounterJournalID = 324,
-		--[[
-		[RF_DIFF] = {
-			{ 1, 78398 },	-- Cord of the Slain Champion
-			{ 2, 78395 },	-- Belt of Flayed Skin
-			{ 3, 78400 },	-- Grotesquely Writhing Bracers
-			{ 4, 78397 },	-- Graveheart Bracers
-			{ 5, 78396 },	-- Treads of Crushed Flesh
-			{ 7, 77969 },	-- Seal of the Seven Signs
-			{ 16, 78866 },	-- Gauntlets of the Corrupted Conqueror
-			{ 17, 78867 },	-- Gauntlets of the Corrupted Protector
-			{ 18, 78865 },	-- Gauntlets of the Corrupted Vanquisher
-			{ 20, 78399 },	-- Finger of Zon'ozz
-		},
-		--]]
-		[NORMAL_DIFF] = {
-			{ 1, 77255 },	-- Cord of the Slain Champion
-			{ 2, 77260 },	-- Belt of Flayed Skin
-			{ 3, 77257 },	-- Grotesquely Writhing Bracers
-			{ 4, 77258 },	-- Graveheart Bracers
-			{ 5, 77259 },	-- Treads of Crushed Flesh
-			{ 7, 77204 },	-- Seal of the Seven Signs
-			{ 16, 78183 },	-- Gauntlets of the Corrupted Conqueror
-			{ 17, 78178 },	-- Gauntlets of the Corrupted Protector
-			{ 18, 78173 },	-- Gauntlets of the Corrupted Vanquisher
-			{ 20, 77215 },	-- Horrifying Horn Arbalest
-			{ 21, 77216 },	-- Finger of Zon'ozz
-			{ 23, "ac6128" },
-		},
-		[HEROIC_DIFF] = {
-			{ 1, 78391 },	-- Cord of the Slain Champion
-			{ 2, 78388 },	-- Belt of Flayed Skin
-			{ 3, 78393 },	-- Grotesquely Writhing Bracers
-			{ 4, 78390 },	-- Graveheart Bracers
-			{ 5, 78389 },	-- Treads of Crushed Flesh
-			{ 7, 77989 },	-- Seal of the Seven Signs
-			{ 16, 78853 },	-- Gauntlets of the Corrupted Conqueror
-			{ 17, 78854 },	-- Gauntlets of the Corrupted Protector
-			{ 18, 78855 },	-- Gauntlets of the Corrupted Vanquisher
-			{ 20, 78387 },	-- Horrifying Horn Arbalest
-			{ 21, 78392 },	-- Finger of Zon'ozz
-			{ 23, "ac6110" },
-			{ 24, "ac6128" },
-		},
+			name = AL["Warlord Zon'ozz"],
+			EncounterJournalID = 324,
+			--[[
+			[RF_DIFF] = {
+				{ 1, 78398 },	-- Cord of the Slain Champion
+				{ 2, 78395 },	-- Belt of Flayed Skin
+				{ 3, 78400 },	-- Grotesquely Writhing Bracers
+				{ 4, 78397 },	-- Graveheart Bracers
+				{ 5, 78396 },	-- Treads of Crushed Flesh
+				{ 7, 77969 },	-- Seal of the Seven Signs
+				{ 16, 78866 },	-- Gauntlets of the Corrupted Conqueror
+				{ 17, 78867 },	-- Gauntlets of the Corrupted Protector
+				{ 18, 78865 },	-- Gauntlets of the Corrupted Vanquisher
+				{ 20, 78399 },	-- Finger of Zon'ozz
+			},
+			--]]
+			[NORMAL_DIFF] = {
+				{ 1, 77255 },	-- Cord of the Slain Champion
+				{ 2, 77260 },	-- Belt of Flayed Skin
+				{ 3, 77257 },	-- Grotesquely Writhing Bracers
+				{ 4, 77258 },	-- Graveheart Bracers
+				{ 5, 77259 },	-- Treads of Crushed Flesh
+				{ 7, 77204 },	-- Seal of the Seven Signs
+				{ 16, 78183 },	-- Gauntlets of the Corrupted Conqueror
+				{ 17, 78178 },	-- Gauntlets of the Corrupted Protector
+				{ 18, 78173 },	-- Gauntlets of the Corrupted Vanquisher
+				{ 20, 77215 },	-- Horrifying Horn Arbalest
+				{ 21, 77216 },	-- Finger of Zon'ozz
+				{ 23, "ac6128" },
+			},
+			[HEROIC_DIFF] = {
+				{ 1, 78391 },	-- Cord of the Slain Champion
+				{ 2, 78388 },	-- Belt of Flayed Skin
+				{ 3, 78393 },	-- Grotesquely Writhing Bracers
+				{ 4, 78390 },	-- Graveheart Bracers
+				{ 5, 78389 },	-- Treads of Crushed Flesh
+				{ 7, 77989 },	-- Seal of the Seven Signs
+				{ 16, 78853 },	-- Gauntlets of the Corrupted Conqueror
+				{ 17, 78854 },	-- Gauntlets of the Corrupted Protector
+				{ 18, 78855 },	-- Gauntlets of the Corrupted Vanquisher
+				{ 20, 78387 },	-- Horrifying Horn Arbalest
+				{ 21, 78392 },	-- Finger of Zon'ozz
+				{ 23, "ac6110" },
+				{ 24, "ac6128" },
+			},
 		},
 		{ -- Yor'sahj the Unsleeping
 			name = AL["Yor'sahj the Unsleeping"],

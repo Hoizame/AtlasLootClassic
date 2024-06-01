@@ -2391,6 +2391,8 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.CATA_VERSION_NUM) then
 		[68781] = {14,490,96255}, -- Design: Agile Shadowspirit Diamond
 		[68782] = {14,490,96256}, -- Design: Reverberating Shadowspirit Diamond
 		[68783] = {14,490,96257}, -- Design: Burning Shadowspirit Diamond
+		[52381] = {14,500,73396}, -- Design: Bold Chimera's Eye
+		[52362] = {14,465,73335}, -- Design: Bold Inferno Ruby
 		--[] = {,,}, --
 		--[recipe] = {scroll#,skill,spell},
     }
