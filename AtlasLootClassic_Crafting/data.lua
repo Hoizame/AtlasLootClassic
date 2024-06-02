@@ -1731,7 +1731,7 @@ data["Herbalism"] = {
 			name = AL["Expert"],
 			[NORMAL_DIFF] = {
 				{ 1, 8836 }, -- Arthas' Tears
-				{ 2, 8831, 8153 }, -- Purple Lotus
+				{ 2, 8831 }, -- Purple Lotus
 				{ 3, 4625 }, -- Firebloom
 				{ 4, 3819 }, -- Wintersbite
 				{ 5, 3358 }, -- Khadgar's Whisker
@@ -1754,8 +1754,8 @@ data["Herbalism"] = {
 		{
 			name = AL["Apprentice"],
 			[NORMAL_DIFF] = {
-				{ 1, 2450, 2452 }, -- Briarthorn
-				{ 2, 785, 2452 }, -- Mageroyal
+				{ 1, 2450 }, -- Briarthorn
+				{ 2, 785 }, -- Mageroyal
 				{ 3, 2449 }, -- Earthroot
 				{ 4, 765 }, -- Silverleaf
 				{ 5, 2447 }, -- Peacebloom
