@@ -1272,7 +1272,7 @@ data["Wintergrasp"] = {
         {9, 44100}, -- Pristine Lightforge Spaulders
         {10, 44099}, -- Strengthened Stockade Pauldrons
         {12, AtlasLoot:GetRetByFaction(44097, 44098)}, -- Inherited Insignia of the Horde / Inherited Insignia of the Alliance
-                         {14, 44115}, -- Wintergrasp Commendation
+        {14, 44115}, -- Wintergrasp Commendation
         {16, 44091}, -- Sharpened Scarlet Kris
         {17, 44096}, -- Battleworn Thrash Blade
         {18, 44092}, -- Reforged Truesilver Champion

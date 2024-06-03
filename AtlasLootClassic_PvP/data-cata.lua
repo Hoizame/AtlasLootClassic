@@ -40,7 +40,7 @@ local SET3_DIFF = data:AddDifficulty(format(AL["Elite Vicious %s"], ""), "set3",
 
 local NORMAL_ITTYPE = data:AddItemTableType("Item", "Item")
 local SET_ITTYPE = data:AddItemTableType("Set", "Item")
-local ICON_ITTYPE = data:AddItemTableType("Dummy")
+--local ICON_ITTYPE = data:AddItemTableType("Dummy")
 
 local QUEST_EXTRA_ITTYPE = data:AddExtraItemTableType("Quest")
 local PRICE_EXTRA_ITTYPE = data:AddExtraItemTableType("Price")
@@ -51,8 +51,8 @@ local ARENA_CONTENT = data:AddContentType(AL["Arena"], ATLASLOOT_PVP_COLOR)
 --local OPEN_WORLD_CONTENT = data:AddContentType(AL["Open World"], ATLASLOOT_PVP_COLOR)
 local GENERAL_CONTENT = data:AddContentType(GENERAL, ATLASLOOT_RAID40_COLOR)
 
-local HORDE, ALLIANCE, RANK_FORMAT = "Horde", "Alliance", AL["|cff33ff99Rank:|r %s"]
-local BLIZZARD_NYI = " |cff00ccff<NYI |T130946:12:20:0:0:32:16:4:28:0:16|t>|r"
+--local HORDE, ALLIANCE, RANK_FORMAT = "Horde", "Alliance", AL["|cff33ff99Rank:|r %s"]
+--local BLIZZARD_NYI = " |cff00ccff<NYI |T130946:12:20:0:0:32:16:4:28:0:16|t>|r"
 
 data["PvPMountsCata"] = {
     name = ALIL["Mounts"],
@@ -80,6 +80,8 @@ data["ArenaS9PvP"] = {
         [SET1_DIFF] = {
         },
         [SET2_DIFF] = {
+        },
+        [SET3_DIFF] = {
         },
     }, {
         name = AL["Weapons"] .. " - " .. AL["One-Handed"],
