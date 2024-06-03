@@ -1586,6 +1586,30 @@ data["MiningBC"] = {
 	}
 }
 
+data["SkinningBC"] = {
+	name = ALIL["Skinning"],
+	ContentType = PROF_GATH_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = NORMAL_ITTYPE,
+	CorrespondingFields = private.MINING_LINK,
+	items = {
+		{
+			name = AL["Master"],
+			[NORMAL_DIFF] = {
+				{ 1, 25708 }, -- Thick Clefthoof Leather
+				{ 2, 25699 }, -- Crystal Infused Leather
+				{ 3, 21887 }, -- Knothide Leather
+				{ 4, 25649 }, -- Knothide Leather Scraps
+				{ 16, 25700 }, -- Fel Scales
+				{ 17, 29547 }, -- Wind Scales
+				{ 18, 29539 }, -- Cobra Scales
+				{ 19, 29548 }, -- Nether Dragonscales
+				{ 21, 25707 }, -- Fel Hide
+			}
+		},
+	}
+}
+
 data["HerbalismBC"] = {
 	name = ALIL["Herbalism"],
 	ContentType = PROF_GATH_CONTENT,
