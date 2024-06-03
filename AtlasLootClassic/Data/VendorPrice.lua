@@ -194,7 +194,10 @@ local PRICE_INFO_LIST = {
     }, -- Isle of Conquest Mark of Honor
     ["cpvpStrand"] = {
         currencyID = 124
-    } -- Strand of the Ancients Mark of Honor
+    }, -- Strand of the Ancients Mark of Honor
+    ["cpvpTolBarad"] = {
+        currencyID = 391
+    } -- Tol Barad Commendation
 }
 
 local VENDOR_PRICE_FORMAT = {}
@@ -1518,38 +1521,38 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.CATA_VERSION_NUM) then
         [58486] = "ValorPoints:1650", -- Slippers of Moving Waters
         -- CA vendor
         [65433] = "chefs:5", -- Recipe: South Island Iced Tea
-	[65432] = "chefs:5", -- Recipe: Fortune Cookie
-	[65426] = "chefs:3", -- Recipe: Baked Rockfish
-	[62799] = "chefs:3", -- Recipe: Broiled Dragon Feast
-	[65431] = "chefs:3", -- Recipe: Chocolate Cookie
-	[62800] = "chefs:3", -- Recipe: Seafood Magnifique Feast
-	[65427] = "chefs:3", -- Recipe: Basilisk Liverdog
-	[65429] = "chefs:3", -- Recipe: Beer-Basted Crocolisk
-	[65424] = "chefs:3", -- Recipe: Blackbelly Sushi
-	[65430] = "chefs:3", -- Recipe: Crocolisk Au Gratin
-	[65422] = "chefs:3", -- Recipe: Delicious Sagefish Tail
+        [65432] = "chefs:5", -- Recipe: Fortune Cookie
+        [65426] = "chefs:3", -- Recipe: Baked Rockfish
+        [62799] = "chefs:3", -- Recipe: Broiled Dragon Feast
+        [65431] = "chefs:3", -- Recipe: Chocolate Cookie
+        [62800] = "chefs:3", -- Recipe: Seafood Magnifique Feast
+        [65427] = "chefs:3", -- Recipe: Basilisk Liverdog
+        [65429] = "chefs:3", -- Recipe: Beer-Basted Crocolisk
+        [65424] = "chefs:3", -- Recipe: Blackbelly Sushi
+        [65430] = "chefs:3", -- Recipe: Crocolisk Au Gratin
+        [65422] = "chefs:3", -- Recipe: Delicious Sagefish Tail
         [65428] = "chefs:3", -- Recipe: Grilled Dragon
         [65409] = "chefs:3", -- Recipe: Lavascale Minestrone
         [65420] = "chefs:3", -- Recipe: Mushroom Sauce Mudfish
-	[65421] = "chefs:3", -- Recipe: Severed Sagefish Head
-	[65425] = "chefs:3", -- Recipe: Skewered Eel
-	[68688] = "chefs:3", -- Recipe: Scalding Murglesnout
-	[65423] = "chefs:3", -- Recipe: Fish Fry
-	[65418] = "chefs:3", -- Recipe: Hearty Seafood Soup
-	[65417] = "chefs:3", -- Recipe: Pickled Guppy
-	[65419] = "chefs:3", -- Recipe: Tender Baked Turtle
-	[65411] = "chefs:3", -- Recipe: Broiled Mountain Trout
-	[65407] = "chefs:3", -- Recipe: Lavascale Fillet
-	[65412] = "chefs:3", -- Recipe: Lightly Fried Lurker
-	[65416] = "chefs:3", -- Recipe: Lurker Lunch
-	[65410] = "chefs:3", -- Recipe: Salted Eye
-	[65413] = "chefs:3", -- Recipe: Seasoned Crab
-	[65406] = "chefs:3", -- Recipe: Whitecrest Gumbo
-	[65415] = "chefs:3", -- Recipe: Highland Spirits
-	[65414] = "chefs:3", -- Recipe: Starfire Espresso
-	[65408] = "chefs:3", -- Recipe: Feathered Lure
-	[65513] = "chefs:2", -- Crate of Tasty Meat
-	[68689] = "chefs:1", -- Imported Supplies
+        [65421] = "chefs:3", -- Recipe: Severed Sagefish Head
+        [65425] = "chefs:3", -- Recipe: Skewered Eel
+        [68688] = "chefs:3", -- Recipe: Scalding Murglesnout
+        [65423] = "chefs:3", -- Recipe: Fish Fry
+        [65418] = "chefs:3", -- Recipe: Hearty Seafood Soup
+        [65417] = "chefs:3", -- Recipe: Pickled Guppy
+        [65419] = "chefs:3", -- Recipe: Tender Baked Turtle
+        [65411] = "chefs:3", -- Recipe: Broiled Mountain Trout
+        [65407] = "chefs:3", -- Recipe: Lavascale Fillet
+        [65412] = "chefs:3", -- Recipe: Lightly Fried Lurker
+        [65416] = "chefs:3", -- Recipe: Lurker Lunch
+        [65410] = "chefs:3", -- Recipe: Salted Eye
+        [65413] = "chefs:3", -- Recipe: Seasoned Crab
+        [65406] = "chefs:3", -- Recipe: Whitecrest Gumbo
+        [65415] = "chefs:3", -- Recipe: Highland Spirits
+        [65414] = "chefs:3", -- Recipe: Starfire Espresso
+        [65408] = "chefs:3", -- Recipe: Feathered Lure
+        [65513] = "chefs:2", -- Crate of Tasty Meat
+        [68689] = "chefs:1", -- Imported Supplies
         -- tailoring recipes
         [54601] = "Dreamc:1", -- Pattern: Belt of the Depths
         [54602] = "Dreamc:1", -- Pattern: Dreamless Belt
@@ -1833,6 +1836,67 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.CATA_VERSION_NUM) then
         [67100] = "HSavageL:10",
         [68193] = "HSavageL:10",
         [71721] = "HSavageL:10",
+        -- Tol Barad Rep
+        [68770] = "cpvpTolBarad:40",
+        [68772] = "cpvpTolBarad:80",
+        [68774] = "cpvpTolBarad:80",
+        [63355] = "cpvpTolBarad:50",
+        [68768] = "cpvpTolBarad:40",
+        [68773] = "cpvpTolBarad:80",
+        [63141] = "cpvpTolBarad:40",
+        [68769] = "cpvpTolBarad:40",
+        [63391] = "cpvpTolBarad:5",
+        [63144] = "cpvpTolBarad:2",
+        [63145] = "cpvpTolBarad:2",
+        [65175] = "cpvpTolBarad:40",
+        [64998] = "cpvpTolBarad:165",
+        [63517] = "cpvpTolBarad:10",
+        [62472] = "cpvpTolBarad:125",
+        [62468] = "cpvpTolBarad:125",
+        [62469] = "cpvpTolBarad:125",
+        [62470] = "cpvpTolBarad:125",
+        [62471] = "cpvpTolBarad:125",
+        [68739] = "cpvpTolBarad:85",
+        [62473] = "cpvpTolBarad:85",
+        [62474] = "cpvpTolBarad:85",
+        [62475] = "cpvpTolBarad:85",
+        [62476] = "cpvpTolBarad:85",
+        [62477] = "cpvpTolBarad:85",
+        [62478] = "cpvpTolBarad:85",
+        [62479] = "cpvpTolBarad:85",
+        [63379] = "cpvpTolBarad:40",
+        [63039] = "cpvpTolBarad:200",
+        [63377] = "cpvpTolBarad:50",
+        [64997] = "cpvpTolBarad:40",
+        [68772] = "cpvpTolBarad:80",
+        [68774] = "cpvpTolBarad:80",
+        [64996] = "cpvpTolBarad:50",
+        [63378] = "cpvpTolBarad:40",
+        [68773] = "cpvpTolBarad:80",
+        [63141] = "cpvpTolBarad:40",
+        [68769] = "cpvpTolBarad:40",
+        [64995] = "cpvpTolBarad:5",
+        [64993] = "cpvpTolBarad:2",
+        [64994] = "cpvpTolBarad:2",
+        [65176] = "cpvpTolBarad:40",
+        [64999] = "cpvpTolBarad:165",
+        [63518] = "cpvpTolBarad:10",
+        [62463] = "cpvpTolBarad:125",
+        [62464] = "cpvpTolBarad:125",
+        [62465] = "cpvpTolBarad:125",
+        [62466] = "cpvpTolBarad:125",
+        [62467] = "cpvpTolBarad:125",
+        [62460] = "cpvpTolBarad:85",
+        [62454] = "cpvpTolBarad:85",
+        [62455] = "cpvpTolBarad:85",
+        [62456] = "cpvpTolBarad:85",
+        [62458] = "cpvpTolBarad:85",
+        [62457] = "cpvpTolBarad:85",
+        [62459] = "cpvpTolBarad:85",
+        [68740] = "cpvpTolBarad:85",
+        [63379] = "cpvpTolBarad:40",
+        [65356] = "cpvpTolBarad:200",
+        [63376] = "cpvpTolBarad:50",
     }
 end
 

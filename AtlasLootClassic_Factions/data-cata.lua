@@ -182,12 +182,12 @@ data["AvengersOfHyjal"] = {
             [ALLIANCE_DIFF] = {
                 {1, "f1177rep8"},
                 {2, 63039}, -- Reins of the Drake of the West Wind
-                {3, 62471}, -- Mirror of Broken Images
-                {4, 62470}, -- Stump of Time
-                {5, 62469}, -- Impatience of Youth
-                {6, 64998}, -- Reins of the Spectral Steed
-                {7, 62468}, -- Unsolvable Riddle
-                {8, 62472}, -- Mandala of Stirring Patterns
+                {3, 64998}, -- Reins of the Spectral Steed
+                {5, 62468}, -- Unsolvable Riddle
+                {6, 62469}, -- Impatience of Youth
+                {7, 62470}, -- Stump of Time
+                {8, 62471}, -- Mirror of Broken Images
+                {9, 62472}, -- Mandala of Stirring Patterns
             },
         },
         { -- Revered 7
@@ -209,10 +209,10 @@ data["AvengersOfHyjal"] = {
             name = ALIL["Honored"],
             [ALLIANCE_DIFF] = {
                 {1, "f1177rep6"},
-                {2, 63379}, -- Baradin's Wardens Tabard
-                {3, 63141}, -- Tol Barad Searchlight
-                {4, 63355}, -- Rustberg Gull
-                {5, 65175}, -- Baradin Footman's Tags
+                {2, 63355}, -- Rustberg Gull
+                {4, 63141}, -- Tol Barad Searchlight
+                {5, 63379}, -- Baradin's Wardens Tabard
+                {6, 65175}, -- Baradin Footman's Tags
             },
         },
         { -- Friendly 5
@@ -220,9 +220,9 @@ data["AvengersOfHyjal"] = {
             [ALLIANCE_DIFF] = {
                 {1, "f1177rep5"},
                 {2, 63517}, -- Baradin's Wardens Commendation
-                {3, 63145}, -- Baradin's Wardens Mana Potion
-                {4, 63391}, -- Baradin's Wardens Bandage
-                {5, 63144}, -- Baradin's Wardens Healing Potion
+                {3, 63391}, -- Baradin's Wardens Bandage
+                {4, 63144}, -- Baradin's Wardens Healing Potion
+                {5, 63145}, -- Baradin's Wardens Mana Potion
             },
         },
     },
@@ -323,13 +323,13 @@ data["AvengersOfHyjal"] = {
             name = ALIL["Exalted"],
             [HORDE_DIFF] = {
                 {1, "f1178rep8"},
-                {2, 62464}, -- Impatience of Youth
+                {2, 65356}, -- Reins of the Drake of the West Wind
                 {3, 64999}, -- Reins of the Spectral Wolf
-                {4, 62466}, -- Mirror of Broken Images
-                {5, 62465}, -- Stump of Time
-                {6, 62467}, -- Mandala of Stirring Patterns
-                {7, 62463}, -- Unsolvable Riddle
-                {8, 65356}, -- Reins of the Drake of the West Wind
+                {5, 62463}, -- Unsolvable Riddle
+                {6, 62464}, -- Impatience of Youth
+                {7, 62465}, -- Stump of Time
+                {8, 62466}, -- Mirror of Broken Images
+                {9, 62467}, -- Mandala of Stirring Patterns
             },
         },
         { -- Revered 7
@@ -343,18 +343,18 @@ data["AvengersOfHyjal"] = {
                 {6, 62458}, -- Insidious Staff
                 {7, 62457}, -- Ravening Slicer
                 {8, 62459}, -- Shimmering Morningstar
-                {9, 63376}, -- Hellscream's Reach Battle Standard
-                {10, 68740}, -- Darkheart Hacker
+                {9, 68740}, -- Darkheart Hacker
+                {10, 63376}, -- Hellscream's Reach Battle Standard
             },
         },
         { -- Honored 6
             name = ALIL["Honored"],
             [HORDE_DIFF] = {
                 {1, "f1178rep6"},
-                {2, 63378}, -- Hellscream's Reach Tabard
-                {3, 64996}, -- Rustberg Gull
+                {2, 64996}, -- Rustberg Gull
                 {4, 64997}, -- Tol Barad Searchlight
-                {5, 65176}, -- Baradin Grunt's Talisman
+                {5, 63378}, -- Hellscream's Reach Tabard
+                {6, 65176}, -- Baradin Grunt's Talisman
             },
         },
         { -- Friendly 5
@@ -362,9 +362,9 @@ data["AvengersOfHyjal"] = {
             [HORDE_DIFF] = {
                 {1, "f1178rep5"},
                 {2, 63518}, -- Hellscream's Reach Commendation
+                {3, 64995}, -- Hellscream's Reach Bandage
                 {3, 64994}, -- Hellscream's Reach Healing Potion
                 {4, 64993}, -- Hellscream's Reach Mana Potion
-                {5, 64995}, -- Hellscream's Reach Bandage
             },
         },
     },
@@ -377,12 +377,12 @@ data["AvengersOfHyjal"] = {
             name = ALIL["Exalted"],
             [NORMAL_DIFF] = {
                 {1, "f1173rep8"},
-                {2, 62450}, -- Desert Walker Sandals
-                {3, 62447}, -- Gift of Nadun
-                {4, 63044}, -- Reins of the Brown Riding Camel
-                {5, 63045}, -- Reins of the Tan Riding Camel
+                {2, 63044}, -- Reins of the Brown Riding Camel
+                {3, 63045}, -- Reins of the Tan Riding Camel
+                {5, 62450}, -- Desert Walker Sandals
                 {6, 62448}, -- Sun King's Girdle
                 {7, 62449}, -- Sandguard Bracers
+                {8, 62447}, -- Gift of Nadun
             },
         },
         { -- Revered 7
