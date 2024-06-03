@@ -1640,6 +1640,69 @@ data["Mining"] = {
 	}
 }
 
+data["Skinning"] = {
+	name = ALIL["Skinning"],
+	ContentType = PROF_GATH_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = NORMAL_ITTYPE,
+	CorrespondingFields = private.MINING_LINK,
+	items = {
+		{
+			name = AL["Artisan"],
+			[NORMAL_DIFF] = {
+				{ 1, 4304 }, -- Thick Leather
+				{ 2, 8170 }, -- Rugged Leather
+				{ 3, 15417 }, -- Devilsaur Leather
+				{ 4, 15419 }, -- Warbear Leather
+				{ 5, 19767 }, -- Primal Bat Leather
+				{ 6, 19768 }, -- Primal Tiger Leather
+				{ 7, 17012 }, -- Core Leather
+				{ 16, 8169 }, -- Thick Hide
+				{ 17, 8171 }, -- Rugged Hide
+				{ 18, 15408 }, -- Heavy Scorpid Scale
+				{ 19, 8165 }, -- Worn Dragonscale
+				{ 20, 15412 }, -- Green Dragonscale
+				{ 21, 15414 }, -- Red Dragonscale
+				{ 22, 15415 }, -- Blue Dragonscale
+				{ 23, 15416 }, -- Black Dragonscale
+				{ 25, 15410 }, -- Scale of Onyxia
+				{ 26, 20381 }, -- Dreamscale
+				{ 27, 12731 }, -- Pristine Hide of the Beast
+			}
+		},
+		{
+			name = AL["Expert"],
+			[NORMAL_DIFF] = {
+				{ 1, 4234 }, -- Heavy Leather
+				{ 16, 4235 }, -- Heavy Hide
+				{ 17, 5785 }, -- Thick Murloc Scale
+				{ 18, 8154 }, -- Scorpid Scale
+				{ 19, 8167 }, -- Turtle Scale
+				{ 20, 7392 }, -- Green Whelp Scale
+			}
+		},
+		{
+			name = AL["Journeyman"],
+			[NORMAL_DIFF] = {
+				{ 1, 2319 }, -- Medium Leather
+				{ 16, 4232 }, -- Medium Hide
+				{ 17, 5784 }, -- Slimy Murloc Scale
+				{ 18, 7286 }, -- Black Whelp Scale
+			}
+		},
+		{
+			name = AL["Apprentice"],
+			[NORMAL_DIFF] = {
+				{ 1, 2318 }, -- Light Leather
+				{ 2, 2934 }, -- Ruined Leather Scraps
+				{ 16,783 }, -- Light Hide
+				{ 17, 6470 }, -- Deviate Scale
+				{ 18, 6471 }, -- Perfect Deviate Scale
+			}
+		},
+	}
+}
+
 data["Herbalism"] = {
 	name = ALIL["Herbalism"],
 	ContentType = PROF_GATH_CONTENT,
@@ -1650,31 +1713,31 @@ data["Herbalism"] = {
 		{
 			name = AL["Artisan"],
 			[NORMAL_DIFF] = {
-				{ 1,  13467 }, -- Icecap
-				{ 2,  13466 }, -- Plaguebloom
-				{ 3,  13465 }, -- Mountain Silversage
-				{ 4,  13463 }, -- Dreamfoil
-				{ 5,  13464 }, -- Golden Sansam
+				{ 1, 13467 }, -- Icecap
+				{ 2, 13466 }, -- Plaguebloom
+				{ 3, 13465 }, -- Mountain Silversage
+				{ 4, 13463 }, -- Dreamfoil
+				{ 5, 13464 }, -- Golden Sansam
 				{ 6, 8846 }, -- Gromsblood
 				{ 7, 8845 }, -- Ghost Mushroom
 				{ 8, 8839 }, -- Blindweed
 				{ 9, 8838 }, -- Sungrass
-				{ 16,  13468 }, -- Black Lotus
-				{ 18,  19727 }, -- Blood Scythe
-				{ 19,  19726 }, -- Bloodvine
+				{ 16, 13468 }, -- Black Lotus
+				{ 18, 19727 }, -- Blood Scythe
+				{ 19, 19726 }, -- Bloodvine
 			}
 		},
 		{
 			name = AL["Expert"],
 			[NORMAL_DIFF] = {
 				{ 1, 8836 }, -- Arthas' Tears
-				{ 2, 8831, 8153 }, -- Purple Lotus
+				{ 2, 8831 }, -- Purple Lotus
 				{ 3, 4625 }, -- Firebloom
 				{ 4, 3819 }, -- Wintersbite
 				{ 5, 3358 }, -- Khadgar's Whisker
 				{ 6, 3821 }, -- Goldthorn
 				{ 7, 3818 }, -- Fadeleaf
-				--{ 17, 8153 }, -- Wildvine
+				{ 16, 8153 }, -- Wildvine
 			}
 		},
 		{
@@ -1691,12 +1754,12 @@ data["Herbalism"] = {
 		{
 			name = AL["Apprentice"],
 			[NORMAL_DIFF] = {
-				{ 1,  2450, 2452 }, -- Briarthorn
-				{ 2,  785, 2452 }, -- Mageroyal
-				{ 3,  2449 }, -- Earthroot
-				{ 4,  765 }, -- Silverleaf
-				{ 5,  2447 }, -- Peacebloom
-				--{ 16,  2452 }, -- Swiftthistle
+				{ 1, 2450 }, -- Briarthorn
+				{ 2, 785 }, -- Mageroyal
+				{ 3, 2449 }, -- Earthroot
+				{ 4, 765 }, -- Silverleaf
+				{ 5, 2447 }, -- Peacebloom
+				{ 16, 2452 }, -- Swiftthistle
 			}
 		},
 	}
