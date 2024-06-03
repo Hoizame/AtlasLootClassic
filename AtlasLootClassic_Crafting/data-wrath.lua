@@ -1444,7 +1444,7 @@ data["JewelcraftingWrath"] = {
 				{ 13, 36931 }, --  Ametrine
 				{ 14, 36930 }, --  Monarch Topaz
 				{ 15, 36929 }, --  Huge Citrine
-				{ 16, 42225 }, --  Dragon's Eye
+				{ 16, "i42225" }, --  Dragon's Eye
 				{ 17, 36784 }, --  Siren's Tear
 				{ 20, 36925 }, --  Majestic Zircon
 				{ 21, 36924 }, -- Sky Sapphire
@@ -1626,7 +1626,7 @@ data["SkinningWrath"] = {
 	ContentType = PROF_GATH_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = NORMAL_ITTYPE,
-	CorrespondingFields = private.MINING_LINK,
+	CorrespondingFields = private.SKINNING_LINK,
 	items = {
 		{
 			name = AL["Grand Master"],
