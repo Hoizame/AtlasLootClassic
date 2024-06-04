@@ -1645,7 +1645,7 @@ data["Skinning"] = {
 	ContentType = PROF_GATH_CONTENT,
 	LoadDifficulty = NORMAL_DIFF,
 	TableType = NORMAL_ITTYPE,
-	CorrespondingFields = private.MINING_LINK,
+	CorrespondingFields = private.SKINNING_LINK,
 	items = {
 		{
 			name = AL["Artisan"],
