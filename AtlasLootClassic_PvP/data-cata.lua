@@ -36,7 +36,7 @@ else
 end
 local SET1_DIFF = data:AddDifficulty(format(AL["Bloodthirsty %s"], ""), "set1", nil, 1)
 local SET2_DIFF = data:AddDifficulty(format(AL["Vicious %s"], ""), "set2", nil, 1)
-local SET3_DIFF = data:AddDifficulty(format(AL["Elite Vicious %s"], ""), "set3", nil, 1)
+local SET3_DIFF = data:AddDifficulty(format(AL["Vicious (Elite) %s"], ""), "set3", nil, 1)
 
 local NORMAL_ITTYPE = data:AddItemTableType("Item", "Item")
 local SET_ITTYPE = data:AddItemTableType("Set", "Item")
@@ -78,10 +78,58 @@ data["ArenaS9PvP"] = {
         name = AL["Sets"],
         TableType = SET_ITTYPE,
         [SET1_DIFF] = {
+            {1, 4000910}, -- Warlock
+            {3, 4000916}, -- Priest Healing
+            {4, 4000915}, -- Priest Shadow
+            {6, 4000914}, -- Rogue
+            {8, 4000920}, -- Hunter
+            {10, 4000909}, -- Warrior Melee
+            {13, 4000924}, -- Death Knight Melee
+            {16, 4000919}, -- Mage
+            {18, 4000923}, -- Druid Resto
+            {19, 4000921}, -- Druid Balance
+            {20, 4000922}, -- Druid Feral
+            {22, 4000913}, -- Shaman Resto
+            {23, 4000911}, -- Shaman Elemental
+            {24, 4000912}, -- Shaman Enhancement
+            {26, 4000918}, -- Paladin Holy
+            {27, 4000917} -- Paladin Melee
         },
         [SET2_DIFF] = {
+            {1, 4001910}, -- Warlock
+            {3, 4002916}, -- Priest Healing
+            {4, 4002915}, -- Priest Shadow
+            {6, 4002914}, -- Rogue
+            {8, 4002920}, -- Hunter
+            {10, 4002909}, -- Warrior Melee
+            {13, 4002924}, -- Death Knight Melee
+            {16, 4002919}, -- Mage
+            {18, 4002923}, -- Druid Resto
+            {19, 4002921}, -- Druid Balance
+            {20, 4002922}, -- Druid Feral
+            {22, 4002913}, -- Shaman Resto
+            {23, 4002911}, -- Shaman Elemental
+            {24, 4002912}, -- Shaman Enhancement
+            {26, 4002918}, -- Paladin Holy
+            {27, 4002917} -- Paladin Melee
         },
         [SET3_DIFF] = {
+            {1, 4003910}, -- Warlock
+            {3, 4003916}, -- Priest Healing
+            {4, 4003915}, -- Priest Shadow
+            {6, 4003914}, -- Rogue
+            {8, 4003920}, -- Hunter
+            {10, 4003909}, -- Warrior Melee
+            {13, 4003924}, -- Death Knight Melee
+            {16, 4003919}, -- Mage
+            {18, 4003923}, -- Druid Resto
+            {19, 4003921}, -- Druid Balance
+            {20, 4003922}, -- Druid Feral
+            {22, 4003913}, -- Shaman Resto
+            {23, 4003911}, -- Shaman Elemental
+            {24, 4003912}, -- Shaman Enhancement
+            {26, 4003918}, -- Paladin Holy
+            {27, 4003917} -- Paladin Melee
         },
     }, {
         name = AL["Weapons"] .. " - " .. AL["One-Handed"],
@@ -102,6 +150,36 @@ data["ArenaS9PvP"] = {
             { 26, 64775 }, -- Bloodthirsty Gladiator's Left Ripper
         },
         [SET2_DIFF] = {
+            { 1, 61324 }, -- Vicious Gladiator's Cleaver
+            { 2, 61325 }, -- Vicious Gladiator's Hacker
+            { 4, 61336 }, -- Vicious Gladiator's Bonecracker
+            { 5, 61335 }, -- Vicious Gladiator's Pummeler
+            { 7, 61345 }, -- Vicious Gladiator's Quickblade
+            { 8, 61344 }, -- Vicious Gladiator's Slicer
+            { 16, 61329 }, -- Vicious Gladiator's Spellblade
+            { 17, 61338 }, -- Vicious Gladiator's Gavel
+            { 19, 61327 }, -- Vicious Gladiator's Shanker
+            { 20, 61328 }, -- Vicious Gladiator's Shiv
+            { 22, 61333 }, -- Vicious Gladiator's Right Render
+            { 23, 61330 }, -- Vicious Gladiator's Right Ripper
+            { 25, 61332 }, -- Vicious Gladiator's Left Render
+            { 26, 61331 }, -- Vicious Gladiator's Left Ripper
+        },
+        [SET3_DIFF] = {
+            { 1, 67474 }, -- Vicious Gladiator's Cleaver
+            { 2, 67473 }, -- Vicious Gladiator's Hacker
+            { 4, 67470 }, -- Vicious Gladiator's Bonecracker
+            { 5, 67471 }, -- Vicious Gladiator's Pummeler
+            { 7, 67468 }, -- Vicious Gladiator's Quickblade
+            { 8, 67469 }, -- Vicious Gladiator's Slicer
+            { 16, 67457 }, -- Vicious Gladiator's Spellblade
+            { 17, 67454 }, -- Vicious Gladiator's Gavel
+            { 19, 67472 }, -- Vicious Gladiator's Shanker
+            { 20, 67460 }, -- Vicious Gladiator's Shiv
+            { 22, 67455 }, -- Vicious Gladiator's Right Render
+            { 23, 67456 }, -- Vicious Gladiator's Right Ripper
+            { 25, 67458 }, -- Vicious Gladiator's Left Render
+            { 26, 67459 }, -- Vicious Gladiator's Left Ripper
         },
     }, {
         name = AL["Weapons"] .. " - " .. AL["Two-Handed"],
@@ -115,6 +193,22 @@ data["ArenaS9PvP"] = {
             { 17, 64744 }, -- Bloodthirsty Gladiator's Energy Staff
         },
         [SET2_DIFF] = {
+            { 1, 61340 }, -- Vicious Gladiator's Pike
+            { 2, 61343 }, -- Vicious Gladiator's Staff
+            { 4, 61326 }, -- Vicious Gladiator's Decapitator
+            { 5, 61339 }, -- Vicious Gladiator's Bonegrinder
+            { 6, 61346 }, -- Vicious Gladiator's Greatsword
+            { 16, 61341 }, -- Vicious Gladiator's Battle Staff
+            { 17, 61342 }, -- Vicious Gladiator's Energy Staff
+        },
+        [SET3_DIFF] = {
+            { 1, 67451 }, -- Vicious Gladiator's Pike
+            { 2, 67448 }, -- Vicious Gladiator's Staff
+            { 4, 67453 }, -- Vicious Gladiator's Decapitator
+            { 5, 67452 }, -- Vicious Gladiator's Bonegrinder
+            { 6, 67447 }, -- Vicious Gladiator's Greatsword
+            { 16, 67449 }, -- Vicious Gladiator's Energy Staff
+            { 17, 67450 }, -- Vicious Gladiator's Battle Staff
         },
     }, {
         name = AL["Weapons"] .. " - " .. AL["Ranged"],
@@ -128,6 +222,22 @@ data["ArenaS9PvP"] = {
             { 17, 64861 }, -- Bloodthirsty Gladiator's Touch of Defeat
         },
         [SET2_DIFF] = {
+            { 1, 61353 }, -- Vicious Gladiator's Longbow
+            { 2, 61355 }, -- Vicious Gladiator's Heavy Crossbow
+            { 3, 61354 }, -- Vicious Gladiator's Rifle
+            { 5, 61348 }, -- Vicious Gladiator's Hatchet
+            { 6, 61347 }, -- Vicious Gladiator's War Edge
+            { 16, 61351 }, -- Vicious Gladiator's Baton of Light
+            { 17, 61350 }, -- Vicious Gladiator's Touch of Defeat
+        },
+        [SET3_DIFF] = {
+            { 1, 67461 }, -- Vicious Gladiator's Longbow
+            { 2, 67462 }, -- Vicious Gladiator's Heavy Crossbow
+            { 3, 67463 }, -- Vicious Gladiator's Rifle
+            { 5, 67466 }, -- Vicious Gladiator's Hatchet
+            { 6, 67467 }, -- Vicious Gladiator's War Edge
+            { 16, 67464 }, -- Vicious Gladiator's Baton of Light
+            { 17, 67465 }, -- Vicious Gladiator's Touch of Defeat
         },
     }, {
         name = AL["Weapons"] .. " - " .. ALIL["Off Hand"],
@@ -136,7 +246,13 @@ data["ArenaS9PvP"] = {
             { 2, 64823 }, -- Bloodthirsty Gladiator's Reprieve
         },
         [SET2_DIFF] = {
+            { 1, 61357 }, -- Vicious Gladiator's Endgame
+            { 2, 61358 }, -- Vicious Gladiator's Reprieve
         },
+        [SET3_DIFF] = {
+            { 1, 67478 }, -- Vicious Gladiator's Reprieve
+            { 2, 67479 }, -- Vicious Gladiator's Endgame
+        }
     }, {
         name = AL["Weapons"] .. " - " .. ALIL["Shields"],
         [SET1_DIFF] = {
@@ -145,6 +261,14 @@ data["ArenaS9PvP"] = {
             { 3, 64849 }, -- Bloodthirsty Gladiator's Shield Wall
         },
         [SET2_DIFF] = {
+            { 1, 61360 }, -- Vicious Gladiator's Barrier
+            { 2, 61361 }, -- Vicious Gladiator's Redoubt
+            { 3, 61359 }, -- Vicious Gladiator's Shield Wall
+        },
+        [SET3_DIFF] = {
+            { 1, 67476 }, -- Vicious Gladiator's Barrier
+            { 2, 67475 }, -- Vicious Gladiator's Redoubt
+            { 3, 67477 }, -- Vicious Gladiator's Shield Wall
         },
     }, {
         name = ALIL["Cloak"],
@@ -158,6 +282,13 @@ data["ArenaS9PvP"] = {
             { 18, 64734 }, -- Bloodthirsty Gladiator's Drape of Prowess
         },
         [SET2_DIFF] = {
+            { 1, 60783 }, -- Vicious Gladiator's Cape of Cruelty
+            { 2, 60779 }, -- Vicious Gladiator's Cape of Prowess
+            { 4, 60776 }, -- Vicious Gladiator's Cloak of Alacrity
+            { 5, 60778 }, -- Vicious Gladiator's Cloak of Prowess
+            { 16, 60786 }, -- Vicious Gladiator's Drape of Diffusion
+            { 17, 60788 }, -- Vicious Gladiator's Drape of Meditation
+            { 18, 60787 }, -- Vicious Gladiator's Drape of Prowess
         },
     }, {
         name = ALIL["Relic"],
@@ -168,6 +299,10 @@ data["ArenaS9PvP"] = {
             { 4, 64822 }, -- Bloodthirsty Gladiator's Relic of Triumph
         },
         [SET2_DIFF] = {
+            { 1, 61391 }, -- Vicious Gladiator's Relic of Conquest
+            { 2, 61388 }, -- Vicious Gladiator's Relic of Dominance
+            { 3, 61389 }, -- Vicious Gladiator's Relic of Salvation
+            { 4, 61390 }, -- Vicious Gladiator's Relic of Triumph
         },
     }, {
         name = ALIL["Neck"],
@@ -181,6 +316,13 @@ data["ArenaS9PvP"] = {
             { 18, 64809 }, -- Bloodthirsty Gladiator's Pendant of Meditation
         },
         [SET2_DIFF] = {
+            { 1, 60673 }, -- Vicious Gladiator's Choker of Accuracy
+            { 2, 60670 }, -- Vicious Gladiator's Choker of Proficiency
+            { 5, 60669 }, -- Vicious Gladiator's Necklace of Proficiency
+            { 6, 60668 }, -- Vicious Gladiator's Necklace of Prowess
+            { 16, 60662 }, -- Vicious Gladiator's Pendant of Alacrity
+            { 17, 60661 }, -- Vicious Gladiator's Pendant of Diffusion
+            { 18, 60664 }, -- Vicious Gladiator's Pendant of Meditation
         },
     }, {
         name = ALIL["Finger"],
@@ -192,14 +334,19 @@ data["ArenaS9PvP"] = {
             { 16, 64690 }, -- Bloodthirsty Gladiator's Band of Accuracy
             { 17, 64691 }, -- Bloodthirsty Gladiator's Band of Cruelty
             { 18, 64692 }, -- Bloodthirsty Gladiator's Band of Meditation
-
-
         },
         [SET2_DIFF] = {
+            { 1, 60651 }, -- Vicious Gladiator's Signet of Accuracy
+            { 2, 60650 }, -- Vicious Gladiator's Signet of Cruelty
+            { 4, 60658 }, -- Vicious Gladiator's Ring of Accuracy
+            { 5, 60659 }, -- Vicious Gladiator's Ring of Cruelty
+            { 16, 60647 }, -- Vicious Gladiator's Band of Accuracy
+            { 17, 60645 }, -- Vicious Gladiator's Band of Cruelty
+            { 18, 60649 }, -- Vicious Gladiator's Band of Meditation
         },
     }, {
         name = format(AL["Non Set '%s'"], ALIL["Cloth"]),
-        [NORMAL_DIFF] = {
+        [SET1_DIFF] = {
             { 1, 64862 }, -- Bloodthirsty Gladiator's Treads of Alacrity
             { 2, 64863 }, -- Bloodthirsty Gladiator's Treads of Cruelty
             { 3, 64864 }, -- Bloodthirsty Gladiator's Treads of Meditation
@@ -209,10 +356,26 @@ data["ArenaS9PvP"] = {
             { 16, 64723 }, -- Bloodthirsty Gladiator's Cuffs of Accuracy
             { 17, 64724 }, -- Bloodthirsty Gladiator's Cuffs of Meditation
             { 18, 64725 }, -- Bloodthirsty Gladiator's Cuffs of Prowess
-        }
+        },
+        [SET2_DIFF] = {
+            { 1, 60630 }, -- Vicious Gladiator's Treads of Alacrity
+            { 2, 60613 }, -- Vicious Gladiator's Treads of Cruelty
+            { 3, 60636 }, -- Vicious Gladiator's Treads of Meditation
+            { 5, 60626 }, -- Vicious Gladiator's Cord of Accuracy
+            { 6, 60612 }, -- Vicious Gladiator's Cord of Cruelty
+            { 7, 60637 }, -- Vicious Gladiator's Cord of Meditation
+            { 16, 60628 }, -- Vicious Gladiator's Cuffs of Accuracy
+            { 17, 60635 }, -- Vicious Gladiator's Cuffs of Meditation
+            { 18, 60634 }, -- Vicious Gladiator's Cuffs of Prowess
+        },
+        [SET3_DIFF] = {
+            { 1, 65599 }, -- Vicious Gladiator's Treads of Alacrity
+            { 2, 65598 }, -- Vicious Gladiator's Treads of Cruelty
+            { 3, 65600 }, -- Vicious Gladiator's Treads of Meditation
+        },
     }, {
         name = format(AL["Non Set '%s'"], ALIL["Leather"]),
-        [NORMAL_DIFF] = {
+        [SET1_DIFF] = {
             { 1, 64702 }, -- Bloodthirsty Gladiator's Boots of Alacrity
             { 2, 64703 }, -- Bloodthirsty Gladiator's Boots of Cruelty
             { 3, 64750 }, -- Bloodthirsty Gladiator's Footguards of Alacrity
@@ -225,10 +388,30 @@ data["ArenaS9PvP"] = {
             { 17, 64686 }, -- Bloodthirsty Gladiator's Armwraps of Alacrity
             { 18, 64698 }, -- Bloodthirsty Gladiator's Bindings of Meditation
             { 19, 64699 }, -- Bloodthirsty Gladiator's Bindings of Prowess
-        }
+        },
+        [SET2_DIFF] = {
+            { 1, 60593 }, -- Vicious Gladiator's Boots of Alacrity
+            { 2, 60587 }, -- Vicious Gladiator's Boots of Cruelty
+            { 3, 60607 }, -- Vicious Gladiator's Footguards of Alacrity
+            { 4, 60581 }, -- Vicious Gladiator's Footguards of Meditation
+            { 6, 60583 }, -- Vicious Gladiator's Belt of Cruelty
+            { 7, 60580 }, -- Vicious Gladiator's Belt of Meditation
+            { 8, 60589 }, -- Vicious Gladiator's Waistband of Accuracy
+            { 9, 60586 }, -- Vicious Gladiator's Waistband of Cruelty
+            { 16, 60591 }, -- Vicious Gladiator's Armwraps of Accuracy
+            { 17, 60594 }, -- Vicious Gladiator's Armwraps of Alacrity
+            { 18, 60582 }, -- Vicious Gladiator's Bindings of Meditation
+            { 19, 60611 }, -- Vicious Gladiator's Bindings of Prowess
+        },
+        [SET3_DIFF] = {
+            { 1, 65610 }, -- Vicious Gladiator's Boots of Alacrity
+            { 2, 65609 }, -- Vicious Gladiator's Boots of Cruelty
+            { 3, 65602 }, -- Vicious Gladiator's Footguards of Alacrity
+            { 4, 65601 }, -- Vicious Gladiator's Footguards of Meditation
+        },
     }, {
         name = format(AL["Non Set '%s'"], ALIL["Mail"]),
-        [NORMAL_DIFF] = {
+        [SET1_DIFF] = {
             { 1, 64835 }, -- Bloodthirsty Gladiator's Sabatons of Alacrity
             { 2, 64834 }, -- Bloodthirsty Gladiator's Sabatons of Alacrity
             { 3, 64836 }, -- Bloodthirsty Gladiator's Sabatons of Cruelty
@@ -241,10 +424,30 @@ data["ArenaS9PvP"] = {
             { 17, 64682 }, -- Bloodthirsty Gladiator's Armbands of Prowess
             { 18, 64872 }, -- Bloodthirsty Gladiator's Wristguards of Accuracy
             { 19, 64873 }, -- Bloodthirsty Gladiator's Wristguards of Alacrity
-        }
+        },
+        [SET2_DIFF] = {
+            { 1, 60557 }, -- Vicious Gladiator's Sabatons of Alacrity
+            { 2, 60567 }, -- Vicious Gladiator's Sabatons of Alacrity
+            { 3, 60554 }, -- Vicious Gladiator's Sabatons of Cruelty
+            { 4, 60534 }, -- Vicious Gladiator's Sabatons of Meditation
+            { 6, 60564 }, -- Vicious Gladiator's Links of Accuracy
+            { 7, 60555 }, -- Vicious Gladiator's Links of Cruelty
+            { 8, 60536 }, -- Vicious Gladiator's Waistguard of Cruelty
+            { 9, 60533 }, -- Vicious Gladiator's Waistguard of Meditation
+            { 16, 60535 }, -- Vicious Gladiator's Armbands of Meditation
+            { 17, 60569 }, -- Vicious Gladiator's Armbands of Prowess
+            { 18, 60565 }, -- Vicious Gladiator's Wristguards of Accuracy
+            { 19, 60559 }, -- Vicious Gladiator's Wristguards of Alacrity
+        },
+        [SET3_DIFF] = {
+            { 1, 65604 }, -- Vicious Gladiator's Sabatons of Alacrity
+            { 2, 65611 }, -- Vicious Gladiator's Sabatons of Alacrity
+            { 3, 65603 }, -- Vicious Gladiator's Sabatons of Cruelty
+            { 4, 65612 }, -- Vicious Gladiator's Sabatons of Meditation
+        },
     }, {
         name = format(AL["Non Set '%s'"], ALIL["Plate"]),
-        [NORMAL_DIFF] = {
+        [SET1_DIFF] = {
             { 1, 64756 }, -- Bloodthirsty Gladiator's Greaves of Alacrity
             { 2, 64757 }, -- Bloodthirsty Gladiator's Greaves of Meditation
             { 3, 64869 }, -- Bloodthirsty Gladiator's Warboots of Alacrity
@@ -257,6 +460,26 @@ data["ArenaS9PvP"] = {
             { 17, 64684 }, -- Bloodthirsty Gladiator's Armplates of Proficiency
             { 18, 64704 }, -- Bloodthirsty Gladiator's Bracers of Meditation
             { 19, 64705 }, -- Bloodthirsty Gladiator's Bracers of Prowess
+        },
+        [SET2_DIFF] = {
+            { 1, 60516 }, -- Vicious Gladiator's Greaves of Alacrity
+            { 2, 60540 }, -- Vicious Gladiator's Greaves of Meditation
+            { 3, 60513 }, -- Vicious Gladiator's Warboots of Alacrity
+            { 4, 60509 }, -- Vicious Gladiator's Warboots of Cruelty
+            { 6, 60505 }, -- Vicious Gladiator's Clasp of Cruelty
+            { 7, 60539 }, -- Vicious Gladiator's Clasp of Meditation
+            { 8, 60508 }, -- Vicious Gladiator's Girdle of Cruelty
+            { 9, 60521 }, -- Vicious Gladiator's Girdle of Prowess
+            { 16, 60512 }, -- Vicious Gladiator's Armplates of Alacrity
+            { 17, 60523 }, -- Vicious Gladiator's Armplates of Proficiency
+            { 18, 60541 }, -- Vicious Gladiator's Bracers of Meditation
+            { 19, 60520 }, -- Vicious Gladiator's Bracers of Prowess
+        },
+        [SET3_DIFF] = {
+            { 1, 65605 }, -- Vicious Gladiator's Greaves of Alacrity
+            { 2, 65606 }, -- Vicious Gladiator's Greaves of Meditation
+            { 3, 65608 }, -- Vicious Gladiator's Warboots of Alacrity
+            { 4, 65607 }, -- Vicious Gladiator's Warboots of Cruelty
         }
     }, {
         name = ALIL["Trinket"],
@@ -267,19 +490,27 @@ data["ArenaS9PvP"] = {
             { 5, 64740 }, -- Bloodthirsty Gladiator's Emblem of Cruelty
             { 6, 64741 }, -- Bloodthirsty Gladiator's Emblem of Meditation
             { 7, 64742 }, -- Bloodthirsty Gladiator's Emblem of Tenacity
-            { 9, 64761 }, -- Bloodthirsty Gladiator's Insignia of Conquest
-            { 10, 64762 }, -- Bloodthirsty Gladiator's Insignia of Dominance
-            { 11, 64763 }, -- Bloodthirsty Gladiator's Insignia of Victory
-            { 16, 69787 }, -- Bloodthirsty Gladiator's Mark of Cruelty
-            { 17, 69789 }, -- Bloodthirsty Gladiator's Mark of Meditation
-            { 18, 69788 }, -- Bloodthirsty Gladiator's Mark of Tenacity
+            { 16, 64761 }, -- Bloodthirsty Gladiator's Insignia of Conquest
+            { 17, 64762 }, -- Bloodthirsty Gladiator's Insignia of Dominance
+            { 18, 64763 }, -- Bloodthirsty Gladiator's Insignia of Victory
             { 20, AtlasLoot:GetRetByFaction(64789, 64790) }, -- Bloodthirsty Gladiator's Medallion of Cruelty
             { 21, AtlasLoot:GetRetByFaction(64792, 64791) }, -- Bloodthirsty Gladiator's Medallion of Meditation
             { 22, AtlasLoot:GetRetByFaction(64794, 64793) }, -- Bloodthirsty Gladiator's Medallion of Tenacity
-            { 24, 69790 }, -- Bloodthirsty Gladiator's Symbol of Cruelty
-            { 25, 69792 }, -- Bloodthirsty Gladiator's Symbol of Meditation
-            { 26, 69791 }, -- Bloodthirsty Gladiator's Symbol of Tenacity
-        }
+        },
+        [SET2_DIFF] = {
+            { 1, 61033 }, -- Vicious Gladiator's Badge of Conquest
+            { 2, 61035 }, -- Vicious Gladiator's Badge of Dominance
+            { 3, 61034 }, -- Vicious Gladiator's Badge of Victory
+            { 5, 61026 }, -- Vicious Gladiator's Emblem of Cruelty
+            { 6, 61031 }, -- Vicious Gladiator's Emblem of Meditation
+            { 7, 61032 }, -- Vicious Gladiator's Emblem of Tenacity
+            { 16, 61047 }, -- Vicious Gladiator's Insignia of Conquest
+            { 17, 61045 }, -- Vicious Gladiator's Insignia of Dominance
+            { 18, 61046 }, -- Vicious Gladiator's Insignia of Victory
+            { 20, AtlasLoot:GetRetByFaction(60801, 60794) }, -- Vicious Gladiator's Medallion of Cruelty
+            { 21, AtlasLoot:GetRetByFaction(60806, 60799) }, -- Vicious Gladiator's Medallion of Meditation
+            { 22, AtlasLoot:GetRetByFaction(60807, 60800) }, -- Vicious Gladiator's Medallion of Tenacity
+        },
     }, {
         name = AL["Gladiator Mount"],
         ExtraList = true,
@@ -290,6 +521,7 @@ data["ArenaS9PvP"] = {
     }}
 }
 
+--[[ TODO: Later, beta first
 data["ArenaS10PvP"] = {
     name = format(AL["Season %s"], "10"),
     ContentType = ARENA_CONTENT,
@@ -453,3 +685,4 @@ data["ArenaS11PvP"] = {
         }
     }}
 }
+]]

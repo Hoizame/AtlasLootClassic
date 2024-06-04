@@ -1077,397 +1077,396 @@ data["LeatherworkingWrath"] = {
 }
 
 data["JewelcraftingWrath"] = {
-	name = ALIL["Jewelcrafting"],
-	ContentType = PROF_CONTENT,
-	LoadDifficulty = NORMAL_DIFF,
-	TableType = PROF_ITTYPE,
-	CorrespondingFields = private.JEWELCRAFTING_LINK,
-	items = {
-		{
-			name = ALIL["Jewelcrafting"].." - "..ALIL["Gems"],
-			[NORMAL_DIFF] = {
-				-- red
-				{ 1, 56049 },	-- Bold Dragon's Eye
-				{ 2, 56052 },	-- Delicate Dragon's Eye
-				{ 3, 56053 },	-- Runed  Dragon's Eye
-				{ 4, 56054 },	-- Bright Dragon's Eye
-				{ 5, 56074 },	-- Brilliant Dragon's Eye
-				{ 6, 56056 },	-- Flashing Dragon's Eye
-				{ 7, 56081 },	-- Precise Dragon's Eye
-				-- blue
-				{ 9, 56077 },	-- Lustrous Dragon's Eye
-				{ 10, 56086 },	-- Solid Dragon's Eye
-				{ 11, 56087 },	-- Sparkling Dragon's Eye
-				{ 12, 56088 },	-- Stormy Dragon's Eye
-				{ 13, 56084 },	-- Rigid Dragon's Eye
-				-- yellow
-				{ 16, 56085 },	-- Smooth Dragon's Eye
-				{ 17, 56079 },	-- Mystic Dragon's Eye
-				{ 18, 56083 },	-- Quick Dragon's Eye
-				{ 19, 56089 },	-- Thick Dragon's Eye
-				{ 20, 56055 },	-- Subtle Dragon's Eye
-				{ 21, 56076 },	-- Smooth Dragon's Eye
-			}
-		},
-		{
-			name = AL["Armor"].." - "..ALIL["Neck"],
-			[NORMAL_DIFF] = {
-				{ 1, 56500 },	-- Titanium Earthguard Chain
-				{ 2, 56499 },	-- Titanium Impact Choker
-				{ 3, 56501 },	-- Titanium Spellshock Necklace
-				{ 5, 64725 },	-- Emerald Choker
-				{ 6, 64726 },	-- Sky Sapphire Amulet
-				{ 7, 56196 },	-- Blood Sun Necklace
-				{ 8, 56195 },	-- Jade Dagger Pendant
-				{ 10, 58142 },	-- Crystal Chalcedony Amulet
-				{ 11, 58141 },	-- Crystal Citrine Necklace
-			}
-		},
-		{
-			name = AL["Armor"].." - "..AL["Ring"],
-			[NORMAL_DIFF] = {
-				{ 1, 56497 },	-- Titanium Earthguard Ring
-				{ 2, 56496 },	-- Titanium Impact Band
-				{ 3, 56498 },	-- Titanium Spellshock Ring
-				{ 4, 58954 },	-- Titanium Frostguard Ring
-				{ 6, 56193 },	-- Bloodstone Band
-				{ 7, 56194 },	-- Sun Rock Ring
-				{ 8, 58146 },	-- Shadowmight Ring
-				{ 9, 58145 },	-- Stoneguard Band
-				{ 16, 56197 },	-- Dream Signet
-				{ 17, 58147 },	-- Ring of Earthen Might
-				{ 18, 58150 },	-- Ring of Northern Tears
-				{ 19, 58148 },	-- Ring of Scarlet Shadows
-				{ 20, 64727 },	-- Runed Mana Band
-				{ 21, 58507 },	-- Savage Titanium Band
-				{ 22, 58492 },	-- Savage Titanium Ring
-				{ 23, 64728 },	-- Scarlet Signet
-				{ 24, 58149 },	-- Windfire Band
-				{ 25, 58143 },	-- Earthshadow Ring
-				{ 26, 58144 },	-- Jade Ring of Slaying
-				
-			}
-		},
-		{
-			name = AL["Armor"].." - "..ALIL["Trinket"],
-			[NORMAL_DIFF] = {
-				{ 1, 56203 },	-- Figurine - Emerald Boar
-				{ 2, 59759 },	-- Figurine - Monarch Crab
-				{ 3, 56199 },	-- Figurine - Ruby Hare
-				{ 4, 56202 },	-- Figurine - Sapphire Owl
-				{ 5, 56201 },	-- Figurine - Twilight Serpent
-			}
-		},
-		{
-			name = format(GEM_FORMAT1, ALIL["Meta"]),
-			[NORMAL_DIFF] = {
-				{ 1, 55401 },	-- Austere Earthsiege Diamond
-				{ 2, 55405 },	-- Beaming Earthsiege Diamond
-				{ 3, 55397 },	-- Bracing Earthsiege Diamond
-				{ 4, 55398 },	-- Eternal Earthsiege Diamond
-				{ 5, 55396 },	-- Insightful Earthsiege Diamond
-				{ 6, 55404 },	-- Invigorating Earthsiege Diamond
-				{ 7, 55402 },	-- Persistant Earthsiege Diamond
-				{ 8, 55399 },	-- Powerful Earthsiege Diamond
-				{ 9, 55400 },	-- Relentless Earthsiege Diamond
-				{ 10, 55403 },	-- Trenchant Earthsiege Diamond
-				{ 16, 55389 },	-- Chaotic Skyflare Diamond
-				{ 17, 55390 },	-- Destructive Skyflare Diamond
-				{ 18, 55384 },  -- Effulgent Skyflare Diamond
-				{ 19, 55392 },	-- Ember Skyflare Diamond
-				{ 20, 55393 },	-- Enigmatic Skyflare Diamond
-				{ 21, 55387 },	-- Forlorn Skyflare Diamond
-				{ 22, 55388 },	-- Impassive Skyflare Diamond
-				{ 23, 55407 },	-- Revitalizing Skyflare Diamond
-				{ 24, 55394 },	-- Swift Skyflare Diamond
-				{ 25, 55395 },	-- Thundering Skyflare Diamond
-				{ 26, 55386 },	-- Tireless Skyflare Diamond
-			}
-		},
-		{
-			name = format(GEM_FORMAT1, ALIL["Red"]),
-			[NORMAL_DIFF] = {
-				{ 1, 66447 },	-- Bold Cardinal Ruby
-				{ 2, 66446 },	-- Brilliant Cardinal Ruby
-				{ 3, 66448 },	-- Delicate Cardinal Ruby
-				{ 4, 66453 },	-- Flashing Cardinal Ruby
-				{ 5, 66450 },	-- Precise Cardinal Ruby
-				-- blue
-				{ 7, 53830 },	-- Bold Scarlet Ruby
-				{ 8, 53946 },	-- Brilliant Scarlet Ruby
-				{ 9, 53945 },	-- Delicate Scarlet Ruby
-				{ 10, 53949 },	-- Flashing Scarlet Ruby
-				{ 11, 53951 },	-- Precise Scarlet Ruby
-				-- green
-				{ 16, 53831 },	-- Bold Bloodstone
-				{ 17, 53834 },	-- Brilliant Bloodstone
-				{ 18, 53832 },	-- Delicate Bloodstone
-				{ 19, 53844 },	-- Flashing Bloodstone
-				{ 20, 54017 },	-- Precise Bloodstone
-				-- perfect
-				{ 22, "i41432" }, -- Perfect Bold Bloodstone
-				{ 23, "i41438" }, -- Perfect Brilliant Bloodstone
-				{ 24, "i41434" }, -- Perfect Delicate Bloodstone
-				{ 25, "i41435" }, -- Perfect Flashing Bloodstone
-				{ 26, "i41437" }, -- Perfect Precise Bloodstone
-			}
-		},
-		{
-			name = format(GEM_FORMAT1, ALIL["Yellow"]),
-			[NORMAL_DIFF] = {
-				{ 1, 66452 },   -- Subtle King's Amber
-				{ 2, 66505 },	-- Mystic King's Amber
-				{ 3, 66506 },	-- Quick King's Amber
-				{ 4, 66502 },	-- Smooth King's Amber
-				-- blue
-				{ 6, 53948 },  -- Subtle Autumn's Glow
-				{ 7, 53960 },	-- Mystic Autumn's Glow
-				{ 8, 53961 },	-- Quick Autumn's Glow
-				{ 9, 53950 },  -- Smooth Autumn's Glow
-				-- green
-				{ 16, 53843 }, -- Subtle Sun Crystal
-				{ 17, 53857 },	-- Mystic Sun Crystal
-				{ 18, 53856 },	-- Quick Sun Crystal
-				{ 19, 53845 }, -- Smooth Sun Crystal
-				-- perfect
-				{ 21, "i41439" }, -- Perfect Subtle Sun Crystal
-				{ 22, "i41445" },	-- Perfect Mystic Sun Crystal
-				{ 23, "i41446" },	-- Perfect Quick Sun Crystal
-				{ 24, "i41436" }, -- Perfect Smooth Sun Crystal
-			}
-		},
-		{
-			name = format(GEM_FORMAT1, ALIL["Blue"]),
-			[NORMAL_DIFF] = {
-				{ 1, 66498 },	-- Sparkling Majestic Zircon
-				{ 2, 66497 },	-- Solid Majestic Zircon
-				{ 3, 66499 },	-- Stormy Majestic Zircon
-				{ 4, 66501 },	-- Rigid Majestic Zircon
-				-- blue
-				{ 6, 53954 },	-- Sparkling Sky Sapphire
-				{ 7, 53952 },	-- Solid Sky Sapphire
-				{ 8, 53955 },	-- Stormy Sky Sapphire
-				{ 9, 53958 },	-- Rigid Sky Sapphire
-				-- green
-				{ 16, 53940 },	-- Sparkling Chalcedony
-				{ 17, 53934 },	-- Solid Chalcedony
-				{ 18, 53943 },	-- Stormy Chalcedony
-				{ 19, 53854 },	-- Rigid Chalcedony
-				-- perfect
-				{ 21, "i41442" },	-- Perfect Sparkling Chalcedony
-				{ 22, "i41441" },	-- Perfect Solid Chalcedony
-				{ 23, "i41443" },	-- Perfect Stormy Chalcedony
-				{ 24, "i41447" },	-- Perfect Rigid Chalcedony
-			}
-		},
-		{
-			name = format(GEM_FORMAT1, ALIL["Orange"]),
-			[NORMAL_DIFF] = {
-				{ 1, 66579 },	-- Champion's Ametrine
-				{ 2, 66568 },	-- Deadly Ametrine
-				{ 3, 66584 },	-- Deft Ametrine
-				{ 4, 66571 },	-- Willful Ametrine
-				{ 5, 66580 },	-- Lucent Ametrine
-				{ 6, 66583 },	-- Fierce Ametrine
-				{ 7, 66581 },   -- Stalwart Ametrine
-				{ 8, 66567 },	-- Inscribed Ametrine
-				{ 9, 66569 },	-- Potent Ametrine
-				{ 10, 66574 },	-- Reckless Ametrine
-				{ 11, 66586 },	-- Resolute Ametrine
-				{ 12, 66582 },	-- Resplendent Ametrine
-				-- blue
-				{ 16, 53977 },	-- Champion's Monarch Topaz
-				{ 17, 53979 },	-- Deadly Monarch Topaz
-				{ 18, 53991 },	-- Deft Monarch Topaz
-				{ 19, 53986 },	-- Willfur Monarch Topaz
-				{ 20, 53990 },	-- Lucent Monarch Topaz
-				{ 21, 54019 },	-- Fierce Monarch Topaz
-				{ 22, 53993 }, -- Stalwart Monarch Topaz
-				{ 23, 53975 },	-- Inscribed Monarch Topaz
-				{ 24, 53983 }, -- Reckless Monarch Topaz
-				{ 25, 53984 },	-- Potent Monarch Topaz
-				{ 26, 54023 },	-- Resolute Monarch Topaz
-				{ 27, 53978 },	-- Resplendent Monarch Topaz
-				-- green
-				{ 101, 53874 },	-- Champion's Huge Citrine
-				{ 102, 53877 },	-- Deadly Huge Citrine
-				{ 103, 53880 },	-- Deft Huge Citrine
-				{ 104, 53884 }, -- Willful Huge Citrine
-				{ 105, 53888 }, -- Lucent Huge Citrine
-				{ 106, 53876 },	-- Fierce Huge Citrine
-				{ 107, 53891 }, -- Stalwart Huge Citrine
-				{ 108, 53872 },	-- Inscribed Huge Citrine
-				{ 109, 53885 }, -- Reckless Huge Citrine
-				{ 110, 53882 },	-- Potent Huge Citrine
-				{ 111, 53893 },	-- Resolute Huge Citrine
-				{ 112, 53875 },	-- Resplendent Huge Citrine
-				-- perfect
-				{ 116, "i41483" }, -- Perfect Champion's Huge Citrine
-				{ 117, "i41484" }, -- Perfect Deadly Huge Citrine
-				{ 118, "i41485" }, -- Perfect Deft Huge Citrine
-				{ 119, "i41486" }, -- Perfect Willful Huge Citrine
-				{ 120, "i41487" }, -- Perfect Lucent Huge Citrine
-				{ 121, "i41489" }, -- Perfect Fierce Huge Citrine
-				{ 122, "i41490" }, -- Perfect Stalwart Huge Citrine
-				{ 123, "i41492" }, -- Perfect Inscribed Huge Citrine
-				{ 124, "i41497" }, -- Perfect Reckless Huge Citrine
-				{ 125, "i41495" }, -- Perfect Potent Huge Citrine
-				{ 126, "i41498" }, -- Perfect Resolute Huge Citrine
-				{ 127, "i41499" }, -- Perfect Resplendent Huge Citrine
-			}
-		},
-		{
-			name = format(GEM_FORMAT1, ALIL["Green"]),
-			[NORMAL_DIFF] = {
-				{ 1, 66338 },   -- Regal Eye of Zul
-				{ 2, 66442 },	-- Energized Eye of Zul
-				{ 3, 66434 },	-- Forceful Eye of Zul
-				{ 4, 66431 },	-- Jagged Eye of Zul
-				{ 5, 66439 },   -- Lightning Eye of Zul
-				{ 6, 66435 },	-- Misty Eye of Zul
-				{ 7, 66441 },	-- Radiant Eye of Zul
-				{ 8, 66443 },	-- Shattered Eye of Zul
-				{ 9, 66428 },	-- Steady Eye of Zul
-				{ 10, 66445 },	-- Turbid Eye of Zul
-				{ 11, 66429 },  -- Nimble Eye of Zul
-				-- blue
-				{ 16, 53998 }, -- Regal Forest Emerald
-				{ 17, 54011 },	-- Energized Forest Emerald
-				{ 18, 54001 },	-- Forceful Forest Emerald
-				{ 19, 53996 },	-- Jagged Forest Emerald
-				{ 20, 54009 }, -- Lightning Forest Emerald
-				{ 21, 54003 },	-- Misty Forest Emerald
-				{ 22, 54012 },	-- Radiant Forest Emerald
-				{ 23, 54014 },	-- Shattered Forest Emerald
-				{ 24, 54000 },	-- Steady Forest Emerald
-				{ 25, 54005 },	-- Turbid Forest Emerald
-				{ 26, 53997 }, -- Nimble Forest Emerald
-				-- green
-				{ 101, 53918 }, -- Regal Dark Jade
-				{ 102, 53930 },	-- Energized Dark Jade
-				{ 103, 53920 }, -- Forceful Dark Jade
-				{ 104, 53916 },	-- Jagged Dark Jade
-				{ 105, 53928 }, -- Lightning Dark Jade
-				{ 106, 53922 },	-- Misty Dark Jade
-				{ 107, 53932 },	-- Radiant Dark Jade
-				{ 108, 53933 },	-- Shattered Dark Jade
-				{ 109, 53919 }, -- Steady Dark Jade
-				{ 110, 53924 },	-- Turbid Dark Jade
-				{ 111, 53917 }, -- Nimble Dark Jade
-				-- perfect
-				{ 116, "i41464" }, -- Perfect Regal Dark Jade
-				{ 117, "i41465" }, -- Perfect Energized Dark Jade
-				{ 118, "i41466" }, -- Perfect Forceful Dark Jade
-				{ 119, "i41468" }, -- Perfect Jagged Dark Jade
-				{ 120, "i41469" }, -- Perfect Lightning Dark Jade
-				{ 121, "i41470" }, -- Perfect Misty Dark Jade
-				{ 122, "i41471" }, -- Perfect Turbid Dark Jade
-				{ 123, "i41472" }, -- Perfect Radiant Dark Jade
-				{ 124, "i41474" }, -- Perfect Shattered Dark Jade
-				{ 125, "i41476" }, -- Perfect Steady Dark Jade
-				{ 126, "i41481" }, -- Perfect Nimble Dark Jade
-			}
-		},
-		{
-			name = format(GEM_FORMAT1, ALIL["Purple"]),
-			[NORMAL_DIFF] = {
-				{ 1, 66560 },	-- Defender's Dreadstone
-				{ 2, 66432 },  -- Timeless Dreadstone
-				{ 3, 66561 },	-- Guardian's Dreadstone
-				{ 4, 66562 },	-- Mysterious Dreadstone
-				{ 5, 66556 },	-- Purified Dreadstone
-				{ 6, 66557 },	-- Shifting Dreadstone
-				{ 7, 66554 },	-- Sovereign Dreadstone
-				{ 8, 66576 },   -- Accurate Dreadstone
-        		{ 9, 66572 },	-- Etched Dreadstone
-        		{ 10, 66573 },	-- Glinting Dreadstone
-        		{ 11, 66570 },  -- Veiled Dreadstone
-				-- blue
-				{ 16, 53972 },	-- Defender's Twilight Opal
-				{ 17, 53965 }, -- Timeless Forest Emerald
-				{ 18, 53974 },	-- Guardian's Twilight Opal
-				{ 19, 53968 },	-- Mysterious Twilight Opal
-				{ 20, 53966 },	-- Purified Twilight Opal
-				{ 21, 53963 },	-- Shifting Twilight Opal
-				{ 22, 53962 },	-- Sovereign Twilight Opal
-				{ 23, 53994 }, -- Accurate Twilight Opal
-				{ 24, 53976 }, --  Etched Twilight Opal
-				{ 25, 53980 }, -- Glinting Twilight Opal
-				{ 26, 53985 },	-- Veiled Twilight Opal
-				-- green
-				{ 101, 53869 },	-- Defender's Shadow Crystal
-				{ 102, 53894 },	-- Timeless Shadow Crystal
-				{ 103, 53871 },	-- Guardian's Shadow Crystal
-				{ 104, 53865 },	-- Mysterious Shadow Crystal
-				{ 105, 53921 },	-- Purified Shadow Crystal
-				{ 106, 53866 },	-- Shifting Shadow Crystal
-				{ 107, 53859 },	-- Sovereign Shadow Crystal
-				{ 108, 53892 }, -- Accurate Shadow Crystal
-				{ 109, 53873 }, -- Etched Shadow Crystal
-				{ 110, 53861 },	-- Glinting Shadow Crystal
-				{ 111, 53883 },	-- Veiled Shadow Crystal
-				-- perfect
-				{ 116, "i41451" },	-- Perfect Defender's Shadow Crystal
-				{ 117, "i41479" }, -- Perfect Timeless Shadow Crystal
-				{ 118, "i41453" },	-- Perfect Guardian's Shadow Crystal
-				{ 119, "i41455" },	-- Perfect Mysterious Shadow Crystal
-				{ 120, "i41457" },	-- Perfect Purified Shadow Crystal
-				{ 121, "i41450" },	-- Perfect Shifting Shadow Crystal
-				{ 122, "i41461" },	-- Perfect Sovereign Shadow Crystal
-				{ 123, "i41482" }, -- Perfect Accurate Shadow Crystal
-				{ 124, "i41488" }, -- Perfect Etched Shadow Crystal
-				{ 125, "i41491" }, -- Perfect Glinting Shadow Crystal
-				{ 126, "i41502" }, -- Perfect Veiled Shadow Crystal
-			}
-		},
-		{
-			name = format(GEM_FORMAT1, ALIL["Prismatic"]),
-			[NORMAL_DIFF] = {
-				{ 1, 56530 }, -- Enchanted Pearl
-				{ 2, 56531 }, -- Enchanted Tear
-				{ 3, 68253 }, -- Nightmare Tear
-			}
-		},
-		{
-			name = AL["Raw Gems"],
-			TableType = NORMAL_ITTYPE,
-			[NORMAL_DIFF] = {
-				{ 1, 41334 }, --  Earthsiege Diamond
-				{ 2, 41266 }, --  Skyflare Diamond
-				{ 3, 36783 }, --  Northsea Pearl
-				{ 5, 36928 }, --  Dreadstone
-				{ 6, 36927 }, --  Twilight Opal
-				{ 7, 36926 }, --  Shadow Crystal
-				{ 9, 36934 }, --  Eye of Zul
-				{ 10, 36933 }, --  Forest Emerald
-				{ 11, 36932 }, --  Dark Jade
-				{ 13, 36931 }, --  Ametrine
-				{ 14, 36930 }, --  Monarch Topaz
-				{ 15, 36929 }, --  Huge Citrine
-				{ 16, "i42225" }, --  Dragon's Eye
-				{ 17, 36784 }, --  Siren's Tear
-				{ 20, 36925 }, --  Majestic Zircon
-				{ 21, 36924 }, -- Sky Sapphire
-				{ 22, 36923 }, --  Chalcedony
-				{ 24, 36919 }, --  Cardinal Ruby
-				{ 25, 36918 }, --  Scarlet Ruby
-				{ 26, 36917 }, --  Bloodstone
-				{ 28, 36922 }, --  King's Amber
-				{ 29, 36921 }, --  Autumn's Glow
-				{ 30, 36920 }, --  Sun Crystal
-			}
-		},
-		{
-			name = AL["Misc"],
-			[NORMAL_DIFF] = {
-				{ 1, 62242 },	-- Icy Prism
-				{ 3, "i43297" },	-- Damaged Necklace
-				{ 16, 56208 },	-- Shadow Jade Focusing Lens
-				{ 17, 56206 },	-- Shadow Crystal Focusing Lens
-				{ 18, 56205 },	-- Dark Jade Focusing Lens
-			}
-		},
-	}
+    name = ALIL["Jewelcrafting"],
+    ContentType = PROF_CONTENT,
+    LoadDifficulty = NORMAL_DIFF,
+    TableType = PROF_ITTYPE,
+    CorrespondingFields = private.JEWELCRAFTING_LINK,
+    items = {
+        {
+            name = ALIL["Jewelcrafting"].." - "..ALIL["Gems"],
+            [NORMAL_DIFF] = {
+                -- red
+                { 1, 56049 },	-- Bold Dragon's Eye
+                { 2, 56052 },	-- Delicate Dragon's Eye
+                { 3, 56053 },	-- Runed  Dragon's Eye
+                { 4, 56054 },	-- Bright Dragon's Eye
+                { 5, 56074 },	-- Brilliant Dragon's Eye
+                { 6, 56056 },	-- Flashing Dragon's Eye
+                { 7, 56081 },	-- Precise Dragon's Eye
+                -- blue
+                { 9, 56077 },	-- Lustrous Dragon's Eye
+                { 10, 56086 },	-- Solid Dragon's Eye
+                { 11, 56087 },	-- Sparkling Dragon's Eye
+                { 12, 56088 },	-- Stormy Dragon's Eye
+                { 13, 56084 },	-- Rigid Dragon's Eye
+                -- yellow
+                { 16, 56085 },	-- Smooth Dragon's Eye
+                { 17, 56079 },	-- Mystic Dragon's Eye
+                { 18, 56083 },	-- Quick Dragon's Eye
+                { 19, 56089 },	-- Thick Dragon's Eye
+                { 20, 56055 },	-- Subtle Dragon's Eye
+                { 21, 56076 },	-- Smooth Dragon's Eye
+            }
+        },
+        {
+            name = AL["Armor"].." - "..ALIL["Neck"],
+            [NORMAL_DIFF] = {
+                { 1, 56500 },	-- Titanium Earthguard Chain
+                { 2, 56499 },	-- Titanium Impact Choker
+                { 3, 56501 },	-- Titanium Spellshock Necklace
+                { 5, 64725 },	-- Emerald Choker
+                { 6, 64726 },	-- Sky Sapphire Amulet
+                { 7, 56196 },	-- Blood Sun Necklace
+                { 8, 56195 },	-- Jade Dagger Pendant
+                { 10, 58142 },	-- Crystal Chalcedony Amulet
+                { 11, 58141 },	-- Crystal Citrine Necklace
+            }
+        },
+        {
+            name = AL["Armor"].." - "..AL["Ring"],
+            [NORMAL_DIFF] = {
+                { 1, 56497 },	-- Titanium Earthguard Ring
+                { 2, 56496 },	-- Titanium Impact Band
+                { 3, 56498 },	-- Titanium Spellshock Ring
+                { 4, 58954 },	-- Titanium Frostguard Ring
+                { 6, 56193 },	-- Bloodstone Band
+                { 7, 56194 },	-- Sun Rock Ring
+                { 8, 58146 },	-- Shadowmight Ring
+                { 9, 58145 },	-- Stoneguard Band
+                { 16, 56197 },	-- Dream Signet
+                { 17, 58147 },	-- Ring of Earthen Might
+                { 18, 58150 },	-- Ring of Northern Tears
+                { 19, 58148 },	-- Ring of Scarlet Shadows
+                { 20, 64727 },	-- Runed Mana Band
+                { 21, 58507 },	-- Savage Titanium Band
+                { 22, 58492 },	-- Savage Titanium Ring
+                { 23, 64728 },	-- Scarlet Signet
+                { 24, 58149 },	-- Windfire Band
+                { 25, 58143 },	-- Earthshadow Ring
+                { 26, 58144 },	-- Jade Ring of Slaying
+            }
+        },
+        {
+            name = AL["Armor"].." - "..ALIL["Trinket"],
+            [NORMAL_DIFF] = {
+                { 1, 56203 },	-- Figurine - Emerald Boar
+                { 2, 59759 },	-- Figurine - Monarch Crab
+                { 3, 56199 },	-- Figurine - Ruby Hare
+                { 4, 56202 },	-- Figurine - Sapphire Owl
+                { 5, 56201 },	-- Figurine - Twilight Serpent
+            }
+        },
+        {
+            name = format(GEM_FORMAT1, ALIL["Meta"]),
+            [NORMAL_DIFF] = {
+                { 1, 55401 },	-- Austere Earthsiege Diamond
+                { 2, 55405 },	-- Beaming Earthsiege Diamond
+                { 3, 55397 },	-- Bracing Earthsiege Diamond
+                { 4, 55398 },	-- Eternal Earthsiege Diamond
+                { 5, 55396 },	-- Insightful Earthsiege Diamond
+                { 6, 55404 },	-- Invigorating Earthsiege Diamond
+                { 7, 55402 },	-- Persistant Earthsiege Diamond
+                { 8, 55399 },	-- Powerful Earthsiege Diamond
+                { 9, 55400 },	-- Relentless Earthsiege Diamond
+                { 10, 55403 },	-- Trenchant Earthsiege Diamond
+                { 16, 55389 },	-- Chaotic Skyflare Diamond
+                { 17, 55390 },	-- Destructive Skyflare Diamond
+                { 18, 55384 },  -- Effulgent Skyflare Diamond
+                { 19, 55392 },	-- Ember Skyflare Diamond
+                { 20, 55393 },	-- Enigmatic Skyflare Diamond
+                { 21, 55387 },	-- Forlorn Skyflare Diamond
+                { 22, 55388 },	-- Impassive Skyflare Diamond
+                { 23, 55407 },	-- Revitalizing Skyflare Diamond
+                { 24, 55394 },	-- Swift Skyflare Diamond
+                { 25, 55395 },	-- Thundering Skyflare Diamond
+                { 26, 55386 },	-- Tireless Skyflare Diamond
+            }
+        },
+        {
+            name = format(GEM_FORMAT1, ALIL["Red"]),
+            [NORMAL_DIFF] = {
+                { 1, 66447 },	-- Bold Cardinal Ruby
+                { 2, 66446 },	-- Brilliant Cardinal Ruby
+                { 3, 66448 },	-- Delicate Cardinal Ruby
+                { 4, 66453 },	-- Flashing Cardinal Ruby
+                { 5, 66450 },	-- Precise Cardinal Ruby
+                -- blue
+                { 7, 53830 },	-- Bold Scarlet Ruby
+                { 8, 53946 },	-- Brilliant Scarlet Ruby
+                { 9, 53945 },	-- Delicate Scarlet Ruby
+                { 10, 53949 },	-- Flashing Scarlet Ruby
+                { 11, 53951 },	-- Precise Scarlet Ruby
+                -- green
+                { 16, 53831 },	-- Bold Bloodstone
+                { 17, 53834 },	-- Brilliant Bloodstone
+                { 18, 53832 },	-- Delicate Bloodstone
+                { 19, 53844 },	-- Flashing Bloodstone
+                { 20, 54017 },	-- Precise Bloodstone
+                -- perfect
+                { 22, "i41432" }, -- Perfect Bold Bloodstone
+                { 23, "i41438" }, -- Perfect Brilliant Bloodstone
+                { 24, "i41434" }, -- Perfect Delicate Bloodstone
+                { 25, "i41435" }, -- Perfect Flashing Bloodstone
+                { 26, "i41437" }, -- Perfect Precise Bloodstone
+            }
+        },
+        {
+            name = format(GEM_FORMAT1, ALIL["Yellow"]),
+            [NORMAL_DIFF] = {
+                { 1, 66452 },   -- Subtle King's Amber
+                { 2, 66505 },	-- Mystic King's Amber
+                { 3, 66506 },	-- Quick King's Amber
+                { 4, 66502 },	-- Smooth King's Amber
+                -- blue
+                { 6, 53948 },  -- Subtle Autumn's Glow
+                { 7, 53960 },	-- Mystic Autumn's Glow
+                { 8, 53961 },	-- Quick Autumn's Glow
+                { 9, 53950 },  -- Smooth Autumn's Glow
+                -- green
+                { 16, 53843 }, -- Subtle Sun Crystal
+                { 17, 53857 },	-- Mystic Sun Crystal
+                { 18, 53856 },	-- Quick Sun Crystal
+                { 19, 53845 }, -- Smooth Sun Crystal
+                -- perfect
+                { 21, "i41439" }, -- Perfect Subtle Sun Crystal
+                { 22, "i41445" },	-- Perfect Mystic Sun Crystal
+                { 23, "i41446" },	-- Perfect Quick Sun Crystal
+                { 24, "i41436" }, -- Perfect Smooth Sun Crystal
+            }
+        },
+        {
+            name = format(GEM_FORMAT1, ALIL["Blue"]),
+            [NORMAL_DIFF] = {
+                { 1, 66498 },	-- Sparkling Majestic Zircon
+                { 2, 66497 },	-- Solid Majestic Zircon
+                { 3, 66499 },	-- Stormy Majestic Zircon
+                { 4, 66501 },	-- Rigid Majestic Zircon
+                -- blue
+                { 6, 53954 },	-- Sparkling Sky Sapphire
+                { 7, 53952 },	-- Solid Sky Sapphire
+                { 8, 53955 },	-- Stormy Sky Sapphire
+                { 9, 53958 },	-- Rigid Sky Sapphire
+                -- green
+                { 16, 53940 },	-- Sparkling Chalcedony
+                { 17, 53934 },	-- Solid Chalcedony
+                { 18, 53943 },	-- Stormy Chalcedony
+                { 19, 53854 },	-- Rigid Chalcedony
+                -- perfect
+                { 21, "i41442" },	-- Perfect Sparkling Chalcedony
+                { 22, "i41441" },	-- Perfect Solid Chalcedony
+                { 23, "i41443" },	-- Perfect Stormy Chalcedony
+                { 24, "i41447" },	-- Perfect Rigid Chalcedony
+            }
+        },
+        {
+            name = format(GEM_FORMAT1, ALIL["Orange"]),
+            [NORMAL_DIFF] = {
+                { 1, 66579 },	-- Champion's Ametrine
+                { 2, 66568 },	-- Deadly Ametrine
+                { 3, 66584 },	-- Deft Ametrine
+                { 4, 66571 },	-- Willful Ametrine
+                { 5, 66580 },	-- Lucent Ametrine
+                { 6, 66583 },	-- Fierce Ametrine
+                { 7, 66581 },   -- Stalwart Ametrine
+                { 8, 66567 },	-- Inscribed Ametrine
+                { 9, 66569 },	-- Potent Ametrine
+                { 10, 66574 },	-- Reckless Ametrine
+                { 11, 66586 },	-- Resolute Ametrine
+                { 12, 66582 },	-- Resplendent Ametrine
+                -- blue
+                { 16, 53977 },	-- Champion's Monarch Topaz
+                { 17, 53979 },	-- Deadly Monarch Topaz
+                { 18, 53991 },	-- Deft Monarch Topaz
+                { 19, 53986 },	-- Willfur Monarch Topaz
+                { 20, 53990 },	-- Lucent Monarch Topaz
+                { 21, 54019 },	-- Fierce Monarch Topaz
+                { 22, 53993 }, -- Stalwart Monarch Topaz
+                { 23, 53975 },	-- Inscribed Monarch Topaz
+                { 24, 53983 }, -- Reckless Monarch Topaz
+                { 25, 53984 },	-- Potent Monarch Topaz
+                { 26, 54023 },	-- Resolute Monarch Topaz
+                { 27, 53978 },	-- Resplendent Monarch Topaz
+                -- green
+                { 101, 53874 },	-- Champion's Huge Citrine
+                { 102, 53877 },	-- Deadly Huge Citrine
+                { 103, 53880 },	-- Deft Huge Citrine
+                { 104, 53884 }, -- Willful Huge Citrine
+                { 105, 53888 }, -- Lucent Huge Citrine
+                { 106, 53876 },	-- Fierce Huge Citrine
+                { 107, 53891 }, -- Stalwart Huge Citrine
+                { 108, 53872 },	-- Inscribed Huge Citrine
+                { 109, 53885 }, -- Reckless Huge Citrine
+                { 110, 53882 },	-- Potent Huge Citrine
+                { 111, 53893 },	-- Resolute Huge Citrine
+                { 112, 53875 },	-- Resplendent Huge Citrine
+                -- perfect
+                { 116, "i41483" }, -- Perfect Champion's Huge Citrine
+                { 117, "i41484" }, -- Perfect Deadly Huge Citrine
+                { 118, "i41485" }, -- Perfect Deft Huge Citrine
+                { 119, "i41486" }, -- Perfect Willful Huge Citrine
+                { 120, "i41487" }, -- Perfect Lucent Huge Citrine
+                { 121, "i41489" }, -- Perfect Fierce Huge Citrine
+                { 122, "i41490" }, -- Perfect Stalwart Huge Citrine
+                { 123, "i41492" }, -- Perfect Inscribed Huge Citrine
+                { 124, "i41497" }, -- Perfect Reckless Huge Citrine
+                { 125, "i41495" }, -- Perfect Potent Huge Citrine
+                { 126, "i41498" }, -- Perfect Resolute Huge Citrine
+                { 127, "i41499" }, -- Perfect Resplendent Huge Citrine
+            }
+        },
+        {
+            name = format(GEM_FORMAT1, ALIL["Green"]),
+            [NORMAL_DIFF] = {
+                { 1, 66338 },   -- Regal Eye of Zul
+                { 2, 66442 },	-- Energized Eye of Zul
+                { 3, 66434 },	-- Forceful Eye of Zul
+                { 4, 66431 },	-- Jagged Eye of Zul
+                { 5, 66439 },   -- Lightning Eye of Zul
+                { 6, 66435 },	-- Misty Eye of Zul
+                { 7, 66441 },	-- Radiant Eye of Zul
+                { 8, 66443 },	-- Shattered Eye of Zul
+                { 9, 66428 },	-- Steady Eye of Zul
+                { 10, 66445 },	-- Turbid Eye of Zul
+                { 11, 66429 },  -- Nimble Eye of Zul
+                -- blue
+                { 16, 53998 }, -- Regal Forest Emerald
+                { 17, 54011 },	-- Energized Forest Emerald
+                { 18, 54001 },	-- Forceful Forest Emerald
+                { 19, 53996 },	-- Jagged Forest Emerald
+                { 20, 54009 }, -- Lightning Forest Emerald
+                { 21, 54003 },	-- Misty Forest Emerald
+                { 22, 54012 },	-- Radiant Forest Emerald
+                { 23, 54014 },	-- Shattered Forest Emerald
+                { 24, 54000 },	-- Steady Forest Emerald
+                { 25, 54005 },	-- Turbid Forest Emerald
+                { 26, 53997 }, -- Nimble Forest Emerald
+                -- green
+                { 101, 53918 }, -- Regal Dark Jade
+                { 102, 53930 },	-- Energized Dark Jade
+                { 103, 53920 }, -- Forceful Dark Jade
+                { 104, 53916 },	-- Jagged Dark Jade
+                { 105, 53928 }, -- Lightning Dark Jade
+                { 106, 53922 },	-- Misty Dark Jade
+                { 107, 53932 },	-- Radiant Dark Jade
+                { 108, 53933 },	-- Shattered Dark Jade
+                { 109, 53919 }, -- Steady Dark Jade
+                { 110, 53924 },	-- Turbid Dark Jade
+                { 111, 53917 }, -- Nimble Dark Jade
+                -- perfect
+                { 116, "i41464" }, -- Perfect Regal Dark Jade
+                { 117, "i41465" }, -- Perfect Energized Dark Jade
+                { 118, "i41466" }, -- Perfect Forceful Dark Jade
+                { 119, "i41468" }, -- Perfect Jagged Dark Jade
+                { 120, "i41469" }, -- Perfect Lightning Dark Jade
+                { 121, "i41470" }, -- Perfect Misty Dark Jade
+                { 122, "i41471" }, -- Perfect Turbid Dark Jade
+                { 123, "i41472" }, -- Perfect Radiant Dark Jade
+                { 124, "i41474" }, -- Perfect Shattered Dark Jade
+                { 125, "i41476" }, -- Perfect Steady Dark Jade
+                { 126, "i41481" }, -- Perfect Nimble Dark Jade
+            }
+        },
+        {
+            name = format(GEM_FORMAT1, ALIL["Purple"]),
+            [NORMAL_DIFF] = {
+                { 1, 66560 },	-- Defender's Dreadstone
+                { 2, 66432 },  -- Timeless Dreadstone
+                { 3, 66561 },	-- Guardian's Dreadstone
+                { 4, 66562 },	-- Mysterious Dreadstone
+                { 5, 66556 },	-- Purified Dreadstone
+                { 6, 66557 },	-- Shifting Dreadstone
+                { 7, 66554 },	-- Sovereign Dreadstone
+                { 8, 66576 },   -- Accurate Dreadstone
+                { 9, 66572 },	-- Etched Dreadstone
+                { 10, 66573 },	-- Glinting Dreadstone
+                { 11, 66570 },  -- Veiled Dreadstone
+                -- blue
+                { 16, 53972 },	-- Defender's Twilight Opal
+                { 17, 53965 }, -- Timeless Forest Emerald
+                { 18, 53974 },	-- Guardian's Twilight Opal
+                { 19, 53968 },	-- Mysterious Twilight Opal
+                { 20, 53966 },	-- Purified Twilight Opal
+                { 21, 53963 },	-- Shifting Twilight Opal
+                { 22, 53962 },	-- Sovereign Twilight Opal
+                { 23, 53994 }, -- Accurate Twilight Opal
+                { 24, 53976 }, --  Etched Twilight Opal
+                { 25, 53980 }, -- Glinting Twilight Opal
+                { 26, 53985 },	-- Veiled Twilight Opal
+                -- green
+                { 101, 53869 },	-- Defender's Shadow Crystal
+                { 102, 53894 },	-- Timeless Shadow Crystal
+                { 103, 53871 },	-- Guardian's Shadow Crystal
+                { 104, 53865 },	-- Mysterious Shadow Crystal
+                { 105, 53921 },	-- Purified Shadow Crystal
+                { 106, 53866 },	-- Shifting Shadow Crystal
+                { 107, 53859 },	-- Sovereign Shadow Crystal
+                { 108, 53892 }, -- Accurate Shadow Crystal
+                { 109, 53873 }, -- Etched Shadow Crystal
+                { 110, 53861 },	-- Glinting Shadow Crystal
+                { 111, 53883 },	-- Veiled Shadow Crystal
+                -- perfect
+                { 116, "i41451" },	-- Perfect Defender's Shadow Crystal
+                { 117, "i41479" }, -- Perfect Timeless Shadow Crystal
+                { 118, "i41453" },	-- Perfect Guardian's Shadow Crystal
+                { 119, "i41455" },	-- Perfect Mysterious Shadow Crystal
+                { 120, "i41457" },	-- Perfect Purified Shadow Crystal
+                { 121, "i41450" },	-- Perfect Shifting Shadow Crystal
+                { 122, "i41461" },	-- Perfect Sovereign Shadow Crystal
+                { 123, "i41482" }, -- Perfect Accurate Shadow Crystal
+                { 124, "i41488" }, -- Perfect Etched Shadow Crystal
+                { 125, "i41491" }, -- Perfect Glinting Shadow Crystal
+                { 126, "i41502" }, -- Perfect Veiled Shadow Crystal
+            }
+        },
+        {
+            name = format(GEM_FORMAT1, ALIL["Prismatic"]),
+            [NORMAL_DIFF] = {
+                { 1, 56530 }, -- Enchanted Pearl
+                { 2, 56531 }, -- Enchanted Tear
+                { 3, 68253 }, -- Nightmare Tear
+            }
+        },
+        {
+            name = AL["Raw Gems"],
+            TableType = NORMAL_ITTYPE,
+            [NORMAL_DIFF] = {
+                { 1, 41334 }, --  Earthsiege Diamond
+                { 2, 41266 }, --  Skyflare Diamond
+                { 3, 36783 }, --  Northsea Pearl
+                { 5, 36928 }, --  Dreadstone
+                { 6, 36927 }, --  Twilight Opal
+                { 7, 36926 }, --  Shadow Crystal
+                { 9, 36934 }, --  Eye of Zul
+                { 10, 36933 }, --  Forest Emerald
+                { 11, 36932 }, --  Dark Jade
+                { 13, 36931 }, --  Ametrine
+                { 14, 36930 }, --  Monarch Topaz
+                { 15, 36929 }, --  Huge Citrine
+                { 16, "i42225" }, --  Dragon's Eye
+                { 17, 36784 }, --  Siren's Tear
+                { 20, 36925 }, --  Majestic Zircon
+                { 21, 36924 }, -- Sky Sapphire
+                { 22, 36923 }, --  Chalcedony
+                { 24, 36919 }, --  Cardinal Ruby
+                { 25, 36918 }, --  Scarlet Ruby
+                { 26, 36917 }, --  Bloodstone
+                { 28, 36922 }, --  King's Amber
+                { 29, 36921 }, --  Autumn's Glow
+                { 30, 36920 }, --  Sun Crystal
+            }
+        },
+        {
+            name = AL["Misc"],
+            [NORMAL_DIFF] = {
+                { 1, 62242 },	-- Icy Prism
+                { 3, "i43297" },	-- Damaged Necklace
+                { 16, 56208 },	-- Shadow Jade Focusing Lens
+                { 17, 56206 },	-- Shadow Crystal Focusing Lens
+                { 18, 56205 },	-- Dark Jade Focusing Lens
+            }
+        },
+    }
 }
 
 data["InscriptionWrath"] = {
@@ -1622,23 +1621,23 @@ data["MiningWrath"] = {
 }
 
 data["SkinningWrath"] = {
-	name = ALIL["Skinning"],
-	ContentType = PROF_GATH_CONTENT,
-	LoadDifficulty = NORMAL_DIFF,
-	TableType = NORMAL_ITTYPE,
-	CorrespondingFields = private.SKINNING_LINK,
-	items = {
-		{
-			name = AL["Grand Master"],
-			[NORMAL_DIFF] = {
-				{ 1, 33568 }, -- Borean Leather
-				{ 2, 33567 }, -- Borean Leather Scraps
-				{ 16, 38558 }, -- Nerubian Chitin
-				{ 17, 38557 }, -- Icy Dragonscale
-				{ 19, 44128 }, -- Arctic Fur
-			}
-		},
-	}
+    name = ALIL["Skinning"],
+    ContentType = PROF_GATH_CONTENT,
+    LoadDifficulty = NORMAL_DIFF,
+    TableType = NORMAL_ITTYPE,
+    CorrespondingFields = private.SKINNING_LINK,
+    items = {
+        {
+            name = AL["Grand Master"],
+            [NORMAL_DIFF] = {
+                { 1, 33568 }, -- Borean Leather
+                { 2, 33567 }, -- Borean Leather Scraps
+                { 16, 38558 }, -- Nerubian Chitin
+                { 17, 38557 }, -- Icy Dragonscale
+                { 19, 44128 }, -- Arctic Fur
+            }
+        },
+    }
 }
 
 data["HerbalismWrath"] = {
