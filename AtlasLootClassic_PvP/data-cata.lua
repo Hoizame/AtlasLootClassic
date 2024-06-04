@@ -521,7 +521,7 @@ data["ArenaS9PvP"] = {
     }}
 }
 
---[[
+--[[ TODO: Later, beta first
 data["ArenaS10PvP"] = {
     name = format(AL["Season %s"], "10"),
     ContentType = ARENA_CONTENT,
