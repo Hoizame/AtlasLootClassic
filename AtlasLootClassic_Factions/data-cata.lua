@@ -163,12 +163,7 @@ data["AvengersOfHyjal"] = {
                 {3, 71227}, -- Bladed Flamewrath Cover
                 {4, 70930}, -- Durable Flamewrath Greatcloak
                 {5, 71228}, -- Sleek Flamewrath Cloak
-                {6, 71390}, -- Flowing Flamewrath Cape
-                {7, 71230}, -- Rippling Flamewrath Drape
-                {8, 71389}, -- Rippling Flamewrath Drape
-                {9, 71388}, -- Sleek Flamewrath Cloak
-                {10, 71391}, -- Bladed Flamewrath Cover
-                {11, 71392}, -- Durable Flamewrath Greatcloak
+                {6, 71230}, -- Rippling Flamewrath Drape
             },
         },
     },
