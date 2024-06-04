@@ -577,7 +577,6 @@ data["TheDeadmines"] = {
 	}
 }
 
---[[
 data["ShadowfangKeep"] = {
 	MapID = 209,
 	InstanceID = 33,
