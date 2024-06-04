@@ -152,7 +152,8 @@ data["ArenaS5PvP"] = {
     items = {{
         name = AL["Sets"],
         TableType = SET_ITTYPE,
-        [SET1_DIFF] = {{1, 3000780}, -- Warlock
+        [SET1_DIFF] = {
+        {1, 3000780}, -- Warlock
         {3, 3000777}, -- Priest / Heal
         {4, 3000778}, -- Priest / Shadow
         {6, 3000776}, -- Rogue
@@ -169,7 +170,8 @@ data["ArenaS5PvP"] = {
         {26, 3000767}, -- Paladin / Heal
         {27, 3000766} -- Paladin / DD
         },
-        [SET2_DIFF] = {{1, 3001780}, -- Warlock
+        [SET2_DIFF] = {
+        {1, 3001780}, -- Warlock
         {3, 3001777}, -- Priest / Heal
         {4, 3001778}, -- Priest / Shadow
         {6, 3001776}, -- Rogue
@@ -186,7 +188,8 @@ data["ArenaS5PvP"] = {
         {26, 3001767}, -- Paladin / Heal
         {27, 3001766} -- Paladin / DD
         },
-        [SET3_DIFF] = {{1, 3002780}, -- Warlock
+        [SET3_DIFF] = {
+        {1, 3002780}, -- Warlock
         {3, 3002777}, -- Priest / Heal
         {4, 3002778}, -- Priest / Shadow
         {6, 3002776}, -- Rogue
