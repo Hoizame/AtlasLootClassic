@@ -577,6 +577,7 @@ data["TheDeadmines"] = {
 	}
 }
 
+--[[
 data["ShadowfangKeep"] = {
 	MapID = 209,
 	InstanceID = 33,
@@ -740,19 +741,19 @@ data["ShadowfangKeep"] = {
 				{ 2,  23171 }, -- The Axe of Severing
 			},
 		},
-		AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM, { -- SFKApothecaryH
+		AtlasLoot:GameVersion_GE(AtlasLoot.CATA_VERSION_NUM, { -- SFKApothecaryH
 			name = AL["Apothecary Hummel <Crown Chemical Co.>"],
 			npcID = 36296,
-			Level = 83,
+			Level = 87,
 			DisplayIDs = {{31167}},
 			AtlasMapBossID = 3,
 			ExtraList = true,
 			[NORMAL_DIFF] = {
-				{ 1,  51804 }, -- Winking Eye of Love
-				{ 2,  51805 }, -- Heartbreak Charm
-				{ 3,  51806 }, -- Shard of Pirouetting Happiness
-				{ 4,  51807 }, -- Sweet Perfume Broach
-				{ 5,  51808 }, -- Choker of the Pure Heart
+				{ 1,  68175 }, -- Winking Eye of Love
+				{ 2,  68176 }, -- Heartbreak Charm
+				{ 3,  68172 }, -- Shard of Pirouetting Happiness
+				{ 4,  68174 }, -- Sweet Perfume Broach
+				{ 5,  68173 }, -- Choker of the Pure Heart
 				{ 7,  49641 }, -- Faded Lovely Greeting Card
 				{ 8,  49715 }, -- Forever-Lovely Rose
 				{ 9,  50250 }, -- X-45 Heartbreaker
@@ -1320,19 +1321,20 @@ data["ScarletMonasteryGraveyard"] = {
 				{ 3, 23168 }, -- Scorn's Focal Dagger
 			},
 		},
-		AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM, { -- SMHeadlessHorseman
+		AtlasLoot:GameVersion_GE(AtlasLoot.CATA_VERSION_NUM, { -- SMHeadlessHorseman
 			name = AL["Headless Horseman"],
 			npcID = 23682,
-			Level = 83,
+			Level = 87,
 			DisplayIDs = {{22351}},
 			AtlasMapBossID = nil,
 			ExtraList = true,
 			[NORMAL_DIFF] = {
-				{ 1, 211817 }, -- Ring of Ghoulish Glee
-				{ 2, 211844 }, -- The Horseman's Seal
-				{ 3, 211847 }, -- Wicked Witch's Band
-				{ 5, 211850 }, -- The Horseman's Horrific Helm
-				{ 6, 211851 }, -- The Horseman's Baleful Blade
+				{ 1, 71327 }, -- Band of Ghoulish Glee
+				{ 2, 71328 }, -- The Horseman's Signet
+				{ 3, 71329 }, -- Wicked Witch's Ring
+				{ 4, 71330 }, -- Seal of the Petrified Pumpkin
+				{ 5, 71326 }, -- The Horseman's Horrific Helmet
+				{ 6, 71325 }, -- The Horseman's Sinister Saber
 				{ 8, 33292 }, -- Hallowed Helm
 				{ 10, 34068 }, -- Weighted Jack-o'-Lantern
 				{ 12, 33277 }, -- Tome of Thomas Thomson
@@ -2937,22 +2939,22 @@ data["BlackrockDepths"] = {
 				{ 4,  22317 }, -- Lefty's Brass Knuckle
 			},
 		},
-		AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM, { -- BRRDCorenDirebrew
+		AtlasLoot:GameVersion_GE(AtlasLoot.CATA_VERSION_NUM, { -- BRRDCorenDirebrew
 			name = AL["Coren Direbrew"],
 			npcID = 23872,
 			DisplayIDs = {{21824}},
 			AtlasMapBossID = 15,
-			Level = 82,
+			Level = 87,
 			ExtraList = true,
 			[NORMAL_DIFF] = {
-				{ 1,  49116 }, -- Bitter Balebrew Charm
-				{ 2,  49118 }, -- Bubbling Brightbrew Charm
-				{ 3,  49074 }, -- Coren's Chromium Coaster
-				{ 4,  49076 }, -- Mithril Pocketwatch
-				{ 5,  49078 }, -- Ancient Pickled Egg
-				{ 6,  49080 }, -- Brawler's Souvenir
-				{ 8,  49120 }, -- Direbrew's Bloody Shanker
-				{ 9,  48663 }, -- Tankard O' Terror
+				{ 1,  71333 }, -- Bitterer Balebrew Charm
+				{ 2,  71334 }, -- Bubblier Brightbrew Charm
+				{ 3,  71335 }, -- Coren's Chilled Chromium Coaster
+				{ 4,  71337 }, -- Mithril Stopwatch
+				{ 5,  71336 }, -- Petrified Pickled Egg
+				{ 6,  71338 }, -- Brawler's Trophy
+				{ 8,  71331 }, -- Direbrew's Bloodied Shanker
+				{ 9,  71332 }, -- Tremendous Tankard O' Terror
 				{ 16,  33977 }, -- Swift Brewfest Ram
 				{ 17,  37828 }, -- Great Brewfest Kodo
 				{ 19,  37863 }, -- Direbrew's Remote
