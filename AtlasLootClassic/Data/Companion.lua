@@ -670,7 +670,7 @@ end
 
 function Companion.IsCollectedItem(itemID)
     if COMPANION_DATA[itemID] then
-        return COLLECTED_COMPANIONS[COMPANION_DATA[itemID][2]]
+        return COLLECTED_COMPANIONS[COMPANION_DATA[itemID][1]]
     end
 end
 
@@ -692,13 +692,13 @@ local function UpdateKnownCompanions(typ)
     if typ == "MOUNT" then
         local mountIDs = C_MountJournal.GetMountIDs()
         for i = 1, #mountIDs do
-            local _, _, _, _, _, _, _, _, _, _, isCollected, mountID = C_MountJournal.GetMountInfoByID(mountIDs[i])
-            COLLECTED_COMPANIONS[mountID] = isCollected
+            local _, spellID, _, _, _, _, _, _, _, _, isCollected, mountID = C_MountJournal.GetMountInfoByID(mountIDs[i])
+            COLLECTED_COMPANIONS[spellID] = isCollected
         end
     else
         for i = 1, GetNumCompanions(typ) do
-            local creatureID = GetCompanionInfo(typ, i)
-            COLLECTED_COMPANIONS[creatureID] = true
+            local _, _, creatureSpellID = GetCompanionInfo(typ, i)
+            COLLECTED_COMPANIONS[creatureSpellID] = true
         end
     end
 end
