@@ -1072,20 +1072,20 @@ data["JewelcraftingCata"] = {
 		{
 			name = ALIL["Jewelcrafting"].." - "..ALIL["Gems"],
 			[NORMAL_DIFF] = {
-				{ 1, 73396 }, -- Bold Chimera's Eye
-				{ 2, 73399 }, -- Brilliant Chimera's Eye
-				{ 3, 73397 }, -- Delicate Chimera's Eye
-				{ 4, 73398 }, -- Flashing Chimera's Eye
-				{ 5, 73400 }, -- Precise Chimera's Eye
-				{ 7, 73409 }, -- Fractured Chimera's Eye
-				{ 8, 73407 }, -- Mystic Chimera's Eye
-				{ 9, 73408 }, -- Quick Chimera's Eye
-				{ 10, 73406 }, -- Smooth Chimera's Eye
-				{ 11, 73405 }, -- Subtle Chimera's Eye
-				{ 16, 73404 }, -- Rigid Chimera's Eye
-				{ 17, 73401 }, -- Solid Chimera's Eye
-				{ 18, 73402 }, -- Sparkling Chimera's Eye
-				{ 19, 73403 }, -- Stormy Chimera's Eye
+                { 1, 73396 }, -- Bold Chimera's Eye
+                { 2, 73399 }, -- Brilliant Chimera's Eye
+                { 3, 73397 }, -- Delicate Chimera's Eye
+                { 4, 73398 }, -- Flashing Chimera's Eye
+                { 5, 73400 }, -- Precise Chimera's Eye
+                { 7, 73409 }, -- Fractured Chimera's Eye
+                { 8, 73407 }, -- Mystic Chimera's Eye
+                { 9, 73408 }, -- Quick Chimera's Eye
+                { 10, 73406 }, -- Smooth Chimera's Eye
+                { 11, 73405 }, -- Subtle Chimera's Eye
+                { 16, 73404 }, -- Rigid Chimera's Eye
+                { 17, 73401 }, -- Solid Chimera's Eye
+                { 18, 73402 }, -- Sparkling Chimera's Eye
+                { 19, 73403 }, -- Stormy Chimera's Eye
 			}
 		},
 		{
@@ -1833,26 +1833,26 @@ data["SkinningCata"] = {
 }
 
 data["HerbalismCata"] = {
-	name = ALIL["Herbalism"],
-	ContentType = PROF_GATH_CONTENT,
-	LoadDifficulty = NORMAL_DIFF,
-	TableType = NORMAL_ITTYPE,
-	CorrespondingFields = private.HERBALISM_LINK,
-	items = {
-		{
-			name = AL["Illustrious Grand Master"],
-			[NORMAL_DIFF] = {
-				{ 1,  52987 }, -- Twilight Jasmine
-				{ 2,  52988 }, -- Whiptail
-				{ 3,  52986 }, -- Heartblossom
-				{ 4,  52984 }, -- Stormvine
-				{ 5,  52985 }, -- Azshara's Veil
-				{ 6,  52983 }, -- Cinderbloom
-				{ 16,  52989 }, -- Deathspore Pod
-				{ 18,  52329 }, -- Volatile Life
-			}
-		},
-	}
+    name = ALIL["Herbalism"],
+    ContentType = PROF_GATH_CONTENT,
+    LoadDifficulty = NORMAL_DIFF,
+    TableType = NORMAL_ITTYPE,
+    CorrespondingFields = private.HERBALISM_LINK,
+    items = {
+        {
+            name = AL["Illustrious Grand Master"],
+            [NORMAL_DIFF] = {
+                { 1,  52987 }, -- Twilight Jasmine
+                { 2,  52988 }, -- Whiptail
+                { 3,  52986 }, -- Heartblossom
+                { 4,  52984 }, -- Stormvine
+                { 5,  52985 }, -- Azshara's Veil
+                { 6,  52983 }, -- Cinderbloom
+                { 16,  52989 }, -- Deathspore Pod
+                { 18,  52329 }, -- Volatile Life
+            }
+        },
+    }
 }
 
 data["ArchaeologyCata"] = {
