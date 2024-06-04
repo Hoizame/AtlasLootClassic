@@ -1306,7 +1306,7 @@ data["JewelcraftingCata"] = {
         {
             name = format(GEM_FORMAT1, ALIL["Green"]),
             [NORMAL_DIFF] = {
-                -- Rare 
+                -- Rare
                 { 1, 73380 },	-- Forceful Dream Emerald
                 { 2, 73377 },	-- Jagged Dream Emerald
                 { 3, 73381 },	-- Lightning Dream Emerald
