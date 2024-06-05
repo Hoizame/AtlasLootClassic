@@ -97,6 +97,24 @@ data["ArenaS9PvP"] = {
         },
         [SET2_DIFF] = {
             {1, 4001910}, -- Warlock
+            {3, 4001916}, -- Priest Healing
+            {4, 4001915}, -- Priest Shadow
+            {6, 4001914}, -- Rogue
+            {8, 4001920}, -- Hunter
+            {10, 4001909}, -- Warrior Melee
+            {13, 4001924}, -- Death Knight Melee
+            {16, 4001919}, -- Mage
+            {18, 4001923}, -- Druid Resto
+            {19, 4001921}, -- Druid Balance
+            {20, 4001922}, -- Druid Feral
+            {22, 4001913}, -- Shaman Resto
+            {23, 4001911}, -- Shaman Elemental
+            {24, 4001912}, -- Shaman Enhancement
+            {26, 4001918}, -- Paladin Holy
+            {27, 4001917} -- Paladin Melee
+        },
+        [SET3_DIFF] = {
+            {1, 4002910}, -- Warlock
             {3, 4002916}, -- Priest Healing
             {4, 4002915}, -- Priest Shadow
             {6, 4002914}, -- Rogue
@@ -113,42 +131,8 @@ data["ArenaS9PvP"] = {
             {26, 4002918}, -- Paladin Holy
             {27, 4002917} -- Paladin Melee
         },
-        [SET3_DIFF] = {
-            {1, 4003910}, -- Warlock
-            {3, 4003916}, -- Priest Healing
-            {4, 4003915}, -- Priest Shadow
-            {6, 4003914}, -- Rogue
-            {8, 4003920}, -- Hunter
-            {10, 4003909}, -- Warrior Melee
-            {13, 4003924}, -- Death Knight Melee
-            {16, 4003919}, -- Mage
-            {18, 4003923}, -- Druid Resto
-            {19, 4003921}, -- Druid Balance
-            {20, 4003922}, -- Druid Feral
-            {22, 4003913}, -- Shaman Resto
-            {23, 4003911}, -- Shaman Elemental
-            {24, 4003912}, -- Shaman Enhancement
-            {26, 4003918}, -- Paladin Holy
-            {27, 4003917} -- Paladin Melee
-        },
     }, {
         name = AL["Weapons"] .. " - " .. AL["One-Handed"],
-        [SET1_DIFF] = {
-            { 1, 64717 }, -- Bloodthirsty Gladiator's Cleaver
-            { 2, 64758 }, -- Bloodthirsty Gladiator's Hacker
-            { 4, 64700 }, -- Bloodthirsty Gladiator's Bonecracker
-            { 5, 64816 }, -- Bloodthirsty Gladiator's Pummeler
-            { 7, 64817 }, -- Bloodthirsty Gladiator's Quickblade
-            { 8, 64858 }, -- Bloodthirsty Gladiator's Slicer
-            { 16, 64859 }, -- Bloodthirsty Gladiator's Spellblade
-            { 17, 64752 }, -- Bloodthirsty Gladiator's Gavel
-            { 19, 64848 }, -- Bloodthirsty Gladiator's Shanker
-            { 20, 64850 }, -- Bloodthirsty Gladiator's Shiv
-            { 22, 64825 }, -- Bloodthirsty Gladiator's Right Render
-            { 23, 64826 }, -- Bloodthirsty Gladiator's Right Ripper
-            { 25, 64774 }, -- Bloodthirsty Gladiator's Left Render
-            { 26, 64775 }, -- Bloodthirsty Gladiator's Left Ripper
-        },
         [SET2_DIFF] = {
             { 1, 61324 }, -- Vicious Gladiator's Cleaver
             { 2, 61325 }, -- Vicious Gladiator's Hacker
@@ -183,15 +167,6 @@ data["ArenaS9PvP"] = {
         },
     }, {
         name = AL["Weapons"] .. " - " .. AL["Two-Handed"],
-        [SET1_DIFF] = {
-            { 1, 64810 }, -- Bloodthirsty Gladiator's Pike
-            { 2, 64860 }, -- Bloodthirsty Gladiator's Staff
-            { 4, 64726 }, -- Bloodthirsty Gladiator's Decapitator
-            { 5, 64701 }, -- Bloodthirsty Gladiator's Bonegrinder
-            { 6, 64755 }, -- Bloodthirsty Gladiator's Greatsword
-            { 16, 64695 }, -- Bloodthirsty Gladiator's Battle Staff
-            { 17, 64744 }, -- Bloodthirsty Gladiator's Energy Staff
-        },
         [SET2_DIFF] = {
             { 1, 61340 }, -- Vicious Gladiator's Pike
             { 2, 61343 }, -- Vicious Gladiator's Staff
@@ -212,15 +187,6 @@ data["ArenaS9PvP"] = {
         },
     }, {
         name = AL["Weapons"] .. " - " .. AL["Ranged"],
-        [SET1_DIFF] = {
-            { 1, 64783 }, -- Bloodthirsty Gladiator's Longbow
-            { 2, 64760 }, -- Bloodthirsty Gladiator's Heavy Crossbow
-            { 3, 64824 }, -- Bloodthirsty Gladiator's Rifle
-            { 5, 64759 }, -- Bloodthirsty Gladiator's Hatchet
-            { 6, 64871 }, -- Bloodthirsty Gladiator's War Edge
-            { 16, 64694 }, -- Bloodthirsty Gladiator's Baton of Light
-            { 17, 64861 }, -- Bloodthirsty Gladiator's Touch of Defeat
-        },
         [SET2_DIFF] = {
             { 1, 61353 }, -- Vicious Gladiator's Longbow
             { 2, 61355 }, -- Vicious Gladiator's Heavy Crossbow
@@ -241,10 +207,6 @@ data["ArenaS9PvP"] = {
         },
     }, {
         name = AL["Weapons"] .. " - " .. ALIL["Off Hand"],
-        [SET1_DIFF] = {
-            { 1, 64743 }, -- Bloodthirsty Gladiator's Endgame
-            { 2, 64823 }, -- Bloodthirsty Gladiator's Reprieve
-        },
         [SET2_DIFF] = {
             { 1, 61357 }, -- Vicious Gladiator's Endgame
             { 2, 61358 }, -- Vicious Gladiator's Reprieve
@@ -255,11 +217,6 @@ data["ArenaS9PvP"] = {
         }
     }, {
         name = AL["Weapons"] .. " - " .. ALIL["Shields"],
-        [SET1_DIFF] = {
-            { 1, 64693 }, -- Bloodthirsty Gladiator's Barrier
-            { 2, 64818 }, -- Bloodthirsty Gladiator's Redoubt
-            { 3, 64849 }, -- Bloodthirsty Gladiator's Shield Wall
-        },
         [SET2_DIFF] = {
             { 1, 61360 }, -- Vicious Gladiator's Barrier
             { 2, 61361 }, -- Vicious Gladiator's Redoubt
@@ -272,15 +229,6 @@ data["ArenaS9PvP"] = {
         },
     }, {
         name = ALIL["Cloak"],
-        [SET1_DIFF] = {
-            { 1, 64706 }, -- Bloodthirsty Gladiator's Cape of Cruelty
-            { 2, 64707 }, -- Bloodthirsty Gladiator's Cape of Prowess
-            { 4, 64718 }, -- Bloodthirsty Gladiator's Cloak of Alacrity
-            { 5, 64719 }, -- Bloodthirsty Gladiator's Cloak of Prowess
-            { 16, 64732 }, -- Bloodthirsty Gladiator's Drape of Diffusion
-            { 17, 64733 }, -- Bloodthirsty Gladiator's Drape of Meditation
-            { 18, 64734 }, -- Bloodthirsty Gladiator's Drape of Prowess
-        },
         [SET2_DIFF] = {
             { 1, 60783 }, -- Vicious Gladiator's Cape of Cruelty
             { 2, 60779 }, -- Vicious Gladiator's Cape of Prowess
@@ -292,12 +240,6 @@ data["ArenaS9PvP"] = {
         },
     }, {
         name = ALIL["Relic"],
-        [SET1_DIFF] = {
-            { 1, 64819 }, -- Bloodthirsty Gladiator's Relic of Conquest
-            { 2, 64820 }, -- Bloodthirsty Gladiator's Relic of Dominance
-            { 3, 64821 }, -- Bloodthirsty Gladiator's Relic of Salvation
-            { 4, 64822 }, -- Bloodthirsty Gladiator's Relic of Triumph
-        },
         [SET2_DIFF] = {
             { 1, 61391 }, -- Vicious Gladiator's Relic of Conquest
             { 2, 61388 }, -- Vicious Gladiator's Relic of Dominance
