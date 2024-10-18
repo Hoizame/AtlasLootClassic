@@ -1,0 +1,5 @@
+AL["Path of the Violet Assassin"] = "Path of the Violet Assassin"
+AL["Path of the Violet Mage"] = "Path of the Violet Mage"
+AL["Path of the Violet Protector"] = "Path of the Violet Protector"
+AL["Path of the Violet Restorer"] = "Path of the Violet Restorer"
+AL["Secondary factions"] = "Secondary factions"

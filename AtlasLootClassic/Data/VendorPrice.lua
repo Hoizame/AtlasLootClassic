@@ -6,78 +6,232 @@ AtlasLoot.Data.VendorPrice = VendorPrice
 local AL = AtlasLoot.Locales
 
 local PRICE_INFO_LIST = {
-	--- Classic
-	-- items
-	["burningblossom"] 	= { itemID = 23247 }, -- Burning Blossom
-	["ancestrycoin"] 	= { itemID = 21100 }, -- Coin of Ancestry
-    ["NecroticRune"] 	= { itemID = 22484 }, -- Necrotic Rune
+    --- Classic
+    -- items
+    ["burningblossom"] = {
+        itemID = 23247
+    }, -- Burning Blossom
+    ["ancestrycoin"] = {
+        itemID = 21100
+    }, -- Coin of Ancestry
+    ["NecroticRune"] = {
+        itemID = 22484
+    }, -- Necrotic Rune
 
-	-- others
-	["money"] 			= { func = GetCoinTextureString },
+    -- others
+    ["money"] = {
+        func = GetCoinTextureString
+    },
 
-	--- BC
-	["holydust"] = { itemID = 29735 }, -- Holy Dust (Aldor)
-	["arcanerune"] = { itemID = 29736 }, -- Holy Dust (Scryers)
-	["SpiritShard"] = { itemID = 28558 }, -- Spirit Shard
-	["HalaaRT"] = { itemID = 26044 }, -- Halaa Research Token
-	["HalaaBT"] = { itemID = 26045 }, -- Halaa Battle Token
-	["MarkOfThrallmar"] = { itemID = 24581 }, -- Mark of Thrallmar
-	["MarkOfHonorHold"] = { itemID = 24579 }, -- Mark of Honor Hold
-	["BoJ"] = { itemID = 29434 }, -- Badge of Justice
-	["glowcap"] = { itemID = 24245 }, -- Glowcap
-	["ApexisC"] = { itemID = 32572 }, -- Apexis Crystal
-	["ApexisS"] = { itemID = 32569 }, -- Apexis Shard
-	["Brewfest"] = { itemID = 37829 }, -- Brewfest Prize Token
-        ["sunmote"] = { itemID = 34664 }, -- Sunmote
-	-- pvp
-	["honor"] = { currencyID = 1901 }, -- Honor
-	["arena"] = { currencyID = 1900 },  -- Arena
-	--["honorH"] = { currencyID = 1901 }, -- Honor / Horde
-	--["honorA"] = { currencyID = 1901 }, -- Honor / Alli
-	["pvpAlterac"] = { itemID = 20560 }, -- Alterac Valley Mark of Honor
-	["pvpWarsong"] = { itemID = 20558 }, -- Warsong Gulch Mark of Honor
-	["pvpArathi"] = { itemID = 20559 }, -- Arathi Basin Mark of Honor
-	["pvpEye"] = { itemID = 29024 }, -- Eye of the Storm Mark of Honor
+    --- BC
+    ["holydust"] = {
+        itemID = 29735
+    }, -- Holy Dust (Aldor)
+    ["arcanerune"] = {
+        itemID = 29736
+    }, -- Holy Dust (Scryers)
+    ["SpiritShard"] = {
+        itemID = 28558
+    }, -- Spirit Shard
+    ["HalaaRT"] = {
+        itemID = 26044
+    }, -- Halaa Research Token
+    ["HalaaBT"] = {
+        itemID = 26045
+    }, -- Halaa Battle Token
+    ["MarkOfThrallmar"] = {
+        itemID = 24581
+    }, -- Mark of Thrallmar
+    ["MarkOfHonorHold"] = {
+        itemID = 24579
+    }, -- Mark of Honor Hold
+    ["BoJ"] = {
+        itemID = 29434
+    }, -- Badge of Justice
+    ["glowcap"] = {
+        itemID = 24245
+    }, -- Glowcap
+    ["ApexisC"] = {
+        itemID = 32572
+    }, -- Apexis Crystal
+    ["ApexisS"] = {
+        itemID = 32569
+    }, -- Apexis Shard
+    ["Brewfest"] = {
+        itemID = 37829
+    }, -- Brewfest Prize Token
+    ["sunmote"] = {
+        itemID = 34664
+    }, -- Sunmote
+    -- pvp
+    ["honor"] = {
+        currencyID = 1901
+    }, -- Honor
+    ["arena"] = {
+        currencyID = 1900
+    }, -- Arena
+    -- ["honorH"] = { currencyID = 1901 }, -- Honor / Horde
+    -- ["honorA"] = { currencyID = 1901 }, -- Honor / Alli
+    ["pvpAlterac"] = {
+        itemID = 20560
+    }, -- Alterac Valley Mark of Honor
+    ["pvpWarsong"] = {
+        itemID = 20558
+    }, -- Warsong Gulch Mark of Honor
+    ["pvpArathi"] = {
+        itemID = 20559
+    }, -- Arathi Basin Mark of Honor
+    ["pvpEye"] = {
+        itemID = 29024
+    }, -- Eye of the Storm Mark of Honor
 
     --- Wrath
-    ["epicurean"] = { currencyID = 81 }, -- Epicurean's Award
+    ["epicurean"] = {
+        currencyID = 81
+    }, -- Epicurean's Award
+    ["PrimordialS"] = {
+        itemID = 49908
+    }, -- Primordial Saronite
+    ["DreamS"] = {
+        itemID = 34052
+    }, -- Dream Shard
+    ["AbyssC"] = {
+        itemID = 34057
+    }, -- Abyss Crystal
+    ["JewelTokenWrath"] = {
+        currencyID = 61
+    }, -- Dalaran Jewelcrafter's Token
+    ["HBoreanL"] = {
+        itemID = 38425
+    }, -- Heavy Borean Leather
+    ["ArcticFur"] = {
+        itemID = 44128
+    }, -- Arctic Fur
+    ["championSeal"] = {
+        currencyID = 241
+    }, -- Champion's Seal
+    ["EmblemOfHeroism"] = {
+        currencyID = 395
+    }, -- Emblem of Heroism
+    ["EmblemOfValor"] = {
+        currencyID = 395
+    }, -- Emblem of Valor
+    ["EmblemOfTriumph"] = {
+        currencyID = 395
+    }, -- Emblem of Triumph
+    ["EmblemOfConquest"] = {
+        currencyID = 395
+    }, -- Emblem of Conquest
+    ["EmblemOfFrost"] = {
+        currencyID = 395
+    }, -- Emblem of Frost
+    ["SiderealEssence"] = {
+        currencyID = 2589
+    }, -- Sidereal Essence
+    ["DefilersScourgestone"] = {
+        currencyID = 2711
+    }, -- Defiler's Scourgestone
 
-    ["championsSeal"] = { currencyID = 241 }, -- Champion's Seal
-    ["EmblemOfHeroism"] = { currencyID = 101 }, -- Emblem of Heroism
-    ["EmblemOfValor"] = { currencyID = 102 }, -- Emblem of Valor
-    ["EmblemOfTriumph"] = { currencyID = 301 }, -- Emblem of Triumph
-    ["EmblemOfConquest"] = { currencyID = 221 }, -- Emblem of Conquest
-    ["EmblemOfFrost"] = { currencyID = 341 }, -- Emblem of Frost
-    ["SiderealEssence"] = { currencyID = 2589 }, -- Sidereal Essence
-    ["DefilersScourgestone"] = {currencyID = 2711}, -- Defiler's Scourgestone
+    -- Cata
+    ["chefs"] = {
+        currencyID = 402
+    }, -- Chef's Award
+    ["Dreamc"] = {
+        itemID = 54440
+    }, -- Dreamcloth
+    ["BEC"] = {
+        itemID = 53643
+    }, -- Bolt of Embersilk Cloth
+    ["ElementiumB"] = {
+        itemID = 52186
+    }, -- Elementium Bar
+    ["HElementiumB"] = {
+        itemID = 53039
+    }, -- Hardened Elementium Bar
+    ["PyriumB"] = {
+        itemID = 51950
+    }, -- Pyrium Bar
+    ["HypnoticD"] = {
+        itemID = 52555
+    }, -- Hypnotic Dust
+    ["HeavenlyS"] = {
+        itemID = 52721
+    }, -- Heavenly Shard
+    ["MaelstromC"] = {
+        itemID = 52722
+    }, -- Maelstrom Crystal
+    ["JewelTokenCata"] = {
+        currencyID = 361
+    }, -- Illustrious Jewelcrafter's Token
+    ["HSavageL"] = {
+        itemID = 56516
+    }, -- Heavy Savage Leather
+    ["JusticePoints"] = {
+        currencyID = 395
+    }, -- Justice Points
+    ["ValorPoints"] = {
+        currencyID = 396
+    }, -- Valor Points
+    ["DarkmoonPrizeTicket"] = {
+        currencyID = 515
+    }, -- Darkmoon Prize Ticket
+    ["MarkWorldTree"] = {
+        currencyID = 416
+    }, -- Mark of the World Tree
+    ["Firestone"] = {
+        itemID = 71617
+    }, -- Crystallized Firestone
+        ["Tricky Treat"] = {
+        itemID = 33226
+    }, -- Tricky Treat
+
+
 
     --- PvP
-    ["cpvpAlterac"] = { currencyID = 121 }, -- Alterac Valley Mark of Honor
-	["cpvpWarsong"] = { currencyID = 125 }, -- Warsong Gulch Mark of Honor
-	["cpvpArathi"] = { currencyID = 122 }, -- Arathi Basin Mark of Honor
-	["cpvpEye"] = { currencyID = 123 }, -- Eye of the Storm Mark of Honor
-	["cpvpWintergrasp"] = { currencyID = 126 }, -- Wintergrasp Mark of Honor
-	["cpvpIsle"] = { currencyID = 321 }, -- Isle of Conquest Mark of Honor
-	["cpvpStrand"] = { currencyID = 124 }, -- Strand of the Ancients Mark of Honor
+    ["cpvpConquest"] = {
+        currencyID = 390
+    }, -- Arena Points
+    ["cpvpAlterac"] = {
+        currencyID = 121
+    }, -- Alterac Valley Mark of Honor
+    ["cpvpWarsong"] = {
+        currencyID = 125
+    }, -- Warsong Gulch Mark of Honor
+    ["cpvpArathi"] = {
+        currencyID = 122
+    }, -- Arathi Basin Mark of Honor
+    ["cpvpEye"] = {
+        currencyID = 123
+    }, -- Eye of the Storm Mark of Honor
+    ["cpvpWintergrasp"] = {
+        currencyID = 126
+    }, -- Wintergrasp Mark of Honor
+    ["cpvpIsle"] = {
+        currencyID = 321
+    }, -- Isle of Conquest Mark of Honor
+    ["cpvpStrand"] = {
+        currencyID = 124
+    }, -- Strand of the Ancients Mark of Honor
+    ["cpvpTolBarad"] = {
+        currencyID = 391
+    } -- Tol Barad Commendation
 }
 
 local VENDOR_PRICE_FORMAT = {}
 for k, v in pairs(PRICE_INFO_LIST) do
     if v.itemID then
-        VENDOR_PRICE_FORMAT[v.itemID] = k..":%d"
+        VENDOR_PRICE_FORMAT[v.itemID] = k .. ":%d"
     elseif v.currencyID and C_CurrencyInfo and C_CurrencyInfo.GetCurrencyInfo then
         local currencyInfo = C_CurrencyInfo.GetCurrencyInfo(v.currencyID)
         if currencyInfo and currencyInfo.iconFileID then
-            VENDOR_PRICE_FORMAT[currencyInfo.iconFileID] = k..":%d"
+            VENDOR_PRICE_FORMAT[currencyInfo.iconFileID] = k .. ":%d"
         end
     end
 end
 
 -- updated with script
 local VENDOR_PRICES, VENDOR_PRICES_RAW = AtlasLoot:GetGameVersionDataTable()
-VENDOR_PRICES_RAW.CLASSIC = {
-
-}
+VENDOR_PRICES_RAW.CLASSIC = {}
 
 if AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM) then
     VENDOR_PRICES_RAW.BCC = {
@@ -521,12 +675,13 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM) then
         [185923] = "money:144000",
         [185924] = "money:144000",
         [187048] = "money:152000",
-        [187049] = "money:152000",
+        [187049] = "money:152000"
     }
 end
 
 if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
     VENDOR_PRICES_RAW.WRATH = {
+        [43102] = "EmblemOfHeroism:10",
         [39728] = "EmblemOfValor:25",
         [39757] = "EmblemOfValor:25",
         [40191] = "EmblemOfValor:25",
@@ -649,6 +804,7 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
         [42985] = "EmblemOfHeroism:40",
         [42991] = "EmblemOfHeroism:50",
         [42992] = "EmblemOfHeroism:50",
+        [44231] = "EmblemOfHeroism:200",
         [43007] = "epicurean:1",
         [43017] = "epicurean:5",
         [43018] = "epicurean:3",
@@ -671,73 +827,340 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
         [43035] = "epicurean:3",
         [43036] = "epicurean:3",
         [43037] = "epicurean:3",
-        [43102] = "EmblemOfHeroism:10",
         [43505] = "epicurean:3",
         [43506] = "epicurean:3",
-        [44231] = "EmblemOfHeroism:200",
         [44954] = "epicurean:3",
         [46349] = "epicurean:100",
-		[45294] = "SiderealEssence:15",
-		[46032] = "SiderealEssence:15",
-		[45933] = "SiderealEssence:15",
-		[45869] = "SiderealEssence:15",
-		[45869] = "SiderealEssence:15",
-		[46096] = "SiderealEssence:15",
-		[45297] = "SiderealEssence:15",
-		[45888] = "SiderealEssence:15",
-		[45296] = "SiderealEssence:15",
-		[45456] = "SiderealEssence:15",
-		[45945] = "SiderealEssence:15",
-		[45946] = "SiderealEssence:15",
-		[45447] = "SiderealEssence:15",
-		[45871] = "SiderealEssence:15",
-		[45931] = "SiderealEssence:19",
-		[46046] = "SiderealEssence:19",
-		[46095] = "SiderealEssence:19",
-		[46068] = "SiderealEssence:19",
-		[45929] = "SiderealEssence:19",
-		[46042] = "SiderealEssence:19",
-		[46048] = "SiderealEssence:19",
-		[45988] = "SiderealEssence:19",
-		[46040] = "SiderealEssence:19",
-		[46047] = "SiderealEssence:19",
-		[45989] = "SiderealEssence:19",
-		[45293] = "SiderealEssence:19",
-		[45928] = "SiderealEssence:19",
-		[45943] = "SiderealEssence:19",
-		[45455] = "SiderealEssence:19",
-		[45300] = "SiderealEssence:19",
-		[46038] = "SiderealEssence:24",
-		[46051] = "SiderealEssence:24",
-		[46050] = "SiderealEssence:24",
-		[46041] = "SiderealEssence:24",
-		[46037] = "SiderealEssence:24",
-		[46045] = "SiderealEssence:24",
-		[46043] = "SiderealEssence:24",
-		[46044] = "SiderealEssence:24",
-		[46097] = "SiderealEssence:25",
-		[45947] = "SiderealEssence:25",
-		[45877] = "SiderealEssence:25",
-		[46036] = "SiderealEssence:25",
-		[45993] = "SiderealEssence:25",
-		[45887] = "SiderealEssence:25",
-		[45930] = "SiderealEssence:25",
-		[45876] = "SiderealEssence:25",
-		[45449] = "SiderealEssence:25",
-		[45295] = "SiderealEssence:25",
-		[45982] = "SiderealEssence:25",
-		[45448] = "SiderealEssence:25",
-		[45867] = "SiderealEssence:25",
-		[46034] = "SiderealEssence:25",
-		[46039] = "SiderealEssence:32",
-		[46049] = "SiderealEssence:32",
-		[45868] = "SiderealEssence:38",
-		[46035] = "SiderealEssence:38",
-		[45886] = "SiderealEssence:38",
-		[46067] = "SiderealEssence:38",
-		[45990] = "SiderealEssence:38",
-		[46033] = "SiderealEssence:38",
-		[45870] = "SiderealEssence:38",
+        [49953] = "PrimordialS:1",
+        [49954] = "PrimordialS:1",
+        [49955] = "PrimordialS:1",
+        [49956] = "PrimordialS:1",
+        [49957] = "PrimordialS:1",
+        [49958] = "PrimordialS:1",
+        [49959] = "PrimordialS:1",
+        [49961] = "PrimordialS:1",
+        [49962] = "PrimordialS:1",
+        [49963] = "PrimordialS:1",
+        [49965] = "PrimordialS:1",
+        [49966] = "PrimordialS:1",
+        [49969] = "PrimordialS:1",
+        [49970] = "PrimordialS:1",
+        [49971] = "PrimordialS:1",
+        [49972] = "PrimordialS:1",
+        [49973] = "PrimordialS:1",
+        [49974] = "PrimordialS:1",
+        [52022] = "PrimordialS:1",
+        [52023] = "PrimordialS:1",
+        [37340] = "DreamS:4",
+        [37347] = "DreamS:4",
+        [37349] = "DreamS:4",
+        [44471] = "DreamS:4",
+        [44472] = "DreamS:4",
+        [44484] = "DreamS:4",
+        [44485] = "DreamS:4",
+        [44488] = "DreamS:4",
+        [44489] = "DreamS:4",
+        [44490] = "DreamS:4",
+        [44491] = "DreamS:4",
+        [44498] = "DreamS:4",
+        [37339] = "DreamS:10",
+        [37344] = "DreamS:10",
+        [44473] = "DreamS:10",
+        [44483] = "DreamS:10",
+        [44486] = "DreamS:10",
+        [44487] = "DreamS:10",
+        [44492] = "DreamS:10",
+        [44494] = "DreamS:10",
+        [44495] = "DreamS:10",
+        [44496] = "DreamS:10",
+        [45059] = "DreamS:10",
+        [44944] = "AbyssC:5",
+        [44513] = "HBoreanL:3",
+        [44514] = "HBoreanL:3",
+        [44515] = "HBoreanL:3",
+        [44516] = "HBoreanL:3",
+        [44517] = "HBoreanL:3",
+        [44518] = "HBoreanL:3",
+        [44519] = "HBoreanL:3",
+        [44520] = "HBoreanL:3",
+        [44521] = "HBoreanL:3",
+        [44522] = "HBoreanL:3",
+        [44523] = "HBoreanL:3",
+        [44524] = "HBoreanL:3",
+        [44525] = "HBoreanL:3",
+        [44526] = "HBoreanL:3",
+        [44527] = "HBoreanL:3",
+        [44528] = "HBoreanL:3",
+        [44530] = "HBoreanL:3",
+        [44531] = "HBoreanL:3",
+        [44532] = "HBoreanL:3",
+        [44533] = "HBoreanL:3",
+        [44534] = "HBoreanL:3",
+        [44535] = "HBoreanL:3",
+        [44536] = "HBoreanL:3",
+        [44537] = "HBoreanL:3",
+        [44538] = "HBoreanL:3",
+        [44539] = "HBoreanL:3",
+        [44540] = "HBoreanL:3",
+        [44541] = "HBoreanL:3",
+        [44542] = "HBoreanL:3",
+        [44543] = "HBoreanL:3",
+        [44544] = "HBoreanL:3",
+        [44545] = "HBoreanL:3",
+        [44128] = "HBoreanL:10",
+        [44584] = "HBoreanL:3",
+        [44585] = "HBoreanL:3",
+        [44586] = "HBoreanL:3",
+        [44587] = "HBoreanL:3",
+        [44588] = "HBoreanL:3",
+        [44589] = "HBoreanL:3",
+        [44546] = "ArcticFur:2",
+        [44547] = "ArcticFur:2",
+        [44548] = "ArcticFur:2",
+        [44549] = "ArcticFur:2",
+        [44550] = "ArcticFur:2",
+        [44551] = "ArcticFur:2",
+        [44552] = "ArcticFur:2",
+        [44553] = "ArcticFur:2",
+        [44932] = "ArcticFur:2",
+        [44933] = "ArcticFur:2",
+        [36928] = "JusticePoints:220",
+        [36931] = "JusticePoints:220",
+        [36934] = "JusticePoints:220",
+        [36925] = "JusticePoints:220",
+        [36919] = "JusticePoints:220",
+        [36922] = "JusticePoints:220",
+        [36927] = "JusticePoints:110",
+        [36933] = "JusticePoints:110",
+        [36930] = "JusticePoints:110",
+        [36924] = "JusticePoints:110",
+        [36918] = "JusticePoints:110",
+        [36921] = "JusticePoints:110",
+        [41727] = "honor:19",
+        [41728] = "honor:19",
+        [41730] = "honor:19",
+        [41732] = "honor:19",
+        [41733] = "honor:19",
+        [41734] = "honor:19",
+        [41735] = "honor:19",
+        [41736] = "honor:19",
+        [41737] = "honor:19",
+        [41738] = "honor:19",
+        [41739] = "honor:19",
+        [41740] = "honor:19",
+        [44076] = "honor:24",
+        [44078] = "honor:24",
+        [44081] = "honor:24",
+        [44082] = "honor:24",
+        [44084] = "honor:24",
+        [41742] = "honor:38",
+        [41743] = "honor:38",
+        [41744] = "honor:38",
+        [42225] = "JewelTokenWrath:1",
+        [41559] = "JewelTokenWrath:1",
+        [41560] = "JewelTokenWrath:1",
+        [41563] = "JewelTokenWrath:1",
+        [41565] = "JewelTokenWrath:1",
+        [41566] = "JewelTokenWrath:1",
+        [41569] = "JewelTokenWrath:1",
+        [41570] = "JewelTokenWrath:1",
+        [41571] = "JewelTokenWrath:1",
+        [41572] = "JewelTokenWrath:1",
+        [41575] = "JewelTokenWrath:1",
+        [42298] = "JewelTokenWrath:2",
+        [42299] = "JewelTokenWrath:2",
+        [42300] = "JewelTokenWrath:2",
+        [42301] = "JewelTokenWrath:2",
+        [42302] = "JewelTokenWrath:2",
+        [42303] = "JewelTokenWrath:2",
+        [42304] = "JewelTokenWrath:2",
+        [42305] = "JewelTokenWrath:2",
+        [42306] = "JewelTokenWrath:2",
+        [42307] = "JewelTokenWrath:2",
+        [42308] = "JewelTokenWrath:2",
+        [42309] = "JewelTokenWrath:2",
+        [42310] = "JewelTokenWrath:2",
+        [42311] = "JewelTokenWrath:2",
+        [42312] = "JewelTokenWrath:2",
+        [42313] = "JewelTokenWrath:2",
+        [42314] = "JewelTokenWrath:2",
+        [42315] = "JewelTokenWrath:2",
+        [41576] = "JewelTokenWrath:3",
+        [41578] = "JewelTokenWrath:3",
+        [41579] = "JewelTokenWrath:3",
+        [41580] = "JewelTokenWrath:3",
+        [41581] = "JewelTokenWrath:3",
+        [41582] = "JewelTokenWrath:3",
+        [41686] = "JewelTokenWrath:3",
+        [41687] = "JewelTokenWrath:3",
+        [41688] = "JewelTokenWrath:3",
+        [41689] = "JewelTokenWrath:3",
+        [41690] = "JewelTokenWrath:3",
+        [41692] = "JewelTokenWrath:3",
+        [41693] = "JewelTokenWrath:3",
+        [41694] = "JewelTokenWrath:3",
+        [41696] = "JewelTokenWrath:3",
+        [41697] = "JewelTokenWrath:3",
+        [41698] = "JewelTokenWrath:3",
+        [41699] = "JewelTokenWrath:3",
+        [41701] = "JewelTokenWrath:3",
+        [41702] = "JewelTokenWrath:3",
+        [41703] = "JewelTokenWrath:3",
+        [41719] = "JewelTokenWrath:3",
+        [41747] = "JewelTokenWrath:3",
+        [42138] = "JewelTokenWrath:3",
+        [43317] = "JewelTokenWrath:4",
+        [43318] = "JewelTokenWrath:4",
+        [43319] = "JewelTokenWrath:4",
+        [43320] = "JewelTokenWrath:4",
+        [43485] = "JewelTokenWrath:4",
+        [43497] = "JewelTokenWrath:4",
+        [46897] = "JewelTokenWrath:4",
+        [46898] = "JewelTokenWrath:4",
+        [46899] = "JewelTokenWrath:4",
+        [46900] = "JewelTokenWrath:4",
+        [46901] = "JewelTokenWrath:4",
+        [46902] = "JewelTokenWrath:4",
+        [46903] = "JewelTokenWrath:4",
+        [46904] = "JewelTokenWrath:4",
+        [46905] = "JewelTokenWrath:4",
+        [46906] = "JewelTokenWrath:4",
+        [46907] = "JewelTokenWrath:4",
+        [46908] = "JewelTokenWrath:4",
+        [46909] = "JewelTokenWrath:4",
+        [46910] = "JewelTokenWrath:4",
+        [46911] = "JewelTokenWrath:4",
+        [46912] = "JewelTokenWrath:4",
+        [46913] = "JewelTokenWrath:4",
+        [46914] = "JewelTokenWrath:4",
+        [46915] = "JewelTokenWrath:4",
+        [46916] = "JewelTokenWrath:4",
+        [46917] = "JewelTokenWrath:4",
+        [46918] = "JewelTokenWrath:4",
+        [46919] = "JewelTokenWrath:4",
+        [46920] = "JewelTokenWrath:4",
+        [46921] = "JewelTokenWrath:4",
+        [46922] = "JewelTokenWrath:4",
+        [46923] = "JewelTokenWrath:4",
+        [46924] = "JewelTokenWrath:4",
+        [46925] = "JewelTokenWrath:4",
+        [46926] = "JewelTokenWrath:4",
+        [46927] = "JewelTokenWrath:4",
+        [46928] = "JewelTokenWrath:4",
+        [46929] = "JewelTokenWrath:4",
+        [46930] = "JewelTokenWrath:4",
+        [46931] = "JewelTokenWrath:4",
+        [46932] = "JewelTokenWrath:4",
+        [46933] = "JewelTokenWrath:4",
+        [46934] = "JewelTokenWrath:4",
+        [46935] = "JewelTokenWrath:4",
+        [46936] = "JewelTokenWrath:4",
+        [46937] = "JewelTokenWrath:4",
+        [46938] = "JewelTokenWrath:4",
+        [46939] = "JewelTokenWrath:4",
+        [46940] = "JewelTokenWrath:4",
+        [46941] = "JewelTokenWrath:4",
+        [46942] = "JewelTokenWrath:4",
+        [46943] = "JewelTokenWrath:4",
+        [46944] = "JewelTokenWrath:4",
+        [46945] = "JewelTokenWrath:4",
+        [46946] = "JewelTokenWrath:4",
+        [46947] = "JewelTokenWrath:4",
+        [46948] = "JewelTokenWrath:4",
+        [46949] = "JewelTokenWrath:4",
+        [46950] = "JewelTokenWrath:4",
+        [46951] = "JewelTokenWrath:4",
+        [46953] = "JewelTokenWrath:4",
+        [46956] = "JewelTokenWrath:4",
+        [47007] = "JewelTokenWrath:4",
+        [47008] = "JewelTokenWrath:4",
+        [47010] = "JewelTokenWrath:4",
+        [47011] = "JewelTokenWrath:4",
+        [47012] = "JewelTokenWrath:4",
+        [47015] = "JewelTokenWrath:4",
+        [47016] = "JewelTokenWrath:4",
+        [47017] = "JewelTokenWrath:4",
+        [47018] = "JewelTokenWrath:4",
+        [47020] = "JewelTokenWrath:4",
+        [47021] = "JewelTokenWrath:4",
+        [47022] = "JewelTokenWrath:4",
+        [47023] = "JewelTokenWrath:4",
+        [49112] = "JewelTokenWrath:4",
+        [41704] = "JewelTokenWrath:5",
+        [41705] = "JewelTokenWrath:5",
+        [41706] = "JewelTokenWrath:5",
+        [41707] = "JewelTokenWrath:5",
+        [41708] = "JewelTokenWrath:5",
+        [41709] = "JewelTokenWrath:5",
+        [41710] = "JewelTokenWrath:5",
+        [41711] = "JewelTokenWrath:5",
+        [42648] = "JewelTokenWrath:6",
+        [42649] = "JewelTokenWrath:6",
+        [42650] = "JewelTokenWrath:6",
+        [42651] = "JewelTokenWrath:6",
+        [42652] = "JewelTokenWrath:6",
+        [42653] = "JewelTokenWrath:6",
+        [43597] = "JewelTokenWrath:6",
+        [45294] = "SiderealEssence:15",
+        [46032] = "SiderealEssence:15",
+        [45933] = "SiderealEssence:15",
+        [45869] = "SiderealEssence:15",
+        [46096] = "SiderealEssence:15",
+        [45297] = "SiderealEssence:15",
+        [45888] = "SiderealEssence:15",
+        [45296] = "SiderealEssence:15",
+        [45456] = "SiderealEssence:15",
+        [45945] = "SiderealEssence:15",
+        [45946] = "SiderealEssence:15",
+        [45447] = "SiderealEssence:15",
+        [45871] = "SiderealEssence:15",
+        [45931] = "SiderealEssence:19",
+        [46046] = "SiderealEssence:19",
+        [46095] = "SiderealEssence:19",
+        [46068] = "SiderealEssence:19",
+        [45929] = "SiderealEssence:19",
+        [46042] = "SiderealEssence:19",
+        [46048] = "SiderealEssence:19",
+        [45988] = "SiderealEssence:19",
+        [46040] = "SiderealEssence:19",
+        [46047] = "SiderealEssence:19",
+        [45989] = "SiderealEssence:19",
+        [45293] = "SiderealEssence:19",
+        [45928] = "SiderealEssence:19",
+        [45943] = "SiderealEssence:19",
+        [45455] = "SiderealEssence:19",
+        [45300] = "SiderealEssence:19",
+        [46038] = "SiderealEssence:24",
+        [46051] = "SiderealEssence:24",
+        [46050] = "SiderealEssence:24",
+        [46041] = "SiderealEssence:24",
+        [46037] = "SiderealEssence:24",
+        [46045] = "SiderealEssence:24",
+        [46043] = "SiderealEssence:24",
+        [46044] = "SiderealEssence:24",
+        [46097] = "SiderealEssence:25",
+        [45947] = "SiderealEssence:25",
+        [45877] = "SiderealEssence:25",
+        [46036] = "SiderealEssence:25",
+        [45993] = "SiderealEssence:25",
+        [45887] = "SiderealEssence:25",
+        [45930] = "SiderealEssence:25",
+        [45876] = "SiderealEssence:25",
+        [45449] = "SiderealEssence:25",
+        [45295] = "SiderealEssence:25",
+        [45982] = "SiderealEssence:25",
+        [45448] = "SiderealEssence:25",
+        [45867] = "SiderealEssence:25",
+        [46034] = "SiderealEssence:25",
+        [46039] = "SiderealEssence:32",
+        [46049] = "SiderealEssence:32",
+        [45868] = "SiderealEssence:38",
+        [46035] = "SiderealEssence:38",
+        [45886] = "SiderealEssence:38",
+        [46067] = "SiderealEssence:38",
+        [45990] = "SiderealEssence:38",
+        [46033] = "SiderealEssence:38",
+        [45870] = "SiderealEssence:38",
         [47661] = "EmblemOfTriumph:25",
         [47662] = "EmblemOfTriumph:25",
         [47664] = "EmblemOfTriumph:25",
@@ -936,6 +1359,12 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
         [46988] = "DefilersScourgestone:38",
         [47093] = "DefilersScourgestone:30",
         [47195] = "DefilersScourgestone:38",
+        [46744] = "championSeal:5:money:3500000",
+        [46747] = "championSeal:5:money:3500000",
+        [46748] = "championSeal:5:money:3500000",
+        [46745] = "championSeal:5:money:3500000",
+        [43958] = "money:8000000",
+        [43961] = "money:80000000",
         [40586] = "money:68000000",
         [44935] = "money:68000000",
         [40585] = "money:68000000",
@@ -951,7 +1380,772 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
         [51557] = "money:10000000",
         [51558] = "money:10000000",
         [51559] = "money:10000000",
-        [51560] = "money:10000000",
+        [51560] = "money:10000000"
+    }
+end
+
+if AtlasLoot:GameVersion_GE(AtlasLoot.CATA_VERSION_NUM) then
+    VENDOR_PRICES_RAW.CATA = {
+        -- JP vendor
+        [57930] = "JusticePoints:1250", -- Pendant of Quiet Breath
+        [57931] = "JusticePoints:1250", -- Amulet of Dull Dreaming
+        [57932] = "JusticePoints:1250", -- The Lustrous Eye
+        [57933] = "JusticePoints:1250", -- String of Beaded Bubbles
+        [57934] = "JusticePoints:1250", -- Celadon Pendant
+        [57921] = "JusticePoints:1650", -- Incense Infused Cummerbund
+        [57922] = "JusticePoints:1650", -- Belt of the Falling Rain
+        [58153] = "JusticePoints:2200", -- Robes of Embalmed Darkness
+        [58154] = "JusticePoints:2200", -- Pensive Legwraps
+        [58155] = "JusticePoints:2200", -- Cowl of Pleasant Gloom
+        [58157] = "JusticePoints:1650", -- Meadow Mantle
+        [58158] = "JusticePoints:1650", -- Gloves of the Painless Midnight
+        [58159] = "JusticePoints:2200", -- Musk Rose Robes
+        [58160] = "JusticePoints:2200", -- Leggings of Charity
+        [58161] = "JusticePoints:2200", -- Mask of New Snow
+        [58162] = "JusticePoints:1650", -- Summer Song Shoulderwraps
+        [58163] = "JusticePoints:1650", -- Gloves of Purification
+        [57927] = "JusticePoints:950", -- Throat Slasher
+        [57918] = "JusticePoints:1650", -- Sash of Musing
+        [57919] = "JusticePoints:1650", -- Thatch Eave Vines
+        [58131] = "JusticePoints:2200", -- Tunic of Sinking Envy
+        [58132] = "JusticePoints:2200", -- Leggings of the Burrowing Mole
+        [58133] = "JusticePoints:2200", -- Mask of Vines
+        [58134] = "JusticePoints:1650", -- Embrace of the Night
+        [58138] = "JusticePoints:1650", -- Sticky Fingers
+        [58139] = "JusticePoints:2200", -- Chestguard of Forgetfulness
+        [58140] = "JusticePoints:2200", -- Leggings of Late Blooms
+        [58150] = "JusticePoints:2200", -- Cluster of Stars
+        [58151] = "JusticePoints:1650", -- Somber Shawl
+        [58152] = "JusticePoints:1650", -- Blessed Hands of Elune
+        [57916] = "JusticePoints:1650", -- Belt of the Dim Forest
+        [57917] = "JusticePoints:1650", -- Belt of the Still Stream
+        [58121] = "JusticePoints:2200", -- Vest of the True Companion
+        [58122] = "JusticePoints:2200", -- Hillside Striders
+        [58123] = "JusticePoints:2200", -- Willow Mask
+        [58124] = "JusticePoints:1650", -- Wrap of the Valley Glades
+        [58125] = "JusticePoints:1650", -- Gloves of the Passing Night
+        [58126] = "JusticePoints:2200", -- Vest of the Waking Dream
+        [58127] = "JusticePoints:2200", -- Leggings of Soothing Silence
+        [58128] = "JusticePoints:2200", -- Helm of the Inward Eye
+        [58129] = "JusticePoints:1650", -- Seafoam Mantle
+        [58130] = "JusticePoints:1650", -- Gleaning Gloves
+        [57923] = "JusticePoints:950", -- Hermit's Lamp
+        [57924] = "JusticePoints:950", -- Apple-Bent Bough
+        [57928] = "JusticePoints:950", -- Windslicer
+        [57929] = "JusticePoints:950", -- Dawnblaze Blade
+        [57913] = "JusticePoints:1650", -- Beech Green Belt
+        [57914] = "JusticePoints:1650", -- Girdle of the Mountains
+        [57915] = "JusticePoints:1650", -- Belt of Barred Clouds
+        [58096] = "JusticePoints:2200", -- Breastplate of Raging Fury
+        [58097] = "JusticePoints:2200", -- Greaves of Gallantry
+        [58098] = "JusticePoints:2200", -- Helm of Easeful Death
+        [58099] = "JusticePoints:1650", -- Reaping Gauntlets
+        [58100] = "JusticePoints:1650", -- Pauldrons of the High Requiem
+        [58101] = "JusticePoints:2200", -- Chestplate of the Steadfast
+        [58102] = "JusticePoints:2200", -- Greaves of Splendor
+        [58103] = "JusticePoints:2200", -- Helm of the Proud
+        [58104] = "JusticePoints:1650", -- Sunburnt Pauldrons
+        [58105] = "JusticePoints:1650", -- Numbing Handguards
+        [58106] = "JusticePoints:2200", -- Chestguard of Dancing Waves
+        [58107] = "JusticePoints:2200", -- Legguards of the Gentle
+        [58108] = "JusticePoints:2200", -- Crown of the Blazing Sun
+        [58109] = "JusticePoints:1650", -- Pauldrons of the Forlorn
+        [58110] = "JusticePoints:1650", -- Gloves of Curious Conscience
+        [57925] = "JusticePoints:950", -- Shield of the Mists
+        [57926] = "JusticePoints:950", -- Shield of the Four Grey Towers
+        -- VP vendor
+        [58180] = "ValorPoints:1650", -- License to Slay
+        [58181] = "ValorPoints:1650", -- Fluid Death
+        [58183] = "ValorPoints:1650", -- Soul Casket
+        [58184] = "ValorPoints:1650", -- Core of Ripeness
+        [58182] = "ValorPoints:1650", -- Bedrock Talisman
+        [64673] = "ValorPoints:700", -- Throat Slasher
+        [64674] = "ValorPoints:700", -- Windslicer
+        [64671] = "ValorPoints:700", -- Dawnblaze Blade
+        [64676] = "ValorPoints:700", -- Shield of the Four Grey Towers
+        [64672] = "ValorPoints:700", -- Shield of the Mists
+        [58189] = "ValorPoints:1250", -- Twined Band of Flowers
+        [58188] = "ValorPoints:1250", -- Band of Secret Names
+        [58185] = "ValorPoints:1250", -- Band of Bees
+        [68812] = "ValorPoints:1250", -- Hornet-Sting Band
+        [58187] = "ValorPoints:1250", -- Ring of the Battle Anthem
+        [58191] = "ValorPoints:1250", -- Viewless Wings
+        [58194] = "ValorPoints:1250", -- Heavenly Breeze
+        [58193] = "ValorPoints:1250", -- Haunt of Flies
+        [58190] = "ValorPoints:1250", -- Floating Web
+        [58192] = "ValorPoints:1250", -- Gray Hair Cloak
+        [60360] = "ValorPoints:2200", -- Reinforced Sapphirium Breastplate
+        [60363] = "ValorPoints:1650", -- Reinforced Sapphirium Gloves
+        [60361] = "ValorPoints:2200", -- Reinforced Sapphirium Greaves
+        [60344] = "ValorPoints:2200", -- Reinforced Sapphirium Battleplate
+        [60345] = "ValorPoints:1650", -- Reinforced Sapphirium Gauntlets
+        [60347] = "ValorPoints:2200", -- Reinforced Sapphirium Legplates
+        [60354] = "ValorPoints:2200", -- Reinforced Sapphirium Chestguard
+        [60355] = "ValorPoints:1650", -- Reinforced Sapphirium Handguards
+        [60357] = "ValorPoints:2200", -- Reinforced Sapphirium Legguards
+        [60323] = "ValorPoints:2200", -- Earthen Battleplate
+        [60326] = "ValorPoints:1650", -- Earthen Gauntlets
+        [60324] = "ValorPoints:2200", -- Earthen Legplates
+        [60329] = "ValorPoints:2200", -- Earthen Chestguard
+        [60332] = "ValorPoints:1650", -- Earthen Handguards
+        [60330] = "ValorPoints:2200", -- Earthen Legguards
+        [60339] = "ValorPoints:2200", -- Magma Plated Battleplate
+        [60340] = "ValorPoints:1650", -- Magma Plated Gauntlets
+        [60342] = "ValorPoints:2200", -- Magma Plated Legplates
+        [60349] = "ValorPoints:2200", -- Magma Plated Chestguard
+        [60350] = "ValorPoints:1650", -- Magma Plated Handguards
+        [60352] = "ValorPoints:2200", -- Magma Plated Legguards
+        [58197] = "ValorPoints:1650", -- Rock Furrow Boots
+        [58198] = "ValorPoints:1650", -- Eternal Pathfinders
+        [58195] = "ValorPoints:1650", -- Woe Breeder's Boots
+        [60313] = "ValorPoints:2200", -- Hauberk of the Raging Elements
+        [60314] = "ValorPoints:1650", -- Gloves of the Raging Elements
+        [60316] = "ValorPoints:2200", -- Kilt of the Raging Elements
+        [60309] = "ValorPoints:2200", -- Tunic of the Raging Elements
+        [60312] = "ValorPoints:1650", -- Handwraps of the Raging Elements
+        [60310] = "ValorPoints:2200", -- Legwraps of the Raging Elements
+        [60318] = "ValorPoints:2200", -- Cuirass of the Raging Elements
+        [60319] = "ValorPoints:1650", -- Grips of the Raging Elements
+        [60321] = "ValorPoints:2200", -- Legguards of the Raging Elements
+        [60304] = "ValorPoints:2200", -- Lightning-Charged Tunic
+        [60307] = "ValorPoints:1650", -- Lightning-Charged Gloves
+        [60305] = "ValorPoints:2200", -- Lightning-Charged Legguards
+        [58199] = "ValorPoints:1650", -- Moccasins of Verdurous Glooms
+        [58481] = "ValorPoints:1650", -- Boots of the Perilous Seas
+        [60276] = "ValorPoints:2200", -- Stormrider's Robes
+        [60280] = "ValorPoints:1650", -- Stormrider's Handwraps
+        [60278] = "ValorPoints:2200", -- Stormrider's Legwraps
+        [60287] = "ValorPoints:2200", -- Stormrider's Raiment
+        [60290] = "ValorPoints:1650", -- Stormrider's Grips
+        [60288] = "ValorPoints:2200", -- Stormrider's Legguards
+        [60281] = "ValorPoints:2200", -- Stormrider's Vestment
+        [60285] = "ValorPoints:1650", -- Stormrider's Gloves
+        [60283] = "ValorPoints:2200", -- Stormrider's Leggings
+        [60301] = "ValorPoints:2200", -- Wind Dancer's Tunic
+        [60298] = "ValorPoints:1650", -- Wind Dancer's Gloves
+        [60300] = "ValorPoints:2200", -- Wind Dancer's Legguards
+        [58482] = "ValorPoints:1650", -- Treads of Fleeting Joy
+        [58484] = "ValorPoints:1650", -- Fading Violet Sandals
+        [60244] = "ValorPoints:2200", -- Firelord's Robes
+        [60247] = "ValorPoints:1650", -- Firelord's Gloves
+        [60245] = "ValorPoints:2200", -- Firelord's Leggings
+        [60251] = "ValorPoints:2200", -- Shadowflame Robes
+        [60248] = "ValorPoints:1650", -- Shadowflame Handwraps
+        [60250] = "ValorPoints:2200", -- Shadowflame Leggings
+        [60259] = "ValorPoints:2200", -- Mercurial Robes
+        [60275] = "ValorPoints:1650", -- Mercurial Handwraps
+        [60261] = "ValorPoints:2200", -- Mercurial Legwraps
+        [60254] = "ValorPoints:2200", -- Mercurial Vestment
+        [60257] = "ValorPoints:1650", -- Mercurial Gloves
+        [60255] = "ValorPoints:2200", -- Mercurial Leggings
+        [58485] = "ValorPoints:1650", -- Melodious Slippers
+        [58486] = "ValorPoints:1650", -- Slippers of Moving Waters
+        -- CA vendor
+        [65433] = "chefs:5", -- Recipe: South Island Iced Tea
+        [65432] = "chefs:5", -- Recipe: Fortune Cookie
+        [65426] = "chefs:3", -- Recipe: Baked Rockfish
+        [62799] = "chefs:3", -- Recipe: Broiled Dragon Feast
+        [65431] = "chefs:3", -- Recipe: Chocolate Cookie
+        [62800] = "chefs:3", -- Recipe: Seafood Magnifique Feast
+        [65427] = "chefs:3", -- Recipe: Basilisk Liverdog
+        [65429] = "chefs:3", -- Recipe: Beer-Basted Crocolisk
+        [65424] = "chefs:3", -- Recipe: Blackbelly Sushi
+        [65430] = "chefs:3", -- Recipe: Crocolisk Au Gratin
+        [65422] = "chefs:3", -- Recipe: Delicious Sagefish Tail
+        [65428] = "chefs:3", -- Recipe: Grilled Dragon
+        [65409] = "chefs:3", -- Recipe: Lavascale Minestrone
+        [65420] = "chefs:3", -- Recipe: Mushroom Sauce Mudfish
+        [65421] = "chefs:3", -- Recipe: Severed Sagefish Head
+        [65425] = "chefs:3", -- Recipe: Skewered Eel
+        [68688] = "chefs:3", -- Recipe: Scalding Murglesnout
+        [65423] = "chefs:3", -- Recipe: Fish Fry
+        [65418] = "chefs:3", -- Recipe: Hearty Seafood Soup
+        [65417] = "chefs:3", -- Recipe: Pickled Guppy
+        [65419] = "chefs:3", -- Recipe: Tender Baked Turtle
+        [65411] = "chefs:3", -- Recipe: Broiled Mountain Trout
+        [65407] = "chefs:3", -- Recipe: Lavascale Fillet
+        [65412] = "chefs:3", -- Recipe: Lightly Fried Lurker
+        [65416] = "chefs:3", -- Recipe: Lurker Lunch
+        [65410] = "chefs:3", -- Recipe: Salted Eye
+        [65413] = "chefs:3", -- Recipe: Seasoned Crab
+        [65406] = "chefs:3", -- Recipe: Whitecrest Gumbo
+        [65415] = "chefs:3", -- Recipe: Highland Spirits
+        [65414] = "chefs:3", -- Recipe: Starfire Espresso
+        [65408] = "chefs:3", -- Recipe: Feathered Lure
+        [65513] = "chefs:2", -- Crate of Tasty Meat
+        [68689] = "chefs:1", -- Imported Supplies
+        -- tailoring recipes
+        [54601] = "Dreamc:1", -- Pattern: Belt of the Depths
+        [54602] = "Dreamc:1", -- Pattern: Dreamless Belt
+        [54603] = "Dreamc:1", -- Pattern: Breeches of Mended Nightmares
+        [54604] = "Dreamc:1", -- Pattern: Flame-Ascended Pantaloons
+        [54605] = "Dreamc:1", -- Pattern: Illusionary Bag
+        [54593] = "BEC:8",
+        [54594] = "BEC:8",
+        [54595] = "BEC:8",
+        [54596] = "BEC:8",
+        [54597] = "BEC:8",
+        [54598] = "BEC:8",
+        [54599] = "BEC:8",
+        [54600] = "BEC:8",
+        [68199] = "BEC:8",
+        -- blacksmithing recipes
+        [66103] = "ElementiumB:20",
+        [66105] = "ElementiumB:20",
+        [66107] = "ElementiumB:20",
+        [66117] = "ElementiumB:20",
+        [66118] = "ElementiumB:20",
+        [66119] = "ElementiumB:20",
+        [66125] = "ElementiumB:20",
+        [66126] = "ElementiumB:20",
+        [66127] = "ElementiumB:20",
+        [66104] = "HElementiumB:2",
+        [66106] = "HElementiumB:2",
+        [66108] = "HElementiumB:2",
+        [66110] = "HElementiumB:2",
+        [66111] = "HElementiumB:2",
+        [66112] = "HElementiumB:2",
+        [66113] = "HElementiumB:2",
+        [66114] = "HElementiumB:2",
+        [66115] = "HElementiumB:2",
+        [66116] = "HElementiumB:2",
+        [66120] = "HElementiumB:2",
+        [66121] = "HElementiumB:2",
+        [66128] = "HElementiumB:2",
+        [66129] = "HElementiumB:2",
+        [67603] = "HElementiumB:2",
+        [66100] = "PyriumB:5",
+        [66101] = "PyriumB:5",
+        [66122] = "PyriumB:5",
+        [66123] = "PyriumB:5",
+        [66124] = "PyriumB:5",
+        [66130] = "PyriumB:5",
+        [66131] = "PyriumB:5",
+        [66132] = "PyriumB:5",
+        [67606] = "PyriumB:5",
+        -- enchanting recipes
+        [67308] = "HypnoticD:20",
+        [67312] = "HypnoticD:20",
+        [65359] = "HeavenlyS:1",
+        [52737] = "HeavenlyS:5",
+        [52738] = "HeavenlyS:5",
+        [52739] = "HeavenlyS:5",
+        [52740] = "HeavenlyS:5",
+        [64411] = "HeavenlyS:5",
+        [64412] = "HeavenlyS:5",
+        [64413] = "HeavenlyS:5",
+        [64414] = "HeavenlyS:5",
+        [64415] = "HeavenlyS:5",
+        [52733] = "MaelstromC:5",
+        [52735] = "MaelstromC:5",
+        [52736] = "MaelstromC:5",
+        -- jewelcrafting recipes
+        [52196] = "JewelTokenCata:1",
+        [52381] = "JewelTokenCata:2",
+        [52447] = "JewelTokenCata:2",
+        [52448] = "JewelTokenCata:2",
+        [52449] = "JewelTokenCata:2",
+        [52450] = "JewelTokenCata:2",
+        [52451] = "JewelTokenCata:2",
+        [52452] = "JewelTokenCata:2",
+        [52453] = "JewelTokenCata:2",
+        [52454] = "JewelTokenCata:2",
+        [52455] = "JewelTokenCata:2",
+        [52456] = "JewelTokenCata:2",
+        [52457] = "JewelTokenCata:2",
+        [52458] = "JewelTokenCata:2",
+        [52459] = "JewelTokenCata:2",
+        [52362] = "JewelTokenCata:3",
+        [52380] = "JewelTokenCata:3",
+        [52384] = "JewelTokenCata:3",
+        [52387] = "JewelTokenCata:3",
+        [52389] = "JewelTokenCata:3",
+        [52390] = "JewelTokenCata:3",
+        [52391] = "JewelTokenCata:3",
+        [52392] = "JewelTokenCata:3",
+        [52393] = "JewelTokenCata:3",
+        [52394] = "JewelTokenCata:3",
+        [52395] = "JewelTokenCata:3",
+        [52396] = "JewelTokenCata:3",
+        [52397] = "JewelTokenCata:3",
+        [52398] = "JewelTokenCata:3",
+        [52399] = "JewelTokenCata:3",
+        [52400] = "JewelTokenCata:3",
+        [52401] = "JewelTokenCata:3",
+        [52402] = "JewelTokenCata:3",
+        [52403] = "JewelTokenCata:3",
+        [52404] = "JewelTokenCata:3",
+        [52405] = "JewelTokenCata:3",
+        [52406] = "JewelTokenCata:3",
+        [52407] = "JewelTokenCata:3",
+        [52408] = "JewelTokenCata:3",
+        [52409] = "JewelTokenCata:3",
+        [52410] = "JewelTokenCata:3",
+        [52411] = "JewelTokenCata:3",
+        [52412] = "JewelTokenCata:3",
+        [52413] = "JewelTokenCata:3",
+        [52414] = "JewelTokenCata:3",
+        [52415] = "JewelTokenCata:3",
+        [52416] = "JewelTokenCata:3",
+        [52417] = "JewelTokenCata:3",
+        [52418] = "JewelTokenCata:3",
+        [52419] = "JewelTokenCata:3",
+        [52420] = "JewelTokenCata:3",
+        [52421] = "JewelTokenCata:3",
+        [52422] = "JewelTokenCata:3",
+        [52423] = "JewelTokenCata:3",
+        [52424] = "JewelTokenCata:3",
+        [52425] = "JewelTokenCata:3",
+        [52426] = "JewelTokenCata:3",
+        [52427] = "JewelTokenCata:3",
+        [52428] = "JewelTokenCata:3",
+        [52429] = "JewelTokenCata:3",
+        [52430] = "JewelTokenCata:3",
+        [52431] = "JewelTokenCata:3",
+        [52432] = "JewelTokenCata:3",
+        [68359] = "JewelTokenCata:3",
+        [68360] = "JewelTokenCata:3",
+        [68361] = "JewelTokenCata:3",
+        [68742] = "JewelTokenCata:3",
+        [52433] = "JewelTokenCata:4",
+        [52434] = "JewelTokenCata:4",
+        [52435] = "JewelTokenCata:4",
+        [52436] = "JewelTokenCata:4",
+        [52437] = "JewelTokenCata:4",
+        [52438] = "JewelTokenCata:4",
+        [52439] = "JewelTokenCata:4",
+        [52440] = "JewelTokenCata:4",
+        [52441] = "JewelTokenCata:4",
+        [52442] = "JewelTokenCata:4",
+        [52443] = "JewelTokenCata:4",
+        [52444] = "JewelTokenCata:4",
+        [52445] = "JewelTokenCata:4",
+        [52460] = "JewelTokenCata:5",
+        [52461] = "JewelTokenCata:5",
+        [52462] = "JewelTokenCata:5",
+        [52463] = "JewelTokenCata:5",
+        [52464] = "JewelTokenCata:5",
+        [52465] = "JewelTokenCata:5",
+        [52466] = "JewelTokenCata:5",
+        [52467] = "JewelTokenCata:5",
+        [69853] = "JewelTokenCata:5",
+        [101784] = "JewelTokenCata:5",
+        [101773] = "JewelTokenCata:5",
+        [101775] = "JewelTokenCata:5",
+        [101749] = "JewelTokenCata:5",
+        [101799] = "JewelTokenCata:5",
+        [101797] = "JewelTokenCata:5",
+        [101768] = "JewelTokenCata:5",
+        [101762] = "JewelTokenCata:5",
+        [101761] = "JewelTokenCata:5",
+        [101793] = "JewelTokenCata:5",
+        [101769] = "JewelTokenCata:5",
+        [101795] = "JewelTokenCata:5",
+        [101754] = "JewelTokenCata:5",
+        [101787] = "JewelTokenCata:5",
+        [101772] = "JewelTokenCata:5",
+        [101776] = "JewelTokenCata:5",
+        [101798] = "JewelTokenCata:5",
+        [101757] = "JewelTokenCata:5",
+        [101803] = "JewelTokenCata:5",
+        [101783] = "JewelTokenCata:5",
+        [101791] = "JewelTokenCata:5",
+        [101747] = "JewelTokenCata:5",
+        [101764] = "JewelTokenCata:5",
+        [101755] = "JewelTokenCata:5",
+        [101774] = "JewelTokenCata:5",
+        [101745] = "JewelTokenCata:5",
+        [101778] = "JewelTokenCata:5",
+        [101743] = "JewelTokenCata:5",
+        [101788] = "JewelTokenCata:5",
+        [101804] = "JewelTokenCata:5",
+        [101758] = "JewelTokenCata:5",
+        [101744] = "JewelTokenCata:5",
+        [101765] = "JewelTokenCata:5",
+        [101763] = "JewelTokenCata:5",
+        [101796] = "JewelTokenCata:5",
+        [101759] = "JewelTokenCata:5",
+        [101789] = "JewelTokenCata:5",
+        [101802] = "JewelTokenCata:5",
+        [101752] = "JewelTokenCata:5",
+        [101771] = "JewelTokenCata:5",
+        [101756] = "JewelTokenCata:5",
+        [101766] = "JewelTokenCata:5",
+        [101782] = "JewelTokenCata:5",
+        [101786] = "JewelTokenCata:5",
+        [101735] = "JewelTokenCata:5",
+        [101746] = "JewelTokenCata:5",
+        [101753] = "JewelTokenCata:5",
+        [101790] = "JewelTokenCata:5",
+        [101777] = "JewelTokenCata:5",
+        [101800] = "JewelTokenCata:5",
+        [101742] = "JewelTokenCata:5",
+        [101794] = "JewelTokenCata:5",
+        [101741] = "JewelTokenCata:5",
+        [101781] = "JewelTokenCata:5",
+        [101767] = "JewelTokenCata:5",
+        [101760] = "JewelTokenCata:5",
+        [101740] = "JewelTokenCata:5",
+        [101801] = "JewelTokenCata:5",
+        [101779] = "JewelTokenCata:5",
+        [101792] = "JewelTokenCata:5",
+        [101751] = "JewelTokenCata:5",
+        [101785] = "JewelTokenCata:5",
+        [101750] = "JewelTokenCata:5",
+        [101770] = "JewelTokenCata:5",
+        [101780] = "JewelTokenCata:5",
+        [101748] = "JewelTokenCata:5",
+        [73396] = "JewelTokenCata:5",
+        [73399] = "JewelTokenCata:5",
+        [73397] = "JewelTokenCata:5",
+        [73398] = "JewelTokenCata:5",
+        [73409] = "JewelTokenCata:5",
+        [73407] = "JewelTokenCata:5",
+        [73400] = "JewelTokenCata:5",
+        [73408] = "JewelTokenCata:5",
+        [73404] = "JewelTokenCata:5",
+        [73406] = "JewelTokenCata:5",
+        [73401] = "JewelTokenCata:5",
+        [73402] = "JewelTokenCata:5",
+        [73403] = "JewelTokenCata:5",
+        [73405] = "JewelTokenCata:5",
+        -- leatherworking recipes
+        [52980] = "HSavageL:10",
+        [67042] = "HSavageL:10",
+        [67044] = "HSavageL:10",
+        [67046] = "HSavageL:10",
+        [67048] = "HSavageL:10",
+        [67049] = "HSavageL:10",
+        [67053] = "HSavageL:10",
+        [67054] = "HSavageL:10",
+        [67055] = "HSavageL:10",
+        [67056] = "HSavageL:10",
+        [67058] = "HSavageL:10",
+        [67060] = "HSavageL:10",
+        [67062] = "HSavageL:10",
+        [67063] = "HSavageL:10",
+        [67064] = "HSavageL:10",
+        [67065] = "HSavageL:10",
+        [67066] = "HSavageL:10",
+        [67068] = "HSavageL:10",
+        [67070] = "HSavageL:10",
+        [67072] = "HSavageL:10",
+        [67073] = "HSavageL:10",
+        [67074] = "HSavageL:10",
+        [67075] = "HSavageL:10",
+        [67076] = "HSavageL:10",
+        [67077] = "HSavageL:10",
+        [67078] = "HSavageL:10",
+        [67079] = "HSavageL:10",
+        [67080] = "HSavageL:10",
+        [67081] = "HSavageL:10",
+        [67082] = "HSavageL:10",
+        [67083] = "HSavageL:10",
+        [67084] = "HSavageL:10",
+        [67085] = "HSavageL:10",
+        [67086] = "HSavageL:10",
+        [67087] = "HSavageL:10",
+        [67089] = "HSavageL:10",
+        [67090] = "HSavageL:10",
+        [67091] = "HSavageL:10",
+        [67092] = "HSavageL:10",
+        [67093] = "HSavageL:10",
+        [67094] = "HSavageL:10",
+        [67095] = "HSavageL:10",
+        [67096] = "HSavageL:10",
+        [67100] = "HSavageL:10",
+        [68193] = "HSavageL:10",
+        [71721] = "HSavageL:10",
+        -- Tol Barad Rep
+        [68770] = "cpvpTolBarad:40",
+        [68772] = "cpvpTolBarad:80",
+        [68774] = "cpvpTolBarad:80",
+        [63355] = "cpvpTolBarad:50",
+        [68768] = "cpvpTolBarad:40",
+        [68773] = "cpvpTolBarad:80",
+        [63141] = "cpvpTolBarad:40",
+        [68769] = "cpvpTolBarad:40",
+        [63391] = "cpvpTolBarad:5",
+        [63144] = "cpvpTolBarad:2",
+        [63145] = "cpvpTolBarad:2",
+        [65175] = "cpvpTolBarad:40",
+        [64998] = "cpvpTolBarad:165",
+        [63517] = "cpvpTolBarad:10",
+        [62472] = "cpvpTolBarad:125",
+        [62468] = "cpvpTolBarad:125",
+        [62469] = "cpvpTolBarad:125",
+        [62470] = "cpvpTolBarad:125",
+        [62471] = "cpvpTolBarad:125",
+        [68739] = "cpvpTolBarad:85",
+        [62473] = "cpvpTolBarad:85",
+        [62474] = "cpvpTolBarad:85",
+        [62475] = "cpvpTolBarad:85",
+        [62476] = "cpvpTolBarad:85",
+        [62477] = "cpvpTolBarad:85",
+        [62478] = "cpvpTolBarad:85",
+        [62479] = "cpvpTolBarad:85",
+        [63379] = "cpvpTolBarad:40",
+        [63039] = "cpvpTolBarad:200",
+        [63377] = "cpvpTolBarad:50",
+        [64997] = "cpvpTolBarad:40",
+        [64996] = "cpvpTolBarad:50",
+        [63378] = "cpvpTolBarad:40",
+        [64995] = "cpvpTolBarad:5",
+        [64993] = "cpvpTolBarad:2",
+        [64994] = "cpvpTolBarad:2",
+        [65176] = "cpvpTolBarad:40",
+        [64999] = "cpvpTolBarad:165",
+        [63518] = "cpvpTolBarad:10",
+        [62463] = "cpvpTolBarad:125",
+        [62464] = "cpvpTolBarad:125",
+        [62465] = "cpvpTolBarad:125",
+        [62466] = "cpvpTolBarad:125",
+        [62467] = "cpvpTolBarad:125",
+        [62460] = "cpvpTolBarad:85",
+        [62454] = "cpvpTolBarad:85",
+        [62455] = "cpvpTolBarad:85",
+        [62456] = "cpvpTolBarad:85",
+        [62458] = "cpvpTolBarad:85",
+        [62457] = "cpvpTolBarad:85",
+        [62459] = "cpvpTolBarad:85",
+        [68740] = "cpvpTolBarad:85",
+        [65356] = "cpvpTolBarad:200",
+        [63376] = "cpvpTolBarad:50",
+        -- S9 Conquest
+        [60408] = "cpvpConquest:2200",
+        [60409] = "cpvpConquest:1650",
+        [60410] = "cpvpConquest:2200",
+        [60411] = "cpvpConquest:2200",
+        [60412] = "cpvpConquest:1650",
+        [60413] = "cpvpConquest:2200",
+        [60414] = "cpvpConquest:1650",
+        [60415] = "cpvpConquest:2200",
+        [60416] = "cpvpConquest:2200",
+        [60417] = "cpvpConquest:1650",
+        [60418] = "cpvpConquest:2200",
+        [60419] = "cpvpConquest:1650",
+        [60420] = "cpvpConquest:2200",
+        [60421] = "cpvpConquest:2200",
+        [60422] = "cpvpConquest:1650",
+        [60423] = "cpvpConquest:2200",
+        [60424] = "cpvpConquest:1650",
+        [60425] = "cpvpConquest:2200",
+        [60426] = "cpvpConquest:2200",
+        [60427] = "cpvpConquest:1650",
+        [60428] = "cpvpConquest:2200",
+        [60429] = "cpvpConquest:1650",
+        [60430] = "cpvpConquest:2200",
+        [60431] = "cpvpConquest:2200",
+        [60432] = "cpvpConquest:1650",
+        [60433] = "cpvpConquest:2200",
+        [60434] = "cpvpConquest:1650",
+        [60435] = "cpvpConquest:2200",
+        [60436] = "cpvpConquest:2200",
+        [60437] = "cpvpConquest:1650",
+        [60438] = "cpvpConquest:2200",
+        [60439] = "cpvpConquest:1650",
+        [60440] = "cpvpConquest:2200",
+        [60441] = "cpvpConquest:2200",
+        [60442] = "cpvpConquest:1650",
+        [60443] = "cpvpConquest:1650",
+        [60444] = "cpvpConquest:2200",
+        [60445] = "cpvpConquest:2200",
+        [60446] = "cpvpConquest:2200",
+        [60447] = "cpvpConquest:1650",
+        [60448] = "cpvpConquest:1650",
+        [60449] = "cpvpConquest:2200",
+        [60450] = "cpvpConquest:2200",
+        [60451] = "cpvpConquest:2200",
+        [60452] = "cpvpConquest:1650",
+        [60453] = "cpvpConquest:1650",
+        [60454] = "cpvpConquest:2200",
+        [60455] = "cpvpConquest:2200",
+        [60456] = "cpvpConquest:2200",
+        [60457] = "cpvpConquest:1650",
+        [60458] = "cpvpConquest:2200",
+        [60459] = "cpvpConquest:1650",
+        [60460] = "cpvpConquest:2200",
+        [60461] = "cpvpConquest:2200",
+        [60462] = "cpvpConquest:1650",
+        [60463] = "cpvpConquest:1650",
+        [60464] = "cpvpConquest:2200",
+        [60465] = "cpvpConquest:2200",
+        [60466] = "cpvpConquest:2200",
+        [60467] = "cpvpConquest:1650",
+        [60468] = "cpvpConquest:1650",
+        [60469] = "cpvpConquest:2200",
+        [60470] = "cpvpConquest:2200",
+        [60471] = "cpvpConquest:2200",
+        [60472] = "cpvpConquest:1650",
+        [60473] = "cpvpConquest:1650",
+        [60474] = "cpvpConquest:2200",
+        [60475] = "cpvpConquest:2200",
+        [60476] = "cpvpConquest:2200",
+        [60477] = "cpvpConquest:1650",
+        [60478] = "cpvpConquest:1650",
+        [60479] = "cpvpConquest:2200",
+        [60480] = "cpvpConquest:2200",
+        [60481] = "cpvpConquest:2200",
+        [60482] = "cpvpConquest:1650",
+        [60505] = "cpvpConquest:1650",
+        [60508] = "cpvpConquest:1650",
+        [60509] = "cpvpConquest:1650",
+        [60512] = "cpvpConquest:1250",
+        [60513] = "cpvpConquest:1650",
+        [60516] = "cpvpConquest:1650",
+        [60520] = "cpvpConquest:1250",
+        [60521] = "cpvpConquest:1650",
+        [60523] = "cpvpConquest:1250",
+        [60533] = "cpvpConquest:1650",
+        [60534] = "cpvpConquest:1650",
+        [60535] = "cpvpConquest:1250",
+        [60536] = "cpvpConquest:1650",
+        [60539] = "cpvpConquest:1650",
+        [60540] = "cpvpConquest:1650",
+        [60541] = "cpvpConquest:1250",
+        [60554] = "cpvpConquest:1650",
+        [60555] = "cpvpConquest:1650",
+        [60557] = "cpvpConquest:1650",
+        [60559] = "cpvpConquest:1250",
+        [60564] = "cpvpConquest:1650",
+        [60565] = "cpvpConquest:1250",
+        [60567] = "cpvpConquest:1650",
+        [60569] = "cpvpConquest:1250",
+        [60580] = "cpvpConquest:1650",
+        [60581] = "cpvpConquest:1650",
+        [60582] = "cpvpConquest:1250",
+        [60583] = "cpvpConquest:1650",
+        [60586] = "cpvpConquest:1650",
+        [60587] = "cpvpConquest:1650",
+        [60589] = "cpvpConquest:1650",
+        [60591] = "cpvpConquest:1250",
+        [60593] = "cpvpConquest:1650",
+        [60594] = "cpvpConquest:1250",
+        [60601] = "cpvpConquest:2200",
+        [60602] = "cpvpConquest:1650",
+        [60603] = "cpvpConquest:2200",
+        [60604] = "cpvpConquest:2200",
+        [60605] = "cpvpConquest:1650",
+        [60607] = "cpvpConquest:1650",
+        [60611] = "cpvpConquest:1250",
+        [60612] = "cpvpConquest:1650",
+        [60613] = "cpvpConquest:1650",
+        [60626] = "cpvpConquest:1650",
+        [60628] = "cpvpConquest:1250",
+        [60630] = "cpvpConquest:1650",
+        [60634] = "cpvpConquest:1250",
+        [60635] = "cpvpConquest:1250",
+        [60636] = "cpvpConquest:1650",
+        [60637] = "cpvpConquest:1650",
+        [60645] = "cpvpConquest:1250",
+        [60647] = "cpvpConquest:1250",
+        [60649] = "cpvpConquest:1250",
+        [60650] = "cpvpConquest:1250",
+        [60651] = "cpvpConquest:1250",
+        [60658] = "cpvpConquest:1250",
+        [60659] = "cpvpConquest:1250",
+        [60661] = "cpvpConquest:1250",
+        [60662] = "cpvpConquest:1250",
+        [60664] = "cpvpConquest:1250",
+        [60668] = "cpvpConquest:1250",
+        [60669] = "cpvpConquest:1250",
+        [60670] = "cpvpConquest:1250",
+        [60673] = "cpvpConquest:1250",
+        [60776] = "cpvpConquest:1250",
+        [60778] = "cpvpConquest:1250",
+        [60779] = "cpvpConquest:1250",
+        [60783] = "cpvpConquest:1250",
+        [60786] = "cpvpConquest:1250",
+        [60787] = "cpvpConquest:1250",
+        [60788] = "cpvpConquest:1250",
+        [60794] = "cpvpConquest:1650",
+        [60799] = "cpvpConquest:1650",
+        [60800] = "cpvpConquest:1650",
+        [60801] = "cpvpConquest:1650",
+        [60806] = "cpvpConquest:1650",
+        [60807] = "cpvpConquest:1650",
+        [61026] = "cpvpConquest:1650",
+        [61031] = "cpvpConquest:1650",
+        [61032] = "cpvpConquest:1650",
+        [61033] = "cpvpConquest:1650",
+        [61034] = "cpvpConquest:1650",
+        [61035] = "cpvpConquest:1650",
+        [61045] = "cpvpConquest:1650",
+        [61046] = "cpvpConquest:1650",
+        [61047] = "cpvpConquest:1650",
+        [61324] = "cpvpConquest:2450",
+        [61325] = "cpvpConquest:2450",
+        [61326] = "cpvpConquest:3400",
+        [61327] = "cpvpConquest:2450",
+        [61328] = "cpvpConquest:950",
+        [61329] = "cpvpConquest:2450",
+        [61330] = "cpvpConquest:2450",
+        [61331] = "cpvpConquest:950",
+        [61332] = "cpvpConquest:950",
+        [61333] = "cpvpConquest:2450",
+        [61335] = "cpvpConquest:2450",
+        [61336] = "cpvpConquest:2450",
+        [61338] = "cpvpConquest:2450",
+        [61339] = "cpvpConquest:3400",
+        [61340] = "cpvpConquest:3400",
+        [61341] = "cpvpConquest:3400",
+        [61342] = "cpvpConquest:3400",
+        [61343] = "cpvpConquest:3400",
+        [61344] = "cpvpConquest:2450",
+        [61345] = "cpvpConquest:2450",
+        [61346] = "cpvpConquest:3400",
+        [61347] = "cpvpConquest:700",
+        [61348] = "cpvpConquest:700",
+        [61350] = "cpvpConquest:700",
+        [61351] = "cpvpConquest:700",
+        [61353] = "cpvpConquest:3400",
+        [61354] = "cpvpConquest:3400",
+        [61355] = "cpvpConquest:3400",
+        [61357] = "cpvpConquest:950",
+        [61358] = "cpvpConquest:950",
+        [61359] = "cpvpConquest:950",
+        [61360] = "cpvpConquest:950",
+        [61361] = "cpvpConquest:950",
+        [61388] = "cpvpConquest:700",
+        [61389] = "cpvpConquest:700",
+        [61390] = "cpvpConquest:700",
+        [61391] = "cpvpConquest:700",
+        [67447] = "cpvpConquest:3400",
+        [67448] = "cpvpConquest:3400",
+        [67449] = "cpvpConquest:3400",
+        [67450] = "cpvpConquest:3400",
+        [67451] = "cpvpConquest:3400",
+        [67452] = "cpvpConquest:3400",
+        [67453] = "cpvpConquest:3400",
+        [67454] = "cpvpConquest:2450",
+        [67455] = "cpvpConquest:2450",
+        [67456] = "cpvpConquest:2450",
+        [67457] = "cpvpConquest:2450",
+        [67458] = "cpvpConquest:950",
+        [67459] = "cpvpConquest:950",
+        [67460] = "cpvpConquest:950",
+        [67461] = "cpvpConquest:3400",
+        [67462] = "cpvpConquest:3400",
+        [67463] = "cpvpConquest:3400",
+        [67464] = "cpvpConquest:700",
+        [67465] = "cpvpConquest:700",
+        [67466] = "cpvpConquest:700",
+        [67467] = "cpvpConquest:700",
+        [67468] = "cpvpConquest:2450",
+        [67469] = "cpvpConquest:2450",
+        [67470] = "cpvpConquest:2450",
+        [67471] = "cpvpConquest:2450",
+        [67472] = "cpvpConquest:2450",
+        [67473] = "cpvpConquest:2450",
+        [67474] = "cpvpConquest:2450",
+        [67475] = "cpvpConquest:950",
+        [67476] = "cpvpConquest:950",
+        [67477] = "cpvpConquest:950",
+        [67478] = "cpvpConquest:950",
+        [67479] = "cpvpConquest:950",
+        [67479] = "cpvpConquest:950",
+        [73766] = "DarkmoonPrizeTicket:180",
+        [72140] = "DarkmoonPrizeTicket:180",
     }
 end
 
@@ -971,27 +2165,34 @@ function VendorPrice.GetPriceInfoList()
     return PRICE_INFO_LIST
 end
 
---################################
+-- ################################
 -- Vendor scan
---################################
+-- ################################
 local VendorLockList = {}
 local SourcesAddon
-local UnitGUID, GetMerchantNumItems, GetMerchantItemID, GetMerchantItemCostInfo, GetMerchantItemCostItem, GetItemInfoInstant =
-      UnitGUID, GetMerchantNumItems, GetMerchantItemID, GetMerchantItemCostInfo, GetMerchantItemCostItem, GetItemInfoInstant
+local UnitGUID, GetMerchantNumItems, GetMerchantItemID, GetMerchantItemCostInfo, GetMerchantItemCostItem,
+    GetItemInfoInstant = UnitGUID, GetMerchantNumItems, GetMerchantItemID, GetMerchantItemCostInfo,
+    GetMerchantItemCostItem, GetItemInfoInstant
 
 local function GetNpcIDFromGuid(guid)
-	local npcID = select(6,strsplit("-",guid))
-	if npcID then
-		return tonumber(npcID)
-	end
+    local npcID = select(6, strsplit("-", guid))
+    if npcID then
+        return tonumber(npcID)
+    end
 end
 
 function VendorPrice.ScanShownVendor()
     local targetGUID = UnitGUID("target")
-    if not targetGUID then return end
+    if not targetGUID then
+        return
+    end
     local npcID = GetNpcIDFromGuid(targetGUID)
-    if not npcID or VendorLockList[npcID] then return end
-    if not SourcesAddon then SourcesAddon = AtlasLoot.Addons:GetAddon("Sources") end
+    if not npcID or VendorLockList[npcID] then
+        return
+    end
+    if not SourcesAddon then
+        SourcesAddon = AtlasLoot.Addons:GetAddon("Sources")
+    end
 
     for itemNum = 1, GetMerchantNumItems() do
         local vItemID = GetMerchantItemID(itemNum)
@@ -1013,7 +2214,7 @@ function VendorPrice.ScanShownVendor()
                         if itemCost == "" then
                             itemCost = format(formatString, itemValue or 0)
                         else
-                            itemCost = itemCost..":"..format(formatString, itemValue or 0)
+                            itemCost = itemCost .. ":" .. format(formatString, itemValue or 0)
                         end
                     end
                 end
@@ -1033,10 +2234,9 @@ end
 
 VendorPrice.EventFrame = CreateFrame("FRAME")
 local function EventFrame_OnEvent(frame, event, arg1, arg2)
-	if event == "MERCHANT_SHOW" then
-		VendorPrice.ScanShownVendor()
-	end
+    if event == "MERCHANT_SHOW" then
+        VendorPrice.ScanShownVendor()
+    end
 end
 VendorPrice.EventFrame:SetScript("OnEvent", EventFrame_OnEvent)
 VendorPrice.EventFrame:RegisterEvent("MERCHANT_SHOW")
-

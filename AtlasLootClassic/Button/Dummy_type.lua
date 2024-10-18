@@ -6,7 +6,7 @@ local AL, ALIL = AtlasLoot.Locales, AtlasLoot.IngameLocales
 local ClickHandler = AtlasLoot.ClickHandler
 local Token = AtlasLoot.Data.Token
 
-local TYPE, ID_INV, ID_ICON, ID_ABILITY, ID_ADDON, ID_CLASS, ID_SLOT, ID_SPECIAL = "Dummy", "INV_", "ICON_", "ABILITY_", "ADDON_", "CLASS_", "SLOT_", "SPECIAL_"
+local TYPE, ID_INV, ID_ICON, ID_ABILITY, ID_ADDON, ID_CLASS, ID_SLOT, ID_SPECIAL, ID_TRADE = "Dummy", "INV_", "ICON_", "ABILITY_", "ADDON_", "CLASS_", "SLOT_", "SPECIAL_", "TRADE_"
 local Dummy = AtlasLoot.Button:AddType(TYPE, ID_INV)
 AtlasLoot.Button:DisableDescriptionReplaceForce(TYPE, true)
 local Dummy_ID_ICON = AtlasLoot.Button:AddIdentifier(TYPE, ID_ICON)
@@ -15,6 +15,7 @@ local Dummy_ID_ADDON = AtlasLoot.Button:AddIdentifier(TYPE, ID_ADDON)
 local Dummy_ID_CLASS = AtlasLoot.Button:AddIdentifier(TYPE, ID_CLASS)
 local Dummy_ID_SLOT = AtlasLoot.Button:AddIdentifier(TYPE, ID_SLOT)
 local Dummy_ID_SPECIAL = AtlasLoot.Button:AddIdentifier(TYPE, ID_SPECIAL)
+local Dummy_ID_TRADE = AtlasLoot.Button:AddIdentifier(TYPE, ID_TRADE)
 
 -- lua
 local tonumber = tonumber
@@ -183,6 +184,10 @@ end
 
 function Dummy.GetStringContent(str)
 	return INTERFACE_PATH..ID_INV..str
+end
+
+function Dummy_ID_TRADE.GetStringContent(str)
+	return INTERFACE_PATH..ID_TRADE..str
 end
 
 function Dummy_ID_ICON.GetStringContent(str)

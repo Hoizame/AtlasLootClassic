@@ -54,6 +54,7 @@ local ICON_TEXTURE = {
     [16] = format(TEXTURE_ICON_F, GetSpellTexture(2842)),   -- Rogue: Poisons
     [17] = format(TEXTURE_ICON_F, 134071),                  -- Jewelcrafting
     [18] = format(TEXTURE_ICON_F, 237171),                  -- Inscription
+    [19] = format(TEXTURE_ICON_F, 441139),                  -- Archaeology
 }
 local SOURCE_TYPES = {
     [0]  = UNKNOWN,	                    -- UNKNOWN
@@ -75,6 +76,7 @@ local SOURCE_TYPES = {
     [16] = ALIL["ROGUE"]..": "..ALIL["Poisons"],             -- Rogue: Poisons
     [17] = ALIL["Jewelcrafting"],       -- Jewelcrafting
     [18] = ALIL["Inscription"],         -- Inscription
+    [19] = ALIL["Archaeology"],          -- Archaelogy
 }
 local SOURCE_DATA = {}
 local KEY_WEAK_MT = {__mode="k"}

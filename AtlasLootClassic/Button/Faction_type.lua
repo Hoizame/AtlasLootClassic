@@ -124,6 +124,11 @@ local FACTION_KEY = {
 	[1052] = AL["Horde Expedition"], -- Horde only
 	[1094] = AL["The Silver Covenant"], -- Alli only
 	[1124] = AL["The Sunreavers"], -- Horde only
+	-- Cata
+	[1177] = AL["Baradin's Wardens"], -- Alli only
+	[1174] = AL["Wildhammer Clan"], -- Alli only
+	[1178] = AL["Hellscream's Reach"], -- Horde only
+	[1172] = AL["Dragonmaw Clan"], -- Horde only
 }
 
 ClickHandler:Add(
@@ -339,7 +344,7 @@ function Faction.ShowToolTipFrame(button)
 		frame.standing.text:SetPoint("TOPLEFT", 3, -3)
 		frame.standing.text:SetPoint("BOTTOMRIGHT", -4, 3)
 		frame.standing.text:SetJustifyH("CENTER")
-		frame.standing.text:SetJustifyV("CENTER")
+		frame.standing.text:SetJustifyV("MIDDLE")
 		frame.standing.text:SetTextColor(1, 1, 1, 1)
 
 		frame.desc = frame:CreateFontString(name.."-desc", "ARTWORK", "GameFontNormalSmall")

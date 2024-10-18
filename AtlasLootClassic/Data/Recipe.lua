@@ -955,7 +955,7 @@ RECIPE_DATA.CLASSIC = {
 }
 
 if AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM) then
-    RECIPE_DATA.BCC = {
+	RECIPE_DATA.BCC = {
 		[2889] = {6,10,2795}, -- Recipe: Beer Basted Boar Ribs
 		[3394] = {4,120,3174}, -- Recipe: Potion of Curing
 		[13517] = {4,350,17632}, -- Recipe: Alchemist's Stone
@@ -1731,11 +1731,11 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM) then
 		[186683] = {10,375,27927}, -- Formula: Enchant Ring - Stats
 		[187048] = {3,350,351769}, -- Pattern: Greater Drums of Restoration
 		[187049] = {3,345,351768}, -- Pattern: Greater Drums of Speed
-    }
+	}
 end
 
 if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
-    RECIPE_DATA.WRATH = {
+	RECIPE_DATA.WRATH = {
 		[728] = {6,50,2543}, -- Recipe: Westfall Stew
 		[3831] = {4,180,3451}, -- Recipe: Major Troll's Blood Elixir
 		[4408] = {9,75,3928}, -- Schematic: Mechanical Squirrel Box
@@ -2283,7 +2283,131 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
 		[52023] = {9,450,72953}, -- Plans: Iceblade Arrow
 		[54797] = {8,425,75596}, -- Frosty Flying Carpet
 		[54798] = {8,425,75597}, -- Pattern: Frosty Flying Carpet
-    }
+	}
+end
+
+if AtlasLoot:GameVersion_GE(AtlasLoot.CATA_VERSION_NUM) then
+	RECIPE_DATA.CATA = {
+		[65426] = {6,500,88003}, -- Recipe: Baked Rockfish
+		[62799] = {6,500,88011}, -- Recipe: Broiled Dragon Feast
+		[65431] = {6,505,88013}, -- Recipe: Chocolate Cookie
+		[65432] = {6,525,88019}, -- Recipe: Fortune Cookie
+		[62800] = {6,525,88036}, -- Recipe: Seafood Magnifique Feast
+		[65433] = {6,525,88044}, -- Recipe: South Island Iced Tea
+		[65427] = {6,500,88004}, -- Recipe: Basilisk Liverdog
+		[65429] = {6,500,88005}, -- Recipe: Beer-Basted Crocolisk
+		[65424] = {6,500,88034}, -- Recipe: Blackbelly Sushi
+		[65430] = {6,500,88014}, -- Recipe: Crocolisk Au Gratin
+		[65422] = {6,500,88016}, -- Recipe: Delicious Sagefish Tail
+		[65428] = {6,500,88020}, -- Recipe: Grilled Dragon
+		[65409] = {6,500,88025}, -- Recipe: Lavascale Minestrone
+		[65420] = {6,500,88031}, -- Recipe: Mushroom Sauce Mudfish
+		[65421] = {6,500,88039}, -- Recipe: Severed Sagefish Head
+		[65425] = {6,500,88042}, -- Recipe: Skewered Eel
+		[68688] = {6,500,96133}, -- Recipe: Scalding Murglesnout
+		[65423] = {6,475,88018}, -- Recipe: Fish Fry
+		[65418] = {6,475,88021}, -- Recipe: Hearty Seafood Soup
+		[65417] = {6,475,88033}, -- Recipe: Pickled Guppy
+		[65419] = {6,475,88046}, -- Recipe: Tender Baked Turtle
+		[65411] = {6,450,88012}, -- Recipe: Broiled Mountain Trout
+		[65407] = {6,450,88024}, -- Recipe: Lavascale Fillet
+		[65412] = {6,450,88028}, -- Recipe: Lightly Fried Lurker
+		[65416] = {6,450,88030}, -- Recipe: Lurker Lunch
+		[65410] = {6,450,88035}, -- Recipe: Salted Eye
+		[65413] = {6,450,88037}, -- Recipe: Seasoned Crab
+		[65406] = {6,450,88047}, -- Recipe: Whitecrest Gumbo
+		[65415] = {6,450,88022}, -- Recipe: Highland Spirits
+		[65414] = {6,450,88045}, -- Recipe: Starfire Espresso
+		[65408] = {6,450,88017}, -- Recipe: Feathered Lure
+		[65359] = {10,515,92370}, -- Formula: Runed Elementium Rod
+		[68789] = {10,515,96262}, -- Formula: Enchant Bracer - Mighty Intellect
+		[68788] = {10,515,96261}, -- Formula: Enchant Bracer - Major Strength
+		[68787] = {10,515,96264}, -- Formula: Enchant Bracer - Agility
+		[67312] = {10,525,93843}, -- Formula: Magic Lamp
+		[67308] = {10,525,93841}, -- Formula: Enchanted Lantern
+		[52735] = {10,525,74244}, -- Formula: Enchant Weapon - Windwalk
+		[52733] = {10,525,74242}, -- Formula: Enchant Weapon - Power Torrent
+		[52736] = {10,525,74246}, -- Formula: Enchant Weapon - Landslide
+		[64415] = {10,525,74254}, -- Formula: Enchant Gloves - Mighty Strength
+		[64414] = {10,525,74255}, -- Formula: Enchant Gloves - Greater Mastery
+		[52737] = {10,525,74247}, -- Formula: Enchant Cloak - Greater Critical Strike
+		[52739] = {10,525,74250}, -- Formula: Enchant Chest - Peerless Stats
+		[52740] = {10,525,74251}, -- Formula: Enchant Chest - Greater Stamina
+		[64413] = {10,525,74256}, -- Formula: Enchant Bracer - Greater Speed
+		[52738] = {10,525,74248}, -- Formula: Enchant Bracer - Greater Critical Strike
+		[64412] = {10,525,74253}, -- Formula: Enchant Boots - Lavawalker
+		[64411] = {10,525,74252}, -- Formula: Enchant Boots - Assassin's Step
+		[67538] = {8,525,93328}, -- Recipe: Vial of the Sands
+		[65435] = {4,525,92643}, -- Recipe: Cauldron of Battle
+		[65498] = {4,525,92688}, -- Recipe: Big Cauldron of Battle
+		[66125] = {2,500,76465}, -- Plans: Ornate Pyrium Bracers
+		[66126] = {2,505,76466}, -- Plans: Ornate Pyrium Gauntlets
+		[66117] = {2,500,76456}, -- Plans: Bloodied Pyrium Bracers
+		[66118] = {2,505,76457}, -- Plans: Bloodied Pyrium Gauntlets
+		[66127] = {2,510,76467}, -- Plans: Ornate Pyrium Belt
+		[66109] = {2,510,76448}, -- Plans: Light Elementium Belt
+		[66105] = {2,510,76444}, -- Plans: Hardened Elementium Girdle
+		[66107] = {2,510,76446}, -- Plans: Elementium Girdle of Pain
+		[66119] = {2,510,76458}, -- Plans: Bloodied Pyrium Belt
+		[66108] = {2,515,76447}, -- Plans: Light Elementium Chestguard
+		[66104] = {2,515,76443}, -- Plans: Hardened Elementium Hauberk
+		[66111] = {2,515,76450}, -- Plans: Elementium Hammer
+		[67603] = {2,515,94718}, -- Plans: Elementium Gutslicer
+		[66106] = {2,515,76445}, -- Plans: Elementium Deathplate
+		[66113] = {2,515,76452}, -- Plans: Elementium Bonesplitter
+		[66128] = {2,515,76468}, -- Plans: Ornate Pyrium Boots
+		[66120] = {2,515,76459}, -- Plans: Bloodied Pyrium Boots
+		[67606] = {2,520,94732}, -- Plans: Forged Elementium Mindcrusher
+		[66116] = {2,520,76455}, -- Plans: Elementium Stormshield
+		[66110] = {2,520,76449}, -- Plans: Elementium Spellblade
+		[66114] = {2,520,76453}, -- Plans: Elementium Shank
+		[66112] = {2,520,76451}, -- Plans: Elementium Poleaxe
+		[66115] = {2,520,76454}, -- Plans: Elementium Earthguard
+		[66129] = {2,520,76469}, -- Plans: Ornate Pyrium Shoulders
+		[66121] = {2,520,76461}, -- Plans: Bloodied Pyrium Shoulders
+		[66100] = {2,525,76439}, -- Plans: Ebonsteel Belt Buckle
+		[66101] = {2,525,76440}, -- Plans: Pyrium Shield Spike
+		[66130] = {2,525,76470}, -- Plans: Ornate Pyrium Legguards
+		[66131] = {2,525,76471}, -- Plans: Ornate Pyrium Helm
+		[66132] = {2,525,76472}, -- Plans: Ornate Pyrium Breastplate
+		[66122] = {2,525,76462}, -- Plans: Bloodied Pyrium Legguards
+		[66123] = {2,525,76463}, -- Plans: Bloodied Pyrium Helm
+		[66124] = {2,525,76464}, -- Plans: Bloodied Pyrium Breastplate
+		[54600] = {8,525,75310}, -- Pattern: Powerful Ghostly Spellthread
+		[54599] = {8,525,75309}, -- Pattern: Powerful Enchanted Spellthread
+		[54605] = {8,525,75308}, -- Pattern: Illusionary Bag
+		[54604] = {8,525,75301}, -- Pattern: Flame-Ascended Pantaloons
+		[54598] = {8,525,75303}, -- Pattern: Fireweave Robe
+		[54597] = {8,525,75302}, -- Pattern: Fireweave Pants
+		[54596] = {8,525,75304}, -- Pattern: Fireweave Cowl
+		[54595] = {8,525,75305}, -- Pattern: Emberfire Robe
+		[54594] = {8,525,75307}, -- Pattern: Emberfire Pants
+		[54593] = {8,525,75306}, -- Pattern: Emberfire Cowl
+		[54602] = {8,525,75299}, -- Pattern: Dreamless Belt
+		[54603] = {8,525,75300}, -- Pattern: Breeches of Mended Nightmares
+		[54601] = {8,525,75298}, -- Pattern: Belt of the Depths
+		[67541] = {8,500,75289}, -- Pattern: High Society Top Hat
+		[72102] = {8,150,102171}, -- Pattern: Black Silk Vest
+		[68781] = {14,490,96255}, -- Design: Agile Shadowspirit Diamond
+		[68782] = {14,490,96256}, -- Design: Reverberating Shadowspirit Diamond
+		[68783] = {14,490,96257}, -- Design: Burning Shadowspirit Diamond
+		[52381] = {14,500,73396}, -- Design: Bold Chimera's Eye
+		[52362] = {14,465,73335}, -- Design: Bold Inferno Ruby
+		[70166] = {2,525,99652}, -- Plans: Brainsplinter
+		[70167] = {2,525,99653}, -- Plans: Masterwork Elementium Spellblade
+		[70168] = {2,525,99654}, -- Plans: Lightforged Elementium Hammer
+		[70169] = {2,525,99655}, -- Plans: Elementium-Edged Scalper
+		[70170] = {2,525,99656}, -- Plans: Pyrium Spellward
+		[70171] = {2,525,99657}, -- Plans: Unbreakable Guardian
+		[70172] = {2,525,99658}, -- Plans: Masterwork Elementium Deathblade
+		[70173] = {2,525,99660}, -- Plans: Witch-Hunter's Harvester
+		[70177] = {9,515,100587}, -- Schematic: Flintlocke's Woodchucker
+		[71078] = {9,525,100687}, -- Schematic: Extreme-Impact Hole Puncher
+		[70174] = {3,510,100583}, -- Pattern: Royal Scribe's Satchel
+		[70175] = {3,500,100586}, -- Pattern: Triple-Reinforced Mining Bag
+		[70176] = {8,515,100585}, -- Pattern: Luxurious Silk Gem Bag
+		--[recipe] = {scroll#,skill,spell},
+	}
 end
 
 RECIPE[21302] = { 13, 300, 25347 } -- Handbook of Deadly Poison V

@@ -257,7 +257,7 @@ local function PopulateListBiS(db, dest)
         for itemId in pairs(listData) do
             if type(itemId) == "number" then
                 local itemName, itemLink, itemRarity, itemLevel, itemMinLevel, itemType,
-                    itemSubType, itemStackCount, itemEquipLoc = GetItemInfo(itemId)
+                itemSubType, itemStackCount, itemEquipLoc = GetItemInfo(itemId)
                 local itemData = { itemId, itemLink, itemLevel, 0, itemType, itemSubType }
                 destList.byId[itemId] = itemData
                 if itemEquipLoc and itemLevel then
@@ -296,7 +296,7 @@ local function PopulateListBiS(db, dest)
                 if destList.bestInSlot[itemEquipLoc] then
                     local bestId, bestLink, bestLevel, secondBestLevel, bestType, bestSubType = unpack(destList.bestInSlot[itemEquipLoc])
                     local itemName, itemLink, itemRarity, itemLevel, itemMinLevel, itemType,
-                        itemSubType, itemStackCount, itemEquipLoc = GetItemInfo(itemId)
+                    itemSubType, itemStackCount, itemEquipLoc = GetItemInfo(itemId)
                     if (bestLevel > itemLevel) and not mainItems[itemId] then
                         destList.obsolete[itemId] = true
                     end
@@ -841,27 +841,31 @@ function Favourites:CountFavouritesByList(addonName, contentName, boss, dif, inc
     local items, tableType, diffData = ItemDB:GetItemTable(addonName, contentName, boss, dif)
     -- Check if items is nil or empty
     if not items or next(items) == nil then
-        return
+        return result
     end
     for l, listData in pairs(self.db.lists) do
-        local listName = listData.__name
-        for i, item in ipairs(items) do
-            if type(item[2]) == "number" then
-                local itemID = item[2]
-                if listData[itemID] and (includeObsolete or not self:IsItemEquippedOrObsolete(itemID, l)) then
-                    result[listName] = (result[listName] or 0) + 1
+        if self:ListIsGlobalActive(l) or self:ListIsProfileActive(l) then
+            local listName = listData.__name
+            for i, item in ipairs(items) do
+                if type(item[2]) == "number" then
+                    local itemID = item[2]
+                    if listData[itemID] and (includeObsolete or not self:IsItemEquippedOrObsolete(itemID, l)) then
+                        result[listName] = (result[listName] or 0) + 1
+                    end
                 end
             end
         end
     end
 
     for l, listData in pairs(self.globalDb.lists) do
-        local listName = listData.__name
-        for i, item in ipairs(items) do
-            if type(item[2]) == "number" then
-                local itemID = item[2]
-                if listData[itemID] and (includeObsolete or not self:IsItemEquippedOrObsolete(itemID, l)) then
-                    result[listName] = (result[listName] or 0) + 1
+        if self:ListIsGlobalActive(l) or self:ListIsProfileActive(l) then
+            local listName = listData.__name
+            for i, item in ipairs(items) do
+                if type(item[2]) == "number" then
+                    local itemID = item[2]
+                    if listData[itemID] and (includeObsolete or not self:IsItemEquippedOrObsolete(itemID, l)) then
+                        result[listName] = (result[listName] or 0) + 1
+                    end
                 end
             end
         end

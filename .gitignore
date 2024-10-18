@@ -1,15 +1,12 @@
-Global.lua
-Collections.lua
-Crafting.lua
-DungeonsAndRaids.lua
-DungeonsAndRaidsTBC.lua
-PvP.lua
-Options.lua
-Factions.lua
-rawdata.lua
-data.lua
 .release
+.idea
+.vscode/
+cata_data/
+CHANGELOG.MD
 
 # from @Blackwidow-sudo
 make.sh
 DevBuild
+
+# MacOS files
+.DS_Store

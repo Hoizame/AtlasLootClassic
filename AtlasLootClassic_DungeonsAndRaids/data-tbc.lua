@@ -1177,24 +1177,24 @@ data["TheSlavePens"] = {
                 { 28, 27741 }, -- Bleeding Hollow Warhammer
             }
         },
-        AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM, { -- CFRSlaveAhune
+        AtlasLoot:GameVersion_GE(AtlasLoot.CATA_VERSION_NUM, { -- CFRSlaveAhune
             name = AL["Ahune <The Frost Lord>"],
             npcID = 25740,
-            Level = 82,
+            Level = 87,
             DisplayIDs = {{23344}},
             ExtraList = true,
             [NORMAL_DIFF] = {
-                { 1, 54806 }, -- Frostscythe of Lord Ahune
-                { 2, 54804 }, -- Shroud of Winter's Chill
-                { 3, 54802 }, -- The Frost Lord's War Cloak
-                { 4, 54801 }, -- Icebound Cloak
-                { 5, 54805 }, -- Cloak of the Frigid Winds
-                { 6, 54803 }, -- The Frost Lord's Battle Shroud
-                { 8, 35723 }, -- Shards of Ahune
+                { 1, 54536 }, -- Satchel of Chilled Goods
+                { 2, 69771 }, -- Frostscythe of Lord Ahune
+                { 4, 69768 }, -- Shroud of Winter's Chill
+                { 5, 69766 }, -- The Frost Lord's War Cloak
+                { 6, 69770 }, -- Icebound Cloak
+                { 7, 69769 }, -- Cloak of the Frigid Winds
+                { 8, 69767 }, -- The Frost Lord's Battle Shroud
+                { 10, 35723 }, -- Shards of Ahune
                 { 16, 35498 }, -- Formula: Enchant Weapon - Deathfrost
-                { 18, 34955 }, -- Scorched Stone
-                { 19, 53641 }, --  Ice Chip
-                { 21, 35557 }, -- Huge Snowball
+                { 18, 53641 }, -- Ice Chip
+                { 20, 35557 }, -- Huge Snowball
             },
         }),
         KEYS
@@ -2774,7 +2774,7 @@ data["Karazhan"] = {
     }
 }
 
-data["ZulAman"] = {
+data["ZulAmanClassic"] = {
 	MapID = 3805,
 	InstanceID = 568,
 	AtlasModule = ATLAS_MODULE_NAME,
@@ -2948,7 +2948,6 @@ data["ZulAman"] = {
         },
     }
 }
-
 
 data["WorldBossesBC"] = {
 	name = AL["World Bosses"],

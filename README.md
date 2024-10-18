@@ -1,52 +1,51 @@
-# AtlasLootClassic
+# AtlasLootClassic Cata
 
-[![Build Status](https://github.com/Hoizame/AtlasLootClassic/workflows/CI/badge.svg)](https://github.com/Hoizame/AtlasLootClassic/actions?workflow=CI)[![AtlasLootClassic Discord](https://img.shields.io/badge/discord-atlaslootclassic-7289DA)](https://discord.gg/vMUwzPc)
+[![Package](https://github.com/snowflame0/AtlasLootClassic_Cata/actions/workflows/build.yml/badge.svg)](https://github.com/snowflame0/AtlasLootClassic_Cata/actions/workflows/build.yml)
 
-AtlasLootClassic is an UI mod allowing for loot tables of bosses to be browsed whenever needed within the game.
+### AtlasLootClassic Cata is a forked and revised version of the AtlasLootClassic updated for Cataclysm Classic. It allows for various loot tables to be browsed in-game.
 
-## Download
+### !! This is still mostly a  work in progress !!
 
-[Curseforge](https://www.curseforge.com/wow/addons/atlaslootclassic)
-
-[WoWInterface](https://www.wowinterface.com/downloads/info25185-AtlasLootClassic.html)
-
-[WagoAddons](https://addons.wago.io/addons/atlaslootclassic)
+#### If you appreciate the work and want to help support my broke ass while I keep working on this, please feel free to buy me a coffee @ https://buymeacoffee.com/snowflame0
 
 ## Features
+- Raids and Dungeons module showing all Dungeon/Raid drops
+- Crafting module showing all craftable items
+- Factions module showing all Faction item rewards
+- Collections module showing item sets, world drops, mounts, and etc.
+- PvP module showing all PvP items (only S9 for Cata Right now)
+- Tooltip integration showing where items come from or currency cost
+- Favorites list (Credits to @Lag, mostly instact as it was :smiley:)
+- Localizations should be mostly intact, new bosses might need translations. Contribute on Curseforge if you'd like
 
-* Loottables for Dungeons and Raids
-* Crafting with informations about materials, created items and skill ranks
-* Factions
-* Collections with item sets and world events
-* Favourites are the new wishlist
+## Usage
+- /al options or Shift + Left Click minimap button for options
+- Alt/Option + Left Click to add an item to Favorites
 
-## Options
+## Notes
+Please report any bugs on Github, I will keep adding missing features. Special thanks to everyone who has helped out adding missing items, sets, and etc!
 
-* Open with `Shift + Left Click` on MiniMap Button or with `/al options`
 
-## Favourites
+## Releases
+### v4.0.1 beta1 (June 4, 2024)
+- First Cata beta
+- Only compatible with Cataclysm Classic (Classic Era players continue to use Original version)
+- All modules have most data, some problems still exist
+- Most item sources should work, report any that don't
+- Only S9 PvP items added so far
+- Collections may be missing items, will add as they come
+- Many, many commits!
 
-* Add items directly from AtlasLoot with `Alt + Left Click`
-* Add notes to favourite items with `Alt + Right Click`
-* Setup global and profile based lists
-* Show on item tooltip if the item is on any active list
-* Import and export your lists
-* A GUI that let you plan your gear and shows a indicator if you already own an item
+## Credits
+- Lag/Hoizame (on Github) - Original author of AtlasLootClassic
+- @scareclaw-kashtira on Github for many contributions updating modules
+- @gitenarra on Github for many contributions updating modules
+- @MCJOHNS117 on Github for initial tier set updates
+- @iZcr3am on Github for help with translations and updating modules
 
-![image](https://media.forgecdn.net/attachments/260/125/atlasloot-fav-gui.png)![image](https://media.forgecdn.net/attachments/260/931/atlasloot-fav-tt.png)
+AND OTHERS I MAY HAVE FORGOTTEN (Whoever made the OG AtlasLoot!)
 
-## Favourites import/export format
+<3 ty for all for keeping the community and this great addon alive.
 
-`(type):(id):(note)` while the `:(note)` part is optional
-
-This currently only supports items and notes
-
-`"i:16703:First item note,i:16704,i:16698:Second item note,i:16699,i:11287"`
-
-## Maps
-
-[Atlas Classic WoW](https://www.curseforge.com/wow/addons/atlas-classicwow)
-
-[Atlas Burning Crusade](https://www.curseforge.com/wow/addons/atlas-burningcrusade)
-
-[Atlas Wrath of the Lich King](https://www.curseforge.com/wow/addons/atlas-wrathofthelichking)
+## License
+This mod is distributed under Version 2 of the GPL. A copy of the GPL is included in this zip file with links to non-english translations.

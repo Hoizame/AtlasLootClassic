@@ -1586,6 +1586,30 @@ data["MiningBC"] = {
 	}
 }
 
+data["SkinningBC"] = {
+	name = ALIL["Skinning"],
+	ContentType = PROF_GATH_CONTENT,
+	LoadDifficulty = NORMAL_DIFF,
+	TableType = NORMAL_ITTYPE,
+	CorrespondingFields = private.SKINNING_LINK,
+	items = {
+		{
+			name = AL["Master"],
+			[NORMAL_DIFF] = {
+				{ 1, 25708 }, -- Thick Clefthoof Leather
+				{ 2, 25699 }, -- Crystal Infused Leather
+				{ 3, 21887 }, -- Knothide Leather
+				{ 4, 25649 }, -- Knothide Leather Scraps
+				{ 16, 25700 }, -- Fel Scales
+				{ 17, 29547 }, -- Wind Scales
+				{ 18, 29539 }, -- Cobra Scales
+				{ 19, 29548 }, -- Nether Dragonscales
+				{ 21, 25707 }, -- Fel Hide
+			}
+		},
+	}
+}
+
 data["HerbalismBC"] = {
 	name = ALIL["Herbalism"],
 	ContentType = PROF_GATH_CONTENT,
@@ -1598,14 +1622,16 @@ data["HerbalismBC"] = {
 			[NORMAL_DIFF] = {
 				{ 1,  22793 }, -- Mana Thistle
 				{ 2,  22792 }, -- Nightmare Vine
-				{ 3,  22791, 22576 }, -- Netherbloom
+				{ 3,  22791 }, -- Netherbloom
 				{ 4,  22790 }, -- Ancient Lichen
 				{ 5,  22789 }, -- Terocone
 				{ 6,  22787 }, -- Ragveil
 				{ 7,  22786 }, -- Dreaming Glory
-				{ 8,  22785, 22795 }, -- Felweed
+				{ 8,  22785 }, -- Felweed
 				{ 16,  22794 }, -- Fel Lotus
-				{ 17,  22575 }, -- Mote of Life
+				{ 18,  22576 }, -- Mote of Mana
+				{ 19,  22575 }, -- Mote of Life
+				{ 23,  22795 }, -- Fel Blossom
 			}
 		},
 	}
