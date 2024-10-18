@@ -1079,49 +1079,73 @@ data["HalloweenCata"] = {
     gameVersion = AtlasLoot.CATA_VERSION_NUM,
     CorrespondingFields = private.HALLOWEEN,
     items = {{ -- Halloween1
-    name = AL["Hallow's End"] .. " - " .. AL["Misc"],
-    [NORMAL_DIFF] = {{1, 20400}, -- Pumpkin Bag
-    {3, 70722}, -- Little Wickerman
-    {4, 70908}, -- Feline Familiar
-    {5, 71076}, -- Creepy Crate
-    {7, 18633}, -- Styleen's Sour Suckerpop
-    {8, 18632}, -- Moonbrook Riot Taffy
-    {9, 18635}, -- Bellara's Nutterbar
-    {10, 20557}, -- Hallow's End Pumpkin Treat
-    {11, 20389}, -- Candy Corn
-    {12, 20388}, -- Lollipop
-    {13, 20390} -- Candy Bar
-}
-}, { -- Halloween1
-name = AL["Hallow's End"] .. " - " .. AL["Wands"],
-[NORMAL_DIFF] = {{1, 20410}, -- Hallowed Wand - Bat
-{2, 20409}, -- Hallowed Wand - Ghost
-{3, 20399}, -- Hallowed Wand - Leper Gnome
-{4, 20398}, -- Hallowed Wand - Ninja
-{5, 20397}, -- Hallowed Wand - Pirate
-{6, 20413}, -- Hallowed Wand - Random
-{7, 20411}, -- Hallowed Wand - Skeleton
-{8, 20414} -- Hallowed Wand - Wisp
-}
-}, { -- Halloween3
-name = AL["Hallow's End"] .. " - " .. AL["Masks"],
-[NORMAL_DIFF] = {{1, 20561}, -- Flimsy Male Dwarf Mask
-{2, 20391}, -- Flimsy Male Gnome Mask
-{3, 20566}, -- Flimsy Male Human Mask
-{4, 20564}, -- Flimsy Male Nightelf Mask
-{5, 20570}, -- Flimsy Male Orc Mask
-{6, 20572}, -- Flimsy Male Tauren Mask
-{7, 20568}, -- Flimsy Male Troll Mask
-{8, 20573}, -- Flimsy Male Undead Mask
-{16, 20562}, -- Flimsy Female Dwarf Mask
-{17, 20392}, -- Flimsy Female Gnome Mask
-{18, 20565}, -- Flimsy Female Human Mask
-{19, 20563}, -- Flimsy Female Nightelf Mask
-{20, 20569}, -- Flimsy Female Orc Mask
-{21, 20571}, -- Flimsy Female Tauren Mask
-{22, 20567}, -- Flimsy Female Troll Mask
-{23, 20574} -- Flimsy Female Undead Mask
-}
+        name = AL["Hallow's End"] .. " - " .. AL["Misc"],
+        [NORMAL_DIFF] = {{1, 20400}, -- Pumpkin Bag
+    {3, 18633}, -- Styleen's Sour Suckerpop
+    {4, 18632}, -- Moonbrook Riot Taffy
+    {5, 18635}, -- Bellara's Nutterbar
+    {6, 20557}, -- Hallow's End Pumpkin Treat
+    {8, 20389}, -- Candy Corn
+    {9, 20388}, -- Lollipop
+    {10, 20390}, -- Candy Bar
+    {12, 71076}, -- Creepy Crate
+    {13, 70908}, -- Feline Familiar
+    {14, 70722}, -- Little Wickerman
+        }
+    }, { -- Halloween1
+        name = AL["Hallow's End"] .. " - " .. AL["Wands"],
+        [NORMAL_DIFF] = {{1, 20410}, -- Hallowed Wand - Bat
+    {2, 20409}, -- Hallowed Wand - Ghost
+    {3, 20399}, -- Hallowed Wand - Leper Gnome
+    {4, 20398}, -- Hallowed Wand - Ninja
+    {5, 20397}, -- Hallowed Wand - Pirate
+    {6, 20413}, -- Hallowed Wand - Random
+    {7, 20411}, -- Hallowed Wand - Skeleton
+    {8, 20414} -- Hallowed Wand - Wisp
+        }
+    }, { -- Halloween3
+        name = AL["Hallow's End"] .. " - " .. AL["Masks"],
+        [NORMAL_DIFF] = {{1, 20561}, -- Flimsy Male Dwarf Mask
+    {2, 20391}, -- Flimsy Male Gnome Mask
+    {3, 20566}, -- Flimsy Male Human Mask
+    {4, 20564}, -- Flimsy Male Nightelf Mask
+    {5, 20570}, -- Flimsy Male Orc Mask
+    {6, 20572}, -- Flimsy Male Tauren Mask
+    {7, 20568}, -- Flimsy Male Troll Mask
+    {8, 20573}, -- Flimsy Male Undead Mask
+    {10, 69188}, -- Murloc Male Mask
+    {11, 69190}, -- Naga Male Mask
+    {12, 69193}, -- Ogre Male Mask
+    {13, 69195}, -- Vrykul Male Mask
+    {16, 20562}, -- Flimsy Female Dwarf Mask
+    {17, 20392}, -- Flimsy Female Gnome Mask
+    {18, 20565}, -- Flimsy Female Human Mask
+    {19, 20563}, -- Flimsy Female Nightelf Mask
+    {20, 20569}, -- Flimsy Female Orc Mask
+    {21, 20571}, -- Flimsy Female Tauren Mask
+    {22, 20567}, -- Flimsy Female Troll Mask
+    {23, 20574}, -- Flimsy Female Undead Mask
+    {25, 69187}, -- Murloc Female Mask
+    {26, 69189}, -- Naga Female Mask
+    {27, 69192}, -- Ogre Female Mask
+    {28, 69194}, -- Vrykul Female Mask
+        }
+    }, { -- SMHeadlessHorseman
+        name = C_Map_GetAreaInfo(796) .. " - " .. AL["Headless Horseman"],
+        [NORMAL_DIFF] = {{1, 71327}, -- Band of Ghoulish Glee
+    {2, 71330}, -- The Horseman's Seal
+    {3, 71328}, -- Wicked Witch's Band
+    {5, 71326}, -- The Horseman's Horrific Helm
+    {6, 71325}, -- The Horseman's Baleful Blade
+    {8, 33292}, -- Hallowed Helm
+    {10, 34068}, -- Weighted Jack-o'-Lantern
+    {12, 33277}, -- Tome of Thomas Thomson
+    {16, 37012}, -- The Horseman's Reins
+    {18, 33182}, -- Swift Flying Broom        280% flying
+    {19, 33176}, -- Flying Broom              60% flying
+    {21, 33184}, -- Swift Magic Broom         100% ground
+    {22, 37011}, -- Magic Broom               60% ground
+    {24, 33154} -- Sinister Squashling
 }, { -- SMHeadlessHorseman
 name = C_Map_GetAreaInfo(796) .. " - " .. AL["Headless Horseman"],
 [NORMAL_DIFF] = {
