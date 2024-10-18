@@ -181,6 +181,9 @@ local PRICE_INFO_LIST = {
     ["Firestone"] = {
         itemID = 71617
     }, -- Crystallized Firestone
+        ["Tricky Treat"] = {
+        itemID = 33226
+    }, -- Tricky Treat
 
 
 
