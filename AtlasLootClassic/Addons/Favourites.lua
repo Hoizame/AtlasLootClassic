@@ -20,6 +20,7 @@ local GetServerTime = _G.GetServerTime
 local GetItemInfoInstant = _G.GetItemInfoInstant
 local RETRIEVING_ITEM_INFO = _G["RETRIEVING_ITEM_INFO"]
 local ItemExist = _G.C_Item.DoesItemExistByID
+local GetAddOnInfo = C_AddOns.GetAddOnInfo
 
 -- locals
 local ICONS_PATH = ALPrivate.ICONS_PATH
