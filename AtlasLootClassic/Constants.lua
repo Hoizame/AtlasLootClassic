@@ -1,6 +1,23 @@
 local ALName, ALPrivate = ...
 
 -- ##############################
+-- Compat shim: Patch 1.15.9 moved legacy global Item API functions under C_Item.
+-- Set as true globals (not local) here, at the earliest-loading file, so every
+-- other file's own "local GetItemInfo = GetItemInfo" style capture picks up the fix.
+-- ##############################
+GetItemInfo = GetItemInfo or (C_Item and C_Item.GetItemInfo)
+GetItemInfoInstant = GetItemInfoInstant or (C_Item and C_Item.GetItemInfoInstant)
+GetItemStats = GetItemStats or (C_Item and C_Item.GetItemStats)
+
+-- Same shim for the AddOn-management family (only fixes single-arg call sites;
+-- Loader.lua handles GetAddOnEnableState's 2-arg legacy signature itself).
+GetAddOnInfo = GetAddOnInfo or (C_AddOns and C_AddOns.GetAddOnInfo)
+GetNumAddOns = GetNumAddOns or (C_AddOns and C_AddOns.GetNumAddOns)
+IsAddOnLoaded = IsAddOnLoaded or (C_AddOns and C_AddOns.IsAddOnLoaded)
+LoadAddOn = LoadAddOn or (C_AddOns and C_AddOns.LoadAddOn)
+GetAddOnMetadata = GetAddOnMetadata or (C_AddOns and C_AddOns.GetAddOnMetadata)
+
+-- ##############################
 -- Global
 -- ##############################
 

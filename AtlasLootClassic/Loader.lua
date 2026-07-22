@@ -8,7 +8,11 @@ local tbl_insert, tbl_remove = table.insert, table.remove
 
 -- WoW
 local GetAddOnMetadata = C_AddOns and C_AddOns.GetAddOnMetadata or _G.GetAddOnMetadata
-local GetNumAddOns, GetAddOnInfo, IsAddOnLoaded = GetNumAddOns, GetAddOnInfo, IsAddOnLoaded
+local GetNumAddOns = C_AddOns and C_AddOns.GetNumAddOns or _G.GetNumAddOns
+local GetAddOnInfo = C_AddOns and C_AddOns.GetAddOnInfo or _G.GetAddOnInfo
+local IsAddOnLoaded = C_AddOns and C_AddOns.IsAddOnLoaded or _G.IsAddOnLoaded
+local GetAddOnEnableState = C_AddOns and C_AddOns.GetAddOnEnableState or _G.GetAddOnEnableState
+local LoadAddOn = C_AddOns and C_AddOns.LoadAddOn or _G.LoadAddOn
 local GetTime = GetTime
 -- ----------------------------------------------------------------------------
 -- AddOn namespace.
@@ -102,6 +106,16 @@ local function LoaderEvents(frame, event, arg1)
 end
 LoaderFrame:SetScript("OnEvent", LoaderEvents)
 
+-- C_AddOns.GetAddOnEnableState(index) takes a single arg (no character name) as of patch 1.15.9,
+-- but still returns the old 0/1/2 tri-state. The legacy global wants (character, index).
+local function IsAddOnEnabledState(index, playerName)
+	if C_AddOns then
+		return C_AddOns.GetAddOnEnableState(index) ~= 0
+	else
+		return GetAddOnEnableState(playerName, index) ~= 0
+	end
+end
+
 function Loader.Init()
 	-- Check addonlist for AtlasLoot modules
 	local tmp
@@ -111,7 +125,7 @@ function Loader.Init()
 		if tmp[1] and str_find(tmp[1], "AtlasLootClassic_") then
 			ModuleList[tmp[1]] = {
 				index = i,
-				enabled = GetAddOnEnableState(playerName, i) ~= 0, --tmp[4], -- 0 = Disabled on char, 1 = Enabled only on some chars (including this), 2 = enabled on all chars
+				enabled = IsAddOnEnabledState(i, playerName), --tmp[4], -- 0 = Disabled on char, 1 = Enabled only on some chars (including this), 2 = enabled on all chars
 				loaded = IsAddOnLoaded(i),
 				loadReason = tmp[5],
 				standardModule = ATLASLOOT_MODULE_LIST_NAMES[tmp[1]],
@@ -120,7 +134,7 @@ function Loader.Init()
 				lootModule = GetAddOnMetadata(tmp[1], "X-AtlasLootClassic-LootModule"),
 			}
 		elseif tmp[1] and str_find(tmp[1], "Atlas_") then
-			AtlasModuleList[tmp[1]] = GetAddOnEnableState(playerName, i) ~= 0
+			AtlasModuleList[tmp[1]] = IsAddOnEnabledState(i, playerName)
 		end
 	end
 	IsInit = true
