@@ -14,6 +14,74 @@ local wipe = table.wipe
 local format = string.format
 local bit_band = bit.band
 
+-- ## Compat shim: Patch 1.15.9 removed the legacy LE_ITEM_* globals from Classic Era.
+-- Prefer the old global if it still exists, else fall back to the namespaced Enum, else a hardcoded (stable, 20yr-old) numeric ID.
+LE_ITEM_CLASS_CONSUMABLE = LE_ITEM_CLASS_CONSUMABLE or (Enum.ItemClass and Enum.ItemClass.Consumable) or 0
+LE_ITEM_CLASS_CONTAINER = LE_ITEM_CLASS_CONTAINER or (Enum.ItemClass and Enum.ItemClass.Container) or 1
+LE_ITEM_CLASS_WEAPON = LE_ITEM_CLASS_WEAPON or (Enum.ItemClass and Enum.ItemClass.Weapon) or 2
+LE_ITEM_CLASS_GEM = LE_ITEM_CLASS_GEM or (Enum.ItemClass and Enum.ItemClass.Gem) or 3
+LE_ITEM_CLASS_ARMOR = LE_ITEM_CLASS_ARMOR or (Enum.ItemClass and Enum.ItemClass.Armor) or 4
+LE_ITEM_CLASS_REAGENT = LE_ITEM_CLASS_REAGENT or (Enum.ItemClass and Enum.ItemClass.Reagent) or 5
+LE_ITEM_CLASS_PROJECTILE = LE_ITEM_CLASS_PROJECTILE or (Enum.ItemClass and Enum.ItemClass.Projectile) or 6
+LE_ITEM_CLASS_TRADEGOODS = LE_ITEM_CLASS_TRADEGOODS or (Enum.ItemClass and Enum.ItemClass.Tradegoods) or 7
+LE_ITEM_CLASS_ITEM_ENHANCEMENT = LE_ITEM_CLASS_ITEM_ENHANCEMENT or (Enum.ItemClass and Enum.ItemClass.ItemEnhancement) or 8
+LE_ITEM_CLASS_RECIPE = LE_ITEM_CLASS_RECIPE or (Enum.ItemClass and Enum.ItemClass.Recipe) or 9
+LE_ITEM_CLASS_QUIVER = LE_ITEM_CLASS_QUIVER or (Enum.ItemClass and Enum.ItemClass.Quiver) or 11
+LE_ITEM_CLASS_QUESTITEM = LE_ITEM_CLASS_QUESTITEM or (Enum.ItemClass and Enum.ItemClass.Questitem) or 12
+LE_ITEM_CLASS_KEY = LE_ITEM_CLASS_KEY or (Enum.ItemClass and Enum.ItemClass.Key) or 13
+LE_ITEM_CLASS_MISCELLANEOUS = LE_ITEM_CLASS_MISCELLANEOUS or (Enum.ItemClass and Enum.ItemClass.Miscellaneous) or 15
+
+LE_ITEM_WEAPON_AXE1H = LE_ITEM_WEAPON_AXE1H or (Enum.ItemWeaponSubclass and Enum.ItemWeaponSubclass.Axe1H) or 0
+LE_ITEM_WEAPON_AXE2H = LE_ITEM_WEAPON_AXE2H or (Enum.ItemWeaponSubclass and Enum.ItemWeaponSubclass.Axe2H) or 1
+LE_ITEM_WEAPON_BOWS = LE_ITEM_WEAPON_BOWS or (Enum.ItemWeaponSubclass and Enum.ItemWeaponSubclass.Bows) or 2
+LE_ITEM_WEAPON_GUNS = LE_ITEM_WEAPON_GUNS or (Enum.ItemWeaponSubclass and Enum.ItemWeaponSubclass.Guns) or 3
+LE_ITEM_WEAPON_MACE1H = LE_ITEM_WEAPON_MACE1H or (Enum.ItemWeaponSubclass and Enum.ItemWeaponSubclass.Mace1H) or 4
+LE_ITEM_WEAPON_MACE2H = LE_ITEM_WEAPON_MACE2H or (Enum.ItemWeaponSubclass and Enum.ItemWeaponSubclass.Mace2H) or 5
+LE_ITEM_WEAPON_POLEARM = LE_ITEM_WEAPON_POLEARM or (Enum.ItemWeaponSubclass and Enum.ItemWeaponSubclass.Polearm) or 6
+LE_ITEM_WEAPON_SWORD1H = LE_ITEM_WEAPON_SWORD1H or (Enum.ItemWeaponSubclass and Enum.ItemWeaponSubclass.Sword1H) or 7
+LE_ITEM_WEAPON_SWORD2H = LE_ITEM_WEAPON_SWORD2H or (Enum.ItemWeaponSubclass and Enum.ItemWeaponSubclass.Sword2H) or 8
+LE_ITEM_WEAPON_WARGLAIVE = LE_ITEM_WEAPON_WARGLAIVE or (Enum.ItemWeaponSubclass and Enum.ItemWeaponSubclass.Warglaive) or 9
+LE_ITEM_WEAPON_STAFF = LE_ITEM_WEAPON_STAFF or (Enum.ItemWeaponSubclass and Enum.ItemWeaponSubclass.Staff) or 10
+LE_ITEM_WEAPON_UNARMED = LE_ITEM_WEAPON_UNARMED or (Enum.ItemWeaponSubclass and Enum.ItemWeaponSubclass.Unarmed) or 13
+LE_ITEM_WEAPON_GENERIC = LE_ITEM_WEAPON_GENERIC or (Enum.ItemWeaponSubclass and Enum.ItemWeaponSubclass.Generic) or 14
+LE_ITEM_WEAPON_DAGGER = LE_ITEM_WEAPON_DAGGER or (Enum.ItemWeaponSubclass and Enum.ItemWeaponSubclass.Dagger) or 15
+LE_ITEM_WEAPON_THROWN = LE_ITEM_WEAPON_THROWN or (Enum.ItemWeaponSubclass and Enum.ItemWeaponSubclass.Thrown) or 16
+LE_ITEM_WEAPON_CROSSBOW = LE_ITEM_WEAPON_CROSSBOW or (Enum.ItemWeaponSubclass and Enum.ItemWeaponSubclass.Crossbow) or 18
+LE_ITEM_WEAPON_WAND = LE_ITEM_WEAPON_WAND or (Enum.ItemWeaponSubclass and Enum.ItemWeaponSubclass.Wand) or 19
+LE_ITEM_WEAPON_FISHINGPOLE = LE_ITEM_WEAPON_FISHINGPOLE or (Enum.ItemWeaponSubclass and Enum.ItemWeaponSubclass.FishingPole) or 20
+
+LE_ITEM_ARMOR_GENERIC = LE_ITEM_ARMOR_GENERIC or (Enum.ItemArmorSubclass and Enum.ItemArmorSubclass.Generic) or 0
+LE_ITEM_ARMOR_CLOTH = LE_ITEM_ARMOR_CLOTH or (Enum.ItemArmorSubclass and Enum.ItemArmorSubclass.Cloth) or 1
+LE_ITEM_ARMOR_LEATHER = LE_ITEM_ARMOR_LEATHER or (Enum.ItemArmorSubclass and Enum.ItemArmorSubclass.Leather) or 2
+LE_ITEM_ARMOR_MAIL = LE_ITEM_ARMOR_MAIL or (Enum.ItemArmorSubclass and Enum.ItemArmorSubclass.Mail) or 3
+LE_ITEM_ARMOR_PLATE = LE_ITEM_ARMOR_PLATE or (Enum.ItemArmorSubclass and Enum.ItemArmorSubclass.Plate) or 4
+LE_ITEM_ARMOR_COSMETIC = LE_ITEM_ARMOR_COSMETIC or (Enum.ItemArmorSubclass and Enum.ItemArmorSubclass.Cosmetic) or 5
+LE_ITEM_ARMOR_SHIELD = LE_ITEM_ARMOR_SHIELD or (Enum.ItemArmorSubclass and Enum.ItemArmorSubclass.Shield) or 6
+LE_ITEM_ARMOR_LIBRAM = LE_ITEM_ARMOR_LIBRAM or (Enum.ItemArmorSubclass and Enum.ItemArmorSubclass.Libram) or 7
+LE_ITEM_ARMOR_IDOL = LE_ITEM_ARMOR_IDOL or (Enum.ItemArmorSubclass and Enum.ItemArmorSubclass.Idol) or 8
+LE_ITEM_ARMOR_TOTEM = LE_ITEM_ARMOR_TOTEM or (Enum.ItemArmorSubclass and Enum.ItemArmorSubclass.Totem) or 9
+LE_ITEM_ARMOR_RELIC = LE_ITEM_ARMOR_RELIC or (Enum.ItemArmorSubclass and Enum.ItemArmorSubclass.Relic) or 11
+
+LE_ITEM_RECIPE_BOOK = LE_ITEM_RECIPE_BOOK or (Enum.ItemRecipeSubclass and Enum.ItemRecipeSubclass.Book) or 0
+LE_ITEM_RECIPE_LEATHERWORKING = LE_ITEM_RECIPE_LEATHERWORKING or (Enum.ItemRecipeSubclass and Enum.ItemRecipeSubclass.Leatherworking) or 1
+LE_ITEM_RECIPE_TAILORING = LE_ITEM_RECIPE_TAILORING or (Enum.ItemRecipeSubclass and Enum.ItemRecipeSubclass.Tailoring) or 2
+LE_ITEM_RECIPE_ENGINEERING = LE_ITEM_RECIPE_ENGINEERING or (Enum.ItemRecipeSubclass and Enum.ItemRecipeSubclass.Engineering) or 3
+LE_ITEM_RECIPE_BLACKSMITHING = LE_ITEM_RECIPE_BLACKSMITHING or (Enum.ItemRecipeSubclass and Enum.ItemRecipeSubclass.Blacksmithing) or 4
+LE_ITEM_RECIPE_COOKING = LE_ITEM_RECIPE_COOKING or (Enum.ItemRecipeSubclass and Enum.ItemRecipeSubclass.Cooking) or 5
+LE_ITEM_RECIPE_ALCHEMY = LE_ITEM_RECIPE_ALCHEMY or (Enum.ItemRecipeSubclass and Enum.ItemRecipeSubclass.Alchemy) or 6
+LE_ITEM_RECIPE_FIRST_AID = LE_ITEM_RECIPE_FIRST_AID or (Enum.ItemRecipeSubclass and Enum.ItemRecipeSubclass.FirstAid) or 7
+LE_ITEM_RECIPE_ENCHANTING = LE_ITEM_RECIPE_ENCHANTING or (Enum.ItemRecipeSubclass and Enum.ItemRecipeSubclass.Enchanting) or 8
+LE_ITEM_RECIPE_FISHING = LE_ITEM_RECIPE_FISHING or (Enum.ItemRecipeSubclass and Enum.ItemRecipeSubclass.Fishing) or 9
+LE_ITEM_RECIPE_JEWELCRAFTING = LE_ITEM_RECIPE_JEWELCRAFTING or (Enum.ItemRecipeSubclass and Enum.ItemRecipeSubclass.Jewelcrafting) or 10
+LE_ITEM_RECIPE_INSCRIPTION = LE_ITEM_RECIPE_INSCRIPTION or (Enum.ItemRecipeSubclass and Enum.ItemRecipeSubclass.Inscription) or 11
+
+LE_ITEM_MISCELLANEOUS_JUNK = LE_ITEM_MISCELLANEOUS_JUNK or (Enum.ItemMiscellaneousSubclass and Enum.ItemMiscellaneousSubclass.Junk) or 0
+LE_ITEM_MISCELLANEOUS_REAGENT = LE_ITEM_MISCELLANEOUS_REAGENT or (Enum.ItemMiscellaneousSubclass and Enum.ItemMiscellaneousSubclass.Reagent) or 1
+LE_ITEM_MISCELLANEOUS_COMPANION_PET = LE_ITEM_MISCELLANEOUS_COMPANION_PET or (Enum.ItemMiscellaneousSubclass and Enum.ItemMiscellaneousSubclass.CompanionPet) or 2
+LE_ITEM_MISCELLANEOUS_HOLIDAY = LE_ITEM_MISCELLANEOUS_HOLIDAY or (Enum.ItemMiscellaneousSubclass and Enum.ItemMiscellaneousSubclass.Holiday) or 3
+LE_ITEM_MISCELLANEOUS_OTHER = LE_ITEM_MISCELLANEOUS_OTHER or (Enum.ItemMiscellaneousSubclass and Enum.ItemMiscellaneousSubclass.Other) or 4
+LE_ITEM_MISCELLANEOUS_MOUNT = LE_ITEM_MISCELLANEOUS_MOUNT or (Enum.ItemMiscellaneousSubclass and Enum.ItemMiscellaneousSubclass.Mount) or 5
+
 -- ## data
 local CLASS_BITS = ALPrivate.CLASS_BITS
 local CLASS_SORT = ALPrivate.CLASS_SORT

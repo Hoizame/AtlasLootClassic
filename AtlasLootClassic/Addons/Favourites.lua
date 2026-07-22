@@ -38,7 +38,7 @@ local TooltipCache, TooltipTextCache = {}
 local ListNameCache
 local ListNoteCache
 local ListBiSCache
-local ItemCountCache
+local ItemCountCache = {}
 local PluginOutfitterLoading
 setmetatable(TooltipCache, KEY_WEAK_MT)
 
