@@ -110,7 +110,10 @@ function ItemFrame.UpdateFilterItem(buttonID, reset)
 		local text = button.RawName or button.name:GetText()
 		if text and not sfind(slower(text), ItemFrame.SearchString, 1, true) then
 			button:SetAlpha(FILTER_ALPHA)
-		elseif reset then
+		elseif not AtlasLoot.db.GUI.classFilter then
+			-- always restore matches, otherwise buttons dimmed by a previous
+			-- search string stay dimmed when the search text changes
+			-- (with the class filter active its branch above set the alpha)
 			button:SetAlpha(1.0)
 		end
 		reset = false
@@ -157,6 +160,9 @@ function ItemFrame:Refresh(skipProtect)
 	LastRefresh = GetTime()
 
 	ItemFrame:ClearItems()
+	-- incomplete selection (e.g. restored from saved variables of another
+	-- version, or nothing picked yet): nothing to refresh
+	if not (AtlasLoot.db.GUI.selected[1] and AtlasLoot.db.GUI.selected[2] and AtlasLoot.db.GUI.selected[3]) then return end
 	AtlasLoot.db.GUI.selected[5] = AtlasLoot.db.GUI.selected[5] or 0
 	ItemFrame.nextPage = nil
 	local page = AtlasLoot.db.GUI.selected[5] * 100 -- Page number for first items on a page are <1, 101, 201, 301, 401, ...>

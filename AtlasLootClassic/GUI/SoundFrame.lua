@@ -117,7 +117,7 @@ local function CreateSoundButtons()
 		frame.name:SetPoint("RIGHT", frame.play, "LEFT")
 		frame.name:SetHeight(28)
 		frame.name:SetJustifyH("LEFT")
-		frame.name:SetJustifyV("CENTER")
+		frame.name:SetJustifyV("MIDDLE")
 		frame.name:SetText("Sound.name")
 
 		if i==1 then

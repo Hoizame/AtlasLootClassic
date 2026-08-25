@@ -45,6 +45,15 @@ local function OnFavouritesAddonLoad(addon, enabled)
 	Favourites = enabled and addon or nil
 end
 
+-- grey out the button of the view (items / model / sounds) that is active
+local function UpdateViewButtonStates()
+	local contentFrame = GUI.frame.contentFrame
+	local shown = contentFrame.shownFrame
+	contentFrame.itemsButton:SetEnabled(not (shown and GUI.ItemFrame and shown == GUI.ItemFrame.frame))
+	contentFrame.modelButton:SetEnabled(not (shown and GUI.ModelFrame and shown == GUI.ModelFrame.frame))
+	contentFrame.soundsButton:SetEnabled(not (shown and GUI.SoundFrame and shown == GUI.SoundFrame.frame))
+end
+
 local function UpdateFrames(noPageUpdate, forceContentUpdate)
 	local moduleData = AtlasLoot.ItemDB:Get(db.selected[1])
 	if not moduleData then return end
@@ -148,6 +157,8 @@ local function UpdateFrames(noPageUpdate, forceContentUpdate)
 	else
 		contentFrame.searchBox:Hide()
 	end
+
+	UpdateViewButtonStates()
 
 	--[[ AtlasMapID
 	if AtlasLoot.AtlasIntegration and (AtlasLoot.AtlasIntegration.IsEnabled() and moduleData[dataID].AtlasMapID and AtlasLoot.AtlasIntegration.GetAtlasZoneData(moduleData[dataID].AtlasMapID)) then
@@ -1384,7 +1395,8 @@ function GUI:Create()
 	frame.contentFrame.contentPhaseButton:RegisterForClicks("LeftButtonUp", "RightButtonUp");
 	frame.contentFrame.contentPhaseButton:SetWidth(25)
 	frame.contentFrame.contentPhaseButton:SetHeight(25)
-	frame.contentFrame.contentPhaseButton:SetPoint("RIGHT", frame.contentFrame.modelButton, "LEFT", -5, 0)
+	-- anchored next to the class filter button below (created later),
+	-- previously it sat at the same point as the Sounds button and overlapped it
 	frame.contentFrame.contentPhaseButton:SetScript("OnClick", ContentPhaseButton_OnClick)
 	--frame.contentFrame.contentPhaseButton:SetScript("OnShow", ContentPhaseButton_OnShow)
 	--frame.contentFrame.contentPhaseButton:SetScript("OnEnter", ContentPhaseButton_OnEnter)
@@ -1427,7 +1439,7 @@ function GUI:Create()
 	-- Center
 	-- #####
 	frame.contentFrame.searchBox = CreateFrame("EditBox", frameName.."-SearchBox", frame.contentFrame, "SearchBoxTemplate")
-	frame.contentFrame.searchBox:SetWidth(200)
+	frame.contentFrame.searchBox:SetWidth(150)
 	frame.contentFrame.searchBox:SetHeight(35)
 	frame.contentFrame.searchBox:SetPoint("CENTER", frame.contentFrame.downBG, "CENTER", 0, 0)
 	frame.contentFrame.searchBox:SetAutoFocus(false)
@@ -1453,9 +1465,12 @@ function GUI:Create()
 	frame.contentFrame.prevPageButton.typ = "prev"
 
 	frame.contentFrame.itemsButton = GUI.CreateButton()
-	frame.contentFrame.itemsButton:SetPoint("LEFT", frame.contentFrame.prevPageButton, "RIGHT", 5, 0)
+	frame.contentFrame.itemsButton:SetPoint("RIGHT", frame.contentFrame.modelButton, "LEFT", -5, 0)
 	frame.contentFrame.itemsButton:SetText(AL["Items"])
 	frame.contentFrame.itemsButton:SetScript("OnClick", ItemButtonOnClick)
+	-- the sounds button moves left of the items button (it was anchored where
+	-- the items button now sits)
+	frame.contentFrame.soundsButton:SetPoint("RIGHT", frame.contentFrame.itemsButton, "LEFT", -5, 0)
 
 	-- Class Filter
 	frame.contentFrame.clasFilterButton = CreateFrame("Button", frameName.."-clasFilterButton")
@@ -1463,13 +1478,17 @@ function GUI:Create()
 	frame.contentFrame.clasFilterButton:RegisterForClicks("LeftButtonUp", "RightButtonUp");
 	frame.contentFrame.clasFilterButton:SetWidth(25)
 	frame.contentFrame.clasFilterButton:SetHeight(25)
-	frame.contentFrame.clasFilterButton:SetPoint("LEFT", frame.contentFrame.itemsButton, "RIGHT", 5, 0)
+	-- anchored to the prev page button (the items button moved to the right
+	-- side of the bar, next to the model button)
+	frame.contentFrame.clasFilterButton:SetPoint("LEFT", frame.contentFrame.prevPageButton, "RIGHT", 5, 0)
 	frame.contentFrame.clasFilterButton:SetScript("OnClick", ClassFilterButton_OnClick)
 	frame.contentFrame.clasFilterButton:SetScript("OnShow", ClassFilterButton_OnShow)
 	frame.contentFrame.clasFilterButton:SetScript("OnEnter", ClassFilterButton_OnEnter)
 	frame.contentFrame.clasFilterButton:SetScript("OnLeave", ClassFilterButton_OnLeave)
 	frame.contentFrame.clasFilterButton.mainButton = true
 	--frame.contentFrame.clasFilterButton:Hide()
+
+	frame.contentFrame.contentPhaseButton:SetPoint("LEFT", frame.contentFrame.clasFilterButton, "RIGHT", 5, 0)
 
 	frame.contentFrame.clasFilterButton.texture = frame.contentFrame.clasFilterButton:CreateTexture(frameName.."-clasFilterButton-texture","ARTWORK")
 	frame.contentFrame.clasFilterButton.texture:SetAllPoints(frame.contentFrame.clasFilterButton)

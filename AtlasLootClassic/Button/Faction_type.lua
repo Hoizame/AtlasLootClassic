@@ -339,7 +339,7 @@ function Faction.ShowToolTipFrame(button)
 		frame.standing.text:SetPoint("TOPLEFT", 3, -3)
 		frame.standing.text:SetPoint("BOTTOMRIGHT", -4, 3)
 		frame.standing.text:SetJustifyH("CENTER")
-		frame.standing.text:SetJustifyV("CENTER")
+		frame.standing.text:SetJustifyV("MIDDLE")
 		frame.standing.text:SetTextColor(1, 1, 1, 1)
 
 		frame.desc = frame:CreateFontString(name.."-desc", "ARTWORK", "GameFontNormalSmall")

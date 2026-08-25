@@ -1,4 +1,4 @@
-﻿## Interface: 11404
+﻿## Interface: 11509
 ## Author: Lag
 ## Version: @project-version@
 ## SavedVariables: AtlasLootClassicDB
@@ -40,6 +40,7 @@
 
 embeds.xml
 
+Compat.lua
 Init.lua
 Constants.lua
 db.lua

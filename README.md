@@ -4,7 +4,22 @@
 
 AtlasLootClassic is an UI mod allowing for loot tables of bosses to be browsed whenever needed within the game.
 
-## Download
+> **This fork (branch `fix/2026-classic-era`) fixes the addon for WoW Classic Era / Hardcore patch 1.15.9 (July 2026)**, where the original stopped loading with `ClassFilter.lua:62: table index is nil`. The fixes have been submitted upstream as [PR #485](https://github.com/Hoizame/AtlasLootClassic/pull/485). All credit for the original addon goes to its authors.
+
+## Download (fixed version)
+
+* **[Latest release zip](https://github.com/scotjam/AtlasLootClassic/releases/latest)** (manual install, see below)
+* [CurseForge: AtlasLoot Classic Era Aug 2026](https://www.curseforge.com/wow/addons/atlasloot-classic-era-aug-2026) (pending moderation)
+
+## Manual install
+
+1. Close World of Warcraft.
+2. Download the zip from the [latest release](https://github.com/scotjam/AtlasLootClassic/releases/latest).
+3. Delete any existing `AtlasLootClassic*` folders from `World of Warcraft\_classic_era_\Interface\AddOns\` (other AtlasLoot versions use the same folder names and will conflict). Your favourites and settings are stored in `WTF\` and are **not** affected.
+4. Extract the zip and copy all **8** `AtlasLootClassic*` folders into `World of Warcraft\_classic_era_\Interface\AddOns\`.
+5. Start the game - you should see 8 AtlasLootClassic entries in the AddOns list. Open the loot browser with `/al` or the minimap button.
+
+## Original download links (broken on Era 1.15.9)
 
 [Curseforge](https://www.curseforge.com/wow/addons/atlaslootclassic)
 
