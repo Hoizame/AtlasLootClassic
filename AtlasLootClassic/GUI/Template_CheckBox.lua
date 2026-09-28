@@ -1,3 +1,5 @@
+-- Modified by HoliestWoW on 2026-09-17: Replaced deprecated OptionsCheckButtonTemplate with UICheckButtonTemplate and manually generated text label.
+
 local AtlasLoot = _G.AtlasLoot
 local GUI = AtlasLoot.GUI
 
@@ -43,12 +45,16 @@ function GUI.CreateCheckBox()
 	self.onClickFunc = nil	-- Run on OnClick
 	self.checked = false
 
-	self.frame = CreateFrame("CheckButton", frameName, nil, "OptionsCheckButtonTemplate")
+	self.frame = CreateFrame("CheckButton", frameName, nil, "UICheckButtonTemplate")
 	self.frame:SetWidth(25)
 	self.frame:SetHeight(25)
 	self.frame:SetScript("OnClick", OnClick)
 	self.frame.obj = self
 	self.frame.text = _G[frameName.."Text"]
+	if not self.frame.text then
+		self.frame.text = self.frame:CreateFontString(frameName.."Text", "ARTWORK", "GameFontNormal")
+		self.frame.text:SetPoint("LEFT", self.frame, "RIGHT", 4, 0)
+	end
 
 	return self
 end

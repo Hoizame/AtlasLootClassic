@@ -61,8 +61,18 @@ function AtlasLoot:DevPrint(msg)
 	end
 end
 
+local function NormalizeForeverProfile()
+	if not AtlasLoot.IS_FOREVER or not AtlasLoot.db or not AtlasLoot.db.GUI then return end
+	AtlasLoot.db.GUI.selectedGameVersion = AtlasLoot.CLASSIC_VERSION_NUM
+	local selected = AtlasLoot.db.GUI.selected
+	if selected and selected[1] == "AtlasLootClassic_DungeonsAndRaids" and selected[2] == "Deadmines" then
+		selected[2] = "TheDeadmines"
+	end
+end
+
 function AtlasLoot:OnProfileChanged()
 	AtlasLoot.db = AtlasLoot.dbRaw.profile
+	NormalizeForeverProfile()
 
 	AtlasLoot.ClickHandler:OnProfileChanged()
 	AtlasLoot.Addons:OnProfileChanged()
@@ -75,6 +85,7 @@ function AtlasLoot:OnInitialize()
 	self.dbRaw = LibStub("AceDB-3.0"):New("AtlasLootClassicDB", AtlasLoot.AtlasLootDBDefaults)
 	self.db = self.dbRaw.profile
 	self.dbGlobal = self.dbRaw.global
+	NormalizeForeverProfile()
 
 	self.dbRaw.RegisterCallback(self, "OnProfileChanged", "OnProfileChanged")
 	self.dbRaw.RegisterCallback(self, "OnProfileCopied", "OnProfileChanged")

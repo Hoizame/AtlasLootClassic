@@ -1,3 +1,5 @@
+-- Modified by HoliestWoW on 2026-09-17: Added guard clauses and debounced item cache listener to fix recursive script timeouts.
+
 local AtlasLoot = _G.AtlasLoot
 local GUI = AtlasLoot.GUI
 local ItemDB = AtlasLoot.ItemDB
@@ -250,3 +252,44 @@ function ItemFrame.Clear()
 	ItemFrame.frame:Hide()
 	GUI.frame.contentFrame.shownFrame = nil
 end
+
+-- ========================================================================
+-- ITEM DATA CACHE EVENT LISTENER & AUTO-REFRESH
+-- ========================================================================
+local ItemCacheListener = CreateFrame("Frame")
+ItemCacheListener:RegisterEvent("GET_ITEM_INFO_RECEIVED")
+-- Safely register the newer item API event used in 1.15.2+ if it exists
+pcall(function() ItemCacheListener:RegisterEvent("ITEM_DATA_LOAD_RESULT") end)
+
+local pendingRefresh = false
+local debounceTimer = 0
+
+ItemCacheListener:SetScript("OnEvent", function(self, event, ...)
+    -- Use the local ItemFrame reference directly and drop the 'success' payload check
+    if ItemFrame and ItemFrame.frame and ItemFrame.frame:IsVisible() then
+        pendingRefresh = true
+        debounceTimer = 0 -- Restart the timer on every new item to catch the whole batch
+    end
+end)
+
+ItemCacheListener:SetScript("OnUpdate", function(self, elapsed)
+    if pendingRefresh then
+        debounceTimer = debounceTimer + elapsed
+        -- Wait for 0.4 seconds of silence from the server
+        if debounceTimer > 0.4 then
+            
+            -- If the mouse is anywhere over the AtlasLoot UI, defer the refresh
+            -- so we don't slam the materials window shut in the player's face.
+            if AtlasLoot.GUI.frame and AtlasLoot.GUI.frame:IsMouseOver() then
+                debounceTimer = 0 
+                return
+            end
+
+            pendingRefresh = false
+            debounceTimer = 0
+            if type(ItemFrame.Refresh) == "function" then
+                ItemFrame:Refresh(true)
+            end
+        end
+    end
+end)

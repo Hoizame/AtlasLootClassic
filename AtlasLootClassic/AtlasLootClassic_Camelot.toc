@@ -1,0 +1,69 @@
+## Interface: 16001
+## Author: Lag (Forever compatibility by Shadugast, updates by HoliestWoW)
+## Version: v3.2.0-fix6
+## SavedVariables: AtlasLootClassicDB
+## OptionalDeps: Ace3, LibSharedMedia-3.0, AceGUI-3.0-SharedMediaWidgets, LibDBIcon-1.0, LibDataBroker-1.1
+## DefaultState: Enabled
+## LoadOnDemand: 0
+## Title: AtlasLootClassic - Forever Fix |cFF22B14C[Core]|r
+## Notes: Shows the possible loot from bosses
+## X-Category: Map
+## X-License: GPL v2
+
+Forever.lua
+ForeverCompat.lua
+
+embeds.xml
+
+Init.lua
+Constants.lua
+db.lua
+Locales\Locales.xml
+AtlasLoot.xml
+AtlasLoot.lua
+Loader.lua
+Core\SlashCommands.lua
+Core\ClickHandler.lua
+Core\Tooltip.lua
+Core\ItemInfo.lua
+Core\TooltipScan.lua
+Core\ItemQuery.lua
+Core\ItemString.lua
+Core\TargetScan.lua
+MiniMapButton.lua
+Data\Token.lua
+Data\Profession.lua
+Data\Recipe.lua
+Data\Companion.lua
+Data\ContentPhase.lua
+Data\Droprate.lua
+Data\AutoSelect.lua
+Data\Requirements.lua
+Data\ClassFilter.lua
+Data\ItemSet.lua
+Data\VendorPrice.lua
+ItemDB\ItemDB.lua
+ItemDB\SoundData.lua
+Button\Button.lua
+Button\Item_type.lua
+Button\Link_type.lua
+Button\Profession_type.lua
+Button\Dummy_type.lua
+Button\Faction_type.lua
+Button\Set_type.lua
+Button\Extra_Price_type.lua
+GUI\GUI.xml
+GUI\GUI.lua
+GUI\Template_CheckBox.lua
+GUI\Template_Button.lua
+GUI\Template_Select.lua
+GUI\Template_DropDown.lua
+GUI\Template_TextWithBg.lua
+GUI\Template_Model.lua
+GUI\ItemFrame.lua
+GUI\ModelFrame.lua
+GUI\SoundFrame.lua
+Addons\Addons.lua
+Addons\Sources.lua
+Addons\Favourites.lua
+Addons\Favourites_GUI.lua

@@ -37,6 +37,7 @@ local TargetTypes = {
 local function OnEvent(self, event)
     local unitGUID = UnitGUID(event == "UPDATE_MOUSEOVER_UNIT" and MOUSEOVER_UNIT or TARGET_UNIT)
     if unitGUID then
+        if _G.AtlasLootCanAccessValue and not _G.AtlasLootCanAccessValue(unitGUID) then return end
         local type, a, b, c, d, e, f = str_split("-", unitGUID)
         if type and TargetTypes[type] then
             TargetTypes[type](unitGUID, a, b, c, d, e, f)

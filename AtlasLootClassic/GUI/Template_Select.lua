@@ -1,3 +1,5 @@
+-- Modified by HoliestWoW on 2026-09-17: Added guard clauses and debounced item cache listener to fix recursive script timeouts.
+
 --[[ usage
 	data = {
 		[1] = {
@@ -62,11 +64,15 @@ end
 -- @param	startSelect		true/false if this is the first call
 local function SetSelected(self, id, dataNum, startSelect)
 	if not id and not dataNum then
-		if self.selected then
+		if type(self.selected) == "table" then
 			self.selected = nil
 			UpdateScroll(self)
 		end
 		return
+	end
+	if not startSelect and type(self.selected) == "table" then
+		if id and self.selected[2] == id then return end
+		if dataNum and self.selected[1] == dataNum then return end
 	end
 	if not id then
 		if self.data[dataNum] then
@@ -336,7 +342,8 @@ do
 					end
 				end
 				button.label:SetText(info.name or UNKNOWN)
-				button.label:GetWidth() -- this "fix" a bug with text is not shown
+				-- Fix: Removed button.label:GetWidth() to prevent severe 
+				-- synchronous layout thrashing/timeout in modern clients.
 			else
 				button:Hide()
 			end

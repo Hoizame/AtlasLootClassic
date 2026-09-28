@@ -2286,51 +2286,47 @@ if AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM) then
     }
 end
 
-RECIPE[21302] = { 13, 300, 25347 } -- Handbook of Deadly Poison V
-local RECIPE_TO_SPELL = {}
-for k,v in pairs(RECIPE) do
-	if v[3] and v[3] ~= 0 then
-		RECIPE_TO_SPELL[v[3]] = k
-	end
-end
-
--- maybe weak table?
-local RecipeCache = {}
-
 function Recipe.IsRecipe(itemID)
-	return (RECIPE[itemID or 0] and RECIPE[itemID or 0][3] ~= 0) and true or false
+	return RECIPE[itemID or 0] and true or false
 end
 
 function Recipe.GetRecipeData(itemID)
-	return RECIPE[itemID or 0] and RECIPE[itemID or 0] or nil
+	return RECIPE[itemID or 0] or nil
 end
 
-function Recipe.GetRecipeDataForExtraFrame(itemID)
-	local recipe = Recipe.GetRecipeData(itemID)
-	if not itemID then return end
-	return Profession.GetDataForExtraFrame(recipe[3])
-end
-
-function Recipe.GetCreatedItemID(itemID)
-	return RECIPE[itemID or 0] and RECIPE[itemID or 0][3] or nil
+local RecipeToItemID
+function Recipe.GetRecipeForSpell(spellID)
+	if not RecipeToItemID then
+		RecipeToItemID = {}
+		for itemID, recipeData in pairs(RECIPE) do
+			if recipeData[3] then
+				RecipeToItemID[recipeData[3]] = itemID
+			end
+		end
+	end
+	return RecipeToItemID[spellID]
 end
 
 function Recipe.GetRecipeDescription(itemID)
-	return ( itemID and RECIPE[itemID] ) and RECIPE_PROF_TEXT[RECIPE[itemID][1] or RECIPE_PROF_DEFAULT] or nil
+	local recipe = RECIPE[itemID or 0]
+	if not recipe then return end
+	return RECIPE_PROF_TEXT[recipe[1] or RECIPE_PROF_DEFAULT]
 end
 
 function Recipe.GetRecipeDescriptionWithRank(itemID)
-	return ( itemID and RECIPE[itemID] ) and ( Profession.GetSpellDescriptionWithRank(RECIPE[itemID][3]) or Recipe.GetRecipeDescription(itemID) ) or nil
+	local recipe = RECIPE[itemID or 0]
+	if not recipe then return end
+	local desc = Recipe.GetRecipeDescription(itemID)
+	if not desc then return end
+	if recipe[2] and recipe[2] > 0 then
+		return desc.."  ".."|cffff8040"..recipe[2].."|r"
+	else
+		return desc
+	end
 end
 
-function Recipe.GetRecipeProfession(itemID)
-	return ( itemID and RECIPE[itemID] ) and RECIPE[itemID][1] or nil
-end
-
-function Recipe.GetRecipeForSpell(spellID)
-	return RECIPE_TO_SPELL[spellID or 0]
-end
-
-function Recipe.GetRecipeSkillRankForSpell(spellID)
-	return RECIPE_TO_SPELL[spellID or 0] and RECIPE[ RECIPE_TO_SPELL[spellID or 0][2] ] or nil
+function Recipe.GetRecipeDataForExtraFrame(itemID)
+	local recipe = RECIPE[itemID or 0]
+	if not recipe then return end
+	return Profession.GetDataForExtraFrame(recipe[3])
 end

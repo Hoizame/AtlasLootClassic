@@ -18,6 +18,8 @@ local data = AtlasLoot.ItemDB:Add(addonname, 1, AtlasLoot.CLASSIC_VERSION_NUM)
 local AL = AtlasLoot.Locales
 local ALIL = AtlasLoot.IngameLocales
 
+local buildTOC = select(4, GetBuildInfo()) or 0
+local isForever = AtlasLoot.IS_FOREVER or _G.ATLASLOOT_FOREVER or (buildTOC >= 16000 and buildTOC < 20000)
 local GetForVersion = AtlasLoot.ReturnForGameVersion
 
 local NORMAL_DIFF = data:AddDifficulty("NORMAL", nil, nil, nil, true)
@@ -79,19 +81,19 @@ local KEYS = {	-- Keys
 		{ 14, 18268, },
 		{ 15, 13873, },
 		{ 16, "INV_Box_01", nil, AL["Misc"], nil },
-		{ 17, 19931 },
-		{ 18, 18250 },
-		{ 19, 9240 },
-		{ 20, 17333 },
-		{ 21, 22754 },
-		{ 22, 13523 },
-		{ 23, 18746 },
-		{ 24, 18663 },
-		{ 25, 19974 },
-		{ 26, 7733 },
-		{ 27, 10818 },
-		{ 29, 22057 },
-		{ 30, 21986 },
+		{ 17, 19931 }, -- Gurubashi Mojo Madness
+		{ 18, 18250 }, -- Gordok Shackle Key
+		{ 19, 9240 }, -- Mallet of Zul'Farrak
+		{ 20, 17333 }, -- Aqual Quintessence
+		{ 21, 22754 }, -- Eternal Quintessence
+		{ 22, 13523 }, -- Blood of Innocents
+		{ 23, 18746 }, -- Divination Scryer
+		{ 24, 18663 }, -- J'eevee's Jar
+		{ 25, 19974 }, -- Mudskunk Lure
+		{ 26, 7733 }, -- Staff of Prehistoria
+		{ 27, 10818 }, -- Yeh'kinya's Scroll
+		{ 29, 22057 }, -- Brazier of Invocation
+		{ 30, 21986 }, -- Banner of Provocation
 	},
 }
 
@@ -300,8 +302,161 @@ data["Ragefire"] = {
 				{ 3,  14151 }, -- Chanting Blade
 			},
 		},
+		isForever and { -- RFCOggleflint
+			name = AL["Oggleflint"],
+			npcID = 11517,
+			Level = 16,
+			DisplayIDs = {{11611}},
+			AtlasMapBossID = 4,
+			[NORMAL_DIFF] = {
+				{ 1,  272996 }, -- Trogg Scepter
+				{ 2,  272998 }, -- Bone Knuckles
+				{ 3,  272999 }, -- Barbaric Crossbow
+			},
+		} or nil,
+		isForever and { -- RFCBazzalan
+			name = AL["Bazzalan"],
+			npcID = 11519,
+			Level = 16,
+			DisplayIDs = {{2007}},
+			AtlasMapBossID = 5,
+			[NORMAL_DIFF] = {
+				{ 1,  273003 }, -- Searing Dagger
+				{ 2,  273007 }, -- Chasm Walkers
+				{ 3, 273005 }, -- Satyrskin Cloak
+			},
+		} or nil,
 	},
 }
+
+if isForever then
+	data["HallofThanes"] = {
+		MapID = 16919, -- Replace with actual Map ID
+		InstanceID = 3065, -- Auto-synced from DungeonEncounter.csv
+		AtlasModule = ATLAS_MODULE_NAME,
+		AtlasMapID = "HallofThanes",
+		AtlasMapFile = "HallofThanes",
+		ContentType = DUNGEON_CONTENT,
+		LoadDifficulty = NORMAL_DIFF,
+		LevelRange = {10, 13, 18},
+		items = {
+			{ -- HoTFaldrim
+				name = AL["Faldrim Anvilmar"],
+				AtlasMapBossID = 1,
+				[NORMAL_DIFF] = {
+					{ 1,  271096 }, -- Aetherwisp Bracers
+					{ 2,  270227 }, -- Ephemeral Choker
+					{ 3,  271097 }, -- Spiritwraith Drape
+				},
+			},
+			{ -- HoTMagmatus
+				name = AL["Magmatus"],
+				AtlasMapBossID = 2,
+				[NORMAL_DIFF] = {
+					{ 1,  271095 }, -- Fang of Magmatus
+					{ 2,  270230 }, -- kindlegem girdle
+					{ 3,  270231 }, -- flamefist grips
+				},
+			},
+			{ -- HoTPlunder
+				name = AL["Plunder"],
+				AtlasMapBossID = 3,
+				[NORMAL_DIFF] = {
+					{ 1,  270229 }, -- Treads of the Protector Golem
+					{ 2,  270228 }, -- Golemheart Stave
+					{ 3,  271098 }, -- Golemguard Chest
+				},
+			},
+			{ -- HoTDurgen
+				name = AL["Durgen Dirgehammer"],
+				AtlasMapBossID = 4,
+				[NORMAL_DIFF] = {
+					{ 1,  270256 }, -- Durgen's Crescent Axe
+					{ 2,  270261 }, -- Robes of the Disgraced Thane
+					{ 3,  270260 }, -- Direhammer Leggings
+				},
+			},
+		},
+	}
+
+	data["RuinsofLordaeron"] = {
+		MapID = 16611,
+		InstanceID = 2999, -- Auto-synced from DungeonEncounter.csv
+		AtlasModule = ATLAS_MODULE_NAME,
+		AtlasMapID = "RuinsofLordaeron",
+		AtlasMapFile = "RuinsofLordaeron",
+		ContentType = DUNGEON_CONTENT,
+		LoadDifficulty = NORMAL_DIFF,
+		LevelRange = {12, 15, 20},
+		items = {
+			{
+				name = AL["Witherfang"],
+				npcID = 250483,
+				AtlasMapBossID = 1,
+				[NORMAL_DIFF] = {
+					{ 1, 271201 }, -- Atrophic Girdle
+					{ 2, 271202 }, -- Witherbite Bracers
+					{ 3, 271203 }, -- Segmented Spider Leg
+				},
+			},
+			{
+				name = AL["The Baron"],
+				AtlasMapBossID = 2,
+				[NORMAL_DIFF] = {
+					{ 1, 271205 }, -- Abomination Bones
+					{ 2, 271206 }, -- Leftover Abomination Skin
+					{ 3, 271204 }, -- Meathook Slicer
+				},
+			},
+			{
+				name = AL["The Abandoned"],
+				AtlasMapBossID = 3,
+				[NORMAL_DIFF] = {
+					{ 1, 271208 }, -- Grip of Fear
+					{ 2, 271207 }, -- Wispcloth Leggings
+					{ 3, 271216 }, -- Scepter of the Abandoned
+				},
+			},
+			{
+				name = AL["Rath'mael"],
+				AtlasMapBossID = 4,
+				[NORMAL_DIFF] = {
+					{ 1, 271215 }, -- Coldspire Staff
+					{ 2, 271214 }, -- Frostbane Treads
+					{ 3, 271213 }, -- Mirror of Rath'mael 
+				},
+			},
+			{
+				name = AL["Bjork"],
+				AtlasMapBossID = 5,
+				[NORMAL_DIFF] = {
+					{ 1, 271209 }, -- Bonerust Leggings
+					{ 2, 271210 }, -- Tuskwrap Belt
+					{ 3, 271217 }, -- Corpse Chopper
+				},
+			},
+			{
+				name = AL["Lordaeron Captain"],
+				specialType = "rare",
+				npcID = 0,
+				Level = 18,
+				DisplayIDs = {{3224}},
+				[NORMAL_DIFF] = {
+					{ 1, 6641 }, -- Haunting Blade
+					{ 2, 6642 }, -- Phantom Armor
+				},
+			},
+			{
+				name = AL["Viktor the Vile"],
+				[NORMAL_DIFF] = {
+					{ 1, 271211 }, -- Vilewalkers
+					{ 2, 271212 }, -- Bloodied Chestwraps
+					{ 3, 271218 }, -- Vileblood Scimitar
+				},
+			},
+		},
+	}
+end
 
 data["WailingCaverns"] = {
 	MapID = 718,
@@ -338,6 +493,7 @@ data["WailingCaverns"] = {
 				{ 1,  10412 }, -- Belt of the Fang
 				{ 3,  5404 }, -- Serpent's Shoulders
 				{ 4,  6446 }, -- Snakeskin Bag
+				isForever and { 2, 273088 } or nil, -- Snake Eye Kaleidoscope
 			},
 		},
 		{ -- WCKresh
@@ -349,6 +505,7 @@ data["WailingCaverns"] = {
 			[NORMAL_DIFF] = {
 				{ 1,  13245 }, -- Kresh's Back
 				{ 3,  6447 }, -- Worn Turtle Shell Shield
+				isForever and { 2, 273084 } or nil, -- Cloak of Hermitic Bliss
 			},
 		},
 		{ -- WCLordPythas
@@ -361,6 +518,7 @@ data["WailingCaverns"] = {
 			[NORMAL_DIFF] = {
 				{ 1,  6472 }, -- Stinging Viper
 				{ 3,  6473 }, -- Armor of the Fang
+				isForever and { 2, 273089 } or nil, -- Slither Cord
 			},
 		},
 		{ -- WCSkum
@@ -372,6 +530,7 @@ data["WailingCaverns"] = {
 			[NORMAL_DIFF] = {
 				{ 1,  6449 }, -- Glowing Lizardscale Cloak
 				{ 3,  6448 }, -- Tail Spike
+				isForever and { 2, 273137 } or nil, -- Skum's Bucket
 			},
 		},
 		{ -- WCLordSerpentis
@@ -456,6 +615,7 @@ data["TheDeadmines"] = {
 			[NORMAL_DIFF] = {
 				{ 1, 872 },	-- Rockslicer
 				{ 3, 5187 },	-- Rhahk'Zor's Hammer
+				isForever and { 2, 273289 } or nil, -- Ogre Loincloth
 			},
 		},
 		{	--DMMinerJohnson
@@ -480,6 +640,7 @@ data["TheDeadmines"] = {
 			[NORMAL_DIFF] = {
 				{ 1, 5194 },	-- Taskmaster Axe
 				{ 3, 5195 },	-- Gold-flecked Gloves
+				isForever and { 4, 273293 } or nil,	-- Bandsaw Wristbands
 			},
 		},
 		{	--DMSneedsShredder
@@ -491,6 +652,7 @@ data["TheDeadmines"] = {
 			[NORMAL_DIFF] = {
 				{ 1, 1937 },	-- Buzz Saw
 				{ 3, 2169 },	-- Buzzer Blade
+				isForever and { 4, 285292 } or nil,	-- Dull Sawblade
 			},
 		},
 		{	--DMGilnid
@@ -503,6 +665,7 @@ data["TheDeadmines"] = {
 			[NORMAL_DIFF] = {
 				{ 1, 1156 },	-- Lavishly Jeweled Ring
 				{ 3, 5199 },	-- Smelting Pants
+				isForever and { 4, 273297 } or nil, 	-- Goblin Hammer
 			},
 		},
 		{	--DMMrSmite
@@ -516,6 +679,7 @@ data["TheDeadmines"] = {
 				{ 1, 7230 },	-- Smite's Mighty Hammer
 				{ 3, 5192 },	-- Thief's Blade
 				{ 4, 5196 },	-- Smite's Reaver
+				isForever and { 2, 284715 } or nil,	-- First Mate Band
 			},
 		},
 		{	--DMCaptainGreenskin
@@ -549,12 +713,12 @@ data["TheDeadmines"] = {
 			npcID = 645,
 			Level = 20,
 			DisplayIDs = {{1305}},
-			specialType = "elite",
 			AtlasMapBossID = 6,
 			[NORMAL_DIFF] = {
 				{ 1, 5198 },	-- Cookie's Stirring Rod
 				{ 3, 5197 },	-- Cookie's Tenderizer
 				{ 5, 8490 },	-- Cat Carrier (Siamese)
+				isForever and { 2, 273298 } or nil,	-- Lookie's Spyglass
 			},
 		},
 		{	--DMDefiasGunpowder
@@ -595,6 +759,8 @@ data["ShadowfangKeep"] = {
 			AtlasMapBossID = 1,
 			[NORMAL_DIFF] = {
 				{ 1,  5254 }, -- Rugged Spaulders
+				isForever and { 2 , 273456 } or nil, -- Cell Keeper's Claws
+				isForever and { 3 , 273457 } or nil, -- Sorcerer Collar
 			},
 		},
 		{ -- SFKFelSteed
@@ -629,6 +795,7 @@ data["ShadowfangKeep"] = {
 			[NORMAL_DIFF] = {
 				{ 1,  6321 }, -- Silverlaine's Family Seal
 				{ 3,  6323 }, -- Baron's Scepter
+				isForever and { 4 , 273637 } or nil, -- Blade of Silverlaine
 			},
 		},
 		{ -- SFKSpringvale
@@ -639,7 +806,8 @@ data["ShadowfangKeep"] = {
 			AtlasMapBossID = 6,
 			[NORMAL_DIFF] = {
 				{ 1,  6320 }, -- Commander's Crest
-				{ 3,  3191 }, -- Arced War Axe
+				{ 4,  3191 }, -- Arced War Axe
+				isForever and { 2 , 273643 } or nil, -- Worgenbane Talisman
 			},
 		},
 		{ -- SFKOdotheBlindwatcher
@@ -651,6 +819,7 @@ data["ShadowfangKeep"] = {
 			[NORMAL_DIFF] = {
 				{ 1,  6318 }, -- Odo's Ley Staff
 				{ 3,  6319 }, -- Girdle of the Blindwatcher
+				isForever and { 4 , 273645 } or nil, -- Blindwatcher's Sight
 			},
 		},
 		{ -- SFKDeathswornCaptain
@@ -684,6 +853,7 @@ data["ShadowfangKeep"] = {
 			[NORMAL_DIFF] = {
 				{ 1,  6340 }, -- Fenrus' Hide
 				{ 2,  3230 }, -- Black Wolf Bracers
+				isForever and { 3 , 273646 } or nil, -- Half-Eaten Boots
 			},
 		},
 		{ -- SFKWolfMasterNandos
@@ -779,6 +949,46 @@ data["ShadowfangKeep"] = {
 	},
 }
 
+if isForever then
+	data["ExcavationSite"] = {
+		MapID = 16732,
+		InstanceID = 2998, -- Auto-synced from DungeonEncounter.csv
+		AtlasModule = ATLAS_MODULE_NAME,
+		AtlasMapID = "ExcavationSite",
+		AtlasMapFile = "ExcavationSite",
+		ContentType = DUNGEON_CONTENT,
+		LoadDifficulty = NORMAL_DIFF,
+		LevelRange = {21, 24, 29},
+		items = {
+			{
+				name = AL["Saltspine"],
+				AtlasMapBossID = 1,
+				[NORMAL_DIFF] = {
+				},
+			},
+			{
+				name = AL["Shadetooth"],
+				AtlasMapBossID = 1,
+				[NORMAL_DIFF] = {
+				},
+			},
+			{
+				name = AL["Highland Horror"],
+				AtlasMapBossID = 1,
+				[NORMAL_DIFF] = {
+				},
+			},
+			{
+				name = AL["Relic Guardian"],
+				AtlasMapBossID = 1,
+				[NORMAL_DIFF] = {
+				},
+			},
+			
+		},
+	}
+end
+
 data["BlackfathomDeeps"] = {
 	MapID = 719,
 	InstanceID = 48,
@@ -846,6 +1056,7 @@ data["BlackfathomDeeps"] = {
 			[NORMAL_DIFF] = {
 				{ 1,  1155 }, -- Rod of the Sleepwalker
 				{ 3,  6903 }, -- Gaze Dreamer Pants
+				isForever and { 4 , 273846 } or nil, -- Twilight Lord Girdle
 			},
 		},
 		{ -- BFDOldSerrakis
@@ -874,6 +1085,16 @@ data["BlackfathomDeeps"] = {
 				{ 3,  6909 }, -- Strike of the Hydra
 			},
 		},
+		isForever and { -- Forever Encounter #2913
+			name = AL["Lorgus Jett"],
+			npcID = 12902,
+			Level = 26,
+			DisplayIDs = {{12902}},
+			[NORMAL_DIFF] = {
+				isForever and { 1, 273842 } or nil, -- Treacherous Treads
+				isForever and { 2, 273843 } or nil, -- Fallenroot Longbow
+			},
+		} or nil,
 		{ -- BFDTrash
 			name = AL["Trash"],
 			ExtraList = true,
@@ -913,6 +1134,7 @@ data["TheStockade"] = {
 			AtlasMapBossID = 2,
 			[NORMAL_DIFF] = {
 				{ 1,  2280 }, -- Kam's Walking Stick
+				isForever and { 2, 273808 } or nil, -- Bridgebreaker Bindings
 			},
 		},
 		{ -- SWStBruegalIronknuckle
@@ -928,15 +1150,129 @@ data["TheStockade"] = {
 				{ 3,  2942 }, -- Iron Knuckles
 			},
 		},
+		{ -- SWStTargorrtheDread
+			name = AL["Targorr the Dread"],
+			npcID = 1696,
+			Level = GetForVersion(24, 25),
+			DisplayIDs = {{517}},
+			AtlasMapBossID = 7,
+			[NORMAL_DIFF] = {
+				isForever and { 1,  273804 } or nil, -- Executioner Mantle
+				isForever and { 2, 273805 } or nil, -- Blackrock Harness
+				isForever and { 3, 273806 } or nil, -- Dark Horde Band
+			},
+		},
+		{ -- SWStBazilThredd
+			name = AL["Bazil Thredd"],
+			npcID = 1716,
+			Level = GetForVersion(29, 25),
+			DisplayIDs = {{1621}},
+			AtlasMapBossID = 8,
+			[NORMAL_DIFF] = {
+				isForever and { 1,  273827 } or nil, -- Debt Collector
+				isForever and { 2, 273824 } or nil, -- Defias Jailbreakers
+				isForever and { 3, 273825 } or nil, -- Red Wool Cloak
+				isForever and { 5, 273829 } or nil, -- Concealed Hand Crossbow
+			},
+		},
+		isForever and { -- Forever Encounter #2758
+			name = AL["Hamhock"],
+			npcID = 1717,
+			Level = 28,
+			DisplayIDs = {{1122}},
+			[NORMAL_DIFF] = {
+				{ 1, 273809 }, -- Hamhocks' Cleaver
+				{ 2, 273810 }, -- Ogre Grips
+			},
+		} or nil,
+		isForever and { -- Forever Encounter #2759
+			name = AL["Dextren Ward"],
+			npcID = 1663,
+			Level = 26,
+			DisplayIDs = {{1619}},
+			[NORMAL_DIFF] = {
+			},
+		} or nil,
 		{ -- SWStTrash
 			name = AL["Trash"],
 			ExtraList = true,
 			[NORMAL_DIFF] = {
 				{ 1,  1076 }, -- Defias Renegade Ring
+				isForever and { 2, 274092 } or nil, -- Sharpened Cutlery
 			},
 		},
 	},
 }
+
+if isForever then
+	data["CityofDalaran"] = {
+		MapID = 16560,
+		InstanceID = 2959, -- Auto-synced from DungeonEncounter.csv
+		AtlasModule = ATLAS_MODULE_NAME,
+		AtlasMapID = "CityofDalaran",
+		AtlasMapFile = "CityofDalaran",
+		ContentType = DUNGEON_CONTENT,
+		LoadDifficulty = NORMAL_DIFF,
+		LevelRange = {25, 28, 33},
+		items = {
+			{
+				name = AL["Arcane Anomaly"],
+				AtlasMapBossID = 1,
+				[NORMAL_DIFF] = {
+				},
+			},
+			{
+				name = AL["Fel Ancient"],
+				AtlasMapBossID = 1,
+				[NORMAL_DIFF] = {
+				},
+			},
+			{
+				name = AL["Mana Devourer"],
+				AtlasMapBossID = 1,
+				[NORMAL_DIFF] = {
+				},
+			},
+			{
+				name = AL["Mana Elemental"],
+				AtlasMapBossID = 1,
+				[NORMAL_DIFF] = {
+				},
+			},
+			{
+				name = AL["Unstable Sentinel"],
+				AtlasMapBossID = 1,
+				[NORMAL_DIFF] = {
+				},
+			},
+			{
+				name = AL["Shade of the Archmage"],
+				AtlasMapBossID = 1,
+				[NORMAL_DIFF] = {
+				},
+			},
+			{
+				name = AL["Lyn the Ignored"],
+				AtlasMapBossID = 1,
+				[NORMAL_DIFF] = {
+				},
+			},
+			{
+				name = AL["Atrexis the Grave Knight"],
+				AtlasMapBossID = 1,
+				[NORMAL_DIFF] = {
+				},
+			},
+			{
+				name = AL["Mana Wraith"],
+				AtlasMapBossID = 1,
+				[NORMAL_DIFF] = {
+				},
+			},
+			
+		},
+	}
+end
 
 data["Gnomeregan"] = {
 	MapID = 721,
@@ -1174,6 +1510,14 @@ data["RazorfenKraul"] = {
 				{ 3,  6688 }, -- Whisperwind Headdress
 			},
 		},
+		isForever and { -- Forever Encounter #2773
+			name = AL["Roogug"],
+			npcID = 6168,
+			Level = 28,
+			DisplayIDs = {{5184}},
+			[NORMAL_DIFF] = {
+			},
+		} or nil,
 		{ -- RFKTrash
 			name = AL["Trash"],
 			ExtraList = true,
@@ -1565,6 +1909,43 @@ data["ScarletMonasteryCathedral"] = {
 	},
 }
 
+if isForever then
+	data["TheDrownedCity"] = {
+		name = "The Drowned City",
+		InstanceID = 0,
+		AtlasModule = ATLAS_MODULE_NAME,
+		ContentType = DUNGEON_CONTENT,
+		LoadDifficulty = NORMAL_DIFF,
+		LevelRange = {32, 35, 40},
+		items = {
+			{
+				name = AL["Zul'Alai"],
+				AtlasMapBossID = 1,
+				[NORMAL_DIFF] = {
+				},
+			},
+			{
+				name = AL["Zin'aka"],
+				AtlasMapBossID = 2,
+				[NORMAL_DIFF] = {
+				},
+			},
+			{
+				name = AL["Deathless Marrow"],
+				AtlasMapBossID = 3,
+				[NORMAL_DIFF] = {
+				},
+			},
+			{
+				name = AL["Min'loth the Serpent"],
+				AtlasMapBossID = 4,
+				[NORMAL_DIFF] = {
+				},
+			},
+		},
+	}
+end
+
 data["RazorfenDowns"] = {
 	MapID = 722,
 	InstanceID = 129,
@@ -1693,6 +2074,25 @@ data["RazorfenDowns"] = {
 		},
 	},
 }
+
+if isForever then
+	data["KroldokStronghold"] = {
+		name = "Krol'dok Stronghold",
+		InstanceID = 0,
+		AtlasModule = ATLAS_MODULE_NAME,
+		ContentType = DUNGEON_CONTENT,
+		LoadDifficulty = NORMAL_DIFF,
+		LevelRange = {38, 40, 45},
+		items = {
+			{
+				name = AL["Trash"],
+				ExtraList = true,
+				[NORMAL_DIFF] = {
+				},
+			},
+		},
+	}
+end
 
 data["Uldaman"] = {
 	MapID = 1337, -- just no...
@@ -2276,6 +2676,25 @@ data["Maraudon"] = {
 		},
 	},
 }
+
+if isForever then
+	data["AlcazPrison"] = {
+		name = "Alcaz Prison",
+		InstanceID = 0,
+		AtlasModule = ATLAS_MODULE_NAME,
+		ContentType = DUNGEON_CONTENT,
+		LoadDifficulty = NORMAL_DIFF,
+		LevelRange = {45, 48, 53},
+		items = {
+			{
+				name = AL["Trash"],
+				ExtraList = true,
+				[NORMAL_DIFF] = {
+				},
+			},
+		},
+	}
+end
 
 data["TheTempleOfAtal'Hakkar"] = {
 	MapID = 1477,
@@ -3003,6 +3422,25 @@ data["BlackrockDepths"] = {
         }),
 	},
 }
+
+if isForever then
+	data["BlackmawHold"] = {
+		name = "Blackmaw Hold",
+		InstanceID = 0,
+		AtlasModule = ATLAS_MODULE_NAME,
+		ContentType = DUNGEON_CONTENT,
+		LoadDifficulty = NORMAL_DIFF,
+		LevelRange = {52, 55, 60},
+		items = {
+			{
+				name = AL["Trash"],
+				ExtraList = true,
+				[NORMAL_DIFF] = {
+				},
+			},
+		},
+	}
+end
 
 data["LowerBlackrockSpire"] = {
 	name = AL["Lower Blackrock Spire"],
@@ -4471,6 +4909,25 @@ data["Scholomance"] = {
 	},
 }
 
+if isForever then
+	data["ShapersTerrace"] = {
+		name = "Shaper's Terrace",
+		InstanceID = 0,
+		AtlasModule = ATLAS_MODULE_NAME,
+		ContentType = DUNGEON_CONTENT,
+		LoadDifficulty = NORMAL_DIFF,
+		LevelRange = {55, 58, 60},
+		items = {
+			{
+				name = AL["Trash"],
+				ExtraList = true,
+				[NORMAL_DIFF] = {
+				},
+			},
+		},
+	}
+end
+
 data["Stratholme"] = {
 	MapID = 2017,
 	InstanceID = 329,
@@ -4844,6 +5301,14 @@ data["Stratholme"] = {
 				{ 24, 16732 }, -- Legplates of Valor
 			},
 		},
+		isForever and { -- Forever Encounter #2797
+			name = AL["Ezra Grimm"],
+			npcID = 11058,
+			Level = 60,
+			DisplayIDs = {{10519}},
+			[NORMAL_DIFF] = {
+			},
+		} or nil,
 		{ -- STRATTrash
 			name = AL["Trash"],
 			ExtraList = true,
@@ -5473,7 +5938,6 @@ data["MoltenCore"] = {
 				{ 24, 16861 }, -- Bracers of Might
 			},
 		},
-		T1_SET,
 	}
 }
 
@@ -6169,9 +6633,13 @@ data["BlackwingLair"] = {
 				{ 11, 18562 }, -- Elementium Ore
 			},
 		},
-		T2_SET,
 	},
 }
+
+if not isForever then
+    table.insert(data["MoltenCore"].items, T1_SET)
+    table.insert(data["BlackwingLair"].items, T2_SET)
+end
 
 data["TheRuinsofAhnQiraj"] = { -- AQ20
 	MapID = 3429,
@@ -7020,3 +7488,180 @@ data["Naxxramas"] = {
 		T3_SET,
 	},
 }
+
+
+if isForever then
+	data["HalfPintTavern"] = {
+		name = "Half-Pint Tavern",
+		MapID = 3002,
+		InstanceID = 3002,
+		AtlasModule = ATLAS_MODULE_NAME,
+		ContentType = DUNGEON_CONTENT,
+		LoadDifficulty = NORMAL_DIFF,
+		LevelRange = {1, 60, 60},
+		items = {
+			{
+				name = AL["Deathulus"],
+				AtlasMapBossID = 1,
+				[NORMAL_DIFF] = {
+				},
+			},
+			{
+				name = AL["Crushfist Bloodbreaker"],
+				AtlasMapBossID = 2,
+				[NORMAL_DIFF] = {
+				},
+			},
+		},
+	}
+end
+
+if isForever then
+	data["BarrowDeeps"] = {
+		name = "The Barrow Deeps",
+		InstanceID = 0,
+		AtlasModule = ATLAS_MODULE_NAME,
+		ContentType = RAID20_CONTENT,
+		LoadDifficulty = RAID20_DIFF,
+		items = {
+			{
+				name = AL["Deepscar Matriarch"],
+				AtlasMapBossID = 1,
+				[NORMAL_DIFF] = {
+				},
+			},
+			{
+				name = AL["Elder Tangleclaw"],
+				AtlasMapBossID = 2,
+				[NORMAL_DIFF] = {
+				},
+			},
+			{
+				name = AL["Khalith the Dreadspinner"],
+				AtlasMapBossID = 3,
+				[NORMAL_DIFF] = {
+				},
+			},
+			{
+				name = AL["Well of Sorrow"],
+				AtlasMapBossID = 4,
+				[NORMAL_DIFF] = {
+				},
+			},
+			{
+				name = AL["Amethrax"],
+				AtlasMapBossID = 5,
+				[NORMAL_DIFF] = {
+				},
+			},
+			{
+				name = AL["Del'lynar Songwood"],
+				AtlasMapBossID = 6,
+				[NORMAL_DIFF] = {
+				},
+			},
+			{
+				name = AL["Ravus and Darlissa"],
+				AtlasMapBossID = 7,
+				[NORMAL_DIFF] = {
+				},
+			},
+			{
+				name = AL["Sonya Darkhallow"],
+				AtlasMapBossID = 8,
+				[NORMAL_DIFF] = {
+				},
+			},
+		},
+	}
+end
+
+if isForever then
+	data["HyjalSummit"] = {
+		name = "Hyjal Summit",
+		InstanceID = 0,
+		AtlasModule = ATLAS_MODULE_NAME,
+		ContentType = RAID20_CONTENT,
+		LoadDifficulty = RAID20_DIFF,
+		items = {
+			{
+				name = AL["Bandalar"],
+				AtlasMapBossID = 1,
+				[NORMAL_DIFF] = {
+				},
+			},
+			{
+				name = AL["Ancient of Decay"],
+				AtlasMapBossID = 2,
+				[NORMAL_DIFF] = {
+				},
+			},
+			{
+				name = AL["Time-Lost Battalion"],
+				AtlasMapBossID = 3,
+				[NORMAL_DIFF] = {
+				},
+			},
+			{
+				name = AL["Sylvestris Dusksong"],
+				AtlasMapBossID = 4,
+				[NORMAL_DIFF] = {
+				},
+			},
+			{
+				name = AL["Old Gloomlurker"],
+				AtlasMapBossID = 5,
+				[NORMAL_DIFF] = {
+				},
+			},
+			{
+				name = AL["Gharalis the Abyssal"],
+				AtlasMapBossID = 6,
+				[NORMAL_DIFF] = {
+				},
+			},
+			{
+				name = AL["Kathris the Haunted"],
+				AtlasMapBossID = 7,
+				[NORMAL_DIFF] = {
+				},
+			},
+			{
+				name = AL["Anara Chillwind"],
+				AtlasMapBossID = 8,
+				[NORMAL_DIFF] = {
+				},
+			},
+			{
+				name = AL["Elder Minderel"],
+				AtlasMapBossID = 9,
+				[NORMAL_DIFF] = {
+				},
+			},
+			{
+				name = AL["Tracker Stillwind"],
+				AtlasMapBossID = 10,
+				[NORMAL_DIFF] = {
+				},
+			},
+			{
+				name = AL["Council of Thorns"],
+				AtlasMapBossID = 11,
+				[NORMAL_DIFF] = {
+				},
+			},
+			{
+				name = AL["Nythus the Dreambound"],
+				AtlasMapBossID = 12,
+				[NORMAL_DIFF] = {
+				},
+			},
+			{
+				name = AL["The Wild King"],
+				AtlasMapBossID = 13,
+				[NORMAL_DIFF] = {
+				},
+			},
+		},
+	}
+end

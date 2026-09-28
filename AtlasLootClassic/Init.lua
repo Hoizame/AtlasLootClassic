@@ -74,9 +74,15 @@ AtlasLoot.IS_CLASSIC = false
 AtlasLoot.IS_BC = false
 AtlasLoot.IS_WRATH = false
 AtlasLoot.IS_RETAIL = false
+AtlasLoot.IS_FOREVER = _G.ATLASLOOT_FOREVER == true
 
 local CurrentGameVersion = AtlasLoot.RETAIL_VERSION_NUM
-if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
+if AtlasLoot.IS_FOREVER then
+	-- Forever (Camelot) uses the modern/mainline engine but Vanilla content.
+	CurrentGameVersion = AtlasLoot.CLASSIC_VERSION_NUM
+	AtlasLoot.IS_CLASSIC = true
+	AtlasLoot.IS_RETAIL = true
+elseif WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
 	CurrentGameVersion = AtlasLoot.RETAIL_VERSION_NUM
 	AtlasLoot.IS_RETAIL = true
 elseif WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC then

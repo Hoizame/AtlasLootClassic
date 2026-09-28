@@ -241,6 +241,10 @@ local function loadItemsFromOtherModule(moduleLoader, loadString, contentTable, 
 end
 
 function ItemDB:GetItemTable(addonName, contentName, boss, dif)
+	if addonName == "AtlasLootClassic_DungeonsAndRaids" and contentName == "Deadmines"
+		and ItemDB.Storage[addonName] and ItemDB.Storage[addonName]["TheDeadmines"] then
+		contentName = "TheDeadmines"
+	end
 	assert(addonName and ItemDB.Storage[addonName], addonName.." (addonName) not found!")
 	assert(contentName and ItemDB.Storage[addonName][contentName], contentName.." (contentName) not found!")
 	assert(boss and ItemDB.Storage[addonName][contentName].items[boss], boss.." (boss) not found!")
@@ -491,10 +495,13 @@ local SpecialMobList = {
 -- @return ContentName, ContentIndex
 function ItemDB.ContentProto:GetContentType()
 	if not self.ContentType then
-		error("ContentType not set for <"..self.__atlaslootdata.addonName.." / "..self.name..">")
-		return nil
+		return "Unknown", "Unknown", {1, 1, 1, 1}
 	end
-	assert(content_types[self.__atlaslootdata.addonName][self.ContentType], self.ContentType.." not found!")
+	
+	if not content_types[self.__atlaslootdata.addonName][self.ContentType] then
+		return "Unknown", "Unknown", {1, 1, 1, 1}
+	end
+
 	return content_types[self.__atlaslootdata.addonName][self.ContentType][1], self.ContentType, content_types[self.__atlaslootdata.addonName][self.ContentType][2]
 end
 
@@ -519,7 +526,8 @@ function ItemDB.ContentProto:GetName(raw)
 	if self.name then
 		name = self.name..addEnd
 	elseif self.MapID then
-		name = C_Map.GetAreaInfo(self.MapID)..addEnd or "MapID:"..self.MapID
+		local mapName = C_Map and C_Map.GetAreaInfo and C_Map.GetAreaInfo(self.MapID)
+		name = (mapName or ("MapID:"..tostring(self.MapID)))..addEnd
 	elseif self.FactionID then
 		name = AtlasLoot:Faction_GetFactionName(self.FactionID)..addEnd
 	elseif self.AchievementID then

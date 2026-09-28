@@ -1,0 +1,15 @@
+## Interface: 16001
+## Author: Lag
+## Version: v3.2.0-fix3
+## Dependencies: AtlasLootClassic
+## LoadOnDemand: 1
+## Title: AtlasLootClassic |cFF0099FF[Dungeons and Raids]|r
+## Notes: AtlasLootClassic Dungeons and Raids module
+## X-Category: Map
+## X-License: GPL v2
+## X-AtlasLootClassic-LootModule: 1
+
+Locales\\Locales.xml
+data.lua
+droprate.lua
+

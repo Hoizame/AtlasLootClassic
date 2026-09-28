@@ -980,6 +980,8 @@ local UnitGUID, GetMerchantNumItems, GetMerchantItemID, GetMerchantItemCostInfo,
       UnitGUID, GetMerchantNumItems, GetMerchantItemID, GetMerchantItemCostInfo, GetMerchantItemCostItem, GetItemInfoInstant
 
 local function GetNpcIDFromGuid(guid)
+	if not guid then return end
+	if _G.AtlasLootCanAccessValue and not _G.AtlasLootCanAccessValue(guid) then return end
 	local npcID = select(6,strsplit("-",guid))
 	if npcID then
 		return tonumber(npcID)
@@ -987,6 +989,10 @@ local function GetNpcIDFromGuid(guid)
 end
 
 function VendorPrice.ScanShownVendor()
+    if type(GetMerchantNumItems) ~= "function" or type(GetMerchantItemID) ~= "function"
+        or type(GetMerchantItemCostInfo) ~= "function" or type(GetMerchantItemCostItem) ~= "function" then
+        return
+    end
     local targetGUID = UnitGUID("target")
     if not targetGUID then return end
     local npcID = GetNpcIDFromGuid(targetGUID)

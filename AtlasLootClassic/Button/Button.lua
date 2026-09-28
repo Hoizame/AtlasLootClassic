@@ -749,9 +749,9 @@ function Proto:SetContentTable(tab, formatTab, setOnlySec)
 	end
 
 	-- dumb but that fix vanishing text...
-	if self.name then
-		self.name:GetWidth()
-	end
+	-- if self.name then
+		-- self.name:GetWidth()
+	-- end
 end
 
 function Proto:SetType(typ, val)

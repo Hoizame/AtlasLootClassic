@@ -93,8 +93,33 @@ function Tooltip:AddTooltipSource(tt, notRefresh)
 	end
 end
 
+local ForeverTooltipHooks = {}
 function Tooltip:AddHookFunction(script, func)
 	if type(func) ~= "function" or not script then return end
+
+	if AtlasLoot.IS_FOREVER and TooltipDataProcessor and Enum and Enum.TooltipDataType then
+		local dataType
+		if script == "OnTooltipSetItem" then
+			dataType = Enum.TooltipDataType.Item
+		elseif script == "OnTooltipSetUnit" then
+			dataType = Enum.TooltipDataType.Unit
+		end
+		if dataType then
+			ForeverTooltipHooks[script] = ForeverTooltipHooks[script] or {}
+			if not ForeverTooltipHooks[script][func] then
+				ForeverTooltipHooks[script][func] = true
+				TooltipDataProcessor.AddTooltipPostCall(dataType, function(tt, data)
+					if script == "OnTooltipSetItem" then
+						func(tt, data and (data.id or data.hyperlink))
+					else
+						func(tt, data and data.guid)
+					end
+				end)
+			end
+			return
+		end
+	end
+
 	if not FunctionRegister[script] then
 		FunctionRegister[script] = {}
 	end
@@ -118,15 +143,19 @@ AtlasLoot:AddInitFunc(HookInit)
 local WHITE_TEXT = "|cffffffff%s|r"
 local TooltipCache = {}
 
-local function OnTooltipSetItem_Hook(self)
+local function OnTooltipSetItem_Hook(self, item)
     if self:IsForbidden() or not AtlasLoot.db.showTooltipInfoGlobal then return end
-    local _, item = self:GetItem()
-    if not item then return end
-	if not TooltipCache[item] then
-        TooltipCache[item] = tonumber(strmatch(item, "item:(%d+)"))
+    if not item and self.GetItem then
+        local _, tooltipItem = self:GetItem()
+        item = tooltipItem
     end
-
-    item = TooltipCache[item]
+    if not item then return end
+    if type(item) ~= "number" then
+        if not TooltipCache[item] then
+            TooltipCache[item] = tonumber(strmatch(item, "item:(%d+)"))
+        end
+        item = TooltipCache[item]
+    end
 
     if item then
 		if AtlasLoot.db.showCompanionLearnedInfo and AtlasLoot.Data.Companion.IsCompanion(item) then
@@ -175,11 +204,13 @@ local PLAYER_GUID_REGISTER = {
 	["Player-4440-0376FFAC"] = format("|T135349:0|t "..COLOR, "AtlasLoot Friend"), -- Balendil / Nekarra
 }
 
-local function AddText(self)
+local function AddText(self, guid)
 	if self:IsForbidden() then return end
-	local name, target = self:GetUnit()
-	if not target then return end
-	local guid = UnitGUID(target)
+	if not guid and self.GetUnit then
+		local _, target = self:GetUnit()
+		if target then guid = UnitGUID(target) end
+	end
+	if guid and _G.AtlasLootCanAccessValue and not _G.AtlasLootCanAccessValue(guid) then return end
 	if guid and PLAYER_GUID_REGISTER[guid] then
 		self:AddLine(PLAYER_GUID_REGISTER[guid])
 	end

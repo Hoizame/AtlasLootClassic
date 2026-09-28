@@ -78,6 +78,10 @@ private.ROGUE_POISONS_LINK = {
     [AtlasLoot.WRATH_VERSION_NUM]       = "RoguePoisonsWrath",
 }
 
+private.MAGE_SCROLLS_LINK = {
+    [AtlasLoot.CLASSIC_VERSION_NUM]     = "MageScrolls",
+}
+
 private.INSCRIPTION_LINK = {
     [AtlasLoot.WRATH_VERSION_NUM]       = "InscriptionWrath",
 }

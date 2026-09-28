@@ -243,15 +243,19 @@ local function BuildSourceFromItemData(item, destTable, itemData, sourceData, ic
     end
 end
 
-local function OnTooltipSetItem_Hook(self)
+local function OnTooltipSetItem_Hook(self, item)
     if self:IsForbidden() or not SOURCE_DATA or not Sources.db.enabled then return end
-    local _, item = self:GetItem()
-    if not item then return end
-    if not TooltipCache[item] then
-        TooltipCache[item] = tonumber(strmatch(item, "item:(%d+)"))
+    if not item and self.GetItem then
+        local _, tooltipItem = self:GetItem()
+        item = tooltipItem
     end
-
-    item = TooltipCache[item]
+    if not item then return end
+    if type(item) ~= "number" then
+        if not TooltipCache[item] then
+            TooltipCache[item] = tonumber(strmatch(item, "item:(%d+)"))
+        end
+        item = TooltipCache[item]
+    end
 
     local sourceData
     for i = #SOURCE_DATA, 1, -1 do

@@ -12,6 +12,19 @@ local function C_Map_GetAreaInfo(id)
 	return d or "GetAreaInfo"..id
 end
 
+local _, _, _, tocversion = GetBuildInfo()
+local isForever = ((tocversion or 0) >= 16000 and (tocversion or 0) < 20000)
+
+local function EraOnly(dataBlock)
+    if isForever then return nil end
+    return dataBlock
+end
+
+local function ForeverOnly(dataBlock)
+    if not isForever then return nil end
+    return dataBlock
+end
+
 -- ----------------------------------------------------------------------------
 -- AddOn namespace.
 -- ----------------------------------------------------------------------------
@@ -23,6 +36,7 @@ local AL = AtlasLoot.Locales
 local ALIL = AtlasLoot.IngameLocales
 
 local GetForVersion = AtlasLoot.ReturnForGameVersion
+local isForever = AtlasLoot.IS_FOREVER or _G.ATLASLOOT_FOREVER or ((tocversion or 0) >= 16000 and (tocversion or 0) < 20000)
 
 local NORMAL_DIFF = data:AddDifficulty("NORMAL", nil, nil, nil, true)
 local HEROIC_DIFF = data:AddDifficulty("HEROIC", nil, nil, nil, true)
@@ -72,36 +86,6 @@ data["TierSets"] = {
 	ContentType = SET_CONTENT,
 	TableType = SET_ITTYPE,
 	items = {
-		{ -- T1
-			name = format(AL["Tier %s Sets"], "1"),
-			CoinTexture = "CLASSIC",
-			[NORMAL_DIFF] = {
-				{ 1, 203 }, -- Warlock
-				{ 3, 202 }, -- Priest
-				{ 16, 201 }, -- Mage
-				{ 5, 204 }, -- Rogue
-				{ 20, 205 }, -- Druid
-				{ 7, 206 }, -- Hunter
-				{ 9, 209 }, -- Warrior
-				{ 22, 207 }, -- Shaman
-				{ 24, 208 }, -- Paladin
-			},
-		},
-		{ -- T2
-			name = format(AL["Tier %s Sets"], "2"),
-			CoinTexture = "CLASSIC",
-			[NORMAL_DIFF] = {
-				{ 1, 212 }, -- Warlock
-				{ 3, 211 }, -- Priest
-				{ 16, 210 }, -- Mage
-				{ 5, 213 }, -- Rogue
-				{ 20, 214 }, -- Druid
-				{ 7, 215 }, -- Hunter
-				{ 9, 218 }, -- Warrior
-				{ 22, 216 }, -- Shaman
-				{ 24, 217 }, -- Paladin
-			},
-		},
 		{ -- T2.5
 			name = format(AL["Tier %s Sets"], "2.5"),
 			CoinTexture = "CLASSIC",
@@ -499,6 +483,56 @@ data["TierSets"] = {
 	},
 }
 
+if not isForever then
+    local T2_TABLE = {
+        name = format(AL["Tier %s Sets"], "2"),
+        CoinTexture = "CLASSIC",
+        [NORMAL_DIFF] = {
+            { 1, 212 }, { 3, 211 }, { 16, 210 }, { 5, 213 },
+            { 20, 214 }, { 7, 215 }, { 9, 218 }, { 22, 216 }, { 24, 217 },
+        },
+    }
+    local T1_TABLE = {
+        name = format(AL["Tier %s Sets"], "1"),
+        CoinTexture = "CLASSIC",
+        [NORMAL_DIFF] = {
+            { 1, 203 }, { 3, 202 }, { 16, 201 }, { 5, 204 },
+            { 20, 205 }, { 7, 206 }, { 9, 209 }, { 22, 207 }, { 24, 208 },
+        },
+    }
+
+    table.insert(data["TierSets"].items, 1, T2_TABLE)
+    table.insert(data["TierSets"].items, 1, T1_TABLE)
+end
+
+if isForever then
+	local FOREVER_CRAFTED_SETS = {
+		name = "Forever Crafted Sets",
+		CoinTexture = "CLASSIC",
+		[NORMAL_DIFF] = {
+			{ 1,  2100 }, -- Warlock: Demonheart Raiment
+			{ 3,  2104 }, -- Priest: Vestments of Conviction (Holy / Disc)
+			{ 4,  2105 }, -- Priest: Raiments of Conviction (Shadow)
+			{ 6,  2099 }, -- Rogue: Grimstitch Armor
+			{ 8,  2101 }, -- Hunter: Wildstalker Armor
+			{ 10, 2103 }, -- Warrior: Battleplate of Glory (Protection)
+			{ 11, 2102 }, -- Warrior: Battlegear of Glory (Fury / Arms)
+			{ 13, 2098 }, -- Mage: Manaflare Regalia
+			{ 16, 2112 }, -- Druid: Grovekeeper Raiment (Restoration)
+			{ 17, 2114 }, -- Druid: Grovekeeper Eclipse (Balance)
+			{ 18, 2113 }, -- Druid: Grovekeeper Rage (Feral Tank)
+			{ 19, 2115 }, -- Druid: Grovekeeper Ferocity (Feral DPS)
+			{ 21, 2109 }, -- Shaman: The Spiritcaller (Restoration)
+			{ 22, 2111 }, -- Shaman: The Spiritcaller's Storm (Elemental)
+			{ 23, 2110 }, -- Shaman: The Spiritcaller's Rage (Enhancement)
+			{ 25, 2107 }, -- Paladin: Justice Armor (Holy)
+			{ 26, 2108 }, -- Paladin: Justice Battleplate (Protection)
+			{ 27, 2106 }, -- Paladin: Justice Battlegear (Retribution)
+		},
+	}
+	table.insert(data["TierSets"].items, 1, FOREVER_CRAFTED_SETS)
+end
+
 data["DungeonSets"] = {
 	name = AL["Dungeon Sets"],
 	ContentType = SET_CONTENT,
@@ -717,14 +751,14 @@ data["MiscSets"] = {
 data["WorldEpics"] = {
 	name = AL["World Epics"],
 	ContentType = COLLECTIONS_CONTENT,
-	LoadDifficulty = LOAD_DIFF,
+	LoadDifficulty = NORMAL_DIFF,
 	TableType = NORMAL_ITTYPE,
 	gameVersion = AtlasLoot.CLASSIC_VERSION_NUM,
 	CorrespondingFields = private.WORLD_EPICS,
 	items = {
 		{
 			name = AL["One-Handed Weapons"],
-			[NORMAL_ITTYPE] = {
+			[NORMAL_DIFF] = {
 				-- Mace
 				{ 1, 2243 }, -- Hand of Edward the Odd
 				{ 2, 810 }, -- Hammer of the Northern Wind
@@ -746,7 +780,7 @@ data["WorldEpics"] = {
 		},
 		{
 			name = AL["Two-Handed Weapons"],
-			[NORMAL_ITTYPE] = {
+			[NORMAL_DIFF] = {
 				-- Axe
 				{ 1, 2801 }, -- Blade of Hanna
 				{ 2, 647 }, -- Destiny
@@ -766,7 +800,7 @@ data["WorldEpics"] = {
 		},
 		{
 			name = AL["Ranged Weapons"].." & "..ALIL["Shield"],
-			[NORMAL_ITTYPE] = {
+			[NORMAL_DIFF] = {
 				-- Bow
 				{ 1, 2824 }, -- Hurricane
 				{ 2, 2825 }, -- Bow of Searing Arrows
@@ -782,7 +816,7 @@ data["WorldEpics"] = {
 		},
 		{
 			name = ALIL["Trinket"].." & "..ALIL["Finger"].." & "..ALIL["Neck"],
-			[NORMAL_ITTYPE] = {
+			[NORMAL_DIFF] = {
 				-- Trinket
 				{ 1, 14557 }, -- The Lion Horn of Stormwind
 				{ 2, 833 }, -- Lifestone
@@ -799,7 +833,7 @@ data["WorldEpics"] = {
 		},
 		{
 			name = AL["Equip"],
-			[NORMAL_ITTYPE] = {
+			[NORMAL_DIFF] = {
 				-- Cloth
 				{ 1,  3075 }, -- Eye of Flame
 				{ 2,  940 }, -- Robes of Insight
@@ -1042,90 +1076,93 @@ data["Tabards"] = {
 			name = ALIL["Tabard"],
 			[NORMAL_DIFF] = {
 				{ 1, 23192 }, -- Tabard of the Scarlet Crusade
-			},
-		},
-		{ -- Faction
-			name = AL["Capitals"],
-			CoinTexture = "Reputation",
-			[ALLIANCE_DIFF] = {
-				{ 1, 45579 },	-- Darnassus Tabard
-				{ 2, 45577 },	-- Ironforge Tabard
-				{ 3, 45578 },	-- Gnomeregan Tabard
-				{ 4, 45574 },	-- Stormwind Tabard
-				{ 16, 45580 },	-- Exodar Tabard
-				AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM, { 17, 64882 }),	-- Gilneas Tabard
-			},
-			[HORDE_DIFF] = {
-				{ 1, 45582 },	-- Darkspear Tabard
-				{ 2, 45581 },	-- Orgrimmar Tabard
-				{ 3, 45584 },	-- Thunder Bluff Tabard
-				{ 4, 45583 },	-- Undercity Tabard
-				AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM, { 16, 45585 }),	-- Silvermoon City Tabard
-			},
-		},
-		{
-			name = format("%s - %s", AL["Factions"], AL["Classic"]),
-			CoinTexture = "Reputation",
-			[NORMAL_DIFF] = {
-				{ 1, 43154 }, -- Tabard of the Argent Crusade
+				{ 2, 22999 }, -- Tabard of the Argent Dawn
+				{ 3, 5976 }, -- Guild Tabard
+				{ 4, 19160 }, -- Contest Winner's Tabard
 			},
 		},
 		{ -- PvP
 			name = AL["PvP"],
 			[ALLIANCE_DIFF] = {
-				{ 1, 15196 },	-- Private's Tabard
-				{ 2, 15198 },	-- Knight's Colors
-				{ 16, 19506 },	-- Silverwing Battle Tabard
-				{ 17, 19032 },	-- Stormpike Battle Tabard
-				{ 18, 20132 },	-- Arathor Battle Tabard
+				{ 1, isForever and 272694 or 15196 }, -- Private's Tabard
+				{ 2, isForever and 272695 or 15198 }, -- Knight's Colors
+				{ 16, 19506 }, -- Silverwing Battle Tabard
+				{ 17, 19032 }, -- Stormpike Battle Tabard
+				{ 18, 20132 }, -- Arathor Battle Tabard
 			},
 			[HORDE_DIFF] = {
-				{ 1, 15197 },	-- Scout's Tabard
-				{ 2, 15199 },	-- Stone Guard's Herald
-				{ 16, 19505 },	-- Warsong Battle Tabard
-				{ 17, 19031 },	-- Frostwolf Battle Tabard
-				{ 18, 20131 },	-- Battle Tabard of the Defilers
+				{ 1, isForever and 272449 or 15197 }, -- Scout's Tabard
+				{ 2, isForever and 272450 or 15199 }, -- Stone Guard's Herald
+				{ 16, 19505 }, -- Warsong Battle Tabard
+				{ 17, 19031 }, -- Frostwolf Battle Tabard
+				{ 18, 20131 }, -- Battle Tabard of the Defilers
 			},
 		},
-		{ -- PvP
+		AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM, { -- Faction
+			name = AL["Capitals"],
+			CoinTexture = "Reputation",
+			[ALLIANCE_DIFF] = {
+				{ 1, 45579 }, -- Darnassus Tabard
+				{ 2, 45577 }, -- Ironforge Tabard
+				{ 3, 45578 }, -- Gnomeregan Tabard
+				{ 4, 45574 }, -- Stormwind Tabard
+				{ 16, 45580 }, -- Exodar Tabard
+				{ 17, 64882 }, -- Gilneas Tabard
+			},
+			[HORDE_DIFF] = {
+				{ 1, 45582 }, -- Darkspear Tabard
+				{ 2, 45581 }, -- Orgrimmar Tabard
+				{ 3, 45584 }, -- Thunder Bluff Tabard
+				{ 4, 45583 }, -- Undercity Tabard
+				{ 16, 45585 }, -- Silvermoon City Tabard
+			},
+		}),
+		AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM, {
+			name = format("%s - %s", AL["Factions"], AL["Classic"]),
+			CoinTexture = "Reputation",
+			[NORMAL_DIFF] = {
+				{ 1, 43154 }, -- Tabard of the Argent Crusade
+			},
+		}),
+		AtlasLoot:GameVersion_GE(AtlasLoot.WRATH_VERSION_NUM, { -- Arena
 			name = AL["Arena"],
 			[NORMAL_DIFF] = {
-				{ 1, 45983 },	-- Furious Gladiator's Tabard
-				{ 2, 49086, },	-- Relentless Gladiator's Tabard
-				{ 3, 51534 },	-- Wrathful Gladiator's Tabard
+				{ 1, 45983 }, -- Furious Gladiator's Tabard
+				{ 2, 49086 }, -- Relentless Gladiator's Tabard
+				{ 3, 51534 }, -- Wrathful Gladiator's Tabard
 			},
-		},
-		{ -- Unobtainable Tabards
+		}),
+		AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM, { -- Unobtainable Tabards
 			name = AL["Unobtainable"],
 			[NORMAL_DIFF] = {
-				{ 1, 19160 },	-- Contest Winner's Tabard
-				AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM, { 3, 36941 }), -- Competitor's Tabard
-				AtlasLoot:GameVersion_GE(AtlasLoot.BC_VERSION_NUM, { 5, 28788 }), -- Tabard of the Protector
+				{ 1, 19160 }, -- Contest Winner's Tabard
+				{ 3, 36941 }, -- Competitor's Tabard
+				{ 5, 28788 }, -- Tabard of the Protector
 				{ 16, "INV_Box_01", nil, AL["Card Game Tabards"], nil },
-				{ 17, 38312 },	-- Tabard of Brilliance
-				{ 18, 23705 },	-- Tabard of Flame
-				{ 19, 23709 },	-- Tabard of Frost
-				{ 20, 38313 },	-- Tabard of Fury
-				{ 21, 38309 },	-- Tabard of Nature
-				{ 22, 38310 },	-- Tabard of the Arcane
-				{ 23, 38314 },	-- Tabard of the Defender
-				{ 24, 38311 },	-- Tabard of the Void
+				{ 17, 38312 }, -- Tabard of Brilliance
+				{ 18, 23705 }, -- Tabard of Flame
+				{ 19, 23709 }, -- Tabard of Frost
+				{ 20, 38313 }, -- Tabard of Fury
+				{ 21, 38309 }, -- Tabard of Nature
+				{ 22, 38310 }, -- Tabard of the Arcane
+				{ 23, 38314 }, -- Tabard of the Defender
+				{ 24, 38311 }, -- Tabard of the Void
 			},
-		},
+		}),
 	},
 }
 
 data["Legendarys"] = {
 	name = AL["Legendarys"],
 	ContentType = COLLECTIONS_CONTENT,
-	LoadDifficulty = LOAD_DIFF,
+	LoadDifficulty = NORMAL_DIFF,
 	TableType = NORMAL_ITTYPE,
 	gameVersion = AtlasLoot.CLASSIC_VERSION_NUM,
 	CorrespondingFields = private.LEGENDARYS,
 	items = {
 		{
 			name = AL["Legendarys"],
-			[NORMAL_ITTYPE] = {
+			[NORMAL_DIFF] = {
 				{ 1,  19019 }, -- Thunderfury, Blessed Blade of the Windseeker
 
 				{ 3,  22631 }, -- Atiesh, Greatstaff of the Guardian / Priest
@@ -1140,7 +1177,7 @@ data["Legendarys"] = {
 		},
 		{
 			name = ALIL["Quest Item"],
-			[NORMAL_ITTYPE] = {
+			[NORMAL_DIFF] = {
 				{ 1,  19018 }, -- Dormant Wind Kissed Blade
 				{ 2,  19017 }, -- Essence of the Firelord
 				{ 3,  19016 }, -- Vessel of Rebirth
@@ -1158,7 +1195,7 @@ data["Legendarys"] = {
 		},
 		{
 			name = AL["Unobtainable"],
-			[NORMAL_ITTYPE] = {
+			[NORMAL_DIFF] = {
 				{ 1,  17782 }, -- Talisman of Binding Shard
 				{ 16,  20221 }, -- Foror's Fabled Steed
 			},
@@ -1816,3 +1853,106 @@ data["ScourgeInvasion"] = {
 		},
 	},
 }
+
+if isForever then
+	-- Add Forever Sets to MiscSets
+	table.insert(data["MiscSets"].items[1][NORMAL_DIFF], { 6, 1972 }) -- Stormcloth Regalia
+	table.insert(data["MiscSets"].items[1][NORMAL_DIFF], { 7, 2134 }) -- Violet Sorcerer's Vestments
+	table.insert(data["MiscSets"].items[2][NORMAL_DIFF], { 11, 2133 }) -- Rotmender's Raiment
+	table.insert(data["MiscSets"].items[2][NORMAL_DIFF], { 12, 2136 }) -- Defias Enforcer's Garb
+	table.insert(data["MiscSets"].items[3][NORMAL_DIFF], { 8, 2135 }) -- Krol'dok Battlegear
+	table.insert(data["MiscSets"].items[4][NORMAL_DIFF], { 4, 1968 }) -- Blessed Plate
+	table.insert(data["MiscSets"].items[5][NORMAL_DIFF], { 17, 2071 }) -- Teachings of the Furbolgs
+	table.insert(data["MiscSets"].items[5][NORMAL_DIFF], { 18, 2130 }) -- Rider of the Plaguelands
+	table.insert(data["MiscSets"].items[5][NORMAL_DIFF], { 19, 2131 }) -- Partners in Crime
+	table.insert(data["MiscSets"].items[5][NORMAL_DIFF], { 20, 2132 }) -- Blessing of Kalimdor
+
+	-- Add raid names to Tier 2.5 and Tier 3 headers (Forever only)
+	for _, sub in ipairs(data["TierSets"].items) do
+		if sub.name == format(AL["Tier %s Sets"], "2.5") then
+			sub.name = C_Map_GetAreaInfo(3428).." ("..format(AL["Tier %s Sets"], "2.5")..")"
+		elseif sub.name == format(AL["Tier %s Sets"], "3") then
+			sub.name = C_Map_GetAreaInfo(3456).." ("..format(AL["Tier %s Sets"], "3")..")"
+		end
+	end
+
+	-- Add Forever Mounts tab
+	table.insert(data["Mounts"].items, {
+		name = "WoW Forever",
+		[NORMAL_DIFF] = {
+			{ 1,  269671 }, -- Swift Empyrean Galestrider
+			{ 2,  269673 }, -- Swift Regal Galestrider
+			{ 3,  269678 }, -- Swift Stormy Galestrider
+			{ 4,  274933 }, -- Swift Umber Galestrider
+			{ 6,  269681 }, -- Empyrean Galestrider
+			{ 7,  269682 }, -- Regal Galestrider
+			{ 8,  269683 }, -- Stormy Galestrider
+			{ 9,  274930 }, -- Umber Galestrider
+			{ 11, 280544 }, -- Cerulean Prideclaw
+			{ 12, 274706 }, -- Reins of the Striped Dawnsaber
+			{ 13, 277718 }, -- Reins of the Spectral Bear
+			{ 14, 234465 }, -- Reins of the Swift Spectral Tiger
+			{ 16, 262766 }, -- Reins of the Pack Kodo
+			{ 17, 277960 }, -- Lavender Kodo
+			{ 18, 275993 }, -- White Kodo
+			{ 19, 216492 }, -- Whistle of the Mottled Raptor
+			{ 21, 274799 }, -- Ochre Skeletal Warhorse
+			{ 22, 265838 }, -- Green Skeletal Horse
+			{ 23, 265839 }, -- Dark Skeletal Horse
+			{ 24, 265840 }, -- Purple Skeletal Horse
+			{ 25, 276063 }, -- Black Skeletal Horse
+			{ 27, 280611 }, -- Veteran Adventurer's Loyal Companion
+		},
+	})
+
+	-- Add Forever Companions tab
+	table.insert(data["Companions"].items, {
+		name = "WoW Forever",
+		[NORMAL_DIFF] = {
+			{ 1,  268502 }, -- Tiny Bronze Whelpling
+			{ 2,  268503 }, -- Tiny Azure Whelpling
+			{ 3,  277714 }, -- Spectral Bear Cub
+			{ 4,  280614 }, -- Pachimari
+			{ 5,  276275 }, -- Bitter Baitling
+			{ 6,  284664 }, -- Packmule Treat
+			{ 8,  269830 }, -- Snowy Wolf Pup
+			{ 9,  277508 }, -- Prairie Wolf Pup Carrier
+			{ 10, 280615 }, -- Galestrider Chick
+			{ 11, 268109 }, -- Musical Gustjumper
+			{ 12, 275682 }, -- Excitable Slime
+			{ 13, 280456 }, -- Weevil K. Neevil
+			{ 16, 280347 }, -- Shadowgale Squirrel
+			{ 17, 280794 }, -- Brown Ground Squirrel Whistle
+			{ 18, 280795 }, -- Red Ground Squirrel Whistle
+			{ 19, 280797 }, -- Rabbit Crate (Artic)
+			{ 20, 280801 }, -- Rabbit Crate (Brown)
+			{ 21, 280803 }, -- Eagle Owl
+			{ 22, 274956 }, -- Wild Chicken Egg
+			{ 23, 280703 }, -- Jungle Boa
+			{ 24, 280697 }, -- Plagued Cockroach
+			{ 25, 280699 }, -- Undercity Cockroach
+		},
+	})
+
+	-- Add Forever Tabards tab
+	table.insert(data["Tabards"].items, {
+		name = "WoW Forever",
+		[NORMAL_DIFF] = {
+			{ 1,  280404 }, -- Lordaeron Forever Tabard
+			{ 2,  280729 }, -- Shen'dorei Tabard
+			{ 3,  277717 }, -- Spectral Bear Tabard
+			{ 5,  280449 }, -- Skyborne Tabard
+			{ 6,  285327 }, -- Kirin Tor Tabard
+			{ 7,  274025 }, -- Guardians of Hyjal Tabard
+			{ 8,  275042 }, -- Farholde Keep Tabard
+			{ 16, 276504 }, -- Theramore Battle Tabard
+			{ 17, 276502 }, -- Darkspear Battle Tabard
+			{ 18, 262765 }, -- Azeroth Commerce Authority Tabard
+			{ 19, 262764 }, -- Durotar Supply and Logistics Tabard
+			{ 21, 272694 }, -- Private's Tabard (Forever)
+			{ 22, 272695 }, -- Knight's Colors (Forever)
+			{ 23, 272449 }, -- Scout's Tabard (Forever)
+			{ 24, 272450 }, -- Stone Guard's Herald (Forever)
+		},
+	})
+end

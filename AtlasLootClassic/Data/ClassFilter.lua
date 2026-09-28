@@ -14,6 +14,73 @@ local wipe = table.wipe
 local format = string.format
 local bit_band = bit.band
 
+-- Polyfill for deprecated LE_ITEM variables
+local LE_ITEM_CLASS_CONSUMABLE = _G.LE_ITEM_CLASS_CONSUMABLE or Enum.ItemClass.Consumable or 0
+local LE_ITEM_CLASS_CONTAINER = _G.LE_ITEM_CLASS_CONTAINER or Enum.ItemClass.Container or 1
+local LE_ITEM_CLASS_WEAPON = _G.LE_ITEM_CLASS_WEAPON or Enum.ItemClass.Weapon or 2
+local LE_ITEM_CLASS_GEM = _G.LE_ITEM_CLASS_GEM or Enum.ItemClass.Gem or 3
+local LE_ITEM_CLASS_ARMOR = _G.LE_ITEM_CLASS_ARMOR or Enum.ItemClass.Armor or 4
+local LE_ITEM_CLASS_REAGENT = _G.LE_ITEM_CLASS_REAGENT or Enum.ItemClass.Reagent or 5
+local LE_ITEM_CLASS_PROJECTILE = _G.LE_ITEM_CLASS_PROJECTILE or Enum.ItemClass.Projectile or 6
+local LE_ITEM_CLASS_TRADEGOODS = _G.LE_ITEM_CLASS_TRADEGOODS or Enum.ItemClass.Tradegoods or 7
+local LE_ITEM_CLASS_ITEM_ENHANCEMENT = _G.LE_ITEM_CLASS_ITEM_ENHANCEMENT or Enum.ItemClass.ItemEnhancement or 8
+local LE_ITEM_CLASS_RECIPE = _G.LE_ITEM_CLASS_RECIPE or Enum.ItemClass.Recipe or 9
+local LE_ITEM_CLASS_QUIVER = _G.LE_ITEM_CLASS_QUIVER or Enum.ItemClass.Quiver or 11
+local LE_ITEM_CLASS_QUESTITEM = _G.LE_ITEM_CLASS_QUESTITEM or Enum.ItemClass.Questitem or 12
+local LE_ITEM_CLASS_KEY = _G.LE_ITEM_CLASS_KEY or Enum.ItemClass.Key or 13
+local LE_ITEM_CLASS_MISCELLANEOUS = _G.LE_ITEM_CLASS_MISCELLANEOUS or Enum.ItemClass.Miscellaneous or 15
+
+local LE_ITEM_WEAPON_AXE1H = _G.LE_ITEM_WEAPON_AXE1H or Enum.ItemWeaponSubclass.Axe1H or 0
+local LE_ITEM_WEAPON_AXE2H = _G.LE_ITEM_WEAPON_AXE2H or Enum.ItemWeaponSubclass.Axe2H or 1
+local LE_ITEM_WEAPON_BOWS = _G.LE_ITEM_WEAPON_BOWS or Enum.ItemWeaponSubclass.Bows or 2
+local LE_ITEM_WEAPON_GUNS = _G.LE_ITEM_WEAPON_GUNS or Enum.ItemWeaponSubclass.Guns or 3
+local LE_ITEM_WEAPON_MACE1H = _G.LE_ITEM_WEAPON_MACE1H or Enum.ItemWeaponSubclass.Mace1H or 4
+local LE_ITEM_WEAPON_MACE2H = _G.LE_ITEM_WEAPON_MACE2H or Enum.ItemWeaponSubclass.Mace2H or 5
+local LE_ITEM_WEAPON_POLEARM = _G.LE_ITEM_WEAPON_POLEARM or Enum.ItemWeaponSubclass.Polearm or 6
+local LE_ITEM_WEAPON_SWORD1H = _G.LE_ITEM_WEAPON_SWORD1H or Enum.ItemWeaponSubclass.Sword1H or 7
+local LE_ITEM_WEAPON_SWORD2H = _G.LE_ITEM_WEAPON_SWORD2H or Enum.ItemWeaponSubclass.Sword2H or 8
+local LE_ITEM_WEAPON_WARGLAIVE = _G.LE_ITEM_WEAPON_WARGLAIVE or Enum.ItemWeaponSubclass.Warglaive or 9
+local LE_ITEM_WEAPON_STAFF = _G.LE_ITEM_WEAPON_STAFF or Enum.ItemWeaponSubclass.Staff or 10
+local LE_ITEM_WEAPON_UNARMED = _G.LE_ITEM_WEAPON_UNARMED or Enum.ItemWeaponSubclass.Unarmed or 13
+local LE_ITEM_WEAPON_GENERIC = _G.LE_ITEM_WEAPON_GENERIC or Enum.ItemWeaponSubclass.Generic or 14
+local LE_ITEM_WEAPON_DAGGER = _G.LE_ITEM_WEAPON_DAGGER or Enum.ItemWeaponSubclass.Dagger or 15
+local LE_ITEM_WEAPON_THROWN = _G.LE_ITEM_WEAPON_THROWN or Enum.ItemWeaponSubclass.Thrown or 16
+local LE_ITEM_WEAPON_CROSSBOW = _G.LE_ITEM_WEAPON_CROSSBOW or Enum.ItemWeaponSubclass.Crossbow or 18
+local LE_ITEM_WEAPON_WAND = _G.LE_ITEM_WEAPON_WAND or Enum.ItemWeaponSubclass.Wand or 19
+local LE_ITEM_WEAPON_FISHINGPOLE = _G.LE_ITEM_WEAPON_FISHINGPOLE or Enum.ItemWeaponSubclass.Fishingpole or 20
+
+local LE_ITEM_ARMOR_GENERIC = _G.LE_ITEM_ARMOR_GENERIC or Enum.ItemArmorSubclass.Generic or 0
+local LE_ITEM_ARMOR_CLOTH = _G.LE_ITEM_ARMOR_CLOTH or Enum.ItemArmorSubclass.Cloth or 1
+local LE_ITEM_ARMOR_LEATHER = _G.LE_ITEM_ARMOR_LEATHER or Enum.ItemArmorSubclass.Leather or 2
+local LE_ITEM_ARMOR_MAIL = _G.LE_ITEM_ARMOR_MAIL or Enum.ItemArmorSubclass.Mail or 3
+local LE_ITEM_ARMOR_PLATE = _G.LE_ITEM_ARMOR_PLATE or Enum.ItemArmorSubclass.Plate or 4
+local LE_ITEM_ARMOR_COSMETIC = _G.LE_ITEM_ARMOR_COSMETIC or Enum.ItemArmorSubclass.Cosmetic or 5
+local LE_ITEM_ARMOR_SHIELD = _G.LE_ITEM_ARMOR_SHIELD or Enum.ItemArmorSubclass.Shield or 6
+local LE_ITEM_ARMOR_LIBRAM = _G.LE_ITEM_ARMOR_LIBRAM or Enum.ItemArmorSubclass.Libram or 7
+local LE_ITEM_ARMOR_IDOL = _G.LE_ITEM_ARMOR_IDOL or Enum.ItemArmorSubclass.Idol or 8
+local LE_ITEM_ARMOR_TOTEM = _G.LE_ITEM_ARMOR_TOTEM or Enum.ItemArmorSubclass.Totem or 9
+local LE_ITEM_ARMOR_RELIC = _G.LE_ITEM_ARMOR_RELIC or Enum.ItemArmorSubclass.Relic or 11
+
+local LE_ITEM_RECIPE_BOOK = _G.LE_ITEM_RECIPE_BOOK or Enum.ItemRecipeSubclass.Book or 0
+local LE_ITEM_RECIPE_LEATHERWORKING = _G.LE_ITEM_RECIPE_LEATHERWORKING or Enum.ItemRecipeSubclass.Leatherworking or 1
+local LE_ITEM_RECIPE_TAILORING = _G.LE_ITEM_RECIPE_TAILORING or Enum.ItemRecipeSubclass.Tailoring or 2
+local LE_ITEM_RECIPE_ENGINEERING = _G.LE_ITEM_RECIPE_ENGINEERING or Enum.ItemRecipeSubclass.Engineering or 3
+local LE_ITEM_RECIPE_BLACKSMITHING = _G.LE_ITEM_RECIPE_BLACKSMITHING or Enum.ItemRecipeSubclass.Blacksmithing or 4
+local LE_ITEM_RECIPE_COOKING = _G.LE_ITEM_RECIPE_COOKING or Enum.ItemRecipeSubclass.Cooking or 5
+local LE_ITEM_RECIPE_ALCHEMY = _G.LE_ITEM_RECIPE_ALCHEMY or Enum.ItemRecipeSubclass.Alchemy or 6
+local LE_ITEM_RECIPE_FIRST_AID = _G.LE_ITEM_RECIPE_FIRST_AID or Enum.ItemRecipeSubclass.FirstAid or 7
+local LE_ITEM_RECIPE_ENCHANTING = _G.LE_ITEM_RECIPE_ENCHANTING or Enum.ItemRecipeSubclass.Enchanting or 8
+local LE_ITEM_RECIPE_FISHING = _G.LE_ITEM_RECIPE_FISHING or Enum.ItemRecipeSubclass.Fishing or 9
+local LE_ITEM_RECIPE_JEWELCRAFTING = _G.LE_ITEM_RECIPE_JEWELCRAFTING or Enum.ItemRecipeSubclass.Jewelcrafting or 10
+local LE_ITEM_RECIPE_INSCRIPTION = _G.LE_ITEM_RECIPE_INSCRIPTION or Enum.ItemRecipeSubclass.Inscription or 11
+
+local LE_ITEM_MISCELLANEOUS_JUNK = _G.LE_ITEM_MISCELLANEOUS_JUNK or Enum.ItemMiscellaneousSubclass.Junk or 0
+local LE_ITEM_MISCELLANEOUS_REAGENT = _G.LE_ITEM_MISCELLANEOUS_REAGENT or Enum.ItemMiscellaneousSubclass.Reagent or 1
+local LE_ITEM_MISCELLANEOUS_COMPANION_PET = _G.LE_ITEM_MISCELLANEOUS_COMPANION_PET or Enum.ItemMiscellaneousSubclass.CompanionPet or 2
+local LE_ITEM_MISCELLANEOUS_HOLIDAY = _G.LE_ITEM_MISCELLANEOUS_HOLIDAY or Enum.ItemMiscellaneousSubclass.Holiday or 3
+local LE_ITEM_MISCELLANEOUS_OTHER = _G.LE_ITEM_MISCELLANEOUS_OTHER or Enum.ItemMiscellaneousSubclass.Other or 4
+local LE_ITEM_MISCELLANEOUS_MOUNT = _G.LE_ITEM_MISCELLANEOUS_MOUNT or Enum.ItemMiscellaneousSubclass.Mount or 5
+
 -- ## data
 local CLASS_BITS = ALPrivate.CLASS_BITS
 local CLASS_SORT = ALPrivate.CLASS_SORT

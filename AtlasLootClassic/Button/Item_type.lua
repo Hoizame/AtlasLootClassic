@@ -1,3 +1,6 @@
+-- Modified by HoliestWoW on 2026-08-19: Updated depreciated globals and LE_ITEM Enums for Classic Era
+-- Modified by HoliestWoW on 2026-09-17: Restored Favourites module assignment and fixed missing tooltip owner arguments in SetFavourite click handler.
+
 local _G = _G
 local ALName, ALPrivate = ...
 local AtlasLoot = _G.AtlasLoot
@@ -68,7 +71,11 @@ ClickHandler:Add(
 )
 
 local function OnFavouritesAddonLoad(addon, enabled)
-	Favourites = enabled and addon or nil
+	if enabled then
+		Favourites = addon
+	else
+		Favourites = nil
+	end
 end
 
 local function OnInit()
@@ -172,9 +179,10 @@ function Item.OnMouseAction(button, mouseButton)
 					end
 				end
 			end
+			-- Fix: Properly pass the 'owner' argument to Item.OnEnter to prevent silent failure
 			if Favourites:TooltipHookEnabled() then
 				Item.OnLeave(button)
-				Item.OnEnter(button)
+				Item.OnEnter(button, {button, "ANCHOR_RIGHT", -(button:GetWidth() * 0.5), 5})
 			end
 			AtlasLoot.Button:ExtraItemFrame_Refresh(button)
 		end
@@ -215,8 +223,11 @@ function Item.OnEnter(button, owner)
 	if button.ItemString then
 		tooltip:SetHyperlink(button.ItemString)
 	else
-		tooltip:SetItemByID(button.ItemID)
-		--tooltip:SetHyperlink("item:"..button.ItemID)
+		if C_Item and C_Item.RequestLoadItemDataByID then
+			C_Item.RequestLoadItemDataByID(button.ItemID)
+		end
+		tooltip:SetHyperlink("item:"..button.ItemID)
+		
 		-- small fix for auctionatorTT as it not hooks SetItemByID
 		if _G.Atr_ShowTipWithPricing then
 			local itemName, itemLink = GetItemInfo(button.ItemID)
@@ -391,6 +402,17 @@ function Item.GetStringContent(str)
 	end
 end
 
+local function ModelReset(self)
+    if self.SetCreature then self:SetCreature(0) end
+    if self.ClearModel then self:ClearModel() end
+    if self.Undress then self:Undress() end
+    if _G.Model_Reset then
+        _G.Model_Reset(self)
+    else
+        self:SetUnit("player")
+    end
+end
+
 --################################
 -- Item dess up
 --################################
@@ -427,7 +449,10 @@ function Item.ShowQuickDressUp(itemLink, ttFrame)
 		frame.modelFrame.zoomLevel = frame.modelFrame.minZoom
 		frame.modelFrame.zoomLevelNew = frame.modelFrame.zoomLevel
 		frame.modelFrame:SetPortraitZoom(frame.modelFrame.zoomLevel)
-		frame.modelFrame.Reset = _G.Model_Reset
+		frame.modelFrame.Reset = _G.Model_Reset or function(self)
+			if self.ClearModel then self:ClearModel() end
+			self:SetUnit("player")
+		end
 
 		Item.previewTooltipFrame = frame
 		frame:Hide()
@@ -459,7 +484,9 @@ function Item.ShowQuickDressUp(itemLink, ttFrame)
 	frame:SetPoint(fPoint, ttFrame, oPoint)
 
 	frame = Item.previewTooltipFrame.modelFrame
-	frame:Reset()
+	if frame.Reset then
+		frame:Reset()
+	end
 	local creatureID = Companion.GetCreatureID(itemLink)
 	if creatureID then
 		frame:SetCreature(creatureID)
@@ -545,6 +572,14 @@ function Query:Add(button)
 		button_list[button.ItemID] = { button }
 	else
 		button_list[button.ItemID][#button_list[button.ItemID]+1] = button
+	end
+
+	-- Actively send query to server for custom/uncached items
+	if C_Item and C_Item.RequestLoadItemDataByID then
+		C_Item.RequestLoadItemDataByID(button.ItemID)
+	end
+	if AtlasLootScanTooltip then
+		AtlasLootScanTooltip:SetHyperlink("item:"..button.ItemID)
 	end
 end
 

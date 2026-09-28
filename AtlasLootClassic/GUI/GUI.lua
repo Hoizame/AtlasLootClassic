@@ -1,3 +1,6 @@
+-- Modified by HoliestWoW on 2026-08-19: Updated depreciated globals and LE_ITEM Enums for Classic Era
+-- Modified by HoliestWoW on 2026-09-17: Restored Favourites module assignment in OnFavouritesAddonLoad.
+
 local ALName, ALPrivate = ...
 local _G = getfenv(0)
 local AtlasLoot = _G.AtlasLoot
@@ -42,7 +45,11 @@ local db
 local LoadAtlasLootModule
 
 local function OnFavouritesAddonLoad(addon, enabled)
-	Favourites = enabled and addon or nil
+	if enabled then
+		Favourites = addon
+	else
+		Favourites = nil
+	end
 end
 
 local function UpdateFrames(noPageUpdate, forceContentUpdate)

@@ -1,3 +1,5 @@
+-- Modified by HoliestWoW on 2026-09-17: Added guard clauses and debounced item cache listener to fix recursive script timeouts.
+
 --[[ usage
 	data = {
 		[1] = {		-- category
@@ -75,7 +77,9 @@ local function SetData(self, data, startValue)
 	end
 	assert(type(data) == "table", "'data' must be a table. See 'GUI/Template_DropDown.lua' for infos.")
 	self.data = data
-	self.selectedId = startValue
+	
+	-- Fix: Removed premature assignment of self.selectedId 
+	-- to allow SetSelected to bypass the guard clause and trigger the callback.
 	if startValue then
 		self:SetSelected(startValue)
 	end
@@ -121,6 +125,7 @@ end
 -- must be a unique id
 local function SetSelected(self, id, userClick)
 	if not id then return end
+	if self.selectedId == id and not userClick then return end
 	local textColor, bgColor
 	local text, arg
 	if Button_Id_List[id] and self == LIST_IS_OPEN then
